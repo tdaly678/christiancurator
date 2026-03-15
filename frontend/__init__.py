@@ -7,7 +7,7 @@ from datetime import date
 from jinja2 import Environment, FileSystemLoader
 
 TEMPLATE_DIR = Path(__file__).parent
-OUTPUT_HTML = Path(__file__).parent.parent / "output" / "index.html"
+OUTPUT_HTML = Path(__file__).parent.parent / "docs" / "index.html"
 
 
 def render_html(articles: list[dict], pairings: list[dict]):

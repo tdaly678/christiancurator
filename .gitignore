@@ -4,4 +4,3 @@ __pycache__/
 *.pyo
 .DS_Store
 output/articles.json
-output/index.html
