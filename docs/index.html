@@ -3,1212 +3,566 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ChristianCurator — Daily Digest</title>
+  <title>Christian Curator — Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
-    body { font-family: Georgia, serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; color: #222; }
-    h1 { font-size: 2rem; border-bottom: 2px solid #7a3b1e; padding-bottom: 0.5rem; }
-    .date { color: #888; font-size: 0.9rem; margin-bottom: 2rem; }
-    h2 { font-size: 1.2rem; margin-top: 2rem; color: #7a3b1e; }
-    .article { margin-bottom: 1.2rem; }
-    .article a { font-size: 1.05rem; font-weight: bold; color: #1a4a8a; text-decoration: none; }
-    .article a:hover { text-decoration: underline; }
-    .meta { font-size: 0.8rem; color: #666; }
-    .score { display: inline-block; background: #f0e8d5; border-radius: 4px; padding: 1px 6px; font-size: 0.78rem; }
-    .tag { display: inline-block; background: #e8f0e8; border-radius: 4px; padding: 1px 6px; font-size: 0.78rem; margin-left: 4px; }
-    .pcp { background: #f9f4ec; border-left: 4px solid #7a3b1e; padding: 0.8rem 1rem; margin-bottom: 1rem; }
-    .pcp .topic { font-weight: bold; font-size: 0.9rem; color: #7a3b1e; margin-bottom: 0.4rem; }
-    footer { margin-top: 3rem; font-size: 0.8rem; color: #aaa; text-align: center; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: #faf9f7;
+      color: #1a1a1a;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .cc-root { max-width: 980px; margin: 0 auto; padding: 0 20px 3rem; }
+
+    /* Header */
+    .cc-header { border-bottom: 1px solid #e0ddd8; padding: 0.75rem 0 0; }
+    .cc-top-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 0.75rem; font-size: 12px; color: #888; letter-spacing: 0.02em;
+    }
+    .cc-subscribe-btn {
+      background: #2C4A2E; color: #fff; border: none; padding: 5px 14px;
+      font-size: 12px; border-radius: 3px; cursor: pointer;
+      font-family: 'Source Sans 3', sans-serif; letter-spacing: 0.03em;
+    }
+    .cc-subscribe-btn:hover { background: #3a5f3c; }
+    .cc-masthead { text-align: center; padding: 0.5rem 0 1rem; border-bottom: 2.5px solid #1a1a1a; }
+    .cc-site-name {
+      font-family: 'Lora', Georgia, serif; font-size: 46px; font-weight: 600;
+      letter-spacing: -0.02em; line-height: 1; color: #1a1a1a; text-decoration: none;
+    }
+    .cc-tagline {
+      font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: #888; margin: 8px 0 0; font-weight: 300;
+    }
+    .cc-nav {
+      display: flex; justify-content: center; border-bottom: 1px solid #e0ddd8;
+      margin-top: 0.5rem; overflow-x: auto;
+    }
+    .cc-nav-item {
+      padding: 9px 14px; font-size: 11.5px; letter-spacing: 0.08em;
+      text-transform: uppercase; font-weight: 600; color: #888; cursor: pointer;
+      white-space: nowrap; border-bottom: 2.5px solid transparent;
+      transition: color 0.15s, border-color 0.15s; text-decoration: none;
+    }
+    .cc-nav-item:hover { color: #1a1a1a; }
+    .cc-nav-item.active { color: #1a1a1a; border-bottom-color: #2C4A2E; }
+
+    /* Layout */
+    .cc-layout {
+      display: grid; grid-template-columns: 1fr 270px;
+      gap: 2.25rem; margin-top: 1.75rem;
+    }
+    @media (max-width: 700px) {
+      .cc-layout { grid-template-columns: 1fr; }
+      .cc-cp-grid { grid-template-columns: 1fr; }
+      .cc-site-name { font-size: 32px; }
+    }
+
+    /* Section label */
+    .cc-section-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #2C4A2E; margin: 0 0 10px;
+    }
+
+    /* Lead story */
+    .cc-lead-story { border-bottom: 1px solid #e0ddd8; padding-bottom: 1.35rem; margin-bottom: 1.35rem; }
+    .cc-lead-title {
+      font-family: 'Lora', Georgia, serif; font-size: 27px; font-weight: 600;
+      line-height: 1.25; margin: 0 0 10px; color: #1a1a1a; text-decoration: none; display: block;
+    }
+    .cc-lead-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-lead-meta {
+      font-size: 12px; color: #888; display: flex; gap: 10px;
+      align-items: center; margin-bottom: 10px; flex-wrap: wrap;
+    }
+    .cc-source-tag {
+      background: #f0ede8; border: 1px solid #ddd; padding: 2px 8px;
+      border-radius: 2px; font-size: 11px; font-weight: 600; color: #555; letter-spacing: 0.03em;
+    }
+    .cc-lead-excerpt { font-size: 14.5px; line-height: 1.7; color: #555; }
+
+    /* Article list */
+    .cc-article-list { display: flex; flex-direction: column; }
+    .cc-article {
+      display: flex; gap: 0; padding: 0.9rem 0;
+      border-bottom: 1px solid #e0ddd8; align-items: flex-start;
+    }
+    .cc-article-num {
+      font-size: 11px; font-weight: 600; color: #bbb;
+      min-width: 24px; padding-top: 2px; font-variant-numeric: tabular-nums;
+    }
+    .cc-article-content { flex: 1; }
+    .cc-article-title {
+      font-family: 'Lora', Georgia, serif; font-size: 15.5px; font-weight: 500;
+      line-height: 1.35; margin: 0 0 5px; color: #1a1a1a; text-decoration: none; display: block;
+    }
+    .cc-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-article-meta { font-size: 11.5px; color: #aaa; display: flex; gap: 7px; align-items: center; flex-wrap: wrap; }
+
+    /* Point / Counterpoint */
+    .cc-counterpoint-block {
+      border: 1px solid #e0ddd8; border-radius: 6px; padding: 1rem 1.1rem;
+      margin: 1.35rem 0; background: #f5f4f0;
+    }
+    .cc-cp-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+      color: #aaa; margin: 0 0 10px; display: flex; align-items: center; gap: 8px;
+    }
+    .cc-cp-label::before, .cc-cp-label::after { content: ''; flex: 1; height: 1px; background: #ddd; }
+    .cc-cp-topic {
+      font-family: 'Lora', Georgia, serif; font-size: 13px; font-style: italic;
+      color: #666; text-align: center; margin-bottom: 12px;
+    }
+    .cc-cp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .cc-cp-side { padding: 11px 13px; border-radius: 5px; background: #fff; border: 1px solid #e0ddd8; }
+    .cc-cp-stance { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 6px; }
+    .cc-cp-stance.for { color: #2C4A2E; }
+    .cc-cp-stance.against { color: #7A2E2E; }
+    .cc-cp-title {
+      font-family: 'Lora', Georgia, serif; font-size: 13.5px; line-height: 1.35;
+      margin: 0 0 6px; color: #1a1a1a; text-decoration: none; display: block;
+    }
+    .cc-cp-title:hover { text-decoration: underline; }
+    .cc-cp-source { font-size: 11px; color: #aaa; }
+
+    /* Sidebar */
+    .cc-sidebar-section { margin-bottom: 1.5rem; border-bottom: 1px solid #e0ddd8; padding-bottom: 1.5rem; }
+    .cc-sidebar-section:last-child { border-bottom: none; padding-bottom: 0; }
+    .cc-sidebar-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+      color: #aaa; margin: 0 0 10px; border-bottom: 1px solid #e0ddd8; padding-bottom: 6px;
+    }
+
+    /* Trending */
+    .cc-trending-item { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px solid #e0ddd8; align-items: flex-start; }
+    .cc-trending-item:last-child { border-bottom: none; }
+    .cc-trending-num { font-size: 20px; font-weight: 600; color: #ddd; min-width: 20px; line-height: 1; font-variant-numeric: tabular-nums; }
+    .cc-trending-title {
+      font-size: 12.5px; line-height: 1.4; color: #1a1a1a;
+      text-decoration: none; font-family: 'Lora', Georgia, serif; display: block;
+    }
+    .cc-trending-title:hover { text-decoration: underline; }
+
+    /* Topic pills */
+    .cc-topic-pills { display: flex; flex-wrap: wrap; gap: 5px; }
+    .cc-topic-pill {
+      background: #f0ede8; border: 1px solid #ddd; border-radius: 2px; padding: 4px 10px;
+      font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; color: #666;
+      cursor: pointer; text-transform: uppercase; text-decoration: none;
+    }
+    .cc-topic-pill:hover { border-color: #2C4A2E; color: #2C4A2E; }
+
+    /* Email box */
+    .cc-email-box { background: #EFF4F0; border: 1px solid #B5CCB8; border-radius: 6px; padding: 1rem; }
+    .cc-email-box p { font-size: 13px; color: #2C4A2E; margin: 0 0 10px; line-height: 1.55; }
+    .cc-email-input {
+      width: 100%; border: 1px solid #B5CCB8; border-radius: 3px; padding: 7px 10px;
+      font-size: 13px; font-family: 'Source Sans 3', sans-serif; background: #fff; color: #1a1a1a; margin-bottom: 7px;
+    }
+    .cc-email-submit {
+      width: 100%; background: #2C4A2E; color: #fff; border: none; padding: 9px;
+      font-size: 13px; font-weight: 600; border-radius: 3px; cursor: pointer;
+      font-family: 'Source Sans 3', sans-serif; letter-spacing: 0.04em;
+    }
+    .cc-email-submit:hover { background: #3a5f3c; }
+
+    /* Footer */
+    .cc-footer {
+      border-top: 2.5px solid #1a1a1a; margin-top: 2.5rem; padding-top: 1rem;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 11px; color: #aaa; flex-wrap: wrap; gap: 8px;
+    }
+    .cc-footer-name { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 15px; color: #1a1a1a; }
   </style>
 </head>
 <body>
+<div class="cc-root">
 
-  <h1>ChristianCurator</h1>
-  <p class="date">March 15, 2026</p>
+  <!-- Header -->
+  <div class="cc-header">
+    <div class="cc-top-bar">
+      <span>March 15, 2026</span>
+      <button class="cc-subscribe-btn">Get the Daily Digest</button>
+    </div>
+    <div class="cc-masthead">
+      <h1 class="cc-site-name">Christian Curator</h1>
+      <p class="cc-tagline">The best of Christian writing, gathered daily</p>
+    </div>
+    <nav class="cc-nav">
+      <a class="cc-nav-item active" href="#">Today's Best</a>
+      <a class="cc-nav-item" href="#">Theology</a>
+      <a class="cc-nav-item" href="#">Culture</a>
+      <a class="cc-nav-item" href="#">Devotional</a>
+      <a class="cc-nav-item" href="#">Church Life</a>
+      
+    </nav>
+  </div>
 
-  <!-- Point / Counterpoint Section -->
-  
+  <div class="cc-layout">
 
-  <!-- Top Articles -->
-  <h2>Today's Top Articles</h2>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/podcasts/carson-center/662265/" target="_blank">
-      How Jesus Read and Interpreted Scripture
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 9</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">apologetics</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/podcasts/carson-center/what-is-biblical-theology/" target="_blank">
-      Understanding Biblical Theology: A Foundation for Christian Faith
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 9</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">apologetics</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/let-scripture-interpret-scripture/" target="_blank">
-      How Scripture Interprets Itself: A Guide to Biblical Understanding
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 9</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">apologetics</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/podcasts/gospelbound/top-10-theology-stories-2000-part-1/" target="_blank">
-      Significant Theological Developments in the 21st Century: Part 1
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 9</span>
-      
-      <span class="tag">theology</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/article/welcome-back-church-planting/" target="_blank">
-      Church Planting Experiences a Renewed Season of Growth
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 9</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">missions</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.christianitytoday.com/2026/03/died-john-perkins-evangelicals-racial-reconciliation-mississippi/" target="_blank">
-      John M. Perkins, Champion of Racial Reconciliation, Dies
-    </a>
-    <div class="meta">
-      Christianity Today
-      <span class="score">★ 9</span>
-      
-      <span class="tag">culture</span>
-      
-      <span class="tag">apologetics</span>
-      
-      <span class="tag">church life</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17278450/the-beatitudes-our-kings-call-to-all-joy" target="_blank">
-      The Beatitudes: Christ's Blueprint for True Happiness
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 9</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">discipleship</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17241519/he-dawns-as-prince-of-peace" target="_blank">
-      The Prince of Peace: His Coming and Reign
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 9</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">devotional</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17238741/he-dawns-as-everlasting-father" target="_blank">
-      The Eternal Father: Understanding Christ's Divine Role
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 9</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">devotional</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17233377/he-dawns-as-mighty-god" target="_blank">
-      The Messiah Arrives: Jesus Revealed as Mighty God
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 9</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">apologetics</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17219453/the-king-dawns-in-darkness" target="_blank">
-      Light Breaks Through: Christ's Kingdom Emerges in Darkness
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 9</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">devotional</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/faith/how-can-we-trust-god-when-we-dont-understand-his-ways/" target="_blank">
-      Finding Faith When God's Plan Remains Unclear
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 9</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">church life</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/article/john-perkins-tribute/" target="_blank">
-      John M. Perkins: Honoring a Life of Christian Witness and Service
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 8</span>
-      
-      <span class="tag">culture</span>
-      
-      <span class="tag">missions</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/article/poverty-doesnt-look-think/" target="_blank">
-      Poverty's Hidden Face: What Christians Often Overlook
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 8</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/article/christian-parents-need-classics/" target="_blank">
-      Christian Parents: Why the Classics Matter for Your Faith
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 8</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/article/scars-pastor-remaining-beirut/" target="_blank">
-      Pastor Reflects on the Cost of Remaining in Beirut
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 8</span>
-      
-      <span class="tag">missions</span>
-      
-      <span class="tag">apologetics</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/reviews/created-god-image-hoekema/" target="_blank">
-      Theological Foundations of Holistic Christian Care
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 8</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">church life</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/article/orthodox-modern-bavinck-cultural-apologist/" target="_blank">
-      Orthodox Thinker Herman Bavinck Bridges Faith and Culture
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 8</span>
-      
-      <span class="tag">apologetics</span>
-      
-      <span class="tag">theology</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/article/teens-make-faith-own/" target="_blank">
-      How to Help Teens Develop Authentic Personal Faith
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 8</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">theology</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.christianitytoday.com/2026/03/eric-mason-pastor-on-ministering-to-men-and-witnessing-in-politics/" target="_blank">
-      Eric Mason on Men's Ministry and Christian Political Witness
-    </a>
-    <div class="meta">
-      Christianity Today
-      <span class="score">★ 8</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">politics</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.christianitytoday.com/2026/03/southern-lebanon-christians-hezbollah-israel-war/" target="_blank">
-      Christians in Southern Lebanon: Weighing Difficult Decisions to Stay or Flee
-    </a>
-    <div class="meta">
-      Christianity Today
-      <span class="score">★ 8</span>
-      
-      <span class="tag">missions</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.christianitytoday.com/2026/03/cuba-crisis-oil-churches-aid-food/" target="_blank">
-      Christians Offer Hope and Aid to Struggling Cuban Families
-    </a>
-    <div class="meta">
-      Christianity Today
-      <span class="score">★ 8</span>
-      
-      <span class="tag">missions</span>
-      
-      <span class="tag">church life</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17299596/he-purifies-our-hearts-with-pleasure" target="_blank">
-      Christ's Purifying Work: Understanding Holy Joy and Sanctification
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 8</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">discipleship</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17292941/he-defends-our-meekness-with-might" target="_blank">
-      Christ Defends the Meek with Divine Strength
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 8</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">discipleship</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17287147/he-sweetens-our-joys-with-his-sorrows" target="_blank">
-      God's Suffering Deepens Our Joy in Him
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 8</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">discipleship</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17258328/when-god-denies-good-desires" target="_blank">
-      When God Says No to Good Desires
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 8</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">discipleship</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17255794/all-gods-soul-is-for-your-good" target="_blank">
-      God's Power Works for Your Good: A Study in Divine Providence
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 8</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">devotional</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17241038/jesus-showed-up" target="_blank">
-      The Incarnation: God's Personal Presence Among Us
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 8</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17234869/you-may-not-see-the-fruit-of-your-ministry" target="_blank">
-      The Unseen Fruit: Finding Purpose Beyond Visible Results
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 8</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">devotional</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17225582/he-dawns-as-wonderful-counselor" target="_blank">
-      The Wonderful Counselor: Jesus as Our Divine Guide
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 8</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">devotional</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/culture/wesley-huff-shares-the-gospel-on-the-diary-of-a-ceo-podcast/" target="_blank">
-      Wesley Huff Shares the Gospel Message on Popular CEO Podcast
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 8</span>
-      
-      <span class="tag">missions</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/culture/is-it-ok-to-pray-for-the-things-you-want/" target="_blank">
-      Seeking God's Will: Praying for Your Desires
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 8</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">church life</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/faith/asking-for-help-is-a-sign-of-wisdom-not-weakness/" target="_blank">
-      Craig Groeschel: Seeking Help Reflects Wisdom, Not Weakness
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 8</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">theology</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/culture/compassion-fatigue-is-one-of-the-biggest-spiritual-challenges-of-the-internet-age/" target="_blank">
-      Compassion Fatigue: A Modern Spiritual Challenge for Christians
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 8</span>
-      
-      <span class="tag">culture</span>
-      
-      <span class="tag">apologetics</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/current/science/what-does-the-bible-actually-says-about-evolution-and-what-it-doesnt/" target="_blank">
-      Bible's Teaching on Evolution: Separating Scripture From Speculation
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 8</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">apologetics</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/article/singles-married-friends/" target="_blank">
-      Single Christians Share What They Need From Married Friends
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 7</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">relationships</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/article/know-about-dementia/" target="_blank">
-      Caregivers' Guide: Eight Essential Truths About Dementia
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 7</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/reviews/george-herbert-poetry-witmer/" target="_blank">
-      George Herbert's Poetry: A Path to Deeper Faith
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 7</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/article/pro-life-kids-2026/" target="_blank">
-      Raising Children with a Biblical View of Life
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 7</span>
-      
-      <span class="tag">politics</span>
-      
-      <span class="tag">church life</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/article/anti-aging-light-scripture/" target="_blank">
-      Biblical Perspective on Anti-Aging Medicine and Bodily Stewardship
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 7</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/article/last-yrr-blogger/" target="_blank">
-      Reflections From a Departing Reformed Voice
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 7</span>
-      
-      <span class="tag">apologetics</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/article/happy-wife-happy-life/" target="_blank">
-      Marriage Thrives When Both Spouses Find Joy and Purpose
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 7</span>
-      
-      <span class="tag">church life</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.christianitytoday.com/2026/03/jan-karon-christian-fiction-author-mitford/" target="_blank">
-      Jan Karon Reflects on 89 Years of God's Faithfulness
-    </a>
-    <div class="meta">
-      Christianity Today
-      <span class="score">★ 7</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17299310/faithful-churches-can-rescue-cities" target="_blank">
-      Churches of Faith: Catalysts for Urban Renewal and Community Hope
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 7</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">culture</span>
-      
-      <span class="tag">missions</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17296728/sketch-beauty-in-suffering" target="_blank">
-      Finding God's Beauty Through Life's Suffering
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 7</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">discipleship</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17267786/who-needs-to-hear-your-hard-words" target="_blank">
-      Speaking Truth in Love: When and How to Share Difficult Messages
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 7</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">discipleship</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17246602/before-you-rule-rule-yourself" target="_blank">
-      Before Leading Others, Master Your Own Heart
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 7</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">church life</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17220673/where-the-wild-things-are" target="_blank">
-      Christian Perspectives on Encountering God's Creation
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 7</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">devotional</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://wng.org/sift/moody-wins-lawsuit-against-chicago-schools-1773415158" target="_blank">
-      Moody Bible Institute Settles Lawsuit With Chicago Public Schools
-    </a>
-    <div class="meta">
-      World Magazine
-      <span class="score">★ 7</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/life5/jimmy-darts-you-dont-need-a-platform-you-need-a-purpose/" target="_blank">
-      Jimmy Darts: Finding Purpose Over Platform in Christian Life
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 7</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/current/things-no-one-tells-you-about-going-short-term-mission-trips/" target="_blank">
-      Short-Term Mission Trips: What Churches Don't Prepare You For
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 7</span>
-      
-      <span class="tag">missions</span>
-      
-      <span class="tag">church life</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/faith/preston-sprinkle-changed-his-mind-about-women-in-church-leadership-heres-why/" target="_blank">
-      Christian Author Preston Sprinkle Reconsiders Women in Church Leadership Roles
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 7</span>
-      
-      <span class="tag">theology</span>
-      
-      <span class="tag">church life</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/culture/bible-sales-hit-a-three-decade-high-in-the-united-kingdom-last-year/" target="_blank">
-      Bible Sales Reach 30-Year Peak in United Kingdom
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 7</span>
-      
-      <span class="tag">culture</span>
-      
-      <span class="tag">church life</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/culture/should-worship-leaders-get-paid-anna-golden-benjamin-william-hastings-and-others-weigh-in-on-the-tension-between-money-and-ministry/" target="_blank">
-      Worship Leaders and Fair Compensation: Navigating Money in Ministry
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 7</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">theology</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/faith/church/chad-veach-the-key-to-avoiding-distraction/" target="_blank">
-      Finding Presence: Chad Veach on Overcoming Distraction
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 7</span>
-      
-      <span class="tag">church life</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.thegospelcoalition.org/article/forevergreen-gospel-oscars/" target="_blank">
-      Gospel Message Reaches Audiences Through 'Forevergreen' at the Oscars
-    </a>
-    <div class="meta">
-      The Gospel Coalition
-      <span class="score">★ 6</span>
-      
-      <span class="tag">culture</span>
-      
-      <span class="tag">missions</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.christianitytoday.com/2026/03/the-year-of-the-evangelical/" target="_blank">
-      Evangelicalism's Growing Influence in American Faith and Politics
-    </a>
-    <div class="meta">
-      Christianity Today
-      <span class="score">★ 6</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.christianitytoday.com/2026/03/nigeria-displaces-thousands-mass-evictions/" target="_blank">
-      Nigerian Government Relocates 40,000 Residents From Floating Community
-    </a>
-    <div class="meta">
-      Christianity Today
-      <span class="score">★ 6</span>
-      
-      <span class="tag">missions</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17296404/what-will-war-bring-to-iran" target="_blank">
-      Iran Faces Uncertainty: A Call to Prayer During Regional Conflict
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 6</span>
-      
-      <span class="tag">missions</span>
-      
-      <span class="tag">prayer</span>
-      
-      <span class="tag">politics</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://feed.desiringgod.org/link/22977/17282727/a-shy-guys-guide-to-big-groups" target="_blank">
-      Finding Your Place: How Introverts Can Thrive in Church Community
-    </a>
-    <div class="meta">
-      Desiring God
-      <span class="score">★ 6</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">discipleship</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://wng.org/sift/officials-id-michigan-attacker-say-family-died-in-israel-bombings-1773419939" target="_blank">
-      Michigan Attack Suspect Identified; Family Lost in Israel Conflict
-    </a>
-    <div class="meta">
-      World Magazine
-      <span class="score">★ 6</span>
-      
-      <span class="tag">culture</span>
-      
-      <span class="tag">politics</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/culture/the-surprisingly-christian-origins-of-friday-the-13th-and-other-superstitions/" target="_blank">
-      Christianity's Hidden History Behind Friday the 13th Superstition
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 6</span>
-      
-      <span class="tag">culture</span>
-      
-      <span class="tag">apologetics</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/culture/music/caleb-gordons-mission-is-bigger-than-music/" target="_blank">
-      Caleb Gordon's Faith-Driven Mission Extends Beyond Music
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 6</span>
-      
-      <span class="tag">culture</span>
-      
-      <span class="tag">church life</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/culture/the-definitive-ranking-of-worship-songs-that-went-way-too-hard-in-the-2000s/" target="_blank">
-      Best and Most Intense Worship Songs of the 2000s Era
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 6</span>
-      
-      <span class="tag">church life</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/life5/youre-not-a-bad-communicator-youre-a-bad-listener/" target="_blank">
-      Authentic Communication Begins With Listening Well
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 6</span>
-      
-      <span class="tag">church life</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.christianitytoday.com/2026/03/books-column-politics-public-life/" target="_blank">
-      Supreme Court Decisions: What Christians Should Understand
-    </a>
-    <div class="meta">
-      Christianity Today
-      <span class="score">★ 5</span>
-      
-      <span class="tag">politics</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://wng.org/roundups/judges-school-lower-court-on-first-grader-free-speech-1773433590" target="_blank">
-      Appeals Court Clarifies First Amendment Rights for Young Students
-    </a>
-    <div class="meta">
-      World Magazine
-      <span class="score">★ 5</span>
-      
-      <span class="tag">culture</span>
-      
-      <span class="tag">apologetics</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/culture/is-27-the-ideal-age-for-getting-married-and-starting-a-family-most-people-think-so/" target="_blank">
-      When Should Christians Consider Marriage and Starting a Family?
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 5</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/culture/music/colony-house-finishes-the-story-on-their-new-album/" target="_blank">
-      Colony House Completes Their Musical Story With New Album
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 5</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.christianitytoday.com/2026/03/the-secret-agent-oscars-nominee/" target="_blank">
-      Brazil's 'The Secret Agent': Memory, Faith, and Authoritarian Power
-    </a>
-    <div class="meta">
-      Christianity Today
-      <span class="score">★ 4</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://www.christianitytoday.com/2026/03/ct-responds-we-are-not-a-monolith-immigration/" target="_blank">
-      Christianity Today Addresses Denominational Unity Statement
-    </a>
-    <div class="meta">
-      Christianity Today
-      <span class="score">★ 4</span>
-      
-      <span class="tag">church life</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://wng.org/sift/investigator-chosen-to-probe-whether-u-s-bombed-iranian-school-1773421624" target="_blank">
-      Investigator Appointed to Examine Reports of U.S. Bombing at Iranian School
-    </a>
-    <div class="meta">
-      World Magazine
-      <span class="score">★ 4</span>
-      
-      <span class="tag">politics</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://wng.org/sift/6-us-service-members-killed-in-plane-crash-over-iraq-1773406816" target="_blank">
-      U.S. Military Personnel Die in Aircraft Accident Over Iraq
-    </a>
-    <div class="meta">
-      World Magazine
-      <span class="score">★ 4</span>
-      
-      <span class="tag">politics</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/culture/movies/the-most-spiritually-interesting-films-at-the-oscars/" target="_blank">
-      Spiritually Meaningful Films Recognized at the Academy Awards
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 4</span>
-      
-      <span class="tag">culture</span>
-      
-      <span class="tag">apologetics</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://wng.org/sift/cuba-in-talks-with-u-s-amid-ongoing-energy-crisis-1773426166" target="_blank">
-      Cuba, U.S. Resume Diplomatic Discussions Despite Oil Embargo
-    </a>
-    <div class="meta">
-      World Magazine
-      <span class="score">★ 3</span>
-      
-      <span class="tag">politics</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://wng.org/podcasts/the-world-and-everything-in-it-march-13-2026-1773318198" target="_blank">
-      Christian News Digest: World Events for March 13, 2026
-    </a>
-    <div class="meta">
-      World Magazine
-      <span class="score">★ 3</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://wng.org/sift/indian-nationals-charged-with-staging-fake-robberies-to-commit-visa-fraud-1773437009" target="_blank">
-      Indian Nationals Accused of Orchestrating Robberies for Visa Fraud Scheme
-    </a>
-    <div class="meta">
-      World Magazine
-      <span class="score">★ 2</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://wng.org/sift/trump-sues-california-over-ev-standards-1773409064" target="_blank">
-      Trump Administration Challenges California's Electric Vehicle Emission Standards
-    </a>
-    <div class="meta">
-      World Magazine
-      <span class="score">★ 2</span>
-      
-      <span class="tag">politics</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://wng.org/sift/u-s-opens-60-trade-probes-clearing-way-for-more-tariffs-1773415156" target="_blank">
-      U.S. Initiates Trade Investigations That May Lead to New Tariffs
-    </a>
-    <div class="meta">
-      World Magazine
-      <span class="score">★ 2</span>
-      
-      <span class="tag">politics</span>
-      
-    </div>
-  </div>
-  
-  <div class="article">
-    <a href="https://relevantmagazine.com/culture/road-trip-eight-underrated-cities-to-visit-spring-break/" target="_blank">
-      Eight Hidden Gems Worth Exploring This Spring Break
-    </a>
-    <div class="meta">
-      Relevant Magazine
-      <span class="score">★ 2</span>
-      
-      <span class="tag">culture</span>
-      
-    </div>
-  </div>
-  
+    <!-- Main feed -->
+    <div class="cc-main">
 
-  <footer>Generated by ChristianCurator · March 15, 2026</footer>
+      
+      
+      <div class="cc-lead-story">
+        <div class="cc-section-label">Lead Story</div>
+        <a class="cc-lead-title" href="https://www.thegospelcoalition.org/podcasts/carson-center/662265/" target="_blank">How Jesus Read Scripture: Ancient Wisdom for Modern Faith</a>
+        <div class="cc-lead-meta">
+          <span class="cc-source-tag">The Gospel Coalition</span>
+          <span>theology</span><span>·</span><span>apologetics</span>
+        </div>
+        
+        <p class="cc-lead-excerpt">Matt Harmon and Ben Gladd explain why Luke highlights Jesus’ Christ-centered reading of the Old Testament and argue Christians should learn to read Scripture the way Jesus taught his disciples—responsibly,...</p>
+        
+      </div>
+      
 
+      
+
+      
+      
+      <div class="cc-section-label">Theology &amp; Doctrine</div>
+      <div class="cc-article-list">
+        
+        <div class="cc-article">
+          <div class="cc-article-num">1</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://www.thegospelcoalition.org/podcasts/carson-center/what-is-biblical-theology/" target="_blank">Understanding Biblical Theology: A Foundation for Faith</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">The Gospel Coalition</span>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">2</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/let-scripture-interpret-scripture/" target="_blank">How Scripture Interprets Itself: A Guide to Biblical Understanding</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">The Gospel Coalition</span>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">3</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://www.thegospelcoalition.org/podcasts/gospelbound/top-10-theology-stories-2000-part-1/" target="_blank">Significant Theological Developments Since 2000: Part 1</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">The Gospel Coalition</span>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">4</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://feed.desiringgod.org/link/22977/17278450/the-beatitudes-our-kings-call-to-all-joy" target="_blank">The Beatitudes: Jesus' Blueprint for True Blessing and Joy</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">Desiring God</span>
+              <span>church life</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">5</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://feed.desiringgod.org/link/22977/17241519/he-dawns-as-prince-of-peace" target="_blank">Prince of Peace: Christ's Role in God's Kingdom</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">Desiring God</span>
+              <span>devotional</span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+
+      
+      
+      <div class="cc-section-label" style="margin-top:1.5rem;">Culture &amp; Society</div>
+      <div class="cc-article-list">
+        
+        <div class="cc-article">
+          <div class="cc-article-num">1</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/died-john-perkins-evangelicals-racial-reconciliation-mississippi/" target="_blank">John M. Perkins, Champion of Racial Reconciliation, Dies</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">Christianity Today</span>
+              <span>apologetics</span><span>church life</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">2</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://relevantmagazine.com/culture/compassion-fatigue-is-one-of-the-biggest-spiritual-challenges-of-the-internet-age/" target="_blank">Compassion Fatigue: A Spiritual Challenge in Our Connected World</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">Relevant Magazine</span>
+              <span>theology</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">3</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://www.thegospelcoalition.org/article/john-perkins-tribute/" target="_blank">Honoring John M. Perkins: A Life of Christian Witness and Service</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">The Gospel Coalition</span>
+              <span>missions</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">4</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://www.thegospelcoalition.org/article/poverty-doesnt-look-think/" target="_blank">Poverty's Hidden Face: What We Often Miss</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">The Gospel Coalition</span>
+              <span>theology</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">5</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://www.thegospelcoalition.org/article/christian-parents-need-classics/" target="_blank">Christian Parents Need Timeless Wisdom From Classical Literature</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">The Gospel Coalition</span>
+              <span>church life</span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+
+      
+      
+      <div class="cc-section-label" style="margin-top:1.5rem;">Church Life</div>
+      <div class="cc-article-list">
+        
+        <div class="cc-article">
+          <div class="cc-article-num">1</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://www.thegospelcoalition.org/article/welcome-back-church-planting/" target="_blank">Church Planting Returns: Renewed Growth in Christian Communities</a>
+            <div class="cc-article-meta"><span class="cc-source-tag">The Gospel Coalition</span></div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">2</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/died-john-perkins-evangelicals-racial-reconciliation-mississippi/" target="_blank">John M. Perkins, Champion of Racial Reconciliation, Dies</a>
+            <div class="cc-article-meta"><span class="cc-source-tag">Christianity Today</span></div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">3</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/cuba-crisis-oil-churches-aid-food/" target="_blank">Cuban Christians Extend Hope Through Humanitarian Aid During Crisis</a>
+            <div class="cc-article-meta"><span class="cc-source-tag">Christianity Today</span></div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">4</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://feed.desiringgod.org/link/22977/17278450/the-beatitudes-our-kings-call-to-all-joy" target="_blank">The Beatitudes: Jesus' Blueprint for True Blessing and Joy</a>
+            <div class="cc-article-meta"><span class="cc-source-tag">Desiring God</span></div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">5</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://relevantmagazine.com/faith/how-can-we-trust-god-when-we-dont-understand-his-ways/" target="_blank">Finding Faith When God's Plan Remains Hidden</a>
+            <div class="cc-article-meta"><span class="cc-source-tag">Relevant Magazine</span></div>
+          </div>
+        </div>
+        
+      </div>
+      
+
+      
+      
+      
+      
+      
+      
+      <div class="cc-section-label" style="margin-top:1.5rem;">More from Today</div>
+      <div class="cc-article-list">
+        
+        <div class="cc-article">
+          <div class="cc-article-num">1</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://feed.desiringgod.org/link/22977/17238741/he-dawns-as-everlasting-father" target="_blank">Christ Revealed as Everlasting Father and Prince of Peace</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">Desiring God</span>
+              <span>theology</span><span>devotional</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">2</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://feed.desiringgod.org/link/22977/17233377/he-dawns-as-mighty-god" target="_blank">The Messiah Arrives: Christ Revealed as Mighty God</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">Desiring God</span>
+              <span>theology</span><span>devotional</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">3</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://feed.desiringgod.org/link/22977/17219453/the-king-dawns-in-darkness" target="_blank">The King's Light Breaks Through the Darkness</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">Desiring God</span>
+              <span>theology</span><span>devotional</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">4</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://www.thegospelcoalition.org/article/scars-pastor-remaining-beirut/" target="_blank">Pastor Reflects on Choosing to Stay in Beirut Despite the Cost</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">The Gospel Coalition</span>
+              <span>missions</span><span>culture</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">5</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://www.thegospelcoalition.org/reviews/created-god-image-hoekema/" target="_blank">Biblical Foundation: Understanding Whole-Person Care in Christian Ministry</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">The Gospel Coalition</span>
+              <span>theology</span><span>church life</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">6</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://www.thegospelcoalition.org/article/orthodox-modern-bavinck-cultural-apologist/" target="_blank">Herman Bavinck: Defending Orthodox Faith in Modern Culture</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">The Gospel Coalition</span>
+              <span>apologetics</span><span>theology</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">7</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://www.thegospelcoalition.org/article/teens-make-faith-own/" target="_blank">Why the "Make Your Faith Your Own" Message Misses the Mark</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">The Gospel Coalition</span>
+              <span>church life</span><span>theology</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cc-article">
+          <div class="cc-article-num">8</div>
+          <div class="cc-article-content">
+            <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/the-year-of-the-evangelical/" target="_blank">Evangelicals Shape Faith and Culture in a Pivotal Year</a>
+            <div class="cc-article-meta">
+              <span class="cc-source-tag">Christianity Today</span>
+              <span>theology</span><span>church life</span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+
+    </div>
+
+    <!-- Sidebar -->
+    <div class="cc-sidebar">
+
+      <div class="cc-sidebar-section">
+        <div class="cc-sidebar-label">Trending Today</div>
+        
+        <div class="cc-trending-item">
+          <div class="cc-trending-num">1</div>
+          <a class="cc-trending-title" href="https://www.thegospelcoalition.org/podcasts/carson-center/662265/" target="_blank">How Jesus Read Scripture: Ancient Wisdom for Modern Faith</a>
+        </div>
+        
+        <div class="cc-trending-item">
+          <div class="cc-trending-num">2</div>
+          <a class="cc-trending-title" href="https://www.thegospelcoalition.org/podcasts/carson-center/what-is-biblical-theology/" target="_blank">Understanding Biblical Theology: A Foundation for Faith</a>
+        </div>
+        
+        <div class="cc-trending-item">
+          <div class="cc-trending-num">3</div>
+          <a class="cc-trending-title" href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/let-scripture-interpret-scripture/" target="_blank">How Scripture Interprets Itself: A Guide to Biblical Understanding</a>
+        </div>
+        
+        <div class="cc-trending-item">
+          <div class="cc-trending-num">4</div>
+          <a class="cc-trending-title" href="https://www.thegospelcoalition.org/podcasts/gospelbound/top-10-theology-stories-2000-part-1/" target="_blank">Significant Theological Developments Since 2000: Part 1</a>
+        </div>
+        
+        <div class="cc-trending-item">
+          <div class="cc-trending-num">5</div>
+          <a class="cc-trending-title" href="https://www.thegospelcoalition.org/article/welcome-back-church-planting/" target="_blank">Church Planting Returns: Renewed Growth in Christian Communities</a>
+        </div>
+        
+      </div>
+
+      
+      
+      
+      <div class="cc-sidebar-section">
+        <div class="cc-sidebar-label">Browse by Topic</div>
+        <div class="cc-topic-pills">
+          <a class="cc-topic-pill" href="#">apologetics</a><a class="cc-topic-pill" href="#">church life</a><a class="cc-topic-pill" href="#">culture</a><a class="cc-topic-pill" href="#">devotional</a><a class="cc-topic-pill" href="#">missions</a><a class="cc-topic-pill" href="#">politics</a><a class="cc-topic-pill" href="#">relationships</a><a class="cc-topic-pill" href="#">theology</a>
+        </div>
+      </div>
+      
+
+      <div class="cc-sidebar-section">
+        <div class="cc-email-box">
+          <p>Get the 10 best articles in your inbox every morning.</p>
+          <input class="cc-email-input" type="email" placeholder="your@email.com" />
+          <button class="cc-email-submit">Subscribe — It's Free</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="cc-footer">
+    <div class="cc-footer-name">Christian Curator</div>
+    <div>All links go to original sources. We curate; they create.</div>
+    <div>ChristianCurator.com</div>
+  </div>
+
+</div>
 </body>
 </html>

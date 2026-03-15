@@ -13,6 +13,7 @@ OUTPUT_HTML = Path(__file__).parent.parent / "docs" / "index.html"
 def render_html(articles: list[dict], pairings: list[dict]):
     """Render index.html from template.html using Jinja2."""
     env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
+    env.tests['contains'] = lambda value, item: item in (value or [])
     template = env.get_template("template.html")
 
     # Build simplified pairings for the template
