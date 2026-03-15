@@ -15,17 +15,17 @@ SOURCES = [
     },
     {
         "name": "Christianity Today",
-        "url": "https://www.christianitytoday.com/ct/channel/rss.xml",
+        "url": "https://www.christianitytoday.com/feed",
         "category": "culture",
     },
     {
         "name": "Desiring God",
-        "url": "https://www.desiringgod.org/articles.rss",
+        "url": "https://feed.desiringgod.org/articles-by-desiring-god.rss",
         "category": "theology",
     },
     {
         "name": "World Magazine",
-        "url": "https://wng.org/feed",
+        "url": "https://wng.org/feeds/rss/topics.rss",
         "category": "news",
     },
     {
