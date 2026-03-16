@@ -415,6 +415,20 @@
     document.getElementById('cc-filter-banner').classList.remove('visible');
   }
 
+  // Email subscribe confirmation message
+  document.addEventListener('DOMContentLoaded', function () {
+    const subscribeForm = document.querySelector('.cc-email-box form');
+    if (subscribeForm) {
+      subscribeForm.addEventListener('submit', function () {
+        setTimeout(function () {
+          document.querySelector('.cc-email-box').innerHTML =
+            '<p style="text-align:center; color:#2C4A2E; font-size:13px; font-weight:600; margin:0 0 4px;">✓ You\'re on the list!</p>' +
+            '<p style="text-align:center; color:#555; font-size:12px; margin:0;">Newsletter coming soon.</p>';
+        }, 150);
+      });
+    }
+  });
+
   // On page load: hide any topic pills that have no matching filterable articles
   document.addEventListener('DOMContentLoaded', function () {
     const filterableArticles = document.querySelectorAll('.cc-article');
