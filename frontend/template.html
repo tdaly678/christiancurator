@@ -167,13 +167,32 @@
     .cc-persona-pill:hover { border-color: #5C3A6E; color: #5C3A6E; }
     .cc-persona-pill.active { background: #5C3A6E; border-color: #5C3A6E; color: #fff; }
 
-    /* Mobile: horizontal scroll for pill rows */
+    /* Filter bar (above articles) */
+    .cc-filter-bar {
+      border-bottom: 1px solid #e0ddd8; padding-bottom: 1rem; margin-bottom: 1.5rem;
+    }
+    .cc-filter-bar .cc-sidebar-label { margin-bottom: 6px; }
+    .cc-filter-row { margin-bottom: 10px; }
+    .cc-filter-row:last-child { margin-bottom: 0; }
+
+    /* Hide filter bar on desktop (shown in sidebar instead) */
+    .cc-filter-bar { display: none; }
+    .cc-sidebar-filters { display: block; }
+
+    /* Mobile: show filter bar above articles, hide from sidebar */
     @media (max-width: 700px) {
+      .cc-filter-bar { display: block; }
+      .cc-sidebar-filters { display: none; }
       .cc-topic-pills, .cc-persona-pills {
         flex-wrap: nowrap; overflow-x: auto;
         -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 4px;
       }
       .cc-topic-pills::-webkit-scrollbar, .cc-persona-pills::-webkit-scrollbar { display: none; }
+    }
+
+    /* Fix article title overflow on mobile */
+    .cc-article-title, .cc-lead-title {
+      overflow-wrap: break-word; word-break: break-word;
     }
     .cc-article.hidden { display: none; }
     .cc-section-group.hidden { display: none; }
@@ -221,6 +240,33 @@
       <h1 class="cc-site-name">Christian Curator</h1>
       <p class="cc-tagline">Curated for the curious Christian</p>
     </div>
+  </div>
+
+  {% set all_tags = [] %}
+  {% for article in articles %}{% for tag in article.tags %}{% if tag not in all_tags %}{% set _ = all_tags.append(tag) %}{% endif %}{% endfor %}{% endfor %}
+  {% set all_personas = [] %}
+  {% for article in articles %}{% if article.personas %}{% for p in article.personas %}{% if p not in all_personas %}{% set _ = all_personas.append(p) %}{% endif %}{% endfor %}{% endif %}{% endfor %}
+
+  <!-- Mobile filter bar (hidden on desktop) -->
+  <div class="cc-filter-bar">
+    {% if all_tags %}
+    <div class="cc-filter-row">
+      <div class="cc-sidebar-label">Browse by Topic</div>
+      <div class="cc-topic-pills">
+        <a class="cc-topic-pill active" data-tag="all" href="#" onclick="filterByTag('all', this); return false;">All</a>
+        {% for tag in all_tags | sort %}<a class="cc-topic-pill" data-tag="{{ tag }}" href="#" onclick="filterByTag('{{ tag }}', this); return false;">{{ tag }}</a>{% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    {% if all_personas %}
+    <div class="cc-filter-row">
+      <div class="cc-sidebar-label">Sort by Reader</div>
+      <div class="cc-persona-pills">
+        <a class="cc-persona-pill active" data-persona="all" href="#" onclick="filterByPersona('all', this); return false;">All</a>
+        {% for persona in all_personas | sort %}<a class="cc-persona-pill" data-persona="{{ persona }}" href="#" onclick="filterByPersona('{{ persona }}', this); return false;">{{ persona }}</a>{% endfor %}
+      </div>
+    </div>
+    {% endif %}
   </div>
 
   <div class="cc-layout">
@@ -370,29 +416,27 @@
         {% endfor %}
       </div>
 
-      {% set all_tags = [] %}
-      {% for article in articles %}{% for tag in article.tags %}{% if tag not in all_tags %}{% set _ = all_tags.append(tag) %}{% endif %}{% endfor %}{% endfor %}
-      {% if all_tags %}
-      <div class="cc-sidebar-section">
-        <div class="cc-sidebar-label">Browse by Topic</div>
-        <div class="cc-topic-pills">
-          <a class="cc-topic-pill active" data-tag="all" href="#" onclick="filterByTag('all', this); return false;">All</a>
-          {% for tag in all_tags | sort %}<a class="cc-topic-pill" data-tag="{{ tag }}" href="#" onclick="filterByTag('{{ tag }}', this); return false;">{{ tag }}</a>{% endfor %}
+      <div class="cc-sidebar-filters">
+        {% if all_tags %}
+        <div class="cc-sidebar-section">
+          <div class="cc-sidebar-label">Browse by Topic</div>
+          <div class="cc-topic-pills">
+            <a class="cc-topic-pill active" data-tag="all" href="#" onclick="filterByTag('all', this); return false;">All</a>
+            {% for tag in all_tags | sort %}<a class="cc-topic-pill" data-tag="{{ tag }}" href="#" onclick="filterByTag('{{ tag }}', this); return false;">{{ tag }}</a>{% endfor %}
+          </div>
         </div>
-      </div>
-      {% endif %}
+        {% endif %}
 
-      {% set all_personas = [] %}
-      {% for article in articles %}{% if article.personas %}{% for p in article.personas %}{% if p not in all_personas %}{% set _ = all_personas.append(p) %}{% endif %}{% endfor %}{% endif %}{% endfor %}
-      {% if all_personas %}
-      <div class="cc-sidebar-section">
-        <div class="cc-sidebar-label">Sort by Reader</div>
-        <div class="cc-persona-pills">
-          <a class="cc-persona-pill active" data-persona="all" href="#" onclick="filterByPersona('all', this); return false;">All</a>
-          {% for persona in all_personas | sort %}<a class="cc-persona-pill" data-persona="{{ persona }}" href="#" onclick="filterByPersona('{{ persona }}', this); return false;">{{ persona }}</a>{% endfor %}
+        {% if all_personas %}
+        <div class="cc-sidebar-section">
+          <div class="cc-sidebar-label">Sort by Reader</div>
+          <div class="cc-persona-pills">
+            <a class="cc-persona-pill active" data-persona="all" href="#" onclick="filterByPersona('all', this); return false;">All</a>
+            {% for persona in all_personas | sort %}<a class="cc-persona-pill" data-persona="{{ persona }}" href="#" onclick="filterByPersona('{{ persona }}', this); return false;">{{ persona }}</a>{% endfor %}
+          </div>
         </div>
+        {% endif %}
       </div>
-      {% endif %}
 
 
     </div>
