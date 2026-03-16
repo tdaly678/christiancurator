@@ -145,6 +145,16 @@
       cursor: pointer; text-transform: uppercase; text-decoration: none;
     }
     .cc-topic-pill:hover { border-color: #2C4A2E; color: #2C4A2E; }
+    .cc-topic-pill.active { background: #2C4A2E; border-color: #2C4A2E; color: #fff; }
+    .cc-article.hidden { display: none; }
+    .cc-section-group.hidden { display: none; }
+    #cc-filter-banner {
+      display: none; background: #EFF4F0; border: 1px solid #B5CCB8; border-radius: 4px;
+      padding: 7px 12px; margin-bottom: 1rem; font-size: 12px; color: #2C4A2E;
+      justify-content: space-between; align-items: center;
+    }
+    #cc-filter-banner.visible { display: flex; }
+    #cc-filter-clear { cursor: pointer; font-weight: 600; color: #2C4A2E; text-decoration: underline; background: none; border: none; font-size: 12px; }
 
     /* Email box */
     .cc-email-box { background: #EFF4F0; border: 1px solid #B5CCB8; border-radius: 6px; padding: 1rem; }
@@ -225,57 +235,69 @@
       {% endfor %}
       {% endif %}
 
+      <!-- Filter banner -->
+      <div id="cc-filter-banner">
+        <span id="cc-filter-label">Showing: all topics</span>
+        <button id="cc-filter-clear" onclick="clearFilter()">Show all</button>
+      </div>
+
       {% set theology_articles = articles[1:] | selectattr('tags') | selectattr('tags', 'contains', 'theology') | list %}
       {% if theology_articles %}
-      <div class="cc-section-label">Theology &amp; Doctrine</div>
-      <div class="cc-article-list">
-        {% for article in theology_articles[:5] %}
-        <div class="cc-article">
-          <div class="cc-article-num">{{ loop.index }}</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="{{ article.url }}" target="_blank">{{ article.rewritten_title or article.title }}</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">{{ article.source_name }}</span>
-              {% for tag in article.tags if tag != 'theology' %}<span>{{ tag }}</span>{% endfor %}
+      <div class="cc-section-group" data-section="theology">
+        <div class="cc-section-label">Theology &amp; Doctrine</div>
+        <div class="cc-article-list">
+          {% for article in theology_articles[:5] %}
+          <div class="cc-article" data-tags="{{ article.tags | join(',') }}">
+            <div class="cc-article-num">{{ loop.index }}</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="{{ article.url }}" target="_blank">{{ article.rewritten_title or article.title }}</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">{{ article.source_name }}</span>
+                {% for tag in article.tags if tag != 'theology' %}<span>{{ tag }}</span>{% endfor %}
+              </div>
             </div>
           </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
       {% endif %}
 
       {% set culture_articles = articles[1:] | selectattr('tags') | selectattr('tags', 'contains', 'culture') | list %}
       {% if culture_articles %}
-      <div class="cc-section-label" style="margin-top:1.5rem;">Culture &amp; Society</div>
-      <div class="cc-article-list">
-        {% for article in culture_articles[:5] %}
-        <div class="cc-article">
-          <div class="cc-article-num">{{ loop.index }}</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="{{ article.url }}" target="_blank">{{ article.rewritten_title or article.title }}</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">{{ article.source_name }}</span>
-              {% for tag in article.tags if tag != 'culture' %}<span>{{ tag }}</span>{% endfor %}
+      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="culture">
+        <div class="cc-section-label">Culture &amp; Society</div>
+        <div class="cc-article-list">
+          {% for article in culture_articles[:5] %}
+          <div class="cc-article" data-tags="{{ article.tags | join(',') }}">
+            <div class="cc-article-num">{{ loop.index }}</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="{{ article.url }}" target="_blank">{{ article.rewritten_title or article.title }}</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">{{ article.source_name }}</span>
+                {% for tag in article.tags if tag != 'culture' %}<span>{{ tag }}</span>{% endfor %}
+              </div>
             </div>
           </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
       {% endif %}
 
       {% set church_articles = articles[1:] | selectattr('tags') | selectattr('tags', 'contains', 'church life') | list %}
       {% if church_articles %}
-      <div class="cc-section-label" style="margin-top:1.5rem;">Church Life</div>
-      <div class="cc-article-list">
-        {% for article in church_articles[:5] %}
-        <div class="cc-article">
-          <div class="cc-article-num">{{ loop.index }}</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="{{ article.url }}" target="_blank">{{ article.rewritten_title or article.title }}</a>
-            <div class="cc-article-meta"><span class="cc-source-tag">{{ article.source_name }}</span></div>
+      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="church life">
+        <div class="cc-section-label">Church Life</div>
+        <div class="cc-article-list">
+          {% for article in church_articles[:5] %}
+          <div class="cc-article" data-tags="{{ article.tags | join(',') }}">
+            <div class="cc-article-num">{{ loop.index }}</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="{{ article.url }}" target="_blank">{{ article.rewritten_title or article.title }}</a>
+              <div class="cc-article-meta"><span class="cc-source-tag">{{ article.source_name }}</span></div>
+            </div>
           </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
       {% endif %}
 
@@ -285,20 +307,22 @@
       {% for a in church_articles[:5] %}{% if seen_urls.append(a.url) %}{% endif %}{% endfor %}
       {% set remaining = articles[1:] | rejectattr('url', 'in', seen_urls) | list %}
       {% if remaining %}
-      <div class="cc-section-label" style="margin-top:1.5rem;">More from Today</div>
-      <div class="cc-article-list">
-        {% for article in remaining[:8] %}
-        <div class="cc-article">
-          <div class="cc-article-num">{{ loop.index }}</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="{{ article.url }}" target="_blank">{{ article.rewritten_title or article.title }}</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">{{ article.source_name }}</span>
-              {% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}
+      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="more">
+        <div class="cc-section-label">More from Today</div>
+        <div class="cc-article-list">
+          {% for article in remaining[:8] %}
+          <div class="cc-article" data-tags="{{ article.tags | join(',') }}">
+            <div class="cc-article-num">{{ loop.index }}</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="{{ article.url }}" target="_blank">{{ article.rewritten_title or article.title }}</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">{{ article.source_name }}</span>
+                {% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}
+              </div>
             </div>
           </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
       {% endif %}
 
@@ -323,7 +347,8 @@
       <div class="cc-sidebar-section">
         <div class="cc-sidebar-label">Browse by Topic</div>
         <div class="cc-topic-pills">
-          {% for tag in all_tags | sort %}<a class="cc-topic-pill" href="#">{{ tag }}</a>{% endfor %}
+          <a class="cc-topic-pill active" data-tag="all" href="#" onclick="filterByTag('all', this); return false;">All</a>
+          {% for tag in all_tags | sort %}<a class="cc-topic-pill" data-tag="{{ tag }}" href="#" onclick="filterByTag('{{ tag }}', this); return false;">{{ tag }}</a>{% endfor %}
         </div>
       </div>
       {% endif %}
@@ -346,5 +371,67 @@
   </div>
 
 </div>
+
+<script>
+  function filterByTag(tag, clickedPill) {
+    // Update active pill
+    document.querySelectorAll('.cc-topic-pill').forEach(p => p.classList.remove('active'));
+    clickedPill.classList.add('active');
+
+    const banner = document.getElementById('cc-filter-banner');
+    const label = document.getElementById('cc-filter-label');
+    const articles = document.querySelectorAll('.cc-article');
+    const sections = document.querySelectorAll('.cc-section-group');
+
+    if (tag === 'all') {
+      articles.forEach(a => a.classList.remove('hidden'));
+      sections.forEach(s => s.classList.remove('hidden'));
+      banner.classList.remove('visible');
+      return;
+    }
+
+    // Show/hide articles
+    articles.forEach(a => {
+      const tags = (a.dataset.tags || '').split(',').map(t => t.trim());
+      a.classList.toggle('hidden', !tags.includes(tag));
+    });
+
+    // Hide sections where all articles are hidden
+    sections.forEach(s => {
+      const visible = s.querySelectorAll('.cc-article:not(.hidden)').length;
+      s.classList.toggle('hidden', visible === 0);
+    });
+
+    // Show banner
+    label.textContent = 'Showing: ' + tag;
+    banner.classList.add('visible');
+  }
+
+  function clearFilter() {
+    const allPill = document.querySelector('.cc-topic-pill[data-tag="all"]');
+    filterByTag('all', allPill);
+    document.getElementById('cc-filter-banner').classList.remove('visible');
+  }
+
+  // On page load: hide any topic pills that have no matching filterable articles
+  document.addEventListener('DOMContentLoaded', function () {
+    const filterableArticles = document.querySelectorAll('.cc-article');
+    const pills = document.querySelectorAll('.cc-topic-pill[data-tag]');
+
+    pills.forEach(function (pill) {
+      const tag = pill.dataset.tag;
+      if (tag === 'all') return;
+
+      const hasMatch = Array.from(filterableArticles).some(function (a) {
+        const tags = (a.dataset.tags || '').split(',').map(function (t) { return t.trim(); });
+        return tags.includes(tag);
+      });
+
+      if (!hasMatch) {
+        pill.style.display = 'none';
+      }
+    });
+  });
+</script>
 </body>
 </html>

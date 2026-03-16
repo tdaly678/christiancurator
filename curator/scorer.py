@@ -37,7 +37,10 @@ You are a curator for a Christian news digest. Score and tag each article below.
 
 For each article, return a JSON object with:
   - "score": integer 1-10 (how relevant and valuable this is for a Christian audience)
-  - "tags": array of 1-3 lowercase topic strings (e.g. "theology", "culture", "missions", "politics", "church life", "apologetics")
+  - "tags": array of 1-3 tags chosen ONLY from this exact list:
+      theology, culture, apologetics, church life, missions, politics, devotional, news, family, prayer, suffering, work
+
+You MUST only use tags from that list. Do not invent new tags.
 
 Respond with ONLY a JSON array containing one object per article, in the same order.
 No explanation, no markdown, just the raw JSON array.
