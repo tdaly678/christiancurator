@@ -33,6 +33,22 @@ RECENCY_BOOSTS = [
 DIVERSITY_PENALTY_PER_EXTRA = 0.75  # -0.75 per article beyond the first
 MAX_PER_SOURCE = 5                  # hard cap per source
 
+WORLD_NEWS_FILTER_PROMPT = """\
+You are a filter for an evangelical Christian news digest. Review each article below and decide if it is relevant to an evangelical Protestant audience.
+
+An article IS relevant if it covers: Protestant or Catholic Christianity, religious freedom, church-state issues, persecution of Christians, Christian cultural influence, Christian leaders or institutions, faith and public life, or major religious events affecting Christians.
+
+An article is NOT relevant if it primarily covers: Islam, Hinduism, Buddhism, Judaism (unless related to Christian-Jewish relations), general spirituality, New Age, atheism, or topics with no direct Christian angle.
+
+For each article, return a JSON object with:
+  - "relevant": true or false
+
+Respond with ONLY a JSON array, one object per article, in the same order.
+
+Articles:
+{articles}
+"""
+
 BATCH_PROMPT = """\
 You are a curator for a Christian news digest. Score and tag each article below.
 
@@ -51,6 +67,31 @@ No explanation, no markdown, just the raw JSON array.
 Articles:
 {articles}
 """
+
+
+def filter_world_news_batch(articles: list[dict]) -> list[dict]:
+    """Filter world news articles for evangelical relevance. Returns only relevant articles."""
+    articles_text = "\n".join(
+        f"{i+1}. Title: {a['title']}\n   Summary: {a['summary'][:200]}"
+        for i, a in enumerate(articles)
+    )
+    try:
+        message = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=500,
+            messages=[{"role": "user", "content": WORLD_NEWS_FILTER_PROMPT.format(articles=articles_text)}],
+        )
+        raw = message.content[0].text.strip()
+        if raw.startswith("```"):
+            raw = raw.split("```")[1]
+            if raw.startswith("json"):
+                raw = raw[4:]
+            raw = raw.strip()
+        results = json.loads(raw)
+        return [a for i, a in enumerate(articles) if i < len(results) and results[i].get("relevant", False)]
+    except Exception as e:
+        print(f"  World news filter error: {e}")
+        return articles  # on error, keep all and let scoring sort it out
 
 
 def score_batch(articles: list[dict]) -> list[dict]:
@@ -134,6 +175,17 @@ def apply_diversity_penalty(articles: list[dict]) -> list[dict]:
 
 def score_articles(articles: list[dict]) -> list[dict]:
     """Score, boost, and diversify all articles. Returns sorted by final_score."""
+    # Step 0: Filter world news articles for evangelical relevance
+    world_news = [a for a in articles if a.get("source_type") == "world_news"]
+    christian = [a for a in articles if a.get("source_type") != "world_news"]
+    if world_news:
+        print(f"  Filtering {len(world_news)} world news articles for evangelical relevance...")
+        kept = []
+        for i in range(0, len(world_news), BATCH_SIZE):
+            kept.extend(filter_world_news_batch(world_news[i:i + BATCH_SIZE]))
+        print(f"  Kept {len(kept)} of {len(world_news)} world news articles after relevance filter")
+        articles = christian + kept
+
     # Step 1: Claude scoring in batches
     scored = []
     for i in range(0, len(articles), BATCH_SIZE):

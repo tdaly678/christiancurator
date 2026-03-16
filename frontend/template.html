@@ -384,12 +384,33 @@
       {% for a in theology_articles[:5] %}{% if seen_urls.append(a.url) %}{% endif %}{% endfor %}
       {% for a in culture_articles[:5] %}{% if seen_urls.append(a.url) %}{% endif %}{% endfor %}
       {% for a in church_articles[:5] %}{% if seen_urls.append(a.url) %}{% endif %}{% endfor %}
-      {% set remaining = articles[1:] | rejectattr('url', 'in', seen_urls) | list %}
+      {% set world_news_articles = articles[1:] | selectattr('source_type', 'equalto', 'world_news') | list %}
+      {% set remaining = articles[1:] | rejectattr('url', 'in', seen_urls) | rejectattr('source_type', 'equalto', 'world_news') | list %}
       {% if remaining %}
       <div class="cc-section-group" style="margin-top:1.5rem;" data-section="more">
         <div class="cc-section-label">More from Today</div>
         <div class="cc-article-list">
           {% for article in remaining[:8] %}
+          <div class="cc-article" data-tags="{{ article.tags | join(',') }}" data-personas="{{ article.personas | join(',') if article.personas else '' }}">
+            <div class="cc-article-num">{{ loop.index }}</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="{{ article.url }}" target="_blank">{{ article.rewritten_title or article.title }}</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">{{ article.source_name }}</span>
+                {% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      {% if world_news_articles %}
+      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="world news">
+        <div class="cc-section-label">World News</div>
+        <div class="cc-article-list">
+          {% for article in world_news_articles[:8] %}
           <div class="cc-article" data-tags="{{ article.tags | join(',') }}" data-personas="{{ article.personas | join(',') if article.personas else '' }}">
             <div class="cc-article-num">{{ loop.index }}</div>
             <div class="cc-article-content">

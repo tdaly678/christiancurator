@@ -73,6 +73,50 @@ SOURCES = [
         "category": "theology",
     },
 
+    # ── World News (religion sections of major outlets) ──
+    {
+        "name": "BBC Religion",
+        "url": "https://feeds.bbci.co.uk/news/religion/rss.xml",
+        "category": "news",
+        "source_type": "world_news",
+    },
+    {
+        "name": "NPR Religion",
+        "url": "https://feeds.npr.org/1017/rss.xml",
+        "category": "news",
+        "source_type": "world_news",
+    },
+    {
+        "name": "Fox News Faith",
+        "url": "https://moxie.foxnews.com/google-publisher/faith.xml",
+        "category": "news",
+        "source_type": "world_news",
+    },
+    {
+        "name": "The Guardian Religion",
+        "url": "https://www.theguardian.com/world/religion/rss",
+        "category": "news",
+        "source_type": "world_news",
+    },
+    {
+        "name": "Catholic News Agency",
+        "url": "https://www.catholicnewsagency.com/rss/latest.rss",
+        "category": "news",
+        "source_type": "world_news",
+    },
+    {
+        "name": "National Catholic Reporter",
+        "url": "https://www.ncronline.org/rss.xml",
+        "category": "news",
+        "source_type": "world_news",
+    },
+    {
+        "name": "NYT Religion",
+        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Religion.xml",
+        "category": "news",
+        "source_type": "world_news",
+    },
+
     # ── Evangelical Author Substacks ──
     {
         "name": "Karen Swallow Prior",

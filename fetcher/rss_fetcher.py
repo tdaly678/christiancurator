@@ -19,6 +19,7 @@ def fetch_feed(source: dict) -> list[dict]:
             articles.append({
                 "source_name": source["name"],
                 "source_category": source["category"],
+                "source_type": source.get("source_type", "christian"),
                 "title": entry.get("title", "").strip(),
                 "url": entry.get("link", ""),
                 "summary": entry.get("summary", ""),
