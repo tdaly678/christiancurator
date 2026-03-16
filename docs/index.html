@@ -145,6 +145,16 @@
       cursor: pointer; text-transform: uppercase; text-decoration: none;
     }
     .cc-topic-pill:hover { border-color: #2C4A2E; color: #2C4A2E; }
+    .cc-topic-pill.active { background: #2C4A2E; border-color: #2C4A2E; color: #fff; }
+    .cc-article.hidden { display: none; }
+    .cc-section-group.hidden { display: none; }
+    #cc-filter-banner {
+      display: none; background: #EFF4F0; border: 1px solid #B5CCB8; border-radius: 4px;
+      padding: 7px 12px; margin-bottom: 1rem; font-size: 12px; color: #2C4A2E;
+      justify-content: space-between; align-items: center;
+    }
+    #cc-filter-banner.visible { display: flex; }
+    #cc-filter-clear { cursor: pointer; font-weight: 600; color: #2C4A2E; text-decoration: underline; background: none; border: none; font-size: 12px; }
 
     /* Email box */
     .cc-email-box { background: #EFF4F0; border: 1px solid #B5CCB8; border-radius: 6px; padding: 1rem; }
@@ -193,190 +203,202 @@
       
       <div class="cc-lead-story">
         <div class="cc-section-label">Lead Story</div>
-        <a class="cc-lead-title" href="https://www.thegospelcoalition.org/article/intergenerational-discipleship-church/" target="_blank">Discipling Across Generations: Building Lasting Faith in Your Church</a>
+        <a class="cc-lead-title" href="https://www.thegospelcoalition.org/podcasts/everyday-pastor/practical-effects-big-god-theology/" target="_blank">How Believing in God's Greatness Transforms Daily Christian Living</a>
         <div class="cc-lead-meta">
           <span class="cc-source-tag">The Gospel Coalition</span>
-          <span>church life</span><span>·</span><span>theology</span>
+          <span>theology</span><span>·</span><span>devotional</span>
         </div>
         
-        <p class="cc-lead-excerpt">Every church member should understand his call to disciple, and we should provide clear paths for all to pass on their faith.</p>
+        <p class="cc-lead-excerpt">Ligon Duncan and Matt Smethurst discuss how a “big God” theology brings deep pastoral comfort, fuels humility, strengthens assurance, and stabilizes believers in suffering.</p>
         
       </div>
       
 
       
 
+      <!-- Filter banner -->
+      <div id="cc-filter-banner">
+        <span id="cc-filter-label">Showing: all topics</span>
+        <button id="cc-filter-clear" onclick="clearFilter()">Show all</button>
+      </div>
+
       
       
-      <div class="cc-section-label">Theology &amp; Doctrine</div>
-      <div class="cc-article-list">
-        
-        <div class="cc-article">
-          <div class="cc-article-num">1</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/hadoti-bible-translation-rajasthan-church-missionary/" target="_blank">Bible Translation Brings God Closer to India's Hadoti-Speaking Communities</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">Christianity Today</span>
-              <span>missions</span><span>church life</span>
+      <div class="cc-section-group" data-section="theology">
+        <div class="cc-section-label">Theology &amp; Doctrine</div>
+        <div class="cc-article-list">
+          
+          <div class="cc-article" data-tags="missions,theology">
+            <div class="cc-article-num">1</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/hadoti-bible-translation-rajasthan-church-missionary/" target="_blank">Bible Translation Brings God's Word Closer to Hadoti Language Speakers</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">Christianity Today</span>
+                <span>missions</span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">2</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://relevantmagazine.com/faith/how-can-we-trust-god-when-we-dont-understand-his-ways/" target="_blank">Finding Faith When God's Plans Remain a Mystery</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">Relevant Magazine</span>
-              <span>church life</span>
+          
+          <div class="cc-article" data-tags="prayer,theology">
+            <div class="cc-article-num">2</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://mereorthodoxy.com/on-praying-psalm-130" target="_blank">Praying Psalm 130: Finding Hope in God's Forgiveness</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">Mere Orthodoxy</span>
+                <span>prayer</span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">3</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://mereorthodoxy.com/on-praying-psalm-130" target="_blank">Turning to Psalm 130: A Guide to Praying From the Depths</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">Mere Orthodoxy</span>
-              <span>church life</span>
+          
+          <div class="cc-article" data-tags="theology,devotional">
+            <div class="cc-article-num">3</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://feed.desiringgod.org/link/22977/17278450/the-beatitudes-our-kings-call-to-all-joy" target="_blank">The Beatitudes: Jesus' Blueprint for True and Lasting Joy</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">Desiring God</span>
+                <span>devotional</span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">4</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://feed.desiringgod.org/link/22977/17287147/he-sweetens-our-joys-with-his-sorrows" target="_blank">God's Suffering Deepens Our Joy in Him</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">Desiring God</span>
-              <span>spiritual growth</span>
+          
+          <div class="cc-article" data-tags="theology,devotional">
+            <div class="cc-article-num">4</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://feed.desiringgod.org/link/22977/17241519/he-dawns-as-prince-of-peace" target="_blank">The Prince of Peace Rises: Christ's Promise Fulfilled</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">Desiring God</span>
+                <span>devotional</span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">5</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="http://feeds.ligonier.org/~/950000762/0/ligonierministriesblog" target="_blank">Understanding Sin: A Guide for Discerning Right From Wrong</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">Ligonier Ministries</span>
-              <span>apologetics</span>
+          
+          <div class="cc-article" data-tags="theology">
+            <div class="cc-article-num">5</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://www.thegospelcoalition.org/podcasts/carson-center/662265/" target="_blank">How Jesus Read Scripture: A Model for Our Faith</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">The Gospel Coalition</span>
+                
+              </div>
             </div>
           </div>
+          
         </div>
-        
       </div>
       
 
       
       
-      <div class="cc-section-label" style="margin-top:1.5rem;">Culture &amp; Society</div>
-      <div class="cc-article-list">
-        
-        <div class="cc-article">
-          <div class="cc-article-num">1</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/died-john-perkins-evangelicals-racial-reconciliation-mississippi/" target="_blank">John M. Perkins, Champion of Racial Reconciliation, Dies</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">Christianity Today</span>
-              <span>politics</span><span>theology</span>
+      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="culture">
+        <div class="cc-section-label">Culture &amp; Society</div>
+        <div class="cc-article-list">
+          
+          <div class="cc-article" data-tags="apologetics,culture">
+            <div class="cc-article-num">1</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/died-john-perkins-evangelicals-racial-reconciliation-mississippi/" target="_blank">John M. Perkins, Champion of Racial Reconciliation, Dies at 88</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">Christianity Today</span>
+                <span>apologetics</span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">2</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://relevantmagazine.com/culture/wesley-huff-shares-the-gospel-on-the-diary-of-a-ceo-podcast/" target="_blank">Wesley Huff Shares Gospel Message on Popular CEO Podcast</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">Relevant Magazine</span>
-              <span>missions</span>
+          
+          <div class="cc-article" data-tags="church life,culture">
+            <div class="cc-article-num">2</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://careynieuwhof.com/episode-790/" target="_blank">Women in Church: Addressing Key Concerns and Pathways Forward</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">Carey Nieuwhof</span>
+                <span>church life</span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">3</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://careynieuwhof.com/episode-787/" target="_blank">Pastoring Angry People: Wisdom for Difficult Leadership Conversations</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">Carey Nieuwhof</span>
-              <span>church life</span><span>leadership</span>
+          
+          <div class="cc-article" data-tags="church life,culture">
+            <div class="cc-article-num">3</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://careynieuwhof.com/episode-789/" target="_blank">Beth Moore on Discerning When to Leave Ministry and Misusing Scripture</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">Carey Nieuwhof</span>
+                <span>church life</span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">4</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/infanticide-dropping-in-africa-abandonment-continues/" target="_blank">Child Abandonment Persists in Africa Despite Declining Infanticide Rates</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">Christianity Today</span>
-              <span>church life</span><span>apologetics</span>
+          
+          <div class="cc-article" data-tags="culture">
+            <div class="cc-article-num">4</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://karenswallowprior.substack.com/p/kindness-is-not-optional" target="_blank">Kindness as a Christian Calling, Not a Choice</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">Karen Swallow Prior</span>
+                
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">5</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://firstthings.com/when-the-bells-stop-ringing/" target="_blank">When Church Bells Fall Silent: What It Means for Faith Communities</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">First Things</span>
-              <span>apologetics</span>
+          
+          <div class="cc-article" data-tags="missions,culture">
+            <div class="cc-article-num">5</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://mereorthodoxy.com/evangelism-in-a-world-of-control-and-aggression" target="_blank">Sharing Faith Amid Cultural Hostility and Division</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">Mere Orthodoxy</span>
+                <span>missions</span>
+              </div>
             </div>
           </div>
+          
         </div>
-        
       </div>
       
 
       
       
-      <div class="cc-section-label" style="margin-top:1.5rem;">Church Life</div>
-      <div class="cc-article-list">
-        
-        <div class="cc-article">
-          <div class="cc-article-num">1</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/hadoti-bible-translation-rajasthan-church-missionary/" target="_blank">Bible Translation Brings God Closer to India's Hadoti-Speaking Communities</a>
-            <div class="cc-article-meta"><span class="cc-source-tag">Christianity Today</span></div>
+      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="church life">
+        <div class="cc-section-label">Church Life</div>
+        <div class="cc-article-list">
+          
+          <div class="cc-article" data-tags="church life">
+            <div class="cc-article-num">1</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://www.thegospelcoalition.org/article/intergenerational-discipleship-church/" target="_blank">Discipling Younger Generations: Building Faith Across Ages</a>
+              <div class="cc-article-meta"><span class="cc-source-tag">The Gospel Coalition</span></div>
+            </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">2</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://relevantmagazine.com/faith/how-can-we-trust-god-when-we-dont-understand-his-ways/" target="_blank">Finding Faith When God's Plans Remain a Mystery</a>
-            <div class="cc-article-meta"><span class="cc-source-tag">Relevant Magazine</span></div>
+          
+          <div class="cc-article" data-tags="missions,church life">
+            <div class="cc-article-num">2</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://www.9marks.org/2018/08/building-healthy-churches-in-sub-saharan-africa/?utm_source=rss&utm_medium=rss&utm_campaign=building-healthy-churches-in-sub-saharan-africa" target="_blank">Strengthening Spiritual Health in Sub-Saharan African Churches</a>
+              <div class="cc-article-meta"><span class="cc-source-tag">9Marks</span></div>
+            </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">3</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://mereorthodoxy.com/on-praying-psalm-130" target="_blank">Turning to Psalm 130: A Guide to Praying From the Depths</a>
-            <div class="cc-article-meta"><span class="cc-source-tag">Mere Orthodoxy</span></div>
+          
+          <div class="cc-article" data-tags="church life">
+            <div class="cc-article-num">3</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://sacredslang.substack.com/p/3-ways-to-create-a-bible-reading" target="_blank">Creating a Bible Reading Culture: Three Practical Approaches</a>
+              <div class="cc-article-meta"><span class="cc-source-tag">Kyle Worley</span></div>
+            </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">4</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://www.thegospelcoalition.org/podcasts/everyday-pastor/practical-effects-big-god-theology/" target="_blank">How Belief in God's Greatness Transforms Daily Christian Living</a>
-            <div class="cc-article-meta"><span class="cc-source-tag">The Gospel Coalition</span></div>
+          
+          <div class="cc-article" data-tags="church life,culture">
+            <div class="cc-article-num">4</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://careynieuwhof.com/episode-790/" target="_blank">Women in Church: Addressing Key Concerns and Pathways Forward</a>
+              <div class="cc-article-meta"><span class="cc-source-tag">Carey Nieuwhof</span></div>
+            </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">5</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="http://feeds.ligonier.org/~/949562321/0/ligonierministriesblog" target="_blank">What the Bible Reveals About King David's Life and Legacy</a>
-            <div class="cc-article-meta"><span class="cc-source-tag">Ligonier Ministries</span></div>
+          
+          <div class="cc-article" data-tags="prayer,church life">
+            <div class="cc-article-num">5</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://www.9marks.org/2018/05/praying-together/?utm_source=rss&utm_medium=rss&utm_campaign=praying-together" target="_blank">Praying Together: The Power of United Intercession</a>
+              <div class="cc-article-meta"><span class="cc-source-tag">9Marks</span></div>
+            </div>
           </div>
+          
         </div>
-        
       </div>
       
 
@@ -386,97 +408,99 @@
       
       
       
-      <div class="cc-section-label" style="margin-top:1.5rem;">More from Today</div>
-      <div class="cc-article-list">
-        
-        <div class="cc-article">
-          <div class="cc-article-num">1</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://feed.desiringgod.org/link/22977/17278450/the-beatitudes-our-kings-call-to-all-joy" target="_blank">The Beatitudes: Jesus' Invitation to True Happiness and Blessing</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">Desiring God</span>
-              <span>theology</span><span>spiritual growth</span>
+      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="more">
+        <div class="cc-section-label">More from Today</div>
+        <div class="cc-article-list">
+          
+          <div class="cc-article" data-tags="suffering,prayer">
+            <div class="cc-article-num">1</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://relevantmagazine.com/culture/compassion-fatigue-is-one-of-the-biggest-spiritual-challenges-of-the-internet-age/" target="_blank">Compassion Fatigue: A Spiritual Challenge for Digital Age Christians</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">Relevant Magazine</span>
+                <span>suffering</span><span>prayer</span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">2</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://mereorthodoxy.com/30-key-moments-in-the-history-of-christianity-an-interview-with-mark-w.-graham" target="_blank">Christian History Scholar Discusses 30 Pivotal Moments Shaping the Faith</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">Mere Orthodoxy</span>
-              <span>theology</span><span>church life</span>
+          
+          <div class="cc-article" data-tags="devotional,suffering">
+            <div class="cc-article-num">2</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://firstthings.com/when-the-bells-stop-ringing/" target="_blank">Church Closures: What Happens When Communities Lose Their Spiritual Home</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">First Things</span>
+                <span>devotional</span><span>suffering</span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">3</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://www.9marks.org/2018/08/building-healthy-churches-in-sub-saharan-africa/?utm_source=rss&utm_medium=rss&utm_campaign=building-healthy-churches-in-sub-saharan-africa" target="_blank">Building Healthy Churches Across Sub-Saharan Africa</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">9Marks</span>
-              <span>missions</span><span>church life</span>
+          
+          <div class="cc-article" data-tags="family,devotional">
+            <div class="cc-article-num">3</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/gospel-parenting-during-the-little-years/" target="_blank">Raising Children in Faith: A Guide to Gospel-Centered Parenting</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">Jen Wilkin</span>
+                <span>family</span><span>devotional</span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">4</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://firstthings.com/i-run-and-pray-the-rosary/" target="_blank">Running and Prayer: How One Person Unites Faith with Fitness</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">First Things</span>
-              <span>church life</span><span>theology</span>
+          
+          <div class="cc-article" data-tags="theology,devotional">
+            <div class="cc-article-num">4</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://feed.desiringgod.org/link/22977/17238741/he-dawns-as-everlasting-father" target="_blank">The Eternal Father: Christ's Timeless Role in God's Plan</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">Desiring God</span>
+                <span>theology</span><span>devotional</span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">5</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/gospel-parenting-during-the-little-years/" target="_blank">Gospel Parenting: Nurturing Faith in Your Young Children</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">Jen Wilkin</span>
-              <span>church life</span><span>theology</span>
+          
+          <div class="cc-article" data-tags="devotional,prayer">
+            <div class="cc-article-num">5</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://relevantmagazine.com/faith/how-can-we-trust-god-when-we-dont-understand-his-ways/" target="_blank">Finding Faith When God's Ways Remain Beyond Our Understanding</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">Relevant Magazine</span>
+                <span>devotional</span><span>prayer</span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">6</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://careynieuwhof.com/measuring-evangelism-health/" target="_blank">Assessing Your Church's Evangelism: A Faithful Self-Evaluation</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">Carey Nieuwhof</span>
-              <span>church life</span><span>evangelism</span><span>leadership</span>
+          
+          <div class="cc-article" data-tags="prayer,suffering">
+            <div class="cc-article-num">6</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://firstthings.com/i-run-and-pray-the-rosary/" target="_blank">Running and Praying: How One Faith Deepens Through Movement</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">First Things</span>
+                <span>prayer</span><span>suffering</span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">7</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://www.thegospelcoalition.org/podcasts/carson-center/662265/" target="_blank">How Jesus Read Scripture: A Model for Our Study</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">The Gospel Coalition</span>
-              <span>theology</span><span>apologetics</span>
+          
+          <div class="cc-article" data-tags="theology,news">
+            <div class="cc-article-num">7</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://mereorthodoxy.com/30-key-moments-in-the-history-of-christianity-an-interview-with-mark-w.-graham" target="_blank">Christianity's 30 Pivotal Moments: Insights From Historian Mark W. Graham</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">Mere Orthodoxy</span>
+                <span>theology</span><span>news</span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="cc-article">
-          <div class="cc-article-num">8</div>
-          <div class="cc-article-content">
-            <a class="cc-article-title" href="https://feed.desiringgod.org/link/22977/17241519/he-dawns-as-prince-of-peace" target="_blank">The Prince of Peace: His Coming and Promise</a>
-            <div class="cc-article-meta">
-              <span class="cc-source-tag">Desiring God</span>
-              <span>theology</span><span>devotional</span>
+          
+          <div class="cc-article" data-tags="devotional">
+            <div class="cc-article-num">8</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://sacredslang.substack.com/p/bible-reading-isnt-about-you" target="_blank">Bible Reading: Discovering God's Purpose Beyond Ourselves</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">Kyle Worley</span>
+                <span>devotional</span>
+              </div>
             </div>
           </div>
+          
         </div>
-        
       </div>
       
 
@@ -490,27 +514,27 @@
         
         <div class="cc-trending-item">
           <div class="cc-trending-num">1</div>
-          <a class="cc-trending-title" href="https://www.thegospelcoalition.org/article/intergenerational-discipleship-church/" target="_blank">Discipling Across Generations: Building Lasting Faith in Your Church</a>
+          <a class="cc-trending-title" href="https://www.thegospelcoalition.org/podcasts/everyday-pastor/practical-effects-big-god-theology/" target="_blank">How Believing in God's Greatness Transforms Daily Christian Living</a>
         </div>
         
         <div class="cc-trending-item">
           <div class="cc-trending-num">2</div>
-          <a class="cc-trending-title" href="https://www.christianitytoday.com/2026/03/hadoti-bible-translation-rajasthan-church-missionary/" target="_blank">Bible Translation Brings God Closer to India's Hadoti-Speaking Communities</a>
+          <a class="cc-trending-title" href="https://www.christianitytoday.com/2026/03/hadoti-bible-translation-rajasthan-church-missionary/" target="_blank">Bible Translation Brings God's Word Closer to Hadoti Language Speakers</a>
         </div>
         
         <div class="cc-trending-item">
           <div class="cc-trending-num">3</div>
-          <a class="cc-trending-title" href="https://relevantmagazine.com/faith/how-can-we-trust-god-when-we-dont-understand-his-ways/" target="_blank">Finding Faith When God's Plans Remain a Mystery</a>
+          <a class="cc-trending-title" href="https://mereorthodoxy.com/on-praying-psalm-130" target="_blank">Praying Psalm 130: Finding Hope in God's Forgiveness</a>
         </div>
         
         <div class="cc-trending-item">
           <div class="cc-trending-num">4</div>
-          <a class="cc-trending-title" href="https://mereorthodoxy.com/on-praying-psalm-130" target="_blank">Turning to Psalm 130: A Guide to Praying From the Depths</a>
+          <a class="cc-trending-title" href="https://feed.desiringgod.org/link/22977/17278450/the-beatitudes-our-kings-call-to-all-joy" target="_blank">The Beatitudes: Jesus' Blueprint for True and Lasting Joy</a>
         </div>
         
         <div class="cc-trending-item">
           <div class="cc-trending-num">5</div>
-          <a class="cc-trending-title" href="https://feed.desiringgod.org/link/22977/17287147/he-sweetens-our-joys-with-his-sorrows" target="_blank">God's Suffering Deepens Our Joy in Him</a>
+          <a class="cc-trending-title" href="https://relevantmagazine.com/culture/compassion-fatigue-is-one-of-the-biggest-spiritual-challenges-of-the-internet-age/" target="_blank">Compassion Fatigue: A Spiritual Challenge for Digital Age Christians</a>
         </div>
         
       </div>
@@ -521,7 +545,8 @@
       <div class="cc-sidebar-section">
         <div class="cc-sidebar-label">Browse by Topic</div>
         <div class="cc-topic-pills">
-          <a class="cc-topic-pill" href="#">apologetics</a><a class="cc-topic-pill" href="#">bible study</a><a class="cc-topic-pill" href="#">church life</a><a class="cc-topic-pill" href="#">culture</a><a class="cc-topic-pill" href="#">devotional</a><a class="cc-topic-pill" href="#">evangelism</a><a class="cc-topic-pill" href="#">leadership</a><a class="cc-topic-pill" href="#">mental health</a><a class="cc-topic-pill" href="#">missions</a><a class="cc-topic-pill" href="#">politics</a><a class="cc-topic-pill" href="#">spiritual growth</a><a class="cc-topic-pill" href="#">theology</a>
+          <a class="cc-topic-pill active" data-tag="all" href="#" onclick="filterByTag('all', this); return false;">All</a>
+          <a class="cc-topic-pill" data-tag="apologetics" href="#" onclick="filterByTag('apologetics', this); return false;">apologetics</a><a class="cc-topic-pill" data-tag="church life" href="#" onclick="filterByTag('church life', this); return false;">church life</a><a class="cc-topic-pill" data-tag="culture" href="#" onclick="filterByTag('culture', this); return false;">culture</a><a class="cc-topic-pill" data-tag="devotional" href="#" onclick="filterByTag('devotional', this); return false;">devotional</a><a class="cc-topic-pill" data-tag="family" href="#" onclick="filterByTag('family', this); return false;">family</a><a class="cc-topic-pill" data-tag="missions" href="#" onclick="filterByTag('missions', this); return false;">missions</a><a class="cc-topic-pill" data-tag="news" href="#" onclick="filterByTag('news', this); return false;">news</a><a class="cc-topic-pill" data-tag="politics" href="#" onclick="filterByTag('politics', this); return false;">politics</a><a class="cc-topic-pill" data-tag="prayer" href="#" onclick="filterByTag('prayer', this); return false;">prayer</a><a class="cc-topic-pill" data-tag="suffering" href="#" onclick="filterByTag('suffering', this); return false;">suffering</a><a class="cc-topic-pill" data-tag="theology" href="#" onclick="filterByTag('theology', this); return false;">theology</a>
         </div>
       </div>
       
@@ -544,5 +569,67 @@
   </div>
 
 </div>
+
+<script>
+  function filterByTag(tag, clickedPill) {
+    // Update active pill
+    document.querySelectorAll('.cc-topic-pill').forEach(p => p.classList.remove('active'));
+    clickedPill.classList.add('active');
+
+    const banner = document.getElementById('cc-filter-banner');
+    const label = document.getElementById('cc-filter-label');
+    const articles = document.querySelectorAll('.cc-article');
+    const sections = document.querySelectorAll('.cc-section-group');
+
+    if (tag === 'all') {
+      articles.forEach(a => a.classList.remove('hidden'));
+      sections.forEach(s => s.classList.remove('hidden'));
+      banner.classList.remove('visible');
+      return;
+    }
+
+    // Show/hide articles
+    articles.forEach(a => {
+      const tags = (a.dataset.tags || '').split(',').map(t => t.trim());
+      a.classList.toggle('hidden', !tags.includes(tag));
+    });
+
+    // Hide sections where all articles are hidden
+    sections.forEach(s => {
+      const visible = s.querySelectorAll('.cc-article:not(.hidden)').length;
+      s.classList.toggle('hidden', visible === 0);
+    });
+
+    // Show banner
+    label.textContent = 'Showing: ' + tag;
+    banner.classList.add('visible');
+  }
+
+  function clearFilter() {
+    const allPill = document.querySelector('.cc-topic-pill[data-tag="all"]');
+    filterByTag('all', allPill);
+    document.getElementById('cc-filter-banner').classList.remove('visible');
+  }
+
+  // On page load: hide any topic pills that have no matching filterable articles
+  document.addEventListener('DOMContentLoaded', function () {
+    const filterableArticles = document.querySelectorAll('.cc-article');
+    const pills = document.querySelectorAll('.cc-topic-pill[data-tag]');
+
+    pills.forEach(function (pill) {
+      const tag = pill.dataset.tag;
+      if (tag === 'all') return;
+
+      const hasMatch = Array.from(filterableArticles).some(function (a) {
+        const tags = (a.dataset.tags || '').split(',').map(function (t) { return t.trim(); });
+        return tags.includes(tag);
+      });
+
+      if (!hasMatch) {
+        pill.style.display = 'none';
+      }
+    });
+  });
+</script>
 </body>
 </html>
