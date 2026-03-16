@@ -16,6 +16,7 @@ from fetcher.rss_fetcher import fetch_all
 from curator.scorer import score_articles
 from curator.title_rewriter import rewrite_titles
 from curator.point_counterpoint import build_point_counterpoint
+from curator.email_sender import send_email
 from output import OUTPUT_JSON_PATH, write_output, save_yesterday, load_yesterday
 from frontend import render_html
 
@@ -52,6 +53,11 @@ def main():
     write_output(articles, pairings)
     save_yesterday(articles)
     render_html(articles, pairings, yesterday_articles)
+
+    # --- Send Email ---
+    print("\n[5/5] Sending daily email via Beehiiv...")
+    send_email(articles, yesterday_articles)
+
     print("=== Pipeline Complete ===")
     print(f"Output written to {OUTPUT_JSON_PATH}")
 
