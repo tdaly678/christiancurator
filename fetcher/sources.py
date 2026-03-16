@@ -53,6 +53,11 @@ SOURCES = [
 
     # ── Culture & Public Theology ──
     {
+        "name": "American Reformer",
+        "url": "https://americanreformer.org/feed/",
+        "category": "culture",
+    },
+    {
         "name": "First Things",
         "url": "https://www.firstthings.com/rss",
         "category": "culture",
