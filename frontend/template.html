@@ -152,10 +152,29 @@
     .cc-topic-pill {
       background: #f0ede8; border: 1px solid #ddd; border-radius: 2px; padding: 4px 10px;
       font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; color: #666;
-      cursor: pointer; text-transform: uppercase; text-decoration: none;
+      cursor: pointer; text-transform: uppercase; text-decoration: none; white-space: nowrap;
     }
     .cc-topic-pill:hover { border-color: #2C4A2E; color: #2C4A2E; }
     .cc-topic-pill.active { background: #2C4A2E; border-color: #2C4A2E; color: #fff; }
+
+    /* Persona pills */
+    .cc-persona-pills { display: flex; flex-wrap: wrap; gap: 5px; }
+    .cc-persona-pill {
+      background: #f0ede8; border: 1px solid #ddd; border-radius: 2px; padding: 4px 10px;
+      font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; color: #666;
+      cursor: pointer; text-transform: uppercase; text-decoration: none; white-space: nowrap;
+    }
+    .cc-persona-pill:hover { border-color: #5C3A6E; color: #5C3A6E; }
+    .cc-persona-pill.active { background: #5C3A6E; border-color: #5C3A6E; color: #fff; }
+
+    /* Mobile: horizontal scroll for pill rows */
+    @media (max-width: 700px) {
+      .cc-topic-pills, .cc-persona-pills {
+        flex-wrap: nowrap; overflow-x: auto;
+        -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 4px;
+      }
+      .cc-topic-pills::-webkit-scrollbar, .cc-persona-pills::-webkit-scrollbar { display: none; }
+    }
     .cc-article.hidden { display: none; }
     .cc-section-group.hidden { display: none; }
     #cc-filter-banner {
@@ -257,7 +276,7 @@
         <div class="cc-section-label">Theology &amp; Doctrine</div>
         <div class="cc-article-list">
           {% for article in theology_articles[:5] %}
-          <div class="cc-article" data-tags="{{ article.tags | join(',') }}">
+          <div class="cc-article" data-tags="{{ article.tags | join(',') }}" data-personas="{{ article.personas | join(',') if article.personas else '' }}">
             <div class="cc-article-num">{{ loop.index }}</div>
             <div class="cc-article-content">
               <a class="cc-article-title" href="{{ article.url }}" target="_blank">{{ article.rewritten_title or article.title }}</a>
@@ -278,7 +297,7 @@
         <div class="cc-section-label">Culture &amp; Society</div>
         <div class="cc-article-list">
           {% for article in culture_articles[:5] %}
-          <div class="cc-article" data-tags="{{ article.tags | join(',') }}">
+          <div class="cc-article" data-tags="{{ article.tags | join(',') }}" data-personas="{{ article.personas | join(',') if article.personas else '' }}">
             <div class="cc-article-num">{{ loop.index }}</div>
             <div class="cc-article-content">
               <a class="cc-article-title" href="{{ article.url }}" target="_blank">{{ article.rewritten_title or article.title }}</a>
@@ -299,7 +318,7 @@
         <div class="cc-section-label">Church Life</div>
         <div class="cc-article-list">
           {% for article in church_articles[:5] %}
-          <div class="cc-article" data-tags="{{ article.tags | join(',') }}">
+          <div class="cc-article" data-tags="{{ article.tags | join(',') }}" data-personas="{{ article.personas | join(',') if article.personas else '' }}">
             <div class="cc-article-num">{{ loop.index }}</div>
             <div class="cc-article-content">
               <a class="cc-article-title" href="{{ article.url }}" target="_blank">{{ article.rewritten_title or article.title }}</a>
@@ -321,7 +340,7 @@
         <div class="cc-section-label">More from Today</div>
         <div class="cc-article-list">
           {% for article in remaining[:8] %}
-          <div class="cc-article" data-tags="{{ article.tags | join(',') }}">
+          <div class="cc-article" data-tags="{{ article.tags | join(',') }}" data-personas="{{ article.personas | join(',') if article.personas else '' }}">
             <div class="cc-article-num">{{ loop.index }}</div>
             <div class="cc-article-content">
               <a class="cc-article-title" href="{{ article.url }}" target="_blank">{{ article.rewritten_title or article.title }}</a>
@@ -363,6 +382,18 @@
       </div>
       {% endif %}
 
+      {% set all_personas = [] %}
+      {% for article in articles %}{% if article.personas %}{% for p in article.personas %}{% if p not in all_personas %}{% set _ = all_personas.append(p) %}{% endif %}{% endfor %}{% endif %}{% endfor %}
+      {% if all_personas %}
+      <div class="cc-sidebar-section">
+        <div class="cc-sidebar-label">Sort by Reader</div>
+        <div class="cc-persona-pills">
+          <a class="cc-persona-pill active" data-persona="all" href="#" onclick="filterByPersona('all', this); return false;">All</a>
+          {% for persona in all_personas | sort %}<a class="cc-persona-pill" data-persona="{{ persona }}" href="#" onclick="filterByPersona('{{ persona }}', this); return false;">{{ persona }}</a>{% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
 
     </div>
   </div>
@@ -381,63 +412,88 @@
 </div>
 
 <script>
-  function filterByTag(tag, clickedPill) {
-    // Update active pill
-    document.querySelectorAll('.cc-topic-pill').forEach(p => p.classList.remove('active'));
-    clickedPill.classList.add('active');
+  var activeTag = 'all';
+  var activePersona = 'all';
 
+  function applyFilters() {
     const banner = document.getElementById('cc-filter-banner');
     const label = document.getElementById('cc-filter-label');
     const articles = document.querySelectorAll('.cc-article');
     const sections = document.querySelectorAll('.cc-section-group');
 
-    if (tag === 'all') {
-      articles.forEach(a => a.classList.remove('hidden'));
-      sections.forEach(s => s.classList.remove('hidden'));
-      banner.classList.remove('visible');
-      return;
-    }
-
-    // Show/hide articles
-    articles.forEach(a => {
-      const tags = (a.dataset.tags || '').split(',').map(t => t.trim());
-      a.classList.toggle('hidden', !tags.includes(tag));
+    articles.forEach(function (a) {
+      const tags = (a.dataset.tags || '').split(',').map(function (t) { return t.trim(); });
+      const personas = (a.dataset.personas || '').split(',').map(function (t) { return t.trim(); });
+      const tagMatch = activeTag === 'all' || tags.includes(activeTag);
+      const personaMatch = activePersona === 'all' || personas.includes(activePersona);
+      a.classList.toggle('hidden', !(tagMatch && personaMatch));
     });
 
-    // Hide sections where all articles are hidden
-    sections.forEach(s => {
+    sections.forEach(function (s) {
       const visible = s.querySelectorAll('.cc-article:not(.hidden)').length;
       s.classList.toggle('hidden', visible === 0);
     });
 
-    // Show banner
-    label.textContent = 'Showing: ' + tag;
-    banner.classList.add('visible');
+    // Update banner
+    if (activeTag === 'all' && activePersona === 'all') {
+      banner.classList.remove('visible');
+    } else {
+      var parts = [];
+      if (activeTag !== 'all') parts.push(activeTag);
+      if (activePersona !== 'all') parts.push(activePersona);
+      label.textContent = 'Showing: ' + parts.join(' · ');
+      banner.classList.add('visible');
+    }
+  }
+
+  function filterByTag(tag, clickedPill) {
+    document.querySelectorAll('.cc-topic-pill').forEach(function (p) { p.classList.remove('active'); });
+    clickedPill.classList.add('active');
+    activeTag = tag;
+    applyFilters();
+  }
+
+  function filterByPersona(persona, clickedPill) {
+    document.querySelectorAll('.cc-persona-pill').forEach(function (p) { p.classList.remove('active'); });
+    clickedPill.classList.add('active');
+    activePersona = persona;
+    applyFilters();
   }
 
   function clearFilter() {
-    const allPill = document.querySelector('.cc-topic-pill[data-tag="all"]');
-    filterByTag('all', allPill);
+    activeTag = 'all';
+    activePersona = 'all';
+    const allTagPill = document.querySelector('.cc-topic-pill[data-tag="all"]');
+    const allPersonaPill = document.querySelector('.cc-persona-pill[data-persona="all"]');
+    if (allTagPill) allTagPill.classList.add('active');
+    document.querySelectorAll('.cc-topic-pill:not([data-tag="all"])').forEach(function (p) { p.classList.remove('active'); });
+    if (allPersonaPill) allPersonaPill.classList.add('active');
+    document.querySelectorAll('.cc-persona-pill:not([data-persona="all"])').forEach(function (p) { p.classList.remove('active'); });
+    document.querySelectorAll('.cc-article').forEach(function (a) { a.classList.remove('hidden'); });
+    document.querySelectorAll('.cc-section-group').forEach(function (s) { s.classList.remove('hidden'); });
     document.getElementById('cc-filter-banner').classList.remove('visible');
   }
 
-  // On page load: hide any topic pills that have no matching filterable articles
+  // On page load: hide pills with no matching articles
   document.addEventListener('DOMContentLoaded', function () {
     const filterableArticles = document.querySelectorAll('.cc-article');
-    const pills = document.querySelectorAll('.cc-topic-pill[data-tag]');
 
-    pills.forEach(function (pill) {
+    document.querySelectorAll('.cc-topic-pill[data-tag]').forEach(function (pill) {
       const tag = pill.dataset.tag;
       if (tag === 'all') return;
-
       const hasMatch = Array.from(filterableArticles).some(function (a) {
-        const tags = (a.dataset.tags || '').split(',').map(function (t) { return t.trim(); });
-        return tags.includes(tag);
+        return (a.dataset.tags || '').split(',').map(function (t) { return t.trim(); }).includes(tag);
       });
+      if (!hasMatch) pill.style.display = 'none';
+    });
 
-      if (!hasMatch) {
-        pill.style.display = 'none';
-      }
+    document.querySelectorAll('.cc-persona-pill[data-persona]').forEach(function (pill) {
+      const persona = pill.dataset.persona;
+      if (persona === 'all') return;
+      const hasMatch = Array.from(filterableArticles).some(function (a) {
+        return (a.dataset.personas || '').split(',').map(function (t) { return t.trim(); }).includes(persona);
+      });
+      if (!hasMatch) pill.style.display = 'none';
     });
   });
 </script>

@@ -5,6 +5,7 @@ Each article receives:
   - score:       int 1-10 from Claude (content quality & relevance)
   - final_score: float after recency boost and diversity penalty
   - tags:        list of topic strings
+  - personas:    list of reader persona strings
 """
 
 import os
@@ -39,8 +40,10 @@ For each article, return a JSON object with:
   - "score": integer 1-10 (how relevant and valuable this is for a Christian audience)
   - "tags": array of 1-3 tags chosen ONLY from this exact list:
       theology, culture, apologetics, church life, missions, politics, devotional, news, family, prayer, suffering, work
+  - "personas": array of 1-3 reader personas who would find this most relevant, chosen ONLY from this exact list:
+      pastor, professional, parent, student, women, seeker
 
-You MUST only use tags from that list. Do not invent new tags.
+You MUST only use tags and personas from those exact lists. Do not invent new values.
 
 Respond with ONLY a JSON array containing one object per article, in the same order.
 No explanation, no markdown, just the raw JSON array.
@@ -77,14 +80,17 @@ def score_batch(articles: list[dict]) -> list[dict]:
             if i < len(results):
                 article["score"] = results[i].get("score", 5)
                 article["tags"] = results[i].get("tags", [])
+                article["personas"] = results[i].get("personas", [])
             else:
                 article["score"] = 5
                 article["tags"] = []
+                article["personas"] = []
     except Exception as e:
         print(f"  Batch scoring error: {e}")
         for article in articles:
             article["score"] = 5
             article["tags"] = []
+            article["personas"] = []
     return articles
 
 
