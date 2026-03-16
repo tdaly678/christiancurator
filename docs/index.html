@@ -552,18 +552,19 @@
       </div>
       
 
-      <div class="cc-sidebar-section">
-        <div class="cc-email-box" id="cc-email-box">
-          <p>Get the 10 best articles in your inbox every morning.</p>
-          <iframe name="beehiiv-hidden" style="display:none;" tabindex="-1" aria-hidden="true"></iframe>
-          <form id="cc-subscribe-form" action="https://christian-curator.beehiiv.com/subscribe" method="post" target="beehiiv-hidden" style="margin:0;" onsubmit="ccSubscribe()">
-            <input class="cc-email-input" id="cc-email-input" type="email" name="email" placeholder="your@email.com" required />
-            <button class="cc-email-submit" type="submit">Subscribe — It's Free</button>
-          </form>
-        </div>
-      </div>
 
     </div>
+  </div>
+
+  <!-- Subscribe bar -->
+  <div id="cc-email-box" style="background:#EFF4F0; border:1px solid #B5CCB8; border-radius:6px; padding:2rem; margin-top:2.5rem; text-align:center;">
+    <p style="font-family:'Lora',Georgia,serif; font-size:20px; font-weight:600; color:#1a1a1a; margin:0 0 6px;">Never miss the best of Christian writing.</p>
+    <p style="font-size:14px; color:#555; margin:0 0 1.25rem;">Get the 10 best articles in your inbox every morning — free.</p>
+    <iframe name="beehiiv-hidden" style="display:none;" tabindex="-1" aria-hidden="true"></iframe>
+    <form id="cc-subscribe-form" action="https://christian-curator.beehiiv.com/subscribe" method="post" target="beehiiv-hidden" style="margin:0; display:flex; gap:8px; justify-content:center; flex-wrap:wrap;" onsubmit="ccSubscribe()">
+      <input class="cc-email-input" id="cc-email-input" type="email" name="email" placeholder="your@email.com" required style="max-width:280px;" />
+      <button class="cc-email-submit" type="submit" style="width:auto; padding:9px 24px;">Subscribe — It's Free</button>
+    </form>
   </div>
 
   <div class="cc-footer">
