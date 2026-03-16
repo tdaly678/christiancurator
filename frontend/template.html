@@ -357,8 +357,9 @@
       <div class="cc-sidebar-section">
         <div class="cc-email-box">
           <p>Get the 10 best articles in your inbox every morning.</p>
-          <form id="cc-subscribe-form" style="margin:0;">
-            <input class="cc-email-input" id="cc-email-input" type="email" placeholder="your@email.com" required />
+          <iframe name="beehiiv-hidden" style="display:none;" tabindex="-1" aria-hidden="true"></iframe>
+          <form id="cc-subscribe-form" action="https://christian-curator.beehiiv.com/subscribe" method="post" target="beehiiv-hidden" style="margin:0;">
+            <input class="cc-email-input" id="cc-email-input" type="email" name="email" placeholder="your@email.com" required />
             <button class="cc-email-submit" type="submit">Subscribe — It's Free</button>
           </form>
         </div>
@@ -420,13 +421,12 @@
   document.addEventListener('DOMContentLoaded', function () {
     const subscribeForm = document.getElementById('cc-subscribe-form');
     if (subscribeForm) {
-      subscribeForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        const email = document.getElementById('cc-email-input').value;
-        window.open('https://christian-curator.beehiiv.com/subscribe?email=' + encodeURIComponent(email), '_blank');
-        document.querySelector('.cc-email-box').innerHTML =
-          '<p style="text-align:center; color:#2C4A2E; font-size:13px; font-weight:600; margin:0 0 4px;">✓ You\'re on the list!</p>' +
-          '<p style="text-align:center; color:#555; font-size:12px; margin:0;">Newsletter coming soon.</p>';
+      subscribeForm.addEventListener('submit', function () {
+        setTimeout(function () {
+          document.querySelector('.cc-email-box').innerHTML =
+            '<p style="text-align:center; color:#2C4A2E; font-size:13px; font-weight:600; margin:0 0 4px;">✓ You\'re on the list!</p>' +
+            '<p style="text-align:center; color:#555; font-size:12px; margin:0;">Newsletter coming soon.</p>';
+        }, 300);
       });
     }
   });
