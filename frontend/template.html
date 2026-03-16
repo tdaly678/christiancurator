@@ -29,8 +29,9 @@
       background: #2C4A2E; color: #fff; border: none; padding: 5px 14px;
       font-size: 12px; border-radius: 3px; cursor: pointer;
       font-family: 'Source Sans 3', sans-serif; letter-spacing: 0.03em;
+      text-decoration: none; display: inline-block;
     }
-    .cc-subscribe-btn:hover { background: #3a5f3c; }
+    .cc-subscribe-btn:hover { background: #3a5f3c; color: #fff; }
     .cc-masthead { text-align: center; padding: 0.5rem 0 1rem; border-bottom: 2.5px solid #1a1a1a; }
     .cc-site-name {
       font-family: 'Lora', Georgia, serif; font-size: 46px; font-weight: 600;
@@ -186,7 +187,7 @@
   <div class="cc-header">
     <div class="cc-top-bar">
       <span>{{ date }}</span>
-      <a href="https://christian-curator.beehiiv.com/subscribe" target="_blank"><button class="cc-subscribe-btn">Get the Daily Digest</button></a>
+      <a class="cc-subscribe-btn" href="https://christian-curator.beehiiv.com/subscribe" target="_blank">Get the Daily Digest</a>
     </div>
     <div class="cc-masthead">
       <h1 class="cc-site-name">Christian Curator</h1>
@@ -356,8 +357,8 @@
       <div class="cc-sidebar-section">
         <div class="cc-email-box">
           <p>Get the 10 best articles in your inbox every morning.</p>
-          <form action="https://christian-curator.beehiiv.com/subscribe" method="post" target="_blank" style="margin:0;">
-            <input class="cc-email-input" type="email" name="email" placeholder="your@email.com" required />
+          <form id="cc-subscribe-form" style="margin:0;">
+            <input class="cc-email-input" id="cc-email-input" type="email" placeholder="your@email.com" required />
             <button class="cc-email-submit" type="submit">Subscribe — It's Free</button>
           </form>
         </div>
@@ -417,14 +418,15 @@
 
   // Email subscribe confirmation message
   document.addEventListener('DOMContentLoaded', function () {
-    const subscribeForm = document.querySelector('.cc-email-box form');
+    const subscribeForm = document.getElementById('cc-subscribe-form');
     if (subscribeForm) {
-      subscribeForm.addEventListener('submit', function () {
-        setTimeout(function () {
-          document.querySelector('.cc-email-box').innerHTML =
-            '<p style="text-align:center; color:#2C4A2E; font-size:13px; font-weight:600; margin:0 0 4px;">✓ You\'re on the list!</p>' +
-            '<p style="text-align:center; color:#555; font-size:12px; margin:0;">Newsletter coming soon.</p>';
-        }, 150);
+      subscribeForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const email = document.getElementById('cc-email-input').value;
+        window.open('https://christian-curator.beehiiv.com/subscribe?email=' + encodeURIComponent(email), '_blank');
+        document.querySelector('.cc-email-box').innerHTML =
+          '<p style="text-align:center; color:#2C4A2E; font-size:13px; font-weight:600; margin:0 0 4px;">✓ You\'re on the list!</p>' +
+          '<p style="text-align:center; color:#555; font-size:12px; margin:0;">Newsletter coming soon.</p>';
       });
     }
   });
