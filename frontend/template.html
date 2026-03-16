@@ -431,6 +431,18 @@
     <!-- Sidebar -->
     <div class="cc-sidebar">
 
+      {% if yesterday_articles %}
+      <div class="cc-sidebar-section">
+        <div class="cc-sidebar-label">Yesterday's Best</div>
+        {% for article in yesterday_articles %}
+        <div class="cc-trending-item">
+          <div class="cc-trending-num">{{ loop.index }}</div>
+          <a class="cc-trending-title" href="{{ article.url }}" target="_blank">{{ article.title }}</a>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
       <div class="cc-sidebar-section">
         <div class="cc-sidebar-label">Trending Today</div>
         {% for article in articles[:5] %}

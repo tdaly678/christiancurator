@@ -73,7 +73,7 @@ SOURCES = [
         "category": "theology",
     },
 
-    # ── World News (religion sections of major outlets) ──
+    # ── World News (religion sections of mainstream outlets) ──
     {
         "name": "BBC Religion",
         "url": "https://feeds.bbci.co.uk/news/religion/rss.xml",
@@ -81,38 +81,26 @@ SOURCES = [
         "source_type": "world_news",
     },
     {
-        "name": "NPR Religion",
-        "url": "https://feeds.npr.org/1017/rss.xml",
+        "name": "The New York Times",
+        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Religion.xml",
         "category": "news",
         "source_type": "world_news",
     },
     {
-        "name": "Fox News Faith",
-        "url": "https://moxie.foxnews.com/google-publisher/faith.xml",
-        "category": "news",
-        "source_type": "world_news",
-    },
-    {
-        "name": "The Guardian Religion",
+        "name": "The Guardian",
         "url": "https://www.theguardian.com/world/religion/rss",
         "category": "news",
         "source_type": "world_news",
     },
     {
-        "name": "Catholic News Agency",
-        "url": "https://www.catholicnewsagency.com/rss/latest.rss",
+        "name": "Associated Press",
+        "url": "https://feeds.apnews.com/rss/apf-Religion",
         "category": "news",
         "source_type": "world_news",
     },
     {
-        "name": "National Catholic Reporter",
-        "url": "https://www.ncronline.org/rss.xml",
-        "category": "news",
-        "source_type": "world_news",
-    },
-    {
-        "name": "NYT Religion",
-        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Religion.xml",
+        "name": "Washington Post",
+        "url": "https://feeds.washingtonpost.com/rss/lifestyle/faith",
         "category": "news",
         "source_type": "world_news",
     },

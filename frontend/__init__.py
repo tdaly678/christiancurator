@@ -10,7 +10,7 @@ TEMPLATE_DIR = Path(__file__).parent
 OUTPUT_HTML = Path(__file__).parent.parent / "docs" / "index.html"
 
 
-def render_html(articles: list[dict], pairings: list[dict]):
+def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: list[dict] = None):
     """Render index.html from template.html using Jinja2."""
     env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
     env.tests['contains'] = lambda value, item: item in (value or [])
@@ -31,6 +31,7 @@ def render_html(articles: list[dict], pairings: list[dict]):
     html = template.render(
         articles=articles,
         pairings=template_pairings,
+        yesterday_articles=yesterday_articles or [],
         date=date.today().strftime("%B %-d, %Y"),
     )
 

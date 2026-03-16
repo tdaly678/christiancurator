@@ -16,12 +16,16 @@ from fetcher.rss_fetcher import fetch_all
 from curator.scorer import score_articles
 from curator.title_rewriter import rewrite_titles
 from curator.point_counterpoint import build_point_counterpoint
-from output import OUTPUT_JSON_PATH, write_output
+from output import OUTPUT_JSON_PATH, write_output, save_yesterday, load_yesterday
 from frontend import render_html
 
 
 def main():
     print("=== ChristianCurator Pipeline Starting ===\n")
+
+    # --- Load yesterday's top 3 for the digest ---
+    yesterday_articles = load_yesterday()
+    print(f"      Loaded {len(yesterday_articles)} articles from yesterday.\n")
 
     # --- Layer 1: Fetch ---
     print("[1/4] Fetching articles from RSS sources...")
@@ -46,7 +50,8 @@ def main():
 
     # --- Output ---
     write_output(articles, pairings)
-    render_html(articles, pairings)
+    save_yesterday(articles)
+    render_html(articles, pairings, yesterday_articles)
     print("=== Pipeline Complete ===")
     print(f"Output written to {OUTPUT_JSON_PATH}")
 
