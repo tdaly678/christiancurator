@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Christian Curator — Daily Digest</title>
+  <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
@@ -191,7 +192,7 @@
     </div>
     <div class="cc-masthead">
       <h1 class="cc-site-name">Christian Curator</h1>
-      <p class="cc-tagline">The best of Christian writing, gathered daily</p>
+      <p class="cc-tagline">Curated for the curious Christian</p>
     </div>
   </div>
 
@@ -359,14 +360,8 @@
   </div>
 
   <!-- Subscribe bar -->
-  <div id="cc-email-box" style="background:#EFF4F0; border:1px solid #B5CCB8; border-radius:6px; padding:2rem; margin-top:2.5rem; text-align:center;">
-    <p style="font-family:'Lora',Georgia,serif; font-size:20px; font-weight:600; color:#1a1a1a; margin:0 0 6px;">Never miss the best of Christian writing.</p>
-    <p style="font-size:14px; color:#555; margin:0 0 1.25rem;">Get the 10 best articles in your inbox every morning — free.</p>
-    <iframe name="beehiiv-hidden" style="display:none;" tabindex="-1" aria-hidden="true"></iframe>
-    <form id="cc-subscribe-form" action="https://christian-curator.beehiiv.com/subscribe" method="post" target="beehiiv-hidden" style="margin:0; display:flex; gap:8px; justify-content:center; flex-wrap:wrap;" onsubmit="ccSubscribe()">
-      <input class="cc-email-input" id="cc-email-input" type="email" name="email" placeholder="your@email.com" required style="max-width:280px;" />
-      <button class="cc-email-submit" type="submit" style="width:auto; padding:9px 24px;">Subscribe — It's Free</button>
-    </form>
+  <div id="cc-email-box" style="margin-top:2.5rem;">
+    <iframe src="https://subscribe-forms.beehiiv.com/4914f77d-da8f-4296-b54b-94fad55345d2" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%; height:375px; margin:0; border-radius:0 !important; background-color:transparent; box-shadow:0 0 #0000;"></iframe>
   </div>
 
   <div class="cc-footer">
@@ -416,14 +411,6 @@
     const allPill = document.querySelector('.cc-topic-pill[data-tag="all"]');
     filterByTag('all', allPill);
     document.getElementById('cc-filter-banner').classList.remove('visible');
-  }
-
-  function ccSubscribe() {
-    setTimeout(function () {
-      document.getElementById('cc-email-box').innerHTML =
-        '<p style="text-align:center; color:#2C4A2E; font-size:14px; font-weight:600; margin:0 0 6px;">✓ You\'re on the list!</p>' +
-        '<p style="text-align:center; color:#555; font-size:12px; margin:0; line-height:1.5;">Newsletter coming soon.<br>Check your inbox for a confirmation.</p>';
-    }, 300);
   }
 
   // On page load: hide any topic pills that have no matching filterable articles
