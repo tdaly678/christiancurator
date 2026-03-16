@@ -186,7 +186,7 @@
   <div class="cc-header">
     <div class="cc-top-bar">
       <span>{{ date }}</span>
-      <button class="cc-subscribe-btn">Get the Daily Digest</button>
+      <a href="https://christian-curator.beehiiv.com/subscribe" target="_blank"><button class="cc-subscribe-btn">Get the Daily Digest</button></a>
     </div>
     <div class="cc-masthead">
       <h1 class="cc-site-name">Christian Curator</h1>
@@ -356,8 +356,10 @@
       <div class="cc-sidebar-section">
         <div class="cc-email-box">
           <p>Get the 10 best articles in your inbox every morning.</p>
-          <input class="cc-email-input" type="email" placeholder="your@email.com" />
-          <button class="cc-email-submit">Subscribe — It's Free</button>
+          <form action="https://christian-curator.beehiiv.com/subscribe" method="post" target="_blank" style="margin:0;">
+            <input class="cc-email-input" type="email" name="email" placeholder="your@email.com" required />
+            <button class="cc-email-submit" type="submit">Subscribe — It's Free</button>
+          </form>
         </div>
       </div>
 
