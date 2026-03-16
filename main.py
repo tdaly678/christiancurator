@@ -31,7 +31,8 @@ def main():
     # --- Layer 2: Score & Tag ---
     print("[2/4] Scoring and tagging articles...")
     articles = score_articles(articles)
-    print("      Scoring complete.\n")
+    boosted = sum(1 for a in articles if a.get("recency_boost", 0) > 0)
+    print(f"      Scoring complete. ({boosted} articles received a recency boost)\n")
 
     # --- Layer 3: Rewrite Titles ---
     print("[3/4] Rewriting titles...")
