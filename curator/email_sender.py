@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 BEEHIIV_API_KEY = os.environ.get("BEEHIIV_API_KEY", "")
-PUBLICATION_ID = "4914f77d-da8f-4296-b54b-94fad55345d2"
+PUBLICATION_ID = "pub_96515e22-7960-48e9-a83f-557dab7b6925"
 API_URL = f"https://api.beehiiv.com/v2/publications/{PUBLICATION_ID}/posts"
 
 
@@ -39,6 +39,8 @@ def render_articles(articles: list[dict]) -> str:
 
 def build_email_html(articles: list[dict], yesterday_articles: list[dict]) -> str:
     """Build the full HTML email content."""
+    if isinstance(articles, dict):
+        articles = articles.get("articles", [])
     today = date.today().strftime("%B %-d, %Y")
 
     christian = [a for a in articles if a.get("source_type") != "world_news"]
@@ -131,40 +133,62 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict]) -> st
 </html>"""
 
 
+def save_email_html(html_content: str) -> str:
+    """Save the email HTML to docs/email_draft.html and return the path."""
+    import os
+    docs_dir = os.path.join(os.path.dirname(__file__), "..", "docs")
+    path = os.path.join(docs_dir, "email_draft.html")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(html_content)
+    return os.path.abspath(path)
+
+
 def send_email(articles: list[dict], yesterday_articles: list[dict]) -> bool:
-    """Create and publish the daily digest via Beehiiv API."""
-    if not BEEHIIV_API_KEY:
-        print("  Warning: BEEHIIV_API_KEY not set. Skipping email send.")
-        return False
+    """Build the daily digest and create a draft post in Beehiiv."""
+    if isinstance(articles, dict):
+        articles = articles.get("articles", [])
 
     today = date.today().strftime("%B %-d, %Y")
     subject = f"Christian Curator — {today}"
     html_content = build_email_html(articles, yesterday_articles)
 
+    # Always save locally as a backup
+    path = save_email_html(html_content)
+    print(f"  Email HTML saved to: {path}")
+
+    if not BEEHIIV_API_KEY:
+        print("  Warning: BEEHIIV_API_KEY not set. Skipping Beehiiv draft.")
+        return False
+
     payload = {
+        "title": subject,
         "subject": subject,
         "preview_text": "Today's best Christian writing, curated for you.",
         "content": {
             "free": html_content,
         },
-        "status": "confirmed",
+        "status": "draft",
         "audience": "free",
     }
 
     headers = {
-        "Authorization": f"ApiKey {BEEHIIV_API_KEY}",
+        "Authorization": f"Bearer {BEEHIIV_API_KEY}",
         "Content-Type": "application/json",
     }
 
     try:
         response = requests.post(API_URL, json=payload, headers=headers, timeout=30)
         response.raise_for_status()
-        print(f"  Email sent successfully: '{subject}'")
+        post_id = response.json().get("data", {}).get("id", "")
+        print(f"  Draft created in Beehiiv: '{subject}'")
+        print(f"  Post ID: {post_id}")
+        print(f"  Log in to Beehiiv and click Send to deliver to subscribers.")
         return True
     except requests.exceptions.HTTPError as e:
-        print(f"  Email send error: {e}")
+        print(f"  Beehiiv draft error: {e}")
         print(f"  Beehiiv response: {e.response.text}")
+        print(f"  Fallback: open docs/email_draft.html and paste into Beehiiv manually.")
         return False
     except Exception as e:
-        print(f"  Email send error: {e}")
+        print(f"  Beehiiv draft error: {e}")
         return False
