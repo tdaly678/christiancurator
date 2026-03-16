@@ -67,6 +67,11 @@ SOURCES = [
         "url": "https://mereorthodoxy.com/feed/",
         "category": "culture",
     },
+    {
+        "name": "Reformation21",
+        "url": "https://www.reformation21.org/feed/",
+        "category": "theology",
+    },
 
     # ── Evangelical Author Substacks ──
     {
