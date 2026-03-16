@@ -47,14 +47,18 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict]) -> st
     world_news = [a for a in articles if a.get("source_type") == "world_news"]
 
     lead = christian[0] if christian else None
-    theology  = [a for a in christian[1:] if "theology"    in (a.get("tags") or [])][:3]
-    culture   = [a for a in christian[1:] if "culture"     in (a.get("tags") or [])][:3]
-    church    = [a for a in christian[1:] if "church life" in (a.get("tags") or [])][:3]
+    theology  = [a for a in christian[1:] if "theology"    in (a.get("tags") or [])][:2]
+    culture   = [a for a in christian[1:] if "culture"     in (a.get("tags") or [])][:2]
+    church    = [a for a in christian[1:] if "church life" in (a.get("tags") or [])][:2]
 
     seen = {lead["url"]} if lead else set()
     for a in theology + culture + church:
         seen.add(a["url"])
-    more = [a for a in christian[1:] if a["url"] not in seen][:5]
+
+    # Cap total christian articles at 10 (lead + sections + remainder)
+    used = len(theology) + len(culture) + len(church)
+    remaining = max(0, 9 - used)  # 9 more after lead = 10 total
+    more = [a for a in christian[1:] if a["url"] not in seen][:remaining]
 
     # ── Lead story block ──────────────────────────────────────────────────────
     lead_html = ""
@@ -119,7 +123,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict]) -> st
     {section("Culture &amp; Society", culture)}
     {section("Church Life", church)}
     {section("More from Today", more)}
-    {section("World News", world_news[:5]) if world_news else ""}
+    {section("World News", world_news[:3]) if world_news else ""}
     {yesterday_html}
 
     <!-- Footer -->
