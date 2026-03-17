@@ -1,5 +1,5 @@
 """
-email_sender.py — builds and sends the daily digest email via Beehiiv API.
+email_sender.py — builds and sends the daily digest email via Brevo API.
 """
 
 import os
@@ -10,9 +10,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-BEEHIIV_API_KEY = os.environ.get("BEEHIIV_API_KEY", "")
-PUBLICATION_ID = "pub_96515e22-7960-48e9-a83f-557dab7b6925"
-API_URL = f"https://api.beehiiv.com/v2/publications/{PUBLICATION_ID}/posts"
+BREVO_API_KEY = os.environ.get("BREVO_API_KEY", "")
+BREVO_LIST_ID = 2
+BREVO_SENDER_EMAIL = os.environ.get("BREVO_SENDER_EMAIL", "")
+BREVO_SENDER_NAME = "Christian Curator"
+BREVO_API_URL = "https://api.brevo.com/v3/emailCampaigns"
 
 
 def strip_tags(html: str) -> str:
@@ -139,7 +141,6 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict]) -> st
 
 def save_email_html(html_content: str) -> str:
     """Save the email HTML to docs/email_draft.html and return the path."""
-    import os
     docs_dir = os.path.join(os.path.dirname(__file__), "..", "docs")
     path = os.path.join(docs_dir, "email_draft.html")
     with open(path, "w", encoding="utf-8") as f:
@@ -148,7 +149,7 @@ def save_email_html(html_content: str) -> str:
 
 
 def send_email(articles: list[dict], yesterday_articles: list[dict]) -> bool:
-    """Build the daily digest and create a draft post in Beehiiv."""
+    """Build the daily digest and send via Brevo API."""
     if isinstance(articles, dict):
         articles = articles.get("articles", [])
 
@@ -160,39 +161,49 @@ def send_email(articles: list[dict], yesterday_articles: list[dict]) -> bool:
     path = save_email_html(html_content)
     print(f"  Email HTML saved to: {path}")
 
-    if not BEEHIIV_API_KEY:
-        print("  Warning: BEEHIIV_API_KEY not set. Skipping Beehiiv draft.")
+    if not BREVO_API_KEY:
+        print("  Warning: BREVO_API_KEY not set. Skipping email send.")
         return False
 
-    payload = {
-        "title": subject,
-        "subject": subject,
-        "preview_text": "Today's best Christian writing, curated for you.",
-        "content": {
-            "free": html_content,
-        },
-        "status": "draft",
-        "audience": "free",
-    }
+    if not BREVO_SENDER_EMAIL:
+        print("  Warning: BREVO_SENDER_EMAIL not set. Skipping email send.")
+        return False
 
     headers = {
-        "Authorization": f"Bearer {BEEHIIV_API_KEY}",
-        "Content-Type": "application/json",
+        "accept": "application/json",
+        "api-key": BREVO_API_KEY,
+        "content-type": "application/json",
+    }
+
+    # Step 1: Create the campaign
+    payload = {
+        "name": f"Christian Curator — {today}",
+        "subject": subject,
+        "sender": {"name": BREVO_SENDER_NAME, "email": BREVO_SENDER_EMAIL},
+        "type": "classic",
+        "htmlContent": html_content,
+        "recipients": {"listIds": [BREVO_LIST_ID]},
     }
 
     try:
-        response = requests.post(API_URL, json=payload, headers=headers, timeout=30)
+        response = requests.post(BREVO_API_URL, json=payload, headers=headers, timeout=30)
         response.raise_for_status()
-        post_id = response.json().get("data", {}).get("id", "")
-        print(f"  Draft created in Beehiiv: '{subject}'")
-        print(f"  Post ID: {post_id}")
-        print(f"  Log in to Beehiiv and click Send to deliver to subscribers.")
+        campaign_id = response.json().get("id")
+        print(f"  Campaign created: ID {campaign_id}")
+    except requests.exceptions.HTTPError as e:
+        print(f"  Brevo campaign creation error: {e}")
+        print(f"  Brevo response: {e.response.text}")
+        return False
+
+    # Step 2: Send it immediately
+    try:
+        send_url = f"{BREVO_API_URL}/{campaign_id}/sendNow"
+        response = requests.post(send_url, headers=headers, timeout=30)
+        response.raise_for_status()
+        print(f"  Email sent successfully via Brevo: '{subject}'")
         return True
     except requests.exceptions.HTTPError as e:
-        print(f"  Beehiiv draft error: {e}")
-        print(f"  Beehiiv response: {e.response.text}")
-        print(f"  Fallback: open docs/email_draft.html and paste into Beehiiv manually.")
-        return False
-    except Exception as e:
-        print(f"  Beehiiv draft error: {e}")
+        print(f"  Brevo send error: {e}")
+        print(f"  Brevo response: {e.response.text}")
+        print(f"  Campaign was created (ID {campaign_id}) — log into Brevo to send manually.")
         return False
