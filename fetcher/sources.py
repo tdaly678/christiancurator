@@ -73,7 +73,25 @@ SOURCES = [
         "category": "theology",
     },
 
-    # ── World News (religion sections of mainstream outlets) ──
+    # ── World News (mainstream outlets — religion + general top news) ──
+    {
+        "name": "Associated Press",
+        "url": "https://feeds.apnews.com/rss/apf-topnews",
+        "category": "news",
+        "source_type": "world_news",
+    },
+    {
+        "name": "Associated Press Religion",
+        "url": "https://feeds.apnews.com/rss/apf-Religion",
+        "category": "news",
+        "source_type": "world_news",
+    },
+    {
+        "name": "BBC News",
+        "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+        "category": "news",
+        "source_type": "world_news",
+    },
     {
         "name": "BBC Religion",
         "url": "https://feeds.bbci.co.uk/news/religion/rss.xml",
@@ -82,19 +100,25 @@ SOURCES = [
     },
     {
         "name": "The New York Times",
+        "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+        "category": "news",
+        "source_type": "world_news",
+    },
+    {
+        "name": "The New York Times Religion",
         "url": "https://rss.nytimes.com/services/xml/rss/nyt/Religion.xml",
+        "category": "news",
+        "source_type": "world_news",
+    },
+    {
+        "name": "Wall Street Journal",
+        "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
         "category": "news",
         "source_type": "world_news",
     },
     {
         "name": "The Guardian",
         "url": "https://www.theguardian.com/world/religion/rss",
-        "category": "news",
-        "source_type": "world_news",
-    },
-    {
-        "name": "Associated Press",
-        "url": "https://feeds.apnews.com/rss/apf-Religion",
         "category": "news",
         "source_type": "world_news",
     },

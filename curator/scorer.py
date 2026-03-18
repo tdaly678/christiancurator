@@ -29,19 +29,35 @@ RECENCY_BOOSTS = [
     (72,  0.25),  # published within 72h  → +0.25
 ]
 
+# Recency penalty: articles older than N days get penalised
+# Articles older than HARD_CUTOFF_DAYS are dropped entirely in score_articles()
+RECENCY_PENALTIES = [
+    (7,   -2.0),  # 3–7 days old   → -2.0
+    (14,  -4.0),  # 7–14 days old  → -4.0
+    (30,  -6.0),  # 14–30 days old → -6.0
+]
+HARD_CUTOFF_DAYS = 30  # articles older than this are excluded entirely
+
 # Diversity: each additional article from the same source is penalised
 DIVERSITY_PENALTY_PER_EXTRA = 0.75  # -0.75 per article beyond the first
 MAX_PER_SOURCE = 5                  # hard cap per source
 
 WORLD_NEWS_FILTER_PROMPT = """\
-You are a filter for an evangelical Christian news digest. Review each article below and decide if it is relevant to an evangelical Protestant audience.
-
-An article IS relevant if it covers: Protestant or Catholic Christianity, religious freedom, church-state issues, persecution of Christians, Christian cultural influence, Christian leaders or institutions, faith and public life, or major religious events affecting Christians.
-
-An article is NOT relevant if it primarily covers: Islam, Hinduism, Buddhism, Judaism (unless related to Christian-Jewish relations), general spirituality, New Age, atheism, or topics with no direct Christian angle.
+You are a filter for a Christian news digest that also surfaces the most important world event each day.
 
 For each article, return a JSON object with:
   - "relevant": true or false
+      An article IS relevant if it covers: Protestant or Catholic Christianity, religious freedom,
+      church-state issues, persecution of Christians, Christian cultural influence, Christian leaders
+      or institutions, faith and public life, or major religious events affecting Christians.
+      An article is NOT relevant if it primarily covers: Islam, Hinduism, Buddhism, Judaism (unless
+      related to Christian-Jewish relations), general spirituality, New Age, or topics with no
+      direct Christian angle.
+  - "top_story": true for exactly ONE article — the single most important and newsworthy world event
+      of the day based on significance, global impact, and timeliness. This article should be surfaced
+      regardless of whether it has a direct Christian angle. Choose the story that a well-informed
+      person would consider the most consequential news of the day. All other articles should have
+      "top_story": false.
 
 Respond with ONLY a JSON array, one object per article, in the same order.
 
@@ -87,7 +103,7 @@ Articles:
 
 
 def filter_world_news_batch(articles: list[dict]) -> list[dict]:
-    """Filter world news articles for evangelical relevance. Returns only relevant articles."""
+    """Filter world news articles for evangelical relevance and flag the top world story."""
     articles_text = "\n".join(
         f"{i+1}. Title: {a['title']}\n   Summary: {a['summary'][:200]}"
         for i, a in enumerate(articles)
@@ -95,7 +111,7 @@ def filter_world_news_batch(articles: list[dict]) -> list[dict]:
     try:
         message = client.messages.create(
             model="claude-haiku-4-5-20251001",
-            max_tokens=500,
+            max_tokens=1000,
             messages=[{"role": "user", "content": WORLD_NEWS_FILTER_PROMPT.format(articles=articles_text)}],
         )
         raw = message.content[0].text.strip()
@@ -105,10 +121,19 @@ def filter_world_news_batch(articles: list[dict]) -> list[dict]:
                 raw = raw[4:]
             raw = raw.strip()
         results = json.loads(raw)
-        return [a for i, a in enumerate(articles) if i < len(results) and results[i].get("relevant", False)]
+        kept = []
+        for i, a in enumerate(articles):
+            if i >= len(results):
+                break
+            if results[i].get("top_story", False):
+                a["top_world_story"] = True
+                kept.append(a)
+            elif results[i].get("relevant", False):
+                kept.append(a)
+        return kept
     except Exception as e:
         print(f"  World news filter error: {e}")
-        return articles  # on error, keep all and let scoring sort it out
+        return articles
 
 
 def score_batch(articles: list[dict]) -> list[dict]:
@@ -159,7 +184,16 @@ def score_batch(articles: list[dict]) -> list[dict]:
 
 
 def apply_recency_boost(article: dict) -> float:
-    """Return a recency bonus based on how recently the article was published."""
+    """Return a recency bonus (positive) or penalty (negative) based on article age.
+
+    - Within 24h:   +1.5
+    - Within 48h:   +0.75
+    - Within 72h:   +0.25
+    - 3–7 days:     -2.0
+    - 7–14 days:    -4.0
+    - 14–30 days:   -6.0
+    - 30+ days:     article is excluded entirely by score_articles()
+    """
     published = article.get("published", "")
     if not published:
         return 0.0
@@ -171,6 +205,13 @@ def apply_recency_boost(article: dict) -> float:
         for max_hours, boost in RECENCY_BOOSTS:
             if hours_old <= max_hours:
                 return boost
+        # No boost matched — check penalty tiers (in days)
+        days_old = hours_old / 24
+        for max_days, penalty in RECENCY_PENALTIES:
+            if days_old <= max_days:
+                return penalty
+        # Older than all penalty tiers — will be hard-dropped in score_articles()
+        return -99.0
     except Exception:
         pass
     return 0.0
@@ -188,7 +229,8 @@ def apply_diversity_penalty(articles: list[dict]) -> list[dict]:
         source = article["source_name"]
         source_counts[source] += 1
         count = source_counts[source]
-        if count > MAX_PER_SOURCE:
+        cap = source_max(source)
+        if count > cap:
             continue  # hard cap — drop article entirely
         penalty = (count - 1) * DIVERSITY_PENALTY_PER_EXTRA
         article["final_score"] = round(article["final_score"] - penalty, 2)
@@ -216,14 +258,31 @@ SOURCE_TIER_MULTIPLIERS = {
     "Jen Wilkin":              1.05,
     "Kyle Worley":             1.05,
     # Tier 3 — 1.0x (default, all others)
-    # Tier 4 — 0.85x
-    "BBC Religion":            0.85,
-    "The New York Times":      0.85,
-    "The Guardian":            0.85,
-    "Associated Press":        0.85,
-    "Washington Post":         0.85,
+    # Tier 4A — 0.90x (high-quality centrist outlets)
+    "Associated Press":          0.90,
+    "Associated Press Religion": 0.90,
+    "BBC News":                  0.90,
+    "BBC Religion":              0.90,
+    "The New York Times":        0.90,
+    "The New York Times Religion": 0.90,
+    "Wall Street Journal":       0.90,
+    # Tier 4B — 0.80x (perspective-driven outlets)
+    "The Guardian":              0.80,
+    "Washington Post":           0.80,
 }
 DEFAULT_TIER_MULTIPLIER = 1.0  # Tier 3 author substacks and unlisted sources
+
+# Per-tier hard caps on articles per source per day
+TIER_1A_SOURCES = {"The Gospel Coalition", "Desiring God", "Ligonier Ministries", "9Marks"}
+TIER_1_SOURCES  = {"Christianity Today", "First Things", "Crossway", "Mere Orthodoxy", "American Reformer"}
+TIER_2_SOURCES  = {"World Magazine", "Relevant Magazine", "Reformation21", "Jen Wilkin", "Kyle Worley"}
+
+def source_max(source_name: str) -> int:
+    if source_name in TIER_1A_SOURCES or source_name in TIER_1_SOURCES:
+        return 5
+    if source_name in TIER_2_SOURCES:
+        return 3
+    return 2  # Tier 3 substacks and Tier 4 world news
 
 PREVIOUSLY_SHOWN_PENALTY = 4.0   # applied to articles already surfaced on the site
 DUPLICATE_TOPIC_PENALTY   = 3.0   # applied to same-topic same-perspective duplicates
@@ -298,6 +357,28 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
             kept.extend(filter_world_news_batch(world_news[i:i + BATCH_SIZE]))
         print(f"  Kept {len(kept)} of {len(world_news)} world news articles after relevance filter")
         articles = christian + kept
+
+    # Step 0b: Hard cutoff — drop articles older than HARD_CUTOFF_DAYS
+    cutoff_hours = HARD_CUTOFF_DAYS * 24
+    fresh = []
+    dropped_old = 0
+    for a in articles:
+        published = a.get("published", "")
+        if published:
+            try:
+                pub_dt = parsedate_to_datetime(published)
+                if pub_dt.tzinfo is None:
+                    pub_dt = pub_dt.replace(tzinfo=timezone.utc)
+                hours_old = (datetime.now(timezone.utc) - pub_dt).total_seconds() / 3600
+                if hours_old > cutoff_hours:
+                    dropped_old += 1
+                    continue
+            except Exception:
+                pass
+        fresh.append(a)
+    if dropped_old:
+        print(f"  Hard cutoff: dropped {dropped_old} articles older than {HARD_CUTOFF_DAYS} days.")
+    articles = fresh
 
     # Step 1: Claude scoring in batches
     scored = []

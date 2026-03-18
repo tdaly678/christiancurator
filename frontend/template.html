@@ -403,10 +403,23 @@
       {% endif %}
 
       {% if world_news_articles %}
+      {% set top_story = world_news_articles | selectattr('top_world_story', 'defined') | selectattr('top_world_story') | first %}
+      {% set other_world = world_news_articles | rejectattr('top_world_story', 'defined') | list %}
       <div class="cc-section-group" style="margin-top:1.5rem;" data-section="world news">
         <div class="cc-section-label">World News</div>
         <div class="cc-article-list">
-          {% for article in world_news_articles[:8] %}
+          {% if top_story %}
+          <div class="cc-article" data-tags="{{ top_story.tags | join(',') }}" data-personas="{{ top_story.personas | join(',') if top_story.personas else '' }}" style="background:#faf9f7; border-left:3px solid #2C4A2E; padding-left:10px;">
+            <div class="cc-article-content">
+              <div style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#2C4A2E; margin-bottom:4px;">Top Story</div>
+              <a class="cc-article-title" href="{{ top_story.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (top_story.rewritten_title or top_story.title) | replace("'", "") }}', 'article_source': '{{ top_story.source_name }}', 'article_url': '{{ top_story.url }}'});">{{ top_story.rewritten_title or top_story.title }}</a>
+              <div class="cc-article-meta">
+                <span class="cc-source-tag">{{ top_story.source_name }}</span>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% for article in other_world[:5] %}
           <div class="cc-article" data-tags="{{ article.tags | join(',') }}" data-personas="{{ article.personas | join(',') if article.personas else '' }}">
             <div class="cc-article-num">{{ loop.index }}</div>
             <div class="cc-article-content">

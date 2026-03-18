@@ -46,7 +46,9 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict]) -> st
     today = date.today().strftime("%B %-d, %Y")
 
     christian = [a for a in articles if a.get("source_type") != "world_news"]
-    world_news = [a for a in articles if a.get("source_type") == "world_news"]
+    world_news_all = [a for a in articles if a.get("source_type") == "world_news"]
+    top_world = next((a for a in world_news_all if a.get("top_world_story")), None)
+    world_news = [a for a in world_news_all if not a.get("top_world_story")]
 
     lead = christian[0] if christian else None
     theology  = [a for a in christian[1:] if "theology"    in (a.get("tags") or [])][:2]
@@ -87,6 +89,21 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict]) -> st
         <div style="margin:24px 0; border-top:1px solid #e0ddd8; padding-top:16px;">
           <div style="font-size:10px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#2C4A2E; margin-bottom:10px;">{label}</div>
           {render_articles(arts)}
+        </div>"""
+
+    # ── Top World Story ───────────────────────────────────────────────────────
+    top_world_html = ""
+    if top_world:
+        tw_title = top_world.get("rewritten_title") or top_world.get("title", "")
+        top_world_html = f"""
+        <div style="margin:24px 0; border-top:1px solid #e0ddd8; padding-top:16px;">
+          <div style="font-size:10px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#2C4A2E; margin-bottom:6px;">Top World Story</div>
+          <div style="border-left:3px solid #2C4A2E; padding:8px 12px; background:#faf9f7;">
+            <div style="font-family:Georgia,serif; font-size:15px; font-weight:600; line-height:1.35; margin-bottom:4px;">
+              <a href="{top_world['url']}" style="color:#1a1a1a; text-decoration:none;">{tw_title}</a>
+            </div>
+            <span style="background:#f0ede8; border:1px solid #ddd; padding:2px 7px; font-size:11px; font-weight:600; color:#555; border-radius:2px;">{top_world['source_name']}</span>
+          </div>
         </div>"""
 
     # ── Yesterday's Best ──────────────────────────────────────────────────────
@@ -140,6 +157,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict]) -> st
     {section("Culture &amp; Society", culture)}
     {section("Church Life", church)}
     {section("More from Today", more)}
+    {top_world_html}
     {section("World News", world_news[:3]) if world_news else ""}
     {yesterday_html}
 
