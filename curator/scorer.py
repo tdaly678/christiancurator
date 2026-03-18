@@ -196,6 +196,35 @@ def apply_diversity_penalty(articles: list[dict]) -> list[dict]:
     return kept
 
 
+# Source tier multipliers — applied to base score before recency boost
+SOURCE_TIER_MULTIPLIERS = {
+    # Tier 1A — 1.3x
+    "The Gospel Coalition":    1.3,
+    "Desiring God":            1.3,
+    "Ligonier Ministries":     1.3,
+    "9Marks":                  1.3,
+    # Tier 1 — 1.2x
+    "Christianity Today":      1.2,
+    "First Things":            1.2,
+    "Crossway":                1.2,
+    "Mere Orthodoxy":          1.2,
+    "American Reformer":       1.2,
+    # Tier 2 — 1.05x
+    "World Magazine":          1.05,
+    "Relevant Magazine":       1.05,
+    "Reformation21":           1.05,
+    "Jen Wilkin":              1.05,
+    "Kyle Worley":             1.05,
+    # Tier 3 — 1.0x (default, all others)
+    # Tier 4 — 0.85x
+    "BBC Religion":            0.85,
+    "The New York Times":      0.85,
+    "The Guardian":            0.85,
+    "Associated Press":        0.85,
+    "Washington Post":         0.85,
+}
+DEFAULT_TIER_MULTIPLIER = 1.0  # Tier 3 author substacks and unlisted sources
+
 PREVIOUSLY_SHOWN_PENALTY = 4.0   # applied to articles already surfaced on the site
 DUPLICATE_TOPIC_PENALTY   = 3.0   # applied to same-topic same-perspective duplicates
 OPPOSING_VIEWS_BOOST      = 1.0   # applied to articles that form an opposing pair
@@ -277,11 +306,13 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
         print(f"  Scoring articles {i+1}-{min(i+BATCH_SIZE, len(articles))}...")
         scored.extend(score_batch(batch))
 
-    # Step 2: Apply recency boost → store in final_score
+    # Step 2: Apply source tier multiplier + recency boost → store in final_score
     shown_urls = shown_urls or set()
     previously_shown_count = 0
     for article in scored:
         base = float(article.get("score") or 5)
+        multiplier = SOURCE_TIER_MULTIPLIERS.get(article.get("source_name", ""), DEFAULT_TIER_MULTIPLIER)
+        base = round(min(base * multiplier, 10.0), 2)
         boost = apply_recency_boost(article)
         raw_final = round(min(base + boost, 10.0), 2)
 
