@@ -113,6 +113,12 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict]) -> st
 <body style="margin:0; padding:0; background:#faf9f7; font-family:'Source Sans 3',Arial,sans-serif; color:#1a1a1a;">
   <div style="max-width:600px; margin:0 auto; padding:24px 20px;">
 
+    <!-- Forwarded banner -->
+    <div style="background:#EFF4F0; border:1px solid #B5CCB8; border-radius:4px; padding:10px 16px; margin-bottom:16px; text-align:center;">
+      <span style="font-size:12px; color:#2C4A2E;">Was this forwarded to you?</span>
+      <a href="https://christiancurator.com/#cc-email-box" style="display:inline-block; margin-left:10px; background:#2C4A2E; color:#fff; font-size:12px; font-weight:700; padding:5px 14px; border-radius:3px; text-decoration:none;">Subscribe Free →</a>
+    </div>
+
     <!-- Header -->
     <div style="border-bottom:2px solid #1a1a1a; padding-bottom:16px; margin-bottom:24px; text-align:center;">
       <div style="font-size:11px; color:#888; letter-spacing:0.05em; margin-bottom:8px;">{today}</div>
@@ -128,10 +134,19 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict]) -> st
     {section("World News", world_news[:3]) if world_news else ""}
     {yesterday_html}
 
+    <!-- Forward CTA -->
+    <div style="background:#f0ede8; border-radius:4px; padding:14px 16px; margin:24px 0; text-align:center;">
+      <div style="font-size:13px; color:#1a1a1a; font-weight:600; margin-bottom:6px;">Know someone who'd enjoy this?</div>
+      <div style="font-size:12px; color:#555;">Forward this email to a friend who loves thoughtful Christian writing.</div>
+    </div>
+
     <!-- Footer -->
-    <div style="border-top:2px solid #1a1a1a; margin-top:32px; padding-top:16px; font-size:11px; color:#aaa; text-align:center;">
+    <div style="border-top:2px solid #1a1a1a; margin-top:24px; padding-top:16px; font-size:11px; color:#aaa; text-align:center;">
       <p>All links go to original sources. We curate; they create.</p>
       <p style="margin-top:8px;"><a href="https://christiancurator.com" style="color:#2C4A2E;">christiancurator.com</a></p>
+      <p style="margin-top:12px;">
+        <a href="https://christiancurator.com/#cc-email-box" style="display:inline-block; background:#2C4A2E; color:#fff; font-size:12px; font-weight:700; padding:7px 18px; border-radius:3px; text-decoration:none;">Subscribe to the Daily Digest</a>
+      </p>
     </div>
 
   </div>
