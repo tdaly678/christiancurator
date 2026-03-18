@@ -52,12 +52,29 @@ Articles:
 BATCH_PROMPT = """\
 You are a curator for a Christian news digest. Score and tag each article below.
 
+SCORING GUIDANCE:
+- Score 1-10 based on theological depth, practical relevance to everyday Christian life, and writing quality.
+- OBITUARIES and PERSON-SPECIFIC NEWS (deaths, appointments, awards, biographical profiles) should score 3 or below
+  unless the person's story contains direct theological lessons or broad cultural significance beyond the individual.
+  Example: "John Perkins Dies at 95" = score 3 max. "What John Perkins Taught Us About Reconciliation" = score normally.
+- PODCAST EPISODE DESCRIPTIONS, RADIO RECAPS, and PROMOTIONAL ANNOUNCEMENTS should score 2 or below.
+- LONG-FORM ESSAYS and THEOLOGICAL ARGUMENTS with clear practical application should score 7-10.
+
 For each article, return a JSON object with:
-  - "score": integer 1-10 (how relevant and valuable this is for a Christian audience)
+  - "score": integer 1-10
   - "tags": array of 1-3 tags chosen ONLY from this exact list:
       theology, culture, apologetics, church life, missions, politics, devotional, news, family, prayer, suffering, work
-  - "personas": array of 1-3 reader personas who would find this most relevant, chosen ONLY from this exact list:
+  - "personas": array of 1-3 reader personas chosen ONLY from this exact list:
       pastor, professional, parent, student, women, seeker
+  - "topic_cluster": a short snake_case string grouping articles on the same news story or topic
+      (e.g. "john_perkins_death", "christian_nationalism_debate", "ai_and_faith", "iran_war_christians").
+      Use the same cluster string for articles covering the same event or topic.
+      Use "unique" if the article stands alone with no likely duplicates.
+  - "perspective": one of "supportive", "critical", "neutral", "news"
+      - "supportive": argues in favor of a position or person
+      - "critical": argues against or raises concerns about a position or person
+      - "neutral": balanced, informational, or devotional
+      - "news": straight news reporting with no clear opinion
 
 You MUST only use tags and personas from those exact lists. Do not invent new values.
 
@@ -122,16 +139,22 @@ def score_batch(articles: list[dict]) -> list[dict]:
                 article["score"] = results[i].get("score", 5)
                 article["tags"] = results[i].get("tags", [])
                 article["personas"] = results[i].get("personas", [])
+                article["topic_cluster"] = results[i].get("topic_cluster", "unique")
+                article["perspective"] = results[i].get("perspective", "neutral")
             else:
                 article["score"] = 5
                 article["tags"] = []
                 article["personas"] = []
+                article["topic_cluster"] = "unique"
+                article["perspective"] = "neutral"
     except Exception as e:
         print(f"  Batch scoring error: {e}")
         for article in articles:
             article["score"] = 5
             article["tags"] = []
             article["personas"] = []
+            article["topic_cluster"] = "unique"
+            article["perspective"] = "neutral"
     return articles
 
 
@@ -173,7 +196,65 @@ def apply_diversity_penalty(articles: list[dict]) -> list[dict]:
     return kept
 
 
-PREVIOUSLY_SHOWN_PENALTY = 4.0  # applied to articles already surfaced on the site
+PREVIOUSLY_SHOWN_PENALTY = 4.0   # applied to articles already surfaced on the site
+DUPLICATE_TOPIC_PENALTY   = 3.0   # applied to same-topic same-perspective duplicates
+OPPOSING_VIEWS_BOOST      = 1.0   # applied to articles that form an opposing pair
+
+
+def apply_topic_deduplication(articles: list[dict]) -> list[dict]:
+    """
+    For articles sharing the same topic_cluster:
+    - If they have opposing perspectives (one supportive + one critical), boost both.
+    - If they share the same perspective, penalize all but the highest scorer.
+    Operates on final_score in-place.
+    """
+    from collections import defaultdict
+    clusters = defaultdict(list)
+    for article in articles:
+        cluster = article.get("topic_cluster", "unique")
+        if cluster and cluster != "unique":
+            clusters[cluster].append(article)
+
+    for cluster, group in clusters.items():
+        if len(group) < 2:
+            continue
+        perspectives = {a.get("perspective", "neutral") for a in group}
+        has_opposing = "supportive" in perspectives and "critical" in perspectives
+
+        if has_opposing:
+            # Boost the best supportive and best critical article
+            supportive = sorted([a for a in group if a.get("perspective") == "supportive"],
+                                key=lambda x: x["final_score"], reverse=True)
+            critical = sorted([a for a in group if a.get("perspective") == "critical"],
+                              key=lambda x: x["final_score"], reverse=True)
+            if supportive:
+                supportive[0]["final_score"] = round(
+                    min(supportive[0]["final_score"] + OPPOSING_VIEWS_BOOST, 10.0), 2)
+                supportive[0]["opposing_pair"] = True
+            if critical:
+                critical[0]["final_score"] = round(
+                    min(critical[0]["final_score"] + OPPOSING_VIEWS_BOOST, 10.0), 2)
+                critical[0]["opposing_pair"] = True
+            # Penalize the rest in the cluster
+            boosted_urls = set()
+            if supportive: boosted_urls.add(supportive[0]["url"])
+            if critical: boosted_urls.add(critical[0]["url"])
+            for a in group:
+                if a["url"] not in boosted_urls:
+                    a["final_score"] = round(max(a["final_score"] - DUPLICATE_TOPIC_PENALTY, 0.0), 2)
+                    a["duplicate_suppressed"] = True
+        else:
+            # Same topic, same take — keep only the best, penalize the rest
+            best = max(group, key=lambda x: x["final_score"])
+            for a in group:
+                if a["url"] != best["url"]:
+                    a["final_score"] = round(max(a["final_score"] - DUPLICATE_TOPIC_PENALTY, 0.0), 2)
+                    a["duplicate_suppressed"] = True
+
+    suppressed = sum(1 for a in articles if a.get("duplicate_suppressed"))
+    if suppressed:
+        print(f"  Topic deduplication: suppressed {suppressed} duplicate-topic articles.")
+    return articles
 
 
 def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
@@ -220,8 +301,12 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     # Step 3: Sort by final_score before diversity pass
     scored.sort(key=lambda a: a["final_score"], reverse=True)
 
-    # Step 4: Apply source diversity penalty and hard cap
+    # Step 4: Apply topic deduplication (suppress same-topic same-perspective duplicates,
+    #          boost opposing viewpoint pairs)
+    scored = apply_topic_deduplication(scored)
+
+    # Step 5: Apply source diversity penalty and hard cap
     scored = apply_diversity_penalty(scored)
 
-    # Step 5: Final sort
+    # Step 6: Final sort
     return sorted(scored, key=lambda a: a["final_score"], reverse=True)
