@@ -173,7 +173,10 @@ def apply_diversity_penalty(articles: list[dict]) -> list[dict]:
     return kept
 
 
-def score_articles(articles: list[dict]) -> list[dict]:
+PREVIOUSLY_SHOWN_PENALTY = 4.0  # applied to articles already surfaced on the site
+
+
+def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     """Score, boost, and diversify all articles. Returns sorted by final_score."""
     # Step 0: Filter world news articles for evangelical relevance
     world_news = [a for a in articles if a.get("source_type") == "world_news"]
@@ -194,12 +197,25 @@ def score_articles(articles: list[dict]) -> list[dict]:
         scored.extend(score_batch(batch))
 
     # Step 2: Apply recency boost → store in final_score
+    shown_urls = shown_urls or set()
+    previously_shown_count = 0
     for article in scored:
         base = float(article.get("score") or 5)
         boost = apply_recency_boost(article)
-        article["final_score"] = round(min(base + boost, 10.0), 2)
+        raw_final = round(min(base + boost, 10.0), 2)
+
+        # Apply previously-shown penalty
+        if article.get("url") in shown_urls:
+            raw_final = round(max(raw_final - PREVIOUSLY_SHOWN_PENALTY, 0.0), 2)
+            article["previously_shown"] = True
+            previously_shown_count += 1
+
+        article["final_score"] = raw_final
         if boost > 0:
             article["recency_boost"] = boost
+
+    if previously_shown_count:
+        print(f"  Applied previously-shown penalty to {previously_shown_count} articles.")
 
     # Step 3: Sort by final_score before diversity pass
     scored.sort(key=lambda a: a["final_score"], reverse=True)

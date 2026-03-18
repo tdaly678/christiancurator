@@ -17,7 +17,7 @@ from curator.scorer import score_articles
 from curator.title_rewriter import rewrite_titles
 from curator.point_counterpoint import build_point_counterpoint
 from curator.email_sender import send_email
-from output import OUTPUT_JSON_PATH, write_output, save_yesterday, load_yesterday
+from output import OUTPUT_JSON_PATH, write_output, save_yesterday, load_yesterday, load_shown_urls, save_article_history
 from frontend import render_html
 
 
@@ -26,7 +26,11 @@ def main():
 
     # --- Load yesterday's top 3 for the digest ---
     yesterday_articles = load_yesterday()
-    print(f"      Loaded {len(yesterday_articles)} articles from yesterday.\n")
+    print(f"      Loaded {len(yesterday_articles)} articles from yesterday.")
+
+    # --- Load previously shown article URLs ---
+    shown_urls = load_shown_urls()
+    print(f"      Tracking {len(shown_urls)} previously shown articles.\n")
 
     # --- Layer 1: Fetch ---
     print("[1/4] Fetching articles from RSS sources...")
@@ -35,7 +39,7 @@ def main():
 
     # --- Layer 2: Score & Tag ---
     print("[2/4] Scoring and tagging articles...")
-    articles = score_articles(articles)
+    articles = score_articles(articles, shown_urls=shown_urls)
     boosted = sum(1 for a in articles if a.get("recency_boost", 0) > 0)
     print(f"      Scoring complete. ({boosted} articles received a recency boost)\n")
 
@@ -52,6 +56,7 @@ def main():
     # --- Output ---
     write_output(articles, pairings)
     save_yesterday(articles)
+    save_article_history(articles)
     render_html(articles, pairings, yesterday_articles)
 
     # --- Send Email ---

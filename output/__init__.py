@@ -5,10 +5,12 @@ output package — writes articles.json and index.html.
 import json
 import os
 from pathlib import Path
+from datetime import date
 
 OUTPUT_DIR = Path(__file__).parent
 OUTPUT_JSON_PATH = OUTPUT_DIR / "articles.json"
 YESTERDAY_JSON_PATH = Path(__file__).parent.parent / "docs" / "yesterday.json"
+HISTORY_JSON_PATH = Path(__file__).parent.parent / "docs" / "article_history.json"
 
 
 def save_yesterday(articles: list[dict]):
@@ -35,6 +37,45 @@ def load_yesterday() -> list[dict]:
             return json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         return []
+
+
+def load_shown_urls() -> set:
+    """Load the set of article URLs already shown on the site."""
+    try:
+        with open(HISTORY_JSON_PATH, "r", encoding="utf-8") as f:
+            history = json.load(f)
+            return {entry["url"] for entry in history}
+    except (FileNotFoundError, json.JSONDecodeError):
+        return set()
+
+
+def save_article_history(articles: list[dict]):
+    """Append today's shown articles to the persistent history file."""
+    try:
+        with open(HISTORY_JSON_PATH, "r", encoding="utf-8") as f:
+            history = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        history = []
+
+    existing_urls = {entry["url"] for entry in history}
+    today = date.today().isoformat()
+
+    for a in articles:
+        url = a.get("url", "")
+        if url and url not in existing_urls:
+            history.append({
+                "url": url,
+                "title": a.get("rewritten_title") or a.get("title", ""),
+                "source_name": a.get("source_name", ""),
+                "date_shown": today,
+                "final_score": a.get("final_score", 0),
+                "tags": a.get("tags", []),
+                "clicks": 0,  # placeholder for future GA integration
+            })
+
+    with open(HISTORY_JSON_PATH, "w", encoding="utf-8") as f:
+        json.dump(history, f, indent=2, ensure_ascii=False)
+    print(f"  Article history updated: {len(history)} total articles tracked.")
 
 
 def write_output(articles: list[dict], pairings: list[dict]):
