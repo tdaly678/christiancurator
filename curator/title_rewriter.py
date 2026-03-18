@@ -6,6 +6,7 @@ The original title is preserved; the rewritten version is stored separately.
 """
 
 import os
+import time
 import anthropic
 from dotenv import load_dotenv
 
@@ -24,19 +25,34 @@ to be clear, engaging, and suitable for a thoughtful Christian reader.
 Original title: {title}
 """
 
+MAX_RETRIES = 4
+RETRY_DELAYS = [5, 15, 30, 60]
+
 
 def rewrite_title(article: dict) -> dict:
-    """Rewrite a single article title using Claude."""
-    try:
-        message = client.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=60,
-            messages=[{"role": "user", "content": REWRITE_PROMPT.format(title=article["title"])}],
-        )
-        article["rewritten_title"] = message.content[0].text.strip().strip('"')
-    except Exception as e:
-        print(f"  Title rewrite error for '{article['title']}': {e}")
-        article["rewritten_title"] = article["title"]
+    """Rewrite a single article title using Claude, with retry on 529 overload."""
+    for attempt, delay in enumerate(RETRY_DELAYS, start=1):
+        try:
+            message = client.messages.create(
+                model="claude-haiku-4-5-20251001",
+                max_tokens=60,
+                messages=[{"role": "user", "content": REWRITE_PROMPT.format(title=article["title"])}],
+            )
+            article["rewritten_title"] = message.content[0].text.strip().strip('"')
+            return article
+        except anthropic.APIStatusError as e:
+            if e.status_code == 529 and attempt <= MAX_RETRIES:
+                print(f"  Title rewrite overloaded (attempt {attempt}/{MAX_RETRIES}), retrying in {delay}s...")
+                time.sleep(delay)
+            else:
+                print(f"  Title rewrite error for '{article['title']}': {e}")
+                article["rewritten_title"] = article["title"]
+                return article
+        except Exception as e:
+            print(f"  Title rewrite error for '{article['title']}': {e}")
+            article["rewritten_title"] = article["title"]
+            return article
+    article["rewritten_title"] = article["title"]
     return article
 
 

@@ -10,6 +10,7 @@ Each article receives:
 
 import os
 import json
+import time
 import anthropic
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
@@ -110,6 +111,24 @@ Articles:
 """
 
 
+MAX_RETRIES = 4
+RETRY_DELAYS = [5, 15, 30, 60]  # seconds between retries
+
+
+def _api_call_with_retry(fn, label="API call"):
+    """Call fn() with exponential backoff on 529 overload errors."""
+    for attempt, delay in enumerate(RETRY_DELAYS, start=1):
+        try:
+            return fn()
+        except anthropic.APIStatusError as e:
+            if e.status_code == 529 and attempt <= MAX_RETRIES:
+                print(f"  {label}: API overloaded (attempt {attempt}/{MAX_RETRIES}), retrying in {delay}s...")
+                time.sleep(delay)
+            else:
+                raise
+    return None  # should not reach here
+
+
 def filter_world_news_batch(articles: list[dict]) -> list[dict]:
     """Filter world news articles for evangelical relevance and flag the top world story."""
     articles_text = "\n".join(
@@ -117,11 +136,13 @@ def filter_world_news_batch(articles: list[dict]) -> list[dict]:
         for i, a in enumerate(articles)
     )
     try:
-        message = client.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=1000,
-            messages=[{"role": "user", "content": WORLD_NEWS_FILTER_PROMPT.format(articles=articles_text)}],
-        )
+        def _call():
+            return client.messages.create(
+                model="claude-haiku-4-5-20251001",
+                max_tokens=1000,
+                messages=[{"role": "user", "content": WORLD_NEWS_FILTER_PROMPT.format(articles=articles_text)}],
+            )
+        message = _api_call_with_retry(_call, "World news filter")
         raw = message.content[0].text.strip()
         if raw.startswith("```"):
             raw = raw.split("```")[1]
@@ -151,11 +172,13 @@ def score_batch(articles: list[dict]) -> list[dict]:
         for i, a in enumerate(articles)
     )
     try:
-        message = client.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=1000,
-            messages=[{"role": "user", "content": BATCH_PROMPT.format(articles=articles_text)}],
-        )
+        def _call():
+            return client.messages.create(
+                model="claude-haiku-4-5-20251001",
+                max_tokens=1000,
+                messages=[{"role": "user", "content": BATCH_PROMPT.format(articles=articles_text)}],
+            )
+        message = _api_call_with_retry(_call, "Scoring")
         raw = message.content[0].text.strip()
         # Strip markdown code fences if present
         if raw.startswith("```"):
