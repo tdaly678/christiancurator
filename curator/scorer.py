@@ -66,7 +66,7 @@ Articles:
 """
 
 BATCH_PROMPT = """\
-You are a curator for a Christian news digest. Score and tag each article below.
+You are a curator for a Christian news digest targeting EVANGELICAL PROTESTANT Christians.
 
 SCORING GUIDANCE:
 - Score 1-10 based on theological depth, practical relevance to everyday Christian life, and writing quality.
@@ -75,6 +75,12 @@ SCORING GUIDANCE:
   Example: "John Perkins Dies at 95" = score 3 max. "What John Perkins Taught Us About Reconciliation" = score normally.
 - PODCAST EPISODE DESCRIPTIONS, RADIO RECAPS, and PROMOTIONAL ANNOUNCEMENTS should score 2 or below.
 - LONG-FORM ESSAYS and THEOLOGICAL ARGUMENTS with clear practical application should score 7-10.
+- CATHOLIC-SPECIFIC CONTENT should score 3 or below. This includes: papal encyclicals, papal appointments,
+  Vatican decisions, the Synod on Synodality, Catholic doctrine debates, Pope Francis statements, Cardinal
+  appointments, and other Roman Catholic institutional news. The audience is evangelical Protestant — they
+  have limited interest in internal Catholic Church affairs. Exception: score normally if the article has
+  clear relevance to all Christians (e.g., broad pro-life coalitions, shared persecution, ecumenical topics
+  with direct evangelical application).
 
 For each article, return a JSON object with:
   - "score": integer 1-10
@@ -82,9 +88,11 @@ For each article, return a JSON object with:
       theology, culture, apologetics, church life, missions, politics, devotional, news, family, prayer, suffering, work
   - "personas": array of 1-3 reader personas chosen ONLY from this exact list:
       pastor, professional, parent, student, women, seeker
-  - "topic_cluster": a short snake_case string grouping articles on the same news story or topic
-      (e.g. "john_perkins_death", "christian_nationalism_debate", "ai_and_faith", "iran_war_christians").
-      Use the same cluster string for articles covering the same event or topic.
+  - "topic_cluster": a short snake_case string grouping articles on the same news story or topic.
+      IMPORTANT: Articles about the same person or institution should share a cluster even if the angle differs.
+      Examples: all Pope Francis / Vatican / synodality articles → "pope_francis_vatican";
+      "john_perkins_death", "christian_nationalism_debate", "ai_and_faith", "iran_war_christians".
+      Use the same cluster string for articles covering the same event, person, or topic.
       Use "unique" if the article stands alone with no likely duplicates.
   - "perspective": one of "supportive", "critical", "neutral", "news"
       - "supportive": argues in favor of a position or person
@@ -288,6 +296,15 @@ PREVIOUSLY_SHOWN_PENALTY = 4.0   # applied to articles already surfaced on the s
 DUPLICATE_TOPIC_PENALTY   = 3.0   # applied to same-topic same-perspective duplicates
 OPPOSING_VIEWS_BOOST      = 1.0   # applied to articles that form an opposing pair
 
+# Catholic content: cluster keywords that trigger a hard score cap of 3
+# (applied after Claude scoring so it works even if Claude scores too high)
+CATHOLIC_CLUSTER_KEYWORDS = {
+    "pope", "papal", "vatican", "synod", "synodality", "cardinal", "jesuit",
+    "catholic_church", "roman_catholic", "pope_francis", "holy_see",
+    "encyclical", "bishop_of_rome",
+}
+CATHOLIC_SCORE_CAP = 3.0  # max final_score for Catholic-specific content
+
 
 def apply_topic_deduplication(articles: list[dict]) -> list[dict]:
     """
@@ -390,6 +407,7 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     # Step 2: Apply source tier multiplier + recency boost → store in final_score
     shown_urls = shown_urls or set()
     previously_shown_count = 0
+    catholic_capped_count = 0
     for article in scored:
         base = float(article.get("score") or 5)
         multiplier = SOURCE_TIER_MULTIPLIERS.get(article.get("source_name", ""), DEFAULT_TIER_MULTIPLIER)
@@ -403,12 +421,23 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
             article["previously_shown"] = True
             previously_shown_count += 1
 
+        # Apply Catholic content cap: check topic_cluster and title for Catholic keywords
+        cluster = (article.get("topic_cluster") or "").lower()
+        title = (article.get("title") or "").lower()
+        is_catholic = any(kw in cluster or kw in title for kw in CATHOLIC_CLUSTER_KEYWORDS)
+        if is_catholic and raw_final > CATHOLIC_SCORE_CAP:
+            raw_final = CATHOLIC_SCORE_CAP
+            article["catholic_capped"] = True
+            catholic_capped_count += 1
+
         article["final_score"] = raw_final
         if boost > 0:
             article["recency_boost"] = boost
 
     if previously_shown_count:
         print(f"  Applied previously-shown penalty to {previously_shown_count} articles.")
+    if catholic_capped_count:
+        print(f"  Applied Catholic content cap to {catholic_capped_count} articles.")
 
     # Step 3: Sort by final_score before diversity pass
     scored.sort(key=lambda a: a["final_score"], reverse=True)
