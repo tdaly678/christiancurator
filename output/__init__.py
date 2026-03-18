@@ -40,11 +40,16 @@ def load_yesterday() -> list[dict]:
 
 
 def load_shown_urls() -> set:
-    """Load the set of article URLs already shown on the site."""
+    """Load URLs of articles shown on previous days only.
+
+    Articles shown today are excluded so re-running the pipeline on the same
+    day doesn't penalise freshly published stories.
+    """
+    today = date.today().isoformat()
     try:
         with open(HISTORY_JSON_PATH, "r", encoding="utf-8") as f:
             history = json.load(f)
-            return {entry["url"] for entry in history}
+            return {entry["url"] for entry in history if entry.get("date_shown") != today}
     except (FileNotFoundError, json.JSONDecodeError):
         return set()
 
