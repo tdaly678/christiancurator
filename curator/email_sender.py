@@ -126,6 +126,15 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict]) -> st
       <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#888; margin-top:6px;">Curated for the curious Christian</div>
     </div>
 
+    <!-- Front page callout -->
+    <div style="border-left:3px solid #2C4A2E; padding:10px 14px; margin-bottom:24px; background:#faf9f7;">
+      <div style="font-size:13px; color:#1a1a1a; line-height:1.6;">
+        This is your <strong>daily highlight reel</strong> — today's best picks from across the Christian web.
+        For the full digest, including more articles, topic filters, and reader personas,
+        <a href="https://christiancurator.com" style="color:#2C4A2E; font-weight:700;">visit the site →</a>
+      </div>
+    </div>
+
     {lead_html}
     {section("Theology &amp; Doctrine", theology)}
     {section("Culture &amp; Society", culture)}
