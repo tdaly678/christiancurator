@@ -288,6 +288,8 @@ SOURCE_TIER_MULTIPLIERS = {
     "Reformation21":           1.05,
     "Jen Wilkin":              1.05,
     "Kyle Worley":             1.05,
+    "Phylicia Masonheimer":    1.05,
+    "Laura Wifler":            1.05,
     # Tier 3 — 1.0x (default, all others)
     # Tier 4A — 0.90x (high-quality centrist outlets)
     "Associated Press":          0.90,
@@ -306,7 +308,27 @@ DEFAULT_TIER_MULTIPLIER = 1.0  # Tier 3 author substacks and unlisted sources
 # Per-tier hard caps on articles per source per day
 TIER_1A_SOURCES = {"The Gospel Coalition", "Desiring God", "Ligonier Ministries", "9Marks"}
 TIER_1_SOURCES  = {"Christianity Today", "First Things", "Crossway", "Mere Orthodoxy", "American Reformer"}
-TIER_2_SOURCES  = {"World Magazine", "Relevant Magazine", "Reformation21", "Jen Wilkin", "Kyle Worley"}
+TIER_2_SOURCES  = {"World Magazine", "Relevant Magazine", "Reformation21", "Jen Wilkin", "Kyle Worley",
+                   "Phylicia Masonheimer", "Laura Wifler"}
+
+# Independent author sources (Substacks + personal blogs) — used for the
+# independent floor guarantee (at least MIN_INDEPENDENT articles per day)
+INDEPENDENT_SOURCES = {
+    # Tier 2 independents
+    "Jen Wilkin", "Kyle Worley", "Phylicia Masonheimer", "Laura Wifler",
+    # Tier 3 — existing
+    "Karen Swallow Prior", "Tish Harrison Warren", "Jake Meador (Mere Orthodoxy)",
+    "Samuel James", "Alan Jacobs", "Carey Nieuwhof",
+    # Tier 3 — network discovery additions
+    "Russell Moore", "Scot McKnight", "Andy Crouch", "Carl Trueman",
+    "Matthew Lee Anderson", "O. Alan Noble", "Ryan Burge",
+    "Sam Allberry", "Trillia Newbell", "Joy Clarkson", "Mike Cosper",
+    "Bethel McGrew", "Bonnie Kristian", "Aimee Byrd", "Nadya Williams",
+    "Daniel K. Williams", "Tsh Oxenreider", "Gary Thomas", "Spencer Klavan",
+    "Diane Langberg", "Timothy Paul Jones", "BibleProject",
+}
+MIN_INDEPENDENT_ARTICLES = 3
+INDEPENDENT_FLOOR_BOOST  = 2.0  # boost applied to top independents if floor not met
 
 def source_max(source_name: str) -> int:
     if source_name in TIER_1A_SOURCES or source_name in TIER_1_SOURCES:
@@ -383,6 +405,42 @@ def apply_topic_deduplication(articles: list[dict]) -> list[dict]:
     if suppressed:
         print(f"  Topic deduplication: suppressed {suppressed} duplicate-topic articles.")
     return articles
+
+
+def apply_independent_floor(articles: list[dict], top_n: int = 20) -> list[dict]:
+    """Guarantee at least MIN_INDEPENDENT_ARTICLES from independent author sources
+    appear in the top_n results. If the floor isn't met, boost the highest-scoring
+    independents that fell below the cutoff so they rise into contention.
+    """
+    top = articles[:top_n]
+    rest = articles[top_n:]
+
+    independent_in_top = sum(
+        1 for a in top if a.get("source_name") in INDEPENDENT_SOURCES
+    )
+
+    if independent_in_top >= MIN_INDEPENDENT_ARTICLES:
+        return articles  # floor already met
+
+    needed = MIN_INDEPENDENT_ARTICLES - independent_in_top
+    # Find the best-scoring independents sitting outside the top_n
+    candidates = sorted(
+        [a for a in rest if a.get("source_name") in INDEPENDENT_SOURCES],
+        key=lambda x: x["final_score"], reverse=True
+    )
+    boosted = 0
+    for a in candidates:
+        if boosted >= needed:
+            break
+        a["final_score"] = round(min(a["final_score"] + INDEPENDENT_FLOOR_BOOST, 10.0), 2)
+        a["independent_floor_boosted"] = True
+        boosted += 1
+
+    if boosted:
+        print(f"  Independent floor: boosted {boosted} independent articles to meet minimum of {MIN_INDEPENDENT_ARTICLES}.")
+
+    # Re-sort after boosts
+    return sorted(articles, key=lambda a: a["final_score"], reverse=True)
 
 
 def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
@@ -472,5 +530,10 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     # Step 5: Apply source diversity penalty and hard cap
     scored = apply_diversity_penalty(scored)
 
-    # Step 6: Final sort
-    return sorted(scored, key=lambda a: a["final_score"], reverse=True)
+    # Step 6: Re-sort after diversity pass
+    scored.sort(key=lambda a: a["final_score"], reverse=True)
+
+    # Step 7: Independent author floor — guarantee at least 3 independent articles
+    scored = apply_independent_floor(scored)
+
+    return scored

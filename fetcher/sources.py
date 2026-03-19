@@ -129,45 +129,203 @@ SOURCES = [
         "source_type": "world_news",
     },
 
-    # ── Evangelical Author Substacks ──
+    # ── Evangelical Author Substacks — Tier 2 ──
     {
-        "name": "Karen Swallow Prior",
-        "url": "https://karenswallowprior.substack.com/feed",
-        "category": "culture",
-    },
-    {
-        "name": "Tish Harrison Warren",
-        "url": "https://tishharrisonwarren.substack.com/feed",
-        "category": "culture",
-    },
-    {
-        "name": "Jake Meador (Mere Orthodoxy)",
-        "url": "https://jakemeador.substack.com/feed",
-        "category": "culture",
-    },
-    {
-        "name": "Samuel James",
-        "url": "https://samueljames.substack.com/feed",
-        "category": "culture",
-    },
-    {
-        "name": "Alan Jacobs",
-        "url": "https://ayjay.substack.com/feed",
-        "category": "culture",
+        "name": "Jen Wilkin",
+        "url": "https://www.jenwilkin.net/blog?format=rss",
+        "category": "theology",
+        "independent": True,
     },
     {
         "name": "Kyle Worley",
         "url": "https://sacredslang.substack.com/feed",
         "category": "theology",
+        "independent": True,
     },
     {
-        "name": "Jen Wilkin",
-        "url": "https://www.jenwilkin.net/blog?format=rss",
+        "name": "Phylicia Masonheimer",
+        "url": "https://phyliciamasonheimer.substack.com/feed",
         "category": "theology",
+        "independent": True,
+    },
+    {
+        "name": "Laura Wifler",
+        "url": "https://laurawifler.substack.com/feed",
+        "category": "family",
+        "independent": True,
+    },
+
+    # ── Evangelical Author Substacks — Tier 3 ──
+    {
+        "name": "Karen Swallow Prior",
+        "url": "https://karenswallowprior.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Tish Harrison Warren",
+        "url": "https://tishharrisonwarren.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Jake Meador (Mere Orthodoxy)",
+        "url": "https://jakemeador.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Samuel James",
+        "url": "https://samueljames.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Alan Jacobs",
+        "url": "https://ayjay.substack.com/feed",
+        "category": "culture",
+        "independent": True,
     },
     {
         "name": "Carey Nieuwhof",
         "url": "https://careynieuwhof.com/feed/",
         "category": "church life",
+        "independent": True,
+    },
+
+    # ── Independent Substacks — Tier 3 (from network discovery) ──
+    # Major evangelical scholars and thinkers
+    {
+        "name": "Russell Moore",
+        "url": "https://russellmoore.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Scot McKnight",
+        "url": "https://scotmcknight.substack.com/feed",
+        "category": "theology",
+        "independent": True,
+    },
+    {
+        "name": "Andy Crouch",
+        "url": "https://andycrouch.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Carl Trueman",
+        "url": "https://carltrueman.substack.com/feed",
+        "category": "theology",
+        "independent": True,
+    },
+    {
+        "name": "Matthew Lee Anderson",
+        "url": "https://matthewleeanderson.substack.com/feed",
+        "category": "theology",
+        "independent": True,
+    },
+    {
+        "name": "O. Alan Noble",
+        "url": "https://oalannoble.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Ryan Burge",
+        "url": "https://ryanburge.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    # Evangelical authors and voices
+    {
+        "name": "Sam Allberry",
+        "url": "https://samallberry.substack.com/feed",
+        "category": "theology",
+        "independent": True,
+    },
+    {
+        "name": "Trillia Newbell",
+        "url": "https://trillianewbell.substack.com/feed",
+        "category": "theology",
+        "independent": True,
+    },
+    {
+        "name": "Joy Clarkson",
+        "url": "https://joyclarkson.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Mike Cosper",
+        "url": "https://mikecosper.substack.com/feed",
+        "category": "church life",
+        "independent": True,
+    },
+    {
+        "name": "Bethel McGrew",
+        "url": "https://bethelmcgrew.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Bonnie Kristian",
+        "url": "https://bonniekristian.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Aimee Byrd",
+        "url": "https://aimeebyrd.substack.com/feed",
+        "category": "theology",
+        "independent": True,
+    },
+    {
+        "name": "Nadya Williams",
+        "url": "https://nadyawilliams.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Daniel K. Williams",
+        "url": "https://danielkwilliams.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Tsh Oxenreider",
+        "url": "https://tshoxenreider.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Gary Thomas",
+        "url": "https://garythomas.substack.com/feed",
+        "category": "devotional",
+        "independent": True,
+    },
+    {
+        "name": "Spencer Klavan",
+        "url": "https://spencerklavan.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Diane Langberg",
+        "url": "https://dianelangberg.substack.com/feed",
+        "category": "church life",
+        "independent": True,
+    },
+    {
+        "name": "Timothy Paul Jones",
+        "url": "https://timothypauljones.substack.com/feed",
+        "category": "theology",
+        "independent": True,
+    },
+    {
+        "name": "BibleProject",
+        "url": "https://bibleproject.substack.com/feed",
+        "category": "theology",
+        "independent": True,
     },
 ]
