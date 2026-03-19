@@ -257,6 +257,42 @@
   {% set all_personas = [] %}
   {% for article in articles %}{% if article.personas %}{% for p in article.personas %}{% if p not in all_personas %}{% set _ = all_personas.append(p) %}{% endif %}{% endfor %}{% endif %}{% endfor %}
 
+  {# Pre-compute sections with strict deduplication — each article appears at most once #}
+  {% set ns = namespace(seen=[articles[0].url] if articles else []) %}
+
+  {% set theology_articles = [] %}
+  {% for a in articles[1:] %}
+    {% if a.tags and 'theology' in a.tags and a.url not in ns.seen and theology_articles | length < 5 %}
+      {% set _ = theology_articles.append(a) %}
+      {% set ns.seen = ns.seen + [a.url] %}
+    {% endif %}
+  {% endfor %}
+
+  {% set culture_articles = [] %}
+  {% for a in articles[1:] %}
+    {% if a.tags and 'culture' in a.tags and a.url not in ns.seen and culture_articles | length < 5 %}
+      {% set _ = culture_articles.append(a) %}
+      {% set ns.seen = ns.seen + [a.url] %}
+    {% endif %}
+  {% endfor %}
+
+  {% set church_articles = [] %}
+  {% for a in articles[1:] %}
+    {% if a.tags and 'church life' in a.tags and a.url not in ns.seen and church_articles | length < 5 %}
+      {% set _ = church_articles.append(a) %}
+      {% set ns.seen = ns.seen + [a.url] %}
+    {% endif %}
+  {% endfor %}
+
+  {% set world_news_articles = articles[1:] | selectattr('source_type', 'equalto', 'world_news') | list %}
+
+  {% set remaining = [] %}
+  {% for a in articles[1:] %}
+    {% if a.url not in ns.seen and a.source_type != 'world_news' and remaining | length < 8 %}
+      {% set _ = remaining.append(a) %}
+    {% endif %}
+  {% endfor %}
+
   <!-- Mobile filter bar (hidden on desktop) -->
   <div class="cc-filter-bar">
     {% if all_tags %}
@@ -323,7 +359,6 @@
         <button id="cc-filter-clear" onclick="clearFilter()">Show all</button>
       </div>
 
-      {% set theology_articles = articles[1:] | selectattr('tags') | selectattr('tags', 'contains', 'theology') | list %}
       {% if theology_articles %}
       <div class="cc-section-group" data-section="theology">
         <div class="cc-section-label">Theology &amp; Doctrine</div>
@@ -341,7 +376,6 @@
       </div>
       {% endif %}
 
-      {% set culture_articles = articles[1:] | selectattr('tags') | selectattr('tags', 'contains', 'culture') | list %}
       {% if culture_articles %}
       <div class="cc-section-group" style="margin-top:1.5rem;" data-section="culture">
         <div class="cc-section-label">Culture &amp; Society</div>
@@ -359,7 +393,6 @@
       </div>
       {% endif %}
 
-      {% set church_articles = articles[1:] | selectattr('tags') | selectattr('tags', 'contains', 'church life') | list %}
       {% if church_articles %}
       <div class="cc-section-group" style="margin-top:1.5rem;" data-section="church life">
         <div class="cc-section-label">Church Life</div>
@@ -377,12 +410,6 @@
       </div>
       {% endif %}
 
-      {% set seen_urls = [lead.url] %}
-      {% for a in theology_articles[:5] %}{% if seen_urls.append(a.url) %}{% endif %}{% endfor %}
-      {% for a in culture_articles[:5] %}{% if seen_urls.append(a.url) %}{% endif %}{% endfor %}
-      {% for a in church_articles[:5] %}{% if seen_urls.append(a.url) %}{% endif %}{% endfor %}
-      {% set world_news_articles = articles[1:] | selectattr('source_type', 'equalto', 'world_news') | list %}
-      {% set remaining = articles[1:] | rejectattr('url', 'in', seen_urls) | rejectattr('source_type', 'equalto', 'world_news') | list %}
       {% if remaining %}
       <div class="cc-section-group" style="margin-top:1.5rem;" data-section="more">
         <div class="cc-section-label">More from Today</div>

@@ -71,9 +71,13 @@ You are a curator for a Christian news digest targeting EVANGELICAL PROTESTANT C
 
 SCORING GUIDANCE:
 - Score 1-10 based on theological depth, practical relevance to everyday Christian life, and writing quality.
-- OBITUARIES and PERSON-SPECIFIC NEWS (deaths, appointments, awards, biographical profiles) should score 3 or below
-  unless the person's story contains direct theological lessons or broad cultural significance beyond the individual.
-  Example: "John Perkins Dies at 95" = score 3 max. "What John Perkins Taught Us About Reconciliation" = score normally.
+- OBITUARIES, TRIBUTES, and PERSON-SPECIFIC NEWS (deaths, memorial essays, tribute pieces, appointments, awards,
+  biographical profiles) should score 4 or below. This includes legacy/tribute framing such as "A Courageous Voice
+  for...", "Remembering...", "Celebrating the Life of...", or "[Name]: [Adjective] [Noun]" title patterns.
+  Only score 5+ if the article contains substantial theological teaching that stands fully independent of the
+  person — i.e., a reader would benefit equally without knowing who the subject is.
+  Example: "John Perkins Dies at 95" = score 2 max. "John Perkins: A Courageous Voice for Justice" = score 4 max.
+  "What Racial Reconciliation Demands of the Church Today" (Perkins as one example among many) = score normally.
 - PODCAST EPISODE DESCRIPTIONS, RADIO RECAPS, and PROMOTIONAL ANNOUNCEMENTS should score 2 or below.
 - LONG-FORM ESSAYS and THEOLOGICAL ARGUMENTS with clear practical application should score 7-10.
 - CATHOLIC-SPECIFIC CONTENT should score 3 or below. This includes: papal encyclicals, papal appointments,
