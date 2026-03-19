@@ -56,7 +56,10 @@ def main():
     # --- Output ---
     write_output(articles, pairings)
     save_yesterday(articles)
-    save_article_history(articles)
+    # Only mark the top 20 articles as "shown" — saves Substack/independent authors
+    # from having ALL their recent content penalised the next day just because it
+    # was scored but never actually featured on the site.
+    save_article_history(articles[:20])
     render_html(articles, pairings, yesterday_articles)
 
     # --- Send Email ---
