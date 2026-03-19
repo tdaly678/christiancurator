@@ -328,4 +328,16 @@ SOURCES = [
         "category": "theology",
         "independent": True,
     },
+    {
+        "name": "Kate Shellnutt",
+        "url": "https://kateshellnutt.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Jonathon Seidl",
+        "url": "https://jonathonseidl.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
 ]

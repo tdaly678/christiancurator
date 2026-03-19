@@ -326,6 +326,7 @@ INDEPENDENT_SOURCES = {
     "Bethel McGrew", "Bonnie Kristian", "Aimee Byrd", "Nadya Williams",
     "Daniel K. Williams", "Tsh Oxenreider", "Gary Thomas", "Spencer Klavan",
     "Diane Langberg", "Timothy Paul Jones", "BibleProject",
+    "Kate Shellnutt", "Jonathon Seidl",
 }
 MIN_INDEPENDENT_ARTICLES = 3
 INDEPENDENT_FLOOR_BOOST  = 2.0  # boost applied to top independents if floor not met
