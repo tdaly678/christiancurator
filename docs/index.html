@@ -78,10 +78,9 @@
       font-size: 12px; color: #888; display: flex; gap: 10px;
       align-items: center; margin-bottom: 10px; flex-wrap: wrap;
     }
-    .cc-source-tag {
-      background: #f0ede8; border: 1px solid #ddd; padding: 2px 8px;
-      border-radius: 2px; font-size: 11px; font-weight: 600; color: #555; letter-spacing: 0.03em;
-    }
+    .cc-author { font-size: 12px; font-weight: 600; color: #3a3a3a; }
+    .cc-source { font-size: 12px; color: #aaa; }
+    .cc-meta-dot { font-size: 11px; color: #ccc; }
     .cc-lead-excerpt { font-size: 14.5px; line-height: 1.7; color: #555; }
 
     /* Article list */
@@ -244,6 +243,9 @@
 
   
   
+
+  
+  
   
   
 
@@ -254,7 +256,7 @@
       <div class="cc-sidebar-label">Browse by Topic</div>
       <div class="cc-topic-pills">
         <a class="cc-topic-pill active" data-tag="all" href="#" onclick="filterByTag('all', this); return false;">All</a>
-        <a class="cc-topic-pill" data-tag="apologetics" href="#" onclick="filterByTag('apologetics', this); return false;">apologetics</a><a class="cc-topic-pill" data-tag="church life" href="#" onclick="filterByTag('church life', this); return false;">church life</a><a class="cc-topic-pill" data-tag="culture" href="#" onclick="filterByTag('culture', this); return false;">culture</a><a class="cc-topic-pill" data-tag="devotional" href="#" onclick="filterByTag('devotional', this); return false;">devotional</a><a class="cc-topic-pill" data-tag="faith" href="#" onclick="filterByTag('faith', this); return false;">faith</a><a class="cc-topic-pill" data-tag="family" href="#" onclick="filterByTag('family', this); return false;">family</a><a class="cc-topic-pill" data-tag="missions" href="#" onclick="filterByTag('missions', this); return false;">missions</a><a class="cc-topic-pill" data-tag="news" href="#" onclick="filterByTag('news', this); return false;">news</a><a class="cc-topic-pill" data-tag="politics" href="#" onclick="filterByTag('politics', this); return false;">politics</a><a class="cc-topic-pill" data-tag="prayer" href="#" onclick="filterByTag('prayer', this); return false;">prayer</a><a class="cc-topic-pill" data-tag="suffering" href="#" onclick="filterByTag('suffering', this); return false;">suffering</a><a class="cc-topic-pill" data-tag="theology" href="#" onclick="filterByTag('theology', this); return false;">theology</a><a class="cc-topic-pill" data-tag="work" href="#" onclick="filterByTag('work', this); return false;">work</a>
+        <a class="cc-topic-pill" data-tag="apologetics" href="#" onclick="filterByTag('apologetics', this); return false;">apologetics</a><a class="cc-topic-pill" data-tag="church life" href="#" onclick="filterByTag('church life', this); return false;">church life</a><a class="cc-topic-pill" data-tag="culture" href="#" onclick="filterByTag('culture', this); return false;">culture</a><a class="cc-topic-pill" data-tag="devotional" href="#" onclick="filterByTag('devotional', this); return false;">devotional</a><a class="cc-topic-pill" data-tag="family" href="#" onclick="filterByTag('family', this); return false;">family</a><a class="cc-topic-pill" data-tag="missions" href="#" onclick="filterByTag('missions', this); return false;">missions</a><a class="cc-topic-pill" data-tag="news" href="#" onclick="filterByTag('news', this); return false;">news</a><a class="cc-topic-pill" data-tag="politics" href="#" onclick="filterByTag('politics', this); return false;">politics</a><a class="cc-topic-pill" data-tag="prayer" href="#" onclick="filterByTag('prayer', this); return false;">prayer</a><a class="cc-topic-pill" data-tag="suffering" href="#" onclick="filterByTag('suffering', this); return false;">suffering</a><a class="cc-topic-pill" data-tag="theology" href="#" onclick="filterByTag('theology', this); return false;">theology</a><a class="cc-topic-pill" data-tag="work" href="#" onclick="filterByTag('work', this); return false;">work</a>
       </div>
     </div>
     
@@ -263,7 +265,7 @@
       <div class="cc-sidebar-label">Sort by Reader</div>
       <div class="cc-persona-pills">
         <a class="cc-persona-pill active" data-persona="all" href="#" onclick="filterByPersona('all', this); return false;">All</a>
-        <a class="cc-persona-pill" data-persona="parent" href="#" onclick="filterByPersona('parent', this); return false;">parent</a><a class="cc-persona-pill" data-persona="pastor" href="#" onclick="filterByPersona('pastor', this); return false;">pastor</a><a class="cc-persona-pill" data-persona="professional" href="#" onclick="filterByPersona('professional', this); return false;">professional</a><a class="cc-persona-pill" data-persona="student" href="#" onclick="filterByPersona('student', this); return false;">student</a><a class="cc-persona-pill" data-persona="women" href="#" onclick="filterByPersona('women', this); return false;">women</a>
+        <a class="cc-persona-pill" data-persona="parent" href="#" onclick="filterByPersona('parent', this); return false;">parent</a><a class="cc-persona-pill" data-persona="pastor" href="#" onclick="filterByPersona('pastor', this); return false;">pastor</a><a class="cc-persona-pill" data-persona="professional" href="#" onclick="filterByPersona('professional', this); return false;">professional</a><a class="cc-persona-pill" data-persona="seeker" href="#" onclick="filterByPersona('seeker', this); return false;">seeker</a><a class="cc-persona-pill" data-persona="student" href="#" onclick="filterByPersona('student', this); return false;">student</a><a class="cc-persona-pill" data-persona="women" href="#" onclick="filterByPersona('women', this); return false;">women</a>
       </div>
     </div>
     
@@ -278,11 +280,14 @@
       
       <div class="cc-lead-story">
         <div class="cc-section-label">Lead Story</div>
-        <a class="cc-lead-title" href="https://www.thegospelcoalition.org/podcasts/deep-dish/why-trust-resurrection/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Why We Can Trust the Resurrection', 'article_source': 'The Gospel Coalition', 'article_url': 'https://www.thegospelcoalition.org/podcasts/deep-dish/why-trust-resurrection/'});">Why We Can Trust the Resurrection</a>
+        <a class="cc-lead-title" href="https://www.thegospelcoalition.org/podcasts/deep-dish/why-trust-resurrection/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Why Christians Can Trust the Resurrections Historical Reality', 'article_source': 'The Gospel Coalition', 'article_url': 'https://www.thegospelcoalition.org/podcasts/deep-dish/why-trust-resurrection/'});">Why Christians Can Trust the Resurrection's Historical Reality</a>
         <div class="cc-lead-meta">
-          <span class="cc-source-tag">The Gospel Coalition</span>
-          <span>theology</span><span>·</span><span>apologetics</span>
-        </div>
+    
+    
+    
+      <span class="cc-author">Courtney Doctor, Melissa Kruger, Michael J. Kruger</span><span class="cc-meta-dot"> · </span><span class="cc-source">The Gospel Coalition</span>
+    
+  </div>
         
         <p class="cc-lead-excerpt">Courtney and Melissa talk with New Testament scholar Michael Kruger about the evidence that Jesus physically rose from the dead—and the difference that makes for all of life.</p>
         
@@ -303,58 +308,73 @@
         <div class="cc-section-label">Theology &amp; Doctrine</div>
         <div class="cc-article-list">
           
-          <div class="cc-article" data-tags="theology,family" data-personas="parent,women">
+          <div class="cc-article" data-tags="theology,culture,church life" data-personas="pastor,professional">
             <div class="cc-article-num">1</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://relevantmagazine.com/magazine/the-church-needs-a-new-sex-talk/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Church Leaders Reconsider Messaging on Sexual Ethics and Purity', 'article_source': 'Relevant Magazine', 'article_url': 'https://relevantmagazine.com/magazine/the-church-needs-a-new-sex-talk/'});">Church Leaders Reconsider Messaging on Sexual Ethics and Purity</a>
+              <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/why-john-perkins-civil-rights-stood-almost-alone/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'John Perkins: A Courageous Voice for Justice and Reconciliation', 'article_source': 'Christianity Today', 'article_url': 'https://www.christianitytoday.com/2026/03/why-john-perkins-civil-rights-stood-almost-alone/'});">John Perkins: A Courageous Voice for Justice and Reconciliation</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">Relevant Magazine</span>
-                <span>family</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">Elise Brandon</span><span class="cc-meta-dot"> · </span><span class="cc-source">Christianity Today</span>
+    
+  </div>
             </div>
           </div>
           
-          <div class="cc-article" data-tags="culture,theology" data-personas="professional,pastor">
+          <div class="cc-article" data-tags="theology,family" data-personas="parent,pastor">
             <div class="cc-article-num">2</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://firstthings.com/lessons-from-the-eternal-city/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Spiritual Wisdom Found in Romes Ancient Christian Heritage', 'article_source': 'First Things', 'article_url': 'https://firstthings.com/lessons-from-the-eternal-city/'});">Spiritual Wisdom Found in Rome's Ancient Christian Heritage</a>
+              <a class="cc-article-title" href="https://relevantmagazine.com/magazine/the-church-needs-a-new-sex-talk/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Church Leaders Reconsider Approach to Purity Teaching', 'article_source': 'Relevant Magazine', 'article_url': 'https://relevantmagazine.com/magazine/the-church-needs-a-new-sex-talk/'});">Church Leaders Reconsider Approach to Purity Teaching</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">First Things</span>
-                <span>culture</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">Emily Brown</span><span class="cc-meta-dot"> · </span><span class="cc-source">Relevant Magazine</span>
+    
+  </div>
             </div>
           </div>
           
           <div class="cc-article" data-tags="theology,culture" data-personas="pastor,professional">
             <div class="cc-article-num">3</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.thegospelcoalition.org/reviews/end-gay-rights-revolution/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'The Sexual Revolution: Why Its Promises Fall Short', 'article_source': 'The Gospel Coalition', 'article_url': 'https://www.thegospelcoalition.org/reviews/end-gay-rights-revolution/'});">The Sexual Revolution: Why Its Promises Fall Short</a>
+              <a class="cc-article-title" href="https://firstthings.com/lessons-from-the-eternal-city/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Faith and History: What Rome Teaches Modern Christians', 'article_source': 'First Things', 'article_url': 'https://firstthings.com/lessons-from-the-eternal-city/'});">Faith and History: What Rome Teaches Modern Christians</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">The Gospel Coalition</span>
-                <span>culture</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">German Saucedo</span><span class="cc-meta-dot"> · </span><span class="cc-source">First Things</span>
+    
+  </div>
             </div>
           </div>
           
-          <div class="cc-article" data-tags="theology,politics,culture" data-personas="professional,pastor">
+          <div class="cc-article" data-tags="theology,culture,apologetics" data-personas="professional,pastor,parent">
             <div class="cc-article-num">4</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://americanreformer.org/2026/03/do-politics-and-morality-overlap/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Politics and Morality: Where Faith Meets Civic Responsibility', 'article_source': 'American Reformer', 'article_url': 'https://americanreformer.org/2026/03/do-politics-and-morality-overlap/'});">Politics and Morality: Where Faith Meets Civic Responsibility</a>
+              <a class="cc-article-title" href="https://www.thegospelcoalition.org/reviews/end-gay-rights-revolution/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'The Sexual Revolutions Unfulfilled Promises: A Christian Perspective', 'article_source': 'The Gospel Coalition', 'article_url': 'https://www.thegospelcoalition.org/reviews/end-gay-rights-revolution/'});">The Sexual Revolution's Unfulfilled Promises: A Christian Perspective</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">American Reformer</span>
-                <span>politics</span><span>culture</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">John F. Hanna</span><span class="cc-meta-dot"> · </span><span class="cc-source">The Gospel Coalition</span>
+    
+  </div>
             </div>
           </div>
           
-          <div class="cc-article" data-tags="missions,theology" data-personas="pastor,professional">
+          <div class="cc-article" data-tags="theology,politics" data-personas="pastor,professional">
             <div class="cc-article-num">5</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/hadoti-bible-translation-rajasthan-church-missionary/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Bible Translation in Hadoti Language Brings Gods Word Closer to India', 'article_source': 'Christianity Today', 'article_url': 'https://www.christianitytoday.com/2026/03/hadoti-bible-translation-rajasthan-church-missionary/'});">Bible Translation in Hadoti Language Brings God's Word Closer to India</a>
+              <a class="cc-article-title" href="https://americanreformer.org/2026/03/do-politics-and-morality-overlap/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Faith and Politics: Can They Align With Christian Values?', 'article_source': 'American Reformer', 'article_url': 'https://americanreformer.org/2026/03/do-politics-and-morality-overlap/'});">Faith and Politics: Can They Align With Christian Values?</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">Christianity Today</span>
-                <span>missions</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">Joshua Parcha</span><span class="cc-meta-dot"> · </span><span class="cc-source">American Reformer</span>
+    
+  </div>
             </div>
           </div>
           
@@ -368,58 +388,73 @@
         <div class="cc-section-label">Culture &amp; Society</div>
         <div class="cc-article-list">
           
-          <div class="cc-article" data-tags="culture,theology" data-personas="professional,pastor">
+          <div class="cc-article" data-tags="theology,culture,church life" data-personas="pastor,professional">
             <div class="cc-article-num">1</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://firstthings.com/lessons-from-the-eternal-city/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Spiritual Wisdom Found in Romes Ancient Christian Heritage', 'article_source': 'First Things', 'article_url': 'https://firstthings.com/lessons-from-the-eternal-city/'});">Spiritual Wisdom Found in Rome's Ancient Christian Heritage</a>
+              <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/why-john-perkins-civil-rights-stood-almost-alone/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'John Perkins: A Courageous Voice for Justice and Reconciliation', 'article_source': 'Christianity Today', 'article_url': 'https://www.christianitytoday.com/2026/03/why-john-perkins-civil-rights-stood-almost-alone/'});">John Perkins: A Courageous Voice for Justice and Reconciliation</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">First Things</span>
-                <span>theology</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">Elise Brandon</span><span class="cc-meta-dot"> · </span><span class="cc-source">Christianity Today</span>
+    
+  </div>
             </div>
           </div>
           
           <div class="cc-article" data-tags="theology,culture" data-personas="pastor,professional">
             <div class="cc-article-num">2</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.thegospelcoalition.org/reviews/end-gay-rights-revolution/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'The Sexual Revolution: Why Its Promises Fall Short', 'article_source': 'The Gospel Coalition', 'article_url': 'https://www.thegospelcoalition.org/reviews/end-gay-rights-revolution/'});">The Sexual Revolution: Why Its Promises Fall Short</a>
+              <a class="cc-article-title" href="https://firstthings.com/lessons-from-the-eternal-city/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Faith and History: What Rome Teaches Modern Christians', 'article_source': 'First Things', 'article_url': 'https://firstthings.com/lessons-from-the-eternal-city/'});">Faith and History: What Rome Teaches Modern Christians</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">The Gospel Coalition</span>
-                <span>theology</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">German Saucedo</span><span class="cc-meta-dot"> · </span><span class="cc-source">First Things</span>
+    
+  </div>
             </div>
           </div>
           
-          <div class="cc-article" data-tags="theology,politics,culture" data-personas="professional,pastor">
+          <div class="cc-article" data-tags="theology,culture,apologetics" data-personas="professional,pastor,parent">
             <div class="cc-article-num">3</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://americanreformer.org/2026/03/do-politics-and-morality-overlap/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Politics and Morality: Where Faith Meets Civic Responsibility', 'article_source': 'American Reformer', 'article_url': 'https://americanreformer.org/2026/03/do-politics-and-morality-overlap/'});">Politics and Morality: Where Faith Meets Civic Responsibility</a>
+              <a class="cc-article-title" href="https://www.thegospelcoalition.org/reviews/end-gay-rights-revolution/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'The Sexual Revolutions Unfulfilled Promises: A Christian Perspective', 'article_source': 'The Gospel Coalition', 'article_url': 'https://www.thegospelcoalition.org/reviews/end-gay-rights-revolution/'});">The Sexual Revolution's Unfulfilled Promises: A Christian Perspective</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">American Reformer</span>
-                <span>theology</span><span>politics</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">John F. Hanna</span><span class="cc-meta-dot"> · </span><span class="cc-source">The Gospel Coalition</span>
+    
+  </div>
             </div>
           </div>
           
-          <div class="cc-article" data-tags="culture,church life" data-personas="pastor,professional">
+          <div class="cc-article" data-tags="culture,apologetics,politics" data-personas="professional,student">
             <div class="cc-article-num">4</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://firstthings.com/mainlining-nostalgia/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Rediscovering Faith: Why We Long for Yesterdays Church', 'article_source': 'First Things', 'article_url': 'https://firstthings.com/mainlining-nostalgia/'});">Rediscovering Faith: Why We Long for Yesterday's Church</a>
+              <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/trashing-evangelicals-no-way-to-fight-conspiracism-book-review-reality-in-ruins/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Criticizing Evangelicals Wont Effectively Counter Conspiracy Theories', 'article_source': 'Christianity Today', 'article_url': 'https://www.christianitytoday.com/2026/03/trashing-evangelicals-no-way-to-fight-conspiracism-book-review-reality-in-ruins/'});">Criticizing Evangelicals Won't Effectively Counter Conspiracy Theories</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">First Things</span>
-                <span>church life</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">Kristy Etheridge</span><span class="cc-meta-dot"> · </span><span class="cc-source">Christianity Today</span>
+    
+  </div>
             </div>
           </div>
           
-          <div class="cc-article" data-tags="politics,culture" data-personas="professional,pastor">
+          <div class="cc-article" data-tags="culture,church life" data-personas="professional,parent">
             <div class="cc-article-num">5</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.graphsaboutreligion.com/p/what-pulls-christians-toward-trump" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Why Christian Voters Prioritize Abortion and Immigration Issues', 'article_source': 'Ryan Burge', 'article_url': 'https://www.graphsaboutreligion.com/p/what-pulls-christians-toward-trump'});">Why Christian Voters Prioritize Abortion and Immigration Issues</a>
+              <a class="cc-article-title" href="https://newsletter.oalannoble.com/p/does-weekly-church-attendance-help" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Church Attendance and Mental Health: What Research Shows', 'article_source': 'O. Alan Noble', 'article_url': 'https://newsletter.oalannoble.com/p/does-weekly-church-attendance-help'});">Church Attendance and Mental Health: What Research Shows</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">Ryan Burge</span>
-                <span>politics</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">O. Alan Noble</span>
+    
+  </div>
             </div>
           </div>
           
@@ -433,43 +468,73 @@
         <div class="cc-section-label">Church Life</div>
         <div class="cc-article-list">
           
-          <div class="cc-article" data-tags="culture,church life" data-personas="pastor,professional">
+          <div class="cc-article" data-tags="theology,culture,church life" data-personas="pastor,professional">
             <div class="cc-article-num">1</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://firstthings.com/mainlining-nostalgia/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Rediscovering Faith: Why We Long for Yesterdays Church', 'article_source': 'First Things', 'article_url': 'https://firstthings.com/mainlining-nostalgia/'});">Rediscovering Faith: Why We Long for Yesterday's Church</a>
-              <div class="cc-article-meta"><span class="cc-source-tag">First Things</span></div>
+              <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/why-john-perkins-civil-rights-stood-almost-alone/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'John Perkins: A Courageous Voice for Justice and Reconciliation', 'article_source': 'Christianity Today', 'article_url': 'https://www.christianitytoday.com/2026/03/why-john-perkins-civil-rights-stood-almost-alone/'});">John Perkins: A Courageous Voice for Justice and Reconciliation</a>
+              <div class="cc-article-meta">
+    
+    
+    
+      <span class="cc-author">Elise Brandon</span><span class="cc-meta-dot"> · </span><span class="cc-source">Christianity Today</span>
+    
+  </div>
             </div>
           </div>
           
-          <div class="cc-article" data-tags="theology,church life" data-personas="pastor,student">
+          <div class="cc-article" data-tags="missions,theology,church life" data-personas="pastor,professional">
             <div class="cc-article-num">2</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://mereorthodoxy.com/the-abuja-affirmation-a-global-definition-of-anglican-identity" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Anglican Leaders Affirm Global Identity Through Abuja Statement', 'article_source': 'Mere Orthodoxy', 'article_url': 'https://mereorthodoxy.com/the-abuja-affirmation-a-global-definition-of-anglican-identity'});">Anglican Leaders Affirm Global Identity Through Abuja Statement</a>
-              <div class="cc-article-meta"><span class="cc-source-tag">Mere Orthodoxy</span></div>
+              <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/hadoti-bible-translation-rajasthan-church-missionary/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Bible Now Available in Indias Hadoti Language, Bringing God Closer', 'article_source': 'Christianity Today', 'article_url': 'https://www.christianitytoday.com/2026/03/hadoti-bible-translation-rajasthan-church-missionary/'});">Bible Now Available in India's Hadoti Language, Bringing God Closer</a>
+              <div class="cc-article-meta">
+    
+    
+    
+      <span class="cc-author">Angela Fulton</span><span class="cc-meta-dot"> · </span><span class="cc-source">Christianity Today</span>
+    
+  </div>
             </div>
           </div>
           
-          <div class="cc-article" data-tags="church life,culture" data-personas="pastor,professional">
+          <div class="cc-article" data-tags="culture,church life" data-personas="professional,parent">
             <div class="cc-article-num">3</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://feed.desiringgod.org/link/22977/17299310/faithful-churches-can-rescue-cities" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Churches of Faith: Agents of Urban Renewal and Hope', 'article_source': 'Desiring God', 'article_url': 'https://feed.desiringgod.org/link/22977/17299310/faithful-churches-can-rescue-cities'});">Churches of Faith: Agents of Urban Renewal and Hope</a>
-              <div class="cc-article-meta"><span class="cc-source-tag">Desiring God</span></div>
+              <a class="cc-article-title" href="https://newsletter.oalannoble.com/p/does-weekly-church-attendance-help" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Church Attendance and Mental Health: What Research Shows', 'article_source': 'O. Alan Noble', 'article_url': 'https://newsletter.oalannoble.com/p/does-weekly-church-attendance-help'});">Church Attendance and Mental Health: What Research Shows</a>
+              <div class="cc-article-meta">
+    
+    
+    
+      <span class="cc-author">O. Alan Noble</span>
+    
+  </div>
             </div>
           </div>
           
-          <div class="cc-article" data-tags="church life,culture" data-personas="professional,parent">
+          <div class="cc-article" data-tags="theology,church life" data-personas="pastor,professional">
             <div class="cc-article-num">4</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://newsletter.oalannoble.com/p/does-weekly-church-attendance-help" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Church Attendance and Mental Health: What Research Reveals', 'article_source': 'O. Alan Noble', 'article_url': 'https://newsletter.oalannoble.com/p/does-weekly-church-attendance-help'});">Church Attendance and Mental Health: What Research Reveals</a>
-              <div class="cc-article-meta"><span class="cc-source-tag">O. Alan Noble</span></div>
+              <a class="cc-article-title" href="https://feed.desiringgod.org/link/22977/17299310/faithful-churches-can-rescue-cities" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Churches of Faith: Catalysts for Urban Renewal and Community Restoration', 'article_source': 'Desiring God', 'article_url': 'https://feed.desiringgod.org/link/22977/17299310/faithful-churches-can-rescue-cities'});">Churches of Faith: Catalysts for Urban Renewal and Community Restoration</a>
+              <div class="cc-article-meta">
+    
+    
+    
+      <span class="cc-author">Greg Morse</span><span class="cc-meta-dot"> · </span><span class="cc-source">Desiring God</span>
+    
+  </div>
             </div>
           </div>
           
-          <div class="cc-article" data-tags="church life,politics" data-personas="pastor,professional">
+          <div class="cc-article" data-tags="politics,church life" data-personas="pastor,professional">
             <div class="cc-article-num">5</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.theguardian.com/uk-news/2026/mar/17/religious-leaders-letter-shabana-mahmood-refugee-asylum-plans" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Religious Leaders Call for Careful Reconsideration of UK Refugee Policy', 'article_source': 'The Guardian', 'article_url': 'https://www.theguardian.com/uk-news/2026/mar/17/religious-leaders-letter-shabana-mahmood-refugee-asylum-plans'});">Religious Leaders Call for Careful Reconsideration of UK Refugee Policy</a>
-              <div class="cc-article-meta"><span class="cc-source-tag">The Guardian</span></div>
+              <a class="cc-article-title" href="https://www.theguardian.com/uk-news/2026/mar/17/religious-leaders-letter-shabana-mahmood-refugee-asylum-plans" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'UK Faith Leaders Call for Careful Reconsideration of Refugee Policy', 'article_source': 'The Guardian', 'article_url': 'https://www.theguardian.com/uk-news/2026/mar/17/religious-leaders-letter-shabana-mahmood-refugee-asylum-plans'});">UK Faith Leaders Call for Careful Reconsideration of Refugee Policy</a>
+              <div class="cc-article-meta">
+    
+    
+    
+      <span class="cc-author">Matthew Weaver</span><span class="cc-meta-dot"> · </span><span class="cc-source">The Guardian</span>
+    
+  </div>
             </div>
           </div>
           
@@ -488,91 +553,115 @@
         <div class="cc-section-label">More from Today</div>
         <div class="cc-article-list">
           
-          <div class="cc-article" data-tags="news,politics,suffering" data-personas="pastor,professional">
-            <div class="cc-article-num">1</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/iran-war-religious-freedom-trump-israel-strikes-berlin-wall-moment/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Christians in Divided Nation Reflect on Modern Spiritual Fractures', 'article_source': 'Christianity Today', 'article_url': 'https://www.christianitytoday.com/2026/03/iran-war-religious-freedom-trump-israel-strikes-berlin-wall-moment/'});">Christians in Divided Nation Reflect on Modern Spiritual Fractures</a>
-              <div class="cc-article-meta">
-                <span class="cc-source-tag">Christianity Today</span>
-                <span>news</span><span>politics</span><span>suffering</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="theology,family" data-personas="parent,pastor">
-            <div class="cc-article-num">2</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.thegospelcoalition.org/article/emotional-validation-loving/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Does Emotional Validation Always Show Love?', 'article_source': 'The Gospel Coalition', 'article_url': 'https://www.thegospelcoalition.org/article/emotional-validation-loving/'});">Does Emotional Validation Always Show Love?</a>
-              <div class="cc-article-meta">
-                <span class="cc-source-tag">The Gospel Coalition</span>
-                <span>theology</span><span>family</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="news,politics" data-personas="parent,professional">
-            <div class="cc-article-num">3</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://wng.org/podcasts/a-fight-over-oversight-1773864670" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Church Leaders Debate Role of Accountability in Governance', 'article_source': 'World Magazine', 'article_url': 'https://wng.org/podcasts/a-fight-over-oversight-1773864670'});">Church Leaders Debate Role of Accountability in Governance</a>
-              <div class="cc-article-meta">
-                <span class="cc-source-tag">World Magazine</span>
-                <span>news</span><span>politics</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="theology" data-personas="student,pastor">
-            <div class="cc-article-num">4</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://scotmcknight.substack.com/p/holiness-purity-and-atonement" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Pursuing Holiness: Understanding Purity and Atonement in Faith', 'article_source': 'Scot McKnight', 'article_url': 'https://scotmcknight.substack.com/p/holiness-purity-and-atonement'});">Pursuing Holiness: Understanding Purity and Atonement in Faith</a>
-              <div class="cc-article-meta">
-                <span class="cc-source-tag">Scot McKnight</span>
-                <span>theology</span>
-              </div>
-            </div>
-          </div>
-          
           <div class="cc-article" data-tags="theology,apologetics" data-personas="pastor,student">
-            <div class="cc-article-num">5</div>
+            <div class="cc-article-num">1</div>
             <div class="cc-article-content">
               <a class="cc-article-title" href="https://timothypauljones.substack.com/p/you-cant-follow-jesus-if-you-dont" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Following Jesus Requires Trusting in Gods Word', 'article_source': 'Timothy Paul Jones', 'article_url': 'https://timothypauljones.substack.com/p/you-cant-follow-jesus-if-you-dont'});">Following Jesus Requires Trusting in God's Word</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">Timothy Paul Jones</span>
-                <span>theology</span><span>apologetics</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">Timothy Paul Jones</span>
+    
+  </div>
             </div>
           </div>
           
-          <div class="cc-article" data-tags="apologetics,culture" data-personas="pastor,professional">
+          <div class="cc-article" data-tags="theology,family,devotional" data-personas="parent,professional,pastor">
+            <div class="cc-article-num">2</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://www.thegospelcoalition.org/article/emotional-validation-loving/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'When Emotional Validation Becomes Unloving: Finding Balance in Care', 'article_source': 'The Gospel Coalition', 'article_url': 'https://www.thegospelcoalition.org/article/emotional-validation-loving/'});">When Emotional Validation Becomes Unloving: Finding Balance in Care</a>
+              <div class="cc-article-meta">
+    
+    
+    
+      <span class="cc-author">Taylor Combs</span><span class="cc-meta-dot"> · </span><span class="cc-source">The Gospel Coalition</span>
+    
+  </div>
+            </div>
+          </div>
+          
+          <div class="cc-article" data-tags="theology,apologetics" data-personas="student,pastor">
+            <div class="cc-article-num">3</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://firstthings.com/living-with-wittgenstein/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Wittgensteins Faith: Lessons for the Christian Life', 'article_source': 'First Things', 'article_url': 'https://firstthings.com/living-with-wittgenstein/'});">Wittgenstein's Faith: Lessons for the Christian Life</a>
+              <div class="cc-article-meta">
+    
+    
+    
+      <span class="cc-author">Jillian Parks</span><span class="cc-meta-dot"> · </span><span class="cc-source">First Things</span>
+    
+  </div>
+            </div>
+          </div>
+          
+          <div class="cc-article" data-tags="news,politics" data-personas="parent">
+            <div class="cc-article-num">4</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://wng.org/podcasts/a-fight-over-oversight-1773864670" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Church Leadership Debates Accountability and Governance Standards', 'article_source': 'World Magazine', 'article_url': 'https://wng.org/podcasts/a-fight-over-oversight-1773864670'});">Church Leadership Debates Accountability and Governance Standards</a>
+              <div class="cc-article-meta">
+    
+    
+    
+      <span class="cc-author">Keegan Martin</span><span class="cc-meta-dot"> · </span><span class="cc-source">World Magazine</span>
+    
+  </div>
+            </div>
+          </div>
+          
+          <div class="cc-article" data-tags="family,devotional,theology" data-personas="parent,professional,pastor">
+            <div class="cc-article-num">5</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://www.thegospelcoalition.org/article/kids-dont-live-up-expectations/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Parenting Faith: Accepting Your Childrens Different Path', 'article_source': 'The Gospel Coalition', 'article_url': 'https://www.thegospelcoalition.org/article/kids-dont-live-up-expectations/'});">Parenting Faith: Accepting Your Children's Different Path</a>
+              <div class="cc-article-meta">
+    
+    
+    
+      <span class="cc-author">Sharonda Cooper</span><span class="cc-meta-dot"> · </span><span class="cc-source">The Gospel Coalition</span>
+    
+  </div>
+            </div>
+          </div>
+          
+          <div class="cc-article" data-tags="theology,devotional" data-personas="student,professional">
             <div class="cc-article-num">6</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.christianitytoday.com/2026/03/trashing-evangelicals-no-way-to-fight-conspiracism-book-review-reality-in-ruins/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Criticizing Evangelicals Wont Solve the Conspiracy Problem', 'article_source': 'Christianity Today', 'article_url': 'https://www.christianitytoday.com/2026/03/trashing-evangelicals-no-way-to-fight-conspiracism-book-review-reality-in-ruins/'});">Criticizing Evangelicals Won't Solve the Conspiracy Problem</a>
+              <a class="cc-article-title" href="https://scotmcknight.substack.com/p/holiness-purity-and-atonement" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Holiness, Purity, and Atonement: Biblical Foundations for Christian Living', 'article_source': 'Scot McKnight', 'article_url': 'https://scotmcknight.substack.com/p/holiness-purity-and-atonement'});">Holiness, Purity, and Atonement: Biblical Foundations for Christian Living</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">Christianity Today</span>
-                <span>apologetics</span><span>culture</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">Scot McKnight</span>
+    
+  </div>
             </div>
           </div>
           
-          <div class="cc-article" data-tags="devotional,theology" data-personas="parent,professional">
+          <div class="cc-article" data-tags="family,devotional" data-personas="parent,professional">
             <div class="cc-article-num">7</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://phyliciamasonheimer.substack.com/p/letting-go-of-remember-when" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Releasing the Past: Finding Freedom in Gods Present', 'article_source': 'Phylicia Masonheimer', 'article_url': 'https://phyliciamasonheimer.substack.com/p/letting-go-of-remember-when'});">Releasing the Past: Finding Freedom in God's Present</a>
+              <a class="cc-article-title" href="https://relevantmagazine.com/current/a-close-friends-divorce-could-increase-your-odds-by-75/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Friends Divorce: How It May Impact Your Own Marriage', 'article_source': 'Relevant Magazine', 'article_url': 'https://relevantmagazine.com/current/a-close-friends-divorce-could-increase-your-odds-by-75/'});">Friend's Divorce: How It May Impact Your Own Marriage</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">Phylicia Masonheimer</span>
-                <span>devotional</span><span>theology</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">Emily Brown</span><span class="cc-meta-dot"> · </span><span class="cc-source">Relevant Magazine</span>
+    
+  </div>
             </div>
           </div>
           
-          <div class="cc-article" data-tags="theology,prayer" data-personas="pastor,student">
+          <div class="cc-article" data-tags="politics,culture" data-personas="professional,parent">
             <div class="cc-article-num">8</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://matthewleeanderson.substack.com/p/746-the-paradox-of-the-sixth-petition" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'The Sixth Petitions Hidden Paradox: Understanding Gods Will', 'article_source': 'Matthew Lee Anderson', 'article_url': 'https://matthewleeanderson.substack.com/p/746-the-paradox-of-the-sixth-petition'});">The Sixth Petition's Hidden Paradox: Understanding God's Will</a>
+              <a class="cc-article-title" href="https://www.graphsaboutreligion.com/p/what-pulls-christians-toward-trump" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Christians Weigh Key Issues: Abortion and Immigration in Election Choices', 'article_source': 'Ryan Burge', 'article_url': 'https://www.graphsaboutreligion.com/p/what-pulls-christians-toward-trump'});">Christians Weigh Key Issues: Abortion and Immigration in Election Choices</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">Matthew Lee Anderson</span>
-                <span>theology</span><span>prayer</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">Ryan Burge</span>
+    
+  </div>
             </div>
           </div>
           
@@ -590,66 +679,85 @@
           <div class="cc-article" data-tags="news,politics" data-personas="" style="background:#faf9f7; border-left:3px solid #2C4A2E; padding-left:10px;">
             <div class="cc-article-content">
               <div style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#2C4A2E; margin-bottom:4px;">Top Story</div>
-              <a class="cc-article-title" href="https://www.bbc.com/news/articles/c15x5ejgyl3o?at_medium=RSS&at_campaign=rss" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Congo and Rwanda Move Toward Peace Following U.S. Mediated Talks', 'article_source': 'BBC News', 'article_url': 'https://www.bbc.com/news/articles/c15x5ejgyl3o?at_medium=RSS&at_campaign=rss'});">Congo and Rwanda Move Toward Peace Following U.S. Mediated Talks</a>
+              <a class="cc-article-title" href="https://www.bbc.com/news/articles/c78x83lpgngo?at_medium=RSS&at_campaign=rss" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Energy Prices Surge Following Middle East Regional Tensions', 'article_source': 'BBC News', 'article_url': 'https://www.bbc.com/news/articles/c78x83lpgngo?at_medium=RSS&at_campaign=rss'});">Energy Prices Surge Following Middle East Regional Tensions</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">BBC News</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">BBC News</span>
+    
+  </div>
             </div>
           </div>
           
           
-          <div class="cc-article" data-tags="culture,politics" data-personas="professional,women">
+          <div class="cc-article" data-tags="culture,politics" data-personas="professional,parent">
             <div class="cc-article-num">1</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.nytimes.com/2026/03/18/world/europe/faroe-islands-abortion-europe.html" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Faroe Islands Consider Loosening Europes Most Restrictive Abortion Laws', 'article_source': 'The New York Times', 'article_url': 'https://www.nytimes.com/2026/03/18/world/europe/faroe-islands-abortion-europe.html'});">Faroe Islands Consider Loosening Europe's Most Restrictive Abortion Laws</a>
+              <a class="cc-article-title" href="https://www.nytimes.com/2026/03/18/world/europe/faroe-islands-abortion-europe.html" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Faroe Islands Consider Easing Europes Strictest Abortion Restrictions', 'article_source': 'The New York Times', 'article_url': 'https://www.nytimes.com/2026/03/18/world/europe/faroe-islands-abortion-europe.html'});">Faroe Islands Consider Easing Europe's Strictest Abortion Restrictions</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">The New York Times</span>
-                <span>culture</span><span>politics</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">Amelia Nierenberg and Regin Winther Poulsen</span><span class="cc-meta-dot"> · </span><span class="cc-source">The New York Times</span>
+    
+  </div>
             </div>
           </div>
           
-          <div class="cc-article" data-tags="politics,culture" data-personas="professional">
+          <div class="cc-article" data-tags="politics,church life" data-personas="pastor,professional">
             <div class="cc-article-num">2</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.bbc.com/news/articles/c8d5d54glreo?at_medium=RSS&at_campaign=rss" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Alberta Proposes New Restrictions on Medical Assistance in Dying', 'article_source': 'BBC News', 'article_url': 'https://www.bbc.com/news/articles/c8d5d54glreo?at_medium=RSS&at_campaign=rss'});">Alberta Proposes New Restrictions on Medical Assistance in Dying</a>
+              <a class="cc-article-title" href="https://www.theguardian.com/uk-news/2026/mar/17/religious-leaders-letter-shabana-mahmood-refugee-asylum-plans" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'UK Faith Leaders Call for Careful Reconsideration of Refugee Policy', 'article_source': 'The Guardian', 'article_url': 'https://www.theguardian.com/uk-news/2026/mar/17/religious-leaders-letter-shabana-mahmood-refugee-asylum-plans'});">UK Faith Leaders Call for Careful Reconsideration of Refugee Policy</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">BBC News</span>
-                <span>politics</span><span>culture</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="church life,politics" data-personas="pastor,professional">
-            <div class="cc-article-num">3</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.theguardian.com/uk-news/2026/mar/17/religious-leaders-letter-shabana-mahmood-refugee-asylum-plans" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Religious Leaders Call for Careful Reconsideration of UK Refugee Policy', 'article_source': 'The Guardian', 'article_url': 'https://www.theguardian.com/uk-news/2026/mar/17/religious-leaders-letter-shabana-mahmood-refugee-asylum-plans'});">Religious Leaders Call for Careful Reconsideration of UK Refugee Policy</a>
-              <div class="cc-article-meta">
-                <span class="cc-source-tag">The Guardian</span>
-                <span>church life</span><span>politics</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">Matthew Weaver</span><span class="cc-meta-dot"> · </span><span class="cc-source">The Guardian</span>
+    
+  </div>
             </div>
           </div>
           
           <div class="cc-article" data-tags="culture" data-personas="professional">
-            <div class="cc-article-num">4</div>
+            <div class="cc-article-num">3</div>
             <div class="cc-article-content">
               <a class="cc-article-title" href="https://www.nytimes.com/2026/03/18/world/americas/montserrat-st-patricks-day.html" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'St. Patricks Day Celebration Honors African Heritage and History', 'article_source': 'The New York Times', 'article_url': 'https://www.nytimes.com/2026/03/18/world/americas/montserrat-st-patricks-day.html'});">St. Patrick's Day Celebration Honors African Heritage and History</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">The New York Times</span>
-                <span>culture</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">James Wagner and Luis Antonio Rojas</span><span class="cc-meta-dot"> · </span><span class="cc-source">The New York Times</span>
+    
+  </div>
             </div>
           </div>
           
-          <div class="cc-article" data-tags="church life,politics" data-personas="pastor,professional">
+          <div class="cc-article" data-tags="news,politics" data-personas="">
+            <div class="cc-article-num">4</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="https://www.bbc.com/news/articles/c8d5d54glreo?at_medium=RSS&at_campaign=rss" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Alberta Proposes New Restrictions on Medical Assistance in Dying', 'article_source': 'BBC News', 'article_url': 'https://www.bbc.com/news/articles/c8d5d54glreo?at_medium=RSS&at_campaign=rss'});">Alberta Proposes New Restrictions on Medical Assistance in Dying</a>
+              <div class="cc-article-meta">
+    
+    
+    
+      <span class="cc-author">BBC News</span>
+    
+  </div>
+            </div>
+          </div>
+          
+          <div class="cc-article" data-tags="politics,church life" data-personas="pastor,professional">
             <div class="cc-article-num">5</div>
             <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.theguardian.com/uk-news/2026/mar/17/the-government-must-rethink-its-settlement-and-citizenship-reforms" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Government Reconsiders Settlement and Citizenship Policy Changes', 'article_source': 'The Guardian', 'article_url': 'https://www.theguardian.com/uk-news/2026/mar/17/the-government-must-rethink-its-settlement-and-citizenship-reforms'});">Government Reconsiders Settlement and Citizenship Policy Changes</a>
+              <a class="cc-article-title" href="https://www.theguardian.com/uk-news/2026/mar/17/the-government-must-rethink-its-settlement-and-citizenship-reforms" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Government Must Reconsider Settlement and Citizenship Policy Reforms', 'article_source': 'The Guardian', 'article_url': 'https://www.theguardian.com/uk-news/2026/mar/17/the-government-must-rethink-its-settlement-and-citizenship-reforms'});">Government Must Reconsider Settlement and Citizenship Policy Reforms</a>
               <div class="cc-article-meta">
-                <span class="cc-source-tag">The Guardian</span>
-                <span>church life</span><span>politics</span>
-              </div>
+    
+    
+    
+      <span class="cc-author">Guardian Staff</span><span class="cc-meta-dot"> · </span><span class="cc-source">The Guardian</span>
+    
+  </div>
             </div>
           </div>
           
@@ -668,27 +776,6 @@
         
         <div class="cc-trending-item">
           <div class="cc-trending-num">1</div>
-          <a class="cc-trending-title" href="https://www.thegospelcoalition.org/podcasts/deep-dish/why-trust-resurrection/" target="_blank">The Resurrection: Why Christians Can Confidently Trust It</a>
-        </div>
-        
-        <div class="cc-trending-item">
-          <div class="cc-trending-num">2</div>
-          <a class="cc-trending-title" href="http://feeds.ligonier.org/~/951044099/0/ligonierministriesblog" target="_blank">What Is Irresistible Grace? Understanding God's Sovereign Call</a>
-        </div>
-        
-        <div class="cc-trending-item">
-          <div class="cc-trending-num">3</div>
-          <a class="cc-trending-title" href="https://firstthings.com/lessons-from-the-eternal-city/" target="_blank">Ancient Rome's Spiritual Lessons for Modern Christian Faith</a>
-        </div>
-        
-      </div>
-      
-
-      <div class="cc-sidebar-section">
-        <div class="cc-sidebar-label">Trending Today</div>
-        
-        <div class="cc-trending-item">
-          <div class="cc-trending-num">1</div>
           <a class="cc-trending-title" href="https://www.thegospelcoalition.org/podcasts/deep-dish/why-trust-resurrection/" target="_blank">Why We Can Trust the Resurrection</a>
         </div>
         
@@ -702,14 +789,35 @@
           <a class="cc-trending-title" href="https://relevantmagazine.com/magazine/the-church-needs-a-new-sex-talk/" target="_blank">Church Leaders Reconsider Messaging on Sexual Ethics and Purity</a>
         </div>
         
+      </div>
+      
+
+      <div class="cc-sidebar-section">
+        <div class="cc-sidebar-label">Trending Today</div>
+        
+        <div class="cc-trending-item">
+          <div class="cc-trending-num">1</div>
+          <a class="cc-trending-title" href="https://www.thegospelcoalition.org/podcasts/deep-dish/why-trust-resurrection/" target="_blank">Why Christians Can Trust the Resurrection's Historical Reality</a>
+        </div>
+        
+        <div class="cc-trending-item">
+          <div class="cc-trending-num">2</div>
+          <a class="cc-trending-title" href="https://www.christianitytoday.com/2026/03/why-john-perkins-civil-rights-stood-almost-alone/" target="_blank">John Perkins: A Courageous Voice for Justice and Reconciliation</a>
+        </div>
+        
+        <div class="cc-trending-item">
+          <div class="cc-trending-num">3</div>
+          <a class="cc-trending-title" href="https://relevantmagazine.com/magazine/the-church-needs-a-new-sex-talk/" target="_blank">Church Leaders Reconsider Approach to Purity Teaching</a>
+        </div>
+        
         <div class="cc-trending-item">
           <div class="cc-trending-num">4</div>
-          <a class="cc-trending-title" href="https://firstthings.com/lessons-from-the-eternal-city/" target="_blank">Spiritual Wisdom Found in Rome's Ancient Christian Heritage</a>
+          <a class="cc-trending-title" href="https://firstthings.com/lessons-from-the-eternal-city/" target="_blank">Faith and History: What Rome Teaches Modern Christians</a>
         </div>
         
         <div class="cc-trending-item">
           <div class="cc-trending-num">5</div>
-          <a class="cc-trending-title" href="https://www.thegospelcoalition.org/reviews/end-gay-rights-revolution/" target="_blank">The Sexual Revolution: Why Its Promises Fall Short</a>
+          <a class="cc-trending-title" href="https://www.thegospelcoalition.org/reviews/end-gay-rights-revolution/" target="_blank">The Sexual Revolution's Unfulfilled Promises: A Christian Perspective</a>
         </div>
         
       </div>
@@ -720,7 +828,7 @@
           <div class="cc-sidebar-label">Browse by Topic</div>
           <div class="cc-topic-pills">
             <a class="cc-topic-pill active" data-tag="all" href="#" onclick="filterByTag('all', this); return false;">All</a>
-            <a class="cc-topic-pill" data-tag="apologetics" href="#" onclick="filterByTag('apologetics', this); return false;">apologetics</a><a class="cc-topic-pill" data-tag="church life" href="#" onclick="filterByTag('church life', this); return false;">church life</a><a class="cc-topic-pill" data-tag="culture" href="#" onclick="filterByTag('culture', this); return false;">culture</a><a class="cc-topic-pill" data-tag="devotional" href="#" onclick="filterByTag('devotional', this); return false;">devotional</a><a class="cc-topic-pill" data-tag="faith" href="#" onclick="filterByTag('faith', this); return false;">faith</a><a class="cc-topic-pill" data-tag="family" href="#" onclick="filterByTag('family', this); return false;">family</a><a class="cc-topic-pill" data-tag="missions" href="#" onclick="filterByTag('missions', this); return false;">missions</a><a class="cc-topic-pill" data-tag="news" href="#" onclick="filterByTag('news', this); return false;">news</a><a class="cc-topic-pill" data-tag="politics" href="#" onclick="filterByTag('politics', this); return false;">politics</a><a class="cc-topic-pill" data-tag="prayer" href="#" onclick="filterByTag('prayer', this); return false;">prayer</a><a class="cc-topic-pill" data-tag="suffering" href="#" onclick="filterByTag('suffering', this); return false;">suffering</a><a class="cc-topic-pill" data-tag="theology" href="#" onclick="filterByTag('theology', this); return false;">theology</a><a class="cc-topic-pill" data-tag="work" href="#" onclick="filterByTag('work', this); return false;">work</a>
+            <a class="cc-topic-pill" data-tag="apologetics" href="#" onclick="filterByTag('apologetics', this); return false;">apologetics</a><a class="cc-topic-pill" data-tag="church life" href="#" onclick="filterByTag('church life', this); return false;">church life</a><a class="cc-topic-pill" data-tag="culture" href="#" onclick="filterByTag('culture', this); return false;">culture</a><a class="cc-topic-pill" data-tag="devotional" href="#" onclick="filterByTag('devotional', this); return false;">devotional</a><a class="cc-topic-pill" data-tag="family" href="#" onclick="filterByTag('family', this); return false;">family</a><a class="cc-topic-pill" data-tag="missions" href="#" onclick="filterByTag('missions', this); return false;">missions</a><a class="cc-topic-pill" data-tag="news" href="#" onclick="filterByTag('news', this); return false;">news</a><a class="cc-topic-pill" data-tag="politics" href="#" onclick="filterByTag('politics', this); return false;">politics</a><a class="cc-topic-pill" data-tag="prayer" href="#" onclick="filterByTag('prayer', this); return false;">prayer</a><a class="cc-topic-pill" data-tag="suffering" href="#" onclick="filterByTag('suffering', this); return false;">suffering</a><a class="cc-topic-pill" data-tag="theology" href="#" onclick="filterByTag('theology', this); return false;">theology</a><a class="cc-topic-pill" data-tag="work" href="#" onclick="filterByTag('work', this); return false;">work</a>
           </div>
         </div>
         
@@ -730,7 +838,7 @@
           <div class="cc-sidebar-label">Sort by Reader</div>
           <div class="cc-persona-pills">
             <a class="cc-persona-pill active" data-persona="all" href="#" onclick="filterByPersona('all', this); return false;">All</a>
-            <a class="cc-persona-pill" data-persona="parent" href="#" onclick="filterByPersona('parent', this); return false;">parent</a><a class="cc-persona-pill" data-persona="pastor" href="#" onclick="filterByPersona('pastor', this); return false;">pastor</a><a class="cc-persona-pill" data-persona="professional" href="#" onclick="filterByPersona('professional', this); return false;">professional</a><a class="cc-persona-pill" data-persona="student" href="#" onclick="filterByPersona('student', this); return false;">student</a><a class="cc-persona-pill" data-persona="women" href="#" onclick="filterByPersona('women', this); return false;">women</a>
+            <a class="cc-persona-pill" data-persona="parent" href="#" onclick="filterByPersona('parent', this); return false;">parent</a><a class="cc-persona-pill" data-persona="pastor" href="#" onclick="filterByPersona('pastor', this); return false;">pastor</a><a class="cc-persona-pill" data-persona="professional" href="#" onclick="filterByPersona('professional', this); return false;">professional</a><a class="cc-persona-pill" data-persona="seeker" href="#" onclick="filterByPersona('seeker', this); return false;">seeker</a><a class="cc-persona-pill" data-persona="student" href="#" onclick="filterByPersona('student', this); return false;">student</a><a class="cc-persona-pill" data-persona="women" href="#" onclick="filterByPersona('women', this); return false;">women</a>
           </div>
         </div>
         
