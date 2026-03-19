@@ -16,10 +16,19 @@ def fetch_feed(source: dict) -> list[dict]:
         feed = feedparser.parse(source["url"])
         articles = []
         for entry in feed.entries[:MAX_ARTICLES_PER_SOURCE]:
+            # Extract author — prefer entry-level, fall back to feed-level
+            author = (
+                entry.get("author")
+                or getattr(entry.get("author_detail"), "name", None)
+                or feed.feed.get("author")
+                or ""
+            ).strip()
             articles.append({
                 "source_name": source["name"],
                 "source_category": source["category"],
                 "source_type": source.get("source_type", "christian"),
+                "independent": source.get("independent", False),
+                "author": author,
                 "title": entry.get("title", "").strip(),
                 "url": entry.get("link", ""),
                 "summary": entry.get("summary", ""),

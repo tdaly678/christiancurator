@@ -78,10 +78,9 @@
       font-size: 12px; color: #888; display: flex; gap: 10px;
       align-items: center; margin-bottom: 10px; flex-wrap: wrap;
     }
-    .cc-source-tag {
-      background: #f0ede8; border: 1px solid #ddd; padding: 2px 8px;
-      border-radius: 2px; font-size: 11px; font-weight: 600; color: #555; letter-spacing: 0.03em;
-    }
+    .cc-author { font-size: 12px; font-weight: 600; color: #3a3a3a; }
+    .cc-source { font-size: 12px; color: #aaa; }
+    .cc-meta-dot { font-size: 11px; color: #ccc; }
     .cc-lead-excerpt { font-size: 14.5px; line-height: 1.7; color: #555; }
 
     /* Article list */
@@ -242,6 +241,17 @@
     </div>
   </div>
 
+  {# Macro: render author · source byline #}
+  {% macro byline(article) %}
+    {% set auth = article.author | default('') | trim %}
+    {% set src  = article.source_name | default('') | trim %}
+    {% if auth and auth | lower != src | lower %}
+      <span class="cc-author">{{ auth }}</span><span class="cc-meta-dot"> · </span><span class="cc-source">{{ src }}</span>
+    {% else %}
+      <span class="cc-author">{{ src }}</span>
+    {% endif %}
+  {% endmacro %}
+
   {% set all_tags = [] %}
   {% for article in articles %}{% for tag in article.tags %}{% if tag not in all_tags %}{% set _ = all_tags.append(tag) %}{% endif %}{% endfor %}{% endfor %}
   {% set all_personas = [] %}
@@ -279,10 +289,7 @@
       <div class="cc-lead-story">
         <div class="cc-section-label">Lead Story</div>
         <a class="cc-lead-title" href="{{ lead.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (lead.rewritten_title or lead.title) | replace("'", "") }}', 'article_source': '{{ lead.source_name }}', 'article_url': '{{ lead.url }}'});">{{ lead.rewritten_title or lead.title }}</a>
-        <div class="cc-lead-meta">
-          <span class="cc-source-tag">{{ lead.source_name }}</span>
-          {% for tag in lead.tags %}<span>{{ tag }}</span>{% if not loop.last %}<span>·</span>{% endif %}{% endfor %}
-        </div>
+        <div class="cc-lead-meta">{{ byline(lead) }}</div>
         {% if lead.summary %}
         <p class="cc-lead-excerpt">{{ lead.summary | striptags | truncate(220) }}</p>
         {% endif %}
@@ -298,12 +305,12 @@
           <div class="cc-cp-side">
             <div class="cc-cp-stance for">Point</div>
             <a class="cc-cp-title" href="{{ pair.point_url }}" target="_blank">{{ pair.point_title }}</a>
-            <div class="cc-cp-source">{{ pair.point_source }}</div>
+            <div class="cc-cp-source cc-source">{{ pair.point_source }}</div>
           </div>
           <div class="cc-cp-side">
             <div class="cc-cp-stance against">Counterpoint</div>
             <a class="cc-cp-title" href="{{ pair.counterpoint_url }}" target="_blank">{{ pair.counterpoint_title }}</a>
-            <div class="cc-cp-source">{{ pair.counterpoint_source }}</div>
+            <div class="cc-cp-source cc-source">{{ pair.counterpoint_source }}</div>
           </div>
         </div>
       </div>
@@ -326,10 +333,7 @@
             <div class="cc-article-num">{{ loop.index }}</div>
             <div class="cc-article-content">
               <a class="cc-article-title" href="{{ article.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (article.rewritten_title or article.title) | replace("'", "") }}', 'article_source': '{{ article.source_name }}', 'article_url': '{{ article.url }}'});">{{ article.rewritten_title or article.title }}</a>
-              <div class="cc-article-meta">
-                <span class="cc-source-tag">{{ article.source_name }}</span>
-                {% for tag in article.tags if tag != 'theology' %}<span>{{ tag }}</span>{% endfor %}
-              </div>
+              <div class="cc-article-meta">{{ byline(article) }}</div>
             </div>
           </div>
           {% endfor %}
@@ -347,10 +351,7 @@
             <div class="cc-article-num">{{ loop.index }}</div>
             <div class="cc-article-content">
               <a class="cc-article-title" href="{{ article.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (article.rewritten_title or article.title) | replace("'", "") }}', 'article_source': '{{ article.source_name }}', 'article_url': '{{ article.url }}'});">{{ article.rewritten_title or article.title }}</a>
-              <div class="cc-article-meta">
-                <span class="cc-source-tag">{{ article.source_name }}</span>
-                {% for tag in article.tags if tag != 'culture' %}<span>{{ tag }}</span>{% endfor %}
-              </div>
+              <div class="cc-article-meta">{{ byline(article) }}</div>
             </div>
           </div>
           {% endfor %}
@@ -368,7 +369,7 @@
             <div class="cc-article-num">{{ loop.index }}</div>
             <div class="cc-article-content">
               <a class="cc-article-title" href="{{ article.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (article.rewritten_title or article.title) | replace("'", "") }}', 'article_source': '{{ article.source_name }}', 'article_url': '{{ article.url }}'});">{{ article.rewritten_title or article.title }}</a>
-              <div class="cc-article-meta"><span class="cc-source-tag">{{ article.source_name }}</span></div>
+              <div class="cc-article-meta">{{ byline(article) }}</div>
             </div>
           </div>
           {% endfor %}
@@ -391,10 +392,7 @@
             <div class="cc-article-num">{{ loop.index }}</div>
             <div class="cc-article-content">
               <a class="cc-article-title" href="{{ article.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (article.rewritten_title or article.title) | replace("'", "") }}', 'article_source': '{{ article.source_name }}', 'article_url': '{{ article.url }}'});">{{ article.rewritten_title or article.title }}</a>
-              <div class="cc-article-meta">
-                <span class="cc-source-tag">{{ article.source_name }}</span>
-                {% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}
-              </div>
+              <div class="cc-article-meta">{{ byline(article) }}</div>
             </div>
           </div>
           {% endfor %}
@@ -413,9 +411,7 @@
             <div class="cc-article-content">
               <div style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#2C4A2E; margin-bottom:4px;">Top Story</div>
               <a class="cc-article-title" href="{{ top_story.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (top_story.rewritten_title or top_story.title) | replace("'", "") }}', 'article_source': '{{ top_story.source_name }}', 'article_url': '{{ top_story.url }}'});">{{ top_story.rewritten_title or top_story.title }}</a>
-              <div class="cc-article-meta">
-                <span class="cc-source-tag">{{ top_story.source_name }}</span>
-              </div>
+              <div class="cc-article-meta">{{ byline(top_story) }}</div>
             </div>
           </div>
           {% endif %}
@@ -424,10 +420,7 @@
             <div class="cc-article-num">{{ loop.index }}</div>
             <div class="cc-article-content">
               <a class="cc-article-title" href="{{ article.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (article.rewritten_title or article.title) | replace("'", "") }}', 'article_source': '{{ article.source_name }}', 'article_url': '{{ article.url }}'});">{{ article.rewritten_title or article.title }}</a>
-              <div class="cc-article-meta">
-                <span class="cc-source-tag">{{ article.source_name }}</span>
-                {% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}
-              </div>
+              <div class="cc-article-meta">{{ byline(article) }}</div>
             </div>
           </div>
           {% endfor %}
