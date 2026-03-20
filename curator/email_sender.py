@@ -22,6 +22,15 @@ def strip_tags(html: str) -> str:
     return re.sub(r'<[^>]+>', '', html or '').strip()
 
 
+def render_byline(article: dict) -> str:
+    """Render author · source byline, matching the website style."""
+    author = (article.get("author") or "").strip()
+    source = (article.get("source_name") or "").strip()
+    if author and author.lower() != source.lower():
+        return f'<span style="font-weight:600; color:#3a3a3a;">{author}</span><span style="color:#ccc;"> · </span><span style="color:#aaa;">{source}</span>'
+    return f'<span style="color:#aaa;">{source}</span>'
+
+
 def render_articles(articles: list[dict]) -> str:
     """Render a list of articles as HTML email rows."""
     out = ""
@@ -32,8 +41,8 @@ def render_articles(articles: list[dict]) -> str:
           <div style="font-family:Georgia,serif; font-size:15px; font-weight:600; line-height:1.35; margin:0 0 5px;">
             <a href="{a['url']}" style="color:#1a1a1a; text-decoration:none;">{title}</a>
           </div>
-          <div style="font-size:11px; color:#aaa;">
-            <span style="background:#f0ede8; border:1px solid #ddd; padding:2px 7px; font-size:11px; font-weight:600; color:#555; border-radius:2px;">{a['source_name']}</span>
+          <div style="font-size:11.5px; margin-top:3px;">
+            {render_byline(a)}
           </div>
         </div>"""
     return out
@@ -51,15 +60,29 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict]) -> st
     world_news = [a for a in world_news_all if not a.get("top_world_story")]
 
     lead = christian[0] if christian else None
-    theology  = [a for a in christian[1:] if "theology"    in (a.get("tags") or [])][:2]
-    culture   = [a for a in christian[1:] if "culture"     in (a.get("tags") or [])][:2]
-    church    = [a for a in christian[1:] if "church life" in (a.get("tags") or [])][:2]
 
+    # Build sections with strict deduplication — each article appears at most once
     seen = {lead["url"]} if lead else set()
-    for a in theology + culture + church:
-        seen.add(a["url"])
 
-    # Cap total christian articles at 10 (lead + sections + remainder)
+    theology = []
+    for a in christian[1:]:
+        if "theology" in (a.get("tags") or []) and a["url"] not in seen and len(theology) < 2:
+            theology.append(a)
+            seen.add(a["url"])
+
+    culture = []
+    for a in christian[1:]:
+        if "culture" in (a.get("tags") or []) and a["url"] not in seen and len(culture) < 2:
+            culture.append(a)
+            seen.add(a["url"])
+
+    church = []
+    for a in christian[1:]:
+        if "church life" in (a.get("tags") or []) and a["url"] not in seen and len(church) < 2:
+            church.append(a)
+            seen.add(a["url"])
+
+    # Fill remainder up to 10 total (lead + sections + more)
     used = len(theology) + len(culture) + len(church)
     remaining = max(0, 9 - used)  # 9 more after lead = 10 total
     more = [a for a in christian[1:] if a["url"] not in seen][:remaining]
@@ -75,8 +98,8 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict]) -> st
           <div style="font-family:Georgia,serif; font-size:22px; font-weight:700; line-height:1.3; margin-bottom:8px;">
             <a href="{lead['url']}" style="color:#1a1a1a; text-decoration:none;">{title}</a>
           </div>
-          <div style="margin-bottom:8px;">
-            <span style="background:#f0ede8; border:1px solid #ddd; padding:2px 7px; font-size:11px; font-weight:600; color:#555; border-radius:2px;">{lead['source_name']}</span>
+          <div style="font-size:11.5px; margin-bottom:8px;">
+            {render_byline(lead)}
           </div>
           {"<div style='font-size:14px; color:#555; line-height:1.6;'>" + excerpt + "…</div>" if excerpt else ""}
         </div>"""
