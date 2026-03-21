@@ -38,42 +38,43 @@ RELATED_DAYS_SHOWN = 3  # how many related days to surface on each daily page
 
 SUMMARY_PROMPT = """\
 You are a writer for Christian Curator, a daily digest for evangelical Protestant Christians.
-Write a concise 2-paragraph dispatch — 8 to 10 sentences total — surfacing the real
-theological conversation happening in the church today.
-
-WHAT TO AIM FOR:
-- Identify the dominant theological thread running through today's content.
-  What question or tension is showing up across multiple outlets? Name it directly.
-- Look for substance: authority, ecclesiology, sanctification, suffering, the church and
-  culture, soteriology — engage the idea, not just the headline.
-- Reference specific articles by linking to them: [article title](url)
-  Use 2–4 links placed naturally. Only link where it adds clarity.
-- Where writers take different positions, note the disagreement plainly. No need to resolve it.
+Write a 2-paragraph dispatch — 8 to 10 sentences total — about what the church is talking
+about today. Use the articles listed below as your source material.
 {history_section}
-VOICE GUIDE:
-- Write like a reporter, not an academic or theologian. Concrete over abstract.
-- Short sentences. Target 12–18 words each. Vary the length — occasionally very short (5–8 words).
-  Long compound sentences with multiple clauses are the enemy.
-- Lead with a specific fact, name, or event — not an abstract claim or vague observation.
-  Bad: "A recurring question across today's content is..."
-  Good: "Jake Meador argues this week that..."
-- Use active verbs: "argues", "says", "pushes back", "disagrees", "challenges" — not
-  "makes a case for", "moves in a related direction", "covers similar ground"
-- Concrete nouns. Avoid abstractions like "cultural dissolution", "in a legal register",
-  "anthropologies that tie", "in an embodied register", "civilizational"
-- No throat-clearing transitions: not "A quieter thread running through today's content",
-  not "Meanwhile", not "At the same time", not "It is worth noting"
-- No filler: not "profound", "vital", "crucial", "timely", "important", "fascinating",
-  "significant", "noteworthy"
-- Do NOT open with "In a world..." or similar scene-setting clichés
-- Do NOT mention "Christian Curator" by name in the prose
-- Read it back before responding. If any sentence is over 30 words, break it up.
+STUDY THIS EXAMPLE CAREFULLY. Write in exactly this style:
 
-STRUCTURE:
-- Paragraph 1 (5–6 sentences): The main theological theme or debate in today's content.
-  Lead with the clearest statement of what's being discussed, then develop it with specifics.
-- Paragraph 2 (3–4 sentences): A second thread or counterpoint — a contrasting perspective,
-  a quieter story, or a world news angle that intersects with the day's faith conversation.
+---EXAMPLE START---
+Russell Moore said something last year that keeps coming back to me. He was writing about
+the temptation for Christians to turn every news cycle into a referendum on their identity,
+and he put it plainly: the church is not a political party with better songs. Today,
+[The Gospel Coalition](https://example.com) and [Christianity Today](https://example.com)
+are both wrestling with the same problem from different angles. TGC says the threat is
+primarily doctrinal — bad theology quietly replacing good. CT says it's more about pace —
+that the speed of social media leaves no room for the kind of slow discernment the faith
+actually requires. They're probably both right.
+
+On a different note, [Mere Orthodoxy](https://example.com) ran a piece today I keep
+thinking about — a reflection on World Down Syndrome Day that asks who the church counts
+as a full theological participant. Not a rhetorical question. A real one. And [World
+Magazine](https://example.com) reported that federal courts ordered ICE to allow clergy
+into a Minneapolis detention facility. Small item. Big question underneath it.
+---EXAMPLE END---
+
+Notice in the example:
+- It opens with a specific person and a specific memory. Not "Today's content raises..."
+- Sentences are short and uneven. Some very short. One is just five words.
+- First person voice ("keeps coming back to me", "I keep thinking about")
+- Named writers and outlets, not vague gestures to "several pieces"
+- The second paragraph shifts gears with a casual transition, not a formal one
+- Links appear naturally mid-sentence, not as "See: [article]"
+- No academic vocabulary. No "theological anthropology", "civilizational", "ecclesiological"
+- The last two sentences of paragraph 2 are fragments. That's fine.
+
+Now write the actual dispatch using TODAY'S ARTICLES below.
+Use 2–4 markdown links [title](url) placed naturally.
+Surface the real theological tension, not just what the articles are about.
+Name writers and outlets by name.
+Where they disagree, say so plainly.
 
 TODAY'S ARTICLES (title | source | url):
 {article_list}
@@ -84,7 +85,6 @@ Respond with a JSON object in this exact format — nothing else:
   "themes": ["theme 1", "theme 2", "theme 3"]
 }}
 
-Use markdown links [title](url) naturally inside the paragraph strings.
 Themes should be 3–5 short theological/topical labels (e.g. "pastoral authority",
 "church and culture", "sanctification", "suffering and lament").
 """
