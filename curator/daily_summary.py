@@ -46,29 +46,35 @@ STUDY THIS EXAMPLE CAREFULLY. Write in exactly this style:
 ---EXAMPLE START---
 Russell Moore said something last year that keeps coming back to me. He was writing about
 the temptation for Christians to turn every news cycle into a referendum on their identity,
-and he put it plainly: the church is not a political party with better songs. Today,
+and he put it plainly: the church is not a political party with better songs.
 [The Gospel Coalition](https://example.com) and [Christianity Today](https://example.com)
-are both wrestling with the same problem from different angles. TGC says the threat is
-primarily doctrinal — bad theology quietly replacing good. CT says it's more about pace —
-that the speed of social media leaves no room for the kind of slow discernment the faith
-actually requires. They're probably both right.
+are circling the same problem this week. TGC says the threat is doctrinal — bad theology
+quietly replacing good. CT says the problem is pace. The speed of social media leaves no
+room for the kind of slow discernment faith actually requires. Neither outlet is wrong.
 
-On a different note, [Mere Orthodoxy](https://example.com) ran a piece today I keep
-thinking about — a reflection on World Down Syndrome Day that asks who the church counts
-as a full theological participant. Not a rhetorical question. A real one. And [World
-Magazine](https://example.com) reported that federal courts ordered ICE to allow clergy
-into a Minneapolis detention facility. Small item. Big question underneath it.
+[Mere Orthodoxy](https://example.com) ran a piece for World Down Syndrome Day asking who
+the church counts as a full theological participant. Not a rhetorical question. A real one
+with stakes. A federal judge also ordered an ICE facility in Minneapolis to allow clergy
+access to detainees — [World Magazine](https://example.com) had the item. Small legal
+story. Larger question about who the church shows up for.
 ---EXAMPLE END---
 
-Notice in the example:
-- It opens with a specific person and a specific memory. Not "Today's content raises..."
-- Sentences are short and uneven. Some very short. One is just five words.
-- First person voice ("keeps coming back to me", "I keep thinking about")
-- Named writers and outlets, not vague gestures to "several pieces"
-- The second paragraph shifts gears with a casual transition, not a formal one
-- Links appear naturally mid-sentence, not as "See: [article]"
-- No academic vocabulary. No "theological anthropology", "civilizational", "ecclesiological"
-- The last two sentences of paragraph 2 are fragments. That's fine.
+Notice what this example does:
+- Opens with a person and a specific memory, not "Today's content raises the question of..."
+- Sentences are SHORT. Many are under 12 words. Some are fragments.
+- First person ("keeps coming back to me") but not overdone
+- Paragraph 2 starts mid-thought, not with a transition word
+- No transition words between paragraphs: not "Meanwhile", "Additionally", "On a different
+  note", "Furthermore", "However", "Notably", "Interestingly", or any variant
+- "Neither outlet is wrong" — direct, not "both diagnoses feel true at the same time"
+- Links mid-sentence, not announced
+
+NEVER WRITE THESE PHRASES (AI tells that detectors flag immediately):
+"on a different/completely different register", "both X and Y feel true",
+"makes the case that", "it's worth noting", "underscores", "navigating",
+"in the realm of", "a testament to", "shed light on", "delve into",
+"at the same time", "collectively", "ultimately", "moreover", "additionally",
+"it is important to", "the argument is simple", "in today's world"
 
 Now write the actual dispatch using TODAY'S ARTICLES below.
 Use 2–4 markdown links [title](url) placed naturally.
