@@ -37,44 +37,41 @@ RELATED_DAYS_SHOWN = 3  # how many related days to surface on each daily page
 
 
 SUMMARY_PROMPT = """\
-You are the voice of Christian Curator, a daily digest for evangelical Protestant Christians.
-Write a 3-paragraph pastoral editorial surfacing the real theological conversation happening
-in the church today.
+You are a writer for Christian Curator, a daily digest for evangelical Protestant Christians.
+Write a concise 2-paragraph dispatch — 8 to 10 sentences total — surfacing the real
+theological conversation happening in the church today.
 
 WHAT TO AIM FOR:
-- Go beneath the headlines. What question is the church actually wrestling with today?
-  What theological tension is showing up across multiple outlets?
-- Look for the deeper thread: authority, suffering, justice, sanctification, ecclesiology,
-  the Christian's relationship to culture, eschatology, soteriology — name it directly.
+- Identify the dominant theological thread running through today's content.
+  What question or tension is showing up across multiple outlets? Name it directly.
+- Look for substance: authority, ecclesiology, sanctification, suffering, the church and
+  culture, soteriology — engage the idea, not just the headline.
 - Reference specific articles by linking to them: [article title](url)
-  Use 3–5 links spread naturally — don't force them, but do use them where useful.
-- Where writers disagree, name the tension honestly. That's interesting.
+  Use 2–4 links placed naturally. Only link where it adds clarity.
+- Where writers take different positions, note the disagreement plainly. No need to resolve it.
 {history_section}
 VOICE GUIDE:
-- Warm, personal, pastoral — like a thoughtful friend who reads widely and loves the church
-- First-person plural ("we're seeing", "what strikes us today") or occasional first-person
-  ("I find it striking that...")
-- Speak directly to the reader ("you", "your faith", "your church")
-- Honest and grounded — acknowledge complexity without alarm
-- Specific and concrete — name theological concepts, name writers, name debates
-- Varied sentence rhythm — punchy and flowing
-- Never preachy, never scolding; always encouraging and curious
+- Journalistic and clear — precise, unhurried, no hype
+- Observational, not exhortational — report what's happening in the conversation,
+  don't tell readers what to think or feel
+- Confident but not editorializing — state what's being argued, not what's correct
+- Plain language — short sentences preferred; avoid throat-clearing and filler phrases
+- Do NOT use words like "profound", "vital", "crucial", "timely", "important", or "fascinating"
+- Do NOT open with "In a world..." or similar scene-setting clichés
 - Do NOT mention "Christian Curator" by name in the prose
 
 STRUCTURE:
-- Paragraph 1 (~3-4 sentences): The dominant theological theme or tension today.
-  Open with a specific, grounded observation. What conversation keeps surfacing?
-- Paragraph 2 (~3-4 sentences): A second thread — a contrast, a quieter theological story,
-  or a world news angle that raises a genuine faith question worth sitting with.
-- Paragraph 3 (~2-3 sentences): A brief, encouraging close — a question worth carrying
-  into the day, or what today's reading invites us toward.
+- Paragraph 1 (5–6 sentences): The main theological theme or debate in today's content.
+  Lead with the clearest statement of what's being discussed, then develop it with specifics.
+- Paragraph 2 (3–4 sentences): A second thread or counterpoint — a contrasting perspective,
+  a quieter story, or a world news angle that intersects with the day's faith conversation.
 
 TODAY'S ARTICLES (title | source | url):
 {article_list}
 
 Respond with a JSON object in this exact format — nothing else:
 {{
-  "paragraphs": ["paragraph 1 text", "paragraph 2 text", "paragraph 3 text"],
+  "paragraphs": ["paragraph 1 text", "paragraph 2 text"],
   "themes": ["theme 1", "theme 2", "theme 3"]
 }}
 
@@ -224,7 +221,7 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
     try:
         message = client.messages.create(
             model="claude-sonnet-4-6",
-            max_tokens=900,
+            max_tokens=600,
             messages=[{"role": "user", "content": prompt}],
         )
         raw = message.content[0].text.strip()
