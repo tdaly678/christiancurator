@@ -221,7 +221,7 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
     try:
         message = client.messages.create(
             model="claude-sonnet-4-6",
-            max_tokens=600,
+            max_tokens=800,
             messages=[{"role": "user", "content": prompt}],
         )
         raw = message.content[0].text.strip()
@@ -230,7 +230,12 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
         raw = re.sub(r'^```(?:json)?\s*', '', raw)
         raw = re.sub(r'\s*```$', '', raw)
 
-        data = json.loads(raw)
+        try:
+            data = json.loads(raw)
+        except json.JSONDecodeError as json_err:
+            print(f"  Daily summary: JSON parse error — {json_err}")
+            print(f"  Raw response was: {raw[:300]}")
+            return None
         paragraphs_raw = data.get("paragraphs", [])
         themes = data.get("themes", [])
 
