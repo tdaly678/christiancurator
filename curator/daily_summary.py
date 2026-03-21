@@ -82,6 +82,10 @@ Surface the real theological tension, not just what the articles are about.
 Name writers and outlets by name.
 Where they disagree, say so plainly.
 
+CRITICAL: State the main theme in the very first sentence. A lay reader should know
+what the day is about before reading the second sentence. Then show how the individual
+pieces connect to that theme. Don't make the reader figure out the connection themselves.
+
 TODAY'S ARTICLES (title | source | url):
 {article_list}
 
