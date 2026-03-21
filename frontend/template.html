@@ -3,7 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christian Curator — Daily Digest</title>
+  <title>Christian Curator — Daily Digest for {{ date }}</title>
+  <meta name="description" content="Your daily digest of the best evangelical Christian news, theology, and culture — curated for {{ date }}. From The Gospel Coalition, Christianity Today, Desiring God, and more." />
+  <link rel="canonical" href="https://christiancurator.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Christian Curator" />
+  <meta property="og:title" content="Christian Curator — Daily Digest for {{ date }}" />
+  <meta property="og:description" content="Your daily digest of the best evangelical Christian news, theology, and culture — curated for {{ date }}." />
+  <meta property="og:url" content="https://christiancurator.com/" />
+  <meta property="og:image" content="https://christiancurator.com/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Christian Curator — Daily Digest for {{ date }}" />
+  <meta name="twitter:description" content="Your daily digest of the best evangelical Christian news, theology, and culture — curated for {{ date }}." />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Christian Curator",
+    "url": "https://christiancurator.com/",
+    "description": "A daily digest of the best evangelical Christian news, theology, and culture.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Christian Curator"
+    }
+  }
+  </script>
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NJ5DSPFXL"></script>
   <script>
