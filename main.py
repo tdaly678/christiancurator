@@ -16,6 +16,7 @@ from fetcher.rss_fetcher import fetch_all
 from curator.scorer import score_articles
 from curator.title_rewriter import rewrite_titles
 from curator.point_counterpoint import build_point_counterpoint
+from curator.daily_summary import generate_daily_summary, save_theme_history
 from curator.email_sender import send_email
 from output import OUTPUT_JSON_PATH, write_output, save_yesterday, load_yesterday, load_shown_urls, save_article_history
 from frontend import render_html
@@ -53,6 +54,15 @@ def main():
     pairings = build_point_counterpoint(articles)
     print(f"      Built {len(pairings)} pairings.\n")
 
+    # --- Layer 5: Daily Summary ---
+    print("[5/5] Generating daily summary...")
+    daily_summary = generate_daily_summary(articles)
+    if daily_summary:
+        print(f"      Daily summary generated for {daily_summary['date']}.")
+        save_theme_history(daily_summary)
+    else:
+        print("      Daily summary skipped.\n")
+
     # --- Output ---
     write_output(articles, pairings)
     save_yesterday(articles)
@@ -60,10 +70,10 @@ def main():
     # from having ALL their recent content penalised the next day just because it
     # was scored but never actually featured on the site.
     save_article_history(articles[:20])
-    render_html(articles, pairings, yesterday_articles)
+    render_html(articles, pairings, yesterday_articles, daily_summary=daily_summary)
 
     # --- Send Email ---
-    print("\n[5/5] Sending daily email via Beehiiv...")
+    print("\n[6/6] Sending daily email via Beehiiv...")
     send_email(articles, yesterday_articles)
 
     print("=== Pipeline Complete ===")
