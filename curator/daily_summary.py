@@ -51,14 +51,23 @@ WHAT TO AIM FOR:
 - Where writers take different positions, note the disagreement plainly. No need to resolve it.
 {history_section}
 VOICE GUIDE:
-- Journalistic and clear — precise, unhurried, no hype
-- Observational, not exhortational — report what's happening in the conversation,
-  don't tell readers what to think or feel
-- Confident but not editorializing — state what's being argued, not what's correct
-- Plain language — short sentences preferred; avoid throat-clearing and filler phrases
-- Do NOT use words like "profound", "vital", "crucial", "timely", "important", or "fascinating"
+- Write like a reporter, not an academic or theologian. Concrete over abstract.
+- Short sentences. Target 12–18 words each. Vary the length — occasionally very short (5–8 words).
+  Long compound sentences with multiple clauses are the enemy.
+- Lead with a specific fact, name, or event — not an abstract claim or vague observation.
+  Bad: "A recurring question across today's content is..."
+  Good: "Jake Meador argues this week that..."
+- Use active verbs: "argues", "says", "pushes back", "disagrees", "challenges" — not
+  "makes a case for", "moves in a related direction", "covers similar ground"
+- Concrete nouns. Avoid abstractions like "cultural dissolution", "in a legal register",
+  "anthropologies that tie", "in an embodied register", "civilizational"
+- No throat-clearing transitions: not "A quieter thread running through today's content",
+  not "Meanwhile", not "At the same time", not "It is worth noting"
+- No filler: not "profound", "vital", "crucial", "timely", "important", "fascinating",
+  "significant", "noteworthy"
 - Do NOT open with "In a world..." or similar scene-setting clichés
 - Do NOT mention "Christian Curator" by name in the prose
+- Read it back before responding. If any sentence is over 30 words, break it up.
 
 STRUCTURE:
 - Paragraph 1 (5–6 sentences): The main theological theme or debate in today's content.
