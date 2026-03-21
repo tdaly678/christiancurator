@@ -17,6 +17,8 @@ Returns a dict:
   }
 """
 
+from __future__ import annotations
+
 import os
 import re
 import json
@@ -196,7 +198,7 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
 
     # Build article list for prompt
     article_list = "\n".join(
-        f"- {a.get('rewritten_title') or a['title']} | {a['source']} | {a['url']}"
+        f"- {a.get('rewritten_title') or a['title']} | {a.get('source_name', '')} | {a['url']}"
         for a in candidates
     )
 
