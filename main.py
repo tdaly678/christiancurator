@@ -73,8 +73,8 @@ def main():
     render_html(articles, pairings, yesterday_articles, daily_summary=daily_summary)
 
     # --- Send Email ---
-    print("\n[6/6] Sending daily email via Beehiiv...")
-    send_email(articles, yesterday_articles)
+    print("\n[6/6] Sending daily email via Brevo...")
+    send_email(articles, yesterday_articles, daily_summary=daily_summary)
 
     print("=== Pipeline Complete ===")
     print(f"Output written to {OUTPUT_JSON_PATH}")
