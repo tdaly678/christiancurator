@@ -293,42 +293,46 @@ def render_archive_index(env: Environment):
 
 
 def regenerate_sitemap():
-    """Regenerate sitemap.xml to include the homepage + all daily pages."""
-    urls = ["https://christiancurator.com/"]
+    """Regenerate sitemap.xml to include the homepage + all daily and archive pages."""
+    today_iso = date.today().isoformat()
 
-    # Collect all daily page slugs from docs/daily/
+    # Each entry: (url, changefreq, priority, lastmod)
+    entries = [("https://christiancurator.com/", "daily", "1.0", today_iso)]
+
+    # Daily pulse pages
     if DAILY_DIR.exists():
         for day_dir in sorted(DAILY_DIR.iterdir()):
             if day_dir.is_dir() and (day_dir / "index.html").exists():
-                urls.append(f"https://christiancurator.com/daily/{day_dir.name}/")
+                entries.append((
+                    f"https://christiancurator.com/daily/{day_dir.name}/",
+                    "never", "0.8", day_dir.name,
+                ))
 
-    # Add archive index
-    urls.append("https://christiancurator.com/archive/")
+    # Archive index (changes every day)
+    entries.append(("https://christiancurator.com/archive/", "daily", "0.7", today_iso))
 
-    # Add individual archive pages
+    # Individual archive pages
     if ARCHIVE_DIR.exists():
         for day_dir in sorted(ARCHIVE_DIR.iterdir()):
             if day_dir.is_dir() and (day_dir / "index.html").exists():
-                urls.append(f"https://christiancurator.com/archive/{day_dir.name}/")
+                entries.append((
+                    f"https://christiancurator.com/archive/{day_dir.name}/",
+                    "never", "0.6", day_dir.name,
+                ))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for i, url in enumerate(urls):
-        if i == 0:
-            priority, changefreq = "1.0", "daily"
-        elif "/archive/" in url and url.count("/") > 4:
-            priority, changefreq = "0.6", "never"   # individual archive days
-        elif "/archive/" in url:
-            priority, changefreq = "0.7", "daily"   # archive index
-        else:
-            priority, changefreq = "0.8", "never"   # daily summary pages
-        lines.append(f"  <url>")
-        lines.append(f"    <loc>{url}</loc>")
-        lines.append(f"    <changefreq>{changefreq}</changefreq>")
-        lines.append(f"    <priority>{priority}</priority>")
-        lines.append(f"  </url>")
+    for url, changefreq, priority, lastmod in entries:
+        lines += [
+            "  <url>",
+            f"    <loc>{url}</loc>",
+            f"    <lastmod>{lastmod}</lastmod>",
+            f"    <changefreq>{changefreq}</changefreq>",
+            f"    <priority>{priority}</priority>",
+            "  </url>",
+        ]
     lines.append("</urlset>")
 
     with open(SITEMAP_PATH, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
-    print(f"  Regenerated sitemap with {len(urls)} URL(s).")
+    print(f"  Regenerated sitemap with {len(entries)} URL(s).")
