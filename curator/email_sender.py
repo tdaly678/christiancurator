@@ -219,6 +219,15 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict],
     {cta_html}
     {yesterday_html}
 
+    <!-- Forward nudge -->
+    <div style="text-align:center;margin:28px 0 0;padding:18px 20px;border:1px dashed #c8d9c9;border-radius:4px;background:#f7fbf7;">
+      <div style="font-size:13px;color:#3a3a3a;margin-bottom:8px;">Know someone who'd enjoy this?</div>
+      <div style="font-size:12px;color:#666;">Forward this email — it takes two seconds and means a lot.<br>They can subscribe free at the link below.</div>
+      <div style="margin-top:10px;">
+        <a href="https://christiancurator.com/#cc-email-box" style="font-size:12px;font-weight:700;color:#2C4A2E;text-decoration:none;">christiancurator.com &rarr;</a>
+      </div>
+    </div>
+
     <!-- Footer -->
     <div style="border-top:2px solid #1a1a1a;margin-top:28px;padding-top:16px;font-size:11px;color:#aaa;text-align:center;">
       <p>All links go to original sources. We curate; they create.</p>
