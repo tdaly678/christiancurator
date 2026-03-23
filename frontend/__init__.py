@@ -166,9 +166,10 @@ def render_archive_page(articles: list[dict], pairings: list[dict], env: Environ
     date_iso = today.isoformat()                          # e.g. "2026-03-22"
     date_display = today.strftime("%B %-d, %Y")           # e.g. "March 22, 2026"
 
-    # Determine prev/next dates based on existing archive pages
+    # Determine prev date: most recent archive day strictly before today
     existing = sorted(
-        [p.name for p in ARCHIVE_DIR.iterdir() if p.is_dir() and (p / "index.html").exists()]
+        [p.name for p in ARCHIVE_DIR.iterdir()
+         if p.is_dir() and (p / "index.html").exists() and p.name < date_iso]
     )
 
     prev_date_iso = existing[-1] if existing else None
