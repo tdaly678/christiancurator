@@ -243,6 +243,24 @@ SOURCES = [
         "category": "culture",
         "independent": False,
     },
+    {
+        "name": "Barna Group",
+        "url": "https://www.barna.com/feed/",
+        "category": "culture",
+        "independent": False,
+    },
+    {
+        "name": "Lifeway Research",
+        "url": "https://lifewayresearch.com/feed/",
+        "category": "culture",
+        "independent": False,
+    },
+    {
+        "name": "Ed Stetzer",
+        "url": "https://edstetzer.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
     # Evangelical authors and voices
     {
         "name": "Sam Allberry",

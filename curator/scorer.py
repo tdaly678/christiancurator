@@ -114,7 +114,8 @@ For each article, return a JSON object with:
   - "score": integer 1-10
   - "tags": array of 1-3 tags chosen ONLY from this exact list:
       theology, culture, apologetics, church life, missions, politics, devotional, news, family, prayer, suffering, work, data
-      Use "data" for research, statistics, polling, and sociological analysis articles (Pew, Barna, Burge, Lifeway, etc.)
+      Use "data" for research, statistics, polling, and sociological analysis articles (Pew Research, Barna Group, Ryan Burge,
+      Lifeway Research, Ed Stetzer, PRRI, Gallup, etc.)
   - "personas": array of 1-3 reader personas chosen ONLY from this exact list:
       pastor, professional, parent, student, women, seeker
   - "topic_cluster": a short snake_case string grouping articles on the same news story or topic.

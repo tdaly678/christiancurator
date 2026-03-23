@@ -18,7 +18,7 @@ RESEARCH_ARTICLES_PATH = DOCS_DIR / "research_articles.json"
 
 # Sources whose articles always qualify for the Research & Data section
 # regardless of tagging (in addition to any article tagged "data")
-RESEARCH_SOURCES = {"Ryan Burge", "Pew Research"}
+RESEARCH_SOURCES = {"Ryan Burge", "Pew Research", "Barna Group", "Lifeway Research", "Ed Stetzer"}
 RESEARCH_MAX = 3          # max slots in the section
 RESEARCH_MAX_AGE_DAYS = 60  # articles older than this are retired from the section
 
