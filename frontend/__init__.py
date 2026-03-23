@@ -5,6 +5,8 @@ frontend package — renders the HTML digest from the Jinja2 template.
 from pathlib import Path
 from datetime import date
 from jinja2 import Environment, FileSystemLoader
+import json
+import re
 
 TEMPLATE_DIR = Path(__file__).parent
 DOCS_DIR = Path(__file__).parent.parent / "docs"
@@ -113,9 +115,31 @@ def render_archive_page(articles: list[dict], pairings: list[dict], env: Environ
         f.write(html)
     print(f"  Rendered archive page to {output_path}")
 
+    # Write slim metadata for the search/filter index
+    _write_archive_meta(page_dir, articles)
+
     # Back-patch: update the previous day's page so its "next" link points to today
     if prev_date_iso:
         _patch_archive_next_link(prev_date_iso, date_iso, date_display, env, articles, pairings)
+
+
+def _write_archive_meta(page_dir: Path, articles: list[dict]):
+    """Write a slim meta.json alongside the archive page for the filter index."""
+    non_world = [a for a in articles if a.get("source_type") != "world_news"]
+    authors = sorted(set(
+        a.get("author", "").strip()
+        for a in non_world
+        if a.get("author", "").strip()
+        and a.get("author", "").strip().lower() != a.get("source_name", "").strip().lower()
+    ))
+    sources = sorted(set(
+        a.get("source_name", "").strip()
+        for a in non_world
+        if a.get("source_name", "").strip()
+    ))
+    tags = sorted(set(t for a in non_world for t in (a.get("tags") or [])))
+    with open(page_dir / "meta.json", "w", encoding="utf-8") as f:
+        json.dump({"authors": authors, "sources": sources, "tags": tags}, f, ensure_ascii=False)
 
 
 def _patch_archive_next_link(
@@ -177,35 +201,102 @@ def _patch_archive_next_link(
     print(f"  Updated archive nav on {output_path}")
 
 
+def _backfill_archive_meta():
+    """Generate meta.json for any archive days that don't have one, by parsing existing HTML."""
+    for day_dir in ARCHIVE_DIR.iterdir():
+        if not day_dir.is_dir():
+            continue
+        meta_path = day_dir / "meta.json"
+        html_path = day_dir / "index.html"
+        if meta_path.exists() or not html_path.exists():
+            continue
+        try:
+            content = html_path.read_text(encoding="utf-8")
+            tags = sorted(set(re.findall(r'<span class="cc-article-tag">([^<]+)</span>', content)))
+            authors = sorted(set(re.findall(r'<span class="cc-author">([^<]+)</span>', content)))
+            sources_lead = set(re.findall(r'<span class="cc-source">([^<]+)</span>', content))
+            # Extract spans from article-meta divs (mix of author + source; take all as sources)
+            meta_blocks = re.findall(r'<div class="cc-article-meta">(.*?)</div>', content, re.DOTALL)
+            all_spans = set()
+            for block in meta_blocks:
+                for span in re.findall(r'<span>([^<]+)</span>', block):
+                    span = span.strip()
+                    if span and span != "·":
+                        all_spans.add(span)
+            sources = sorted((sources_lead | all_spans) - set(authors))
+            with open(meta_path, "w", encoding="utf-8") as f:
+                json.dump({"authors": authors, "sources": sources, "tags": tags}, f, ensure_ascii=False)
+        except Exception as e:
+            print(f"  Warning: could not backfill meta for {day_dir.name}: {e}")
+
+
 def render_archive_index(env: Environment):
-    """Regenerate docs/archive/index.html — a chronological listing of all archive days."""
+    """Regenerate docs/archive/index.html — a filterable chronological listing of all archive days."""
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
 
-    # Collect all dated subdirectories that contain index.html
-    days = []
-    for day_dir in ARCHIVE_DIR.iterdir():
-        if day_dir.is_dir() and day_dir.name != "index.html" and (day_dir / "index.html").exists():
-            try:
-                d = date.fromisoformat(day_dir.name)
-                days.append((day_dir.name, d.strftime("%B %-d, %Y"), d.strftime("%A")))
-            except ValueError:
-                pass
-    days.sort(key=lambda x: x[0], reverse=True)  # Most recent first
+    # Backfill meta.json for any archive days that pre-date this feature
+    _backfill_archive_meta()
 
-    # Group by month for display
+    # Collect all dated subdirectories with metadata
+    days = []
+    all_authors: set = set()
+    all_sources: set = set()
+    all_tags: set = set()
+
+    for day_dir in ARCHIVE_DIR.iterdir():
+        if not day_dir.is_dir() or not (day_dir / "index.html").exists():
+            continue
+        try:
+            d = date.fromisoformat(day_dir.name)
+        except ValueError:
+            continue
+        meta = {}
+        meta_path = day_dir / "meta.json"
+        if meta_path.exists():
+            try:
+                with open(meta_path, "r", encoding="utf-8") as f:
+                    meta = json.load(f)
+            except Exception:
+                pass
+        authors = meta.get("authors", [])
+        sources = meta.get("sources", [])
+        tags    = meta.get("tags", [])
+        all_authors.update(authors)
+        all_sources.update(sources)
+        all_tags.update(tags)
+        days.append({
+            "iso":     day_dir.name,
+            "display": d.strftime("%B %-d, %Y"),
+            "weekday": d.strftime("%A"),
+            "authors": authors,
+            "sources": sources,
+            "tags":    tags,
+        })
+
+    days.sort(key=lambda x: x["iso"], reverse=True)
+
+    # Group by month
     from collections import OrderedDict
     months: dict = OrderedDict()
-    for iso, display, weekday in days:
-        month_key = iso[:7]  # "2026-03"
+    for day in days:
+        month_key = day["iso"][:7]
         try:
-            month_label = date.fromisoformat(iso).strftime("%B %Y")
+            month_label = date.fromisoformat(day["iso"]).strftime("%B %Y")
         except ValueError:
             month_label = month_key
         if month_key not in months:
             months[month_key] = {"label": month_label, "days": []}
-        months[month_key]["days"].append({"iso": iso, "display": display, "weekday": weekday})
+        months[month_key]["days"].append(day)
 
-    # Build HTML
+    sorted_authors = sorted(all_authors)
+    sorted_sources = sorted(all_sources)
+    sorted_tags    = sorted(all_tags)
+
+    def opt(val, label=None):
+        label = label or val
+        escaped = val.replace('"', '&quot;')
+        return f'        <option value="{escaped}">{label}</option>'
+
     lines = [
         '<!DOCTYPE html>',
         '<html lang="en">',
@@ -234,7 +325,13 @@ def render_archive_index(env: Environment):
         '    .cc-site-name:hover{color:#2C4A2E;}',
         '    .cc-tagline{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:8px 0 0;font-weight:300;}',
         '    h1{font-family:"Lora",Georgia,serif;font-size:24px;font-weight:600;margin:1.75rem 0 0.5rem;}',
-        '    .cc-archive-intro{font-size:14px;color:#666;margin-bottom:2rem;}',
+        '    .cc-archive-intro{font-size:14px;color:#666;margin-bottom:1.25rem;}',
+        '    .cc-filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:0.5rem;}',
+        '    .cc-filter-bar select{font-family:"Source Sans 3",sans-serif;font-size:12px;color:#1a1a1a;background:#fff;border:1px solid #d0cdc8;border-radius:3px;padding:5px 8px;cursor:pointer;flex:1;min-width:140px;}',
+        '    .cc-filter-bar select:focus{outline:none;border-color:#2C4A2E;}',
+        '    .cc-filter-clear{font-family:"Source Sans 3",sans-serif;font-size:12px;background:none;border:1px solid #d0cdc8;border-radius:3px;padding:5px 12px;cursor:pointer;color:#888;white-space:nowrap;}',
+        '    .cc-filter-clear:hover{border-color:#2C4A2E;color:#2C4A2E;}',
+        '    .cc-filter-count{font-size:12px;color:#888;margin-bottom:1.25rem;min-height:1.2em;}',
         '    .cc-month{margin-bottom:2rem;}',
         '    .cc-month-label{font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#2C4A2E;padding-bottom:0.5rem;border-bottom:1px solid #e0ddd8;margin-bottom:0.75rem;}',
         '    .cc-day-link{display:flex;align-items:baseline;gap:10px;padding:0.6rem 0;border-bottom:1px solid #f0ede8;text-decoration:none;color:#1a1a1a;}',
@@ -245,31 +342,53 @@ def render_archive_index(env: Environment):
         '    .cc-footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e0ddd8;text-align:center;font-size:12px;color:#aaa;}',
         '    .cc-footer a{color:#2C4A2E;text-decoration:none;}',
         '    .cc-footer a:hover{text-decoration:underline;}',
-        '    @media(max-width:600px){.cc-site-name{font-size:32px;}}',
+        '    @media(max-width:600px){.cc-site-name{font-size:32px;}.cc-filter-bar select{min-width:100%;}}',
         '  </style>',
         '</head>',
         '<body>',
         '  <div class="cc-root">',
         '    <header class="cc-header">',
         '      <div class="cc-top-bar">',
-        '        <a href="/" class="cc-back-link">← Today\'s Digest</a>',
-        '        <a href="/#subscribe" class="cc-subscribe-btn">Get the Daily Digest</a>',
+        "        <a href='/' class='cc-back-link'>← Today's Digest</a>",
+        "        <a href='/#subscribe' class='cc-subscribe-btn'>Get the Daily Digest</a>",
         '      </div>',
         '      <div class="cc-masthead">',
-        '        <a href="/" class="cc-site-name">Christian Curator</a>',
-        '        <p class="cc-tagline">Evangelical News &amp; Theology — Curated Daily</p>',
+        "        <a href='/' class='cc-site-name'>Christian Curator</a>",
+        "        <p class='cc-tagline'>Evangelical News &amp; Theology — Curated Daily</p>",
         '      </div>',
         '    </header>',
         '    <h1>Archive</h1>',
         f'    <p class="cc-archive-intro">Browse {len(days)} past issue{"s" if len(days) != 1 else ""} of Christian Curator.</p>',
+        '    <div class="cc-filter-bar">',
+        '      <select id="cc-filter-author" onchange="ccApplyFilters()">',
+        '        <option value="">All Authors</option>',
+        *[opt(a) for a in sorted_authors],
+        '      </select>',
+        '      <select id="cc-filter-tag" onchange="ccApplyFilters()">',
+        '        <option value="">All Tags</option>',
+        *[opt(t, t.title()) for t in sorted_tags],
+        '      </select>',
+        '      <select id="cc-filter-outlet" onchange="ccApplyFilters()">',
+        '        <option value="">All Outlets</option>',
+        *[opt(s) for s in sorted_sources],
+        '      </select>',
+        '      <button class="cc-filter-clear" onclick="ccClearFilters()">Clear</button>',
+        '    </div>',
+        '    <p class="cc-filter-count" id="cc-filter-count"></p>',
     ]
 
     for month_data in months.values():
-        lines.append(f'    <div class="cc-month">')
+        lines.append('    <div class="cc-month">')
         lines.append(f'      <div class="cc-month-label">{month_data["label"]}</div>')
         for day in month_data["days"]:
+            authors_attr = "|".join(day["authors"]).replace('"', '&quot;')
+            sources_attr = "|".join(day["sources"]).replace('"', '&quot;')
+            tags_attr    = "|".join(day["tags"]).replace('"', '&quot;')
             lines.append(
-                f'      <a href="/archive/{day["iso"]}/" class="cc-day-link">'
+                f'      <a href="/archive/{day["iso"]}/" class="cc-day-link"'
+                f' data-authors="{authors_attr}"'
+                f' data-sources="{sources_attr}"'
+                f' data-tags="{tags_attr}">'
                 f'<span class="cc-day-weekday">{day["weekday"]}</span>'
                 f'<span class="cc-day-display">{day["display"]}</span>'
                 f'</a>'
@@ -282,6 +401,39 @@ def render_archive_index(env: Environment):
         '      <p style="margin-top:6px;"><a href="/#subscribe">Subscribe to the daily email</a></p>',
         '    </footer>',
         '  </div>',
+        '  <script>',
+        '    function ccApplyFilters() {',
+        '      var author = document.getElementById("cc-filter-author").value;',
+        '      var tag    = document.getElementById("cc-filter-tag").value;',
+        '      var outlet = document.getElementById("cc-filter-outlet").value;',
+        '      var shown = 0, total = 0;',
+        '      document.querySelectorAll(".cc-day-link").forEach(function(link) {',
+        '        total++;',
+        '        var authors = link.dataset.authors ? link.dataset.authors.split("|") : [];',
+        '        var tags    = link.dataset.tags    ? link.dataset.tags.split("|")    : [];',
+        '        var sources = link.dataset.sources ? link.dataset.sources.split("|") : [];',
+        '        var matches = (!author || authors.indexOf(author) !== -1)',
+        '                   && (!tag    || tags.indexOf(tag)       !== -1)',
+        '                   && (!outlet || sources.indexOf(outlet) !== -1);',
+        '        link.style.display = matches ? "" : "none";',
+        '        if (matches) shown++;',
+        '      });',
+        '      document.querySelectorAll(".cc-month").forEach(function(month) {',
+        '        var visible = Array.from(month.querySelectorAll(".cc-day-link")).filter(function(l){ return l.style.display !== "none"; });',
+        '        month.style.display = visible.length ? "" : "none";',
+        '      });',
+        '      var countEl = document.getElementById("cc-filter-count");',
+        '      if (author || tag || outlet) {',
+        '        countEl.textContent = shown === total ? "All " + total + " days match" : "Showing " + shown + " of " + total + " days";',
+        '      } else {',
+        '        countEl.textContent = "";',
+        '      }',
+        '    }',
+        '    function ccClearFilters() {',
+        '      ["cc-filter-author","cc-filter-tag","cc-filter-outlet"].forEach(function(id){ document.getElementById(id).value = ""; });',
+        '      ccApplyFilters();',
+        '    }',
+        '  </script>',
         '</body>',
         '</html>',
     ]

@@ -25,7 +25,13 @@
     .cc-site-name:hover{color:#2C4A2E;}
     .cc-tagline{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:8px 0 0;font-weight:300;}
     h1{font-family:"Lora",Georgia,serif;font-size:24px;font-weight:600;margin:1.75rem 0 0.5rem;}
-    .cc-archive-intro{font-size:14px;color:#666;margin-bottom:2rem;}
+    .cc-archive-intro{font-size:14px;color:#666;margin-bottom:1.25rem;}
+    .cc-filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:0.5rem;}
+    .cc-filter-bar select{font-family:"Source Sans 3",sans-serif;font-size:12px;color:#1a1a1a;background:#fff;border:1px solid #d0cdc8;border-radius:3px;padding:5px 8px;cursor:pointer;flex:1;min-width:140px;}
+    .cc-filter-bar select:focus{outline:none;border-color:#2C4A2E;}
+    .cc-filter-clear{font-family:"Source Sans 3",sans-serif;font-size:12px;background:none;border:1px solid #d0cdc8;border-radius:3px;padding:5px 12px;cursor:pointer;color:#888;white-space:nowrap;}
+    .cc-filter-clear:hover{border-color:#2C4A2E;color:#2C4A2E;}
+    .cc-filter-count{font-size:12px;color:#888;margin-bottom:1.25rem;min-height:1.2em;}
     .cc-month{margin-bottom:2rem;}
     .cc-month-label{font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#2C4A2E;padding-bottom:0.5rem;border-bottom:1px solid #e0ddd8;margin-bottom:0.75rem;}
     .cc-day-link{display:flex;align-items:baseline;gap:10px;padding:0.6rem 0;border-bottom:1px solid #f0ede8;text-decoration:none;color:#1a1a1a;}
@@ -36,32 +42,158 @@
     .cc-footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e0ddd8;text-align:center;font-size:12px;color:#aaa;}
     .cc-footer a{color:#2C4A2E;text-decoration:none;}
     .cc-footer a:hover{text-decoration:underline;}
-    @media(max-width:600px){.cc-site-name{font-size:32px;}}
+    @media(max-width:600px){.cc-site-name{font-size:32px;}.cc-filter-bar select{min-width:100%;}}
   </style>
 </head>
 <body>
   <div class="cc-root">
     <header class="cc-header">
       <div class="cc-top-bar">
-        <a href="/" class="cc-back-link">← Today's Digest</a>
-        <a href="/#subscribe" class="cc-subscribe-btn">Get the Daily Digest</a>
+        <a href='/' class='cc-back-link'>← Today's Digest</a>
+        <a href='/#subscribe' class='cc-subscribe-btn'>Get the Daily Digest</a>
       </div>
       <div class="cc-masthead">
-        <a href="/" class="cc-site-name">Christian Curator</a>
-        <p class="cc-tagline">Evangelical News &amp; Theology — Curated Daily</p>
+        <a href='/' class='cc-site-name'>Christian Curator</a>
+        <p class='cc-tagline'>Evangelical News &amp; Theology — Curated Daily</p>
       </div>
     </header>
     <h1>Archive</h1>
     <p class="cc-archive-intro">Browse 2 past issues of Christian Curator.</p>
+    <div class="cc-filter-bar">
+      <select id="cc-filter-author" onchange="ccApplyFilters()">
+        <option value="">All Authors</option>
+        <option value="Kate Stevens">Kate Stevens</option>
+        <option value="Ryanne Molinari">Ryanne Molinari</option>
+      </select>
+      <select id="cc-filter-tag" onchange="ccApplyFilters()">
+        <option value="">All Tags</option>
+        <option value="church life">Church Life</option>
+        <option value="culture">Culture</option>
+        <option value="devotional">Devotional</option>
+        <option value="family">Family</option>
+        <option value="missions">Missions</option>
+        <option value="news">News</option>
+        <option value="politics">Politics</option>
+        <option value="prayer">Prayer</option>
+        <option value="suffering">Suffering</option>
+        <option value="theology">Theology</option>
+        <option value="work">Work</option>
+      </select>
+      <select id="cc-filter-outlet" onchange="ccApplyFilters()">
+        <option value="">All Outlets</option>
+        <option value="Aimee Byrd">Aimee Byrd</option>
+        <option value="American Reformer">American Reformer</option>
+        <option value="Annie Eisner">Annie Eisner</option>
+        <option value="BBC News">BBC News</option>
+        <option value="Benjamin L. Gladd, Matthew Harmon">Benjamin L. Gladd, Matthew Harmon</option>
+        <option value="Benjamin Mabry">Benjamin Mabry</option>
+        <option value="Bethel McGrew">Bethel McGrew</option>
+        <option value="Bonnie Kristian">Bonnie Kristian</option>
+        <option value="Carey Nieuwhof">Carey Nieuwhof</option>
+        <option value="Chris Bolt">Chris Bolt</option>
+        <option value="Christianity Today">Christianity Today</option>
+        <option value="Christina Grube">Christina Grube</option>
+        <option value="Clarissa Moll">Clarissa Moll</option>
+        <option value="Dan Doriani">Dan Doriani</option>
+        <option value="Daniel K. Williams">Daniel K. Williams</option>
+        <option value="David Mathis">David Mathis</option>
+        <option value="David VanDrunen">David VanDrunen</option>
+        <option value="Desiring God">Desiring God</option>
+        <option value="Elizabeth Russell">Elizabeth Russell</option>
+        <option value="Elizabeth Woodson">Elizabeth Woodson</option>
+        <option value="Emily Brown">Emily Brown</option>
+        <option value="First Things">First Things</option>
+        <option value="Frank Thielman">Frank Thielman</option>
+        <option value="German Saucedo">German Saucedo</option>
+        <option value="Greg Morse">Greg Morse</option>
+        <option value="Haleluya Hadero">Haleluya Hadero</option>
+        <option value="James Norris">James Norris</option>
+        <option value="Jillian Parks">Jillian Parks</option>
+        <option value="Joshua Heavin">Joshua Heavin</option>
+        <option value="Joy Clarkson">Joy Clarkson</option>
+        <option value="Joy Marie Clarkson ☀️">Joy Marie Clarkson ☀️</option>
+        <option value="Justin D. Detmers">Justin D. Detmers</option>
+        <option value="Justin Lonas">Justin Lonas</option>
+        <option value="Kara Bettis Carvalho">Kara Bettis Carvalho</option>
+        <option value="Karen Swallow Prior">Karen Swallow Prior</option>
+        <option value="Kate Shellnutt">Kate Shellnutt</option>
+        <option value="Keegan Martin">Keegan Martin</option>
+        <option value="Kyle Worley">Kyle Worley</option>
+        <option value="Laura Wifler">Laura Wifler</option>
+        <option value="Marshall Segal">Marshall Segal</option>
+        <option value="Matthew Lee Anderson">Matthew Lee Anderson</option>
+        <option value="Mere Orthodoxy">Mere Orthodoxy</option>
+        <option value="Mike Sabo">Mike Sabo</option>
+        <option value="Nadya Williams">Nadya Williams</option>
+        <option value="O. Alan Noble">O. Alan Noble</option>
+        <option value="Peter Biles">Peter Biles</option>
+        <option value="Phylicia Masonheimer">Phylicia Masonheimer</option>
+        <option value="Randall Merrill">Randall Merrill</option>
+        <option value="Reformation21">Reformation21</option>
+        <option value="Relevant Magazine">Relevant Magazine</option>
+        <option value="Rosaria Butterfield">Rosaria Butterfield</option>
+        <option value="Ryan Burge">Ryan Burge</option>
+        <option value="Scot McKnight">Scot McKnight</option>
+        <option value="Scott Yenor">Scott Yenor</option>
+        <option value="Stephen Kloosterman">Stephen Kloosterman</option>
+        <option value="The Gospel Coalition">The Gospel Coalition</option>
+        <option value="The Guardian">The Guardian</option>
+        <option value="The New York Times">The New York Times</option>
+        <option value="Timon Cline">Timon Cline</option>
+        <option value="Timothy Paul Jones">Timothy Paul Jones</option>
+        <option value="Todd Boone">Todd Boone</option>
+        <option value="VisitorReach.com">VisitorReach.com</option>
+        <option value="Wall Street Journal">Wall Street Journal</option>
+        <option value="World Magazine">World Magazine</option>
+        <option value="evanvalin">evanvalin</option>
+        <option value="hbwilt">hbwilt</option>
+        <option value="ian@mereorthodoxy.com (Ian Harber)">ian@mereorthodoxy.com (Ian Harber)</option>
+      </select>
+      <button class="cc-filter-clear" onclick="ccClearFilters()">Clear</button>
+    </div>
+    <p class="cc-filter-count" id="cc-filter-count"></p>
     <div class="cc-month">
       <div class="cc-month-label">March 2026</div>
-      <a href="/archive/2026-03-23/" class="cc-day-link"><span class="cc-day-weekday">Monday</span><span class="cc-day-display">March 23, 2026</span></a>
-      <a href="/archive/2026-03-22/" class="cc-day-link"><span class="cc-day-weekday">Sunday</span><span class="cc-day-display">March 22, 2026</span></a>
+      <a href="/archive/2026-03-23/" class="cc-day-link" data-authors="Kate Stevens" data-sources="American Reformer|Annie Eisner|BBC News|Bonnie Kristian|Christianity Today|Clarissa Moll|David VanDrunen|Desiring God|Elizabeth Woodson|First Things|German Saucedo|Greg Morse|Haleluya Hadero|James Norris|Jillian Parks|Joshua Heavin|Justin Lonas|Kara Bettis Carvalho|Kate Shellnutt|Keegan Martin|Kyle Worley|Laura Wifler|Mere Orthodoxy|Nadya Williams|Phylicia Masonheimer|Randall Merrill|Reformation21|Relevant Magazine|Scot McKnight|The Gospel Coalition|The New York Times|Timon Cline|Wall Street Journal|World Magazine|evanvalin" data-tags="church life|missions|politics|theology|work"><span class="cc-day-weekday">Monday</span><span class="cc-day-display">March 23, 2026</span></a>
+      <a href="/archive/2026-03-22/" class="cc-day-link" data-authors="Ryanne Molinari" data-sources="Aimee Byrd|American Reformer|Annie Eisner|BBC News|Benjamin L. Gladd, Matthew Harmon|Benjamin Mabry|Bethel McGrew|Bonnie Kristian|Carey Nieuwhof|Chris Bolt|Christianity Today|Christina Grube|Clarissa Moll|Dan Doriani|Daniel K. Williams|David Mathis|Desiring God|Elizabeth Russell|Emily Brown|First Things|Frank Thielman|German Saucedo|Greg Morse|Haleluya Hadero|James Norris|Jillian Parks|Joshua Heavin|Joy Clarkson|Joy Marie Clarkson ☀️|Justin D. Detmers|Kara Bettis Carvalho|Karen Swallow Prior|Kate Shellnutt|Kyle Worley|Laura Wifler|Marshall Segal|Matthew Lee Anderson|Mere Orthodoxy|Mike Sabo|Nadya Williams|O. Alan Noble|Peter Biles|Phylicia Masonheimer|Randall Merrill|Reformation21|Relevant Magazine|Rosaria Butterfield|Ryan Burge|Scot McKnight|Scott Yenor|Stephen Kloosterman|The Gospel Coalition|The Guardian|The New York Times|Timon Cline|Timothy Paul Jones|Todd Boone|VisitorReach.com|Wall Street Journal|World Magazine|evanvalin|hbwilt|ian@mereorthodoxy.com (Ian Harber)" data-tags="church life|culture|devotional|family|missions|news|politics|prayer|suffering|theology|work"><span class="cc-day-weekday">Sunday</span><span class="cc-day-display">March 22, 2026</span></a>
     </div>
     <footer class="cc-footer">
       <p><a href="/">Christian Curator</a> — A daily digest of the best evangelical Christian writing.</p>
       <p style="margin-top:6px;"><a href="/#subscribe">Subscribe to the daily email</a></p>
     </footer>
   </div>
+  <script>
+    function ccApplyFilters() {
+      var author = document.getElementById("cc-filter-author").value;
+      var tag    = document.getElementById("cc-filter-tag").value;
+      var outlet = document.getElementById("cc-filter-outlet").value;
+      var shown = 0, total = 0;
+      document.querySelectorAll(".cc-day-link").forEach(function(link) {
+        total++;
+        var authors = link.dataset.authors ? link.dataset.authors.split("|") : [];
+        var tags    = link.dataset.tags    ? link.dataset.tags.split("|")    : [];
+        var sources = link.dataset.sources ? link.dataset.sources.split("|") : [];
+        var matches = (!author || authors.indexOf(author) !== -1)
+                   && (!tag    || tags.indexOf(tag)       !== -1)
+                   && (!outlet || sources.indexOf(outlet) !== -1);
+        link.style.display = matches ? "" : "none";
+        if (matches) shown++;
+      });
+      document.querySelectorAll(".cc-month").forEach(function(month) {
+        var visible = Array.from(month.querySelectorAll(".cc-day-link")).filter(function(l){ return l.style.display !== "none"; });
+        month.style.display = visible.length ? "" : "none";
+      });
+      var countEl = document.getElementById("cc-filter-count");
+      if (author || tag || outlet) {
+        countEl.textContent = shown === total ? "All " + total + " days match" : "Showing " + shown + " of " + total + " days";
+      } else {
+        countEl.textContent = "";
+      }
+    }
+    function ccClearFilters() {
+      ["cc-filter-author","cc-filter-tag","cc-filter-outlet"].forEach(function(id){ document.getElementById(id).value = ""; });
+      ccApplyFilters();
+    }
+  </script>
 </body>
 </html>
