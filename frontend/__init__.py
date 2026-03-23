@@ -79,6 +79,11 @@ def render_archive_page(articles: list[dict], pairings: list[dict], env: Environ
     """Render a daily archive snapshot to docs/archive/YYYY-MM-DD/index.html."""
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
 
+    # Only archive the top-scored articles (matching what the homepage shows).
+    # Sort by score descending and take top 20 so the archive mirrors the actual
+    # homepage content rather than dumping every fetched article.
+    articles = sorted(articles, key=lambda a: a.get("score", 0), reverse=True)[:20]
+
     today = date.today()
     date_iso = today.isoformat()                          # e.g. "2026-03-22"
     date_display = today.strftime("%B %-d, %Y")           # e.g. "March 22, 2026"
