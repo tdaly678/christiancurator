@@ -19,7 +19,7 @@ from curator.point_counterpoint import build_point_counterpoint
 from curator.daily_summary import generate_daily_summary, save_theme_history
 from curator.email_sender import send_email
 from output import OUTPUT_JSON_PATH, write_output, save_yesterday, load_yesterday, load_shown_urls, save_article_history
-from frontend import render_html
+from frontend import render_html, update_research_articles
 
 
 def main():
@@ -70,11 +70,18 @@ def main():
     # from having ALL their recent content penalised the next day just because it
     # was scored but never actually featured on the site.
     save_article_history(articles[:20])
-    render_html(articles, pairings, yesterday_articles, daily_summary=daily_summary)
+
+    # --- Research & Data section (persistent) ---
+    print("\n[6/7] Updating Research & Data section...")
+    research_articles = update_research_articles(articles)
+
+    render_html(articles, pairings, yesterday_articles, daily_summary=daily_summary,
+                research_articles=research_articles)
 
     # --- Send Email ---
-    print("\n[6/6] Sending daily email via Brevo...")
-    send_email(articles, yesterday_articles, daily_summary=daily_summary)
+    print("\n[7/7] Sending daily email via Brevo...")
+    send_email(articles, yesterday_articles, daily_summary=daily_summary,
+               research_articles=research_articles)
 
     print("=== Pipeline Complete ===")
     print(f"Output written to {OUTPUT_JSON_PATH}")

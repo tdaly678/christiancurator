@@ -14,10 +14,87 @@ OUTPUT_HTML = DOCS_DIR / "index.html"
 DAILY_DIR = DOCS_DIR / "daily"
 ARCHIVE_DIR = DOCS_DIR / "archive"
 SITEMAP_PATH = DOCS_DIR / "sitemap.xml"
+RESEARCH_ARTICLES_PATH = DOCS_DIR / "research_articles.json"
+
+# Sources whose articles always qualify for the Research & Data section
+# regardless of tagging (in addition to any article tagged "data")
+RESEARCH_SOURCES = {"Ryan Burge", "Pew Research"}
+RESEARCH_MAX = 3          # max slots in the section
+RESEARCH_MAX_AGE_DAYS = 60  # articles older than this are retired from the section
+
+
+def load_research_articles() -> list[dict]:
+    """Load the persistent Research & Data article list from docs/research_articles.json."""
+    if not RESEARCH_ARTICLES_PATH.exists():
+        return []
+    try:
+        return json.loads(RESEARCH_ARTICLES_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+
+
+def update_research_articles(new_articles: list[dict]) -> list[dict]:
+    """Merge today's data/research articles into the persistent store.
+
+    - Qualifies: articles tagged 'data' OR from a RESEARCH_SOURCES source.
+    - New qualifying articles are prepended (most recent first).
+    - Duplicates (by URL) are removed, keeping the newer occurrence.
+    - Articles older than RESEARCH_MAX_AGE_DAYS are retired.
+    - Result is capped at RESEARCH_MAX entries and saved back to disk.
+    Returns the updated list.
+    """
+    from datetime import datetime, timezone
+    from email.utils import parsedate_to_datetime
+
+    def article_age_days(a: dict) -> float:
+        pub = a.get("published", "")
+        if not pub:
+            return 0.0
+        try:
+            dt = parsedate_to_datetime(pub)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return (datetime.now(timezone.utc) - dt).total_seconds() / 86400
+        except Exception:
+            return 0.0
+
+    # Identify qualifying articles from today's scored pool
+    qualifying = [
+        a for a in new_articles
+        if "data" in (a.get("tags") or [])
+        or a.get("source_name", "") in RESEARCH_SOURCES
+    ]
+
+    # Load existing store
+    existing = load_research_articles()
+
+    # Build merged list: new first, then existing; dedupe by URL
+    merged = qualifying + existing
+    seen_urls: set = set()
+    deduped = []
+    for a in merged:
+        url = a.get("url", "")
+        if url and url not in seen_urls:
+            seen_urls.add(url)
+            deduped.append(a)
+
+    # Retire articles that are too old
+    fresh = [a for a in deduped if article_age_days(a) <= RESEARCH_MAX_AGE_DAYS]
+
+    # Cap at max slots
+    result = fresh[:RESEARCH_MAX]
+
+    RESEARCH_ARTICLES_PATH.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+    added = len([a for a in qualifying if a.get("url") not in {e.get("url") for e in existing}])
+    if added:
+        print(f"  Research & Data: added {added} new article(s), section now has {len(result)} item(s).")
+    else:
+        print(f"  Research & Data: no new articles today, keeping {len(result)} existing item(s).")
+    return result
 
 
 def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: list[dict] = None,
-                daily_summary: dict = None):
+                daily_summary: dict = None, research_articles: list[dict] = None):
     """Render index.html from template.html using Jinja2."""
     env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
     env.tests['contains'] = lambda value, item: item in (value or [])
@@ -41,6 +118,7 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         yesterday_articles=yesterday_articles or [],
         date=date.today().strftime("%B %-d, %Y"),
         daily_summary=daily_summary,
+        research_articles=research_articles or load_research_articles(),
     )
 
     with open(OUTPUT_HTML, "w", encoding="utf-8") as f:

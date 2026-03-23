@@ -71,6 +71,28 @@ You are a curator for a Christian news digest targeting EVANGELICAL PROTESTANT C
 
 SCORING GUIDANCE:
 - Score 1-10 based on theological depth, practical relevance to everyday Christian life, and writing quality.
+
+- SCORE 8-10: Essays or devotionals that (a) explicitly connect the topic to the gospel — Christ's death,
+  resurrection, or atonement as the answer, not just general theism — (b) exposit a specific Scripture passage
+  with context and meaning rather than merely citing verses as footnotes, and (c) close with concrete application
+  for the Christian life. Bonus: articles that begin by naming a real struggle or question the reader faces, then
+  address it biblically. Length alone does not earn a high score — a short devotional that does all three deserves
+  8 more than a long essay that does none.
+
+- SCORE 6-7: Solid theological or practical articles that apply Scripture to Christian life but lack an explicit
+  gospel connection, OR good cultural commentary that offers a biblically-grounded constructive alternative (not
+  just critique). Interviews and roundtables with substantive theological content may fall here.
+
+- SCORE 5-6: CULTURAL COMMENTARY that critiques secular trends or cultural moments without offering a substantive
+  biblical or gospel-based constructive response — the observation without the answer. Also score 5-6: listicles
+  and pragmatic "how-to" articles that assume Christian motivation without grounding it doctrinally.
+
+- SCORE 4-5: DATA, RESEARCH, or STATISTICS-DRIVEN articles about Christian trends, church demographics,
+  religious identity, or sociological observations about faith in America. These are genuinely valuable for
+  context but are not devotionally formative. Tag these with "data" — they are curated separately in a
+  Research & Data section and should NOT compete with theological or devotional content for main feed placement.
+  Examples: church attendance surveys, generational faith trends, religious polling data, Pew/Barna/Burge analysis.
+
 - OBITUARIES, TRIBUTES, and PERSON-SPECIFIC NEWS (deaths, memorial essays, tribute pieces, appointments, awards,
   biographical profiles) should score 4 or below. This includes legacy/tribute framing such as "A Courageous Voice
   for...", "Remembering...", "Celebrating the Life of...", or "[Name]: [Adjective] [Noun]" title patterns.
@@ -78,8 +100,9 @@ SCORING GUIDANCE:
   person — i.e., a reader would benefit equally without knowing who the subject is.
   Example: "John Perkins Dies at 95" = score 2 max. "John Perkins: A Courageous Voice for Justice" = score 4 max.
   "What Racial Reconciliation Demands of the Church Today" (Perkins as one example among many) = score normally.
+
 - PODCAST EPISODE DESCRIPTIONS, RADIO RECAPS, and PROMOTIONAL ANNOUNCEMENTS should score 2 or below.
-- LONG-FORM ESSAYS and THEOLOGICAL ARGUMENTS with clear practical application should score 7-10.
+
 - CATHOLIC-SPECIFIC CONTENT should score 3 or below. This includes: papal encyclicals, papal appointments,
   Vatican decisions, the Synod on Synodality, Catholic doctrine debates, Pope Francis statements, Cardinal
   appointments, and other Roman Catholic institutional news. The audience is evangelical Protestant — they
@@ -90,7 +113,8 @@ SCORING GUIDANCE:
 For each article, return a JSON object with:
   - "score": integer 1-10
   - "tags": array of 1-3 tags chosen ONLY from this exact list:
-      theology, culture, apologetics, church life, missions, politics, devotional, news, family, prayer, suffering, work
+      theology, culture, apologetics, church life, missions, politics, devotional, news, family, prayer, suffering, work, data
+      Use "data" for research, statistics, polling, and sociological analysis articles (Pew, Barna, Burge, Lifeway, etc.)
   - "personas": array of 1-3 reader personas chosen ONLY from this exact list:
       pastor, professional, parent, student, women, seeker
   - "topic_cluster": a short snake_case string grouping articles on the same news story or topic.
@@ -171,8 +195,13 @@ def filter_world_news_batch(articles: list[dict]) -> list[dict]:
 
 def score_batch(articles: list[dict]) -> list[dict]:
     """Score and tag a batch of articles in a single API call."""
+    # Tier 1A sources get a longer summary window so the scorer sees enough
+    # theological content to distinguish an 8 from a 6.
+    def _summary_limit(article: dict) -> int:
+        return 400 if article.get("source_name", "") in TIER_1A_SOURCES else 200
+
     articles_text = "\n".join(
-        f"{i+1}. Title: {a['title']}\n   Summary: {a['summary'][:200]}"
+        f"{i+1}. Title: {a['title']}\n   Summary: {a['summary'][:_summary_limit(a)]}"
         for i, a in enumerate(articles)
     )
     try:

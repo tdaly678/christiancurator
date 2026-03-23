@@ -1,0 +1,53 @@
+[
+  {
+    "source_name": "Ryan Burge",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": true,
+    "author": "Ryan Burge",
+    "title": "The United Church of Christ Is Running Out of People—and Pastors",
+    "url": "https://www.graphsaboutreligion.com/p/the-united-church-of-christ-is-running",
+    "summary": "Why Long-Term Decline Is Now Creating a Clergy and Congregational Crisis",
+    "published": "Thu, 12 Mar 2026 11:31:22 GMT",
+    "fetched_at": "2026-03-23T09:49:45.648640",
+    "score": 6,
+    "tags": [
+      "church life",
+      "news"
+    ],
+    "rewritten_title": "United Church of Christ Faces Declining Membership and Pastor Shortage",
+    "personas": [
+      "pastor",
+      "professional"
+    ],
+    "topic_cluster": "denominational_decline",
+    "perspective": "news",
+    "final_score": 2.0
+  },
+  {
+    "source_name": "Ryan Burge",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": true,
+    "author": "Ryan Burge",
+    "title": "The Moral Reasoning Gap in American Christianity",
+    "url": "https://www.graphsaboutreligion.com/p/the-moral-reasoning-gap-in-american",
+    "summary": "How education, church attendance, and tradition shape whether Christians rely on faith or science",
+    "published": "Thu, 05 Mar 2026 12:30:54 GMT",
+    "fetched_at": "2026-03-23T09:49:45.648644",
+    "score": 8,
+    "tags": [
+      "theology",
+      "culture",
+      "apologetics"
+    ],
+    "rewritten_title": "American Christians Grapple with Inconsistencies in Moral Reasoning",
+    "personas": [
+      "pastor",
+      "professional"
+    ],
+    "topic_cluster": "faith_science_reasoning",
+    "perspective": "neutral",
+    "final_score": 1.25
+  }
+]

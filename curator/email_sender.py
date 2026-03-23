@@ -82,7 +82,7 @@ def pick_highlights(articles: list[dict], exclude_urls: set, n: int = 3) -> list
 
 
 def build_email_html(articles: list[dict], yesterday_articles: list[dict],
-                     daily_summary: dict = None) -> str:
+                     daily_summary: dict = None, research_articles: list[dict] = None) -> str:
     if isinstance(articles, dict):
         articles = articles.get("articles", [])
     today = date.today().strftime("%B %-d, %Y")
@@ -193,6 +193,26 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict],
       {rows}
     </div>"""
 
+    # ── Research & Data ────────────────────────────────────────────────────
+    research_html = ""
+    if research_articles:
+        rows = ""
+        for a in research_articles:
+            title = a.get("rewritten_title") or a.get("title", "")
+            rows += f"""
+      <div style="padding:10px 0; border-bottom:1px solid #e0ddd8;">
+        <div style="font-family:Georgia,serif; font-size:15px; font-weight:600; line-height:1.35; margin-bottom:4px;">
+          <a href="{a['url']}" style="color:#1a1a1a; text-decoration:none;">{title}</a>
+        </div>
+        <div style="font-size:11.5px;">{render_byline(a)}</div>
+      </div>"""
+        research_html = f"""
+    <div style="margin:28px 0; border-top:1px solid #e0ddd8; padding-top:16px;">
+      <div style="font-size:10px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#2C4A2E; margin-bottom:4px;">Research &amp; Data</div>
+      <div style="font-size:11px; color:#999; margin-bottom:8px;">Persistent picks &middot; refreshed as new research appears</div>
+      {rows}
+    </div>"""
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"></head>
@@ -216,6 +236,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict],
     {pulse_html}
     {lead_html}
     {highlights_html}
+    {research_html}
     {cta_html}
     {yesterday_html}
 
@@ -248,13 +269,14 @@ def save_email_html(html_content: str) -> str:
 
 
 def send_email(articles: list[dict], yesterday_articles: list[dict],
-               daily_summary: dict = None) -> bool:
+               daily_summary: dict = None, research_articles: list[dict] = None) -> bool:
     if isinstance(articles, dict):
         articles = articles.get("articles", [])
 
     today = date.today().strftime("%B %-d, %Y")
     subject = f"Christian Curator — {today}"
-    html_content = build_email_html(articles, yesterday_articles, daily_summary=daily_summary)
+    html_content = build_email_html(articles, yesterday_articles, daily_summary=daily_summary,
+                                    research_articles=research_articles)
 
     path = save_email_html(html_content)
     print(f"  Email HTML saved to: {path}")

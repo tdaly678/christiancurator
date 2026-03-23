@@ -233,9 +233,15 @@ SOURCES = [
     },
     {
         "name": "Ryan Burge",
-        "url": "https://ryanburge.substack.com/feed",
+        "url": "https://www.graphsaboutreligion.com/feed",
         "category": "culture",
         "independent": True,
+    },
+    {
+        "name": "Pew Research",
+        "url": "https://www.pewresearch.org/religion/feed/",
+        "category": "culture",
+        "independent": False,
     },
     # Evangelical authors and voices
     {

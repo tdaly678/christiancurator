@@ -431,6 +431,24 @@
       </div>
       {% endif %}
 
+      {% if research_articles %}
+      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="research">
+        <div class="cc-section-label">Research &amp; Data</div>
+        <div class="cc-section-sublabel" style="font-size:12px;color:#888;margin-bottom:0.6rem;">Persistent picks · refreshed as new research appears</div>
+        <div class="cc-article-list">
+          {% for article in research_articles %}
+          <div class="cc-article" data-tags="{{ article.tags | join(',') if article.tags else '' }}" data-personas="{{ article.personas | join(',') if article.personas else '' }}">
+            <div class="cc-article-num">{{ loop.index }}</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="{{ article.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (article.rewritten_title or article.title) | replace("'", "") }}', 'article_source': '{{ article.source_name }}', 'article_url': '{{ article.url }}'});">{{ article.rewritten_title or article.title }}</a>
+              <div class="cc-article-meta">{{ byline(article) }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
       {% if church_articles %}
       <div class="cc-section-group" style="margin-top:1.5rem;" data-section="church life">
         <div class="cc-section-label">Church Life</div>
