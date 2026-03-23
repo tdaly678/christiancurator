@@ -245,115 +245,117 @@
       {% endif %}
 
       <!-- Theology & Doctrine -->
-      {% set theology_articles = articles | selectattr("source_type", "ne", "world_news") | selectattr("tags", "defined") | selectattr("url", "ne", lead.url if lead else "") | selectattr("tags", "contains", "Theology & Doctrine") | list %}
+      {% set theology_articles = [] %}
+      {% for a in articles %}
+        {% if a.source_type != 'world_news' and a.tags and 'theology' in a.tags and a.url not in shown.urls and theology_articles | length < 5 %}
+          {% set _ = shown.urls.append(a.url) %}
+          {% set _ = theology_articles.append(a) %}
+        {% endif %}
+      {% endfor %}
       {% if theology_articles %}
         <div class="cc-section-label">Theology &amp; Doctrine</div>
         <div class="cc-article-list">
-          {% set count = namespace(n=0) %}
           {% for a in theology_articles %}
-            {% if a.url not in shown.urls and count.n < 5 %}
-              {% set _ = shown.urls.append(a.url) %}
-              {% set count.n = count.n + 1 %}
-              <div class="cc-article">
-                <div class="cc-article-num">{{ count.n }}</div>
-                <div class="cc-article-content">
-                  <a href="{{ a.url }}" class="cc-article-title" target="_blank" rel="noopener">{{ a.rewritten_title or a.title }}</a>
-                  <div class="cc-article-meta">
-                    {% if a.author and a.author != a.source_name %}
-                      <span>{{ a.author }}</span><span class="cc-meta-dot">·</span>
-                    {% endif %}
-                    <span>{{ a.source_name }}</span>
-                  </div>
+            <div class="cc-article">
+              <div class="cc-article-num">{{ loop.index }}</div>
+              <div class="cc-article-content">
+                <a href="{{ a.url }}" class="cc-article-title" target="_blank" rel="noopener">{{ a.rewritten_title or a.title }}</a>
+                <div class="cc-article-meta">
+                  {% if a.author and a.author != a.source_name %}
+                    <span>{{ a.author }}</span><span class="cc-meta-dot">·</span>
+                  {% endif %}
+                  <span>{{ a.source_name }}</span>
                 </div>
               </div>
-            {% endif %}
+            </div>
           {% endfor %}
         </div>
       {% endif %}
 
       <!-- Culture & Society -->
-      {% set culture_articles = articles | selectattr("source_type", "ne", "world_news") | selectattr("tags", "defined") | selectattr("tags", "contains", "Culture & Society") | list %}
+      {% set culture_articles = [] %}
+      {% for a in articles %}
+        {% if a.source_type != 'world_news' and a.tags and 'culture' in a.tags and a.url not in shown.urls and culture_articles | length < 5 %}
+          {% set _ = shown.urls.append(a.url) %}
+          {% set _ = culture_articles.append(a) %}
+        {% endif %}
+      {% endfor %}
       {% if culture_articles %}
         <div class="cc-section-label">Culture &amp; Society</div>
         <div class="cc-article-list">
-          {% set count = namespace(n=0) %}
           {% for a in culture_articles %}
-            {% if a.url not in shown.urls and count.n < 4 %}
-              {% set _ = shown.urls.append(a.url) %}
-              {% set count.n = count.n + 1 %}
-              <div class="cc-article">
-                <div class="cc-article-num">{{ count.n }}</div>
-                <div class="cc-article-content">
-                  <a href="{{ a.url }}" class="cc-article-title" target="_blank" rel="noopener">{{ a.rewritten_title or a.title }}</a>
-                  <div class="cc-article-meta">
-                    {% if a.author and a.author != a.source_name %}
-                      <span>{{ a.author }}</span><span class="cc-meta-dot">·</span>
-                    {% endif %}
-                    <span>{{ a.source_name }}</span>
-                  </div>
+            <div class="cc-article">
+              <div class="cc-article-num">{{ loop.index }}</div>
+              <div class="cc-article-content">
+                <a href="{{ a.url }}" class="cc-article-title" target="_blank" rel="noopener">{{ a.rewritten_title or a.title }}</a>
+                <div class="cc-article-meta">
+                  {% if a.author and a.author != a.source_name %}
+                    <span>{{ a.author }}</span><span class="cc-meta-dot">·</span>
+                  {% endif %}
+                  <span>{{ a.source_name }}</span>
                 </div>
               </div>
-            {% endif %}
+            </div>
           {% endfor %}
         </div>
       {% endif %}
 
       <!-- Church Life -->
-      {% set church_articles = articles | selectattr("source_type", "ne", "world_news") | selectattr("tags", "defined") | selectattr("tags", "contains", "Church Life") | list %}
+      {% set church_articles = [] %}
+      {% for a in articles %}
+        {% if a.source_type != 'world_news' and a.tags and 'church life' in a.tags and a.url not in shown.urls and church_articles | length < 5 %}
+          {% set _ = shown.urls.append(a.url) %}
+          {% set _ = church_articles.append(a) %}
+        {% endif %}
+      {% endfor %}
       {% if church_articles %}
         <div class="cc-section-label">Church Life</div>
         <div class="cc-article-list">
-          {% set count = namespace(n=0) %}
           {% for a in church_articles %}
-            {% if a.url not in shown.urls and count.n < 3 %}
-              {% set _ = shown.urls.append(a.url) %}
-              {% set count.n = count.n + 1 %}
-              <div class="cc-article">
-                <div class="cc-article-num">{{ count.n }}</div>
-                <div class="cc-article-content">
-                  <a href="{{ a.url }}" class="cc-article-title" target="_blank" rel="noopener">{{ a.rewritten_title or a.title }}</a>
-                  <div class="cc-article-meta">
-                    {% if a.author and a.author != a.source_name %}
-                      <span>{{ a.author }}</span><span class="cc-meta-dot">·</span>
-                    {% endif %}
-                    <span>{{ a.source_name }}</span>
-                  </div>
+            <div class="cc-article">
+              <div class="cc-article-num">{{ loop.index }}</div>
+              <div class="cc-article-content">
+                <a href="{{ a.url }}" class="cc-article-title" target="_blank" rel="noopener">{{ a.rewritten_title or a.title }}</a>
+                <div class="cc-article-meta">
+                  {% if a.author and a.author != a.source_name %}
+                    <span>{{ a.author }}</span><span class="cc-meta-dot">·</span>
+                  {% endif %}
+                  <span>{{ a.source_name }}</span>
                 </div>
               </div>
-            {% endif %}
+            </div>
           {% endfor %}
         </div>
       {% endif %}
 
       <!-- More from Today -->
-      {% set remaining = articles | selectattr("source_type", "ne", "world_news") | list %}
-      {% set has_more = namespace(found=false) %}
-      {% for a in remaining %}{% if a.url not in shown.urls %}{% set has_more.found = true %}{% endif %}{% endfor %}
-      {% if has_more.found %}
+      {% set more_articles = [] %}
+      {% for a in articles %}
+        {% if a.source_type != 'world_news' and a.url not in shown.urls and more_articles | length < 10 %}
+          {% set _ = shown.urls.append(a.url) %}
+          {% set _ = more_articles.append(a) %}
+        {% endif %}
+      {% endfor %}
+      {% if more_articles %}
         <div class="cc-section-label">More from Today</div>
         <div class="cc-article-list">
-          {% set count = namespace(n=0) %}
-          {% for a in remaining %}
-            {% if a.url not in shown.urls and count.n < 6 %}
-              {% set _ = shown.urls.append(a.url) %}
-              {% set count.n = count.n + 1 %}
-              <div class="cc-article">
-                <div class="cc-article-num">{{ count.n }}</div>
-                <div class="cc-article-content">
-                  <a href="{{ a.url }}" class="cc-article-title" target="_blank" rel="noopener">{{ a.rewritten_title or a.title }}</a>
-                  <div class="cc-article-meta">
-                    {% if a.author and a.author != a.source_name %}
-                      <span>{{ a.author }}</span><span class="cc-meta-dot">·</span>
-                    {% endif %}
-                    <span>{{ a.source_name }}</span>
-                    {% if a.tags %}
-                      <span class="cc-meta-dot">·</span>
-                      <span class="cc-article-tag">{{ a.tags[0] }}</span>
-                    {% endif %}
-                  </div>
+          {% for a in more_articles %}
+            <div class="cc-article">
+              <div class="cc-article-num">{{ loop.index }}</div>
+              <div class="cc-article-content">
+                <a href="{{ a.url }}" class="cc-article-title" target="_blank" rel="noopener">{{ a.rewritten_title or a.title }}</a>
+                <div class="cc-article-meta">
+                  {% if a.author and a.author != a.source_name %}
+                    <span>{{ a.author }}</span><span class="cc-meta-dot">·</span>
+                  {% endif %}
+                  <span>{{ a.source_name }}</span>
+                  {% if a.tags %}
+                    <span class="cc-meta-dot">·</span>
+                    <span class="cc-article-tag">{{ a.tags[0] }}</span>
+                  {% endif %}
                 </div>
               </div>
-            {% endif %}
+            </div>
           {% endfor %}
         </div>
       {% endif %}
