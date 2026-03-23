@@ -12,8 +12,8 @@ import json
 import datetime
 from pathlib import Path
 from curator.daily_summary import generate_daily_summary, save_theme_history
-from frontend import render_daily_page, regenerate_sitemap
-from jinja2 import Environment, FileSystemLoader
+from frontend import render_html
+from output import load_yesterday
 
 ARTICLES_PATH = Path(__file__).parent / "output" / "articles.json"
 TEMPLATE_DIR = Path(__file__).parent / "frontend"
@@ -42,7 +42,18 @@ def main():
         data = json.load(f)
     articles = data.get("articles", data) if isinstance(data, dict) else data
 
-    print(f"  Loaded {len(articles)} articles from output/articles.json")
+    # Reconstruct pairings in the format render_html expects
+    raw_pairings = data.get("pairings", []) if isinstance(data, dict) else []
+    pairings = [
+        {
+            "topic": p["topic"],
+            "point": {"rewritten_title": p["point_title"], "title": p["point_title"], "url": p["point_url"]},
+            "counterpoint": {"rewritten_title": p["counterpoint_title"], "title": p["counterpoint_title"], "url": p["counterpoint_url"]},
+        }
+        for p in raw_pairings
+    ]
+
+    print(f"  Loaded {len(articles)} articles and {len(pairings)} pairings from output/articles.json")
 
     print("  Generating daily summary...")
     daily_summary = generate_daily_summary(articles)
@@ -54,11 +65,11 @@ def main():
     print(f"  Summary generated for {daily_summary['date']}.")
     save_theme_history(daily_summary)
 
-    env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
-    render_daily_page(daily_summary, env)
-    regenerate_sitemap()
+    # Re-render index.html so the Today's Pulse sidebar link appears
+    yesterday_articles = load_yesterday()
+    render_html(articles, pairings, yesterday_articles, daily_summary=daily_summary)
 
-    print("\n=== Done. Check docs/daily/ for the updated page. ===")
+    print("\n=== Done. index.html and docs/daily/ updated. ===")
     print("Remember to: git add docs/ && git commit -m '...' && git push")
 
 
