@@ -2,16 +2,21 @@
 main.py — orchestrates the full ChristianCurator pipeline.
 
 Usage:
-    python main.py
+    python main.py              # full run including email
+    python main.py --no-email   # full run, skip email (use send_email.py to send later)
 
 Steps:
     1. Fetch articles from RSS sources (fetcher layer)
     2. Score, tag, and rewrite titles (curator layer)
     3. Generate point/counterpoint pairs (curator layer)
     4. Write output JSON and regenerate HTML (output layer)
+    5. Generate daily summary
+    6. Update Research & Data section
+    7. Send email (skipped with --no-email)
 """
 
 import json
+import sys
 from fetcher.rss_fetcher import fetch_all
 from curator.scorer import score_articles
 from curator.title_rewriter import rewrite_titles
@@ -23,6 +28,7 @@ from frontend import render_html, update_research_articles
 
 
 def main():
+    send_email_flag = "--no-email" not in sys.argv
     print("=== ChristianCurator Pipeline Starting ===\n")
 
     # --- Load yesterday's top 3 for the digest ---
@@ -79,9 +85,12 @@ def main():
                 research_articles=research_articles)
 
     # --- Send Email ---
-    print("\n[7/7] Sending daily email via Brevo...")
-    send_email(articles, yesterday_articles, daily_summary=daily_summary,
-               research_articles=research_articles)
+    if send_email_flag:
+        print("\n[7/7] Sending daily email via Brevo...")
+        send_email(articles, yesterday_articles, daily_summary=daily_summary,
+                   research_articles=research_articles)
+    else:
+        print("\n[7/7] Email skipped (--no-email). Run send_email.py when ready to send.")
 
     print("=== Pipeline Complete ===")
     print(f"Output written to {OUTPUT_JSON_PATH}")
