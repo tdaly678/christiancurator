@@ -397,6 +397,24 @@
         <button id="cc-filter-clear" onclick="clearFilter()">Show all</button>
       </div>
 
+      {# Fallback: if all tag sections are empty (e.g. scoring API failed), show top articles directly #}
+      {% if not theology_articles and not culture_articles and not church_articles %}
+      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="more">
+        <div class="cc-section-label">Today's Best</div>
+        <div class="cc-article-list">
+          {% for article in articles[1:9] %}
+          <div class="cc-article" data-tags="" data-personas="">
+            <div class="cc-article-num">{{ loop.index }}</div>
+            <div class="cc-article-content">
+              <a class="cc-article-title" href="{{ article.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (article.rewritten_title or article.title) | replace("'", "") }}', 'article_source': '{{ article.source_name }}', 'article_url': '{{ article.url }}'});">{{ article.rewritten_title or article.title }}</a>
+              <div class="cc-article-meta">{{ byline(article) }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
       {% if theology_articles %}
       <div class="cc-section-group" data-section="theology">
         <div class="cc-section-label">Theology &amp; Doctrine</div>
