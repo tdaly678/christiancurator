@@ -22,6 +22,7 @@ from __future__ import annotations
 import os
 import re
 import json
+import time
 import anthropic
 from datetime import date
 from pathlib import Path
@@ -30,6 +31,23 @@ from dotenv import load_dotenv
 load_dotenv()
 
 client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+
+MAX_RETRIES = 4
+RETRY_DELAYS = [5, 15, 30, 60]  # seconds between retries
+
+
+def _api_call_with_retry(fn, label="API call"):
+    """Call fn() with exponential backoff on 529 overload errors."""
+    for attempt, delay in enumerate(RETRY_DELAYS, start=1):
+        try:
+            return fn()
+        except anthropic.APIStatusError as e:
+            if e.status_code == 529 and attempt <= MAX_RETRIES:
+                print(f"  {label}: API overloaded (attempt {attempt}/{MAX_RETRIES}), retrying in {delay}s...")
+                time.sleep(delay)
+            else:
+                raise
+    return None
 
 THEME_HISTORY_PATH = Path(__file__).parent.parent / "docs" / "theme_history.json"
 MAX_HISTORY_DAYS = 60   # how many days to keep in the file
@@ -238,11 +256,13 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
     )
 
     try:
-        message = client.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=800,
-            messages=[{"role": "user", "content": prompt}],
-        )
+        def _call():
+            return client.messages.create(
+                model="claude-sonnet-4-6",
+                max_tokens=800,
+                messages=[{"role": "user", "content": prompt}],
+            )
+        message = _api_call_with_retry(_call, "Daily summary")
         raw = message.content[0].text.strip()
 
         # Strip markdown code fences if present
