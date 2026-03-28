@@ -164,6 +164,13 @@
       margin: 0 12px;
     }
     .cc-archive-nav a:hover { text-decoration: underline; }
+    .cc-archive-nav-pulse {
+      margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #f0ede8;
+    }
+    .cc-archive-nav-pulse a {
+      font-size: 12px; color: #aaa; text-decoration: none; margin: 0;
+    }
+    .cc-archive-nav-pulse a:hover { color: #2C4A2E; }
 
     /* Footer */
     .cc-footer {
@@ -394,6 +401,11 @@
       <a href="/archive/">All Archives</a>
       {% if next_date_iso %}
         <a href="/archive/{{ next_date_iso }}/">{{ next_date_display }} →</a>
+      {% endif %}
+      {% if daily_slug %}
+      <div class="cc-archive-nav-pulse">
+        <a href="/daily/{{ daily_slug }}/">Read the editorial pulse for this day →</a>
+      </div>
       {% endif %}
     </div>
 

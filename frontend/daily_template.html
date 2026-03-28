@@ -108,6 +108,24 @@
     }
     .cc-related-link:hover { color: #1a1a1a; border-color: #1a1a1a; }
 
+    /* Prev / next nav */
+    .cc-daily-nav {
+      margin-top: 2.5rem; padding-top: 1.5rem;
+      border-top: 1px solid #e0ddd8;
+      display: flex; justify-content: space-between;
+    }
+    .cc-daily-nav a {
+      font-size: 13px; color: #2C4A2E; text-decoration: none; font-weight: 600;
+    }
+    .cc-daily-nav a:hover { text-decoration: underline; }
+
+    /* Archive crosslink */
+    .cc-archive-crosslink {
+      margin-top: 0.75rem; font-size: 12px; color: #aaa; text-align: center;
+    }
+    .cc-archive-crosslink a { color: #aaa; text-decoration: none; }
+    .cc-archive-crosslink a:hover { color: #2C4A2E; }
+
     /* Back link */
     .cc-back {
       display: inline-block; margin-top: 2.5rem;
@@ -152,6 +170,16 @@
         </div>
         {% endfor %}
       </div>
+      {% endif %}
+
+      {% if prev_slug or next_slug %}
+      <div class="cc-daily-nav">
+        <span>{% if prev_slug %}<a href="/daily/{{ prev_slug }}/">← {{ prev_date }}</a>{% endif %}</span>
+        <span>{% if next_slug %}<a href="/daily/{{ next_slug }}/">{{ next_date }} →</a>{% endif %}</span>
+      </div>
+      {% endif %}
+      {% if archive_date_iso %}
+      <p class="cc-archive-crosslink"><a href="/archive/{{ archive_date_iso }}/">See the articles from this day →</a></p>
       {% endif %}
 
       <a class="cc-back" href="https://christiancurator.com/">← Read today's full digest</a>

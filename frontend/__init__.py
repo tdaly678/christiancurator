@@ -133,8 +133,19 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
     render_archive_page(articles, template_pairings, env)
     render_archive_index(env)
 
+    # Backfill prev/next + crosslinks on pages predating this feature
+    _backfill_crosslinks()
+
     # Regenerate sitemap to include all daily and archive pages
     regenerate_sitemap()
+
+
+def _slug_to_display(slug: str) -> str:
+    """Convert a YYYY-MM-DD slug to a human-readable date string."""
+    try:
+        return date.fromisoformat(slug).strftime("%B %-d, %Y")
+    except ValueError:
+        return slug
 
 
 def render_daily_page(daily_summary: dict, env: Environment):
@@ -144,13 +155,90 @@ def render_daily_page(daily_summary: dict, env: Environment):
     page_dir = DAILY_DIR / slug
     page_dir.mkdir(parents=True, exist_ok=True)
 
+    # Compute prev/next slugs from existing daily pages
+    existing = sorted([
+        p.name for p in DAILY_DIR.iterdir()
+        if p.is_dir() and len(p.name) == 10 and p.name != slug
+    ])
+    all_slugs = sorted(existing + [slug])
+    idx = all_slugs.index(slug)
+    prev_slug = all_slugs[idx - 1] if idx > 0 else None
+    next_slug = all_slugs[idx + 1] if idx < len(all_slugs) - 1 else None
+
     template = env.get_template("daily_template.html")
-    html = template.render(**daily_summary)
+    html = template.render(
+        **daily_summary,
+        prev_slug=prev_slug,
+        prev_date=_slug_to_display(prev_slug) if prev_slug else None,
+        next_slug=next_slug,
+        next_date=_slug_to_display(next_slug) if next_slug else None,
+        archive_date_iso=slug,  # archive is always generated in the same pipeline run
+    )
 
     output_path = page_dir / "index.html"
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"  Rendered daily page to {output_path}")
+
+    # Back-patch the previous daily page so its "next" link now points to today
+    if prev_slug:
+        _patch_daily_next_link(prev_slug, slug, _slug_to_display(slug))
+
+
+def _patch_daily_next_link(target_slug: str, next_slug: str, next_display: str):
+    """Re-patch an existing daily page to add or update its prev/next nav block."""
+    page_path = DAILY_DIR / target_slug / "index.html"
+    if not page_path.exists():
+        return
+
+    # Recompute prev for the target page
+    all_slugs = sorted([
+        p.name for p in DAILY_DIR.iterdir()
+        if p.is_dir() and len(p.name) == 10
+    ])
+    idx = all_slugs.index(target_slug) if target_slug in all_slugs else -1
+    prev_slug = all_slugs[idx - 1] if idx > 0 else None
+
+    prev_html = (
+        f'<a href="/daily/{prev_slug}/">← {_slug_to_display(prev_slug)}</a>'
+        if prev_slug else ''
+    )
+    next_html = f'<a href="/daily/{next_slug}/">{next_display} →</a>'
+    has_archive = (ARCHIVE_DIR / target_slug / "index.html").exists()
+    archive_line = (
+        f'\n      <p class="cc-archive-crosslink">'
+        f'<a href="/archive/{target_slug}/">See the articles from this day →</a></p>'
+        if has_archive else ""
+    )
+
+    new_nav = (
+        f'<div class="cc-daily-nav">\n'
+        f'        <span>{prev_html}</span>\n'
+        f'        <span>{next_html}</span>\n'
+        f'      </div>{archive_line}'
+    )
+
+    content = page_path.read_text(encoding="utf-8")
+    nav_pattern = re.compile(r'<div class="cc-daily-nav">.*?</div>', re.DOTALL)
+    if nav_pattern.search(content):
+        # Replace existing nav div (but preserve any archive crosslink that follows)
+        new_content = nav_pattern.sub(
+            f'<div class="cc-daily-nav">\n'
+            f'        <span>{prev_html}</span>\n'
+            f'        <span>{next_html}</span>\n'
+            f'      </div>',
+            content, count=1
+        )
+    else:
+        # Insert before the cc-back link
+        new_content = content.replace(
+            '      <a class="cc-back"',
+            f'      {new_nav}\n\n      <a class="cc-back"',
+            1
+        )
+
+    page_path.write_text(new_content, encoding="utf-8")
+    print(f"  Updated daily nav on {page_path}")
 
 
 def render_archive_page(articles: list[dict], pairings: list[dict], env: Environment):
@@ -180,6 +268,9 @@ def render_archive_page(articles: list[dict], pairings: list[dict], env: Environ
         except ValueError:
             prev_date_iso = None
 
+    # Link to the daily pulse page for this date if one exists
+    has_daily_pulse = (DAILY_DIR / date_iso / "index.html").exists()
+
     template = env.get_template("archive_template.html")
     html = template.render(
         articles=articles,
@@ -190,6 +281,7 @@ def render_archive_page(articles: list[dict], pairings: list[dict], env: Environ
         prev_date_display=prev_date_display,
         next_date_iso=None,
         next_date_display=None,
+        daily_slug=date_iso if has_daily_pulse else None,
     )
 
     page_dir = ARCHIVE_DIR / date_iso
@@ -283,7 +375,15 @@ def _patch_archive_next_link(
     if prev_iso:
         new_nav_inner += f'      <a href="/archive/{prev_iso}/">← {prev_display}</a>\n'
     new_nav_inner += '      <a href="/archive/">All Archives</a>\n'
-    new_nav_inner += f'      <a href="/archive/{next_iso}/">{next_display} →</a>\n    '
+    new_nav_inner += f'      <a href="/archive/{next_iso}/">{next_display} →</a>\n'
+    # Preserve / add daily pulse crosslink if one exists for this archive day
+    if (DAILY_DIR / target_iso / "index.html").exists():
+        new_nav_inner += (
+            f'      <div class="cc-archive-nav-pulse">'
+            f'<a href="/daily/{target_iso}/">Read the editorial pulse for this day →</a>'
+            f'</div>\n'
+        )
+    new_nav_inner += '    '
 
     new_content = nav_pattern.sub(
         lambda m: m.group(1) + new_nav_inner + m.group(3),
@@ -363,6 +463,102 @@ def _backfill_archive_meta():
                            "articles": article_data}, f, ensure_ascii=False)
         except Exception as e:
             print(f"  Warning: could not backfill meta for {day_dir.name}: {e}")
+
+
+def _backfill_crosslinks():
+    """Backfill prev/next + archive links on existing daily pages that predate this feature,
+    and add daily pulse links to existing archive pages that are missing them."""
+
+    # --- Daily pages: add prev/next nav + archive crosslink ---
+    if not DAILY_DIR.exists():
+        return
+    all_daily_slugs = sorted([
+        p.name for p in DAILY_DIR.iterdir()
+        if p.is_dir() and len(p.name) == 10 and (p / "index.html").exists()
+    ])
+
+    patched_daily = 0
+    for idx, slug in enumerate(all_daily_slugs):
+        page_path = DAILY_DIR / slug / "index.html"
+        content = page_path.read_text(encoding="utf-8")
+        if 'cc-daily-nav' in content:
+            continue  # already has nav from new template
+
+        prev_slug = all_daily_slugs[idx - 1] if idx > 0 else None
+        next_slug = all_daily_slugs[idx + 1] if idx < len(all_daily_slugs) - 1 else None
+        has_archive = (ARCHIVE_DIR / slug / "index.html").exists()
+
+        prev_html = (
+            f'<a href="/daily/{prev_slug}/">← {_slug_to_display(prev_slug)}</a>'
+            if prev_slug else ''
+        )
+        next_html = (
+            f'<a href="/daily/{next_slug}/">{_slug_to_display(next_slug)} →</a>'
+            if next_slug else ''
+        )
+        nav_html = (
+            f'<div class="cc-daily-nav">\n'
+            f'        <span>{prev_html}</span>\n'
+            f'        <span>{next_html}</span>\n'
+            f'      </div>'
+        )
+        if has_archive:
+            nav_html += (
+                f'\n      <p class="cc-archive-crosslink">'
+                f'<a href="/archive/{slug}/">See the articles from this day →</a></p>'
+            )
+
+        if '      <a class="cc-back"' in content:
+            new_content = content.replace(
+                '      <a class="cc-back"',
+                f'      {nav_html}\n\n      <a class="cc-back"',
+                1
+            )
+            page_path.write_text(new_content, encoding="utf-8")
+            patched_daily += 1
+
+    if patched_daily:
+        print(f"  Backfilled crosslinks on {patched_daily} daily page(s).")
+
+    # --- Archive pages: add daily pulse link to nav if missing ---
+    if not ARCHIVE_DIR.exists():
+        return
+
+    patched_archive = 0
+    nav_pattern = re.compile(r'(<div class="cc-archive-nav">)(.*?)(</div>)', re.DOTALL)
+    for day_dir in sorted(ARCHIVE_DIR.iterdir()):
+        if not day_dir.is_dir() or not (day_dir / "index.html").exists():
+            continue
+        try:
+            date.fromisoformat(day_dir.name)
+        except ValueError:
+            continue
+        slug = day_dir.name
+        if not (DAILY_DIR / slug / "index.html").exists():
+            continue  # no daily pulse for this date
+
+        page_path = day_dir / "index.html"
+        content = page_path.read_text(encoding="utf-8")
+        if 'cc-archive-nav-pulse' in content:
+            continue  # already has the link
+
+        pulse_div = (
+            f'<div class="cc-archive-nav-pulse">'
+            f'<a href="/daily/{slug}/">Read the editorial pulse for this day →</a>'
+            f'</div>\n    '
+        )
+        m = nav_pattern.search(content)
+        if m:
+            new_content = (
+                content[:m.start(3)] +
+                '\n      ' + pulse_div +
+                content[m.start(3):]
+            )
+            page_path.write_text(new_content, encoding="utf-8")
+            patched_archive += 1
+
+    if patched_archive:
+        print(f"  Backfilled daily pulse links on {patched_archive} archive page(s).")
 
 
 def render_archive_index(env: Environment):
