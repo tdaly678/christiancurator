@@ -381,7 +381,7 @@ OPPOSING_VIEWS_BOOST      = 1.0   # applied to articles that form an opposing pa
 CATHOLIC_CLUSTER_KEYWORDS = {
     "pope", "papal", "vatican", "synod", "synodality", "cardinal", "jesuit",
     "catholic_church", "roman_catholic", "pope_francis", "holy_see",
-    "encyclical", "bishop_of_rome",
+    "encyclical", "bishop_of_rome", "purgatory", "catholic",
 }
 CATHOLIC_SCORE_CAP = 3.0  # max final_score for Catholic-specific content
 
