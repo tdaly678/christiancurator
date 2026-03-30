@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Best Christian Articles on the Local Church — Christian Curator</title>
-  <meta name="description" content="The evangelical conversation on the local church, membership, and ecclesiology — curated and synthesized. Why the church still matters and what healthy church life looks like." />
-  <link rel="canonical" href="https://christiancurator.com/topics/local-church/" />
+  <title>Best Christian Articles on Discipleship — Christian Curator</title>
+  <meta name="description" content="Best Christian Articles on Discipleship. The evangelical conversation curated and synthesized." />
+  <link rel="canonical" href="https://christiancurator.com/topics/discipleship/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
@@ -13,7 +13,7 @@
     body { font-family: 'Source Sans 3', sans-serif; background: #faf9f7; color: #1a1a1a; font-size: 16px; line-height: 1.6; }
     .cc-root { max-width: 740px; margin: 0 auto; padding: 0 20px 4rem; }
     .cc-header { border-bottom: 1px solid #e0ddd8; padding: 0.75rem 0 1rem; margin-bottom: 2rem; }
-    .cc-top-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; font-size: 12px; color: #888; }
+    .cc-top-bar { display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: #888; }
     .cc-back { font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; }
     .cc-back:hover { text-decoration: underline; }
     .cc-site-name { font-family: 'Lora', Georgia, serif; font-size: 22px; font-weight: 600; color: #1a1a1a; text-decoration: none; }
@@ -45,8 +45,7 @@
     .cc-synthesis p { font-size: 15px; color: #333; line-height: 1.7; margin-bottom: 0.9rem; }
     .cc-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e0ddd8; font-size: 12px; color: #aaa; text-align: center; line-height: 1.8; }
     .cc-footer a { color: #2C4A2E; text-decoration: none; }
-
-    /* Topics strip — grouped */
+    .cc-footer a:hover { text-decoration: underline; }
     .cc-topics-strip { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e0ddd8; }
     .cc-topics-strip-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #aaa; margin-bottom: 1rem; }
     .cc-topics-category { margin-bottom: 1rem; }
@@ -58,96 +57,91 @@
     .cc-topic-link.active { background: #2C4A2E; color: #fff; border-color: #2C4A2E; }
     .cc-topic-link.coming-soon { color: #bbb; border-color: #ece9e4; background: #faf9f7; cursor: default; font-style: italic; }
 
-    .cc-topics-strip { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e0ddd8; }
-    .cc-topics-strip-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #aaa; margin-bottom: 0.75rem; }
-    .cc-topics-grid { display: flex; flex-wrap: wrap; gap: 8px; }
-    .cc-topic-link { font-size: 12px; padding: 5px 12px; border: 1px solid #e0ddd8; border-radius: 20px; color: #444; text-decoration: none; font-weight: 600; background: #fff; }
-    .cc-topic-link:hover, .cc-topic-link.active { background: #2C4A2E; color: #fff; border-color: #2C4A2E; }
   </style>
 </head>
 <body>
 <div class="cc-root">
   <div class="cc-header">
     <div class="cc-top-bar">
-      <a href="/" class="cc-back">← Back to Today's Digest</a>
+      <a href="/" class="cc-back">&larr; Back to Today&rsquo;s Digest</a>
       <a href="/" class="cc-site-name">Christian Curator</a>
     </div>
   </div>
 
   <div class="cc-topic-hero">
-    <div class="cc-series-label">Go Deeper · Church Life</div>
-    <h1 class="cc-topic-title">Best Christian Articles on the Local Church</h1>
-    <p class="cc-topic-deck">Why does membership, commitment, and embodied community still matter in a digital, mobile age?</p>
-    <div class="cc-topic-meta">Curated by Christian Curator · Updated regularly</div>
+    <div class="cc-series-label">Go Deeper &middot; Spiritual Formation</div>
+    <h1 class="cc-topic-title">Best Christian Articles on Discipleship</h1>
+    <p class="cc-topic-deck">What does it actually mean to make disciples — and why is the local church the irreplaceable context for it?</p>
+    <div class="cc-topic-meta">Curated by Christian Curator &middot; Updated regularly</div>
   </div>
 
-  <div class="cc-editorial">    <p>Something is happening to the American church, and evangelicals are only beginning to reckon with it. The "Great Dechurching" — estimated at 40 million Americans who have left regular church attendance in the past 25 years — is the largest religious shift in U.S. history. But perhaps more significant than the numbers is the theological question underneath them: have evangelicals been operating with a view of the church thin enough that people can leave it without losing anything essential?</p>
-
-    <p>The irony is that evangelical ecclesiology — the theology of the church — has always been one of the tradition's weakest areas. Evangelicalism prioritized personal conversion, individual Bible reading, and parachurch movements at the expense of robust theology of the local congregation. The result: many evangelicals understand salvation clearly but the church dimly, which makes it possible to think of church attendance as a helpful supplement to the Christian life rather than a constitutive part of it.</p>
-
-    <p>The articles below represent the best evangelical reckoning with that gap. Some diagnose the problem historically. Others make the positive case for church membership, church discipline, and embodied community from Scripture. Together they form a constructive vision of the local church not as a service provider or spiritual gym, but as a covenant people — the outpost of God's kingdom in a particular neighborhood.</p>
-
+  <div class="cc-editorial">
+    <!-- TODO: Replace with human-written editorial content -->
+    <p>Jesus did not commission his followers to make converts; he commissioned them to make disciples — people who learn to obey everything he commanded, in every dimension of life. That distinction carries enormous practical weight. Conversion is an event; discipleship is a lifelong process of formation, and it requires intentional relationship, sustained community, and patient instruction over time.</p><p>Evangelical Christianity has not always been clear on this. The tradition's emphasis on personal conversion, combined with the rise of individualistic spiritual practice, has sometimes produced Christians who understand salvation but have little experience of what it means to be deliberately formed by a more mature believer. The result is churches full of people who made a decision but were never discipled into the fullness of Christian life.</p><p>The best evangelical thinking on discipleship is recovering something the New Testament assumes throughout: that Christian formation happens in relationship, within the structure of the local church, and through the ordinary means of God's grace — the Word, prayer, the Lord's Supper, and the body of Christ. The articles below represent the sharpest thinking on what it means to disciple and be discipled.</p>
     <div class="cc-key-questions">
       <div class="cc-key-questions-label">Key Questions This Topic Addresses</div>
-      <ul>
-        <li>Is church membership actually biblical — or is it just an institutional convenience?</li>
-        <li>What caused the Great Dechurching, and what does it reveal about evangelical ecclesiology?</li>
-        <li>What are the responsibilities that come with church membership?</li>
-        <li>How does the local church function as a witness to the gospel?</li>
-        <li>What is the relationship between church membership and the Lord's Supper?</li>
-      </ul>
+      <ul><li>What is the difference between evangelism and discipleship — and why does it matter?</li><li>What does the New Testament actually show us about how discipleship worked in the early church?</li><li>How does a church cultivate a culture of intentional disciple-making rather than just program attendance?</li><li>What is the role of one-on-one relationships in spiritual formation?</li><li>How do small groups function as discipleship contexts rather than just social communities?</li></ul>
     </div>
   </div>
 
   <div>
     <div class="cc-article-list-label">The Evangelical Conversation, Curated</div>
-
+    
     <div class="cc-article-entry">
       <div class="cc-article-num">1</div>
       <div class="cc-article-body">
-        <div class="cc-article-title"><a href="https://www.christianitytoday.com/2023/08/dechurching-trend-evangelical-ecclesiology-church-theology/" target="_blank" rel="noopener">Evangelicals' Theology of the Church Must Be Born Again</a></div>
-        <div class="cc-article-byline">Daniel K. Williams · <span class="source">Christianity Today</span></div>
-        <div class="cc-article-annotation">The essential diagnostic piece for the current moment. Williams argues that the Great Dechurching is not primarily a cultural failure but a theological one — evangelicalism has historically prioritized personal salvation over corporate church life, leaving it without a compelling answer for why church attendance is non-optional. A historically informed, generously critical assessment of where evangelical ecclesiology went wrong.</div>
+        <div class="cc-article-title"><a href="https://www.9marks.org/article/journaldiscipleship-according-scriptures/" target="_blank" rel="noopener">Discipleship According to the Scriptures</a></div>
+        <div class="cc-article-byline"> · <span class="source">9Marks</span></div>
+        <div class="cc-article-annotation">The essential biblical foundation piece. This article argues that discipleship doesn't just happen — it requires intentional cultivation of deep, honest relationships in which believers deliberately do spiritual good to one another. It traces the pattern of discipleship through the New Testament and shows why it is inherently relational, not merely programmatic.</div>
       </div>
     </div>
 
     <div class="cc-article-entry">
       <div class="cc-article-num">2</div>
       <div class="cc-article-body">
-        <div class="cc-article-title"><a href="https://www.9marks.org/article/journaltwelve-reasons-why-membership-matters/" target="_blank" rel="noopener">Twelve Reasons Why Membership Matters</a></div>
-        <div class="cc-article-byline">9Marks</div>
-        <div class="cc-article-annotation">The most comprehensive single-article case for formal church membership in the evangelical literature. Drawing on ecclesiology, New Testament ethics, and pastoral practice, this piece shows that membership is not bureaucratic formality but a theological structure that enables specific forms of love, accountability, and gospel witness. Essential for pastors and church members trying to articulate why membership is not optional.</div>
+        <div class="cc-article-title"><a href="https://www.9marks.org/article/disciple-others/" target="_blank" rel="noopener">Disciple Others</a></div>
+        <div class="cc-article-byline"> · <span class="source">9Marks</span></div>
+        <div class="cc-article-annotation">A practical piece on what it means to deliberately help another person grow in conformity to Jesus. Discipling is defined here not as a program but as an intentional relationship — meeting regularly, reading Scripture together, praying, and speaking honestly into one another's lives. Clear, actionable, and grounded in what the New Testament actually shows.</div>
       </div>
     </div>
 
     <div class="cc-article-entry">
       <div class="cc-article-num">3</div>
       <div class="cc-article-body">
-        <div class="cc-article-title"><a href="https://www.9marks.org/article/journalchurch-membership-biblical/" target="_blank" rel="noopener">Is Church Membership Biblical?</a></div>
-        <div class="cc-article-byline">9Marks</div>
-        <div class="cc-article-annotation">The exegetical foundation. This article confronts the most common objection head-on: if the word "membership" doesn't appear in the New Testament, how can it be required? The answer, carefully argued from passages in Acts, the Pauline letters, and Hebrews, is that formal covenant commitment to a local congregation is exactly what the New Testament assumes, even when it doesn't use modern institutional vocabulary.</div>
+        <div class="cc-article-title"><a href="https://www.thegospelcoalition.org/article/how-to-grow-a-disciple-making-culture-in-your-church/" target="_blank" rel="noopener">Grow a Disciple-Making Culture in Your Church</a></div>
+        <div class="cc-article-byline"> · <span class="source">The Gospel Coalition</span></div>
+        <div class="cc-article-annotation">Addresses the institutional challenge: how does a church move from a program-centric model to a culture where disciple-making is the normal expectation of every member? The article defines disciple-making as an intentional process of evangelizing non-believers, establishing believers in faith, and equipping leaders — and outlines the pastoral moves that shift a church's culture toward this end.</div>
       </div>
     </div>
 
     <div class="cc-article-entry">
       <div class="cc-article-num">4</div>
       <div class="cc-article-body">
-        <div class="cc-article-title"><a href="https://www.9marks.org/article/why-join-a-church/" target="_blank" rel="noopener">Why Join a Church?</a></div>
-        <div class="cc-article-byline">9Marks</div>
-        <div class="cc-article-annotation">A shorter, more accessible piece for the ordinary church member or skeptic who has never been persuaded that formal membership matters. It grounds the answer in the question of gospel witness: church membership is how the church publicly affirms that a person is a credible representative of Jesus Christ. A useful piece to give to someone who attends faithfully but resists the language of commitment.</div>
+        <div class="cc-article-title"><a href="https://www.thegospelcoalition.org/article/your-small-group-making-disciples/" target="_blank" rel="noopener">Your Small Group Should Be Making Disciples</a></div>
+        <div class="cc-article-byline"> · <span class="source">The Gospel Coalition</span></div>
+        <div class="cc-article-annotation">Small groups are the most common discipleship structure in evangelical churches — but many function as social communities or Bible information sessions rather than genuine disciple-making environments. This article clarifies what has to change: shared accountability, intentional growth goals, and the church community as the context for genuine spiritual transformation.</div>
       </div>
     </div>
 
-
+    <div class="cc-article-entry">
+      <div class="cc-article-num">5</div>
+      <div class="cc-article-body">
+        <div class="cc-article-title"><a href="https://ca.thegospelcoalition.org/article/the-four-causes-of-spiritual-formation/" target="_blank" rel="noopener">The Four Causes of Spiritual Formation</a></div>
+        <div class="cc-article-byline"> · <span class="source">The Gospel Coalition Canada</span></div>
+        <div class="cc-article-annotation">A theologically rich piece drawing on Aristotle's four causes to analyze what actually produces spiritual formation. What is the material of spiritual growth? What is its formal structure? What moves it? What is its goal? The Aristotelian framework is a vehicle for a genuinely illuminating account of how the Holy Spirit works through ordinary means to transform ordinary people.</div>
+      </div>
+    </div>
+    <!-- TODO: Add article from Desiring God on personal discipleship -->
+    <!-- TODO: Add article from Ligonier Ministries on spiritual formation -->
   </div>
 
   <div class="cc-synthesis">
     <div class="cc-synthesis-label">What the Conversation Adds Up To</div>
-    <p>The thread running through all of these articles is a recovery of what the Reformers called the <em>marks of the true church</em>: the right preaching of the Word and the right administration of the sacraments. These are not institutional decorations but constitutive activities — what the church is doing when it is being the church. Membership, discipline, and gathered worship are not programs layered on top of the Christian life; they are the ordinary context in which the Christian life is lived.</p>
-    <p>The pastoral implication is urgent: churches that treat attendance as optional and membership as bureaucratic will continue to see people drift. Churches that articulate and embody a robust theology of the gathered people of God give people something worth staying for — and something worth coming back to.</p>
+    <!-- TODO: Replace with human-written synthesis -->
+    <p>The thread running through all of these articles is a recovery of what discipleship actually looks like in the New Testament: intentional, relational, and embedded in the local church. It is not a program you attend; it is a pattern of life you enter with others. The early church devoted itself to the apostles' teaching, fellowship, breaking of bread, and prayer — and those four activities are still the structure within which genuine Christian formation happens.</p><p>The practical implication for churches is a shift from attraction to formation: from asking 'how do we get people to come?' to 'how do we help the people who come to become like Christ?' These are different questions, and they require different kinds of investment — less platform, more relationship; less event, more sustained presence.</p>
   </div>
 
-  <div class="cc-topics-strip">
+    <div class="cc-topics-strip">
     <div class="cc-topics-strip-label">Explore All Topics</div>
 
     <div class="cc-topics-category">
@@ -160,11 +154,10 @@
         <a href="/topics/atonement/" class="cc-topic-link">The Atonement</a>
       </div>
     </div>
-
     <div class="cc-topics-category">
       <div class="cc-topics-cat-label">Church Life</div>
       <div class="cc-topics-grid">
-        <a href="/topics/local-church/" class="cc-topic-link active">The Local Church</a>
+        <a href="/topics/local-church/" class="cc-topic-link">The Local Church</a>
         <a href="/topics/membership/" class="cc-topic-link">Membership</a>
         <a href="/topics/church-planting/" class="cc-topic-link">Church Planting &amp; Revitalization</a>
         <span class="cc-topic-link coming-soon">Baptism</span>
@@ -172,19 +165,17 @@
         <span class="cc-topic-link coming-soon">Lord&rsquo;s Supper</span>
       </div>
     </div>
-
     <div class="cc-topics-category">
       <div class="cc-topics-cat-label">Spiritual Formation</div>
       <div class="cc-topics-grid">
-        <a href="/topics/discipleship/" class="cc-topic-link">Discipleship</a>
+        <a href="/topics/discipleship/" class="cc-topic-link  active">Discipleship</a>
         <a href="/topics/preaching/" class="cc-topic-link">Preaching</a>
         <a href="/topics/marriage-and-family/" class="cc-topic-link">Marriage &amp; Family</a>
         <a href="/topics/vocation-and-work/" class="cc-topic-link">Vocation &amp; Work</a>
       </div>
     </div>
-
     <div class="cc-topics-category">
-      <div class="cc-topics-cat-label">Culture &amp; Society</div>
+      <div class="cc-topics-cat-label">Culture & Society</div>
       <div class="cc-topics-grid">
         <a href="/topics/technology/" class="cc-topic-link">Technology</a>
         <a href="/topics/politics-and-the-church/" class="cc-topic-link">Politics</a>
@@ -192,9 +183,10 @@
       </div>
     </div>
   </div>
+
   <div class="cc-footer">
-    <div>Christian Curator · All links go to original sources. We curate; they create.</div>
-    <div><a href="/">Return to Today's Digest</a> · <a href="/archive/">Browse Archive</a></div>
+    <div>Christian Curator &middot; All links go to original sources. We curate; they create.</div>
+    <div><a href="/">Return to Today&rsquo;s Digest</a> &middot; <a href="/archive/">Browse Archive</a></div>
   </div>
 </div>
 </body>
