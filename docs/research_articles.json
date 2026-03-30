@@ -4,72 +4,71 @@
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "John Simons",
-    "title": "How to Start a Men’s Ministry in Your Church",
-    "url": "https://research.lifeway.com/2026/03/26/how-to-start-a-mens-ministry-in-your-church/",
-    "summary": "<p>Here are three principles for a church wanting to start a men’s ministry with its best foot forward toward overall church health.  <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/03/26/how-to-start-a-mens-ministry-in-your-church/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/03/26/how-to-start-a-mens-ministry-in-your-church/\">How to Start a Men’s Ministry in Your Church</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
-    "published": "Thu, 26 Mar 2026 06:02:00 +0000",
-    "fetched_at": "2026-03-27T08:49:43.168520",
-    "score": 6,
-    "tags": [
-      "church life"
-    ],
-    "rewritten_title": "How to Launch a Meaningful Men's Ministry in Your Church",
-    "personas": [
-      "pastor"
-    ],
-    "topic_cluster": "mens_ministry_church",
-    "perspective": "neutral",
-    "final_score": 6.75,
-    "recency_boost": 0.75
-  },
-  {
-    "source_name": "Lifeway Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
     "author": "Robby Gallaty",
     "title": "How to Measure Discipleship in Your Church",
     "url": "https://research.lifeway.com/2026/03/27/how-to-measure-discipleship-in-your-church/",
     "summary": "<p>Churches and their leaders can stop wondering how to measure discipleship when they finally know what they’re measuring for. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/03/27/how-to-measure-discipleship-in-your-church/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/03/27/how-to-measure-discipleship-in-your-church/\">How to Measure Discipleship in Your Church</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "published": "Fri, 27 Mar 2026 06:12:00 +0000",
-    "fetched_at": "2026-03-27T08:49:43.168508",
-    "score": 5,
+    "fetched_at": "2026-03-29T08:03:38.131264",
+    "score": 6,
     "tags": [
       "church life"
     ],
-    "rewritten_title": "Assessing Spiritual Growth: Meaningful Metrics for Church Discipleship",
+    "rewritten_title": "Assessing Spiritual Growth: Meaningful Measures of Discipleship",
     "personas": [
       "pastor"
     ],
     "topic_cluster": "discipleship_measurement",
     "perspective": "neutral",
-    "final_score": 5.75,
-    "recency_boost": 1.5
+    "final_score": 6.25,
+    "recency_boost": 0.25
   },
   {
-    "source_name": "Kyle Worley",
-    "source_category": "theology",
+    "source_name": "Ryan Burge",
+    "source_category": "culture",
     "source_type": "christian",
     "independent": true,
-    "author": "Kyle Worley",
-    "title": "This is an ad - but a necessary one.",
-    "url": "https://sacredslang.substack.com/p/this-is-an-ad-but-a-necessary-one",
-    "summary": "The data from Ligonier's State of Theology report is a call to action.",
-    "published": "Thu, 26 Mar 2026 14:02:36 GMT",
-    "fetched_at": "2026-03-27T08:49:35.987689",
+    "author": "Ryan Burge",
+    "title": "America Got a Little More Religious. No, Really.",
+    "url": "https://www.graphsaboutreligion.com/p/america-got-a-little-more-religious",
+    "summary": "America's Secular Surge Has Stalled. We Don't Know Why.",
+    "published": "Sat, 28 Mar 2026 11:31:07 GMT",
+    "fetched_at": "2026-03-29T08:03:35.496856",
     "score": 4,
     "tags": [
       "data"
     ],
-    "rewritten_title": "Church Leaders Call for Honest Dialogue on Faith-Based Advertising",
+    "rewritten_title": "America Shows Signs of Growing Religious Commitment, Survey Finds",
     "personas": [
-      "pastor",
+      "pastor"
+    ],
+    "topic_cluster": "religious_trends_america",
+    "perspective": "neutral",
+    "final_score": 5.5,
+    "recency_boost": 1.5
+  },
+  {
+    "source_name": "The Guardian",
+    "source_category": "news",
+    "source_type": "world_news",
+    "independent": false,
+    "author": "Sinéad Campbell",
+    "title": "‘Our assumptions are broken’: how fraudulent church data revealed AI’s threat to polling",
+    "url": "https://www.theguardian.com/technology/2026/mar/28/how-fraudulent-church-data-revealed-ais-threat-to-polling",
+    "summary": "<p>Experts say paid participants are using automated tools to generate unreliable survey responses at scale</p><p>If you had been keeping tabs on the news about church attendance in Britain lately, you would be forgiven for thinking the country was in the midst of a <a href=\"https://www.theguardian.com/world/2025/apr/26/a-revival-is-happening-church-hails-resurgence-among-young-in-uk\">Christian revival</a>.</p><p>Stories of swelling congregations, filled with <a href=\"https://www.theguardian.com/commentisfree/2025/apr/21/gen-z-men-church-community-activism-online-radicalisation\">young people returning to the flock</a>, spurred on by everything from social media to a <a href=\"https://www.theguardian.com/world/2026/jan/10/its-younger-people-seeking-some-sort-of-spirituality-the-rise-of-uk-bible-sales\">rise in bible sales</a> appeared to be confirmed by a 2024 report from the Bible Society.</p> <a href=\"https://www.theguardian.com/technology/2026/mar/28/how-fraudulent-church-data-revealed-ais-threat-to-polling\">Continue reading...</a>",
+    "published": "Sat, 28 Mar 2026 12:00:32 GMT",
+    "fetched_at": "2026-03-29T08:02:11.185573",
+    "score": 5,
+    "tags": [
+      "data"
+    ],
+    "rewritten_title": "Church Data Fraud Exposes Critical Flaws in AI-Driven Polling Methods",
+    "personas": [
       "professional"
     ],
-    "topic_cluster": "ligonier_theology_survey",
-    "perspective": "news",
-    "final_score": 5.7,
+    "topic_cluster": "church_polling_fraud",
+    "perspective": "neutral",
+    "final_score": 5.5,
     "recency_boost": 1.5
   }
 ]
