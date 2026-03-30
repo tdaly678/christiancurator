@@ -4,71 +4,73 @@
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Robby Gallaty",
-    "title": "How to Measure Discipleship in Your Church",
-    "url": "https://research.lifeway.com/2026/03/27/how-to-measure-discipleship-in-your-church/",
-    "summary": "<p>Churches and their leaders can stop wondering how to measure discipleship when they finally know what they’re measuring for. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/03/27/how-to-measure-discipleship-in-your-church/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/03/27/how-to-measure-discipleship-in-your-church/\">How to Measure Discipleship in Your Church</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
-    "published": "Fri, 27 Mar 2026 06:12:00 +0000",
-    "fetched_at": "2026-03-29T08:03:38.131264",
-    "score": 6,
+    "author": "Christina Gonet",
+    "title": "What is Sin?",
+    "url": "https://research.lifeway.com/2026/03/30/what-is-sin/",
+    "summary": "<p>Could there be a need to clarify what it means for humans to be made in the image of God and how that relates to human sin? <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/03/30/what-is-sin/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/03/30/what-is-sin/\">What is Sin?</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "published": "Mon, 30 Mar 2026 06:22:00 +0000",
+    "fetched_at": "2026-03-30T10:44:44.228520",
+    "score": 5,
     "tags": [
-      "church life"
+      "theology"
     ],
-    "rewritten_title": "Assessing Spiritual Growth: Meaningful Measures of Discipleship",
+    "rewritten_title": "Understanding Sin: A Biblical Foundation for Christian Life",
     "personas": [
-      "pastor"
+      "pastor",
+      "student"
     ],
-    "topic_cluster": "discipleship_measurement",
+    "topic_cluster": "sin_imago_dei",
     "perspective": "neutral",
-    "final_score": 6.25,
-    "recency_boost": 0.25
+    "final_score": 6.5,
+    "recency_boost": 1.5
   },
   {
-    "source_name": "Ryan Burge",
-    "source_category": "culture",
+    "source_name": "World Magazine",
+    "source_category": "news",
     "source_type": "christian",
-    "independent": true,
-    "author": "Ryan Burge",
-    "title": "America Got a Little More Religious. No, Really.",
-    "url": "https://www.graphsaboutreligion.com/p/america-got-a-little-more-religious",
-    "summary": "America's Secular Surge Has Stalled. We Don't Know Why.",
-    "published": "Sat, 28 Mar 2026 11:31:07 GMT",
-    "fetched_at": "2026-03-29T08:03:35.496856",
+    "independent": false,
+    "author": "Keegan Martin",
+    "title": "Purgatory economics",
+    "url": "https://wng.org/podcasts/purgatory-economics-1774735165",
+    "summary": "<p>From stable jobless claims to weakening hiring data, the economy shows mixed signs as investors react to oil prices and geopolitical risk. David Bahnsen has this week’s Monday Moneybeat.</p>",
+    "published": "Mon, 30 Mar 2026 03:13:00 -0400",
+    "fetched_at": "2026-03-30T10:43:11.789698",
     "score": 4,
     "tags": [
       "data"
     ],
-    "rewritten_title": "America Shows Signs of Growing Religious Commitment, Survey Finds",
-    "personas": [
-      "pastor"
-    ],
-    "topic_cluster": "religious_trends_america",
-    "perspective": "neutral",
-    "final_score": 5.5,
-    "recency_boost": 1.5
-  },
-  {
-    "source_name": "The Guardian",
-    "source_category": "news",
-    "source_type": "world_news",
-    "independent": false,
-    "author": "Sinéad Campbell",
-    "title": "‘Our assumptions are broken’: how fraudulent church data revealed AI’s threat to polling",
-    "url": "https://www.theguardian.com/technology/2026/mar/28/how-fraudulent-church-data-revealed-ais-threat-to-polling",
-    "summary": "<p>Experts say paid participants are using automated tools to generate unreliable survey responses at scale</p><p>If you had been keeping tabs on the news about church attendance in Britain lately, you would be forgiven for thinking the country was in the midst of a <a href=\"https://www.theguardian.com/world/2025/apr/26/a-revival-is-happening-church-hails-resurgence-among-young-in-uk\">Christian revival</a>.</p><p>Stories of swelling congregations, filled with <a href=\"https://www.theguardian.com/commentisfree/2025/apr/21/gen-z-men-church-community-activism-online-radicalisation\">young people returning to the flock</a>, spurred on by everything from social media to a <a href=\"https://www.theguardian.com/world/2026/jan/10/its-younger-people-seeking-some-sort-of-spirituality-the-rise-of-uk-bible-sales\">rise in bible sales</a> appeared to be confirmed by a 2024 report from the Bible Society.</p> <a href=\"https://www.theguardian.com/technology/2026/mar/28/how-fraudulent-church-data-revealed-ais-threat-to-polling\">Continue reading...</a>",
-    "published": "Sat, 28 Mar 2026 12:00:32 GMT",
-    "fetched_at": "2026-03-29T08:02:11.185573",
-    "score": 5,
-    "tags": [
-      "data"
-    ],
-    "rewritten_title": "Church Data Fraud Exposes Critical Flaws in AI-Driven Polling Methods",
+    "rewritten_title": "Understanding Purgatory: A Catholic Perspective on Spiritual Debt",
     "personas": [
       "professional"
     ],
-    "topic_cluster": "church_polling_fraud",
+    "topic_cluster": "economic_analysis",
     "perspective": "neutral",
-    "final_score": 5.5,
+    "final_score": 4.95,
     "recency_boost": 1.5
+  },
+  {
+    "source_name": "Lifeway Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Scott McConnell",
+    "title": "American Nones: What to Expect and How to Reach Them",
+    "url": "https://research.lifeway.com/2026/03/25/american-nones-what-to-expect-and-how-to-reach-them/",
+    "summary": "<p>Maybe the bigger question for us isn’t whether American Nones want to hear the gospel message but whether we love them enough to share it. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/03/25/american-nones-what-to-expect-and-how-to-reach-them/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/03/25/american-nones-what-to-expect-and-how-to-reach-them/\">American Nones: What to Expect and How to Reach Them</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "published": "Wed, 25 Mar 2026 06:43:00 +0000",
+    "fetched_at": "2026-03-30T10:44:44.228542",
+    "score": 6,
+    "tags": [
+      "culture",
+      "missions"
+    ],
+    "rewritten_title": "Understanding America's Unchurched: A Guide for Believers",
+    "personas": [
+      "pastor",
+      "professional"
+    ],
+    "topic_cluster": "reaching_nones",
+    "perspective": "neutral",
+    "final_score": 3.25
   }
 ]
