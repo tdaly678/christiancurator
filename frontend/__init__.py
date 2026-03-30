@@ -808,8 +808,11 @@ def render_archive_index(env: Environment):
     print(f"  Rendered archive index to {output_path} ({len(days)} days listed)")
 
 
+TOPICS_DIR = DOCS_DIR / "topics"
+
+
 def regenerate_sitemap():
-    """Regenerate sitemap.xml to include the homepage + all daily and archive pages."""
+    """Regenerate sitemap.xml to include the homepage + all daily, archive, and topic pages."""
     today_iso = date.today().isoformat()
 
     # Each entry: (url, changefreq, priority, lastmod)
@@ -834,6 +837,17 @@ def regenerate_sitemap():
                 entries.append((
                     f"https://christiancurator.com/archive/{day_dir.name}/",
                     "never", "0.6", day_dir.name,
+                ))
+
+    # Topics index + individual topic pages
+    if TOPICS_DIR.exists():
+        if (TOPICS_DIR / "index.html").exists():
+            entries.append(("https://christiancurator.com/topics/", "weekly", "0.9", today_iso))
+        for topic_dir in sorted(TOPICS_DIR.iterdir()):
+            if topic_dir.is_dir() and (topic_dir / "index.html").exists():
+                entries.append((
+                    f"https://christiancurator.com/topics/{topic_dir.name}/",
+                    "monthly", "0.85", today_iso,
                 ))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
