@@ -9,7 +9,7 @@
     "url": "https://research.lifeway.com/2026/03/30/what-is-sin/",
     "summary": "<p>Could there be a need to clarify what it means for humans to be made in the image of God and how that relates to human sin? <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/03/30/what-is-sin/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/03/30/what-is-sin/\">What is Sin?</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "published": "Mon, 30 Mar 2026 06:22:00 +0000",
-    "fetched_at": "2026-03-30T10:44:44.228520",
+    "fetched_at": "2026-03-30T18:46:40.993515",
     "score": 5,
     "tags": [
       "theology"
@@ -25,6 +25,32 @@
     "recency_boost": 1.5
   },
   {
+    "source_name": "Ryan Burge",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": true,
+    "author": "Ryan Burge",
+    "title": "The Fox News Advantage: How Cable News Divides Along Religious and Generational Lines",
+    "url": "https://www.graphsaboutreligion.com/p/the-fox-news-advantage-how-cable",
+    "summary": "Young atheists and agnostics aren't tuning into MSNBC while young Christians still watch Fox News",
+    "published": "Mon, 30 Mar 2026 11:31:02 GMT",
+    "fetched_at": "2026-03-30T18:46:40.107592",
+    "score": 4,
+    "tags": [
+      "data",
+      "politics"
+    ],
+    "rewritten_title": "Religious and Generational Divides in Cable News Viewership",
+    "personas": [
+      "pastor",
+      "professional"
+    ],
+    "topic_cluster": "media_religion_generational",
+    "perspective": "neutral",
+    "final_score": 5.5,
+    "recency_boost": 1.5
+  },
+  {
     "source_name": "World Magazine",
     "source_category": "news",
     "source_type": "christian",
@@ -34,43 +60,18 @@
     "url": "https://wng.org/podcasts/purgatory-economics-1774735165",
     "summary": "<p>From stable jobless claims to weakening hiring data, the economy shows mixed signs as investors react to oil prices and geopolitical risk. David Bahnsen has this week’s Monday Moneybeat.</p>",
     "published": "Mon, 30 Mar 2026 03:13:00 -0400",
-    "fetched_at": "2026-03-30T10:43:11.789698",
+    "fetched_at": "2026-03-30T18:45:03.551399",
     "score": 4,
     "tags": [
       "data"
     ],
-    "rewritten_title": "Understanding Purgatory: A Catholic Perspective on Spiritual Debt",
+    "rewritten_title": "Understanding Purgatory: Catholic Perspectives on Spiritual Debt and Redemption",
     "personas": [
       "professional"
     ],
-    "topic_cluster": "economic_analysis",
+    "topic_cluster": "economic_data",
     "perspective": "neutral",
     "final_score": 4.95,
     "recency_boost": 1.5
-  },
-  {
-    "source_name": "Lifeway Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Scott McConnell",
-    "title": "American Nones: What to Expect and How to Reach Them",
-    "url": "https://research.lifeway.com/2026/03/25/american-nones-what-to-expect-and-how-to-reach-them/",
-    "summary": "<p>Maybe the bigger question for us isn’t whether American Nones want to hear the gospel message but whether we love them enough to share it. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/03/25/american-nones-what-to-expect-and-how-to-reach-them/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/03/25/american-nones-what-to-expect-and-how-to-reach-them/\">American Nones: What to Expect and How to Reach Them</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
-    "published": "Wed, 25 Mar 2026 06:43:00 +0000",
-    "fetched_at": "2026-03-30T10:44:44.228542",
-    "score": 6,
-    "tags": [
-      "culture",
-      "missions"
-    ],
-    "rewritten_title": "Understanding America's Unchurched: A Guide for Believers",
-    "personas": [
-      "pastor",
-      "professional"
-    ],
-    "topic_cluster": "reaching_nones",
-    "perspective": "neutral",
-    "final_score": 3.25
   }
 ]

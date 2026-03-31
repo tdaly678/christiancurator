@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ date }} — Christian Curator Daily Pulse</title>
   <meta name="description" content="{{ paragraphs_plain[0][:160] }}" />
-  <link rel="canonical" href="https://christiancurator.com/daily/{{ slug }}/" />
+  <link rel="canonical" href="https://www.christiancurator.com/daily/{{ slug }}/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Christian Curator" />
   <meta property="og:title" content="{{ date }} — Christian Curator Daily Pulse" />
   <meta property="og:description" content="{{ paragraphs_plain[0][:200] }}" />
-  <meta property="og:url" content="https://christiancurator.com/daily/{{ slug }}/" />
+  <meta property="og:url" content="https://www.christiancurator.com/daily/{{ slug }}/" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -24,9 +24,9 @@
     "publisher": {
       "@type": "Organization",
       "name": "Christian Curator",
-      "url": "https://christiancurator.com"
+      "url": "https://www.christiancurator.com"
     },
-    "mainEntityOfPage": "https://christiancurator.com/daily/{{ slug }}/"
+    "mainEntityOfPage": "https://www.christiancurator.com/daily/{{ slug }}/"
   }
   </script>
 
@@ -146,7 +146,7 @@
   <div class="cc-root">
 
     <header class="cc-header">
-      <a href="https://christiancurator.com/" class="cc-site-name">Christian Curator</a>
+      <a href="https://www.christiancurator.com/" class="cc-site-name">Christian Curator</a>
       <div class="cc-tagline">Daily Digest · Evangelical News &amp; Theology</div>
     </header>
 
@@ -166,7 +166,7 @@
           <div class="cc-related-date">{{ day.date }}</div>
           <div class="cc-related-themes">{{ day.shared_themes | join(' · ') }}</div>
           <div class="cc-related-excerpt">{{ day.excerpt }}</div>
-          <a class="cc-related-link" href="https://christiancurator.com/daily/{{ day.slug }}/">Read that day's pulse &rarr;</a>
+          <a class="cc-related-link" href="https://www.christiancurator.com/daily/{{ day.slug }}/">Read that day's pulse &rarr;</a>
         </div>
         {% endfor %}
       </div>
@@ -182,7 +182,7 @@
       <p class="cc-archive-crosslink"><a href="/archive/{{ archive_date_iso }}/">See the articles from this day →</a></p>
       {% endif %}
 
-      <a class="cc-back" href="https://christiancurator.com/">← Read today's full digest</a>
+      <a class="cc-back" href="https://www.christiancurator.com/">← Read today's full digest</a>
     </main>
 
     <footer class="cc-footer">

@@ -119,7 +119,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict],
         # Trim to ~2 sentences for the teaser
         sentences = re.split(r'(?<=[.!?])\s', first_para)
         teaser = " ".join(sentences[:2])
-        pulse_url = f"https://christiancurator.com/daily/{today_slug}/"
+        pulse_url = f"https://www.christiancurator.com/daily/{today_slug}/"
         pulse_html = f"""
     <div style="border-left:3px solid #2C4A2E; padding:12px 16px; margin-bottom:28px; background:#f5f8f5;">
       <div style="font-size:10px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#2C4A2E; margin-bottom:8px;">Today's Pulse</div>
@@ -164,7 +164,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict],
     # ── Big CTA ────────────────────────────────────────────────────────────
     cta_html = f"""
     <div style="text-align:center; margin:32px 0;">
-      <a href="https://christiancurator.com"
+      <a href="https://www.christiancurator.com"
          style="display:inline-block; background:#2C4A2E; color:#fff; font-family:Georgia,serif;
                 font-size:16px; font-weight:700; padding:14px 32px; border-radius:4px;
                 text-decoration:none; letter-spacing:0.02em;">
@@ -223,7 +223,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict],
     <!-- Forwarded banner -->
     <div style="background:#EFF4F0;border:1px solid #B5CCB8;border-radius:4px;padding:10px 16px;margin-bottom:16px;text-align:center;">
       <span style="font-size:12px;color:#2C4A2E;">Was this forwarded to you?</span>
-      <a href="https://christiancurator.com/#cc-email-box" style="display:inline-block;margin-left:10px;background:#2C4A2E;color:#fff;font-size:12px;font-weight:700;padding:5px 14px;border-radius:3px;text-decoration:none;">Subscribe Free &rarr;</a>
+      <a href="https://www.christiancurator.com/#cc-email-box" style="display:inline-block;margin-left:10px;background:#2C4A2E;color:#fff;font-size:12px;font-weight:700;padding:5px 14px;border-radius:3px;text-decoration:none;">Subscribe Free &rarr;</a>
     </div>
 
     <!-- Header -->
@@ -245,14 +245,14 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict],
       <div style="font-size:13px;color:#3a3a3a;margin-bottom:8px;">Know someone who'd enjoy this?</div>
       <div style="font-size:12px;color:#666;">Forward this email — it takes two seconds and means a lot.<br>They can subscribe free at the link below.</div>
       <div style="margin-top:10px;">
-        <a href="https://christiancurator.com/#cc-email-box" style="font-size:12px;font-weight:700;color:#2C4A2E;text-decoration:none;">christiancurator.com &rarr;</a>
+        <a href="https://www.christiancurator.com/#cc-email-box" style="font-size:12px;font-weight:700;color:#2C4A2E;text-decoration:none;">christiancurator.com &rarr;</a>
       </div>
     </div>
 
     <!-- Footer -->
     <div style="border-top:2px solid #1a1a1a;margin-top:28px;padding-top:16px;font-size:11px;color:#aaa;text-align:center;">
       <p>All links go to original sources. We curate; they create.</p>
-      <p style="margin-top:8px;"><a href="https://christiancurator.com" style="color:#2C4A2E;">christiancurator.com</a></p>
+      <p style="margin-top:8px;"><a href="https://www.christiancurator.com" style="color:#2C4A2E;">christiancurator.com</a></p>
     </div>
 
   </div>

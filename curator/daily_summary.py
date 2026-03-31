@@ -122,8 +122,8 @@ RECENT THEOLOGICAL CONVERSATIONS (from previous days — use these to create con
 {history_lines}
 
 If today's content revisits one of these themes, weave in a natural reference in your prose
-— e.g. "Earlier this week we were watching [this same tension](https://christiancurator.com/daily/SLUG/) play out..."
-or "That question hasn't gone away — [on March 19](https://christiancurator.com/daily/2026-03-19/) several
+— e.g. "Earlier this week we were watching [this same tension](https://www.christiancurator.com/daily/SLUG/) play out..."
+or "That question hasn't gone away — [on March 19](https://www.christiancurator.com/daily/2026-03-19/) several
 writers approached it from a different angle."
 Only reference previous days when it's genuinely relevant and adds insight. Don't force it.
 
@@ -242,7 +242,7 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
 
     if recent:
         history_lines = "\n".join(
-            f"- {h['date']} (https://christiancurator.com/daily/{h['slug']}/): "
+            f"- {h['date']} (https://www.christiancurator.com/daily/{h['slug']}/): "
             f"{', '.join(h['themes'])} — \"{h['excerpt'][:120]}...\""
             for h in reversed(recent)  # most recent first
         )

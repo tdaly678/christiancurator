@@ -641,7 +641,7 @@ def render_archive_index(env: Environment):
         '  <meta name="viewport" content="width=device-width, initial-scale=1.0" />',
         '  <title>Christian Curator — Archive</title>',
         '  <meta name="description" content="Browse all past issues of Christian Curator — a daily digest of evangelical Christian news, theology, and culture." />',
-        '  <link rel="canonical" href="https://christiancurator.com/archive/" />',
+        '  <link rel="canonical" href="https://www.christiancurator.com/archive/" />',
         '  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NJ5DSPFXL"></script>',
         '  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-3NJ5DSPFXL");</script>',
         '  <link rel="preconnect" href="https://fonts.googleapis.com" />',
@@ -816,37 +816,37 @@ def regenerate_sitemap():
     today_iso = date.today().isoformat()
 
     # Each entry: (url, changefreq, priority, lastmod)
-    entries = [("https://christiancurator.com/", "daily", "1.0", today_iso)]
+    entries = [("https://www.christiancurator.com/", "daily", "1.0", today_iso)]
 
     # Daily pulse pages
     if DAILY_DIR.exists():
         for day_dir in sorted(DAILY_DIR.iterdir()):
             if day_dir.is_dir() and (day_dir / "index.html").exists():
                 entries.append((
-                    f"https://christiancurator.com/daily/{day_dir.name}/",
+                    f"https://www.christiancurator.com/daily/{day_dir.name}/",
                     "never", "0.8", day_dir.name,
                 ))
 
     # Archive index (changes every day)
-    entries.append(("https://christiancurator.com/archive/", "daily", "0.7", today_iso))
+    entries.append(("https://www.christiancurator.com/archive/", "daily", "0.7", today_iso))
 
     # Individual archive pages
     if ARCHIVE_DIR.exists():
         for day_dir in sorted(ARCHIVE_DIR.iterdir()):
             if day_dir.is_dir() and (day_dir / "index.html").exists():
                 entries.append((
-                    f"https://christiancurator.com/archive/{day_dir.name}/",
+                    f"https://www.christiancurator.com/archive/{day_dir.name}/",
                     "never", "0.6", day_dir.name,
                 ))
 
     # Topics index + individual topic pages
     if TOPICS_DIR.exists():
         if (TOPICS_DIR / "index.html").exists():
-            entries.append(("https://christiancurator.com/topics/", "weekly", "0.9", today_iso))
+            entries.append(("https://www.christiancurator.com/topics/", "weekly", "0.9", today_iso))
         for topic_dir in sorted(TOPICS_DIR.iterdir()):
             if topic_dir.is_dir() and (topic_dir / "index.html").exists():
                 entries.append((
-                    f"https://christiancurator.com/topics/{topic_dir.name}/",
+                    f"https://www.christiancurator.com/topics/{topic_dir.name}/",
                     "monthly", "0.85", today_iso,
                 ))
 
