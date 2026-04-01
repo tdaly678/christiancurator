@@ -1,27 +1,49 @@
 [
   {
-    "source_name": "Relevant Magazine",
+    "source_name": "Lifeway Research",
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Emily Brown",
-    "title": "New Study Reveals the Area Surrounding Data Centers Is 16 Degrees Warmer Than Normal",
-    "url": "https://relevantmagazine.com/justice/environment/new-study-reveals-the-area-surrounding-data-centers-is-16-degrees-warmer-than-normal/",
-    "summary": "A new study is raising fresh questions about the environmental cost of artificial intelligence. Researchers say hyperscale data centers — the massive facilities powering AI systems — may be creating localized “heat islands” that raise surrounding land-surface temperatures and affect communities miles beyond the buildings themselves. The paper, posted March 21 on arXiv and not&#8230;",
-    "published": "Tue, 31 Mar 2026 01:24:52 +0000",
-    "fetched_at": "2026-03-31T09:44:53.798059",
-    "score": 4,
+    "author": "Danny Franks",
+    "title": "How to Create a Culture of Recognition for Your Volunteers",
+    "url": "https://research.lifeway.com/2026/04/01/how-to-create-a-culture-of-recognition-for-your-volunteers/",
+    "summary": "<p>As we build a volunteer team, we must also build a culture of recognition, taking time to notice and appreciate their work for the kingdom. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/04/01/how-to-create-a-culture-of-recognition-for-your-volunteers/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/04/01/how-to-create-a-culture-of-recognition-for-your-volunteers/\">How to Create a Culture of Recognition for Your Volunteers</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "published": "Wed, 01 Apr 2026 06:51:00 +0000",
+    "fetched_at": "2026-04-01T09:53:55.113415",
+    "score": 6,
     "tags": [
-      "data",
-      "culture"
+      "church life"
     ],
-    "rewritten_title": "Data Centers' Heat Islands Raise Environmental and Community Health Questions",
+    "rewritten_title": "Building a Culture of Appreciation for Your Ministry Volunteers",
     "personas": [
+      "pastor",
       "professional"
     ],
-    "topic_cluster": "ai_environmental_impact",
+    "topic_cluster": "volunteer_management",
     "perspective": "neutral",
-    "final_score": 4.2,
+    "final_score": 7.5,
+    "recency_boost": 1.5
+  },
+  {
+    "source_name": "Pew Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Beshay",
+    "title": "About 9% of U.S. births in 2023 were to unauthorized or temporary legal immigrant mothers",
+    "url": "https://www.pewresearch.org/short-reads/2026/03/31/about-9-of-us-births-in-2023-were-to-unauthorized-or-temporary-legal-immigrant-mothers/",
+    "summary": "Generally, the trends in births to unauthorized immigrants follow the growth and decline of the unauthorized immigrant population.",
+    "published": "Tue, 31 Mar 2026 19:56:05 +0000",
+    "fetched_at": "2026-04-01T09:53:54.595667",
+    "score": 4,
+    "tags": [
+      "data"
+    ],
+    "rewritten_title": "Births to Unauthorized Immigrants Rise With Population Growth",
+    "personas": [],
+    "topic_cluster": "immigration_demographics",
+    "perspective": "neutral",
+    "final_score": 5.5,
     "recency_boost": 1.5
   },
   {
@@ -29,51 +51,24 @@
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Scott McConnell",
-    "title": "American Nones: What to Expect and How to Reach Them",
-    "url": "https://research.lifeway.com/2026/03/25/american-nones-what-to-expect-and-how-to-reach-them/",
-    "summary": "<p>Maybe the bigger question for us isn’t whether American Nones want to hear the gospel message but whether we love them enough to share it. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/03/25/american-nones-what-to-expect-and-how-to-reach-them/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/03/25/american-nones-what-to-expect-and-how-to-reach-them/\">American Nones: What to Expect and How to Reach Them</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
-    "published": "Wed, 25 Mar 2026 06:43:00 +0000",
-    "fetched_at": "2026-03-31T09:46:26.875257",
-    "score": 6,
-    "tags": [
-      "apologetics",
-      "missions"
-    ],
-    "rewritten_title": "Reaching America's \"Nones\": Do We Love Them Enough to Share?",
-    "personas": [
-      "pastor",
-      "professional"
-    ],
-    "topic_cluster": "reaching_nones",
-    "perspective": "neutral",
-    "final_score": 4.0
-  },
-  {
-    "source_name": "Ryan Burge",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": true,
-    "author": "Ryan Burge",
-    "title": "The Fox News Advantage: How Cable News Divides Along Religious and Generational Lines",
-    "url": "https://www.graphsaboutreligion.com/p/the-fox-news-advantage-how-cable",
-    "summary": "Young atheists and agnostics aren't tuning into MSNBC while young Christians still watch Fox News",
-    "published": "Mon, 30 Mar 2026 11:31:02 GMT",
-    "fetched_at": "2026-03-31T09:46:25.742658",
+    "author": "Aaron Earls",
+    "title": "Pastors Support Legal Immigration, Split on Deportation Levels",
+    "url": "https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/",
+    "summary": "<p>Pastors overwhelmingly view legal immigration positively but are more divided over the deportation of those in the United States illegally. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/\">Pastors Support Legal Immigration, Split on Deportation Levels</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "published": "Tue, 31 Mar 2026 19:55:00 +0000",
+    "fetched_at": "2026-04-01T09:53:55.113427",
     "score": 4,
     "tags": [
       "data",
-      "culture"
+      "politics"
     ],
-    "rewritten_title": "Young Christians and Atheists Show Starkly Different News Viewing Habits",
+    "rewritten_title": "Pastors Embrace Legal Immigration, Disagree on Deportation Policy",
     "personas": [
       "pastor"
     ],
-    "topic_cluster": "media_religion_generational",
-    "perspective": "neutral",
-    "previously_shown": true,
-    "final_score": 3.5,
-    "recency_boost": 1.5,
-    "independent_floor_boosted": true
+    "topic_cluster": "pastor_immigration_views",
+    "perspective": "news",
+    "final_score": 4.75,
+    "recency_boost": 1.5
   }
 ]
