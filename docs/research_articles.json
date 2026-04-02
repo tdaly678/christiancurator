@@ -4,46 +4,25 @@
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Danny Franks",
-    "title": "How to Create a Culture of Recognition for Your Volunteers",
-    "url": "https://research.lifeway.com/2026/04/01/how-to-create-a-culture-of-recognition-for-your-volunteers/",
-    "summary": "<p>As we build a volunteer team, we must also build a culture of recognition, taking time to notice and appreciate their work for the kingdom. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/04/01/how-to-create-a-culture-of-recognition-for-your-volunteers/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/04/01/how-to-create-a-culture-of-recognition-for-your-volunteers/\">How to Create a Culture of Recognition for Your Volunteers</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
-    "published": "Wed, 01 Apr 2026 06:51:00 +0000",
-    "fetched_at": "2026-04-01T09:53:55.113415",
-    "score": 6,
+    "author": "Sara Lansford",
+    "title": "Why Kids in Your Community Need VBS This Summer",
+    "url": "https://research.lifeway.com/2026/04/02/why-kids-in-your-community-need-vbs-this-summer/",
+    "summary": "<p>The biblical content of Illumination Station VBS addresses five apologetic questions kids in your community are facing this summer. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/04/02/why-kids-in-your-community-need-vbs-this-summer/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/04/02/why-kids-in-your-community-need-vbs-this-summer/\">Why Kids in Your Community Need VBS This Summer</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "published": "Thu, 02 Apr 2026 07:55:00 +0000",
+    "fetched_at": "2026-04-02T09:41:30.321997",
+    "score": 5,
     "tags": [
-      "church life"
+      "church life",
+      "apologetics"
     ],
-    "rewritten_title": "Building a Culture of Appreciation for Your Ministry Volunteers",
+    "rewritten_title": "Addressing Five Key Questions: Why Illumination Station VBS Matters",
     "personas": [
       "pastor",
-      "professional"
+      "parent"
     ],
-    "topic_cluster": "volunteer_management",
-    "perspective": "neutral",
-    "final_score": 7.5,
-    "recency_boost": 1.5
-  },
-  {
-    "source_name": "Pew Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Beshay",
-    "title": "About 9% of U.S. births in 2023 were to unauthorized or temporary legal immigrant mothers",
-    "url": "https://www.pewresearch.org/short-reads/2026/03/31/about-9-of-us-births-in-2023-were-to-unauthorized-or-temporary-legal-immigrant-mothers/",
-    "summary": "Generally, the trends in births to unauthorized immigrants follow the growth and decline of the unauthorized immigrant population.",
-    "published": "Tue, 31 Mar 2026 19:56:05 +0000",
-    "fetched_at": "2026-04-01T09:53:54.595667",
-    "score": 4,
-    "tags": [
-      "data"
-    ],
-    "rewritten_title": "Births to Unauthorized Immigrants Rise With Population Growth",
-    "personas": [],
-    "topic_cluster": "immigration_demographics",
-    "perspective": "neutral",
-    "final_score": 5.5,
+    "topic_cluster": "vbs_ministry_content",
+    "perspective": "supportive",
+    "final_score": 6.5,
     "recency_boost": 1.5
   },
   {
@@ -56,19 +35,44 @@
     "url": "https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/",
     "summary": "<p>Pastors overwhelmingly view legal immigration positively but are more divided over the deportation of those in the United States illegally. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/\">Pastors Support Legal Immigration, Split on Deportation Levels</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "published": "Tue, 31 Mar 2026 19:55:00 +0000",
-    "fetched_at": "2026-04-01T09:53:55.113427",
+    "fetched_at": "2026-04-02T09:41:30.322015",
     "score": 4,
+    "tags": [
+      "politics",
+      "data"
+    ],
+    "rewritten_title": "Pastors Embrace Legal Immigration; Differ on Deportation Policy",
+    "personas": [
+      "pastor"
+    ],
+    "topic_cluster": "immigration_policy",
+    "perspective": "news",
+    "final_score": 4.0,
+    "recency_boost": 0.75
+  },
+  {
+    "source_name": "Pew Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Beshay",
+    "title": "Many Latin Americans – especially Protestants – see a role for religion in national leadership, identity and laws",
+    "url": "https://www.pewresearch.org/short-reads/2026/03/26/many-latin-americans-especially-protestants-see-a-role-for-religion-in-national-leadership-identity-and-laws/",
+    "summary": "Majorities in Brazil, Colombia and Peru want leaders who stand up for their religious beliefs. Protestants are especially supportive of Christianity in public life.",
+    "published": "Thu, 26 Mar 2026 13:55:00 +0000",
+    "fetched_at": "2026-04-02T09:41:29.928992",
+    "score": 6,
     "tags": [
       "data",
       "politics"
     ],
-    "rewritten_title": "Pastors Embrace Legal Immigration, Disagree on Deportation Policy",
+    "rewritten_title": "Latin Americans, Especially Protestants, Value Religious Leadership in Public Life",
     "personas": [
+      "professional",
       "pastor"
     ],
-    "topic_cluster": "pastor_immigration_views",
-    "perspective": "news",
-    "final_score": 4.75,
-    "recency_boost": 1.5
+    "topic_cluster": "latin_america_religion_politics",
+    "perspective": "neutral",
+    "final_score": 4.0
   }
 ]
