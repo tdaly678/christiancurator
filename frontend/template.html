@@ -555,14 +555,29 @@
       <div class="cc-sidebar-section" style="margin-top: 0.5rem;">
         <div class="cc-sidebar-label">Go Deeper</div>
 
+        {% if matched_topics %}
+        <div style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #e0ddd8;">
+          <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 6px;">Today's Deep Dives</div>
+          <div style="display: flex; flex-direction: column; gap: 5px;">
+            {% for topic in matched_topics %}
+            <a href="/topics/{{ topic.slug }}/" style="font-size: 13px; color: #1a1a1a; text-decoration: none; font-weight: 600; line-height: 1.4; padding: 5px 8px; background: #f0f4f0; border-left: 3px solid #2C4A2E; border-radius: 0 3px 3px 0; display: block;">{{ topic.label }} →</a>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
         <div style="margin-bottom: 10px;">
           <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; margin-bottom: 5px;">Core Theology</div>
           <div style="display: flex; flex-direction: column; gap: 4px;">
+            <a href="/topics/atonement/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">The Atonement →</a>
+            <a href="/topics/justification-by-faith/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Justification →</a>
+            <a href="/topics/biblical-inerrancy/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Biblical Inerrancy →</a>
             <a href="/topics/sanctification/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Sanctification →</a>
+            <a href="/topics/heaven-hell-eternity/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Heaven &amp; Hell →</a>
             <a href="/topics/suffering-and-providence/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Suffering →</a>
             <a href="/topics/prayer/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Prayer →</a>
             <a href="/topics/gender-and-biblical-anthropology/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Gender &amp; Anthropology →</a>
-            <a href="/topics/atonement/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">The Atonement →</a>
+            <a href="/topics/creation-evolution/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Creation &amp; Evolution →</a>
           </div>
         </div>
 
@@ -572,6 +587,7 @@
             <a href="/topics/local-church/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">The Local Church →</a>
             <a href="/topics/membership/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Membership →</a>
             <a href="/topics/church-planting/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Church Planting →</a>
+            <a href="/topics/complementarianism-egalitarianism/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Complementarianism →</a>
           </div>
         </div>
 
@@ -580,8 +596,11 @@
           <div style="display: flex; flex-direction: column; gap: 4px;">
             <a href="/topics/discipleship/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Discipleship →</a>
             <a href="/topics/preaching/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Preaching →</a>
+            <a href="/topics/spiritual-disciplines/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Spiritual Disciplines →</a>
             <a href="/topics/marriage-and-family/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Marriage &amp; Family →</a>
+            <a href="/topics/christian-parenting/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Christian Parenting →</a>
             <a href="/topics/vocation-and-work/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Vocation &amp; Work →</a>
+            <a href="/topics/mental-health/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Mental Health &amp; Faith →</a>
           </div>
         </div>
 
@@ -589,12 +608,15 @@
           <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; margin-bottom: 5px;">Culture &amp; Society</div>
           <div style="display: flex; flex-direction: column; gap: 4px;">
             <a href="/topics/technology/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Technology →</a>
+            <a href="/topics/technology-and-discipleship/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Tech &amp; Discipleship →</a>
             <a href="/topics/politics-and-the-church/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Politics →</a>
             <a href="/topics/missions-and-evangelism/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Missions &amp; Evangelism →</a>
+            <a href="/topics/apologetics/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Apologetics →</a>
+            <a href="/topics/racial-reconciliation/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Racial Reconciliation →</a>
           </div>
         </div>
 
-        <p style="font-size: 11px; color: #aaa; margin-top: 8px;">Curated deep dives.</p>
+        <p style="font-size: 11px; color: #aaa; margin-top: 8px;">Curated deep dives. <a href="/topics/" style="color: #2C4A2E; text-decoration: none; font-weight: 600;">Browse all →</a></p>
       </div>
 
       <!-- Archive search -->

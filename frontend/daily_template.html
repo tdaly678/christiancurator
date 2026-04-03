@@ -185,6 +185,20 @@
       <a class="cc-back" href="https://www.christiancurator.com/">← Read today's full digest</a>
     </main>
 
+    {% if matched_topics %}
+    <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e0ddd8;">
+      <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.9rem;">Go Deeper</div>
+      <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+        {% for topic in matched_topics %}
+        <a href="/topics/{{ topic.slug }}/" style="font-family: 'Lora', Georgia, serif; font-size: 15px; color: #1a1a1a; text-decoration: none; border-bottom: 1px solid #e0ddd8; padding-bottom: 0.6rem; display: block;">
+          {{ topic.label }} <span style="color: #2C4A2E; font-size: 13px;">→</span>
+        </a>
+        {% endfor %}
+      </div>
+      <p style="font-size: 11px; color: #aaa; margin-top: 0.75rem;">Curated deep dives on today's themes. <a href="/topics/" style="color: #2C4A2E; text-decoration: none;">Browse all topics →</a></p>
+    </div>
+    {% endif %}
+
     <footer class="cc-footer">
       <div class="cc-footer-name">Christian Curator</div>
       <div>All links go to original sources. We curate; they create.</div>

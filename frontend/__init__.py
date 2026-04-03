@@ -96,6 +96,8 @@ def update_research_articles(new_articles: list[dict]) -> list[dict]:
 def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: list[dict] = None,
                 daily_summary: dict = None, research_articles: list[dict] = None):
     """Render index.html from template.html using Jinja2."""
+    from frontend.topic_matcher import match_topics
+
     env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
     env.tests['contains'] = lambda value, item: item in (value or [])
     template = env.get_template("template.html")
@@ -112,6 +114,12 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         for p in pairings
     ]
 
+    # Match today's articles and themes to relevant deep-dive topic pages
+    matched_topics = match_topics(articles, daily_summary)
+    if matched_topics:
+        labels = ", ".join(t["label"] for t in matched_topics)
+        print(f"  Topic matcher: surfacing '{labels}'")
+
     html = template.render(
         articles=articles,
         pairings=template_pairings,
@@ -119,6 +127,7 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         date=date.today().strftime("%B %-d, %Y"),
         daily_summary=daily_summary,
         research_articles=research_articles or load_research_articles(),
+        matched_topics=matched_topics,
     )
 
     with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
@@ -127,7 +136,7 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
 
     # Render the standalone daily summary page if we have one
     if daily_summary:
-        render_daily_page(daily_summary, env)
+        render_daily_page(daily_summary, env, matched_topics=matched_topics)
 
     # Render the daily archive snapshot and update the archive index
     render_archive_page(articles, template_pairings, env)
@@ -148,7 +157,7 @@ def _slug_to_display(slug: str) -> str:
         return slug
 
 
-def render_daily_page(daily_summary: dict, env: Environment):
+def render_daily_page(daily_summary: dict, env: Environment, matched_topics: list = None):
     """Render a standalone daily pulse page to docs/daily/YYYY-MM-DD/index.html."""
     DAILY_DIR.mkdir(parents=True, exist_ok=True)
     slug = daily_summary["slug"]
@@ -173,6 +182,7 @@ def render_daily_page(daily_summary: dict, env: Environment):
         next_slug=next_slug,
         next_date=_slug_to_display(next_slug) if next_slug else None,
         archive_date_iso=slug,  # archive is always generated in the same pipeline run
+        matched_topics=matched_topics or [],
     )
 
     output_path = page_dir / "index.html"
