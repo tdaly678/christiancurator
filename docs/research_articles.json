@@ -1,28 +1,26 @@
 [
   {
-    "source_name": "Lifeway Research",
+    "source_name": "Ryan Burge",
     "source_category": "culture",
     "source_type": "christian",
-    "independent": false,
-    "author": "Sara Lansford",
-    "title": "Why Kids in Your Community Need VBS This Summer",
-    "url": "https://research.lifeway.com/2026/04/02/why-kids-in-your-community-need-vbs-this-summer/",
-    "summary": "<p>The biblical content of Illumination Station VBS addresses five apologetic questions kids in your community are facing this summer. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/04/02/why-kids-in-your-community-need-vbs-this-summer/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/04/02/why-kids-in-your-community-need-vbs-this-summer/\">Why Kids in Your Community Need VBS This Summer</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
-    "published": "Thu, 02 Apr 2026 07:55:00 +0000",
-    "fetched_at": "2026-04-02T09:41:30.321997",
-    "score": 5,
+    "independent": true,
+    "author": "Ryan Burge",
+    "title": "The Growing Gap in Church Membership",
+    "url": "https://www.graphsaboutreligion.com/p/the-growing-gap-in-church-membership",
+    "summary": "Who joins a church &#8212; and why it matters more than you think",
+    "published": "Thu, 02 Apr 2026 11:30:40 GMT",
+    "fetched_at": "2026-04-03T08:37:33.702960",
+    "score": 4,
     "tags": [
-      "church life",
-      "apologetics"
+      "data"
     ],
-    "rewritten_title": "Addressing Five Key Questions: Why Illumination Station VBS Matters",
+    "rewritten_title": "Church Membership Decline: Understanding Who Joins and Why It Matters",
     "personas": [
-      "pastor",
-      "parent"
+      "pastor"
     ],
-    "topic_cluster": "vbs_ministry_content",
-    "perspective": "supportive",
-    "final_score": 6.5,
+    "topic_cluster": "church_membership_trends",
+    "perspective": "neutral",
+    "final_score": 5.5,
     "recency_boost": 1.5
   },
   {
@@ -35,20 +33,20 @@
     "url": "https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/",
     "summary": "<p>Pastors overwhelmingly view legal immigration positively but are more divided over the deportation of those in the United States illegally. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/\">Pastors Support Legal Immigration, Split on Deportation Levels</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "published": "Tue, 31 Mar 2026 19:55:00 +0000",
-    "fetched_at": "2026-04-02T09:41:30.322015",
-    "score": 4,
+    "fetched_at": "2026-04-03T08:37:34.382459",
+    "score": 5,
     "tags": [
-      "politics",
       "data"
     ],
-    "rewritten_title": "Pastors Embrace Legal Immigration; Differ on Deportation Policy",
+    "rewritten_title": "Pastors Unified on Legal Immigration, Divided on Deportation Policy",
     "personas": [
-      "pastor"
+      "pastor",
+      "professional"
     ],
-    "topic_cluster": "immigration_policy",
-    "perspective": "news",
-    "final_score": 4.0,
-    "recency_boost": 0.75
+    "topic_cluster": "pastor_political_views",
+    "perspective": "neutral",
+    "final_score": 5.25,
+    "recency_boost": 0.25
   },
   {
     "source_name": "Pew Research",
@@ -56,23 +54,23 @@
     "source_type": "christian",
     "independent": false,
     "author": "Beshay",
-    "title": "Many Latin Americans – especially Protestants – see a role for religion in national leadership, identity and laws",
-    "url": "https://www.pewresearch.org/short-reads/2026/03/26/many-latin-americans-especially-protestants-see-a-role-for-religion-in-national-leadership-identity-and-laws/",
-    "summary": "Majorities in Brazil, Colombia and Peru want leaders who stand up for their religious beliefs. Protestants are especially supportive of Christianity in public life.",
-    "published": "Thu, 26 Mar 2026 13:55:00 +0000",
-    "fetched_at": "2026-04-02T09:41:29.928992",
-    "score": 6,
+    "title": "How Americans view Trump’s handling of trade and tariffs",
+    "url": "https://www.pewresearch.org/short-reads/2026/04/01/how-americans-view-trumps-handling-of-trade-and-tariffs/",
+    "summary": "Nearly six-in-ten U.S. adults are not confident that Trump can make good decisions about trade policy. Views of trade between the U.S. and China, Canada and Mexico have shifted since 2025.",
+    "published": "Wed, 01 Apr 2026 18:51:17 +0000",
+    "fetched_at": "2026-04-03T08:37:33.993219",
+    "score": 2,
     "tags": [
-      "data",
+      "news",
       "politics"
     ],
-    "rewritten_title": "Latin Americans, Especially Protestants, Value Religious Leadership in Public Life",
+    "rewritten_title": "Americans' Confidence in Trump's Trade Policy Decisions Declines",
     "personas": [
-      "professional",
-      "pastor"
+      "professional"
     ],
-    "topic_cluster": "latin_america_religion_politics",
-    "perspective": "neutral",
-    "final_score": 4.0
+    "topic_cluster": "trump_trade_policy",
+    "perspective": "news",
+    "final_score": 2.75,
+    "recency_boost": 0.75
   }
 ]
