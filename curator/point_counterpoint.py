@@ -6,6 +6,7 @@ Returns a list of pairings: [{"point": article_a, "counterpoint": article_b, "to
 """
 
 import os
+import re
 import json
 import anthropic
 from dotenv import load_dotenv
@@ -13,6 +14,18 @@ from dotenv import load_dotenv
 load_dotenv()
 
 client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+
+
+def _extract_json(text: str) -> str:
+    """Extract JSON from a response that may contain markdown fences or extra text."""
+    # Prefer the last ```json ... ``` block (Claude sometimes self-corrects after an error)
+    matches = re.findall(r'```(?:json)?\s*([\s\S]*?)\s*```', text)
+    if matches:
+        return matches[-1].strip()
+    # Fall back to stripping any leading/trailing fences
+    text = re.sub(r'^```(?:json)?\s*', '', text.strip())
+    text = re.sub(r'\s*```$', '', text)
+    return text.strip()
 
 MATCH_PROMPT = """\
 You are a curator for a Christian news digest. Below is a list of article titles
@@ -50,6 +63,7 @@ def build_point_counterpoint(articles: list[dict]) -> list[dict]:
             messages=[{"role": "user", "content": MATCH_PROMPT.format(article_list=article_list)}],
         )
         raw = message.content[0].text.strip()
+        raw = _extract_json(raw)
         pairings_raw = json.loads(raw)
 
         pairings = []

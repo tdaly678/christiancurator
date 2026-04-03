@@ -364,4 +364,70 @@ SOURCES = [
         "category": "culture",
         "independent": True,
     },
+
+    # ── New Additions: Institutional Ministries ──
+    {
+        "name": "Albert Mohler",
+        "url": "https://albertmohler.com/feed",
+        "category": "culture",
+    },
+    {
+        "name": "Gospel in Life",
+        "url": "https://gospelinlife.com/feed/",
+        "category": "theology",
+    },
+    {
+        "name": "The Aquila Report",
+        "url": "https://theaquilareport.com/feed/",
+        "category": "theology",
+    },
+
+    # ── New Additions: Black Evangelical Voices ──
+    {
+        "name": "Jemar Tisby",
+        "url": "https://jemartisby.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Faithfully Magazine",
+        "url": "https://faithfullymagazine.com/feed/",
+        "category": "culture",
+    },
+
+    # ── New Additions: Apologetics ──
+    {
+        "name": "Sean McDowell",
+        "url": "https://seanmcdowell.org/feed/",
+        "category": "theology",
+        "independent": True,
+    },
+
+    # ── New Additions: Reformed Voices ──
+    {
+        "name": "Kevin DeYoung",
+        "url": "https://www.thegospelcoalition.org/blogs/kevin-deyoung/feed/",
+        "category": "theology",
+        "independent": True,
+    },
+    {
+        "name": "Gavin Ortlund",
+        "url": "https://truthunites.org/feed/",
+        "category": "theology",
+        "independent": True,
+    },
+
+    # ── New Additions: Young Evangelical Voices ──
+    {
+        "name": "Patrick Miller",
+        "url": "https://patrickkmiller.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Hannah Anderson",
+        "url": "https://sometimesalight.substack.com/feed",
+        "category": "theology",
+        "independent": True,
+    },
 ]

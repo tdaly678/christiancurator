@@ -36,6 +36,18 @@ MAX_RETRIES = 4
 RETRY_DELAYS = [5, 15, 30, 60]  # seconds between retries
 
 
+def _extract_json(text: str) -> str:
+    """Extract JSON from a response that may contain markdown fences or extra text."""
+    # Prefer the last ```json ... ``` block (Claude sometimes self-corrects after an error)
+    matches = re.findall(r'```(?:json)?\s*([\s\S]*?)\s*```', text)
+    if matches:
+        return matches[-1].strip()
+    # Fall back to stripping any leading/trailing fences
+    text = re.sub(r'^```(?:json)?\s*', '', text.strip())
+    text = re.sub(r'\s*```$', '', text)
+    return text.strip()
+
+
 def _api_call_with_retry(fn, label="API call"):
     """Call fn() with exponential backoff on 529 overload errors."""
     for attempt, delay in enumerate(RETRY_DELAYS, start=1):
@@ -264,17 +276,23 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
             )
         message = _api_call_with_retry(_call, "Daily summary")
         raw = message.content[0].text.strip()
-
-        # Strip markdown code fences if present
-        raw = re.sub(r'^```(?:json)?\s*', '', raw)
-        raw = re.sub(r'\s*```$', '', raw)
+        raw = _extract_json(raw)
 
         try:
             data = json.loads(raw)
         except json.JSONDecodeError as json_err:
-            print(f"  Daily summary: JSON parse error — {json_err}")
-            print(f"  Raw response was: {raw[:300]}")
-            return None
+            # Second attempt: replace smart quotes and common non-standard characters
+            cleaned = (raw
+                       .replace('\u201c', '\\"').replace('\u201d', '\\"')  # curly double quotes
+                       .replace('\u2018', "\\'").replace('\u2019', "\\'")  # curly single quotes
+                       .replace('\u2014', '-').replace('\u2013', '-')      # em/en dashes
+                       .replace('\u2026', '...'))                          # ellipsis
+            try:
+                data = json.loads(cleaned)
+            except json.JSONDecodeError:
+                print(f"  Daily summary: JSON parse error — {json_err}")
+                print(f"  Raw response was: {raw[:300]}")
+                return None
         paragraphs_raw = data.get("paragraphs", [])
         themes = data.get("themes", [])
 

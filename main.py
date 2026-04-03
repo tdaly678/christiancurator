@@ -4,6 +4,7 @@ main.py — orchestrates the full ChristianCurator pipeline.
 Usage:
     python main.py              # full run including email
     python main.py --no-email   # full run, skip email (use send_email.py to send later)
+    python main.py --force-email  # send email even if pipeline already ran today
 
 Steps:
     1. Fetch articles from RSS sources (fetcher layer)
@@ -12,11 +13,13 @@ Steps:
     4. Write output JSON and regenerate HTML (output layer)
     5. Generate daily summary
     6. Update Research & Data section
-    7. Send email (skipped with --no-email)
+    7. Send email (skipped with --no-email, or if already sent today)
 """
 
 import json
+import os
 import sys
+from datetime import date
 from fetcher.rss_fetcher import fetch_all
 from curator.scorer import score_articles
 from curator.title_rewriter import rewrite_titles
@@ -27,9 +30,26 @@ from output import OUTPUT_JSON_PATH, write_output, save_yesterday, load_yesterda
 from frontend import render_html, update_research_articles
 
 
+def already_ran_today() -> bool:
+    """Check if the pipeline already ran today by looking for today's archive page."""
+    today = date.today().isoformat()
+    archive_path = os.path.join(
+        os.path.dirname(__file__), "docs", "archive", today, "index.html"
+    )
+    return os.path.exists(archive_path)
+
+
 def main():
     send_email_flag = "--no-email" not in sys.argv
+    force_email = "--force-email" in sys.argv
     print("=== ChristianCurator Pipeline Starting ===\n")
+
+    # --- Duplicate-run guard: skip email if pipeline already ran today ---
+    if send_email_flag and not force_email and already_ran_today():
+        print(f"  ⚠️  Pipeline already ran today ({date.today().isoformat()}).")
+        print("      Email will be skipped to avoid duplicates.")
+        print("      To send anyway, re-run with: python main.py --force-email\n")
+        send_email_flag = False
 
     # --- Load yesterday's top 3 for the digest ---
     yesterday_articles = load_yesterday()
