@@ -1,77 +1,76 @@
 [
   {
-    "source_name": "Lifeway Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Christina Gonet",
-    "title": "What is Sin?",
-    "url": "https://research.lifeway.com/2026/03/30/what-is-sin/",
-    "summary": "<p>Could there be a need to clarify what it means for humans to be made in the image of God and how that relates to human sin? <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/03/30/what-is-sin/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/03/30/what-is-sin/\">What is Sin?</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
-    "published": "Mon, 30 Mar 2026 06:22:00 +0000",
-    "fetched_at": "2026-03-30T18:46:40.993515",
-    "score": 5,
-    "tags": [
-      "theology"
-    ],
-    "rewritten_title": "Understanding Sin: A Biblical Foundation for Christian Life",
-    "personas": [
-      "pastor",
-      "student"
-    ],
-    "topic_cluster": "sin_imago_dei",
-    "perspective": "neutral",
-    "final_score": 6.5,
-    "recency_boost": 1.5
-  },
-  {
     "source_name": "Ryan Burge",
     "source_category": "culture",
     "source_type": "christian",
     "independent": true,
     "author": "Ryan Burge",
-    "title": "The Fox News Advantage: How Cable News Divides Along Religious and Generational Lines",
-    "url": "https://www.graphsaboutreligion.com/p/the-fox-news-advantage-how-cable",
-    "summary": "Young atheists and agnostics aren't tuning into MSNBC while young Christians still watch Fox News",
-    "published": "Mon, 30 Mar 2026 11:31:02 GMT",
-    "fetched_at": "2026-03-30T18:46:40.107592",
+    "title": "The Growing Gap in Church Membership",
+    "url": "https://www.graphsaboutreligion.com/p/the-growing-gap-in-church-membership",
+    "summary": "Who joins a church &#8212; and why it matters more than you think",
+    "published": "Thu, 02 Apr 2026 11:30:40 GMT",
+    "fetched_at": "2026-04-03T08:37:33.702960",
     "score": 4,
     "tags": [
-      "data",
-      "politics"
+      "data"
     ],
-    "rewritten_title": "Religious and Generational Divides in Cable News Viewership",
+    "rewritten_title": "Church Membership Decline: Understanding Who Joins and Why It Matters",
     "personas": [
-      "pastor",
-      "professional"
+      "pastor"
     ],
-    "topic_cluster": "media_religion_generational",
+    "topic_cluster": "church_membership_trends",
     "perspective": "neutral",
     "final_score": 5.5,
     "recency_boost": 1.5
   },
   {
-    "source_name": "World Magazine",
-    "source_category": "news",
+    "source_name": "Lifeway Research",
+    "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Keegan Martin",
-    "title": "Purgatory economics",
-    "url": "https://wng.org/podcasts/purgatory-economics-1774735165",
-    "summary": "<p>From stable jobless claims to weakening hiring data, the economy shows mixed signs as investors react to oil prices and geopolitical risk. David Bahnsen has this week’s Monday Moneybeat.</p>",
-    "published": "Mon, 30 Mar 2026 03:13:00 -0400",
-    "fetched_at": "2026-03-30T18:45:03.551399",
-    "score": 4,
+    "author": "Aaron Earls",
+    "title": "Pastors Support Legal Immigration, Split on Deportation Levels",
+    "url": "https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/",
+    "summary": "<p>Pastors overwhelmingly view legal immigration positively but are more divided over the deportation of those in the United States illegally. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/\">Pastors Support Legal Immigration, Split on Deportation Levels</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "published": "Tue, 31 Mar 2026 19:55:00 +0000",
+    "fetched_at": "2026-04-03T08:37:34.382459",
+    "score": 5,
     "tags": [
       "data"
     ],
-    "rewritten_title": "Understanding Purgatory: Catholic Perspectives on Spiritual Debt and Redemption",
+    "rewritten_title": "Pastors Unified on Legal Immigration, Divided on Deportation Policy",
+    "personas": [
+      "pastor",
+      "professional"
+    ],
+    "topic_cluster": "pastor_political_views",
+    "perspective": "neutral",
+    "final_score": 5.25,
+    "recency_boost": 0.25
+  },
+  {
+    "source_name": "Pew Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Beshay",
+    "title": "How Americans view Trump’s handling of trade and tariffs",
+    "url": "https://www.pewresearch.org/short-reads/2026/04/01/how-americans-view-trumps-handling-of-trade-and-tariffs/",
+    "summary": "Nearly six-in-ten U.S. adults are not confident that Trump can make good decisions about trade policy. Views of trade between the U.S. and China, Canada and Mexico have shifted since 2025.",
+    "published": "Wed, 01 Apr 2026 18:51:17 +0000",
+    "fetched_at": "2026-04-03T08:37:33.993219",
+    "score": 2,
+    "tags": [
+      "news",
+      "politics"
+    ],
+    "rewritten_title": "Americans' Confidence in Trump's Trade Policy Decisions Declines",
     "personas": [
       "professional"
     ],
-    "topic_cluster": "economic_data",
-    "perspective": "neutral",
-    "final_score": 4.95,
-    "recency_boost": 1.5
+    "topic_cluster": "trump_trade_policy",
+    "perspective": "news",
+    "final_score": 2.75,
+    "recency_boost": 0.75
   }
 ]
