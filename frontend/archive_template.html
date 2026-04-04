@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christian Curator — {{ date_display }}</title>
-  <meta name="description" content="Top evangelical Christian articles curated for {{ date_display }}. Theology, culture, church life, and world news — from The Gospel Coalition, Christianity Today, Desiring God, and more." />
+  <title>Christian Curator — Daily Digest, {{ date_display }}</title>
+  <meta name="description" content="The best evangelical Christian writing curated for {{ date_display }} — theology, culture, church life, and more." />
   <link rel="canonical" href="https://www.christiancurator.com/archive/{{ date_iso }}/" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Christian Curator" />
-  <meta property="og:title" content="Christian Curator — {{ date_display }}" />
-  <meta property="og:description" content="Top evangelical Christian articles curated for {{ date_display }}." />
+  <meta property="og:title" content="Christian Curator — Daily Digest, {{ date_display }}" />
+  <meta property="og:description" content="The best evangelical Christian writing curated for {{ date_display }}." />
   <meta property="og:url" content="https://www.christiancurator.com/archive/{{ date_iso }}/" />
   <meta property="og:image" content="https://www.christiancurator.com/og-image.png" />
 
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NJ5DSPFXL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -44,12 +42,9 @@
     .cc-header { border-bottom: 1px solid #e0ddd8; padding: 0.75rem 0 0; margin-bottom: 2rem; }
     .cc-top-bar {
       display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 0.75rem; font-size: 12px; color: #888; letter-spacing: 0.02em;
+      margin-bottom: 0.75rem; font-size: 12px; color: #888;
     }
-    .cc-back-link {
-      font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600;
-      letter-spacing: 0.02em;
-    }
+    .cc-back-link { font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; }
     .cc-back-link:hover { text-decoration: underline; }
     .cc-subscribe-btn {
       background: #2C4A2E; color: #fff; border: none; padding: 5px 14px;
@@ -57,7 +52,7 @@
       font-family: 'Source Sans 3', sans-serif; letter-spacing: 0.03em;
       text-decoration: none; display: inline-block;
     }
-    .cc-subscribe-btn:hover { background: #3a5f3c; color: #fff; }
+    .cc-subscribe-btn:hover { background: #3a5f3c; }
     .cc-masthead { text-align: center; padding: 0.5rem 0 1rem; border-bottom: 2.5px solid #1a1a1a; }
     .cc-site-name {
       font-family: 'Lora', Georgia, serif; font-size: 46px; font-weight: 600;
@@ -68,46 +63,45 @@
       font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
       color: #888; margin: 8px 0 0; font-weight: 300;
     }
-    @media (max-width: 600px) {
-      .cc-site-name { font-size: 32px; }
-    }
+    @media (max-width: 600px) { .cc-site-name { font-size: 32px; } }
 
-    /* Archive heading */
-    .cc-archive-heading {
-      margin: 1.75rem 0 0.25rem;
-      font-family: 'Lora', Georgia, serif;
-      font-size: 22px;
-      font-weight: 600;
-      color: #1a1a1a;
+    /* Day heading */
+    .cc-day-heading {
+      display: flex; align-items: baseline; justify-content: space-between;
+      border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin: 1.75rem 0 1.25rem;
     }
-    .cc-archive-subheading {
-      font-size: 13px;
-      color: #888;
-      margin-bottom: 1.75rem;
+    .cc-day-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #1a1a1a;
     }
+    .cc-day-date { font-size: 11px; color: #aaa; }
 
-    /* Section label */
-    .cc-section-label {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
-      text-transform: uppercase; color: #2C4A2E; margin: 1.75rem 0 0.75rem;
-      padding-bottom: 0.5rem; border-bottom: 1px solid #e0ddd8;
+    /* Yesterday heading */
+    .cc-yesterday-heading {
+      display: flex; align-items: baseline; justify-content: space-between;
+      border-bottom: 1px solid #e0ddd8; padding-bottom: 6px; margin: 2.5rem 0 1.25rem;
     }
+    .cc-yesterday-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #888;
+    }
+    .cc-yesterday-date { font-size: 11px; color: #aaa; }
 
     /* Lead story */
+    .cc-lead {
+      padding-bottom: 1.25rem; border-bottom: 1px solid #e0ddd8; margin-bottom: 0.5rem;
+    }
     .cc-lead-title {
       font-family: 'Lora', Georgia, serif; font-size: 24px; font-weight: 600;
-      line-height: 1.25; margin: 0 0 8px; color: #1a1a1a; text-decoration: none; display: block;
+      line-height: 1.25; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 7px;
     }
     .cc-lead-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-lead-meta { font-size: 12px; color: #888; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-    .cc-author { font-size: 12px; font-weight: 600; color: #3a3a3a; }
-    .cc-source { font-size: 12px; color: #aaa; }
-    .cc-meta-dot { font-size: 11px; color: #ccc; }
+    .cc-lead-meta { font-size: 12px; color: #aaa; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+    .cc-lead-author { font-weight: 600; color: #555; }
+    .cc-meta-dot { color: #ddd; }
 
     /* Article list */
     .cc-article-list { display: flex; flex-direction: column; }
     .cc-article {
-      display: flex; gap: 0; padding: 0.9rem 0;
+      display: flex; gap: 0; padding: 0.85rem 0;
       border-bottom: 1px solid #e0ddd8; align-items: flex-start;
     }
     .cc-article:last-child { border-bottom: none; }
@@ -118,303 +112,160 @@
     .cc-article-content { flex: 1; }
     .cc-article-title {
       font-family: 'Lora', Georgia, serif; font-size: 15.5px; font-weight: 500;
-      line-height: 1.35; margin: 0 0 5px; color: #1a1a1a; text-decoration: none; display: block;
+      line-height: 1.35; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 4px;
     }
     .cc-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-article-meta { font-size: 11.5px; color: #aaa; display: flex; gap: 7px; align-items: center; flex-wrap: wrap; }
-    .cc-article-tag {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
-      color: #2C4A2E; background: #eaf0ea; padding: 2px 7px; border-radius: 2px;
+    .cc-article-meta { font-size: 11.5px; color: #aaa; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+    .cc-article-author { font-weight: 600; color: #777; }
+
+    /* Date chip */
+    .cc-date-chip {
+      font-size: 10px; color: #bbb; font-weight: 600; letter-spacing: 0.04em;
     }
 
-    /* Point / Counterpoint */
-    .cc-counterpoint-block {
-      border: 1px solid #e0ddd8; border-radius: 6px; padding: 1rem 1.1rem;
-      margin: 1.5rem 0; background: #f5f4f0;
+    /* Digest nav */
+    .cc-digest-nav {
+      margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid #e0ddd8;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
     }
-    .cc-cp-label {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-      color: #aaa; margin: 0 0 10px; display: flex; align-items: center; gap: 8px;
+    .cc-digest-nav a {
+      font-size: 12.5px; color: #2C4A2E; text-decoration: none; font-weight: 600;
     }
-    .cc-cp-label::before, .cc-cp-label::after { content: ''; flex: 1; height: 1px; background: #ddd; }
-    .cc-cp-topic {
-      font-family: 'Lora', Georgia, serif; font-size: 13px; font-style: italic;
-      color: #666; text-align: center; margin-bottom: 12px;
-    }
-    .cc-cp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    @media (max-width: 500px) { .cc-cp-grid { grid-template-columns: 1fr; } }
-    .cc-cp-side { padding: 11px 13px; border-radius: 5px; background: #fff; border: 1px solid #e0ddd8; }
-    .cc-cp-stance { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 6px; }
-    .cc-cp-stance.for { color: #2C4A2E; }
-    .cc-cp-stance.against { color: #7A2E2E; }
-    .cc-cp-title {
-      font-family: 'Lora', Georgia, serif; font-size: 13.5px; line-height: 1.35;
-      margin: 0 0 6px; color: #1a1a1a; text-decoration: none; display: block;
-    }
-    .cc-cp-title:hover { text-decoration: underline; }
-    .cc-cp-source { font-size: 11px; color: #aaa; }
-
-    /* Archive nav */
-    .cc-archive-nav {
-      margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e0ddd8;
-      text-align: center;
-    }
-    .cc-archive-nav a {
-      font-size: 13px; color: #2C4A2E; text-decoration: none; font-weight: 600;
-      margin: 0 12px;
-    }
-    .cc-archive-nav a:hover { text-decoration: underline; }
-    .cc-archive-nav-pulse {
-      margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #f0ede8;
-    }
-    .cc-archive-nav-pulse a {
-      font-size: 12px; color: #aaa; text-decoration: none; margin: 0;
-    }
-    .cc-archive-nav-pulse a:hover { color: #2C4A2E; }
+    .cc-digest-nav a:hover { text-decoration: underline; }
 
     /* Footer */
     .cc-footer {
-      margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e0ddd8;
+      margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid #e0ddd8;
       text-align: center; font-size: 12px; color: #aaa;
     }
-    .cc-footer a { color: #2C4A2E; text-decoration: none; }
+    .cc-footer a { color: #2C4A2E; text-decoration: none; font-weight: 600; }
     .cc-footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <div class="cc-root">
+<div class="cc-root">
 
-    <!-- Header -->
-    <header class="cc-header">
-      <div class="cc-top-bar">
-        <a href="/" class="cc-back-link">← Today's Digest</a>
-        <a href="/#subscribe" class="cc-subscribe-btn">Get the Daily Digest</a>
-      </div>
-      <div class="cc-masthead">
-        <a href="/" class="cc-site-name">Christian Curator</a>
-        <p class="cc-tagline">Evangelical News &amp; Theology — Curated Daily</p>
-      </div>
-    </header>
+  <header class="cc-header">
+    <div class="cc-top-bar">
+      <a href="/" class="cc-back-link">← Christian Curator</a>
+      <a href="/#cc-email-box" class="cc-subscribe-btn">Get the Daily Digest</a>
+    </div>
+    <div class="cc-masthead">
+      <a href="/" class="cc-site-name">Christian Curator</a>
+      <p class="cc-tagline">Curated perspectives &middot; updated daily</p>
+    </div>
+  </header>
 
-    <!-- Archive heading -->
-    <div data-pagefind-body>
-      <h1 class="cc-archive-heading">{{ date_display }}</h1>
-      <p class="cc-archive-subheading">Top articles curated for evangelical Christians — theology, culture, church life, and world news.</p>
+  <div data-pagefind-body>
 
-      {% set shown = namespace(urls=[]) %}
-
-      <!-- Lead Story -->
-      {% set lead = articles | selectattr("source_type", "ne", "world_news") | list | first %}
-      {% if lead %}
-        {% set _ = shown.urls.append(lead.url) %}
-        <div class="cc-section-label">Lead Story</div>
-        <div style="padding-bottom: 1.35rem; border-bottom: 1px solid #e0ddd8; margin-bottom: 1.35rem;">
-          <a href="{{ lead.url }}" class="cc-lead-title" target="_blank" rel="noopener">{{ lead.rewritten_title or lead.title }}</a>
-          <div class="cc-lead-meta">
-            {% if lead.author and lead.author != lead.source_name %}
-              <span class="cc-author">{{ lead.author }}</span>
-              <span class="cc-meta-dot">·</span>
-              <span class="cc-source">{{ lead.source_name }}</span>
-            {% else %}
-              <span class="cc-author">{{ lead.source_name }}</span>
-            {% endif %}
-            {% if lead.tags %}
-              <span class="cc-meta-dot">·</span>
-              {% for tag in lead.tags[:2] %}
-                <span class="cc-article-tag">{{ tag }}</span>
-              {% endfor %}
-            {% endif %}
-          </div>
-        </div>
+    {# Macro: render author · source · date byline #}
+    {% macro byline(article) %}
+      {% set auth = article.author | default('') | trim %}
+      {% set src  = article.source_name | default('') | trim %}
+      {% set pub  = article.published_display | default('') | trim if article.published_display is defined else '' %}
+      {% if auth and auth | lower != src | lower %}
+        <span class="cc-article-author">{{ auth }}</span>
+        <span class="cc-meta-dot">·</span>
+        <span>{{ src }}</span>
+      {% else %}
+        <span>{{ src }}</span>
       {% endif %}
+      {% if pub %}
+        <span class="cc-meta-dot">·</span>
+        <span class="cc-date-chip">{{ pub }}</span>
+      {% endif %}
+    {% endmacro %}
 
-      <!-- Point / Counterpoint -->
-      {% if pairings %}
-        <div class="cc-section-label">Point / Counterpoint</div>
-        {% for pair in pairings[:1] %}
-          {% if pair.point_url not in shown.urls %}{% set _ = shown.urls.append(pair.point_url) %}{% endif %}
-          {% if pair.counterpoint_url not in shown.urls %}{% set _ = shown.urls.append(pair.counterpoint_url) %}{% endif %}
-          <div class="cc-counterpoint-block">
-            <div class="cc-cp-label">Point / Counterpoint</div>
-            <div class="cc-cp-topic">{{ pair.topic }}</div>
-            <div class="cc-cp-grid">
-              <div class="cc-cp-side">
-                <div class="cc-cp-stance for">Point</div>
-                <a href="{{ pair.point_url }}" class="cc-cp-title" target="_blank" rel="noopener">{{ pair.point_title }}</a>
-              </div>
-              <div class="cc-cp-side">
-                <div class="cc-cp-stance against">Counterpoint</div>
-                <a href="{{ pair.counterpoint_url }}" class="cc-cp-title" target="_blank" rel="noopener">{{ pair.counterpoint_title }}</a>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      {% endif %}
-
-      <!-- Theology & Doctrine -->
-      {% set theology_articles = [] %}
-      {% for a in articles %}
-        {% if a.source_type != 'world_news' and a.tags and 'theology' in a.tags and a.url not in shown.urls and theology_articles | length < 5 %}
-          {% set _ = shown.urls.append(a.url) %}
-          {% set _ = theology_articles.append(a) %}
-        {% endif %}
-      {% endfor %}
-      {% if theology_articles %}
-        <div class="cc-section-label">Theology &amp; Doctrine</div>
-        <div class="cc-article-list">
-          {% for a in theology_articles %}
-            <div class="cc-article">
-              <div class="cc-article-num">{{ loop.index }}</div>
-              <div class="cc-article-content">
-                <a href="{{ a.url }}" class="cc-article-title" target="_blank" rel="noopener">{{ a.rewritten_title or a.title }}</a>
-                <div class="cc-article-meta">
-                  {% if a.author and a.author != a.source_name %}
-                    <span>{{ a.author }}</span><span class="cc-meta-dot">·</span>
-                  {% endif %}
-                  <span>{{ a.source_name }}</span>
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      {% endif %}
-
-      <!-- Culture & Society -->
-      {% set culture_articles = [] %}
-      {% for a in articles %}
-        {% if a.source_type != 'world_news' and a.tags and 'culture' in a.tags and a.url not in shown.urls and culture_articles | length < 5 %}
-          {% set _ = shown.urls.append(a.url) %}
-          {% set _ = culture_articles.append(a) %}
-        {% endif %}
-      {% endfor %}
-      {% if culture_articles %}
-        <div class="cc-section-label">Culture &amp; Society</div>
-        <div class="cc-article-list">
-          {% for a in culture_articles %}
-            <div class="cc-article">
-              <div class="cc-article-num">{{ loop.index }}</div>
-              <div class="cc-article-content">
-                <a href="{{ a.url }}" class="cc-article-title" target="_blank" rel="noopener">{{ a.rewritten_title or a.title }}</a>
-                <div class="cc-article-meta">
-                  {% if a.author and a.author != a.source_name %}
-                    <span>{{ a.author }}</span><span class="cc-meta-dot">·</span>
-                  {% endif %}
-                  <span>{{ a.source_name }}</span>
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      {% endif %}
-
-      <!-- Church Life -->
-      {% set church_articles = [] %}
-      {% for a in articles %}
-        {% if a.source_type != 'world_news' and a.tags and 'church life' in a.tags and a.url not in shown.urls and church_articles | length < 5 %}
-          {% set _ = shown.urls.append(a.url) %}
-          {% set _ = church_articles.append(a) %}
-        {% endif %}
-      {% endfor %}
-      {% if church_articles %}
-        <div class="cc-section-label">Church Life</div>
-        <div class="cc-article-list">
-          {% for a in church_articles %}
-            <div class="cc-article">
-              <div class="cc-article-num">{{ loop.index }}</div>
-              <div class="cc-article-content">
-                <a href="{{ a.url }}" class="cc-article-title" target="_blank" rel="noopener">{{ a.rewritten_title or a.title }}</a>
-                <div class="cc-article-meta">
-                  {% if a.author and a.author != a.source_name %}
-                    <span>{{ a.author }}</span><span class="cc-meta-dot">·</span>
-                  {% endif %}
-                  <span>{{ a.source_name }}</span>
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      {% endif %}
-
-      <!-- More from Today -->
-      {% set more_articles = [] %}
-      {% for a in articles %}
-        {% if a.source_type != 'world_news' and a.url not in shown.urls and more_articles | length < 10 %}
-          {% set _ = shown.urls.append(a.url) %}
-          {% set _ = more_articles.append(a) %}
-        {% endif %}
-      {% endfor %}
-      {% if more_articles %}
-        <div class="cc-section-label">More from Today</div>
-        <div class="cc-article-list">
-          {% for a in more_articles %}
-            <div class="cc-article">
-              <div class="cc-article-num">{{ loop.index }}</div>
-              <div class="cc-article-content">
-                <a href="{{ a.url }}" class="cc-article-title" target="_blank" rel="noopener">{{ a.rewritten_title or a.title }}</a>
-                <div class="cc-article-meta">
-                  {% if a.author and a.author != a.source_name %}
-                    <span>{{ a.author }}</span><span class="cc-meta-dot">·</span>
-                  {% endif %}
-                  <span>{{ a.source_name }}</span>
-                  {% if a.tags %}
-                    <span class="cc-meta-dot">·</span>
-                    <span class="cc-article-tag">{{ a.tags[0] }}</span>
-                  {% endif %}
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      {% endif %}
-
-      <!-- World News -->
-      {% set world_articles = articles | selectattr("source_type", "equalto", "world_news") | list %}
-      {% if world_articles %}
-        <div class="cc-section-label">World News</div>
-        <div class="cc-article-list">
-          {% set count = namespace(n=0) %}
-          {% for a in world_articles %}
-            {% if a.url not in shown.urls and count.n < 4 %}
-              {% set _ = shown.urls.append(a.url) %}
-              {% set count.n = count.n + 1 %}
-              <div class="cc-article">
-                <div class="cc-article-num">{{ count.n }}</div>
-                <div class="cc-article-content">
-                  <a href="{{ a.url }}" class="cc-article-title" target="_blank" rel="noopener">{{ a.rewritten_title or a.title }}</a>
-                  <div class="cc-article-meta">
-                    <span>{{ a.source_name }}</span>
-                  </div>
-                </div>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </div>
-      {% endif %}
-
-    </div><!-- /data-pagefind-body -->
-
-    <!-- Archive navigation -->
-    <div class="cc-archive-nav">
-      {% if prev_date_iso %}
-        <a href="/archive/{{ prev_date_iso }}/">← {{ prev_date_display }}</a>
-      {% endif %}
-      <a href="/archive/">All Archives</a>
-      {% if next_date_iso %}
-        <a href="/archive/{{ next_date_iso }}/">{{ next_date_display }} →</a>
-      {% endif %}
-      {% if daily_slug %}
-      <div class="cc-archive-nav-pulse">
-        <a href="/daily/{{ daily_slug }}/">Read the editorial pulse for this day →</a>
-      </div>
-      {% endif %}
+    <!-- Today's digest -->
+    {% if articles %}
+    <div class="cc-day-heading">
+      <div class="cc-day-label">Today&rsquo;s Best</div>
+      <div class="cc-day-date">{{ date_display }}</div>
     </div>
 
-    <!-- Footer -->
-    <footer class="cc-footer">
-      <p><a href="/">Christian Curator</a> — A daily digest of the best evangelical Christian writing.</p>
-      <p style="margin-top: 6px;"><a href="/#subscribe">Subscribe to the daily email</a> · <a href="/archive/">Browse the archive</a></p>
-    </footer>
+    {# Lead: first article gets a larger treatment #}
+    {% set lead = articles[0] %}
+    <div class="cc-lead">
+      <a href="{{ lead.url }}" class="cc-lead-title" target="_blank" rel="noopener"
+         onclick="gtag('event','article_click',{'article_title':'{{ (lead.rewritten_title or lead.title)|replace("'","") }}','article_source':'{{ lead.source_name }}','article_url':'{{ lead.url }}'});">
+        {{ lead.rewritten_title or lead.title }}
+      </a>
+      <div class="cc-lead-meta">
+        {% set auth = lead.author | default('') | trim %}
+        {% set src  = lead.source_name | default('') | trim %}
+        {% if auth and auth | lower != src | lower %}
+          <span class="cc-lead-author">{{ auth }}</span>
+          <span class="cc-meta-dot">·</span>
+          <span>{{ src }}</span>
+        {% else %}
+          <span class="cc-lead-author">{{ src }}</span>
+        {% endif %}
+      </div>
+    </div>
+
+    {# Remaining articles 2-10 #}
+    <div class="cc-article-list">
+      {% for article in articles[1:] %}
+      <div class="cc-article">
+        <div class="cc-article-num">{{ loop.index + 1 }}</div>
+        <div class="cc-article-content">
+          <a href="{{ article.url }}" class="cc-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}'});">
+            {{ article.rewritten_title or article.title }}
+          </a>
+          <div class="cc-article-meta">{{ byline(article) }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Yesterday's digest -->
+    {% if yesterday_articles %}
+    <div class="cc-yesterday-heading">
+      <div class="cc-yesterday-label">Yesterday&rsquo;s Best</div>
+      {% if prev_date_display %}
+      <div class="cc-yesterday-date">{{ prev_date_display }}</div>
+      {% endif %}
+    </div>
+    <div class="cc-article-list">
+      {% for article in yesterday_articles %}
+      <div class="cc-article">
+        <div class="cc-article-num">{{ loop.index }}</div>
+        <div class="cc-article-content">
+          <a href="{{ article.url }}" class="cc-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}'});">
+            {{ article.rewritten_title or article.title }}
+          </a>
+          <div class="cc-article-meta">{{ byline(article) }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
 
   </div>
+
+  <!-- Navigation between days -->
+  <div class="cc-digest-nav">
+    {% if prev_date_iso %}
+      <a href="/archive/{{ prev_date_iso }}/">&larr; {{ prev_date_display }}</a>
+    {% else %}
+      <span></span>
+    {% endif %}
+    <a href="/">Back to home</a>
+    {% if next_date_iso %}
+      <a href="/archive/{{ next_date_iso }}/">{{ next_date_display }} &rarr;</a>
+    {% else %}
+      <span></span>
+    {% endif %}
+  </div>
+
+  <footer class="cc-footer">
+    <p><a href="/">Christian Curator</a> &mdash; Curated perspectives, updated daily.</p>
+    <p style="margin-top:6px;"><a href="/#cc-email-box">Subscribe to the daily email</a></p>
+  </footer>
+
+</div>
 </body>
 </html>

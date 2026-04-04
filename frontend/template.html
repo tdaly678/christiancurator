@@ -98,30 +98,15 @@
     .cc-welcome {
       border-bottom: 1px solid #e0ddd8;
       padding: 2rem 0 1.75rem;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 2rem;
-      align-items: center;
     }
     .cc-welcome-hed {
       font-family: 'Lora', Georgia, serif; font-size: 30px; font-weight: 600;
       line-height: 1.25; color: #1a1a1a; margin-bottom: 0.6rem;
     }
     .cc-welcome-sub {
-      font-size: 14.5px; color: #666; line-height: 1.65; max-width: 560px;
+      font-size: 14.5px; color: #666; line-height: 1.65;
     }
-    .cc-welcome-nav {
-      display: flex; flex-direction: column; gap: 7px; align-items: flex-end; min-width: 160px;
-    }
-    .cc-welcome-cat {
-      font-size: 12px; font-weight: 600; color: #2C4A2E; text-decoration: none;
-      padding: 5px 14px; border: 1.5px solid #2C4A2E; border-radius: 20px;
-      white-space: nowrap; transition: background 0.12s;
-    }
-    .cc-welcome-cat:hover { background: #2C4A2E; color: #fff; }
     @media (max-width: 660px) {
-      .cc-welcome { grid-template-columns: 1fr; }
-      .cc-welcome-nav { flex-direction: row; flex-wrap: wrap; align-items: flex-start; }
       .cc-welcome-hed { font-size: 24px; }
       .cc-site-name { font-size: 32px; }
     }
@@ -184,6 +169,21 @@
       border-top: 1px solid #e0ddd8;
     }
     .cc-featured-cta:hover { text-decoration: underline; }
+
+    /* ── Archive list ────────────────────────────────────────────── */
+    .cc-archive-list { margin-top: 2.75rem; }
+    .cc-archive-list-header {
+      border-bottom: 1px solid #e0ddd8; padding-bottom: 6px; margin-bottom: 1rem;
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #aaa;
+    }
+    .cc-archive-links {
+      display: flex; flex-wrap: wrap; gap: 6px 10px;
+    }
+    .cc-archive-link {
+      font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600;
+    }
+    .cc-archive-link:hover { text-decoration: underline; }
 
     /* ── Browse grid ─────────────────────────────────────────────── */
     .cc-browse { margin-top: 2.75rem; }
@@ -248,23 +248,14 @@
     </div>
     <nav class="cc-nav">
       <a href="/" class="active">Home</a>
-      <a href="/topics/">Topics</a>
       <a href="/archive/">Daily Digest</a>
     </nav>
   </div>
 
   <!-- Welcome -->
   <div class="cc-welcome">
-    <div>
-      <h2 class="cc-welcome-hed">The conversations shaping evangelical Christianity.</h2>
-      <p class="cc-welcome-sub">Because every curious Christian deserves clarity on the questions that matter most.</p>
-    </div>
-    <div class="cc-welcome-nav">
-      <a href="/topics/#core-theology" class="cc-welcome-cat">Core Theology</a>
-      <a href="/topics/#church-life" class="cc-welcome-cat">Church Life</a>
-      <a href="/topics/#spiritual-formation" class="cc-welcome-cat">Spiritual Formation</a>
-      <a href="/topics/#culture-society" class="cc-welcome-cat">Culture &amp; Society</a>
-    </div>
+    <h2 class="cc-welcome-hed">The conversations shaping evangelical Christianity.</h2>
+    <p class="cc-welcome-sub">Because every curious Christian deserves clarity on the questions that matter most.</p>
   </div>
 
   {% if featured_topics %}
@@ -289,7 +280,14 @@
              onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}'});">
             {{ article.rewritten_title or article.title }}
           </a>
-          <span class="cc-featured-article-source">{{ article.source_name }}</span>
+          <span class="cc-featured-article-source">
+            {%- set auth = article.author | default('') | trim -%}
+            {%- set src  = article.source_name | default('') | trim -%}
+            {%- set pub  = article.published_display | default('') | trim -%}
+            {%- if auth and auth | lower != src | lower -%}{{ auth }} &middot; {%- endif -%}
+            {{ src }}
+            {%- if pub %} &middot; {{ pub }}{%- endif -%}
+          </span>
         </div>
         {% endfor %}
         {% endif %}
@@ -328,6 +326,18 @@
     </div>
   </div>
 
+  <!-- Past digests -->
+  {% if archive_dates %}
+  <div class="cc-archive-list">
+    <div class="cc-archive-list-header">Past Daily Digests</div>
+    <div class="cc-archive-links">
+      {% for d in archive_dates %}
+      <a href="/archive/{{ d.iso }}/" class="cc-archive-link">{{ d.display }}</a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
   <!-- Subscribe -->
   <div id="cc-email-box" style="margin-top:2.75rem;">
     <iframe
@@ -340,7 +350,6 @@
   <div class="cc-footer">
     <div class="cc-footer-name">Christian Curator</div>
     <div class="cc-footer-nav">
-      <a href="/topics/">Topics</a>
       <a href="/archive/">Daily Digest</a>
     </div>
     <div>All links go to original sources. We curate; they create.</div>

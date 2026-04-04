@@ -106,6 +106,8 @@ def compute_featured_topics(articles: list, top_n: int = 3) -> list:
                 "rewritten_title": article.get("rewritten_title", ""),
                 "url": article.get("url", ""),
                 "source_name": article.get("source_name", ""),
+                "author": article.get("author", ""),
+                "published_display": _fmt_date(article.get("published", "")),
                 "final_score": article.get("final_score", 0),
             })
 
@@ -134,3 +136,15 @@ def compute_featured_topics(articles: list, top_n: int = 3) -> list:
         })
 
     return featured
+
+
+def _fmt_date(published: str) -> str:
+    """Parse an RFC 2822 published string and return a short display date like 'Apr 4'."""
+    if not published:
+        return ""
+    try:
+        from email.utils import parsedate_to_datetime
+        dt = parsedate_to_datetime(published)
+        return dt.strftime("%b %-d")
+    except Exception:
+        return ""

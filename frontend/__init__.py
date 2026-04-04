@@ -129,6 +129,21 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         labels = ", ".join(t["name"] for t in featured_topics)
         print(f"  Featured debates today: {labels}")
 
+    # Compute recent archive dates for the homepage archive list
+    archive_dates = []
+    if ARCHIVE_DIR.exists():
+        for day_dir in sorted(ARCHIVE_DIR.iterdir(), reverse=True):
+            if day_dir.is_dir() and (day_dir / "index.html").exists():
+                try:
+                    d = date.fromisoformat(day_dir.name)
+                    archive_dates.append({
+                        "iso": day_dir.name,
+                        "display": d.strftime("%B %-d, %Y"),
+                    })
+                except ValueError:
+                    pass
+        archive_dates = archive_dates[:20]
+
     html = template.render(
         articles=articles,
         pairings=template_pairings,
@@ -141,6 +156,7 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         all_topics=TOPICS,
         topics_by_category=TOPICS_BY_CATEGORY,
         categories=CATEGORIES,
+        archive_dates=archive_dates,
     )
 
     with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
@@ -152,7 +168,7 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         render_daily_page(daily_summary, env, matched_topics=matched_topics)
 
     # Render the daily archive snapshot and update the archive index
-    render_archive_page(articles, template_pairings, env)
+    render_archive_page(articles, template_pairings, env, yesterday_articles=yesterday_articles or [])
     render_archive_index(env)
 
     # Backfill prev/next + crosslinks on pages predating this feature
@@ -264,14 +280,22 @@ def _patch_daily_next_link(target_slug: str, next_slug: str, next_display: str):
     print(f"  Updated daily nav on {page_path}")
 
 
-def render_archive_page(articles: list[dict], pairings: list[dict], env: Environment):
+def render_archive_page(articles: list[dict], pairings: list[dict], env: Environment,
+                        yesterday_articles: list[dict] = None):
     """Render a daily archive snapshot to docs/archive/YYYY-MM-DD/index.html."""
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
 
-    # Only archive the top-scored articles (matching what the homepage shows).
-    # Sort by score descending and take top 20 so the archive mirrors the actual
-    # homepage content rather than dumping every fetched article.
-    articles = sorted(articles, key=lambda a: a.get("score", 0), reverse=True)[:20]
+    # Top 10 of today's non-world-news articles by final_score
+    today_top = sorted(
+        [a for a in articles if a.get("source_type") != "world_news"],
+        key=lambda a: a.get("final_score", a.get("score", 0)), reverse=True
+    )[:10]
+
+    # Top 10 of yesterday's articles (passed in from caller)
+    yesterday_top = sorted(
+        [a for a in (yesterday_articles or []) if a.get("source_type") != "world_news"],
+        key=lambda a: a.get("final_score", a.get("score", 0)), reverse=True
+    )[:10]
 
     today = date.today()
     date_iso = today.isoformat()                          # e.g. "2026-03-22"
@@ -296,7 +320,8 @@ def render_archive_page(articles: list[dict], pairings: list[dict], env: Environ
 
     template = env.get_template("archive_template.html")
     html = template.render(
-        articles=articles,
+        articles=today_top,
+        yesterday_articles=yesterday_top,
         pairings=pairings,
         date_iso=date_iso,
         date_display=date_display,
