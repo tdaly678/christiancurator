@@ -4,16 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Christian Curator — Evangelical Debates &amp; Daily Digest</title>
-  {% set lead_title = (articles[0].rewritten_title or articles[0].title) if articles else "" %}
-  {% set meta_desc = "The evangelical debate hub — 36 topics, every major position, the key thinkers, the best articles. Plus a daily digest of the best evangelical writing from TGC, Desiring God, Ligonier, and more." %}
-  <meta name="description" content="{{ meta_desc }}" />
+  <meta name="description" content="The evangelical debate hub — 36 topics, every major position, the key thinkers, the best articles. Plus a daily digest of the best evangelical writing from TGC, Desiring God, Ligonier, and more." />
   <link rel="canonical" href="https://www.christiancurator.com/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Christian Curator" />
   <meta property="og:title" content="Christian Curator — Evangelical Debates &amp; Daily Digest" />
-  <meta property="og:description" content="{{ meta_desc }}" />
+  <meta property="og:description" content="The evangelical debate hub — 36 topics, every major position, the key thinkers, the best articles." />
   <meta property="og:url" content="https://www.christiancurator.com/" />
   <meta property="og:image" content="https://www.christiancurator.com/og-image.png" />
   <meta property="og:image:width" content="1200" />
@@ -22,7 +20,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Christian Curator — Evangelical Debates &amp; Daily Digest" />
-  <meta name="twitter:description" content="The evangelical debate hub — 36 topics, every major position, the key thinkers, and the best articles. Updated daily." />
+  <meta name="twitter:description" content="36 evangelical debates mapped — every major position, the key thinkers, the best articles. Updated daily." />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -31,7 +29,7 @@
     "@type": "WebSite",
     "name": "Christian Curator",
     "url": "https://www.christiancurator.com/",
-    "description": "A daily digest of the best evangelical Christian news, theology, and culture.",
+    "description": "The evangelical debate hub — 36 topics, every major position, the key thinkers, the best articles.",
     "publisher": {
       "@type": "Organization",
       "name": "Christian Curator"
@@ -47,8 +45,6 @@
     gtag('js', new Date());
     gtag('config', 'G-3NJ5DSPFXL');
   </script>
-  <!-- Pagefind search -->
-  <link href="/_pagefind/pagefind-ui.css" rel="stylesheet" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
@@ -63,9 +59,9 @@
       line-height: 1.5;
     }
 
+    /* ── Header ──────────────────────────────────────────────────── */
     .cc-root { max-width: 980px; margin: 0 auto; padding: 0 20px 3rem; }
 
-    /* Header */
     .cc-header { border-bottom: 1px solid #e0ddd8; padding: 0.75rem 0 0; }
     .cc-top-bar {
       display: flex; align-items: center; justify-content: space-between;
@@ -98,160 +94,154 @@
     .cc-nav a:hover { color: #2C4A2E; }
     .cc-nav a.active { color: #1a1a1a; border-bottom: 2px solid #1a1a1a; padding-bottom: 2px; }
 
-    /* Layout */
-    .cc-layout {
-      display: grid; grid-template-columns: 1fr 270px;
-      gap: 2.25rem; margin-top: 1.75rem;
-    }
-    @media (max-width: 700px) {
-      .cc-layout { grid-template-columns: 1fr; }
-      .cc-cp-grid { grid-template-columns: 1fr; }
-      .cc-site-name { font-size: 32px; }
-    }
-
-    /* Section label */
+    /* ── Section label (shared) ──────────────────────────────────── */
     .cc-section-label {
       font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
       text-transform: uppercase; color: #2C4A2E; margin: 0 0 10px;
     }
 
-    /* Lead story */
-    .cc-lead-story { border-bottom: 1px solid #e0ddd8; padding-bottom: 1.35rem; margin-bottom: 1.35rem; }
-    .cc-lead-title {
-      font-family: 'Lora', Georgia, serif; font-size: 27px; font-weight: 600;
-      line-height: 1.25; margin: 0 0 10px; color: #1a1a1a; text-decoration: none; display: block;
+    /* ── Hero ────────────────────────────────────────────────────── */
+    .cc-hero {
+      background: #1a1a1a; color: #fff;
+      text-align: center; padding: 2.75rem 1.5rem 2.5rem;
+      margin: 0 -20px; /* bleed to edge within root */
     }
-    .cc-lead-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-lead-meta {
-      font-size: 12px; color: #888; display: flex; gap: 10px;
-      align-items: center; margin-bottom: 10px; flex-wrap: wrap;
+    .cc-hero-eyebrow {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+      color: #b5ccb8; margin-bottom: 1rem;
     }
-    .cc-author { font-size: 12px; font-weight: 600; color: #3a3a3a; }
-    .cc-source { font-size: 12px; color: #aaa; }
-    .cc-meta-dot { font-size: 11px; color: #ccc; }
-    .cc-lead-excerpt { font-size: 14.5px; line-height: 1.7; color: #555; }
-
-    /* Article list */
-    .cc-article-list { display: flex; flex-direction: column; }
-    .cc-article {
-      display: flex; gap: 0; padding: 0.9rem 0;
-      border-bottom: 1px solid #e0ddd8; align-items: flex-start;
+    .cc-hero-hed {
+      font-family: 'Lora', Georgia, serif; font-size: 34px; font-weight: 600;
+      line-height: 1.2; color: #fff; margin-bottom: 0.75rem;
     }
-    .cc-article-num {
-      font-size: 11px; font-weight: 600; color: #bbb;
-      min-width: 24px; padding-top: 2px; font-variant-numeric: tabular-nums;
+    .cc-hero-sub {
+      font-size: 14px; color: #b5ccb8; margin-bottom: 1.75rem;
+      max-width: 540px; margin-left: auto; margin-right: auto; line-height: 1.6;
     }
-    .cc-article-content { flex: 1; }
-    .cc-article-title {
-      font-family: 'Lora', Georgia, serif; font-size: 15.5px; font-weight: 500;
-      line-height: 1.35; margin: 0 0 5px; color: #1a1a1a; text-decoration: none; display: block;
+    .cc-hero-cats {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 1.5rem;
     }
-    .cc-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-article-meta { font-size: 11.5px; color: #aaa; display: flex; gap: 7px; align-items: center; flex-wrap: wrap; }
-
-    /* Point / Counterpoint */
-    .cc-counterpoint-block {
-      border: 1px solid #e0ddd8; border-radius: 6px; padding: 1rem 1.1rem;
-      margin: 1.35rem 0; background: #f5f4f0;
+    .cc-hero-cat {
+      font-size: 12px; font-weight: 600; color: #fff; text-decoration: none;
+      padding: 5px 14px; border: 1px solid #444; border-radius: 20px;
+      transition: background 0.15s, border-color 0.15s;
     }
-    .cc-cp-label {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-      color: #aaa; margin: 0 0 10px; display: flex; align-items: center; gap: 8px;
+    .cc-hero-cat:hover { background: #2C4A2E; border-color: #2C4A2E; }
+    .cc-hero-cta {
+      display: inline-block; font-size: 13px; font-weight: 600;
+      color: #fff; text-decoration: none;
+      background: #2C4A2E; padding: 9px 22px; border-radius: 3px;
+      letter-spacing: 0.04em;
     }
-    .cc-cp-label::before, .cc-cp-label::after { content: ''; flex: 1; height: 1px; background: #ddd; }
-    .cc-cp-topic {
-      font-family: 'Lora', Georgia, serif; font-size: 13px; font-style: italic;
-      color: #666; text-align: center; margin-bottom: 12px;
-    }
-    .cc-cp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .cc-cp-side { padding: 11px 13px; border-radius: 5px; background: #fff; border: 1px solid #e0ddd8; }
-    .cc-cp-stance { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 6px; }
-    .cc-cp-stance.for { color: #2C4A2E; }
-    .cc-cp-stance.against { color: #7A2E2E; }
-    .cc-cp-title {
-      font-family: 'Lora', Georgia, serif; font-size: 13.5px; line-height: 1.35;
-      margin: 0 0 6px; color: #1a1a1a; text-decoration: none; display: block;
-    }
-    .cc-cp-title:hover { text-decoration: underline; }
-    .cc-cp-source { font-size: 11px; color: #aaa; }
-
-    /* Sidebar */
-    .cc-sidebar-section { margin-bottom: 1.5rem; border-bottom: 1px solid #e0ddd8; padding-bottom: 1.5rem; }
-    .cc-sidebar-section:last-child { border-bottom: none; padding-bottom: 0; }
-    .cc-sidebar-label {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-      color: #aaa; margin: 0 0 10px; border-bottom: 1px solid #e0ddd8; padding-bottom: 6px;
-    }
-
-    /* Trending */
-    .cc-trending-item { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px solid #e0ddd8; align-items: flex-start; }
-    .cc-trending-item:last-child { border-bottom: none; }
-    .cc-trending-num { font-size: 20px; font-weight: 600; color: #ddd; min-width: 20px; line-height: 1; font-variant-numeric: tabular-nums; }
-    .cc-trending-title {
-      font-size: 12.5px; line-height: 1.4; color: #1a1a1a;
-      text-decoration: none; font-family: 'Lora', Georgia, serif; display: block;
-    }
-    .cc-trending-title:hover { text-decoration: underline; }
-
-    /* Topic pills */
-    .cc-topic-pills { display: flex; flex-wrap: wrap; gap: 5px; }
-    .cc-topic-pill {
-      background: #f0ede8; border: 1px solid #ddd; border-radius: 2px; padding: 4px 10px;
-      font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; color: #666;
-      cursor: pointer; text-transform: uppercase; text-decoration: none; white-space: nowrap;
-    }
-    .cc-topic-pill:hover { border-color: #2C4A2E; color: #2C4A2E; }
-    .cc-topic-pill.active { background: #2C4A2E; border-color: #2C4A2E; color: #fff; }
-
-    /* Persona pills */
-    .cc-persona-pills { display: flex; flex-wrap: wrap; gap: 5px; }
-    .cc-persona-pill {
-      background: #f0ede8; border: 1px solid #ddd; border-radius: 2px; padding: 4px 10px;
-      font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; color: #666;
-      cursor: pointer; text-transform: uppercase; text-decoration: none; white-space: nowrap;
-    }
-    .cc-persona-pill:hover { border-color: #5C3A6E; color: #5C3A6E; }
-    .cc-persona-pill.active { background: #5C3A6E; border-color: #5C3A6E; color: #fff; }
-
-    /* Filter bar (above articles) */
-    .cc-filter-bar {
-      border-bottom: 1px solid #e0ddd8; padding-bottom: 1rem; margin-bottom: 1.5rem;
-    }
-    .cc-filter-bar .cc-sidebar-label { margin-bottom: 6px; }
-    .cc-filter-row { margin-bottom: 10px; }
-    .cc-filter-row:last-child { margin-bottom: 0; }
-
-    /* Hide filter bar on desktop (shown in sidebar instead) */
-    .cc-filter-bar { display: none; }
-    .cc-sidebar-filters { display: block; }
-
-    /* Mobile: show filter bar above articles, hide from sidebar */
+    .cc-hero-cta:hover { background: #3a5f3c; }
     @media (max-width: 700px) {
-      .cc-filter-bar { display: block; }
-      .cc-sidebar-filters { display: none; }
-      .cc-topic-pills, .cc-persona-pills {
-        flex-wrap: nowrap; overflow-x: auto;
-        -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 4px;
-      }
-      .cc-topic-pills::-webkit-scrollbar, .cc-persona-pills::-webkit-scrollbar { display: none; }
+      .cc-hero-hed { font-size: 26px; }
+      .cc-hero { padding: 2rem 1rem; }
+      .cc-site-name { font-size: 32px; }
     }
 
-    /* Fix article title overflow on mobile */
-    .cc-article-title, .cc-lead-title {
-      overflow-wrap: break-word; word-break: break-word;
+    /* ── Featured debates section ─────────────────────────────────── */
+    .cc-featured { margin: 2.25rem 0 0; }
+    .cc-featured-header {
+      display: flex; align-items: baseline; justify-content: space-between;
+      border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.25rem;
+    }
+    .cc-featured-header-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #1a1a1a;
+    }
+    .cc-featured-header-date { font-size: 11px; color: #aaa; }
+
+    .cc-featured-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+    }
+    @media (max-width: 860px) { .cc-featured-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .cc-featured-grid { grid-template-columns: 1fr; } }
+
+    .cc-featured-card {
+      border: 1px solid #e0ddd8; border-radius: 5px; padding: 1.1rem 1.2rem 1rem;
+      background: #fff; display: flex; flex-direction: column;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .cc-featured-card:hover { border-color: #2C4A2E; box-shadow: 0 2px 8px rgba(44,74,46,0.08); }
+
+    .cc-featured-cat {
+      font-size: 9.5px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.14em; color: #2C4A2E; margin-bottom: 6px;
+    }
+    .cc-featured-name {
+      font-family: 'Lora', Georgia, serif; font-size: 19px; font-weight: 600;
+      line-height: 1.25; color: #1a1a1a; margin-bottom: 10px;
+    }
+    .cc-featured-hook {
+      font-size: 13px; color: #555; font-style: italic; line-height: 1.6;
+      border-left: 2px solid #2C4A2E; padding-left: 10px;
+      margin-bottom: 14px; flex: 1;
+    }
+    .cc-featured-articles-label {
+      font-size: 9.5px; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: #aaa; margin-bottom: 7px;
+    }
+    .cc-featured-article {
+      padding: 5px 0; border-top: 1px solid #f0ede8;
+    }
+    .cc-featured-article:first-of-type { border-top: none; }
+    .cc-featured-article-title {
+      font-size: 12.5px; color: #1a1a1a; text-decoration: none;
+      font-family: 'Lora', Georgia, serif; line-height: 1.35;
+      display: block; margin-bottom: 2px;
+    }
+    .cc-featured-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-featured-article-source { font-size: 10.5px; color: #aaa; }
+
+    .cc-featured-cta {
+      display: block; font-size: 12.5px; font-weight: 600; color: #2C4A2E;
+      text-decoration: none; margin-top: 12px; padding-top: 10px;
+      border-top: 1px solid #e0ddd8;
+    }
+    .cc-featured-cta:hover { text-decoration: underline; }
+
+    /* ── Browse grid ─────────────────────────────────────────────── */
+    .cc-browse { margin-top: 2.75rem; }
+    .cc-browse-header {
+      display: flex; align-items: baseline; justify-content: space-between;
+      border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.75rem;
+    }
+    .cc-browse-header-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #1a1a1a;
+    }
+    .cc-browse-header-count { font-size: 11px; color: #aaa; }
+
+    .cc-browse-cat { margin-bottom: 2rem; }
+    .cc-browse-cat-name {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #aaa;
+      margin-bottom: 0.75rem;
+    }
+    .cc-browse-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(195px, 1fr)); gap: 10px;
+    }
+    @media (max-width: 560px) { .cc-browse-grid { grid-template-columns: 1fr 1fr; } }
+
+    .cc-browse-card {
+      border: 1px solid #e0ddd8; border-radius: 4px;
+      padding: 11px 13px; text-decoration: none; background: #fff;
+      display: block; transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .cc-browse-card:hover {
+      border-color: #2C4A2E; box-shadow: 0 1px 5px rgba(44,74,46,0.1);
+    }
+    .cc-browse-card-name {
+      font-family: 'Lora', Georgia, serif; font-size: 13.5px; font-weight: 600;
+      color: #1a1a1a; line-height: 1.3; margin-bottom: 4px;
+    }
+    .cc-browse-card-hook {
+      font-size: 11px; color: #999; line-height: 1.45;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
     }
 
-    .cc-article.hidden { display: none; }
-    .cc-section-group.hidden { display: none; }
-    #cc-filter-banner {
-      display: none; background: #EFF4F0; border: 1px solid #B5CCB8; border-radius: 4px;
-      padding: 7px 12px; margin-bottom: 1rem; font-size: 12px; color: #2C4A2E;
-      justify-content: space-between; align-items: center;
-    }
-    #cc-filter-banner.visible { display: flex; }
-    #cc-filter-clear { cursor: pointer; font-weight: 600; color: #2C4A2E; text-decoration: underline; background: none; border: none; font-size: 12px; }
-
-    /* Email box */
+    /* ── Email box ───────────────────────────────────────────────── */
     .cc-email-box { background: #EFF4F0; border: 1px solid #B5CCB8; border-radius: 6px; padding: 1rem; }
     .cc-email-box p { font-size: 13px; color: #2C4A2E; margin: 0 0 10px; line-height: 1.55; }
     .cc-email-input {
@@ -265,38 +255,16 @@
     }
     .cc-email-submit:hover { background: #3a5f3c; }
 
-    /* Debate Hub Banner */
-    .cc-debate-banner {
-      background: #1a1a1a; color: #fff; padding: 0.9rem 0; margin-top: 0; border-bottom: 2px solid #2C4A2E;
-    }
-    .cc-debate-banner-inner { max-width: 980px; margin: 0 auto; padding: 0 20px; }
-    .cc-debate-banner-hed {
-      font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-      color: #b5ccb8; margin-bottom: 8px;
-    }
-    .cc-debate-banner-cats { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-    .cc-debate-banner-cat {
-      font-size: 12px; font-weight: 600; color: #fff; text-decoration: none;
-      padding: 4px 12px; border: 1px solid #444; border-radius: 20px;
-      transition: background 0.15s, border-color 0.15s;
-    }
-    .cc-debate-banner-cat:hover { background: #2C4A2E; border-color: #2C4A2E; }
-    .cc-debate-banner-all {
-      font-size: 12px; font-weight: 600; color: #2C4A2E; text-decoration: none;
-      margin-left: 4px; letter-spacing: 0.02em;
-    }
-    .cc-debate-banner-all:hover { text-decoration: underline; }
-    @media (max-width: 700px) {
-      .cc-debate-banner-cats { gap: 6px; }
-    }
-
-    /* Footer */
+    /* ── Footer ──────────────────────────────────────────────────── */
     .cc-footer {
       border-top: 2.5px solid #1a1a1a; margin-top: 2.5rem; padding-top: 1rem;
       display: flex; justify-content: space-between; align-items: center;
       font-size: 11px; color: #aaa; flex-wrap: wrap; gap: 8px;
     }
     .cc-footer-name { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 15px; color: #1a1a1a; }
+    .cc-footer-nav { display: flex; gap: 12px; }
+    .cc-footer-nav a { font-size: 11px; color: #888; text-decoration: none; font-weight: 600; }
+    .cc-footer-nav a:hover { color: #2C4A2E; }
   </style>
 </head>
 <body>
@@ -309,492 +277,110 @@
       <a class="cc-subscribe-btn" href="#cc-email-box" onclick="document.getElementById('cc-email-box').scrollIntoView({behavior:'smooth'}); return false;">Get the Daily Digest</a>
     </div>
     <div class="cc-masthead">
-      <h1 class="cc-site-name">Christian Curator</h1>
+      <h1><a href="/" class="cc-site-name">Christian Curator</a></h1>
       <p class="cc-tagline">The evangelical debate hub &middot; curated daily</p>
     </div>
     <nav class="cc-nav">
-      <a href="/" class="active">Today&rsquo;s Digest</a>
-      <a href="/topics/">Debate Hub</a>
-      <a href="/archive/">Archive</a>
+      <a href="/" class="active">Home</a>
+      <a href="/topics/">All Debates</a>
+      <a href="/archive/">Daily Digest</a>
     </nav>
   </div>
 
-  <!-- Debate Hub Banner -->
-  <div class="cc-debate-banner">
-    <div class="cc-debate-banner-inner">
-      <div class="cc-debate-banner-hed">36 topics &middot; every major position &middot; the key thinkers &middot; the best articles</div>
-      <div class="cc-debate-banner-cats">
-        <a href="/topics/" class="cc-debate-banner-cat">Core Theology</a>
-        <a href="/topics/" class="cc-debate-banner-cat">Church Life</a>
-        <a href="/topics/" class="cc-debate-banner-cat">Spiritual Formation</a>
-        <a href="/topics/" class="cc-debate-banner-cat">Culture &amp; Society</a>
-        <a href="/topics/" class="cc-debate-banner-all">Browse all 36 debates &rarr;</a>
-      </div>
+  <!-- Hero -->
+  <div class="cc-hero">
+    <div class="cc-hero-eyebrow">36 topics &middot; every major position &middot; the key thinkers &middot; the best articles</div>
+    <h2 class="cc-hero-hed">Every major evangelical debate, mapped.</h2>
+    <p class="cc-hero-sub">Fresh thinking on the questions that matter most &mdash; surfaced from across the evangelical world, every day.</p>
+    <div class="cc-hero-cats">
+      <a href="/topics/#core-theology" class="cc-hero-cat">Core Theology</a>
+      <a href="/topics/#church-life" class="cc-hero-cat">Church Life</a>
+      <a href="/topics/#spiritual-formation" class="cc-hero-cat">Spiritual Formation</a>
+      <a href="/topics/#culture-society" class="cc-hero-cat">Culture &amp; Society</a>
     </div>
+    <a href="/topics/" class="cc-hero-cta">Browse all 36 debates &rarr;</a>
   </div>
 
-  {# Macro: render author · source byline #}
-  {% macro byline(article) %}
-    {% set auth = article.author | default('') | trim %}
-    {% set src  = article.source_name | default('') | trim %}
-    {% if auth and auth | lower != src | lower %}
-      <span class="cc-author">{{ auth }}</span><span class="cc-meta-dot"> · </span><span class="cc-source">{{ src }}</span>
-    {% else %}
-      <span class="cc-author">{{ src }}</span>
-    {% endif %}
-  {% endmacro %}
-
-  {% set all_tags = [] %}
-  {% for article in articles %}{% for tag in article.tags %}{% if tag not in all_tags %}{% set _ = all_tags.append(tag) %}{% endif %}{% endfor %}{% endfor %}
-  {% set all_personas = [] %}
-  {% for article in articles %}{% if article.personas %}{% for p in article.personas %}{% if p not in all_personas %}{% set _ = all_personas.append(p) %}{% endif %}{% endfor %}{% endif %}{% endfor %}
-
-  {# Pre-compute sections with strict deduplication — each article appears at most once #}
-  {% set ns = namespace(seen=[articles[0].url] if articles else []) %}
-
-  {% set theology_articles = [] %}
-  {% for a in articles[1:] %}
-    {% if a.tags and 'theology' in a.tags and a.url not in ns.seen and theology_articles | length < 5 %}
-      {% set _ = theology_articles.append(a) %}
-      {% set ns.seen = ns.seen + [a.url] %}
-    {% endif %}
-  {% endfor %}
-
-  {% set culture_articles = [] %}
-  {% for a in articles[1:] %}
-    {% if a.tags and 'culture' in a.tags and a.url not in ns.seen and culture_articles | length < 5 %}
-      {% set _ = culture_articles.append(a) %}
-      {% set ns.seen = ns.seen + [a.url] %}
-    {% endif %}
-  {% endfor %}
-
-  {% set church_articles = [] %}
-  {% for a in articles[1:] %}
-    {% if a.tags and 'church life' in a.tags and a.url not in ns.seen and church_articles | length < 5 %}
-      {% set _ = church_articles.append(a) %}
-      {% set ns.seen = ns.seen + [a.url] %}
-    {% endif %}
-  {% endfor %}
-
-  {% set world_news_articles = articles[1:] | selectattr('source_type', 'equalto', 'world_news') | list %}
-
-  {% set remaining = [] %}
-  {% for a in articles[1:] %}
-    {% if a.url not in ns.seen and a.source_type != 'world_news' and remaining | length < 8 %}
-      {% set _ = remaining.append(a) %}
-    {% endif %}
-  {% endfor %}
-
-
-  <div class="cc-layout">
-
-    <!-- Main feed -->
-    <div class="cc-main">
-
-      {% if articles %}
-      {% set lead = articles[0] %}
-      <div class="cc-lead-story">
-        <div class="cc-section-label">Lead Story</div>
-        <a class="cc-lead-title" href="{{ lead.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (lead.rewritten_title or lead.title) | replace("'", "") }}', 'article_source': '{{ lead.source_name }}', 'article_url': '{{ lead.url }}'});">{{ lead.rewritten_title or lead.title }}</a>
-        <div class="cc-lead-meta">{{ byline(lead) }}</div>
-        {% if lead.summary %}
-        <p class="cc-lead-excerpt">{{ lead.summary | striptags | truncate(220) }}</p>
-        {% endif %}
-      </div>
-      {% endif %}
-
-      {% if pairings %}
-      {% for pair in pairings %}
-      <div class="cc-counterpoint-block">
-        <div class="cc-cp-label">Point / Counterpoint</div>
-        <p class="cc-cp-topic">{{ pair.topic }}</p>
-        <div class="cc-cp-grid">
-          <div class="cc-cp-side">
-            <div class="cc-cp-stance for">Point</div>
-            <a class="cc-cp-title" href="{{ pair.point_url }}" target="_blank">{{ pair.point_title }}</a>
-            <div class="cc-cp-source cc-source">{{ pair.point_source }}</div>
-          </div>
-          <div class="cc-cp-side">
-            <div class="cc-cp-stance against">Counterpoint</div>
-            <a class="cc-cp-title" href="{{ pair.counterpoint_url }}" target="_blank">{{ pair.counterpoint_title }}</a>
-            <div class="cc-cp-source cc-source">{{ pair.counterpoint_source }}</div>
-          </div>
+  {% if featured_topics %}
+  <!-- Featured Debates Today -->
+  <div class="cc-featured">
+    <div class="cc-featured-header">
+      <div class="cc-featured-header-label">In the debate today</div>
+      <div class="cc-featured-header-date">{{ date }}</div>
+    </div>
+    <div class="cc-featured-grid">
+      {% for topic in featured_topics %}
+      <div class="cc-featured-card">
+        <div class="cc-featured-cat">{{ topic.category }}</div>
+        <div class="cc-featured-name">{{ topic.name }}</div>
+        <p class="cc-featured-hook">{{ topic.hook }}</p>
+        {% if topic.articles %}
+        <div class="cc-featured-articles-label">What&rsquo;s being said</div>
+        {% for article in topic.articles[:2] %}
+        <div class="cc-featured-article">
+          <a class="cc-featured-article-title"
+             href="{{ article.url }}" target="_blank"
+             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}'});">
+            {{ article.rewritten_title or article.title }}
+          </a>
+          <span class="cc-featured-article-source">{{ article.source_name }}</span>
         </div>
+        {% endfor %}
+        {% endif %}
+        <a class="cc-featured-cta" href="/topics/{{ topic.slug }}/">Explore this debate &rarr;</a>
       </div>
       {% endfor %}
-      {% endif %}
+    </div>
+  </div>
+  {% endif %}
 
-{# Fallback: if all tag sections are empty (e.g. scoring API failed), show top articles directly #}
-      {% if not theology_articles and not culture_articles and not church_articles %}
-      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="more">
-        <div class="cc-section-label">Today's Best</div>
-        <div class="cc-article-list">
-          {% for article in articles[1:9] %}
-          <div class="cc-article" data-tags="" data-personas="">
-            <div class="cc-article-num">{{ loop.index }}</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="{{ article.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (article.rewritten_title or article.title) | replace("'", "") }}', 'article_source': '{{ article.source_name }}', 'article_url': '{{ article.url }}'});">{{ article.rewritten_title or article.title }}</a>
-              <div class="cc-article-meta">{{ byline(article) }}</div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
-
-      {% if theology_articles %}
-      <div class="cc-section-group" data-section="theology">
-        <div class="cc-section-label">Theology &amp; Doctrine</div>
-        <div class="cc-article-list">
-          {% for article in theology_articles[:5] %}
-          <div class="cc-article" data-tags="{{ article.tags | join(',') }}" data-personas="{{ article.personas | join(',') if article.personas else '' }}">
-            <div class="cc-article-num">{{ loop.index }}</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="{{ article.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (article.rewritten_title or article.title) | replace("'", "") }}', 'article_source': '{{ article.source_name }}', 'article_url': '{{ article.url }}'});">{{ article.rewritten_title or article.title }}</a>
-              <div class="cc-article-meta">{{ byline(article) }}</div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
-
-      {% if culture_articles %}
-      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="culture">
-        <div class="cc-section-label">Culture &amp; Society</div>
-        <div class="cc-article-list">
-          {% for article in culture_articles[:5] %}
-          <div class="cc-article" data-tags="{{ article.tags | join(',') }}" data-personas="{{ article.personas | join(',') if article.personas else '' }}">
-            <div class="cc-article-num">{{ loop.index }}</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="{{ article.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (article.rewritten_title or article.title) | replace("'", "") }}', 'article_source': '{{ article.source_name }}', 'article_url': '{{ article.url }}'});">{{ article.rewritten_title or article.title }}</a>
-              <div class="cc-article-meta">{{ byline(article) }}</div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
-
-      {% if research_articles %}
-      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="research">
-        <div class="cc-section-label">Research &amp; Data</div>
-        <div class="cc-section-sublabel" style="font-size:12px;color:#888;margin-bottom:0.6rem;">Persistent picks · refreshed as new research appears</div>
-        <div class="cc-article-list">
-          {% for article in research_articles %}
-          <div class="cc-article" data-tags="{{ article.tags | join(',') if article.tags else '' }}" data-personas="{{ article.personas | join(',') if article.personas else '' }}">
-            <div class="cc-article-num">{{ loop.index }}</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="{{ article.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (article.rewritten_title or article.title) | replace("'", "") }}', 'article_source': '{{ article.source_name }}', 'article_url': '{{ article.url }}'});">{{ article.rewritten_title or article.title }}</a>
-              <div class="cc-article-meta">{{ byline(article) }}</div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
-
-      {% if church_articles %}
-      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="church life">
-        <div class="cc-section-label">Church Life</div>
-        <div class="cc-article-list">
-          {% for article in church_articles[:5] %}
-          <div class="cc-article" data-tags="{{ article.tags | join(',') }}" data-personas="{{ article.personas | join(',') if article.personas else '' }}">
-            <div class="cc-article-num">{{ loop.index }}</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="{{ article.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (article.rewritten_title or article.title) | replace("'", "") }}', 'article_source': '{{ article.source_name }}', 'article_url': '{{ article.url }}'});">{{ article.rewritten_title or article.title }}</a>
-              <div class="cc-article-meta">{{ byline(article) }}</div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
-
-      {% if remaining %}
-      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="more">
-        <div class="cc-section-label">More from Today</div>
-        <div class="cc-article-list">
-          {% for article in remaining[:8] %}
-          <div class="cc-article" data-tags="{{ article.tags | join(',') }}" data-personas="{{ article.personas | join(',') if article.personas else '' }}">
-            <div class="cc-article-num">{{ loop.index }}</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="{{ article.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (article.rewritten_title or article.title) | replace("'", "") }}', 'article_source': '{{ article.source_name }}', 'article_url': '{{ article.url }}'});">{{ article.rewritten_title or article.title }}</a>
-              <div class="cc-article-meta">{{ byline(article) }}</div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
-
-      {% if world_news_articles %}
-      {% set top_story = world_news_articles | selectattr('top_world_story', 'defined') | selectattr('top_world_story') | first %}
-      {% set other_world = world_news_articles | rejectattr('top_world_story', 'defined') | list %}
-      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="world news">
-        <div class="cc-section-label">World News</div>
-        <div class="cc-article-list">
-          {% if top_story %}
-          <div class="cc-article" data-tags="{{ top_story.tags | join(',') }}" data-personas="{{ top_story.personas | join(',') if top_story.personas else '' }}" style="background:#faf9f7; border-left:3px solid #2C4A2E; padding-left:10px;">
-            <div class="cc-article-content">
-              <div style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#2C4A2E; margin-bottom:4px;">Top Story</div>
-              <a class="cc-article-title" href="{{ top_story.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (top_story.rewritten_title or top_story.title) | replace("'", "") }}', 'article_source': '{{ top_story.source_name }}', 'article_url': '{{ top_story.url }}'});">{{ top_story.rewritten_title or top_story.title }}</a>
-              <div class="cc-article-meta">{{ byline(top_story) }}</div>
-            </div>
-          </div>
-          {% endif %}
-          {% for article in other_world[:5] %}
-          <div class="cc-article" data-tags="{{ article.tags | join(',') }}" data-personas="{{ article.personas | join(',') if article.personas else '' }}">
-            <div class="cc-article-num">{{ loop.index }}</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="{{ article.url }}" target="_blank" onclick="gtag('event', 'article_click', {'article_title': '{{ (article.rewritten_title or article.title) | replace("'", "") }}', 'article_source': '{{ article.source_name }}', 'article_url': '{{ article.url }}'});">{{ article.rewritten_title or article.title }}</a>
-              <div class="cc-article-meta">{{ byline(article) }}</div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
-
+  <!-- Browse All 36 Debates -->
+  <div class="cc-browse">
+    <div class="cc-browse-header">
+      <div class="cc-browse-header-label">Browse all 36 debates</div>
+      <div class="cc-browse-header-count">4 categories</div>
     </div>
 
-    <!-- Sidebar -->
-    <div class="cc-sidebar">
-
-      {% if daily_summary %}
-      <div class="cc-sidebar-section">
-        <div class="cc-sidebar-label">Today's Pulse</div>
-        <a href="/daily/{{ daily_summary.slug }}/" style="display:block; font-family:'Lora',Georgia,serif; font-size:14px; color:#2C4A2E; text-decoration:none; line-height:1.5;">What is the church talking about today? &rarr;</a>
-      </div>
-      {% endif %}
-
-      {% if yesterday_articles %}
-      <div class="cc-sidebar-section">
-        <div class="cc-sidebar-label">Yesterday's Best</div>
-        {% for article in yesterday_articles %}
-        <div class="cc-trending-item">
-          <div class="cc-trending-num">{{ loop.index }}</div>
-          <a class="cc-trending-title" href="{{ article.url }}" target="_blank">{{ article.title }}</a>
-        </div>
+    {% for category in categories %}
+    <div class="cc-browse-cat">
+      <div class="cc-browse-cat-name">{{ category }}</div>
+      <div class="cc-browse-grid">
+        {% for topic in topics_by_category[category] %}
+        <a class="cc-browse-card" href="/topics/{{ topic.slug }}/"
+           onclick="gtag('event','topic_click',{'topic':'{{ topic.slug }}','category':'{{ topic.category }}'});">
+          <div class="cc-browse-card-name">{{ topic.name }}</div>
+          <div class="cc-browse-card-hook">{{ topic.hook }}</div>
+        </a>
         {% endfor %}
       </div>
-      {% endif %}
+    </div>
+    {% endfor %}
 
-      <div class="cc-sidebar-section">
-        <div class="cc-sidebar-label">Trending Today</div>
-        {% for article in articles[:5] %}
-        <div class="cc-trending-item">
-          <div class="cc-trending-num">{{ loop.index }}</div>
-          <a class="cc-trending-title" href="{{ article.url }}" target="_blank">{{ article.rewritten_title or article.title }}</a>
-        </div>
-        {% endfor %}
-      </div>
-
-      <!-- Debate Hub: All 36 Topic Pages -->
-      <div class="cc-sidebar-section" style="margin-top: 0.5rem;">
-        <div class="cc-sidebar-label">The Debate Hub</div>
-
-        {% if matched_topics %}
-        <div style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #e0ddd8;">
-          <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 6px;">Today&rsquo;s Related Debates</div>
-          <div style="display: flex; flex-direction: column; gap: 5px;">
-            {% for topic in matched_topics %}
-            <a href="/topics/{{ topic.slug }}/" style="font-size: 13px; color: #1a1a1a; text-decoration: none; font-weight: 600; line-height: 1.4; padding: 5px 8px; background: #f0f4f0; border-left: 3px solid #2C4A2E; border-radius: 0 3px 3px 0; display: block;">{{ topic.label }} &rarr;</a>
-            {% endfor %}
-          </div>
-        </div>
-        {% endif %}
-
-        <div style="margin-bottom: 10px;">
-          <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; margin-bottom: 5px;">Core Theology</div>
-          <div style="display: flex; flex-direction: column; gap: 4px;">
-            <a href="/topics/atonement/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">The Atonement &rarr;</a>
-            <a href="/topics/justification-by-faith/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Justification &rarr;</a>
-            <a href="/topics/biblical-inerrancy/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Biblical Inerrancy &rarr;</a>
-            <a href="/topics/sanctification/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Sanctification &rarr;</a>
-            <a href="/topics/heaven-hell-eternity/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Heaven &amp; Hell &rarr;</a>
-            <a href="/topics/suffering-and-providence/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Suffering &amp; Providence &rarr;</a>
-            <a href="/topics/prayer/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Prayer &rarr;</a>
-            <a href="/topics/gender-and-biblical-anthropology/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Gender &amp; Anthropology &rarr;</a>
-            <a href="/topics/creation-evolution/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Creation &amp; Evolution &rarr;</a>
-            <a href="/topics/baptism/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Baptism &rarr;</a>
-            <a href="/topics/lords-supper/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">The Lord&rsquo;s Supper &rarr;</a>
-            <a href="/topics/spiritual-warfare/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Spiritual Warfare &rarr;</a>
-            <a href="/topics/church-history/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Church History &rarr;</a>
-          </div>
-        </div>
-
-        <div style="margin-bottom: 10px;">
-          <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; margin-bottom: 5px;">Church Life</div>
-          <div style="display: flex; flex-direction: column; gap: 4px;">
-            <a href="/topics/local-church/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">The Local Church &rarr;</a>
-            <a href="/topics/membership/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Membership &rarr;</a>
-            <a href="/topics/church-planting/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Church Planting &rarr;</a>
-            <a href="/topics/complementarianism-egalitarianism/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Complementarianism &rarr;</a>
-            <a href="/topics/church-discipline/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Church Discipline &rarr;</a>
-            <a href="/topics/worship-and-liturgy/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Worship &amp; Liturgy &rarr;</a>
-          </div>
-        </div>
-
-        <div style="margin-bottom: 10px;">
-          <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; margin-bottom: 5px;">Spiritual Formation</div>
-          <div style="display: flex; flex-direction: column; gap: 4px;">
-            <a href="/topics/discipleship/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Discipleship &rarr;</a>
-            <a href="/topics/preaching/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Preaching &rarr;</a>
-            <a href="/topics/spiritual-disciplines/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Spiritual Disciplines &rarr;</a>
-            <a href="/topics/marriage-and-family/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Marriage &amp; Family &rarr;</a>
-            <a href="/topics/christian-parenting/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Christian Parenting &rarr;</a>
-            <a href="/topics/vocation-and-work/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Vocation &amp; Work &rarr;</a>
-            <a href="/topics/mental-health/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Mental Health &amp; Faith &rarr;</a>
-            <a href="/topics/anxiety-and-fear/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Anxiety &amp; Fear &rarr;</a>
-            <a href="/topics/fasting/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Fasting &rarr;</a>
-          </div>
-        </div>
-
-        <div style="margin-bottom: 4px;">
-          <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; margin-bottom: 5px;">Culture &amp; Society</div>
-          <div style="display: flex; flex-direction: column; gap: 4px;">
-            <a href="/topics/technology/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Technology &rarr;</a>
-            <a href="/topics/technology-and-discipleship/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Tech &amp; Discipleship &rarr;</a>
-            <a href="/topics/politics-and-the-church/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Politics &rarr;</a>
-            <a href="/topics/missions-and-evangelism/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Missions &amp; Evangelism &rarr;</a>
-            <a href="/topics/apologetics/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Apologetics &rarr;</a>
-            <a href="/topics/racial-reconciliation/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Racial Reconciliation &rarr;</a>
-            <a href="/topics/christian-ethics/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Christian Ethics &rarr;</a>
-            <a href="/topics/evangelicalism/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Evangelicalism &rarr;</a>
-          </div>
-        </div>
-
-        <p style="font-size: 11px; color: #aaa; margin-top: 8px;">36 debates mapped. <a href="/topics/" style="color: #2C4A2E; text-decoration: none; font-weight: 600;">Browse all &rarr;</a></p>
-      </div>
-
-      <!-- Archive search -->
-      <div class="cc-sidebar-section" style="margin-top: 0.5rem;">
-        <div class="cc-sidebar-label">Search Archive</div>
-        <div id="cc-search" style="--pagefind-ui-scale: 0.75; --pagefind-ui-primary: #2C4A2E; --pagefind-ui-text: #1a1a1a; --pagefind-ui-background: #faf9f7; --pagefind-ui-border: #e0ddd8; --pagefind-ui-tag: #eaf0ea; --pagefind-ui-font: 'Source Sans 3', sans-serif;"></div>
-        <p style="font-size: 11px; color: #aaa; margin-top: 6px;">
-          <a href="/archive/" style="color: #2C4A2E; text-decoration: none; font-weight: 600;">Browse full archive →</a>
-        </p>
-      </div>
-
+    <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid #e0ddd8;">
+      <a href="/topics/" style="font-size: 13px; font-weight: 600; color: #2C4A2E; text-decoration: none; letter-spacing: 0.04em;">
+        View full topic pages with positions, thinkers &amp; curated articles &rarr;
+      </a>
     </div>
   </div>
 
-  <!-- Subscribe bar -->
-  <div id="cc-email-box" style="margin-top:2.5rem;">
-    <iframe src="https://252bf73d.sibforms.com/serve/MUIFAB7CIQuc2nJNb3F3vKnSjaBpMFNDbsi6MK_4uqstTr5i_Ja7ZVdjszNLkSe5RAdysOdcY-DDVrkYlvzoy-mJZQe-oaIbRqV0BfUYd-jli69OP21lSds8gIdS9vjXfoCRPiOESVzK7HOfbM1DlLkSimp2yR1_zYHWP2ar7d7X32wq6F-eyz7cDIoZ3lyhzNGXvQDWSAd5LBtnYA==" frameborder="0" scrolling="auto" allowfullscreen style="display:block; width:100%; height:500px; max-width:540px; margin-left:auto; margin-right:auto; background-color:transparent;"></iframe>
+  <!-- Subscribe -->
+  <div id="cc-email-box" style="margin-top: 2.75rem;">
+    <iframe
+      src="https://252bf73d.sibforms.com/serve/MUIFAB7CIQuc2nJNb3F3vKnSjaBpMFNDbsi6MK_4uqstTr5i_Ja7ZVdjszNLkSe5RAdysOdcY-DDVrkYlvzoy-mJZQe-oaIbRqV0BfUYd-jli69OP21lSds8gIdS9vjXfoCRPiOESVzK7HOfbM1DlLkSimp2yR1_zYHWP2ar7d7X32wq6F-eyz7cDIoZ3lyhzNGXvQDWSAd5LBtnYA=="
+      frameborder="0" scrolling="auto" allowfullscreen
+      style="display:block; width:100%; height:500px; max-width:540px; margin-left:auto; margin-right:auto; background-color:transparent;">
+    </iframe>
   </div>
 
   <div class="cc-footer">
     <div class="cc-footer-name">Christian Curator</div>
+    <div class="cc-footer-nav">
+      <a href="/topics/">All Debates</a>
+      <a href="/archive/">Daily Digest</a>
+    </div>
     <div>All links go to original sources. We curate; they create.</div>
-    <div>ChristianCurator.com</div>
   </div>
 
 </div>
-
-<script>
-  var activeTag = 'all';
-  var activePersona = 'all';
-
-  function applyFilters() {
-    const banner = document.getElementById('cc-filter-banner');
-    const label = document.getElementById('cc-filter-label');
-    const articles = document.querySelectorAll('.cc-article');
-    const sections = document.querySelectorAll('.cc-section-group');
-
-    articles.forEach(function (a) {
-      const tags = (a.dataset.tags || '').split(',').map(function (t) { return t.trim(); });
-      const personas = (a.dataset.personas || '').split(',').map(function (t) { return t.trim(); });
-      const tagMatch = activeTag === 'all' || tags.includes(activeTag);
-      const personaMatch = activePersona === 'all' || personas.includes(activePersona);
-      a.classList.toggle('hidden', !(tagMatch && personaMatch));
-    });
-
-    sections.forEach(function (s) {
-      const visible = s.querySelectorAll('.cc-article:not(.hidden)').length;
-      s.classList.toggle('hidden', visible === 0);
-    });
-
-    // Update banner
-    if (activeTag === 'all' && activePersona === 'all') {
-      banner.classList.remove('visible');
-    } else {
-      var parts = [];
-      if (activeTag !== 'all') parts.push(activeTag);
-      if (activePersona !== 'all') parts.push(activePersona);
-      label.textContent = 'Showing: ' + parts.join(' · ');
-      banner.classList.add('visible');
-    }
-  }
-
-  function filterByTag(tag, clickedPill) {
-    document.querySelectorAll('.cc-topic-pill').forEach(function (p) { p.classList.remove('active'); });
-    clickedPill.classList.add('active');
-    activeTag = tag;
-    applyFilters();
-  }
-
-  function filterByPersona(persona, clickedPill) {
-    document.querySelectorAll('.cc-persona-pill').forEach(function (p) { p.classList.remove('active'); });
-    clickedPill.classList.add('active');
-    activePersona = persona;
-    applyFilters();
-  }
-
-  function clearFilter() {
-    activeTag = 'all';
-    activePersona = 'all';
-    const allTagPill = document.querySelector('.cc-topic-pill[data-tag="all"]');
-    const allPersonaPill = document.querySelector('.cc-persona-pill[data-persona="all"]');
-    if (allTagPill) allTagPill.classList.add('active');
-    document.querySelectorAll('.cc-topic-pill:not([data-tag="all"])').forEach(function (p) { p.classList.remove('active'); });
-    if (allPersonaPill) allPersonaPill.classList.add('active');
-    document.querySelectorAll('.cc-persona-pill:not([data-persona="all"])').forEach(function (p) { p.classList.remove('active'); });
-    document.querySelectorAll('.cc-article').forEach(function (a) { a.classList.remove('hidden'); });
-    document.querySelectorAll('.cc-section-group').forEach(function (s) { s.classList.remove('hidden'); });
-    document.getElementById('cc-filter-banner').classList.remove('visible');
-  }
-
-  // On page load: hide pills with no matching articles
-  document.addEventListener('DOMContentLoaded', function () {
-    const filterableArticles = document.querySelectorAll('.cc-article');
-
-    document.querySelectorAll('.cc-topic-pill[data-tag]').forEach(function (pill) {
-      const tag = pill.dataset.tag;
-      if (tag === 'all') return;
-      const hasMatch = Array.from(filterableArticles).some(function (a) {
-        return (a.dataset.tags || '').split(',').map(function (t) { return t.trim(); }).includes(tag);
-      });
-      if (!hasMatch) pill.style.display = 'none';
-    });
-
-    document.querySelectorAll('.cc-persona-pill[data-persona]').forEach(function (pill) {
-      const persona = pill.dataset.persona;
-      if (persona === 'all') return;
-      const hasMatch = Array.from(filterableArticles).some(function (a) {
-        return (a.dataset.personas || '').split(',').map(function (t) { return t.trim(); }).includes(persona);
-      });
-      if (!hasMatch) pill.style.display = 'none';
-    });
-  });
-</script>
-
-<!-- Pagefind search init -->
-<script src="/_pagefind/pagefind-ui.js"></script>
-<script>
-  window.addEventListener('DOMContentLoaded', function () {
-    if (window.PagefindUI) {
-      new PagefindUI({
-        element: "#cc-search",
-        showSubResults: false,
-        showImages: false,
-        resetStyles: false,
-        excerptLength: 10,
-        placeholder: "Search past issues…",
-      });
-    }
-  });
-</script>
 </body>
 </html>

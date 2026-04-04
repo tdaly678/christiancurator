@@ -97,6 +97,8 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
                 daily_summary: dict = None, research_articles: list[dict] = None):
     """Render index.html from template.html using Jinja2."""
     from frontend.topic_matcher import match_topics
+    from curator.topic_classifier import classify_articles, compute_featured_topics
+    from frontend.topics_data import TOPICS, TOPICS_BY_CATEGORY, CATEGORIES
 
     env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
     env.tests['contains'] = lambda value, item: item in (value or [])
@@ -114,11 +116,18 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         for p in pairings
     ]
 
-    # Match today's articles and themes to relevant deep-dive topic pages
+    # Match today's articles and themes to relevant deep-dive topic pages (legacy sidebar)
     matched_topics = match_topics(articles, daily_summary)
     if matched_topics:
         labels = ", ".join(t["label"] for t in matched_topics)
         print(f"  Topic matcher: surfacing '{labels}'")
+
+    # Classify articles against the 36 debate topics → compute featured topics for homepage
+    classify_articles(articles)
+    featured_topics = compute_featured_topics(articles, top_n=3)
+    if featured_topics:
+        labels = ", ".join(t["name"] for t in featured_topics)
+        print(f"  Featured debates today: {labels}")
 
     html = template.render(
         articles=articles,
@@ -128,6 +137,10 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         daily_summary=daily_summary,
         research_articles=research_articles or load_research_articles(),
         matched_topics=matched_topics,
+        featured_topics=featured_topics,
+        all_topics=TOPICS,
+        topics_by_category=TOPICS_BY_CATEGORY,
+        categories=CATEGORIES,
     )
 
     with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
