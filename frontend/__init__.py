@@ -887,10 +887,8 @@ def regenerate_sitemap():
                     "never", "0.6", day_dir.name,
                 ))
 
-    # Topics index + individual topic pages
+    # Individual topic pages (topics/index.html redirects to home — excluded from sitemap)
     if TOPICS_DIR.exists():
-        if (TOPICS_DIR / "index.html").exists():
-            entries.append(("https://www.christiancurator.com/topics/", "weekly", "0.9", today_iso))
         for topic_dir in sorted(TOPICS_DIR.iterdir()):
             if topic_dir.is_dir() and (topic_dir / "index.html").exists():
                 entries.append((
