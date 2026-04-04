@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christian Curator — Evangelical Debates &amp; Daily Digest</title>
-  <meta name="description" content="The evangelical debate hub — 36 topics, every major position, the key thinkers, the best articles. Plus a daily digest of the best evangelical writing from TGC, Desiring God, Ligonier, and more." />
+  <title>Christian Curator — Evangelical Perspectives &amp; Daily Digest</title>
+  <meta name="description" content="Clarity on the conversations shaping evangelical Christianity. Curated perspectives on theology, church life, culture, and more — organized and surfaced daily." />
   <link rel="canonical" href="https://www.christiancurator.com/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Christian Curator" />
-  <meta property="og:title" content="Christian Curator — Evangelical Debates &amp; Daily Digest" />
-  <meta property="og:description" content="The evangelical debate hub — 36 topics, every major position, the key thinkers, the best articles." />
+  <meta property="og:title" content="Christian Curator — Evangelical Perspectives &amp; Daily Digest" />
+  <meta property="og:description" content="Clarity on the conversations shaping evangelical Christianity. Curated perspectives on theology, church life, culture, and more." />
   <meta property="og:url" content="https://www.christiancurator.com/" />
   <meta property="og:image" content="https://www.christiancurator.com/og-image.png" />
   <meta property="og:image:width" content="1200" />
@@ -19,8 +19,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Christian Curator — Evangelical Debates &amp; Daily Digest" />
-  <meta name="twitter:description" content="36 evangelical debates mapped — every major position, the key thinkers, the best articles. Updated daily." />
+  <meta name="twitter:title" content="Christian Curator — Evangelical Perspectives &amp; Daily Digest" />
+  <meta name="twitter:description" content="Clarity on the conversations shaping evangelical Christianity. Curated perspectives, surfaced daily." />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -29,7 +29,7 @@
     "@type": "WebSite",
     "name": "Christian Curator",
     "url": "https://www.christiancurator.com/",
-    "description": "The evangelical debate hub — 36 topics, every major position, the key thinkers, the best articles.",
+    "description": "Clarity on the conversations shaping evangelical Christianity. Curated perspectives on theology, church life, culture, and more.",
     "publisher": {
       "@type": "Organization",
       "name": "Christian Curator"
@@ -94,63 +94,49 @@
     .cc-nav a:hover { color: #2C4A2E; }
     .cc-nav a.active { color: #1a1a1a; border-bottom: 2px solid #1a1a1a; padding-bottom: 2px; }
 
-    /* ── Section label (shared) ──────────────────────────────────── */
-    .cc-section-label {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
-      text-transform: uppercase; color: #2C4A2E; margin: 0 0 10px;
+    /* ── Welcome section ─────────────────────────────────────────── */
+    .cc-welcome {
+      border-bottom: 1px solid #e0ddd8;
+      padding: 2rem 0 1.75rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
     }
-
-    /* ── Hero ────────────────────────────────────────────────────── */
-    .cc-hero {
-      background: #1a1a1a; color: #fff;
-      text-align: center; padding: 2.75rem 1.5rem 2.5rem;
-      margin: 0 -20px; /* bleed to edge within root */
+    .cc-welcome-hed {
+      font-family: 'Lora', Georgia, serif; font-size: 30px; font-weight: 600;
+      line-height: 1.25; color: #1a1a1a; margin-bottom: 0.6rem;
     }
-    .cc-hero-eyebrow {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
-      color: #b5ccb8; margin-bottom: 1rem;
+    .cc-welcome-sub {
+      font-size: 14.5px; color: #666; line-height: 1.65; max-width: 560px;
     }
-    .cc-hero-hed {
-      font-family: 'Lora', Georgia, serif; font-size: 34px; font-weight: 600;
-      line-height: 1.2; color: #fff; margin-bottom: 0.75rem;
+    .cc-welcome-nav {
+      display: flex; flex-direction: column; gap: 7px; align-items: flex-end; min-width: 160px;
     }
-    .cc-hero-sub {
-      font-size: 14px; color: #b5ccb8; margin-bottom: 1.75rem;
-      max-width: 540px; margin-left: auto; margin-right: auto; line-height: 1.6;
+    .cc-welcome-cat {
+      font-size: 12px; font-weight: 600; color: #2C4A2E; text-decoration: none;
+      padding: 5px 14px; border: 1.5px solid #2C4A2E; border-radius: 20px;
+      white-space: nowrap; transition: background 0.12s;
     }
-    .cc-hero-cats {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 1.5rem;
-    }
-    .cc-hero-cat {
-      font-size: 12px; font-weight: 600; color: #fff; text-decoration: none;
-      padding: 5px 14px; border: 1px solid #444; border-radius: 20px;
-      transition: background 0.15s, border-color 0.15s;
-    }
-    .cc-hero-cat:hover { background: #2C4A2E; border-color: #2C4A2E; }
-    .cc-hero-cta {
-      display: inline-block; font-size: 13px; font-weight: 600;
-      color: #fff; text-decoration: none;
-      background: #2C4A2E; padding: 9px 22px; border-radius: 3px;
-      letter-spacing: 0.04em;
-    }
-    .cc-hero-cta:hover { background: #3a5f3c; }
-    @media (max-width: 700px) {
-      .cc-hero-hed { font-size: 26px; }
-      .cc-hero { padding: 2rem 1rem; }
+    .cc-welcome-cat:hover { background: #2C4A2E; color: #fff; }
+    @media (max-width: 660px) {
+      .cc-welcome { grid-template-columns: 1fr; }
+      .cc-welcome-nav { flex-direction: row; flex-wrap: wrap; align-items: flex-start; }
+      .cc-welcome-hed { font-size: 24px; }
       .cc-site-name { font-size: 32px; }
     }
 
-    /* ── Featured debates section ─────────────────────────────────── */
-    .cc-featured { margin: 2.25rem 0 0; }
+    /* ── Featured topics ─────────────────────────────────────────── */
+    .cc-featured { margin-top: 2rem; }
     .cc-featured-header {
       display: flex; align-items: baseline; justify-content: space-between;
       border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.25rem;
     }
-    .cc-featured-header-label {
+    .cc-featured-label {
       font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
       text-transform: uppercase; color: #1a1a1a;
     }
-    .cc-featured-header-date { font-size: 11px; color: #aaa; }
+    .cc-featured-date { font-size: 11px; color: #aaa; }
 
     .cc-featured-grid {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
@@ -163,8 +149,9 @@
       background: #fff; display: flex; flex-direction: column;
       transition: border-color 0.15s, box-shadow 0.15s;
     }
-    .cc-featured-card:hover { border-color: #2C4A2E; box-shadow: 0 2px 8px rgba(44,74,46,0.08); }
-
+    .cc-featured-card:hover {
+      border-color: #2C4A2E; box-shadow: 0 2px 8px rgba(44,74,46,0.08);
+    }
     .cc-featured-cat {
       font-size: 9.5px; font-weight: 600; text-transform: uppercase;
       letter-spacing: 0.14em; color: #2C4A2E; margin-bottom: 6px;
@@ -182,9 +169,7 @@
       font-size: 9.5px; font-weight: 600; letter-spacing: 0.12em;
       text-transform: uppercase; color: #aaa; margin-bottom: 7px;
     }
-    .cc-featured-article {
-      padding: 5px 0; border-top: 1px solid #f0ede8;
-    }
+    .cc-featured-article { padding: 5px 0; border-top: 1px solid #f0ede8; }
     .cc-featured-article:first-of-type { border-top: none; }
     .cc-featured-article-title {
       font-size: 12.5px; color: #1a1a1a; text-decoration: none;
@@ -193,7 +178,6 @@
     }
     .cc-featured-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
     .cc-featured-article-source { font-size: 10.5px; color: #aaa; }
-
     .cc-featured-cta {
       display: block; font-size: 12.5px; font-weight: 600; color: #2C4A2E;
       text-decoration: none; margin-top: 12px; padding-top: 10px;
@@ -204,34 +188,27 @@
     /* ── Browse grid ─────────────────────────────────────────────── */
     .cc-browse { margin-top: 2.75rem; }
     .cc-browse-header {
-      display: flex; align-items: baseline; justify-content: space-between;
       border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.75rem;
     }
     .cc-browse-header-label {
       font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
       text-transform: uppercase; color: #1a1a1a;
     }
-    .cc-browse-header-count { font-size: 11px; color: #aaa; }
-
     .cc-browse-cat { margin-bottom: 2rem; }
     .cc-browse-cat-name {
       font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: #aaa;
-      margin-bottom: 0.75rem;
+      text-transform: uppercase; color: #aaa; margin-bottom: 0.75rem;
     }
     .cc-browse-grid {
       display: grid; grid-template-columns: repeat(auto-fill, minmax(195px, 1fr)); gap: 10px;
     }
     @media (max-width: 560px) { .cc-browse-grid { grid-template-columns: 1fr 1fr; } }
-
     .cc-browse-card {
       border: 1px solid #e0ddd8; border-radius: 4px;
       padding: 11px 13px; text-decoration: none; background: #fff;
       display: block; transition: border-color 0.15s, box-shadow 0.15s;
     }
-    .cc-browse-card:hover {
-      border-color: #2C4A2E; box-shadow: 0 1px 5px rgba(44,74,46,0.1);
-    }
+    .cc-browse-card:hover { border-color: #2C4A2E; box-shadow: 0 1px 5px rgba(44,74,46,0.1); }
     .cc-browse-card-name {
       font-family: 'Lora', Georgia, serif; font-size: 13.5px; font-weight: 600;
       color: #1a1a1a; line-height: 1.3; margin-bottom: 4px;
@@ -243,17 +220,6 @@
 
     /* ── Email box ───────────────────────────────────────────────── */
     .cc-email-box { background: #EFF4F0; border: 1px solid #B5CCB8; border-radius: 6px; padding: 1rem; }
-    .cc-email-box p { font-size: 13px; color: #2C4A2E; margin: 0 0 10px; line-height: 1.55; }
-    .cc-email-input {
-      width: 100%; border: 1px solid #B5CCB8; border-radius: 3px; padding: 7px 10px;
-      font-size: 13px; font-family: 'Source Sans 3', sans-serif; background: #fff; color: #1a1a1a; margin-bottom: 7px;
-    }
-    .cc-email-submit {
-      width: 100%; background: #2C4A2E; color: #fff; border: none; padding: 9px;
-      font-size: 13px; font-weight: 600; border-radius: 3px; cursor: pointer;
-      font-family: 'Source Sans 3', sans-serif; letter-spacing: 0.04em;
-    }
-    .cc-email-submit:hover { background: #3a5f3c; }
 
     /* ── Footer ──────────────────────────────────────────────────── */
     .cc-footer {
@@ -278,35 +244,35 @@
     </div>
     <div class="cc-masthead">
       <h1><a href="/" class="cc-site-name">Christian Curator</a></h1>
-      <p class="cc-tagline">The evangelical debate hub &middot; curated daily</p>
+      <p class="cc-tagline">Curated perspectives &middot; updated daily</p>
     </div>
     <nav class="cc-nav">
       <a href="/" class="active">Home</a>
-      <a href="/topics/">All Debates</a>
+      <a href="/topics/">Topics</a>
       <a href="/archive/">Daily Digest</a>
     </nav>
   </div>
 
-  <!-- Hero -->
-  <div class="cc-hero">
-    <div class="cc-hero-eyebrow">36 topics &middot; every major position &middot; the key thinkers &middot; the best articles</div>
-    <h2 class="cc-hero-hed">Every major evangelical debate, mapped.</h2>
-    <p class="cc-hero-sub">Fresh thinking on the questions that matter most &mdash; surfaced from across the evangelical world, every day.</p>
-    <div class="cc-hero-cats">
-      <a href="/topics/#core-theology" class="cc-hero-cat">Core Theology</a>
-      <a href="/topics/#church-life" class="cc-hero-cat">Church Life</a>
-      <a href="/topics/#spiritual-formation" class="cc-hero-cat">Spiritual Formation</a>
-      <a href="/topics/#culture-society" class="cc-hero-cat">Culture &amp; Society</a>
+  <!-- Welcome -->
+  <div class="cc-welcome">
+    <div>
+      <h2 class="cc-welcome-hed">Clarity on the conversations shaping evangelical Christianity.</h2>
+      <p class="cc-welcome-sub">The questions Christians are wrestling with &mdash; organized by topic, every major perspective represented, the key thinkers identified, and the best writing surfaced daily.</p>
     </div>
-    <a href="/topics/" class="cc-hero-cta">Browse all 36 debates &rarr;</a>
+    <div class="cc-welcome-nav">
+      <a href="/topics/#core-theology" class="cc-welcome-cat">Core Theology</a>
+      <a href="/topics/#church-life" class="cc-welcome-cat">Church Life</a>
+      <a href="/topics/#spiritual-formation" class="cc-welcome-cat">Spiritual Formation</a>
+      <a href="/topics/#culture-society" class="cc-welcome-cat">Culture &amp; Society</a>
+    </div>
   </div>
 
   {% if featured_topics %}
-  <!-- Featured Debates Today -->
+  <!-- In the conversation today -->
   <div class="cc-featured">
     <div class="cc-featured-header">
-      <div class="cc-featured-header-label">In the debate today</div>
-      <div class="cc-featured-header-date">{{ date }}</div>
+      <div class="cc-featured-label">In the conversation today</div>
+      <div class="cc-featured-date">{{ date }}</div>
     </div>
     <div class="cc-featured-grid">
       {% for topic in featured_topics %}
@@ -315,7 +281,7 @@
         <div class="cc-featured-name">{{ topic.name }}</div>
         <p class="cc-featured-hook">{{ topic.hook }}</p>
         {% if topic.articles %}
-        <div class="cc-featured-articles-label">What&rsquo;s being said</div>
+        <div class="cc-featured-articles-label">What&rsquo;s being written about this</div>
         {% for article in topic.articles[:2] %}
         <div class="cc-featured-article">
           <a class="cc-featured-article-title"
@@ -327,18 +293,17 @@
         </div>
         {% endfor %}
         {% endif %}
-        <a class="cc-featured-cta" href="/topics/{{ topic.slug }}/">Explore this debate &rarr;</a>
+        <a class="cc-featured-cta" href="/topics/{{ topic.slug }}/">Explore this topic &rarr;</a>
       </div>
       {% endfor %}
     </div>
   </div>
   {% endif %}
 
-  <!-- Browse All 36 Debates -->
+  <!-- Browse all topics -->
   <div class="cc-browse">
     <div class="cc-browse-header">
-      <div class="cc-browse-header-label">Browse all 36 debates</div>
-      <div class="cc-browse-header-count">4 categories</div>
+      <div class="cc-browse-header-label">Explore all topics</div>
     </div>
 
     {% for category in categories %}
@@ -356,15 +321,15 @@
     </div>
     {% endfor %}
 
-    <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid #e0ddd8;">
-      <a href="/topics/" style="font-size: 13px; font-weight: 600; color: #2C4A2E; text-decoration: none; letter-spacing: 0.04em;">
-        View full topic pages with positions, thinkers &amp; curated articles &rarr;
+    <div style="text-align:center; margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid #e0ddd8;">
+      <a href="/topics/" style="font-size:13px; font-weight:600; color:#2C4A2E; text-decoration:none; letter-spacing:0.04em;">
+        View full topic pages with perspectives, key thinkers &amp; curated reading &rarr;
       </a>
     </div>
   </div>
 
   <!-- Subscribe -->
-  <div id="cc-email-box" style="margin-top: 2.75rem;">
+  <div id="cc-email-box" style="margin-top:2.75rem;">
     <iframe
       src="https://252bf73d.sibforms.com/serve/MUIFAB7CIQuc2nJNb3F3vKnSjaBpMFNDbsi6MK_4uqstTr5i_Ja7ZVdjszNLkSe5RAdysOdcY-DDVrkYlvzoy-mJZQe-oaIbRqV0BfUYd-jli69OP21lSds8gIdS9vjXfoCRPiOESVzK7HOfbM1DlLkSimp2yR1_zYHWP2ar7d7X32wq6F-eyz7cDIoZ3lyhzNGXvQDWSAd5LBtnYA=="
       frameborder="0" scrolling="auto" allowfullscreen
@@ -375,7 +340,7 @@
   <div class="cc-footer">
     <div class="cc-footer-name">Christian Curator</div>
     <div class="cc-footer-nav">
-      <a href="/topics/">All Debates</a>
+      <a href="/topics/">Topics</a>
       <a href="/archive/">Daily Digest</a>
     </div>
     <div>All links go to original sources. We curate; they create.</div>
