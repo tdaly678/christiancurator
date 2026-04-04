@@ -89,6 +89,29 @@
     .cc-topics-grid { display: flex; flex-wrap: wrap; gap: 8px; }
     .cc-topic-link { font-size: 12px; padding: 5px 12px; border: 1px solid #e0ddd8; border-radius: 20px; color: #444; text-decoration: none; font-weight: 600; background: #fff; }
     .cc-topic-link:hover, .cc-topic-link.active { background: #2C4A2E; color: #fff; border-color: #2C4A2E; }
+
+    /* Controversy Section */
+    .cc-controversy { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 2px solid #e0ddd8; margin-bottom: 2.5rem; }
+    .cc-controversy-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #8B1A1A; margin-bottom: 0.5rem; }
+    .cc-controversy-title { font-family: 'Lora', Georgia, serif; font-size: 24px; font-weight: 600; margin-bottom: 0.75rem; color: #1a1a1a; }
+    .cc-controversy-intro { font-size: 15px; color: #444; line-height: 1.75; margin-bottom: 1.75rem; }
+    .cc-debate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+    .cc-debate-grid.three-way { grid-template-columns: 1fr 1fr 1fr; }
+    .cc-debate-side { border: 1px solid #e0ddd8; border-radius: 6px; padding: 1.25rem; background: #fff; }
+    .cc-debate-side.side-a { border-top: 3px solid #2C4A2E; }
+    .cc-debate-side.side-b { border-top: 3px solid #8B4513; }
+    .cc-debate-side.side-c { border-top: 3px solid #4A4A8B; }
+    .cc-debate-position { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .cc-debate-side.side-a .cc-debate-position { color: #2C4A2E; }
+    .cc-debate-side.side-b .cc-debate-position { color: #8B4513; }
+    .cc-debate-side.side-c .cc-debate-position { color: #4A4A8B; }
+    .cc-debate-name { font-family: 'Lora', Georgia, serif; font-size: 16px; font-weight: 600; margin-bottom: 0.35rem; line-height: 1.3; }
+    .cc-debate-thinkers { font-size: 12px; color: #888; margin-bottom: 0.75rem; font-style: italic; }
+    .cc-debate-argument { font-size: 14px; color: #3a3a3a; line-height: 1.65; margin-bottom: 0.85rem; }
+    .cc-debate-reads-label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; margin-bottom: 0.35rem; }
+    .cc-debate-reads a { display: block; color: #2C4A2E; text-decoration: none; font-size: 12px; font-weight: 600; margin-bottom: 3px; }
+    .cc-debate-reads a:hover { text-decoration: underline; }
+    @media (max-width: 580px) { .cc-debate-grid, .cc-debate-grid.three-way { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -173,7 +196,7 @@
     <p>The pastoral implication is urgent: churches that treat attendance as optional and membership as bureaucratic will continue to see people drift. Churches that articulate and embody a robust theology of the gathered people of God give people something worth staying for — and something worth coming back to.</p>
   </div>
 
-    <div class="cc-topics-strip">
+      <div class="cc-topics-strip">
     <div class="cc-topics-strip-label">Explore All Topics</div>
     <div class="cc-topics-category">
       <div class="cc-topics-cat-label">Core Theology</div>
@@ -187,6 +210,10 @@
         <a href="/topics/prayer/" class="cc-topic-link">Prayer</a>
         <a href="/topics/gender-and-biblical-anthropology/" class="cc-topic-link">Gender &amp; Anthropology</a>
         <a href="/topics/creation-evolution/" class="cc-topic-link">Creation &amp; Evolution</a>
+        <a href="/topics/baptism/" class="cc-topic-link">Baptism</a>
+        <a href="/topics/lords-supper/" class="cc-topic-link">The Lord&rsquo;s Supper</a>
+        <a href="/topics/spiritual-warfare/" class="cc-topic-link">Spiritual Warfare</a>
+        <a href="/topics/church-history/" class="cc-topic-link">Church History</a>
       </div>
     </div>
     <div class="cc-topics-category">
@@ -194,11 +221,10 @@
       <div class="cc-topics-grid">
         <a href="/topics/local-church/" class="cc-topic-link active">The Local Church</a>
         <a href="/topics/membership/" class="cc-topic-link">Membership</a>
-        <a href="/topics/church-planting/" class="cc-topic-link">Church Planting &amp; Revitalization</a>
+        <a href="/topics/church-planting/" class="cc-topic-link">Church Planting</a>
         <a href="/topics/complementarianism-egalitarianism/" class="cc-topic-link">Complementarianism</a>
-        <span class="cc-topic-link coming-soon">Baptism</span>
-        <span class="cc-topic-link coming-soon">Church Discipline</span>
-        <span class="cc-topic-link coming-soon">Lord&rsquo;s Supper</span>
+        <a href="/topics/church-discipline/" class="cc-topic-link">Church Discipline</a>
+        <a href="/topics/worship-and-liturgy/" class="cc-topic-link">Worship &amp; Liturgy</a>
       </div>
     </div>
     <div class="cc-topics-category">
@@ -211,6 +237,8 @@
         <a href="/topics/christian-parenting/" class="cc-topic-link">Christian Parenting</a>
         <a href="/topics/vocation-and-work/" class="cc-topic-link">Vocation &amp; Work</a>
         <a href="/topics/mental-health/" class="cc-topic-link">Mental Health &amp; Faith</a>
+        <a href="/topics/anxiety-and-fear/" class="cc-topic-link">Anxiety &amp; Fear</a>
+        <a href="/topics/fasting/" class="cc-topic-link">Fasting</a>
       </div>
     </div>
     <div class="cc-topics-category">
@@ -222,6 +250,8 @@
         <a href="/topics/missions-and-evangelism/" class="cc-topic-link">Missions &amp; Evangelism</a>
         <a href="/topics/apologetics/" class="cc-topic-link">Apologetics</a>
         <a href="/topics/racial-reconciliation/" class="cc-topic-link">Racial Reconciliation</a>
+        <a href="/topics/christian-ethics/" class="cc-topic-link">Christian Ethics</a>
+        <a href="/topics/evangelicalism/" class="cc-topic-link">Evangelicalism</a>
       </div>
     </div>
   </div>
