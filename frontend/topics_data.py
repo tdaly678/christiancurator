@@ -426,6 +426,116 @@ TOPICS = [
             "SBC", "southern baptist", "NAE", "evangelical crisis",
         ],
     },
+    {
+        "slug": "predestination-free-will",
+        "name": "Predestination & Free Will",
+        "category": "Core Theology",
+        "hook": "Is salvation ultimately determined by God's sovereign choice or the human will's free response — and what are the stakes of getting this question right?",
+        "keywords": [
+            "predestination", "election", "calvinism", "arminianism", "free will",
+            "sovereignty", "TULIP", "Reformed", "Molinism", "unconditional election",
+            "middle knowledge", "libertarian freedom", "divine foreknowledge",
+        ],
+    },
+    {
+        "slug": "holy-spirit-spiritual-gifts",
+        "name": "The Holy Spirit & Spiritual Gifts",
+        "category": "Core Theology",
+        "hook": "Do miraculous spiritual gifts like tongues and prophecy continue today, or did they cease with the apostolic age — and how does the answer shape Christian life and worship?",
+        "keywords": [
+            "holy spirit", "spiritual gifts", "tongues", "prophecy", "gifts of the spirit",
+            "cessationism", "continuationism", "baptism in the holy spirit",
+            "charismatic", "pentecostal", "apostolic gifts", "healing",
+        ],
+    },
+    {
+        "slug": "the-trinity",
+        "name": "The Trinity",
+        "category": "Core Theology",
+        "hook": "What does it mean that God is one being in three persons — and why does Trinitarian theology matter for prayer, salvation, and everyday Christian life?",
+        "keywords": [
+            "trinity", "trinitarian", "three in one", "father son holy spirit",
+            "subordinationism", "social trinitarianism", "substance", "persons",
+            "perichoresis", "divine nature", "godhead", "triune god",
+        ],
+    },
+    {
+        "slug": "christian-nationalism",
+        "name": "Christian Nationalism",
+        "category": "Culture & Society",
+        "hook": "What is Christian nationalism, why is it attracting evangelical support, and how does it differ from faithful Christian political engagement?",
+        "keywords": [
+            "christian nationalism", "nationalism", "christendom", "christian civilization",
+            "christian right", "political power", "kingdom of god", "two kingdoms",
+            "cultural christianity", "post-christian", "religious liberty",
+        ],
+    },
+    {
+        "slug": "faith-deconstruction",
+        "name": "Deconstruction & Faith",
+        "category": "Spiritual Formation",
+        "hook": "When Christians begin questioning their beliefs, what does faithful deconstruction look like — and how should churches and pastors respond?",
+        "keywords": [
+            "deconstruction", "deconversion", "faith crisis", "questioning faith",
+            "leaving evangelicalism", "religious trauma", "faith doubt", "apostasy",
+            "doubting believer", "evangelical trauma", "reconstructing faith",
+        ],
+    },
+    {
+        "slug": "biblical-sexuality",
+        "name": "Biblical Sexuality",
+        "category": "Culture & Society",
+        "hook": "What does Scripture teach about same-sex attraction, marriage, and sexual identity — and how should evangelical churches care for LGBTQ+ neighbors and members?",
+        "keywords": [
+            "sexuality", "same-sex", "LGBTQ", "homosexuality", "gender identity",
+            "sexual ethics", "traditional marriage", "sexual orientation",
+            "conversion therapy", "celibacy", "affirming churches",
+        ],
+    },
+    {
+        "slug": "church-accountability",
+        "name": "Pastoral Accountability",
+        "category": "Church Life",
+        "hook": "How should evangelical churches build structures that protect the vulnerable, hold leaders accountable, and prevent the abuse of power?",
+        "keywords": [
+            "pastoral abuse", "accountability", "church discipline", "abuse prevention",
+            "leadership structure", "elder boards", "abuse", "misconduct",
+            "victim protection", "clergy abuse", "spiritual abuse",
+        ],
+    },
+    {
+        "slug": "contemplative-prayer",
+        "name": "Contemplative Prayer",
+        "category": "Spiritual Formation",
+        "hook": "Are contemplative practices like centering prayer and lectio divina a rich retrieval of Christian tradition — or a dangerous import of mystical techniques incompatible with evangelical theology?",
+        "keywords": [
+            "contemplative prayer", "centering prayer", "lectio divina", "mysticism",
+            "contemplation", "meditation", "listening to god", "silence",
+            "prayer of examen", "contemplative spirituality", "mystical theology",
+        ],
+    },
+    {
+        "slug": "ai-and-the-church",
+        "name": "Artificial Intelligence & the Church",
+        "category": "Culture & Society",
+        "hook": "How should Christians think about AI's impact on ministry, human dignity, creative work, and what it means to be made in the image of God?",
+        "keywords": [
+            "artificial intelligence", "AI", "chatGPT", "machine learning",
+            "technology", "automation", "human dignity", "image of god",
+            "algorithmic", "digital ministry", "technology and faith",
+        ],
+    },
+    {
+        "slug": "biblical-justice",
+        "name": "Biblical Justice & the Social Gospel",
+        "category": "Culture & Society",
+        "hook": "What is the evangelical responsibility toward the poor and oppressed — and how do we distinguish biblical justice from a social gospel that eclipses the gospel itself?",
+        "keywords": [
+            "justice", "social justice", "poverty", "poor", "oppressed",
+            "social gospel", "systemic injustice", "prophetic", "inequality",
+            "racial justice", "economic justice", "biblical justice",
+        ],
+    },
 ]
 
 # Index by slug for fast lookups
