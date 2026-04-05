@@ -5,47 +5,24 @@
     "source_type": "christian",
     "independent": false,
     "author": "Reem Nadeem",
-    "title": "How appealing are electric vehicles and hybrids to Americans?",
-    "url": "https://www.pewresearch.org/science/2026/04/03/how-appealing-are-electric-vehicles-and-hybrids-to-americans/",
-    "summary": "Key takeaways: About a third of Americans say they would very or somewhat seriously consider purchasing an electric vehicle as their next vehicle. This is a similar share as last year but down from 42% in 2022. Roughly half (53%) say they are not too or not at all likely to seriously consider purchasing an [&#8230;]",
-    "published": "Fri, 03 Apr 2026 15:59:22 +0000",
-    "fetched_at": "2026-04-04T08:01:56.027135",
-    "score": 4,
-    "tags": [
-      "data"
-    ],
-    "rewritten_title": "American Interest in Electric Vehicles Declines to One-Third",
-    "personas": [
-      "professional"
-    ],
-    "topic_cluster": "ev_vehicle_adoption",
-    "perspective": "neutral",
-    "final_score": 5.5,
-    "recency_boost": 1.5
-  },
-  {
-    "source_name": "Pew Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Reem Nadeem",
     "title": "Americans’ Shifting Views on Energy Issues",
     "url": "https://www.pewresearch.org/science/2026/04/03/americans-shifting-views-on-energy-issues/",
     "summary": "The share of Republicans who say the country should prioritize oil, coal and natural gas over wind and solar power has doubled to 71% over the last six years.",
     "published": "Fri, 03 Apr 2026 15:59:21 +0000",
-    "fetched_at": "2026-04-04T08:01:56.027140",
+    "fetched_at": "2026-04-05T08:05:05.249367",
     "score": 4,
     "tags": [
-      "data"
+      "data",
+      "politics"
     ],
-    "rewritten_title": "Republican Support for Fossil Fuels Over Renewables Doubles to 71%",
+    "rewritten_title": "Republican Support for Fossil Fuels Over Renewables Doubles in Six Years",
     "personas": [
       "professional"
     ],
     "topic_cluster": "energy_policy_views",
     "perspective": "neutral",
     "final_score": 4.75,
-    "recency_boost": 1.5
+    "recency_boost": 0.75
   },
   {
     "source_name": "Ryan Burge",
@@ -57,20 +34,44 @@
     "url": "https://www.graphsaboutreligion.com/p/the-growing-gap-in-church-membership",
     "summary": "Who joins a church &#8212; and why it matters more than you think",
     "published": "Thu, 02 Apr 2026 11:30:40 GMT",
-    "fetched_at": "2026-04-04T08:01:52.064006",
+    "fetched_at": "2026-04-05T08:05:04.451903",
     "score": 4,
     "tags": [
       "data"
     ],
-    "rewritten_title": "Church Membership Declining: Why It Matters for Faith Communities",
+    "rewritten_title": "Church Membership Decline: Understanding Who's Missing and Why",
     "personas": [
       "pastor"
     ],
     "topic_cluster": "church_membership_trends",
     "perspective": "neutral",
     "previously_shown": true,
-    "final_score": 2.75,
-    "recency_boost": 0.75,
+    "final_score": 2.25,
+    "recency_boost": 0.25,
     "independent_floor_boosted": true
+  },
+  {
+    "source_name": "Pew Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Beshay",
+    "title": "How Americans view Trump’s handling of trade and tariffs",
+    "url": "https://www.pewresearch.org/short-reads/2026/04/01/how-americans-view-trumps-handling-of-trade-and-tariffs/",
+    "summary": "Nearly six-in-ten U.S. adults are not confident that Trump can make good decisions about trade policy. Views of trade between the U.S. and China, Canada and Mexico have shifted since 2025.",
+    "published": "Wed, 01 Apr 2026 18:51:17 +0000",
+    "fetched_at": "2026-04-05T08:05:05.249373",
+    "score": 4,
+    "tags": [
+      "politics",
+      "data"
+    ],
+    "rewritten_title": "Americans' Confidence in Trump's Trade Policy Decisions Declines",
+    "personas": [
+      "professional"
+    ],
+    "topic_cluster": "trump_trade_policy",
+    "perspective": "news",
+    "final_score": 1.25
   }
 ]
