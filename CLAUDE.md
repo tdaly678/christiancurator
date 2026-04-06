@@ -12,7 +12,7 @@ Curate evangelical Christian content from across the web and become the #1 autho
 ## Architecture
 - `docs/` — all static HTML served by GitHub Pages
   - `docs/index.html` — homepage (featured topic cards + curated headlines + browse grid)
-  - `docs/digest/index.html` — Daily Digest page (same layout as homepage, re-rendered daily)
+  - `docs/digest/index.html` — Daily Digest page (featured topic cards + today's top 10 + yesterday's top 10, re-rendered daily)
   - `docs/archive/index.html` — Archive index listing all past days
   - `docs/archive/YYYY-MM-DD/index.html` — per-day archive snapshots
   - `docs/topics/[slug]/index.html` — 46 topic pages
@@ -30,6 +30,7 @@ Curate evangelical Christian content from across the web and become the #1 autho
 - `fetcher/` — RSS/web fetching
 - `main.py` — main pipeline entry point
 - `regenerate_daily.py` — re-render pages from cached articles (requires Claude API for daily summary)
+- `/tmp/rerender_only.py` — minimal re-render script (no Claude API needed; recreate each session from session notes)
 
 ## Git Push Workaround
 The mounted filesystem has a persistent `index.lock` that blocks git operations. **Always push via a temp clone:**
@@ -80,6 +81,9 @@ Templates use `{{ topic.summary or topic.hook }}`. The `compute_featured_topics(
 4. `compute_featured_topics()` — aggregates article counts per topic, returns top 3 for homepage/digest
 
 Keywords removed from topics in April 2026 for being too generic: `media`, `tech` (technology), `race`, `justice` (racial-reconciliation), `justice` (biblical-justice), `fear` (anxiety), `work`, `labor` (vocation), `silence` (spiritual-disciplines + contemplative-prayer), `pain` (suffering), bare `sovereignty` (predestination).
+
+## Daily Digest — Yesterday Section (Added April 6 2026)
+The digest page shows "Yesterday's top reads" below today's headlines. `save_yesterday()` in `output/__init__.py` saves the top 10 scored articles daily to `docs/yesterday.json`. `render_digest_page()` in `frontend/__init__.py` accepts `yesterday_articles` and sorts to top 10 before passing to the template. The browse grid ("Explore all topics") was removed from the digest page — it lives on the homepage only.
 
 ## Email Design (Updated April 2026)
 Daily email via Brevo API. Structure:
