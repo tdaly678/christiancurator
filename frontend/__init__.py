@@ -172,7 +172,7 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         render_daily_page(daily_summary, env, matched_topics=matched_topics)
 
     # Render the daily digest page (/digest/)
-    render_digest_page(articles, env, featured_topics=featured_topics)
+    render_digest_page(articles, env, featured_topics=featured_topics, yesterday_articles=yesterday_articles)
 
     # Render the daily archive snapshot and update the archive index
     render_archive_page(articles, template_pairings, env, yesterday_articles=yesterday_articles or [])
@@ -403,7 +403,8 @@ def render_archive_page(articles: list[dict], pairings: list[dict], env: Environ
 
 
 def render_digest_page(articles: list[dict], env: Environment,
-                       featured_topics: list = None):
+                       featured_topics: list = None,
+                       yesterday_articles: list = None):
     """Render the daily digest page to docs/digest/index.html."""
     from frontend.topics_data import TOPICS, TOPICS_BY_CATEGORY, CATEGORIES
 
@@ -433,8 +434,15 @@ def render_digest_page(articles: list[dict], env: Environment,
         archive_dates = archive_dates[:20]
 
     template = env.get_template("digest_template.html")
+    # Top 10 yesterday articles by score
+    yesterday_top10 = sorted(
+        [a for a in (yesterday_articles or []) if a.get("source_type") != "world_news"],
+        key=lambda a: a.get("final_score", a.get("score", 0)), reverse=True
+    )[:10]
+
     html = template.render(
         articles=top10,
+        yesterday_articles=yesterday_top10,
         date=date_display,
         featured_topics=featured_topics or [],
         topics_by_category=TOPICS_BY_CATEGORY,

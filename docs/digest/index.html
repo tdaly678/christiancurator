@@ -224,38 +224,17 @@
     }
     .cc-archive-link:hover { text-decoration: underline; }
 
-    /* ── Browse grid ─────────────────────────────────────────────── */
-    .cc-browse { margin-top: 2.75rem; }
-    .cc-browse-header {
-      border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.75rem;
+    /* ── Yesterday's headlines ──────────────────────────────────── */
+    .cc-yesterday { margin-top: 2.75rem; }
+    .cc-yesterday-header {
+      display: flex; align-items: baseline; justify-content: space-between;
+      border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.25rem;
     }
-    .cc-browse-header-label {
+    .cc-yesterday-label {
       font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
       text-transform: uppercase; color: #1a1a1a;
     }
-    .cc-browse-cat { margin-bottom: 2rem; }
-    .cc-browse-cat-name {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: #aaa; margin-bottom: 0.75rem;
-    }
-    .cc-browse-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(195px, 1fr)); gap: 10px;
-    }
-    @media (max-width: 560px) { .cc-browse-grid { grid-template-columns: 1fr 1fr; } }
-    .cc-browse-card {
-      border: 1px solid #e0ddd8; border-radius: 4px;
-      padding: 11px 13px; text-decoration: none; background: #fff;
-      display: block; transition: border-color 0.15s, box-shadow 0.15s;
-    }
-    .cc-browse-card:hover { border-color: #2C4A2E; box-shadow: 0 1px 5px rgba(44,74,46,0.1); }
-    .cc-browse-card-name {
-      font-family: 'Lora', Georgia, serif; font-size: 13.5px; font-weight: 600;
-      color: #1a1a1a; line-height: 1.3; margin-bottom: 4px;
-    }
-    .cc-browse-card-hook {
-      font-size: 11px; color: #999; line-height: 1.45;
-      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-    }
+    .cc-yesterday-date { font-size: 11px; color: #aaa; }
 
     /* ── Footer ──────────────────────────────────────────────────── */
     .cc-footer {
@@ -519,324 +498,52 @@
   </div>
   
 
-  <!-- Browse all topics -->
-  <div class="cc-browse">
-    <div class="cc-browse-header">
-      <div class="cc-browse-header-label">Explore all topics</div>
+  
+  <!-- Yesterday's top articles -->
+  <div class="cc-yesterday">
+    <div class="cc-yesterday-header">
+      <div class="cc-yesterday-label">Yesterday&rsquo;s top reads</div>
+      <div class="cc-yesterday-date">In case you missed it</div>
     </div>
 
     
-    <div class="cc-browse-cat">
-      <div class="cc-browse-cat-name">Core Theology</div>
-      <div class="cc-browse-grid">
-        
-        <a class="cc-browse-card" href="/topics/atonement/"
-           onclick="gtag('event','topic_click',{'topic':'atonement','category':'Core Theology'});">
-          <div class="cc-browse-card-name">The Atonement</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on the cross, penal substitution, and what Christ's death accomplished for sinners.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/justification-by-faith/"
-           onclick="gtag('event','topic_click',{'topic':'justification-by-faith','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Justification by Faith</div>
-          <div class="cc-browse-card-hook">Evangelical debate over faith alone, imputed righteousness, and what Paul really meant by justification.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/biblical-inerrancy/"
-           onclick="gtag('event','topic_click',{'topic':'biblical-inerrancy','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Biblical Inerrancy</div>
-          <div class="cc-browse-card-hook">How evangelicals understand Scripture's authority, reliability, and relationship to science, history, and theology.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/baptism/"
-           onclick="gtag('event','topic_click',{'topic':'baptism','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Baptism</div>
-          <div class="cc-browse-card-hook">The evangelical debate over infant vs. believer's baptism, mode, and what Scripture teaches about the ordinance.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/lords-supper/"
-           onclick="gtag('event','topic_click',{'topic':'lords-supper','category':'Core Theology'});">
-          <div class="cc-browse-card-name">The Lord's Supper</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on what happens at communion — Christ's presence, meaning, and how churches practice it.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/heaven-hell-eternity/"
-           onclick="gtag('event','topic_click',{'topic':'heaven-hell-eternity','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Heaven, Hell & Eternity</div>
-          <div class="cc-browse-card-hook">Evangelical views on the afterlife, eternal punishment, annihilationism, and the hope of new creation.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/creation-evolution/"
-           onclick="gtag('event','topic_click',{'topic':'creation-evolution','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Creation & Evolution</div>
-          <div class="cc-browse-card-hook">How evangelicals navigate Genesis, the origins debate, and young-earth vs. old-earth creationism.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/suffering-and-providence/"
-           onclick="gtag('event','topic_click',{'topic':'suffering-and-providence','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Suffering & Providence</div>
-          <div class="cc-browse-card-hook">How Christians understand God's sovereignty in the face of pain, grief, and seemingly unanswered prayer.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/gender-and-biblical-anthropology/"
-           onclick="gtag('event','topic_click',{'topic':'gender-and-biblical-anthropology','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Gender & Biblical Anthropology</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on male and female identity, embodiment, transgender questions, and the image of God.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/apologetics/"
-           onclick="gtag('event','topic_click',{'topic':'apologetics','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Apologetics</div>
-          <div class="cc-browse-card-hook">How Christians make the case for the faith — through reason, evidence, presupposition, and engagement with doubt.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/predestination-free-will/"
-           onclick="gtag('event','topic_click',{'topic':'predestination-free-will','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Predestination & Free Will</div>
-          <div class="cc-browse-card-hook">The Calvinist-Arminian debate over divine election, human freedom, and the nature of saving grace.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/holy-spirit-spiritual-gifts/"
-           onclick="gtag('event','topic_click',{'topic':'holy-spirit-spiritual-gifts','category':'Core Theology'});">
-          <div class="cc-browse-card-name">The Holy Spirit & Spiritual Gifts</div>
-          <div class="cc-browse-card-hook">The debate between cessationists and continuationists over spiritual gifts, tongues, and the Spirit's work today.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/the-trinity/"
-           onclick="gtag('event','topic_click',{'topic':'the-trinity','category':'Core Theology'});">
-          <div class="cc-browse-card-name">The Trinity</div>
-          <div class="cc-browse-card-hook">Evangelical theology of the triune God — Father, Son, and Spirit — and why Trinitarian doctrine matters in practice.</div>
-        </a>
-        
-      </div>
-    </div>
     
-    <div class="cc-browse-cat">
-      <div class="cc-browse-cat-name">Church Life</div>
-      <div class="cc-browse-grid">
-        
-        <a class="cc-browse-card" href="/topics/complementarianism-egalitarianism/"
-           onclick="gtag('event','topic_click',{'topic':'complementarianism-egalitarianism','category':'Church Life'});">
-          <div class="cc-browse-card-name">Complementarianism & Egalitarianism</div>
-          <div class="cc-browse-card-hook">The ongoing evangelical debate over women in ministry, male headship, and what Scripture teaches about church leadership.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/church-discipline/"
-           onclick="gtag('event','topic_click',{'topic':'church-discipline','category':'Church Life'});">
-          <div class="cc-browse-card-name">Church Discipline</div>
-          <div class="cc-browse-card-hook">How churches handle member sin, accountability, corrective removal, and the path to restoration.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/worship-and-liturgy/"
-           onclick="gtag('event','topic_click',{'topic':'worship-and-liturgy','category':'Church Life'});">
-          <div class="cc-browse-card-name">Worship & Liturgy</div>
-          <div class="cc-browse-card-hook">Evangelical conversation about how churches should gather, sing, and meet with God — contemporary or liturgical.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/local-church/"
-           onclick="gtag('event','topic_click',{'topic':'local-church','category':'Church Life'});">
-          <div class="cc-browse-card-name">The Local Church</div>
-          <div class="cc-browse-card-hook">Why the local church matters — and evangelical conversations about attendance, belonging, and dechurching.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/missions-and-evangelism/"
-           onclick="gtag('event','topic_click',{'topic':'missions-and-evangelism','category':'Church Life'});">
-          <div class="cc-browse-card-name">Missions & Evangelism</div>
-          <div class="cc-browse-card-hook">How evangelicals understand the Great Commission, gospel proclamation, and the church's mission in the world.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/church-history/"
-           onclick="gtag('event','topic_click',{'topic':'church-history','category':'Church Life'});">
-          <div class="cc-browse-card-name">Church History</div>
-          <div class="cc-browse-card-hook">What the church's past — its reformers, councils, creeds, and failures — means for Christians today.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/membership/"
-           onclick="gtag('event','topic_click',{'topic':'membership','category':'Church Life'});">
-          <div class="cc-browse-card-name">Church Membership</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on formal church membership and what covenant commitment to a local body requires.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/church-planting/"
-           onclick="gtag('event','topic_click',{'topic':'church-planting','category':'Church Life'});">
-          <div class="cc-browse-card-name">Church Planting</div>
-          <div class="cc-browse-card-hook">The theology and practice of starting new churches as a strategy for reaching unchurched communities.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/preaching/"
-           onclick="gtag('event','topic_click',{'topic':'preaching','category':'Church Life'});">
-          <div class="cc-browse-card-name">Preaching</div>
-          <div class="cc-browse-card-hook">What makes a sermon faithful — evangelical debate over expository preaching, topical approaches, and pulpit method.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/church-accountability/"
-           onclick="gtag('event','topic_click',{'topic':'church-accountability','category':'Church Life'});">
-          <div class="cc-browse-card-name">Pastoral Accountability</div>
-          <div class="cc-browse-card-hook">How churches build structures to prevent pastoral abuse, protect victims, and hold leaders accountable.</div>
-        </a>
-        
-      </div>
-    </div>
-    
-    <div class="cc-browse-cat">
-      <div class="cc-browse-cat-name">Spiritual Formation</div>
-      <div class="cc-browse-grid">
-        
-        <a class="cc-browse-card" href="/topics/prayer/"
-           onclick="gtag('event','topic_click',{'topic':'prayer','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Prayer</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on how Christians pray, whether prayer changes things, and building a consistent prayer life.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/discipleship/"
-           onclick="gtag('event','topic_click',{'topic':'discipleship','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Discipleship</div>
-          <div class="cc-browse-card-hook">How Christians grow in maturity — one-on-one mentoring, church programs, and the meaning of making disciples.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/sanctification/"
-           onclick="gtag('event','topic_click',{'topic':'sanctification','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Sanctification</div>
-          <div class="cc-browse-card-hook">The evangelical debate over how Christians grow in holiness — God's work, human effort, and means of grace.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/spiritual-disciplines/"
-           onclick="gtag('event','topic_click',{'topic':'spiritual-disciplines','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Spiritual Disciplines</div>
-          <div class="cc-browse-card-hook">How practices like solitude, silence, Scripture reading, and fasting shape the Christian life.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/spiritual-warfare/"
-           onclick="gtag('event','topic_click',{'topic':'spiritual-warfare','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Spiritual Warfare</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on demonic activity, the armor of God, deliverance, and living in spiritual conflict.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/fasting/"
-           onclick="gtag('event','topic_click',{'topic':'fasting','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Fasting</div>
-          <div class="cc-browse-card-hook">What the Bible teaches about fasting — and why many evangelicals consider it a neglected spiritual discipline.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/anxiety-and-fear/"
-           onclick="gtag('event','topic_click',{'topic':'anxiety-and-fear','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Anxiety & Fear</div>
-          <div class="cc-browse-card-hook">How Christians understand worry, fear, and anxiety — spiritually, psychologically, and practically.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/mental-health/"
-           onclick="gtag('event','topic_click',{'topic':'mental-health','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Mental Health & Faith</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on depression, mental illness, counseling, and integrating faith with psychological care.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/faith-deconstruction/"
-           onclick="gtag('event','topic_click',{'topic':'faith-deconstruction','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Deconstruction & Faith</div>
-          <div class="cc-browse-card-hook">Why Christians are deconstructing, what churches can do, and what healthy faith rebuilding looks like.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/contemplative-prayer/"
-           onclick="gtag('event','topic_click',{'topic':'contemplative-prayer','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Contemplative Prayer</div>
-          <div class="cc-browse-card-hook">Evangelical debate over centering prayer, lectio divina, and the place of contemplative practices in Christian spirituality.</div>
-        </a>
-        
-      </div>
-    </div>
-    
-    <div class="cc-browse-cat">
-      <div class="cc-browse-cat-name">Culture & Society</div>
-      <div class="cc-browse-grid">
-        
-        <a class="cc-browse-card" href="/topics/politics-and-the-church/"
-           onclick="gtag('event','topic_click',{'topic':'politics-and-the-church','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Politics & the Church</div>
-          <div class="cc-browse-card-hook">How evangelical Christians engage with politics, government, civic life, and the public square.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/racial-reconciliation/"
-           onclick="gtag('event','topic_click',{'topic':'racial-reconciliation','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Racial Reconciliation</div>
-          <div class="cc-browse-card-hook">Evangelical conversation around race, repentance, diversity, and what the church owes to justice.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/technology/"
-           onclick="gtag('event','topic_click',{'topic':'technology','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Technology & the Christian Life</div>
-          <div class="cc-browse-card-hook">How Christians think about social media, smartphones, digital life, and the spiritual formation impact of technology.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/technology-and-discipleship/"
-           onclick="gtag('event','topic_click',{'topic':'technology-and-discipleship','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Technology & Discipleship</div>
-          <div class="cc-browse-card-hook">How AI and digital tools are reshaping discipleship, ministry, and evangelical thinking about what it means to be human.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/marriage-and-family/"
-           onclick="gtag('event','topic_click',{'topic':'marriage-and-family','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Marriage & Family</div>
-          <div class="cc-browse-card-hook">A Christian vision of marriage, family, divorce, singleness, and family formation in a post-Christian culture.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/christian-parenting/"
-           onclick="gtag('event','topic_click',{'topic':'christian-parenting','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Christian Parenting</div>
-          <div class="cc-browse-card-hook">How Christian parents pass faith to the next generation — from family worship and catechism to raising teenagers.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/christian-ethics/"
-           onclick="gtag('event','topic_click',{'topic':'christian-ethics','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Christian Ethics</div>
-          <div class="cc-browse-card-hook">How Christians navigate bioethics, sexuality, LGBTQ+ questions, and moral issues Scripture doesn't directly address.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/vocation-and-work/"
-           onclick="gtag('event','topic_click',{'topic':'vocation-and-work','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Vocation & Work</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on calling, vocation, and how faith shapes ordinary work and the marketplace.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/evangelicalism/"
-           onclick="gtag('event','topic_click',{'topic':'evangelicalism','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">The Future of Evangelicalism</div>
-          <div class="cc-browse-card-hook">The state of the evangelical movement — its divisions, decline, identity, and what comes next.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/christian-nationalism/"
-           onclick="gtag('event','topic_click',{'topic':'christian-nationalism','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Christian Nationalism</div>
-          <div class="cc-browse-card-hook">Evangelical debate over Christian nationalism — its appeal, its dangers, and what faithful political engagement looks like.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/biblical-sexuality/"
-           onclick="gtag('event','topic_click',{'topic':'biblical-sexuality','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Biblical Sexuality</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on same-sex attraction, LGBTQ+ identity, sexual ethics, and what Scripture teaches about sexuality.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/ai-and-the-church/"
-           onclick="gtag('event','topic_click',{'topic':'ai-and-the-church','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Artificial Intelligence & the Church</div>
-          <div class="cc-browse-card-hook">How AI is reshaping ministry, creative work, and evangelical thinking about human dignity and the image of God.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/biblical-justice/"
-           onclick="gtag('event','topic_click',{'topic':'biblical-justice','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Biblical Justice & the Social Gospel</div>
-          <div class="cc-browse-card-hook">Evangelical debate over poverty, oppression, and the distinction between biblical justice and the social gospel.</div>
-        </a>
-        
-      </div>
-    </div>
-    
-
-    <div style="text-align:center; margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid #e0ddd8;">
-      <a href="/topics/" style="font-size:13px; font-weight:600; color:#2C4A2E; text-decoration:none; letter-spacing:0.04em;">
-        View full topic pages with perspectives, key thinkers &amp; curated reading &rarr;
+    <div class="cc-headline-lead">
+      <a href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/jesus-betrayed-crucified/" class="cc-headline-lead-title" target="_blank" rel="noopener"
+         onclick="gtag('event','article_click',{'article_title':'Gods Sacrifice: Jesus Death for Our Redemption','article_source':'The Gospel Coalition','article_url':'https://www.thegospelcoalition.org/podcasts/tgc-podcast/jesus-betrayed-crucified/'});">
+        God's Sacrifice: Jesus' Death for Our Redemption
       </a>
+      <div class="cc-headline-lead-meta"><span class="cc-headline-lead-author">The Gospel Coalition</span></div>
+    </div>
+
+    
+    <div class="cc-headline-list">
+      
+      <div class="cc-headline-item">
+        <div class="cc-headline-num">2</div>
+        <div class="cc-headline-content">
+          <a href="https://feed.desiringgod.org/link/22977/17312221/the-agony-of-sin-and-love" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Marveling at Christs Love: The True Meaning of Maundy Thursday','article_source':'Desiring God','article_url':'https://feed.desiringgod.org/link/22977/17312221/the-agony-of-sin-and-love'});">
+            Marveling at Christ's Love: The True Meaning of Maundy Thursday
+          </a>
+          <div class="cc-headline-meta"><span>Desiring God</span></div>
+        </div>
+      </div>
+      
+      <div class="cc-headline-item">
+        <div class="cc-headline-num">3</div>
+        <div class="cc-headline-content">
+          <a href="http://feeds.ligonier.org/~/916702607/0/ligonierministriesblog" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Jesus on Trial: Gods Love for the World Revealed','article_source':'Ligonier Ministries','article_url':'http://feeds.ligonier.org/~/916702607/0/ligonierministriesblog'});">
+            Jesus on Trial: God's Love for the World Revealed
+          </a>
+          <div class="cc-headline-meta"><span>Ligonier Ministries</span></div>
+        </div>
+      </div>
+      
     </div>
   </div>
+  
 
   <!-- Past digests -->
   
