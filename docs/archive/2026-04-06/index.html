@@ -140,6 +140,16 @@
     }
     .cc-footer a { color: #2C4A2E; text-decoration: none; font-weight: 600; }
     .cc-footer a:hover { text-decoration: underline; }
+    .cc-nav {
+      display: flex; gap: 24px; justify-content: center;
+      margin-top: 10px; font-size: 13px; letter-spacing: 0.04em;
+    }
+    .cc-nav a {
+      color: #888; text-decoration: none; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.1em; font-size: 11px;
+    }
+    .cc-nav a:hover { color: #2C4A2E; }
+    .cc-nav a.active { color: #1a1a1a; border-bottom: 2px solid #1a1a1a; padding-bottom: 2px; }
   </style>
 </head>
 <body>
@@ -149,6 +159,11 @@
     <div class="cc-top-bar">
       <a href="/" class="cc-back-link">← Christian Curator</a>
       <a href="/#cc-email-box" class="cc-subscribe-btn">Get the Daily Digest</a>
+    <nav class="cc-nav">
+      <a href="/">Home</a>
+      <a href="/digest/">Daily Digest</a>
+      <a href="/archive/" class="active">Archive</a>
+    </nav>
     </div>
     <div class="cc-masthead">
       <a href="/" class="cc-site-name">Christian Curator</a>
