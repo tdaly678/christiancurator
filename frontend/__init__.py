@@ -172,7 +172,7 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         render_daily_page(daily_summary, env, matched_topics=matched_topics)
 
     # Render the daily digest page (/digest/)
-    render_digest_page(articles, env)
+    render_digest_page(articles, env, featured_topics=featured_topics)
 
     # Render the daily archive snapshot and update the archive index
     render_archive_page(articles, template_pairings, env, yesterday_articles=yesterday_articles or [])
@@ -402,8 +402,11 @@ def render_archive_page(articles: list[dict], pairings: list[dict], env: Environ
         _patch_archive_next_link(prev_date_iso, date_iso, date_display, env, articles, pairings)
 
 
-def render_digest_page(articles: list[dict], env: Environment):
+def render_digest_page(articles: list[dict], env: Environment,
+                       featured_topics: list = None):
     """Render the daily digest page to docs/digest/index.html."""
+    from frontend.topics_data import TOPICS, TOPICS_BY_CATEGORY, CATEGORIES
+
     DIGEST_DIR.mkdir(parents=True, exist_ok=True)
 
     top10 = sorted(
@@ -414,10 +417,29 @@ def render_digest_page(articles: list[dict], env: Environment):
     today = date.today()
     date_display = today.strftime("%B %-d, %Y")
 
+    # Compute recent archive dates (same as homepage)
+    archive_dates = []
+    if ARCHIVE_DIR.exists():
+        for day_dir in sorted(ARCHIVE_DIR.iterdir(), reverse=True):
+            if day_dir.is_dir() and (day_dir / "index.html").exists():
+                try:
+                    d = date.fromisoformat(day_dir.name)
+                    archive_dates.append({
+                        "iso": day_dir.name,
+                        "display": d.strftime("%B %-d, %Y"),
+                    })
+                except ValueError:
+                    pass
+        archive_dates = archive_dates[:20]
+
     template = env.get_template("digest_template.html")
     html = template.render(
         articles=top10,
         date=date_display,
+        featured_topics=featured_topics or [],
+        topics_by_category=TOPICS_BY_CATEGORY,
+        categories=CATEGORIES,
+        archive_dates=archive_dates,
     )
 
     output_path = DIGEST_DIR / "index.html"
