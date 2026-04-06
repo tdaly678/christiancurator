@@ -110,7 +110,7 @@ TOPICS = [
         "summary": "How Christians understand God's sovereignty in the face of pain, grief, and seemingly unanswered prayer.",
         "keywords": [
             "suffering", "providence", "theodicy", "problem of evil",
-            "why does god allow", "pain", "grief", "lament",
+            "why does god allow", "grief", "lament",
             "god's plan", "ordained suffering", "open theism",
             "meticulous providence", "sovereignty of god",
         ],
@@ -300,7 +300,7 @@ TOPICS = [
         "hook": "Are the spiritual disciplines a path to growth — or a path to legalism?",
         "summary": "How practices like solitude, silence, Scripture reading, and fasting shape the Christian life.",
         "keywords": [
-            "spiritual disciplines", "disciplines", "solitude", "silence",
+            "spiritual disciplines", "disciplines", "solitude",
             "scripture memorization", "journaling", "sabbath keeping",
             "richard foster", "dallas willard", "means of grace",
         ],
@@ -335,7 +335,7 @@ TOPICS = [
         "hook": "Is anxiety primarily a spiritual failure, a medical condition, or both?",
         "summary": "How Christians understand worry, fear, and anxiety — spiritually, psychologically, and practically.",
         "keywords": [
-            "anxiety", "fear", "worry", "anxious", "panic",
+            "anxiety", "worry", "anxious", "panic",
             "cast your anxiety", "do not be afraid", "mental health",
             "christian counseling", "psychology", "therapy",
         ],
@@ -374,8 +374,8 @@ TOPICS = [
         "hook": "Is racial reconciliation best pursued through structural change, individual repentance, or gospel proclamation?",
         "summary": "Evangelical conversation around race, repentance, diversity, and what the church owes to justice.",
         "keywords": [
-            "racial reconciliation", "race", "racism", "diversity",
-            "justice", "social justice", "critical race theory", "CRT",
+            "racial reconciliation", "racism", "diversity",
+            "social justice", "critical race theory", "CRT",
             "reparations", "racial justice", "multiethnic church",
             "ethnic diversity", "systemic racism",
         ],
@@ -388,8 +388,8 @@ TOPICS = [
         "summary": "How Christians think about social media, smartphones, digital life, and the spiritual formation impact of technology.",
         "keywords": [
             "technology", "social media", "smartphone", "digital",
-            "internet", "tech", "algorithm", "screen time",
-            "digital age", "online life", "phone", "media",
+            "internet", "algorithm", "screen time",
+            "digital age", "online life", "phone",
         ],
     },
     {
@@ -448,8 +448,8 @@ TOPICS = [
         "hook": "Is all honest work sacred, or does ministry hold a higher calling?",
         "summary": "Evangelical perspectives on calling, vocation, and how faith shapes ordinary work and the marketplace.",
         "keywords": [
-            "vocation", "work", "calling", "career", "workplace",
-            "labor", "ordinary work", "sacred and secular",
+            "vocation", "calling", "career", "workplace",
+            "ordinary work", "sacred and secular",
             "faith and work", "monday morning", "marketplace", "profession",
         ],
     },
@@ -473,7 +473,7 @@ TOPICS = [
         "summary": "The Calvinist-Arminian debate over divine election, human freedom, and the nature of saving grace.",
         "keywords": [
             "predestination", "election", "calvinism", "arminianism", "free will",
-            "sovereignty", "TULIP", "Reformed", "Molinism", "unconditional election",
+            "sovereignty of god", "TULIP", "Reformed", "Molinism", "unconditional election",
             "middle knowledge", "libertarian freedom", "divine foreknowledge",
         ],
     },
@@ -557,7 +557,7 @@ TOPICS = [
         "summary": "Evangelical debate over centering prayer, lectio divina, and the place of contemplative practices in Christian spirituality.",
         "keywords": [
             "contemplative prayer", "centering prayer", "lectio divina", "mysticism",
-            "contemplation", "meditation", "listening to god", "silence",
+            "contemplation", "meditation", "listening to god",
             "prayer of examen", "contemplative spirituality", "mystical theology",
         ],
     },
@@ -580,7 +580,7 @@ TOPICS = [
         "hook": "What is the evangelical responsibility toward the poor and oppressed — and how do we distinguish biblical justice from a social gospel that eclipses the gospel itself?",
         "summary": "Evangelical debate over poverty, oppression, and the distinction between biblical justice and the social gospel.",
         "keywords": [
-            "justice", "social justice", "poverty", "poor", "oppressed",
+            "social justice", "poverty", "poor", "oppressed",
             "social gospel", "systemic injustice", "prophetic", "inequality",
             "racial justice", "economic justice", "biblical justice",
         ],

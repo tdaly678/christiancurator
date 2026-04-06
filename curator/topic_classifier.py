@@ -24,6 +24,13 @@ def _normalize(text: str) -> str:
     return re.sub(r"[^\w\s]", " ", text.lower())
 
 
+def _strip_html_and_urls(text: str) -> str:
+    """Remove URLs and HTML tags before keyword matching to avoid CDN/image URL false positives."""
+    text = re.sub(r"https?://\S+", " ", text)
+    text = re.sub(r"<[^>]+>", " ", text)
+    return text
+
+
 def _score_topic(text: str, keywords: list) -> int:
     """
     Return a match score: count of keyword hits in the text.
@@ -42,12 +49,18 @@ def classify_article(article: dict) -> list:
     Return up to 2 topic slugs that best match this article.
     Uses title + summary + topic_cluster for matching.
     Title matches are weighted 3x to prioritise specificity.
-    Tags alone do not trigger a match — they only add weight
-    if the title or summary also matches.
+
+    Minimum score threshold of 2 required to avoid single-keyword noise
+    (e.g. 'resurrection' alone matching 'heaven-hell', 'media' in CDN URLs
+    matching 'technology', 'work' matching 'vocation', etc.).
+
+    A score of 2 requires either:
+      - at least 1 title keyword hit (title_hits*3 >= 3 > 2), OR
+      - at least 2 body keyword hits
     """
     title_text = _normalize(article.get("title", ""))
     body_text  = _normalize(
-        article.get("summary", "")[:400]
+        _strip_html_and_urls(article.get("summary", "")[:400])
         + " " + article.get("topic_cluster", "").replace("_", " ")
     )
 
@@ -56,7 +69,7 @@ def classify_article(article: dict) -> list:
         title_hits = _score_topic(title_text, topic["keywords"])
         body_hits  = _score_topic(body_text,  topic["keywords"])
         combined   = title_hits * 3 + body_hits
-        if combined > 0:
+        if combined >= 2:
             scores.append((topic["slug"], combined))
 
     # Sort by score descending, return top 2 slugs
