@@ -65,6 +65,18 @@
     }
     @media (max-width: 600px) { .cc-site-name { font-size: 32px; } }
 
+    /* Nav */
+    .cc-nav {
+      display: flex; justify-content: center; gap: 2rem;
+      padding: 0.6rem 0 0; border-top: 1px solid #e0ddd8; margin-top: 0.75rem;
+    }
+    .cc-nav a {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #888; text-decoration: none;
+    }
+    .cc-nav a:hover { color: #2C4A2E; }
+    .cc-nav a.active { color: #1a1a1a; border-bottom: 2px solid #1a1a1a; padding-bottom: 2px; }
+
     /* Day heading */
     .cc-day-heading {
       display: flex; align-items: baseline; justify-content: space-between;
@@ -140,16 +152,6 @@
     }
     .cc-footer a { color: #2C4A2E; text-decoration: none; font-weight: 600; }
     .cc-footer a:hover { text-decoration: underline; }
-    .cc-nav {
-      display: flex; gap: 24px; justify-content: center;
-      margin-top: 10px; font-size: 13px; letter-spacing: 0.04em;
-    }
-    .cc-nav a {
-      color: #888; text-decoration: none; font-weight: 600;
-      text-transform: uppercase; letter-spacing: 0.1em; font-size: 11px;
-    }
-    .cc-nav a:hover { color: #2C4A2E; }
-    .cc-nav a.active { color: #1a1a1a; border-bottom: 2px solid #1a1a1a; padding-bottom: 2px; }
   </style>
 </head>
 <body>
@@ -159,16 +161,16 @@
     <div class="cc-top-bar">
       <a href="/" class="cc-back-link">← Christian Curator</a>
       <a href="/#cc-email-box" class="cc-subscribe-btn">Get the Daily Digest</a>
-    <nav class="cc-nav">
-      <a href="/">Home</a>
-      <a href="/digest/">Daily Digest</a>
-      <a href="/archive/" class="active">Archive</a>
-    </nav>
     </div>
     <div class="cc-masthead">
       <a href="/" class="cc-site-name">Christian Curator</a>
       <p class="cc-tagline">Curated perspectives &middot; updated daily</p>
     </div>
+    <nav class="cc-nav">
+      <a href="/">Home</a>
+      <a href="/digest/">Daily Digest</a>
+      <a href="/archive/" class="active">Archive</a>
+    </nav>
   </header>
 
   <div data-pagefind-body>
@@ -186,15 +188,15 @@
     
     
     <div class="cc-lead">
-      <a href="https://www.thegospelcoalition.org/article/working-without-recognition/" class="cc-lead-title" target="_blank" rel="noopener"
-         onclick="gtag('event','article_click',{'article_title':'Gods Purpose for Our Work Matters Beyond Human Recognition','article_source':'The Gospel Coalition','article_url':'https://www.thegospelcoalition.org/article/working-without-recognition/'});">
-        God's Purpose for Our Work Matters Beyond Human Recognition
+      <a href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/jesus-betrayed-crucified/" class="cc-lead-title" target="_blank" rel="noopener"
+         onclick="gtag('event','article_click',{'article_title':'Gods Love Revealed Through Christs Sacrifice on the Cross','article_source':'The Gospel Coalition','article_url':'https://www.thegospelcoalition.org/podcasts/tgc-podcast/jesus-betrayed-crucified/'});">
+        God's Love Revealed Through Christ's Sacrifice on the Cross
       </a>
       <div class="cc-lead-meta">
         
         
         
-          <span class="cc-lead-author">Denise Lee Yohn</span>
+          <span class="cc-lead-author">J. Gary Millar</span>
           <span class="cc-meta-dot">·</span>
           <span>The Gospel Coalition</span>
         
@@ -207,16 +209,16 @@
       <div class="cc-article">
         <div class="cc-article-num">2</div>
         <div class="cc-article-content">
-          <a href="https://feed.desiringgod.org/link/22977/17313842/the-day-death-tried-to-swallow-life" class="cc-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Easter: When Death Met Its Match in the Risen Christ','article_source':'Desiring God','article_url':'https://feed.desiringgod.org/link/22977/17313842/the-day-death-tried-to-swallow-life'});">
-            Easter: When Death Met Its Match in the Risen Christ
+          <a href="https://feed.desiringgod.org/link/22977/17312221/the-agony-of-sin-and-love" class="cc-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Marveling at Christs Love: Why Imitation Pauses at the Cross','article_source':'Desiring God','article_url':'https://feed.desiringgod.org/link/22977/17312221/the-agony-of-sin-and-love'});">
+            Marveling at Christ's Love: Why Imitation Pauses at the Cross
           </a>
           <div class="cc-article-meta">
       
       
       
       
-        <span class="cc-article-author">Clinton Manley</span>
+        <span class="cc-article-author">David Mathis</span>
         <span class="cc-meta-dot">·</span>
         <span>Desiring God</span>
       
@@ -228,18 +230,18 @@
       <div class="cc-article">
         <div class="cc-article-num">3</div>
         <div class="cc-article-content">
-          <a href="http://feeds.ligonier.org/~/916876337/0/ligonierministriesblog" class="cc-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Examining Augustines Insights on Time and Eternitys Nature','article_source':'Ligonier Ministries','article_url':'http://feeds.ligonier.org/~/916876337/0/ligonierministriesblog'});">
-            Examining Augustine's Insights on Time and Eternity's Nature
+          <a href="https://firstthings.com/the-politics-of-judas/" class="cc-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Judass Betrayal: Political and Spiritual Dimensions at Easter','article_source':'First Things','article_url':'https://firstthings.com/the-politics-of-judas/'});">
+            Judas's Betrayal: Political and Spiritual Dimensions at Easter
           </a>
           <div class="cc-article-meta">
       
       
       
       
-        <span class="cc-article-author">Gabriel N.E. Fluhrer</span>
+        <span class="cc-article-author">German Saucedo</span>
         <span class="cc-meta-dot">·</span>
-        <span>Ligonier Ministries</span>
+        <span>First Things</span>
       
       
     </div>
@@ -249,18 +251,18 @@
       <div class="cc-article">
         <div class="cc-article-num">4</div>
         <div class="cc-article-content">
-          <a href="https://mereorthodoxy.com/a-psalm-for-easter" class="cc-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Easters Psalm: Gods Mercy Renews the Desperate Soul','article_source':'Mere Orthodoxy','article_url':'https://mereorthodoxy.com/a-psalm-for-easter'});">
-            Easter's Psalm: God's Mercy Renews the Desperate Soul
+          <a href="https://relevantmagazine.com/faith/church/what-is-maundy-thursday/" class="cc-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Maundy Thursday: The Intimate Meal Before Christs Passion','article_source':'Relevant Magazine','article_url':'https://relevantmagazine.com/faith/church/what-is-maundy-thursday/'});">
+            Maundy Thursday: The Intimate Meal Before Christ's Passion
           </a>
           <div class="cc-article-meta">
       
       
       
       
-        <span class="cc-article-author">Alex Kneen</span>
+        <span class="cc-article-author">John Taylor</span>
         <span class="cc-meta-dot">·</span>
-        <span>Mere Orthodoxy</span>
+        <span>Relevant Magazine</span>
       
       
     </div>
@@ -270,16 +272,16 @@
       <div class="cc-article">
         <div class="cc-article-num">5</div>
         <div class="cc-article-content">
-          <a href="https://theaquilareport.com/still-stiff-necked/" class="cc-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Total Surrender: Why Half-Hearted Obedience Falls Short','article_source':'The Aquila Report','article_url':'https://theaquilareport.com/still-stiff-necked/'});">
-            Total Surrender: Why Half-Hearted Obedience Falls Short
+          <a href="https://theaquilareport.com/a-most-spectacular-misidentification/" class="cc-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Why Jesus Wasnt Recognized After the Resurrection','article_source':'The Aquila Report','article_url':'https://theaquilareport.com/a-most-spectacular-misidentification/'});">
+            Why Jesus Wasn't Recognized After the Resurrection
           </a>
           <div class="cc-article-meta">
       
       
       
       
-        <span class="cc-article-author">Garth Landis</span>
+        <span class="cc-article-author">Campbell Markham</span>
         <span class="cc-meta-dot">·</span>
         <span>The Aquila Report</span>
       
@@ -291,18 +293,18 @@
       <div class="cc-article">
         <div class="cc-article-num">6</div>
         <div class="cc-article-content">
-          <a href="https://www.thegospelcoalition.org/article/nietzsche-wrong-weakness/" class="cc-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Gods Strength Perfected in Our Weakness and Suffering','article_source':'The Gospel Coalition','article_url':'https://www.thegospelcoalition.org/article/nietzsche-wrong-weakness/'});">
-            God's Strength Perfected in Our Weakness and Suffering
+          <a href="https://firstthings.com/against-god-alone/" class="cc-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Why We Need Others in Our Faith, Not God Alone','article_source':'First Things','article_url':'https://firstthings.com/against-god-alone/'});">
+            Why We Need Others in Our Faith, Not God Alone
           </a>
           <div class="cc-article-meta">
       
       
       
       
-        <span class="cc-article-author">Matthew J. Hall</span>
+        <span class="cc-article-author">Jillian Parks</span>
         <span class="cc-meta-dot">·</span>
-        <span>The Gospel Coalition</span>
+        <span>First Things</span>
       
       
     </div>
@@ -312,58 +314,16 @@
       <div class="cc-article">
         <div class="cc-article-num">7</div>
         <div class="cc-article-content">
-          <a href="https://theaquilareport.com/the-book-of-jonah-running-from-mercy/" class="cc-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Jonahs Struggle: Resisting Gods Mercy for the Undeserving','article_source':'The Aquila Report','article_url':'https://theaquilareport.com/the-book-of-jonah-running-from-mercy/'});">
-            Jonah's Struggle: Resisting God's Mercy for the Undeserving
+          <a href="https://www.christianitytoday.com/2026/04/easter-jesus-not-zombie-ghost-story/" class="cc-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Easter Proclaims Christs Resurrection, Not Merely a Supernatural Return','article_source':'Christianity Today','article_url':'https://www.christianitytoday.com/2026/04/easter-jesus-not-zombie-ghost-story/'});">
+            Easter Proclaims Christ's Resurrection, Not Merely a Supernatural Return
           </a>
           <div class="cc-article-meta">
       
       
       
       
-        <span class="cc-article-author">Steve Weaver</span>
-        <span class="cc-meta-dot">·</span>
-        <span>The Aquila Report</span>
-      
-      
-    </div>
-        </div>
-      </div>
-      
-      <div class="cc-article">
-        <div class="cc-article-num">8</div>
-        <div class="cc-article-content">
-          <a href="https://research.lifeway.com/2026/04/06/pastor-dont-heal-thyself-3-reasons-pastors-need-community/" class="cc-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Why Pastors Need Community, Not Isolation, for Health','article_source':'Lifeway Research','article_url':'https://research.lifeway.com/2026/04/06/pastor-dont-heal-thyself-3-reasons-pastors-need-community/'});">
-            Why Pastors Need Community, Not Isolation, for Health
-          </a>
-          <div class="cc-article-meta">
-      
-      
-      
-      
-        <span class="cc-article-author">Dan Hyun</span>
-        <span class="cc-meta-dot">·</span>
-        <span>Lifeway Research</span>
-      
-      
-    </div>
-        </div>
-      </div>
-      
-      <div class="cc-article">
-        <div class="cc-article-num">9</div>
-        <div class="cc-article-content">
-          <a href="https://www.christianitytoday.com/2026/04/the-scandal-and-grace-of-christs-saturday-in-the-grave/" class="cc-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Finding Meaning in Holy Saturdays Silent Vigil','article_source':'Christianity Today','article_url':'https://www.christianitytoday.com/2026/04/the-scandal-and-grace-of-christs-saturday-in-the-grave/'});">
-            Finding Meaning in Holy Saturday's Silent Vigil
-          </a>
-          <div class="cc-article-meta">
-      
-      
-      
-      
-        <span class="cc-article-author">hbwilt</span>
+        <span class="cc-article-author">Elise Brandon</span>
         <span class="cc-meta-dot">·</span>
         <span>Christianity Today</span>
       
@@ -373,11 +333,32 @@
       </div>
       
       <div class="cc-article">
-        <div class="cc-article-num">10</div>
+        <div class="cc-article-num">8</div>
         <div class="cc-article-content">
-          <a href="https://wng.org/podcasts/a-promise-under-strain-1775416730" class="cc-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Supreme Court Revisits Citizenship Rights for All Born in America','article_source':'World Magazine','article_url':'https://wng.org/podcasts/a-promise-under-strain-1775416730'});">
-            Supreme Court Revisits Citizenship Rights for All Born in America
+          <a href="https://mereorthodoxy.com/aquinas-ai-and-the-pursuit-of-learning" class="cc-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Thomas Aquinas and the Value of Teaching Children to Research Well','article_source':'Mere Orthodoxy','article_url':'https://mereorthodoxy.com/aquinas-ai-and-the-pursuit-of-learning'});">
+            Thomas Aquinas and the Value of Teaching Children to Research Well
+          </a>
+          <div class="cc-article-meta">
+      
+      
+      
+      
+        <span class="cc-article-author">Alex Stevens</span>
+        <span class="cc-meta-dot">·</span>
+        <span>Mere Orthodoxy</span>
+      
+      
+    </div>
+        </div>
+      </div>
+      
+      <div class="cc-article">
+        <div class="cc-article-num">9</div>
+        <div class="cc-article-content">
+          <a href="https://wng.org/podcasts/speech-and-consequence-1775145932" class="cc-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Speaking Truth: Navigating Faith, Freedom, and Responsibility','article_source':'World Magazine','article_url':'https://wng.org/podcasts/speech-and-consequence-1775145932'});">
+            Speaking Truth: Navigating Faith, Freedom, and Responsibility
           </a>
           <div class="cc-article-meta">
       
@@ -393,6 +374,25 @@
         </div>
       </div>
       
+      <div class="cc-article">
+        <div class="cc-article-num">10</div>
+        <div class="cc-article-content">
+          <a href="https://danielkwilliams.substack.com/p/a-reformed-christian-critique-of" class="cc-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Reformed Christian Analysis of Defense Secretarys Imprecatory Prayer Language','article_source':'Daniel K. Williams','article_url':'https://danielkwilliams.substack.com/p/a-reformed-christian-critique-of'});">
+            Reformed Christian Analysis of Defense Secretary's Imprecatory Prayer Language
+          </a>
+          <div class="cc-article-meta">
+      
+      
+      
+      
+        <span>Daniel K. Williams</span>
+      
+      
+    </div>
+        </div>
+      </div>
+      
     </div>
     
 
@@ -401,7 +401,7 @@
     <div class="cc-yesterday-heading">
       <div class="cc-yesterday-label">Yesterday&rsquo;s Best</div>
       
-      <div class="cc-yesterday-date">April 5, 2026</div>
+      <div class="cc-yesterday-date">April 4, 2026</div>
       
     </div>
     <div class="cc-article-list">
@@ -409,9 +409,9 @@
       <div class="cc-article">
         <div class="cc-article-num">1</div>
         <div class="cc-article-content">
-          <a href="https://www.thegospelcoalition.org/article/easter-ordinary-day-history/" class="cc-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Easter: The Day Deaths Defeat Became Humanitys New Normal','article_source':'The Gospel Coalition','article_url':'https://www.thegospelcoalition.org/article/easter-ordinary-day-history/'});">
-            Easter: The Day Death's Defeat Became Humanity's New Normal
+          <a href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/jesus-betrayed-crucified/" class="cc-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Gods Sacrifice: Jesus Death for Our Redemption','article_source':'The Gospel Coalition','article_url':'https://www.thegospelcoalition.org/podcasts/tgc-podcast/jesus-betrayed-crucified/'});">
+            God's Sacrifice: Jesus' Death for Our Redemption
           </a>
           <div class="cc-article-meta">
       
@@ -428,16 +428,16 @@
       <div class="cc-article">
         <div class="cc-article-num">2</div>
         <div class="cc-article-content">
-          <a href="https://theaquilareport.com/the-wrath-of-god-was-satisfied-2/" class="cc-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Understanding Gods Character: Wrestling with Biblical Violence and Justice','article_source':'The Aquila Report','article_url':'https://theaquilareport.com/the-wrath-of-god-was-satisfied-2/'});">
-            Understanding God's Character: Wrestling with Biblical Violence and Justice
+          <a href="https://feed.desiringgod.org/link/22977/17312221/the-agony-of-sin-and-love" class="cc-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Marveling at Christs Love: The True Meaning of Maundy Thursday','article_source':'Desiring God','article_url':'https://feed.desiringgod.org/link/22977/17312221/the-agony-of-sin-and-love'});">
+            Marveling at Christ's Love: The True Meaning of Maundy Thursday
           </a>
           <div class="cc-article-meta">
       
       
       
       
-        <span>The Aquila Report</span>
+        <span>Desiring God</span>
       
       
     </div>
@@ -447,16 +447,16 @@
       <div class="cc-article">
         <div class="cc-article-num">3</div>
         <div class="cc-article-content">
-          <a href="https://faithfullymagazine.com/sisters-at-the-cross-reflections-for-a-holy-saturday/" class="cc-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Holy Saturday: Reflections in the Space Between Cross and Resurrection','article_source':'Faithfully Magazine','article_url':'https://faithfullymagazine.com/sisters-at-the-cross-reflections-for-a-holy-saturday/'});">
-            Holy Saturday: Reflections in the Space Between Cross and Resurrection
+          <a href="http://feeds.ligonier.org/~/916702607/0/ligonierministriesblog" class="cc-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Jesus on Trial: Gods Love for the World Revealed','article_source':'Ligonier Ministries','article_url':'http://feeds.ligonier.org/~/916702607/0/ligonierministriesblog'});">
+            Jesus on Trial: God's Love for the World Revealed
           </a>
           <div class="cc-article-meta">
       
       
       
       
-        <span>Faithfully Magazine</span>
+        <span>Ligonier Ministries</span>
       
       
     </div>
@@ -471,7 +471,7 @@
   <!-- Navigation between days -->
   <div class="cc-digest-nav">
     
-      <a href="/archive/2026-04-05/">&larr; April 5, 2026</a>
+      <a href="/archive/2026-04-04/">&larr; April 4, 2026</a>
     
     <a href="/">Back to home</a>
     

@@ -130,6 +130,7 @@ def compute_featured_topics(articles: list, top_n: int = 3) -> list:
             "slug": slug,
             "name": topic["name"],
             "hook": topic["hook"],
+            "summary": topic.get("summary", topic["hook"]),
             "category": topic["category"],
             "article_count": count,
             "articles": arts_sorted,
