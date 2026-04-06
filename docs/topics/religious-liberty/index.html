@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>On Religious Liberty | Christian Curator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Source Sans 3', sans-serif; background: #faf9f7; color: #1a1a1a; font-size: 16px; line-height: 1.6; }
+    .cc-root { max-width: 740px; margin: 0 auto; padding: 0 20px 4rem; }
+    .cc-header { border-bottom: 1px solid #e0ddd8; padding: 0.75rem 0 1rem; margin-bottom: 2rem; }
+    .cc-top-bar { display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: #888; }
+    .cc-back { font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; }
+    .cc-back:hover { text-decoration: underline; }
+    .cc-site-name { font-family: 'Lora', Georgia, serif; font-size: 22px; font-weight: 600; color: #1a1a1a; text-decoration: none; }
+    .cc-series-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.5rem; }
+    .cc-topic-hero { margin-bottom: 2.25rem; padding-bottom: 2rem; border-bottom: 2px solid #1a1a1a; }
+    .cc-topic-title { font-family: 'Lora', Georgia, serif; font-size: 38px; font-weight: 600; line-height: 1.15; margin-bottom: 0.6rem; }
+    .cc-topic-deck { font-size: 18px; color: #555; line-height: 1.5; font-style: italic; margin-bottom: 1.25rem; font-family: 'Lora', Georgia, serif; }
+    .cc-topic-meta { font-size: 12px; color: #aaa; }
+    .cc-editorial { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-editorial p { margin-bottom: 1rem; font-size: 16px; line-height: 1.7; color: #2a2a2a; }
+    .cc-editorial p:last-child { margin-bottom: 0; }
+    .cc-key-questions { background: #f0f4f0; border-left: 3px solid #2C4A2E; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; }
+    .cc-key-questions-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.5rem; }
+    .cc-key-questions ul { padding-left: 1.2rem; }
+    .cc-key-questions li { font-size: 14px; color: #3a3a3a; margin-bottom: 0.3rem; line-height: 1.5; }
+    .cc-article-list-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 1.25rem; }
+    .cc-article-entry { display: flex; gap: 1rem; margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-article-entry:last-child { border-bottom: none; }
+    .cc-article-num { font-family: 'Lora', Georgia, serif; font-size: 28px; font-weight: 600; color: #e0ddd8; min-width: 36px; line-height: 1; padding-top: 3px; }
+    .cc-article-body { flex: 1; }
+    .cc-article-title { font-family: 'Lora', Georgia, serif; font-size: 17px; font-weight: 600; line-height: 1.3; margin-bottom: 4px; }
+    .cc-article-title a { color: #1a1a1a; text-decoration: none; }
+    .cc-article-title a:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-article-byline { font-size: 12px; color: #aaa; margin-bottom: 8px; }
+    .cc-article-byline .source { color: #2C4A2E; font-weight: 600; }
+    .cc-article-annotation { font-size: 14px; color: #444; line-height: 1.6; }
+    .cc-synthesis { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 2px solid #e0ddd8; }
+    .cc-synthesis-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.75rem; }
+    .cc-synthesis p { font-size: 15px; color: #333; line-height: 1.7; margin-bottom: 0.9rem; }
+    .cc-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e0ddd8; font-size: 12px; color: #aaa; text-align: center; line-height: 1.8; }
+    .cc-footer a { color: #2C4A2E; text-decoration: none; }
+    .cc-footer a:hover { text-decoration: underline; }
+    .cc-topics-strip { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e0ddd8; }
+    .cc-topics-strip-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #aaa; margin-bottom: 1rem; }
+    .cc-topics-category { margin-bottom: 1rem; }
+    .cc-topics-category:last-child { margin-bottom: 0; }
+    .cc-topics-cat-label { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 6px; }
+    .cc-topics-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+    .cc-topic-link { font-size: 12px; padding: 4px 11px; border: 1px solid #e0ddd8; border-radius: 20px; color: #444; text-decoration: none; font-weight: 600; background: #fff; }
+    .cc-topic-link:hover { background: #2C4A2E; color: #fff; border-color: #2C4A2E; }
+    .cc-topic-link.active { background: #2C4A2E; color: #fff; border-color: #2C4A2E; }
+    .cc-debate { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 2px solid #e0ddd8; margin-bottom: 2.5rem; }
+    .cc-debate-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.5rem; }
+    .cc-debate-title { font-family: 'Lora', Georgia, serif; font-size: 24px; font-weight: 600; margin-bottom: 0.75rem; color: #1a1a1a; }
+    .cc-debate-intro { font-size: 15px; color: #444; line-height: 1.75; margin-bottom: 1.75rem; }
+    .cc-debate-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+    .cc-debate-position-card { border: 1px solid #e0ddd8; border-radius: 6px; padding: 1.25rem; background: #fff; }
+    .cc-debate-position-card.position-a { border-top: 3px solid #2C4A2E; }
+    .cc-debate-position-card.position-b { border-top: 3px solid #8B4513; }
+    .cc-debate-position-card.position-c { border-top: 3px solid #4A4A8B; }
+    .cc-debate-position-label { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .cc-debate-position-card.position-a .cc-debate-position-label { color: #2C4A2E; }
+    .cc-debate-position-card.position-b .cc-debate-position-label { color: #8B4513; }
+    .cc-debate-position-card.position-c .cc-debate-position-label { color: #4A4A8B; }
+    .cc-debate-position-name { font-family: 'Lora', Georgia, serif; font-size: 16px; font-weight: 600; margin-bottom: 0.35rem; line-height: 1.3; }
+    .cc-debate-thinkers { font-size: 12px; color: #888; margin-bottom: 0.75rem; font-style: italic; }
+    .cc-debate-argument { font-size: 14px; color: #3a3a3a; line-height: 1.65; margin-bottom: 0.85rem; }
+    .cc-debate-reads-label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; margin-bottom: 0.35rem; }
+    .cc-debate-reads a { display: block; color: #2C4A2E; text-decoration: none; font-size: 12px; font-weight: 600; margin-bottom: 3px; }
+    .cc-debate-reads a:hover { text-decoration: underline; }
+    @media (max-width: 580px) { .cc-debate-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="cc-root">
+    <header class="cc-header">
+      <div class="cc-top-bar">
+        <a href="/" class="cc-back">← Christian Curator</a>
+        <span>April 6, 2026</span>
+      </div>
+    </header>
+
+    <article>
+      <div class="cc-topic-hero">
+        <div class="cc-series-label">Culture &amp; Society</div>
+        <h1 class="cc-topic-title">On Religious Liberty</h1>
+        <p class="cc-topic-deck">Is religious liberty under genuine threat — and how should Christians respond when conscience conflicts with the law?</p>
+        <div class="cc-topic-meta">A Christian Curator Topic Guide</div>
+      </div>
+
+      <div class="cc-editorial">
+        <p>Religious liberty remains one of the most contested concepts in American evangelical life. The landscape is crowded with conflicts: cake baker lawsuits (Masterpiece Cakeshop, more recently), restrictions on school prayer and religious clubs, faith-based adoption agencies navigating nondiscrimination laws, healthcare mandates conflicting with conscience, and transgender pronoun policies in workplaces. Evangelicals largely agree that religious freedom matters; they sharply disagree on what it requires and what it enables. Some argue that religious exemptions are foundational rights, necessary to prevent the state from coercing conscience. Others worry that appeals to religious liberty can become a shield for discrimination—a way to deny services or benefits to LGBTQ people, religious minorities, or vulnerable populations. A third group insists that Christian witness does not depend on legal exemptions at all; the church should expect to suffer penalties for faithfulness, not negotiate with the state.</p>
+
+        <p>The debate is complicated by shifting American pluralism and the loss of evangelical cultural dominance. What once felt like Christian America accommodating Christian conscience increasingly feels like a secular state limiting Christian rights. But this narrative obscures how religious liberty has always worked—as a right for minority faiths as well as majorities, and how Christian conscience claims sometimes conflict with the conscience rights of others. The question the church faces is not whether to fight for legal protections, but on what grounds, with what consistency, and in service of what gospel vision. Can religious liberty be claimed prophetically for the marginalized while also protecting the powerful? Can exemptions be sought for some beliefs while recognizing the same right in others?</p>
+      </div>
+
+      <div class="cc-key-questions">
+        <div class="cc-key-questions-label">Key Questions</div>
+        <ul>
+          <li>What do constitutional protections of religious freedom actually guarantee, and what remains contested in law?</li>
+          <li>When do Christian conscience claims conflict with LGBTQ inclusion or nondiscrimination principles, and how should that conflict be resolved?</li>
+          <li>Is religious liberty under threat in the West, or is it the normalization of Christian cultural loss?</li>
+          <li>What distinguishes legitimate conscientious objection from discrimination masquerading as conscience?</li>
+          <li>How does the gospel shape Christian witness in pluralistic democracies where legal protection cannot be assumed?</li>
+        </ul>
+      </div>
+
+      <div class="cc-debate">
+        <div class="cc-debate-label">The Conversation</div>
+        <h2 class="cc-debate-title">Three Evangelical Positions on Religious Liberty</h2>
+        <p class="cc-debate-intro">Evangelicals articulate religious liberty through competing frameworks—each shaped by different theological priorities and different assessments of the threat:</p>
+
+        <div class="cc-debate-grid">
+          <div class="cc-debate-position-card position-a">
+            <div class="cc-debate-position-label">Position A</div>
+            <h3 class="cc-debate-position-name">Robust Exemptions</h3>
+            <p class="cc-debate-thinkers">Albert Mohler, Andrew Walker, ERLC</p>
+            <p class="cc-debate-argument">Religious freedom requires strong legal protections and broad exemptions. Christians should not be forced by the state to violate conscience—whether through healthcare mandates, adoption regulations, or pronoun requirements. Religious liberty is foundational; losing it invites persecution. The church must advocate vigorously for legal safeguards and exemptions, particularly for faith-based institutions.</p>
+            <div class="cc-debate-reads">
+              <div class="cc-debate-reads-label">Key Reads</div>
+              <a href="https://erlc.com/resource-library/articles/religious-liberty">ERLC on Religious Liberty</a>
+              <a href="https://www.thegospelcoalition.org/blogs/justin-taylor/albertmohler-conscience-and-law/">Albert Mohler on Conscience and the Law</a>
+              <a href="https://www.thegospelcoalition.org/article/religious-liberty-and-christianity/">Religious Liberty and Christianity</a>
+            </div>
+          </div>
+
+          <div class="cc-debate-position-card position-b">
+            <div class="cc-debate-position-label">Position B</div>
+            <h3 class="cc-debate-position-name">Principled Pluralism</h3>
+            <p class="cc-debate-thinkers">Russell Moore, Miroslav Volf</p>
+            <p class="cc-debate-argument">Religious liberty is a gospel-informed principle rooted in respect for conscience, not merely Christian self-interest. Christians should advocate for religious freedom for all faiths—Muslim, Jewish, Buddhist—because the gospel mandates this pluralism. Exemptions may be just, but they cannot be motivated by fear or self-protection. True religious liberty means minority faiths receive equal protection and dignity.</p>
+            <div class="cc-debate-reads">
+              <div class="cc-debate-reads-label">Key Reads</div>
+              <a href="https://www.thegospelcoalition.org/blogs/justin-taylor/russell-moore-religious-liberty/">Russell Moore on Religious Liberty</a>
+              <a href="https://www.christianitytoday.com/ct/2021/december/religious-liberty-pluralism.html">Religious Liberty and Pluralism</a>
+              <a href="https://www.thegospelcoalition.org/article/faith-and-conscience-in-pluralism/">Faith and Conscience in Pluralism</a>
+            </div>
+          </div>
+
+          <div class="cc-debate-position-card position-c">
+            <div class="cc-debate-position-label">Position C</div>
+            <h3 class="cc-debate-position-name">Prophetic Witness Without Legal Refuge</h3>
+            <p class="cc-debate-thinkers">Stanley Hauerwas, Anabaptist voices</p>
+            <p class="cc-debate-argument">The church should not depend on legal protection for faithful witness. Christians should accept penalties for conscience—fines, loss of business, imprisonment—rather than negotiate exemptions with the state. Relying on legal protections makes the gospel conditional and reduces faithfulness to a rights claim. The church is most faithful when it's willing to suffer.</p>
+            <div class="cc-debate-reads">
+              <div class="cc-debate-reads-label">Key Reads</div>
+              <a href="https://www.thegospelcoalition.org/blogs/justin-taylor/stanley-hauerwas-church-and-state/">Stanley Hauerwas on the Church and State</a>
+              <a href="https://www.christianitytoday.com/ct/2022/march/witness-without-legal-refuge.html">Witness Without Legal Refuge</a>
+              <a href="https://www.thegospelcoalition.org/article/anabaptist-perspective-religious-liberty/">An Anabaptist Perspective on Religious Liberty</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cc-synthesis">
+        <div class="cc-synthesis-label">What Comes Next</div>
+        <p>The gospel shapes Christian engagement with the state by refusing both absolutisms. Christians are not entitled to legal dominance, nor are they called to capitulate to every secular demand. The church needs robust protections for conscience—especially for minorities and the vulnerable. But these protections must be claimed universally, not selfishly. When Christians advocate for religious exemptions, they must do so in ways that protect Muslim and Jewish minorities equally, not carve out privileges for the Christian majority.</p>
+
+        <p>And the church must recover the spiritual resource of suffering for conscience. Not because suffering is good in itself, but because it frees the church from desperation. A church that expects legal protection will compromise the gospel to secure it. A church that accepts martyrdom for faithfulness is free to witness prophetically. The question is not whether Christians will enjoy legal supremacy again—they will not. The question is whether the church will use its remaining cultural capital to advocate for justice and pluralism, or to preserve Christian privilege. The answer will define whether American evangelicalism is truly prophetic or merely self-interested.</p>
+      </div>
+
+      <section class="cc-synthesis">
+        <div class="cc-article-list-label">Essential Reading</div>
+
+        <div class="cc-article-entry">
+          <div class="cc-article-num">1</div>
+          <div class="cc-article-body">
+            <div class="cc-article-title"><a href="https://erlc.com/resource-library/articles/what-is-religious-liberty">What Is Religious Liberty?</a></div>
+            <div class="cc-article-byline">by <span class="source">ERLC</span></div>
+            <div class="cc-article-annotation">A foundational definition of religious liberty—constitutional history, current legal landscape, and the evangelical interest in strong protections.</div>
+          </div>
+        </div>
+
+        <div class="cc-article-entry">
+          <div class="cc-article-num">2</div>
+          <div class="cc-article-body">
+            <div class="cc-article-title"><a href="https://www.thegospelcoalition.org/article/masterpiece-cakeshop-religious-liberty/">Masterpiece Cakeshop and Religious Conscience</a></div>
+            <div class="cc-article-byline">by <span class="source">The Gospel Coalition</span></div>
+            <div class="cc-article-annotation">An analysis of the landmark cake baker case—what it reveals about the collision between religious liberty and nondiscrimination, and why evangelicals remain divided.</div>
+          </div>
+        </div>
+
+        <div class="cc-article-entry">
+          <div class="cc-article-num">3</div>
+          <div class="cc-article-body">
+            <div class="cc-article-title"><a href="https://www.christianitytoday.com/ct/2023/january-february/religious-liberty-threat.html">Is Religious Liberty Really Under Threat?</a></div>
+            <div class="cc-article-byline">by <span class="source">Christianity Today</span></div>
+            <div class="cc-article-annotation">A critical examination of evangelical claims about persecution and religious liberty decline in the US—what's real and what's cultural loss.</div>
+          </div>
+        </div>
+
+        <div class="cc-article-entry">
+          <div class="cc-article-num">4</div>
+          <div class="cc-article-body">
+            <div class="cc-article-title"><a href="https://www.thegospelcoalition.org/article/lgbtq-nondiscrimination-and-conscience/">LGBTQ Inclusion and Christian Conscience</a></div>
+            <div class="cc-article-byline">by <span class="source">The Gospel Coalition</span></div>
+            <div class="cc-article-annotation">On navigating the tension between protecting Christian conscience claims and respecting LGBTQ dignity—and whether both can coexist.</div>
+          </div>
+        </div>
+
+        <div class="cc-article-entry">
+          <div class="cc-article-num">5</div>
+          <div class="cc-article-body">
+            <div class="cc-article-title"><a href="https://erlc.com/resource-library/articles/global-religious-persecution">Global Religious Persecution</a></div>
+            <div class="cc-article-byline">by <span class="source">ERLC</span></div>
+            <div class="cc-article-annotation">Documenting genuine persecution of Christians and other faiths worldwide—providing perspective on the American religious liberty debate.</div>
+          </div>
+        </div>
+
+        <div class="cc-article-entry">
+          <div class="cc-article-num">6</div>
+          <div class="cc-article-body">
+            <div class="cc-article-title"><a href="https://www.christianitytoday.com/ct/2022/june/religious-liberty-and-discrimination.html">Where Religious Liberty Becomes Discrimination</a></div>
+            <div class="cc-article-byline">by <span class="source">Christianity Today</span></div>
+            <div class="cc-article-annotation">Drawing the line between legitimate conscience claims and using "religious liberty" to justify exclusion or harm to vulnerable populations.</div>
+          </div>
+        </div>
+
+        <div class="cc-article-entry">
+          <div class="cc-article-num">7</div>
+          <div class="cc-article-body">
+            <div class="cc-article-title"><a href="https://www.thegospelcoalition.org/article/prophetic-witness-without-legal-privilege/">Prophetic Witness Without Legal Privilege</a></div>
+            <div class="cc-article-byline">by <span class="source">The Gospel Coalition</span></div>
+            <div class="cc-article-annotation">On reclaiming a vision of the church as faithful minority—what it means to witness boldly without relying on state protection.</div>
+          </div>
+        </div>
+
+        <div class="cc-article-entry">
+          <div class="cc-article-num">8</div>
+          <div class="cc-article-body">
+            <div class="cc-article-title"><a href="https://www.firstthings.com/articles/religious-liberty-and-pluralism">Religious Liberty and Pluralism</a></div>
+            <div class="cc-article-byline">by <span class="source">First Things</span></div>
+            <div class="cc-article-annotation">A reflection on religious liberty in a pluralistic society—how the gospel's defense of conscience extends to all faiths, not just Christian ones.</div>
+          </div>
+        </div>
+
+        <div class="cc-article-entry">
+          <div class="cc-article-num">9</div>
+          <div class="cc-article-body">
+            <div class="cc-article-title"><a href="https://erlc.com/resource-library/articles/faith-based-adoption-agencies-and-nondiscrimination">Faith-Based Adoption and Nondiscrimination Law</a></div>
+            <div class="cc-article-byline">by <span class="source">ERLC</span></div>
+            <div class="cc-article-annotation">A case study in the collision between religious exemptions and civil rights—examining both evangelical and progressive arguments.</div>
+          </div>
+        </div>
+
+        <div class="cc-article-entry">
+          <div class="cc-article-num">10</div>
+          <div class="cc-article-body">
+            <div class="cc-article-title"><a href="https://www.christianitytoday.com/ct/2024/april/religious-liberty-future.html">The Future of Religious Liberty in America</a></div>
+            <div class="cc-article-byline">by <span class="source">Christianity Today</span></div>
+            <div class="cc-article-annotation">Looking ahead—how Christians might engage religious liberty debates with both prophetic conviction and genuine humility about the pluralistic world we inhabit.</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="cc-topics-strip">
+        <div class="cc-topics-strip-label">Explore All Topics</div>
+        <div class="cc-topics-category">
+          <div class="cc-topics-cat-label">Core Theology</div>
+          <div class="cc-topics-grid">
+            <a href="/topics/atonement/" class="cc-topic-link">The Atonement</a>
+            <a href="/topics/justification-by-faith/" class="cc-topic-link">Justification</a>
+            <a href="/topics/biblical-inerrancy/" class="cc-topic-link">Biblical Inerrancy</a>
+            <a href="/topics/baptism/" class="cc-topic-link">Baptism</a>
+            <a href="/topics/lords-supper/" class="cc-topic-link">The Lord's Supper</a>
+            <a href="/topics/heaven-hell-eternity/" class="cc-topic-link">Heaven &amp; Hell</a>
+            <a href="/topics/creation-evolution/" class="cc-topic-link">Creation &amp; Evolution</a>
+            <a href="/topics/suffering-and-providence/" class="cc-topic-link">Suffering &amp; Providence</a>
+            <a href="/topics/gender-and-biblical-anthropology/" class="cc-topic-link">Gender &amp; Anthropology</a>
+            <a href="/topics/apologetics/" class="cc-topic-link">Apologetics</a>
+            <a href="/topics/predestination-free-will/" class="cc-topic-link">Predestination</a>
+            <a href="/topics/holy-spirit-spiritual-gifts/" class="cc-topic-link">The Holy Spirit</a>
+            <a href="/topics/the-trinity/" class="cc-topic-link">The Trinity</a>
+            <a href="/topics/eschatology/" class="cc-topic-link">End Times</a>
+            <a href="/topics/israel-and-prophecy/" class="cc-topic-link">Israel &amp; Prophecy</a>
+          </div>
+        </div>
+        <div class="cc-topics-category">
+          <div class="cc-topics-cat-label">Church Life</div>
+          <div class="cc-topics-grid">
+            <a href="/topics/complementarianism-egalitarianism/" class="cc-topic-link">Complementarianism</a>
+            <a href="/topics/church-discipline/" class="cc-topic-link">Church Discipline</a>
+            <a href="/topics/worship-and-liturgy/" class="cc-topic-link">Worship &amp; Liturgy</a>
+            <a href="/topics/local-church/" class="cc-topic-link">The Local Church</a>
+            <a href="/topics/missions-and-evangelism/" class="cc-topic-link">Missions &amp; Evangelism</a>
+            <a href="/topics/church-history/" class="cc-topic-link">Church History</a>
+            <a href="/topics/membership/" class="cc-topic-link">Membership</a>
+            <a href="/topics/church-planting/" class="cc-topic-link">Church Planting</a>
+            <a href="/topics/preaching/" class="cc-topic-link">Preaching</a>
+            <a href="/topics/church-accountability/" class="cc-topic-link">Accountability</a>
+            <a href="/topics/spiritual-abuse/" class="cc-topic-link">Spiritual Abuse</a>
+          </div>
+        </div>
+        <div class="cc-topics-category">
+          <div class="cc-topics-cat-label">Spiritual Formation</div>
+          <div class="cc-topics-grid">
+            <a href="/topics/prayer/" class="cc-topic-link">Prayer</a>
+            <a href="/topics/discipleship/" class="cc-topic-link">Discipleship</a>
+            <a href="/topics/sanctification/" class="cc-topic-link">Sanctification</a>
+            <a href="/topics/spiritual-disciplines/" class="cc-topic-link">Spiritual Disciplines</a>
+            <a href="/topics/spiritual-warfare/" class="cc-topic-link">Spiritual Warfare</a>
+            <a href="/topics/fasting/" class="cc-topic-link">Fasting</a>
+            <a href="/topics/anxiety-and-fear/" class="cc-topic-link">Anxiety &amp; Fear</a>
+            <a href="/topics/mental-health/" class="cc-topic-link">Mental Health &amp; Faith</a>
+            <a href="/topics/faith-deconstruction/" class="cc-topic-link">Deconstruction</a>
+            <a href="/topics/contemplative-prayer/" class="cc-topic-link">Contemplative Prayer</a>
+            <a href="/topics/grief-and-lament/" class="cc-topic-link">Grief &amp; Lament</a>
+            <a href="/topics/forgiveness/" class="cc-topic-link">Forgiveness</a>
+            <a href="/topics/christian-friendship/" class="cc-topic-link">Friendship</a>
+          </div>
+        </div>
+        <div class="cc-topics-category">
+          <div class="cc-topics-cat-label">Culture &amp; Society</div>
+          <div class="cc-topics-grid">
+            <a href="/topics/politics-and-the-church/" class="cc-topic-link">Politics &amp; the Church</a>
+            <a href="/topics/racial-reconciliation/" class="cc-topic-link">Racial Reconciliation</a>
+            <a href="/topics/technology/" class="cc-topic-link">Technology</a>
+            <a href="/topics/technology-and-discipleship/" class="cc-topic-link">Tech &amp; Discipleship</a>
+            <a href="/topics/marriage-and-family/" class="cc-topic-link">Marriage &amp; Family</a>
+            <a href="/topics/christian-parenting/" class="cc-topic-link">Christian Parenting</a>
+            <a href="/topics/christian-ethics/" class="cc-topic-link">Christian Ethics</a>
+            <a href="/topics/vocation-and-work/" class="cc-topic-link">Vocation &amp; Work</a>
+            <a href="/topics/evangelicalism/" class="cc-topic-link">Evangelicalism</a>
+            <a href="/topics/christian-nationalism/" class="cc-topic-link">Christian Nationalism</a>
+            <a href="/topics/biblical-sexuality/" class="cc-topic-link">Biblical Sexuality</a>
+            <a href="/topics/ai-and-the-church/" class="cc-topic-link">AI &amp; the Church</a>
+            <a href="/topics/biblical-justice/" class="cc-topic-link">Justice &amp; the Gospel</a>
+            <a href="/topics/prosperity-gospel/" class="cc-topic-link">Prosperity Gospel</a>
+            <a href="/topics/religious-liberty/" class="cc-topic-link active">Religious Liberty</a>
+            <a href="/topics/progressive-christianity/" class="cc-topic-link">Progressive Christianity</a>
+            <a href="/topics/stewardship-and-generosity/" class="cc-topic-link">Stewardship &amp; Generosity</a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="cc-footer">
+        <p><strong>Christian Curator</strong> is an independent digest of evangelical thought on theology, culture, and the church.</p>
+        <p><a href="/">Home</a> | <a href="/about/">About</a> | <a href="/archive/">Archive</a> | <a href="/subscribe/">Subscribe</a></p>
+      </footer>
+    </article>
+  </div>
+</body>
+</html>

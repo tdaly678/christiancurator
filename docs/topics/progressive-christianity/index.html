@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>On Progressive Christianity | Christian Curator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Source Sans 3', sans-serif; background: #faf9f7; color: #1a1a1a; font-size: 16px; line-height: 1.6; }
+    .cc-root { max-width: 740px; margin: 0 auto; padding: 0 20px 4rem; }
+    .cc-header { border-bottom: 1px solid #e0ddd8; padding: 0.75rem 0 1rem; margin-bottom: 2rem; }
+    .cc-top-bar { display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: #888; }
+    .cc-back { font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; }
+    .cc-back:hover { text-decoration: underline; }
+    .cc-site-name { font-family: 'Lora', Georgia, serif; font-size: 22px; font-weight: 600; color: #1a1a1a; text-decoration: none; }
+    .cc-series-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.5rem; }
+    .cc-topic-hero { margin-bottom: 2.25rem; padding-bottom: 2rem; border-bottom: 2px solid #1a1a1a; }
+    .cc-topic-title { font-family: 'Lora', Georgia, serif; font-size: 38px; font-weight: 600; line-height: 1.15; margin-bottom: 0.6rem; }
+    .cc-topic-deck { font-size: 18px; color: #555; line-height: 1.5; font-style: italic; margin-bottom: 1.25rem; font-family: 'Lora', Georgia, serif; }
+    .cc-topic-meta { font-size: 12px; color: #aaa; }
+    .cc-editorial { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-editorial p { margin-bottom: 1rem; font-size: 16px; line-height: 1.7; color: #2a2a2a; }
+    .cc-editorial p:last-child { margin-bottom: 0; }
+    .cc-key-questions { background: #f0f4f0; border-left: 3px solid #2C4A2E; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; }
+    .cc-key-questions-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.5rem; }
+    .cc-key-questions ul { padding-left: 1.2rem; }
+    .cc-key-questions li { font-size: 14px; color: #3a3a3a; margin-bottom: 0.3rem; line-height: 1.5; }
+    .cc-article-list-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 1.25rem; }
+    .cc-article-entry { display: flex; gap: 1rem; margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-article-entry:last-child { border-bottom: none; }
+    .cc-article-num { font-family: 'Lora', Georgia, serif; font-size: 28px; font-weight: 600; color: #e0ddd8; min-width: 36px; line-height: 1; padding-top: 3px; }
+    .cc-article-body { flex: 1; }
+    .cc-article-title { font-family: 'Lora', Georgia, serif; font-size: 17px; font-weight: 600; line-height: 1.3; margin-bottom: 4px; }
+    .cc-article-title a { color: #1a1a1a; text-decoration: none; }
+    .cc-article-title a:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-article-byline { font-size: 12px; color: #aaa; margin-bottom: 8px; }
+    .cc-article-byline .source { color: #2C4A2E; font-weight: 600; }
+    .cc-article-annotation { font-size: 14px; color: #444; line-height: 1.6; }
+    .cc-synthesis { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 2px solid #e0ddd8; }
+    .cc-synthesis-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.75rem; }
+    .cc-synthesis p { font-size: 15px; color: #333; line-height: 1.7; margin-bottom: 0.9rem; }
+    .cc-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e0ddd8; font-size: 12px; color: #aaa; text-align: center; line-height: 1.8; }
+    .cc-footer a { color: #2C4A2E; text-decoration: none; }
+    .cc-footer a:hover { text-decoration: underline; }
+    .cc-topics-strip { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e0ddd8; }
+    .cc-topics-strip-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #aaa; margin-bottom: 1rem; }
+    .cc-topics-category { margin-bottom: 1rem; }
+    .cc-topics-category:last-child { margin-bottom: 0; }
+    .cc-topics-cat-label { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 6px; }
+    .cc-topics-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+    .cc-topic-link { font-size: 12px; padding: 4px 11px; border: 1px solid #e0ddd8; border-radius: 20px; color: #444; text-decoration: none; font-weight: 600; background: #fff; }
+    .cc-topic-link:hover { background: #2C4A2E; color: #fff; border-color: #2C4A2E; }
+    .cc-topic-link.active { background: #2C4A2E; color: #fff; border-color: #2C4A2E; }
+    .cc-debate { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 2px solid #e0ddd8; margin-bottom: 2.5rem; }
+    .cc-debate-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.5rem; }
+    .cc-debate-title { font-family: 'Lora', Georgia, serif; font-size: 24px; font-weight: 600; margin-bottom: 0.75rem; color: #1a1a1a; }
+    .cc-debate-intro { font-size: 15px; color: #444; line-height: 1.75; margin-bottom: 1.75rem; }
+    .cc-debate-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+    .cc-debate-position-card { border: 1px solid #e0ddd8; border-radius: 6px; padding: 1.25rem; background: #fff; }
+    .cc-debate-position-card.position-a { border-top: 3px solid #2C4A2E; }
+    .cc-debate-position-card.position-b { border-top: 3px solid #8B4513; }
+    .cc-debate-position-card.position-c { border-top: 3px solid #4A4A8B; }
+    .cc-debate-position-label { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .cc-debate-position-card.position-a .cc-debate-position-label { color: #2C4A2E; }
+    .cc-debate-position-card.position-b .cc-debate-position-label { color: #8B4513; }
+    .cc-debate-position-card.position-c .cc-debate-position-label { color: #4A4A8B; }
+    .cc-debate-position-name { font-family: 'Lora', Georgia, serif; font-size: 16px; font-weight: 600; margin-bottom: 0.35rem; line-height: 1.3; }
+    .cc-debate-thinkers { font-size: 12px; color: #888; margin-bottom: 0.75rem; font-style: italic; }
+    .cc-debate-argument { font-size: 14px; color: #3a3a3a; line-height: 1.65; margin-bottom: 0.85rem; }
+    .cc-debate-reads-label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; margin-bottom: 0.35rem; }
+    .cc-debate-reads a { display: block; color: #2C4A2E; text-decoration: none; font-size: 12px; font-weight: 600; margin-bottom: 3px; }
+    .cc-debate-reads a:hover { text-decoration: underline; }
+    @media (max-width: 580px) { .cc-debate-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="cc-root">
+    <header class="cc-header">
+      <div class="cc-top-bar">
+        <a href="/" class="cc-back">← Christian Curator</a>
+        <span>April 2026</span>
+      </div>
+    </header>
+
+    <div class="cc-topic-hero">
+      <div class="cc-series-label">Culture &amp; Society</div>
+      <h1 class="cc-topic-title">On Progressive Christianity</h1>
+      <p class="cc-topic-deck">Is progressive Christianity a reform of the faith — or has it progressed so far it has become a different religion altogether?</p>
+      <div class="cc-topic-meta">A Christian Curator Topic Guide</div>
+    </div>
+
+    <div class="cc-editorial">
+      <p>Progressive Christianity represents one of the most significant departures from evangelical orthodoxy in contemporary religious life. It is not simply a liberal interpretation of Scripture; it is a comprehensive theological reorientation that challenges foundational evangelical commitments. Where evangelical Christianity affirms the authority of Scripture, the exclusivity of Christ's saving work, the reality of personal conversion, and the centrality of Christ's substitutionary atonement, progressive Christianity tends to emphasize cultural accommodation, religious pluralism, ethical concerns over doctrinal precision, and a Jesus whose primary work was social transformation rather than cosmic redemption. These are not marginal disagreements but fundamental shifts in how one understands the gospel itself.</p>
+      <p>For evangelical leaders and pastors, progressive Christianity represents both a cautionary tale and an urgent pastoral concern. Many who have deconstructed from evangelical faith have traveled through progressive theology on their way to skepticism or other faiths entirely. The movement's uncritical embrace of cultural trends—particularly on sexuality, gender, biblical authority, and the exclusivity of Christ—raises the question of whether it represents genuine reformation or systematic capitulation to secular culture. Yet the evangelical church's failure to adequately address questions about biblical interpretation, the treatment of LGBTQ+ persons, racial justice, and women's leadership has created a vacuum that progressive voices have rushed to fill. This suggests that addressing progressive Christianity cannot be merely defensive; it requires the church to recover a robustly biblical, intellectually rigorous, and pastorally winsome orthodoxy.</p>
+    </div>
+
+    <div class="cc-key-questions">
+      <div class="cc-key-questions-label">Key Questions</div>
+      <ul>
+        <li>What precisely defines "progressive Christianity," and how does it differ fundamentally from historical evangelical faith?</li>
+        <li>On which doctrinal issues—biblical authority, the exclusivity of Christ, sexual ethics, the nature of atonement—does progressive Christianity most sharply diverge from historic Christianity?</li>
+        <li>How can evangelicals engage progressive Christians with intellectual honesty and pastoral charity while maintaining doctrinal clarity?</li>
+        <li>What drives young evangelicals toward faith deconstruction and progressive theology, and what catechetical failures does this expose in the church?</li>
+        <li>Is progressive Christianity a genuinely new movement, or is it merely liberal Protestantism re-branded for the contemporary moment?</li>
+      </ul>
+    </div>
+
+    <div class="cc-debate">
+      <div class="cc-debate-label">The Debate</div>
+      <h2 class="cc-debate-title">Three Evangelical Responses to Progressive Christianity</h2>
+      <p class="cc-debate-intro">Evangelicals across the theological spectrum share concern about progressive Christianity's trajectory, yet they differ on the most faithful evangelical response: whether to refute it apologetically, engage it dialogically, or recover a deeper orthodoxy that transcends the evangelical-progressive divide.</p>
+
+      <div class="cc-debate-grid">
+        <div class="cc-debate-position-card position-a">
+          <div class="cc-debate-position-label">Position A</div>
+          <h3 class="cc-debate-position-name">Apologetic Refutation</h3>
+          <p class="cc-debate-thinkers">Alisa Childers, Michael Brown</p>
+          <p class="cc-debate-argument">Progressive Christianity must be clearly identified as a departure from historic Christian orthodoxy and systematically refuted. It abandons the bedrock commitments of the faith—biblical authority, Christ's exclusive lordship, substitutionary atonement—in favor of cultural accommodation. The church's primary responsibility is to defend the faith once for all delivered to the saints, to expose the theological errors of progressivism, and to call people back to biblical Christianity. Dialogue without clear apologetics can inadvertently legitimize theological error.</p>
+          <div class="cc-debate-reads">
+            <div class="cc-debate-reads-label">Key Reads</div>
+            <a href="https://www.thegospelcoalition.org/blogs/alisa-childers/" target="_blank">Alisa Childers at The Gospel Coalition</a>
+            <a href="https://www.christianpost.com/authors/michael-brown/" target="_blank">Michael Brown - Christian Post</a>
+          </div>
+        </div>
+
+        <div class="cc-debate-position-card position-b">
+          <div class="cc-debate-position-label">Position B</div>
+          <h3 class="cc-debate-position-name">Generous Dialogue</h3>
+          <p class="cc-debate-thinkers">Tim Keller-influenced voices</p>
+          <p class="cc-debate-argument">Progressive Christians raise legitimate questions about how evangelicalism has sometimes accommodated to its own cultural captivity—tribalism, nationalism, materialism. Rather than dismissing progressivism wholesale, faithful evangelicals should listen carefully to the concerns driving it, engage progressive thinkers with genuine intellectual curiosity, and defend orthodoxy through winsome reasoning rather than polemic. This approach honors the image of God in progressive believers and creates space for genuine theological conversation across deep disagreement.</p>
+          <div class="cc-debate-reads">
+            <div class="cc-debate-reads-label">Key Reads</div>
+            <a href="https://www.thegospelcoalition.org/article/ten-questions-evangelicals-should-ask-themselves/" target="_blank">TGC: Questions Evangelicals Should Ask</a>
+            <a href="https://www.crossway.org/articles/talking-across-the-divide-with-tim-keller/" target="_blank">Talking Across the Divide (Crossway)</a>
+          </div>
+        </div>
+
+        <div class="cc-debate-position-card position-c">
+          <div class="cc-debate-position-label">Position C</div>
+          <h3 class="cc-debate-position-name">Prophetic Retrieval</h3>
+          <p class="cc-debate-thinkers">Carl Trueman, Matthew Barrett</p>
+          <p class="cc-debate-argument">The problem is not that progressive Christianity has rejected evangelical faith but that it has rejected biblical, creedal orthodoxy itself. The solution is neither to defend evangelical distinctives nor to engage in undifferentiated dialogue, but to recover the deep catholicity of historic Christian doctrine—the ancient creeds, the theological wisdom of the church fathers, the Reformation's commitment to Scripture's authority. This retrieval of orthodoxy transcends the evangelical-progressive divide and grounds the church in something deeper and more enduring than contemporary culture.</p>
+          <div class="cc-debate-reads">
+            <div class="cc-debate-reads-label">Key Reads</div>
+            <a href="https://www.thegospelcoalition.org/blogs/carl-trueman/" target="_blank">Carl Trueman at The Gospel Coalition</a>
+            <a href="https://www.crossway.org/authors/matthew-barrett/" target="_blank">Matthew Barrett - Crossway</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cc-synthesis">
+      <div class="cc-synthesis-label">Synthesis</div>
+      <p>Progressive Christianity reveals a crucial failure in evangelical catechesis and biblical formation. Many who deconstruct from evangelical faith do so not because they have encountered devastating intellectual arguments but because they have never been adequately taught why historic Christian doctrine matters, how to read Scripture with both faith and critical care, or how to think Christianly about complex cultural questions. The church's retreat into tribal identity politics on the right has been matched by its capitulation to cultural progressivism on the left—both represent a failure to ground the faith in the deeper wells of apostolic tradition and biblical authority. If the church is to respond faithfully to progressive Christianity, it cannot do so by defending evangelical distinctives or even by engaging in dialogue, though dialogue has its place. It must recover a deep, winsome, intellectually rigorous Christian orthodoxy that is both faithful to Scripture and capacious enough to address the legitimate questions progressive voices raise.</p>
+      <p>The most urgent pastoral task is not to polemicize against progressivism but to catechize the rising generation in the faith once delivered to the saints. This means teaching young Christians to read the Bible as a unified narrative of redemption, to understand the why behind Christian doctrine, to think carefully about how Scripture addresses cultural questions without simply capitulating to cultural pressure, and to recognize that the deepest human fulfillment comes not from aligning with the spirit of the age but from being conformed to Christ. Where progressive Christianity offers therapy and affirmation, historic Christianity offers truth, beauty, and a communion that transcends every human category. The church's witness in this moment depends not on defeating progressivism in argument but on embodying a faith so intellectually compelling, pastorally tender, and spiritually alive that it demonstrates the sufficiency of Christ and the authority of Scripture in a way that addresses the deepest longings of the human heart.</p>
+    </div>
+
+    <div style="margin-bottom: 2.5rem;">
+      <div class="cc-article-list-label">Further Reading</div>
+
+      <div class="cc-article-entry">
+        <div class="cc-article-num">1</div>
+        <div class="cc-article-body">
+          <h3 class="cc-article-title"><a href="https://www.thegospelcoalition.org/article/what-is-progressive-christianity/" target="_blank">What Is Progressive Christianity?</a></h3>
+          <div class="cc-article-byline">by <span class="source">The Gospel Coalition</span></div>
+          <p class="cc-article-annotation">A comprehensive overview of progressive Christianity's history, key figures, and theological commitments, explaining how it differs from evangelical and mainline Protestant traditions.</p>
+        </div>
+      </div>
+
+      <div class="cc-article-entry">
+        <div class="cc-article-num">2</div>
+        <div class="cc-article-body">
+          <h3 class="cc-article-title"><a href="https://www.crossway.org/articles/alisa-childers-on-progressive-christianity/" target="_blank">Alisa Childers on Progressive Christianity and Deconstruction</a></h3>
+          <div class="cc-article-byline">by <span class="source">Crossway</span></div>
+          <p class="cc-article-annotation">An in-depth interview and article examining how progressive theology functions as a gateway to faith deconstruction and addressing its core intellectual and spiritual vulnerabilities.</p>
+        </div>
+      </div>
+
+      <div class="cc-article-entry">
+        <div class="cc-article-num">3</div>
+        <div class="cc-article-body">
+          <h3 class="cc-article-title"><a href="https://www.christianitytoday.com/ct/2020/september/rob-bell-leaves-evangelicalism.html" target="_blank">Rob Bell and the Trajectory of Progressive Evangelicalism</a></h3>
+          <div class="cc-article-byline">by <span class="source">Christianity Today</span></div>
+          <p class="cc-article-annotation">An examination of how influential evangelical figures like Rob Bell have progressively abandoned core doctrines, tracing the theological and cultural factors that precipitate this movement.</p>
+        </div>
+      </div>
+
+      <div class="cc-article-entry">
+        <div class="cc-article-num">4</div>
+        <div class="cc-article-body">
+          <h3 class="cc-article-title"><a href="https://www.thegospelcoalition.org/article/rachel-held-evans-and-progressive-christianity/" target="_blank">Rachel Held Evans: Progressive Faith and Its Limits</a></h3>
+          <div class="cc-article-byline">by <span class="source">The Gospel Coalition</span></div>
+          <p class="cc-article-annotation">A reflection on Rachel Held Evans' trajectory from evangelical to progressive Christianity, examining what her theological journey reveals about the evangelical church's blind spots and weaknesses.</p>
+        </div>
+      </div>
+
+      <div class="cc-article-entry">
+        <div class="cc-article-num">5</div>
+        <div class="cc-article-body">
+          <h3 class="cc-article-title"><a href="https://www.crossway.org/articles/biblical-authority-and-progressive-theology/" target="_blank">Biblical Authority and Progressive Theology</a></h3>
+          <div class="cc-article-byline">by <span class="source">Crossway</span></div>
+          <p class="cc-article-annotation">An examination of how progressive Christianity approaches biblical interpretation and why the rejection of biblical authority is central to its theological project.</p>
+        </div>
+      </div>
+
+      <div class="cc-article-entry">
+        <div class="cc-article-num">6</div>
+        <div class="cc-article-body">
+          <h3 class="cc-article-title"><a href="https://www.thegospelcoalition.org/article/faith-deconstruction-and-progressive-christianity/" target="_blank">Understanding Deconstruction: From Evangelicalism to Progressive Faith</a></h3>
+          <div class="cc-article-byline">by <span class="source">The Gospel Coalition</span></div>
+          <p class="cc-article-annotation">A pastoral and theological analysis of why young evangelicals are deconstructing their faith and what the church can learn about its failures in formation and discipleship.</p>
+        </div>
+      </div>
+
+      <div class="cc-article-entry">
+        <div class="cc-article-num">7</div>
+        <div class="cc-article-body">
+          <h3 class="cc-article-title"><a href="https://www.christianitytoday.com/ct/2023/january/evangelical-crisis-identity-formation.html" target="_blank">The Evangelical Crisis in Catechesis and Identity</a></h3>
+          <div class="cc-article-byline">by <span class="source">Christianity Today</span></div>
+          <p class="cc-article-annotation">An urgent examination of how the evangelical church's failure to teach its young people the deep doctrines of the faith has left them vulnerable to progressive deconstruction.</p>
+        </div>
+      </div>
+
+      <div class="cc-article-entry">
+        <div class="cc-article-num">8</div>
+        <div class="cc-article-body">
+          <h3 class="cc-article-title"><a href="https://www.crossway.org/articles/carl-trueman-on-progressivism-and-historical-orthodoxy/" target="_blank">Carl Trueman on Progressivism and Historical Orthodoxy</a></h3>
+          <div class="cc-article-byline">by <span class="source">Crossway</span></div>
+          <p class="cc-article-annotation">A compelling argument for recovering the ancient creeds and apostolic tradition as the antidote to both progressive theological drift and evangelical cultural accommodation.</p>
+        </div>
+      </div>
+
+      <div class="cc-article-entry">
+        <div class="cc-article-num">9</div>
+        <div class="cc-article-body">
+          <h3 class="cc-article-title"><a href="https://www.thegospelcoalition.org/article/engaging-progressive-christians-with-grace-and-truth/" target="_blank">Engaging Progressive Christians: Grace and Truth</a></h3>
+          <div class="cc-article-byline">by <span class="source">The Gospel Coalition</span></div>
+          <p class="cc-article-annotation">A guide to thoughtful, charitable engagement with progressive believers that maintains doctrinal conviction while recognizing legitimate questions they raise about evangelical culture.</p>
+        </div>
+      </div>
+
+      <div class="cc-article-entry">
+        <div class="cc-article-num">10</div>
+        <div class="cc-article-body">
+          <h3 class="cc-article-title"><a href="https://www.christianitytoday.com/ct/2022/october/evangelical-reformation-beyond-progressive-and-conservative.html" target="_blank">Beyond Progressive and Conservative: Recovering Evangelical Faithfulness</a></h3>
+          <div class="cc-article-byline">by <span class="source">Christianity Today</span></div>
+          <p class="cc-article-annotation">A vision for how the evangelical church can address the legitimate concerns that drive people toward progressive theology while remaining faithfully rooted in biblical orthodoxy.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cc-topics-strip">
+      <div class="cc-topics-strip-label">Explore All Topics</div>
+      <div class="cc-topics-category">
+        <div class="cc-topics-cat-label">Core Theology</div>
+        <div class="cc-topics-grid">
+          <a href="/topics/atonement/" class="cc-topic-link">The Atonement</a>
+          <a href="/topics/justification-by-faith/" class="cc-topic-link">Justification</a>
+          <a href="/topics/biblical-inerrancy/" class="cc-topic-link">Biblical Inerrancy</a>
+          <a href="/topics/baptism/" class="cc-topic-link">Baptism</a>
+          <a href="/topics/lords-supper/" class="cc-topic-link">The Lord's Supper</a>
+          <a href="/topics/heaven-hell-eternity/" class="cc-topic-link">Heaven &amp; Hell</a>
+          <a href="/topics/creation-evolution/" class="cc-topic-link">Creation &amp; Evolution</a>
+          <a href="/topics/suffering-and-providence/" class="cc-topic-link">Suffering &amp; Providence</a>
+          <a href="/topics/gender-and-biblical-anthropology/" class="cc-topic-link">Gender &amp; Anthropology</a>
+          <a href="/topics/apologetics/" class="cc-topic-link">Apologetics</a>
+          <a href="/topics/predestination-free-will/" class="cc-topic-link">Predestination</a>
+          <a href="/topics/holy-spirit-spiritual-gifts/" class="cc-topic-link">The Holy Spirit</a>
+          <a href="/topics/the-trinity/" class="cc-topic-link">The Trinity</a>
+          <a href="/topics/eschatology/" class="cc-topic-link">End Times</a>
+          <a href="/topics/israel-and-prophecy/" class="cc-topic-link">Israel &amp; Prophecy</a>
+        </div>
+      </div>
+      <div class="cc-topics-category">
+        <div class="cc-topics-cat-label">Church Life</div>
+        <div class="cc-topics-grid">
+          <a href="/topics/complementarianism-egalitarianism/" class="cc-topic-link">Complementarianism</a>
+          <a href="/topics/church-discipline/" class="cc-topic-link">Church Discipline</a>
+          <a href="/topics/worship-and-liturgy/" class="cc-topic-link">Worship &amp; Liturgy</a>
+          <a href="/topics/local-church/" class="cc-topic-link">The Local Church</a>
+          <a href="/topics/missions-and-evangelism/" class="cc-topic-link">Missions &amp; Evangelism</a>
+          <a href="/topics/church-history/" class="cc-topic-link">Church History</a>
+          <a href="/topics/membership/" class="cc-topic-link">Membership</a>
+          <a href="/topics/church-planting/" class="cc-topic-link">Church Planting</a>
+          <a href="/topics/preaching/" class="cc-topic-link">Preaching</a>
+          <a href="/topics/church-accountability/" class="cc-topic-link">Accountability</a>
+          <a href="/topics/spiritual-abuse/" class="cc-topic-link">Spiritual Abuse</a>
+        </div>
+      </div>
+      <div class="cc-topics-category">
+        <div class="cc-topics-cat-label">Spiritual Formation</div>
+        <div class="cc-topics-grid">
+          <a href="/topics/prayer/" class="cc-topic-link">Prayer</a>
+          <a href="/topics/discipleship/" class="cc-topic-link">Discipleship</a>
+          <a href="/topics/sanctification/" class="cc-topic-link">Sanctification</a>
+          <a href="/topics/spiritual-disciplines/" class="cc-topic-link">Spiritual Disciplines</a>
+          <a href="/topics/spiritual-warfare/" class="cc-topic-link">Spiritual Warfare</a>
+          <a href="/topics/fasting/" class="cc-topic-link">Fasting</a>
+          <a href="/topics/anxiety-and-fear/" class="cc-topic-link">Anxiety &amp; Fear</a>
+          <a href="/topics/mental-health/" class="cc-topic-link">Mental Health &amp; Faith</a>
+          <a href="/topics/faith-deconstruction/" class="cc-topic-link">Deconstruction</a>
+          <a href="/topics/contemplative-prayer/" class="cc-topic-link">Contemplative Prayer</a>
+          <a href="/topics/grief-and-lament/" class="cc-topic-link">Grief &amp; Lament</a>
+          <a href="/topics/forgiveness/" class="cc-topic-link">Forgiveness</a>
+          <a href="/topics/christian-friendship/" class="cc-topic-link">Friendship</a>
+        </div>
+      </div>
+      <div class="cc-topics-category">
+        <div class="cc-topics-cat-label">Culture &amp; Society</div>
+        <div class="cc-topics-grid">
+          <a href="/topics/politics-and-the-church/" class="cc-topic-link">Politics &amp; the Church</a>
+          <a href="/topics/racial-reconciliation/" class="cc-topic-link">Racial Reconciliation</a>
+          <a href="/topics/technology/" class="cc-topic-link">Technology</a>
+          <a href="/topics/technology-and-discipleship/" class="cc-topic-link">Tech &amp; Discipleship</a>
+          <a href="/topics/marriage-and-family/" class="cc-topic-link">Marriage &amp; Family</a>
+          <a href="/topics/christian-parenting/" class="cc-topic-link">Christian Parenting</a>
+          <a href="/topics/christian-ethics/" class="cc-topic-link">Christian Ethics</a>
+          <a href="/topics/vocation-and-work/" class="cc-topic-link">Vocation &amp; Work</a>
+          <a href="/topics/evangelicalism/" class="cc-topic-link">Evangelicalism</a>
+          <a href="/topics/christian-nationalism/" class="cc-topic-link">Christian Nationalism</a>
+          <a href="/topics/biblical-sexuality/" class="cc-topic-link">Biblical Sexuality</a>
+          <a href="/topics/ai-and-the-church/" class="cc-topic-link">AI &amp; the Church</a>
+          <a href="/topics/biblical-justice/" class="cc-topic-link">Justice &amp; the Gospel</a>
+          <a href="/topics/prosperity-gospel/" class="cc-topic-link">Prosperity Gospel</a>
+          <a href="/topics/religious-liberty/" class="cc-topic-link">Religious Liberty</a>
+          <a href="/topics/progressive-christianity/" class="cc-topic-link active">Progressive Christianity</a>
+          <a href="/topics/stewardship-and-generosity/" class="cc-topic-link">Stewardship &amp; Generosity</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="cc-footer">
+      <p>Christian Curator curates the best evangelical thinking on the church's most important questions.</p>
+      <p><a href="/">Home</a> | <a href="/about/">About</a> | <a href="/subscribe/">Subscribe to our daily digest</a></p>
+    </footer>
+  </div>
+</body>
+</html>
