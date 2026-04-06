@@ -307,7 +307,7 @@
       <div class="cc-featured-card">
         <div class="cc-featured-cat">{{ topic.category }}</div>
         <div class="cc-featured-name">{{ topic.name }}</div>
-        <p class="cc-featured-hook">{{ topic.hook }}</p>
+        <p class="cc-featured-hook">{{ topic.summary or topic.hook }}</p>
         {% if topic.articles %}
         <div class="cc-featured-articles-label">What&rsquo;s being written about this</div>
         {% for article in topic.articles[:2] %}
@@ -401,7 +401,7 @@
         <a class="cc-browse-card" href="/topics/{{ topic.slug }}/"
            onclick="gtag('event','topic_click',{'topic':'{{ topic.slug }}','category':'{{ topic.category }}'});">
           <div class="cc-browse-card-name">{{ topic.name }}</div>
-          <div class="cc-browse-card-hook">{{ topic.hook }}</div>
+          <div class="cc-browse-card-hook">{{ topic.summary or topic.hook }}</div>
         </a>
         {% endfor %}
       </div>

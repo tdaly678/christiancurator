@@ -129,7 +129,7 @@ def _render_topic_card(topic: dict, muted: bool = False) -> str:
       <div style="border:1px solid {border_color};border-radius:5px;padding:18px 20px 16px;background:{bg_color};">
         <div style="font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:{cta_color};margin-bottom:7px;">{topic.get("category", "")}</div>
         <div style="font-family:Georgia,serif;font-size:20px;font-weight:700;line-height:1.25;color:#1a1a1a;margin-bottom:12px;">{topic.get("name", "")}</div>
-        <div style="font-size:13.5px;color:#555;font-style:italic;line-height:1.6;border-left:2px solid {accent_color};padding-left:10px;margin-bottom:16px;">{topic.get("hook", "")}</div>
+        <div style="font-size:13.5px;color:#555;font-style:italic;line-height:1.6;border-left:2px solid {accent_color};padding-left:10px;margin-bottom:16px;">{topic.get("summary") or topic.get("hook", "")}</div>
         <div style="font-size:9.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#aaa;margin-bottom:9px;">{articles_label}</div>
         {articles_html}
         <div style="border-top:1px solid #e0ddd8;margin-top:12px;padding-top:12px;">
