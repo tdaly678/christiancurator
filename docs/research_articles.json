@@ -1,51 +1,29 @@
 [
   {
-    "source_name": "Lifeway Research",
+    "source_name": "Relevant Magazine",
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Dan Hyun",
-    "title": "Pastor, Don’t Heal Thyself: 3 Reasons Pastors Need Community",
-    "url": "https://research.lifeway.com/2026/04/06/pastor-dont-heal-thyself-3-reasons-pastors-need-community/",
-    "summary": "<p>Ministry can create a particular kind of loneliness, but health cannot be sustained in isolation. Pastors need community. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/04/06/pastor-dont-heal-thyself-3-reasons-pastors-need-community/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/04/06/pastor-dont-heal-thyself-3-reasons-pastors-need-community/\">Pastor, Don’t Heal Thyself: 3 Reasons Pastors Need Community</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
-    "published": "Mon, 06 Apr 2026 06:53:00 +0000",
-    "fetched_at": "2026-04-06T09:56:01.219551",
+    "author": "Emily Brown",
+    "title": "The Fake News Era Is Sending People Back to Scripture, Experts Say",
+    "url": "https://relevantmagazine.com/current/the-fake-news-era-is-sending-people-back-to-scripture-experts-say/",
+    "summary": "Turns out the oldest book in the room still knows how to get people’s attention. Bible sales in the U.S. hit a 21-year high in 2025, with 19 million units sold, up 12% from 2024 and double the number sold in 2019. In the U.K., publishers reported Bible sales were 134% higher than in 2008,&#8230;",
+    "published": "Mon, 06 Apr 2026 17:57:25 +0000",
+    "fetched_at": "2026-04-07T09:50:11.910820",
     "score": 6,
     "tags": [
-      "church life"
+      "data",
+      "culture"
     ],
-    "rewritten_title": "Why Pastors Need Community, Not Isolation, for Health",
+    "rewritten_title": "Rising Distrust in News Drives Americans Back to Bible Reading",
     "personas": [
+      "professional",
       "pastor"
     ],
-    "topic_cluster": "pastoral_health_community",
-    "perspective": "supportive",
-    "final_score": 7.5,
+    "topic_cluster": "bible_sales_trend",
+    "perspective": "neutral",
+    "final_score": 7.8,
     "recency_boost": 1.5
-  },
-  {
-    "source_name": "Pew Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Beshay",
-    "title": "How Americans view Trump’s handling of trade and tariffs",
-    "url": "https://www.pewresearch.org/short-reads/2026/04/01/how-americans-view-trumps-handling-of-trade-and-tariffs/",
-    "summary": "Nearly six-in-ten U.S. adults are not confident that Trump can make good decisions about trade policy. Views of trade between the U.S. and China, Canada and Mexico have shifted since 2025.",
-    "published": "Wed, 01 Apr 2026 18:51:17 +0000",
-    "fetched_at": "2026-04-06T09:56:00.836339",
-    "score": 4,
-    "tags": [
-      "data",
-      "politics"
-    ],
-    "rewritten_title": "Americans' Confidence in Trump's Trade Policy Decisions Declines",
-    "personas": [
-      "professional"
-    ],
-    "topic_cluster": "trump_trade_policy",
-    "perspective": "news",
-    "final_score": 2.0
   },
   {
     "source_name": "Ryan Burge",
@@ -53,23 +31,47 @@
     "source_type": "christian",
     "independent": true,
     "author": "Ryan Burge",
-    "title": "The Growing Gap in Church Membership",
-    "url": "https://www.graphsaboutreligion.com/p/the-growing-gap-in-church-membership",
-    "summary": "Who joins a church &#8212; and why it matters more than you think",
-    "published": "Thu, 02 Apr 2026 11:30:40 GMT",
-    "fetched_at": "2026-04-06T09:56:00.027029",
+    "title": "Emergency Expenses and American Religion",
+    "url": "https://www.graphsaboutreligion.com/p/emergency-expenses-and-american-religion",
+    "summary": "Who Can Weather a Financial Storm?",
+    "published": "Mon, 06 Apr 2026 11:30:06 GMT",
+    "fetched_at": "2026-04-07T09:51:40.043974",
     "score": 4,
     "tags": [
       "data"
     ],
-    "rewritten_title": "Church Membership Decline: Why It Matters for Faith Communities",
+    "rewritten_title": "Religious Americans Face Financial Vulnerability During Unexpected Crises",
     "personas": [
-      "pastor"
+      "pastor",
+      "professional"
     ],
-    "topic_cluster": "church_membership_trends",
+    "topic_cluster": "financial_resilience",
     "perspective": "neutral",
-    "previously_shown": true,
-    "final_score": 2.0,
-    "independent_floor_boosted": true
+    "final_score": 5.5,
+    "recency_boost": 1.5
+  },
+  {
+    "source_name": "Pew Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Carrie Blazina",
+    "title": "Top tax frustrations for Americans: Feeling that some wealthy people, corporations don’t pay fair share",
+    "url": "https://www.pewresearch.org/short-reads/2026/04/06/top-tax-frustrations-for-americans-feeling-that-some-wealthy-people-corporations-dont-pay-fair-share/",
+    "summary": "61% of adults say that the feeling that some wealthy people don’t pay their fair share bothers them a lot. 60% say this about some some corporations.",
+    "published": "Mon, 06 Apr 2026 13:53:52 +0000",
+    "fetched_at": "2026-04-07T09:51:40.688384",
+    "score": 4,
+    "tags": [
+      "data"
+    ],
+    "rewritten_title": "Americans Express Concern Over Unequal Tax Burden for Wealthy and Corporations",
+    "personas": [
+      "professional"
+    ],
+    "topic_cluster": "pew_tax_frustration_survey",
+    "perspective": "news",
+    "final_score": 5.5,
+    "recency_boost": 1.5
   }
 ]
