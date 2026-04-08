@@ -1,52 +1,52 @@
 [
   {
-    "source_name": "Relevant Magazine",
+    "source_name": "Lifeway Research",
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Emily Brown",
-    "title": "The Fake News Era Is Sending People Back to Scripture, Experts Say",
-    "url": "https://relevantmagazine.com/current/the-fake-news-era-is-sending-people-back-to-scripture-experts-say/",
-    "summary": "Turns out the oldest book in the room still knows how to get people’s attention. Bible sales in the U.S. hit a 21-year high in 2025, with 19 million units sold, up 12% from 2024 and double the number sold in 2019. In the U.K., publishers reported Bible sales were 134% higher than in 2008,&#8230;",
-    "published": "Mon, 06 Apr 2026 17:57:25 +0000",
-    "fetched_at": "2026-04-07T09:50:11.910820",
-    "score": 6,
+    "author": "Aaron Earls",
+    "title": "Growing Number of Churchgoers Face Doubts",
+    "url": "https://research.lifeway.com/2026/04/07/growing-number-of-churchgoers-face-doubts/",
+    "summary": "<p>Churchgoers tend to trust God’s involvement in their lives and the lives of others, but many admit doubts can creep in. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/04/07/growing-number-of-churchgoers-face-doubts/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/04/07/growing-number-of-churchgoers-face-doubts/\">Growing Number of Churchgoers Face Doubts</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "published": "Tue, 07 Apr 2026 14:45:00 +0000",
+    "fetched_at": "2026-04-08T09:52:04.282659",
+    "score": 5,
     "tags": [
       "data",
-      "culture"
+      "devotional"
     ],
-    "rewritten_title": "Rising Distrust in News Drives Americans Back to Bible Reading",
-    "personas": [
-      "professional",
-      "pastor"
-    ],
-    "topic_cluster": "bible_sales_trend",
-    "perspective": "neutral",
-    "final_score": 7.8,
-    "recency_boost": 1.5
-  },
-  {
-    "source_name": "Ryan Burge",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": true,
-    "author": "Ryan Burge",
-    "title": "Emergency Expenses and American Religion",
-    "url": "https://www.graphsaboutreligion.com/p/emergency-expenses-and-american-religion",
-    "summary": "Who Can Weather a Financial Storm?",
-    "published": "Mon, 06 Apr 2026 11:30:06 GMT",
-    "fetched_at": "2026-04-07T09:51:40.043974",
-    "score": 4,
-    "tags": [
-      "data"
-    ],
-    "rewritten_title": "Religious Americans Face Financial Vulnerability During Unexpected Crises",
+    "rewritten_title": "Many Churchgoers Experience Doubt Despite Trust in God",
     "personas": [
       "pastor",
       "professional"
     ],
-    "topic_cluster": "financial_resilience",
+    "topic_cluster": "churchgoer_doubt_research",
     "perspective": "neutral",
+    "final_score": 6.5,
+    "recency_boost": 1.5
+  },
+  {
+    "source_name": "Pew Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Beshay",
+    "title": "Negative views of Israel, Netanyahu continue to rise among Americans – especially young people",
+    "url": "https://www.pewresearch.org/short-reads/2026/04/07/negative-views-of-israel-netanyahu-continue-to-rise-among-americans-especially-young-people/",
+    "summary": "Views of Israel and Benjamin Netanyahu have grown more negative among U.S. adults, with majorities under 50 in both parties rating them poorly.",
+    "published": "Tue, 07 Apr 2026 17:54:58 +0000",
+    "fetched_at": "2026-04-08T09:52:03.829425",
+    "score": 4,
+    "tags": [
+      "data",
+      "politics"
+    ],
+    "rewritten_title": "American Views of Israel and Netanyahu Grow More Negative, Especially Among Youth",
+    "personas": [
+      "professional"
+    ],
+    "topic_cluster": "israel_polling",
+    "perspective": "news",
     "final_score": 5.5,
     "recency_boost": 1.5
   },
@@ -55,23 +55,24 @@
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Carrie Blazina",
-    "title": "Top tax frustrations for Americans: Feeling that some wealthy people, corporations don’t pay fair share",
-    "url": "https://www.pewresearch.org/short-reads/2026/04/06/top-tax-frustrations-for-americans-feeling-that-some-wealthy-people-corporations-dont-pay-fair-share/",
-    "summary": "61% of adults say that the feeling that some wealthy people don’t pay their fair share bothers them a lot. 60% say this about some some corporations.",
-    "published": "Mon, 06 Apr 2026 13:53:52 +0000",
-    "fetched_at": "2026-04-07T09:51:40.688384",
+    "author": "Jcoleman",
+    "title": "Do Americans think Trump can make good decisions about various foreign policy issues?",
+    "url": "https://www.pewresearch.org/global/2026/04/07/do-americans-think-trump-can-make-good-decisions-about-various-foreign-policy-issues/",
+    "summary": "Public confidence in Trump's handling of the Russia-Ukraine war, as well as his policymaking toward Iran, China and North Korea, has declined since last year.",
+    "published": "Tue, 07 Apr 2026 17:53:34 +0000",
+    "fetched_at": "2026-04-08T09:52:03.829450",
     "score": 4,
     "tags": [
-      "data"
+      "data",
+      "politics"
     ],
-    "rewritten_title": "Americans Express Concern Over Unequal Tax Burden for Wealthy and Corporations",
+    "rewritten_title": "Americans' Confidence in Trump's Foreign Policy Leadership Declines",
     "personas": [
       "professional"
     ],
-    "topic_cluster": "pew_tax_frustration_survey",
+    "topic_cluster": "trump_foreign_policy_polling",
     "perspective": "news",
-    "final_score": 5.5,
+    "final_score": 4.75,
     "recency_boost": 1.5
   }
 ]
