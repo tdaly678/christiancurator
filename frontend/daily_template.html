@@ -57,6 +57,39 @@
       font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
       color: #888; font-weight: 300;
     }
+    .cc-nav {
+      display: flex; justify-content: center; gap: 2rem;
+      padding: 0.6rem 0 0; border-top: 1px solid #e0ddd8; margin-top: 0.75rem;
+    }
+    .cc-nav a {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #888; text-decoration: none;
+    }
+    .cc-nav a:hover { color: #2C4A2E; }
+    .cc-nav-dropdown { position: relative; display: inline-block; }
+    .cc-nav-dropdown-toggle {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #888; text-decoration: none; cursor: pointer;
+      display: flex; align-items: center; gap: 4px; background: none; border: none;
+      font-family: inherit; padding: 0;
+    }
+    .cc-nav-dropdown-toggle:hover { color: #2C4A2E; }
+    .cc-nav-dropdown-toggle::after { content: '▾'; font-size: 10px; letter-spacing: 0; }
+    .cc-nav-dropdown-menu {
+      display: none; position: absolute; top: 100%; left: 50%;
+      transform: translateX(-50%);
+      background: #fff; border: 1px solid #e0ddd8; border-radius: 4px;
+      padding: 14px 0 6px; min-width: 140px; z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .cc-nav-dropdown:hover .cc-nav-dropdown-menu,
+    .cc-nav-dropdown:focus-within .cc-nav-dropdown-menu { display: block; }
+    .cc-nav-dropdown-menu a {
+      display: block; padding: 7px 18px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #888; text-decoration: none; white-space: nowrap;
+    }
+    .cc-nav-dropdown-menu a:hover { color: #2C4A2E; background: #f7f5f2; }
 
     /* Article */
     .cc-daily-label {
@@ -148,6 +181,17 @@
     <header class="cc-header">
       <a href="https://www.christiancurator.com/" class="cc-site-name">Christian Curator</a>
       <div class="cc-tagline">Daily Digest · Evangelical News &amp; Theology</div>
+      <nav class="cc-nav">
+        <a href="/">Home</a>
+        <a href="/digest/">Daily Digest</a>
+        <div class="cc-nav-dropdown">
+          <button class="cc-nav-dropdown-toggle">Resources</button>
+          <div class="cc-nav-dropdown-menu">
+            <a href="/voices/">Voices</a>
+            <a href="/archive/">Archive</a>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>

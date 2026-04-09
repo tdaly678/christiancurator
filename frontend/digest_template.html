@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christian Curator — Daily Digest, {{ date }}</title>
+  <meta name="description" content="Today's best evangelical writing on theology, church life, culture, and more — curated and rewritten for clarity." />
+  <link rel="canonical" href="https://www.christiancurator.com/digest/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Christian Curator" />
+  <meta property="og:title" content="Christian Curator — Daily Digest, {{ date }}" />
+  <meta property="og:description" content="Today's best evangelical writing on theology, church life, culture, and more — curated and rewritten for clarity." />
+  <meta property="og:url" content="https://www.christiancurator.com/digest/" />
+  <meta property="og:image" content="https://www.christiancurator.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Christian Curator — Daily Digest, {{ date }}" />
+  <meta name="twitter:description" content="Today's best evangelical writing, curated daily." />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Christian Curator — Daily Digest",
+    "url": "https://www.christiancurator.com/digest/",
+    "description": "Today's best evangelical writing, curated and rewritten for clarity.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Christian Curator",
+      "url": "https://www.christiancurator.com"
+    }
+  }
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NJ5DSPFXL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3NJ5DSPFXL');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: #faf9f7;
+      color: #1a1a1a;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* ── Header ──────────────────────────────────────────────────── */
+    .cc-root { max-width: 980px; margin: 0 auto; padding: 0 20px 3rem; }
+
+    .cc-header { border-bottom: 1px solid #e0ddd8; padding: 0.75rem 0 0; }
+    .cc-top-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 0.75rem; font-size: 12px; color: #888; letter-spacing: 0.02em;
+    }
+    .cc-subscribe-btn {
+      background: #2C4A2E; color: #fff; border: none; padding: 5px 14px;
+      font-size: 12px; border-radius: 3px; cursor: pointer;
+      font-family: 'Source Sans 3', sans-serif; letter-spacing: 0.03em;
+      text-decoration: none; display: inline-block;
+    }
+    .cc-subscribe-btn:hover { background: #3a5f3c; color: #fff; }
+    .cc-masthead { text-align: center; padding: 0.5rem 0 1rem; border-bottom: 2.5px solid #1a1a1a; }
+    .cc-site-name {
+      font-family: 'Lora', Georgia, serif; font-size: 46px; font-weight: 600;
+      letter-spacing: -0.02em; line-height: 1; color: #1a1a1a; text-decoration: none;
+    }
+    .cc-tagline {
+      font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: #888; margin: 8px 0 0; font-weight: 300;
+    }
+    .cc-nav {
+      display: flex; justify-content: center; gap: 2rem;
+      padding: 0.6rem 0 0; border-top: 1px solid #e0ddd8; margin-top: 0.75rem;
+    }
+    .cc-nav a {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #888; text-decoration: none;
+    }
+    .cc-nav a:hover { color: #2C4A2E; }
+    .cc-nav a.active { color: #1a1a1a; border-bottom: 2px solid #1a1a1a; padding-bottom: 2px; }
+    .cc-nav-dropdown { position: relative; display: inline-block; }
+    .cc-nav-dropdown-toggle {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #888; text-decoration: none; cursor: pointer;
+      display: flex; align-items: center; gap: 4px; background: none; border: none;
+      font-family: inherit; padding: 0;
+    }
+    .cc-nav-dropdown-toggle:hover { color: #2C4A2E; }
+    .cc-nav-dropdown-toggle::after { content: '▾'; font-size: 10px; letter-spacing: 0; }
+    .cc-nav-dropdown-menu {
+      display: none; position: absolute; top: 100%; left: 50%;
+      transform: translateX(-50%);
+      background: #fff; border: 1px solid #e0ddd8; border-radius: 4px;
+      padding: 14px 0 6px; min-width: 140px; z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .cc-nav-dropdown:hover .cc-nav-dropdown-menu,
+    .cc-nav-dropdown:focus-within .cc-nav-dropdown-menu { display: block; }
+    .cc-nav-dropdown-menu a {
+      display: block; padding: 7px 18px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #888; text-decoration: none; white-space: nowrap;
+    }
+    .cc-nav-dropdown-menu a:hover { color: #2C4A2E; background: #f7f5f2; }
+
+    /* ── Welcome section ─────────────────────────────────────────── */
+    .cc-welcome {
+      border-bottom: 1px solid #e0ddd8;
+      padding: 2rem 0 1.75rem;
+    }
+    .cc-welcome-hed {
+      font-family: 'Lora', Georgia, serif; font-size: 30px; font-weight: 600;
+      line-height: 1.25; color: #1a1a1a; margin-bottom: 0.6rem;
+    }
+    .cc-welcome-sub {
+      font-size: 14.5px; color: #666; line-height: 1.65;
+    }
+    @media (max-width: 660px) {
+      .cc-welcome-hed { font-size: 24px; }
+      .cc-site-name { font-size: 32px; }
+    }
+
+    /* ── Featured topics ─────────────────────────────────────────── */
+    .cc-featured { margin-top: 2rem; }
+    .cc-featured-header {
+      display: flex; align-items: baseline; justify-content: space-between;
+      border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.25rem;
+    }
+    .cc-featured-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #1a1a1a;
+    }
+    .cc-featured-date { font-size: 11px; color: #aaa; }
+
+    .cc-featured-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+    }
+    @media (max-width: 860px) { .cc-featured-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .cc-featured-grid { grid-template-columns: 1fr; } }
+
+    .cc-featured-card {
+      border: 1px solid #e0ddd8; border-radius: 5px; padding: 1.1rem 1.2rem 1rem;
+      background: #fff; display: flex; flex-direction: column;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .cc-featured-card:hover {
+      border-color: #2C4A2E; box-shadow: 0 2px 8px rgba(44,74,46,0.08);
+    }
+    .cc-featured-cat {
+      font-size: 9.5px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.14em; color: #2C4A2E; margin-bottom: 6px;
+    }
+    .cc-featured-name {
+      font-family: 'Lora', Georgia, serif; font-size: 19px; font-weight: 600;
+      line-height: 1.25; color: #1a1a1a; margin-bottom: 10px;
+    }
+    .cc-featured-hook {
+      font-size: 13px; color: #555; font-style: italic; line-height: 1.6;
+      border-left: 2px solid #2C4A2E; padding-left: 10px;
+      margin-bottom: 14px; flex: 1;
+    }
+    .cc-featured-articles-label {
+      font-size: 9.5px; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: #aaa; margin-bottom: 7px;
+    }
+    .cc-featured-article { padding: 5px 0; border-top: 1px solid #f0ede8; }
+    .cc-featured-article:first-of-type { border-top: none; }
+    .cc-featured-article-title {
+      font-size: 12.5px; color: #1a1a1a; text-decoration: none;
+      font-family: 'Lora', Georgia, serif; line-height: 1.35;
+      display: block; margin-bottom: 2px;
+    }
+    .cc-featured-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-featured-article-source { font-size: 10.5px; color: #aaa; }
+    .cc-featured-cta {
+      display: block; font-size: 12.5px; font-weight: 600; color: #2C4A2E;
+      text-decoration: none; margin-top: 12px; padding-top: 10px;
+      border-top: 1px solid #e0ddd8;
+    }
+    .cc-featured-cta:hover { text-decoration: underline; }
+
+    /* ── Today's headlines ───────────────────────────────────────── */
+    .cc-headlines { margin-top: 2.75rem; }
+    .cc-headlines-header {
+      display: flex; align-items: baseline; justify-content: space-between;
+      border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.25rem;
+    }
+    .cc-headlines-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #1a1a1a;
+    }
+    .cc-headlines-date { font-size: 11px; color: #aaa; }
+    .cc-headline-lead {
+      padding-bottom: 1rem; margin-bottom: 0.25rem; border-bottom: 1px solid #e0ddd8;
+    }
+    .cc-headline-lead-title {
+      font-family: 'Lora', Georgia, serif; font-size: 22px; font-weight: 600;
+      line-height: 1.25; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 6px;
+    }
+    .cc-headline-lead-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-headline-lead-meta { font-size: 12px; color: #aaa; }
+    .cc-headline-lead-author { font-weight: 600; color: #555; }
+    .cc-headline-list { display: flex; flex-direction: column; }
+    .cc-headline-item {
+      display: flex; gap: 0; padding: 0.7rem 0;
+      border-bottom: 1px solid #e0ddd8; align-items: flex-start;
+    }
+    .cc-headline-item:last-child { border-bottom: none; }
+    .cc-headline-num {
+      font-size: 11px; font-weight: 600; color: #bbb;
+      min-width: 26px; padding-top: 2px; font-variant-numeric: tabular-nums;
+    }
+    .cc-headline-content { flex: 1; }
+    .cc-headline-title {
+      font-family: 'Lora', Georgia, serif; font-size: 15px; font-weight: 500;
+      line-height: 1.35; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 3px;
+    }
+    .cc-headline-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-headline-meta { font-size: 11px; color: #aaa; }
+    .cc-headline-author { font-weight: 600; color: #777; }
+
+    /* ── Archive list ────────────────────────────────────────────── */
+    .cc-archive-list { margin-top: 2.75rem; }
+    .cc-archive-list-header {
+      border-bottom: 1px solid #e0ddd8; padding-bottom: 6px; margin-bottom: 1rem;
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #aaa;
+    }
+    .cc-archive-links { display: flex; flex-wrap: wrap; gap: 6px 10px; }
+    .cc-archive-link {
+      font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600;
+    }
+    .cc-archive-link:hover { text-decoration: underline; }
+
+    /* ── Yesterday's headlines ──────────────────────────────────── */
+    .cc-yesterday { margin-top: 2.75rem; }
+    .cc-yesterday-header {
+      display: flex; align-items: baseline; justify-content: space-between;
+      border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.25rem;
+    }
+    .cc-yesterday-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #1a1a1a;
+    }
+    .cc-yesterday-date { font-size: 11px; color: #aaa; }
+
+    /* ── Footer ──────────────────────────────────────────────────── */
+    .cc-footer {
+      border-top: 2.5px solid #1a1a1a; margin-top: 2.5rem; padding-top: 1rem;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 11px; color: #aaa; flex-wrap: wrap; gap: 8px;
+    }
+    .cc-footer-name { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 15px; color: #1a1a1a; }
+    .cc-footer-nav { display: flex; gap: 12px; }
+    .cc-footer-nav a { font-size: 11px; color: #888; text-decoration: none; font-weight: 600; }
+    .cc-footer-nav a:hover { color: #2C4A2E; }
+  </style>
+</head>
+<body>
+<div class="cc-root">
+
+  <!-- Header -->
+  <div class="cc-header">
+    <div class="cc-top-bar">
+      <span>{{ date }}</span>
+      <a class="cc-subscribe-btn" href="#cc-email-box" onclick="document.getElementById('cc-email-box').scrollIntoView({behavior:'smooth'}); return false;">Get the Daily Digest</a>
+    </div>
+    <div class="cc-masthead">
+      <h1><a href="/" class="cc-site-name">Christian Curator</a></h1>
+      <p class="cc-tagline">Curated perspectives &middot; updated daily</p>
+    </div>
+    <nav class="cc-nav">
+      <a href="/">Home</a>
+      <a href="/digest/" class="active">Daily Digest</a>
+      <div class="cc-nav-dropdown">
+        <button class="cc-nav-dropdown-toggle">Resources</button>
+        <div class="cc-nav-dropdown-menu">
+          <a href="/voices/">Voices</a>
+          <a href="/archive/">Archive</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Welcome -->
+  <div class="cc-welcome">
+    <h2 class="cc-welcome-hed">The conversations shaping evangelical Christianity.</h2>
+    <p class="cc-welcome-sub">Because every curious Christian deserves clarity on the questions that matter most.</p>
+  </div>
+
+  {% if featured_topics %}
+  <!-- In the conversation today -->
+  <div class="cc-featured">
+    <div class="cc-featured-header">
+      <div class="cc-featured-label">In the conversation today</div>
+      <div class="cc-featured-date">{{ date }}</div>
+    </div>
+    <div class="cc-featured-grid">
+      {% for topic in featured_topics %}
+      <div class="cc-featured-card">
+        <div class="cc-featured-cat">{{ topic.category }}</div>
+        <div class="cc-featured-name">{{ topic.name }}</div>
+        <p class="cc-featured-hook">{{ topic.summary or topic.hook }}</p>
+        {% if topic.articles %}
+        <div class="cc-featured-articles-label">What&rsquo;s being written about this</div>
+        {% for article in topic.articles[:2] %}
+        <div class="cc-featured-article">
+          <a class="cc-featured-article-title"
+             href="{{ article.url }}" target="_blank"
+             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}'});">
+            {{ article.rewritten_title or article.title }}
+          </a>
+          <span class="cc-featured-article-source">
+            {%- set auth = article.author | default('') | trim -%}
+            {%- set src  = article.source_name | default('') | trim -%}
+            {%- set pub  = article.published_display | default('') | trim -%}
+            {%- if auth and auth | lower != src | lower -%}{{ auth }} &middot; {%- endif -%}
+            {{ src }}
+            {%- if pub %} &middot; {{ pub }}{%- endif -%}
+          </span>
+        </div>
+        {% endfor %}
+        {% endif %}
+        <a class="cc-featured-cta" href="/topics/{{ topic.slug }}/">Explore this topic &rarr;</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if articles %}
+  <!-- Today's curated headlines -->
+  <div class="cc-headlines">
+    <div class="cc-headlines-header">
+      <div class="cc-headlines-label">Today&rsquo;s curated headlines</div>
+      <div class="cc-headlines-date">{{ date }}</div>
+    </div>
+
+    {# Lead: first article gets a larger treatment #}
+    {% set lead = articles[0] %}
+    <div class="cc-headline-lead">
+      <a href="{{ lead.url }}" class="cc-headline-lead-title" target="_blank" rel="noopener"
+         onclick="gtag('event','article_click',{'article_title':'{{ (lead.rewritten_title or lead.title)|replace("'","") }}','article_source':'{{ lead.source_name }}','article_url':'{{ lead.url }}'});">
+        {{ lead.rewritten_title or lead.title }}
+      </a>
+      <div class="cc-headline-lead-meta">
+        {%- set auth = lead.author | default('') | trim -%}
+        {%- set src  = lead.source_name | default('') | trim -%}
+        {%- if auth and auth | lower != src | lower -%}
+          <span class="cc-headline-lead-author">{{ auth }}</span> &middot; <span>{{ src }}</span>
+        {%- else -%}
+          <span class="cc-headline-lead-author">{{ src }}</span>
+        {%- endif -%}
+      </div>
+    </div>
+
+    {# Articles 2–10 #}
+    <div class="cc-headline-list">
+      {% for article in articles[1:] %}
+      <div class="cc-headline-item">
+        <div class="cc-headline-num">{{ loop.index + 1 }}</div>
+        <div class="cc-headline-content">
+          <a href="{{ article.url }}" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}'});">
+            {{ article.rewritten_title or article.title }}
+          </a>
+          <div class="cc-headline-meta">
+            {%- set auth = article.author | default('') | trim -%}
+            {%- set src  = article.source_name | default('') | trim -%}
+            {%- if auth and auth | lower != src | lower -%}
+              <span class="cc-headline-author">{{ auth }}</span> &middot; <span>{{ src }}</span>
+            {%- else -%}
+              <span>{{ src }}</span>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if yesterday_articles %}
+  <!-- Yesterday's top articles -->
+  <div class="cc-yesterday">
+    <div class="cc-yesterday-header">
+      <div class="cc-yesterday-label">Yesterday&rsquo;s top reads</div>
+      <div class="cc-yesterday-date">In case you missed it</div>
+    </div>
+
+    {# Lead article #}
+    {% set ylead = yesterday_articles[0] %}
+    <div class="cc-headline-lead">
+      <a href="{{ ylead.url }}" class="cc-headline-lead-title" target="_blank" rel="noopener"
+         onclick="gtag('event','article_click',{'article_title':'{{ (ylead.rewritten_title or ylead.title)|replace("'","") }}','article_source':'{{ ylead.source_name }}','article_url':'{{ ylead.url }}'});">
+        {{ ylead.rewritten_title or ylead.title }}
+      </a>
+      <div class="cc-headline-lead-meta">
+        {%- set auth = ylead.author | default('') | trim -%}
+        {%- set src  = ylead.source_name | default('') | trim -%}
+        {%- if auth and auth | lower != src | lower -%}
+          <span class="cc-headline-lead-author">{{ auth }}</span> &middot; <span>{{ src }}</span>
+        {%- else -%}
+          <span class="cc-headline-lead-author">{{ src }}</span>
+        {%- endif -%}
+      </div>
+    </div>
+
+    {# Articles 2–10 #}
+    <div class="cc-headline-list">
+      {% for article in yesterday_articles[1:] %}
+      <div class="cc-headline-item">
+        <div class="cc-headline-num">{{ loop.index + 1 }}</div>
+        <div class="cc-headline-content">
+          <a href="{{ article.url }}" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}'});">
+            {{ article.rewritten_title or article.title }}
+          </a>
+          <div class="cc-headline-meta">
+            {%- set auth = article.author | default('') | trim -%}
+            {%- set src  = article.source_name | default('') | trim -%}
+            {%- if auth and auth | lower != src | lower -%}
+              <span class="cc-headline-author">{{ auth }}</span> &middot; <span>{{ src }}</span>
+            {%- else -%}
+              <span>{{ src }}</span>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Past digests -->
+  {% if archive_dates %}
+  <div class="cc-archive-list">
+    <div class="cc-archive-list-header">Past Daily Digests</div>
+    <div class="cc-archive-links">
+      {% for d in archive_dates %}
+      <a href="/archive/{{ d.iso }}/" class="cc-archive-link">{{ d.display }}</a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Subscribe -->
+  <div id="cc-email-box" style="margin-top:2.75rem;">
+    <iframe
+      src="https://252bf73d.sibforms.com/serve/MUIFAB7CIQuc2nJNb3F3vKnSjaBpMFNDbsi6MK_4uqstTr5i_Ja7ZVdjszNLkSe5RAdysOdcY-DDVrkYlvzoy-mJZQe-oaIbRqV0BfUYd-jli69OP21lSds8gIdS9vjXfoCRPiOESVzK7HOfbM1DlLkSimp2yR1_zYHWP2ar7d7X32wq6F-eyz7cDIoZ3lyhzNGXvQDWSAd5LBtnYA=="
+      frameborder="0" scrolling="auto" allowfullscreen
+      style="display:block; width:100%; height:500px; max-width:540px; margin-left:auto; margin-right:auto; background-color:transparent;">
+    </iframe>
+  </div>
+
+  <div class="cc-footer">
+    <div class="cc-footer-name">Christian Curator</div>
+    <div class="cc-footer-nav">
+      <a href="/digest/">Daily Digest</a>
+      <a href="/voices/">Voices</a>
+      <a href="/archive/">Archive</a>
+    </div>
+    <div>Curated from across the evangelical web.</div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -13,6 +13,7 @@ DOCS_DIR = Path(__file__).parent.parent / "docs"
 OUTPUT_HTML = DOCS_DIR / "index.html"
 DAILY_DIR = DOCS_DIR / "daily"
 ARCHIVE_DIR = DOCS_DIR / "archive"
+DIGEST_DIR = DOCS_DIR / "digest"
 SITEMAP_PATH = DOCS_DIR / "sitemap.xml"
 RESEARCH_ARTICLES_PATH = DOCS_DIR / "research_articles.json"
 
@@ -97,6 +98,8 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
                 daily_summary: dict = None, research_articles: list[dict] = None):
     """Render index.html from template.html using Jinja2."""
     from frontend.topic_matcher import match_topics
+    from curator.topic_classifier import classify_articles, compute_featured_topics
+    from frontend.topics_data import TOPICS, TOPICS_BY_CATEGORY, CATEGORIES
 
     env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
     env.tests['contains'] = lambda value, item: item in (value or [])
@@ -114,11 +117,36 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         for p in pairings
     ]
 
-    # Match today's articles and themes to relevant deep-dive topic pages
+    # Match today's articles and themes to relevant deep-dive topic pages (legacy sidebar)
     matched_topics = match_topics(articles, daily_summary)
     if matched_topics:
         labels = ", ".join(t["label"] for t in matched_topics)
         print(f"  Topic matcher: surfacing '{labels}'")
+
+    # Classify articles against the 36 debate topics → compute featured topics for homepage
+    classify_articles(articles)
+    featured_topics = compute_featured_topics(articles, top_n=3)
+    if featured_topics:
+        labels = ", ".join(t["name"] for t in featured_topics)
+        print(f"  Featured debates today: {labels}")
+
+    # Persist today's featured topics so the email sender can use them (and look up yesterday's)
+    _save_featured_topic_log(featured_topics)
+
+    # Compute recent archive dates for the homepage archive list
+    archive_dates = []
+    if ARCHIVE_DIR.exists():
+        for day_dir in sorted(ARCHIVE_DIR.iterdir(), reverse=True):
+            if day_dir.is_dir() and (day_dir / "index.html").exists():
+                try:
+                    d = date.fromisoformat(day_dir.name)
+                    archive_dates.append({
+                        "iso": day_dir.name,
+                        "display": d.strftime("%B %-d, %Y"),
+                    })
+                except ValueError:
+                    pass
+        archive_dates = archive_dates[:20]
 
     html = template.render(
         articles=articles,
@@ -128,6 +156,11 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         daily_summary=daily_summary,
         research_articles=research_articles or load_research_articles(),
         matched_topics=matched_topics,
+        featured_topics=featured_topics,
+        all_topics=TOPICS,
+        topics_by_category=TOPICS_BY_CATEGORY,
+        categories=CATEGORIES,
+        archive_dates=archive_dates,
     )
 
     with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
@@ -138,8 +171,11 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
     if daily_summary:
         render_daily_page(daily_summary, env, matched_topics=matched_topics)
 
+    # Render the daily digest page (/digest/)
+    render_digest_page(articles, env, featured_topics=featured_topics, yesterday_articles=yesterday_articles)
+
     # Render the daily archive snapshot and update the archive index
-    render_archive_page(articles, template_pairings, env)
+    render_archive_page(articles, template_pairings, env, yesterday_articles=yesterday_articles or [])
     render_archive_index(env)
 
     # Backfill prev/next + crosslinks on pages predating this feature
@@ -147,6 +183,54 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
 
     # Regenerate sitemap to include all daily and archive pages
     regenerate_sitemap()
+
+
+FEATURED_TOPIC_LOG_PATH = DOCS_DIR / "featured_topic_log.json"
+
+
+def _save_featured_topic_log(featured_topics: list):
+    """Persist today's featured topics to docs/featured_topic_log.json, keeping 30 days."""
+    today_iso = date.today().isoformat()
+
+    log = {}
+    if FEATURED_TOPIC_LOG_PATH.exists():
+        try:
+            log = json.loads(FEATURED_TOPIC_LOG_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            log = {}
+
+    # Store only the fields the email sender needs (strip heavy article data to just title/url/source)
+    def _slim_articles(articles):
+        return [
+            {
+                "title": a.get("rewritten_title") or a.get("title", ""),
+                "url": a.get("url", ""),
+                "source_name": a.get("source_name", ""),
+                "author": a.get("author", ""),
+            }
+            for a in (articles or [])[:2]
+        ]
+
+    log[today_iso] = [
+        {
+            "slug": t["slug"],
+            "name": t["name"],
+            "hook": t["hook"],
+            "category": t["category"],
+            "articles": _slim_articles(t.get("articles", [])),
+        }
+        for t in (featured_topics or [])
+    ]
+
+    # Prune entries older than 30 days
+    cutoff = (date.today().replace(day=1)).isoformat()  # rough cutoff
+    from datetime import timedelta
+    cutoff_iso = (date.today() - timedelta(days=30)).isoformat()
+    log = {k: v for k, v in log.items() if k >= cutoff_iso}
+
+    FEATURED_TOPIC_LOG_PATH.write_text(
+        json.dumps(log, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
 
 def _slug_to_display(slug: str) -> str:
@@ -251,14 +335,22 @@ def _patch_daily_next_link(target_slug: str, next_slug: str, next_display: str):
     print(f"  Updated daily nav on {page_path}")
 
 
-def render_archive_page(articles: list[dict], pairings: list[dict], env: Environment):
+def render_archive_page(articles: list[dict], pairings: list[dict], env: Environment,
+                        yesterday_articles: list[dict] = None):
     """Render a daily archive snapshot to docs/archive/YYYY-MM-DD/index.html."""
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
 
-    # Only archive the top-scored articles (matching what the homepage shows).
-    # Sort by score descending and take top 20 so the archive mirrors the actual
-    # homepage content rather than dumping every fetched article.
-    articles = sorted(articles, key=lambda a: a.get("score", 0), reverse=True)[:20]
+    # Top 10 of today's non-world-news articles by final_score
+    today_top = sorted(
+        [a for a in articles if a.get("source_type") != "world_news"],
+        key=lambda a: a.get("final_score", a.get("score", 0)), reverse=True
+    )[:10]
+
+    # Top 10 of yesterday's articles (passed in from caller)
+    yesterday_top = sorted(
+        [a for a in (yesterday_articles or []) if a.get("source_type") != "world_news"],
+        key=lambda a: a.get("final_score", a.get("score", 0)), reverse=True
+    )[:10]
 
     today = date.today()
     date_iso = today.isoformat()                          # e.g. "2026-03-22"
@@ -283,7 +375,8 @@ def render_archive_page(articles: list[dict], pairings: list[dict], env: Environ
 
     template = env.get_template("archive_template.html")
     html = template.render(
-        articles=articles,
+        articles=today_top,
+        yesterday_articles=yesterday_top,
         pairings=pairings,
         date_iso=date_iso,
         date_display=date_display,
@@ -307,6 +400,60 @@ def render_archive_page(articles: list[dict], pairings: list[dict], env: Environ
     # Back-patch: update the previous day's page so its "next" link points to today
     if prev_date_iso:
         _patch_archive_next_link(prev_date_iso, date_iso, date_display, env, articles, pairings)
+
+
+def render_digest_page(articles: list[dict], env: Environment,
+                       featured_topics: list = None,
+                       yesterday_articles: list = None):
+    """Render the daily digest page to docs/digest/index.html."""
+    from frontend.topics_data import TOPICS, TOPICS_BY_CATEGORY, CATEGORIES
+
+    DIGEST_DIR.mkdir(parents=True, exist_ok=True)
+
+    top10 = sorted(
+        [a for a in articles if a.get("source_type") != "world_news"],
+        key=lambda a: a.get("final_score", a.get("score", 0)), reverse=True
+    )[:10]
+
+    today = date.today()
+    date_display = today.strftime("%B %-d, %Y")
+
+    # Compute recent archive dates (same as homepage)
+    archive_dates = []
+    if ARCHIVE_DIR.exists():
+        for day_dir in sorted(ARCHIVE_DIR.iterdir(), reverse=True):
+            if day_dir.is_dir() and (day_dir / "index.html").exists():
+                try:
+                    d = date.fromisoformat(day_dir.name)
+                    archive_dates.append({
+                        "iso": day_dir.name,
+                        "display": d.strftime("%B %-d, %Y"),
+                    })
+                except ValueError:
+                    pass
+        archive_dates = archive_dates[:20]
+
+    template = env.get_template("digest_template.html")
+    # Top 10 yesterday articles by score
+    yesterday_top10 = sorted(
+        [a for a in (yesterday_articles or []) if a.get("source_type") != "world_news"],
+        key=lambda a: a.get("final_score", a.get("score", 0)), reverse=True
+    )[:10]
+
+    html = template.render(
+        articles=top10,
+        yesterday_articles=yesterday_top10,
+        date=date_display,
+        featured_topics=featured_topics or [],
+        topics_by_category=TOPICS_BY_CATEGORY,
+        categories=CATEGORIES,
+        archive_dates=archive_dates,
+    )
+
+    output_path = DIGEST_DIR / "index.html"
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(html)
+    print(f"  Rendered digest page to {output_path}")
 
 
 def _write_archive_meta(page_dir: Path, articles: list[dict]):
@@ -698,6 +845,19 @@ def render_archive_index(env: Environment):
         '    .cc-footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e0ddd8;text-align:center;font-size:12px;color:#aaa;}',
         '    .cc-footer a{color:#2C4A2E;text-decoration:none;}',
         '    .cc-footer a:hover{text-decoration:underline;}',
+        '    .cc-nav{display:flex;justify-content:center;align-items:center;gap:2rem;padding:0.6rem 0 0;border-top:1px solid #e0ddd8;margin-top:0.75rem;}',
+        '    .cc-nav a{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#888;text-decoration:none;}',
+        '    .cc-nav a:hover{color:#2C4A2E;}',
+        '    .cc-nav a.active{color:#1a1a1a;border-bottom:2px solid #1a1a1a;padding-bottom:2px;}',
+        '    .cc-nav-dropdown{position:relative;display:inline-block;}',
+        '    .cc-nav-dropdown-toggle{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;gap:4px;background:none;border:none;font-family:inherit;padding:0;}',
+        '    .cc-nav-dropdown-toggle:hover{color:#2C4A2E;}',
+        '    .cc-nav-dropdown-toggle::after{content:"▾";font-size:10px;letter-spacing:0;}',
+        '    .cc-nav-dropdown-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid #e0ddd8;border-radius:4px;padding:14px 0 6px;min-width:140px;z-index:100;box-shadow:0 4px 12px rgba(0,0,0,0.08);}',
+        '    .cc-nav-dropdown:hover .cc-nav-dropdown-menu,.cc-nav-dropdown:focus-within .cc-nav-dropdown-menu{display:block;}',
+        '    .cc-nav-dropdown-menu a{display:block;padding:7px 18px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#888;text-decoration:none;white-space:nowrap;}',
+        '    .cc-nav-dropdown-menu a:hover{color:#2C4A2E;background:#f7f5f2;}',
+        '    .cc-nav-dropdown-menu a.active{color:#1a1a1a;}',
         '    @media(max-width:600px){.cc-site-name{font-size:32px;}.cc-filter-bar select{min-width:100%;}}',
         '  </style>',
         '</head>',
@@ -706,12 +866,23 @@ def render_archive_index(env: Environment):
         '    <header class="cc-header">',
         '      <div class="cc-top-bar">',
         "        <a href='/' class='cc-back-link'>← Today's Digest</a>",
-        "        <a href='/#subscribe' class='cc-subscribe-btn'>Get the Daily Digest</a>",
+        "        <a href='/#cc-email-box' class='cc-subscribe-btn'>Get the Daily Digest</a>",
         '      </div>',
         '      <div class="cc-masthead">',
         "        <a href='/' class='cc-site-name'>Christian Curator</a>",
         "        <p class='cc-tagline'>Evangelical News &amp; Theology — Curated Daily</p>",
         '      </div>',
+        '      <nav class="cc-nav">',
+        "        <a href='/'>Home</a>",
+        "        <a href='/digest/'>Daily Digest</a>",
+        "        <div class='cc-nav-dropdown'>",
+        "          <button class='cc-nav-dropdown-toggle'>Resources</button>",
+        "          <div class='cc-nav-dropdown-menu'>",
+        "            <a href='/voices/'>Voices</a>",
+        "            <a href='/archive/' class='active'>Archive</a>",
+        "          </div>",
+        "        </div>",
+        '      </nav>',
         '    </header>',
         '    <h1>Archive</h1>',
         f'    <p class="cc-archive-intro">Browse {len(days)} past issue{"s" if len(days) != 1 else ""} of Christian Curator.</p>',
@@ -826,7 +997,10 @@ def regenerate_sitemap():
     today_iso = date.today().isoformat()
 
     # Each entry: (url, changefreq, priority, lastmod)
-    entries = [("https://www.christiancurator.com/", "daily", "1.0", today_iso)]
+    entries = [
+        ("https://www.christiancurator.com/", "daily", "1.0", today_iso),
+        ("https://www.christiancurator.com/digest/", "daily", "0.9", today_iso),
+    ]
 
     # Daily pulse pages
     if DAILY_DIR.exists():
@@ -849,10 +1023,8 @@ def regenerate_sitemap():
                     "never", "0.6", day_dir.name,
                 ))
 
-    # Topics index + individual topic pages
+    # Individual topic pages (topics/index.html redirects to home — excluded from sitemap)
     if TOPICS_DIR.exists():
-        if (TOPICS_DIR / "index.html").exists():
-            entries.append(("https://www.christiancurator.com/topics/", "weekly", "0.9", today_iso))
         for topic_dir in sorted(TOPICS_DIR.iterdir()):
             if topic_dir.is_dir() and (topic_dir / "index.html").exists():
                 entries.append((

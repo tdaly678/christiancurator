@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christian Curator — Daily Digest for April 3, 2026</title>
-  
-  
-  <meta name="description" content="Today’s lead: “God's Sacrifice: Jesus' Death for Our Redemption” — plus theology, culture & church life. Free daily digest for evangelical Christians." />
+  <title>Christian Curator — Evangelical Perspectives &amp; Daily Digest</title>
+  <meta name="description" content="Clarity on the conversations shaping evangelical Christianity. Curated perspectives on theology, church life, culture, and more." />
   <link rel="canonical" href="https://www.christiancurator.com/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Christian Curator" />
-  <meta property="og:title" content="Christian Curator — Daily Digest for April 3, 2026" />
-  <meta property="og:description" content="Today’s lead: “God's Sacrifice: Jesus' Death for Our Redemption” — plus theology, culture & church life. Free daily digest for evangelical Christians." />
+  <meta property="og:title" content="Christian Curator — Evangelical Perspectives &amp; Daily Digest" />
+  <meta property="og:description" content="Clarity on the conversations shaping evangelical Christianity. Curated perspectives on theology, church life, culture, and more." />
   <meta property="og:url" content="https://www.christiancurator.com/" />
   <meta property="og:image" content="https://www.christiancurator.com/og-image.png" />
   <meta property="og:image:width" content="1200" />
@@ -21,8 +19,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Christian Curator — Daily Digest for April 3, 2026" />
-  <meta name="twitter:description" content="Your daily digest of the best evangelical Christian news, theology, and culture — curated for April 3, 2026." />
+  <meta name="twitter:title" content="Christian Curator — Evangelical Perspectives &amp; Daily Digest" />
+  <meta name="twitter:description" content="Clarity on the conversations shaping evangelical Christianity. Curated perspectives, surfaced daily." />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -31,7 +29,7 @@
     "@type": "WebSite",
     "name": "Christian Curator",
     "url": "https://www.christiancurator.com/",
-    "description": "A daily digest of the best evangelical Christian news, theology, and culture.",
+    "description": "Clarity on the conversations shaping evangelical Christianity. Curated perspectives on theology, church life, culture, and more.",
     "publisher": {
       "@type": "Organization",
       "name": "Christian Curator"
@@ -47,8 +45,6 @@
     gtag('js', new Date());
     gtag('config', 'G-3NJ5DSPFXL');
   </script>
-  <!-- Pagefind search -->
-  <link href="/_pagefind/pagefind-ui.css" rel="stylesheet" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
@@ -63,9 +59,9 @@
       line-height: 1.5;
     }
 
+    /* ── Header ──────────────────────────────────────────────────── */
     .cc-root { max-width: 980px; margin: 0 auto; padding: 0 20px 3rem; }
 
-    /* Header */
     .cc-header { border-bottom: 1px solid #e0ddd8; padding: 0.75rem 0 0; }
     .cc-top-bar {
       display: flex; align-items: center; justify-content: space-between;
@@ -98,180 +94,171 @@
     .cc-nav a:hover { color: #2C4A2E; }
     .cc-nav a.active { color: #1a1a1a; border-bottom: 2px solid #1a1a1a; padding-bottom: 2px; }
 
-    /* Layout */
-    .cc-layout {
-      display: grid; grid-template-columns: 1fr 270px;
-      gap: 2.25rem; margin-top: 1.75rem;
+    /* ── Resources dropdown ──────────────────────────────────────── */
+    .cc-nav-dropdown { position: relative; display: inline-block; }
+    .cc-nav-dropdown-toggle {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #888; text-decoration: none; cursor: pointer;
+      display: flex; align-items: center; gap: 4px; background: none; border: none;
+      font-family: inherit; padding: 0;
     }
-    @media (max-width: 700px) {
-      .cc-layout { grid-template-columns: 1fr; }
-      .cc-cp-grid { grid-template-columns: 1fr; }
+    .cc-nav-dropdown-toggle:hover { color: #2C4A2E; }
+    .cc-nav-dropdown-toggle::after {
+      content: '▾'; font-size: 10px; letter-spacing: 0;
+    }
+    .cc-nav-dropdown-menu {
+      display: none; position: absolute; top: 100%; left: 50%;
+      transform: translateX(-50%);
+      background: #fff; border: 1px solid #e0ddd8; border-radius: 4px;
+      padding: 14px 0 6px; min-width: 140px; z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .cc-nav-dropdown:hover .cc-nav-dropdown-menu,
+    .cc-nav-dropdown:focus-within .cc-nav-dropdown-menu { display: block; }
+    .cc-nav-dropdown-menu a {
+      display: block; padding: 7px 18px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #888; text-decoration: none; white-space: nowrap;
+    }
+    .cc-nav-dropdown-menu a:hover { color: #2C4A2E; background: #f7f5f2; }
+
+    /* ── Welcome section ─────────────────────────────────────────── */
+    .cc-welcome {
+      border-bottom: 1px solid #e0ddd8;
+      padding: 2rem 0 1.75rem;
+    }
+    .cc-welcome-hed {
+      font-family: 'Lora', Georgia, serif; font-size: 30px; font-weight: 600;
+      line-height: 1.25; color: #1a1a1a; margin-bottom: 0.6rem;
+    }
+    .cc-welcome-sub {
+      font-size: 14.5px; color: #666; line-height: 1.65;
+    }
+    @media (max-width: 660px) {
+      .cc-welcome-hed { font-size: 24px; }
       .cc-site-name { font-size: 32px; }
     }
 
-    /* Section label */
-    .cc-section-label {
+    /* ── Featured topics ─────────────────────────────────────────── */
+    .cc-featured { margin-top: 2rem; }
+    .cc-featured-header {
+      display: flex; align-items: baseline; justify-content: space-between;
+      border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.25rem;
+    }
+    .cc-featured-label {
       font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
-      text-transform: uppercase; color: #2C4A2E; margin: 0 0 10px;
+      text-transform: uppercase; color: #1a1a1a;
+    }
+    .cc-featured-date { font-size: 11px; color: #aaa; }
+
+    .cc-featured-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+    }
+    @media (max-width: 860px) { .cc-featured-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .cc-featured-grid { grid-template-columns: 1fr; } }
+
+    .cc-featured-card {
+      border: 1px solid #e0ddd8; border-radius: 5px; padding: 1.1rem 1.2rem 1rem;
+      background: #fff; display: flex; flex-direction: column;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .cc-featured-card:hover {
+      border-color: #2C4A2E; box-shadow: 0 2px 8px rgba(44,74,46,0.08);
+    }
+    .cc-featured-cat {
+      font-size: 9.5px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.14em; color: #2C4A2E; margin-bottom: 6px;
+    }
+    .cc-featured-name {
+      font-family: 'Lora', Georgia, serif; font-size: 19px; font-weight: 600;
+      line-height: 1.25; color: #1a1a1a; margin-bottom: 10px;
+    }
+    .cc-featured-hook {
+      font-size: 13px; color: #555; font-style: italic; line-height: 1.6;
+      border-left: 2px solid #2C4A2E; padding-left: 10px;
+      margin-bottom: 14px; flex: 1;
+    }
+    .cc-featured-articles-label {
+      font-size: 9.5px; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: #aaa; margin-bottom: 7px;
+    }
+    .cc-featured-article { padding: 5px 0; border-top: 1px solid #f0ede8; }
+    .cc-featured-article:first-of-type { border-top: none; }
+    .cc-featured-article-title {
+      font-size: 12.5px; color: #1a1a1a; text-decoration: none;
+      font-family: 'Lora', Georgia, serif; line-height: 1.35;
+      display: block; margin-bottom: 2px;
+    }
+    .cc-featured-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-featured-article-source { font-size: 10.5px; color: #aaa; }
+    .cc-featured-cta {
+      display: block; font-size: 12.5px; font-weight: 600; color: #2C4A2E;
+      text-decoration: none; margin-top: 12px; padding-top: 10px;
+      border-top: 1px solid #e0ddd8;
+    }
+    .cc-featured-cta:hover { text-decoration: underline; }
+
+    /* ── Archive list ────────────────────────────────────────────── */
+    .cc-archive-list { margin-top: 2.75rem; }
+    .cc-archive-list-header {
+      border-bottom: 1px solid #e0ddd8; padding-bottom: 6px; margin-bottom: 1rem;
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #aaa;
+    }
+    .cc-archive-links {
+      display: flex; flex-wrap: wrap; gap: 6px 10px;
+    }
+    .cc-archive-link {
+      font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600;
+    }
+    .cc-archive-link:hover { text-decoration: underline; }
+
+    /* ── Browse grid ─────────────────────────────────────────────── */
+    .cc-browse { margin-top: 2.75rem; }
+    .cc-browse-header {
+      border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.75rem;
+    }
+    .cc-browse-header-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #1a1a1a;
+    }
+    .cc-browse-cat { margin-bottom: 2rem; }
+    .cc-browse-cat-name {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #aaa; margin-bottom: 0.75rem;
+    }
+    .cc-browse-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(195px, 1fr)); gap: 10px;
+    }
+    @media (max-width: 560px) { .cc-browse-grid { grid-template-columns: 1fr 1fr; } }
+    .cc-browse-card {
+      border: 1px solid #e0ddd8; border-radius: 4px;
+      padding: 11px 13px; text-decoration: none; background: #fff;
+      display: block; transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .cc-browse-card:hover { border-color: #2C4A2E; box-shadow: 0 1px 5px rgba(44,74,46,0.1); }
+    .cc-browse-card-name {
+      font-family: 'Lora', Georgia, serif; font-size: 13.5px; font-weight: 600;
+      color: #1a1a1a; line-height: 1.3; margin-bottom: 4px;
+    }
+    .cc-browse-card-hook {
+      font-size: 11px; color: #999; line-height: 1.45;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
     }
 
-    /* Lead story */
-    .cc-lead-story { border-bottom: 1px solid #e0ddd8; padding-bottom: 1.35rem; margin-bottom: 1.35rem; }
-    .cc-lead-title {
-      font-family: 'Lora', Georgia, serif; font-size: 27px; font-weight: 600;
-      line-height: 1.25; margin: 0 0 10px; color: #1a1a1a; text-decoration: none; display: block;
-    }
-    .cc-lead-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-lead-meta {
-      font-size: 12px; color: #888; display: flex; gap: 10px;
-      align-items: center; margin-bottom: 10px; flex-wrap: wrap;
-    }
-    .cc-author { font-size: 12px; font-weight: 600; color: #3a3a3a; }
-    .cc-source { font-size: 12px; color: #aaa; }
-    .cc-meta-dot { font-size: 11px; color: #ccc; }
-    .cc-lead-excerpt { font-size: 14.5px; line-height: 1.7; color: #555; }
-
-    /* Article list */
-    .cc-article-list { display: flex; flex-direction: column; }
-    .cc-article {
-      display: flex; gap: 0; padding: 0.9rem 0;
-      border-bottom: 1px solid #e0ddd8; align-items: flex-start;
-    }
-    .cc-article-num {
-      font-size: 11px; font-weight: 600; color: #bbb;
-      min-width: 24px; padding-top: 2px; font-variant-numeric: tabular-nums;
-    }
-    .cc-article-content { flex: 1; }
-    .cc-article-title {
-      font-family: 'Lora', Georgia, serif; font-size: 15.5px; font-weight: 500;
-      line-height: 1.35; margin: 0 0 5px; color: #1a1a1a; text-decoration: none; display: block;
-    }
-    .cc-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-article-meta { font-size: 11.5px; color: #aaa; display: flex; gap: 7px; align-items: center; flex-wrap: wrap; }
-
-    /* Point / Counterpoint */
-    .cc-counterpoint-block {
-      border: 1px solid #e0ddd8; border-radius: 6px; padding: 1rem 1.1rem;
-      margin: 1.35rem 0; background: #f5f4f0;
-    }
-    .cc-cp-label {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-      color: #aaa; margin: 0 0 10px; display: flex; align-items: center; gap: 8px;
-    }
-    .cc-cp-label::before, .cc-cp-label::after { content: ''; flex: 1; height: 1px; background: #ddd; }
-    .cc-cp-topic {
-      font-family: 'Lora', Georgia, serif; font-size: 13px; font-style: italic;
-      color: #666; text-align: center; margin-bottom: 12px;
-    }
-    .cc-cp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .cc-cp-side { padding: 11px 13px; border-radius: 5px; background: #fff; border: 1px solid #e0ddd8; }
-    .cc-cp-stance { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 6px; }
-    .cc-cp-stance.for { color: #2C4A2E; }
-    .cc-cp-stance.against { color: #7A2E2E; }
-    .cc-cp-title {
-      font-family: 'Lora', Georgia, serif; font-size: 13.5px; line-height: 1.35;
-      margin: 0 0 6px; color: #1a1a1a; text-decoration: none; display: block;
-    }
-    .cc-cp-title:hover { text-decoration: underline; }
-    .cc-cp-source { font-size: 11px; color: #aaa; }
-
-    /* Sidebar */
-    .cc-sidebar-section { margin-bottom: 1.5rem; border-bottom: 1px solid #e0ddd8; padding-bottom: 1.5rem; }
-    .cc-sidebar-section:last-child { border-bottom: none; padding-bottom: 0; }
-    .cc-sidebar-label {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-      color: #aaa; margin: 0 0 10px; border-bottom: 1px solid #e0ddd8; padding-bottom: 6px;
-    }
-
-    /* Trending */
-    .cc-trending-item { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px solid #e0ddd8; align-items: flex-start; }
-    .cc-trending-item:last-child { border-bottom: none; }
-    .cc-trending-num { font-size: 20px; font-weight: 600; color: #ddd; min-width: 20px; line-height: 1; font-variant-numeric: tabular-nums; }
-    .cc-trending-title {
-      font-size: 12.5px; line-height: 1.4; color: #1a1a1a;
-      text-decoration: none; font-family: 'Lora', Georgia, serif; display: block;
-    }
-    .cc-trending-title:hover { text-decoration: underline; }
-
-    /* Topic pills */
-    .cc-topic-pills { display: flex; flex-wrap: wrap; gap: 5px; }
-    .cc-topic-pill {
-      background: #f0ede8; border: 1px solid #ddd; border-radius: 2px; padding: 4px 10px;
-      font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; color: #666;
-      cursor: pointer; text-transform: uppercase; text-decoration: none; white-space: nowrap;
-    }
-    .cc-topic-pill:hover { border-color: #2C4A2E; color: #2C4A2E; }
-    .cc-topic-pill.active { background: #2C4A2E; border-color: #2C4A2E; color: #fff; }
-
-    /* Persona pills */
-    .cc-persona-pills { display: flex; flex-wrap: wrap; gap: 5px; }
-    .cc-persona-pill {
-      background: #f0ede8; border: 1px solid #ddd; border-radius: 2px; padding: 4px 10px;
-      font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; color: #666;
-      cursor: pointer; text-transform: uppercase; text-decoration: none; white-space: nowrap;
-    }
-    .cc-persona-pill:hover { border-color: #5C3A6E; color: #5C3A6E; }
-    .cc-persona-pill.active { background: #5C3A6E; border-color: #5C3A6E; color: #fff; }
-
-    /* Filter bar (above articles) */
-    .cc-filter-bar {
-      border-bottom: 1px solid #e0ddd8; padding-bottom: 1rem; margin-bottom: 1.5rem;
-    }
-    .cc-filter-bar .cc-sidebar-label { margin-bottom: 6px; }
-    .cc-filter-row { margin-bottom: 10px; }
-    .cc-filter-row:last-child { margin-bottom: 0; }
-
-    /* Hide filter bar on desktop (shown in sidebar instead) */
-    .cc-filter-bar { display: none; }
-    .cc-sidebar-filters { display: block; }
-
-    /* Mobile: show filter bar above articles, hide from sidebar */
-    @media (max-width: 700px) {
-      .cc-filter-bar { display: block; }
-      .cc-sidebar-filters { display: none; }
-      .cc-topic-pills, .cc-persona-pills {
-        flex-wrap: nowrap; overflow-x: auto;
-        -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 4px;
-      }
-      .cc-topic-pills::-webkit-scrollbar, .cc-persona-pills::-webkit-scrollbar { display: none; }
-    }
-
-    /* Fix article title overflow on mobile */
-    .cc-article-title, .cc-lead-title {
-      overflow-wrap: break-word; word-break: break-word;
-    }
-
-    .cc-article.hidden { display: none; }
-    .cc-section-group.hidden { display: none; }
-    #cc-filter-banner {
-      display: none; background: #EFF4F0; border: 1px solid #B5CCB8; border-radius: 4px;
-      padding: 7px 12px; margin-bottom: 1rem; font-size: 12px; color: #2C4A2E;
-      justify-content: space-between; align-items: center;
-    }
-    #cc-filter-banner.visible { display: flex; }
-    #cc-filter-clear { cursor: pointer; font-weight: 600; color: #2C4A2E; text-decoration: underline; background: none; border: none; font-size: 12px; }
-
-    /* Email box */
+    /* ── Email box ───────────────────────────────────────────────── */
     .cc-email-box { background: #EFF4F0; border: 1px solid #B5CCB8; border-radius: 6px; padding: 1rem; }
-    .cc-email-box p { font-size: 13px; color: #2C4A2E; margin: 0 0 10px; line-height: 1.55; }
-    .cc-email-input {
-      width: 100%; border: 1px solid #B5CCB8; border-radius: 3px; padding: 7px 10px;
-      font-size: 13px; font-family: 'Source Sans 3', sans-serif; background: #fff; color: #1a1a1a; margin-bottom: 7px;
-    }
-    .cc-email-submit {
-      width: 100%; background: #2C4A2E; color: #fff; border: none; padding: 9px;
-      font-size: 13px; font-weight: 600; border-radius: 3px; cursor: pointer;
-      font-family: 'Source Sans 3', sans-serif; letter-spacing: 0.04em;
-    }
-    .cc-email-submit:hover { background: #3a5f3c; }
 
-    /* Footer */
+    /* ── Footer ──────────────────────────────────────────────────── */
     .cc-footer {
       border-top: 2.5px solid #1a1a1a; margin-top: 2.5rem; padding-top: 1rem;
       display: flex; justify-content: space-between; align-items: center;
       font-size: 11px; color: #aaa; flex-wrap: wrap; gap: 8px;
     }
     .cc-footer-name { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 15px; color: #1a1a1a; }
+    .cc-footer-nav { display: flex; gap: 12px; }
+    .cc-footer-nav a { font-size: 11px; color: #888; text-decoration: none; font-weight: 600; }
+    .cc-footer-nav a:hover { color: #2C4A2E; }
   </style>
 </head>
 <body>
@@ -280,1317 +267,570 @@
   <!-- Header -->
   <div class="cc-header">
     <div class="cc-top-bar">
-      <span>April 3, 2026</span>
+      <span>April 9, 2026</span>
       <a class="cc-subscribe-btn" href="#cc-email-box" onclick="document.getElementById('cc-email-box').scrollIntoView({behavior:'smooth'}); return false;">Get the Daily Digest</a>
     </div>
     <div class="cc-masthead">
-      <h1 class="cc-site-name">Christian Curator</h1>
-      <p class="cc-tagline">Curated for the curious Christian</p>
+      <h1><a href="/" class="cc-site-name">Christian Curator</a></h1>
+      <p class="cc-tagline">Curated perspectives &middot; updated daily</p>
     </div>
     <nav class="cc-nav">
-      <a href="/" class="active">Today</a>
-      <a href="/topics/">Deep Dives</a>
-      <a href="/archive/">Archive</a>
+      <a href="/" class="active">Home</a>
+      <a href="/digest/">Daily Digest</a>
+      <div class="cc-nav-dropdown">
+        <button class="cc-nav-dropdown-toggle">Resources</button>
+        <div class="cc-nav-dropdown-menu">
+          <a href="/voices/">Voices</a>
+          <a href="/archive/">Archive</a>
+        </div>
+      </div>
     </nav>
   </div>
 
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      
-      
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-  
-    
-      
-      
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      
-      
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      
-      
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      
-      
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-
-  
-
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      
-    
-  
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-
-
-  <div class="cc-layout">
-
-    <!-- Main feed -->
-    <div class="cc-main">
-
-      
-      
-      <div class="cc-lead-story">
-        <div class="cc-section-label">Lead Story</div>
-        <a class="cc-lead-title" href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/jesus-betrayed-crucified/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Gods Sacrifice: Jesus Death for Our Redemption', 'article_source': 'The Gospel Coalition', 'article_url': 'https://www.thegospelcoalition.org/podcasts/tgc-podcast/jesus-betrayed-crucified/'});">God's Sacrifice: Jesus' Death for Our Redemption</a>
-        <div class="cc-lead-meta">
-    
-    
-    
-      <span class="cc-author">J. Gary Millar</span><span class="cc-meta-dot"> · </span><span class="cc-source">The Gospel Coalition</span>
-    
+  <!-- Welcome -->
+  <div class="cc-welcome">
+    <h2 class="cc-welcome-hed">The conversations shaping evangelical Christianity.</h2>
+    <p class="cc-welcome-sub">Because every curious Christian deserves clarity on the questions that matter most.</p>
   </div>
+
+  
+  <!-- In the conversation today -->
+  <div class="cc-featured">
+    <div class="cc-featured-header">
+      <div class="cc-featured-label">In the conversation today</div>
+      <div class="cc-featured-date">April 9, 2026</div>
+    </div>
+    <div class="cc-featured-grid">
+      
+      <div class="cc-featured-card">
+        <div class="cc-featured-cat">Core Theology</div>
+        <div class="cc-featured-name">Heaven, Hell & Eternity</div>
+        <p class="cc-featured-hook">Evangelical views on the afterlife, eternal punishment, annihilationism, and the hope of new creation.</p>
         
-        <p class="cc-lead-excerpt">This is the heart of the gospel. This is the center of history. This is God dying in our place.</p>
+        <div class="cc-featured-articles-label">What&rsquo;s being written about this</div>
         
-      </div>
-      
-
-      
-
-
-      
-
-      
-      <div class="cc-section-group" data-section="theology">
-        <div class="cc-section-label">Theology &amp; Doctrine</div>
-        <div class="cc-article-list">
-          
-          <div class="cc-article" data-tags="theology,devotional" data-personas="professional,student">
-            <div class="cc-article-num">1</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://feed.desiringgod.org/link/22977/17312221/the-agony-of-sin-and-love" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Marveling at Christs Love: The True Meaning of Maundy Thursday', 'article_source': 'Desiring God', 'article_url': 'https://feed.desiringgod.org/link/22977/17312221/the-agony-of-sin-and-love'});">Marveling at Christ's Love: The True Meaning of Maundy Thursday</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">David Mathis</span><span class="cc-meta-dot"> · </span><span class="cc-source">Desiring God</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="theology,devotional" data-personas="pastor,student,seeker">
-            <div class="cc-article-num">2</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="http://feeds.ligonier.org/~/916702607/0/ligonierministriesblog" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Jesus on Trial: Gods Love for the World Revealed', 'article_source': 'Ligonier Ministries', 'article_url': 'http://feeds.ligonier.org/~/916702607/0/ligonierministriesblog'});">Jesus on Trial: God's Love for the World Revealed</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">R.C. Sproul</span><span class="cc-meta-dot"> · </span><span class="cc-source">Ligonier Ministries</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="theology,apologetics" data-personas="pastor,professional">
-            <div class="cc-article-num">3</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://firstthings.com/against-god-alone/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'When Faith Alone Isnt Enough: A Doctors Crisis of Conscience', 'article_source': 'First Things', 'article_url': 'https://firstthings.com/against-god-alone/'});">When Faith Alone Isn't Enough: A Doctor's Crisis of Conscience</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Jillian Parks</span><span class="cc-meta-dot"> · </span><span class="cc-source">First Things</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="theology,work" data-personas="student,professional">
-            <div class="cc-article-num">4</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://mereorthodoxy.com/aquinas-ai-and-the-pursuit-of-learning" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Aquinas and Learning: Teaching Children to Research Deeply', 'article_source': 'Mere Orthodoxy', 'article_url': 'https://mereorthodoxy.com/aquinas-ai-and-the-pursuit-of-learning'});">Aquinas and Learning: Teaching Children to Research Deeply</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Alex Stevens</span><span class="cc-meta-dot"> · </span><span class="cc-source">Mere Orthodoxy</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="devotional,theology" data-personas="parent,professional">
-            <div class="cc-article-num">5</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://relevantmagazine.com/faith/church/what-is-maundy-thursday/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Maundy Thursday: Understanding Christs Humble Service Before the Cross', 'article_source': 'Relevant Magazine', 'article_url': 'https://relevantmagazine.com/faith/church/what-is-maundy-thursday/'});">Maundy Thursday: Understanding Christ's Humble Service Before the Cross</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">John Taylor</span><span class="cc-meta-dot"> · </span><span class="cc-source">Relevant Magazine</span>
-    
-  </div>
-            </div>
-          </div>
-          
+        <div class="cc-featured-article">
+          <a class="cc-featured-article-title"
+             href="https://theaquilareport.com/easter-unbelievably-good-news/" target="_blank"
+             onclick="gtag('event','article_click',{'article_title':'The Resurrection: Christs Victory and Our Eternal Hope','article_source':'The Aquila Report','article_url':'https://theaquilareport.com/easter-unbelievably-good-news/'});">
+            The Resurrection: Christ's Victory and Our Eternal Hope
+          </a>
+          <span class="cc-featured-article-source">Richard Baxter &middot;The Aquila Report &middot; Apr 3</span>
         </div>
-      </div>
-      
-
-      
-      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="culture">
-        <div class="cc-section-label">Culture &amp; Society</div>
-        <div class="cc-article-list">
-          
-          <div class="cc-article" data-tags="politics,culture" data-personas="pastor,professional">
-            <div class="cc-article-num">1</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://firstthings.com/canadas-offensive-secularism/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Canadas Parliament Repeals Long-Standing Religious Opinion Defense', 'article_source': 'First Things', 'article_url': 'https://firstthings.com/canadas-offensive-secularism/'});">Canada's Parliament Repeals Long-Standing Religious Opinion Defense</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">German Saucedo</span><span class="cc-meta-dot"> · </span><span class="cc-source">First Things</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="culture,politics" data-personas="parent,professional">
-            <div class="cc-article-num">2</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://firstthings.com/protecting-kids-online-doesnt-threaten-speech-or-parental-rights/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Protecting Children Online: Preserving Speech and Parental Rights', 'article_source': 'First Things', 'article_url': 'https://firstthings.com/protecting-kids-online-doesnt-threaten-speech-or-parental-rights/'});">Protecting Children Online: Preserving Speech and Parental Rights</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">German Saucedo</span><span class="cc-meta-dot"> · </span><span class="cc-source">First Things</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="devotional,culture" data-personas="student,professional">
-            <div class="cc-article-num">3</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://relevantmagazine.com/culture/most-dating-advice-misses-the-point-heres-what-works/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Biblical Wisdom for Dating: Moving Beyond Hollow Advice', 'article_source': 'Relevant Magazine', 'article_url': 'https://relevantmagazine.com/culture/most-dating-advice-misses-the-point-heres-what-works/'});">Biblical Wisdom for Dating: Moving Beyond Hollow Advice</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Emily Brown</span><span class="cc-meta-dot"> · </span><span class="cc-source">Relevant Magazine</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="culture,family" data-personas="parent">
-            <div class="cc-article-num">4</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://wng.org/podcasts/the-dirty-dozen-1775160325" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Tech Platforms Face Scrutiny Over Child Safety Protections', 'article_source': 'World Magazine', 'article_url': 'https://wng.org/podcasts/the-dirty-dozen-1775160325'});">Tech Platforms Face Scrutiny Over Child Safety Protections</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Keegan Martin</span><span class="cc-meta-dot"> · </span><span class="cc-source">World Magazine</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="culture,apologetics" data-personas="professional">
-            <div class="cc-article-num">5</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://wng.org/podcasts/speech-and-consequence-1775145932" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Free Speech and Responsibility: Navigating Faith in Public Discourse', 'article_source': 'World Magazine', 'article_url': 'https://wng.org/podcasts/speech-and-consequence-1775145932'});">Free Speech and Responsibility: Navigating Faith in Public Discourse</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Keegan Martin</span><span class="cc-meta-dot"> · </span><span class="cc-source">World Magazine</span>
-    
-  </div>
-            </div>
-          </div>
-          
+        
+        <div class="cc-featured-article">
+          <a class="cc-featured-article-title"
+             href="https://www.thegospelcoalition.org/article/resurrection-evidence-tells-story/" target="_blank"
+             onclick="gtag('event','article_click',{'article_title':'The Resurrection: How Historical Evidence Shaped Early Christian Belief','article_source':'The Gospel Coalition','article_url':'https://www.thegospelcoalition.org/article/resurrection-evidence-tells-story/'});">
+            The Resurrection: How Historical Evidence Shaped Early Christian Belief
+          </a>
+          <span class="cc-featured-article-source">Kyle Tucker &middot;The Gospel Coalition &middot; Apr 1</span>
         </div>
+        
+        
+        <a class="cc-featured-cta" href="/topics/heaven-hell-eternity/">Explore this topic &rarr;</a>
       </div>
       
-
-      
-      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="research">
-        <div class="cc-section-label">Research &amp; Data</div>
-        <div class="cc-section-sublabel" style="font-size:12px;color:#888;margin-bottom:0.6rem;">Persistent picks · refreshed as new research appears</div>
-        <div class="cc-article-list">
-          
-          <div class="cc-article" data-tags="data" data-personas="pastor">
-            <div class="cc-article-num">1</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.graphsaboutreligion.com/p/the-growing-gap-in-church-membership" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Church Membership Decline: Understanding Who Joins and Why It Matters', 'article_source': 'Ryan Burge', 'article_url': 'https://www.graphsaboutreligion.com/p/the-growing-gap-in-church-membership'});">Church Membership Decline: Understanding Who Joins and Why It Matters</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Ryan Burge</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="data" data-personas="pastor,professional">
-            <div class="cc-article-num">2</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Pastors Unified on Legal Immigration, Divided on Deportation Policy', 'article_source': 'Lifeway Research', 'article_url': 'https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/'});">Pastors Unified on Legal Immigration, Divided on Deportation Policy</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Aaron Earls</span><span class="cc-meta-dot"> · </span><span class="cc-source">Lifeway Research</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="news,politics" data-personas="professional">
-            <div class="cc-article-num">3</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.pewresearch.org/short-reads/2026/04/01/how-americans-view-trumps-handling-of-trade-and-tariffs/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Americans Confidence in Trumps Trade Policy Decisions Declines', 'article_source': 'Pew Research', 'article_url': 'https://www.pewresearch.org/short-reads/2026/04/01/how-americans-view-trumps-handling-of-trade-and-tariffs/'});">Americans' Confidence in Trump's Trade Policy Decisions Declines</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Beshay</span><span class="cc-meta-dot"> · </span><span class="cc-source">Pew Research</span>
-    
-  </div>
-            </div>
-          </div>
-          
+      <div class="cc-featured-card">
+        <div class="cc-featured-cat">Culture & Society</div>
+        <div class="cc-featured-name">The Future of Evangelicalism</div>
+        <p class="cc-featured-hook">The state of the evangelical movement — its divisions, decline, identity, and what comes next.</p>
+        
+        <div class="cc-featured-articles-label">What&rsquo;s being written about this</div>
+        
+        <div class="cc-featured-article">
+          <a class="cc-featured-article-title"
+             href="https://mereorthodoxy.com/why-evangelical-gender-discourse-is-unserious" target="_blank"
+             onclick="gtag('event','article_click',{'article_title':'Evangelical Debates on Gender Need Serious Engagement, Not Gatekeeping','article_source':'Mere Orthodoxy','article_url':'https://mereorthodoxy.com/why-evangelical-gender-discourse-is-unserious'});">
+            Evangelical Debates on Gender Need Serious Engagement, Not Gatekeeping
+          </a>
+          <span class="cc-featured-article-source">Jamie Carlson &middot;Mere Orthodoxy &middot; Mar 31</span>
         </div>
-      </div>
-      
-
-      
-      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="church life">
-        <div class="cc-section-label">Church Life</div>
-        <div class="cc-article-list">
-          
-          <div class="cc-article" data-tags="theology,church life" data-personas="pastor,professional">
-            <div class="cc-article-num">1</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.christianitytoday.com/2026/04/communion-cup-eschatology-juice-wine/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Understanding Communion: Why Churches Use Different Cup Beverages', 'article_source': 'Christianity Today', 'article_url': 'https://www.christianitytoday.com/2026/04/communion-cup-eschatology-juice-wine/'});">Understanding Communion: Why Churches Use Different Cup Beverages</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Kara Bettis Carvalho</span><span class="cc-meta-dot"> · </span><span class="cc-source">Christianity Today</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="culture,church life" data-personas="pastor">
-            <div class="cc-article-num">2</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.christianitytoday.com/2026/04/churches-try-drones-and-skydiving-bunnies-for-easter-outreach/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Churches Embrace Unconventional Methods for Easter Community Outreach', 'article_source': 'Christianity Today', 'article_url': 'https://www.christianitytoday.com/2026/04/churches-try-drones-and-skydiving-bunnies-for-easter-outreach/'});">Churches Embrace Unconventional Methods for Easter Community Outreach</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Bonnie Kristian</span><span class="cc-meta-dot"> · </span><span class="cc-source">Christianity Today</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="theology,church life" data-personas="pastor,women">
-            <div class="cc-article-num">3</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://mereorthodoxy.com/why-evangelical-gender-discourse-is-unserious" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Evangelical Debates on Gender: Moving Beyond Performative Arguments', 'article_source': 'Mere Orthodoxy', 'article_url': 'https://mereorthodoxy.com/why-evangelical-gender-discourse-is-unserious'});">Evangelical Debates on Gender: Moving Beyond Performative Arguments</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Jamie Carlson</span><span class="cc-meta-dot"> · </span><span class="cc-source">Mere Orthodoxy</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="theology,church life" data-personas="pastor">
-            <div class="cc-article-num">4</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://research.lifeway.com/2026/03/20/8-critical-discipleship-marks-of-a-healthy-church/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Eight Marks of Spiritual Growth Toward Christlikeness', 'article_source': 'Lifeway Research', 'article_url': 'https://research.lifeway.com/2026/03/20/8-critical-discipleship-marks-of-a-healthy-church/'});">Eight Marks of Spiritual Growth Toward Christlikeness</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Lifeway Research</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="church life" data-personas="pastor">
-            <div class="cc-article-num">5</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://careynieuwhof.com/sermon-end-sunday/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Extending Sermon Impact Beyond Sunday Worship', 'article_source': 'Carey Nieuwhof', 'article_url': 'https://careynieuwhof.com/sermon-end-sunday/'});">Extending Sermon Impact Beyond Sunday Worship</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Josh Burnett</span><span class="cc-meta-dot"> · </span><span class="cc-source">Carey Nieuwhof</span>
-    
-  </div>
-            </div>
-          </div>
-          
+        
+        <div class="cc-featured-article">
+          <a class="cc-featured-article-title"
+             href="https://www.christianitytoday.com/2026/04/the-evangelical-roots-of-north-koreas-kim-family/" target="_blank"
+             onclick="gtag('event','article_click',{'article_title':'North Koreas Nuclear Ambitions and the Plight of Its Christians','article_source':'Christianity Today','article_url':'https://www.christianitytoday.com/2026/04/the-evangelical-roots-of-north-koreas-kim-family/'});">
+            North Korea's Nuclear Ambitions and the Plight of Its Christians
+          </a>
+          <span class="cc-featured-article-source">Clarissa Moll &middot;Christianity Today &middot; Apr 2</span>
         </div>
+        
+        
+        <a class="cc-featured-cta" href="/topics/evangelicalism/">Explore this topic &rarr;</a>
       </div>
       
-
-      
-      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="more">
-        <div class="cc-section-label">More from Today</div>
-        <div class="cc-article-list">
-          
-          <div class="cc-article" data-tags="theology,devotional" data-personas="professional,student">
-            <div class="cc-article-num">1</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://mereorthodoxy.com/deconstructing-pessimism" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Examining Arthur Schopenhauers Philosophy of Pessimism', 'article_source': 'Mere Orthodoxy', 'article_url': 'https://mereorthodoxy.com/deconstructing-pessimism'});">Examining Arthur Schopenhauer's Philosophy of Pessimism</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Matthew Loftus</span><span class="cc-meta-dot"> · </span><span class="cc-source">Mere Orthodoxy</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="theology,devotional" data-personas="pastor,student">
-            <div class="cc-article-num">2</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="http://feeds.ligonier.org/~/953054321/0/ligonierministriesblog" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'The Origin and Meaning of Good Fridays Name', 'article_source': 'Ligonier Ministries', 'article_url': 'http://feeds.ligonier.org/~/953054321/0/ligonierministriesblog'});">The Origin and Meaning of Good Friday's Name</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Karrie Hahn</span><span class="cc-meta-dot"> · </span><span class="cc-source">Ligonier Ministries</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="news,politics" data-personas="professional">
-            <div class="cc-article-num">3</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.christianitytoday.com/2026/04/the-evangelical-roots-of-north-koreas-kim-family/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'North Koreas Nuclear Strategy and Its Historical Evangelical Connections', 'article_source': 'Christianity Today', 'article_url': 'https://www.christianitytoday.com/2026/04/the-evangelical-roots-of-north-koreas-kim-family/'});">North Korea's Nuclear Strategy and Its Historical Evangelical Connections</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Clarissa Moll</span><span class="cc-meta-dot"> · </span><span class="cc-source">Christianity Today</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="devotional,theology" data-personas="professional,parent">
-            <div class="cc-article-num">4</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.thegospelcoalition.org/article/memento-mori-death-easter/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Easters Forgotten Practice: Why Christians Should Remember Their Death', 'article_source': 'The Gospel Coalition', 'article_url': 'https://www.thegospelcoalition.org/article/memento-mori-death-easter/'});">Easter's Forgotten Practice: Why Christians Should Remember Their Death</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Kelly M. Kapic, M. Elizabeth Lewis Hall, Jason McMartin</span><span class="cc-meta-dot"> · </span><span class="cc-source">The Gospel Coalition</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="data" data-personas="pastor">
-            <div class="cc-article-num">5</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.graphsaboutreligion.com/p/the-growing-gap-in-church-membership" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Church Membership Decline: Understanding Who Joins and Why It Matters', 'article_source': 'Ryan Burge', 'article_url': 'https://www.graphsaboutreligion.com/p/the-growing-gap-in-church-membership'});">Church Membership Decline: Understanding Who Joins and Why It Matters</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Ryan Burge</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="theology,devotional" data-personas="seeker,professional">
-            <div class="cc-article-num">6</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.christianitytoday.com/2026/04/easter-jesus-not-zombie-ghost-story/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Why Easters Message Transcends Modern Skepticism About Christs Resurrection', 'article_source': 'Christianity Today', 'article_url': 'https://www.christianitytoday.com/2026/04/easter-jesus-not-zombie-ghost-story/'});">Why Easter's Message Transcends Modern Skepticism About Christ's Resurrection</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Elise Brandon</span><span class="cc-meta-dot"> · </span><span class="cc-source">Christianity Today</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="data" data-personas="pastor,professional">
-            <div class="cc-article-num">7</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Pastors Unified on Legal Immigration, Divided on Deportation Policy', 'article_source': 'Lifeway Research', 'article_url': 'https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/'});">Pastors Unified on Legal Immigration, Divided on Deportation Policy</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Aaron Earls</span><span class="cc-meta-dot"> · </span><span class="cc-source">Lifeway Research</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="apologetics,theology" data-personas="pastor,student">
-            <div class="cc-article-num">8</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.thegospelcoalition.org/article/resurrection-evidence-tells-story/" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'The Resurrection: Historical Evidence and Early Christian Conviction', 'article_source': 'The Gospel Coalition', 'article_url': 'https://www.thegospelcoalition.org/article/resurrection-evidence-tells-story/'});">The Resurrection: Historical Evidence and Early Christian Conviction</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Kyle Tucker</span><span class="cc-meta-dot"> · </span><span class="cc-source">The Gospel Coalition</span>
-    
-  </div>
-            </div>
-          </div>
-          
+      <div class="cc-featured-card">
+        <div class="cc-featured-cat">Spiritual Formation</div>
+        <div class="cc-featured-name">Prayer</div>
+        <p class="cc-featured-hook">Evangelical perspectives on how Christians pray, whether prayer changes things, and building a consistent prayer life.</p>
+        
+        <div class="cc-featured-articles-label">What&rsquo;s being written about this</div>
+        
+        <div class="cc-featured-article">
+          <a class="cc-featured-article-title"
+             href="https://danielkwilliams.substack.com/p/a-reformed-christian-critique-of" target="_blank"
+             onclick="gtag('event','article_click',{'article_title':'Reformed Christian Analysis of Defense Secretarys Imprecatory Prayer Language','article_source':'Daniel K. Williams','article_url':'https://danielkwilliams.substack.com/p/a-reformed-christian-critique-of'});">
+            Reformed Christian Analysis of Defense Secretary's Imprecatory Prayer Language
+          </a>
+          <span class="cc-featured-article-source">Daniel K. Williams &middot; Apr 1</span>
         </div>
-      </div>
-      
-
-      
-      
-      
-      <div class="cc-section-group" style="margin-top:1.5rem;" data-section="world news">
-        <div class="cc-section-label">World News</div>
-        <div class="cc-article-list">
-          
-          <div class="cc-article" data-tags="news" data-personas="professional" style="background:#faf9f7; border-left:3px solid #2C4A2E; padding-left:10px;">
-            <div class="cc-article-content">
-              <div style="font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#2C4A2E; margin-bottom:4px;">Top Story</div>
-              <a class="cc-article-title" href="https://www.bbc.com/news/articles/crm1vj941x9o?at_medium=RSS&at_campaign=rss" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Iranians Face Growing Hardship Amid Ongoing Conflict and Uncertainty', 'article_source': 'BBC News', 'article_url': 'https://www.bbc.com/news/articles/crm1vj941x9o?at_medium=RSS&at_campaign=rss'});">Iranians Face Growing Hardship Amid Ongoing Conflict and Uncertainty</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">BBC News</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          
-          <div class="cc-article" data-tags="news" data-personas="">
-            <div class="cc-article-num">1</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.theguardian.com/world/2026/apr/03/nuns-who-broke-back-into-their-austrian-convent-are-step-closer-to-being-able-to-stay" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Nuns Who Fled Care Home May Be Allowed to Return to Convent', 'article_source': 'The Guardian', 'article_url': 'https://www.theguardian.com/world/2026/apr/03/nuns-who-broke-back-into-their-austrian-convent-are-step-closer-to-being-able-to-stay'});">Nuns Who Fled Care Home May Be Allowed to Return to Convent</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Kate Connolly in Berlin</span><span class="cc-meta-dot"> · </span><span class="cc-source">The Guardian</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="news" data-personas="">
-            <div class="cc-article-num">2</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.wsj.com/world/cuba-to-free-2-010-prisoners-amid-talks-with-the-u-s-4f605693" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Cuba Releases 2,010 Prisoners During Easter as Vatican Diplomacy Advances', 'article_source': 'Wall Street Journal', 'article_url': 'https://www.wsj.com/world/cuba-to-free-2-010-prisoners-amid-talks-with-the-u-s-4f605693'});">Cuba Releases 2,010 Prisoners During Easter as Vatican Diplomacy Advances</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">José de Córdoba</span><span class="cc-meta-dot"> · </span><span class="cc-source">Wall Street Journal</span>
-    
-  </div>
-            </div>
-          </div>
-          
-          <div class="cc-article" data-tags="news" data-personas="">
-            <div class="cc-article-num">3</div>
-            <div class="cc-article-content">
-              <a class="cc-article-title" href="https://www.theguardian.com/world/2026/apr/03/pope-leos-first-easter-one-year-in-what-do-catholics-think-of-the-new-pontiff" target="_blank" onclick="gtag('event', 'article_click', {'article_title': 'Pope Leos First Easter: Catholics Assess His Year of Leadership', 'article_source': 'The Guardian', 'article_url': 'https://www.theguardian.com/world/2026/apr/03/pope-leos-first-easter-one-year-in-what-do-catholics-think-of-the-new-pontiff'});">Pope Leo's First Easter: Catholics Assess His Year of Leadership</a>
-              <div class="cc-article-meta">
-    
-    
-    
-      <span class="cc-author">Angela Giuffrida in Vatican City</span><span class="cc-meta-dot"> · </span><span class="cc-source">The Guardian</span>
-    
-  </div>
-            </div>
-          </div>
-          
+        
+        <div class="cc-featured-article">
+          <a class="cc-featured-article-title"
+             href="https://feed.desiringgod.org/link/22977/17296404/what-will-war-bring-to-iran" target="_blank"
+             onclick="gtag('event','article_click',{'article_title':'How Christians Can Pray During Irans Crisis','article_source':'Desiring God','article_url':'https://feed.desiringgod.org/link/22977/17296404/what-will-war-bring-to-iran'});">
+            How Christians Can Pray During Iran's Crisis
+          </a>
+          <span class="cc-featured-article-source">David Mathis &middot;Desiring God &middot; Mar 5</span>
         </div>
+        
+        
+        <a class="cc-featured-cta" href="/topics/prayer/">Explore this topic &rarr;</a>
       </div>
       
+    </div>
+  </div>
+  
 
+  <!-- Browse all topics -->
+  <div class="cc-browse">
+    <div class="cc-browse-header">
+      <div class="cc-browse-header-label">Explore all topics</div>
     </div>
 
-    <!-- Sidebar -->
-    <div class="cc-sidebar">
-
-      
-
-      
-      <div class="cc-sidebar-section">
-        <div class="cc-sidebar-label">Yesterday's Best</div>
+    
+    <div class="cc-browse-cat">
+      <div class="cc-browse-cat-name">Core Theology</div>
+      <div class="cc-browse-grid">
         
-        <div class="cc-trending-item">
-          <div class="cc-trending-num">1</div>
-          <a class="cc-trending-title" href="https://www.thegospelcoalition.org/podcasts/deep-dish/recognizing-own-marks-righteousness/" target="_blank">Recognizing Self-Righteousness: Relying on Christ Instead</a>
-        </div>
+        <a class="cc-browse-card" href="/topics/atonement/"
+           onclick="gtag('event','topic_click',{'topic':'atonement','category':'Core Theology'});">
+          <div class="cc-browse-card-name">The Atonement</div>
+          <div class="cc-browse-card-hook">Evangelical perspectives on the cross, penal substitution, and what Christ's death accomplished for sinners.</div>
+        </a>
         
-        <div class="cc-trending-item">
-          <div class="cc-trending-num">2</div>
-          <a class="cc-trending-title" href="https://www.christianitytoday.com/2026/04/easter-jesus-not-zombie-ghost-story/" target="_blank">Easter Affirms Life, Not a Resurrection Myth</a>
-        </div>
+        <a class="cc-browse-card" href="/topics/justification-by-faith/"
+           onclick="gtag('event','topic_click',{'topic':'justification-by-faith','category':'Core Theology'});">
+          <div class="cc-browse-card-name">Justification by Faith</div>
+          <div class="cc-browse-card-hook">Evangelical debate over faith alone, imputed righteousness, and what Paul really meant by justification.</div>
+        </a>
         
-        <div class="cc-trending-item">
-          <div class="cc-trending-num">3</div>
-          <a class="cc-trending-title" href="http://feeds.ligonier.org/~/952887071/0/ligonierministriesblog" target="_blank">Finding Your Way Through Prayer Struggles: A Christian's Guide</a>
-        </div>
+        <a class="cc-browse-card" href="/topics/biblical-inerrancy/"
+           onclick="gtag('event','topic_click',{'topic':'biblical-inerrancy','category':'Core Theology'});">
+          <div class="cc-browse-card-name">Biblical Inerrancy</div>
+          <div class="cc-browse-card-hook">How evangelicals understand Scripture's authority, reliability, and relationship to science, history, and theology.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/baptism/"
+           onclick="gtag('event','topic_click',{'topic':'baptism','category':'Core Theology'});">
+          <div class="cc-browse-card-name">Baptism</div>
+          <div class="cc-browse-card-hook">The evangelical debate over infant vs. believer's baptism, mode, and what Scripture teaches about the ordinance.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/lords-supper/"
+           onclick="gtag('event','topic_click',{'topic':'lords-supper','category':'Core Theology'});">
+          <div class="cc-browse-card-name">The Lord's Supper</div>
+          <div class="cc-browse-card-hook">Evangelical perspectives on what happens at communion — Christ's presence, meaning, and how churches practice it.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/heaven-hell-eternity/"
+           onclick="gtag('event','topic_click',{'topic':'heaven-hell-eternity','category':'Core Theology'});">
+          <div class="cc-browse-card-name">Heaven, Hell & Eternity</div>
+          <div class="cc-browse-card-hook">Evangelical views on the afterlife, eternal punishment, annihilationism, and the hope of new creation.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/creation-evolution/"
+           onclick="gtag('event','topic_click',{'topic':'creation-evolution','category':'Core Theology'});">
+          <div class="cc-browse-card-name">Creation & Evolution</div>
+          <div class="cc-browse-card-hook">How evangelicals navigate Genesis, the origins debate, and young-earth vs. old-earth creationism.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/suffering-and-providence/"
+           onclick="gtag('event','topic_click',{'topic':'suffering-and-providence','category':'Core Theology'});">
+          <div class="cc-browse-card-name">Suffering & Providence</div>
+          <div class="cc-browse-card-hook">How Christians understand God's sovereignty in the face of pain, grief, and seemingly unanswered prayer.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/gender-and-biblical-anthropology/"
+           onclick="gtag('event','topic_click',{'topic':'gender-and-biblical-anthropology','category':'Core Theology'});">
+          <div class="cc-browse-card-name">Gender & Biblical Anthropology</div>
+          <div class="cc-browse-card-hook">Evangelical perspectives on male and female identity, embodiment, transgender questions, and the image of God.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/apologetics/"
+           onclick="gtag('event','topic_click',{'topic':'apologetics','category':'Core Theology'});">
+          <div class="cc-browse-card-name">Apologetics</div>
+          <div class="cc-browse-card-hook">How Christians make the case for the faith — through reason, evidence, presupposition, and engagement with doubt.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/predestination-free-will/"
+           onclick="gtag('event','topic_click',{'topic':'predestination-free-will','category':'Core Theology'});">
+          <div class="cc-browse-card-name">Predestination & Free Will</div>
+          <div class="cc-browse-card-hook">The Calvinist-Arminian debate over divine election, human freedom, and the nature of saving grace.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/holy-spirit-spiritual-gifts/"
+           onclick="gtag('event','topic_click',{'topic':'holy-spirit-spiritual-gifts','category':'Core Theology'});">
+          <div class="cc-browse-card-name">The Holy Spirit & Spiritual Gifts</div>
+          <div class="cc-browse-card-hook">The debate between cessationists and continuationists over spiritual gifts, tongues, and the Spirit's work today.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/the-trinity/"
+           onclick="gtag('event','topic_click',{'topic':'the-trinity','category':'Core Theology'});">
+          <div class="cc-browse-card-name">The Trinity</div>
+          <div class="cc-browse-card-hook">Evangelical theology of the triune God — Father, Son, and Spirit — and why Trinitarian doctrine matters in practice.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/eschatology/"
+           onclick="gtag('event','topic_click',{'topic':'eschatology','category':'Core Theology'});">
+          <div class="cc-browse-card-name">Eschatology & End Times</div>
+          <div class="cc-browse-card-hook">Evangelical debate over premillennialism, amillennialism, the rapture, and what Scripture teaches about Christ's return and the end of history.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/israel-and-prophecy/"
+           onclick="gtag('event','topic_click',{'topic':'israel-and-prophecy','category':'Core Theology'});">
+          <div class="cc-browse-card-name">Israel & Prophecy</div>
+          <div class="cc-browse-card-hook">Evangelical debate between dispensationalism and covenant theology over Israel's role in prophecy, the land promises, and Christian Zionism.</div>
+        </a>
         
       </div>
-      
-
-      <div class="cc-sidebar-section">
-        <div class="cc-sidebar-label">Trending Today</div>
+    </div>
+    
+    <div class="cc-browse-cat">
+      <div class="cc-browse-cat-name">Church Life</div>
+      <div class="cc-browse-grid">
         
-        <div class="cc-trending-item">
-          <div class="cc-trending-num">1</div>
-          <a class="cc-trending-title" href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/jesus-betrayed-crucified/" target="_blank">God's Sacrifice: Jesus' Death for Our Redemption</a>
-        </div>
+        <a class="cc-browse-card" href="/topics/complementarianism-egalitarianism/"
+           onclick="gtag('event','topic_click',{'topic':'complementarianism-egalitarianism','category':'Church Life'});">
+          <div class="cc-browse-card-name">Complementarianism & Egalitarianism</div>
+          <div class="cc-browse-card-hook">The ongoing evangelical debate over women in ministry, male headship, and what Scripture teaches about church leadership.</div>
+        </a>
         
-        <div class="cc-trending-item">
-          <div class="cc-trending-num">2</div>
-          <a class="cc-trending-title" href="https://feed.desiringgod.org/link/22977/17312221/the-agony-of-sin-and-love" target="_blank">Marveling at Christ's Love: The True Meaning of Maundy Thursday</a>
-        </div>
+        <a class="cc-browse-card" href="/topics/church-discipline/"
+           onclick="gtag('event','topic_click',{'topic':'church-discipline','category':'Church Life'});">
+          <div class="cc-browse-card-name">Church Discipline</div>
+          <div class="cc-browse-card-hook">How churches handle member sin, accountability, corrective removal, and the path to restoration.</div>
+        </a>
         
-        <div class="cc-trending-item">
-          <div class="cc-trending-num">3</div>
-          <a class="cc-trending-title" href="http://feeds.ligonier.org/~/916702607/0/ligonierministriesblog" target="_blank">Jesus on Trial: God's Love for the World Revealed</a>
-        </div>
+        <a class="cc-browse-card" href="/topics/worship-and-liturgy/"
+           onclick="gtag('event','topic_click',{'topic':'worship-and-liturgy','category':'Church Life'});">
+          <div class="cc-browse-card-name">Worship & Liturgy</div>
+          <div class="cc-browse-card-hook">Evangelical conversation about how churches should gather, sing, and meet with God — contemporary or liturgical.</div>
+        </a>
         
-        <div class="cc-trending-item">
-          <div class="cc-trending-num">4</div>
-          <a class="cc-trending-title" href="https://firstthings.com/against-god-alone/" target="_blank">When Faith Alone Isn't Enough: A Doctor's Crisis of Conscience</a>
-        </div>
+        <a class="cc-browse-card" href="/topics/local-church/"
+           onclick="gtag('event','topic_click',{'topic':'local-church','category':'Church Life'});">
+          <div class="cc-browse-card-name">The Local Church</div>
+          <div class="cc-browse-card-hook">Why the local church matters — and evangelical conversations about attendance, belonging, and dechurching.</div>
+        </a>
         
-        <div class="cc-trending-item">
-          <div class="cc-trending-num">5</div>
-          <a class="cc-trending-title" href="https://mereorthodoxy.com/aquinas-ai-and-the-pursuit-of-learning" target="_blank">Aquinas and Learning: Teaching Children to Research Deeply</a>
-        </div>
+        <a class="cc-browse-card" href="/topics/missions-and-evangelism/"
+           onclick="gtag('event','topic_click',{'topic':'missions-and-evangelism','category':'Church Life'});">
+          <div class="cc-browse-card-name">Missions & Evangelism</div>
+          <div class="cc-browse-card-hook">How evangelicals understand the Great Commission, gospel proclamation, and the church's mission in the world.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/church-history/"
+           onclick="gtag('event','topic_click',{'topic':'church-history','category':'Church Life'});">
+          <div class="cc-browse-card-name">Church History</div>
+          <div class="cc-browse-card-hook">What the church's past — its reformers, councils, creeds, and failures — means for Christians today.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/membership/"
+           onclick="gtag('event','topic_click',{'topic':'membership','category':'Church Life'});">
+          <div class="cc-browse-card-name">Church Membership</div>
+          <div class="cc-browse-card-hook">Evangelical perspectives on formal church membership and what covenant commitment to a local body requires.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/church-planting/"
+           onclick="gtag('event','topic_click',{'topic':'church-planting','category':'Church Life'});">
+          <div class="cc-browse-card-name">Church Planting</div>
+          <div class="cc-browse-card-hook">The theology and practice of starting new churches as a strategy for reaching unchurched communities.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/preaching/"
+           onclick="gtag('event','topic_click',{'topic':'preaching','category':'Church Life'});">
+          <div class="cc-browse-card-name">Preaching</div>
+          <div class="cc-browse-card-hook">What makes a sermon faithful — evangelical debate over expository preaching, topical approaches, and pulpit method.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/church-accountability/"
+           onclick="gtag('event','topic_click',{'topic':'church-accountability','category':'Church Life'});">
+          <div class="cc-browse-card-name">Pastoral Accountability</div>
+          <div class="cc-browse-card-hook">How churches build structures to prevent pastoral abuse, protect victims, and hold leaders accountable.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/spiritual-abuse/"
+           onclick="gtag('event','topic_click',{'topic':'spiritual-abuse','category':'Church Life'});">
+          <div class="cc-browse-card-name">Spiritual Abuse & Toxic Churches</div>
+          <div class="cc-browse-card-hook">What spiritual abuse looks like in evangelical churches, how abusive leaders operate, and what faithful churches owe to survivors.</div>
+        </a>
         
       </div>
-
-      <!-- Go Deeper: Authority Topic Pages -->
-      <div class="cc-sidebar-section" style="margin-top: 0.5rem;">
-        <div class="cc-sidebar-label">Go Deeper</div>
-
-        <div style="margin-bottom: 10px;">
-          <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; margin-bottom: 5px;">Core Theology</div>
-          <div style="display: flex; flex-direction: column; gap: 4px;">
-            <a href="/topics/sanctification/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Sanctification →</a>
-            <a href="/topics/suffering-and-providence/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Suffering →</a>
-            <a href="/topics/prayer/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Prayer →</a>
-            <a href="/topics/gender-and-biblical-anthropology/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Gender &amp; Anthropology →</a>
-            <a href="/topics/atonement/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">The Atonement →</a>
-          </div>
-        </div>
-
-        <div style="margin-bottom: 10px;">
-          <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; margin-bottom: 5px;">Church Life</div>
-          <div style="display: flex; flex-direction: column; gap: 4px;">
-            <a href="/topics/local-church/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">The Local Church →</a>
-            <a href="/topics/membership/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Membership →</a>
-            <a href="/topics/church-planting/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Church Planting →</a>
-          </div>
-        </div>
-
-        <div style="margin-bottom: 10px;">
-          <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; margin-bottom: 5px;">Spiritual Formation</div>
-          <div style="display: flex; flex-direction: column; gap: 4px;">
-            <a href="/topics/discipleship/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Discipleship →</a>
-            <a href="/topics/preaching/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Preaching →</a>
-            <a href="/topics/marriage-and-family/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Marriage &amp; Family →</a>
-            <a href="/topics/vocation-and-work/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Vocation &amp; Work →</a>
-          </div>
-        </div>
-
-        <div style="margin-bottom: 4px;">
-          <div style="font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; margin-bottom: 5px;">Culture &amp; Society</div>
-          <div style="display: flex; flex-direction: column; gap: 4px;">
-            <a href="/topics/technology/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Technology →</a>
-            <a href="/topics/politics-and-the-church/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Politics →</a>
-            <a href="/topics/missions-and-evangelism/" style="font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; line-height: 1.4;">Missions &amp; Evangelism →</a>
-          </div>
-        </div>
-
-        <p style="font-size: 11px; color: #aaa; margin-top: 8px;">Curated deep dives.</p>
+    </div>
+    
+    <div class="cc-browse-cat">
+      <div class="cc-browse-cat-name">Spiritual Formation</div>
+      <div class="cc-browse-grid">
+        
+        <a class="cc-browse-card" href="/topics/prayer/"
+           onclick="gtag('event','topic_click',{'topic':'prayer','category':'Spiritual Formation'});">
+          <div class="cc-browse-card-name">Prayer</div>
+          <div class="cc-browse-card-hook">Evangelical perspectives on how Christians pray, whether prayer changes things, and building a consistent prayer life.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/discipleship/"
+           onclick="gtag('event','topic_click',{'topic':'discipleship','category':'Spiritual Formation'});">
+          <div class="cc-browse-card-name">Discipleship</div>
+          <div class="cc-browse-card-hook">How Christians grow in maturity — one-on-one mentoring, church programs, and the meaning of making disciples.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/sanctification/"
+           onclick="gtag('event','topic_click',{'topic':'sanctification','category':'Spiritual Formation'});">
+          <div class="cc-browse-card-name">Sanctification</div>
+          <div class="cc-browse-card-hook">The evangelical debate over how Christians grow in holiness — God's work, human effort, and means of grace.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/spiritual-disciplines/"
+           onclick="gtag('event','topic_click',{'topic':'spiritual-disciplines','category':'Spiritual Formation'});">
+          <div class="cc-browse-card-name">Spiritual Disciplines</div>
+          <div class="cc-browse-card-hook">How practices like solitude, silence, Scripture reading, and fasting shape the Christian life.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/spiritual-warfare/"
+           onclick="gtag('event','topic_click',{'topic':'spiritual-warfare','category':'Spiritual Formation'});">
+          <div class="cc-browse-card-name">Spiritual Warfare</div>
+          <div class="cc-browse-card-hook">Evangelical perspectives on demonic activity, the armor of God, deliverance, and living in spiritual conflict.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/fasting/"
+           onclick="gtag('event','topic_click',{'topic':'fasting','category':'Spiritual Formation'});">
+          <div class="cc-browse-card-name">Fasting</div>
+          <div class="cc-browse-card-hook">What the Bible teaches about fasting — and why many evangelicals consider it a neglected spiritual discipline.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/anxiety-and-fear/"
+           onclick="gtag('event','topic_click',{'topic':'anxiety-and-fear','category':'Spiritual Formation'});">
+          <div class="cc-browse-card-name">Anxiety & Fear</div>
+          <div class="cc-browse-card-hook">How Christians understand worry, fear, and anxiety — spiritually, psychologically, and practically.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/mental-health/"
+           onclick="gtag('event','topic_click',{'topic':'mental-health','category':'Spiritual Formation'});">
+          <div class="cc-browse-card-name">Mental Health & Faith</div>
+          <div class="cc-browse-card-hook">Evangelical perspectives on depression, mental illness, counseling, and integrating faith with psychological care.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/faith-deconstruction/"
+           onclick="gtag('event','topic_click',{'topic':'faith-deconstruction','category':'Spiritual Formation'});">
+          <div class="cc-browse-card-name">Deconstruction & Faith</div>
+          <div class="cc-browse-card-hook">Why Christians are deconstructing, what churches can do, and what healthy faith rebuilding looks like.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/contemplative-prayer/"
+           onclick="gtag('event','topic_click',{'topic':'contemplative-prayer','category':'Spiritual Formation'});">
+          <div class="cc-browse-card-name">Contemplative Prayer</div>
+          <div class="cc-browse-card-hook">Evangelical debate over centering prayer, lectio divina, and the place of contemplative practices in Christian spirituality.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/grief-and-lament/"
+           onclick="gtag('event','topic_click',{'topic':'grief-and-lament','category':'Spiritual Formation'});">
+          <div class="cc-browse-card-name">Grief & Lament</div>
+          <div class="cc-browse-card-hook">What the Bible teaches about grief, lament, and honest prayer in suffering — and why so many evangelical churches struggle to make space for it.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/forgiveness/"
+           onclick="gtag('event','topic_click',{'topic':'forgiveness','category':'Spiritual Formation'});">
+          <div class="cc-browse-card-name">Forgiveness</div>
+          <div class="cc-browse-card-hook">Evangelical debate over whether forgiveness is unconditional, what reconciliation requires, and how churches handle forgiveness in the context of abuse and justice.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/christian-friendship/"
+           onclick="gtag('event','topic_click',{'topic':'christian-friendship','category':'Spiritual Formation'});">
+          <div class="cc-browse-card-name">Christian Friendship & Community</div>
+          <div class="cc-browse-card-hook">Evangelical perspectives on biblical friendship, loneliness, and why the church must become a place of genuine, deep relational belonging.</div>
+        </a>
+        
       </div>
-
-      <!-- Archive search -->
-      <div class="cc-sidebar-section" style="margin-top: 0.5rem;">
-        <div class="cc-sidebar-label">Search Archive</div>
-        <div id="cc-search" style="--pagefind-ui-scale: 0.75; --pagefind-ui-primary: #2C4A2E; --pagefind-ui-text: #1a1a1a; --pagefind-ui-background: #faf9f7; --pagefind-ui-border: #e0ddd8; --pagefind-ui-tag: #eaf0ea; --pagefind-ui-font: 'Source Sans 3', sans-serif;"></div>
-        <p style="font-size: 11px; color: #aaa; margin-top: 6px;">
-          <a href="/archive/" style="color: #2C4A2E; text-decoration: none; font-weight: 600;">Browse full archive →</a>
-        </p>
+    </div>
+    
+    <div class="cc-browse-cat">
+      <div class="cc-browse-cat-name">Culture & Society</div>
+      <div class="cc-browse-grid">
+        
+        <a class="cc-browse-card" href="/topics/politics-and-the-church/"
+           onclick="gtag('event','topic_click',{'topic':'politics-and-the-church','category':'Culture & Society'});">
+          <div class="cc-browse-card-name">Politics & the Church</div>
+          <div class="cc-browse-card-hook">How evangelical Christians engage with politics, government, civic life, and the public square.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/racial-reconciliation/"
+           onclick="gtag('event','topic_click',{'topic':'racial-reconciliation','category':'Culture & Society'});">
+          <div class="cc-browse-card-name">Racial Reconciliation</div>
+          <div class="cc-browse-card-hook">Evangelical conversation around race, repentance, diversity, and what the church owes to justice.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/technology/"
+           onclick="gtag('event','topic_click',{'topic':'technology','category':'Culture & Society'});">
+          <div class="cc-browse-card-name">Technology & the Christian Life</div>
+          <div class="cc-browse-card-hook">How Christians think about social media, smartphones, digital life, and the spiritual formation impact of technology.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/technology-and-discipleship/"
+           onclick="gtag('event','topic_click',{'topic':'technology-and-discipleship','category':'Culture & Society'});">
+          <div class="cc-browse-card-name">Technology & Discipleship</div>
+          <div class="cc-browse-card-hook">How AI and digital tools are reshaping discipleship, ministry, and evangelical thinking about what it means to be human.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/marriage-and-family/"
+           onclick="gtag('event','topic_click',{'topic':'marriage-and-family','category':'Culture & Society'});">
+          <div class="cc-browse-card-name">Marriage & Family</div>
+          <div class="cc-browse-card-hook">A Christian vision of marriage, family, divorce, singleness, and family formation in a post-Christian culture.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/christian-parenting/"
+           onclick="gtag('event','topic_click',{'topic':'christian-parenting','category':'Culture & Society'});">
+          <div class="cc-browse-card-name">Christian Parenting</div>
+          <div class="cc-browse-card-hook">How Christian parents pass faith to the next generation — from family worship and catechism to raising teenagers.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/christian-ethics/"
+           onclick="gtag('event','topic_click',{'topic':'christian-ethics','category':'Culture & Society'});">
+          <div class="cc-browse-card-name">Christian Ethics</div>
+          <div class="cc-browse-card-hook">How Christians navigate bioethics, sexuality, LGBTQ+ questions, and moral issues Scripture doesn't directly address.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/vocation-and-work/"
+           onclick="gtag('event','topic_click',{'topic':'vocation-and-work','category':'Culture & Society'});">
+          <div class="cc-browse-card-name">Vocation & Work</div>
+          <div class="cc-browse-card-hook">Evangelical perspectives on calling, vocation, and how faith shapes ordinary work and the marketplace.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/evangelicalism/"
+           onclick="gtag('event','topic_click',{'topic':'evangelicalism','category':'Culture & Society'});">
+          <div class="cc-browse-card-name">The Future of Evangelicalism</div>
+          <div class="cc-browse-card-hook">The state of the evangelical movement — its divisions, decline, identity, and what comes next.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/christian-nationalism/"
+           onclick="gtag('event','topic_click',{'topic':'christian-nationalism','category':'Culture & Society'});">
+          <div class="cc-browse-card-name">Christian Nationalism</div>
+          <div class="cc-browse-card-hook">Evangelical debate over Christian nationalism — its appeal, its dangers, and what faithful political engagement looks like.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/biblical-sexuality/"
+           onclick="gtag('event','topic_click',{'topic':'biblical-sexuality','category':'Culture & Society'});">
+          <div class="cc-browse-card-name">Biblical Sexuality</div>
+          <div class="cc-browse-card-hook">Evangelical perspectives on same-sex attraction, LGBTQ+ identity, sexual ethics, and what Scripture teaches about sexuality.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/ai-and-the-church/"
+           onclick="gtag('event','topic_click',{'topic':'ai-and-the-church','category':'Culture & Society'});">
+          <div class="cc-browse-card-name">Artificial Intelligence & the Church</div>
+          <div class="cc-browse-card-hook">How AI is reshaping ministry, creative work, and evangelical thinking about human dignity and the image of God.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/biblical-justice/"
+           onclick="gtag('event','topic_click',{'topic':'biblical-justice','category':'Culture & Society'});">
+          <div class="cc-browse-card-name">Biblical Justice & the Social Gospel</div>
+          <div class="cc-browse-card-hook">Evangelical debate over poverty, oppression, and the distinction between biblical justice and the social gospel.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/prosperity-gospel/"
+           onclick="gtag('event','topic_click',{'topic':'prosperity-gospel','category':'Culture & Society'});">
+          <div class="cc-browse-card-name">The Prosperity Gospel</div>
+          <div class="cc-browse-card-hook">Why evangelical Christians oppose the Word of Faith movement, and what a biblically faithful theology of blessing, suffering, and money looks like.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/religious-liberty/"
+           onclick="gtag('event','topic_click',{'topic':'religious-liberty','category':'Culture & Society'});">
+          <div class="cc-browse-card-name">Religious Liberty</div>
+          <div class="cc-browse-card-hook">Evangelical debate over conscience rights, religious exemptions, government overreach, and how Christians engage a pluralistic legal culture.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/progressive-christianity/"
+           onclick="gtag('event','topic_click',{'topic':'progressive-christianity','category':'Culture & Society'});">
+          <div class="cc-browse-card-name">Progressive Christianity</div>
+          <div class="cc-browse-card-hook">Evangelical responses to progressive Christianity — its departure from biblical authority, sexual ethics, and exclusivity — and what distinguishes it from historic orthodoxy.</div>
+        </a>
+        
+        <a class="cc-browse-card" href="/topics/stewardship-and-generosity/"
+           onclick="gtag('event','topic_click',{'topic':'stewardship-and-generosity','category':'Culture & Society'});">
+          <div class="cc-browse-card-name">Stewardship & Generosity</div>
+          <div class="cc-browse-card-hook">How Christians think about money, giving, and generosity — from tithing debates to radical generosity and the prosperity gospel critique.</div>
+        </a>
+        
       </div>
+    </div>
+    
 
+    <div style="text-align:center; margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid #e0ddd8;">
+      <a href="/topics/" style="font-size:13px; font-weight:600; color:#2C4A2E; text-decoration:none; letter-spacing:0.04em;">
+        View full topic pages with perspectives, key thinkers &amp; curated reading &rarr;
+      </a>
     </div>
   </div>
 
-  <!-- Subscribe bar -->
-  <div id="cc-email-box" style="margin-top:2.5rem;">
-    <iframe src="https://252bf73d.sibforms.com/serve/MUIFAB7CIQuc2nJNb3F3vKnSjaBpMFNDbsi6MK_4uqstTr5i_Ja7ZVdjszNLkSe5RAdysOdcY-DDVrkYlvzoy-mJZQe-oaIbRqV0BfUYd-jli69OP21lSds8gIdS9vjXfoCRPiOESVzK7HOfbM1DlLkSimp2yR1_zYHWP2ar7d7X32wq6F-eyz7cDIoZ3lyhzNGXvQDWSAd5LBtnYA==" frameborder="0" scrolling="auto" allowfullscreen style="display:block; width:100%; height:500px; max-width:540px; margin-left:auto; margin-right:auto; background-color:transparent;"></iframe>
+  <!-- Past digests -->
+  
+  <div class="cc-archive-list">
+    <div class="cc-archive-list-header">Past Daily Digests</div>
+    <div class="cc-archive-links">
+      
+      <a href="/archive/2026-04-09/" class="cc-archive-link">April 9, 2026</a>
+      
+      <a href="/archive/2026-04-06/" class="cc-archive-link">April 6, 2026</a>
+      
+      <a href="/archive/2026-04-04/" class="cc-archive-link">April 4, 2026</a>
+      
+      <a href="/archive/2026-04-03/" class="cc-archive-link">April 3, 2026</a>
+      
+      <a href="/archive/2026-04-02/" class="cc-archive-link">April 2, 2026</a>
+      
+      <a href="/archive/2026-04-01/" class="cc-archive-link">April 1, 2026</a>
+      
+      <a href="/archive/2026-03-31/" class="cc-archive-link">March 31, 2026</a>
+      
+      <a href="/archive/2026-03-30/" class="cc-archive-link">March 30, 2026</a>
+      
+      <a href="/archive/2026-03-29/" class="cc-archive-link">March 29, 2026</a>
+      
+      <a href="/archive/2026-03-27/" class="cc-archive-link">March 27, 2026</a>
+      
+      <a href="/archive/2026-03-26/" class="cc-archive-link">March 26, 2026</a>
+      
+      <a href="/archive/2026-03-25/" class="cc-archive-link">March 25, 2026</a>
+      
+      <a href="/archive/2026-03-24/" class="cc-archive-link">March 24, 2026</a>
+      
+      <a href="/archive/2026-03-23/" class="cc-archive-link">March 23, 2026</a>
+      
+      <a href="/archive/2026-03-22/" class="cc-archive-link">March 22, 2026</a>
+      
+    </div>
+  </div>
+  
+
+  <!-- Subscribe -->
+  <div id="cc-email-box" style="margin-top:2.75rem;">
+    <iframe
+      src="https://252bf73d.sibforms.com/serve/MUIFAB7CIQuc2nJNb3F3vKnSjaBpMFNDbsi6MK_4uqstTr5i_Ja7ZVdjszNLkSe5RAdysOdcY-DDVrkYlvzoy-mJZQe-oaIbRqV0BfUYd-jli69OP21lSds8gIdS9vjXfoCRPiOESVzK7HOfbM1DlLkSimp2yR1_zYHWP2ar7d7X32wq6F-eyz7cDIoZ3lyhzNGXvQDWSAd5LBtnYA=="
+      frameborder="0" scrolling="auto" allowfullscreen
+      style="display:block; width:100%; height:500px; max-width:540px; margin-left:auto; margin-right:auto; background-color:transparent;">
+    </iframe>
   </div>
 
   <div class="cc-footer">
     <div class="cc-footer-name">Christian Curator</div>
-    <div>All links go to original sources. We curate; they create.</div>
-    <div>ChristianCurator.com</div>
+    <div class="cc-footer-nav">
+      <a href="/digest/">Daily Digest</a>
+      <a href="/voices/">Voices</a>
+      <a href="/archive/">Archive</a>
+    </div>
+    <div>Curated from across the evangelical web.</div>
   </div>
 
 </div>
-
-<script>
-  var activeTag = 'all';
-  var activePersona = 'all';
-
-  function applyFilters() {
-    const banner = document.getElementById('cc-filter-banner');
-    const label = document.getElementById('cc-filter-label');
-    const articles = document.querySelectorAll('.cc-article');
-    const sections = document.querySelectorAll('.cc-section-group');
-
-    articles.forEach(function (a) {
-      const tags = (a.dataset.tags || '').split(',').map(function (t) { return t.trim(); });
-      const personas = (a.dataset.personas || '').split(',').map(function (t) { return t.trim(); });
-      const tagMatch = activeTag === 'all' || tags.includes(activeTag);
-      const personaMatch = activePersona === 'all' || personas.includes(activePersona);
-      a.classList.toggle('hidden', !(tagMatch && personaMatch));
-    });
-
-    sections.forEach(function (s) {
-      const visible = s.querySelectorAll('.cc-article:not(.hidden)').length;
-      s.classList.toggle('hidden', visible === 0);
-    });
-
-    // Update banner
-    if (activeTag === 'all' && activePersona === 'all') {
-      banner.classList.remove('visible');
-    } else {
-      var parts = [];
-      if (activeTag !== 'all') parts.push(activeTag);
-      if (activePersona !== 'all') parts.push(activePersona);
-      label.textContent = 'Showing: ' + parts.join(' · ');
-      banner.classList.add('visible');
-    }
-  }
-
-  function filterByTag(tag, clickedPill) {
-    document.querySelectorAll('.cc-topic-pill').forEach(function (p) { p.classList.remove('active'); });
-    clickedPill.classList.add('active');
-    activeTag = tag;
-    applyFilters();
-  }
-
-  function filterByPersona(persona, clickedPill) {
-    document.querySelectorAll('.cc-persona-pill').forEach(function (p) { p.classList.remove('active'); });
-    clickedPill.classList.add('active');
-    activePersona = persona;
-    applyFilters();
-  }
-
-  function clearFilter() {
-    activeTag = 'all';
-    activePersona = 'all';
-    const allTagPill = document.querySelector('.cc-topic-pill[data-tag="all"]');
-    const allPersonaPill = document.querySelector('.cc-persona-pill[data-persona="all"]');
-    if (allTagPill) allTagPill.classList.add('active');
-    document.querySelectorAll('.cc-topic-pill:not([data-tag="all"])').forEach(function (p) { p.classList.remove('active'); });
-    if (allPersonaPill) allPersonaPill.classList.add('active');
-    document.querySelectorAll('.cc-persona-pill:not([data-persona="all"])').forEach(function (p) { p.classList.remove('active'); });
-    document.querySelectorAll('.cc-article').forEach(function (a) { a.classList.remove('hidden'); });
-    document.querySelectorAll('.cc-section-group').forEach(function (s) { s.classList.remove('hidden'); });
-    document.getElementById('cc-filter-banner').classList.remove('visible');
-  }
-
-  // On page load: hide pills with no matching articles
-  document.addEventListener('DOMContentLoaded', function () {
-    const filterableArticles = document.querySelectorAll('.cc-article');
-
-    document.querySelectorAll('.cc-topic-pill[data-tag]').forEach(function (pill) {
-      const tag = pill.dataset.tag;
-      if (tag === 'all') return;
-      const hasMatch = Array.from(filterableArticles).some(function (a) {
-        return (a.dataset.tags || '').split(',').map(function (t) { return t.trim(); }).includes(tag);
-      });
-      if (!hasMatch) pill.style.display = 'none';
-    });
-
-    document.querySelectorAll('.cc-persona-pill[data-persona]').forEach(function (pill) {
-      const persona = pill.dataset.persona;
-      if (persona === 'all') return;
-      const hasMatch = Array.from(filterableArticles).some(function (a) {
-        return (a.dataset.personas || '').split(',').map(function (t) { return t.trim(); }).includes(persona);
-      });
-      if (!hasMatch) pill.style.display = 'none';
-    });
-  });
-</script>
-
-<!-- Pagefind search init -->
-<script src="/_pagefind/pagefind-ui.js"></script>
-<script>
-  window.addEventListener('DOMContentLoaded', function () {
-    if (window.PagefindUI) {
-      new PagefindUI({
-        element: "#cc-search",
-        showSubResults: false,
-        showImages: false,
-        resetStyles: false,
-        excerptLength: 10,
-        placeholder: "Search past issues…",
-      });
-    }
-  });
-</script>
 </body>
 </html>
