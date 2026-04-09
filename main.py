@@ -26,6 +26,7 @@ from curator.title_rewriter import rewrite_titles
 from curator.point_counterpoint import build_point_counterpoint
 from curator.daily_summary import generate_daily_summary, save_theme_history
 from curator.email_sender import send_email
+from curator.voice_generator import generate_new_voice_pages
 from output import OUTPUT_JSON_PATH, write_output, save_yesterday, load_yesterday, load_shown_urls, save_article_history
 from frontend import render_html, update_research_articles
 
@@ -104,13 +105,17 @@ def main():
     render_html(articles, pairings, yesterday_articles, daily_summary=daily_summary,
                 research_articles=research_articles)
 
+    # --- Voices: auto-generate pages for new authors ---
+    print("\n[7/8] Checking for new Voices...")
+    generate_new_voice_pages(articles)
+
     # --- Send Email ---
     if send_email_flag:
-        print("\n[7/7] Sending daily email via Brevo...")
+        print("\n[8/8] Sending daily email via Brevo...")
         send_email(articles, yesterday_articles, daily_summary=daily_summary,
                    research_articles=research_articles)
     else:
-        print("\n[7/7] Email skipped (--no-email). Run send_email.py when ready to send.")
+        print("\n[8/8] Email skipped (--no-email). Run send_email.py when ready to send.")
 
     print("=== Pipeline Complete ===")
     print(f"Output written to {OUTPUT_JSON_PATH}")
