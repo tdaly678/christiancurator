@@ -415,6 +415,11 @@ def render_digest_page(articles: list[dict], env: Environment,
         key=lambda a: a.get("final_score", a.get("score", 0)), reverse=True
     )[:10]
 
+    world_news_top3 = sorted(
+        [a for a in articles if a.get("source_type") == "world_news"],
+        key=lambda a: a.get("final_score", a.get("score", 0)), reverse=True
+    )[:3]
+
     today = date.today()
     date_display = today.strftime("%B %-d, %Y")
 
@@ -443,6 +448,7 @@ def render_digest_page(articles: list[dict], env: Environment,
     html = template.render(
         articles=top10,
         yesterday_articles=yesterday_top10,
+        world_news_articles=world_news_top3,
         date=date_display,
         featured_topics=featured_topics or [],
         topics_by_category=TOPICS_BY_CATEGORY,
