@@ -4,25 +4,49 @@
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Aaron Earls",
-    "title": "Growing Number of Churchgoers Face Doubts",
-    "url": "https://research.lifeway.com/2026/04/07/growing-number-of-churchgoers-face-doubts/",
-    "summary": "<p>Churchgoers tend to trust God’s involvement in their lives and the lives of others, but many admit doubts can creep in. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/04/07/growing-number-of-churchgoers-face-doubts/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/04/07/growing-number-of-churchgoers-face-doubts/\">Growing Number of Churchgoers Face Doubts</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
-    "published": "Tue, 07 Apr 2026 14:45:00 +0000",
-    "fetched_at": "2026-04-08T09:52:04.282659",
+    "author": "PJ Dunn",
+    "title": "How Do Older Adults Invest in Young Adult Ministry?",
+    "url": "https://research.lifeway.com/2026/04/09/how-do-older-adults-invest-in-young-adult-ministry/",
+    "summary": "<p>When senior adults intentionally invest in young adult ministry leaders, the impact extends far beyond one ministry area.  <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/04/09/how-do-older-adults-invest-in-young-adult-ministry/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/04/09/how-do-older-adults-invest-in-young-adult-ministry/\">How Do Older Adults Invest in Young Adult Ministry?</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "published": "Thu, 09 Apr 2026 06:16:00 +0000",
+    "fetched_at": "2026-04-09T10:01:12.386541",
+    "score": 6,
+    "tags": [
+      "church life"
+    ],
+    "rewritten_title": "Mentoring Young Adults: How Senior Believers Shape Future Leaders",
+    "personas": [
+      "pastor"
+    ],
+    "topic_cluster": "intergenerational_ministry",
+    "perspective": "neutral",
+    "final_score": 7.5,
+    "recency_boost": 1.5
+  },
+  {
+    "source_name": "The New York Times",
+    "source_category": "news",
+    "source_type": "world_news",
+    "independent": false,
+    "author": "Lauren Jackson",
+    "title": "No, Britain Is Not Having a Christian Revival",
+    "url": "https://www.nytimes.com/2026/04/09/world/europe/britain-christian-revival-survey.html",
+    "summary": "A study said church attendance had soared among British young people, a trend reversal that excited religious conservatives around the world. Turns out it wasn’t true.",
+    "published": "Thu, 09 Apr 2026 09:24:16 +0000",
+    "fetched_at": "2026-04-09T09:59:46.367496",
     "score": 5,
     "tags": [
-      "data",
-      "devotional"
+      "culture",
+      "data"
     ],
-    "rewritten_title": "Many Churchgoers Experience Doubt Despite Trust in God",
+    "rewritten_title": "British Church Attendance Study: What the Data Actually Shows",
     "personas": [
-      "pastor",
-      "professional"
+      "professional",
+      "pastor"
     ],
-    "topic_cluster": "churchgoer_doubt_research",
-    "perspective": "neutral",
-    "final_score": 6.5,
+    "topic_cluster": "britain_church_attendance_myth",
+    "perspective": "critical",
+    "final_score": 6.0,
     "recency_boost": 1.5
   },
   {
@@ -35,44 +59,17 @@
     "url": "https://www.pewresearch.org/short-reads/2026/04/07/negative-views-of-israel-netanyahu-continue-to-rise-among-americans-especially-young-people/",
     "summary": "Views of Israel and Benjamin Netanyahu have grown more negative among U.S. adults, with majorities under 50 in both parties rating them poorly.",
     "published": "Tue, 07 Apr 2026 17:54:58 +0000",
-    "fetched_at": "2026-04-08T09:52:03.829425",
+    "fetched_at": "2026-04-09T10:01:12.019906",
     "score": 4,
     "tags": [
       "data",
       "politics"
     ],
-    "rewritten_title": "American Views of Israel and Netanyahu Grow More Negative, Especially Among Youth",
-    "personas": [
-      "professional"
-    ],
-    "topic_cluster": "israel_polling",
-    "perspective": "news",
-    "final_score": 5.5,
-    "recency_boost": 1.5
-  },
-  {
-    "source_name": "Pew Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Jcoleman",
-    "title": "Do Americans think Trump can make good decisions about various foreign policy issues?",
-    "url": "https://www.pewresearch.org/global/2026/04/07/do-americans-think-trump-can-make-good-decisions-about-various-foreign-policy-issues/",
-    "summary": "Public confidence in Trump's handling of the Russia-Ukraine war, as well as his policymaking toward Iran, China and North Korea, has declined since last year.",
-    "published": "Tue, 07 Apr 2026 17:53:34 +0000",
-    "fetched_at": "2026-04-08T09:52:03.829450",
-    "score": 4,
-    "tags": [
-      "data",
-      "politics"
-    ],
-    "rewritten_title": "Americans' Confidence in Trump's Foreign Policy Leadership Declines",
-    "personas": [
-      "professional"
-    ],
-    "topic_cluster": "trump_foreign_policy_polling",
-    "perspective": "news",
+    "rewritten_title": "American Views of Israel and Netanyahu Decline Across Age Groups",
+    "personas": [],
+    "topic_cluster": "israel_public_opinion",
+    "perspective": "neutral",
     "final_score": 4.75,
-    "recency_boost": 1.5
+    "recency_boost": 0.75
   }
 ]
