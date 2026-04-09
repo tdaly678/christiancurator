@@ -14,24 +14,26 @@ HISTORY_JSON_PATH = Path(__file__).parent.parent / "docs" / "article_history.jso
 
 
 def save_yesterday(articles: list[dict]):
-    """Save today's top 3 non-world-news articles to docs/yesterday.json for tomorrow's digest."""
-    top3 = [
+    """Save today's top 10 non-world-news articles to docs/yesterday.json for tomorrow's digest."""
+    top10 = [
         {
             "title": a.get("rewritten_title") or a.get("title", ""),
             "url": a.get("url", ""),
             "source_name": a.get("source_name", ""),
+            "author": a.get("author", ""),
+            "final_score": a.get("final_score", a.get("score", 0)),
             "tags": a.get("tags", []),
         }
         for a in articles
         if a.get("source_type") != "world_news"
-    ][:3]
+    ][:10]
     with open(YESTERDAY_JSON_PATH, "w", encoding="utf-8") as f:
-        json.dump(top3, f, indent=2, ensure_ascii=False)
-    print(f"  Saved top 3 to {YESTERDAY_JSON_PATH}")
+        json.dump(top10, f, indent=2, ensure_ascii=False)
+    print(f"  Saved top 10 to {YESTERDAY_JSON_PATH}")
 
 
 def load_yesterday() -> list[dict]:
-    """Load yesterday's top 3 articles if available."""
+    """Load yesterday's top 10 articles if available."""
     try:
         with open(YESTERDAY_JSON_PATH, "r", encoding="utf-8") as f:
             return json.load(f)

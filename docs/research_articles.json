@@ -1,52 +1,53 @@
 [
   {
-    "source_name": "Ryan Burge",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": true,
-    "author": "Ryan Burge",
-    "title": "The Growing Gap in Church Membership",
-    "url": "https://www.graphsaboutreligion.com/p/the-growing-gap-in-church-membership",
-    "summary": "Who joins a church &#8212; and why it matters more than you think",
-    "published": "Thu, 02 Apr 2026 11:30:40 GMT",
-    "fetched_at": "2026-04-03T08:37:33.702960",
-    "score": 4,
-    "tags": [
-      "data"
-    ],
-    "rewritten_title": "Church Membership Decline: Understanding Who Joins and Why It Matters",
-    "personas": [
-      "pastor"
-    ],
-    "topic_cluster": "church_membership_trends",
-    "perspective": "neutral",
-    "final_score": 5.5,
-    "recency_boost": 1.5
-  },
-  {
     "source_name": "Lifeway Research",
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Aaron Earls",
-    "title": "Pastors Support Legal Immigration, Split on Deportation Levels",
-    "url": "https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/",
-    "summary": "<p>Pastors overwhelmingly view legal immigration positively but are more divided over the deportation of those in the United States illegally. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/03/31/pastors-support-legal-immigration-split-on-deportation-levels/\">Pastors Support Legal Immigration, Split on Deportation Levels</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
-    "published": "Tue, 31 Mar 2026 19:55:00 +0000",
-    "fetched_at": "2026-04-03T08:37:34.382459",
+    "author": "PJ Dunn",
+    "title": "How Do Older Adults Invest in Young Adult Ministry?",
+    "url": "https://research.lifeway.com/2026/04/09/how-do-older-adults-invest-in-young-adult-ministry/",
+    "summary": "<p>When senior adults intentionally invest in young adult ministry leaders, the impact extends far beyond one ministry area.  <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/04/09/how-do-older-adults-invest-in-young-adult-ministry/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/04/09/how-do-older-adults-invest-in-young-adult-ministry/\">How Do Older Adults Invest in Young Adult Ministry?</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "published": "Thu, 09 Apr 2026 06:16:00 +0000",
+    "fetched_at": "2026-04-09T10:01:12.386541",
+    "score": 6,
+    "tags": [
+      "church life"
+    ],
+    "rewritten_title": "Mentoring Young Adults: How Senior Believers Shape Future Leaders",
+    "personas": [
+      "pastor"
+    ],
+    "topic_cluster": "intergenerational_ministry",
+    "perspective": "neutral",
+    "final_score": 7.5,
+    "recency_boost": 1.5
+  },
+  {
+    "source_name": "The New York Times",
+    "source_category": "news",
+    "source_type": "world_news",
+    "independent": false,
+    "author": "Lauren Jackson",
+    "title": "No, Britain Is Not Having a Christian Revival",
+    "url": "https://www.nytimes.com/2026/04/09/world/europe/britain-christian-revival-survey.html",
+    "summary": "A study said church attendance had soared among British young people, a trend reversal that excited religious conservatives around the world. Turns out it wasn’t true.",
+    "published": "Thu, 09 Apr 2026 09:24:16 +0000",
+    "fetched_at": "2026-04-09T09:59:46.367496",
     "score": 5,
     "tags": [
+      "culture",
       "data"
     ],
-    "rewritten_title": "Pastors Unified on Legal Immigration, Divided on Deportation Policy",
+    "rewritten_title": "British Church Attendance Study: What the Data Actually Shows",
     "personas": [
-      "pastor",
-      "professional"
+      "professional",
+      "pastor"
     ],
-    "topic_cluster": "pastor_political_views",
-    "perspective": "neutral",
-    "final_score": 5.25,
-    "recency_boost": 0.25
+    "topic_cluster": "britain_church_attendance_myth",
+    "perspective": "critical",
+    "final_score": 6.0,
+    "recency_boost": 1.5
   },
   {
     "source_name": "Pew Research",
@@ -54,23 +55,21 @@
     "source_type": "christian",
     "independent": false,
     "author": "Beshay",
-    "title": "How Americans view Trump’s handling of trade and tariffs",
-    "url": "https://www.pewresearch.org/short-reads/2026/04/01/how-americans-view-trumps-handling-of-trade-and-tariffs/",
-    "summary": "Nearly six-in-ten U.S. adults are not confident that Trump can make good decisions about trade policy. Views of trade between the U.S. and China, Canada and Mexico have shifted since 2025.",
-    "published": "Wed, 01 Apr 2026 18:51:17 +0000",
-    "fetched_at": "2026-04-03T08:37:33.993219",
-    "score": 2,
+    "title": "Negative views of Israel, Netanyahu continue to rise among Americans – especially young people",
+    "url": "https://www.pewresearch.org/short-reads/2026/04/07/negative-views-of-israel-netanyahu-continue-to-rise-among-americans-especially-young-people/",
+    "summary": "Views of Israel and Benjamin Netanyahu have grown more negative among U.S. adults, with majorities under 50 in both parties rating them poorly.",
+    "published": "Tue, 07 Apr 2026 17:54:58 +0000",
+    "fetched_at": "2026-04-09T10:01:12.019906",
+    "score": 4,
     "tags": [
-      "news",
+      "data",
       "politics"
     ],
-    "rewritten_title": "Americans' Confidence in Trump's Trade Policy Decisions Declines",
-    "personas": [
-      "professional"
-    ],
-    "topic_cluster": "trump_trade_policy",
-    "perspective": "news",
-    "final_score": 2.75,
+    "rewritten_title": "American Views of Israel and Netanyahu Decline Across Age Groups",
+    "personas": [],
+    "topic_cluster": "israel_public_opinion",
+    "perspective": "neutral",
+    "final_score": 4.75,
     "recency_boost": 0.75
   }
 ]
