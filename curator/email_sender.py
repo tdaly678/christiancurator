@@ -114,6 +114,50 @@ def _render_topic_card(topic: dict, muted: bool = False) -> str:
       </div>"""
 
 
+# ── World news card renderer ───────────────────────────────────────────────────
+
+def _render_world_news_card(world_articles: list[dict]) -> str:
+    """Render a single navy-toned world news card for up to 3 articles."""
+    if not world_articles:
+        return ""
+
+    rows_html = ""
+    for i, a in enumerate(world_articles[:3]):
+        title  = a.get("rewritten_title") or a.get("title") or ""
+        author = (a.get("author") or "").strip()
+        source = (a.get("source_name") or "").strip()
+        byline = (
+            f'{author} &middot; {source}'
+            if author and author.lower() != source.lower()
+            else source
+        )
+        border_top = "border-top:1px solid #c5d4ea;" if i > 0 else ""
+        rows_html += f"""
+        <div style="padding:10px 0;{border_top}display:table;width:100%;">
+          <div style="display:table-cell;width:26px;font-size:11px;font-weight:700;color:#7a93b8;vertical-align:top;padding-top:2px;">{i + 1}</div>
+          <div style="display:table-cell;vertical-align:top;">
+            <div style="font-family:Georgia,serif;font-size:14px;font-weight:600;line-height:1.35;margin-bottom:3px;">
+              <a href="https://www.christiancurator.com/digest/" style="color:#12284a;text-decoration:none;">{title}</a>
+            </div>
+            <div style="font-size:11px;color:#7a93b8;">{byline}</div>
+          </div>
+        </div>"""
+
+    return f"""
+      <div style="background:#f0f4fb;border:1px solid #c5d4ea;border-radius:6px;padding:18px 20px 14px;">
+        <div style="font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.16em;color:#1E3A6E;border-bottom:2px solid #1E3A6E;padding-bottom:6px;margin-bottom:12px;">
+          World News &amp; Culture
+        </div>
+        <div style="font-size:11.5px;color:#5a7099;margin-bottom:12px;font-style:italic;">
+          From the broader world — filtered for what matters to Christians
+        </div>
+        {rows_html}
+        <div style="border-top:1px solid #c5d4ea;margin-top:12px;padding-top:12px;">
+          <a href="https://www.christiancurator.com/digest/" style="font-size:13px;font-weight:700;color:#1E3A6E;text-decoration:none;">Read today&rsquo;s full digest &rarr;</a>
+        </div>
+      </div>"""
+
+
 # ── Main email builder ─────────────────────────────────────────────────────────
 
 def build_email_html(articles: list[dict], yesterday_articles: list[dict],
@@ -149,14 +193,27 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict],
           {_render_topic_card(card, muted=False)}
         </div>"""
 
+    # ── World news card ────────────────────────────────────────────────────────
+    world_top3 = sorted(
+        [a for a in articles if a.get("source_type") == "world_news"],
+        key=lambda a: a.get("final_score", a.get("score", 0)), reverse=True
+    )[:3]
+    world_card_html = ""
+    if world_top3:
+        world_card_html = f"""
+        <div style="margin-bottom:20px;">
+          {_render_world_news_card(world_top3)}
+        </div>"""
+
     today_section_html = ""
-    if cards_html:
+    if cards_html or world_card_html:
         today_section_html = f"""
     <div style="margin-bottom:8px;">
       <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#1a1a1a;border-bottom:2px solid #1a1a1a;padding-bottom:6px;margin-bottom:16px;">
         In the Conversation Today
       </div>
       {cards_html}
+      {world_card_html}
     </div>"""
 
     # ── CTA ────────────────────────────────────────────────────────────────────
