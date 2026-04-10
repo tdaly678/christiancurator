@@ -1,52 +1,27 @@
 [
   {
-    "source_name": "Lifeway Research",
+    "source_name": "Ryan Burge",
     "source_category": "culture",
     "source_type": "christian",
-    "independent": false,
-    "author": "PJ Dunn",
-    "title": "How Do Older Adults Invest in Young Adult Ministry?",
-    "url": "https://research.lifeway.com/2026/04/09/how-do-older-adults-invest-in-young-adult-ministry/",
-    "summary": "<p>When senior adults intentionally invest in young adult ministry leaders, the impact extends far beyond one ministry area.  <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/04/09/how-do-older-adults-invest-in-young-adult-ministry/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/04/09/how-do-older-adults-invest-in-young-adult-ministry/\">How Do Older Adults Invest in Young Adult Ministry?</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
-    "published": "Thu, 09 Apr 2026 06:16:00 +0000",
-    "fetched_at": "2026-04-09T10:01:12.386541",
-    "score": 6,
+    "independent": true,
+    "author": "Ryan Burge",
+    "title": "Politically Neutral, Religiously Intense: What the Data Reveals About Jehovah's Witnesses",
+    "url": "https://www.graphsaboutreligion.com/p/politically-neutral-religiously-intense",
+    "summary": "At 3 million strong, Jehovah's Witnesses are larger than most Protestant denominations&#8212;here's what makes them unique",
+    "published": "Thu, 09 Apr 2026 11:31:14 GMT",
+    "fetched_at": "2026-04-10T09:56:17.206096",
+    "score": 4,
     "tags": [
-      "church life"
-    ],
-    "rewritten_title": "Mentoring Young Adults: How Senior Believers Shape Future Leaders",
-    "personas": [
-      "pastor"
-    ],
-    "topic_cluster": "intergenerational_ministry",
-    "perspective": "neutral",
-    "final_score": 7.5,
-    "recency_boost": 1.5
-  },
-  {
-    "source_name": "The New York Times",
-    "source_category": "news",
-    "source_type": "world_news",
-    "independent": false,
-    "author": "Lauren Jackson",
-    "title": "No, Britain Is Not Having a Christian Revival",
-    "url": "https://www.nytimes.com/2026/04/09/world/europe/britain-christian-revival-survey.html",
-    "summary": "A study said church attendance had soared among British young people, a trend reversal that excited religious conservatives around the world. Turns out it wasn’t true.",
-    "published": "Thu, 09 Apr 2026 09:24:16 +0000",
-    "fetched_at": "2026-04-09T09:59:46.367496",
-    "score": 5,
-    "tags": [
-      "culture",
       "data"
     ],
-    "rewritten_title": "British Church Attendance Study: What the Data Actually Shows",
+    "rewritten_title": "Jehovah's Witnesses: A 3 Million-Member Community's Defining Characteristics",
     "personas": [
-      "professional",
-      "pastor"
+      "pastor",
+      "professional"
     ],
-    "topic_cluster": "britain_church_attendance_myth",
-    "perspective": "critical",
-    "final_score": 6.0,
+    "topic_cluster": "jehovahs_witnesses_religious_demographics",
+    "perspective": "neutral",
+    "final_score": 5.5,
     "recency_boost": 1.5
   },
   {
@@ -59,7 +34,7 @@
     "url": "https://www.pewresearch.org/short-reads/2026/04/07/negative-views-of-israel-netanyahu-continue-to-rise-among-americans-especially-young-people/",
     "summary": "Views of Israel and Benjamin Netanyahu have grown more negative among U.S. adults, with majorities under 50 in both parties rating them poorly.",
     "published": "Tue, 07 Apr 2026 17:54:58 +0000",
-    "fetched_at": "2026-04-09T10:01:12.019906",
+    "fetched_at": "2026-04-10T09:56:17.905610",
     "score": 4,
     "tags": [
       "data",
@@ -67,9 +42,33 @@
     ],
     "rewritten_title": "American Views of Israel and Netanyahu Decline Across Age Groups",
     "personas": [],
-    "topic_cluster": "israel_public_opinion",
-    "perspective": "neutral",
-    "final_score": 4.75,
-    "recency_boost": 0.75
+    "topic_cluster": "israel_sentiment_polling",
+    "perspective": "news",
+    "final_score": 4.25,
+    "recency_boost": 0.25
+  },
+  {
+    "source_name": "Lifeway Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Aaron Earls",
+    "title": "LGBTQ+ Identification Flat Overall, Still Growing Among Gen Z",
+    "url": "https://research.lifeway.com/2026/04/08/lgbtq-identification-flat-overall-still-growing-among-gen-z/",
+    "summary": "<p>Around 1 in 10 American adults identify as LGBTQ+, with younger generations largely driving the increase in recent years. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/04/08/lgbtq-identification-flat-overall-still-growing-among-gen-z/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/04/08/lgbtq-identification-flat-overall-still-growing-among-gen-z/\">LGBTQ+ Identification Flat Overall, Still Growing Among Gen Z</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "published": "Wed, 08 Apr 2026 06:52:00 +0000",
+    "fetched_at": "2026-04-10T09:56:18.319488",
+    "score": 4,
+    "tags": [
+      "data"
+    ],
+    "rewritten_title": "LGBTQ+ Identification Remains Stable Among Adults, Rising in Gen Z",
+    "personas": [
+      "pastor"
+    ],
+    "topic_cluster": "lgbtq_identity_trends",
+    "perspective": "news",
+    "final_score": 4.25,
+    "recency_boost": 0.25
   }
 ]

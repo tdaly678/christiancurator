@@ -1,35 +1,1204 @@
 [
-  {"name":"A. J. Swoboda","slug":"a-j-swoboda","bio":"Dr. A. J. Swoboda is an associate professor of Bible and theology at Bushnell University and co-host of the Slow Theology podcast. He specializes in Christian formation, spiritual disciplines, and contemporary theological issues, with a particular focus on practices like sabbath and doubt in the modern church.","affiliation":"Bushnell University","role":"Professor & Author","education":"PhD, University of Birmingham","website":"https://ajswoboda.com/","books":[{"title":"Subversive Sabbath","amazon_url":"https://www.amazon.com/s?k=Subversive+Sabbath+Swoboda"},{"title":"After Doubt","amazon_url":"https://www.amazon.com/s?k=After+Doubt+Swoboda"},{"title":"Redeeming How We Talk","amazon_url":"https://www.amazon.com/s?k=Redeeming+How+We+Talk+Swoboda"},{"title":"The Gift of Thorns","amazon_url":"https://www.amazon.com/s?k=The+Gift+of+Thorns+Swoboda"}],"initials":"AJS"},
-  {"name":"Aimee Byrd","slug":"aimee-byrd","bio":"Aimee Byrd is an author, speaker, and Bible study teacher who writes about theology, biblical womanhood, and evangelical culture. She is known for her theological depth and challenges to shallow women's ministry resources, and regularly contributes to Christianity Today.","affiliation":"Christianity Today","role":"Author & Theologian","education":"","website":"https://aimeebyrd.com/","books":[{"title":"Recovering from Biblical Manhood and Womanhood","amazon_url":"https://www.amazon.com/s?k=Recovering+from+Biblical+Manhood+and+Womanhood+Byrd"},{"title":"Saving Face","amazon_url":"https://www.amazon.com/s?k=Saving+Face+Aimee+Byrd"},{"title":"Housewife Theologian","amazon_url":"https://www.amazon.com/s?k=Housewife+Theologian+Byrd"},{"title":"Theological Fitness","amazon_url":"https://www.amazon.com/s?k=Theological+Fitness+Byrd"}],"initials":"AB"},
-  {"name":"Bethel McGrew","slug":"bethel-mcgrew","bio":"Bethel McGrew is a freelance writer, educator, and mathematician whose essays on Christianity and culture appear in First Things, The Spectator, WORLD, and other national publications. She maintains the popular Further Up Substack newsletter.","affiliation":"First Things, WORLD Opinions","role":"Writer & Educator","education":"PhD, Mathematics","website":"https://www.furtherup.net/","books":[],"initials":"BM"},
-  {"name":"Bonnie Kristian","slug":"bonnie-kristian","bio":"Bonnie Kristian is a deputy editor at Christianity Today who writes extensively on religion, faith, foreign policy, and Christian community. Her work bridges evangelical thought with mainstream journalism and she is the author of Untrustworthy and A Flexible Faith.","affiliation":"Christianity Today","role":"Editor & Author","education":"MA, Christian Thought, Bethel Seminary","website":"https://www.bonniekristian.com/","books":[{"title":"Untrustworthy","amazon_url":"https://www.amazon.com/s?k=Untrustworthy+Bonnie+Kristian"},{"title":"A Flexible Faith","amazon_url":"https://www.amazon.com/s?k=A+Flexible+Faith+Kristian"}],"initials":"BK"},
-  {"name":"Campbell Markham","slug":"campbell-markham","bio":"Campbell Markham is a Presbyterian pastor in Tasmania who specializes in Reformation history and biblical languages. He is the Moderator of the Presbyterian Church of Tasmania and has published translations and historical works including a biography of Marie Durand.","affiliation":"Presbyterian Church of Tasmania","role":"Pastor & Author","education":"","website":"","books":[{"title":"Marie Durand, Prisoner of the Tour de Constance","amazon_url":"https://www.amazon.com/s?k=Marie+Durand+Prisoner+Tour+Constance+Markham"}],"initials":"CM"},
-  {"name":"Carey Nieuwhof","slug":"carey-nieuwhof","bio":"Carey Nieuwhof is a bestselling leadership author, former attorney, and founding pastor of Connexus Church. His Carey Nieuwhof Leadership Podcast ranks in the top 0.1% of podcasts worldwide and he is a sought-after speaker on Christian leadership and sustainable ministry pace.","affiliation":"Connexus Church","role":"Leadership Author & Pastor","education":"BA in Law; BA in Theology, University of Toronto","website":"https://www.careynieuwhof.com/","books":[{"title":"At Your Best","amazon_url":"https://www.amazon.com/s?k=At+Your+Best+Carey+Nieuwhof"},{"title":"Didn't See It Coming","amazon_url":"https://www.amazon.com/s?k=Didnt+See+It+Coming+Nieuwhof"},{"title":"Lasting Impact","amazon_url":"https://www.amazon.com/s?k=Lasting+Impact+Carey+Nieuwhof"},{"title":"The Self-Aware Leader","amazon_url":"https://www.amazon.com/s?k=The+Self-Aware+Leader+Nieuwhof"}],"initials":"CN"},
-  {"name":"Clarissa Moll","slug":"clarissa-moll","bio":"Clarissa Moll is an award-winning writer and podcaster specializing in grief and bereavement ministry. Her writing appears in Christianity Today and The Gospel Coalition, and she is the author of Beyond the Darkness, a guide for living and thriving after loss.","affiliation":"Christianity Today, The Gospel Coalition","role":"Author & Podcaster","education":"MA, Trinity Evangelical Divinity School","website":"https://www.clarissamoll.com/","books":[{"title":"Beyond the Darkness","amazon_url":"https://www.amazon.com/s?k=Beyond+the+Darkness+Clarissa+Moll"},{"title":"Hurt Help Hope","amazon_url":"https://www.amazon.com/s?k=Hurt+Help+Hope+Clarissa+Moll"}],"initials":"CM"},
-  {"name":"Daniel K. Williams","slug":"daniel-k-williams","bio":"Daniel K. Williams is a historian at Ashland University specializing in American religion and politics, the Christian Right, and the pro-life movement. His scholarly works examine the intersection of faith and American political history.","affiliation":"Ashland University","role":"Historian & Author","education":"PhD, History, Brown University","website":"https://www.danielkwilliamsphd.com/","books":[{"title":"God's Own Party","amazon_url":"https://www.amazon.com/s?k=Gods+Own+Party+Daniel+Williams"},{"title":"Defenders of the Unborn","amazon_url":"https://www.amazon.com/s?k=Defenders+of+the+Unborn+Williams"},{"title":"The Politics of the Cross","amazon_url":"https://www.amazon.com/s?k=The+Politics+of+the+Cross+Williams"}],"initials":"DKW"},
-  {"name":"Danny Franks","slug":"danny-franks","bio":"Danny Franks is the Pastor of Guest Services at The Summit Church in Durham, North Carolina, overseeing hospitality across ten campuses. He is an author and consultant helping churches welcome guests with gospel-centered hospitality.","affiliation":"The Summit Church","role":"Pastor & Author","education":"","website":"https://dfranks.com/","books":[{"title":"People Are the Mission","amazon_url":"https://www.amazon.com/s?k=People+Are+the+Mission+Danny+Franks"}],"initials":"DF"},
-  {"name":"David Mathis","slug":"david-mathis","bio":"David Mathis is executive editor at Desiring God and pastor at Cities Church in Saint Paul. An author of numerous books and hundreds of articles, he blends pastoral ministry with theological teaching on joy, grace, and spiritual disciplines.","affiliation":"Desiring God, Cities Church","role":"Senior Teacher & Pastor","education":"BA, Furman University","website":"https://www.desiringgod.org/authors/david-mathis","books":[{"title":"Habits of Grace","amazon_url":"https://www.amazon.com/s?k=Habits+of+Grace+David+Mathis"},{"title":"Workers for Your Joy","amazon_url":"https://www.amazon.com/s?k=Workers+for+Your+Joy+Mathis"},{"title":"A Little Theology of Exercise","amazon_url":"https://www.amazon.com/s?k=A+Little+Theology+of+Exercise+Mathis"}],"initials":"DM"},
-  {"name":"German Saucedo","slug":"german-saucedo","bio":"German Saucedo is a Mexican writer, lawyer, and cultural commentator based in New York. Associate Editor and Podcast Producer at First Things, he writes essays on theology, culture, and philosophy with a focus on faith and contemporary issues.","affiliation":"First Things","role":"Writer & Editor","education":"","website":"https://germnsaucedo.substack.com/","books":[],"initials":"GS"},
-  {"name":"Greg Morse","slug":"greg-morse","bio":"Greg Morse is a staff writer at Desiring God and a graduate of Bethlehem College and Seminary. A prolific author of essays on biblical theology and Christian living, his writing covers topics including biblical manhood, the new birth, and spiritual formation.","affiliation":"Desiring God","role":"Staff Writer","education":"Bethlehem College and Seminary","website":"https://www.desiringgod.org/authors/greg-morse","books":[],"initials":"GM"},
-  {"name":"J. Gary Millar","slug":"j-gary-millar","bio":"J. Gary Millar is the Principal of Queensland Theological College in Brisbane, Australia, and a theologian specializing in Old Testament and biblical theology. A former pastor in Ireland and Northern Ireland, he has particular expertise in Deuteronomy and the theology of prayer.","affiliation":"Queensland Theological College","role":"Principal & Theologian","education":"PhD, Oxford University","website":"https://www.qtc.edu.au/staff/gary-millar/","books":[{"title":"Now Choose Life","amazon_url":"https://www.amazon.com/s?k=Now+Choose+Life+J.+Gary+Millar"},{"title":"Calling on the Name of the Lord","amazon_url":"https://www.amazon.com/s?k=Calling+on+the+Name+of+the+Lord+J.+Gary+Millar"},{"title":"Changed into His Likeness","amazon_url":"https://www.amazon.com/s?k=Changed+into+His+Likeness+J.+Gary+Millar"},{"title":"Saving Eutychus","amazon_url":"https://www.amazon.com/s?k=Saving+Eutychus+Gary+Millar"}],"initials":"JGM"},
-  {"name":"Jemar Tisby","slug":"jemar-tisby","bio":"Jemar Tisby is a New York Times bestselling historian, author, and speaker focusing on race, religion, and social movements. A professor at Simmons College of Kentucky, he is known for his scholarship on the American church's relationship with racism and justice.","affiliation":"Simmons College of Kentucky","role":"Historian, Author & Professor","education":"PhD, University of Mississippi","website":"https://jemartisby.com/","books":[{"title":"The Color of Compromise","amazon_url":"https://www.amazon.com/s?k=The+Color+of+Compromise+Jemar+Tisby"},{"title":"How to Fight Racism","amazon_url":"https://www.amazon.com/s?k=How+to+Fight+Racism+Jemar+Tisby"},{"title":"The Spirit of Justice","amazon_url":"https://www.amazon.com/s?k=The+Spirit+of+Justice+Jemar+Tisby"}],"initials":"JT"},
-  {"name":"Joy Marie Clarkson","slug":"joy-marie-clarkson","bio":"Joy Marie Clarkson is a writer, podcaster, and researcher at King's College London specializing in theology and literature. Books and Culture Editor at Plough Quarterly, she explores art, theology, and contemporary culture through her published works and popular podcast.","affiliation":"Plough Quarterly, King's College London","role":"Author & Podcaster","education":"PhD, University of St Andrews","website":"https://joyclarkson.com/","books":[{"title":"Aggressively Happy","amazon_url":"https://www.amazon.com/s?k=Aggressively+Happy+Joy+Marie+Clarkson"},{"title":"You Are a Tree","amazon_url":"https://www.amazon.com/s?k=You+Are+a+Tree+Joy+Marie+Clarkson"}],"initials":"JMC"},
-  {"name":"Kara Bettis Carvalho","slug":"kara-bettis-carvalho","bio":"Kara Bettis Carvalho is a senior features editor at Christianity Today with over a decade of religion journalism experience. An award-winning reporter and storyteller, she covers faith, politics, and culture with a focus on long-form profiles and reported features.","affiliation":"Christianity Today","role":"Senior Features Editor","education":"MA, Southern Baptist Theological Seminary","website":"","books":[],"initials":"KBC"},
-  {"name":"Karen Swallow Prior","slug":"karen-swallow-prior","bio":"Karen Swallow Prior is an award-winning author and scholar specializing in literature, ethics, and Christian thought. She writes extensively on faith, culture, and the integration of reading with spiritual formation, and is a fellow at the Trinity Forum.","affiliation":"Bethel Seminary, Trinity Forum","role":"Author & Scholar","education":"PhD, SUNY Buffalo","website":"https://karenswallowprior.com/","books":[{"title":"On Reading Well","amazon_url":"https://www.amazon.com/s?k=On+Reading+Well+Karen+Swallow+Prior"},{"title":"The Evangelical Imagination","amazon_url":"https://www.amazon.com/s?k=The+Evangelical+Imagination+Karen+Swallow+Prior"},{"title":"Fierce Convictions","amazon_url":"https://www.amazon.com/s?k=Fierce+Convictions+Karen+Swallow+Prior"},{"title":"Booked","amazon_url":"https://www.amazon.com/s?k=Booked+Karen+Swallow+Prior"}],"initials":"KSP"},
-  {"name":"Kate Shellnutt","slug":"kate-shellnutt","bio":"Kate Shellnutt is the Editorial Director of News at Christianity Today, with over fifteen years of religion journalism experience. Her award-winning work has appeared in major publications including The New York Times and The Washington Post.","affiliation":"Christianity Today","role":"Editor & Religion Reporter","education":"Northwestern University (Medill School of Journalism)","website":"","books":[],"initials":"KS"},
-  {"name":"Kyle Worley","slug":"kyle-worley","bio":"Kyle Worley is the lead pastor of Mosaic Church in Richardson, Texas, and co-host of the Knowing Faith podcast with J. T. English and Jen Wilkin. An author and teacher with over twenty years in ministry, he writes on union with Christ and the theological formation of local churches.","affiliation":"Mosaic Church, The Gospel Coalition","role":"Pastor & Author","education":"ThM, Southern Baptist Theological Seminary","website":"https://kyleworley.net","books":[{"title":"Home with God","amazon_url":"https://www.amazon.com/s?k=Home+with+God+Kyle+Worley"},{"title":"Formed for Fellowship","amazon_url":"https://www.amazon.com/s?k=Formed+for+Fellowship+Kyle+Worley"},{"title":"Pitfalls","amazon_url":"https://www.amazon.com/s?k=Pitfalls+Young+Reformed+Worley"}],"initials":"KW"},
-  {"name":"Laura Wifler","slug":"laura-wifler","bio":"Laura Wifler is a bestselling author of children's and adult books exploring the intersection of faith and everyday life. Co-founder of Risen Motherhood and founder of The KidLit Lab, she is a beloved voice for Christian mothers and aspiring writers.","affiliation":"Risen Motherhood, The Gospel Coalition","role":"Author & Writing Coach","education":"","website":"https://laurawifler.com","books":[{"title":"Risen Motherhood","amazon_url":"https://www.amazon.com/s?k=Risen+Motherhood+Laura+Wifler"},{"title":"Gospel Mom","amazon_url":"https://www.amazon.com/s?k=Gospel+Mom+Laura+Wifler"},{"title":"Any Time, Any Place, Any Prayer","amazon_url":"https://www.amazon.com/s?k=Any+Time+Any+Place+Any+Prayer+Laura+Wifler"}],"initials":"LW"},
-  {"name":"Leland Ryken","slug":"leland-ryken","bio":"Leland Ryken is Professor Emeritus of English at Wheaton College with over half a century of teaching experience. The author of nearly sixty books on biblical and literary topics, he served as literary stylist for the English Standard Version of the Bible.","affiliation":"Wheaton College, Crossway Publishers","role":"Professor Emeritus & Author","education":"PhD, University of Oregon","website":"","books":[{"title":"The Word of God in English","amazon_url":"https://www.amazon.com/s?k=The+Word+of+God+in+English+Ryken"},{"title":"How to Read the Bible as Literature","amazon_url":"https://www.amazon.com/s?k=How+to+Read+Bible+as+Literature+Ryken"},{"title":"The Christian Imagination","amazon_url":"https://www.amazon.com/s?k=The+Christian+Imagination+Leland+Ryken"},{"title":"Windows to the World","amazon_url":"https://www.amazon.com/s?k=Windows+to+the+World+Ryken"}],"initials":"LR"},
-  {"name":"Matthew Lee Anderson","slug":"matthew-lee-anderson","bio":"Matthew Lee Anderson is an Associate Professor of Ethics and Theology in Baylor University's Honors College and founder of Mere Orthodoxy. He is the author of several books addressing Christian ethics and co-hosts the Mere Fidelity podcast on theology and culture.","affiliation":"Baylor University, Mere Orthodoxy","role":"Professor & Author","education":"DPhil in Christian Ethics, Oxford University","website":"https://matthewleeanderson.com","books":[{"title":"Earthen Vessels","amazon_url":"https://www.amazon.com/s?k=Earthen+Vessels+Matthew+Lee+Anderson"},{"title":"The End of Our Exploring","amazon_url":"https://www.amazon.com/s?k=End+Our+Exploring+Matthew+Lee+Anderson"},{"title":"Called into Questions","amazon_url":"https://www.amazon.com/s?k=Called+into+Questions+Matthew+Lee+Anderson"}],"initials":"MLA"},
-  {"name":"Matthew Loftus","slug":"matthew-loftus","bio":"Matthew Loftus is a family physician practicing at a mission hospital in Kenya, where he also teaches. A regular columnist for Christianity Today, he is the inaugural recipient of the Michael J. Gerson Memorial Prize for Excellence in Writing on Faith and Public Life.","affiliation":"Christianity Today","role":"Physician & Author","education":"MD","website":"https://matthewandmaggie.org","books":[{"title":"Resisting Therapy Culture","amazon_url":"https://www.amazon.com/s?k=Resisting+Therapy+Culture+Matthew+Loftus"}],"initials":"ML"},
-  {"name":"Nadya Williams","slug":"nadya-williams","bio":"Nadya Williams is a classicist and historian who left academia to write about ancient Christianity and classical literature from a Christian perspective. Books Editor at Mere Orthodoxy, she is the author of Cultural Christians in the Early Church and other works on the ancient world.","affiliation":"Mere Orthodoxy, Providence Magazine","role":"Author & Educator","education":"PhD in Classics, Princeton University","website":"https://www.nadyawilliams.com","books":[{"title":"Cultural Christians in the Early Church","amazon_url":"https://www.amazon.com/s?k=Cultural+Christians+Early+Church+Nadya+Williams"},{"title":"Mothers, Children, and the Body Politic","amazon_url":"https://www.amazon.com/s?k=Mothers+Children+Body+Politic+Nadya+Williams"},{"title":"Christians Reading Classics","amazon_url":"https://www.amazon.com/s?k=Christians+Reading+Classics+Nadya+Williams"}],"initials":"NW"},
-  {"name":"Nate Fischer","slug":"nate-fischer","bio":"Nate Fischer is Chairman of American Reformer and founder and CEO of New Founding, a venture firm focused on Christian-centered American revitalization. A Harvard Law graduate, he writes on evangelical leadership and Christian cultural engagement.","affiliation":"American Reformer, New Founding","role":"Entrepreneur & Writer","education":"JD, Harvard Law School; BA, Calvin College","website":"https://newfounding.com","books":[],"initials":"NF"},
-  {"name":"O. Alan Noble","slug":"alan-noble","bio":"O. Alan Noble is an Associate Professor of English at Oklahoma Baptist University and co-founder and editor-in-chief of Christ and Pop Culture. He is the author of several books examining contemporary culture, technology, and what it means to be human in a distracted age.","affiliation":"Oklahoma Baptist University, Christ and Pop Culture","role":"Professor & Author","education":"PhD, Baylor University","website":"https://www.oalannoble.com","books":[{"title":"You Are Not Your Own","amazon_url":"https://www.amazon.com/s?k=You+Are+Not+Your+Own+Alan+Noble"},{"title":"Disruptive Witness","amazon_url":"https://www.amazon.com/s?k=Disruptive+Witness+Alan+Noble"},{"title":"On Getting Out of Bed","amazon_url":"https://www.amazon.com/s?k=On+Getting+Out+of+Bed+Alan+Noble"}],"initials":"OAN"},
-  {"name":"Phylicia Masonheimer","slug":"phylicia-masonheimer","bio":"Phylicia Masonheimer is a bestselling author, Bible teacher, and podcast host who equips Christians with theological depth and biblical thinking. Her work addresses topics ranging from womanhood and sexuality to grief and spiritual formation, and she is a contributor to Focus on the Family.","affiliation":"Independent, Focus on the Family","role":"Author & Bible Teacher","education":"BS in Religion, Liberty University","website":"https://phyliciamasonheimer.com","books":[{"title":"Every Woman a Theologian","amazon_url":"https://www.amazon.com/s?k=Every+Woman+a+Theologian+Phylicia+Masonheimer"},{"title":"Stop Calling Me Beautiful","amazon_url":"https://www.amazon.com/s?k=Stop+Calling+Me+Beautiful+Phylicia+Masonheimer"},{"title":"Every Home a Foundation","amazon_url":"https://www.amazon.com/s?k=Every+Home+a+Foundation+Phylicia+Masonheimer"},{"title":"The Flirtation Experiment","amazon_url":"https://www.amazon.com/s?k=The+Flirtation+Experiment+Phylicia+Masonheimer"}],"initials":"PM"},
-  {"name":"R. Albert Mohler Jr.","slug":"r-albert-mohler-jr","bio":"R. Albert Mohler Jr. is the ninth president of The Southern Baptist Theological Seminary and one of the leading intellectuals of the evangelical movement in America. A prolific author and podcaster, he addresses Christian worldview issues and theological controversies facing the contemporary church.","affiliation":"Southern Baptist Theological Seminary","role":"Seminary President & Theologian","education":"PhD in Systematic & Historical Theology, Southern Baptist Theological Seminary","website":"https://albertmohler.com","books":[{"title":"The Conviction to Lead","amazon_url":"https://www.amazon.com/s?k=The+Conviction+to+Lead+Albert+Mohler"},{"title":"The Apostles' Creed","amazon_url":"https://www.amazon.com/s?k=The+Apostles+Creed+Albert+Mohler"},{"title":"The Gathering Storm","amazon_url":"https://www.amazon.com/s?k=The+Gathering+Storm+Albert+Mohler"},{"title":"We Cannot Be Silent","amazon_url":"https://www.amazon.com/s?k=We+Cannot+Be+Silent+Albert+Mohler"},{"title":"He Is Not Silent","amazon_url":"https://www.amazon.com/s?k=He+Is+Not+Silent+Albert+Mohler"}],"initials":"RAM"},
-  {"name":"Ryan Burge","slug":"ryan-burge","bio":"Ryan Burge is a political scientist and statistician at Washington University in St. Louis specializing in the study of religion's impact on American politics and society. His research on religious demographics and the rise of the religiously unaffiliated has shaped how evangelicals understand cultural change.","affiliation":"Washington University in St. Louis","role":"Political Scientist & Author","education":"PhD in Political Science, Southern Illinois University","website":"https://www.graphsaboutreligion.com","books":[{"title":"The Nones","amazon_url":"https://www.amazon.com/s?k=The+Nones+Ryan+Burge"},{"title":"The Great Dechurching","amazon_url":"https://www.amazon.com/s?k=The+Great+Dechurching+Ryan+Burge"},{"title":"20 Myths about Religion and Politics in America","amazon_url":"https://www.amazon.com/s?k=20+Myths+about+Religion+and+Politics+America+Ryan+Burge"}],"initials":"RB"},
-  {"name":"Scot McKnight","slug":"scot-mcknight","bio":"Scot McKnight is an acclaimed New Testament scholar and historian of early Christianity who has written over eighty books on the historical Jesus, Christian theology, and biblical interpretation. A leading voice in evangelical scholarship, his work has shaped conversations on scripture, the kingdom of God, and ecclesiology.","affiliation":"Houston Theological Seminary","role":"New Testament Scholar & Author","education":"PhD, University of Aberdeen","website":"https://scotmcknight.substack.com","books":[{"title":"The Jesus Creed","amazon_url":"https://www.amazon.com/s?k=The+Jesus+Creed+Scot+McKnight"},{"title":"The King Jesus Gospel","amazon_url":"https://www.amazon.com/s?k=The+King+Jesus+Gospel+Scot+McKnight"},{"title":"The Blue Parakeet","amazon_url":"https://www.amazon.com/s?k=The+Blue+Parakeet+Scot+McKnight"},{"title":"A Church Called Tov","amazon_url":"https://www.amazon.com/s?k=A+Church+Called+Tov+Scot+McKnight"},{"title":"Kingdom Conspiracy","amazon_url":"https://www.amazon.com/s?k=Kingdom+Conspiracy+Scot+McKnight"}],"initials":"SM"},
-  {"name":"Scott Hubbard","slug":"scott-hubbard","bio":"Scott Hubbard is a managing editor at Desiring God and pastor at All Peoples Church in Minneapolis. The author of over two hundred articles, he writes to deepen joy in God through Jesus, particularly for those navigating doubt and spiritual darkness.","affiliation":"Desiring God, All Peoples Church","role":"Editor & Pastor","education":"MDiv, Bethlehem College and Seminary","website":"https://www.desiringgod.org/authors/scott-hubbard","books":[],"initials":"SH"},
-  {"name":"Sean McDowell","slug":"sean-mcdowell","bio":"Sean McDowell is an associate professor of apologetics at Talbot School of Theology at Biola University. An accomplished author and speaker, he equips the church and the next generation to defend the Christian faith with intellectual rigor and cultural relevance.","affiliation":"Biola University, Talbot School of Theology","role":"Professor of Apologetics & Author","education":"PhD in Apologetics and Worldview Studies","website":"https://seanmcdowell.org","books":[{"title":"Evidence that Demands a Verdict","amazon_url":"https://www.amazon.com/s?k=Evidence+that+Demands+a+Verdict+Sean+McDowell"},{"title":"The Fate of the Apostles","amazon_url":"https://www.amazon.com/s?k=The+Fate+of+the+Apostles+Sean+McDowell"},{"title":"A New Kind of Apologist","amazon_url":"https://www.amazon.com/s?k=A+New+Kind+of+Apologist+Sean+McDowell"},{"title":"Think Biblically","amazon_url":"https://www.amazon.com/s?k=Think+Biblically+Sean+McDowell"}],"initials":"SM"},
-  {"name":"Timothy Paul Jones","slug":"timothy-paul-jones","bio":"Timothy Paul Jones is the C. Edwin Gheens Professor of Christian Family Ministry and Vice President for Doctoral Studies at The Southern Baptist Theological Seminary. An evangelical scholar of apologetics and family ministry, he has authored or co-authored over twenty books making complex theological topics accessible to general audiences.","affiliation":"Southern Baptist Theological Seminary","role":"Seminary Professor & Author","education":"PhD, Southern Baptist Theological Seminary","website":"https://www.timothypauljones.com","books":[{"title":"How We Got the Bible","amazon_url":"https://www.amazon.com/s?k=How+We+Got+the+Bible+Timothy+Paul+Jones"},{"title":"Christian History Made Easy","amazon_url":"https://www.amazon.com/s?k=Christian+History+Made+Easy+Timothy+Paul+Jones"},{"title":"The Da Vinci Codebreaker","amazon_url":"https://www.amazon.com/s?k=The+Da+Vinci+Codebreaker+Timothy+Paul+Jones"},{"title":"Did the Resurrection Really Happen","amazon_url":"https://www.amazon.com/s?k=Did+the+Resurrection+Really+Happen+Timothy+Paul+Jones"}],"initials":"TPJ"}
+  {
+    "name": "A. J. Swoboda",
+    "slug": "a-j-swoboda",
+    "bio": "Dr. A. J. Swoboda is an associate professor of Bible and theology at Bushnell University and co-host of the Slow Theology podcast. He specializes in Christian formation, spiritual disciplines, and contemporary theological issues, with a particular focus on practices like sabbath and doubt in the modern church.",
+    "affiliation": "Bushnell University",
+    "role": "Professor & Author",
+    "education": "PhD, University of Birmingham",
+    "website": "https://ajswoboda.com/",
+    "books": [
+      {
+        "title": "Subversive Sabbath",
+        "amazon_url": "https://www.amazon.com/s?k=Subversive+Sabbath+Swoboda"
+      },
+      {
+        "title": "After Doubt",
+        "amazon_url": "https://www.amazon.com/s?k=After+Doubt+Swoboda"
+      },
+      {
+        "title": "Redeeming How We Talk",
+        "amazon_url": "https://www.amazon.com/s?k=Redeeming+How+We+Talk+Swoboda"
+      },
+      {
+        "title": "The Gift of Thorns",
+        "amazon_url": "https://www.amazon.com/s?k=The+Gift+of+Thorns+Swoboda"
+      }
+    ],
+    "initials": "AJS"
+  },
+  {
+    "name": "Aimee Byrd",
+    "slug": "aimee-byrd",
+    "bio": "Aimee Byrd is an author, speaker, and Bible study teacher who writes about theology, biblical womanhood, and evangelical culture. She is known for her theological depth and challenges to shallow women's ministry resources, and regularly contributes to Christianity Today.",
+    "affiliation": "Christianity Today",
+    "role": "Author & Theologian",
+    "education": "",
+    "website": "https://aimeebyrd.com/",
+    "books": [
+      {
+        "title": "Recovering from Biblical Manhood and Womanhood",
+        "amazon_url": "https://www.amazon.com/s?k=Recovering+from+Biblical+Manhood+and+Womanhood+Byrd"
+      },
+      {
+        "title": "Saving Face",
+        "amazon_url": "https://www.amazon.com/s?k=Saving+Face+Aimee+Byrd"
+      },
+      {
+        "title": "Housewife Theologian",
+        "amazon_url": "https://www.amazon.com/s?k=Housewife+Theologian+Byrd"
+      },
+      {
+        "title": "Theological Fitness",
+        "amazon_url": "https://www.amazon.com/s?k=Theological+Fitness+Byrd"
+      }
+    ],
+    "initials": "AB"
+  },
+  {
+    "name": "Bethel McGrew",
+    "slug": "bethel-mcgrew",
+    "bio": "Bethel McGrew is a freelance writer, educator, and mathematician whose essays on Christianity and culture appear in First Things, The Spectator, WORLD, and other national publications. She maintains the popular Further Up Substack newsletter.",
+    "affiliation": "First Things, WORLD Opinions",
+    "role": "Writer & Educator",
+    "education": "PhD, Mathematics",
+    "website": "https://www.furtherup.net/",
+    "books": [],
+    "initials": "BM"
+  },
+  {
+    "name": "Bonnie Kristian",
+    "slug": "bonnie-kristian",
+    "bio": "Bonnie Kristian is a deputy editor at Christianity Today who writes extensively on religion, faith, foreign policy, and Christian community. Her work bridges evangelical thought with mainstream journalism and she is the author of Untrustworthy and A Flexible Faith.",
+    "affiliation": "Christianity Today",
+    "role": "Editor & Author",
+    "education": "MA, Christian Thought, Bethel Seminary",
+    "website": "https://www.bonniekristian.com/",
+    "books": [
+      {
+        "title": "Untrustworthy",
+        "amazon_url": "https://www.amazon.com/s?k=Untrustworthy+Bonnie+Kristian"
+      },
+      {
+        "title": "A Flexible Faith",
+        "amazon_url": "https://www.amazon.com/s?k=A+Flexible+Faith+Kristian"
+      }
+    ],
+    "initials": "BK"
+  },
+  {
+    "name": "Campbell Markham",
+    "slug": "campbell-markham",
+    "bio": "Campbell Markham is a Presbyterian pastor in Tasmania who specializes in Reformation history and biblical languages. He is the Moderator of the Presbyterian Church of Tasmania and has published translations and historical works including a biography of Marie Durand.",
+    "affiliation": "Presbyterian Church of Tasmania",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Marie Durand, Prisoner of the Tour de Constance",
+        "amazon_url": "https://www.amazon.com/s?k=Marie+Durand+Prisoner+Tour+Constance+Markham"
+      }
+    ],
+    "initials": "CM"
+  },
+  {
+    "name": "Carey Nieuwhof",
+    "slug": "carey-nieuwhof",
+    "bio": "Carey Nieuwhof is a bestselling leadership author, former attorney, and founding pastor of Connexus Church. His Carey Nieuwhof Leadership Podcast ranks in the top 0.1% of podcasts worldwide and he is a sought-after speaker on Christian leadership and sustainable ministry pace.",
+    "affiliation": "Connexus Church",
+    "role": "Leadership Author & Pastor",
+    "education": "BA in Law; BA in Theology, University of Toronto",
+    "website": "https://www.careynieuwhof.com/",
+    "books": [
+      {
+        "title": "At Your Best",
+        "amazon_url": "https://www.amazon.com/s?k=At+Your+Best+Carey+Nieuwhof"
+      },
+      {
+        "title": "Didn't See It Coming",
+        "amazon_url": "https://www.amazon.com/s?k=Didnt+See+It+Coming+Nieuwhof"
+      },
+      {
+        "title": "Lasting Impact",
+        "amazon_url": "https://www.amazon.com/s?k=Lasting+Impact+Carey+Nieuwhof"
+      },
+      {
+        "title": "The Self-Aware Leader",
+        "amazon_url": "https://www.amazon.com/s?k=The+Self-Aware+Leader+Nieuwhof"
+      }
+    ],
+    "initials": "CN"
+  },
+  {
+    "name": "Clarissa Moll",
+    "slug": "clarissa-moll",
+    "bio": "Clarissa Moll is an award-winning writer and podcaster specializing in grief and bereavement ministry. Her writing appears in Christianity Today and The Gospel Coalition, and she is the author of Beyond the Darkness, a guide for living and thriving after loss.",
+    "affiliation": "Christianity Today, The Gospel Coalition",
+    "role": "Author & Podcaster",
+    "education": "MA, Trinity Evangelical Divinity School",
+    "website": "https://www.clarissamoll.com/",
+    "books": [
+      {
+        "title": "Beyond the Darkness",
+        "amazon_url": "https://www.amazon.com/s?k=Beyond+the+Darkness+Clarissa+Moll"
+      },
+      {
+        "title": "Hurt Help Hope",
+        "amazon_url": "https://www.amazon.com/s?k=Hurt+Help+Hope+Clarissa+Moll"
+      }
+    ],
+    "initials": "CM"
+  },
+  {
+    "name": "Daniel K. Williams",
+    "slug": "daniel-k-williams",
+    "bio": "Daniel K. Williams is a historian at Ashland University specializing in American religion and politics, the Christian Right, and the pro-life movement. His scholarly works examine the intersection of faith and American political history.",
+    "affiliation": "Ashland University",
+    "role": "Historian & Author",
+    "education": "PhD, History, Brown University",
+    "website": "https://www.danielkwilliamsphd.com/",
+    "books": [
+      {
+        "title": "God's Own Party",
+        "amazon_url": "https://www.amazon.com/s?k=Gods+Own+Party+Daniel+Williams"
+      },
+      {
+        "title": "Defenders of the Unborn",
+        "amazon_url": "https://www.amazon.com/s?k=Defenders+of+the+Unborn+Williams"
+      },
+      {
+        "title": "The Politics of the Cross",
+        "amazon_url": "https://www.amazon.com/s?k=The+Politics+of+the+Cross+Williams"
+      }
+    ],
+    "initials": "DKW"
+  },
+  {
+    "name": "Danny Franks",
+    "slug": "danny-franks",
+    "bio": "Danny Franks is the Pastor of Guest Services at The Summit Church in Durham, North Carolina, overseeing hospitality across ten campuses. He is an author and consultant helping churches welcome guests with gospel-centered hospitality.",
+    "affiliation": "The Summit Church",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "https://dfranks.com/",
+    "books": [
+      {
+        "title": "People Are the Mission",
+        "amazon_url": "https://www.amazon.com/s?k=People+Are+the+Mission+Danny+Franks"
+      }
+    ],
+    "initials": "DF"
+  },
+  {
+    "name": "David Mathis",
+    "slug": "david-mathis",
+    "bio": "David Mathis is executive editor at Desiring God and pastor at Cities Church in Saint Paul. An author of numerous books and hundreds of articles, he blends pastoral ministry with theological teaching on joy, grace, and spiritual disciplines.",
+    "affiliation": "Desiring God, Cities Church",
+    "role": "Senior Teacher & Pastor",
+    "education": "BA, Furman University",
+    "website": "https://www.desiringgod.org/authors/david-mathis",
+    "books": [
+      {
+        "title": "Habits of Grace",
+        "amazon_url": "https://www.amazon.com/s?k=Habits+of+Grace+David+Mathis"
+      },
+      {
+        "title": "Workers for Your Joy",
+        "amazon_url": "https://www.amazon.com/s?k=Workers+for+Your+Joy+Mathis"
+      },
+      {
+        "title": "A Little Theology of Exercise",
+        "amazon_url": "https://www.amazon.com/s?k=A+Little+Theology+of+Exercise+Mathis"
+      }
+    ],
+    "initials": "DM"
+  },
+  {
+    "name": "German Saucedo",
+    "slug": "german-saucedo",
+    "bio": "German Saucedo is a Mexican writer, lawyer, and cultural commentator based in New York. Associate Editor and Podcast Producer at First Things, he writes essays on theology, culture, and philosophy with a focus on faith and contemporary issues.",
+    "affiliation": "First Things",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "https://germnsaucedo.substack.com/",
+    "books": [],
+    "initials": "GS"
+  },
+  {
+    "name": "Greg Morse",
+    "slug": "greg-morse",
+    "bio": "Greg Morse is a staff writer at Desiring God and a graduate of Bethlehem College and Seminary. A prolific author of essays on biblical theology and Christian living, his writing covers topics including biblical manhood, the new birth, and spiritual formation.",
+    "affiliation": "Desiring God",
+    "role": "Staff Writer",
+    "education": "Bethlehem College and Seminary",
+    "website": "https://www.desiringgod.org/authors/greg-morse",
+    "books": [],
+    "initials": "GM"
+  },
+  {
+    "name": "J. Gary Millar",
+    "slug": "j-gary-millar",
+    "bio": "J. Gary Millar is the Principal of Queensland Theological College in Brisbane, Australia, and a theologian specializing in Old Testament and biblical theology. A former pastor in Ireland and Northern Ireland, he has particular expertise in Deuteronomy and the theology of prayer.",
+    "affiliation": "Queensland Theological College",
+    "role": "Principal & Theologian",
+    "education": "PhD, Oxford University",
+    "website": "https://www.qtc.edu.au/staff/gary-millar/",
+    "books": [
+      {
+        "title": "Now Choose Life",
+        "amazon_url": "https://www.amazon.com/s?k=Now+Choose+Life+J.+Gary+Millar"
+      },
+      {
+        "title": "Calling on the Name of the Lord",
+        "amazon_url": "https://www.amazon.com/s?k=Calling+on+the+Name+of+the+Lord+J.+Gary+Millar"
+      },
+      {
+        "title": "Changed into His Likeness",
+        "amazon_url": "https://www.amazon.com/s?k=Changed+into+His+Likeness+J.+Gary+Millar"
+      },
+      {
+        "title": "Saving Eutychus",
+        "amazon_url": "https://www.amazon.com/s?k=Saving+Eutychus+Gary+Millar"
+      }
+    ],
+    "initials": "JGM"
+  },
+  {
+    "name": "Jemar Tisby",
+    "slug": "jemar-tisby",
+    "bio": "Jemar Tisby is a New York Times bestselling historian, author, and speaker focusing on race, religion, and social movements. A professor at Simmons College of Kentucky, he is known for his scholarship on the American church's relationship with racism and justice.",
+    "affiliation": "Simmons College of Kentucky",
+    "role": "Historian, Author & Professor",
+    "education": "PhD, University of Mississippi",
+    "website": "https://jemartisby.com/",
+    "books": [
+      {
+        "title": "The Color of Compromise",
+        "amazon_url": "https://www.amazon.com/s?k=The+Color+of+Compromise+Jemar+Tisby"
+      },
+      {
+        "title": "How to Fight Racism",
+        "amazon_url": "https://www.amazon.com/s?k=How+to+Fight+Racism+Jemar+Tisby"
+      },
+      {
+        "title": "The Spirit of Justice",
+        "amazon_url": "https://www.amazon.com/s?k=The+Spirit+of+Justice+Jemar+Tisby"
+      }
+    ],
+    "initials": "JT"
+  },
+  {
+    "name": "Joy Marie Clarkson",
+    "slug": "joy-marie-clarkson",
+    "bio": "Joy Marie Clarkson is a writer, podcaster, and researcher at King's College London specializing in theology and literature. Books and Culture Editor at Plough Quarterly, she explores art, theology, and contemporary culture through her published works and popular podcast.",
+    "affiliation": "Plough Quarterly, King's College London",
+    "role": "Author & Podcaster",
+    "education": "PhD, University of St Andrews",
+    "website": "https://joyclarkson.com/",
+    "books": [
+      {
+        "title": "Aggressively Happy",
+        "amazon_url": "https://www.amazon.com/s?k=Aggressively+Happy+Joy+Marie+Clarkson"
+      },
+      {
+        "title": "You Are a Tree",
+        "amazon_url": "https://www.amazon.com/s?k=You+Are+a+Tree+Joy+Marie+Clarkson"
+      }
+    ],
+    "initials": "JMC"
+  },
+  {
+    "name": "Kara Bettis Carvalho",
+    "slug": "kara-bettis-carvalho",
+    "bio": "Kara Bettis Carvalho is a senior features editor at Christianity Today with over a decade of religion journalism experience. An award-winning reporter and storyteller, she covers faith, politics, and culture with a focus on long-form profiles and reported features.",
+    "affiliation": "Christianity Today",
+    "role": "Senior Features Editor",
+    "education": "MA, Southern Baptist Theological Seminary",
+    "website": "",
+    "books": [],
+    "initials": "KBC"
+  },
+  {
+    "name": "Karen Swallow Prior",
+    "slug": "karen-swallow-prior",
+    "bio": "Karen Swallow Prior is an award-winning author and scholar specializing in literature, ethics, and Christian thought. She writes extensively on faith, culture, and the integration of reading with spiritual formation, and is a fellow at the Trinity Forum.",
+    "affiliation": "Bethel Seminary, Trinity Forum",
+    "role": "Author & Scholar",
+    "education": "PhD, SUNY Buffalo",
+    "website": "https://karenswallowprior.com/",
+    "books": [
+      {
+        "title": "On Reading Well",
+        "amazon_url": "https://www.amazon.com/s?k=On+Reading+Well+Karen+Swallow+Prior"
+      },
+      {
+        "title": "The Evangelical Imagination",
+        "amazon_url": "https://www.amazon.com/s?k=The+Evangelical+Imagination+Karen+Swallow+Prior"
+      },
+      {
+        "title": "Fierce Convictions",
+        "amazon_url": "https://www.amazon.com/s?k=Fierce+Convictions+Karen+Swallow+Prior"
+      },
+      {
+        "title": "Booked",
+        "amazon_url": "https://www.amazon.com/s?k=Booked+Karen+Swallow+Prior"
+      }
+    ],
+    "initials": "KSP"
+  },
+  {
+    "name": "Kate Shellnutt",
+    "slug": "kate-shellnutt",
+    "bio": "Kate Shellnutt is the Editorial Director of News at Christianity Today, with over fifteen years of religion journalism experience. Her award-winning work has appeared in major publications including The New York Times and The Washington Post.",
+    "affiliation": "Christianity Today",
+    "role": "Editor & Religion Reporter",
+    "education": "Northwestern University (Medill School of Journalism)",
+    "website": "",
+    "books": [],
+    "initials": "KS"
+  },
+  {
+    "name": "Kyle Worley",
+    "slug": "kyle-worley",
+    "bio": "Kyle Worley is the lead pastor of Mosaic Church in Richardson, Texas, and co-host of the Knowing Faith podcast with J. T. English and Jen Wilkin. An author and teacher with over twenty years in ministry, he writes on union with Christ and the theological formation of local churches.",
+    "affiliation": "Mosaic Church, The Gospel Coalition",
+    "role": "Pastor & Author",
+    "education": "ThM, Southern Baptist Theological Seminary",
+    "website": "https://kyleworley.net",
+    "books": [
+      {
+        "title": "Home with God",
+        "amazon_url": "https://www.amazon.com/s?k=Home+with+God+Kyle+Worley"
+      },
+      {
+        "title": "Formed for Fellowship",
+        "amazon_url": "https://www.amazon.com/s?k=Formed+for+Fellowship+Kyle+Worley"
+      },
+      {
+        "title": "Pitfalls",
+        "amazon_url": "https://www.amazon.com/s?k=Pitfalls+Young+Reformed+Worley"
+      }
+    ],
+    "initials": "KW"
+  },
+  {
+    "name": "Laura Wifler",
+    "slug": "laura-wifler",
+    "bio": "Laura Wifler is a bestselling author of children's and adult books exploring the intersection of faith and everyday life. Co-founder of Risen Motherhood and founder of The KidLit Lab, she is a beloved voice for Christian mothers and aspiring writers.",
+    "affiliation": "Risen Motherhood, The Gospel Coalition",
+    "role": "Author & Writing Coach",
+    "education": "",
+    "website": "https://laurawifler.com",
+    "books": [
+      {
+        "title": "Risen Motherhood",
+        "amazon_url": "https://www.amazon.com/s?k=Risen+Motherhood+Laura+Wifler"
+      },
+      {
+        "title": "Gospel Mom",
+        "amazon_url": "https://www.amazon.com/s?k=Gospel+Mom+Laura+Wifler"
+      },
+      {
+        "title": "Any Time, Any Place, Any Prayer",
+        "amazon_url": "https://www.amazon.com/s?k=Any+Time+Any+Place+Any+Prayer+Laura+Wifler"
+      }
+    ],
+    "initials": "LW"
+  },
+  {
+    "name": "Leland Ryken",
+    "slug": "leland-ryken",
+    "bio": "Leland Ryken is Professor Emeritus of English at Wheaton College with over half a century of teaching experience. The author of nearly sixty books on biblical and literary topics, he served as literary stylist for the English Standard Version of the Bible.",
+    "affiliation": "Wheaton College, Crossway Publishers",
+    "role": "Professor Emeritus & Author",
+    "education": "PhD, University of Oregon",
+    "website": "",
+    "books": [
+      {
+        "title": "The Word of God in English",
+        "amazon_url": "https://www.amazon.com/s?k=The+Word+of+God+in+English+Ryken"
+      },
+      {
+        "title": "How to Read the Bible as Literature",
+        "amazon_url": "https://www.amazon.com/s?k=How+to+Read+Bible+as+Literature+Ryken"
+      },
+      {
+        "title": "The Christian Imagination",
+        "amazon_url": "https://www.amazon.com/s?k=The+Christian+Imagination+Leland+Ryken"
+      },
+      {
+        "title": "Windows to the World",
+        "amazon_url": "https://www.amazon.com/s?k=Windows+to+the+World+Ryken"
+      }
+    ],
+    "initials": "LR"
+  },
+  {
+    "name": "Matthew Lee Anderson",
+    "slug": "matthew-lee-anderson",
+    "bio": "Matthew Lee Anderson is an Associate Professor of Ethics and Theology in Baylor University's Honors College and founder of Mere Orthodoxy. He is the author of several books addressing Christian ethics and co-hosts the Mere Fidelity podcast on theology and culture.",
+    "affiliation": "Baylor University, Mere Orthodoxy",
+    "role": "Professor & Author",
+    "education": "DPhil in Christian Ethics, Oxford University",
+    "website": "https://matthewleeanderson.com",
+    "books": [
+      {
+        "title": "Earthen Vessels",
+        "amazon_url": "https://www.amazon.com/s?k=Earthen+Vessels+Matthew+Lee+Anderson"
+      },
+      {
+        "title": "The End of Our Exploring",
+        "amazon_url": "https://www.amazon.com/s?k=End+Our+Exploring+Matthew+Lee+Anderson"
+      },
+      {
+        "title": "Called into Questions",
+        "amazon_url": "https://www.amazon.com/s?k=Called+into+Questions+Matthew+Lee+Anderson"
+      }
+    ],
+    "initials": "MLA"
+  },
+  {
+    "name": "Matthew Loftus",
+    "slug": "matthew-loftus",
+    "bio": "Matthew Loftus is a family physician practicing at a mission hospital in Kenya, where he also teaches. A regular columnist for Christianity Today, he is the inaugural recipient of the Michael J. Gerson Memorial Prize for Excellence in Writing on Faith and Public Life.",
+    "affiliation": "Christianity Today",
+    "role": "Physician & Author",
+    "education": "MD",
+    "website": "https://matthewandmaggie.org",
+    "books": [
+      {
+        "title": "Resisting Therapy Culture",
+        "amazon_url": "https://www.amazon.com/s?k=Resisting+Therapy+Culture+Matthew+Loftus"
+      }
+    ],
+    "initials": "ML"
+  },
+  {
+    "name": "Nadya Williams",
+    "slug": "nadya-williams",
+    "bio": "Nadya Williams is a classicist and historian who left academia to write about ancient Christianity and classical literature from a Christian perspective. Books Editor at Mere Orthodoxy, she is the author of Cultural Christians in the Early Church and other works on the ancient world.",
+    "affiliation": "Mere Orthodoxy, Providence Magazine",
+    "role": "Author & Educator",
+    "education": "PhD in Classics, Princeton University",
+    "website": "https://www.nadyawilliams.com",
+    "books": [
+      {
+        "title": "Cultural Christians in the Early Church",
+        "amazon_url": "https://www.amazon.com/s?k=Cultural+Christians+Early+Church+Nadya+Williams"
+      },
+      {
+        "title": "Mothers, Children, and the Body Politic",
+        "amazon_url": "https://www.amazon.com/s?k=Mothers+Children+Body+Politic+Nadya+Williams"
+      },
+      {
+        "title": "Christians Reading Classics",
+        "amazon_url": "https://www.amazon.com/s?k=Christians+Reading+Classics+Nadya+Williams"
+      }
+    ],
+    "initials": "NW"
+  },
+  {
+    "name": "Nate Fischer",
+    "slug": "nate-fischer",
+    "bio": "Nate Fischer is Chairman of American Reformer and founder and CEO of New Founding, a venture firm focused on Christian-centered American revitalization. A Harvard Law graduate, he writes on evangelical leadership and Christian cultural engagement.",
+    "affiliation": "American Reformer, New Founding",
+    "role": "Entrepreneur & Writer",
+    "education": "JD, Harvard Law School; BA, Calvin College",
+    "website": "https://newfounding.com",
+    "books": [],
+    "initials": "NF"
+  },
+  {
+    "name": "O. Alan Noble",
+    "slug": "alan-noble",
+    "bio": "O. Alan Noble is an Associate Professor of English at Oklahoma Baptist University and co-founder and editor-in-chief of Christ and Pop Culture. He is the author of several books examining contemporary culture, technology, and what it means to be human in a distracted age.",
+    "affiliation": "Oklahoma Baptist University, Christ and Pop Culture",
+    "role": "Professor & Author",
+    "education": "PhD, Baylor University",
+    "website": "https://www.oalannoble.com",
+    "books": [
+      {
+        "title": "You Are Not Your Own",
+        "amazon_url": "https://www.amazon.com/s?k=You+Are+Not+Your+Own+Alan+Noble"
+      },
+      {
+        "title": "Disruptive Witness",
+        "amazon_url": "https://www.amazon.com/s?k=Disruptive+Witness+Alan+Noble"
+      },
+      {
+        "title": "On Getting Out of Bed",
+        "amazon_url": "https://www.amazon.com/s?k=On+Getting+Out+of+Bed+Alan+Noble"
+      }
+    ],
+    "initials": "OAN"
+  },
+  {
+    "name": "Phylicia Masonheimer",
+    "slug": "phylicia-masonheimer",
+    "bio": "Phylicia Masonheimer is a bestselling author, Bible teacher, and podcast host who equips Christians with theological depth and biblical thinking. Her work addresses topics ranging from womanhood and sexuality to grief and spiritual formation, and she is a contributor to Focus on the Family.",
+    "affiliation": "Independent, Focus on the Family",
+    "role": "Author & Bible Teacher",
+    "education": "BS in Religion, Liberty University",
+    "website": "https://phyliciamasonheimer.com",
+    "books": [
+      {
+        "title": "Every Woman a Theologian",
+        "amazon_url": "https://www.amazon.com/s?k=Every+Woman+a+Theologian+Phylicia+Masonheimer"
+      },
+      {
+        "title": "Stop Calling Me Beautiful",
+        "amazon_url": "https://www.amazon.com/s?k=Stop+Calling+Me+Beautiful+Phylicia+Masonheimer"
+      },
+      {
+        "title": "Every Home a Foundation",
+        "amazon_url": "https://www.amazon.com/s?k=Every+Home+a+Foundation+Phylicia+Masonheimer"
+      },
+      {
+        "title": "The Flirtation Experiment",
+        "amazon_url": "https://www.amazon.com/s?k=The+Flirtation+Experiment+Phylicia+Masonheimer"
+      }
+    ],
+    "initials": "PM"
+  },
+  {
+    "name": "R. Albert Mohler Jr.",
+    "slug": "r-albert-mohler-jr",
+    "bio": "R. Albert Mohler Jr. is the ninth president of The Southern Baptist Theological Seminary and one of the leading intellectuals of the evangelical movement in America. A prolific author and podcaster, he addresses Christian worldview issues and theological controversies facing the contemporary church.",
+    "affiliation": "Southern Baptist Theological Seminary",
+    "role": "Seminary President & Theologian",
+    "education": "PhD in Systematic & Historical Theology, Southern Baptist Theological Seminary",
+    "website": "https://albertmohler.com",
+    "books": [
+      {
+        "title": "The Conviction to Lead",
+        "amazon_url": "https://www.amazon.com/s?k=The+Conviction+to+Lead+Albert+Mohler"
+      },
+      {
+        "title": "The Apostles' Creed",
+        "amazon_url": "https://www.amazon.com/s?k=The+Apostles+Creed+Albert+Mohler"
+      },
+      {
+        "title": "The Gathering Storm",
+        "amazon_url": "https://www.amazon.com/s?k=The+Gathering+Storm+Albert+Mohler"
+      },
+      {
+        "title": "We Cannot Be Silent",
+        "amazon_url": "https://www.amazon.com/s?k=We+Cannot+Be+Silent+Albert+Mohler"
+      },
+      {
+        "title": "He Is Not Silent",
+        "amazon_url": "https://www.amazon.com/s?k=He+Is+Not+Silent+Albert+Mohler"
+      }
+    ],
+    "initials": "RAM"
+  },
+  {
+    "name": "Ryan Burge",
+    "slug": "ryan-burge",
+    "bio": "Ryan Burge is a political scientist and statistician at Washington University in St. Louis specializing in the study of religion's impact on American politics and society. His research on religious demographics and the rise of the religiously unaffiliated has shaped how evangelicals understand cultural change.",
+    "affiliation": "Washington University in St. Louis",
+    "role": "Political Scientist & Author",
+    "education": "PhD in Political Science, Southern Illinois University",
+    "website": "https://www.graphsaboutreligion.com",
+    "books": [
+      {
+        "title": "The Nones",
+        "amazon_url": "https://www.amazon.com/s?k=The+Nones+Ryan+Burge"
+      },
+      {
+        "title": "The Great Dechurching",
+        "amazon_url": "https://www.amazon.com/s?k=The+Great+Dechurching+Ryan+Burge"
+      },
+      {
+        "title": "20 Myths about Religion and Politics in America",
+        "amazon_url": "https://www.amazon.com/s?k=20+Myths+about+Religion+and+Politics+America+Ryan+Burge"
+      }
+    ],
+    "initials": "RB"
+  },
+  {
+    "name": "Scot McKnight",
+    "slug": "scot-mcknight",
+    "bio": "Scot McKnight is an acclaimed New Testament scholar and historian of early Christianity who has written over eighty books on the historical Jesus, Christian theology, and biblical interpretation. A leading voice in evangelical scholarship, his work has shaped conversations on scripture, the kingdom of God, and ecclesiology.",
+    "affiliation": "Houston Theological Seminary",
+    "role": "New Testament Scholar & Author",
+    "education": "PhD, University of Aberdeen",
+    "website": "https://scotmcknight.substack.com",
+    "books": [
+      {
+        "title": "The Jesus Creed",
+        "amazon_url": "https://www.amazon.com/s?k=The+Jesus+Creed+Scot+McKnight"
+      },
+      {
+        "title": "The King Jesus Gospel",
+        "amazon_url": "https://www.amazon.com/s?k=The+King+Jesus+Gospel+Scot+McKnight"
+      },
+      {
+        "title": "The Blue Parakeet",
+        "amazon_url": "https://www.amazon.com/s?k=The+Blue+Parakeet+Scot+McKnight"
+      },
+      {
+        "title": "A Church Called Tov",
+        "amazon_url": "https://www.amazon.com/s?k=A+Church+Called+Tov+Scot+McKnight"
+      },
+      {
+        "title": "Kingdom Conspiracy",
+        "amazon_url": "https://www.amazon.com/s?k=Kingdom+Conspiracy+Scot+McKnight"
+      }
+    ],
+    "initials": "SM"
+  },
+  {
+    "name": "Scott Hubbard",
+    "slug": "scott-hubbard",
+    "bio": "Scott Hubbard is a managing editor at Desiring God and pastor at All Peoples Church in Minneapolis. The author of over two hundred articles, he writes to deepen joy in God through Jesus, particularly for those navigating doubt and spiritual darkness.",
+    "affiliation": "Desiring God, All Peoples Church",
+    "role": "Editor & Pastor",
+    "education": "MDiv, Bethlehem College and Seminary",
+    "website": "https://www.desiringgod.org/authors/scott-hubbard",
+    "books": [],
+    "initials": "SH"
+  },
+  {
+    "name": "Sean McDowell",
+    "slug": "sean-mcdowell",
+    "bio": "Sean McDowell is an associate professor of apologetics at Talbot School of Theology at Biola University. An accomplished author and speaker, he equips the church and the next generation to defend the Christian faith with intellectual rigor and cultural relevance.",
+    "affiliation": "Biola University, Talbot School of Theology",
+    "role": "Professor of Apologetics & Author",
+    "education": "PhD in Apologetics and Worldview Studies",
+    "website": "https://seanmcdowell.org",
+    "books": [
+      {
+        "title": "Evidence that Demands a Verdict",
+        "amazon_url": "https://www.amazon.com/s?k=Evidence+that+Demands+a+Verdict+Sean+McDowell"
+      },
+      {
+        "title": "The Fate of the Apostles",
+        "amazon_url": "https://www.amazon.com/s?k=The+Fate+of+the+Apostles+Sean+McDowell"
+      },
+      {
+        "title": "A New Kind of Apologist",
+        "amazon_url": "https://www.amazon.com/s?k=A+New+Kind+of+Apologist+Sean+McDowell"
+      },
+      {
+        "title": "Think Biblically",
+        "amazon_url": "https://www.amazon.com/s?k=Think+Biblically+Sean+McDowell"
+      }
+    ],
+    "initials": "SM"
+  },
+  {
+    "name": "Timothy Paul Jones",
+    "slug": "timothy-paul-jones",
+    "bio": "Timothy Paul Jones is the C. Edwin Gheens Professor of Christian Family Ministry and Vice President for Doctoral Studies at The Southern Baptist Theological Seminary. An evangelical scholar of apologetics and family ministry, he has authored or co-authored over twenty books making complex theological topics accessible to general audiences.",
+    "affiliation": "Southern Baptist Theological Seminary",
+    "role": "Seminary Professor & Author",
+    "education": "PhD, Southern Baptist Theological Seminary",
+    "website": "https://www.timothypauljones.com",
+    "books": [
+      {
+        "title": "How We Got the Bible",
+        "amazon_url": "https://www.amazon.com/s?k=How+We+Got+the+Bible+Timothy+Paul+Jones"
+      },
+      {
+        "title": "Christian History Made Easy",
+        "amazon_url": "https://www.amazon.com/s?k=Christian+History+Made+Easy+Timothy+Paul+Jones"
+      },
+      {
+        "title": "The Da Vinci Codebreaker",
+        "amazon_url": "https://www.amazon.com/s?k=The+Da+Vinci+Codebreaker+Timothy+Paul+Jones"
+      },
+      {
+        "title": "Did the Resurrection Really Happen",
+        "amazon_url": "https://www.amazon.com/s?k=Did+the+Resurrection+Really+Happen+Timothy+Paul+Jones"
+      }
+    ],
+    "initials": "TPJ"
+  },
+  {
+    "name": "Cory Brock",
+    "slug": "cory-brock",
+    "bio": "Cory Brock is a pastor, author, and theologian known for helping Christians think deeply about their faith and culture. He serves as senior pastor and has written extensively on topics including Christian suffering, doubt, and biblical worldview. His work combines pastoral wisdom with scholarly insight to address the questions that matter most to believers.",
+    "affiliation": "Fireside Church; Desiring God",
+    "role": "Pastor & Author",
+    "education": "Ph.D., University of Aberdeen",
+    "website": "https://corybrock.com",
+    "books": [
+      {
+        "title": "The Surprising Offense of God's Love",
+        "amazon_url": "https://www.amazon.com/s?k=The+Surprising+Offense+of+God%27s+Love+Cory+Brock"
+      },
+      {
+        "title": "How to Suffer Well",
+        "amazon_url": "https://www.amazon.com/s?k=How+to+Suffer+Well+Cory+Brock"
+      },
+      {
+        "title": "Peculiar Crossings",
+        "amazon_url": "https://www.amazon.com/s?k=Peculiar+Crossings+Cory+Brock"
+      }
+    ],
+    "initials": "CB"
+  },
+  {
+    "name": "Alex Seeley",
+    "slug": "alex-seeley",
+    "bio": "Alex Seeley is a pastor and church planter known for his work in missional Christianity and leadership development. He has dedicated his ministry to equipping believers for authentic discipleship and kingdom-focused living.",
+    "affiliation": "",
+    "role": "Pastor & Church Planter",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AS"
+  },
+  {
+    "name": "Timothy Mallard",
+    "slug": "timothy-mallard",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TM"
+  },
+  {
+    "name": "Mark Sanders",
+    "slug": "mark-sanders",
+    "bio": "Mark Sanders is a writer whose work appears in evangelical publications curated by Christian Curator.",
+    "affiliation": "",
+    "role": "Author & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MS"
+  },
+  {
+    "name": "Michael McEwen",
+    "slug": "michael-mcewen",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MM"
+  },
+  {
+    "name": "Keegan Martin",
+    "slug": "keegan-martin",
+    "bio": "Keegan Martin is a writer whose work appears in evangelical publications curated by Christian Curator.",
+    "affiliation": "",
+    "role": "Author & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KM"
+  },
+  {
+    "name": "Rob Golding",
+    "slug": "rob-golding",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RG"
+  },
+  {
+    "name": "John Taylor",
+    "slug": "john-taylor",
+    "bio": "John Taylor is a respected voice in Christian thought and ministry. With a passion for biblical teaching and pastoral care, he has devoted his career to helping believers deepen their faith and understanding of Scripture.",
+    "affiliation": "",
+    "role": "Author & Christian Educator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JT"
+  },
+  {
+    "name": "Chris Sibben",
+    "slug": "chris-sibben",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CS"
+  },
+  {
+    "name": "Julie Smyth",
+    "slug": "julie-smyth",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JS"
+  },
+  {
+    "name": "Emily Brown",
+    "slug": "emily-brown",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EB"
+  },
+  {
+    "name": "Brandon Corley",
+    "slug": "brandon-corley",
+    "bio": "Brandon Corley is a Christian writer and content creator dedicated to exploring faith, discipleship, and spiritual growth. Through his work, he seeks to help believers deepen their understanding of Scripture and live out their faith with greater intentionality and authenticity.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BC"
+  },
+  {
+    "name": "Aaron Earls",
+    "slug": "aaron-earls",
+    "bio": "Aaron Earls is a writer and researcher who has contributed to conversations about faith, culture, and the American church. Known for his work analyzing religious trends and Christian engagement with contemporary issues, Earls has been a regular contributor to various Christian publications and research organizations.",
+    "affiliation": "Lifeway Research",
+    "role": "Writer & Researcher",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AE"
+  },
+  {
+    "name": "Dăng Tùng Bạch",
+    "slug": "dng-tng-bch",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DTB"
+  },
+  {
+    "name": "Rob Ventura",
+    "slug": "rob-ventura",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RV"
+  },
+  {
+    "name": "Lucy S. R. Austen",
+    "slug": "lucy-s-r-austen",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LSA"
+  },
+  {
+    "name": "Joe Carter",
+    "slug": "joe-carter",
+    "bio": "Joe Carter is an editor and writer known for his work in Christian commentary and cultural analysis. He has contributed extensively to evangelical publications, helping readers navigate faith, politics, and contemporary issues from a Christian worldview perspective.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Editor & Writer",
+    "education": "Master of Arts in Theology",
+    "website": "https://www.joecarter.me",
+    "books": [
+      {
+        "title": "How to Argue Like Jesus: Learning Persuasion from History's Greatest Communicator",
+        "amazon_url": "https://www.amazon.com/s?k=How+to+Argue+Like+Jesus+Joe+Carter"
+      },
+      {
+        "title": "The Unimaginable: What Our World Would Be Like Without Christianity",
+        "amazon_url": "https://www.amazon.com/s?k=The+Unimaginable+Joe+Carter"
+      }
+    ],
+    "initials": "JC"
+  },
+  {
+    "name": "Jcoleman",
+    "slug": "jcoleman",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JC"
+  },
+  {
+    "name": "Todd Rester",
+    "slug": "todd-rester",
+    "bio": "Todd Rester is a pastor and Christian communicator dedicated to helping believers grow in their faith and understanding of Scripture. Through his teaching and writing, he encourages Christians to apply biblical truth to their daily lives.",
+    "affiliation": "",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TR"
+  },
+  {
+    "name": "Jason Douglas",
+    "slug": "jason-douglas",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JD"
+  },
+  {
+    "name": "Katy Carl",
+    "slug": "katy-carl",
+    "bio": "Katy Carl is a Christian writer and content creator known for her thoughtful perspectives on faith, family, and living out biblical principles in everyday life. She engages audiences through writing that combines personal experience with scriptural insight.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KC"
+  },
+  {
+    "name": "Chris Osuh",
+    "slug": "chris-osuh-community-affairs-correspondent",
+    "bio": "Chris Osuh is a community affairs correspondent dedicated to covering stories that matter to faith communities and local neighborhoods. With a focus on social issues, faith-based initiatives, and community development, Osuh brings thoughtful journalism to important cultural conversations relevant to Christian audiences.",
+    "affiliation": "",
+    "role": "Community Affairs Correspondent",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CO"
+  },
+  {
+    "name": "Michael P. Jensen",
+    "slug": "michael-p-jensen",
+    "bio": "Michael P. Jensen is an Australian Anglican clergyman and theologian known for his thoughtful engagement with Reformed theology and contemporary Christianity. He has served in pastoral ministry while contributing to Christian discourse through writing and theological reflection.",
+    "affiliation": "Anglican Church in Australia",
+    "role": "Pastor & Theologian",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MPJ"
+  },
+  {
+    "name": "Reuben Bredenhof",
+    "slug": "reuben-bredenhof",
+    "bio": "Reuben Bredenhof is a Reformed pastor and writer known for his thoughtful commentary on Scripture and Christian living. He has contributed to various Christian publications and is recognized for his work in helping believers understand God's Word in practical and accessible ways.",
+    "affiliation": "Christian Courier",
+    "role": "Pastor & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RB"
+  },
+  {
+    "name": "Jillian Parks",
+    "slug": "jillian-parks",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JP"
+  },
+  {
+    "name": "Anat Peled",
+    "slug": "anat-peled",
+    "bio": "Anat Peled is a scholar and writer who brings expertise in biblical studies and Christian theology to contemporary discussions. Her work explores the intersection of Scripture, faith, and modern life with depth and accessibility for Christian audiences.",
+    "affiliation": "",
+    "role": "Author & Scholar",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AP"
+  },
+  {
+    "name": "Jordan Stone",
+    "slug": "jordan-stone",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JS"
+  },
+  {
+    "name": "PJ Dunn",
+    "slug": "pj-dunn",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PJD"
+  },
+  {
+    "name": "Jake Meador",
+    "slug": "jakemeadorgmailcom-jake-meador",
+    "bio": "Jake Meador is a writer and editor known for his work on faith, culture, and Christian living. He has contributed to various Christian publications and is recognized for his thoughtful engagement with contemporary issues from a Christian perspective.",
+    "affiliation": "Mere Orthodoxy",
+    "role": "Editor & Writer",
+    "education": "",
+    "website": "https://www.jakemeador.com",
+    "books": [],
+    "initials": "JM"
+  },
+  {
+    "name": "Joseph Rigney",
+    "slug": "joseph-rigney",
+    "bio": "Joseph Rigney is a writer and teacher known for exploring themes of Christian joy, spiritual formation, and biblical theology. He writes from a Reformed evangelical perspective and has contributed to various Christian publications and platforms. His work encourages readers to deepen their understanding of Scripture and grow in their faith.",
+    "affiliation": "Bethlehem College & Seminary",
+    "role": "Author & Teacher",
+    "education": "M.Div., Bethlehem College & Seminary",
+    "website": "https://www.josephrigney.com",
+    "books": [
+      {
+        "title": "The Things of Earth: Treasuring God by Enjoying His Gifts",
+        "amazon_url": "https://www.amazon.com/s?k=The+Things+of+Earth+Joseph+Rigney"
+      },
+      {
+        "title": "Live Like You're Loved: The Forgiveness You've Received Frees You to Love Others",
+        "amazon_url": "https://www.amazon.com/s?k=Live+Like+You+Are+Loved+Joseph+Rigney"
+      },
+      {
+        "title": "As It Is in Heaven: Worship, Imagination, and the Renewal of the Church",
+        "amazon_url": "https://www.amazon.com/s?k=As+It+Is+in+Heaven+Joseph+Rigney"
+      }
+    ],
+    "initials": "JR"
+  },
+  {
+    "name": "Mark Jones",
+    "slug": "mark-jones",
+    "bio": "Mark Jones is a Reformed theologian and pastor known for his thoughtful engagement with classical Christian theology and contemporary issues. His work emphasizes the centrality of Christ and the sufficiency of Scripture for the Christian life.",
+    "affiliation": "Gvancouverbaptist.org; Ligonier Ministries contributor",
+    "role": "Pastor & Theologian",
+    "education": "M.Phil, University of Pretoria",
+    "website": "https://markjonesministries.com",
+    "books": [
+      {
+        "title": "Knowing Christ",
+        "amazon_url": "https://www.amazon.com/s?k=Knowing+Christ+Mark+Jones"
+      },
+      {
+        "title": "Antinomianism: Reformed Theology's Unwelcome Guest?",
+        "amazon_url": "https://www.amazon.com/s?k=Antinomianism+Mark+Jones"
+      },
+      {
+        "title": "Radical Protestantism and Its Theological Influences",
+        "amazon_url": "https://www.amazon.com/s?k=Radical+Protestantism+Mark+Jones"
+      },
+      {
+        "title": "Picturing the Psalms",
+        "amazon_url": "https://www.amazon.com/s?k=Picturing+the+Psalms+Mark+Jones"
+      },
+      {
+        "title": "Christological Orthodoxy",
+        "amazon_url": "https://www.amazon.com/s?k=Christological+Orthodoxy+Mark+Jones"
+      }
+    ],
+    "initials": "MJ"
+  },
+  {
+    "name": "Simon P. Kennedy",
+    "slug": "simon-p-kennedy",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SPK"
+  },
+  {
+    "name": "Hayden Nesbit",
+    "slug": "hayden-nesbit",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "HN"
+  },
+  {
+    "name": "Clinton Manley",
+    "slug": "clinton-manley",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CM"
+  },
+  {
+    "name": "Gavin",
+    "slug": "gavin",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "G"
+  },
+  {
+    "name": "Ligonier Updates",
+    "slug": "ligonier-updates",
+    "bio": "Ligonier Updates is the official news and content platform of Ligonier Ministries, a leading evangelical Christian education organization dedicated to helping Christians know and apply the unchanging truth of God's Word. Through articles, teaching updates, and ministry news, Ligonier Updates keeps readers informed about resources, events, and insights from Ligonier's network of trusted teachers and theologians.",
+    "affiliation": "Ligonier Ministries",
+    "role": "Content Curation & Ministry Updates",
+    "education": "",
+    "website": "https://www.ligonier.org",
+    "books": [],
+    "initials": "LU"
+  },
+  {
+    "name": "FM AI",
+    "slug": "fm-ai",
+    "bio": "FM AI is an artificial intelligence assistant designed to help curate and discuss Christian content with thoughtfulness and clarity. While not human, FM AI engages with biblical concepts, theological discussions, and faith-based topics to support Christian readers and content creators.",
+    "affiliation": "",
+    "role": "AI Assistant & Content Curator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "FM"
+  },
+  {
+    "name": "Gabriel N.E. Fluhrer",
+    "slug": "gabriel-ne-fluhrer",
+    "bio": "Gabriel N.E. Fluhrer is a Christian writer and content creator dedicated to exploring faith, theology, and spiritual formation. His work engages thoughtfully with Scripture and contemporary Christian thought for modern believers seeking deeper understanding of their faith.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "GNF"
+  },
+  {
+    "name": "Mike Sabo",
+    "slug": "mike-sabo",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MS"
+  }
 ]
