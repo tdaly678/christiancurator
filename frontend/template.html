@@ -256,6 +256,43 @@
     }
     .cc-digest-cta a:hover { text-decoration: underline; }
 
+    /* ── WORLD NEWS ─────────────────────────────────────────────── */
+    .cc-world-news { margin-top: 1.75rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-world-news-section-header {
+      display: flex; align-items: baseline; justify-content: space-between;
+      border-bottom: 2px solid #1E3A6E; padding-bottom: 6px; margin-bottom: 1.25rem;
+    }
+    .cc-world-news-section-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #1E3A6E;
+    }
+    .cc-world-news-section-sub { font-size: 11px; color: #7a93b8; font-style: italic; }
+    .cc-world-news-card {
+      background: #f0f4fb; border: 1px solid #c5d4ea; border-radius: 6px;
+      padding: 1.1rem 1.4rem 1rem;
+    }
+    .cc-world-news-intro {
+      font-size: 11.5px; color: #5a7099; font-style: italic; margin-bottom: 0.9rem;
+    }
+    .cc-world-news-list { display: flex; flex-direction: column; }
+    .cc-world-news-item {
+      display: flex; gap: 0; padding: 0.6rem 0;
+      border-top: 1px solid #d6e2f0; align-items: flex-start;
+    }
+    .cc-world-news-item:first-child { border-top: none; padding-top: 0; }
+    .cc-world-news-num {
+      font-size: 11px; font-weight: 600; color: #7a93b8;
+      min-width: 26px; padding-top: 2px; font-variant-numeric: tabular-nums;
+    }
+    .cc-world-news-content { flex: 1; }
+    .cc-world-news-title {
+      font-family: 'Lora', Georgia, serif; font-size: 14px; font-weight: 500;
+      line-height: 1.35; color: #12284a; text-decoration: none; display: block; margin-bottom: 3px;
+    }
+    .cc-world-news-title:hover { text-decoration: underline; text-decoration-color: #1E3A6E; }
+    .cc-world-news-meta { font-size: 11px; color: #7a93b8; }
+    .cc-world-news-meta strong { color: #4a6a99; font-weight: 600; }
+
     /* ── TOPIC INDEX ─────────────────────────────────────────────── */
     .cc-topic-index { margin-top: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
     .cc-topic-index-grid {
@@ -471,6 +508,42 @@
     </div>
     <div class="cc-digest-cta">
       <a href="/digest/">View full digest with annotations &rarr;</a>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- ── WORLD NEWS ───────────────────────────────────────────────────── -->
+  {% set world_articles = articles | selectattr("source_type", "equalto", "world_news") | list %}
+  {% if world_articles %}
+  <div class="cc-world-news">
+    <div class="cc-world-news-section-header">
+      <div class="cc-world-news-section-label">World News &amp; Culture</div>
+      <div class="cc-world-news-section-sub">Stories worth watching</div>
+    </div>
+    <div class="cc-world-news-card">
+      <div class="cc-world-news-intro">From the broader world — filtered for what matters to Christians</div>
+      <div class="cc-world-news-list">
+        {% for article in world_articles[:3] %}
+        <div class="cc-world-news-item">
+          <div class="cc-world-news-num">{{ loop.index }}</div>
+          <div class="cc-world-news-content">
+            <a href="{{ article.url }}" class="cc-world-news-title" target="_blank" rel="noopener"
+               onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','position':'world_news'});">
+              {{ article.rewritten_title or article.title }}
+            </a>
+            <div class="cc-world-news-meta">
+              {%- set auth = article.author | default('') | trim -%}
+              {%- set src  = article.source_name | default('') | trim -%}
+              {%- if auth and auth | lower != src | lower -%}
+                <strong>{{ auth }}</strong> &middot; {{ src }}
+              {%- else -%}
+                {{ src }}
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
   {% endif %}
