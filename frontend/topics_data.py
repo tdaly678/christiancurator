@@ -709,6 +709,200 @@ TOPICS = [
             "isolation church", "community discipleship",
         ],
     },
+    # ── Topics added to reach 70 ──────────────────────────────────────────────
+
+    # Core Theology
+    {
+        "slug": "christology",
+        "name": "Christology",
+        "category": "Core Theology",
+        "hook": "Is Jesus fully God and fully human at the same time — and why does the answer matter for salvation, prayer, and everything else?",
+        "summary": "Evangelical theology of Jesus Christ — his divine and human natures, the hypostatic union, and what faithful Christology means for worship and salvation.",
+        "keywords": [
+            "christology", "jesus christ", "hypostatic union", "two natures",
+            "fully god fully human", "incarnation", "divine nature", "human nature",
+            "kenosis", "eternal son", "person of christ", "high christology",
+            "deity of christ", "humanity of christ",
+        ],
+    },
+    {
+        "slug": "covenant-theology",
+        "name": "Covenant Theology",
+        "category": "Core Theology",
+        "hook": "Is the Bible best read as one unified covenant story, or as a sequence of distinct dispensations — and what's at stake in getting this right?",
+        "summary": "Evangelical debate between covenant theology and dispensationalism over how the Old and New Testaments relate, and what the biblical covenants mean for the church today.",
+        "keywords": [
+            "covenant theology", "dispensationalism", "new covenant", "old covenant",
+            "covenant of grace", "covenant of works", "biblical theology",
+            "law and gospel", "continuity discontinuity", "kingdom of god",
+            "progressive covenantalism", "covenant", "testament",
+        ],
+    },
+
+    # Church Life
+    {
+        "slug": "small-groups",
+        "name": "Small Groups",
+        "category": "Church Life",
+        "hook": "Are small groups the engine of discipleship in the local church — or a poor substitute for the deep community Christians actually need?",
+        "summary": "How evangelical churches use small groups, life groups, and home groups for discipleship, community, and pastoral care — and whether they actually work.",
+        "keywords": [
+            "small groups", "life groups", "home groups", "community groups",
+            "cell groups", "small group ministry", "house church",
+            "missional community", "discipleship groups", "bible study group",
+            "small group leader", "small group curriculum",
+        ],
+    },
+    {
+        "slug": "pastoral-ministry",
+        "name": "The Pastor's Role",
+        "category": "Church Life",
+        "hook": "Is the pastor primarily a preacher, a shepherd, a CEO — and how does the answer shape the health of a church?",
+        "summary": "What the Bible teaches about pastoral ministry — shepherding, preaching, leadership, bivocational ministry, and the marks of a faithful pastor.",
+        "keywords": [
+            "pastor", "pastoral ministry", "shepherd", "bivocational",
+            "pastor burnout", "pastoral leadership", "elder pastor",
+            "what is a pastor", "senior pastor", "lead pastor",
+            "clergy", "ordained ministry", "pastoral calling", "pastor role",
+        ],
+    },
+    {
+        "slug": "church-governance",
+        "name": "Church Governance",
+        "category": "Church Life",
+        "hook": "Should churches be governed by elders, congregations, or bishops — and does polity really matter for church health?",
+        "summary": "Evangelical debate over elder rule, congregationalism, and episcopal governance — and what the New Testament teaches about how churches should be structured and led.",
+        "keywords": [
+            "church governance", "church polity", "elder rule", "congregationalism",
+            "episcopal", "elders", "deacons", "church structure", "plurality of elders",
+            "church officers", "baptist polity", "presbyterian polity",
+            "church constitution", "elder led church",
+        ],
+    },
+
+    # Spiritual Formation
+    {
+        "slug": "singleness",
+        "name": "Singleness",
+        "category": "Spiritual Formation",
+        "hook": "Is singleness a lesser life than marriage — or does the New Testament present it as an equally valid, even uniquely powerful, calling?",
+        "summary": "Evangelical perspectives on singleness as a calling, celibacy as a gift, and how the church should honor and support single Christians.",
+        "keywords": [
+            "singleness", "single christian", "celibacy", "gift of singleness",
+            "unmarried", "single in church", "sam allberry", "wesley hill",
+            "barry danylak", "singleness and community", "christian single life",
+            "loneliness and singleness", "single and satisfied",
+        ],
+    },
+    {
+        "slug": "biblical-literacy",
+        "name": "Biblical Literacy",
+        "category": "Spiritual Formation",
+        "hook": "Why do so many Christians read the Bible so little — and what would change if the church actually knew Scripture?",
+        "summary": "Evangelical concern about declining biblical knowledge, how Christians should read and engage Scripture, and what it looks like to recover genuine biblical literacy.",
+        "keywords": [
+            "biblical literacy", "bible reading", "scripture engagement", "read the bible",
+            "bible knowledge", "old testament", "hermeneutics", "bible reading plan",
+            "bible engagement", "word of god", "knowing scripture", "difficult passages",
+            "biblical illiteracy", "whole bible",
+        ],
+    },
+    {
+        "slug": "pornography",
+        "name": "Pornography & Sexual Purity",
+        "category": "Spiritual Formation",
+        "hook": "Is pornography primarily a spiritual problem, a neurological addiction, or both — and what does genuine freedom actually look like?",
+        "summary": "Evangelical approaches to pornography addiction, purity culture critique, accountability, and the path to sexual wholeness for men and women.",
+        "keywords": [
+            "pornography", "porn addiction", "sexual purity", "purity culture",
+            "lust", "sexual sin", "accountability software", "covenant eyes",
+            "sexual wholeness", "porn and marriage", "purity movement",
+            "sexual freedom", "masturbation", "sexual temptation",
+        ],
+    },
+    {
+        "slug": "death-and-dying",
+        "name": "Death & Dying",
+        "category": "Spiritual Formation",
+        "hook": "How should Christians prepare for death — and does the church have anything distinctive to offer a culture that avoids it?",
+        "summary": "Evangelical perspectives on dying well, end-of-life care, euthanasia, hospice, and how the hope of resurrection shapes the way Christians face death.",
+        "keywords": [
+            "death", "dying", "end of life", "dying well", "euthanasia",
+            "assisted suicide", "hospice", "palliative care", "christian death",
+            "resurrection hope", "mortality", "facing death", "good death",
+            "death and resurrection", "christian funeral",
+        ],
+    },
+
+    # Culture & Society
+    {
+        "slug": "christian-education",
+        "name": "Christian Education",
+        "category": "Culture & Society",
+        "hook": "Should Christian parents put their children in public schools, Christian schools, or homeschool them — and is there a biblical answer?",
+        "summary": "Evangelical debate over Christian schooling, classical education, homeschooling, and how families pass on faith through education.",
+        "keywords": [
+            "christian education", "homeschooling", "classical christian education",
+            "christian school", "classical school", "faith and education",
+            "charlotte mason", "classical conversations", "christian homeschool",
+            "education worldview", "faith formation education", "christian curriculum",
+            "school choice", "public school christian",
+        ],
+    },
+    {
+        "slug": "abortion",
+        "name": "Abortion & the Pro-Life Movement",
+        "category": "Culture & Society",
+        "hook": "What does the pro-life movement owe to women after Roe — and is the church doing enough?",
+        "summary": "Evangelical theology of life, the pro-life movement post-Dobbs, and what faithful Christian witness looks like on abortion in a post-Roe America.",
+        "keywords": [
+            "abortion", "pro-life", "roe v wade", "dobbs", "sanctity of life",
+            "unborn", "personhood", "pregnancy center", "pro-life movement",
+            "evangelical and abortion", "life begins at conception",
+            "post-dobbs", "abortion ban", "pro-choice",
+        ],
+    },
+    {
+        "slug": "addiction-and-recovery",
+        "name": "Addiction & Recovery",
+        "category": "Culture & Society",
+        "hook": "Is addiction a sin, a disease, or both — and what does the church offer that secular recovery programs cannot?",
+        "summary": "How evangelical Christians understand addiction, the role of faith in recovery, and what the church can offer those struggling with substances and compulsive behaviors.",
+        "keywords": [
+            "addiction", "recovery", "celebrate recovery", "substance abuse",
+            "alcoholism", "drug addiction", "faith and recovery", "christian recovery",
+            "addiction and sin", "addiction and disease", "sobriety",
+            "twelve steps", "freedom from addiction", "alcohol",
+        ],
+    },
+    {
+        "slug": "creation-care",
+        "name": "Creation Care",
+        "category": "Culture & Society",
+        "hook": "Is caring for the environment a Christian responsibility — or a distraction from the gospel?",
+        "summary": "Evangelical debate over environmental stewardship, climate change, and what it means to care for creation as image-bearers of God.",
+        "keywords": [
+            "creation care", "environment", "stewardship", "climate change",
+            "evangelical environmentalism", "A Rocha", "care of creation",
+            "environmental stewardship", "creation stewardship",
+            "biblical ecology", "green christianity", "climate and faith",
+        ],
+    },
+    {
+        "slug": "christian-masculinity",
+        "name": "Christian Masculinity",
+        "category": "Culture & Society",
+        "hook": "What does it actually mean to be a man in the church today — and is evangelical culture making men better or worse?",
+        "summary": "Evangelical conversation about biblical manhood, the crisis of male disengagement from church, fatherhood, and what healthy Christian masculinity looks like.",
+        "keywords": [
+            "christian masculinity", "biblical manhood", "men in church",
+            "male discipleship", "fatherhood", "men leaving church",
+            "john eldredge", "wild at heart", "crisis of masculinity",
+            "masculine christianity", "men and faith", "man up",
+            "christian men", "gender and men",
+        ],
+    },
+
     {
         "slug": "stewardship-and-generosity",
         "name": "Stewardship & Generosity",
