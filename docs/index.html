@@ -133,6 +133,9 @@
     .cc-section-meta { font-size: 11px; color: #aaa; }
     .cc-section-meta a { color: #2C4A2E; text-decoration: none; font-weight: 600; font-size: 11px; }
     .cc-section-meta a:hover { text-decoration: underline; }
+    .cc-author-link { color: inherit; font-weight: 600; text-decoration: none; }
+    .cc-author-link:hover { text-decoration: underline; color: #2C4A2E; }
+    .cc-pub-date { color: #aaa; }
 
     /* ── LEAD STORY ──────────────────────────────────────────────── */
     .cc-lead { margin-top: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
@@ -337,9 +340,75 @@
     .cc-footer-nav a { font-size: 11px; color: #888; text-decoration: none; font-weight: 600; }
     .cc-footer-nav a:hover { color: #2C4A2E; }
 
+    /* ── CATEGORY TAG ────────────────────────────────────────────── */
+    .cc-cat-tag {
+      font-size: 9.5px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #2C4A2E;
+    }
+    .cc-lead-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      border-top: 1px solid #f0ede8; padding-top: 10px; margin-top: 6px;
+    }
+
+    /* ── THEME GROUPS ────────────────────────────────────────────── */
+    .cc-theme-group { margin-top: 2rem; }
+    .cc-theme-group--last { padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-theme-divider {
+      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;
+    }
+    .cc-theme-divider-label {
+      font-size: 9.5px; font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #888; white-space: nowrap;
+    }
+    .cc-theme-divider-line { flex: 1; height: 1px; background: #e0ddd8; }
+    .cc-theme-divider-explore {
+      font-size: 11px; font-weight: 600; color: #2C4A2E;
+      text-decoration: none; white-space: nowrap;
+    }
+    .cc-theme-divider-explore:hover { text-decoration: underline; }
+
+    /* ── ARTICLE CARD GRID ───────────────────────────────────────── */
+    .cc-card-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 0; border-top: 1px solid #e0ddd8;
+    }
+    .cc-card-grid.two-col { grid-template-columns: repeat(2, 1fr); }
+    .cc-article-card {
+      padding: 1rem 1.25rem 1rem 0;
+      border-bottom: 1px solid #f0ede8;
+      display: flex; flex-direction: column; justify-content: space-between;
+      min-height: 100px;
+    }
+    .cc-article-card + .cc-article-card {
+      padding-left: 1.25rem; border-left: 1px solid #f0ede8;
+    }
+    .cc-card-grid:not(.two-col) .cc-article-card:nth-child(3n+1) {
+      border-left: none; padding-left: 0;
+    }
+    .cc-card-grid.two-col .cc-article-card:nth-child(2n+1) {
+      border-left: none; padding-left: 0;
+    }
+    .cc-article-card-title {
+      font-family: 'Lora', Georgia, serif; font-size: 16px; font-weight: 500;
+      line-height: 1.3; color: #1a1a1a; text-decoration: none; display: block;
+      margin-bottom: 6px; flex: 1;
+    }
+    .cc-article-card-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-article-card-footer {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      margin-top: 8px;
+    }
+    .cc-article-card-meta { font-size: 11px; color: #aaa; line-height: 1.4; }
+    .cc-article-card-meta strong { color: #777; font-weight: 600; }
+    .cc-article-card-cat {
+      font-size: 8.5px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #2C4A2E; white-space: nowrap; margin-left: 8px;
+    }
+
     @media (max-width: 660px) {
       .cc-site-name { font-size: 32px; }
       .cc-lead-title { font-size: 26px; }
+      .cc-card-grid, .cc-card-grid.two-col { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -381,47 +450,44 @@
       </div>
     </div>
 
-    <div class="cc-lead-cat">Culture & Society</div>
-    <a href="/topics/christian-ethics/" class="cc-lead-title"
-       onclick="gtag('event','topic_click',{'topic':'christian-ethics','position':'lead'});">
-      Christian Ethics
+    
+    
+    <a href="https://theaquilareport.com/easter-unbelievably-good-news/" class="cc-lead-title" target="_blank" rel="noopener"
+       onclick="gtag('event','article_click',{'article_title':'The Resurrection: Christs Victory and Our Eternal Hope','article_source':'The Aquila Report','position':'lead'});">
+      The Resurrection: Christ's Victory and Our Eternal Hope
     </a>
-    <p class="cc-lead-hook">How Christians navigate bioethics, sexuality, LGBTQ+ questions, and moral issues Scripture doesn't directly address.</p>
+    <div class="cc-lead-article-meta" style="margin-bottom:1rem; font-size:13px; color:#777;"><strong>Richard Baxter</strong>&middot; The Aquila Report &middot; <span class="cc-pub-date">Apr 3</span></div>
+    
 
     <div class="cc-lead-body">
       <div>
         
-        <div class="cc-lead-articles-label">What&rsquo;s being written about this</div>
+        <div class="cc-lead-articles-label">Also on this topic</div>
         
         <div class="cc-lead-article">
-          <a href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/response-bart-ehrman/" class="cc-lead-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Michael Kruger Responds to Bart Ehrman on Christian Ethics','article_source':'The Gospel Coalition','position':'lead'});">
-            Michael Kruger Responds to Bart Ehrman on Christian Ethics
+          <a href="https://www.thegospelcoalition.org/article/resurrection-evidence-tells-story/" class="cc-lead-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'The Resurrection: How Historical Evidence Shaped Early Christian Belief','article_source':'The Gospel Coalition','position':'lead'});">
+            The Resurrection: How Historical Evidence Shaped Early Christian Belief
           </a>
-          <div class="cc-lead-article-meta"><strong>Sarah Eekhoff Zylstra, Michael J. Kruger</strong> &middot; The Gospel Coalition &middot; Apr 10</div>
+          <div class="cc-lead-article-meta"><strong>Kyle Tucker</strong>&middot; The Gospel Coalition &middot; <span class="cc-pub-date">Apr 1</span></div>
         </div>
         
         <div class="cc-lead-article">
-          <a href="https://research.lifeway.com/2026/04/08/lgbtq-identification-flat-overall-still-growing-among-gen-z/" class="cc-lead-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'LGBTQ+ Identification Remains Stable Among Adults, Rising in Gen Z','article_source':'Lifeway Research','position':'lead'});">
-            LGBTQ+ Identification Remains Stable Among Adults, Rising in Gen Z
+          <a href="https://seanmcdowell.org/blog/hell-in-the-bible-eternal-torment-or-annihilation" class="cc-lead-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Eternal Punishment or Annihilation: What Does Scripture Teach About Hell?','article_source':'Sean McDowell','position':'lead'});">
+            Eternal Punishment or Annihilation: What Does Scripture Teach About Hell?
           </a>
-          <div class="cc-lead-article-meta"><strong>Aaron Earls</strong> &middot; Lifeway Research &middot; Apr 8</div>
-        </div>
-        
-        <div class="cc-lead-article">
-          <a href="https://seanmcdowell.org/blog/bart-ehrman-and-sean-mcdowell-discuss-the-moral-argument-guilt-and-the-teachings-of-jesus" class="cc-lead-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Jesuss Teachings and Western Morality: Objective Truth or Cultural Change?','article_source':'Sean McDowell','position':'lead'});">
-            Jesus's Teachings and Western Morality: Objective Truth or Cultural Change?
-          </a>
-          <div class="cc-lead-article-meta">Sean McDowell &middot; Mar 27</div>
+          <div class="cc-lead-article-meta">Sean McDowell &middot; <span class="cc-pub-date">Mar 6</span></div>
         </div>
         
         
-        <a href="/topics/christian-ethics/" class="cc-lead-explore"
-           onclick="gtag('event','topic_click',{'topic':'christian-ethics','position':'lead_cta'});">
-          Explore this topic in depth &rarr;
-        </a>
+        <div class="cc-lead-footer">
+          <span class="cc-cat-tag">Heaven, Hell & Eternity</span>
+          <a href="/topics/heaven-hell-eternity/" class="cc-lead-explore"
+             onclick="gtag('event','topic_click',{'topic':'heaven-hell-eternity','position':'lead_cta'});">
+            More on this topic &rarr;
+          </a>
+        </div>
       </div>
 
       <!-- Sidebar CTA -->
@@ -429,83 +495,111 @@
         
         
         <div class="cc-lead-cta-label">Also in focus today</div>
-        <div class="cc-lead-cta-title">Heaven, Hell & Eternity</div>
-        <div class="cc-lead-cta-summary">Evangelical views on the afterlife, eternal punishment, annihilationism, and the hope of new creation.</div>
+        <div class="cc-lead-cta-title">The Future of Evangelicalism</div>
+        <div class="cc-lead-cta-summary">The state of the evangelical movement — its divisions, decline, identity, and what comes next.</div>
         
         <a href="/digest/" class="cc-lead-cta-link">Read today&rsquo;s full digest &rarr;</a>
       </div>
     </div>
   </div>
 
-  <!-- ── SECONDARY TOPICS ──────────────────────────────────────────── -->
+  <!-- ── THEME GROUPS ──────────────────────────────────────────────── -->
   
-  <div class="cc-secondary">
-    <div class="cc-secondary-grid">
+  
+  <div class="cc-theme-group">
+    <div class="cc-theme-divider">
+      <span class="cc-theme-divider-label">Culture & Society</span>
+      <div class="cc-theme-divider-line"></div>
+      <a href="/topics/evangelicalism/" class="cc-theme-divider-explore"
+         onclick="gtag('event','topic_click',{'topic':'evangelicalism','position':'theme_group'});">Explore all &rarr;</a>
+    </div>
+    
+    <div class="cc-card-grid">
       
-      <div class="cc-secondary-card">
-        <div class="cc-secondary-cat">Core Theology</div>
-        <div class="cc-secondary-name">
-          <a href="/topics/heaven-hell-eternity/"
-             onclick="gtag('event','topic_click',{'topic':'heaven-hell-eternity','position':'secondary'});">
-            Heaven, Hell & Eternity
-          </a>
+      <div class="cc-article-card">
+        <a href="https://mereorthodoxy.com/why-evangelical-gender-discourse-is-unserious" class="cc-article-card-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Evangelical Debates on Gender Need Serious Engagement, Not Gatekeeping','article_source':'Mere Orthodoxy','position':'theme_group'});">
+          Evangelical Debates on Gender Need Serious Engagement, Not Gatekeeping
+        </a>
+        <div class="cc-article-card-footer">
+          <div class="cc-article-card-meta"><strong>Jamie Carlson</strong>&middot; Mere Orthodoxy &middot; <span class="cc-pub-date">Mar 31</span></div>
+          <span class="cc-article-card-cat">The Future of Evangelicalism</span>
         </div>
-        <p class="cc-secondary-hook">Evangelical views on the afterlife, eternal punishment, annihilationism, and the hope of new creation.</p>
-        
-        
-        <div class="cc-secondary-article">
-          <a href="http://feeds.ligonier.org/~/917207162/0/ligonierministriesblog" class="cc-secondary-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Finding Spiritual Growth Through Grief and Mourning','article_source':'Ligonier Ministries','position':'secondary'});">
-            Finding Spiritual Growth Through Grief and Mourning
-          </a>
-          <div class="cc-secondary-article-meta"><strong>Jordan Stone</strong> &middot; Ligonier Ministries</div>
-        </div>
-        
-        <div class="cc-secondary-article">
-          <a href="https://seanmcdowell.org/blog/hell-q-a-theology-professors-respond" class="cc-secondary-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Theology Professors Address Common Questions About Hell','article_source':'Sean McDowell','position':'secondary'});">
-            Theology Professors Address Common Questions About Hell
-          </a>
-          <div class="cc-secondary-article-meta">Sean McDowell</div>
-        </div>
-        
-        
-        <a href="/topics/heaven-hell-eternity/" class="cc-secondary-explore">Explore this topic &rarr;</a>
       </div>
       
-      <div class="cc-secondary-card">
-        <div class="cc-secondary-cat">Culture & Society</div>
-        <div class="cc-secondary-name">
-          <a href="/topics/technology-and-discipleship/"
-             onclick="gtag('event','topic_click',{'topic':'technology-and-discipleship','position':'secondary'});">
-            Technology & Discipleship
-          </a>
+      <div class="cc-article-card">
+        <a href="https://www.christianitytoday.com/2026/04/the-evangelical-roots-of-north-koreas-kim-family/" class="cc-article-card-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'North Koreas Nuclear Ambitions and the Plight of Its Christians','article_source':'Christianity Today','position':'theme_group'});">
+          North Korea's Nuclear Ambitions and the Plight of Its Christians
+        </a>
+        <div class="cc-article-card-footer">
+          <div class="cc-article-card-meta"><a href="/voices/clarissa-moll/" class="cc-author-link"><strong>Clarissa Moll</strong></a>&middot; Christianity Today &middot; <span class="cc-pub-date">Apr 2</span></div>
+          <span class="cc-article-card-cat">The Future of Evangelicalism</span>
         </div>
-        <p class="cc-secondary-hook">How AI and digital tools are reshaping discipleship, ministry, and evangelical thinking about what it means to be human.</p>
-        
-        
-        <div class="cc-secondary-article">
-          <a href="https://www.christianitytoday.com/2026/04/to-write-well-is-human-ai-writing-editing-church/" class="cc-secondary-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Publisher Withdraws Novel Over Suspected AI Authorship Concerns','article_source':'Christianity Today','position':'secondary'});">
-            Publisher Withdraws Novel Over Suspected AI Authorship Concerns
-          </a>
-          <div class="cc-secondary-article-meta"><strong>Bonnie Kristian</strong> &middot; Christianity Today</div>
+      </div>
+      
+      <div class="cc-article-card">
+        <a href="https://danielkwilliams.substack.com/p/the-one-generation-that-politicized" class="cc-article-card-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'How One Generation Shifted Evangelicalism Toward Politics','article_source':'Daniel K. Williams','position':'theme_group'});">
+          How One Generation Shifted Evangelicalism Toward Politics
+        </a>
+        <div class="cc-article-card-footer">
+          <div class="cc-article-card-meta">Daniel K. Williams &middot; <span class="cc-pub-date">Mar 24</span></div>
+          <span class="cc-article-card-cat">The Future of Evangelicalism</span>
         </div>
-        
-        <div class="cc-secondary-article">
-          <a href="https://mereorthodoxy.com/a-hollow-crown-ai-and-the-formation-of-students" class="cc-secondary-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'AIs Role in Shaping Student Character and Values Today','article_source':'Mere Orthodoxy','position':'secondary'});">
-            AI's Role in Shaping Student Character and Values Today
-          </a>
-          <div class="cc-secondary-article-meta"><strong>Chris Sibben</strong> &middot; Mere Orthodoxy</div>
-        </div>
-        
-        
-        <a href="/topics/technology-and-discipleship/" class="cc-secondary-explore">Explore this topic &rarr;</a>
       </div>
       
     </div>
+    
   </div>
+  
+  <div class="cc-theme-group cc-theme-group--last">
+    <div class="cc-theme-divider">
+      <span class="cc-theme-divider-label">Spiritual Formation</span>
+      <div class="cc-theme-divider-line"></div>
+      <a href="/topics/prayer/" class="cc-theme-divider-explore"
+         onclick="gtag('event','topic_click',{'topic':'prayer','position':'theme_group'});">Explore all &rarr;</a>
+    </div>
+    
+    <div class="cc-card-grid">
+      
+      <div class="cc-article-card">
+        <a href="https://danielkwilliams.substack.com/p/a-reformed-christian-critique-of" class="cc-article-card-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Reformed Christian Analysis of Defense Secretarys Imprecatory Prayer Language','article_source':'Daniel K. Williams','position':'theme_group'});">
+          Reformed Christian Analysis of Defense Secretary's Imprecatory Prayer Language
+        </a>
+        <div class="cc-article-card-footer">
+          <div class="cc-article-card-meta">Daniel K. Williams &middot; <span class="cc-pub-date">Apr 1</span></div>
+          <span class="cc-article-card-cat">Prayer</span>
+        </div>
+      </div>
+      
+      <div class="cc-article-card">
+        <a href="https://feed.desiringgod.org/link/22977/17296404/what-will-war-bring-to-iran" class="cc-article-card-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'How Christians Can Pray During Irans Crisis','article_source':'Desiring God','position':'theme_group'});">
+          How Christians Can Pray During Iran's Crisis
+        </a>
+        <div class="cc-article-card-footer">
+          <div class="cc-article-card-meta"><a href="/voices/david-mathis/" class="cc-author-link"><strong>David Mathis</strong></a>&middot; Desiring God &middot; <span class="cc-pub-date">Mar 5</span></div>
+          <span class="cc-article-card-cat">Prayer</span>
+        </div>
+      </div>
+      
+      <div class="cc-article-card">
+        <a href="https://matthewleeanderson.substack.com/p/746-the-paradox-of-the-sixth-petition" class="cc-article-card-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Understanding Jesus Teaching on Giving and Prayer','article_source':'Matthew Lee Anderson','position':'theme_group'});">
+          Understanding Jesus' Teaching on Giving and Prayer
+        </a>
+        <div class="cc-article-card-footer">
+          <div class="cc-article-card-meta">Matthew Lee Anderson &middot; <span class="cc-pub-date">Mar 18</span></div>
+          <span class="cc-article-card-cat">Prayer</span>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
   
   
 
@@ -522,110 +616,110 @@
       <div class="cc-headline-item">
         <div class="cc-headline-num">1</div>
         <div class="cc-headline-content">
-          <a href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/response-bart-ehrman/" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Michael Kruger Responds to Bart Ehrman on Christian Ethics','article_source':'The Gospel Coalition','position':'headlines'});">
-            Michael Kruger Responds to Bart Ehrman on Christian Ethics
+          <a href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/jesus-betrayed-crucified/" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Gods Love Revealed Through Christs Sacrifice on the Cross','article_source':'The Gospel Coalition','position':'headlines'});">
+            God's Love Revealed Through Christ's Sacrifice on the Cross
           </a>
-          <div class="cc-headline-meta"><strong>Sarah Eekhoff Zylstra, Michael J. Kruger</strong> &middot; The Gospel Coalition</div>
+          <div class="cc-headline-meta"><a href="/voices/j-gary-millar/" class="cc-author-link"><strong>J. Gary Millar</strong></a>&middot; The Gospel Coalition</div>
         </div>
       </div>
       
       <div class="cc-headline-item">
         <div class="cc-headline-num">2</div>
         <div class="cc-headline-content">
-          <a href="http://feeds.ligonier.org/~/944612738/0/ligonierministriesblog" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Understanding Gods Purpose in Christs Sacrifice','article_source':'Ligonier Ministries','position':'headlines'});">
-            Understanding God's Purpose in Christ's Sacrifice
+          <a href="https://feed.desiringgod.org/link/22977/17312221/the-agony-of-sin-and-love" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Marveling at Christs Love: Why Imitation Pauses at the Cross','article_source':'Desiring God','position':'headlines'});">
+            Marveling at Christ's Love: Why Imitation Pauses at the Cross
           </a>
-          <div class="cc-headline-meta"><strong>Cory Brock</strong> &middot; Ligonier Ministries</div>
+          <div class="cc-headline-meta"><a href="/voices/david-mathis/" class="cc-author-link"><strong>David Mathis</strong></a>&middot; Desiring God</div>
         </div>
       </div>
       
       <div class="cc-headline-item">
         <div class="cc-headline-num">3</div>
         <div class="cc-headline-content">
-          <a href="https://www.christianitytoday.com/2026/04/when-parents-pay-for-a-childs-violence/" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Amish Schoolhouse Shooting: When Parents Bear the Burden','article_source':'Christianity Today','position':'headlines'});">
-            Amish Schoolhouse Shooting: When Parents Bear the Burden
+          <a href="https://firstthings.com/the-politics-of-judas/" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Judass Betrayal: Political and Spiritual Dimensions at Easter','article_source':'First Things','position':'headlines'});">
+            Judas's Betrayal: Political and Spiritual Dimensions at Easter
           </a>
-          <div class="cc-headline-meta"><strong>Clarissa Moll</strong> &middot; Christianity Today</div>
+          <div class="cc-headline-meta"><a href="/voices/german-saucedo/" class="cc-author-link"><strong>German Saucedo</strong></a>&middot; First Things</div>
         </div>
       </div>
       
       <div class="cc-headline-item">
         <div class="cc-headline-num">4</div>
         <div class="cc-headline-content">
-          <a href="https://relevantmagazine.com/faith/alex-seeley-on-what-to-remember-when-youre-angry-at-god/" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Finding Faith When You Feel Abandoned by God','article_source':'Relevant Magazine','position':'headlines'});">
-            Finding Faith When You Feel Abandoned by God
+          <a href="https://relevantmagazine.com/faith/church/what-is-maundy-thursday/" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Maundy Thursday: The Intimate Meal Before Christs Passion','article_source':'Relevant Magazine','position':'headlines'});">
+            Maundy Thursday: The Intimate Meal Before Christ's Passion
           </a>
-          <div class="cc-headline-meta"><strong>Alex Seeley</strong> &middot; Relevant Magazine</div>
+          <div class="cc-headline-meta"><strong>John Taylor</strong>&middot; Relevant Magazine</div>
         </div>
       </div>
       
       <div class="cc-headline-item">
         <div class="cc-headline-num">5</div>
         <div class="cc-headline-content">
-          <a href="https://feed.desiringgod.org/link/22977/17316399/the-voice-of-a-great-awakening" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Voices God Uses to Awaken Souls: Learning From Whitefield','article_source':'Desiring God','position':'headlines'});">
-            Voices God Uses to Awaken Souls: Learning From Whitefield
+          <a href="https://theaquilareport.com/a-most-spectacular-misidentification/" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Why Jesus Wasnt Recognized After the Resurrection','article_source':'The Aquila Report','position':'headlines'});">
+            Why Jesus Wasn't Recognized After the Resurrection
           </a>
-          <div class="cc-headline-meta"><strong>Greg Morse</strong> &middot; Desiring God</div>
+          <div class="cc-headline-meta"><a href="/voices/campbell-markham/" class="cc-author-link"><strong>Campbell Markham</strong></a>&middot; The Aquila Report</div>
         </div>
       </div>
       
       <div class="cc-headline-item">
         <div class="cc-headline-num">6</div>
         <div class="cc-headline-content">
-          <a href="https://www.thegospelcoalition.org/article/chaplains-professionals-shepherds-souls/" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Military Chaplains: How the Army Abandoned Spiritual Care for Soldiers','article_source':'The Gospel Coalition','position':'headlines'});">
-            Military Chaplains: How the Army Abandoned Spiritual Care for Soldiers
+          <a href="https://firstthings.com/against-god-alone/" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Why We Need Others in Our Faith, Not God Alone','article_source':'First Things','position':'headlines'});">
+            Why We Need Others in Our Faith, Not God Alone
           </a>
-          <div class="cc-headline-meta"><strong>Timothy Mallard</strong> &middot; The Gospel Coalition</div>
+          <div class="cc-headline-meta"><strong>Jillian Parks</strong>&middot; First Things</div>
         </div>
       </div>
       
       <div class="cc-headline-item">
         <div class="cc-headline-num">7</div>
         <div class="cc-headline-content">
-          <a href="https://firstthings.com/not-so-evil-empire/" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Reformed Thinkers Debate Role of Civil Government in Protecting Christianity','article_source':'First Things','position':'headlines'});">
-            Reformed Thinkers Debate Role of Civil Government in Protecting Christianity
+          <a href="https://www.christianitytoday.com/2026/04/easter-jesus-not-zombie-ghost-story/" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Easter Proclaims Christs Resurrection, Not Merely a Supernatural Return','article_source':'Christianity Today','position':'headlines'});">
+            Easter Proclaims Christ's Resurrection, Not Merely a Supernatural Return
           </a>
-          <div class="cc-headline-meta"><strong>German Saucedo</strong> &middot; First Things</div>
+          <div class="cc-headline-meta"><strong>Elise Brandon</strong>&middot; Christianity Today</div>
         </div>
       </div>
       
       <div class="cc-headline-item">
         <div class="cc-headline-num">8</div>
         <div class="cc-headline-content">
-          <a href="https://theaquilareport.com/polygamy-in-the-bible-is-it-allowed/" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'God Used Flawed Leaders Through Polygamy to Advance His Plan','article_source':'The Aquila Report','position':'headlines'});">
-            God Used Flawed Leaders Through Polygamy to Advance His Plan
+          <a href="https://mereorthodoxy.com/aquinas-ai-and-the-pursuit-of-learning" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Thomas Aquinas and the Value of Teaching Children to Research Well','article_source':'Mere Orthodoxy','position':'headlines'});">
+            Thomas Aquinas and the Value of Teaching Children to Research Well
           </a>
-          <div class="cc-headline-meta"><strong>Mark Sanders</strong> &middot; The Aquila Report</div>
+          <div class="cc-headline-meta"><strong>Alex Stevens</strong>&middot; Mere Orthodoxy</div>
         </div>
       </div>
       
       <div class="cc-headline-item">
         <div class="cc-headline-num">9</div>
         <div class="cc-headline-content">
-          <a href="https://www.christianitytoday.com/2026/04/to-write-well-is-human-ai-writing-editing-church/" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Publisher Withdraws Novel Over Suspected AI Authorship Concerns','article_source':'Christianity Today','position':'headlines'});">
-            Publisher Withdraws Novel Over Suspected AI Authorship Concerns
+          <a href="https://wng.org/podcasts/speech-and-consequence-1775145932" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Speaking Truth: Navigating Faith, Freedom, and Responsibility','article_source':'World Magazine','position':'headlines'});">
+            Speaking Truth: Navigating Faith, Freedom, and Responsibility
           </a>
-          <div class="cc-headline-meta"><strong>Bonnie Kristian</strong> &middot; Christianity Today</div>
+          <div class="cc-headline-meta"><strong>Keegan Martin</strong>&middot; World Magazine</div>
         </div>
       </div>
       
       <div class="cc-headline-item">
         <div class="cc-headline-num">10</div>
         <div class="cc-headline-content">
-          <a href="https://www.thegospelcoalition.org/reviews/make-home-luminous-dark/" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'James K. A. Smith on Mystical Faith: Promise and Underdeveloped Potential','article_source':'The Gospel Coalition','position':'headlines'});">
-            James K. A. Smith on Mystical Faith: Promise and Underdeveloped Potential
+          <a href="https://danielkwilliams.substack.com/p/a-reformed-christian-critique-of" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Reformed Christian Analysis of Defense Secretarys Imprecatory Prayer Language','article_source':'Daniel K. Williams','position':'headlines'});">
+            Reformed Christian Analysis of Defense Secretary's Imprecatory Prayer Language
           </a>
-          <div class="cc-headline-meta"><strong>Michael McEwen</strong> &middot; The Gospel Coalition</div>
+          <div class="cc-headline-meta">Daniel K. Williams</div>
         </div>
       </div>
       
@@ -666,7 +760,7 @@
                onclick="gtag('event','article_click',{'article_title':'Cuba Releases 2,000 Prisoners as Holy Week Humanitarian Gesture','article_source':'The New York Times','position':'world_news'});">
               Cuba Releases 2,000 Prisoners as Holy Week Humanitarian Gesture
             </a>
-            <div class="cc-world-news-meta"><strong>Francesca Regalado and David C. Adams</strong> &middot; The New York Times</div>
+            <div class="cc-world-news-meta"><strong>Francesca Regalado and David C. Adams</strong>&middot; The New York Times</div>
           </div>
         </div>
         
@@ -1077,13 +1171,7 @@
       
       <a href="/archive/2026-04-09/" class="cc-archive-link">April 9, 2026</a>
       
-      <a href="/archive/2026-04-08/" class="cc-archive-link">April 8, 2026</a>
-      
-      <a href="/archive/2026-04-07/" class="cc-archive-link">April 7, 2026</a>
-      
       <a href="/archive/2026-04-06/" class="cc-archive-link">April 6, 2026</a>
-      
-      <a href="/archive/2026-04-05/" class="cc-archive-link">April 5, 2026</a>
       
       <a href="/archive/2026-04-04/" class="cc-archive-link">April 4, 2026</a>
       
