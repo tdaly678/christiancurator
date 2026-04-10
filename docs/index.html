@@ -137,98 +137,95 @@
     .cc-author-link:hover { text-decoration: underline; color: #2C4A2E; }
     .cc-pub-date { color: #aaa; }
 
-    /* ── LEAD STORY ──────────────────────────────────────────────── */
-    .cc-lead { margin-top: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
-    .cc-lead-cat {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-      color: #2C4A2E; margin-bottom: 0.55rem;
-    }
-    .cc-lead-title {
-      font-family: 'Lora', Georgia, serif; font-size: 34px; font-weight: 600;
-      line-height: 1.15; color: #1a1a1a; margin-bottom: 0.65rem;
-      text-decoration: none; display: block;
-    }
-    .cc-lead-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-lead-hook {
-      font-family: 'Lora', Georgia, serif; font-size: 15.5px; color: #444;
-      font-style: italic; line-height: 1.65; margin-bottom: 1.25rem; max-width: 700px;
-    }
-    .cc-lead-body {
-      display: grid; grid-template-columns: 1fr 250px; gap: 2rem; align-items: start;
-    }
-    @media (max-width: 700px) { .cc-lead-body { grid-template-columns: 1fr; } }
-    .cc-lead-articles-label {
-      font-size: 9.5px; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: #aaa; margin-bottom: 10px;
-    }
-    .cc-lead-article { padding: 9px 0; border-top: 1px solid #e0ddd8; }
-    .cc-lead-article:first-child { border-top: none; padding-top: 0; }
-    .cc-lead-article-title {
-      font-family: 'Lora', Georgia, serif; font-size: 14px; font-weight: 500;
-      color: #1a1a1a; text-decoration: none; line-height: 1.35; display: block; margin-bottom: 3px;
-    }
-    .cc-lead-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-lead-article-meta { font-size: 11px; color: #aaa; }
-    .cc-lead-article-meta strong { color: #777; font-weight: 600; }
-    .cc-lead-explore {
-      display: inline-block; margin-top: 14px; font-size: 13px; font-weight: 600;
-      color: #2C4A2E; text-decoration: none;
-    }
-    .cc-lead-explore:hover { text-decoration: underline; }
-    .cc-lead-cta-box {
-      background: #f0f4f0; border: 1px solid #b5ccb8; border-radius: 5px;
-      padding: 1.25rem; display: flex; flex-direction: column; gap: 10px;
-    }
-    .cc-lead-cta-label {
-      font-size: 9.5px; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: #2C4A2E;
-    }
-    .cc-lead-cta-title {
-      font-family: 'Lora', Georgia, serif; font-size: 15px; font-weight: 600;
-      color: #1a1a1a; line-height: 1.3;
-    }
-    .cc-lead-cta-summary {
-      font-size: 12.5px; color: #555; line-height: 1.6;
-      border-left: 2px solid #2C4A2E; padding-left: 10px; font-style: italic;
-    }
-    .cc-lead-cta-link {
-      font-size: 12.5px; font-weight: 600; color: #2C4A2E;
-      text-decoration: none; padding-top: 8px; border-top: 1px solid #c8d9c9; display: block;
-    }
-    .cc-lead-cta-link:hover { text-decoration: underline; }
+    /* ── NEWSPAPER FRONT PAGE ────────────────────────────────────── */
+    .cc-front { margin-top: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
 
-    /* ── SECONDARY TOPICS ────────────────────────────────────────── */
-    .cc-secondary { margin-top: 1.75rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
-    .cc-secondary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-    @media (max-width: 620px) { .cc-secondary-grid { grid-template-columns: 1fr; } }
-    .cc-secondary-card { border-left: 3px solid #2C4A2E; padding-left: 1rem; }
-    .cc-secondary-cat {
-      font-size: 9.5px; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: #2C4A2E; margin-bottom: 5px;
+    /* Row 1: large feature + 2 stacked mediums */
+    .cc-front-row1 {
+      display: grid; grid-template-columns: 3fr 2fr; gap: 0;
+      padding-bottom: 1.5rem; border-bottom: 1px solid #e0ddd8;
     }
-    .cc-secondary-name {
-      font-family: 'Lora', Georgia, serif; font-size: 20px; font-weight: 600;
-      line-height: 1.2; margin-bottom: 8px;
+    @media (max-width: 660px) { .cc-front-row1 { grid-template-columns: 1fr; } }
+
+    .cc-card-large {
+      padding: 1.25rem 2rem 0 0;
+      border-right: 1px solid #e0ddd8;
+      display: flex; flex-direction: column;
     }
-    .cc-secondary-name a { color: #1a1a1a; text-decoration: none; }
-    .cc-secondary-name a:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-secondary-hook {
-      font-size: 13px; color: #555; line-height: 1.6; font-style: italic; margin-bottom: 10px;
+    @media (max-width: 660px) {
+      .cc-card-large { border-right: none; padding-right: 0; padding-bottom: 1.25rem; border-bottom: 1px solid #e0ddd8; }
     }
-    .cc-secondary-article { padding: 6px 0; border-top: 1px solid #f0ede8; }
-    .cc-secondary-article:first-child { border-top: none; padding-top: 0; }
-    .cc-secondary-article-title {
-      font-size: 12.5px; font-family: 'Lora', Georgia, serif; color: #1a1a1a;
-      text-decoration: none; line-height: 1.35; display: block; margin-bottom: 2px;
+    .cc-card-large-title {
+      font-family: 'Lora', Georgia, serif; font-size: 29px; font-weight: 600;
+      line-height: 1.15; color: #1a1a1a; text-decoration: none; display: block;
+      margin-bottom: 0.7rem;
     }
-    .cc-secondary-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-secondary-article-meta { font-size: 11px; color: #aaa; }
-    .cc-secondary-article-meta strong { color: #777; font-weight: 600; }
-    .cc-secondary-explore {
-      display: inline-block; margin-top: 10px; font-size: 12px;
-      font-weight: 600; color: #2C4A2E; text-decoration: none;
+    .cc-card-large-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-card-large-preview {
+      font-size: 14px; color: #555; line-height: 1.65; margin-bottom: 1rem; flex: 1;
     }
-    .cc-secondary-explore:hover { text-decoration: underline; }
+    .cc-card-large-meta { font-size: 11.5px; color: #888; margin-bottom: 0.75rem; }
+    .cc-card-large-meta strong { color: #555; font-weight: 600; }
+    .cc-card-large-cta {
+      font-size: 12px; font-weight: 600; color: #2C4A2E; text-decoration: none;
+      border-top: 1px solid #e0ddd8; padding-top: 10px; display: inline-block; margin-top: auto;
+    }
+    .cc-card-large-cta:hover { text-decoration: underline; }
+
+    /* Medium cards (stacked right column) */
+    .cc-front-mediums { display: flex; flex-direction: column; }
+    .cc-card-medium {
+      padding: 1.25rem 0 1.25rem 1.75rem;
+      flex: 1; display: flex; flex-direction: column;
+      border-bottom: 1px solid #e0ddd8;
+    }
+    .cc-card-medium:last-child { border-bottom: none; }
+    @media (max-width: 660px) { .cc-card-medium { padding-left: 0; } }
+    .cc-card-medium-title {
+      font-family: 'Lora', Georgia, serif; font-size: 19px; font-weight: 600;
+      line-height: 1.2; color: #1a1a1a; text-decoration: none; display: block;
+      margin-bottom: 0.5rem;
+    }
+    .cc-card-medium-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-card-medium-preview {
+      font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 0.6rem; flex: 1;
+    }
+    .cc-card-medium-meta { font-size: 11px; color: #aaa; margin-bottom: 0.4rem; }
+    .cc-card-medium-meta strong { color: #777; font-weight: 600; }
+    .cc-card-medium-cta {
+      font-size: 11.5px; font-weight: 600; color: #2C4A2E; text-decoration: none; margin-top: auto;
+    }
+    .cc-card-medium-cta:hover { text-decoration: underline; }
+
+    /* Row 2: small cards */
+    .cc-front-row2 {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; padding-top: 1.25rem;
+    }
+    @media (max-width: 660px) { .cc-front-row2 { grid-template-columns: 1fr 1fr; gap: 1rem 0; } }
+    @media (max-width: 400px) { .cc-front-row2 { grid-template-columns: 1fr; } }
+    .cc-card-small {
+      padding: 0 1.25rem 0 0; border-right: 1px solid #e0ddd8;
+      display: flex; flex-direction: column;
+    }
+    .cc-card-small:last-child { border-right: none; padding-right: 0; }
+    .cc-card-small + .cc-card-small { padding-left: 1.25rem; }
+    @media (max-width: 660px) {
+      .cc-card-small:nth-child(even) { border-right: none; padding-right: 0; }
+      .cc-card-small:nth-child(odd) { padding-left: 0; }
+      .cc-card-small:nth-child(even) { padding-left: 1.25rem; }
+    }
+    .cc-card-small-title {
+      font-family: 'Lora', Georgia, serif; font-size: 15px; font-weight: 500;
+      line-height: 1.3; color: #1a1a1a; text-decoration: none; display: block;
+      margin-bottom: 0.4rem;
+    }
+    .cc-card-small-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-card-small-meta { font-size: 11px; color: #aaa; margin-bottom: 0.35rem; }
+    .cc-card-small-meta strong { color: #777; font-weight: 600; }
+    .cc-card-small-cta {
+      font-size: 11px; font-weight: 600; color: #2C4A2E; text-decoration: none; margin-top: auto;
+    }
+    .cc-card-small-cta:hover { text-decoration: underline; }
 
     /* ── TODAY'S HEADLINES ───────────────────────────────────────── */
     .cc-headlines { margin-top: 1.75rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
@@ -340,68 +337,6 @@
     .cc-footer-nav a { font-size: 11px; color: #888; text-decoration: none; font-weight: 600; }
     .cc-footer-nav a:hover { color: #2C4A2E; }
 
-    /* ── CATEGORY TAG ────────────────────────────────────────────── */
-    .cc-cat-tag {
-      font-size: 9.5px; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: #2C4A2E;
-    }
-    .cc-lead-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      border-top: 1px solid #f0ede8; padding-top: 10px; margin-top: 6px;
-    }
-
-    /* ── THEME GROUPS ────────────────────────────────────────────── */
-    .cc-theme-group { margin-top: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid #e0ddd8; }
-    .cc-theme-divider {
-      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
-    }
-    .cc-theme-divider-label {
-      font-size: 9.5px; font-weight: 600; letter-spacing: 0.16em;
-      text-transform: uppercase; color: #888; white-space: nowrap;
-    }
-    .cc-theme-divider-line { flex: 1; height: 1px; background: #e0ddd8; }
-    .cc-theme-divider-explore {
-      font-size: 11px; font-weight: 600; color: #2C4A2E;
-      text-decoration: none; white-space: nowrap;
-    }
-    .cc-theme-divider-explore:hover { text-decoration: underline; }
-
-    /* ── ARTICLE CARD GRID ───────────────────────────────────────── */
-    .cc-card-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 0;
-    }
-    .cc-card-grid.two-col { grid-template-columns: repeat(2, 1fr); }
-    .cc-article-card {
-      padding: 1rem 1.25rem 0 0;
-      display: flex; flex-direction: column; justify-content: space-between;
-      min-height: 100px;
-    }
-    .cc-article-card + .cc-article-card {
-      padding-left: 1.25rem; border-left: 1px solid #f0ede8;
-    }
-    .cc-card-grid:not(.two-col) .cc-article-card:nth-child(3n+1) {
-      border-left: none; padding-left: 0;
-    }
-    .cc-card-grid.two-col .cc-article-card:nth-child(2n+1) {
-      border-left: none; padding-left: 0;
-    }
-    .cc-article-card-title {
-      font-family: 'Lora', Georgia, serif; font-size: 16px; font-weight: 500;
-      line-height: 1.3; color: #1a1a1a; text-decoration: none; display: block;
-      margin-bottom: 6px; flex: 1;
-    }
-    .cc-article-card-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-article-card-footer {
-      display: flex; align-items: flex-end; justify-content: space-between;
-      margin-top: 8px;
-    }
-    .cc-article-card-meta { font-size: 11px; color: #aaa; line-height: 1.4; }
-    .cc-article-card-meta strong { color: #777; font-weight: 600; }
-    .cc-article-card-cat {
-      font-size: 8.5px; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: #2C4A2E; white-space: nowrap; margin-left: 8px;
-    }
 
     @media (max-width: 660px) {
       .cc-site-name { font-size: 32px; }
@@ -436,11 +371,54 @@
     </nav>
   </div>
 
+  <!-- ── NEWSPAPER FRONT PAGE ─────────────────────────────────────── -->
   
+  
+  
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+  
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+  
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
   
 
-  <!-- ── LEAD STORY ───────────────────────────────────────────────── -->
-  <div class="cc-lead">
+  <div class="cc-front">
     <div style="margin-top:1.75rem;">
       <div class="cc-section-header">
         <div class="cc-section-label">In the conversation today</div>
@@ -449,283 +427,484 @@
     </div>
 
     
-    
-    <a href="https://theaquilareport.com/easter-unbelievably-good-news/" class="cc-lead-title" target="_blank" rel="noopener"
-       onclick="gtag('event','article_click',{'article_title':'The Resurrection: Christs Victory and Our Eternal Hope','article_source':'The Aquila Report','position':'lead'});">
-      The Resurrection: Christ's Victory and Our Eternal Hope
-    </a>
-    <div class="cc-lead-article-meta" style="margin-bottom:1rem; font-size:13px; color:#777;"><strong>Richard Baxter</strong>&middot; The Aquila Report &middot; <span class="cc-pub-date">Apr 3</span></div>
-    
+    <!-- Row 1: large + 2 stacked mediums -->
+    <div class="cc-front-row1">
+      
+      <div class="cc-card-large">
+        <a href="https://theaquilareport.com/easter-unbelievably-good-news/" class="cc-card-large-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'The Resurrection: Christs Victory and Our Eternal Hope','article_source':'The Aquila Report','position':'front_large'});">
+          The Resurrection: Christ's Victory and Our Eternal Hope
+        </a>
+        
+        
+        <div class="cc-card-large-meta"><strong>Richard Baxter</strong>&middot; The Aquila Report &middot; <span class="cc-pub-date">Apr 3</span></div>
+        <a href="/topics/heaven-hell-eternity/" class="cc-card-large-cta"
+           onclick="gtag('event','topic_click',{'topic':'heaven-hell-eternity','position':'front_large'});">
+          More on Heaven, Hell & Eternity &rarr;
+        </a>
+      </div>
 
-    <div class="cc-lead-body">
-      <div>
+      <div class="cc-front-mediums">
         
-        <div class="cc-lead-articles-label">Also on this topic</div>
-        
-        <div class="cc-lead-article">
-          <a href="https://www.thegospelcoalition.org/article/resurrection-evidence-tells-story/" class="cc-lead-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'The Resurrection: How Historical Evidence Shaped Early Christian Belief','article_source':'The Gospel Coalition','position':'lead'});">
+        <div class="cc-card-medium">
+          <a href="https://www.thegospelcoalition.org/article/resurrection-evidence-tells-story/" class="cc-card-medium-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'The Resurrection: How Historical Evidence Shaped Early Christian Belief','article_source':'The Gospel Coalition','position':'front_medium'});">
             The Resurrection: How Historical Evidence Shaped Early Christian Belief
           </a>
-          <div class="cc-lead-article-meta"><strong>Kyle Tucker</strong>&middot; The Gospel Coalition &middot; <span class="cc-pub-date">Apr 1</span></div>
+          
+          
+          <div class="cc-card-medium-meta"><strong>Kyle Tucker</strong>&middot; The Gospel Coalition</div>
+          <a href="/topics/heaven-hell-eternity/" class="cc-card-medium-cta"
+             onclick="gtag('event','topic_click',{'topic':'heaven-hell-eternity','position':'front_medium'});">
+            More on Heaven, Hell & Eternity &rarr;
+          </a>
         </div>
         
-        <div class="cc-lead-article">
-          <a href="https://seanmcdowell.org/blog/hell-in-the-bible-eternal-torment-or-annihilation" class="cc-lead-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Eternal Punishment or Annihilation: What Does Scripture Teach About Hell?','article_source':'Sean McDowell','position':'lead'});">
+        <div class="cc-card-medium">
+          <a href="https://seanmcdowell.org/blog/hell-in-the-bible-eternal-torment-or-annihilation" class="cc-card-medium-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Eternal Punishment or Annihilation: What Does Scripture Teach About Hell?','article_source':'Sean McDowell','position':'front_medium'});">
             Eternal Punishment or Annihilation: What Does Scripture Teach About Hell?
           </a>
-          <div class="cc-lead-article-meta">Sean McDowell &middot; <span class="cc-pub-date">Mar 6</span></div>
-        </div>
-        
-        
-        <div class="cc-lead-footer">
-          <span class="cc-cat-tag">Heaven, Hell & Eternity</span>
-          <a href="/topics/heaven-hell-eternity/" class="cc-lead-explore"
-             onclick="gtag('event','topic_click',{'topic':'heaven-hell-eternity','position':'lead_cta'});">
-            More on this topic &rarr;
+          
+          
+          <div class="cc-card-medium-meta">Sean McDowell</div>
+          <a href="/topics/heaven-hell-eternity/" class="cc-card-medium-cta"
+             onclick="gtag('event','topic_click',{'topic':'heaven-hell-eternity','position':'front_medium'});">
+            More on Heaven, Hell & Eternity &rarr;
           </a>
         </div>
-      </div>
-
-      <!-- Sidebar CTA -->
-      <div class="cc-lead-cta-box">
         
-        
-        <div class="cc-lead-cta-label">Also in focus today</div>
-        <div class="cc-lead-cta-title">The Future of Evangelicalism</div>
-        <div class="cc-lead-cta-summary">The state of the evangelical movement — its divisions, decline, identity, and what comes next.</div>
-        
-        <a href="/digest/" class="cc-lead-cta-link">Read today&rsquo;s full digest &rarr;</a>
       </div>
     </div>
-  </div>
 
-  <!-- ── THEME GROUPS ──────────────────────────────────────────────── -->
-  
-  
-  <div class="cc-theme-group">
-    <div class="cc-theme-divider">
-      <span class="cc-theme-divider-label">The Future of Evangelicalism</span>
-      <div class="cc-theme-divider-line"></div>
-      <a href="/topics/evangelicalism/" class="cc-theme-divider-explore"
-         onclick="gtag('event','topic_click',{'topic':'evangelicalism','position':'theme_group'});">Explore all &rarr;</a>
-    </div>
+    <!-- Row 2: small cards -->
     
-    <div class="cc-card-grid">
+    <div class="cc-front-row2">
       
-      <div class="cc-article-card">
-        <a href="https://mereorthodoxy.com/why-evangelical-gender-discourse-is-unserious" class="cc-article-card-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Evangelical Debates on Gender Need Serious Engagement, Not Gatekeeping','article_source':'Mere Orthodoxy','position':'theme_group'});">
+      <div class="cc-card-small">
+        <a href="https://mereorthodoxy.com/why-evangelical-gender-discourse-is-unserious" class="cc-card-small-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Evangelical Debates on Gender Need Serious Engagement, Not Gatekeeping','article_source':'Mere Orthodoxy','position':'front_small'});">
           Evangelical Debates on Gender Need Serious Engagement, Not Gatekeeping
         </a>
-        <div class="cc-article-card-footer">
-          <div class="cc-article-card-meta"><strong>Jamie Carlson</strong>&middot; Mere Orthodoxy &middot; <span class="cc-pub-date">Mar 31</span></div>
-          <span class="cc-article-card-cat">The Future of Evangelicalism</span>
-        </div>
+        <div class="cc-card-small-meta"><strong>Jamie Carlson</strong>&middot; Mere Orthodoxy</div>
+        <a href="/topics/evangelicalism/" class="cc-card-small-cta"
+           onclick="gtag('event','topic_click',{'topic':'evangelicalism','position':'front_small'});">
+          More on The Future of Evangelicalism &rarr;
+        </a>
       </div>
       
-      <div class="cc-article-card">
-        <a href="https://www.christianitytoday.com/2026/04/the-evangelical-roots-of-north-koreas-kim-family/" class="cc-article-card-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'North Koreas Nuclear Ambitions and the Plight of Its Christians','article_source':'Christianity Today','position':'theme_group'});">
+      <div class="cc-card-small">
+        <a href="https://www.christianitytoday.com/2026/04/the-evangelical-roots-of-north-koreas-kim-family/" class="cc-card-small-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'North Koreas Nuclear Ambitions and the Plight of Its Christians','article_source':'Christianity Today','position':'front_small'});">
           North Korea's Nuclear Ambitions and the Plight of Its Christians
         </a>
-        <div class="cc-article-card-footer">
-          <div class="cc-article-card-meta"><a href="/voices/clarissa-moll/" class="cc-author-link"><strong>Clarissa Moll</strong></a>&middot; Christianity Today &middot; <span class="cc-pub-date">Apr 2</span></div>
-          <span class="cc-article-card-cat">The Future of Evangelicalism</span>
-        </div>
+        <div class="cc-card-small-meta"><a href="/voices/clarissa-moll/" class="cc-author-link"><strong>Clarissa Moll</strong></a>&middot; Christianity Today</div>
+        <a href="/topics/evangelicalism/" class="cc-card-small-cta"
+           onclick="gtag('event','topic_click',{'topic':'evangelicalism','position':'front_small'});">
+          More on The Future of Evangelicalism &rarr;
+        </a>
       </div>
       
-      <div class="cc-article-card">
-        <a href="https://danielkwilliams.substack.com/p/the-one-generation-that-politicized" class="cc-article-card-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'How One Generation Shifted Evangelicalism Toward Politics','article_source':'Daniel K. Williams','position':'theme_group'});">
+      <div class="cc-card-small">
+        <a href="https://danielkwilliams.substack.com/p/the-one-generation-that-politicized" class="cc-card-small-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'How One Generation Shifted Evangelicalism Toward Politics','article_source':'Daniel K. Williams','position':'front_small'});">
           How One Generation Shifted Evangelicalism Toward Politics
         </a>
-        <div class="cc-article-card-footer">
-          <div class="cc-article-card-meta">Daniel K. Williams &middot; <span class="cc-pub-date">Mar 24</span></div>
-          <span class="cc-article-card-cat">The Future of Evangelicalism</span>
-        </div>
+        <div class="cc-card-small-meta">Daniel K. Williams</div>
+        <a href="/topics/evangelicalism/" class="cc-card-small-cta"
+           onclick="gtag('event','topic_click',{'topic':'evangelicalism','position':'front_small'});">
+          More on The Future of Evangelicalism &rarr;
+        </a>
       </div>
       
-    </div>
-    
-  </div>
-  
-  <div class="cc-theme-group">
-    <div class="cc-theme-divider">
-      <span class="cc-theme-divider-label">Prayer</span>
-      <div class="cc-theme-divider-line"></div>
-      <a href="/topics/prayer/" class="cc-theme-divider-explore"
-         onclick="gtag('event','topic_click',{'topic':'prayer','position':'theme_group'});">Explore all &rarr;</a>
-    </div>
-    
-    <div class="cc-card-grid">
-      
-      <div class="cc-article-card">
-        <a href="https://danielkwilliams.substack.com/p/a-reformed-christian-critique-of" class="cc-article-card-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Reformed Christian Analysis of Defense Secretarys Imprecatory Prayer Language','article_source':'Daniel K. Williams','position':'theme_group'});">
+      <div class="cc-card-small">
+        <a href="https://danielkwilliams.substack.com/p/a-reformed-christian-critique-of" class="cc-card-small-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Reformed Christian Analysis of Defense Secretarys Imprecatory Prayer Language','article_source':'Daniel K. Williams','position':'front_small'});">
           Reformed Christian Analysis of Defense Secretary's Imprecatory Prayer Language
         </a>
-        <div class="cc-article-card-footer">
-          <div class="cc-article-card-meta">Daniel K. Williams &middot; <span class="cc-pub-date">Apr 1</span></div>
-          <span class="cc-article-card-cat">Prayer</span>
-        </div>
-      </div>
-      
-      <div class="cc-article-card">
-        <a href="https://feed.desiringgod.org/link/22977/17296404/what-will-war-bring-to-iran" class="cc-article-card-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'How Christians Can Pray During Irans Crisis','article_source':'Desiring God','position':'theme_group'});">
-          How Christians Can Pray During Iran's Crisis
+        <div class="cc-card-small-meta">Daniel K. Williams</div>
+        <a href="/topics/prayer/" class="cc-card-small-cta"
+           onclick="gtag('event','topic_click',{'topic':'prayer','position':'front_small'});">
+          More on Prayer &rarr;
         </a>
-        <div class="cc-article-card-footer">
-          <div class="cc-article-card-meta"><a href="/voices/david-mathis/" class="cc-author-link"><strong>David Mathis</strong></a>&middot; Desiring God &middot; <span class="cc-pub-date">Mar 5</span></div>
-          <span class="cc-article-card-cat">Prayer</span>
-        </div>
-      </div>
-      
-      <div class="cc-article-card">
-        <a href="https://matthewleeanderson.substack.com/p/746-the-paradox-of-the-sixth-petition" class="cc-article-card-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Understanding Jesus Teaching on Giving and Prayer','article_source':'Matthew Lee Anderson','position':'theme_group'});">
-          Understanding Jesus' Teaching on Giving and Prayer
-        </a>
-        <div class="cc-article-card-footer">
-          <div class="cc-article-card-meta">Matthew Lee Anderson &middot; <span class="cc-pub-date">Mar 18</span></div>
-          <span class="cc-article-card-cat">Prayer</span>
-        </div>
       </div>
       
     </div>
     
+    
   </div>
-  
-  
   
 
-  <!-- ── TODAY'S CURATED HEADLINES ─────────────────────────────────── -->
+  <!-- ── MORE FROM TODAY ───────────────────────────────────────────── -->
   
   
-  <div class="cc-headlines">
-    <div class="cc-section-header">
-      <div class="cc-section-label">Today&rsquo;s curated headlines</div>
-      <div class="cc-section-meta">10 articles</div>
-    </div>
-    <div class="cc-headline-list">
+    
       
-      <div class="cc-headline-item">
-        <div class="cc-headline-num">1</div>
-        <div class="cc-headline-content">
-          <a href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/jesus-betrayed-crucified/" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Gods Love Revealed Through Christs Sacrifice on the Cross','article_source':'The Gospel Coalition','position':'headlines'});">
-            God's Love Revealed Through Christ's Sacrifice on the Cross
-          </a>
-          <div class="cc-headline-meta"><a href="/voices/j-gary-millar/" class="cc-author-link"><strong>J. Gary Millar</strong></a>&middot; The Gospel Coalition</div>
-        </div>
-      </div>
+        
       
-      <div class="cc-headline-item">
-        <div class="cc-headline-num">2</div>
-        <div class="cc-headline-content">
-          <a href="https://feed.desiringgod.org/link/22977/17312221/the-agony-of-sin-and-love" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Marveling at Christs Love: Why Imitation Pauses at the Cross','article_source':'Desiring God','position':'headlines'});">
-            Marveling at Christ's Love: Why Imitation Pauses at the Cross
-          </a>
-          <div class="cc-headline-meta"><a href="/voices/david-mathis/" class="cc-author-link"><strong>David Mathis</strong></a>&middot; Desiring God</div>
-        </div>
-      </div>
+        
       
-      <div class="cc-headline-item">
-        <div class="cc-headline-num">3</div>
-        <div class="cc-headline-content">
-          <a href="https://firstthings.com/the-politics-of-judas/" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Judass Betrayal: Political and Spiritual Dimensions at Easter','article_source':'First Things','position':'headlines'});">
-            Judas's Betrayal: Political and Spiritual Dimensions at Easter
-          </a>
-          <div class="cc-headline-meta"><a href="/voices/german-saucedo/" class="cc-author-link"><strong>German Saucedo</strong></a>&middot; First Things</div>
-        </div>
-      </div>
+        
       
-      <div class="cc-headline-item">
-        <div class="cc-headline-num">4</div>
-        <div class="cc-headline-content">
-          <a href="https://relevantmagazine.com/faith/church/what-is-maundy-thursday/" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Maundy Thursday: The Intimate Meal Before Christs Passion','article_source':'Relevant Magazine','position':'headlines'});">
-            Maundy Thursday: The Intimate Meal Before Christ's Passion
-          </a>
-          <div class="cc-headline-meta"><strong>John Taylor</strong>&middot; Relevant Magazine</div>
-        </div>
-      </div>
+    
       
-      <div class="cc-headline-item">
-        <div class="cc-headline-num">5</div>
-        <div class="cc-headline-content">
-          <a href="https://theaquilareport.com/a-most-spectacular-misidentification/" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Why Jesus Wasnt Recognized After the Resurrection','article_source':'The Aquila Report','position':'headlines'});">
-            Why Jesus Wasn't Recognized After the Resurrection
-          </a>
-          <div class="cc-headline-meta"><a href="/voices/campbell-markham/" class="cc-author-link"><strong>Campbell Markham</strong></a>&middot; The Aquila Report</div>
-        </div>
-      </div>
+        
       
-      <div class="cc-headline-item">
-        <div class="cc-headline-num">6</div>
-        <div class="cc-headline-content">
-          <a href="https://firstthings.com/against-god-alone/" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Why We Need Others in Our Faith, Not God Alone','article_source':'First Things','position':'headlines'});">
-            Why We Need Others in Our Faith, Not God Alone
-          </a>
-          <div class="cc-headline-meta"><strong>Jillian Parks</strong>&middot; First Things</div>
-        </div>
-      </div>
+        
       
-      <div class="cc-headline-item">
-        <div class="cc-headline-num">7</div>
-        <div class="cc-headline-content">
-          <a href="https://www.christianitytoday.com/2026/04/easter-jesus-not-zombie-ghost-story/" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Easter Proclaims Christs Resurrection, Not Merely a Supernatural Return','article_source':'Christianity Today','position':'headlines'});">
-            Easter Proclaims Christ's Resurrection, Not Merely a Supernatural Return
-          </a>
-          <div class="cc-headline-meta"><strong>Elise Brandon</strong>&middot; Christianity Today</div>
-        </div>
-      </div>
+        
       
-      <div class="cc-headline-item">
-        <div class="cc-headline-num">8</div>
-        <div class="cc-headline-content">
-          <a href="https://mereorthodoxy.com/aquinas-ai-and-the-pursuit-of-learning" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Thomas Aquinas and the Value of Teaching Children to Research Well','article_source':'Mere Orthodoxy','position':'headlines'});">
-            Thomas Aquinas and the Value of Teaching Children to Research Well
-          </a>
-          <div class="cc-headline-meta"><strong>Alex Stevens</strong>&middot; Mere Orthodoxy</div>
-        </div>
-      </div>
+    
       
-      <div class="cc-headline-item">
-        <div class="cc-headline-num">9</div>
-        <div class="cc-headline-content">
-          <a href="https://wng.org/podcasts/speech-and-consequence-1775145932" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Speaking Truth: Navigating Faith, Freedom, and Responsibility','article_source':'World Magazine','position':'headlines'});">
-            Speaking Truth: Navigating Faith, Freedom, and Responsibility
-          </a>
-          <div class="cc-headline-meta"><strong>Keegan Martin</strong>&middot; World Magazine</div>
-        </div>
-      </div>
+        
       
-      <div class="cc-headline-item">
-        <div class="cc-headline-num">10</div>
-        <div class="cc-headline-content">
-          <a href="https://danielkwilliams.substack.com/p/a-reformed-christian-critique-of" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Reformed Christian Analysis of Defense Secretarys Imprecatory Prayer Language','article_source':'Daniel K. Williams','position':'headlines'});">
-            Reformed Christian Analysis of Defense Secretary's Imprecatory Prayer Language
-          </a>
-          <div class="cc-headline-meta">Daniel K. Williams</div>
-        </div>
-      </div>
+        
       
-    </div>
-    <div class="cc-digest-cta">
-      <a href="/digest/">View full digest with annotations &rarr;</a>
-    </div>
-  </div>
+        
+      
+    
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
   
 
   <!-- ── WORLD NEWS ───────────────────────────────────────────────────── -->

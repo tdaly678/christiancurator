@@ -113,8 +113,16 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
     from curator.topic_classifier import classify_articles, compute_featured_topics
     from frontend.topics_data import TOPICS, TOPICS_BY_CATEGORY, CATEGORIES
 
+    def strip_html(value):
+        """Strip HTML tags and collapse whitespace for use in templates."""
+        if not value:
+            return ""
+        clean = re.sub(r'<[^>]+>', '', str(value))
+        return re.sub(r'\s+', ' ', clean).strip()
+
     env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
     env.tests['contains'] = lambda value, item: item in (value or [])
+    env.filters['strip_html'] = strip_html
     template = env.get_template("template.html")
 
     # Build simplified pairings for the template

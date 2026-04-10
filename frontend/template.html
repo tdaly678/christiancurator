@@ -137,98 +137,95 @@
     .cc-author-link:hover { text-decoration: underline; color: #2C4A2E; }
     .cc-pub-date { color: #aaa; }
 
-    /* ── LEAD STORY ──────────────────────────────────────────────── */
-    .cc-lead { margin-top: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
-    .cc-lead-cat {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-      color: #2C4A2E; margin-bottom: 0.55rem;
-    }
-    .cc-lead-title {
-      font-family: 'Lora', Georgia, serif; font-size: 34px; font-weight: 600;
-      line-height: 1.15; color: #1a1a1a; margin-bottom: 0.65rem;
-      text-decoration: none; display: block;
-    }
-    .cc-lead-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-lead-hook {
-      font-family: 'Lora', Georgia, serif; font-size: 15.5px; color: #444;
-      font-style: italic; line-height: 1.65; margin-bottom: 1.25rem; max-width: 700px;
-    }
-    .cc-lead-body {
-      display: grid; grid-template-columns: 1fr 250px; gap: 2rem; align-items: start;
-    }
-    @media (max-width: 700px) { .cc-lead-body { grid-template-columns: 1fr; } }
-    .cc-lead-articles-label {
-      font-size: 9.5px; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: #aaa; margin-bottom: 10px;
-    }
-    .cc-lead-article { padding: 9px 0; border-top: 1px solid #e0ddd8; }
-    .cc-lead-article:first-child { border-top: none; padding-top: 0; }
-    .cc-lead-article-title {
-      font-family: 'Lora', Georgia, serif; font-size: 14px; font-weight: 500;
-      color: #1a1a1a; text-decoration: none; line-height: 1.35; display: block; margin-bottom: 3px;
-    }
-    .cc-lead-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-lead-article-meta { font-size: 11px; color: #aaa; }
-    .cc-lead-article-meta strong { color: #777; font-weight: 600; }
-    .cc-lead-explore {
-      display: inline-block; margin-top: 14px; font-size: 13px; font-weight: 600;
-      color: #2C4A2E; text-decoration: none;
-    }
-    .cc-lead-explore:hover { text-decoration: underline; }
-    .cc-lead-cta-box {
-      background: #f0f4f0; border: 1px solid #b5ccb8; border-radius: 5px;
-      padding: 1.25rem; display: flex; flex-direction: column; gap: 10px;
-    }
-    .cc-lead-cta-label {
-      font-size: 9.5px; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: #2C4A2E;
-    }
-    .cc-lead-cta-title {
-      font-family: 'Lora', Georgia, serif; font-size: 15px; font-weight: 600;
-      color: #1a1a1a; line-height: 1.3;
-    }
-    .cc-lead-cta-summary {
-      font-size: 12.5px; color: #555; line-height: 1.6;
-      border-left: 2px solid #2C4A2E; padding-left: 10px; font-style: italic;
-    }
-    .cc-lead-cta-link {
-      font-size: 12.5px; font-weight: 600; color: #2C4A2E;
-      text-decoration: none; padding-top: 8px; border-top: 1px solid #c8d9c9; display: block;
-    }
-    .cc-lead-cta-link:hover { text-decoration: underline; }
+    /* ── NEWSPAPER FRONT PAGE ────────────────────────────────────── */
+    .cc-front { margin-top: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
 
-    /* ── SECONDARY TOPICS ────────────────────────────────────────── */
-    .cc-secondary { margin-top: 1.75rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
-    .cc-secondary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-    @media (max-width: 620px) { .cc-secondary-grid { grid-template-columns: 1fr; } }
-    .cc-secondary-card { border-left: 3px solid #2C4A2E; padding-left: 1rem; }
-    .cc-secondary-cat {
-      font-size: 9.5px; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: #2C4A2E; margin-bottom: 5px;
+    /* Row 1: large feature + 2 stacked mediums */
+    .cc-front-row1 {
+      display: grid; grid-template-columns: 3fr 2fr; gap: 0;
+      padding-bottom: 1.5rem; border-bottom: 1px solid #e0ddd8;
     }
-    .cc-secondary-name {
-      font-family: 'Lora', Georgia, serif; font-size: 20px; font-weight: 600;
-      line-height: 1.2; margin-bottom: 8px;
+    @media (max-width: 660px) { .cc-front-row1 { grid-template-columns: 1fr; } }
+
+    .cc-card-large {
+      padding: 1.25rem 2rem 0 0;
+      border-right: 1px solid #e0ddd8;
+      display: flex; flex-direction: column;
     }
-    .cc-secondary-name a { color: #1a1a1a; text-decoration: none; }
-    .cc-secondary-name a:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-secondary-hook {
-      font-size: 13px; color: #555; line-height: 1.6; font-style: italic; margin-bottom: 10px;
+    @media (max-width: 660px) {
+      .cc-card-large { border-right: none; padding-right: 0; padding-bottom: 1.25rem; border-bottom: 1px solid #e0ddd8; }
     }
-    .cc-secondary-article { padding: 6px 0; border-top: 1px solid #f0ede8; }
-    .cc-secondary-article:first-child { border-top: none; padding-top: 0; }
-    .cc-secondary-article-title {
-      font-size: 12.5px; font-family: 'Lora', Georgia, serif; color: #1a1a1a;
-      text-decoration: none; line-height: 1.35; display: block; margin-bottom: 2px;
+    .cc-card-large-title {
+      font-family: 'Lora', Georgia, serif; font-size: 29px; font-weight: 600;
+      line-height: 1.15; color: #1a1a1a; text-decoration: none; display: block;
+      margin-bottom: 0.7rem;
     }
-    .cc-secondary-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-secondary-article-meta { font-size: 11px; color: #aaa; }
-    .cc-secondary-article-meta strong { color: #777; font-weight: 600; }
-    .cc-secondary-explore {
-      display: inline-block; margin-top: 10px; font-size: 12px;
-      font-weight: 600; color: #2C4A2E; text-decoration: none;
+    .cc-card-large-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-card-large-preview {
+      font-size: 14px; color: #555; line-height: 1.65; margin-bottom: 1rem; flex: 1;
     }
-    .cc-secondary-explore:hover { text-decoration: underline; }
+    .cc-card-large-meta { font-size: 11.5px; color: #888; margin-bottom: 0.75rem; }
+    .cc-card-large-meta strong { color: #555; font-weight: 600; }
+    .cc-card-large-cta {
+      font-size: 12px; font-weight: 600; color: #2C4A2E; text-decoration: none;
+      border-top: 1px solid #e0ddd8; padding-top: 10px; display: inline-block; margin-top: auto;
+    }
+    .cc-card-large-cta:hover { text-decoration: underline; }
+
+    /* Medium cards (stacked right column) */
+    .cc-front-mediums { display: flex; flex-direction: column; }
+    .cc-card-medium {
+      padding: 1.25rem 0 1.25rem 1.75rem;
+      flex: 1; display: flex; flex-direction: column;
+      border-bottom: 1px solid #e0ddd8;
+    }
+    .cc-card-medium:last-child { border-bottom: none; }
+    @media (max-width: 660px) { .cc-card-medium { padding-left: 0; } }
+    .cc-card-medium-title {
+      font-family: 'Lora', Georgia, serif; font-size: 19px; font-weight: 600;
+      line-height: 1.2; color: #1a1a1a; text-decoration: none; display: block;
+      margin-bottom: 0.5rem;
+    }
+    .cc-card-medium-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-card-medium-preview {
+      font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 0.6rem; flex: 1;
+    }
+    .cc-card-medium-meta { font-size: 11px; color: #aaa; margin-bottom: 0.4rem; }
+    .cc-card-medium-meta strong { color: #777; font-weight: 600; }
+    .cc-card-medium-cta {
+      font-size: 11.5px; font-weight: 600; color: #2C4A2E; text-decoration: none; margin-top: auto;
+    }
+    .cc-card-medium-cta:hover { text-decoration: underline; }
+
+    /* Row 2: small cards */
+    .cc-front-row2 {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; padding-top: 1.25rem;
+    }
+    @media (max-width: 660px) { .cc-front-row2 { grid-template-columns: 1fr 1fr; gap: 1rem 0; } }
+    @media (max-width: 400px) { .cc-front-row2 { grid-template-columns: 1fr; } }
+    .cc-card-small {
+      padding: 0 1.25rem 0 0; border-right: 1px solid #e0ddd8;
+      display: flex; flex-direction: column;
+    }
+    .cc-card-small:last-child { border-right: none; padding-right: 0; }
+    .cc-card-small + .cc-card-small { padding-left: 1.25rem; }
+    @media (max-width: 660px) {
+      .cc-card-small:nth-child(even) { border-right: none; padding-right: 0; }
+      .cc-card-small:nth-child(odd) { padding-left: 0; }
+      .cc-card-small:nth-child(even) { padding-left: 1.25rem; }
+    }
+    .cc-card-small-title {
+      font-family: 'Lora', Georgia, serif; font-size: 15px; font-weight: 500;
+      line-height: 1.3; color: #1a1a1a; text-decoration: none; display: block;
+      margin-bottom: 0.4rem;
+    }
+    .cc-card-small-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-card-small-meta { font-size: 11px; color: #aaa; margin-bottom: 0.35rem; }
+    .cc-card-small-meta strong { color: #777; font-weight: 600; }
+    .cc-card-small-cta {
+      font-size: 11px; font-weight: 600; color: #2C4A2E; text-decoration: none; margin-top: auto;
+    }
+    .cc-card-small-cta:hover { text-decoration: underline; }
 
     /* ── TODAY'S HEADLINES ───────────────────────────────────────── */
     .cc-headlines { margin-top: 1.75rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
@@ -340,68 +337,6 @@
     .cc-footer-nav a { font-size: 11px; color: #888; text-decoration: none; font-weight: 600; }
     .cc-footer-nav a:hover { color: #2C4A2E; }
 
-    /* ── CATEGORY TAG ────────────────────────────────────────────── */
-    .cc-cat-tag {
-      font-size: 9.5px; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: #2C4A2E;
-    }
-    .cc-lead-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      border-top: 1px solid #f0ede8; padding-top: 10px; margin-top: 6px;
-    }
-
-    /* ── THEME GROUPS ────────────────────────────────────────────── */
-    .cc-theme-group { margin-top: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid #e0ddd8; }
-    .cc-theme-divider {
-      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
-    }
-    .cc-theme-divider-label {
-      font-size: 9.5px; font-weight: 600; letter-spacing: 0.16em;
-      text-transform: uppercase; color: #888; white-space: nowrap;
-    }
-    .cc-theme-divider-line { flex: 1; height: 1px; background: #e0ddd8; }
-    .cc-theme-divider-explore {
-      font-size: 11px; font-weight: 600; color: #2C4A2E;
-      text-decoration: none; white-space: nowrap;
-    }
-    .cc-theme-divider-explore:hover { text-decoration: underline; }
-
-    /* ── ARTICLE CARD GRID ───────────────────────────────────────── */
-    .cc-card-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 0;
-    }
-    .cc-card-grid.two-col { grid-template-columns: repeat(2, 1fr); }
-    .cc-article-card {
-      padding: 1rem 1.25rem 0 0;
-      display: flex; flex-direction: column; justify-content: space-between;
-      min-height: 100px;
-    }
-    .cc-article-card + .cc-article-card {
-      padding-left: 1.25rem; border-left: 1px solid #f0ede8;
-    }
-    .cc-card-grid:not(.two-col) .cc-article-card:nth-child(3n+1) {
-      border-left: none; padding-left: 0;
-    }
-    .cc-card-grid.two-col .cc-article-card:nth-child(2n+1) {
-      border-left: none; padding-left: 0;
-    }
-    .cc-article-card-title {
-      font-family: 'Lora', Georgia, serif; font-size: 16px; font-weight: 500;
-      line-height: 1.3; color: #1a1a1a; text-decoration: none; display: block;
-      margin-bottom: 6px; flex: 1;
-    }
-    .cc-article-card-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-article-card-footer {
-      display: flex; align-items: flex-end; justify-content: space-between;
-      margin-top: 8px;
-    }
-    .cc-article-card-meta { font-size: 11px; color: #aaa; line-height: 1.4; }
-    .cc-article-card-meta strong { color: #777; font-weight: 600; }
-    .cc-article-card-cat {
-      font-size: 8.5px; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: #2C4A2E; white-space: nowrap; margin-left: 8px;
-    }
 
     @media (max-width: 660px) {
       .cc-site-name { font-size: 32px; }
@@ -436,11 +371,18 @@
     </nav>
   </div>
 
+  <!-- ── NEWSPAPER FRONT PAGE ─────────────────────────────────────── -->
   {% if featured_topics %}
-  {% set lead = featured_topics[0] %}
+  {% set ns = namespace(cards=[]) %}
+  {% for topic in featured_topics %}
+    {% for article in topic.articles %}
+      {% if ns.cards | length < 10 %}
+        {% set ns.cards = ns.cards + [{'article': article, 'topic_name': topic.name, 'topic_slug': topic.slug}] %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
 
-  <!-- ── LEAD STORY ───────────────────────────────────────────────── -->
-  <div class="cc-lead">
+  <div class="cc-front">
     <div style="margin-top:1.75rem;">
       <div class="cc-section-header">
         <div class="cc-section-label">In the conversation today</div>
@@ -448,142 +390,124 @@
       </div>
     </div>
 
-    {% if lead.articles %}
-    {% set lead_article = lead.articles[0] %}
-    <a href="{{ lead_article.url }}" class="cc-lead-title" target="_blank" rel="noopener"
-       onclick="gtag('event','article_click',{'article_title':'{{ (lead_article.rewritten_title or lead_article.title)|replace("'","") }}','article_source':'{{ lead_article.source_name }}','position':'lead'});">
-      {{ lead_article.rewritten_title or lead_article.title }}
-    </a>
-    <div class="cc-lead-article-meta" style="margin-bottom:1rem; font-size:13px; color:#777;">
-      {%- set auth = lead_article.author | default('') | trim -%}
-      {%- set src  = lead_article.source_name | default('') | trim -%}
-      {%- set pub  = lead_article.published_display | default('') | trim -%}
-      {%- if auth and auth | lower != src | lower -%}
-        {%- set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' -%}
-        {%- if auth_slug -%}<a href="/voices/{{ auth_slug }}/" class="cc-author-link"><strong>{{ auth }}</strong></a>{%- else -%}<strong>{{ auth }}</strong>{%- endif -%}
-         &middot; {{ src }}
-      {%- else -%}
-        {{ src }}
-      {%- endif -%}
-      {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
-    </div>
-    {% else %}
-    <a href="/topics/{{ lead.slug }}/" class="cc-lead-title"
-       onclick="gtag('event','topic_click',{'topic':'{{ lead.slug }}','position':'lead'});">
-      {{ lead.name }}
-    </a>
-    {% endif %}
+    {% if ns.cards %}
+    <!-- Row 1: large + 2 stacked mediums -->
+    <div class="cc-front-row1">
+      {% set large = ns.cards[0] %}
+      <div class="cc-card-large">
+        <a href="{{ large.article.url }}" class="cc-card-large-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'{{ (large.article.rewritten_title or large.article.title)|replace("'","") }}','article_source':'{{ large.article.source_name }}','position':'front_large'});">
+          {{ large.article.rewritten_title or large.article.title }}
+        </a>
+        {% set preview = large.article.summary | strip_html %}
+        {% if preview %}
+        <p class="cc-card-large-preview">{{ preview | truncate(220, true, '…') }}</p>
+        {% endif %}
+        <div class="cc-card-large-meta">
+          {%- set auth = large.article.author | default('') | trim -%}
+          {%- set src  = large.article.source_name | default('') | trim -%}
+          {%- set pub  = large.article.published_display | default('') | trim -%}
+          {%- if auth and auth | lower != src | lower -%}
+            {%- set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' -%}
+            {%- if auth_slug -%}<a href="/voices/{{ auth_slug }}/" class="cc-author-link"><strong>{{ auth }}</strong></a>{%- else -%}<strong>{{ auth }}</strong>{%- endif -%}
+             &middot; {{ src }}
+          {%- else -%}{{ src }}{%- endif -%}
+          {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
+        </div>
+        <a href="/topics/{{ large.topic_slug }}/" class="cc-card-large-cta"
+           onclick="gtag('event','topic_click',{'topic':'{{ large.topic_slug }}','position':'front_large'});">
+          More on {{ large.topic_name }} &rarr;
+        </a>
+      </div>
 
-    <div class="cc-lead-body">
-      <div>
-        {% if lead.articles and lead.articles | length > 1 %}
-        <div class="cc-lead-articles-label">Also on this topic</div>
-        {% for article in lead.articles[1:3] %}
-        <div class="cc-lead-article">
-          <a href="{{ article.url }}" class="cc-lead-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','position':'lead'});">
-            {{ article.rewritten_title or article.title }}
+      <div class="cc-front-mediums">
+        {% for card in ns.cards[1:3] %}
+        <div class="cc-card-medium">
+          <a href="{{ card.article.url }}" class="cc-card-medium-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'{{ (card.article.rewritten_title or card.article.title)|replace("'","") }}','article_source':'{{ card.article.source_name }}','position':'front_medium'});">
+            {{ card.article.rewritten_title or card.article.title }}
           </a>
-          <div class="cc-lead-article-meta">
-            {%- set auth = article.author | default('') | trim -%}
-            {%- set src  = article.source_name | default('') | trim -%}
-            {%- set pub  = article.published_display | default('') | trim -%}
+          {% set preview = card.article.summary | strip_html %}
+          {% if preview %}
+          <p class="cc-card-medium-preview">{{ preview | truncate(140, true, '…') }}</p>
+          {% endif %}
+          <div class="cc-card-medium-meta">
+            {%- set auth = card.article.author | default('') | trim -%}
+            {%- set src  = card.article.source_name | default('') | trim -%}
             {%- if auth and auth | lower != src | lower -%}
               {%- set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' -%}
               {%- if auth_slug -%}<a href="/voices/{{ auth_slug }}/" class="cc-author-link"><strong>{{ auth }}</strong></a>{%- else -%}<strong>{{ auth }}</strong>{%- endif -%}
                &middot; {{ src }}
-            {%- else -%}
-              {{ src }}
-            {%- endif -%}
-            {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
+            {%- else -%}{{ src }}{%- endif -%}
           </div>
+          <a href="/topics/{{ card.topic_slug }}/" class="cc-card-medium-cta"
+             onclick="gtag('event','topic_click',{'topic':'{{ card.topic_slug }}','position':'front_medium'});">
+            More on {{ card.topic_name }} &rarr;
+          </a>
         </div>
         {% endfor %}
-        {% endif %}
-        <div class="cc-lead-footer">
-          <span class="cc-cat-tag">{{ lead.name }}</span>
-          <a href="/topics/{{ lead.slug }}/" class="cc-lead-explore"
-             onclick="gtag('event','topic_click',{'topic':'{{ lead.slug }}','position':'lead_cta'});">
-            More on this topic &rarr;
-          </a>
-        </div>
-      </div>
-
-      <!-- Sidebar CTA -->
-      <div class="cc-lead-cta-box">
-        {% if featured_topics | length > 1 %}
-        {% set aside = featured_topics[1] %}
-        <div class="cc-lead-cta-label">Also in focus today</div>
-        <div class="cc-lead-cta-title">{{ aside.name }}</div>
-        <div class="cc-lead-cta-summary">{{ aside.summary or aside.hook }}</div>
-        {% else %}
-        <div class="cc-lead-cta-label">Go deeper</div>
-        <div class="cc-lead-cta-title">70 topics worth exploring</div>
-        <div class="cc-lead-cta-summary">Theology, church life, spiritual formation, and culture — all curated and updated daily.</div>
-        {% endif %}
-        <a href="/digest/" class="cc-lead-cta-link">Read today&rsquo;s full digest &rarr;</a>
       </div>
     </div>
-  </div>
 
-  <!-- ── THEME GROUPS ──────────────────────────────────────────────── -->
-  {% if featured_topics | length > 1 %}
-  {% for topic in featured_topics[1:4] %}
-  <div class="cc-theme-group">
-    <div class="cc-theme-divider">
-      <span class="cc-theme-divider-label">{{ topic.name }}</span>
-      <div class="cc-theme-divider-line"></div>
-      <a href="/topics/{{ topic.slug }}/" class="cc-theme-divider-explore"
-         onclick="gtag('event','topic_click',{'topic':'{{ topic.slug }}','position':'theme_group'});">Explore all &rarr;</a>
-    </div>
-    {% if topic.articles %}
-    <div class="cc-card-grid{% if topic.articles | length < 3 %} two-col{% endif %}">
-      {% for article in topic.articles[:3] %}
-      <div class="cc-article-card">
-        <a href="{{ article.url }}" class="cc-article-card-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','position':'theme_group'});">
-          {{ article.rewritten_title or article.title }}
+    <!-- Row 2: small cards -->
+    {% if ns.cards | length > 3 %}
+    <div class="cc-front-row2">
+      {% for card in ns.cards[3:7] %}
+      <div class="cc-card-small">
+        <a href="{{ card.article.url }}" class="cc-card-small-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'{{ (card.article.rewritten_title or card.article.title)|replace("'","") }}','article_source':'{{ card.article.source_name }}','position':'front_small'});">
+          {{ card.article.rewritten_title or card.article.title }}
         </a>
-        <div class="cc-article-card-footer">
-          <div class="cc-article-card-meta">
-            {%- set auth = article.author | default('') | trim -%}
-            {%- set src  = article.source_name | default('') | trim -%}
-            {%- set pub  = article.published_display | default('') | trim -%}
-            {%- if auth and auth | lower != src | lower -%}
-              {%- set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' -%}
-              {%- if auth_slug -%}<a href="/voices/{{ auth_slug }}/" class="cc-author-link"><strong>{{ auth }}</strong></a>{%- else -%}<strong>{{ auth }}</strong>{%- endif -%}
-               &middot; {{ src }}
-            {%- else -%}
-              {{ src }}
-            {%- endif -%}
-            {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
-          </div>
-          <span class="cc-article-card-cat">{{ topic.name }}</span>
+        <div class="cc-card-small-meta">
+          {%- set auth = card.article.author | default('') | trim -%}
+          {%- set src  = card.article.source_name | default('') | trim -%}
+          {%- if auth and auth | lower != src | lower -%}
+            {%- set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' -%}
+            {%- if auth_slug -%}<a href="/voices/{{ auth_slug }}/" class="cc-author-link"><strong>{{ auth }}</strong></a>{%- else -%}<strong>{{ auth }}</strong>{%- endif -%}
+             &middot; {{ src }}
+          {%- else -%}{{ src }}{%- endif -%}
         </div>
+        <a href="/topics/{{ card.topic_slug }}/" class="cc-card-small-cta"
+           onclick="gtag('event','topic_click',{'topic':'{{ card.topic_slug }}','position':'front_small'});">
+          More on {{ card.topic_name }} &rarr;
+        </a>
       </div>
       {% endfor %}
     </div>
     {% endif %}
+    {% endif %}
   </div>
-  {% endfor %}
-  {% endif %}
   {% endif %}
 
-  <!-- ── TODAY'S CURATED HEADLINES ─────────────────────────────────── -->
+  <!-- ── MORE FROM TODAY ───────────────────────────────────────────── -->
+  {% set ns_urls = namespace(seen=[]) %}
+  {% if featured_topics %}
+    {% for topic in featured_topics %}
+      {% for article in topic.articles %}
+        {% set ns_urls.seen = ns_urls.seen + [article.url] %}
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
   {% set top_articles = articles | rejectattr("source_type", "equalto", "world_news") | list %}
-  {% if top_articles %}
+  {% set more_articles = [] %}
+  {% for article in top_articles %}
+    {% if article.url not in ns_urls.seen and more_articles | length < 8 %}
+      {% set more_articles = more_articles + [article] %}
+    {% endif %}
+  {% endfor %}
+  {% if more_articles %}
   <div class="cc-headlines">
     <div class="cc-section-header">
-      <div class="cc-section-label">Today&rsquo;s curated headlines</div>
-      <div class="cc-section-meta">{{ top_articles[:10] | length }} articles</div>
+      <div class="cc-section-label">More from today</div>
+      <div class="cc-section-meta">{{ more_articles | length }} articles</div>
     </div>
     <div class="cc-headline-list">
-      {% for article in top_articles[:10] %}
+      {% for article in more_articles %}
       <div class="cc-headline-item">
         <div class="cc-headline-num">{{ loop.index }}</div>
         <div class="cc-headline-content">
           <a href="{{ article.url }}" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','position':'headlines'});">
+             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','position':'more_today'});">
             {{ article.rewritten_title or article.title }}
           </a>
           <div class="cc-headline-meta">
