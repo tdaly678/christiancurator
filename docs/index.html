@@ -59,9 +59,10 @@
       line-height: 1.5;
     }
 
-    /* ── Header ──────────────────────────────────────────────────── */
+    /* ── Layout ──────────────────────────────────────────────────── */
     .cc-root { max-width: 980px; margin: 0 auto; padding: 0 20px 3rem; }
 
+    /* ── Header ──────────────────────────────────────────────────── */
     .cc-header { border-bottom: 1px solid #e0ddd8; padding: 0.75rem 0 0; }
     .cc-top-bar {
       display: flex; align-items: center; justify-content: space-between;
@@ -103,9 +104,7 @@
       font-family: inherit; padding: 0;
     }
     .cc-nav-dropdown-toggle:hover { color: #2C4A2E; }
-    .cc-nav-dropdown-toggle::after {
-      content: '▾'; font-size: 10px; letter-spacing: 0;
-    }
+    .cc-nav-dropdown-toggle::after { content: '▾'; font-size: 10px; letter-spacing: 0; }
     .cc-nav-dropdown-menu {
       display: none; position: absolute; top: 100%; left: 50%;
       transform: translateX(-50%);
@@ -122,132 +121,173 @@
     }
     .cc-nav-dropdown-menu a:hover { color: #2C4A2E; background: #f7f5f2; }
 
-    /* ── Welcome section ─────────────────────────────────────────── */
-    .cc-welcome {
-      border-bottom: 1px solid #e0ddd8;
-      padding: 2rem 0 1.75rem;
-    }
-    .cc-welcome-hed {
-      font-family: 'Lora', Georgia, serif; font-size: 30px; font-weight: 600;
-      line-height: 1.25; color: #1a1a1a; margin-bottom: 0.6rem;
-    }
-    .cc-welcome-sub {
-      font-size: 14.5px; color: #666; line-height: 1.65;
-    }
-    @media (max-width: 660px) {
-      .cc-welcome-hed { font-size: 24px; }
-      .cc-site-name { font-size: 32px; }
-    }
-
-    /* ── Featured topics ─────────────────────────────────────────── */
-    .cc-featured { margin-top: 2rem; }
-    .cc-featured-header {
+    /* ── Section header ──────────────────────────────────────────── */
+    .cc-section-header {
       display: flex; align-items: baseline; justify-content: space-between;
-      border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.25rem;
+      border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.5rem;
     }
-    .cc-featured-label {
+    .cc-section-label {
       font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
       text-transform: uppercase; color: #1a1a1a;
     }
-    .cc-featured-date { font-size: 11px; color: #aaa; }
+    .cc-section-meta { font-size: 11px; color: #aaa; }
+    .cc-section-meta a { color: #2C4A2E; text-decoration: none; font-weight: 600; font-size: 11px; }
+    .cc-section-meta a:hover { text-decoration: underline; }
 
-    .cc-featured-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+    /* ── LEAD STORY ──────────────────────────────────────────────── */
+    .cc-lead { margin-top: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-lead-cat {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+      color: #2C4A2E; margin-bottom: 0.55rem;
     }
-    @media (max-width: 860px) { .cc-featured-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 560px) { .cc-featured-grid { grid-template-columns: 1fr; } }
+    .cc-lead-title {
+      font-family: 'Lora', Georgia, serif; font-size: 34px; font-weight: 600;
+      line-height: 1.15; color: #1a1a1a; margin-bottom: 0.65rem;
+      text-decoration: none; display: block;
+    }
+    .cc-lead-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-lead-hook {
+      font-family: 'Lora', Georgia, serif; font-size: 15.5px; color: #444;
+      font-style: italic; line-height: 1.65; margin-bottom: 1.25rem; max-width: 700px;
+    }
+    .cc-lead-body {
+      display: grid; grid-template-columns: 1fr 250px; gap: 2rem; align-items: start;
+    }
+    @media (max-width: 700px) { .cc-lead-body { grid-template-columns: 1fr; } }
+    .cc-lead-articles-label {
+      font-size: 9.5px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #aaa; margin-bottom: 10px;
+    }
+    .cc-lead-article { padding: 9px 0; border-top: 1px solid #e0ddd8; }
+    .cc-lead-article:first-child { border-top: none; padding-top: 0; }
+    .cc-lead-article-title {
+      font-family: 'Lora', Georgia, serif; font-size: 14px; font-weight: 500;
+      color: #1a1a1a; text-decoration: none; line-height: 1.35; display: block; margin-bottom: 3px;
+    }
+    .cc-lead-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-lead-article-meta { font-size: 11px; color: #aaa; }
+    .cc-lead-article-meta strong { color: #777; font-weight: 600; }
+    .cc-lead-explore {
+      display: inline-block; margin-top: 14px; font-size: 13px; font-weight: 600;
+      color: #2C4A2E; text-decoration: none;
+    }
+    .cc-lead-explore:hover { text-decoration: underline; }
+    .cc-lead-cta-box {
+      background: #f0f4f0; border: 1px solid #b5ccb8; border-radius: 5px;
+      padding: 1.25rem; display: flex; flex-direction: column; gap: 10px;
+    }
+    .cc-lead-cta-label {
+      font-size: 9.5px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #2C4A2E;
+    }
+    .cc-lead-cta-title {
+      font-family: 'Lora', Georgia, serif; font-size: 15px; font-weight: 600;
+      color: #1a1a1a; line-height: 1.3;
+    }
+    .cc-lead-cta-summary {
+      font-size: 12.5px; color: #555; line-height: 1.6;
+      border-left: 2px solid #2C4A2E; padding-left: 10px; font-style: italic;
+    }
+    .cc-lead-cta-link {
+      font-size: 12.5px; font-weight: 600; color: #2C4A2E;
+      text-decoration: none; padding-top: 8px; border-top: 1px solid #c8d9c9; display: block;
+    }
+    .cc-lead-cta-link:hover { text-decoration: underline; }
 
-    .cc-featured-card {
-      border: 1px solid #e0ddd8; border-radius: 5px; padding: 1.1rem 1.2rem 1rem;
-      background: #fff; display: flex; flex-direction: column;
-      transition: border-color 0.15s, box-shadow 0.15s;
+    /* ── SECONDARY TOPICS ────────────────────────────────────────── */
+    .cc-secondary { margin-top: 1.75rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-secondary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    @media (max-width: 620px) { .cc-secondary-grid { grid-template-columns: 1fr; } }
+    .cc-secondary-card { border-left: 3px solid #2C4A2E; padding-left: 1rem; }
+    .cc-secondary-cat {
+      font-size: 9.5px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #2C4A2E; margin-bottom: 5px;
     }
-    .cc-featured-card:hover {
-      border-color: #2C4A2E; box-shadow: 0 2px 8px rgba(44,74,46,0.08);
+    .cc-secondary-name {
+      font-family: 'Lora', Georgia, serif; font-size: 20px; font-weight: 600;
+      line-height: 1.2; margin-bottom: 8px;
     }
-    .cc-featured-cat {
-      font-size: 9.5px; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 0.14em; color: #2C4A2E; margin-bottom: 6px;
+    .cc-secondary-name a { color: #1a1a1a; text-decoration: none; }
+    .cc-secondary-name a:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-secondary-hook {
+      font-size: 13px; color: #555; line-height: 1.6; font-style: italic; margin-bottom: 10px;
     }
-    .cc-featured-name {
-      font-family: 'Lora', Georgia, serif; font-size: 19px; font-weight: 600;
-      line-height: 1.25; color: #1a1a1a; margin-bottom: 10px;
+    .cc-secondary-article { padding: 6px 0; border-top: 1px solid #f0ede8; }
+    .cc-secondary-article:first-child { border-top: none; padding-top: 0; }
+    .cc-secondary-article-title {
+      font-size: 12.5px; font-family: 'Lora', Georgia, serif; color: #1a1a1a;
+      text-decoration: none; line-height: 1.35; display: block; margin-bottom: 2px;
     }
-    .cc-featured-hook {
-      font-size: 13px; color: #555; font-style: italic; line-height: 1.6;
-      border-left: 2px solid #2C4A2E; padding-left: 10px;
-      margin-bottom: 14px; flex: 1;
+    .cc-secondary-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-secondary-article-meta { font-size: 11px; color: #aaa; }
+    .cc-secondary-article-meta strong { color: #777; font-weight: 600; }
+    .cc-secondary-explore {
+      display: inline-block; margin-top: 10px; font-size: 12px;
+      font-weight: 600; color: #2C4A2E; text-decoration: none;
     }
-    .cc-featured-articles-label {
-      font-size: 9.5px; font-weight: 600; letter-spacing: 0.12em;
-      text-transform: uppercase; color: #aaa; margin-bottom: 7px;
+    .cc-secondary-explore:hover { text-decoration: underline; }
+
+    /* ── TODAY'S HEADLINES ───────────────────────────────────────── */
+    .cc-headlines { margin-top: 1.75rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-headline-list { columns: 2; column-gap: 2.5rem; }
+    @media (max-width: 660px) { .cc-headline-list { columns: 1; } }
+    .cc-headline-item {
+      break-inside: avoid; display: flex; gap: 0;
+      padding: 0.65rem 0; border-bottom: 1px solid #f0ede8; align-items: flex-start;
     }
-    .cc-featured-article { padding: 5px 0; border-top: 1px solid #f0ede8; }
-    .cc-featured-article:first-of-type { border-top: none; }
-    .cc-featured-article-title {
-      font-size: 12.5px; color: #1a1a1a; text-decoration: none;
-      font-family: 'Lora', Georgia, serif; line-height: 1.35;
-      display: block; margin-bottom: 2px;
+    .cc-headline-item:last-child { border-bottom: none; }
+    .cc-headline-num {
+      font-size: 11px; font-weight: 600; color: #ccc;
+      min-width: 26px; padding-top: 2px; font-variant-numeric: tabular-nums;
     }
-    .cc-featured-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-featured-article-source { font-size: 10.5px; color: #aaa; }
-    .cc-featured-cta {
-      display: block; font-size: 12.5px; font-weight: 600; color: #2C4A2E;
-      text-decoration: none; margin-top: 12px; padding-top: 10px;
-      border-top: 1px solid #e0ddd8;
+    .cc-headline-content { flex: 1; }
+    .cc-headline-title {
+      font-family: 'Lora', Georgia, serif; font-size: 14px; font-weight: 500;
+      line-height: 1.35; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 3px;
     }
-    .cc-featured-cta:hover { text-decoration: underline; }
+    .cc-headline-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-headline-meta { font-size: 11px; color: #aaa; }
+    .cc-headline-meta strong { color: #777; font-weight: 600; }
+    .cc-digest-cta {
+      margin-top: 1rem; text-align: right;
+    }
+    .cc-digest-cta a {
+      font-size: 12.5px; font-weight: 600; color: #2C4A2E; text-decoration: none;
+    }
+    .cc-digest-cta a:hover { text-decoration: underline; }
+
+    /* ── TOPIC INDEX ─────────────────────────────────────────────── */
+    .cc-topic-index { margin-top: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-topic-index-grid {
+      display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0 2rem;
+    }
+    @media (max-width: 760px) { .cc-topic-index-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem 2rem; } }
+    @media (max-width: 480px) { .cc-topic-index-grid { grid-template-columns: 1fr; } }
+    .cc-topic-index-col {}
+    .cc-topic-index-cat {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      color: #2C4A2E; border-bottom: 1px solid #e0ddd8; padding-bottom: 5px; margin-bottom: 8px;
+    }
+    .cc-topic-index-link {
+      display: block; font-size: 12.5px; color: #444; text-decoration: none;
+      padding: 4px 0; border-bottom: 1px solid #f5f3f0;
+      line-height: 1.35; font-family: 'Lora', Georgia, serif;
+    }
+    .cc-topic-index-link:hover { color: #2C4A2E; }
+    .cc-topic-index-link:last-child { border-bottom: none; }
 
     /* ── Archive list ────────────────────────────────────────────── */
-    .cc-archive-list { margin-top: 2.75rem; }
+    .cc-archive-list { margin-top: 2rem; }
     .cc-archive-list-header {
       border-bottom: 1px solid #e0ddd8; padding-bottom: 6px; margin-bottom: 1rem;
       font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
       text-transform: uppercase; color: #aaa;
     }
-    .cc-archive-links {
-      display: flex; flex-wrap: wrap; gap: 6px 10px;
-    }
+    .cc-archive-links { display: flex; flex-wrap: wrap; gap: 6px 10px; }
     .cc-archive-link {
       font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600;
     }
     .cc-archive-link:hover { text-decoration: underline; }
-
-    /* ── Browse grid ─────────────────────────────────────────────── */
-    .cc-browse { margin-top: 2.75rem; }
-    .cc-browse-header {
-      border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.75rem;
-    }
-    .cc-browse-header-label {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
-      text-transform: uppercase; color: #1a1a1a;
-    }
-    .cc-browse-cat { margin-bottom: 2rem; }
-    .cc-browse-cat-name {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: #aaa; margin-bottom: 0.75rem;
-    }
-    .cc-browse-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(195px, 1fr)); gap: 10px;
-    }
-    @media (max-width: 560px) { .cc-browse-grid { grid-template-columns: 1fr 1fr; } }
-    .cc-browse-card {
-      border: 1px solid #e0ddd8; border-radius: 4px;
-      padding: 11px 13px; text-decoration: none; background: #fff;
-      display: block; transition: border-color 0.15s, box-shadow 0.15s;
-    }
-    .cc-browse-card:hover { border-color: #2C4A2E; box-shadow: 0 1px 5px rgba(44,74,46,0.1); }
-    .cc-browse-card-name {
-      font-family: 'Lora', Georgia, serif; font-size: 13.5px; font-weight: 600;
-      color: #1a1a1a; line-height: 1.3; margin-bottom: 4px;
-    }
-    .cc-browse-card-hook {
-      font-size: 11px; color: #999; line-height: 1.45;
-      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-    }
-
-    /* ── Email box ───────────────────────────────────────────────── */
-    .cc-email-box { background: #EFF4F0; border: 1px solid #B5CCB8; border-radius: 6px; padding: 1rem; }
 
     /* ── Footer ──────────────────────────────────────────────────── */
     .cc-footer {
@@ -259,6 +299,11 @@
     .cc-footer-nav { display: flex; gap: 12px; }
     .cc-footer-nav a { font-size: 11px; color: #888; text-decoration: none; font-weight: 600; }
     .cc-footer-nav a:hover { color: #2C4A2E; }
+
+    @media (max-width: 660px) {
+      .cc-site-name { font-size: 32px; }
+      .cc-lead-title { font-size: 26px; }
+    }
   </style>
 </head>
 <body>
@@ -267,7 +312,7 @@
   <!-- Header -->
   <div class="cc-header">
     <div class="cc-top-bar">
-      <span>April 9, 2026</span>
+      <span>April 10, 2026</span>
       <a class="cc-subscribe-btn" href="#cc-email-box" onclick="document.getElementById('cc-email-box').scrollIntoView({behavior:'smooth'}); return false;">Get the Daily Digest</a>
     </div>
     <div class="cc-masthead">
@@ -287,488 +332,651 @@
     </nav>
   </div>
 
-  <!-- Welcome -->
-  <div class="cc-welcome">
-    <h2 class="cc-welcome-hed">The conversations shaping evangelical Christianity.</h2>
-    <p class="cc-welcome-sub">Because every curious Christian deserves clarity on the questions that matter most.</p>
-  </div>
-
   
-  <!-- In the conversation today -->
-  <div class="cc-featured">
-    <div class="cc-featured-header">
-      <div class="cc-featured-label">In the conversation today</div>
-      <div class="cc-featured-date">April 9, 2026</div>
+  
+
+  <!-- ── LEAD STORY ───────────────────────────────────────────────── -->
+  <div class="cc-lead">
+    <div style="margin-top:1.75rem;">
+      <div class="cc-section-header">
+        <div class="cc-section-label">In the conversation today</div>
+        <div class="cc-section-meta">April 10, 2026</div>
+      </div>
     </div>
-    <div class="cc-featured-grid">
-      
-      <div class="cc-featured-card">
-        <div class="cc-featured-cat">Core Theology</div>
-        <div class="cc-featured-name">Heaven, Hell & Eternity</div>
-        <p class="cc-featured-hook">Evangelical views on the afterlife, eternal punishment, annihilationism, and the hope of new creation.</p>
+
+    <div class="cc-lead-cat">Core Theology</div>
+    <a href="/topics/heaven-hell-eternity/" class="cc-lead-title"
+       onclick="gtag('event','topic_click',{'topic':'heaven-hell-eternity','position':'lead'});">
+      Heaven, Hell & Eternity
+    </a>
+    <p class="cc-lead-hook">Evangelical views on the afterlife, eternal punishment, annihilationism, and the hope of new creation.</p>
+
+    <div class="cc-lead-body">
+      <div>
         
-        <div class="cc-featured-articles-label">What&rsquo;s being written about this</div>
+        <div class="cc-lead-articles-label">What&rsquo;s being written about this</div>
         
-        <div class="cc-featured-article">
-          <a class="cc-featured-article-title"
-             href="https://theaquilareport.com/easter-unbelievably-good-news/" target="_blank"
-             onclick="gtag('event','article_click',{'article_title':'The Resurrection: Christs Victory and Our Eternal Hope','article_source':'The Aquila Report','article_url':'https://theaquilareport.com/easter-unbelievably-good-news/'});">
+        <div class="cc-lead-article">
+          <a href="https://theaquilareport.com/easter-unbelievably-good-news/" class="cc-lead-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'The Resurrection: Christs Victory and Our Eternal Hope','article_source':'The Aquila Report','position':'lead'});">
             The Resurrection: Christ's Victory and Our Eternal Hope
           </a>
-          <span class="cc-featured-article-source">Richard Baxter &middot;The Aquila Report &middot; Apr 3</span>
+          <div class="cc-lead-article-meta"><strong>Richard Baxter</strong> &middot; The Aquila Report &middot; Apr 3</div>
         </div>
         
-        <div class="cc-featured-article">
-          <a class="cc-featured-article-title"
-             href="https://www.thegospelcoalition.org/article/resurrection-evidence-tells-story/" target="_blank"
-             onclick="gtag('event','article_click',{'article_title':'The Resurrection: How Historical Evidence Shaped Early Christian Belief','article_source':'The Gospel Coalition','article_url':'https://www.thegospelcoalition.org/article/resurrection-evidence-tells-story/'});">
+        <div class="cc-lead-article">
+          <a href="https://www.thegospelcoalition.org/article/resurrection-evidence-tells-story/" class="cc-lead-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'The Resurrection: How Historical Evidence Shaped Early Christian Belief','article_source':'The Gospel Coalition','position':'lead'});">
             The Resurrection: How Historical Evidence Shaped Early Christian Belief
           </a>
-          <span class="cc-featured-article-source">Kyle Tucker &middot;The Gospel Coalition &middot; Apr 1</span>
+          <div class="cc-lead-article-meta"><strong>Kyle Tucker</strong> &middot; The Gospel Coalition &middot; Apr 1</div>
+        </div>
+        
+        <div class="cc-lead-article">
+          <a href="https://seanmcdowell.org/blog/hell-in-the-bible-eternal-torment-or-annihilation" class="cc-lead-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Eternal Punishment or Annihilation: What Does Scripture Teach About Hell?','article_source':'Sean McDowell','position':'lead'});">
+            Eternal Punishment or Annihilation: What Does Scripture Teach About Hell?
+          </a>
+          <div class="cc-lead-article-meta">Sean McDowell &middot; Mar 6</div>
         </div>
         
         
-        <a class="cc-featured-cta" href="/topics/heaven-hell-eternity/">Explore this topic &rarr;</a>
+        <a href="/topics/heaven-hell-eternity/" class="cc-lead-explore"
+           onclick="gtag('event','topic_click',{'topic':'heaven-hell-eternity','position':'lead_cta'});">
+          Explore this topic in depth &rarr;
+        </a>
       </div>
+
+      <!-- Sidebar CTA -->
+      <div class="cc-lead-cta-box">
+        
+        
+        <div class="cc-lead-cta-label">Also in focus today</div>
+        <div class="cc-lead-cta-title">The Future of Evangelicalism</div>
+        <div class="cc-lead-cta-summary">The state of the evangelical movement — its divisions, decline, identity, and what comes next.</div>
+        
+        <a href="/digest/" class="cc-lead-cta-link">Read today&rsquo;s full digest &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECONDARY TOPICS ──────────────────────────────────────────── -->
+  
+  <div class="cc-secondary">
+    <div class="cc-secondary-grid">
       
-      <div class="cc-featured-card">
-        <div class="cc-featured-cat">Culture & Society</div>
-        <div class="cc-featured-name">The Future of Evangelicalism</div>
-        <p class="cc-featured-hook">The state of the evangelical movement — its divisions, decline, identity, and what comes next.</p>
+      <div class="cc-secondary-card">
+        <div class="cc-secondary-cat">Culture & Society</div>
+        <div class="cc-secondary-name">
+          <a href="/topics/evangelicalism/"
+             onclick="gtag('event','topic_click',{'topic':'evangelicalism','position':'secondary'});">
+            The Future of Evangelicalism
+          </a>
+        </div>
+        <p class="cc-secondary-hook">The state of the evangelical movement — its divisions, decline, identity, and what comes next.</p>
         
-        <div class="cc-featured-articles-label">What&rsquo;s being written about this</div>
         
-        <div class="cc-featured-article">
-          <a class="cc-featured-article-title"
-             href="https://mereorthodoxy.com/why-evangelical-gender-discourse-is-unserious" target="_blank"
-             onclick="gtag('event','article_click',{'article_title':'Evangelical Debates on Gender Need Serious Engagement, Not Gatekeeping','article_source':'Mere Orthodoxy','article_url':'https://mereorthodoxy.com/why-evangelical-gender-discourse-is-unserious'});">
+        <div class="cc-secondary-article">
+          <a href="https://mereorthodoxy.com/why-evangelical-gender-discourse-is-unserious" class="cc-secondary-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Evangelical Debates on Gender Need Serious Engagement, Not Gatekeeping','article_source':'Mere Orthodoxy','position':'secondary'});">
             Evangelical Debates on Gender Need Serious Engagement, Not Gatekeeping
           </a>
-          <span class="cc-featured-article-source">Jamie Carlson &middot;Mere Orthodoxy &middot; Mar 31</span>
+          <div class="cc-secondary-article-meta"><strong>Jamie Carlson</strong> &middot; Mere Orthodoxy</div>
         </div>
         
-        <div class="cc-featured-article">
-          <a class="cc-featured-article-title"
-             href="https://www.christianitytoday.com/2026/04/the-evangelical-roots-of-north-koreas-kim-family/" target="_blank"
-             onclick="gtag('event','article_click',{'article_title':'North Koreas Nuclear Ambitions and the Plight of Its Christians','article_source':'Christianity Today','article_url':'https://www.christianitytoday.com/2026/04/the-evangelical-roots-of-north-koreas-kim-family/'});">
+        <div class="cc-secondary-article">
+          <a href="https://www.christianitytoday.com/2026/04/the-evangelical-roots-of-north-koreas-kim-family/" class="cc-secondary-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'North Koreas Nuclear Ambitions and the Plight of Its Christians','article_source':'Christianity Today','position':'secondary'});">
             North Korea's Nuclear Ambitions and the Plight of Its Christians
           </a>
-          <span class="cc-featured-article-source">Clarissa Moll &middot;Christianity Today &middot; Apr 2</span>
+          <div class="cc-secondary-article-meta"><strong>Clarissa Moll</strong> &middot; Christianity Today</div>
         </div>
         
         
-        <a class="cc-featured-cta" href="/topics/evangelicalism/">Explore this topic &rarr;</a>
+        <a href="/topics/evangelicalism/" class="cc-secondary-explore">Explore this topic &rarr;</a>
       </div>
       
-      <div class="cc-featured-card">
-        <div class="cc-featured-cat">Spiritual Formation</div>
-        <div class="cc-featured-name">Prayer</div>
-        <p class="cc-featured-hook">Evangelical perspectives on how Christians pray, whether prayer changes things, and building a consistent prayer life.</p>
+      <div class="cc-secondary-card">
+        <div class="cc-secondary-cat">Spiritual Formation</div>
+        <div class="cc-secondary-name">
+          <a href="/topics/prayer/"
+             onclick="gtag('event','topic_click',{'topic':'prayer','position':'secondary'});">
+            Prayer
+          </a>
+        </div>
+        <p class="cc-secondary-hook">Evangelical perspectives on how Christians pray, whether prayer changes things, and building a consistent prayer life.</p>
         
-        <div class="cc-featured-articles-label">What&rsquo;s being written about this</div>
         
-        <div class="cc-featured-article">
-          <a class="cc-featured-article-title"
-             href="https://danielkwilliams.substack.com/p/a-reformed-christian-critique-of" target="_blank"
-             onclick="gtag('event','article_click',{'article_title':'Reformed Christian Analysis of Defense Secretarys Imprecatory Prayer Language','article_source':'Daniel K. Williams','article_url':'https://danielkwilliams.substack.com/p/a-reformed-christian-critique-of'});">
+        <div class="cc-secondary-article">
+          <a href="https://danielkwilliams.substack.com/p/a-reformed-christian-critique-of" class="cc-secondary-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Reformed Christian Analysis of Defense Secretarys Imprecatory Prayer Language','article_source':'Daniel K. Williams','position':'secondary'});">
             Reformed Christian Analysis of Defense Secretary's Imprecatory Prayer Language
           </a>
-          <span class="cc-featured-article-source">Daniel K. Williams &middot; Apr 1</span>
+          <div class="cc-secondary-article-meta">Daniel K. Williams</div>
         </div>
         
-        <div class="cc-featured-article">
-          <a class="cc-featured-article-title"
-             href="https://feed.desiringgod.org/link/22977/17296404/what-will-war-bring-to-iran" target="_blank"
-             onclick="gtag('event','article_click',{'article_title':'How Christians Can Pray During Irans Crisis','article_source':'Desiring God','article_url':'https://feed.desiringgod.org/link/22977/17296404/what-will-war-bring-to-iran'});">
+        <div class="cc-secondary-article">
+          <a href="https://feed.desiringgod.org/link/22977/17296404/what-will-war-bring-to-iran" class="cc-secondary-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'How Christians Can Pray During Irans Crisis','article_source':'Desiring God','position':'secondary'});">
             How Christians Can Pray During Iran's Crisis
           </a>
-          <span class="cc-featured-article-source">David Mathis &middot;Desiring God &middot; Mar 5</span>
+          <div class="cc-secondary-article-meta"><strong>David Mathis</strong> &middot; Desiring God</div>
         </div>
         
         
-        <a class="cc-featured-cta" href="/topics/prayer/">Explore this topic &rarr;</a>
+        <a href="/topics/prayer/" class="cc-secondary-explore">Explore this topic &rarr;</a>
       </div>
       
     </div>
   </div>
   
+  
 
-  <!-- Browse all topics -->
-  <div class="cc-browse">
-    <div class="cc-browse-header">
-      <div class="cc-browse-header-label">Explore all topics</div>
+  <!-- ── TODAY'S CURATED HEADLINES ─────────────────────────────────── -->
+  
+  
+  <div class="cc-headlines">
+    <div class="cc-section-header">
+      <div class="cc-section-label">Today&rsquo;s curated headlines</div>
+      <div class="cc-section-meta">10 articles</div>
     </div>
+    <div class="cc-headline-list">
+      
+      <div class="cc-headline-item">
+        <div class="cc-headline-num">1</div>
+        <div class="cc-headline-content">
+          <a href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/jesus-betrayed-crucified/" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Gods Love Revealed Through Christs Sacrifice on the Cross','article_source':'The Gospel Coalition','position':'headlines'});">
+            God's Love Revealed Through Christ's Sacrifice on the Cross
+          </a>
+          <div class="cc-headline-meta"><strong>J. Gary Millar</strong> &middot; The Gospel Coalition</div>
+        </div>
+      </div>
+      
+      <div class="cc-headline-item">
+        <div class="cc-headline-num">2</div>
+        <div class="cc-headline-content">
+          <a href="https://feed.desiringgod.org/link/22977/17312221/the-agony-of-sin-and-love" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Marveling at Christs Love: Why Imitation Pauses at the Cross','article_source':'Desiring God','position':'headlines'});">
+            Marveling at Christ's Love: Why Imitation Pauses at the Cross
+          </a>
+          <div class="cc-headline-meta"><strong>David Mathis</strong> &middot; Desiring God</div>
+        </div>
+      </div>
+      
+      <div class="cc-headline-item">
+        <div class="cc-headline-num">3</div>
+        <div class="cc-headline-content">
+          <a href="https://firstthings.com/the-politics-of-judas/" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Judass Betrayal: Political and Spiritual Dimensions at Easter','article_source':'First Things','position':'headlines'});">
+            Judas's Betrayal: Political and Spiritual Dimensions at Easter
+          </a>
+          <div class="cc-headline-meta"><strong>German Saucedo</strong> &middot; First Things</div>
+        </div>
+      </div>
+      
+      <div class="cc-headline-item">
+        <div class="cc-headline-num">4</div>
+        <div class="cc-headline-content">
+          <a href="https://relevantmagazine.com/faith/church/what-is-maundy-thursday/" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Maundy Thursday: The Intimate Meal Before Christs Passion','article_source':'Relevant Magazine','position':'headlines'});">
+            Maundy Thursday: The Intimate Meal Before Christ's Passion
+          </a>
+          <div class="cc-headline-meta"><strong>John Taylor</strong> &middot; Relevant Magazine</div>
+        </div>
+      </div>
+      
+      <div class="cc-headline-item">
+        <div class="cc-headline-num">5</div>
+        <div class="cc-headline-content">
+          <a href="https://theaquilareport.com/a-most-spectacular-misidentification/" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Why Jesus Wasnt Recognized After the Resurrection','article_source':'The Aquila Report','position':'headlines'});">
+            Why Jesus Wasn't Recognized After the Resurrection
+          </a>
+          <div class="cc-headline-meta"><strong>Campbell Markham</strong> &middot; The Aquila Report</div>
+        </div>
+      </div>
+      
+      <div class="cc-headline-item">
+        <div class="cc-headline-num">6</div>
+        <div class="cc-headline-content">
+          <a href="https://firstthings.com/against-god-alone/" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Why We Need Others in Our Faith, Not God Alone','article_source':'First Things','position':'headlines'});">
+            Why We Need Others in Our Faith, Not God Alone
+          </a>
+          <div class="cc-headline-meta"><strong>Jillian Parks</strong> &middot; First Things</div>
+        </div>
+      </div>
+      
+      <div class="cc-headline-item">
+        <div class="cc-headline-num">7</div>
+        <div class="cc-headline-content">
+          <a href="https://www.christianitytoday.com/2026/04/easter-jesus-not-zombie-ghost-story/" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Easter Proclaims Christs Resurrection, Not Merely a Supernatural Return','article_source':'Christianity Today','position':'headlines'});">
+            Easter Proclaims Christ's Resurrection, Not Merely a Supernatural Return
+          </a>
+          <div class="cc-headline-meta"><strong>Elise Brandon</strong> &middot; Christianity Today</div>
+        </div>
+      </div>
+      
+      <div class="cc-headline-item">
+        <div class="cc-headline-num">8</div>
+        <div class="cc-headline-content">
+          <a href="https://mereorthodoxy.com/aquinas-ai-and-the-pursuit-of-learning" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Thomas Aquinas and the Value of Teaching Children to Research Well','article_source':'Mere Orthodoxy','position':'headlines'});">
+            Thomas Aquinas and the Value of Teaching Children to Research Well
+          </a>
+          <div class="cc-headline-meta"><strong>Alex Stevens</strong> &middot; Mere Orthodoxy</div>
+        </div>
+      </div>
+      
+      <div class="cc-headline-item">
+        <div class="cc-headline-num">9</div>
+        <div class="cc-headline-content">
+          <a href="https://wng.org/podcasts/speech-and-consequence-1775145932" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Speaking Truth: Navigating Faith, Freedom, and Responsibility','article_source':'World Magazine','position':'headlines'});">
+            Speaking Truth: Navigating Faith, Freedom, and Responsibility
+          </a>
+          <div class="cc-headline-meta"><strong>Keegan Martin</strong> &middot; World Magazine</div>
+        </div>
+      </div>
+      
+      <div class="cc-headline-item">
+        <div class="cc-headline-num">10</div>
+        <div class="cc-headline-content">
+          <a href="https://danielkwilliams.substack.com/p/a-reformed-christian-critique-of" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'Reformed Christian Analysis of Defense Secretarys Imprecatory Prayer Language','article_source':'Daniel K. Williams','position':'headlines'});">
+            Reformed Christian Analysis of Defense Secretary's Imprecatory Prayer Language
+          </a>
+          <div class="cc-headline-meta">Daniel K. Williams</div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="cc-digest-cta">
+      <a href="/digest/">View full digest with annotations &rarr;</a>
+    </div>
+  </div>
+  
 
-    
-    <div class="cc-browse-cat">
-      <div class="cc-browse-cat-name">Core Theology</div>
-      <div class="cc-browse-grid">
+  <!-- ── TOPIC INDEX ────────────────────────────────────────────────── -->
+  <div class="cc-topic-index">
+    <div class="cc-section-header">
+      <div class="cc-section-label">Explore all 70 topics</div>
+      <div class="cc-section-meta"><a href="/digest/">Today&rsquo;s digest &rarr;</a></div>
+    </div>
+    <div class="cc-topic-index-grid">
+      
+      <div class="cc-topic-index-col">
+        <div class="cc-topic-index-cat">Core Theology</div>
         
-        <a class="cc-browse-card" href="/topics/atonement/"
-           onclick="gtag('event','topic_click',{'topic':'atonement','category':'Core Theology'});">
-          <div class="cc-browse-card-name">The Atonement</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on the cross, penal substitution, and what Christ's death accomplished for sinners.</div>
+        <a href="/topics/atonement/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'atonement','position':'index'});">
+          The Atonement
         </a>
         
-        <a class="cc-browse-card" href="/topics/justification-by-faith/"
-           onclick="gtag('event','topic_click',{'topic':'justification-by-faith','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Justification by Faith</div>
-          <div class="cc-browse-card-hook">Evangelical debate over faith alone, imputed righteousness, and what Paul really meant by justification.</div>
+        <a href="/topics/justification-by-faith/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'justification-by-faith','position':'index'});">
+          Justification by Faith
         </a>
         
-        <a class="cc-browse-card" href="/topics/biblical-inerrancy/"
-           onclick="gtag('event','topic_click',{'topic':'biblical-inerrancy','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Biblical Inerrancy</div>
-          <div class="cc-browse-card-hook">How evangelicals understand Scripture's authority, reliability, and relationship to science, history, and theology.</div>
+        <a href="/topics/biblical-inerrancy/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'biblical-inerrancy','position':'index'});">
+          Biblical Inerrancy
         </a>
         
-        <a class="cc-browse-card" href="/topics/baptism/"
-           onclick="gtag('event','topic_click',{'topic':'baptism','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Baptism</div>
-          <div class="cc-browse-card-hook">The evangelical debate over infant vs. believer's baptism, mode, and what Scripture teaches about the ordinance.</div>
+        <a href="/topics/baptism/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'baptism','position':'index'});">
+          Baptism
         </a>
         
-        <a class="cc-browse-card" href="/topics/lords-supper/"
-           onclick="gtag('event','topic_click',{'topic':'lords-supper','category':'Core Theology'});">
-          <div class="cc-browse-card-name">The Lord's Supper</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on what happens at communion — Christ's presence, meaning, and how churches practice it.</div>
+        <a href="/topics/lords-supper/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'lords-supper','position':'index'});">
+          The Lord's Supper
         </a>
         
-        <a class="cc-browse-card" href="/topics/heaven-hell-eternity/"
-           onclick="gtag('event','topic_click',{'topic':'heaven-hell-eternity','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Heaven, Hell & Eternity</div>
-          <div class="cc-browse-card-hook">Evangelical views on the afterlife, eternal punishment, annihilationism, and the hope of new creation.</div>
+        <a href="/topics/heaven-hell-eternity/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'heaven-hell-eternity','position':'index'});">
+          Heaven, Hell & Eternity
         </a>
         
-        <a class="cc-browse-card" href="/topics/creation-evolution/"
-           onclick="gtag('event','topic_click',{'topic':'creation-evolution','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Creation & Evolution</div>
-          <div class="cc-browse-card-hook">How evangelicals navigate Genesis, the origins debate, and young-earth vs. old-earth creationism.</div>
+        <a href="/topics/creation-evolution/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'creation-evolution','position':'index'});">
+          Creation & Evolution
         </a>
         
-        <a class="cc-browse-card" href="/topics/suffering-and-providence/"
-           onclick="gtag('event','topic_click',{'topic':'suffering-and-providence','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Suffering & Providence</div>
-          <div class="cc-browse-card-hook">How Christians understand God's sovereignty in the face of pain, grief, and seemingly unanswered prayer.</div>
+        <a href="/topics/suffering-and-providence/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'suffering-and-providence','position':'index'});">
+          Suffering & Providence
         </a>
         
-        <a class="cc-browse-card" href="/topics/gender-and-biblical-anthropology/"
-           onclick="gtag('event','topic_click',{'topic':'gender-and-biblical-anthropology','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Gender & Biblical Anthropology</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on male and female identity, embodiment, transgender questions, and the image of God.</div>
+        <a href="/topics/gender-and-biblical-anthropology/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'gender-and-biblical-anthropology','position':'index'});">
+          Gender & Biblical Anthropology
         </a>
         
-        <a class="cc-browse-card" href="/topics/apologetics/"
-           onclick="gtag('event','topic_click',{'topic':'apologetics','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Apologetics</div>
-          <div class="cc-browse-card-hook">How Christians make the case for the faith — through reason, evidence, presupposition, and engagement with doubt.</div>
+        <a href="/topics/apologetics/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'apologetics','position':'index'});">
+          Apologetics
         </a>
         
-        <a class="cc-browse-card" href="/topics/predestination-free-will/"
-           onclick="gtag('event','topic_click',{'topic':'predestination-free-will','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Predestination & Free Will</div>
-          <div class="cc-browse-card-hook">The Calvinist-Arminian debate over divine election, human freedom, and the nature of saving grace.</div>
+        <a href="/topics/predestination-free-will/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'predestination-free-will','position':'index'});">
+          Predestination & Free Will
         </a>
         
-        <a class="cc-browse-card" href="/topics/holy-spirit-spiritual-gifts/"
-           onclick="gtag('event','topic_click',{'topic':'holy-spirit-spiritual-gifts','category':'Core Theology'});">
-          <div class="cc-browse-card-name">The Holy Spirit & Spiritual Gifts</div>
-          <div class="cc-browse-card-hook">The debate between cessationists and continuationists over spiritual gifts, tongues, and the Spirit's work today.</div>
+        <a href="/topics/holy-spirit-spiritual-gifts/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'holy-spirit-spiritual-gifts','position':'index'});">
+          The Holy Spirit & Spiritual Gifts
         </a>
         
-        <a class="cc-browse-card" href="/topics/the-trinity/"
-           onclick="gtag('event','topic_click',{'topic':'the-trinity','category':'Core Theology'});">
-          <div class="cc-browse-card-name">The Trinity</div>
-          <div class="cc-browse-card-hook">Evangelical theology of the triune God — Father, Son, and Spirit — and why Trinitarian doctrine matters in practice.</div>
+        <a href="/topics/the-trinity/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'the-trinity','position':'index'});">
+          The Trinity
         </a>
         
-        <a class="cc-browse-card" href="/topics/eschatology/"
-           onclick="gtag('event','topic_click',{'topic':'eschatology','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Eschatology & End Times</div>
-          <div class="cc-browse-card-hook">Evangelical debate over premillennialism, amillennialism, the rapture, and what Scripture teaches about Christ's return and the end of history.</div>
+        <a href="/topics/eschatology/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'eschatology','position':'index'});">
+          Eschatology & End Times
         </a>
         
-        <a class="cc-browse-card" href="/topics/israel-and-prophecy/"
-           onclick="gtag('event','topic_click',{'topic':'israel-and-prophecy','category':'Core Theology'});">
-          <div class="cc-browse-card-name">Israel & Prophecy</div>
-          <div class="cc-browse-card-hook">Evangelical debate between dispensationalism and covenant theology over Israel's role in prophecy, the land promises, and Christian Zionism.</div>
+        <a href="/topics/israel-and-prophecy/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'israel-and-prophecy','position':'index'});">
+          Israel & Prophecy
+        </a>
+        
+        <a href="/topics/christology/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'christology','position':'index'});">
+          Christology
+        </a>
+        
+        <a href="/topics/covenant-theology/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'covenant-theology','position':'index'});">
+          Covenant Theology
         </a>
         
       </div>
-    </div>
-    
-    <div class="cc-browse-cat">
-      <div class="cc-browse-cat-name">Church Life</div>
-      <div class="cc-browse-grid">
+      
+      <div class="cc-topic-index-col">
+        <div class="cc-topic-index-cat">Church Life</div>
         
-        <a class="cc-browse-card" href="/topics/complementarianism-egalitarianism/"
-           onclick="gtag('event','topic_click',{'topic':'complementarianism-egalitarianism','category':'Church Life'});">
-          <div class="cc-browse-card-name">Complementarianism & Egalitarianism</div>
-          <div class="cc-browse-card-hook">The ongoing evangelical debate over women in ministry, male headship, and what Scripture teaches about church leadership.</div>
+        <a href="/topics/complementarianism-egalitarianism/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'complementarianism-egalitarianism','position':'index'});">
+          Complementarianism & Egalitarianism
         </a>
         
-        <a class="cc-browse-card" href="/topics/church-discipline/"
-           onclick="gtag('event','topic_click',{'topic':'church-discipline','category':'Church Life'});">
-          <div class="cc-browse-card-name">Church Discipline</div>
-          <div class="cc-browse-card-hook">How churches handle member sin, accountability, corrective removal, and the path to restoration.</div>
+        <a href="/topics/church-discipline/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'church-discipline','position':'index'});">
+          Church Discipline
         </a>
         
-        <a class="cc-browse-card" href="/topics/worship-and-liturgy/"
-           onclick="gtag('event','topic_click',{'topic':'worship-and-liturgy','category':'Church Life'});">
-          <div class="cc-browse-card-name">Worship & Liturgy</div>
-          <div class="cc-browse-card-hook">Evangelical conversation about how churches should gather, sing, and meet with God — contemporary or liturgical.</div>
+        <a href="/topics/worship-and-liturgy/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'worship-and-liturgy','position':'index'});">
+          Worship & Liturgy
         </a>
         
-        <a class="cc-browse-card" href="/topics/local-church/"
-           onclick="gtag('event','topic_click',{'topic':'local-church','category':'Church Life'});">
-          <div class="cc-browse-card-name">The Local Church</div>
-          <div class="cc-browse-card-hook">Why the local church matters — and evangelical conversations about attendance, belonging, and dechurching.</div>
+        <a href="/topics/local-church/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'local-church','position':'index'});">
+          The Local Church
         </a>
         
-        <a class="cc-browse-card" href="/topics/missions-and-evangelism/"
-           onclick="gtag('event','topic_click',{'topic':'missions-and-evangelism','category':'Church Life'});">
-          <div class="cc-browse-card-name">Missions & Evangelism</div>
-          <div class="cc-browse-card-hook">How evangelicals understand the Great Commission, gospel proclamation, and the church's mission in the world.</div>
+        <a href="/topics/missions-and-evangelism/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'missions-and-evangelism','position':'index'});">
+          Missions & Evangelism
         </a>
         
-        <a class="cc-browse-card" href="/topics/church-history/"
-           onclick="gtag('event','topic_click',{'topic':'church-history','category':'Church Life'});">
-          <div class="cc-browse-card-name">Church History</div>
-          <div class="cc-browse-card-hook">What the church's past — its reformers, councils, creeds, and failures — means for Christians today.</div>
+        <a href="/topics/church-history/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'church-history','position':'index'});">
+          Church History
         </a>
         
-        <a class="cc-browse-card" href="/topics/membership/"
-           onclick="gtag('event','topic_click',{'topic':'membership','category':'Church Life'});">
-          <div class="cc-browse-card-name">Church Membership</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on formal church membership and what covenant commitment to a local body requires.</div>
+        <a href="/topics/membership/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'membership','position':'index'});">
+          Church Membership
         </a>
         
-        <a class="cc-browse-card" href="/topics/church-planting/"
-           onclick="gtag('event','topic_click',{'topic':'church-planting','category':'Church Life'});">
-          <div class="cc-browse-card-name">Church Planting</div>
-          <div class="cc-browse-card-hook">The theology and practice of starting new churches as a strategy for reaching unchurched communities.</div>
+        <a href="/topics/church-planting/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'church-planting','position':'index'});">
+          Church Planting
         </a>
         
-        <a class="cc-browse-card" href="/topics/preaching/"
-           onclick="gtag('event','topic_click',{'topic':'preaching','category':'Church Life'});">
-          <div class="cc-browse-card-name">Preaching</div>
-          <div class="cc-browse-card-hook">What makes a sermon faithful — evangelical debate over expository preaching, topical approaches, and pulpit method.</div>
+        <a href="/topics/preaching/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'preaching','position':'index'});">
+          Preaching
         </a>
         
-        <a class="cc-browse-card" href="/topics/church-accountability/"
-           onclick="gtag('event','topic_click',{'topic':'church-accountability','category':'Church Life'});">
-          <div class="cc-browse-card-name">Pastoral Accountability</div>
-          <div class="cc-browse-card-hook">How churches build structures to prevent pastoral abuse, protect victims, and hold leaders accountable.</div>
+        <a href="/topics/church-accountability/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'church-accountability','position':'index'});">
+          Pastoral Accountability
         </a>
         
-        <a class="cc-browse-card" href="/topics/spiritual-abuse/"
-           onclick="gtag('event','topic_click',{'topic':'spiritual-abuse','category':'Church Life'});">
-          <div class="cc-browse-card-name">Spiritual Abuse & Toxic Churches</div>
-          <div class="cc-browse-card-hook">What spiritual abuse looks like in evangelical churches, how abusive leaders operate, and what faithful churches owe to survivors.</div>
+        <a href="/topics/spiritual-abuse/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'spiritual-abuse','position':'index'});">
+          Spiritual Abuse & Toxic Churches
         </a>
         
-      </div>
-    </div>
-    
-    <div class="cc-browse-cat">
-      <div class="cc-browse-cat-name">Spiritual Formation</div>
-      <div class="cc-browse-grid">
-        
-        <a class="cc-browse-card" href="/topics/prayer/"
-           onclick="gtag('event','topic_click',{'topic':'prayer','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Prayer</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on how Christians pray, whether prayer changes things, and building a consistent prayer life.</div>
+        <a href="/topics/small-groups/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'small-groups','position':'index'});">
+          Small Groups
         </a>
         
-        <a class="cc-browse-card" href="/topics/discipleship/"
-           onclick="gtag('event','topic_click',{'topic':'discipleship','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Discipleship</div>
-          <div class="cc-browse-card-hook">How Christians grow in maturity — one-on-one mentoring, church programs, and the meaning of making disciples.</div>
+        <a href="/topics/pastoral-ministry/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'pastoral-ministry','position':'index'});">
+          The Pastor's Role
         </a>
         
-        <a class="cc-browse-card" href="/topics/sanctification/"
-           onclick="gtag('event','topic_click',{'topic':'sanctification','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Sanctification</div>
-          <div class="cc-browse-card-hook">The evangelical debate over how Christians grow in holiness — God's work, human effort, and means of grace.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/spiritual-disciplines/"
-           onclick="gtag('event','topic_click',{'topic':'spiritual-disciplines','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Spiritual Disciplines</div>
-          <div class="cc-browse-card-hook">How practices like solitude, silence, Scripture reading, and fasting shape the Christian life.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/spiritual-warfare/"
-           onclick="gtag('event','topic_click',{'topic':'spiritual-warfare','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Spiritual Warfare</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on demonic activity, the armor of God, deliverance, and living in spiritual conflict.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/fasting/"
-           onclick="gtag('event','topic_click',{'topic':'fasting','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Fasting</div>
-          <div class="cc-browse-card-hook">What the Bible teaches about fasting — and why many evangelicals consider it a neglected spiritual discipline.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/anxiety-and-fear/"
-           onclick="gtag('event','topic_click',{'topic':'anxiety-and-fear','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Anxiety & Fear</div>
-          <div class="cc-browse-card-hook">How Christians understand worry, fear, and anxiety — spiritually, psychologically, and practically.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/mental-health/"
-           onclick="gtag('event','topic_click',{'topic':'mental-health','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Mental Health & Faith</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on depression, mental illness, counseling, and integrating faith with psychological care.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/faith-deconstruction/"
-           onclick="gtag('event','topic_click',{'topic':'faith-deconstruction','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Deconstruction & Faith</div>
-          <div class="cc-browse-card-hook">Why Christians are deconstructing, what churches can do, and what healthy faith rebuilding looks like.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/contemplative-prayer/"
-           onclick="gtag('event','topic_click',{'topic':'contemplative-prayer','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Contemplative Prayer</div>
-          <div class="cc-browse-card-hook">Evangelical debate over centering prayer, lectio divina, and the place of contemplative practices in Christian spirituality.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/grief-and-lament/"
-           onclick="gtag('event','topic_click',{'topic':'grief-and-lament','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Grief & Lament</div>
-          <div class="cc-browse-card-hook">What the Bible teaches about grief, lament, and honest prayer in suffering — and why so many evangelical churches struggle to make space for it.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/forgiveness/"
-           onclick="gtag('event','topic_click',{'topic':'forgiveness','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Forgiveness</div>
-          <div class="cc-browse-card-hook">Evangelical debate over whether forgiveness is unconditional, what reconciliation requires, and how churches handle forgiveness in the context of abuse and justice.</div>
-        </a>
-        
-        <a class="cc-browse-card" href="/topics/christian-friendship/"
-           onclick="gtag('event','topic_click',{'topic':'christian-friendship','category':'Spiritual Formation'});">
-          <div class="cc-browse-card-name">Christian Friendship & Community</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on biblical friendship, loneliness, and why the church must become a place of genuine, deep relational belonging.</div>
+        <a href="/topics/church-governance/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'church-governance','position':'index'});">
+          Church Governance
         </a>
         
       </div>
-    </div>
-    
-    <div class="cc-browse-cat">
-      <div class="cc-browse-cat-name">Culture & Society</div>
-      <div class="cc-browse-grid">
+      
+      <div class="cc-topic-index-col">
+        <div class="cc-topic-index-cat">Spiritual Formation</div>
         
-        <a class="cc-browse-card" href="/topics/politics-and-the-church/"
-           onclick="gtag('event','topic_click',{'topic':'politics-and-the-church','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Politics & the Church</div>
-          <div class="cc-browse-card-hook">How evangelical Christians engage with politics, government, civic life, and the public square.</div>
+        <a href="/topics/prayer/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'prayer','position':'index'});">
+          Prayer
         </a>
         
-        <a class="cc-browse-card" href="/topics/racial-reconciliation/"
-           onclick="gtag('event','topic_click',{'topic':'racial-reconciliation','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Racial Reconciliation</div>
-          <div class="cc-browse-card-hook">Evangelical conversation around race, repentance, diversity, and what the church owes to justice.</div>
+        <a href="/topics/discipleship/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'discipleship','position':'index'});">
+          Discipleship
         </a>
         
-        <a class="cc-browse-card" href="/topics/technology/"
-           onclick="gtag('event','topic_click',{'topic':'technology','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Technology & the Christian Life</div>
-          <div class="cc-browse-card-hook">How Christians think about social media, smartphones, digital life, and the spiritual formation impact of technology.</div>
+        <a href="/topics/sanctification/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'sanctification','position':'index'});">
+          Sanctification
         </a>
         
-        <a class="cc-browse-card" href="/topics/technology-and-discipleship/"
-           onclick="gtag('event','topic_click',{'topic':'technology-and-discipleship','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Technology & Discipleship</div>
-          <div class="cc-browse-card-hook">How AI and digital tools are reshaping discipleship, ministry, and evangelical thinking about what it means to be human.</div>
+        <a href="/topics/spiritual-disciplines/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'spiritual-disciplines','position':'index'});">
+          Spiritual Disciplines
         </a>
         
-        <a class="cc-browse-card" href="/topics/marriage-and-family/"
-           onclick="gtag('event','topic_click',{'topic':'marriage-and-family','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Marriage & Family</div>
-          <div class="cc-browse-card-hook">A Christian vision of marriage, family, divorce, singleness, and family formation in a post-Christian culture.</div>
+        <a href="/topics/spiritual-warfare/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'spiritual-warfare','position':'index'});">
+          Spiritual Warfare
         </a>
         
-        <a class="cc-browse-card" href="/topics/christian-parenting/"
-           onclick="gtag('event','topic_click',{'topic':'christian-parenting','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Christian Parenting</div>
-          <div class="cc-browse-card-hook">How Christian parents pass faith to the next generation — from family worship and catechism to raising teenagers.</div>
+        <a href="/topics/fasting/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'fasting','position':'index'});">
+          Fasting
         </a>
         
-        <a class="cc-browse-card" href="/topics/christian-ethics/"
-           onclick="gtag('event','topic_click',{'topic':'christian-ethics','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Christian Ethics</div>
-          <div class="cc-browse-card-hook">How Christians navigate bioethics, sexuality, LGBTQ+ questions, and moral issues Scripture doesn't directly address.</div>
+        <a href="/topics/anxiety-and-fear/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'anxiety-and-fear','position':'index'});">
+          Anxiety & Fear
         </a>
         
-        <a class="cc-browse-card" href="/topics/vocation-and-work/"
-           onclick="gtag('event','topic_click',{'topic':'vocation-and-work','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Vocation & Work</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on calling, vocation, and how faith shapes ordinary work and the marketplace.</div>
+        <a href="/topics/mental-health/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'mental-health','position':'index'});">
+          Mental Health & Faith
         </a>
         
-        <a class="cc-browse-card" href="/topics/evangelicalism/"
-           onclick="gtag('event','topic_click',{'topic':'evangelicalism','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">The Future of Evangelicalism</div>
-          <div class="cc-browse-card-hook">The state of the evangelical movement — its divisions, decline, identity, and what comes next.</div>
+        <a href="/topics/faith-deconstruction/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'faith-deconstruction','position':'index'});">
+          Deconstruction & Faith
         </a>
         
-        <a class="cc-browse-card" href="/topics/christian-nationalism/"
-           onclick="gtag('event','topic_click',{'topic':'christian-nationalism','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Christian Nationalism</div>
-          <div class="cc-browse-card-hook">Evangelical debate over Christian nationalism — its appeal, its dangers, and what faithful political engagement looks like.</div>
+        <a href="/topics/contemplative-prayer/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'contemplative-prayer','position':'index'});">
+          Contemplative Prayer
         </a>
         
-        <a class="cc-browse-card" href="/topics/biblical-sexuality/"
-           onclick="gtag('event','topic_click',{'topic':'biblical-sexuality','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Biblical Sexuality</div>
-          <div class="cc-browse-card-hook">Evangelical perspectives on same-sex attraction, LGBTQ+ identity, sexual ethics, and what Scripture teaches about sexuality.</div>
+        <a href="/topics/grief-and-lament/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'grief-and-lament','position':'index'});">
+          Grief & Lament
         </a>
         
-        <a class="cc-browse-card" href="/topics/ai-and-the-church/"
-           onclick="gtag('event','topic_click',{'topic':'ai-and-the-church','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Artificial Intelligence & the Church</div>
-          <div class="cc-browse-card-hook">How AI is reshaping ministry, creative work, and evangelical thinking about human dignity and the image of God.</div>
+        <a href="/topics/forgiveness/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'forgiveness','position':'index'});">
+          Forgiveness
         </a>
         
-        <a class="cc-browse-card" href="/topics/biblical-justice/"
-           onclick="gtag('event','topic_click',{'topic':'biblical-justice','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Biblical Justice & the Social Gospel</div>
-          <div class="cc-browse-card-hook">Evangelical debate over poverty, oppression, and the distinction between biblical justice and the social gospel.</div>
+        <a href="/topics/christian-friendship/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'christian-friendship','position':'index'});">
+          Christian Friendship & Community
         </a>
         
-        <a class="cc-browse-card" href="/topics/prosperity-gospel/"
-           onclick="gtag('event','topic_click',{'topic':'prosperity-gospel','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">The Prosperity Gospel</div>
-          <div class="cc-browse-card-hook">Why evangelical Christians oppose the Word of Faith movement, and what a biblically faithful theology of blessing, suffering, and money looks like.</div>
+        <a href="/topics/singleness/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'singleness','position':'index'});">
+          Singleness
         </a>
         
-        <a class="cc-browse-card" href="/topics/religious-liberty/"
-           onclick="gtag('event','topic_click',{'topic':'religious-liberty','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Religious Liberty</div>
-          <div class="cc-browse-card-hook">Evangelical debate over conscience rights, religious exemptions, government overreach, and how Christians engage a pluralistic legal culture.</div>
+        <a href="/topics/biblical-literacy/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'biblical-literacy','position':'index'});">
+          Biblical Literacy
         </a>
         
-        <a class="cc-browse-card" href="/topics/progressive-christianity/"
-           onclick="gtag('event','topic_click',{'topic':'progressive-christianity','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Progressive Christianity</div>
-          <div class="cc-browse-card-hook">Evangelical responses to progressive Christianity — its departure from biblical authority, sexual ethics, and exclusivity — and what distinguishes it from historic orthodoxy.</div>
+        <a href="/topics/pornography/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'pornography','position':'index'});">
+          Pornography & Sexual Purity
         </a>
         
-        <a class="cc-browse-card" href="/topics/stewardship-and-generosity/"
-           onclick="gtag('event','topic_click',{'topic':'stewardship-and-generosity','category':'Culture & Society'});">
-          <div class="cc-browse-card-name">Stewardship & Generosity</div>
-          <div class="cc-browse-card-hook">How Christians think about money, giving, and generosity — from tithing debates to radical generosity and the prosperity gospel critique.</div>
+        <a href="/topics/death-and-dying/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'death-and-dying','position':'index'});">
+          Death & Dying
         </a>
         
       </div>
-    </div>
-    
-
-    <div style="text-align:center; margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid #e0ddd8;">
-      <a href="/topics/" style="font-size:13px; font-weight:600; color:#2C4A2E; text-decoration:none; letter-spacing:0.04em;">
-        View full topic pages with perspectives, key thinkers &amp; curated reading &rarr;
-      </a>
+      
+      <div class="cc-topic-index-col">
+        <div class="cc-topic-index-cat">Culture & Society</div>
+        
+        <a href="/topics/politics-and-the-church/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'politics-and-the-church','position':'index'});">
+          Politics & the Church
+        </a>
+        
+        <a href="/topics/racial-reconciliation/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'racial-reconciliation','position':'index'});">
+          Racial Reconciliation
+        </a>
+        
+        <a href="/topics/technology/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'technology','position':'index'});">
+          Technology & the Christian Life
+        </a>
+        
+        <a href="/topics/technology-and-discipleship/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'technology-and-discipleship','position':'index'});">
+          Technology & Discipleship
+        </a>
+        
+        <a href="/topics/marriage-and-family/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'marriage-and-family','position':'index'});">
+          Marriage & Family
+        </a>
+        
+        <a href="/topics/christian-parenting/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'christian-parenting','position':'index'});">
+          Christian Parenting
+        </a>
+        
+        <a href="/topics/christian-ethics/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'christian-ethics','position':'index'});">
+          Christian Ethics
+        </a>
+        
+        <a href="/topics/vocation-and-work/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'vocation-and-work','position':'index'});">
+          Vocation & Work
+        </a>
+        
+        <a href="/topics/evangelicalism/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'evangelicalism','position':'index'});">
+          The Future of Evangelicalism
+        </a>
+        
+        <a href="/topics/christian-nationalism/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'christian-nationalism','position':'index'});">
+          Christian Nationalism
+        </a>
+        
+        <a href="/topics/biblical-sexuality/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'biblical-sexuality','position':'index'});">
+          Biblical Sexuality
+        </a>
+        
+        <a href="/topics/ai-and-the-church/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'ai-and-the-church','position':'index'});">
+          Artificial Intelligence & the Church
+        </a>
+        
+        <a href="/topics/biblical-justice/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'biblical-justice','position':'index'});">
+          Biblical Justice & the Social Gospel
+        </a>
+        
+        <a href="/topics/prosperity-gospel/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'prosperity-gospel','position':'index'});">
+          The Prosperity Gospel
+        </a>
+        
+        <a href="/topics/religious-liberty/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'religious-liberty','position':'index'});">
+          Religious Liberty
+        </a>
+        
+        <a href="/topics/progressive-christianity/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'progressive-christianity','position':'index'});">
+          Progressive Christianity
+        </a>
+        
+        <a href="/topics/christian-education/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'christian-education','position':'index'});">
+          Christian Education
+        </a>
+        
+        <a href="/topics/abortion/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'abortion','position':'index'});">
+          Abortion & the Pro-Life Movement
+        </a>
+        
+        <a href="/topics/addiction-and-recovery/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'addiction-and-recovery','position':'index'});">
+          Addiction & Recovery
+        </a>
+        
+        <a href="/topics/creation-care/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'creation-care','position':'index'});">
+          Creation Care
+        </a>
+        
+        <a href="/topics/christian-masculinity/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'christian-masculinity','position':'index'});">
+          Christian Masculinity
+        </a>
+        
+        <a href="/topics/stewardship-and-generosity/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'stewardship-and-generosity','position':'index'});">
+          Stewardship & Generosity
+        </a>
+        
+      </div>
+      
     </div>
   </div>
 
