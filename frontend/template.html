@@ -351,10 +351,9 @@
     }
 
     /* ── THEME GROUPS ────────────────────────────────────────────── */
-    .cc-theme-group { margin-top: 2rem; }
-    .cc-theme-group--last { padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-theme-group { margin-top: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid #e0ddd8; }
     .cc-theme-divider {
-      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;
+      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
     }
     .cc-theme-divider-label {
       font-size: 9.5px; font-weight: 600; letter-spacing: 0.16em;
@@ -370,12 +369,11 @@
     /* ── ARTICLE CARD GRID ───────────────────────────────────────── */
     .cc-card-grid {
       display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 0; border-top: 1px solid #e0ddd8;
+      gap: 0;
     }
     .cc-card-grid.two-col { grid-template-columns: repeat(2, 1fr); }
     .cc-article-card {
-      padding: 1rem 1.25rem 1rem 0;
-      border-bottom: 1px solid #f0ede8;
+      padding: 1rem 1.25rem 0 0;
       display: flex; flex-direction: column; justify-content: space-between;
       min-height: 100px;
     }
@@ -531,9 +529,9 @@
   <!-- ── THEME GROUPS ──────────────────────────────────────────────── -->
   {% if featured_topics | length > 1 %}
   {% for topic in featured_topics[1:4] %}
-  <div class="cc-theme-group{% if loop.last %} cc-theme-group--last{% endif %}">
+  <div class="cc-theme-group">
     <div class="cc-theme-divider">
-      <span class="cc-theme-divider-label">{{ topic.category }}</span>
+      <span class="cc-theme-divider-label">{{ topic.name }}</span>
       <div class="cc-theme-divider-line"></div>
       <a href="/topics/{{ topic.slug }}/" class="cc-theme-divider-explore"
          onclick="gtag('event','topic_click',{'topic':'{{ topic.slug }}','position':'theme_group'});">Explore all &rarr;</a>
