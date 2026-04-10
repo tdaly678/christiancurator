@@ -9,6 +9,7 @@ Each article receives:
 """
 
 import os
+import re
 import json
 import time
 import anthropic
@@ -78,6 +79,11 @@ SCORING GUIDANCE:
   for the Christian life. Bonus: articles that begin by naming a real struggle or question the reader faces, then
   address it biblically. Length alone does not earn a high score — a short devotional that does all three deserves
   8 more than a long essay that does none.
+
+  SPECIAL CASE — DIRECT RESPONSE ARTICLES: If an article is a named author directly responding to, refuting,
+  or engaging the argument of another named author or position (e.g., "X Responds to Y", "A Reply to...",
+  "Why X is Wrong About..."), add +1 to whatever score you would otherwise give, capped at 10. These articles
+  represent live theological debate and are high editorial value for this audience.
 
 - SCORE 6-7: Solid theological or practical articles that apply Scripture to Christian life but lack an explicit
   gospel connection, OR good cultural commentary that offers a biblically-grounded constructive alternative (not
@@ -376,6 +382,20 @@ PREVIOUSLY_SHOWN_PENALTY = 4.0   # applied to articles already surfaced on the s
 DUPLICATE_TOPIC_PENALTY   = 3.0   # applied to same-topic same-perspective duplicates
 OPPOSING_VIEWS_BOOST      = 1.0   # applied to articles that form an opposing pair
 
+# Response/debate article boost — applied when a title signals direct engagement
+# with another named author or argument, especially from Tier 1 outlets.
+RESPONSE_ARTICLE_BOOST       = 0.75   # base boost for any detected response article
+RESPONSE_TIER1_EXTRA_BOOST   = 0.50   # additional boost when source is Tier 1A or 1
+
+RESPONSE_TITLE_PATTERNS = [
+    r"\bresponds?\b", r"\bresponding\b", r"\ba reply\b", r"\bin reply\b",
+    r"\brefutes?\b", r"\brefuting\b", r"\bpushes? back\b", r"\bcorrecting\b",
+    r"\bwhy .{3,40} is wrong\b", r"\bwhat .{3,40} gets wrong\b",
+    r"\bagainst\b", r"\breviewing\b.*\bresponse\b",
+    r"\bresponds? to\b", r"\breply to\b", r"\ba response to\b",
+    r"\bcritique of\b", r"\bcritiquing\b", r"\bchallenging\b.*\bclaim\b",
+]
+
 # Catholic content: cluster keywords that trigger a hard score cap of 3
 # (applied after Claude scoring so it works even if Claude scores too high)
 CATHOLIC_CLUSTER_KEYWORDS = {
@@ -554,6 +574,25 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
         print(f"  Applied previously-shown penalty to {previously_shown_count} articles.")
     if catholic_capped_count:
         print(f"  Applied Catholic content cap to {catholic_capped_count} articles.")
+
+    # Step 2b: Response/debate article boost
+    # Articles whose title signals direct engagement with a named author or argument
+    # get a score lift, with extra lift for Tier 1A/1 sources.
+    _tier1_sources = TIER_1A_SOURCES | TIER_1_SOURCES
+    _compiled_patterns = [re.compile(p, re.IGNORECASE) for p in RESPONSE_TITLE_PATTERNS]
+    response_boosted_count = 0
+    for article in scored:
+        title = article.get("title", "")
+        is_response = any(pat.search(title) for pat in _compiled_patterns)
+        if is_response:
+            boost_amount = RESPONSE_ARTICLE_BOOST
+            if article.get("source_name", "") in _tier1_sources:
+                boost_amount += RESPONSE_TIER1_EXTRA_BOOST
+            article["final_score"] = round(min(article["final_score"] + boost_amount, 10.0), 2)
+            article["response_boosted"] = True
+            response_boosted_count += 1
+    if response_boosted_count:
+        print(f"  Response/debate boost: boosted {response_boosted_count} articles.")
 
     # Step 3: Sort by final_score before diversity pass
     scored.sort(key=lambda a: a["final_score"], reverse=True)
