@@ -59,9 +59,10 @@
       line-height: 1.5;
     }
 
-    /* ── Header ──────────────────────────────────────────────────── */
+    /* ── Layout ──────────────────────────────────────────────────── */
     .cc-root { max-width: 980px; margin: 0 auto; padding: 0 20px 3rem; }
 
+    /* ── Header ──────────────────────────────────────────────────── */
     .cc-header { border-bottom: 1px solid #e0ddd8; padding: 0.75rem 0 0; }
     .cc-top-bar {
       display: flex; align-items: center; justify-content: space-between;
@@ -103,9 +104,7 @@
       font-family: inherit; padding: 0;
     }
     .cc-nav-dropdown-toggle:hover { color: #2C4A2E; }
-    .cc-nav-dropdown-toggle::after {
-      content: '▾'; font-size: 10px; letter-spacing: 0;
-    }
+    .cc-nav-dropdown-toggle::after { content: '▾'; font-size: 10px; letter-spacing: 0; }
     .cc-nav-dropdown-menu {
       display: none; position: absolute; top: 100%; left: 50%;
       transform: translateX(-50%);
@@ -122,132 +121,173 @@
     }
     .cc-nav-dropdown-menu a:hover { color: #2C4A2E; background: #f7f5f2; }
 
-    /* ── Welcome section ─────────────────────────────────────────── */
-    .cc-welcome {
-      border-bottom: 1px solid #e0ddd8;
-      padding: 2rem 0 1.75rem;
-    }
-    .cc-welcome-hed {
-      font-family: 'Lora', Georgia, serif; font-size: 30px; font-weight: 600;
-      line-height: 1.25; color: #1a1a1a; margin-bottom: 0.6rem;
-    }
-    .cc-welcome-sub {
-      font-size: 14.5px; color: #666; line-height: 1.65;
-    }
-    @media (max-width: 660px) {
-      .cc-welcome-hed { font-size: 24px; }
-      .cc-site-name { font-size: 32px; }
-    }
-
-    /* ── Featured topics ─────────────────────────────────────────── */
-    .cc-featured { margin-top: 2rem; }
-    .cc-featured-header {
+    /* ── Section header ──────────────────────────────────────────── */
+    .cc-section-header {
       display: flex; align-items: baseline; justify-content: space-between;
-      border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.25rem;
+      border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.5rem;
     }
-    .cc-featured-label {
+    .cc-section-label {
       font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
       text-transform: uppercase; color: #1a1a1a;
     }
-    .cc-featured-date { font-size: 11px; color: #aaa; }
+    .cc-section-meta { font-size: 11px; color: #aaa; }
+    .cc-section-meta a { color: #2C4A2E; text-decoration: none; font-weight: 600; font-size: 11px; }
+    .cc-section-meta a:hover { text-decoration: underline; }
 
-    .cc-featured-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+    /* ── LEAD STORY ──────────────────────────────────────────────── */
+    .cc-lead { margin-top: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-lead-cat {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+      color: #2C4A2E; margin-bottom: 0.55rem;
     }
-    @media (max-width: 860px) { .cc-featured-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 560px) { .cc-featured-grid { grid-template-columns: 1fr; } }
+    .cc-lead-title {
+      font-family: 'Lora', Georgia, serif; font-size: 34px; font-weight: 600;
+      line-height: 1.15; color: #1a1a1a; margin-bottom: 0.65rem;
+      text-decoration: none; display: block;
+    }
+    .cc-lead-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-lead-hook {
+      font-family: 'Lora', Georgia, serif; font-size: 15.5px; color: #444;
+      font-style: italic; line-height: 1.65; margin-bottom: 1.25rem; max-width: 700px;
+    }
+    .cc-lead-body {
+      display: grid; grid-template-columns: 1fr 250px; gap: 2rem; align-items: start;
+    }
+    @media (max-width: 700px) { .cc-lead-body { grid-template-columns: 1fr; } }
+    .cc-lead-articles-label {
+      font-size: 9.5px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #aaa; margin-bottom: 10px;
+    }
+    .cc-lead-article { padding: 9px 0; border-top: 1px solid #e0ddd8; }
+    .cc-lead-article:first-child { border-top: none; padding-top: 0; }
+    .cc-lead-article-title {
+      font-family: 'Lora', Georgia, serif; font-size: 14px; font-weight: 500;
+      color: #1a1a1a; text-decoration: none; line-height: 1.35; display: block; margin-bottom: 3px;
+    }
+    .cc-lead-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-lead-article-meta { font-size: 11px; color: #aaa; }
+    .cc-lead-article-meta strong { color: #777; font-weight: 600; }
+    .cc-lead-explore {
+      display: inline-block; margin-top: 14px; font-size: 13px; font-weight: 600;
+      color: #2C4A2E; text-decoration: none;
+    }
+    .cc-lead-explore:hover { text-decoration: underline; }
+    .cc-lead-cta-box {
+      background: #f0f4f0; border: 1px solid #b5ccb8; border-radius: 5px;
+      padding: 1.25rem; display: flex; flex-direction: column; gap: 10px;
+    }
+    .cc-lead-cta-label {
+      font-size: 9.5px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #2C4A2E;
+    }
+    .cc-lead-cta-title {
+      font-family: 'Lora', Georgia, serif; font-size: 15px; font-weight: 600;
+      color: #1a1a1a; line-height: 1.3;
+    }
+    .cc-lead-cta-summary {
+      font-size: 12.5px; color: #555; line-height: 1.6;
+      border-left: 2px solid #2C4A2E; padding-left: 10px; font-style: italic;
+    }
+    .cc-lead-cta-link {
+      font-size: 12.5px; font-weight: 600; color: #2C4A2E;
+      text-decoration: none; padding-top: 8px; border-top: 1px solid #c8d9c9; display: block;
+    }
+    .cc-lead-cta-link:hover { text-decoration: underline; }
 
-    .cc-featured-card {
-      border: 1px solid #e0ddd8; border-radius: 5px; padding: 1.1rem 1.2rem 1rem;
-      background: #fff; display: flex; flex-direction: column;
-      transition: border-color 0.15s, box-shadow 0.15s;
+    /* ── SECONDARY TOPICS ────────────────────────────────────────── */
+    .cc-secondary { margin-top: 1.75rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-secondary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    @media (max-width: 620px) { .cc-secondary-grid { grid-template-columns: 1fr; } }
+    .cc-secondary-card { border-left: 3px solid #2C4A2E; padding-left: 1rem; }
+    .cc-secondary-cat {
+      font-size: 9.5px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #2C4A2E; margin-bottom: 5px;
     }
-    .cc-featured-card:hover {
-      border-color: #2C4A2E; box-shadow: 0 2px 8px rgba(44,74,46,0.08);
+    .cc-secondary-name {
+      font-family: 'Lora', Georgia, serif; font-size: 20px; font-weight: 600;
+      line-height: 1.2; margin-bottom: 8px;
     }
-    .cc-featured-cat {
-      font-size: 9.5px; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 0.14em; color: #2C4A2E; margin-bottom: 6px;
+    .cc-secondary-name a { color: #1a1a1a; text-decoration: none; }
+    .cc-secondary-name a:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-secondary-hook {
+      font-size: 13px; color: #555; line-height: 1.6; font-style: italic; margin-bottom: 10px;
     }
-    .cc-featured-name {
-      font-family: 'Lora', Georgia, serif; font-size: 19px; font-weight: 600;
-      line-height: 1.25; color: #1a1a1a; margin-bottom: 10px;
+    .cc-secondary-article { padding: 6px 0; border-top: 1px solid #f0ede8; }
+    .cc-secondary-article:first-child { border-top: none; padding-top: 0; }
+    .cc-secondary-article-title {
+      font-size: 12.5px; font-family: 'Lora', Georgia, serif; color: #1a1a1a;
+      text-decoration: none; line-height: 1.35; display: block; margin-bottom: 2px;
     }
-    .cc-featured-hook {
-      font-size: 13px; color: #555; font-style: italic; line-height: 1.6;
-      border-left: 2px solid #2C4A2E; padding-left: 10px;
-      margin-bottom: 14px; flex: 1;
+    .cc-secondary-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-secondary-article-meta { font-size: 11px; color: #aaa; }
+    .cc-secondary-article-meta strong { color: #777; font-weight: 600; }
+    .cc-secondary-explore {
+      display: inline-block; margin-top: 10px; font-size: 12px;
+      font-weight: 600; color: #2C4A2E; text-decoration: none;
     }
-    .cc-featured-articles-label {
-      font-size: 9.5px; font-weight: 600; letter-spacing: 0.12em;
-      text-transform: uppercase; color: #aaa; margin-bottom: 7px;
+    .cc-secondary-explore:hover { text-decoration: underline; }
+
+    /* ── TODAY'S HEADLINES ───────────────────────────────────────── */
+    .cc-headlines { margin-top: 1.75rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-headline-list { columns: 2; column-gap: 2.5rem; }
+    @media (max-width: 660px) { .cc-headline-list { columns: 1; } }
+    .cc-headline-item {
+      break-inside: avoid; display: flex; gap: 0;
+      padding: 0.65rem 0; border-bottom: 1px solid #f0ede8; align-items: flex-start;
     }
-    .cc-featured-article { padding: 5px 0; border-top: 1px solid #f0ede8; }
-    .cc-featured-article:first-of-type { border-top: none; }
-    .cc-featured-article-title {
-      font-size: 12.5px; color: #1a1a1a; text-decoration: none;
-      font-family: 'Lora', Georgia, serif; line-height: 1.35;
-      display: block; margin-bottom: 2px;
+    .cc-headline-item:last-child { border-bottom: none; }
+    .cc-headline-num {
+      font-size: 11px; font-weight: 600; color: #ccc;
+      min-width: 26px; padding-top: 2px; font-variant-numeric: tabular-nums;
     }
-    .cc-featured-article-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-featured-article-source { font-size: 10.5px; color: #aaa; }
-    .cc-featured-cta {
-      display: block; font-size: 12.5px; font-weight: 600; color: #2C4A2E;
-      text-decoration: none; margin-top: 12px; padding-top: 10px;
-      border-top: 1px solid #e0ddd8;
+    .cc-headline-content { flex: 1; }
+    .cc-headline-title {
+      font-family: 'Lora', Georgia, serif; font-size: 14px; font-weight: 500;
+      line-height: 1.35; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 3px;
     }
-    .cc-featured-cta:hover { text-decoration: underline; }
+    .cc-headline-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
+    .cc-headline-meta { font-size: 11px; color: #aaa; }
+    .cc-headline-meta strong { color: #777; font-weight: 600; }
+    .cc-digest-cta {
+      margin-top: 1rem; text-align: right;
+    }
+    .cc-digest-cta a {
+      font-size: 12.5px; font-weight: 600; color: #2C4A2E; text-decoration: none;
+    }
+    .cc-digest-cta a:hover { text-decoration: underline; }
+
+    /* ── TOPIC INDEX ─────────────────────────────────────────────── */
+    .cc-topic-index { margin-top: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-topic-index-grid {
+      display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0 2rem;
+    }
+    @media (max-width: 760px) { .cc-topic-index-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem 2rem; } }
+    @media (max-width: 480px) { .cc-topic-index-grid { grid-template-columns: 1fr; } }
+    .cc-topic-index-col {}
+    .cc-topic-index-cat {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      color: #2C4A2E; border-bottom: 1px solid #e0ddd8; padding-bottom: 5px; margin-bottom: 8px;
+    }
+    .cc-topic-index-link {
+      display: block; font-size: 12.5px; color: #444; text-decoration: none;
+      padding: 4px 0; border-bottom: 1px solid #f5f3f0;
+      line-height: 1.35; font-family: 'Lora', Georgia, serif;
+    }
+    .cc-topic-index-link:hover { color: #2C4A2E; }
+    .cc-topic-index-link:last-child { border-bottom: none; }
 
     /* ── Archive list ────────────────────────────────────────────── */
-    .cc-archive-list { margin-top: 2.75rem; }
+    .cc-archive-list { margin-top: 2rem; }
     .cc-archive-list-header {
       border-bottom: 1px solid #e0ddd8; padding-bottom: 6px; margin-bottom: 1rem;
       font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
       text-transform: uppercase; color: #aaa;
     }
-    .cc-archive-links {
-      display: flex; flex-wrap: wrap; gap: 6px 10px;
-    }
+    .cc-archive-links { display: flex; flex-wrap: wrap; gap: 6px 10px; }
     .cc-archive-link {
       font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600;
     }
     .cc-archive-link:hover { text-decoration: underline; }
-
-    /* ── Browse grid ─────────────────────────────────────────────── */
-    .cc-browse { margin-top: 2.75rem; }
-    .cc-browse-header {
-      border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.75rem;
-    }
-    .cc-browse-header-label {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
-      text-transform: uppercase; color: #1a1a1a;
-    }
-    .cc-browse-cat { margin-bottom: 2rem; }
-    .cc-browse-cat-name {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: #aaa; margin-bottom: 0.75rem;
-    }
-    .cc-browse-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(195px, 1fr)); gap: 10px;
-    }
-    @media (max-width: 560px) { .cc-browse-grid { grid-template-columns: 1fr 1fr; } }
-    .cc-browse-card {
-      border: 1px solid #e0ddd8; border-radius: 4px;
-      padding: 11px 13px; text-decoration: none; background: #fff;
-      display: block; transition: border-color 0.15s, box-shadow 0.15s;
-    }
-    .cc-browse-card:hover { border-color: #2C4A2E; box-shadow: 0 1px 5px rgba(44,74,46,0.1); }
-    .cc-browse-card-name {
-      font-family: 'Lora', Georgia, serif; font-size: 13.5px; font-weight: 600;
-      color: #1a1a1a; line-height: 1.3; margin-bottom: 4px;
-    }
-    .cc-browse-card-hook {
-      font-size: 11px; color: #999; line-height: 1.45;
-      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-    }
-
-    /* ── Email box ───────────────────────────────────────────────── */
-    .cc-email-box { background: #EFF4F0; border: 1px solid #B5CCB8; border-radius: 6px; padding: 1rem; }
 
     /* ── Footer ──────────────────────────────────────────────────── */
     .cc-footer {
@@ -259,6 +299,11 @@
     .cc-footer-nav { display: flex; gap: 12px; }
     .cc-footer-nav a { font-size: 11px; color: #888; text-decoration: none; font-weight: 600; }
     .cc-footer-nav a:hover { color: #2C4A2E; }
+
+    @media (max-width: 660px) {
+      .cc-site-name { font-size: 32px; }
+      .cc-lead-title { font-size: 26px; }
+    }
   </style>
 </head>
 <body>
@@ -287,77 +332,167 @@
     </nav>
   </div>
 
-  <!-- Welcome -->
-  <div class="cc-welcome">
-    <h2 class="cc-welcome-hed">The conversations shaping evangelical Christianity.</h2>
-    <p class="cc-welcome-sub">Because every curious Christian deserves clarity on the questions that matter most.</p>
-  </div>
-
   {% if featured_topics %}
-  <!-- In the conversation today -->
-  <div class="cc-featured">
-    <div class="cc-featured-header">
-      <div class="cc-featured-label">In the conversation today</div>
-      <div class="cc-featured-date">{{ date }}</div>
+  {% set lead = featured_topics[0] %}
+
+  <!-- ── LEAD STORY ───────────────────────────────────────────────── -->
+  <div class="cc-lead">
+    <div style="margin-top:1.75rem;">
+      <div class="cc-section-header">
+        <div class="cc-section-label">In the conversation today</div>
+        <div class="cc-section-meta">{{ date }}</div>
+      </div>
     </div>
-    <div class="cc-featured-grid">
-      {% for topic in featured_topics %}
-      <div class="cc-featured-card">
-        <div class="cc-featured-cat">{{ topic.category }}</div>
-        <div class="cc-featured-name">{{ topic.name }}</div>
-        <p class="cc-featured-hook">{{ topic.summary or topic.hook }}</p>
-        {% if topic.articles %}
-        <div class="cc-featured-articles-label">What&rsquo;s being written about this</div>
-        {% for article in topic.articles[:2] %}
-        <div class="cc-featured-article">
-          <a class="cc-featured-article-title"
-             href="{{ article.url }}" target="_blank"
-             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}'});">
+
+    <div class="cc-lead-cat">{{ lead.category }}</div>
+    <a href="/topics/{{ lead.slug }}/" class="cc-lead-title"
+       onclick="gtag('event','topic_click',{'topic':'{{ lead.slug }}','position':'lead'});">
+      {{ lead.name }}
+    </a>
+    <p class="cc-lead-hook">{{ lead.summary or lead.hook }}</p>
+
+    <div class="cc-lead-body">
+      <div>
+        {% if lead.articles %}
+        <div class="cc-lead-articles-label">What&rsquo;s being written about this</div>
+        {% for article in lead.articles[:3] %}
+        <div class="cc-lead-article">
+          <a href="{{ article.url }}" class="cc-lead-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','position':'lead'});">
             {{ article.rewritten_title or article.title }}
           </a>
-          <span class="cc-featured-article-source">
+          <div class="cc-lead-article-meta">
             {%- set auth = article.author | default('') | trim -%}
             {%- set src  = article.source_name | default('') | trim -%}
             {%- set pub  = article.published_display | default('') | trim -%}
-            {%- if auth and auth | lower != src | lower -%}{{ auth }} &middot; {%- endif -%}
-            {{ src }}
+            {%- if auth and auth | lower != src | lower -%}
+              <strong>{{ auth }}</strong> &middot; {{ src }}
+            {%- else -%}
+              {{ src }}
+            {%- endif -%}
             {%- if pub %} &middot; {{ pub }}{%- endif -%}
-          </span>
+          </div>
         </div>
         {% endfor %}
         {% endif %}
-        <a class="cc-featured-cta" href="/topics/{{ topic.slug }}/">Explore this topic &rarr;</a>
+        <a href="/topics/{{ lead.slug }}/" class="cc-lead-explore"
+           onclick="gtag('event','topic_click',{'topic':'{{ lead.slug }}','position':'lead_cta'});">
+          Explore this topic in depth &rarr;
+        </a>
+      </div>
+
+      <!-- Sidebar CTA -->
+      <div class="cc-lead-cta-box">
+        {% if featured_topics | length > 1 %}
+        {% set aside = featured_topics[1] %}
+        <div class="cc-lead-cta-label">Also in focus today</div>
+        <div class="cc-lead-cta-title">{{ aside.name }}</div>
+        <div class="cc-lead-cta-summary">{{ aside.summary or aside.hook }}</div>
+        {% else %}
+        <div class="cc-lead-cta-label">Go deeper</div>
+        <div class="cc-lead-cta-title">70 topics worth exploring</div>
+        <div class="cc-lead-cta-summary">Theology, church life, spiritual formation, and culture — all curated and updated daily.</div>
+        {% endif %}
+        <a href="/digest/" class="cc-lead-cta-link">Read today&rsquo;s full digest &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECONDARY TOPICS ──────────────────────────────────────────── -->
+  {% if featured_topics | length > 1 %}
+  <div class="cc-secondary">
+    <div class="cc-secondary-grid">
+      {% for topic in featured_topics[1:3] %}
+      <div class="cc-secondary-card">
+        <div class="cc-secondary-cat">{{ topic.category }}</div>
+        <div class="cc-secondary-name">
+          <a href="/topics/{{ topic.slug }}/"
+             onclick="gtag('event','topic_click',{'topic':'{{ topic.slug }}','position':'secondary'});">
+            {{ topic.name }}
+          </a>
+        </div>
+        <p class="cc-secondary-hook">{{ topic.summary or topic.hook }}</p>
+        {% if topic.articles %}
+        {% for article in topic.articles[:2] %}
+        <div class="cc-secondary-article">
+          <a href="{{ article.url }}" class="cc-secondary-article-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','position':'secondary'});">
+            {{ article.rewritten_title or article.title }}
+          </a>
+          <div class="cc-secondary-article-meta">
+            {%- set auth = article.author | default('') | trim -%}
+            {%- set src  = article.source_name | default('') | trim -%}
+            {%- if auth and auth | lower != src | lower -%}
+              <strong>{{ auth }}</strong> &middot; {{ src }}
+            {%- else -%}
+              {{ src }}
+            {%- endif -%}
+          </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+        <a href="/topics/{{ topic.slug }}/" class="cc-secondary-explore">Explore this topic &rarr;</a>
       </div>
       {% endfor %}
     </div>
   </div>
   {% endif %}
+  {% endif %}
 
-  <!-- Browse all topics -->
-  <div class="cc-browse">
-    <div class="cc-browse-header">
-      <div class="cc-browse-header-label">Explore all topics</div>
+  <!-- ── TODAY'S CURATED HEADLINES ─────────────────────────────────── -->
+  {% set top_articles = articles | rejectattr("source_type", "equalto", "world_news") | list %}
+  {% if top_articles %}
+  <div class="cc-headlines">
+    <div class="cc-section-header">
+      <div class="cc-section-label">Today&rsquo;s curated headlines</div>
+      <div class="cc-section-meta">{{ top_articles[:10] | length }} articles</div>
     </div>
+    <div class="cc-headline-list">
+      {% for article in top_articles[:10] %}
+      <div class="cc-headline-item">
+        <div class="cc-headline-num">{{ loop.index }}</div>
+        <div class="cc-headline-content">
+          <a href="{{ article.url }}" class="cc-headline-title" target="_blank" rel="noopener"
+             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','position':'headlines'});">
+            {{ article.rewritten_title or article.title }}
+          </a>
+          <div class="cc-headline-meta">
+            {%- set auth = article.author | default('') | trim -%}
+            {%- set src  = article.source_name | default('') | trim -%}
+            {%- if auth and auth | lower != src | lower -%}
+              <strong>{{ auth }}</strong> &middot; {{ src }}
+            {%- else -%}
+              {{ src }}
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="cc-digest-cta">
+      <a href="/digest/">View full digest with annotations &rarr;</a>
+    </div>
+  </div>
+  {% endif %}
 
-    {% for category in categories %}
-    <div class="cc-browse-cat">
-      <div class="cc-browse-cat-name">{{ category }}</div>
-      <div class="cc-browse-grid">
+  <!-- ── TOPIC INDEX ────────────────────────────────────────────────── -->
+  <div class="cc-topic-index">
+    <div class="cc-section-header">
+      <div class="cc-section-label">Explore all {{ all_topics | length }} topics</div>
+      <div class="cc-section-meta"><a href="/digest/">Today&rsquo;s digest &rarr;</a></div>
+    </div>
+    <div class="cc-topic-index-grid">
+      {% for category in categories %}
+      <div class="cc-topic-index-col">
+        <div class="cc-topic-index-cat">{{ category }}</div>
         {% for topic in topics_by_category[category] %}
-        <a class="cc-browse-card" href="/topics/{{ topic.slug }}/"
-           onclick="gtag('event','topic_click',{'topic':'{{ topic.slug }}','category':'{{ topic.category }}'});">
-          <div class="cc-browse-card-name">{{ topic.name }}</div>
-          <div class="cc-browse-card-hook">{{ topic.summary or topic.hook }}</div>
+        <a href="/topics/{{ topic.slug }}/" class="cc-topic-index-link"
+           onclick="gtag('event','topic_click',{'topic':'{{ topic.slug }}','position':'index'});">
+          {{ topic.name }}
         </a>
         {% endfor %}
       </div>
-    </div>
-    {% endfor %}
-
-    <div style="text-align:center; margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid #e0ddd8;">
-      <a href="/topics/" style="font-size:13px; font-weight:600; color:#2C4A2E; text-decoration:none; letter-spacing:0.04em;">
-        View full topic pages with perspectives, key thinkers &amp; curated reading &rarr;
-      </a>
+      {% endfor %}
     </div>
   </div>
 
