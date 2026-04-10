@@ -434,7 +434,7 @@ TOPICS = [
         "name": "Christian Ethics",
         "category": "Culture & Society",
         "hook": "How do Christians navigate complex moral questions the Bible does not directly address?",
-        "summary": "How Christians navigate bioethics, sexuality, LGBTQ+ questions, and moral issues Scripture doesn't directly address.",
+        "summary": "How Christians navigate bioethics, sexuality, LGBTQ+ questions, and moral issues with Biblical discernment.",
         "keywords": [
             "ethics", "bioethics", "moral", "abortion", "euthanasia",
             "end of life", "IVF", "surrogacy", "sexuality",
