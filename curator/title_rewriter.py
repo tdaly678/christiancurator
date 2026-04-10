@@ -15,13 +15,29 @@ load_dotenv()
 client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
 REWRITE_PROMPT = """\
-You are an editor for a Christian news digest. Rewrite the following article title
-to be clear, engaging, and suitable for a thoughtful Christian reader.
-- Keep it under 12 words
-- Avoid sensationalism and clickbait
-- Preserve the meaning of the original — do NOT invent a new topic
-- The rewritten title must accurately reflect the article summary below
-- Return ONLY the rewritten title, nothing else.
+You are a headline editor for a Christian news aggregator, writing in the style of \
+RealClearPolitics or RealClearReligion — punchy, direct, and compelling enough to make \
+a reader stop scrolling.
+
+Rewrite the article title using these principles:
+- Lead with the stakes, tension, or conflict — what is at risk or being debated?
+- Use strong, specific verbs and nouns (not "discusses," "explores," or "looks at")
+- Reveal the angle: who's arguing what, what's changing, what's surprising
+- A little editorial edge is fine — don't sand down every opinion into mush
+- Under 12 words
+- Do NOT invent facts or topics not in the original article
+- The rewrite must be accurate to the article summary below
+- Return ONLY the rewritten title, nothing else
+
+Examples of the tone to aim for:
+  Flat: "Reflections on the Role of the Church in Modern Society"
+  Better: "The Church Is Losing Culture — and Deserves to Know Why"
+
+  Flat: "An Overview of Current Debates on Penal Substitution"
+  Better: "Evangelicalism's Atonement War Is Back. Here's What's at Stake."
+
+  Flat: "Christian Perspectives on Artificial Intelligence"
+  Better: "AI Can't Preach the Gospel. But It's Trying."
 
 Original title: {title}
 Article summary: {summary}
