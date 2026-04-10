@@ -133,6 +133,9 @@
     .cc-section-meta { font-size: 11px; color: #aaa; }
     .cc-section-meta a { color: #2C4A2E; text-decoration: none; font-weight: 600; font-size: 11px; }
     .cc-section-meta a:hover { text-decoration: underline; }
+    .cc-author-link { color: inherit; font-weight: 600; text-decoration: none; }
+    .cc-author-link:hover { text-decoration: underline; color: #2C4A2E; }
+    .cc-pub-date { color: #aaa; }
 
     /* ── LEAD STORY ──────────────────────────────────────────────── */
     .cc-lead { margin-top: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
@@ -403,11 +406,13 @@
             {%- set src  = article.source_name | default('') | trim -%}
             {%- set pub  = article.published_display | default('') | trim -%}
             {%- if auth and auth | lower != src | lower -%}
-              <strong>{{ auth }}</strong> &middot; {{ src }}
+              {%- set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' -%}
+              {%- if auth_slug -%}<a href="/voices/{{ auth_slug }}/" class="cc-author-link"><strong>{{ auth }}</strong></a>{%- else -%}<strong>{{ auth }}</strong>{%- endif -%}
+               &middot; {{ src }}
             {%- else -%}
               {{ src }}
             {%- endif -%}
-            {%- if pub %} &middot; {{ pub }}{%- endif -%}
+            {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
           </div>
         </div>
         {% endfor %}
@@ -459,11 +464,15 @@
           <div class="cc-secondary-article-meta">
             {%- set auth = article.author | default('') | trim -%}
             {%- set src  = article.source_name | default('') | trim -%}
+            {%- set pub  = article.published_display | default('') | trim -%}
             {%- if auth and auth | lower != src | lower -%}
-              <strong>{{ auth }}</strong> &middot; {{ src }}
+              {%- set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' -%}
+              {%- if auth_slug -%}<a href="/voices/{{ auth_slug }}/" class="cc-author-link"><strong>{{ auth }}</strong></a>{%- else -%}<strong>{{ auth }}</strong>{%- endif -%}
+               &middot; {{ src }}
             {%- else -%}
               {{ src }}
             {%- endif -%}
+            {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
           </div>
         </div>
         {% endfor %}
@@ -496,11 +505,15 @@
           <div class="cc-headline-meta">
             {%- set auth = article.author | default('') | trim -%}
             {%- set src  = article.source_name | default('') | trim -%}
+            {%- set pub  = article.published_display | default('') | trim -%}
             {%- if auth and auth | lower != src | lower -%}
-              <strong>{{ auth }}</strong> &middot; {{ src }}
+              {%- set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' -%}
+              {%- if auth_slug -%}<a href="/voices/{{ auth_slug }}/" class="cc-author-link"><strong>{{ auth }}</strong></a>{%- else -%}<strong>{{ auth }}</strong>{%- endif -%}
+               &middot; {{ src }}
             {%- else -%}
               {{ src }}
             {%- endif -%}
+            {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
           </div>
         </div>
       </div>
@@ -534,11 +547,15 @@
             <div class="cc-world-news-meta">
               {%- set auth = article.author | default('') | trim -%}
               {%- set src  = article.source_name | default('') | trim -%}
+              {%- set pub  = article.published_display | default('') | trim -%}
               {%- if auth and auth | lower != src | lower -%}
-                <strong>{{ auth }}</strong> &middot; {{ src }}
+                {%- set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' -%}
+                {%- if auth_slug -%}<a href="/voices/{{ auth_slug }}/" class="cc-author-link"><strong>{{ auth }}</strong></a>{%- else -%}<strong>{{ auth }}</strong>{%- endif -%}
+                 &middot; {{ src }}
               {%- else -%}
                 {{ src }}
               {%- endif -%}
+              {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
             </div>
           </div>
         </div>

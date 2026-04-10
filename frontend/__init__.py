@@ -34,6 +34,18 @@ def load_research_articles() -> list[dict]:
         return []
 
 
+def load_voices_by_name() -> dict:
+    """Return a {lowercase_name: slug} dict from docs/voices_data.json for author cross-linking."""
+    voices_path = DOCS_DIR / "voices_data.json"
+    if not voices_path.exists():
+        return {}
+    try:
+        voices = json.loads(voices_path.read_text(encoding="utf-8"))
+        return {v["name"].lower(): v["slug"] for v in voices if "name" in v and "slug" in v}
+    except Exception:
+        return {}
+
+
 def update_research_articles(new_articles: list[dict]) -> list[dict]:
     """Merge today's data/research articles into the persistent store.
 
@@ -161,6 +173,7 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         topics_by_category=TOPICS_BY_CATEGORY,
         categories=CATEGORIES,
         archive_dates=archive_dates,
+        voices_by_name=load_voices_by_name(),
     )
 
     with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
@@ -385,6 +398,7 @@ def render_archive_page(articles: list[dict], pairings: list[dict], env: Environ
         next_date_iso=None,
         next_date_display=None,
         daily_slug=date_iso if has_daily_pulse else None,
+        voices_by_name=load_voices_by_name(),
     )
 
     page_dir = ARCHIVE_DIR / date_iso
@@ -454,6 +468,7 @@ def render_digest_page(articles: list[dict], env: Environment,
         topics_by_category=TOPICS_BY_CATEGORY,
         categories=CATEGORIES,
         archive_dates=archive_dates,
+        voices_by_name=load_voices_by_name(),
     )
 
     output_path = DIGEST_DIR / "index.html"

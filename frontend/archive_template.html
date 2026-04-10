@@ -134,6 +134,9 @@
     .cc-lead-meta { font-size: 12px; color: #aaa; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
     .cc-lead-author { font-weight: 600; color: #555; }
     .cc-meta-dot { color: #ddd; }
+    .cc-author-link { color: inherit; font-weight: 600; text-decoration: none; }
+    .cc-author-link:hover { text-decoration: underline; color: #2C4A2E; }
+    .cc-pub-date { color: #aaa; }
 
     /* Article list */
     .cc-article-list { display: flex; flex-direction: column; }
@@ -207,12 +210,17 @@
   <div data-pagefind-body>
 
     {# Macro: render author · source · date byline #}
-    {% macro byline(article) %}
+    {% macro byline(article, vbn=None) %}
       {% set auth = article.author | default('') | trim %}
       {% set src  = article.source_name | default('') | trim %}
       {% set pub  = article.published_display | default('') | trim if article.published_display is defined else '' %}
       {% if auth and auth | lower != src | lower %}
-        <span class="cc-article-author">{{ auth }}</span>
+        {% set auth_slug = vbn.get(auth.lower(), '') if vbn else '' %}
+        {% if auth_slug %}
+          <a href="/voices/{{ auth_slug }}/" class="cc-author-link cc-article-author">{{ auth }}</a>
+        {% else %}
+          <span class="cc-article-author">{{ auth }}</span>
+        {% endif %}
         <span class="cc-meta-dot">·</span>
         <span>{{ src }}</span>
       {% else %}
@@ -241,12 +249,22 @@
       <div class="cc-lead-meta">
         {% set auth = lead.author | default('') | trim %}
         {% set src  = lead.source_name | default('') | trim %}
+        {% set pub  = lead.published_display | default('') | trim if lead.published_display is defined else '' %}
         {% if auth and auth | lower != src | lower %}
-          <span class="cc-lead-author">{{ auth }}</span>
+          {% set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' %}
+          {% if auth_slug %}
+            <a href="/voices/{{ auth_slug }}/" class="cc-author-link cc-lead-author">{{ auth }}</a>
+          {% else %}
+            <span class="cc-lead-author">{{ auth }}</span>
+          {% endif %}
           <span class="cc-meta-dot">·</span>
           <span>{{ src }}</span>
         {% else %}
           <span class="cc-lead-author">{{ src }}</span>
+        {% endif %}
+        {% if pub %}
+          <span class="cc-meta-dot">·</span>
+          <span class="cc-date-chip">{{ pub }}</span>
         {% endif %}
       </div>
     </div>
@@ -261,7 +279,7 @@
              onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}'});">
             {{ article.rewritten_title or article.title }}
           </a>
-          <div class="cc-article-meta">{{ byline(article) }}</div>
+          <div class="cc-article-meta">{{ byline(article, voices_by_name) }}</div>
         </div>
       </div>
       {% endfor %}
@@ -285,7 +303,7 @@
              onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}'});">
             {{ article.rewritten_title or article.title }}
           </a>
-          <div class="cc-article-meta">{{ byline(article) }}</div>
+          <div class="cc-article-meta">{{ byline(article, voices_by_name) }}</div>
         </div>
       </div>
       {% endfor %}
