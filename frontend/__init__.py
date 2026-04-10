@@ -150,6 +150,16 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         labels = ", ".join(t["name"] for t in featured_topics)
         print(f"  Featured debates today: {labels}")
 
+    # Build article URL → primary topic lookup so the template can show "More on X" for any article
+    from frontend.topics_data import TOPICS_BY_SLUG
+    article_topic_map = {}
+    for article in articles:
+        for slug in article.get("debate_topics", []):
+            if slug in TOPICS_BY_SLUG:
+                topic = TOPICS_BY_SLUG[slug]
+                article_topic_map[article["url"]] = {"slug": slug, "name": topic["name"]}
+                break  # use first matched topic only
+
     # Persist today's featured topics so the email sender can use them (and look up yesterday's)
     _save_featured_topic_log(featured_topics)
 
@@ -177,6 +187,7 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         research_articles=research_articles or load_research_articles(),
         matched_topics=matched_topics,
         featured_topics=featured_topics,
+        article_topic_map=article_topic_map,
         all_topics=TOPICS,
         topics_by_category=TOPICS_BY_CATEGORY,
         categories=CATEGORIES,

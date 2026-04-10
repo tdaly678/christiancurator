@@ -227,33 +227,33 @@
     }
     .cc-card-small-cta:hover { text-decoration: underline; }
 
-    /* ── TODAY'S HEADLINES ───────────────────────────────────────── */
+    /* ── OTHER HEADLINES ─────────────────────────────────────────── */
     .cc-headlines { margin-top: 1.75rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
-    .cc-headline-list { columns: 2; column-gap: 2.5rem; }
-    @media (max-width: 660px) { .cc-headline-list { columns: 1; } }
     .cc-headline-item {
-      break-inside: avoid; display: flex; gap: 0;
-      padding: 0.65rem 0; border-bottom: 1px solid #f0ede8; align-items: flex-start;
+      display: flex; align-items: baseline; gap: 0.5rem;
+      padding: 0.6rem 0; border-bottom: 1px solid #f0ede8;
     }
     .cc-headline-item:last-child { border-bottom: none; }
     .cc-headline-num {
       font-size: 11px; font-weight: 600; color: #ccc;
-      min-width: 26px; padding-top: 2px; font-variant-numeric: tabular-nums;
+      min-width: 22px; flex-shrink: 0; font-variant-numeric: tabular-nums;
     }
-    .cc-headline-content { flex: 1; }
+    .cc-headline-content { flex: 1; min-width: 0; }
     .cc-headline-title {
-      font-family: 'Lora', Georgia, serif; font-size: 14px; font-weight: 500;
-      line-height: 1.35; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 3px;
+      font-family: 'Lora', Georgia, serif; font-size: 14.5px; font-weight: 500;
+      line-height: 1.35; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 2px;
     }
     .cc-headline-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
     .cc-headline-meta { font-size: 11px; color: #aaa; }
     .cc-headline-meta strong { color: #777; font-weight: 600; }
-    .cc-digest-cta {
-      margin-top: 1rem; text-align: right;
+    .cc-headline-topic {
+      flex-shrink: 0; margin-left: auto; padding-left: 1.5rem;
+      font-size: 11px; font-weight: 600; color: #2C4A2E;
+      text-decoration: none; white-space: nowrap; align-self: center;
     }
-    .cc-digest-cta a {
-      font-size: 12.5px; font-weight: 600; color: #2C4A2E; text-decoration: none;
-    }
+    .cc-headline-topic:hover { text-decoration: underline; }
+    .cc-digest-cta { margin-top: 1rem; text-align: right; }
+    .cc-digest-cta a { font-size: 12.5px; font-weight: 600; color: #2C4A2E; text-decoration: none; }
     .cc-digest-cta a:hover { text-decoration: underline; }
 
     /* ── WORLD NEWS ─────────────────────────────────────────────── */
@@ -535,372 +535,29 @@
   </div>
   
 
-  <!-- ── MORE FROM TODAY ───────────────────────────────────────────── -->
+  <!-- ── OTHER HEADLINES: deduped, shown after world news below ───── -->
   
   
     
       
-        
-      
-        
-      
-        
-      
-    
-      
-        
-      
-        
-      
-        
-      
-    
-      
-        
-      
-        
-      
-        
-      
-    
-  
-  
-  
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-  
-    
-  
-    
-      
-    
-  
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-  
-    
-      
     
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
       
     
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
       
     
   
     
       
-    
-  
     
       
     
-  
-    
       
     
   
     
       
-    
-  
     
       
-    
-  
     
       
     
@@ -953,6 +610,348 @@
         </div>
         
       </div>
+    </div>
+  </div>
+  
+
+  <!-- ── OTHER HEADLINES ──────────────────────────────────────────────── -->
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <div class="cc-headlines">
+    <div class="cc-section-header">
+      <div class="cc-section-label">Other Headlines</div>
+      <div class="cc-section-meta">10 articles</div>
+    </div>
+    
+    
+    <div class="cc-headline-item">
+      <div class="cc-headline-num">1</div>
+      <div class="cc-headline-content">
+        <a href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/jesus-betrayed-crucified/" class="cc-headline-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Gods Love Revealed Through Christs Sacrifice on the Cross','article_source':'The Gospel Coalition','position':'other_headlines'});">
+          God's Love Revealed Through Christ's Sacrifice on the Cross
+        </a>
+        <div class="cc-headline-meta"><a href="/voices/j-gary-millar/" class="cc-author-link"><strong>J. Gary Millar</strong></a>&middot; The Gospel Coalition</div>
+      </div>
+    </div>
+    
+    
+    <div class="cc-headline-item">
+      <div class="cc-headline-num">2</div>
+      <div class="cc-headline-content">
+        <a href="https://feed.desiringgod.org/link/22977/17312221/the-agony-of-sin-and-love" class="cc-headline-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Marveling at Christs Love: Why Imitation Pauses at the Cross','article_source':'Desiring God','position':'other_headlines'});">
+          Marveling at Christ's Love: Why Imitation Pauses at the Cross
+        </a>
+        <div class="cc-headline-meta"><a href="/voices/david-mathis/" class="cc-author-link"><strong>David Mathis</strong></a>&middot; Desiring God</div>
+      </div>
+    </div>
+    
+    
+    <div class="cc-headline-item">
+      <div class="cc-headline-num">3</div>
+      <div class="cc-headline-content">
+        <a href="https://firstthings.com/the-politics-of-judas/" class="cc-headline-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Judass Betrayal: Political and Spiritual Dimensions at Easter','article_source':'First Things','position':'other_headlines'});">
+          Judas's Betrayal: Political and Spiritual Dimensions at Easter
+        </a>
+        <div class="cc-headline-meta"><a href="/voices/german-saucedo/" class="cc-author-link"><strong>German Saucedo</strong></a>&middot; First Things</div>
+      </div>
+      <a href="/topics/politics-and-the-church/" class="cc-headline-topic"
+         onclick="gtag('event','topic_click',{'topic':'politics-and-the-church','position':'other_headlines'});">
+        More on Politics & the Church &rarr;
+      </a>
+    </div>
+    
+    
+    <div class="cc-headline-item">
+      <div class="cc-headline-num">4</div>
+      <div class="cc-headline-content">
+        <a href="https://relevantmagazine.com/faith/church/what-is-maundy-thursday/" class="cc-headline-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Maundy Thursday: The Intimate Meal Before Christs Passion','article_source':'Relevant Magazine','position':'other_headlines'});">
+          Maundy Thursday: The Intimate Meal Before Christ's Passion
+        </a>
+        <div class="cc-headline-meta"><strong>John Taylor</strong>&middot; Relevant Magazine</div>
+      </div>
+    </div>
+    
+    
+    <div class="cc-headline-item">
+      <div class="cc-headline-num">5</div>
+      <div class="cc-headline-content">
+        <a href="https://theaquilareport.com/a-most-spectacular-misidentification/" class="cc-headline-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Why Jesus Wasnt Recognized After the Resurrection','article_source':'The Aquila Report','position':'other_headlines'});">
+          Why Jesus Wasn't Recognized After the Resurrection
+        </a>
+        <div class="cc-headline-meta"><a href="/voices/campbell-markham/" class="cc-author-link"><strong>Campbell Markham</strong></a>&middot; The Aquila Report</div>
+      </div>
+    </div>
+    
+    
+    <div class="cc-headline-item">
+      <div class="cc-headline-num">6</div>
+      <div class="cc-headline-content">
+        <a href="https://firstthings.com/against-god-alone/" class="cc-headline-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Why We Need Others in Our Faith, Not God Alone','article_source':'First Things','position':'other_headlines'});">
+          Why We Need Others in Our Faith, Not God Alone
+        </a>
+        <div class="cc-headline-meta"><strong>Jillian Parks</strong>&middot; First Things</div>
+      </div>
+    </div>
+    
+    
+    <div class="cc-headline-item">
+      <div class="cc-headline-num">7</div>
+      <div class="cc-headline-content">
+        <a href="https://www.christianitytoday.com/2026/04/easter-jesus-not-zombie-ghost-story/" class="cc-headline-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Easter Proclaims Christs Resurrection, Not Merely a Supernatural Return','article_source':'Christianity Today','position':'other_headlines'});">
+          Easter Proclaims Christ's Resurrection, Not Merely a Supernatural Return
+        </a>
+        <div class="cc-headline-meta"><strong>Elise Brandon</strong>&middot; Christianity Today</div>
+      </div>
+    </div>
+    
+    
+    <div class="cc-headline-item">
+      <div class="cc-headline-num">8</div>
+      <div class="cc-headline-content">
+        <a href="https://mereorthodoxy.com/aquinas-ai-and-the-pursuit-of-learning" class="cc-headline-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Thomas Aquinas and the Value of Teaching Children to Research Well','article_source':'Mere Orthodoxy','position':'other_headlines'});">
+          Thomas Aquinas and the Value of Teaching Children to Research Well
+        </a>
+        <div class="cc-headline-meta"><strong>Alex Stevens</strong>&middot; Mere Orthodoxy</div>
+      </div>
+      <a href="/topics/technology-and-discipleship/" class="cc-headline-topic"
+         onclick="gtag('event','topic_click',{'topic':'technology-and-discipleship','position':'other_headlines'});">
+        More on Technology & Discipleship &rarr;
+      </a>
+    </div>
+    
+    
+    <div class="cc-headline-item">
+      <div class="cc-headline-num">9</div>
+      <div class="cc-headline-content">
+        <a href="https://wng.org/podcasts/speech-and-consequence-1775145932" class="cc-headline-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Speaking Truth: Navigating Faith, Freedom, and Responsibility','article_source':'World Magazine','position':'other_headlines'});">
+          Speaking Truth: Navigating Faith, Freedom, and Responsibility
+        </a>
+        <div class="cc-headline-meta"><strong>Keegan Martin</strong>&middot; World Magazine</div>
+      </div>
+    </div>
+    
+    
+    <div class="cc-headline-item">
+      <div class="cc-headline-num">10</div>
+      <div class="cc-headline-content">
+        <a href="https://scotmcknight.substack.com/p/second-amendment-or-second-commandment-981" class="cc-headline-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Jesuss Call to Peacemaking Over Personal Protection','article_source':'Scot McKnight','position':'other_headlines'});">
+          Jesus's Call to Peacemaking Over Personal Protection
+        </a>
+        <div class="cc-headline-meta">Scot McKnight</div>
+      </div>
+    </div>
+    
+    <div class="cc-digest-cta">
+      <a href="/digest/">View full digest with annotations &rarr;</a>
     </div>
   </div>
   

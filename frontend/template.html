@@ -227,33 +227,33 @@
     }
     .cc-card-small-cta:hover { text-decoration: underline; }
 
-    /* ── TODAY'S HEADLINES ───────────────────────────────────────── */
+    /* ── OTHER HEADLINES ─────────────────────────────────────────── */
     .cc-headlines { margin-top: 1.75rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
-    .cc-headline-list { columns: 2; column-gap: 2.5rem; }
-    @media (max-width: 660px) { .cc-headline-list { columns: 1; } }
     .cc-headline-item {
-      break-inside: avoid; display: flex; gap: 0;
-      padding: 0.65rem 0; border-bottom: 1px solid #f0ede8; align-items: flex-start;
+      display: flex; align-items: baseline; gap: 0.5rem;
+      padding: 0.6rem 0; border-bottom: 1px solid #f0ede8;
     }
     .cc-headline-item:last-child { border-bottom: none; }
     .cc-headline-num {
       font-size: 11px; font-weight: 600; color: #ccc;
-      min-width: 26px; padding-top: 2px; font-variant-numeric: tabular-nums;
+      min-width: 22px; flex-shrink: 0; font-variant-numeric: tabular-nums;
     }
-    .cc-headline-content { flex: 1; }
+    .cc-headline-content { flex: 1; min-width: 0; }
     .cc-headline-title {
-      font-family: 'Lora', Georgia, serif; font-size: 14px; font-weight: 500;
-      line-height: 1.35; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 3px;
+      font-family: 'Lora', Georgia, serif; font-size: 14.5px; font-weight: 500;
+      line-height: 1.35; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 2px;
     }
     .cc-headline-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
     .cc-headline-meta { font-size: 11px; color: #aaa; }
     .cc-headline-meta strong { color: #777; font-weight: 600; }
-    .cc-digest-cta {
-      margin-top: 1rem; text-align: right;
+    .cc-headline-topic {
+      flex-shrink: 0; margin-left: auto; padding-left: 1.5rem;
+      font-size: 11px; font-weight: 600; color: #2C4A2E;
+      text-decoration: none; white-space: nowrap; align-self: center;
     }
-    .cc-digest-cta a {
-      font-size: 12.5px; font-weight: 600; color: #2C4A2E; text-decoration: none;
-    }
+    .cc-headline-topic:hover { text-decoration: underline; }
+    .cc-digest-cta { margin-top: 1rem; text-align: right; }
+    .cc-digest-cta a { font-size: 12.5px; font-weight: 600; color: #2C4A2E; text-decoration: none; }
     .cc-digest-cta a:hover { text-decoration: underline; }
 
     /* ── WORLD NEWS ─────────────────────────────────────────────── */
@@ -479,59 +479,14 @@
   </div>
   {% endif %}
 
-  <!-- ── MORE FROM TODAY ───────────────────────────────────────────── -->
+  <!-- ── OTHER HEADLINES: deduped, shown after world news below ───── -->
   {% set ns_urls = namespace(seen=[]) %}
-  {% if featured_topics %}
-    {% for topic in featured_topics %}
-      {% for article in topic.articles %}
-        {% set ns_urls.seen = ns_urls.seen + [article.url] %}
-      {% endfor %}
+  {% for topic in featured_topics %}
+    {% for article in topic.articles %}
+      {% set ns_urls.seen = ns_urls.seen + [article.url] %}
     {% endfor %}
-  {% endif %}
-  {% set top_articles = articles | rejectattr("source_type", "equalto", "world_news") | list %}
-  {% set more_articles = [] %}
-  {% for article in top_articles %}
-    {% if article.url not in ns_urls.seen and more_articles | length < 8 %}
-      {% set more_articles = more_articles + [article] %}
-    {% endif %}
   {% endfor %}
-  {% if more_articles %}
-  <div class="cc-headlines">
-    <div class="cc-section-header">
-      <div class="cc-section-label">More from today</div>
-      <div class="cc-section-meta">{{ more_articles | length }} articles</div>
-    </div>
-    <div class="cc-headline-list">
-      {% for article in more_articles %}
-      <div class="cc-headline-item">
-        <div class="cc-headline-num">{{ loop.index }}</div>
-        <div class="cc-headline-content">
-          <a href="{{ article.url }}" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','position':'more_today'});">
-            {{ article.rewritten_title or article.title }}
-          </a>
-          <div class="cc-headline-meta">
-            {%- set auth = article.author | default('') | trim -%}
-            {%- set src  = article.source_name | default('') | trim -%}
-            {%- set pub  = article.published_display | default('') | trim -%}
-            {%- if auth and auth | lower != src | lower -%}
-              {%- set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' -%}
-              {%- if auth_slug -%}<a href="/voices/{{ auth_slug }}/" class="cc-author-link"><strong>{{ auth }}</strong></a>{%- else -%}<strong>{{ auth }}</strong>{%- endif -%}
-               &middot; {{ src }}
-            {%- else -%}
-              {{ src }}
-            {%- endif -%}
-            {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-    <div class="cc-digest-cta">
-      <a href="/digest/">View full digest with annotations &rarr;</a>
-    </div>
-  </div>
-  {% endif %}
+  {% set top_articles = articles | rejectattr("source_type", "equalto", "world_news") | list %}
 
   <!-- ── WORLD NEWS ───────────────────────────────────────────────────── -->
   {% set world_articles = articles | selectattr("source_type", "equalto", "world_news") | list %}
@@ -569,6 +524,56 @@
         </div>
         {% endfor %}
       </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- ── OTHER HEADLINES ──────────────────────────────────────────────── -->
+  {% set ns_oh = namespace(articles=[]) %}
+  {% for article in top_articles %}
+    {% if article.url not in ns_urls.seen and ns_oh.articles | length < 10 %}
+      {% set ns_oh.articles = ns_oh.articles + [article] %}
+    {% endif %}
+  {% endfor %}
+  {% if ns_oh.articles %}
+  <div class="cc-headlines">
+    <div class="cc-section-header">
+      <div class="cc-section-label">Other Headlines</div>
+      <div class="cc-section-meta">{{ ns_oh.articles | length }} articles</div>
+    </div>
+    {% for article in ns_oh.articles %}
+    {% set atopic = article_topic_map.get(article.url, {}) if article_topic_map is defined else {} %}
+    <div class="cc-headline-item">
+      <div class="cc-headline-num">{{ loop.index }}</div>
+      <div class="cc-headline-content">
+        <a href="{{ article.url }}" class="cc-headline-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','position':'other_headlines'});">
+          {{ article.rewritten_title or article.title }}
+        </a>
+        <div class="cc-headline-meta">
+          {%- set auth = article.author | default('') | trim -%}
+          {%- set src  = article.source_name | default('') | trim -%}
+          {%- set pub  = article.published_display | default('') | trim -%}
+          {%- if auth and auth | lower != src | lower -%}
+            {%- set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' -%}
+            {%- if auth_slug -%}<a href="/voices/{{ auth_slug }}/" class="cc-author-link"><strong>{{ auth }}</strong></a>{%- else -%}<strong>{{ auth }}</strong>{%- endif -%}
+             &middot; {{ src }}
+          {%- else -%}
+            {{ src }}
+          {%- endif -%}
+          {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
+        </div>
+      </div>
+      {%- if atopic.slug %}
+      <a href="/topics/{{ atopic.slug }}/" class="cc-headline-topic"
+         onclick="gtag('event','topic_click',{'topic':'{{ atopic.slug }}','position':'other_headlines'});">
+        More on {{ atopic.name }} &rarr;
+      </a>
+      {%- endif %}
+    </div>
+    {% endfor %}
+    <div class="cc-digest-cta">
+      <a href="/digest/">View full digest with annotations &rarr;</a>
     </div>
   </div>
   {% endif %}
