@@ -150,7 +150,6 @@
     .cc-card-large {
       padding: 1.25rem 2rem 0 0;
       border-right: 1px solid #e0ddd8;
-      display: flex; flex-direction: column;
     }
     @media (max-width: 660px) {
       .cc-card-large { border-right: none; padding-right: 0; padding-bottom: 1.25rem; border-bottom: 1px solid #e0ddd8; }
@@ -162,13 +161,13 @@
     }
     .cc-card-large-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
     .cc-card-large-preview {
-      font-size: 14px; color: #555; line-height: 1.65; margin-bottom: 1rem; flex: 1;
+      font-size: 14px; color: #555; line-height: 1.65; margin-bottom: 1rem;
     }
     .cc-card-large-meta { font-size: 11.5px; color: #888; margin-bottom: 0.75rem; }
     .cc-card-large-meta strong { color: #555; font-weight: 600; }
     .cc-card-large-cta {
       font-size: 12px; font-weight: 600; color: #2C4A2E; text-decoration: none;
-      border-top: 1px solid #e0ddd8; padding-top: 10px; display: inline-block; margin-top: auto;
+      display: inline-block; margin-top: 0.25rem;
     }
     .cc-card-large-cta:hover { text-decoration: underline; }
 
@@ -467,7 +466,8 @@
 
     <!-- Row 2: small cards -->
     
-    <div class="cc-front-row2">
+    
+    <div class="cc-front-row2" style="grid-template-columns: repeat(3, 1fr);">
       
       <div class="cc-card-small">
         <a href="https://mereorthodoxy.com/a-hollow-crown-ai-and-the-formation-of-students" class="cc-card-small-title" target="_blank" rel="noopener"
@@ -537,11 +537,143 @@
   <!-- ── WORLD NEWS ───────────────────────────────────────────────────── -->
   
   
+  
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+  
+  
+  <div class="cc-world-news">
+    <div class="cc-world-news-section-header">
+      <div class="cc-world-news-section-label">World News &amp; Culture</div>
+      <div class="cc-world-news-section-sub">Stories worth watching</div>
+    </div>
+    <div class="cc-world-news-card">
+      <div class="cc-world-news-intro">From the broader world — filtered for what matters to Christians</div>
+      <div class="cc-world-news-list">
+        
+        <div class="cc-world-news-item">
+          <div class="cc-world-news-num">1</div>
+          <div class="cc-world-news-content">
+            <a href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/response-bart-ehrman/" class="cc-world-news-title" target="_blank" rel="noopener"
+               onclick="gtag('event','article_click',{'article_title':'Michael Kruger Responds to Bart Ehrman on Christian Ethics','article_source':'The Gospel Coalition','position':'world_news'});">
+              Michael Kruger Responds to Bart Ehrman on Christian Ethics
+            </a>
+            <div class="cc-world-news-meta"><strong>Sarah Eekhoff Zylstra, Michael J. Kruger</strong>&middot; The Gospel Coalition</div>
+          </div>
+        </div>
+        
+        <div class="cc-world-news-item">
+          <div class="cc-world-news-num">2</div>
+          <div class="cc-world-news-content">
+            <a href="http://feeds.ligonier.org/~/944612738/0/ligonierministriesblog" class="cc-world-news-title" target="_blank" rel="noopener"
+               onclick="gtag('event','article_click',{'article_title':'Understanding Gods Purpose in Christs Sacrifice','article_source':'Ligonier Ministries','position':'world_news'});">
+              Understanding God's Purpose in Christ's Sacrifice
+            </a>
+            <div class="cc-world-news-meta"><a href="/voices/cory-brock/" class="cc-author-link"><strong>Cory Brock</strong></a>&middot; Ligonier Ministries</div>
+          </div>
+        </div>
+        
+        <div class="cc-world-news-item">
+          <div class="cc-world-news-num">3</div>
+          <div class="cc-world-news-content">
+            <a href="https://www.christianitytoday.com/2026/04/when-parents-pay-for-a-childs-violence/" class="cc-world-news-title" target="_blank" rel="noopener"
+               onclick="gtag('event','article_click',{'article_title':'Amish Schoolhouse Shooting: When Parents Bear the Burden','article_source':'Christianity Today','position':'world_news'});">
+              Amish Schoolhouse Shooting: When Parents Bear the Burden
+            </a>
+            <div class="cc-world-news-meta"><a href="/voices/clarissa-moll/" class="cc-author-link"><strong>Clarissa Moll</strong></a>&middot; Christianity Today</div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
 
   <!-- ── OTHER HEADLINES ──────────────────────────────────────────────── -->
   
   
     
+  
+    
+  
+    
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
       
     
   
@@ -563,32 +695,6 @@
   
     
       
-    
-  
-    
-  
-    
-      
-    
-  
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-  
-    
-  
     
   
     
@@ -612,46 +718,6 @@
     <div class="cc-headline-item">
       <div class="cc-headline-num">1</div>
       <div class="cc-headline-content">
-        <a href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/response-bart-ehrman/" class="cc-headline-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Michael Kruger Responds to Bart Ehrman on Christian Ethics','article_source':'The Gospel Coalition','position':'other_headlines'});">
-          Michael Kruger Responds to Bart Ehrman on Christian Ethics
-        </a>
-        <div class="cc-headline-meta"><strong>Sarah Eekhoff Zylstra, Michael J. Kruger</strong>&middot; The Gospel Coalition</div>
-      </div>
-      <a href="/topics/christian-ethics/" class="cc-headline-topic"
-         onclick="gtag('event','topic_click',{'topic':'christian-ethics','position':'other_headlines'});">
-        More on Christian Ethics &rarr;
-      </a>
-    </div>
-    
-    
-    <div class="cc-headline-item">
-      <div class="cc-headline-num">2</div>
-      <div class="cc-headline-content">
-        <a href="http://feeds.ligonier.org/~/944612738/0/ligonierministriesblog" class="cc-headline-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Understanding Gods Purpose in Christs Sacrifice','article_source':'Ligonier Ministries','position':'other_headlines'});">
-          Understanding God's Purpose in Christ's Sacrifice
-        </a>
-        <div class="cc-headline-meta"><a href="/voices/cory-brock/" class="cc-author-link"><strong>Cory Brock</strong></a>&middot; Ligonier Ministries</div>
-      </div>
-    </div>
-    
-    
-    <div class="cc-headline-item">
-      <div class="cc-headline-num">3</div>
-      <div class="cc-headline-content">
-        <a href="https://www.christianitytoday.com/2026/04/when-parents-pay-for-a-childs-violence/" class="cc-headline-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Amish Schoolhouse Shooting: When Parents Bear the Burden','article_source':'Christianity Today','position':'other_headlines'});">
-          Amish Schoolhouse Shooting: When Parents Bear the Burden
-        </a>
-        <div class="cc-headline-meta"><a href="/voices/clarissa-moll/" class="cc-author-link"><strong>Clarissa Moll</strong></a>&middot; Christianity Today</div>
-      </div>
-    </div>
-    
-    
-    <div class="cc-headline-item">
-      <div class="cc-headline-num">4</div>
-      <div class="cc-headline-content">
         <a href="https://relevantmagazine.com/faith/alex-seeley-on-what-to-remember-when-youre-angry-at-god/" class="cc-headline-title" target="_blank" rel="noopener"
            onclick="gtag('event','article_click',{'article_title':'Finding Faith When You Feel Abandoned by God','article_source':'Relevant Magazine','position':'other_headlines'});">
           Finding Faith When You Feel Abandoned by God
@@ -662,7 +728,7 @@
     
     
     <div class="cc-headline-item">
-      <div class="cc-headline-num">5</div>
+      <div class="cc-headline-num">2</div>
       <div class="cc-headline-content">
         <a href="https://feed.desiringgod.org/link/22977/17316399/the-voice-of-a-great-awakening" class="cc-headline-title" target="_blank" rel="noopener"
            onclick="gtag('event','article_click',{'article_title':'Voices God Uses to Awaken Souls: Learning From Whitefield','article_source':'Desiring God','position':'other_headlines'});">
@@ -674,7 +740,7 @@
     
     
     <div class="cc-headline-item">
-      <div class="cc-headline-num">6</div>
+      <div class="cc-headline-num">3</div>
       <div class="cc-headline-content">
         <a href="https://www.thegospelcoalition.org/article/chaplains-professionals-shepherds-souls/" class="cc-headline-title" target="_blank" rel="noopener"
            onclick="gtag('event','article_click',{'article_title':'Military Chaplains: How the Army Abandoned Spiritual Care for Soldiers','article_source':'The Gospel Coalition','position':'other_headlines'});">
@@ -686,7 +752,7 @@
     
     
     <div class="cc-headline-item">
-      <div class="cc-headline-num">7</div>
+      <div class="cc-headline-num">4</div>
       <div class="cc-headline-content">
         <a href="https://theaquilareport.com/polygamy-in-the-bible-is-it-allowed/" class="cc-headline-title" target="_blank" rel="noopener"
            onclick="gtag('event','article_click',{'article_title':'God Used Flawed Leaders Through Polygamy to Advance His Plan','article_source':'The Aquila Report','position':'other_headlines'});">
@@ -698,7 +764,7 @@
     
     
     <div class="cc-headline-item">
-      <div class="cc-headline-num">8</div>
+      <div class="cc-headline-num">5</div>
       <div class="cc-headline-content">
         <a href="https://www.thegospelcoalition.org/reviews/make-home-luminous-dark/" class="cc-headline-title" target="_blank" rel="noopener"
            onclick="gtag('event','article_click',{'article_title':'James K. A. Smith on Mystical Faith: Promise and Underdeveloped Potential','article_source':'The Gospel Coalition','position':'other_headlines'});">
@@ -710,7 +776,7 @@
     
     
     <div class="cc-headline-item">
-      <div class="cc-headline-num">9</div>
+      <div class="cc-headline-num">6</div>
       <div class="cc-headline-content">
         <a href="https://wng.org/podcasts/truth-under-pressure-1775739275" class="cc-headline-title" target="_blank" rel="noopener"
            onclick="gtag('event','article_click',{'article_title':'Speaking Truth in a Culture That Demands Silence: A Conversation with John Stonestreet','article_source':'World Magazine','position':'other_headlines'});">
@@ -722,7 +788,7 @@
     
     
     <div class="cc-headline-item">
-      <div class="cc-headline-num">10</div>
+      <div class="cc-headline-num">7</div>
       <div class="cc-headline-content">
         <a href="https://theaquilareport.com/doubt-is-the-propellant-of-love/" class="cc-headline-title" target="_blank" rel="noopener"
            onclick="gtag('event','article_click',{'article_title':'Finding Faith: How Doubt Deepens Our Trust in God','article_source':'The Aquila Report','position':'other_headlines'});">
@@ -733,6 +799,54 @@
       <a href="/topics/apologetics/" class="cc-headline-topic"
          onclick="gtag('event','topic_click',{'topic':'apologetics','position':'other_headlines'});">
         More on Apologetics &rarr;
+      </a>
+    </div>
+    
+    
+    <div class="cc-headline-item">
+      <div class="cc-headline-num">8</div>
+      <div class="cc-headline-content">
+        <a href="https://relevantmagazine.com/culture/88-of-americans-feel-stressed-about-money-but-christians-should-think-about-finances-differently/" class="cc-headline-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Why Christians Must Reconsider Their Relationship With Money and Worry','article_source':'Relevant Magazine','position':'other_headlines'});">
+          Why Christians Must Reconsider Their Relationship With Money and Worry
+        </a>
+        <div class="cc-headline-meta">Relevant Magazine</div>
+      </div>
+      <a href="/topics/anxiety-and-fear/" class="cc-headline-topic"
+         onclick="gtag('event','topic_click',{'topic':'anxiety-and-fear','position':'other_headlines'});">
+        More on Anxiety & Fear &rarr;
+      </a>
+    </div>
+    
+    
+    <div class="cc-headline-item">
+      <div class="cc-headline-num">9</div>
+      <div class="cc-headline-content">
+        <a href="https://www.christianitytoday.com/2026/04/social-media-addiction-attorneys-see-themselves-as-good-samaritans/" class="cc-headline-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Lawyers Pursue Social Media Giants Over Deliberately Addictive Platform Design','article_source':'Christianity Today','position':'other_headlines'});">
+          Lawyers Pursue Social Media Giants Over Deliberately Addictive Platform Design
+        </a>
+        <div class="cc-headline-meta">Christianity Today</div>
+      </div>
+      <a href="/topics/technology/" class="cc-headline-topic"
+         onclick="gtag('event','topic_click',{'topic':'technology','position':'other_headlines'});">
+        More on Technology & the Christian Life &rarr;
+      </a>
+    </div>
+    
+    
+    <div class="cc-headline-item">
+      <div class="cc-headline-num">10</div>
+      <div class="cc-headline-content">
+        <a href="https://wng.org/podcasts/one-conversation-two-rules-1775755515" class="cc-headline-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Fired After Faith Discussion: Employee Questions Workplace Speech Standards','article_source':'World Magazine','position':'other_headlines'});">
+          Fired After Faith Discussion: Employee Questions Workplace Speech Standards
+        </a>
+        <div class="cc-headline-meta">World Magazine</div>
+      </div>
+      <a href="/topics/vocation-and-work/" class="cc-headline-topic"
+         onclick="gtag('event','topic_click',{'topic':'vocation-and-work','position':'other_headlines'});">
+        More on Vocation & Work &rarr;
       </a>
     </div>
     
