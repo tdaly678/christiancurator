@@ -1200,5 +1200,320 @@
     "website": "",
     "books": [],
     "initials": "MS"
+  },
+  {
+    "name": "Haleluya Hadero",
+    "slug": "haleluya-hadero",
+    "bio": "Haleluya Hadero is a writer and content creator engaged with contemporary Christian topics and cultural commentary. Her work explores faith, identity, and spiritual growth for modern audiences seeking thoughtful reflection on Christian living.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "HH"
+  },
+  {
+    "name": "Tim Cantrell",
+    "slug": "tim-cantrell",
+    "bio": "Tim Cantrell is a Christian writer and content creator dedicated to helping believers deepen their faith and understanding of Scripture. His work focuses on practical theology and spiritual growth for modern Christians.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TC"
+  },
+  {
+    "name": "Peter Jones",
+    "slug": "peter-jones",
+    "bio": "Peter Jones is a Reformed theologian and cultural apologist known for his work examining worldview issues and their intersection with Christian faith. He has been a prominent voice in addressing contemporary philosophical and spiritual challenges facing the modern church.",
+    "affiliation": "Westminster Seminary California",
+    "role": "Theologian & Author",
+    "education": "M.A.R., Westminster Theological Seminary",
+    "website": "https://www.reformation21.org/",
+    "books": [
+      {
+        "title": "One or Two: Seeing a Worldview Contrast",
+        "amazon_url": "https://www.amazon.com/s?k=One+or+Two+Peter+Jones"
+      },
+      {
+        "title": "The God of Comfort: Finding Consolation in the Psalms",
+        "amazon_url": "https://www.amazon.com/s?k=The+God+of+Comfort+Peter+Jones"
+      },
+      {
+        "title": "Stolen Identity: The Conspiracy to Reinvent Jesus",
+        "amazon_url": "https://www.amazon.com/s?k=Stolen+Identity+Peter+Jones"
+      },
+      {
+        "title": "Gospel Progress in a Postmodern World",
+        "amazon_url": "https://www.amazon.com/s?k=Gospel+Progress+in+a+Postmodern+World+Peter+Jones"
+      }
+    ],
+    "initials": "PJ"
+  },
+  {
+    "name": "Angela Fulton",
+    "slug": "angela-fulton",
+    "bio": "Angela Fulton is a Christian writer and speaker who focuses on faith, family, and spiritual growth. She is known for her approachable style and commitment to helping believers deepen their relationship with Christ through practical, biblical teaching.",
+    "affiliation": "",
+    "role": "Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AF"
+  },
+  {
+    "name": "Gillis Harp",
+    "slug": "gillis-harp",
+    "bio": "Gillis Harp is a historian and author who specializes in American religious and intellectual history, with particular focus on evangelical and reformed Christian thought. His scholarly work examines the intersection of faith, culture, and politics in American history, offering insights valuable to Christians seeking to understand their tradition's place in the broader American narrative.",
+    "affiliation": "Grove City College",
+    "role": "Professor & Historian",
+    "education": "Ph.D. in History",
+    "website": "",
+    "books": [
+      {
+        "title": "Positivism and the Separation of Church and State",
+        "amazon_url": "https://www.amazon.com/s?k=Positivism+Separation+Church+State+Gillis+Harp"
+      },
+      {
+        "title": "Protestants and the American Frontier",
+        "amazon_url": "https://www.amazon.com/s?k=Protestants+American+Frontier+Gillis+Harp"
+      }
+    ],
+    "initials": "GH"
+  },
+  {
+    "name": "Rob Plummer",
+    "slug": "rob-plummer",
+    "bio": "Rob Plummer is a biblical scholar and professor dedicated to helping Christians engage deeply with Scripture. He combines academic expertise with a passion for making the Bible's teachings accessible to everyday believers.",
+    "affiliation": "Southern Baptist Theological Seminary",
+    "role": "Professor & Biblical Scholar",
+    "education": "Ph.D. in Biblical Studies",
+    "website": "",
+    "books": [
+      {
+        "title": "40 Days Through the Book of John",
+        "amazon_url": "https://www.amazon.com/s?k=40+Days+Through+Book+John+Rob+Plummer"
+      },
+      {
+        "title": "Paul's Understanding of the Church's Mission",
+        "amazon_url": "https://www.amazon.com/s?k=Paul+Understanding+Church+Mission+Rob+Plummer"
+      }
+    ],
+    "initials": "RP"
+  },
+  {
+    "name": "Lynn Pryor",
+    "slug": "lynn-pryor",
+    "bio": "Lynn Pryor is a Christian author and speaker who has contributed to faith-based publications and content platforms. Her writing focuses on practical Christian living and spiritual growth for contemporary audiences.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LP"
+  },
+  {
+    "name": "Annie Eisner",
+    "slug": "annie-eisner",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AE"
+  },
+  {
+    "name": "Travis Kircher",
+    "slug": "travis-kircher",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TK"
+  },
+  {
+    "name": "Guardian Staff",
+    "slug": "guardian-staff",
+    "bio": "Guardian Staff represents the collective editorial team at The Guardian, a major British news organization. While not exclusively Christian in focus, Guardian journalists cover faith, religion, and ethics stories relevant to Christian readers seeking comprehensive news analysis.",
+    "affiliation": "The Guardian",
+    "role": "Editorial Team & Contributors",
+    "education": "",
+    "website": "https://www.theguardian.com",
+    "books": [],
+    "initials": "GS"
+  },
+  {
+    "name": "Paul J. Pastor",
+    "slug": "paul-j-pastor",
+    "bio": "Paul J. Pastor is an author, editor, and minister who writes thoughtfully about faith, spirituality, and the Christian life. His work explores themes of discipleship, contemplative practice, and the integration of faith into everyday living. He has contributed to various Christian publications and authored books that encourage deeper engagement with Scripture and spiritual formation.",
+    "affiliation": "Christianity Today, Relevant Magazine",
+    "role": "Author & Editor",
+    "education": "",
+    "website": "https://pauljpastor.com",
+    "books": [
+      {
+        "title": "The Listening Life: Embrace a Life that Shapes Your Soul",
+        "amazon_url": "https://www.amazon.com/s?k=The+Listening+Life+Paul+Pastor"
+      },
+      {
+        "title": "Centered: Finishing Well in Life and Ministry",
+        "amazon_url": "https://www.amazon.com/s?k=Centered+Paul+Pastor"
+      },
+      {
+        "title": "For the Life of the World: Letters to the Exiles",
+        "amazon_url": "https://www.amazon.com/s?k=For+the+Life+of+the+World+Paul+Pastor"
+      }
+    ],
+    "initials": "PJP"
+  },
+  {
+    "name": "Brian Borgman",
+    "slug": "brian-borgman",
+    "bio": "Brian Borgman is a pastor and author who has devoted his ministry to helping Christians develop deeper spiritual maturity and biblical understanding. He has served in pastoral roles and written extensively on topics related to Christian living, discipleship, and theological growth for evangelical audiences.",
+    "affiliation": "",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BB"
+  },
+  {
+    "name": "Joyu Wang",
+    "slug": "joyu-wang",
+    "bio": "Joyu Wang is a Christian writer and content creator focused on faith, culture, and spiritual formation. Her work encourages believers to integrate their Christian convictions with contemporary life and thought.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JW"
+  },
+  {
+    "name": "Elisabetta Povoledo",
+    "slug": "elisabetta-povoledo",
+    "bio": "Elisabetta Povoledo is an award-winning journalist and Rome correspondent for The New York Times, known for her extensive coverage of the Vatican, Catholic Church, and Italian religious affairs. Her reporting combines journalistic rigor with deep insights into faith, spirituality, and the intersection of religion and culture in modern Europe.",
+    "affiliation": "The New York Times",
+    "role": "Vatican Correspondent & Religious Affairs Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EP"
+  },
+  {
+    "name": "Elizabeth Russell",
+    "slug": "elizabeth-russell",
+    "bio": "Elizabeth Russell is a Christian author and speaker known for her work exploring faith, discipleship, and spiritual growth. She has contributed to various Christian publications and platforms, helping believers deepen their relationship with Christ through thoughtful, biblically-grounded writing.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ER"
+  },
+  {
+    "name": "Julia Carrie Wong",
+    "slug": "julia-carrie-wong",
+    "bio": "Julia Carrie Wong is a journalist and technology reporter who covers digital culture, social media, and their impact on society. Her work examines how technology intersects with human behavior, ethics, and community, offering insights relevant to Christian perspectives on modern life.",
+    "affiliation": "The Guardian",
+    "role": "Technology & Culture Reporter",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JCW"
+  },
+  {
+    "name": "Andrew Kaufmann",
+    "slug": "andrew-kaufmann",
+    "bio": "Andrew Kaufmann is a Christian writer and content creator dedicated to exploring biblical themes and faith-centered topics. His work engages thoughtfully with Scripture and contemporary Christian life, offering insights for believers seeking deeper understanding of their faith.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AK"
+  },
+  {
+    "name": "Alex Kneen",
+    "slug": "alex-kneen",
+    "bio": "Alex Kneen is a Christian writer and content creator focused on faith, spirituality, and biblical living. With a passion for helping believers deepen their relationship with Christ, Alex produces thoughtful resources for modern Christian audiences seeking practical wisdom rooted in Scripture.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AK"
+  },
+  {
+    "name": "Elise Brandon",
+    "slug": "elise-brandon",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EB"
+  },
+  {
+    "name": "Margherita Stancati",
+    "slug": "margherita-stancati",
+    "bio": "Margherita Stancati is a journalist and writer who contributes to prominent Christian and mainstream publications, bringing thoughtful perspective to issues of faith, culture, and contemporary life. Her work reflects a commitment to exploring how Christian conviction engages with the complexities of the modern world.",
+    "affiliation": "The Wall Street Journal, Christianity Today",
+    "role": "Journalist & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MS"
+  },
+  {
+    "name": "R.C. Sproul",
+    "slug": "rc-sproul",
+    "bio": "R.C. Sproul (1939–2017) was a renowned Reformed theologian, pastor, and teacher who dedicated his life to making biblical scholarship accessible to everyday Christians. As the founder of Ligonier Ministries, he became known for his passionate defense of biblical inerrancy and the sovereignty of God, leaving an enduring legacy through thousands of teaching resources, books, and sermons.",
+    "affiliation": "Ligonier Ministries; Reformed Theological Seminary",
+    "role": "Theologian, Pastor & Teacher",
+    "education": "M.A. from Fuller Theological Seminary; graduate study at the University of Basel",
+    "website": "https://www.ligonier.org",
+    "books": [
+      {
+        "title": "Chosen by God",
+        "amazon_url": "https://www.amazon.com/s?k=Chosen+by+God+R.C.+Sproul"
+      },
+      {
+        "title": "The Holiness of God",
+        "amazon_url": "https://www.amazon.com/s?k=The+Holiness+of+God+R.C.+Sproul"
+      },
+      {
+        "title": "Knowing Scripture",
+        "amazon_url": "https://www.amazon.com/s?k=Knowing+Scripture+R.C.+Sproul"
+      },
+      {
+        "title": "The Sovereignty of God",
+        "amazon_url": "https://www.amazon.com/s?k=The+Sovereignty+of+God+R.C.+Sproul"
+      },
+      {
+        "title": "Everyone's a Theologian",
+        "amazon_url": "https://www.amazon.com/s?k=Everyone's+a+Theologian+R.C.+Sproul"
+      },
+      {
+        "title": "Essential Truths of the Christian Faith",
+        "amazon_url": "https://www.amazon.com/s?k=Essential+Truths+of+the+Christian+Faith+R.C.+Sproul"
+      }
+    ],
+    "initials": "RCS"
+  },
+  {
+    "name": "Karrie Hahn",
+    "slug": "karrie-hahn",
+    "bio": "Karrie Hahn is a Christian author and speaker known for her work in faith-based content creation and ministry. She writes with a focus on helping believers deepen their relationship with God and navigate the intersection of faith and everyday life.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KH"
   }
 ]
