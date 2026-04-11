@@ -1515,5 +1515,59 @@
     "website": "",
     "books": [],
     "initials": "KH"
+  },
+  {
+    "name": "Mia Staub",
+    "slug": "mia-staub",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MS"
+  },
+  {
+    "name": "Carl Trueman",
+    "slug": "carl-trueman",
+    "bio": "Carl Trueman is a leading Christian intellectual and cultural commentator known for his insightful analysis of modern secularism, identity politics, and their theological implications. A professor of biblical and religious studies, he writes extensively on how contemporary cultural shifts challenge traditional Christian belief and practice. His work helps Christians understand and thoughtfully engage with the philosophical currents shaping our world.",
+    "affiliation": "Grove City College; The Gospel Coalition",
+    "role": "Professor & Author",
+    "education": "Ph.D. in Ecclesiastical History, University of Aberdeen",
+    "website": "https://www.carltrueman.com",
+    "books": [
+      {
+        "title": "The Rise and Triumph of the Modern Self",
+        "amazon_url": "https://www.amazon.com/s?k=The+Rise+and+Triumph+of+the+Modern+Self+Carl+Trueman"
+      },
+      {
+        "title": "Strange New World",
+        "amazon_url": "https://www.amazon.com/s?k=Strange+New+World+Carl+Trueman"
+      },
+      {
+        "title": "Protestantism: A Very Short Introduction",
+        "amazon_url": "https://www.amazon.com/s?k=Protestantism+A+Very+Short+Introduction+Carl+Trueman"
+      },
+      {
+        "title": "The Wages of Spin",
+        "amazon_url": "https://www.amazon.com/s?k=The+Wages+of+Spin+Carl+Trueman"
+      },
+      {
+        "title": "John Calvin and the Christian Life",
+        "amazon_url": "https://www.amazon.com/s?k=John+Calvin+and+the+Christian+Life+Carl+Trueman"
+      }
+    ],
+    "initials": "CT"
+  },
+  {
+    "name": "Christina Grube",
+    "slug": "christina-grube",
+    "bio": "Christina Grube is a writer and content creator who explores themes of faith, culture, and Christian living. Her work encourages readers to think deeply about how their beliefs intersect with everyday life and contemporary issues.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CG"
   }
 ]
