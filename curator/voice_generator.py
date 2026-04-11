@@ -126,23 +126,26 @@ def extract_new_authors(articles: list, existing_slugs: set) -> list:
     seen_names = set()
     new_authors = []
     for article in articles:
-        name = (article.get("author") or "").strip()
-        # Skip blanks, multi-author lines, known junk
-        if not name or len(name) < 4:
+        raw = (article.get("author") or "").strip()
+        if not raw:
             continue
-        if "," in name:
-            continue
-        if name.lower() in SKIP_AUTHORS:
-            continue
-        # Skip obvious news bylines like "Name in City"
-        if re.search(r'\b(in |at )\b', name):
-            continue
-        if name in seen_names:
-            continue
-        seen_names.add(name)
-        slug = name_to_slug(name)
-        if slug and slug not in existing_slugs:
-            new_authors.append({"name": name, "slug": slug})
+        # Split comma-separated multi-author bylines into individual names
+        candidates = [n.strip() for n in raw.split(",") if n.strip()]
+        for name in candidates:
+            # Skip blanks, short strings, known junk
+            if len(name) < 4:
+                continue
+            if name.lower() in SKIP_AUTHORS:
+                continue
+            # Skip obvious news bylines like "Name in City"
+            if re.search(r'\b(in |at )\b', name):
+                continue
+            if name in seen_names:
+                continue
+            seen_names.add(name)
+            slug = name_to_slug(name)
+            if slug and slug not in existing_slugs:
+                new_authors.append({"name": name, "slug": slug})
     return new_authors
 
 
