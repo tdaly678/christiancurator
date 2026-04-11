@@ -1569,5 +1569,54 @@
     "website": "",
     "books": [],
     "initials": "CG"
+  },
+  {
+    "name": "Ben Ratliff",
+    "slug": "ben-ratliff",
+    "bio": "Ben Ratliff is a music critic and cultural journalist known for his thoughtful analysis of jazz, popular music, and the arts. His work has appeared in The New York Times and other leading publications, where he brings both intellectual rigor and accessible insight to discussions of music and faith-adjacent cultural topics.",
+    "affiliation": "The New York Times",
+    "role": "Music Critic & Journalist",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Coltrane: The Story of a Sound",
+        "amazon_url": "https://www.amazon.com/s?k=Coltrane+Story+of+Sound+Ben+Ratliff"
+      }
+    ],
+    "initials": "BR"
+  },
+  {
+    "name": "Michael D. Shear",
+    "slug": "michael-d-shear",
+    "bio": "Michael D. Shear is a veteran political correspondent and journalist with extensive experience covering U.S. politics and policy. While not primarily known as a Christian author, his reporting has provided factual accounts of American political developments that may interest readers seeking informed journalism.",
+    "affiliation": "The New York Times",
+    "role": "Political Correspondent & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MDS"
+  },
+  {
+    "name": "Daniel Michaels",
+    "slug": "daniel-michaels",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DM"
+  },
+  {
+    "name": "Chris Larson",
+    "slug": "chris-larson",
+    "bio": "Chris Larson is a Christian writer and content creator focused on helping believers deepen their faith and understand Scripture. His work emphasizes practical application of biblical principles to daily Christian living.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CL"
   }
 ]

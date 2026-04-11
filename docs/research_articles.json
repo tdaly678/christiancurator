@@ -9,18 +9,17 @@
     "url": "https://research.lifeway.com/2026/04/10/3-strategies-for-cultivating-a-congregation-that-lives-sacrificially/",
     "summary": "<p>Our spiritual growth is evident as we learn to daily choose to obey God and sacrificially deny our own desires and wishes. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/04/10/3-strategies-for-cultivating-a-congregation-that-lives-sacrificially/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/04/10/3-strategies-for-cultivating-a-congregation-that-lives-sacrificially/\">3 Strategies for Cultivating a Congregation That Lives Sacrificially</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "published": "Fri, 10 Apr 2026 13:12:43 +0000",
-    "fetched_at": "2026-04-11T11:12:45.425398",
+    "fetched_at": "2026-04-11T11:21:04.650272",
     "score": 6,
     "tags": [
       "theology",
       "church life"
     ],
-    "rewritten_title": "Churches Demand Sacrifice. Can Congregations Actually Deliver?",
+    "rewritten_title": "Congregations Won't Sacrifice Unless Pastors Teach Daily Obedience",
     "personas": [
-      "pastor",
-      "professional"
+      "pastor"
     ],
-    "topic_cluster": "sacrificial_living_church",
+    "topic_cluster": "sacrificial_giving",
     "perspective": "neutral",
     "final_score": 7.5,
     "recency_boost": 1.5
@@ -35,14 +34,13 @@
     "url": "https://wng.org/sift/study-finnish-youth-more-likely-to-see-psychiatric-specialists-after-gender-treatments-1775852830",
     "summary": "",
     "published": "Fri, 10 Apr 2026 17:32:00 -0400",
-    "fetched_at": "2026-04-11T11:11:09.016953",
+    "fetched_at": "2026-04-11T11:19:28.251253",
     "score": 4,
     "tags": [
       "data"
     ],
     "rewritten_title": "Study: Finnish youth more likely to see psychiatric specialists after gender treatments",
     "personas": [
-      "student",
       "parent"
     ],
     "topic_cluster": "gender_medicine_youth",
@@ -56,20 +54,23 @@
     "source_type": "christian",
     "independent": false,
     "author": "Beshay",
-    "title": "How often does the Supreme Court overturn its own decisions?",
-    "url": "https://www.pewresearch.org/short-reads/2026/04/08/how-often-does-the-supreme-court-overturn-its-own-decisions/",
-    "summary": "Fewer than 1% of Supreme Court cases have overturned an older decision. More than half of these cases concerned economic activity or criminal procedure.",
-    "published": "Wed, 08 Apr 2026 17:56:38 +0000",
-    "fetched_at": "2026-04-11T11:12:45.090647",
-    "score": 3,
+    "title": "Americans still opt for print books over digital or audio versions; few are in book clubs",
+    "url": "https://www.pewresearch.org/short-reads/2026/04/09/americans-still-opt-for-print-books-over-digital-or-audio-versions-few-are-in-book-clubs/",
+    "summary": "Most U.S. adults read books, with print still favored over digital formats, though e-book and audiobook use has grown. Habits vary by demographics and few join book clubs.",
+    "published": "Thu, 09 Apr 2026 13:50:50 +0000",
+    "fetched_at": "2026-04-11T11:21:04.256977",
+    "score": 4,
     "tags": [
       "data"
     ],
-    "rewritten_title": "Supreme Court Rarely Reverses Itself — Except on Money and Crime",
-    "personas": [],
-    "topic_cluster": "supreme_court_statistics",
-    "perspective": "neutral",
-    "final_score": 3.25,
-    "recency_boost": 0.25
+    "rewritten_title": "Print Books Still Win America's Reading Wars—But Digital Is Gaining Ground",
+    "personas": [
+      "professional",
+      "parent"
+    ],
+    "topic_cluster": "unique",
+    "perspective": "news",
+    "final_score": 4.75,
+    "recency_boost": 0.75
   }
 ]
