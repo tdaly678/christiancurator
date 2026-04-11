@@ -237,14 +237,22 @@ def _save_featured_topic_log(featured_topics: list):
         except Exception:
             log = {}
 
-    # Store only the fields the email sender needs (strip heavy article data to just title/url/source)
+    # Store only the fields the email sender needs (strip heavy article data to just title/url/source/summary)
     def _slim_articles(articles):
+        def _plain(text):
+            """Strip HTML tags and collapse whitespace."""
+            if not text:
+                return ""
+            clean = re.sub(r'<[^>]+>', '', str(text))
+            return re.sub(r'\s+', ' ', clean).strip()
+
         return [
             {
                 "title": a.get("rewritten_title") or a.get("title", ""),
                 "url": a.get("url", ""),
                 "source_name": a.get("source_name", ""),
                 "author": a.get("author", ""),
+                "summary": _plain(a.get("summary", "")),
             }
             for a in (articles or [])[:2]
         ]

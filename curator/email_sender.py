@@ -88,20 +88,35 @@ def _render_topic_card(topic: dict, muted: bool = False) -> str:
     title_color  = "#444444" if muted else "#1a1a1a"
 
     articles_html = ""
-    for a in (topic.get("articles") or [])[:2]:
-        title  = a.get("title") or ""
-        url    = a.get("url") or ""
-        author = (a.get("author") or "").strip()
-        source = (a.get("source_name") or "").strip()
-        byline = (
+    for idx, a in enumerate((topic.get("articles") or [])[:2]):
+        title   = a.get("title") or ""
+        url     = a.get("url") or ""
+        author  = (a.get("author") or "").strip()
+        source  = (a.get("source_name") or "").strip()
+        summary = (a.get("summary") or "").strip()
+        byline  = (
             f'{author} &middot; {source}' if author and author.lower() != source.lower()
             else source
         )
         anchor = _article_anchor(url)
         href   = f"https://www.christiancurator.com/#{anchor}" if url else "https://www.christiancurator.com/"
+
+        # Truncate summary to ~200 chars at a sentence boundary for the lead article
+        preview_html = ""
+        if idx == 0 and summary:
+            sentences = re.split(r'(?<=[.!?])\s+', summary)
+            preview = ""
+            for s in sentences:
+                if len(preview) + len(s) > 200:
+                    break
+                preview += (" " if preview else "") + s
+            if preview:
+                preview_html = f'<div style="font-size:13px;color:#555;line-height:1.6;margin-top:5px;margin-bottom:4px;">{preview}</div>'
+
         articles_html += f"""
         <div style="padding:9px 0;border-top:1px solid #f0ede8;">
           <a href="{href}" style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;line-height:1.35;color:{title_color};text-decoration:none;display:block;margin-bottom:3px;">{title}</a>
+          {preview_html}
           <div style="font-size:11px;color:#aaa;">{byline}</div>
         </div>"""
 
