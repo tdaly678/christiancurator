@@ -34,6 +34,13 @@ SOURCES = [
         "category": "culture",
     },
 
+    # ── Tier 1A: Institutional Evangelical Voices ──
+    {
+        "name": "EFCA Blog",
+        "url": "https://blogs.efca.org/feed/",
+        "category": "theology",
+    },
+
     # ── Theology & Ministry ──
     {
         "name": "Ligonier Ministries",
