@@ -102,12 +102,13 @@ def main():
     print("\n[6/7] Updating Research & Data section...")
     research_articles = update_research_articles(articles)
 
-    render_html(articles, pairings, yesterday_articles, daily_summary=daily_summary,
-                research_articles=research_articles)
-
-    # --- Voices: auto-generate pages for new authors ---
+    # --- Voices: auto-generate pages for new authors (must run BEFORE render_html
+    #     so voices_data.json is up-to-date when the homepage builds author links) ---
     print("\n[7/8] Checking for new Voices...")
     generate_new_voice_pages(articles)
+
+    render_html(articles, pairings, yesterday_articles, daily_summary=daily_summary,
+                research_articles=research_articles)
 
     # --- Send Email ---
     if send_email_flag:

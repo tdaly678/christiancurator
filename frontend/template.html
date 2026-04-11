@@ -408,8 +408,7 @@
           {%- set src  = large.article.source_name | default('') | trim -%}
           {%- set pub  = large.article.published_display | default('') | trim -%}
           {%- if auth and auth | lower != src | lower -%}
-            {%- set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' -%}
-            {%- if auth_slug -%}<a href="/voices/{{ auth_slug }}/" class="cc-author-link"><strong>{{ auth }}</strong></a>{%- else -%}<strong>{{ auth }}</strong>{%- endif -%}
+            {{ auth | format_author_links(voices_by_name if voices_by_name is defined else {}) }}
              &middot; {{ src }}
           {%- else -%}{{ src }}{%- endif -%}
           {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
@@ -435,8 +434,7 @@
             {%- set auth = card.article.author | default('') | trim -%}
             {%- set src  = card.article.source_name | default('') | trim -%}
             {%- if auth and auth | lower != src | lower -%}
-              {%- set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' -%}
-              {%- if auth_slug -%}<a href="/voices/{{ auth_slug }}/" class="cc-author-link"><strong>{{ auth }}</strong></a>{%- else -%}<strong>{{ auth }}</strong>{%- endif -%}
+              {{ auth | format_author_links(voices_by_name if voices_by_name is defined else {}) }}
                &middot; {{ src }}
             {%- else -%}{{ src }}{%- endif -%}
           </div>
@@ -462,8 +460,7 @@
           {%- set auth = card.article.author | default('') | trim -%}
           {%- set src  = card.article.source_name | default('') | trim -%}
           {%- if auth and auth | lower != src | lower -%}
-            {%- set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' -%}
-            {%- if auth_slug -%}<a href="/voices/{{ auth_slug }}/" class="cc-author-link"><strong>{{ auth }}</strong></a>{%- else -%}<strong>{{ auth }}</strong>{%- endif -%}
+            {{ auth | format_author_links(voices_by_name if voices_by_name is defined else {}) }}
              &middot; {{ src }}
           {%- else -%}{{ src }}{%- endif -%}
         </div>
@@ -512,8 +509,7 @@
               {%- set src  = article.source_name | default('') | trim -%}
               {%- set pub  = article.published_display | default('') | trim -%}
               {%- if auth and auth | lower != src | lower -%}
-                {%- set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' -%}
-                {%- if auth_slug -%}<a href="/voices/{{ auth_slug }}/" class="cc-author-link"><strong>{{ auth }}</strong></a>{%- else -%}<strong>{{ auth }}</strong>{%- endif -%}
+                {{ auth | format_author_links(voices_by_name if voices_by_name is defined else {}) }}
                  &middot; {{ src }}
               {%- else -%}
                 {{ src }}
@@ -555,8 +551,7 @@
           {%- set src  = article.source_name | default('') | trim -%}
           {%- set pub  = article.published_display | default('') | trim -%}
           {%- if auth and auth | lower != src | lower -%}
-            {%- set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' -%}
-            {%- if auth_slug -%}<a href="/voices/{{ auth_slug }}/" class="cc-author-link"><strong>{{ auth }}</strong></a>{%- else -%}<strong>{{ auth }}</strong>{%- endif -%}
+            {{ auth | format_author_links(voices_by_name if voices_by_name is defined else {}) }}
              &middot; {{ src }}
           {%- else -%}
             {{ src }}

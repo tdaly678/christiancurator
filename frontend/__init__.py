@@ -125,10 +125,25 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         """Convert an article URL into a stable 9-char HTML id (letter prefix + 8 hex chars)."""
         return "a" + hashlib.md5((url or "").encode()).hexdigest()[:8]
 
+    def format_author_links(author_str: str, voices: dict, css_class: str = "cc-author-link") -> str:
+        """Split a potentially comma-separated author string and hyperlink each name that has a voice page."""
+        if not author_str:
+            return ""
+        parts = [p.strip() for p in author_str.split(",") if p.strip()]
+        linked = []
+        for name in parts:
+            slug = voices.get(name.lower(), "") if voices else ""
+            if slug:
+                linked.append(f'<a href="/voices/{slug}/" class="{css_class}"><strong>{name}</strong></a>')
+            else:
+                linked.append(f"<strong>{name}</strong>")
+        return ", ".join(linked)
+
     env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
     env.tests['contains'] = lambda value, item: item in (value or [])
     env.filters['strip_html'] = strip_html
     env.filters['article_anchor'] = article_anchor
+    env.filters['format_author_links'] = format_author_links
     template = env.get_template("template.html")
 
     # Build simplified pairings for the template
