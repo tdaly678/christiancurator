@@ -77,14 +77,44 @@ def classify_article(article: dict) -> list:
     return [slug for slug, _ in scores[:2]]
 
 
+def classify_article_best_match(article: dict) -> list:
+    """
+    Fallback classifier for articles that scored 0 at the normal threshold.
+    Returns the single highest-scoring topic (score >= 1) regardless of threshold,
+    so every article can have a 'More on [Topic]' link.
+    """
+    title_text = _normalize(article.get("title", ""))
+    body_text  = _normalize(
+        _strip_html_and_urls(article.get("summary", "")[:400])
+        + " " + article.get("topic_cluster", "").replace("_", " ")
+    )
+
+    best_slug  = None
+    best_score = 0
+    for topic in TOPICS:
+        title_hits = _score_topic(title_text, topic["keywords"])
+        body_hits  = _score_topic(body_text,  topic["keywords"])
+        combined   = title_hits * 3 + body_hits
+        if combined > best_score:
+            best_score = combined
+            best_slug  = topic["slug"]
+
+    return [best_slug] if best_slug and best_score > 0 else []
+
+
 def classify_articles(articles: list) -> list:
     """
     Run classify_article on every article in the list.
+    Articles that don't reach the normal threshold get a best-match fallback
+    so every article has at least one topic for the 'More on X' link.
     Adds "debate_topics" field to each article (in-place).
     Returns the articles list.
     """
     for article in articles:
-        article["debate_topics"] = classify_article(article)
+        topics = classify_article(article)
+        if not topics:
+            topics = classify_article_best_match(article)
+        article["debate_topics"] = topics
     return articles
 
 
