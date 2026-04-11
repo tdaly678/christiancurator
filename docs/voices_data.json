@@ -1618,5 +1618,95 @@
     "website": "",
     "books": [],
     "initials": "CL"
+  },
+  {
+    "name": "Sarah Eekhoff Zylstra",
+    "slug": "sarah-eekhoff-zylstra",
+    "bio": "Sarah Eekhoff Zylstra is a senior writer at Christianity Today, where she covers faith, culture, and the church. Known for her thoughtful journalism and in-depth reporting, she brings a distinctly Christian perspective to contemporary cultural issues and stories of faith.",
+    "affiliation": "Christianity Today",
+    "role": "Senior Writer & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SEZ"
+  },
+  {
+    "name": "Michael J. Kruger",
+    "slug": "michael-j-kruger",
+    "bio": "Michael J. Kruger is a respected New Testament scholar and theologian known for his work on biblical canon, early Christianity, and apologetics. As president of Reformed Theological Seminary, he combines academic expertise with pastoral concern, helping Christians understand the historical foundations and reliability of Scripture. His writings address both scholarly and popular audiences seeking to deepen their faith through serious engagement with biblical truth.",
+    "affiliation": "Reformed Theological Seminary; Crossway Publishers",
+    "role": "President & Professor, New Testament Scholar",
+    "education": "Ph.D. in New Testament, University of Edinburgh",
+    "website": "https://michaeljkruger.com/",
+    "books": [
+      {
+        "title": "The Question of Canon: Challenging the Status Quo in the New Testament Debate",
+        "amazon_url": "https://www.amazon.com/s?k=The+Question+of+Canon+Michael+Kruger"
+      },
+      {
+        "title": "Canon Revisited: Establishing the Origins and Authority of the New Testament Books",
+        "amazon_url": "https://www.amazon.com/s?k=Canon+Revisited+Michael+Kruger"
+      },
+      {
+        "title": "Heresy and Orthodoxy: How to Know the Difference",
+        "amazon_url": "https://www.amazon.com/s?k=Heresy+and+Orthodoxy+Michael+Kruger"
+      },
+      {
+        "title": "The Superiority of Christ: Why Jesus Is Better Than Anyone Else",
+        "amazon_url": "https://www.amazon.com/s?k=The+Superiority+of+Christ+Michael+Kruger"
+      },
+      {
+        "title": "At Home in God's House: A Common Sense Guide to Church Membership",
+        "amazon_url": "https://www.amazon.com/s?k=At+Home+in+Gods+House+Michael+Kruger"
+      }
+    ],
+    "initials": "MJK"
+  },
+  {
+    "name": "R. Albert Mohler",
+    "slug": "r-albert-mohler",
+    "bio": "R. Albert Mohler Jr. is president of The Southern Baptist Theological Seminary and one of the most influential evangelical voices in contemporary Christianity. Known for his thoughtful engagement with theology, culture, and current events, Mohler has shaped evangelical thinking on issues ranging from bioethics to politics through both his writing and his popular podcast, The Briefing.",
+    "affiliation": "The Southern Baptist Theological Seminary; The Briefing podcast",
+    "role": "Seminary President, Theologian & Writer",
+    "education": "Ph.D., Southern Baptist Theological Seminary",
+    "website": "https://albertmohler.com",
+    "books": [
+      {
+        "title": "The Conviction to Lead",
+        "amazon_url": "https://www.amazon.com/s?k=The+Conviction+to+Lead+Albert+Mohler"
+      },
+      {
+        "title": "We Cannot Be Silent",
+        "amazon_url": "https://www.amazon.com/s?k=We+Cannot+Be+Silent+Albert+Mohler"
+      },
+      {
+        "title": "The Briefing: Every Thinking Christian's Guide to Today's World",
+        "amazon_url": "https://www.amazon.com/s?k=The+Briefing+Albert+Mohler"
+      },
+      {
+        "title": "The Prayer That Turns the World Upside Down",
+        "amazon_url": "https://www.amazon.com/s?k=The+Prayer+That+Turns+the+World+Upside+Down+Mohler"
+      },
+      {
+        "title": "Atheism Remix",
+        "amazon_url": "https://www.amazon.com/s?k=Atheism+Remix+Albert+Mohler"
+      },
+      {
+        "title": "The Disappearance of God",
+        "amazon_url": "https://www.amazon.com/s?k=The+Disappearance+of+God+Albert+Mohler"
+      }
+    ],
+    "initials": "RAM"
+  },
+  {
+    "name": "Yeganeh Torbati",
+    "slug": "yeganeh-torbati",
+    "bio": "Yeganeh Torbati is a journalist and religion correspondent known for thoughtful reporting on faith communities and religious issues. Her work focuses on how Christian communities engage with contemporary social and political challenges.",
+    "affiliation": "Religion News Service",
+    "role": "Religion Correspondent & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "YT"
   }
 ]
