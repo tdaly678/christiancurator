@@ -47,20 +47,43 @@ MAX_RETRIES = 4
 RETRY_DELAYS = [5, 15, 30, 60]
 
 
+def _looks_like_headline(text: str) -> bool:
+    """Return False if the model's response looks like a meta-reply rather than a rewritten title."""
+    if not text:
+        return False
+    # Too long to be a headline (>120 chars), or contains phrases typical of a confused/refusal response
+    if len(text) > 120:
+        return False
+    lower = text.lower()
+    refusal_phrases = [
+        "i need to see", "could you provide", "article summary", "please provide",
+        "i cannot", "i'm unable", "i don't have", "you've included",
+    ]
+    return not any(p in lower for p in refusal_phrases)
+
+
 def rewrite_title(article: dict) -> dict:
     """Rewrite a single article title using Claude, with retry on 529 overload."""
+    import re
+    summary = article.get("summary") or ""
+    # Strip HTML tags from summary for cleaner context
+    summary_text = re.sub(r"<[^>]+>", "", summary).strip()[:300]
+
+    # Skip rewrite entirely if there's nothing to ground it on
+    if not summary_text:
+        article["rewritten_title"] = article["title"]
+        return article
+
     for attempt, delay in enumerate(RETRY_DELAYS, start=1):
         try:
-            summary = article.get("summary") or ""
-            # Strip HTML tags from summary for cleaner context
-            import re
-            summary_text = re.sub(r"<[^>]+>", "", summary).strip()[:300]
             message = client.messages.create(
                 model="claude-haiku-4-5-20251001",
                 max_tokens=60,
                 messages=[{"role": "user", "content": REWRITE_PROMPT.format(title=article["title"], summary=summary_text)}],
             )
-            article["rewritten_title"] = message.content[0].text.strip().strip('"')
+            candidate = message.content[0].text.strip().strip('"')
+            # Guard against meta-replies leaking through as headlines
+            article["rewritten_title"] = candidate if _looks_like_headline(candidate) else article["title"]
             return article
         except anthropic.APIStatusError as e:
             if e.status_code == 529 and attempt <= MAX_RETRIES:
