@@ -569,6 +569,8 @@
          onclick="gtag('event','topic_click',{'topic':'{{ atopic.slug }}','position':'other_headlines'});">
         More on {{ atopic.name }} &rarr;
       </a>
+      {%- else %}
+      <a href="/digest/" class="cc-headline-topic">More stories &rarr;</a>
       {%- endif %}
     </div>
     {% endfor %}
