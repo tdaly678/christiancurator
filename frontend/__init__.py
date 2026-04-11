@@ -5,6 +5,7 @@ frontend package — renders the HTML digest from the Jinja2 template.
 from pathlib import Path
 from datetime import date
 from jinja2 import Environment, FileSystemLoader
+import hashlib
 import json
 import re
 
@@ -120,9 +121,14 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         clean = re.sub(r'<[^>]+>', '', str(value))
         return re.sub(r'\s+', ' ', clean).strip()
 
+    def article_anchor(url: str) -> str:
+        """Convert an article URL into a stable 9-char HTML id (letter prefix + 8 hex chars)."""
+        return "a" + hashlib.md5((url or "").encode()).hexdigest()[:8]
+
     env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
     env.tests['contains'] = lambda value, item: item in (value or [])
     env.filters['strip_html'] = strip_html
+    env.filters['article_anchor'] = article_anchor
     template = env.get_template("template.html")
 
     # Build simplified pairings for the template

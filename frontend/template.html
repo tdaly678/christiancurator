@@ -150,6 +150,7 @@
     .cc-card-large {
       padding: 1.25rem 2rem 0 0;
       border-right: 1px solid #e0ddd8;
+      display: flex; flex-direction: column;
     }
     @media (max-width: 660px) {
       .cc-card-large { border-right: none; padding-right: 0; padding-bottom: 1.25rem; border-bottom: 1px solid #e0ddd8; }
@@ -161,13 +162,13 @@
     }
     .cc-card-large-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
     .cc-card-large-preview {
-      font-size: 14px; color: #555; line-height: 1.65; margin-bottom: 1rem;
+      font-size: 14px; color: #555; line-height: 1.65; margin-bottom: 1rem; flex: 1;
     }
     .cc-card-large-meta { font-size: 11.5px; color: #888; margin-bottom: 0.75rem; }
     .cc-card-large-meta strong { color: #555; font-weight: 600; }
     .cc-card-large-cta {
       font-size: 12px; font-weight: 600; color: #2C4A2E; text-decoration: none;
-      display: inline-block; margin-top: 0.25rem;
+      border-top: 1px solid #e0ddd8; padding-top: 10px; display: inline-block; margin-top: auto;
     }
     .cc-card-large-cta:hover { text-decoration: underline; }
 
@@ -393,7 +394,7 @@
     <!-- Row 1: large + 2 stacked mediums -->
     <div class="cc-front-row1">
       {% set large = ns.cards[0] %}
-      <div class="cc-card-large">
+      <div class="cc-card-large" id="{{ large.article.url | article_anchor }}">
         <a href="{{ large.article.url }}" class="cc-card-large-title" target="_blank" rel="noopener"
            onclick="gtag('event','article_click',{'article_title':'{{ (large.article.rewritten_title or large.article.title)|replace("'","") }}','article_source':'{{ large.article.source_name }}','position':'front_large'});">
           {{ large.article.rewritten_title or large.article.title }}
@@ -421,7 +422,7 @@
 
       <div class="cc-front-mediums">
         {% for card in ns.cards[1:3] %}
-        <div class="cc-card-medium">
+        <div class="cc-card-medium" id="{{ card.article.url | article_anchor }}">
           <a href="{{ card.article.url }}" class="cc-card-medium-title" target="_blank" rel="noopener"
              onclick="gtag('event','article_click',{'article_title':'{{ (card.article.rewritten_title or card.article.title)|replace("'","") }}','article_source':'{{ card.article.source_name }}','position':'front_medium'});">
             {{ card.article.rewritten_title or card.article.title }}
@@ -450,10 +451,9 @@
 
     <!-- Row 2: small cards -->
     {% if ns.cards | length > 3 %}
-    {% set small_cards = ns.cards[3:7] %}
-    <div class="cc-front-row2" style="grid-template-columns: repeat({{ small_cards | length }}, 1fr);">
-      {% for card in small_cards %}
-      <div class="cc-card-small">
+    <div class="cc-front-row2">
+      {% for card in ns.cards[3:7] %}
+      <div class="cc-card-small" id="{{ card.article.url | article_anchor }}">
         <a href="{{ card.article.url }}" class="cc-card-small-title" target="_blank" rel="noopener"
            onclick="gtag('event','article_click',{'article_title':'{{ (card.article.rewritten_title or card.article.title)|replace("'","") }}','article_source':'{{ card.article.source_name }}','position':'front_small'});">
           {{ card.article.rewritten_title or card.article.title }}
@@ -490,16 +490,6 @@
 
   <!-- ── WORLD NEWS ───────────────────────────────────────────────────── -->
   {% set world_articles = articles | selectattr("source_type", "equalto", "world_news") | list %}
-  {# Fallback: if no world_news typed articles, pull top non-featured general articles #}
-  {% if not world_articles %}
-    {% set ns_wf = namespace(fallback=[]) %}
-    {% for article in top_articles %}
-      {% if article.url not in ns_urls.seen and ns_wf.fallback | length < 3 %}
-        {% set ns_wf.fallback = ns_wf.fallback + [article] %}
-      {% endif %}
-    {% endfor %}
-    {% set world_articles = ns_wf.fallback %}
-  {% endif %}
   {% if world_articles %}
   <div class="cc-world-news">
     <div class="cc-world-news-section-header">
@@ -539,10 +529,6 @@
   {% endif %}
 
   <!-- ── OTHER HEADLINES ──────────────────────────────────────────────── -->
-  {# Also exclude world news articles from Other Headlines #}
-  {% for article in world_articles %}
-    {% set ns_urls.seen = ns_urls.seen + [article.url] %}
-  {% endfor %}
   {% set ns_oh = namespace(articles=[]) %}
   {% for article in top_articles %}
     {% if article.url not in ns_urls.seen and ns_oh.articles | length < 10 %}
@@ -557,7 +543,7 @@
     </div>
     {% for article in ns_oh.articles %}
     {% set atopic = article_topic_map.get(article.url, {}) if article_topic_map is defined else {} %}
-    <div class="cc-headline-item">
+    <div class="cc-headline-item" id="{{ article.url | article_anchor }}">
       <div class="cc-headline-num">{{ loop.index }}</div>
       <div class="cc-headline-content">
         <a href="{{ article.url }}" class="cc-headline-title" target="_blank" rel="noopener"

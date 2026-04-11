@@ -11,6 +11,7 @@ Email structure:
   Footer
 """
 
+import hashlib
 import os
 import re
 import json
@@ -72,44 +73,46 @@ def _get_topic_cards():
     return today_cards
 
 
+# ── Anchor helper ──────────────────────────────────────────────────────────────
+
+def _article_anchor(url: str) -> str:
+    """Return the same stable anchor id used in the homepage template."""
+    return "a" + hashlib.md5((url or "").encode()).hexdigest()[:8]
+
+
 # ── Card renderer ──────────────────────────────────────────────────────────────
 
 def _render_topic_card(topic: dict, muted: bool = False) -> str:
-    """Render one topic card as email-safe inline HTML."""
-    border_color = "#e8e5e0" if muted else "#e0ddd8"
-    bg_color = "#fdfdfc" if muted else "#ffffff"
+    """Render one topic card as email-safe inline HTML, styled to match the site."""
     accent_color = "#b5ccb8" if muted else "#2C4A2E"
-    article_link_color = "#333333" if muted else "#1a1a1a"
-    cta_color = "#2C4A2E"
+    title_color  = "#444444" if muted else "#1a1a1a"
 
     articles_html = ""
     for a in (topic.get("articles") or [])[:2]:
-        title = a.get("title") or ""
+        title  = a.get("title") or ""
+        url    = a.get("url") or ""
         author = (a.get("author") or "").strip()
         source = (a.get("source_name") or "").strip()
         byline = (
             f'{author} &middot; {source}' if author and author.lower() != source.lower()
             else source
         )
+        anchor = _article_anchor(url)
+        href   = f"https://www.christiancurator.com/#{anchor}" if url else "https://www.christiancurator.com/"
         articles_html += f"""
-        <div style="padding:8px 0;border-top:1px solid #f0ede8;">
-          <div style="font-family:Georgia,serif;font-size:13.5px;font-weight:600;line-height:1.35;margin-bottom:3px;">
-            <a href="https://www.christiancurator.com/" style="color:{article_link_color};text-decoration:none;">{title}</a>
-          </div>
+        <div style="padding:9px 0;border-top:1px solid #f0ede8;">
+          <a href="{href}" style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;line-height:1.35;color:{title_color};text-decoration:none;display:block;margin-bottom:3px;">{title}</a>
           <div style="font-size:11px;color:#aaa;">{byline}</div>
         </div>"""
 
-    articles_label = "What&rsquo;s being written about this"
-
     return f"""
-      <div style="border:1px solid {border_color};border-radius:5px;padding:18px 20px 16px;background:{bg_color};">
-        <div style="font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:{cta_color};margin-bottom:7px;">{topic.get("category", "")}</div>
-        <div style="font-family:Georgia,serif;font-size:20px;font-weight:700;line-height:1.25;color:#1a1a1a;margin-bottom:12px;">{topic.get("name", "")}</div>
-        <div style="font-size:13.5px;color:#555;font-style:italic;line-height:1.6;border-left:2px solid {accent_color};padding-left:10px;margin-bottom:16px;">{topic.get("summary") or topic.get("hook", "")}</div>
-        <div style="font-size:9.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#aaa;margin-bottom:9px;">{articles_label}</div>
+      <div style="border-top:2px solid {'#d0ccc6' if muted else '#1a1a1a'};padding-top:14px;margin-bottom:4px;">
+        <div style="font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:{accent_color};margin-bottom:6px;">{topic.get("category", "")}</div>
+        <div style="font-family:Georgia,'Times New Roman',serif;font-size:23px;font-weight:600;line-height:1.2;color:{title_color};margin-bottom:10px;">{topic.get("name", "")}</div>
+        <div style="font-size:13.5px;color:#555;font-style:italic;line-height:1.6;border-left:2px solid {accent_color};padding-left:10px;margin-bottom:14px;">{topic.get("summary") or topic.get("hook", "")}</div>
         {articles_html}
-        <div style="border-top:1px solid #e0ddd8;margin-top:12px;padding-top:12px;">
-          <a href="https://www.christiancurator.com/" style="font-size:13px;font-weight:700;color:{cta_color};text-decoration:none;">Read more at Christian Curator &rarr;</a>
+        <div style="margin-top:12px;">
+          <a href="https://www.christiancurator.com/topics/{topic.get('slug', '')}/" style="font-size:12px;font-weight:700;color:#2C4A2E;text-decoration:none;">More on {topic.get('name','')} &rarr;</a>
         </div>
       </div>"""
 
@@ -132,12 +135,14 @@ def _render_world_news_card(world_articles: list[dict]) -> str:
             else source
         )
         border_top = "border-top:1px solid #c5d4ea;" if i > 0 else ""
+        anchor = _article_anchor(a.get("url", ""))
+        href = f"https://www.christiancurator.com/#{anchor}" if a.get("url") else "https://www.christiancurator.com/"
         rows_html += f"""
         <div style="padding:10px 0;{border_top}display:table;width:100%;">
           <div style="display:table-cell;width:26px;font-size:11px;font-weight:700;color:#7a93b8;vertical-align:top;padding-top:2px;">{i + 1}</div>
           <div style="display:table-cell;vertical-align:top;">
-            <div style="font-family:Georgia,serif;font-size:14px;font-weight:600;line-height:1.35;margin-bottom:3px;">
-              <a href="https://www.christiancurator.com/digest/" style="color:#12284a;text-decoration:none;">{title}</a>
+            <div style="font-family:Georgia,'Times New Roman',serif;font-size:14px;font-weight:600;line-height:1.35;margin-bottom:3px;">
+              <a href="{href}" style="color:#12284a;text-decoration:none;">{title}</a>
             </div>
             <div style="font-size:11px;color:#7a93b8;">{byline}</div>
           </div>
@@ -209,7 +214,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict],
     if cards_html or world_card_html:
         today_section_html = f"""
     <div style="margin-bottom:8px;">
-      <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#1a1a1a;border-bottom:2px solid #1a1a1a;padding-bottom:6px;margin-bottom:16px;">
+      <div style="font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#1a1a1a;border-bottom:2.5px solid #1a1a1a;padding-bottom:6px;margin-bottom:20px;">
         In the Conversation Today
       </div>
       {cards_html}
@@ -232,39 +237,50 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict],
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"></head>
-<body style="margin:0;padding:0;background:#faf9f7;font-family:Arial,sans-serif;color:#1a1a1a;">
+<body style="margin:0;padding:0;background:#faf9f7;font-family:'Helvetica Neue',Arial,sans-serif;color:#1a1a1a;">
   {preheader_html}
-  <div style="max-width:600px;margin:0 auto;padding:24px 20px;">
+  <div style="max-width:600px;margin:0 auto;padding:20px 20px 32px;">
 
-    <!-- Forwarded banner -->
-    <div style="background:#EFF4F0;border:1px solid #B5CCB8;border-radius:4px;padding:10px 16px;margin-bottom:16px;text-align:center;">
-      <span style="font-size:12px;color:#2C4A2E;">Was this forwarded to you?</span>
-      <a href="https://www.christiancurator.com/#cc-email-box" style="display:inline-block;margin-left:10px;background:#2C4A2E;color:#fff;font-size:12px;font-weight:700;padding:5px 14px;border-radius:3px;text-decoration:none;">Subscribe Free &rarr;</a>
+    <!-- Top bar: date left, subscribe right (mirrors site cc-top-bar) -->
+    <div style="display:table;width:100%;margin-bottom:14px;">
+      <div style="display:table-cell;font-size:12px;color:#888;letter-spacing:0.02em;vertical-align:middle;">{today}</div>
+      <div style="display:table-cell;text-align:right;vertical-align:middle;">
+        <span style="font-size:12px;color:#888;">Forwarded to you? </span>
+        <a href="https://www.christiancurator.com/#cc-email-box" style="background:#2C4A2E;color:#fff;font-size:12px;font-weight:700;padding:5px 14px;border-radius:3px;text-decoration:none;display:inline-block;margin-left:6px;">Subscribe Free &rarr;</a>
+      </div>
     </div>
 
-    <!-- Header -->
-    <div style="border-bottom:2px solid #1a1a1a;padding-bottom:16px;margin-bottom:28px;text-align:center;">
-      <div style="font-size:11px;color:#888;letter-spacing:0.05em;margin-bottom:8px;">{today}</div>
-      <div style="font-family:Georgia,serif;font-size:34px;font-weight:700;color:#1a1a1a;">Christian Curator</div>
-      <div style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin-top:6px;">For curious Christians seeking clarity on the questions that matter most</div>
+    <!-- Masthead (mirrors site cc-masthead) -->
+    <div style="text-align:center;padding-bottom:14px;border-bottom:2.5px solid #1a1a1a;margin-bottom:26px;">
+      <div style="font-family:Georgia,'Times New Roman',serif;font-size:38px;font-weight:600;letter-spacing:-0.02em;color:#1a1a1a;line-height:1;">Christian Curator</div>
+      <div style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin-top:8px;font-weight:400;">For curious Christians seeking clarity on the questions that matter most</div>
     </div>
 
     {today_section_html}
     {cta_html}
 
     <!-- Forward nudge -->
-    <div style="text-align:center;margin:28px 0 0;padding:18px 20px;border:1px dashed #c8d9c9;border-radius:4px;background:#f7fbf7;">
-      <div style="font-size:13px;color:#3a3a3a;margin-bottom:8px;">Know someone who&rsquo;d enjoy this?</div>
-      <div style="font-size:12px;color:#666;">Forward this email — it takes two seconds and means a lot.</div>
+    <div style="margin-top:28px;padding:16px 20px;border:1px solid #e0ddd8;border-radius:4px;">
+      <div style="font-size:13px;color:#3a3a3a;margin-bottom:6px;">Know someone who&rsquo;d enjoy this?</div>
+      <div style="font-size:12px;color:#888;">Forward this email &mdash; it takes two seconds and means a lot.</div>
       <div style="margin-top:10px;">
         <a href="https://www.christiancurator.com/#cc-email-box" style="font-size:12px;font-weight:700;color:#2C4A2E;text-decoration:none;">christiancurator.com &rarr;</a>
       </div>
     </div>
 
-    <!-- Footer -->
-    <div style="border-top:2px solid #1a1a1a;margin-top:28px;padding-top:16px;font-size:11px;color:#aaa;text-align:center;">
-      <p>Curated from across the evangelical web. Visit us to read the full articles.</p>
-      <p style="margin-top:8px;"><a href="https://www.christiancurator.com" style="color:#2C4A2E;">christiancurator.com</a></p>
+    <!-- Footer (mirrors site cc-footer) -->
+    <div style="border-top:2.5px solid #1a1a1a;margin-top:28px;padding-top:14px;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;color:#1a1a1a;">Christian Curator</td>
+          <td style="text-align:right;font-size:11px;color:#888;">
+            <a href="https://www.christiancurator.com/digest/" style="color:#888;text-decoration:none;font-weight:600;">Daily Digest</a>
+            &nbsp;&nbsp;
+            <a href="https://www.christiancurator.com/archive/" style="color:#888;text-decoration:none;font-weight:600;">Archive</a>
+          </td>
+        </tr>
+      </table>
+      <div style="font-size:11px;color:#aaa;margin-top:8px;">Curated from across the evangelical web.</div>
     </div>
 
   </div>
