@@ -184,6 +184,17 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
     # Persist today's featured topics so the email sender can use them (and look up yesterday's)
     _save_featured_topic_log(featured_topics)
 
+    # Build diversified front-page cards: max 2 per topic slug, top 10 total
+    front_page_cards = _build_diversified_cards(articles, TOPICS_BY_SLUG, max_per_topic=2, total=10)
+    front_page_urls  = {c["article"]["url"] for c in front_page_cards}
+
+    # Build diversified other-headlines: max 2 per topic slug, top 10, excluding front-page URLs
+    other_headlines = _build_diversified_headlines(articles, TOPICS_BY_SLUG, front_page_urls, max_per_topic=2, total=10)
+
+    if front_page_cards:
+        topics_shown = [c["topic_name"] for c in front_page_cards[:3]]
+        print(f"  Front-page cards (top 3): {topics_shown}")
+
     # Compute recent archive dates for the homepage archive list
     archive_dates = []
     if ARCHIVE_DIR.exists():
@@ -208,6 +219,8 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         research_articles=research_articles or load_research_articles(),
         matched_topics=matched_topics,
         featured_topics=featured_topics,
+        front_page_cards=front_page_cards,
+        other_headlines=other_headlines,
         article_topic_map=article_topic_map,
         all_topics=TOPICS,
         topics_by_category=TOPICS_BY_CATEGORY,
@@ -239,6 +252,96 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
 
 
 FEATURED_TOPIC_LOG_PATH = DOCS_DIR / "featured_topic_log.json"
+
+
+def _build_diversified_cards(articles: list, topics_by_slug: dict,
+                              max_per_topic: int = 2, total: int = 10) -> list:
+    """
+    Return up to `total` front-page cards drawn from all non-world-news classified articles,
+    capped at `max_per_topic` cards per topic slug.  Cards are sorted by article score so the
+    best articles surface first, while no single topic dominates the layout.
+    Each card is a dict: {article, topic_name, topic_slug}.
+    """
+    from curator.topic_classifier import _fmt_date  # reuse existing date formatter
+
+    topic_counts: dict = {}
+    cards = []
+    seen_urls: set = set()
+
+    # Score-ranked pool: only non-world-news articles that have at least one topic match
+    pool = sorted(
+        [a for a in articles
+         if a.get("source_type") != "world_news" and a.get("debate_topics")],
+        key=lambda a: a.get("final_score", 0),
+        reverse=True,
+    )
+
+    for article in pool:
+        if len(cards) >= total:
+            break
+        url = article.get("url", "")
+        if url in seen_urls:
+            continue
+
+        # Pick the first valid topic slug
+        slug = next(
+            (s for s in article.get("debate_topics", []) if s in topics_by_slug),
+            None,
+        )
+        if not slug:
+            continue
+        if topic_counts.get(slug, 0) >= max_per_topic:
+            continue
+
+        topic = topics_by_slug[slug]
+        cards.append({
+            "article": article,
+            "topic_name": topic["name"],
+            "topic_slug": slug,
+        })
+        topic_counts[slug] = topic_counts.get(slug, 0) + 1
+        seen_urls.add(url)
+
+    return cards
+
+
+def _build_diversified_headlines(articles: list, topics_by_slug: dict,
+                                  exclude_urls: set, max_per_topic: int = 2,
+                                  total: int = 10) -> list:
+    """
+    Return up to `total` other-headlines articles (non-world-news, not in exclude_urls),
+    capped at `max_per_topic` per topic slug.  Articles with no topic match are still
+    included but count against a shared 'unclassified' bucket (no per-topic cap applied).
+    """
+    topic_counts: dict = {}
+    headlines = []
+
+    pool = sorted(
+        [a for a in articles if a.get("source_type") != "world_news"],
+        key=lambda a: a.get("final_score", 0),
+        reverse=True,
+    )
+
+    for article in pool:
+        if len(headlines) >= total:
+            break
+        url = article.get("url", "")
+        if url in exclude_urls:
+            continue
+
+        slug = next(
+            (s for s in article.get("debate_topics", []) if s in topics_by_slug),
+            None,
+        )
+        if slug and topic_counts.get(slug, 0) >= max_per_topic:
+            continue
+
+        headlines.append(article)
+        if slug:
+            topic_counts[slug] = topic_counts.get(slug, 0) + 1
+        exclude_urls.add(url)  # prevent duplicates within this list too
+
+    return headlines
 
 
 def _save_featured_topic_log(featured_topics: list):

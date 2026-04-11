@@ -372,16 +372,7 @@
   </div>
 
   <!-- ── NEWSPAPER FRONT PAGE ─────────────────────────────────────── -->
-  {% if featured_topics %}
-  {% set ns = namespace(cards=[]) %}
-  {% for topic in featured_topics %}
-    {% for article in topic.articles %}
-      {% if ns.cards | length < 10 %}
-        {% set ns.cards = ns.cards + [{'article': article, 'topic_name': topic.name, 'topic_slug': topic.slug}] %}
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-
+  {% if front_page_cards %}
   <div class="cc-front">
     <div style="margin-top:1.75rem;">
       <div class="cc-section-header">
@@ -390,10 +381,10 @@
       </div>
     </div>
 
-    {% if ns.cards %}
+    {% if front_page_cards %}
     <!-- Row 1: large + 2 stacked mediums -->
     <div class="cc-front-row1">
-      {% set large = ns.cards[0] %}
+      {% set large = front_page_cards[0] %}
       <div class="cc-card-large" id="{{ large.article.url | article_anchor }}">
         <a href="{{ large.article.url }}" class="cc-card-large-title" target="_blank" rel="noopener"
            onclick="gtag('event','article_click',{'article_title':'{{ (large.article.rewritten_title or large.article.title)|replace("'","") }}','article_source':'{{ large.article.source_name }}','position':'front_large'});">
@@ -420,7 +411,7 @@
       </div>
 
       <div class="cc-front-mediums">
-        {% for card in ns.cards[1:3] %}
+        {% for card in front_page_cards[1:3] %}
         <div class="cc-card-medium" id="{{ card.article.url | article_anchor }}">
           <a href="{{ card.article.url }}" class="cc-card-medium-title" target="_blank" rel="noopener"
              onclick="gtag('event','article_click',{'article_title':'{{ (card.article.rewritten_title or card.article.title)|replace("'","") }}','article_source':'{{ card.article.source_name }}','position':'front_medium'});">
@@ -448,9 +439,9 @@
     </div>
 
     <!-- Row 2: small cards -->
-    {% if ns.cards | length > 3 %}
+    {% if front_page_cards | length > 3 %}
     <div class="cc-front-row2">
-      {% for card in ns.cards[3:7] %}
+      {% for card in front_page_cards[3:7] %}
       <div class="cc-card-small" id="{{ card.article.url | article_anchor }}">
         <a href="{{ card.article.url }}" class="cc-card-small-title" target="_blank" rel="noopener"
            onclick="gtag('event','article_click',{'article_title':'{{ (card.article.rewritten_title or card.article.title)|replace("'","") }}','article_source':'{{ card.article.source_name }}','position':'front_small'});">
@@ -475,15 +466,6 @@
     {% endif %}
   </div>
   {% endif %}
-
-  <!-- ── OTHER HEADLINES: deduped, shown after world news below ───── -->
-  {% set ns_urls = namespace(seen=[]) %}
-  {% for topic in featured_topics %}
-    {% for article in topic.articles %}
-      {% set ns_urls.seen = ns_urls.seen + [article.url] %}
-    {% endfor %}
-  {% endfor %}
-  {% set top_articles = articles | rejectattr("source_type", "equalto", "world_news") | list %}
 
   <!-- ── WORLD NEWS ───────────────────────────────────────────────────── -->
   {% set world_articles = articles | selectattr("source_type", "equalto", "world_news") | list %}
@@ -525,19 +507,13 @@
   {% endif %}
 
   <!-- ── OTHER HEADLINES ──────────────────────────────────────────────── -->
-  {% set ns_oh = namespace(articles=[]) %}
-  {% for article in top_articles %}
-    {% if article.url not in ns_urls.seen and ns_oh.articles | length < 10 %}
-      {% set ns_oh.articles = ns_oh.articles + [article] %}
-    {% endif %}
-  {% endfor %}
-  {% if ns_oh.articles %}
+  {% if other_headlines %}
   <div class="cc-headlines">
     <div class="cc-section-header">
       <div class="cc-section-label">Other Headlines</div>
-      <div class="cc-section-meta">{{ ns_oh.articles | length }} articles</div>
+      <div class="cc-section-meta">{{ other_headlines | length }} articles</div>
     </div>
-    {% for article in ns_oh.articles %}
+    {% for article in other_headlines %}
     {% set atopic = article_topic_map.get(article.url, {}) if article_topic_map is defined else {} %}
     <div class="cc-headline-item" id="{{ article.url | article_anchor }}">
       <div class="cc-headline-num">{{ loop.index }}</div>
@@ -573,7 +549,7 @@
       <a href="/digest/">View full digest with annotations &rarr;</a>
     </div>
   </div>
-  {% endif %}
+  {% endif %}  {# /other_headlines #}
 
   <!-- ── TOPIC INDEX ────────────────────────────────────────────────── -->
   <div class="cc-topic-index">
