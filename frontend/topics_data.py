@@ -463,6 +463,11 @@ TOPICS = [
             "evangelicalism", "evangelical", "post-evangelical",
             "evangelical identity", "evangelical decline", "evangelical movement",
             "SBC", "southern baptist", "NAE", "evangelical crisis",
+            # Broad catch-all terms so generic Christian articles route here
+            # when they don't match a more specific topic
+            "christian", "christianity", "church", "faith", "gospel",
+            "jesus", "christ", "bible", "scripture", "theology", "theological",
+            "pastor", "ministry", "believers", "congregation", "denomination",
         ],
     },
     {

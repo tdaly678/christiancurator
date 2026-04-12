@@ -107,6 +107,9 @@ def classify_articles(articles: list) -> list:
     Run classify_article on every article in the list.
     Articles that don't reach the normal threshold get a best-match fallback
     so every article has at least one topic for the 'More on X' link.
+    If the best-match fallback also returns nothing (score=0 for every topic),
+    we default to "evangelicalism" — a broad topic that covers general Christian
+    content and ensures no article ever falls back to a generic "More stories" link.
     Adds "debate_topics" field to each article (in-place).
     Returns the articles list.
     """
@@ -114,6 +117,8 @@ def classify_articles(articles: list) -> list:
         topics = classify_article(article)
         if not topics:
             topics = classify_article_best_match(article)
+        if not topics:
+            topics = ["evangelicalism"]  # final catch-all: every article is about Christian life
         article["debate_topics"] = topics
     return articles
 
