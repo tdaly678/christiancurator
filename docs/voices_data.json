@@ -1708,5 +1708,97 @@
     "website": "",
     "books": [],
     "initials": "YT"
+  },
+  {
+    "name": "Vaneetha Rendall Risner",
+    "slug": "vaneetha-rendall-risner",
+    "bio": "Vaneetha Rendall Risner is an author and speaker who writes about suffering, disability, and faith from personal experience. She has contributed to various Christian publications and speaks at conferences about navigating life's hardships with hope in Christ. Her work encourages readers to find meaning and purpose through trials.",
+    "affiliation": "The Gospel Coalition, Christianity Today",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "https://www.vaneethrisner.com",
+    "books": [
+      {
+        "title": "The Scars That Have Shaped Me: How God Meets Us in Suffering",
+        "amazon_url": "https://www.amazon.com/s?k=The+Scars+That+Have+Shaped+Me+Vaneetha+Rendall+Risner"
+      }
+    ],
+    "initials": "VRR"
+  },
+  {
+    "name": "Ian Wildeboer",
+    "slug": "ian-wildeboer",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "IW"
+  },
+  {
+    "name": "Darryl Dash",
+    "slug": "darryl-dash",
+    "bio": "Darryl Dash is a pastor, author, and speaker who has dedicated his ministry to helping Christians understand and live out their faith with greater depth and clarity. Drawing on years of pastoral experience, he writes and teaches on Scripture, spiritual growth, and practical Christian living.",
+    "affiliation": "Vida Church",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "https://www.darryl-dash.com",
+    "books": [
+      {
+        "title": "Do You Feel Their Love? How the Local Church Can Minister to the Lonely",
+        "amazon_url": "https://www.amazon.com/s?k=Do+You+Feel+Their+Love+Darryl+Dash"
+      }
+    ],
+    "initials": "DD"
+  },
+  {
+    "name": "Laurence Norman",
+    "slug": "laurence-norman",
+    "bio": "Laurence Norman is a journalist and editor known for his coverage of religious and cultural issues. He brings thoughtful analysis to contemporary faith topics relevant to Christian readers and observers of religious life in modern society.",
+    "affiliation": "",
+    "role": "Journalist & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LN"
+  },
+  {
+    "name": "Abdi Latif Dahir",
+    "slug": "abdi-latif-dahir",
+    "bio": "Abdi Latif Dahir is a Pulitzer Prize-nominated journalist and author who brings thoughtful storytelling to issues affecting East Africa and the global Christian community. His work explores themes of faith, identity, and resilience in regions often overlooked by mainstream media.",
+    "affiliation": "The New York Times, NPR, The Guardian",
+    "role": "Journalist & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Surprising Life of Abdi Latif Dahir",
+        "amazon_url": "https://www.amazon.com/s?k=Abdi+Latif+Dahir"
+      }
+    ],
+    "initials": "ALD"
+  },
+  {
+    "name": "Dov Lieber",
+    "slug": "dov-lieber",
+    "bio": "Dov Lieber is an investigative journalist and author known for his in-depth reporting on religious and social issues. His work combines rigorous journalism with thoughtful analysis of faith communities and their cultural impact.",
+    "affiliation": "The Wall Street Journal, The New York Times",
+    "role": "Investigative Journalist & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DL"
+  },
+  {
+    "name": "Edward Helmore",
+    "slug": "edward-helmore",
+    "bio": "Edward Helmore is a journalist and religion correspondent known for his thoughtful coverage of faith, culture, and contemporary religious issues. His work has appeared in major publications where he explores the intersection of Christianity, society, and current events with nuance and insight.",
+    "affiliation": "The Guardian, Religion News Service",
+    "role": "Religion Correspondent & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EH"
   }
 ]
