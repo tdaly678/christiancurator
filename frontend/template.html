@@ -168,7 +168,7 @@
     .cc-card-large-meta strong { color: #555; font-weight: 600; }
     .cc-card-large-cta {
       font-size: 12px; font-weight: 600; color: #2C4A2E; text-decoration: none;
-      border-top: 1px solid #e0ddd8; padding-top: 10px; display: inline-block; margin-top: auto;
+      display: inline-block; margin-top: auto; padding-top: 0;
     }
     .cc-card-large-cta:hover { text-decoration: underline; }
 
@@ -390,10 +390,6 @@
            onclick="gtag('event','article_click',{'article_title':'{{ (large.article.rewritten_title or large.article.title)|replace("'","") }}','article_source':'{{ large.article.source_name }}','position':'front_large'});">
           {{ large.article.rewritten_title or large.article.title }}
         </a>
-        {% set preview = (large.article.full_content or large.article.summary) | strip_html %}
-        {% if preview %}
-        <p class="cc-card-large-preview">{{ preview | truncate(500, true, '…') }}</p>
-        {% endif %}
         <div class="cc-card-large-meta">
           {%- set auth = large.article.author | default('') | trim -%}
           {%- set src  = large.article.source_name | default('') | trim -%}
@@ -404,6 +400,10 @@
           {%- else -%}{{ src }}{%- endif -%}
           {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
         </div>
+        {% set preview = (large.article.full_content or large.article.summary) | strip_html %}
+        {% if preview %}
+        <p class="cc-card-large-preview">{{ preview | truncate(500, true, '…') }}</p>
+        {% endif %}
         <a href="/topics/{{ large.topic_slug }}/" class="cc-card-large-cta"
            onclick="gtag('event','topic_click',{'topic':'{{ large.topic_slug }}','position':'front_large'});">
           More on {{ large.topic_name }} &rarr;
