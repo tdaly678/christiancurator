@@ -23,6 +23,12 @@ def fetch_feed(source: dict) -> list[dict]:
                 or feed.feed.get("author")
                 or ""
             ).strip()
+            # Capture full article body from content:encoded if available.
+            # feedparser stores this in entry.content[0].value.
+            # Used by the large feature card to show a 3-4 sentence preview.
+            content_list = entry.get("content", [])
+            full_content = content_list[0].get("value", "") if content_list else ""
+
             articles.append({
                 "source_name": source["name"],
                 "source_category": source["category"],
@@ -32,6 +38,7 @@ def fetch_feed(source: dict) -> list[dict]:
                 "title": entry.get("title", "").strip(),
                 "url": entry.get("link", ""),
                 "summary": entry.get("summary", ""),
+                "full_content": full_content,
                 "published": entry.get("published", ""),
                 "fetched_at": datetime.utcnow().isoformat(),
                 # Curator fields (populated later)

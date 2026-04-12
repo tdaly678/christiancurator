@@ -156,9 +156,9 @@
       .cc-card-large { border-right: none; padding-right: 0; padding-bottom: 1.25rem; border-bottom: 1px solid #e0ddd8; }
     }
     .cc-card-large-title {
-      font-family: 'Lora', Georgia, serif; font-size: 29px; font-weight: 600;
-      line-height: 1.15; color: #1a1a1a; text-decoration: none; display: block;
-      margin-bottom: 0.7rem;
+      font-family: 'Lora', Georgia, serif; font-size: 36px; font-weight: 600;
+      line-height: 1.12; color: #1a1a1a; text-decoration: none; display: block;
+      margin-bottom: 0.75rem;
     }
     .cc-card-large-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
     .cc-card-large-preview {
@@ -390,9 +390,9 @@
            onclick="gtag('event','article_click',{'article_title':'{{ (large.article.rewritten_title or large.article.title)|replace("'","") }}','article_source':'{{ large.article.source_name }}','position':'front_large'});">
           {{ large.article.rewritten_title or large.article.title }}
         </a>
-        {% set preview = large.article.summary | strip_html %}
+        {% set preview = (large.article.full_content or large.article.summary) | strip_html %}
         {% if preview %}
-        <p class="cc-card-large-preview">{{ preview | truncate(220, true, '…') }}</p>
+        <p class="cc-card-large-preview">{{ preview | truncate(500, true, '…') }}</p>
         {% endif %}
         <div class="cc-card-large-meta">
           {%- set auth = large.article.author | default('') | trim -%}
