@@ -717,1088 +717,489 @@
     "initials": "TPJ"
   },
   {
-    "name": "Cory Brock",
-    "slug": "cory-brock",
-    "bio": "Cory Brock is a pastor, author, and theologian known for helping Christians think deeply about their faith and culture. He serves as senior pastor and has written extensively on topics including Christian suffering, doubt, and biblical worldview. His work combines pastoral wisdom with scholarly insight to address the questions that matter most to believers.",
-    "affiliation": "Fireside Church; Desiring God",
-    "role": "Pastor & Author",
-    "education": "Ph.D., University of Aberdeen",
-    "website": "https://corybrock.com",
-    "books": [
-      {
-        "title": "The Surprising Offense of God's Love",
-        "amazon_url": "https://www.amazon.com/s?k=The+Surprising+Offense+of+God%27s+Love+Cory+Brock"
-      },
-      {
-        "title": "How to Suffer Well",
-        "amazon_url": "https://www.amazon.com/s?k=How+to+Suffer+Well+Cory+Brock"
-      },
-      {
-        "title": "Peculiar Crossings",
-        "amazon_url": "https://www.amazon.com/s?k=Peculiar+Crossings+Cory+Brock"
-      }
-    ],
-    "initials": "CB"
-  },
-  {
-    "name": "Alex Seeley",
-    "slug": "alex-seeley",
-    "bio": "Alex Seeley is a pastor and church planter known for his work in missional Christianity and leadership development. He has dedicated his ministry to equipping believers for authentic discipleship and kingdom-focused living.",
-    "affiliation": "",
-    "role": "Pastor & Church Planter",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AS"
-  },
-  {
-    "name": "Timothy Mallard",
-    "slug": "timothy-mallard",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "TM"
-  },
-  {
-    "name": "Mark Sanders",
-    "slug": "mark-sanders",
-    "bio": "Mark Sanders is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MS"
-  },
-  {
-    "name": "Michael McEwen",
-    "slug": "michael-mcewen",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MM"
-  },
-  {
     "name": "Keegan Martin",
     "slug": "keegan-martin",
-    "bio": "Keegan Martin is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
+    "bio": "Keegan Martin is a staff writer at World Magazine, where he covers religion, politics, and culture from a Christian worldview perspective. His reporting spans evangelical news, cultural analysis, and issues at the intersection of faith and public life.",
+    "affiliation": "World Magazine",
+    "role": "Staff Writer",
     "education": "",
     "website": "",
     "books": [],
     "initials": "KM"
   },
   {
-    "name": "Rob Golding",
-    "slug": "rob-golding",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RG"
-  },
-  {
-    "name": "John Taylor",
-    "slug": "john-taylor",
-    "bio": "John Taylor is a respected voice in Christian thought and ministry. With a passion for biblical teaching and pastoral care, he has devoted his career to helping believers deepen their faith and understanding of Scripture.",
-    "affiliation": "",
-    "role": "Author & Christian Educator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JT"
-  },
-  {
-    "name": "Chris Sibben",
-    "slug": "chris-sibben",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CS"
-  },
-  {
-    "name": "Julie Smyth",
-    "slug": "julie-smyth",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JS"
-  },
-  {
-    "name": "Emily Brown",
-    "slug": "emily-brown",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "EB"
-  },
-  {
-    "name": "Brandon Corley",
-    "slug": "brandon-corley",
-    "bio": "Brandon Corley is a Christian writer and content creator dedicated to exploring faith, discipleship, and spiritual growth. Through his work, he seeks to help believers deepen their understanding of Scripture and live out their faith with greater intentionality and authenticity.",
-    "affiliation": "",
-    "role": "Writer & Content Creator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "BC"
-  },
-  {
-    "name": "Aaron Earls",
-    "slug": "aaron-earls",
-    "bio": "Aaron Earls is a writer and researcher who has contributed to conversations about faith, culture, and the American church. Known for his work analyzing religious trends and Christian engagement with contemporary issues, Earls has been a regular contributor to various Christian publications and research organizations.",
-    "affiliation": "Lifeway Research",
-    "role": "Writer & Researcher",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AE"
-  },
-  {
-    "name": "Dăng Tùng Bạch",
-    "slug": "dng-tng-bch",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "DTB"
-  },
-  {
-    "name": "Rob Ventura",
-    "slug": "rob-ventura",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RV"
-  },
-  {
-    "name": "Lucy S. R. Austen",
-    "slug": "lucy-s-r-austen",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "LSA"
-  },
-  {
-    "name": "Joe Carter",
-    "slug": "joe-carter",
-    "bio": "Joe Carter is an editor and writer known for his work in Christian commentary and cultural analysis. He has contributed extensively to evangelical publications, helping readers navigate faith, politics, and contemporary issues from a Christian worldview perspective.",
-    "affiliation": "The Gospel Coalition",
-    "role": "Editor & Writer",
-    "education": "Master of Arts in Theology",
-    "website": "https://www.joecarter.me",
-    "books": [
-      {
-        "title": "How to Argue Like Jesus: Learning Persuasion from History's Greatest Communicator",
-        "amazon_url": "https://www.amazon.com/s?k=How+to+Argue+Like+Jesus+Joe+Carter"
-      },
-      {
-        "title": "The Unimaginable: What Our World Would Be Like Without Christianity",
-        "amazon_url": "https://www.amazon.com/s?k=The+Unimaginable+Joe+Carter"
-      }
-    ],
-    "initials": "JC"
-  },
-  {
-    "name": "Jcoleman",
-    "slug": "jcoleman",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JC"
-  },
-  {
-    "name": "Todd Rester",
-    "slug": "todd-rester",
-    "bio": "Todd Rester is a pastor and Christian communicator dedicated to helping believers grow in their faith and understanding of Scripture. Through his teaching and writing, he encourages Christians to apply biblical truth to their daily lives.",
-    "affiliation": "",
-    "role": "Pastor & Author",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "TR"
-  },
-  {
-    "name": "Jason Douglas",
-    "slug": "jason-douglas",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JD"
-  },
-  {
-    "name": "Katy Carl",
-    "slug": "katy-carl",
-    "bio": "Katy Carl is a Christian writer and content creator known for her thoughtful perspectives on faith, family, and living out biblical principles in everyday life. She engages audiences through writing that combines personal experience with scriptural insight.",
-    "affiliation": "",
-    "role": "Writer & Content Creator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "KC"
-  },
-  {
-    "name": "Chris Osuh",
-    "slug": "chris-osuh-community-affairs-correspondent",
-    "bio": "Chris Osuh is a community affairs correspondent dedicated to covering stories that matter to faith communities and local neighborhoods. With a focus on social issues, faith-based initiatives, and community development, Osuh brings thoughtful journalism to important cultural conversations relevant to Christian audiences.",
-    "affiliation": "",
-    "role": "Community Affairs Correspondent",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CO"
-  },
-  {
-    "name": "Michael P. Jensen",
-    "slug": "michael-p-jensen",
-    "bio": "Michael P. Jensen is an Australian Anglican clergyman and theologian known for his thoughtful engagement with Reformed theology and contemporary Christianity. He has served in pastoral ministry while contributing to Christian discourse through writing and theological reflection.",
-    "affiliation": "Anglican Church in Australia",
-    "role": "Pastor & Theologian",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MPJ"
-  },
-  {
-    "name": "Reuben Bredenhof",
-    "slug": "reuben-bredenhof",
-    "bio": "Reuben Bredenhof is a Reformed pastor and writer known for his thoughtful commentary on Scripture and Christian living. He has contributed to various Christian publications and is recognized for his work in helping believers understand God's Word in practical and accessible ways.",
-    "affiliation": "Christian Courier",
-    "role": "Pastor & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RB"
-  },
-  {
     "name": "Jillian Parks",
     "slug": "jillian-parks",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Jillian Parks is a writer and critic whose work appears in First Things, where she explores literature, culture, and the life of faith. She brings a thoughtful Catholic and broadly Christian lens to questions of art, community, and the spiritual life.",
+    "affiliation": "First Things",
+    "role": "Writer & Critic",
     "education": "",
     "website": "",
     "books": [],
     "initials": "JP"
   },
   {
-    "name": "Anat Peled",
-    "slug": "anat-peled",
-    "bio": "Anat Peled is a scholar and writer who brings expertise in biblical studies and Christian theology to contemporary discussions. Her work explores the intersection of Scripture, faith, and modern life with depth and accessibility for Christian audiences.",
-    "affiliation": "",
-    "role": "Author & Scholar",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AP"
-  },
-  {
-    "name": "Jordan Stone",
-    "slug": "jordan-stone",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JS"
-  },
-  {
-    "name": "PJ Dunn",
-    "slug": "pj-dunn",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "PJD"
-  },
-  {
-    "name": "Jake Meador",
-    "slug": "jakemeadorgmailcom-jake-meador",
-    "bio": "Jake Meador is a writer and editor known for his work on faith, culture, and Christian living. He has contributed to various Christian publications and is recognized for his thoughtful engagement with contemporary issues from a Christian perspective.",
-    "affiliation": "Mere Orthodoxy",
-    "role": "Editor & Writer",
-    "education": "",
-    "website": "https://www.jakemeador.com",
-    "books": [],
-    "initials": "JM"
-  },
-  {
-    "name": "Joseph Rigney",
-    "slug": "joseph-rigney",
-    "bio": "Joseph Rigney is a writer and teacher known for exploring themes of Christian joy, spiritual formation, and biblical theology. He writes from a Reformed evangelical perspective and has contributed to various Christian publications and platforms. His work encourages readers to deepen their understanding of Scripture and grow in their faith.",
-    "affiliation": "Bethlehem College & Seminary",
-    "role": "Author & Teacher",
-    "education": "M.Div., Bethlehem College & Seminary",
-    "website": "https://www.josephrigney.com",
-    "books": [
-      {
-        "title": "The Things of Earth: Treasuring God by Enjoying His Gifts",
-        "amazon_url": "https://www.amazon.com/s?k=The+Things+of+Earth+Joseph+Rigney"
-      },
-      {
-        "title": "Live Like You're Loved: The Forgiveness You've Received Frees You to Love Others",
-        "amazon_url": "https://www.amazon.com/s?k=Live+Like+You+Are+Loved+Joseph+Rigney"
-      },
-      {
-        "title": "As It Is in Heaven: Worship, Imagination, and the Renewal of the Church",
-        "amazon_url": "https://www.amazon.com/s?k=As+It+Is+in+Heaven+Joseph+Rigney"
-      }
-    ],
-    "initials": "JR"
-  },
-  {
-    "name": "Mark Jones",
-    "slug": "mark-jones",
-    "bio": "Mark Jones is a Reformed theologian and pastor known for his thoughtful engagement with classical Christian theology and contemporary issues. His work emphasizes the centrality of Christ and the sufficiency of Scripture for the Christian life.",
-    "affiliation": "Gvancouverbaptist.org; Ligonier Ministries contributor",
-    "role": "Pastor & Theologian",
-    "education": "M.Phil, University of Pretoria",
-    "website": "https://markjonesministries.com",
-    "books": [
-      {
-        "title": "Knowing Christ",
-        "amazon_url": "https://www.amazon.com/s?k=Knowing+Christ+Mark+Jones"
-      },
-      {
-        "title": "Antinomianism: Reformed Theology's Unwelcome Guest?",
-        "amazon_url": "https://www.amazon.com/s?k=Antinomianism+Mark+Jones"
-      },
-      {
-        "title": "Radical Protestantism and Its Theological Influences",
-        "amazon_url": "https://www.amazon.com/s?k=Radical+Protestantism+Mark+Jones"
-      },
-      {
-        "title": "Picturing the Psalms",
-        "amazon_url": "https://www.amazon.com/s?k=Picturing+the+Psalms+Mark+Jones"
-      },
-      {
-        "title": "Christological Orthodoxy",
-        "amazon_url": "https://www.amazon.com/s?k=Christological+Orthodoxy+Mark+Jones"
-      }
-    ],
-    "initials": "MJ"
-  },
-  {
-    "name": "Simon P. Kennedy",
-    "slug": "simon-p-kennedy",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SPK"
-  },
-  {
-    "name": "Hayden Nesbit",
-    "slug": "hayden-nesbit",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "HN"
-  },
-  {
-    "name": "Clinton Manley",
-    "slug": "clinton-manley",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CM"
-  },
-  {
-    "name": "Gavin",
-    "slug": "gavin",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "G"
-  },
-  {
-    "name": "Ligonier Updates",
-    "slug": "ligonier-updates",
-    "bio": "Ligonier Updates is the official news and content platform of Ligonier Ministries, a leading evangelical Christian education organization dedicated to helping Christians know and apply the unchanging truth of God's Word. Through articles, teaching updates, and ministry news, Ligonier Updates keeps readers informed about resources, events, and insights from Ligonier's network of trusted teachers and theologians.",
-    "affiliation": "Ligonier Ministries",
-    "role": "Content Curation & Ministry Updates",
-    "education": "",
-    "website": "https://www.ligonier.org",
-    "books": [],
-    "initials": "LU"
-  },
-  {
-    "name": "FM AI",
-    "slug": "fm-ai",
-    "bio": "FM AI is an artificial intelligence assistant designed to help curate and discuss Christian content with thoughtfulness and clarity. While not human, FM AI engages with biblical concepts, theological discussions, and faith-based topics to support Christian readers and content creators.",
-    "affiliation": "",
-    "role": "AI Assistant & Content Curator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "FM"
-  },
-  {
-    "name": "Gabriel N.E. Fluhrer",
-    "slug": "gabriel-ne-fluhrer",
-    "bio": "Gabriel N.E. Fluhrer is a Christian writer and content creator dedicated to exploring faith, theology, and spiritual formation. His work engages thoughtfully with Scripture and contemporary Christian thought for modern believers seeking deeper understanding of their faith.",
-    "affiliation": "",
-    "role": "Christian Writer & Content Creator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "GNF"
-  },
-  {
-    "name": "Mike Sabo",
-    "slug": "mike-sabo",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MS"
-  },
-  {
-    "name": "Haleluya Hadero",
-    "slug": "haleluya-hadero",
-    "bio": "Haleluya Hadero is a writer and content creator engaged with contemporary Christian topics and cultural commentary. Her work explores faith, identity, and spiritual growth for modern audiences seeking thoughtful reflection on Christian living.",
-    "affiliation": "",
-    "role": "Writer & Content Creator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "HH"
-  },
-  {
-    "name": "Tim Cantrell",
-    "slug": "tim-cantrell",
-    "bio": "Tim Cantrell is a Christian writer and content creator dedicated to helping believers deepen their faith and understanding of Scripture. His work focuses on practical theology and spiritual growth for modern Christians.",
-    "affiliation": "",
-    "role": "Writer & Content Creator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "TC"
-  },
-  {
-    "name": "Peter Jones",
-    "slug": "peter-jones",
-    "bio": "Peter Jones is a Reformed theologian and cultural apologist known for his work examining worldview issues and their intersection with Christian faith. He has been a prominent voice in addressing contemporary philosophical and spiritual challenges facing the modern church.",
-    "affiliation": "Westminster Seminary California",
-    "role": "Theologian & Author",
-    "education": "M.A.R., Westminster Theological Seminary",
-    "website": "https://www.reformation21.org/",
-    "books": [
-      {
-        "title": "One or Two: Seeing a Worldview Contrast",
-        "amazon_url": "https://www.amazon.com/s?k=One+or+Two+Peter+Jones"
-      },
-      {
-        "title": "The God of Comfort: Finding Consolation in the Psalms",
-        "amazon_url": "https://www.amazon.com/s?k=The+God+of+Comfort+Peter+Jones"
-      },
-      {
-        "title": "Stolen Identity: The Conspiracy to Reinvent Jesus",
-        "amazon_url": "https://www.amazon.com/s?k=Stolen+Identity+Peter+Jones"
-      },
-      {
-        "title": "Gospel Progress in a Postmodern World",
-        "amazon_url": "https://www.amazon.com/s?k=Gospel+Progress+in+a+Postmodern+World+Peter+Jones"
-      }
-    ],
-    "initials": "PJ"
-  },
-  {
-    "name": "Angela Fulton",
-    "slug": "angela-fulton",
-    "bio": "Angela Fulton is a Christian writer and speaker who focuses on faith, family, and spiritual growth. She is known for her approachable style and commitment to helping believers deepen their relationship with Christ through practical, biblical teaching.",
-    "affiliation": "",
-    "role": "Writer & Speaker",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AF"
-  },
-  {
-    "name": "Gillis Harp",
-    "slug": "gillis-harp",
-    "bio": "Gillis Harp is a historian and author who specializes in American religious and intellectual history, with particular focus on evangelical and reformed Christian thought. His scholarly work examines the intersection of faith, culture, and politics in American history, offering insights valuable to Christians seeking to understand their tradition's place in the broader American narrative.",
-    "affiliation": "Grove City College",
-    "role": "Professor & Historian",
-    "education": "Ph.D. in History",
-    "website": "",
-    "books": [
-      {
-        "title": "Positivism and the Separation of Church and State",
-        "amazon_url": "https://www.amazon.com/s?k=Positivism+Separation+Church+State+Gillis+Harp"
-      },
-      {
-        "title": "Protestants and the American Frontier",
-        "amazon_url": "https://www.amazon.com/s?k=Protestants+American+Frontier+Gillis+Harp"
-      }
-    ],
-    "initials": "GH"
-  },
-  {
-    "name": "Rob Plummer",
-    "slug": "rob-plummer",
-    "bio": "Rob Plummer is a biblical scholar and professor dedicated to helping Christians engage deeply with Scripture. He combines academic expertise with a passion for making the Bible's teachings accessible to everyday believers.",
-    "affiliation": "Southern Baptist Theological Seminary",
-    "role": "Professor & Biblical Scholar",
-    "education": "Ph.D. in Biblical Studies",
-    "website": "",
-    "books": [
-      {
-        "title": "40 Days Through the Book of John",
-        "amazon_url": "https://www.amazon.com/s?k=40+Days+Through+Book+John+Rob+Plummer"
-      },
-      {
-        "title": "Paul's Understanding of the Church's Mission",
-        "amazon_url": "https://www.amazon.com/s?k=Paul+Understanding+Church+Mission+Rob+Plummer"
-      }
-    ],
-    "initials": "RP"
-  },
-  {
-    "name": "Lynn Pryor",
-    "slug": "lynn-pryor",
-    "bio": "Lynn Pryor is a Christian author and speaker who has contributed to faith-based publications and content platforms. Her writing focuses on practical Christian living and spiritual growth for contemporary audiences.",
-    "affiliation": "",
-    "role": "Author & Speaker",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "LP"
-  },
-  {
-    "name": "Annie Eisner",
-    "slug": "annie-eisner",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AE"
-  },
-  {
-    "name": "Travis Kircher",
-    "slug": "travis-kircher",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "TK"
-  },
-  {
-    "name": "Guardian Staff",
-    "slug": "guardian-staff",
-    "bio": "Guardian Staff represents the collective editorial team at The Guardian, a major British news organization. While not exclusively Christian in focus, Guardian journalists cover faith, religion, and ethics stories relevant to Christian readers seeking comprehensive news analysis.",
-    "affiliation": "The Guardian",
-    "role": "Editorial Team & Contributors",
-    "education": "",
-    "website": "https://www.theguardian.com",
-    "books": [],
-    "initials": "GS"
-  },
-  {
-    "name": "Paul J. Pastor",
-    "slug": "paul-j-pastor",
-    "bio": "Paul J. Pastor is an author, editor, and minister who writes thoughtfully about faith, spirituality, and the Christian life. His work explores themes of discipleship, contemplative practice, and the integration of faith into everyday living. He has contributed to various Christian publications and authored books that encourage deeper engagement with Scripture and spiritual formation.",
-    "affiliation": "Christianity Today, Relevant Magazine",
-    "role": "Author & Editor",
-    "education": "",
-    "website": "https://pauljpastor.com",
-    "books": [
-      {
-        "title": "The Listening Life: Embrace a Life that Shapes Your Soul",
-        "amazon_url": "https://www.amazon.com/s?k=The+Listening+Life+Paul+Pastor"
-      },
-      {
-        "title": "Centered: Finishing Well in Life and Ministry",
-        "amazon_url": "https://www.amazon.com/s?k=Centered+Paul+Pastor"
-      },
-      {
-        "title": "For the Life of the World: Letters to the Exiles",
-        "amazon_url": "https://www.amazon.com/s?k=For+the+Life+of+the+World+Paul+Pastor"
-      }
-    ],
-    "initials": "PJP"
-  },
-  {
-    "name": "Brian Borgman",
-    "slug": "brian-borgman",
-    "bio": "Brian Borgman is a pastor and author who has devoted his ministry to helping Christians develop deeper spiritual maturity and biblical understanding. He has served in pastoral roles and written extensively on topics related to Christian living, discipleship, and theological growth for evangelical audiences.",
-    "affiliation": "",
-    "role": "Pastor & Author",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "BB"
-  },
-  {
-    "name": "Joyu Wang",
-    "slug": "joyu-wang",
-    "bio": "Joyu Wang is a Christian writer and content creator focused on faith, culture, and spiritual formation. Her work encourages believers to integrate their Christian convictions with contemporary life and thought.",
-    "affiliation": "",
-    "role": "Writer & Content Creator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JW"
-  },
-  {
-    "name": "Elisabetta Povoledo",
-    "slug": "elisabetta-povoledo",
-    "bio": "Elisabetta Povoledo is an award-winning journalist and Rome correspondent for The New York Times, known for her extensive coverage of the Vatican, Catholic Church, and Italian religious affairs. Her reporting combines journalistic rigor with deep insights into faith, spirituality, and the intersection of religion and culture in modern Europe.",
-    "affiliation": "The New York Times",
-    "role": "Vatican Correspondent & Religious Affairs Journalist",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "EP"
-  },
-  {
-    "name": "Elizabeth Russell",
-    "slug": "elizabeth-russell",
-    "bio": "Elizabeth Russell is a Christian author and speaker known for her work exploring faith, discipleship, and spiritual growth. She has contributed to various Christian publications and platforms, helping believers deepen their relationship with Christ through thoughtful, biblically-grounded writing.",
-    "affiliation": "",
-    "role": "Author & Speaker",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "ER"
-  },
-  {
-    "name": "Julia Carrie Wong",
-    "slug": "julia-carrie-wong",
-    "bio": "Julia Carrie Wong is a journalist and technology reporter who covers digital culture, social media, and their impact on society. Her work examines how technology intersects with human behavior, ethics, and community, offering insights relevant to Christian perspectives on modern life.",
-    "affiliation": "The Guardian",
-    "role": "Technology & Culture Reporter",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JCW"
-  },
-  {
-    "name": "Andrew Kaufmann",
-    "slug": "andrew-kaufmann",
-    "bio": "Andrew Kaufmann is a Christian writer and content creator dedicated to exploring biblical themes and faith-centered topics. His work engages thoughtfully with Scripture and contemporary Christian life, offering insights for believers seeking deeper understanding of their faith.",
-    "affiliation": "",
-    "role": "Writer & Content Creator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AK"
-  },
-  {
-    "name": "Alex Kneen",
-    "slug": "alex-kneen",
-    "bio": "Alex Kneen is a Christian writer and content creator focused on faith, spirituality, and biblical living. With a passion for helping believers deepen their relationship with Christ, Alex produces thoughtful resources for modern Christian audiences seeking practical wisdom rooted in Scripture.",
-    "affiliation": "",
-    "role": "Writer & Content Creator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AK"
-  },
-  {
     "name": "Elise Brandon",
     "slug": "elise-brandon",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Elise Brandon is a writer for Christianity Today, contributing articles on theology, church life, and the Christian calendar. Her work draws readers into deeper reflection on Scripture and the historic practices of the Christian faith.",
+    "affiliation": "Christianity Today",
+    "role": "Writer",
     "education": "",
     "website": "",
     "books": [],
     "initials": "EB"
   },
   {
-    "name": "Margherita Stancati",
-    "slug": "margherita-stancati",
-    "bio": "Margherita Stancati is a journalist and writer who contributes to prominent Christian and mainstream publications, bringing thoughtful perspective to issues of faith, culture, and contemporary life. Her work reflects a commitment to exploring how Christian conviction engages with the complexities of the modern world.",
-    "affiliation": "The Wall Street Journal, Christianity Today",
-    "role": "Journalist & Writer",
+    "name": "Kyle Tucker",
+    "slug": "kyle-tucker",
+    "bio": "Kyle Tucker is a writer and researcher contributing to The Gospel Coalition, where his work focuses on apologetics, biblical history, and the intellectual defense of the Christian faith. He writes for readers who want rigorous engagement with theological and historical questions.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Writer & Researcher",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "MS"
+    "initials": "KT"
   },
   {
-    "name": "R.C. Sproul",
-    "slug": "rc-sproul",
-    "bio": "R.C. Sproul (1939–2017) was a renowned Reformed theologian, pastor, and teacher who dedicated his life to making biblical scholarship accessible to everyday Christians. As the founder of Ligonier Ministries, he became known for his passionate defense of biblical inerrancy and the sovereignty of God, leaving an enduring legacy through thousands of teaching resources, books, and sermons.",
-    "affiliation": "Ligonier Ministries; Reformed Theological Seminary",
-    "role": "Theologian, Pastor & Teacher",
-    "education": "M.A. from Fuller Theological Seminary; graduate study at the University of Basel",
-    "website": "https://www.ligonier.org",
+    "name": "Courtney Doctor",
+    "slug": "courtney-doctor",
+    "bio": "Courtney Doctor is a Bible teacher, author, and women's ministry director who writes for The Gospel Coalition. She is the author of From Garden to Glory: A Bible Study on the Bible's Story and In View of God's Mercies: The Story of Salvation in Romans. Her writing helps women anchor their lives in the grand narrative of Scripture.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Author & Bible Teacher",
+    "education": "",
+    "website": "",
     "books": [
       {
-        "title": "Chosen by God",
-        "amazon_url": "https://www.amazon.com/s?k=Chosen+by+God+R.C.+Sproul"
+        "title": "From Garden to Glory",
+        "amazon_url": "https://www.amazon.com/s?k=From+Garden+to+Glory+Courtney+Doctor"
       },
       {
-        "title": "The Holiness of God",
-        "amazon_url": "https://www.amazon.com/s?k=The+Holiness+of+God+R.C.+Sproul"
-      },
-      {
-        "title": "Knowing Scripture",
-        "amazon_url": "https://www.amazon.com/s?k=Knowing+Scripture+R.C.+Sproul"
-      },
-      {
-        "title": "The Sovereignty of God",
-        "amazon_url": "https://www.amazon.com/s?k=The+Sovereignty+of+God+R.C.+Sproul"
-      },
-      {
-        "title": "Everyone's a Theologian",
-        "amazon_url": "https://www.amazon.com/s?k=Everyone's+a+Theologian+R.C.+Sproul"
-      },
-      {
-        "title": "Essential Truths of the Christian Faith",
-        "amazon_url": "https://www.amazon.com/s?k=Essential+Truths+of+the+Christian+Faith+R.C.+Sproul"
+        "title": "In View of God's Mercies",
+        "amazon_url": "https://www.amazon.com/s?k=In+View+of+Gods+Mercies+Courtney+Doctor"
       }
     ],
-    "initials": "RCS"
+    "initials": "CD"
   },
   {
-    "name": "Karrie Hahn",
-    "slug": "karrie-hahn",
-    "bio": "Karrie Hahn is a Christian author and speaker known for her work in faith-based content creation and ministry. She writes with a focus on helping believers deepen their relationship with God and navigate the intersection of faith and everyday life.",
-    "affiliation": "",
-    "role": "Author & Speaker",
+    "name": "Melissa Kruger",
+    "slug": "melissa-kruger",
+    "bio": "Melissa Kruger serves as director of women's initiatives at The Gospel Coalition and is the author of several books including The Envy of Eve, Walking with God in the Season of Motherhood, and In All Things. A graduate of Reformed Theological Seminary, she writes with warmth and theological depth on discipleship, community, and the Christian life.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Author & Director of Women's Initiatives",
+    "education": "MA in Biblical Studies, Reformed Theological Seminary",
+    "website": "melissakruger.com",
+    "books": [
+      {
+        "title": "The Envy of Eve",
+        "amazon_url": "https://www.amazon.com/s?k=The+Envy+of+Eve+Melissa+Kruger"
+      },
+      {
+        "title": "Walking with God in the Season of Motherhood",
+        "amazon_url": "https://www.amazon.com/s?k=Walking+with+God+Season+Motherhood+Melissa+Kruger"
+      },
+      {
+        "title": "In All Things",
+        "amazon_url": "https://www.amazon.com/s?k=In+All+Things+Melissa+Kruger"
+      }
+    ],
+    "initials": "MK"
+  },
+  {
+    "name": "Ginger Blomberg",
+    "slug": "ginger-blomberg",
+    "bio": "Ginger Blomberg is a writer for The Gospel Coalition who covers international Christianity, church growth, and mission. Her reporting brings attention to the global body of Christ, particularly stories of faith flourishing in places where the gospel is spreading rapidly.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Writer",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "KH"
+    "initials": "GB"
   },
   {
-    "name": "Mia Staub",
-    "slug": "mia-staub",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "name": "John Taylor",
+    "slug": "john-taylor",
+    "bio": "John Taylor is a writer contributing to Relevant Magazine on topics of faith, culture, and Christian living. He writes for a younger evangelical audience navigating questions of spirituality, church, and life in a post-Christian culture.",
+    "affiliation": "Relevant Magazine",
+    "role": "Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JT"
+  },
+  {
+    "name": "Alex Stevens",
+    "slug": "alex-stevens",
+    "bio": "Alex Stevens is a writer at Mere Orthodoxy, where he engages the intersection of classical Christian thought and contemporary culture. His essays draw on theological and philosophical tradition — including figures like Thomas Aquinas — to illuminate questions of education, virtue, and the common good.",
+    "affiliation": "Mere Orthodoxy",
+    "role": "Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AS"
+  },
+  {
+    "name": "Matthew Spear",
+    "slug": "matthew-spear",
+    "bio": "Matthew Spear is a writer for Relevant Magazine whose work explores the spiritual disciplines, Christian formation, and the life of faith in everyday culture. He writes with pastoral attentiveness to the challenges of faithful living in a distracted age.",
+    "affiliation": "Relevant Magazine",
+    "role": "Writer",
     "education": "",
     "website": "",
     "books": [],
     "initials": "MS"
   },
   {
-    "name": "Carl Trueman",
-    "slug": "carl-trueman",
-    "bio": "Carl Trueman is a leading Christian intellectual and cultural commentator known for his insightful analysis of modern secularism, identity politics, and their theological implications. A professor of biblical and religious studies, he writes extensively on how contemporary cultural shifts challenge traditional Christian belief and practice. His work helps Christians understand and thoughtfully engage with the philosophical currents shaping our world.",
-    "affiliation": "Grove City College; The Gospel Coalition",
+    "name": "Kelly M. Kapic",
+    "slug": "kelly-m-kapic",
+    "bio": "Kelly M. Kapic is professor of theological studies at Covenant College and a widely read voice in evangelical theology. He is the author of You're Only Human: How Your Limits Reflect God's Design and Why That's Good, Embodied Hope: A Theological Meditation on Pain and Suffering, and numerous other works. His scholarship bridges systematic theology and spiritual formation, helping Christians embrace their creaturely limitations as gifts from God.",
+    "affiliation": "Covenant College / The Gospel Coalition",
     "role": "Professor & Author",
-    "education": "Ph.D. in Ecclesiastical History, University of Aberdeen",
-    "website": "https://www.carltrueman.com",
+    "education": "PhD in Theology, King's College London",
+    "website": "kellykapic.com",
     "books": [
       {
-        "title": "The Rise and Triumph of the Modern Self",
-        "amazon_url": "https://www.amazon.com/s?k=The+Rise+and+Triumph+of+the+Modern+Self+Carl+Trueman"
+        "title": "You're Only Human",
+        "amazon_url": "https://www.amazon.com/s?k=You%27re+Only+Human+Kelly+Kapic"
       },
       {
-        "title": "Strange New World",
-        "amazon_url": "https://www.amazon.com/s?k=Strange+New+World+Carl+Trueman"
+        "title": "Embodied Hope",
+        "amazon_url": "https://www.amazon.com/s?k=Embodied+Hope+Kelly+Kapic"
       },
       {
-        "title": "Protestantism: A Very Short Introduction",
-        "amazon_url": "https://www.amazon.com/s?k=Protestantism+A+Very+Short+Introduction+Carl+Trueman"
-      },
-      {
-        "title": "The Wages of Spin",
-        "amazon_url": "https://www.amazon.com/s?k=The+Wages+of+Spin+Carl+Trueman"
-      },
-      {
-        "title": "John Calvin and the Christian Life",
-        "amazon_url": "https://www.amazon.com/s?k=John+Calvin+and+the+Christian+Life+Carl+Trueman"
+        "title": "God So Loved, He Gave",
+        "amazon_url": "https://www.amazon.com/s?k=God+So+Loved+He+Gave+Kapic"
       }
     ],
-    "initials": "CT"
+    "initials": "KK"
   },
   {
-    "name": "Christina Grube",
-    "slug": "christina-grube",
-    "bio": "Christina Grube is a writer and content creator who explores themes of faith, culture, and Christian living. Her work encourages readers to think deeply about how their beliefs intersect with everyday life and contemporary issues.",
-    "affiliation": "",
-    "role": "Writer & Content Creator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CG"
-  },
-  {
-    "name": "Ben Ratliff",
-    "slug": "ben-ratliff",
-    "bio": "Ben Ratliff is a music critic and cultural journalist known for his thoughtful analysis of jazz, popular music, and the arts. His work has appeared in The New York Times and other leading publications, where he brings both intellectual rigor and accessible insight to discussions of music and faith-adjacent cultural topics.",
-    "affiliation": "The New York Times",
-    "role": "Music Critic & Journalist",
-    "education": "",
-    "website": "",
-    "books": [
-      {
-        "title": "Coltrane: The Story of a Sound",
-        "amazon_url": "https://www.amazon.com/s?k=Coltrane+Story+of+Sound+Ben+Ratliff"
-      }
-    ],
-    "initials": "BR"
-  },
-  {
-    "name": "Michael D. Shear",
-    "slug": "michael-d-shear",
-    "bio": "Michael D. Shear is a veteran political correspondent and journalist with extensive experience covering U.S. politics and policy. While not primarily known as a Christian author, his reporting has provided factual accounts of American political developments that may interest readers seeking informed journalism.",
-    "affiliation": "The New York Times",
-    "role": "Political Correspondent & Journalist",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MDS"
-  },
-  {
-    "name": "Daniel Michaels",
-    "slug": "daniel-michaels",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "DM"
-  },
-  {
-    "name": "Chris Larson",
-    "slug": "chris-larson",
-    "bio": "Chris Larson is a Christian writer and content creator focused on helping believers deepen their faith and understand Scripture. His work emphasizes practical application of biblical principles to daily Christian living.",
-    "affiliation": "",
-    "role": "Christian Writer & Content Creator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CL"
-  },
-  {
-    "name": "Sarah Eekhoff Zylstra",
-    "slug": "sarah-eekhoff-zylstra",
-    "bio": "Sarah Eekhoff Zylstra is a senior writer at Christianity Today, where she covers faith, culture, and the church. Known for her thoughtful journalism and in-depth reporting, she brings a distinctly Christian perspective to contemporary cultural issues and stories of faith.",
-    "affiliation": "Christianity Today",
-    "role": "Senior Writer & Journalist",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SEZ"
-  },
-  {
-    "name": "Michael J. Kruger",
-    "slug": "michael-j-kruger",
-    "bio": "Michael J. Kruger is a respected New Testament scholar and theologian known for his work on biblical canon, early Christianity, and apologetics. As president of Reformed Theological Seminary, he combines academic expertise with pastoral concern, helping Christians understand the historical foundations and reliability of Scripture. His writings address both scholarly and popular audiences seeking to deepen their faith through serious engagement with biblical truth.",
-    "affiliation": "Reformed Theological Seminary; Crossway Publishers",
-    "role": "President & Professor, New Testament Scholar",
-    "education": "Ph.D. in New Testament, University of Edinburgh",
-    "website": "https://michaeljkruger.com/",
-    "books": [
-      {
-        "title": "The Question of Canon: Challenging the Status Quo in the New Testament Debate",
-        "amazon_url": "https://www.amazon.com/s?k=The+Question+of+Canon+Michael+Kruger"
-      },
-      {
-        "title": "Canon Revisited: Establishing the Origins and Authority of the New Testament Books",
-        "amazon_url": "https://www.amazon.com/s?k=Canon+Revisited+Michael+Kruger"
-      },
-      {
-        "title": "Heresy and Orthodoxy: How to Know the Difference",
-        "amazon_url": "https://www.amazon.com/s?k=Heresy+and+Orthodoxy+Michael+Kruger"
-      },
-      {
-        "title": "The Superiority of Christ: Why Jesus Is Better Than Anyone Else",
-        "amazon_url": "https://www.amazon.com/s?k=The+Superiority+of+Christ+Michael+Kruger"
-      },
-      {
-        "title": "At Home in God's House: A Common Sense Guide to Church Membership",
-        "amazon_url": "https://www.amazon.com/s?k=At+Home+in+Gods+House+Michael+Kruger"
-      }
-    ],
-    "initials": "MJK"
-  },
-  {
-    "name": "R. Albert Mohler",
-    "slug": "r-albert-mohler",
-    "bio": "R. Albert Mohler Jr. is president of The Southern Baptist Theological Seminary and one of the most influential evangelical voices in contemporary Christianity. Known for his thoughtful engagement with theology, culture, and current events, Mohler has shaped evangelical thinking on issues ranging from bioethics to politics through both his writing and his popular podcast, The Briefing.",
-    "affiliation": "The Southern Baptist Theological Seminary; The Briefing podcast",
-    "role": "Seminary President, Theologian & Writer",
-    "education": "Ph.D., Southern Baptist Theological Seminary",
-    "website": "https://albertmohler.com",
-    "books": [
-      {
-        "title": "The Conviction to Lead",
-        "amazon_url": "https://www.amazon.com/s?k=The+Conviction+to+Lead+Albert+Mohler"
-      },
-      {
-        "title": "We Cannot Be Silent",
-        "amazon_url": "https://www.amazon.com/s?k=We+Cannot+Be+Silent+Albert+Mohler"
-      },
-      {
-        "title": "The Briefing: Every Thinking Christian's Guide to Today's World",
-        "amazon_url": "https://www.amazon.com/s?k=The+Briefing+Albert+Mohler"
-      },
-      {
-        "title": "The Prayer That Turns the World Upside Down",
-        "amazon_url": "https://www.amazon.com/s?k=The+Prayer+That+Turns+the+World+Upside+Down+Mohler"
-      },
-      {
-        "title": "Atheism Remix",
-        "amazon_url": "https://www.amazon.com/s?k=Atheism+Remix+Albert+Mohler"
-      },
-      {
-        "title": "The Disappearance of God",
-        "amazon_url": "https://www.amazon.com/s?k=The+Disappearance+of+God+Albert+Mohler"
-      }
-    ],
-    "initials": "RAM"
-  },
-  {
-    "name": "Yeganeh Torbati",
-    "slug": "yeganeh-torbati",
-    "bio": "Yeganeh Torbati is a journalist and religion correspondent known for thoughtful reporting on faith communities and religious issues. Her work focuses on how Christian communities engage with contemporary social and political challenges.",
-    "affiliation": "Religion News Service",
-    "role": "Religion Correspondent & Journalist",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "YT"
-  },
-  {
-    "name": "Vaneetha Rendall Risner",
-    "slug": "vaneetha-rendall-risner",
-    "bio": "Vaneetha Rendall Risner is an author and speaker who writes about suffering, disability, and faith from personal experience. She has contributed to various Christian publications and speaks at conferences about navigating life's hardships with hope in Christ. Her work encourages readers to find meaning and purpose through trials.",
-    "affiliation": "The Gospel Coalition, Christianity Today",
-    "role": "Author & Speaker",
-    "education": "",
-    "website": "https://www.vaneethrisner.com",
-    "books": [
-      {
-        "title": "The Scars That Have Shaped Me: How God Meets Us in Suffering",
-        "amazon_url": "https://www.amazon.com/s?k=The+Scars+That+Have+Shaped+Me+Vaneetha+Rendall+Risner"
-      }
-    ],
-    "initials": "VRR"
-  },
-  {
-    "name": "Ian Wildeboer",
-    "slug": "ian-wildeboer",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "IW"
-  },
-  {
-    "name": "Darryl Dash",
-    "slug": "darryl-dash",
-    "bio": "Darryl Dash is a pastor, author, and speaker who has dedicated his ministry to helping Christians understand and live out their faith with greater depth and clarity. Drawing on years of pastoral experience, he writes and teaches on Scripture, spiritual growth, and practical Christian living.",
-    "affiliation": "Vida Church",
-    "role": "Pastor & Author",
-    "education": "",
-    "website": "https://www.darryl-dash.com",
-    "books": [
-      {
-        "title": "Do You Feel Their Love? How the Local Church Can Minister to the Lonely",
-        "amazon_url": "https://www.amazon.com/s?k=Do+You+Feel+Their+Love+Darryl+Dash"
-      }
-    ],
-    "initials": "DD"
-  },
-  {
-    "name": "Laurence Norman",
-    "slug": "laurence-norman",
-    "bio": "Laurence Norman is a journalist and editor known for his coverage of religious and cultural issues. He brings thoughtful analysis to contemporary faith topics relevant to Christian readers and observers of religious life in modern society.",
-    "affiliation": "",
-    "role": "Journalist & Editor",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "LN"
-  },
-  {
-    "name": "Abdi Latif Dahir",
-    "slug": "abdi-latif-dahir",
-    "bio": "Abdi Latif Dahir is a Pulitzer Prize-nominated journalist and author who brings thoughtful storytelling to issues affecting East Africa and the global Christian community. His work explores themes of faith, identity, and resilience in regions often overlooked by mainstream media.",
-    "affiliation": "The New York Times, NPR, The Guardian",
-    "role": "Journalist & Author",
-    "education": "",
-    "website": "",
-    "books": [
-      {
-        "title": "The Surprising Life of Abdi Latif Dahir",
-        "amazon_url": "https://www.amazon.com/s?k=Abdi+Latif+Dahir"
-      }
-    ],
-    "initials": "ALD"
-  },
-  {
-    "name": "Dov Lieber",
-    "slug": "dov-lieber",
-    "bio": "Dov Lieber is an investigative journalist and author known for his in-depth reporting on religious and social issues. His work combines rigorous journalism with thoughtful analysis of faith communities and their cultural impact.",
-    "affiliation": "The Wall Street Journal, The New York Times",
-    "role": "Investigative Journalist & Author",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "DL"
-  },
-  {
-    "name": "Edward Helmore",
-    "slug": "edward-helmore",
-    "bio": "Edward Helmore is a journalist and religion correspondent known for his thoughtful coverage of faith, culture, and contemporary religious issues. His work has appeared in major publications where he explores the intersection of Christianity, society, and current events with nuance and insight.",
-    "affiliation": "The Guardian, Religion News Service",
-    "role": "Religion Correspondent & Journalist",
-    "education": "",
+    "name": "M. Elizabeth Lewis Hall",
+    "slug": "m-elizabeth-lewis-hall",
+    "bio": "M. Elizabeth Lewis Hall is a professor of psychology at Rosemead School of Psychology at Biola University, where she researches the integration of Christian theology and psychological science. Her scholarly and popular writing addresses human embodiment, suffering, and what it means to be made in the image of God.",
+    "affiliation": "Biola University / Rosemead School of Psychology",
+    "role": "Professor & Scholar",
+    "education": "PhD, Rosemead School of Psychology",
     "website": "",
     "books": [],
     "initials": "EH"
+  },
+  {
+    "name": "Jason McMartin",
+    "slug": "jason-mcmartin",
+    "bio": "Jason McMartin is a professor of theology at Rosemead School of Psychology at Biola University, where he works at the intersection of systematic theology and the behavioral sciences. His writing explores Christian anthropology, sanctification, and the theological dimensions of human flourishing.",
+    "affiliation": "Biola University / Rosemead School of Psychology",
+    "role": "Professor of Theology",
+    "education": "PhD, Fuller Theological Seminary",
+    "website": "",
+    "books": [
+      {
+        "title": "Being Saved: Dimensions of Human Salvation",
+        "amazon_url": "https://www.amazon.com/s?k=Being+Saved+Dimensions+Human+Salvation+McMartin"
+      }
+    ],
+    "initials": "JM"
+  },
+  {
+    "name": "Jamie Carlson",
+    "slug": "jamie-carlson",
+    "bio": "Jamie Carlson is a writer at Mere Orthodoxy who engages questions of gender, theology, and evangelical culture with careful attention to both Scripture and tradition. Her essays call for more substantive theological engagement in evangelical debates that are often reduced to political or cultural terms.",
+    "affiliation": "Mere Orthodoxy",
+    "role": "Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JC"
+  },
+  {
+    "name": "William Tate",
+    "slug": "william-tate",
+    "bio": "William Tate is a writer at Mere Orthodoxy contributing essays on literature, culture, and the Christian intellectual tradition. He writes with an eye toward recovering the richness of Christian humanist thought for evangelical readers navigating questions of art, education, and the good life.",
+    "affiliation": "Mere Orthodoxy",
+    "role": "Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "WT"
+  },
+  {
+    "name": "Joshua Mitchell",
+    "slug": "joshua-mitchell",
+    "bio": "Joshua Mitchell is a professor of political theory at Georgetown University and the author of American Awakening: Identity Politics and Other Afflictions of Our Time. He writes at the intersection of Christian theology and political philosophy, bringing a Tocquevillian lens to contemporary cultural and spiritual debates.",
+    "affiliation": "Georgetown University / American Reformer",
+    "role": "Professor & Author",
+    "education": "PhD in Government, Georgetown University",
+    "website": "",
+    "books": [
+      {
+        "title": "American Awakening",
+        "amazon_url": "https://www.amazon.com/s?k=American+Awakening+Joshua+Mitchell"
+      }
+    ],
+    "initials": "JM"
+  },
+  {
+    "name": "James Norris",
+    "slug": "james-norris",
+    "bio": "James Norris is a writer and pastor contributing to Reformation21, the online journal of the Alliance of Confessing Evangelicals. He writes on biblical exegesis, Reformed theology, and the church's witness in a post-Christian culture.",
+    "affiliation": "Reformation21",
+    "role": "Pastor & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JN"
+  },
+  {
+    "name": "Josh Burnett",
+    "slug": "josh-burnett",
+    "bio": "Josh Burnett is a writer and ministry practitioner contributing to the Carey Nieuwhof platform, where he addresses church leadership, preaching, and ministry strategy. His work helps pastors think through the practical and theological dimensions of sermon preparation and congregational discipleship.",
+    "affiliation": "Carey Nieuwhof",
+    "role": "Writer & Ministry Practitioner",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JB"
+  },
+  {
+    "name": "Nick Batzig",
+    "slug": "nick-batzig",
+    "bio": "Nick Batzig is a contributing editor at Ligonier Ministries and serves as pastor of New Covenant Presbyterian Church (PCA) in Richmond Hill, Georgia. A thoughtful expositor and Reformed theologian, he writes on covenant theology, biblical typology, and the doctrines of grace.",
+    "affiliation": "Ligonier Ministries",
+    "role": "Pastor & Contributing Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "NB"
+  },
+  {
+    "name": "Tim Rosenberger",
+    "slug": "tim-rosenberger",
+    "bio": "Tim Rosenberger is a writer at Mere Orthodoxy who explores the relationship between authentic faith and the cultural forces that can distort it. His essays examine how sentiment, aesthetics, and cultural Christianity can substitute for genuine conviction, calling evangelicals back to a more robust theological and spiritual foundation.",
+    "affiliation": "Mere Orthodoxy",
+    "role": "Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TR"
+  },
+  {
+    "name": "Sara Lansford",
+    "slug": "sara-lansford",
+    "bio": "Sara Lansford is a writer and researcher with Lifeway Research, contributing to evangelical conversations about children's ministry, faith formation, and reaching the next generation. Her work draws on research data to help churches and parents think strategically about passing faith to children.",
+    "affiliation": "Lifeway Research",
+    "role": "Writer & Researcher",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SL"
+  },
+  {
+    "name": "Nathaniel Marshall",
+    "slug": "nathaniel-marshall",
+    "bio": "Nathaniel Marshall is a writer and book reviewer at Mere Orthodoxy who engages Christian intellectual culture through careful reading and criticism. His reviews and essays take seriously both ideas and the books that carry them, serving readers who want substantive engagement with the evangelical and broader Christian mind.",
+    "affiliation": "Mere Orthodoxy",
+    "role": "Writer & Critic",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "NM"
+  },
+  {
+    "name": "Angela Fulton",
+    "slug": "angela-fulton",
+    "bio": "Angela Fulton is a writer for Christianity Today who covers global Christianity, the church in conflict zones, and the lives of Christians navigating faith under pressure. Her reporting brings American evangelical readers into contact with the worldwide body of Christ.",
+    "affiliation": "Christianity Today",
+    "role": "Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AF"
+  },
+  {
+    "name": "Ryan Smith",
+    "slug": "ryan-smith",
+    "bio": "Ryan Smith is a writer for American Reformer contributing to evangelical conversations about education, culture, and Christian citizenship. His work engages the classical Christian education movement and broader questions of how Christians should form the next generation.",
+    "affiliation": "American Reformer",
+    "role": "Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RS"
+  },
+  {
+    "name": "Todd Boone",
+    "slug": "todd-boone",
+    "bio": "Todd Boone is a pastor and writer contributing to Reformation21, the online journal of the Alliance of Confessing Evangelicals. He writes on biblical exposition, Reformed theology, and the spiritual significance of the church calendar and ordinances.",
+    "affiliation": "Reformation21",
+    "role": "Pastor & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TB"
+  },
+  {
+    "name": "Mike Sabo",
+    "slug": "mike-sabo",
+    "bio": "Mike Sabo is a writer and editor at American Reformer, where he covers conservative Christian politics, cultural analysis, and the challenges facing the church in American public life. He writes from a Reformed perspective on nationalism, the common good, and Christian civic engagement.",
+    "affiliation": "American Reformer",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MS"
+  },
+  {
+    "name": "John W. Hoyum",
+    "slug": "john-w-hoyum",
+    "bio": "John W. Hoyum is a pastor and writer at American Reformer who addresses the economic and institutional challenges facing the pastoral ministry. He advocates for fair compensation of clergy and writes on the health of the local church as an institution within broader society.",
+    "affiliation": "American Reformer",
+    "role": "Pastor & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JH"
+  },
+  {
+    "name": "James Abernathy",
+    "slug": "james-abernathy",
+    "bio": "James Abernathy is a writer for The Gospel Coalition whose work engages disability theology, embodiment, and the full inclusion of people with disabilities in the life of the church. He writes with personal insight and theological care about what it means to bear the image of God in all its diversity.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JA"
+  },
+  {
+    "name": "Adam Griffin",
+    "slug": "adam-griffin",
+    "bio": "Adam Griffin is a pastor and writer for The Gospel Coalition whose work focuses on marriage, family discipleship, and the spiritual formation of the home. He helps parents and spouses think through how the gospel reshapes their most intimate relationships and responsibilities.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Pastor & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AG"
+  },
+  {
+    "name": "Benjamin L. Gladd",
+    "slug": "benjamin-l-gladd",
+    "bio": "Benjamin L. Gladd is associate professor of New Testament at Reformed Theological Seminary in Jackson, Mississippi. He is the co-author of Making All Things New: Inaugurated Eschatology for the Life of the Church and contributes to The Gospel Coalition on biblical theology, eschatology, and the redemptive-historical reading of Scripture.",
+    "affiliation": "Reformed Theological Seminary / The Gospel Coalition",
+    "role": "Professor & Author",
+    "education": "PhD in New Testament, Wheaton College",
+    "website": "",
+    "books": [
+      {
+        "title": "Making All Things New",
+        "amazon_url": "https://www.amazon.com/s?k=Making+All+Things+New+Gladd+Harmon"
+      }
+    ],
+    "initials": "BG"
+  },
+  {
+    "name": "Sidney Dyer",
+    "slug": "sidney-dyer",
+    "bio": "Sidney Dyer is a writer and editor contributing to Ligonier Ministries, where he explores Reformed theology, the doctrine of God, and topics in systematic and biblical theology. His work serves readers seeking rigorous engagement with the classic doctrines of the Christian faith.",
+    "affiliation": "Ligonier Ministries",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SD"
+  },
+  {
+    "name": "Kirsten Sanders",
+    "slug": "kirsten-sanders",
+    "bio": "Kirsten Sanders is a writer at Mere Orthodoxy who engages questions of art, culture, and Christian faithfulness. Her essays examine how Christians should navigate contested cultural spaces — including film, visual art, and public discourse — with discernment and conviction.",
+    "affiliation": "Mere Orthodoxy",
+    "role": "Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KS"
+  },
+  {
+    "name": "Nate Shurden",
+    "slug": "nate-shurden",
+    "bio": "Nate Shurden is a writer for Ligonier Ministries who contributes expositions of Scripture and meditations on the life of Christ for evangelical readers. His work draws on careful biblical study to illuminate the meaning and significance of the gospel narratives.",
+    "affiliation": "Ligonier Ministries",
+    "role": "Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "NS"
+  },
+  {
+    "name": "Gene Edward Veith",
+    "slug": "gene-edward-veith",
+    "bio": "Gene Edward Veith Jr. is professor of literature at Patrick Henry College and a contributing editor at World Magazine and Ligonier Ministries. One of evangelical Christianity's leading voices on culture and the arts, he is the author of numerous books including Postmodern Times, State of the Arts, and God at Work: Your Christian Vocation in All of Life. He writes from a confessional Lutheran perspective on everything from classical education to contemporary media.",
+    "affiliation": "Patrick Henry College / World Magazine / Ligonier Ministries",
+    "role": "Professor & Author",
+    "education": "PhD in English, University of Kansas",
+    "website": "",
+    "books": [
+      {
+        "title": "God at Work",
+        "amazon_url": "https://www.amazon.com/s?k=God+at+Work+Gene+Veith"
+      },
+      {
+        "title": "Postmodern Times",
+        "amazon_url": "https://www.amazon.com/s?k=Postmodern+Times+Gene+Veith"
+      },
+      {
+        "title": "State of the Arts",
+        "amazon_url": "https://www.amazon.com/s?k=State+of+the+Arts+Gene+Veith"
+      }
+    ],
+    "initials": "GV"
+  },
+  {
+    "name": "Christopher Gehrz",
+    "slug": "christopher-gehrz",
+    "bio": "Christopher Gehrz is professor of history at Bethel University in St. Paul, Minnesota, and the author of The Pietist Vision of Christian Higher Education. He blogs at The Pietist Schoolman and writes on church history, the Pietist tradition, and the relationship between faith and scholarship. His work at Mere Orthodoxy brings a historian's perspective to evangelical self-understanding.",
+    "affiliation": "Bethel University / Mere Orthodoxy",
+    "role": "Professor & Author",
+    "education": "PhD in History, Yale University",
+    "website": "pietistschoolman.com",
+    "books": [
+      {
+        "title": "The Pietist Vision of Christian Higher Education",
+        "amazon_url": "https://www.amazon.com/s?k=Pietist+Vision+Christian+Higher+Education+Gehrz"
+      }
+    ],
+    "initials": "CG"
+  },
+  {
+    "name": "Brittany Dahl",
+    "slug": "brittany-dahl",
+    "bio": "Brittany Dahl is a writer for The Gospel Coalition whose work draws on literature, imagination, and the Christian tradition to illuminate the gospel. She writes on how stories — from C.S. Lewis's Narnia to Scripture itself — can form our affections and deepen our love for Christ.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BD"
+  },
+  {
+    "name": "Ian J. Vaillancourt",
+    "slug": "ian-j-vaillancourt",
+    "bio": "Ian J. Vaillancourt is a biblical scholar and writer for The Gospel Coalition who specializes in Old Testament wisdom literature. His work explores how the Psalms, Proverbs, and the wisdom books of Scripture speak to the full range of human experience and point readers toward Christ.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Biblical Scholar & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "IV"
+  },
+  {
+    "name": "Annie Eisner",
+    "slug": "annie-eisner",
+    "bio": "Annie Eisner is a writer for Relevant Magazine who addresses theology, relationships, and the Christian life for a younger evangelical audience. She brings a pastoral and culturally engaged voice to questions of biblical sexuality, marriage, and how Christians navigate contemporary life with conviction.",
+    "affiliation": "Relevant Magazine",
+    "role": "Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AE"
   }
 ]
