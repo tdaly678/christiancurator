@@ -1906,5 +1906,21 @@
     "website": "",
     "books": [],
     "initials": "PS"
+  },
+  {
+    "name": "Ben Hubbard",
+    "slug": "ben-hubbard",
+    "bio": "Ben Hubbard is a religion and Middle East correspondent known for his reporting on Christianity and Islam in the Middle East and beyond. With decades of experience covering religious communities and their intersections with politics and culture, Hubbard brings nuanced insight to complex faith narratives for Christian audiences seeking to understand the global church.",
+    "affiliation": "New York Times",
+    "role": "Religion & Middle East Correspondent",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Rise and Fall of the Islamic State",
+        "amazon_url": "https://www.amazon.com/s?k=The+Rise+and+Fall+of+the+Islamic+State+Ben+Hubbard"
+      }
+    ],
+    "initials": "BH"
   }
 ]
