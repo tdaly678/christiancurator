@@ -538,7 +538,47 @@
   </div>
   
 
-  <!-- ── WORLD NEWS ───────────────────────────────────────────────────── -->
+  <!-- ── WORLD NEWS ───────────────────────────────────────────────────── -->  <!-- Subscribe -->
+  <div id="cc-email-box" style="margin-top:2.75rem; margin-bottom:2.75rem;">
+    <div class="cc-signup-block">
+      <h3 class="cc-signup-heading">Get the Daily Digest</h3>
+      <p class="cc-signup-sub">The best evangelical content, curated and delivered to your inbox each morning.</p>
+
+      <form id="cc-signup-form" class="cc-signup-form"
+            action="https://252bf73d.sibforms.com/serve/MUIFAB7CIQuc2nJNb3F3vKnSjaBpMFNDbsi6MK_4uqstTr5i_Ja7ZVdjszNLkSe5RAdysOdcY-DDVrkYlvzoy-mJZQe-oaIbRqV0BfUYd-jli69OP21lSds8gIdS9vjXfoCRPiOESVzK7HOfbM1DlLkSimp2yR1_zYHWP2ar7d7X32wq6F-eyz7cDIoZ3lyhzNGXvQDWSAd5LBtnYA=="
+            method="post"
+            target="brevo-sink">
+        <div class="cc-signup-row">
+          <input type="email" name="EMAIL" id="cc-signup-email"
+                 class="cc-signup-input"
+                 placeholder="Your email address"
+                 required autocomplete="email" />
+          <button type="submit" class="cc-signup-submit">Subscribe</button>
+        </div>
+        <!-- Brevo required fields -->
+        <input type="text" name="email_address_check" value="" style="position:absolute;left:-5000px;" tabindex="-1" autocomplete="off" />
+        <input type="hidden" name="locale" value="en" />
+        <input type="hidden" name="html_type" value="simple" />
+      </form>
+
+      <div id="cc-signup-success" class="cc-signup-success" style="display:none;">
+        ✓ You're in! Check your inbox for a confirmation email.
+      </div>
+      <p class="cc-signup-privacy">No spam. Unsubscribe anytime.</p>
+    </div>
+    <!-- Hidden iframe absorbs Brevo's post-submit redirect so page never navigates away -->
+    <iframe name="brevo-sink" style="display:none;" title="subscription confirmation"></iframe>
+    <script>
+      document.getElementById('cc-signup-form').addEventListener('submit', function() {
+        setTimeout(function() {
+          document.getElementById('cc-signup-form').style.display = 'none';
+          document.getElementById('cc-signup-success').style.display = 'block';
+        }, 400);
+      });
+    </script>
+  </div>
+
+
   
   
   <div class="cc-world-news">
@@ -1151,11 +1191,7 @@
     </div>
   </div>
 
-  <!-- Past digests -->
-  
-  <div class="cc-archive-list">
-    <div class="cc-archive-list-header">Past Daily Digests</div>
-    <div class="cc-archive-links">
+  <!-- Past digests -->    <div class="cc-archive-links">
       
       <a href="/archive/2026-04-12/" class="cc-archive-link">April 12, 2026</a>
       
@@ -1198,50 +1234,7 @@
       <a href="/archive/2026-03-23/" class="cc-archive-link">March 23, 2026</a>
       
     </div>
-  </div>
-  
-
-  <!-- Subscribe -->
-  <div id="cc-email-box" style="margin-top:2.75rem;">
-    <div class="cc-signup-block">
-      <h3 class="cc-signup-heading">Get the Daily Digest</h3>
-      <p class="cc-signup-sub">The best evangelical content, curated and delivered to your inbox each morning.</p>
-
-      <form id="cc-signup-form" class="cc-signup-form"
-            action="https://252bf73d.sibforms.com/serve/MUIFAB7CIQuc2nJNb3F3vKnSjaBpMFNDbsi6MK_4uqstTr5i_Ja7ZVdjszNLkSe5RAdysOdcY-DDVrkYlvzoy-mJZQe-oaIbRqV0BfUYd-jli69OP21lSds8gIdS9vjXfoCRPiOESVzK7HOfbM1DlLkSimp2yR1_zYHWP2ar7d7X32wq6F-eyz7cDIoZ3lyhzNGXvQDWSAd5LBtnYA=="
-            method="post"
-            target="brevo-sink">
-        <div class="cc-signup-row">
-          <input type="email" name="EMAIL" id="cc-signup-email"
-                 class="cc-signup-input"
-                 placeholder="Your email address"
-                 required autocomplete="email" />
-          <button type="submit" class="cc-signup-submit">Subscribe</button>
-        </div>
-        <!-- Brevo required fields -->
-        <input type="text" name="email_address_check" value="" style="position:absolute;left:-5000px;" tabindex="-1" autocomplete="off" />
-        <input type="hidden" name="locale" value="en" />
-        <input type="hidden" name="html_type" value="simple" />
-      </form>
-
-      <div id="cc-signup-success" class="cc-signup-success" style="display:none;">
-        ✓ You're in! Check your inbox for a confirmation email.
-      </div>
-      <p class="cc-signup-privacy">No spam. Unsubscribe anytime.</p>
-    </div>
-    <!-- Hidden iframe absorbs Brevo's post-submit redirect so page never navigates away -->
-    <iframe name="brevo-sink" style="display:none;" title="subscription confirmation"></iframe>
-    <script>
-      document.getElementById('cc-signup-form').addEventListener('submit', function() {
-        setTimeout(function() {
-          document.getElementById('cc-signup-form').style.display = 'none';
-          document.getElementById('cc-signup-success').style.display = 'block';
-        }, 400);
-      });
-    </script>
-  </div>
-
-  <div class="cc-footer">
+  </div>  <div class="cc-footer">
     <div class="cc-footer-name">Christian Curator</div>
     <div class="cc-footer-nav">
       <a href="/digest/">Daily Digest</a>
