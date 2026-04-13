@@ -1,6 +1,6 @@
 [
   {
-    "title": "Pastors Must Define the Gospel or Lose It Entirely",
+    "title": "Pastors Can't Stay Silent on What the Gospel Is",
     "url": "https://www.thegospelcoalition.org/podcasts/everyday-pastor/what-is-gospel/",
     "source_name": "The Gospel Coalition",
     "author": "Ligon Duncan, Matt Smethurst",
@@ -11,7 +11,7 @@
     ]
   },
   {
-    "title": "The Pleasure You're Choosing Will Destroy You",
+    "title": "Sin's Fleeting Pleasures vs. Eternity: Which Will You Choose?",
     "url": "https://feed.desiringgod.org/link/22977/17317852/no-sin-is-worth-hell",
     "source_name": "Desiring God",
     "author": "Greg Morse",
@@ -22,41 +22,42 @@
     ]
   },
   {
-    "title": "God Is Unchanging. Everything Else Falls Apart.",
+    "title": "God Is Immutable. You're Not. Why That Matters.",
     "url": "http://feeds.ligonier.org/~/953707655/0/ligonierministriesblog",
     "source_name": "Ligonier Ministries",
     "author": "Reuben Hunter",
     "final_score": 10.0,
     "tags": [
+      "theology",
       "devotional",
-      "theology"
+      "prayer"
     ]
   },
   {
-    "title": "Infertility and Faith: When \"Just Pray\" Isn't Enough",
+    "title": "Infertility's Spiritual Reckoning: When \"Just Relax\" Fails",
     "url": "https://www.christianitytoday.com/2026/04/fertility-treatment-quick-fix-restorative-reproductive-medicine/",
     "source_name": "Christianity Today",
     "author": "Bonnie Kristian",
     "final_score": 9.9,
     "tags": [
-      "theology",
+      "devotional",
       "family"
     ]
   },
   {
-    "title": "Faithful Theologian, Modest Career: When Devotion Doesn't Pay",
+    "title": "Faithful Theologian, Obscure Career: Why Suffering Visits the Devoted",
     "url": "https://firstthings.com/why-me/",
     "source_name": "First Things",
     "author": "Jillian Parks",
     "final_score": 9.9,
     "tags": [
-      "devotional",
+      "theology",
       "suffering",
-      "theology"
+      "devotional"
     ]
   },
   {
-    "title": "Mindfulness Won't Save You—Here's What Actually Will",
+    "title": "Mindfulness Won't Fix Your Anxiety. Here's What Will.",
     "url": "https://mereorthodoxy.com/meditation-and-the-giver-of-things",
     "source_name": "Mere Orthodoxy",
     "author": "Justin N. Poythress",
@@ -67,7 +68,7 @@
     ]
   },
   {
-    "title": "God Commands Israel Not to Hate Esau. So Did He?",
+    "title": "God Commanded Israel Not to Hate Edom. So Did He?",
     "url": "https://theaquilareport.com/did-god-hate-esau/",
     "source_name": "The Aquila Report",
     "author": "William Conley",
@@ -78,36 +79,37 @@
     ]
   },
   {
-    "title": "Bible Study Demands Work. Here's Why Christians Can't Skip It.",
+    "title": "Bible Study Feels Hard. Here's Why It's Worth the Struggle.",
     "url": "https://www.thegospelcoalition.org/article/read-bible-study/",
     "source_name": "The Gospel Coalition",
     "author": "Glenna Marshall",
     "final_score": 9.25,
+    "tags": [
+      "devotional",
+      "theology"
+    ]
+  },
+  {
+    "title": "A Whole New World",
+    "url": "https://firstthings.com/a-whole-new-world-2/",
+    "source_name": "First Things",
+    "author": "Jillian Parks",
+    "final_score": 9.15,
     "tags": [
       "theology",
       "devotional"
     ]
   },
   {
-    "title": "Pastors Waste Time. God Holds Them Accountable.",
+    "title": "Pastors Must Stop Spinning Their Wheels for God",
     "url": "https://www.thegospelcoalition.org/article/pastor-productivity-dependence/",
     "source_name": "The Gospel Coalition",
     "author": "Daniel Stegeman",
     "final_score": 8.5,
     "tags": [
-      "theology",
-      "church life"
-    ]
-  },
-  {
-    "title": "Trueman's Diagnosis: Why the Church Must Understand Modernity's Disease",
-    "url": "https://firstthings.com/finding-a-pulse/",
-    "source_name": "First Things",
-    "author": "Jillian Parks",
-    "final_score": 7.95,
-    "tags": [
-      "theology",
-      "culture"
+      "devotional",
+      "work",
+      "theology"
     ]
   }
 ]
