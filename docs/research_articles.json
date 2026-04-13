@@ -10,19 +10,20 @@
     "summary": "<p>The Great Commission was given to ordinary people who simply said yes. Here are five ways we can activate our people to make disciples. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/04/13/5-ways-to-help-develop-disciples-who-make-disciples/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/04/13/5-ways-to-help-develop-disciples-who-make-disciples/\">5 Ways to Help Develop Disciples Who Make Disciples</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "full_content": "",
     "published": "Mon, 13 Apr 2026 06:59:00 +0000",
-    "fetched_at": "2026-04-13T10:42:19.309094",
-    "score": 5,
+    "fetched_at": "2026-04-13T11:06:18.293013",
+    "score": 6,
     "tags": [
-      "church life"
+      "church life",
+      "missions"
     ],
-    "rewritten_title": "The Great Commission Needs Ordinary People—Here's How to Activate Them",
+    "rewritten_title": "The Great Commission Is Stalled. Here's How to Unblock It.",
     "personas": [
       "pastor",
       "professional"
     ],
-    "topic_cluster": "discipleship_strategies",
+    "topic_cluster": "discipleship_making",
     "perspective": "neutral",
-    "final_score": 6.5,
+    "final_score": 7.5,
     "recency_boost": 1.5
   },
   {
@@ -36,13 +37,13 @@
     "summary": "<p>Monday Moneybeat: Oil prices, inflation, and geopolitical risk are driving volatility, but markets may be betting more on how the conflict ends than on the final outcome. Our conversation with economist David Bahnsen.</p>",
     "full_content": "",
     "published": "Mon, 13 Apr 2026 03:13:00 -0400",
-    "fetched_at": "2026-04-13T10:40:46.443594",
+    "fetched_at": "2026-04-13T11:04:38.540845",
     "score": 4,
     "tags": [
       "data",
       "politics"
     ],
-    "rewritten_title": "Markets Are Pricing In the End of War, Not Victory",
+    "rewritten_title": "Markets Are Betting on How the War Ends, Not Victory",
     "personas": [
       "professional"
     ],
@@ -52,25 +53,29 @@
     "recency_boost": 1.5
   },
   {
-    "source_name": "Pew Research",
-    "source_category": "culture",
-    "source_type": "christian",
+    "source_name": "Wall Street Journal",
+    "source_category": "news",
+    "source_type": "world_news",
     "independent": false,
-    "author": "Beshay",
-    "title": "Negative views of Israel, Netanyahu continue to rise among Americans – especially young people",
-    "url": "https://www.pewresearch.org/short-reads/2026/04/07/negative-views-of-israel-netanyahu-continue-to-rise-among-americans-especially-young-people/",
-    "summary": "Views of Israel and Benjamin Netanyahu have grown more negative among U.S. adults, with majorities under 50 in both parties rating them poorly.",
+    "author": "Sherry Qin",
+    "title": "Oil Climbs, Asian Equities Fall as U.S.-Iran Peace Talks Collapse",
+    "url": "https://www.wsj.com/finance/stocks/oil-climbs-asian-equities-fall-as-u-s-iran-peace-talks-collapse-d19ec1b7",
+    "summary": "Oil rose back above $100 a barrel and Asian equities fell, as the collapse of the U.S.-Iran peace talks poured cold water on hopes of an end to the fighting.",
     "full_content": "",
-    "published": "Tue, 07 Apr 2026 17:54:58 +0000",
-    "fetched_at": "2026-04-13T10:42:18.852470",
+    "published": "Mon, 13 Apr 2026 02:59:00 GMT",
+    "fetched_at": "2026-04-13T11:04:49.783255",
     "score": 4,
     "tags": [
       "data"
     ],
-    "rewritten_title": "Israel's Standing Crumbles Among Young Americans Across Both Parties",
-    "personas": [],
-    "topic_cluster": "israel_sentiment_trends",
-    "perspective": "neutral",
-    "final_score": 2.0
+    "rewritten_title": "Oil Spikes, Markets Tank as U.S.-Iran Peace Talks Collapse",
+    "top_world_story": true,
+    "personas": [
+      "professional"
+    ],
+    "topic_cluster": "iran_war_economic_impact",
+    "perspective": "news",
+    "final_score": 4.35,
+    "recency_boost": 1.5
   }
 ]

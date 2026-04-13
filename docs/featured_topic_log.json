@@ -234,5 +234,73 @@
         }
       ]
     }
+  ],
+  "2026-04-13": [
+    {
+      "slug": "evangelicalism",
+      "name": "The Future of Evangelicalism",
+      "hook": "Is the evangelical movement fracturing — and if so, what should come next?",
+      "category": "Culture & Society",
+      "articles": [
+        {
+          "title": "Pastors Are Losing the Gospel by Not Defining It",
+          "url": "https://www.thegospelcoalition.org/podcasts/everyday-pastor/what-is-gospel/",
+          "source_name": "The Gospel Coalition",
+          "author": "Ligon Duncan, Matt Smethurst",
+          "summary": ""
+        },
+        {
+          "title": "Infertility Demands More Than Prayer—Here's What the Church Misses",
+          "url": "https://www.christianitytoday.com/2026/04/fertility-treatment-quick-fix-restorative-reproductive-medicine/",
+          "source_name": "Christianity Today",
+          "author": "Bonnie Kristian",
+          "summary": ""
+        }
+      ]
+    },
+    {
+      "slug": "politics-and-the-church",
+      "name": "Politics & the Church",
+      "hook": "Should evangelical Christians seek political power, or hold it at arm's length?",
+      "category": "Culture & Society",
+      "articles": [
+        {
+          "title": "Supreme Court Decides: Can Government Turn Away Asylum Seekers at Border?",
+          "url": "https://wng.org/podcasts/one-step-short-1776029998",
+          "source_name": "World Magazine",
+          "author": "Arla Eicher",
+          "summary": ""
+        },
+        {
+          "title": "Orbán's 16-Year Grip on Hungary Snaps in Stunning Landslide",
+          "url": "https://www.bbc.com/news/articles/cd9vg782kx7o?at_medium=RSS&at_campaign=rss",
+          "source_name": "BBC News",
+          "author": "",
+          "summary": ""
+        }
+      ]
+    },
+    {
+      "slug": "suffering-and-providence",
+      "name": "Suffering & Providence",
+      "hook": "Does God ordain suffering for our good, or does he merely permit it?",
+      "category": "Core Theology",
+      "articles": [
+        {
+          "title": "Faithful Theologian, Modest Success: Why Does God Allow It?",
+          "url": "https://firstthings.com/why-me/",
+          "source_name": "First Things",
+          "author": "Jillian Parks",
+          "summary": ""
+        },
+        {
+          "title": "God's Promise Against the Chaos: A New World Is Coming",
+          "url": "https://theaquilareport.com/no-one-shall-make-them-afraid/",
+          "source_name": "The Aquila Report",
+          "author": "Cole Newton",
+          "summary": ""
+        }
+      ]
+    }
   ]
 }
