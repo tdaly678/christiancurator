@@ -2,18 +2,18 @@
 email_sender.py — builds and sends the daily digest email via Brevo API.
 
 Email structure:
-  Preheader (invisible, from Daily Pulse first sentence)
-  Header (masthead)
-  "In the Conversation Today" — up to 3 featured topic cards for today
-      All article links direct readers to christiancurator.com homepage
-  CTA → christiancurator.com
+  Preheader  (invisible inbox preview — first 3 headline titles)
+  Top bar    (date · Forwarded? Subscribe)
+  Masthead   (Christian Curator wordmark + tagline)
+  Top Stories (5 highest-scored non-world-news articles — title + source only)
+  CTA box    (+ N more stories today → christiancurator.com)
+  Go Deeper  (rotating topic spotlight — cycles through all topics)
   Forward nudge
   Footer
 """
 
 import hashlib
 import os
-import re
 import json
 import requests
 from datetime import date, timedelta
@@ -22,280 +22,304 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-BREVO_API_KEY = os.environ.get("BREVO_API_KEY", "")
-BREVO_LIST_ID = 2
-BREVO_SENDER_EMAIL = os.environ.get("BREVO_SENDER_EMAIL", "")
-BREVO_SENDER_NAME = "Christian Curator"
-BREVO_API_URL = "https://api.brevo.com/v3/emailCampaigns"
+BREVO_API_KEY        = os.environ.get("BREVO_API_KEY", "")
+BREVO_LIST_ID        = 2
+BREVO_SENDER_EMAIL   = os.environ.get("BREVO_SENDER_EMAIL", "")
+BREVO_SENDER_NAME    = "Christian Curator"
+BREVO_API_URL        = "https://api.brevo.com/v3/emailCampaigns"
 
-DOCS_DIR = Path(__file__).parent.parent / "docs"
-FEATURED_TOPIC_LOG_PATH = DOCS_DIR / "featured_topic_log.json"
-SENT_TOPIC_LOG_PATH = DOCS_DIR / "sent_topic_log.json"
+DOCS_DIR           = Path(__file__).parent.parent / "docs"
+SPOTLIGHT_LOG_PATH = DOCS_DIR / "spotlight_topic_log.json"
 
 
-# ── Topic log helpers ──────────────────────────────────────────────────────────
+# ── Spotlight topic rotation ───────────────────────────────────────────────────
 
-def _load_json_log(path: Path) -> dict:
-    if path.exists():
+def _load_spotlight_log() -> dict:
+    if SPOTLIGHT_LOG_PATH.exists():
         try:
-            return json.loads(path.read_text(encoding="utf-8"))
+            return json.loads(SPOTLIGHT_LOG_PATH.read_text(encoding="utf-8"))
         except Exception:
             pass
     return {}
 
 
-def _save_json_log(path: Path, data: dict):
-    path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+def _save_spotlight_log(data: dict):
+    SPOTLIGHT_LOG_PATH.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
 
-def _get_topic_cards():
+def _get_spotlight_topic() -> dict | None:
     """
-    Return a list of up to 3 featured topic dicts for today, or [] if unavailable.
-
-    Also records today's top slug in sent_topic_log.json for downstream use.
+    Return the next topic to spotlight, cycling through all topics without
+    repeating until every topic has been shown. Records today's pick in
+    spotlight_topic_log.json.
     """
+    try:
+        from frontend.topics_data import TOPICS
+    except ImportError:
+        return None
+
     today_iso = date.today().isoformat()
+    log = _load_spotlight_log()
 
-    featured_log = _load_json_log(FEATURED_TOPIC_LOG_PATH)
-    sent_log = _load_json_log(SENT_TOPIC_LOG_PATH)
+    # Already picked today — return same topic
+    if today_iso in log:
+        slug = log[today_iso]
+        return next((t for t in TOPICS if t["slug"] == slug), None)
 
-    today_topics = featured_log.get(today_iso, [])
-    today_cards = today_topics[:3]
+    # Find slugs already used in last 70 days so the cycle can reset naturally
+    cutoff = (date.today() - timedelta(days=70)).isoformat()
+    recent_slugs = {v for k, v in log.items() if k >= cutoff}
 
-    # Record the top slug so it can be used by other logic if needed
-    if today_cards:
-        sent_log[today_iso] = today_cards[0]["slug"]
-        # Prune sent log to last 30 days
-        cutoff = (date.today() - timedelta(days=30)).isoformat()
-        sent_log = {k: v for k, v in sent_log.items() if k >= cutoff}
-        _save_json_log(SENT_TOPIC_LOG_PATH, sent_log)
+    # Pick first topic not recently spotlighted; fall back to full list if all used
+    candidates = [t for t in TOPICS if t["slug"] not in recent_slugs] or list(TOPICS)
+    chosen = candidates[0]
 
-    return today_cards
-
-
-# ── Anchor helper ──────────────────────────────────────────────────────────────
-
-def _article_anchor(url: str) -> str:
-    """Return the same stable anchor id used in the homepage template."""
-    return "a" + hashlib.md5((url or "").encode()).hexdigest()[:8]
+    log[today_iso] = chosen["slug"]
+    # Prune log to last 90 days
+    log = {k: v for k, v in log.items()
+           if k >= (date.today() - timedelta(days=90)).isoformat()}
+    _save_spotlight_log(log)
+    return chosen
 
 
-# ── Card renderer ──────────────────────────────────────────────────────────────
+# ── Section renderers ──────────────────────────────────────────────────────────
 
-def _render_topic_card(topic: dict, muted: bool = False) -> str:
-    """Render one topic card as email-safe inline HTML, styled to match the site."""
-    accent_color = "#b5ccb8" if muted else "#2C4A2E"
-    title_color  = "#444444" if muted else "#1a1a1a"
+def _render_top_stories(articles: list[dict]) -> str:
+    """5 highest-scored non-world-news articles — title + source, no summaries."""
+    top5 = sorted(
+        [a for a in articles if a.get("source_type") != "world_news"],
+        key=lambda a: a.get("final_score", a.get("score", 0)),
+        reverse=True,
+    )[:5]
 
-    articles_html = ""
-    for idx, a in enumerate((topic.get("articles") or [])[:2]):
-        title   = a.get("title") or ""
-        url     = a.get("url") or ""
-        author  = (a.get("author") or "").strip()
-        source  = (a.get("source_name") or "").strip()
-        summary = (a.get("summary") or "").strip()
-        byline  = (
-            f'{author} &middot; {source}' if author and author.lower() != source.lower()
-            else source
-        )
-        anchor = _article_anchor(url)
-        href   = f"https://www.christiancurator.com/#{anchor}" if url else "https://www.christiancurator.com/"
-
-        # Truncate summary to ~200 chars at a sentence boundary for the lead article
-        preview_html = ""
-        if idx == 0 and summary:
-            sentences = re.split(r'(?<=[.!?])\s+', summary)
-            preview = ""
-            for s in sentences:
-                if len(preview) + len(s) > 200:
-                    break
-                preview += (" " if preview else "") + s
-            if preview:
-                preview_html = f'<div style="font-size:13px;color:#555;line-height:1.6;margin-top:5px;margin-bottom:4px;">{preview}</div>'
-
-        articles_html += f"""
-        <div style="padding:9px 0;border-top:1px solid #f0ede8;">
-          <a href="{href}" style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;line-height:1.35;color:{title_color};text-decoration:none;display:block;margin-bottom:3px;">{title}</a>
-          {preview_html}
-          <div style="font-size:11px;color:#aaa;">{byline}</div>
-        </div>"""
-
-    return f"""
-      <div style="border-top:2px solid {'#d0ccc6' if muted else '#1a1a1a'};padding-top:14px;margin-bottom:4px;">
-        <div style="font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:{accent_color};margin-bottom:6px;">{topic.get("category", "")}</div>
-        <div style="font-family:Georgia,'Times New Roman',serif;font-size:23px;font-weight:600;line-height:1.2;color:{title_color};margin-bottom:10px;">{topic.get("name", "")}</div>
-        <div style="font-size:13.5px;color:#555;font-style:italic;line-height:1.6;border-left:2px solid {accent_color};padding-left:10px;margin-bottom:14px;">{topic.get("summary") or topic.get("hook", "")}</div>
-        {articles_html}
-        <div style="margin-top:12px;">
-          <a href="https://www.christiancurator.com/topics/{topic.get('slug', '')}/" style="font-size:12px;font-weight:700;color:#2C4A2E;text-decoration:none;">More on {topic.get('name','')} &rarr;</a>
-        </div>
-      </div>"""
-
-
-# ── World news card renderer ───────────────────────────────────────────────────
-
-def _render_world_news_card(world_articles: list[dict]) -> str:
-    """Render a single navy-toned world news card for up to 3 articles."""
-    if not world_articles:
+    if not top5:
         return ""
 
-    rows_html = ""
-    for i, a in enumerate(world_articles[:3]):
+    rows = ""
+    for i, a in enumerate(top5):
         title  = a.get("rewritten_title") or a.get("title") or ""
         author = (a.get("author") or "").strip()
         source = (a.get("source_name") or "").strip()
+        url    = a.get("url") or ""
         byline = (
-            f'{author} &middot; {source}'
+            f"{author} &nbsp;·&nbsp; {source}"
             if author and author.lower() != source.lower()
             else source
         )
-        border_top = "border-top:1px solid #c5d4ea;" if i > 0 else ""
-        anchor = _article_anchor(a.get("url", ""))
-        href = f"https://www.christiancurator.com/#{anchor}" if a.get("url") else "https://www.christiancurator.com/"
-        rows_html += f"""
-        <div style="padding:10px 0;{border_top}display:table;width:100%;">
-          <div style="display:table-cell;width:26px;font-size:11px;font-weight:700;color:#7a93b8;vertical-align:top;padding-top:2px;">{i + 1}</div>
-          <div style="display:table-cell;vertical-align:top;">
-            <div style="font-family:Georgia,'Times New Roman',serif;font-size:14px;font-weight:600;line-height:1.35;margin-bottom:3px;">
-              <a href="{href}" style="color:#12284a;text-decoration:none;">{title}</a>
-            </div>
-            <div style="font-size:11px;color:#7a93b8;">{byline}</div>
-          </div>
-        </div>"""
+        anchor = "a" + hashlib.md5((url or "").encode()).hexdigest()[:8]
+        href   = f"https://www.christiancurator.com/#{anchor}" if url else "https://www.christiancurator.com/"
+        border = "" if i == len(top5) - 1 else "border-bottom:1px solid #eceae6;"
 
-    return f"""
-      <div style="background:#f0f4fb;border:1px solid #c5d4ea;border-radius:6px;padding:18px 20px 14px;">
-        <div style="font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.16em;color:#1E3A6E;border-bottom:2px solid #1E3A6E;padding-bottom:6px;margin-bottom:12px;">
-          World News &amp; Culture
-        </div>
-        <div style="font-size:11.5px;color:#5a7099;margin-bottom:12px;font-style:italic;">
-          From the broader world — filtered for what matters to Christians
-        </div>
-        {rows_html}
-        <div style="border-top:1px solid #c5d4ea;margin-top:12px;padding-top:12px;">
-          <a href="https://www.christiancurator.com/digest/" style="font-size:13px;font-weight:700;color:#1E3A6E;text-decoration:none;">Read today&rsquo;s full digest &rarr;</a>
-        </div>
+        rows += f"""
+      <div style="padding:14px 0;{border}">
+        <a href="{href}"
+           style="font-family:Georgia,'Times New Roman',serif;font-size:16px;
+                  font-weight:600;line-height:1.35;color:#1a1a1a;text-decoration:none;
+                  display:block;margin-bottom:5px;">
+          {title}
+        </a>
+        <div style="font-size:11px;color:#aaa;letter-spacing:0.01em;">{byline}</div>
       </div>"""
 
+    return f"""
+    <div style="padding:24px 28px 0;">
+      <div style="font-size:9px;font-weight:700;text-transform:uppercase;
+                  letter-spacing:0.18em;color:#888;border-bottom:2.5px solid #1a1a1a;
+                  padding-bottom:8px;margin-bottom:0;">
+        Today&rsquo;s Top Stories
+      </div>
+      {rows}
+    </div>"""
 
-# ── Main email builder ─────────────────────────────────────────────────────────
 
-def build_email_html(articles: list[dict], yesterday_articles: list[dict],
+def _render_cta(non_world_count: int) -> str:
+    """CTA box — dynamic story count + button to homepage."""
+    more = max(0, non_world_count - 5)
+    more_label = f"+ {more} more stories today" if more > 0 else "Read all stories today"
+
+    return f"""
+    <div style="padding:24px 28px 0;">
+      <div style="background:#f3f1ed;border:1px solid #e0ddd8;border-radius:6px;
+                  padding:22px 20px;text-align:center;">
+        <div style="font-size:12px;color:#888;margin-bottom:6px;letter-spacing:0.04em;
+                    text-transform:uppercase;font-weight:600;">
+          {more_label}
+        </div>
+        <div style="font-family:Georgia,'Times New Roman',serif;font-size:18px;
+                    font-weight:600;color:#1a1a1a;line-height:1.3;margin-bottom:18px;">
+          Theology &nbsp;·&nbsp; Church Life &nbsp;·&nbsp; Culture &nbsp;·&nbsp; World News
+        </div>
+        <a href="https://www.christiancurator.com/"
+           style="display:inline-block;background:#2C4A2E;color:#fff;
+                  font-size:14px;font-weight:700;padding:13px 32px;
+                  border-radius:4px;text-decoration:none;letter-spacing:0.03em;">
+          Read today&rsquo;s digest &rarr;
+        </a>
+      </div>
+    </div>"""
+
+
+def _render_go_deeper(topic: dict) -> str:
+    """Rotating topic spotlight card."""
+    if not topic:
+        return ""
+
+    name     = topic.get("name", "")
+    slug     = topic.get("slug", "")
+    category = topic.get("category", "")
+    question = topic.get("hook", "")
+    summary  = topic.get("summary") or topic.get("hook", "")
+    url      = f"https://www.christiancurator.com/topics/{slug}/"
+
+    return f"""
+    <div style="padding:28px 28px 0;">
+      <div style="border:1px solid #e0ddd8;border-radius:6px;overflow:hidden;">
+
+        <div style="background:#2C4A2E;padding:10px 18px;">
+          <div style="font-size:9px;font-weight:700;text-transform:uppercase;
+                      letter-spacing:0.2em;color:#b5ccb8;">
+            Go Deeper &nbsp;·&nbsp; Topic Spotlight
+          </div>
+        </div>
+
+        <div style="padding:18px 18px 20px;background:#faf9f7;">
+          <div style="font-size:9.5px;font-weight:700;text-transform:uppercase;
+                      letter-spacing:0.14em;color:#2C4A2E;margin-bottom:7px;">
+            {category}
+          </div>
+          <div style="font-family:Georgia,'Times New Roman',serif;font-size:21px;
+                      font-weight:600;line-height:1.2;color:#1a1a1a;margin-bottom:10px;">
+            {name}
+          </div>
+          <div style="font-size:13.5px;color:#555;font-style:italic;line-height:1.65;
+                      border-left:2px solid #b5ccb8;padding-left:12px;margin-bottom:16px;">
+            {question}
+          </div>
+          <div style="font-size:13px;color:#444;line-height:1.65;margin-bottom:18px;">
+            {summary}
+          </div>
+          <a href="{url}"
+             style="display:inline-block;background:#faf9f7;color:#2C4A2E;
+                    font-size:12.5px;font-weight:700;padding:9px 20px;
+                    border-radius:4px;text-decoration:none;letter-spacing:0.02em;
+                    border:1.5px solid #2C4A2E;">
+            Explore this topic &rarr;
+          </a>
+        </div>
+
+      </div>
+    </div>"""
+
+
+# ── Main builder ───────────────────────────────────────────────────────────────
+
+def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None,
                      daily_summary: dict = None, research_articles: list[dict] = None) -> str:
+
     if isinstance(articles, dict):
         articles = articles.get("articles", [])
 
-    today = date.today().strftime("%B %-d, %Y")
+    today_long = date.today().strftime("%A, %B %-d, %Y")
 
-    # ── Preheader (invisible inbox preview text) ───────────────────────────────
-    preheader_text = ""
-    if daily_summary and daily_summary.get("paragraphs_plain"):
-        first_para = daily_summary["paragraphs_plain"][0]
-        first_sentence = re.split(r'(?<=[.!?])\s', first_para)[0]
-        preheader_text = first_sentence[:150]
-    elif articles:
-        lead = next((a for a in articles if a.get("source_type") != "world_news"), None)
-        if lead:
-            preheader_text = (lead.get("rewritten_title") or lead.get("title", ""))[:150]
+    # Preheader: first 3 non-world-news headline titles
+    top_titles = [
+        a.get("rewritten_title") or a.get("title", "")
+        for a in sorted(
+            [a for a in articles if a.get("source_type") != "world_news"],
+            key=lambda a: a.get("final_score", a.get("score", 0)),
+            reverse=True,
+        )[:3]
+    ]
+    preheader = " &nbsp;·&nbsp; ".join(t for t in top_titles if t)
+    if preheader:
+        preheader += " &nbsp;·&nbsp; and more."
 
-    preheader_html = f"""
-    <div style="display:none;max-height:0;overflow:hidden;font-size:1px;color:#faf9f7;">
-      {preheader_text}&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌
-    </div>""" if preheader_text else ""
+    non_world_count  = len([a for a in articles if a.get("source_type") != "world_news"])
+    spotlight_topic  = _get_spotlight_topic()
 
-    # ── Topic cards ────────────────────────────────────────────────────────────
-    today_cards = _get_topic_cards()
-
-    cards_html = ""
-    for card in today_cards:
-        cards_html += f"""
-        <div style="margin-bottom:20px;">
-          {_render_topic_card(card, muted=False)}
-        </div>"""
-
-    # ── World news card ────────────────────────────────────────────────────────
-    world_top3 = sorted(
-        [a for a in articles if a.get("source_type") == "world_news"],
-        key=lambda a: a.get("final_score", a.get("score", 0)), reverse=True
-    )[:3]
-    world_card_html = ""
-    if world_top3:
-        world_card_html = f"""
-        <div style="margin-bottom:20px;">
-          {_render_world_news_card(world_top3)}
-        </div>"""
-
-    today_section_html = ""
-    if cards_html or world_card_html:
-        today_section_html = f"""
-    <div style="margin-bottom:8px;">
-      <div style="font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#1a1a1a;border-bottom:2.5px solid #1a1a1a;padding-bottom:6px;margin-bottom:20px;">
-        In the Conversation Today
-      </div>
-      {cards_html}
-      {world_card_html}
-    </div>"""
-
-    # ── CTA ────────────────────────────────────────────────────────────────────
-    cta_html = """
-    <div style="text-align:center;margin:32px 0;padding:24px 20px;background:#EFF4F0;border:1px solid #B5CCB8;border-radius:6px;">
-      <div style="font-family:Georgia,serif;font-size:17px;font-weight:700;color:#1a1a1a;margin-bottom:6px;">See all the conversations happening today</div>
-      <div style="font-size:13px;color:#555;margin-bottom:18px;">Theology &middot; Church Life &middot; Spiritual Formation &middot; Culture &amp; Society</div>
-      <a href="https://www.christiancurator.com/"
-         style="display:inline-block;background:#2C4A2E;color:#fff;font-family:Georgia,serif;
-                font-size:15px;font-weight:700;padding:13px 28px;border-radius:4px;
-                text-decoration:none;letter-spacing:0.02em;">
-        Visit Christian Curator &rarr;
-      </a>
-    </div>"""
+    top_stories_html = _render_top_stories(articles)
+    cta_html         = _render_cta(non_world_count)
+    go_deeper_html   = _render_go_deeper(spotlight_topic)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"></head>
-<body style="margin:0;padding:0;background:#faf9f7;font-family:'Helvetica Neue',Arial,sans-serif;color:#1a1a1a;">
-  {preheader_html}
-  <div style="max-width:600px;margin:0 auto;padding:20px 20px 32px;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0;padding:0;background:#e8e5e0;font-family:'Helvetica Neue',Arial,sans-serif;color:#1a1a1a;">
 
-    <!-- Top bar: date left, subscribe right (mirrors site cc-top-bar) -->
-    <div style="display:table;width:100%;margin-bottom:14px;">
-      <div style="display:table-cell;font-size:12px;color:#888;letter-spacing:0.02em;vertical-align:middle;">{today}</div>
+  <div style="display:none;max-height:0;overflow:hidden;font-size:1px;color:#e8e5e0;">
+    {preheader}&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;&nbsp;&#8204;
+  </div>
+
+  <div style="max-width:600px;margin:0 auto;background:#faf9f7;padding:0 0 40px;">
+
+    <div style="padding:14px 28px 12px;display:table;width:100%;box-sizing:border-box;">
+      <div style="display:table-cell;font-size:11px;color:#999;letter-spacing:0.05em;
+                  vertical-align:middle;text-transform:uppercase;">
+        {today_long}
+      </div>
       <div style="display:table-cell;text-align:right;vertical-align:middle;">
-        <span style="font-size:12px;color:#888;">Forwarded to you? </span>
-        <a href="https://www.christiancurator.com/#cc-email-box" style="background:#2C4A2E;color:#fff;font-size:12px;font-weight:700;padding:5px 14px;border-radius:3px;text-decoration:none;display:inline-block;margin-left:6px;">Subscribe Free &rarr;</a>
+        <span style="font-size:11px;color:#aaa;">Forwarded to you?&nbsp;</span>
+        <a href="https://www.christiancurator.com/#cc-email-box"
+           style="background:#2C4A2E;color:#fff;font-size:11px;font-weight:700;
+                  padding:4px 12px;border-radius:3px;text-decoration:none;
+                  display:inline-block;letter-spacing:0.04em;">
+          Subscribe Free
+        </a>
       </div>
     </div>
 
-    <!-- Masthead (mirrors site cc-masthead) -->
-    <div style="text-align:center;padding-bottom:14px;border-bottom:2.5px solid #1a1a1a;margin-bottom:26px;">
-      <div style="font-family:Georgia,'Times New Roman',serif;font-size:38px;font-weight:600;letter-spacing:-0.02em;color:#1a1a1a;line-height:1;">Christian Curator</div>
-      <div style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin-top:8px;font-weight:400;">For curious Christians seeking clarity on the questions that matter most</div>
+    <div style="text-align:center;padding:8px 28px 18px;border-bottom:2.5px solid #1a1a1a;margin:0 28px;">
+      <a href="https://www.christiancurator.com/" style="text-decoration:none;">
+        <div style="font-family:Georgia,'Times New Roman',serif;font-size:42px;font-weight:600;
+                    letter-spacing:-0.02em;color:#1a1a1a;line-height:1;">
+          Christian Curator
+        </div>
+      </a>
+      <div style="font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;
+                  color:#aaa;margin-top:9px;font-weight:400;">
+        For curious Christians seeking clarity on the questions that matter most
+      </div>
     </div>
 
-    {today_section_html}
+    {top_stories_html}
     {cta_html}
+    {go_deeper_html}
 
-    <!-- Forward nudge -->
-    <div style="margin-top:28px;padding:16px 20px;border:1px solid #e0ddd8;border-radius:4px;">
-      <div style="font-size:13px;color:#3a3a3a;margin-bottom:6px;">Know someone who&rsquo;d enjoy this?</div>
-      <div style="font-size:12px;color:#888;">Forward this email &mdash; it takes two seconds and means a lot.</div>
-      <div style="margin-top:10px;">
-        <a href="https://www.christiancurator.com/#cc-email-box" style="font-size:12px;font-weight:700;color:#2C4A2E;text-decoration:none;">christiancurator.com &rarr;</a>
+    <div style="padding:20px 28px 0;text-align:center;">
+      <div style="font-size:12px;color:#bbb;line-height:1.7;">
+        Know a curious Christian who&rsquo;d enjoy this?&nbsp;
+        <a href="mailto:?subject=Christian%20Curator%20%E2%80%94%20Daily%20Digest&body=Thought%20you%27d%20enjoy%20this%3A%20https%3A%2F%2Fwww.christiancurator.com%2F"
+           style="color:#2C4A2E;font-weight:700;text-decoration:none;">
+          Forward this email.
+        </a>
       </div>
     </div>
 
-    <!-- Footer (mirrors site cc-footer) -->
-    <div style="border-top:2.5px solid #1a1a1a;margin-top:28px;padding-top:14px;">
+    <div style="margin:24px 28px 0;padding-top:14px;border-top:2.5px solid #1a1a1a;">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;color:#1a1a1a;">Christian Curator</td>
-          <td style="text-align:right;font-size:11px;color:#888;">
-            <a href="https://www.christiancurator.com/digest/" style="color:#888;text-decoration:none;font-weight:600;">Daily Digest</a>
-            &nbsp;&nbsp;
-            <a href="https://www.christiancurator.com/archive/" style="color:#888;text-decoration:none;font-weight:600;">Archive</a>
+          <td style="font-family:Georgia,'Times New Roman',serif;font-size:14px;
+                     font-weight:600;color:#1a1a1a;vertical-align:middle;">
+            Christian Curator
+          </td>
+          <td style="text-align:right;vertical-align:middle;">
+            <a href="https://www.christiancurator.com/"
+               style="font-size:11px;color:#aaa;text-decoration:none;font-weight:600;
+                      letter-spacing:0.04em;text-transform:uppercase;">
+              Visit Site
+            </a>
           </td>
         </tr>
       </table>
-      <div style="font-size:11px;color:#aaa;margin-top:8px;">Curated from across the evangelical web.</div>
+      <div style="font-size:11px;color:#ccc;margin-top:8px;line-height:1.6;">
+        Curated from across the evangelical web. &nbsp;·&nbsp;
+        <a href="{"{{{unsubscribe}}}"}" style="color:#ccc;text-decoration:underline;">Unsubscribe</a>
+      </div>
     </div>
 
   </div>
@@ -303,22 +327,27 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict],
 </html>"""
 
 
+# ── File save ──────────────────────────────────────────────────────────────────
+
 def save_email_html(html_content: str) -> str:
     path = DOCS_DIR / "email_draft.html"
     path.write_text(html_content, encoding="utf-8")
     return str(path.resolve())
 
 
-def send_email(articles: list[dict], yesterday_articles: list[dict],
+# ── Send ───────────────────────────────────────────────────────────────────────
+
+def send_email(articles: list[dict], yesterday_articles: list[dict] = None,
                daily_summary: dict = None, research_articles: list[dict] = None) -> bool:
+
     if isinstance(articles, dict):
         articles = articles.get("articles", [])
 
-    today = date.today().strftime("%B %-d, %Y")
-    subject = f"Christian Curator — {today}"
-    html_content = build_email_html(articles, yesterday_articles, daily_summary=daily_summary,
+    today        = date.today().strftime("%B %-d, %Y")
+    subject      = f"Christian Curator — {today}"
+    html_content = build_email_html(articles, yesterday_articles,
+                                    daily_summary=daily_summary,
                                     research_articles=research_articles)
-
     path = save_email_html(html_content)
     print(f"  Email HTML saved to: {path}")
 
@@ -334,7 +363,6 @@ def send_email(articles: list[dict], yesterday_articles: list[dict],
         "api-key": BREVO_API_KEY,
         "content-type": "application/json",
     }
-
     payload = {
         "name": f"Christian Curator — {today}",
         "subject": subject,
