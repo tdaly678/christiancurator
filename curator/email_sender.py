@@ -317,8 +317,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
         </tr>
       </table>
       <div style="font-size:11px;color:#ccc;margin-top:8px;line-height:1.6;">
-        Curated from across the evangelical web. &nbsp;·&nbsp;
-        <a href="{"{{{unsubscribe}}}"}" style="color:#ccc;text-decoration:underline;">Unsubscribe</a>
+        Curated from across the evangelical web.
       </div>
     </div>
 
