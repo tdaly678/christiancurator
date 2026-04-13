@@ -580,18 +580,6 @@
   </div>
   {% endif %}
 
-  <!-- Past digests -->
-  {% if archive_dates %}
-  <div class="cc-archive-list">
-    <div class="cc-archive-list-header">Past Daily Digests</div>
-    <div class="cc-archive-links">
-      {% for d in archive_dates %}
-      <a href="/archive/{{ d.iso }}/" class="cc-archive-link">{{ d.display }}</a>
-      {% endfor %}
-    </div>
-  </div>
-  {% endif %}
-
   <!-- Subscribe -->
   <div id="cc-email-box" style="margin-top:2.75rem;">
     <div class="cc-signup-block">
