@@ -1201,5 +1201,601 @@
     "website": "",
     "books": [],
     "initials": "AE"
+  },
+  {
+    "name": "Ligon Duncan",
+    "slug": "ligon-duncan",
+    "bio": "Ligon Duncan is a Reformed theologian, pastor, and author deeply committed to expository preaching and biblical scholarship. He has served as senior pastor of Christ Church in Jackson, Mississippi, and is known for his work in promoting confessional Reformed theology and historical Christian thought. Through teaching, writing, and pastoral ministry, Duncan seeks to help believers understand and apply Scripture with doctrinal depth and practical wisdom.",
+    "affiliation": "Christ Church Jackson; Reformed Theological Seminary",
+    "role": "Senior Pastor, Author & Theologian",
+    "education": "M.A.R., Westminster Theological Seminary; Ph.D., University of Edinburgh",
+    "website": "https://ligonduncan.com",
+    "books": [
+      {
+        "title": "Recovering the Reformed Confession",
+        "amazon_url": "https://www.amazon.com/s?k=Recovering+the+Reformed+Confession+Ligon+Duncan"
+      },
+      {
+        "title": "The Whole Counsel of God",
+        "amazon_url": "https://www.amazon.com/s?k=The+Whole+Counsel+of+God+Ligon+Duncan"
+      },
+      {
+        "title": "Does the Bible Really Say That?",
+        "amazon_url": "https://www.amazon.com/s?k=Does+the+Bible+Really+Say+That+Ligon+Duncan"
+      },
+      {
+        "title": "Sermon on the Mount",
+        "amazon_url": "https://www.amazon.com/s?k=Sermon+on+the+Mount+Ligon+Duncan"
+      }
+    ],
+    "initials": "LD"
+  },
+  {
+    "name": "Matt Smethurst",
+    "slug": "matt-smethurst",
+    "bio": "Matt Smethurst is an editor and writer for The Gospel Coalition, where he helps curate and create Christian content for a global audience. Known for his clear, accessible writing on Scripture, theology, and Christian living, Smethurst has become a trusted voice for evangelical readers seeking to deepen their faith and understanding of God's Word.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Editor & Writer",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Practically Speaking: A Toolkit for Practically Applying God's Word",
+        "amazon_url": "https://www.amazon.com/s?k=Practically+Speaking+Matt+Smethurst"
+      },
+      {
+        "title": "Before You Open Your Bible: Nine Ways to Approach Scripture",
+        "amazon_url": "https://www.amazon.com/s?k=Before+You+Open+Your+Bible+Matt+Smethurst"
+      }
+    ],
+    "initials": "MS"
+  },
+  {
+    "name": "Reuben Hunter",
+    "slug": "reuben-hunter",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RH"
+  },
+  {
+    "name": "Glenna Marshall",
+    "slug": "glenna-marshall",
+    "bio": "Glenna Marshall is a writer and Bible teacher known for her thoughtful exploration of Scripture and Christian living. She contributes to various Christian publications and speaks on topics including faith, discipleship, and biblical womanhood.",
+    "affiliation": "",
+    "role": "Writer & Bible Teacher",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "GM"
+  },
+  {
+    "name": "Cole Newton",
+    "slug": "cole-newton",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CN"
+  },
+  {
+    "name": "Daniel Stegeman",
+    "slug": "daniel-stegeman",
+    "bio": "Daniel Stegeman is a Christian author and speaker dedicated to exploring faith, discipleship, and spiritual growth. His work encourages believers to deepen their relationship with Christ and live out their faith in practical, meaningful ways.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DS"
+  },
+  {
+    "name": "William Conley",
+    "slug": "william-conley",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "WC"
+  },
+  {
+    "name": "Arla Eicher",
+    "slug": "arla-eicher",
+    "bio": "Arla Eicher is a thoughtful Christian writer and content creator dedicated to exploring faith, family, and discipleship. Her work encourages believers to deepen their relationship with Christ through practical wisdom and biblical reflection.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AE"
+  },
+  {
+    "name": "Daniel Stevens",
+    "slug": "daniel-stevens",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DS"
+  },
+  {
+    "name": "Chad Higgins",
+    "slug": "chad-higgins",
+    "bio": "Chad Higgins is a Christian author and speaker dedicated to helping believers deepen their faith and understand Scripture more fully. His work focuses on practical discipleship and spiritual growth for modern Christians.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CH"
+  },
+  {
+    "name": "Andrew Spencer",
+    "slug": "andrew-spencer",
+    "bio": "Andrew Spencer is a Christian author and communicator dedicated to helping believers navigate faith in contemporary culture. His work emphasizes biblical truth, practical discipleship, and engaging with modern challenges from a Christian worldview.",
+    "affiliation": "",
+    "role": "Author & Christian Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AS"
+  },
+  {
+    "name": "André Paultre",
+    "slug": "andr-paultre",
+    "bio": "André Paultre is a Christian author and content creator dedicated to exploring faith, spirituality, and biblical wisdom for contemporary audiences. His work focuses on helping believers deepen their understanding of Scripture and apply Christian principles to everyday life.",
+    "affiliation": "",
+    "role": "Author & Christian Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AP"
+  },
+  {
+    "name": "Emiliano Rodríguez Mega and Simon Romero",
+    "slug": "emiliano-rodrguez-mega-and-simon-romero",
+    "bio": "Emiliano Rodríguez Mega and Simon Romero are journalists who have covered major news stories across Latin America and the Caribbean. Their reporting often intersects with themes of faith, culture, and social issues relevant to Christian communities in the region.",
+    "affiliation": "The New York Times",
+    "role": "Journalists & Correspondents",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ERM-SR"
+  },
+  {
+    "name": "Emily Brown",
+    "slug": "emily-brown",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EB"
+  },
+  {
+    "name": "R. Albert Mohler",
+    "slug": "r-albert-mohler",
+    "bio": "R. Albert Mohler Jr. is the president of The Southern Baptist Theological Seminary and one of the most influential evangelical leaders in America. A prolific writer and speaker, he is known for applying biblical theology to contemporary cultural and political issues facing Christians today.",
+    "affiliation": "The Southern Baptist Theological Seminary; The Briefing",
+    "role": "Seminary President, Author & Theologian",
+    "education": "Ph.D., Southern Baptist Theological Seminary",
+    "website": "https://albertmohler.com",
+    "books": [
+      {
+        "title": "The Gathering Storm: Secularism, Culture, and the Church",
+        "amazon_url": "https://www.amazon.com/s?k=The+Gathering+Storm+Albert+Mohler"
+      },
+      {
+        "title": "We Cannot Be Silent: Speaking Truth to a Culture Redefining Sex, Marriage, and the Very Meaning of Right and Wrong",
+        "amazon_url": "https://www.amazon.com/s?k=We+Cannot+Be+Silent+Albert+Mohler"
+      },
+      {
+        "title": "The Prayer That Turns the World Upside Down: The Lord's Prayer as a Manifesto for Revolution",
+        "amazon_url": "https://www.amazon.com/s?k=The+Prayer+That+Turns+the+World+Upside+Down+Mohler"
+      },
+      {
+        "title": "Atheism Remix: A Christian Confrontation of Contemporary Atheism",
+        "amazon_url": "https://www.amazon.com/s?k=Atheism+Remix+Albert+Mohler"
+      },
+      {
+        "title": "The Disappearance of God: Dangerous Beliefs in the New Spiritual Darkness",
+        "amazon_url": "https://www.amazon.com/s?k=The+Disappearance+of+God+Albert+Mohler"
+      }
+    ],
+    "initials": "RAM"
+  },
+  {
+    "name": "Gillis Harp",
+    "slug": "gillis-harp",
+    "bio": "Gillis Harp is a historian and author who specializes in American religious and intellectual history, with particular expertise in the development of Christian thought and culture. His scholarly work examines how faith has shaped American society and institutions throughout the nation's history. Harp combines rigorous historical research with accessible writing to help contemporary Christians understand their spiritual and cultural heritage.",
+    "affiliation": "Grove City College",
+    "role": "Historian & Author",
+    "education": "Ph.D. in American History",
+    "website": "",
+    "books": [
+      {
+        "title": "Positivism and the Separation of Church and State: The Church in Nineteenth-Century America",
+        "amazon_url": "https://www.amazon.com/s?k=Positivism+Separation+Church+State+Gillis+Harp"
+      },
+      {
+        "title": "Brahmin Prophet: Phillips Brooks and the Path of Liberal Protestantism",
+        "amazon_url": "https://www.amazon.com/s?k=Brahmin+Prophet+Phillips+Brooks+Gillis+Harp"
+      }
+    ],
+    "initials": "GH"
+  },
+  {
+    "name": "Cory Brock",
+    "slug": "cory-brock",
+    "bio": "Cory Brock is a pastor, author, and speaker who seeks to help Christians think deeply about their faith and culture. He serves as senior pastor at Antioch Community Church in Nashville, Tennessee, and is known for thoughtful biblical teaching that engages contemporary questions.",
+    "affiliation": "Antioch Community Church (Nashville); Various Christian publications",
+    "role": "Senior Pastor & Author",
+    "education": "PhD in Systematic Theology, University of St. Andrews",
+    "website": "https://corybrock.com",
+    "books": [
+      {
+        "title": "Theססential Church: Reclaiming a Christianity the World Never Forgot",
+        "amazon_url": "https://www.amazon.com/s?k=The+Essential+Church+Cory+Brock"
+      },
+      {
+        "title": "Heavenly Minded: The Pursuit of a Christian Worldview",
+        "amazon_url": "https://www.amazon.com/s?k=Heavenly+Minded+Cory+Brock"
+      },
+      {
+        "title": "God is a Drinker: Finding Delight in the Divine Goodness",
+        "amazon_url": "https://www.amazon.com/s?k=God+is+a+Drinker+Cory+Brock"
+      }
+    ],
+    "initials": "CB"
+  },
+  {
+    "name": "Vaneetha Rendall Risner",
+    "slug": "vaneetha-rendall-risner",
+    "bio": "Vaneetha Rendall Risner is an author and speaker who writes about faith, suffering, and God's grace from her own experience navigating chronic illness and disability. Her transparent and vulnerable approach to Christian living has resonated with readers seeking honest conversations about pain and God's faithfulness. She contributes to various Christian publications and speaks at conferences about finding hope and purpose in difficult circumstances.",
+    "affiliation": "Desiring God, The Gospel Coalition",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "https://www.vaneetharisner.com",
+    "books": [
+      {
+        "title": "The Scars That Have Shaped Me",
+        "amazon_url": "https://www.amazon.com/s?k=The+Scars+That+Have+Shaped+Me+Vaneetha+Risner"
+      },
+      {
+        "title": "Grief Undone",
+        "amazon_url": "https://www.amazon.com/s?k=Grief+Undone+Vaneetha+Risner"
+      }
+    ],
+    "initials": "VRR"
+  },
+  {
+    "name": "Guardian staff and agencies",
+    "slug": "guardian-staff-and-agencies",
+    "bio": "Guardian staff and agencies represent the collaborative reporting efforts of The Guardian newspaper and its network of news partners. This collective body of journalists and writers covers news, culture, and current events from a range of perspectives, including occasional coverage of faith and religious topics relevant to contemporary Christian audiences.",
+    "affiliation": "The Guardian",
+    "role": "News Staff and Journalists",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "GSA"
+  },
+  {
+    "name": "Paul J. Pastor",
+    "slug": "paul-j-pastor",
+    "bio": "Paul J. Pastor is an author, pastor, and spiritual director known for his thoughtful writing on faith, Scripture, and the contemplative Christian life. His work emphasizes the integration of biblical truth with lived experience, offering readers deeper insights into discipleship and spiritual formation. He has contributed to various Christian publications and speaks regularly at conferences and churches.",
+    "affiliation": "Imago Dei Community; Christianity Today contributor",
+    "role": "Author, Pastor & Spiritual Director",
+    "education": "Multnomah University",
+    "website": "https://pauljpastor.com",
+    "books": [
+      {
+        "title": "The Listening Life: Embracing Contemplative Traditions in an Active World",
+        "amazon_url": "https://www.amazon.com/s?k=The+Listening+Life+Paul+Pastor"
+      },
+      {
+        "title": "Heal Us, Emmanuel: Receiving God's Love in the Midst of Suffering",
+        "amazon_url": "https://www.amazon.com/s?k=Heal+Us+Emmanuel+Paul+Pastor"
+      },
+      {
+        "title": "The Renewal of All Things: A Conversation about the New Heaven and the New Earth",
+        "amazon_url": "https://www.amazon.com/s?k=The+Renewal+of+All+Things+Paul+Pastor"
+      }
+    ],
+    "initials": "PJP"
+  },
+  {
+    "name": "Jordan Stone",
+    "slug": "jordan-stone",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JS"
+  },
+  {
+    "name": "Reuben Bredenhof",
+    "slug": "reuben-bredenhof",
+    "bio": "Reuben Bredenhof is a pastor and Christian writer committed to helping believers understand Scripture and live out their faith in the modern world. His writing emphasizes practical theology and biblical worldview formation for contemporary Christians.",
+    "affiliation": "Christian Courier",
+    "role": "Pastor & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RB"
+  },
+  {
+    "name": "Edward Helmore",
+    "slug": "edward-helmore",
+    "bio": "Edward Helmore is a writer and journalist who has contributed commentary on faith, culture, and current events to various Christian and mainstream publications. His work reflects a thoughtful engagement with how Christian values intersect with contemporary issues and cultural trends.",
+    "affiliation": "",
+    "role": "Writer & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EH"
+  },
+  {
+    "name": "Matthew Luxmoore",
+    "slug": "matthew-luxmoore",
+    "bio": "Matthew Luxmoore is a journalist and writer who has covered religious affairs, Eastern European politics, and faith-based issues for major international publications. His reporting combines rigorous journalism with an interest in how Christian communities navigate contemporary social and political challenges.",
+    "affiliation": "The Economist, The Telegraph, Religion News Service",
+    "role": "Journalist & Religion Correspondent",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ML"
+  },
+  {
+    "name": "Ellen Hayes",
+    "slug": "ellen-hayes",
+    "bio": "Ellen Hayes is a Christian author and speaker known for her work in faith-based content creation. She writes with a focus on spiritual encouragement and biblical living for contemporary Christian audiences.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EH"
+  },
+  {
+    "name": "Mark Jones",
+    "slug": "mark-jones",
+    "bio": "Mark Jones is a Reformed theologian and pastor known for making classical Christian doctrine accessible to contemporary audiences. His work emphasizes the practical application of theology to the Christian life, drawing from both Scripture and the rich heritage of Reformed thought.",
+    "affiliation": "謏Coral Ridge Presbyterian Church; Knowing Faith podcast",
+    "role": "Pastor & Author",
+    "education": "M.A.R., Westminster Theological Seminary",
+    "website": "https://www.markjonesministries.com",
+    "books": [
+      {
+        "title": "Knowing Christ",
+        "amazon_url": "https://www.amazon.com/s?k=Knowing+Christ+Mark+Jones"
+      },
+      {
+        "title": "Antinomianism: Reformed Theology's Unwelcome Guest?",
+        "amazon_url": "https://www.amazon.com/s?k=Antinomianism+Mark+Jones"
+      },
+      {
+        "title": "Belief and the Christian Life",
+        "amazon_url": "https://www.amazon.com/s?k=Belief+Christian+Life+Mark+Jones"
+      },
+      {
+        "title": "Picturing God",
+        "amazon_url": "https://www.amazon.com/s?k=Picturing+God+Mark+Jones"
+      },
+      {
+        "title": "Precious Blood",
+        "amazon_url": "https://www.amazon.com/s?k=Precious+Blood+Mark+Jones"
+      }
+    ],
+    "initials": "MJ"
+  },
+  {
+    "name": "Rob Plummer",
+    "slug": "rob-plummer",
+    "bio": "Rob Plummer is a New Testament scholar and professor known for his accessible teaching on biblical interpretation and Greek language studies. He is committed to helping Christians engage deeply with Scripture through sound exegetical methods and theological insight.",
+    "affiliation": "Southern Baptist Theological Seminary",
+    "role": "Professor & Author",
+    "education": "Ph.D. in New Testament, Southern Baptist Theological Seminary",
+    "website": "https://www.robplummer.com",
+    "books": [
+      {
+        "title": "40 Questions About Interpreting the Bible",
+        "amazon_url": "https://www.amazon.com/s?k=40+Questions+About+Interpreting+the+Bible+Rob+Plummer"
+      },
+      {
+        "title": "Paul's Understanding of the Church's Mission",
+        "amazon_url": "https://www.amazon.com/s?k=Paul%27s+Understanding+of+the+Church%27s+Mission+Rob+Plummer"
+      }
+    ],
+    "initials": "RP"
+  },
+  {
+    "name": "Jcoleman",
+    "slug": "jcoleman",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JC"
+  },
+  {
+    "name": "Aaron Earls",
+    "slug": "aaron-earls",
+    "bio": "Aaron Earls is a writer and researcher focused on faith, culture, and the church in America. He has contributed extensively to Christian publications and research organizations, helping churches understand cultural trends and discipleship challenges. His work aims to equip believers with insights for engaging thoughtfully with contemporary issues.",
+    "affiliation": "Lifeway Research",
+    "role": "Writer & Researcher",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AE"
+  },
+  {
+    "name": "Jake Meador",
+    "slug": "jakemeadorgmailcom-jake-meador",
+    "bio": "Jake Meador is a writer and editor known for thoughtful commentary on faith, culture, and Christian witness in contemporary society. He has contributed to various Christian publications and platforms, exploring how believers can engage meaningfully with modern cultural issues while maintaining biblical conviction.",
+    "affiliation": "Mere Orthodoxy",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JM"
+  },
+  {
+    "name": "Ligonier Updates",
+    "slug": "ligonier-updates",
+    "bio": "Ligonier Updates is the official news and content platform of Ligonier Ministries, dedicated to equipping Christians with Reformed theological resources and biblical teaching. Through articles, updates, and curated content, Ligonier Updates serves the global church by promoting the study of Scripture and classical Christian doctrine.",
+    "affiliation": "Ligonier Ministries",
+    "role": "Content Platform & Ministry News",
+    "education": "",
+    "website": "https://www.ligonier.org/updates",
+    "books": [],
+    "initials": "LU"
+  },
+  {
+    "name": "Clinton Manley",
+    "slug": "clinton-manley",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CM"
+  },
+  {
+    "name": "Haleluya Hadero",
+    "slug": "haleluya-hadero",
+    "bio": "Haleluya Hadero is a writer and content creator who engages with Christian themes and spiritual reflection. Her work explores faith, culture, and the intersection of personal belief with contemporary life.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "HH"
+  },
+  {
+    "name": "Katy Carl",
+    "slug": "katy-carl",
+    "bio": "Katy Carl is a writer and content creator focused on Christian living and faith development. She contributes to various Christian platforms and publications, helping readers deepen their spiritual understanding and practice.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KC"
+  },
+  {
+    "name": "Rob Ventura",
+    "slug": "rob-ventura",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RV"
+  },
+  {
+    "name": "Sherry Qin",
+    "slug": "sherry-qin",
+    "bio": "Sherry Qin is a Chinese Christian author and speaker who shares insights on faith, cultural identity, and spiritual growth with audiences across Asia and beyond. Her work bridges contemporary Christian thought with practical wisdom for believers navigating modern challenges.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SQ"
+  },
+  {
+    "name": "FM AI",
+    "slug": "fm-ai",
+    "bio": "FM AI is an artificial intelligence assistant designed to help curate and organize Christian content. While not a human author in the traditional sense, FM AI works to support faith-based communities by facilitating access to meaningful theological resources and Christian thought.",
+    "affiliation": "",
+    "role": "AI Content Assistant",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "FM"
+  },
+  {
+    "name": "Brandon Corley",
+    "slug": "brandon-corley",
+    "bio": "Brandon Corley is a Christian author and speaker dedicated to helping believers deepen their faith and understanding of Scripture. Through his writing and teaching, he addresses practical spiritual topics relevant to modern Christian living.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BC"
+  },
+  {
+    "name": "Alex Kneen",
+    "slug": "alex-kneen",
+    "bio": "Alex Kneen is a Christian writer and content creator focused on faith, culture, and spiritual formation. His work explores how believers can engage thoughtfully with contemporary issues through a biblical worldview.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AK"
+  },
+  {
+    "name": "Joseph Rigney",
+    "slug": "joseph-rigney",
+    "bio": "Joseph Rigney is a writer and pastor committed to helping Christians think deeply about faith, culture, and Scripture. His work explores themes of Christian living, biblical wisdom, and spiritual formation for contemporary believers.",
+    "affiliation": "Bethlehem College & Seminary",
+    "role": "Author & Pastor",
+    "education": "M.Div., Bethlehem College & Seminary",
+    "website": "https://www.josephrigney.com",
+    "books": [
+      {
+        "title": "The Things of Earth: Treasuring God by Enjoying His Gifts",
+        "amazon_url": "https://www.amazon.com/s?k=The+Things+of+Earth+Joseph+Rigney"
+      },
+      {
+        "title": "Getting the Gospel Right: The Tie That Binds Evangelicals Together",
+        "amazon_url": "https://www.amazon.com/s?k=Getting+the+Gospel+Right+Joseph+Rigney"
+      },
+      {
+        "title": "Pierced for Our Transgressions: Rediscovering the Glory of Penal Substitution",
+        "amazon_url": "https://www.amazon.com/s?k=Pierced+for+Our+Transgressions+Joseph+Rigney"
+      }
+    ],
+    "initials": "JR"
+  },
+  {
+    "name": "Gavin",
+    "slug": "gavin",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "G"
+  },
+  {
+    "name": "Simon P. Kennedy",
+    "slug": "simon-p-kennedy",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SPK"
   }
 ]
