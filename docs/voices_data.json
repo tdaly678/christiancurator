@@ -1819,5 +1819,48 @@
     "website": "",
     "books": [],
     "initials": "LP"
+  },
+  {
+    "name": "Keith A. Mathison",
+    "slug": "keith-a-mathison",
+    "bio": "Keith A. Mathison is a Reformed theologian and author known for his clear, accessible treatments of Christian doctrine and apologetics. He has contributed significantly to contemporary evangelical and Reformed Christian thought through both academic writing and popular-level works designed to equip believers in their faith.",
+    "affiliation": "Ligonier Ministries",
+    "role": "Author & Theologian",
+    "education": "M.A. in Theological Studies",
+    "website": "",
+    "books": [
+      {
+        "title": "The Shape of Things to Come: Unfulfilled Prophecy and the End Times",
+        "amazon_url": "https://www.amazon.com/s?k=The+Shape+of+Things+to+Come+Keith+Mathison"
+      },
+      {
+        "title": "Given for You: Reclaiming Calvin's Doctrine of the Lord's Supper",
+        "amazon_url": "https://www.amazon.com/s?k=Given+for+You+Keith+Mathison"
+      },
+      {
+        "title": "Postmillennialism: An Eschatology of Hope",
+        "amazon_url": "https://www.amazon.com/s?k=Postmillennialism+Keith+Mathison"
+      },
+      {
+        "title": "The New Testament Development of Old Testament Institutions",
+        "amazon_url": "https://www.amazon.com/s?k=The+New+Testament+Development+of+Old+Testament+Institutions+Mathison"
+      },
+      {
+        "title": "Dispensationalism: Rightly Dividing the People of God?",
+        "amazon_url": "https://www.amazon.com/s?k=Dispensationalism+Keith+Mathison"
+      }
+    ],
+    "initials": "KAM"
+  },
+  {
+    "name": "Reem Nadeem",
+    "slug": "reem-nadeem",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RN"
   }
 ]
