@@ -1922,5 +1922,168 @@
       }
     ],
     "initials": "BH"
+  },
+  {
+    "name": "Michelle Ayres",
+    "slug": "michelle-ayres",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MA"
+  },
+  {
+    "name": "Thomas Brewer",
+    "slug": "thomas-brewer",
+    "bio": "Thomas Brewer is a thoughtful Christian writer and content creator dedicated to helping believers deepen their faith and understanding of Scripture. His work focuses on practical theology and spiritual growth for contemporary Christians.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TB"
+  },
+  {
+    "name": "Michael Jensen",
+    "slug": "michael-jensen",
+    "bio": "Michael Jensen is an Australian Anglican theologian and communicator known for making biblical scholarship accessible to everyday Christians. He has served as a minister and lecturer, contributing thoughtfully to contemporary Christian conversations about theology, faith, and cultural engagement.",
+    "affiliation": "Anglican Church in Australia; Moore Theological College",
+    "role": "Theologian, Author & Minister",
+    "education": "PhD, University of Cambridge",
+    "website": "https://michaeljensen.com.au",
+    "books": [
+      {
+        "title": "Gravity and Grace: Understanding the Divine Nature",
+        "amazon_url": "https://www.amazon.com/s?k=Gravity+and+Grace+Michael+Jensen"
+      },
+      {
+        "title": "For the Love of God: A Journey Through the Bible",
+        "amazon_url": "https://www.amazon.com/s?k=For+the+Love+of+God+Michael+Jensen"
+      }
+    ],
+    "initials": "MJ"
+  },
+  {
+    "name": "hbwilt",
+    "slug": "hbwilt",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": ""
+  },
+  {
+    "name": "Jared Moore",
+    "slug": "jared-moore",
+    "bio": "Jared Moore is a Christian writer and content creator dedicated to helping believers grow in their faith and understanding of Scripture. Through his writing and teaching, he addresses contemporary issues from a biblical worldview.",
+    "affiliation": "",
+    "role": "Author & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JM"
+  },
+  {
+    "name": "Taylor Berry",
+    "slug": "taylor-berry",
+    "bio": "Taylor Berry is a Christian writer and content creator focused on faith, culture, and discipleship. With a passion for helping believers navigate modern life through a biblical lens, Taylor contributes thoughtful perspectives to Christian audiences seeking authentic spiritual growth.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TB"
+  },
+  {
+    "name": "Doug Eaton",
+    "slug": "doug-eaton",
+    "bio": "Doug Eaton is a Christian writer and content creator focused on biblical teaching and spiritual growth. His work encourages believers to deepen their understanding of Scripture and apply Christian principles to everyday life.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DE"
+  },
+  {
+    "name": "Jared Kennedy",
+    "slug": "jared-kennedy",
+    "bio": "Jared Kennedy is a pastor, author, and speaker who focuses on helping families and churches navigate faith formation in a secular culture. He writes about parenting, discipleship, and how Christians can raise spiritually resilient children in the modern world. His work emphasizes the integration of faith into everyday family life.",
+    "affiliation": "The Grapevine Faith",
+    "role": "Pastor & Author",
+    "education": "Southern Seminary",
+    "website": "https://www.jaredkennedy.com",
+    "books": [
+      {
+        "title": "Raising Your Kids on Purpose for Their Calling",
+        "amazon_url": "https://www.amazon.com/s?k=Raising+Your+Kids+on+Purpose+for+Their+Calling+Jared+Kennedy"
+      },
+      {
+        "title": "The Fate of the Faithful: Christianity in the Middle East",
+        "amazon_url": "https://www.amazon.com/s?k=The+Fate+of+the+Faithful+Christianity+in+the+Middle+East+Jared+Kennedy"
+      },
+      {
+        "title": "Unashamed: Dropping the Baggage, Pulling the Mask, and Finding Freedom to Be Yourself",
+        "amazon_url": "https://www.amazon.com/s?k=Unashamed+Dropping+the+Baggage+Pulling+the+Mask+Finding+Freedom+Jared+Kennedy"
+      }
+    ],
+    "initials": "JK"
+  },
+  {
+    "name": "Rebecca F. Elliott",
+    "slug": "rebecca-f-elliott",
+    "bio": "Rebecca F. Elliott is a Christian author and illustrator known for creating children's books that celebrate faith, diversity, and God's love. Her work combines engaging storytelling with vibrant illustrations to help young readers explore biblical themes and Christian values in meaningful ways.",
+    "affiliation": "",
+    "role": "Author & Illustrator",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Just Because",
+        "amazon_url": "https://www.amazon.com/s?k=Just+Because+Rebecca+Elliott"
+      },
+      {
+        "title": "Milo Imagines the World",
+        "amazon_url": "https://www.amazon.com/s?k=Milo+Imagines+the+World+Rebecca+Elliott"
+      }
+    ],
+    "initials": "RFE"
+  },
+  {
+    "name": "Elvan Kivilcim",
+    "slug": "elvan-kivilcim",
+    "bio": "Elvan Kivilcim is a Christian writer and content creator focused on faith, spirituality, and biblical perspective. With a heart for helping believers deepen their understanding of Scripture and Christian living, Kivilcim contributes to conversations about integrating faith into daily life.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EK"
+  },
+  {
+    "name": "Cameron Shaffer",
+    "slug": "cameron-shaffer",
+    "bio": "Cameron Shaffer is a Christian writer and content creator dedicated to exploring faith, culture, and discipleship for modern believers. His work seeks to help Christians think critically about contemporary issues through a biblical worldview.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CS"
+  },
+  {
+    "name": "Gabriel N.E. Fluhrer",
+    "slug": "gabriel-ne-fluhrer",
+    "bio": "Gabriel N.E. Fluhrer is a Christian writer and content creator focused on biblical theology and faith development. His work engages thoughtful readers seeking deeper understanding of Scripture and its application to contemporary Christian life.",
+    "affiliation": "",
+    "role": "Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "GNF"
   }
 ]
