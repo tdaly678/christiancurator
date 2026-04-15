@@ -2085,5 +2085,180 @@
     "website": "",
     "books": [],
     "initials": "GNF"
+  },
+  {
+    "name": "Jeremy Kimble",
+    "slug": "jeremy-kimble",
+    "bio": "Jeremy Kimble is a Christian author and thinker who engages with apologetics and theological topics for modern believers. His work seeks to help Christians understand their faith more deeply and articulate it thoughtfully in contemporary culture.",
+    "affiliation": "",
+    "role": "Author & Apologist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JK"
+  },
+  {
+    "name": "Meredith Lee Myers",
+    "slug": "meredith-lee-myers",
+    "bio": "Meredith Lee Myers is a writer and content creator focused on faith, culture, and Christian living. She contributes to various Christian publications and platforms, helping readers navigate their spiritual journeys with thoughtful, biblically-grounded perspectives.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MLM"
+  },
+  {
+    "name": "Michael Mock",
+    "slug": "michael-mock",
+    "bio": "Michael Mock is a writer and speaker who explores faith, culture, and the Christian life with thoughtful reflection and biblical insight. His work encourages believers to engage meaningfully with their faith in the modern world.",
+    "affiliation": "",
+    "role": "Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MM"
+  },
+  {
+    "name": "Kristen LaValley",
+    "slug": "kristen-lavalley",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KL"
+  },
+  {
+    "name": "Thomas Goodwin",
+    "slug": "thomas-goodwin",
+    "bio": "Thomas Goodwin (1600-1680) was an English Puritan theologian and pastor whose pastoral writings profoundly influenced Reformed Christianity. A biblical expositor and spiritual director, he served as chaplain to Oliver Cromwell and contributed to the Westminster Standards. His works on assurance, the Person of Christ, and the Holy Spirit remain treasured resources for evangelical believers seeking deeper theological understanding.",
+    "affiliation": "Westminster Assembly",
+    "role": "Puritan Theologian & Pastor",
+    "education": "Christ's College, Cambridge",
+    "website": "",
+    "books": [
+      {
+        "title": "The Works of Thomas Goodwin (Complete)",
+        "amazon_url": "https://www.amazon.com/s?k=Works+of+Thomas+Goodwin"
+      },
+      {
+        "title": "The Heart of Christ in Heaven Towards Sinners on Earth",
+        "amazon_url": "https://www.amazon.com/s?k=Heart+of+Christ+in+Heaven+Thomas+Goodwin"
+      },
+      {
+        "title": "Of Christ the Mediator",
+        "amazon_url": "https://www.amazon.com/s?k=Of+Christ+the+Mediator+Thomas+Goodwin"
+      },
+      {
+        "title": "An Exposition of the Epistle to the Ephesians",
+        "amazon_url": "https://www.amazon.com/s?k=Exposition+Epistle+Ephesians+Thomas+Goodwin"
+      },
+      {
+        "title": "The Knowledge of God and Ourselves",
+        "amazon_url": "https://www.amazon.com/s?k=Knowledge+of+God+and+Ourselves+Thomas+Goodwin"
+      }
+    ],
+    "initials": "TG"
+  },
+  {
+    "name": "Julie Dickerson",
+    "slug": "julie-dickerson",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JD"
+  },
+  {
+    "name": "Steven Searcy",
+    "slug": "steven-searcy",
+    "bio": "Steven Searcy is a Christian writer and content creator focused on biblical teaching and spiritual growth. His work emphasizes practical faith application for modern believers seeking deeper understanding of Scripture.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SS"
+  },
+  {
+    "name": "Cassandra Vinograd and Oleksandr Chubko",
+    "slug": "cassandra-vinograd-and-oleksandr-chubko",
+    "bio": "Cassandra Vinograd and Oleksandr Chubko are international journalists and correspondents known for their reporting on global events, including coverage of Eastern Europe and international crises. Their work brings important news stories to Christian audiences seeking informed perspectives on world affairs.",
+    "affiliation": "NBC News, Reuters",
+    "role": "Journalists & News Correspondents",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CV-OC"
+  },
+  {
+    "name": "G. Dutro",
+    "slug": "gdutrochristianitytodaycom",
+    "bio": "G. Dutro is a writer and editor associated with Christianity Today, one of the leading evangelical Christian publications. With a focus on contemporary Christian thought and theology, Dutro contributes to meaningful conversations within the faith community.",
+    "affiliation": "Christianity Today",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "GD"
+  },
+  {
+    "name": "Timon Cline",
+    "slug": "timon-cline",
+    "bio": "Timon Cline is a writer and editor known for his work in Christian apologetics and cultural commentary. He engages contemporary issues from a thoughtful Christian worldview perspective, contributing to various publications and platforms focused on faith and culture.",
+    "affiliation": "",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TC"
+  },
+  {
+    "name": "Arwa Mahdawi",
+    "slug": "arwa-mahdawi",
+    "bio": "Arwa Mahdawi is a British-American columnist and cultural commentator known for her sharp analysis of current events, politics, and social issues. While not primarily a Christian writer, her work often intersects with questions of ethics, morality, and cultural values that resonate with thoughtful Christian readers seeking nuanced perspectives on contemporary society.",
+    "affiliation": "The Guardian",
+    "role": "Columnist & Cultural Commentator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AM"
+  },
+  {
+    "name": "Shelby Holliday",
+    "slug": "shelby-holliday",
+    "bio": "Shelby Holliday is a journalist and on-air correspondent known for her work covering international news and faith-related stories with depth and integrity. Her reporting has taken her across the globe to document stories of resilience, hope, and human dignity from a perspective informed by Christian values.",
+    "affiliation": "Wall Street Journal",
+    "role": "Journalist & Correspondent",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SH"
+  },
+  {
+    "name": "Matthew Mpoke Bigg",
+    "slug": "matthew-mpoke-bigg",
+    "bio": "Matthew Mpoke Bigg is a theologian and biblical scholar who brings deep insight into Scripture and Christian doctrine. His work emphasizes the richness of biblical theology and its application to contemporary Christian life and witness.",
+    "affiliation": "",
+    "role": "Theologian & Biblical Scholar",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MMB"
+  },
+  {
+    "name": "Zlati Meyer",
+    "slug": "zlati-meyer",
+    "bio": "Zlati Meyer is a journalist and writer who covers faith, culture, and social issues with a thoughtful Christian perspective. Her work has appeared in major Christian and secular publications, where she explores how faith intersects with contemporary life and challenges.",
+    "affiliation": "Religion News Service, Christianity Today",
+    "role": "Religion Journalist & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ZM"
   }
 ]
