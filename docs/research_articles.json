@@ -1,5 +1,56 @@
 [
   {
+    "source_name": "Pew Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Beshay",
+    "title": "Americans stand out internationally for their pessimism about the nation’s political system",
+    "url": "https://www.pewresearch.org/short-reads/2026/04/15/americans-stand-out-internationally-for-their-pessimism-about-the-nations-political-system/",
+    "summary": "People in higher-income countries are generally less likely to say their nation’s political system needs major changes or complete reform. Americans are an exception.",
+    "full_content": "",
+    "published": "Wed, 15 Apr 2026 14:54:59 +0000",
+    "fetched_at": "2026-04-16T07:18:33.249787",
+    "score": 4,
+    "tags": [
+      "data",
+      "politics"
+    ],
+    "rewritten_title": "Americans Alone: Why the West's Richest Nation Distrusts Its Politics Most",
+    "personas": [
+      "professional"
+    ],
+    "topic_cluster": "political_system_attitudes",
+    "perspective": "neutral",
+    "final_score": 5.5,
+    "recency_boost": 1.5
+  },
+  {
+    "source_name": "Pew Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Sara Atske",
+    "title": "What parents say about their teen’s uses of social media",
+    "url": "https://www.pewresearch.org/internet/2026/04/15/what-parents-say-about-their-teens-uses-of-social-media/",
+    "summary": "Warnings about the potential harms of social media for youth are everywhere – some even targeting specific apps. To see if parents’ outlook shift by platform, we surveyed 1,458 U.S. parents of teens ages 13 to 17. We asked parents about how they think social media generally impact their teen. And for the first time, [&#8230;]",
+    "full_content": "",
+    "published": "Wed, 15 Apr 2026 13:55:27 +0000",
+    "fetched_at": "2026-04-16T07:18:33.249824",
+    "score": 4,
+    "tags": [
+      "data"
+    ],
+    "rewritten_title": "Parents Fear Social Media's Grip on Their Teens' Faith and Future",
+    "personas": [
+      "parent"
+    ],
+    "topic_cluster": "teen_social_media_pew",
+    "perspective": "neutral",
+    "final_score": 4.75,
+    "recency_boost": 1.5
+  },
+  {
     "source_name": "Lifeway Research",
     "source_category": "culture",
     "source_type": "christian",
@@ -10,72 +61,23 @@
     "summary": "<p>These Bible verses refine our thinking about suffering, teach us about the goodness of God, and help us find hope that never wavers. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/04/15/is-it-possible-to-suffer-well-4-verses-to-reorient-the-theology-of-suffering/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/04/15/is-it-possible-to-suffer-well-4-verses-to-reorient-the-theology-of-suffering/\">Is It Possible to Suffer Well? 4 Verses to Reorient the Theology of Suffering</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "full_content": "",
     "published": "Wed, 15 Apr 2026 06:33:00 +0000",
-    "fetched_at": "2026-04-15T10:41:22.730357",
-    "score": 7,
+    "fetched_at": "2026-04-16T07:18:33.556862",
+    "score": 8,
     "tags": [
       "theology",
       "suffering",
       "devotional"
     ],
-    "rewritten_title": "Four Bible Verses That Reframe Christian Suffering",
+    "rewritten_title": "Four Verses That Reclaim Suffering as Spiritual Formation",
     "personas": [
-      "pastor",
+      "student",
       "professional",
-      "student"
+      "parent"
     ],
-    "topic_cluster": "suffering_theology",
+    "topic_cluster": "theology_of_suffering",
     "perspective": "neutral",
-    "final_score": 8.5,
-    "recency_boost": 1.5
-  },
-  {
-    "source_name": "Pew Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Beshay",
-    "title": "Americans’ views of China have grown somewhat more positive in recent years",
-    "url": "https://www.pewresearch.org/short-reads/2026/04/14/americans-views-of-china-have-grown-somewhat-more-positive-in-recent-years/",
-    "summary": "Most Americans still view China negatively, but a recent survey shows favorability has ticked up, especially among Democrats and younger adults. Fewer now call China an enemy.",
-    "full_content": "",
-    "published": "Tue, 14 Apr 2026 14:53:45 +0000",
-    "fetched_at": "2026-04-15T10:41:22.474806",
-    "score": 4,
-    "tags": [
-      "data"
-    ],
-    "rewritten_title": "Americans' China Favorability Rises — But Partisan Divide Deepens",
-    "personas": [
-      "professional"
-    ],
-    "topic_cluster": "us_china_relations",
-    "perspective": "neutral",
-    "final_score": 5.5,
-    "recency_boost": 1.5
-  },
-  {
-    "source_name": "Pew Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Jcoleman",
-    "title": "Local News Fact Sheet",
-    "url": "https://www.pewresearch.org/journalism/fact-sheet/local-news-fact-sheet/",
-    "summary": "Americans' attention to local news has declined since 2016. Explore how people get local news today, shifting from TV and print to digital sources.",
-    "full_content": "",
-    "published": "Tue, 14 Apr 2026 13:50:13 +0000",
-    "fetched_at": "2026-04-15T10:41:22.474821",
-    "score": 4,
-    "tags": [
-      "data"
-    ],
-    "rewritten_title": "Americans Are Abandoning Local News. Digital Won't Save It.",
-    "personas": [
-      "professional"
-    ],
-    "topic_cluster": "media_consumption_trends",
-    "perspective": "neutral",
+    "previously_shown": true,
     "final_score": 4.75,
-    "recency_boost": 1.5
+    "recency_boost": 0.75
   }
 ]

@@ -2260,5 +2260,179 @@
     "website": "",
     "books": [],
     "initials": "ZM"
+  },
+  {
+    "name": "Abigail Thompson",
+    "slug": "abigail-thompson",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AT"
+  },
+  {
+    "name": "Peter J. Gentry",
+    "slug": "peter-j-gentry",
+    "bio": "Peter J. Gentry is a biblical scholar and theologian known for his work in Old Testament studies and biblical interpretation. He has contributed significantly to evangelical understanding of Scripture through his academic research and teaching.",
+    "affiliation": "Southern Baptist Theological Seminary",
+    "role": "Professor & Biblical Scholar",
+    "education": "Ph.D. in Old Testament, University of Stellenbosch",
+    "website": "",
+    "books": [
+      {
+        "title": "Rethinking the Foundations of Religion",
+        "amazon_url": "https://www.amazon.com/s?k=Rethinking+the+Foundations+of+Religion+Peter+Gentry"
+      },
+      {
+        "title": "The Genealogies of Jesus",
+        "amazon_url": "https://www.amazon.com/s?k=The+Genealogies+of+Jesus+Peter+Gentry"
+      }
+    ],
+    "initials": "PJG"
+  },
+  {
+    "name": "Scott James",
+    "slug": "scott-james",
+    "bio": "Scott James is a writer and content creator focused on Christian living, faith, and culture. He has contributed to various Christian publications and platforms, helping readers think deeply about their faith in contemporary contexts.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SJ"
+  },
+  {
+    "name": "Scott Hurst",
+    "slug": "scott-hurst",
+    "bio": "Scott Hurst is a Christian author and communicator dedicated to helping believers deepen their faith and understanding of Scripture. His work focuses on practical spirituality and biblical teaching for contemporary Christians.",
+    "affiliation": "",
+    "role": "Author & Christian Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SH"
+  },
+  {
+    "name": "Tony Arsenal",
+    "slug": "tony-arsenal",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TA"
+  },
+  {
+    "name": "Hannah Miller King",
+    "slug": "hannah-miller-king",
+    "bio": "Hannah Miller King is a writer and content creator who engages with faith-based topics for Christian audiences. Her work reflects a thoughtful approach to contemporary Christian living and spiritual growth.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "HMK"
+  },
+  {
+    "name": "Stephen Kaufmann",
+    "slug": "stephen-kaufmann",
+    "bio": "Stephen Kaufmann is a thoughtful Christian writer and speaker who explores faith, theology, and spiritual growth for contemporary audiences. His work encourages believers to deepen their understanding of Scripture and apply biblical principles to everyday life.",
+    "affiliation": "",
+    "role": "Author & Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SK"
+  },
+  {
+    "name": "Emily Jensen",
+    "slug": "emily-jensen",
+    "bio": "Emily Jensen is a writer and content creator focused on helping Christian women navigate faith, family, and discipleship. She is known for her thoughtful approach to biblical womanhood and her collaborative work in Christian publishing.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EJ"
+  },
+  {
+    "name": "RELEVANT",
+    "slug": "relevant",
+    "bio": "RELEVANT is a writer whose work appears in evangelical publications curated by Christian Curator.",
+    "affiliation": "",
+    "role": "Author & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "R"
+  },
+  {
+    "name": "Joseph Porter",
+    "slug": "joseph-porter",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JP"
+  },
+  {
+    "name": "Sara Atske",
+    "slug": "sara-atske",
+    "bio": "Sara Atske is a researcher and writer focused on faith, culture, and social trends. Her work explores how Christian perspectives intersect with contemporary issues and cultural conversations.",
+    "affiliation": "",
+    "role": "Researcher & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SA"
+  },
+  {
+    "name": "Motoko Rich",
+    "slug": "motoko-rich",
+    "bio": "Motoko Rich is a New York Times reporter and journalist who has covered education, publishing, and cultural trends for major American publications. While not primarily known as a Christian author, her investigative journalism has explored topics relevant to faith communities, including the role of libraries, literacy, and cultural institutions in American life.",
+    "affiliation": "New York Times",
+    "role": "Journalist & Reporter",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MR"
+  },
+  {
+    "name": "Richard Luscombe and agency",
+    "slug": "richard-luscombe-and-agency",
+    "bio": "Richard Luscombe is a Christian content creator and agency leader dedicated to helping churches and ministries communicate their faith-based messages effectively. Through his agency work, he partners with Christian organizations to develop strategic content that resonates with evangelical audiences.",
+    "affiliation": "",
+    "role": "Content Curator & Agency Leader",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RL"
+  },
+  {
+    "name": "Summer Said",
+    "slug": "summer-said",
+    "bio": "Summer Said is a Christian communicator and content creator dedicated to helping believers navigate faith and culture with authenticity and grace. Through writing and digital platforms, she encourages Christians to deepen their relationship with Christ and live out their faith in meaningful ways.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SS"
+  },
+  {
+    "name": "Jason Horowitz",
+    "slug": "jason-horowitz",
+    "bio": "Jason Horowitz is a writer and content creator focused on Christian living and faith development. He contributes to various Christian platforms and publications, offering practical insights for believers seeking to deepen their spiritual walk.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JH"
   }
 ]
