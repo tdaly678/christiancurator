@@ -2434,5 +2434,215 @@
     "website": "",
     "books": [],
     "initials": "JH"
+  },
+  {
+    "name": "Noah Senthil",
+    "slug": "noah-senthil",
+    "bio": "Noah Senthil is a Christian writer and content creator focused on faith, theology, and spiritual growth. He engages thoughtfully with contemporary issues through a biblical lens, helping readers deepen their understanding of Scripture and Christian living.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "NS"
+  },
+  {
+    "name": "Guy Prentiss Waters",
+    "slug": "guy-prentiss-waters",
+    "bio": "Guy Prentiss Waters is a Reformed theologian and pastor known for his accessible yet scholarly writings on biblical theology and Christian living. He has served in pastoral ministry and has been a prolific author and teacher, helping evangelical Christians understand the depth of Scripture through a Reformed lens.",
+    "affiliation": "Ligonier Ministries, Reformed Presbyterian Church of North America",
+    "role": "Pastor, Author & Theologian",
+    "education": "Ph.D., Southern Baptist Theological Seminary",
+    "website": "",
+    "books": [
+      {
+        "title": "The Lord's Prayer",
+        "amazon_url": "https://www.amazon.com/s?k=The+Lord%27s+Prayer+Guy+Prentiss+Waters"
+      },
+      {
+        "title": "How Jesus Fulfills the Old Testament",
+        "amazon_url": "https://www.amazon.com/s?k=How+Jesus+Fulfills+the+Old+Testament+Guy+Prentiss+Waters"
+      },
+      {
+        "title": "Assurance in the Psalms",
+        "amazon_url": "https://www.amazon.com/s?k=Assurance+in+the+Psalms+Guy+Prentiss+Waters"
+      },
+      {
+        "title": "Justification and the New Perspective on Paul",
+        "amazon_url": "https://www.amazon.com/s?k=Justification+and+the+New+Perspective+on+Paul+Guy+Prentiss+Waters"
+      },
+      {
+        "title": "The Doctrines of Grace",
+        "amazon_url": "https://www.amazon.com/s?k=The+Doctrines+of+Grace+Guy+Prentiss+Waters"
+      }
+    ],
+    "initials": "GPW"
+  },
+  {
+    "name": "Chris Brauns",
+    "slug": "chris-brauns",
+    "bio": "Chris Brauns is a pastor, author, and advocate for church leadership and biblical community. He has written extensively on topics including church discipline, conflict resolution, and spiritual formation, bringing both theological insight and practical wisdom to his work.",
+    "affiliation": "The Fellowship/Libertyville Christian Church",
+    "role": "Pastor & Author",
+    "education": "Trinity Evangelical Divinity School",
+    "website": "https://www.chrisbrauns.com",
+    "books": [
+      {
+        "title": "Unpacking Forgiveness: Biblical Answers to Life's Toughest Questions",
+        "amazon_url": "https://www.amazon.com/s?k=Unpacking+Forgiveness+Chris+Brauns"
+      },
+      {
+        "title": "Stragglers: Why Young Adults Leave the Church and Rethink Faith",
+        "amazon_url": "https://www.amazon.com/s?k=Stragglers+Chris+Brauns"
+      },
+      {
+        "title": "The Pastor's Practical Guide to Church Discipline",
+        "amazon_url": "https://www.amazon.com/s?k=Pastor's+Practical+Guide+Church+Discipline+Chris+Brauns"
+      }
+    ],
+    "initials": "CB"
+  },
+  {
+    "name": "Stephen Kneale",
+    "slug": "stephen-kneale",
+    "bio": "Stephen Kneale is a pastor and Christian writer known for thoughtful biblical teaching and cultural commentary from a Reformed evangelical perspective. He has contributed to various Christian publications and is recognized for his pastoral ministry and theological insight on contemporary issues facing the church.",
+    "affiliation": "The Kneale Blog",
+    "role": "Pastor & Writer",
+    "education": "",
+    "website": "https://www.stephenkneale.com",
+    "books": [],
+    "initials": "SK"
+  },
+  {
+    "name": "Charles Carman",
+    "slug": "charles-carman",
+    "bio": "Charles Carman is a thoughtful Christian writer and content creator dedicated to exploring faith, theology, and spiritual formation. His work encourages believers to deepen their understanding of Scripture and live out their faith authentically in today's world.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CC"
+  },
+  {
+    "name": "Bethany Broderick",
+    "slug": "bethany-broderick",
+    "bio": "Bethany Broderick is a writer and content creator who engages with Christian themes and contemporary faith issues. She contributes to discussions on spirituality, personal growth, and living out Christian values in modern life.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BB"
+  },
+  {
+    "name": "Brianna Lambert",
+    "slug": "brianna-lambert",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BL"
+  },
+  {
+    "name": "Brett Lee-Price",
+    "slug": "brett-leeprice",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BLP"
+  },
+  {
+    "name": "John Bryce",
+    "slug": "john-bryce",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JB"
+  },
+  {
+    "name": "Emiliano Rodríguez Mega and César Rodríguez",
+    "slug": "emiliano-rodrguez-mega-and-csar-rodrguez",
+    "bio": "Emiliano Rodríguez Mega and César Rodríguez are content creators and communicators dedicated to sharing Christian perspectives with Spanish-speaking audiences. Their work focuses on making faith accessible and relevant to contemporary believers seeking to integrate their Christian values with modern life.",
+    "affiliation": "",
+    "role": "Content Creators & Christian Communicators",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ERM, CR"
+  },
+  {
+    "name": "Anastasiia Malenko",
+    "slug": "anastasiia-malenko",
+    "bio": "Anastasiia Malenko is a Christian author and content creator focused on faith, personal growth, and spiritual development. Her writing seeks to encourage believers in their walk with Christ and to explore how Christian principles apply to contemporary life.",
+    "affiliation": "",
+    "role": "Author & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AM"
+  },
+  {
+    "name": "Marina Dunbar",
+    "slug": "marina-dunbar",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MD"
+  },
+  {
+    "name": "Dan Perkins",
+    "slug": "dan-perkins",
+    "bio": "Dan Perkins is a Christian author and speaker known for his work in biblical prophecy and end-times theology. His writings explore Scripture's teaching on future events and their relevance to contemporary Christian life.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DP"
+  },
+  {
+    "name": "Presented by Jonathan Freedland with Nikki McCann Ramirez",
+    "slug": "presented-by-jonathan-freedland-with-nikki-mccann-ramirez",
+    "bio": "Jonathan Freedland and Nikki McCann Ramirez collaborate to present insightful content exploring faith, culture, and contemporary issues. Together they bring diverse perspectives to conversations relevant to Christian audiences seeking thoughtful analysis of today's world.",
+    "affiliation": "",
+    "role": "Content Presenters & Curators",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JFR"
+  },
+  {
+    "name": "Ned Carter Miles",
+    "slug": "produced-by-ned-carter-miles",
+    "bio": "Ned Carter Miles is a Christian content producer and curator dedicated to sharing faith-centered resources with modern audiences. Through his work in content production, he helps bring biblical teaching and Christian perspectives to digital platforms.",
+    "affiliation": "",
+    "role": "Content Producer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "NCM"
+  },
+  {
+    "name": "Maz Ebtehaj",
+    "slug": "the-executive-producer-is-maz-ebtehaj",
+    "bio": "Maz Ebtehaj is an executive producer known for his work in media and content creation. While details about his specific Christian ministry or publications are limited in public records, he has been involved in producing quality content for various platforms.",
+    "affiliation": "",
+    "role": "Executive Producer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ME"
   }
 ]
