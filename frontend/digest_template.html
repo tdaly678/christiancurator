@@ -359,7 +359,7 @@
 <div class="cc-root">
 
   <!-- Header -->
-  <div class="cc-header">
+  <header class="cc-header">
     <div class="cc-top-bar">
       <span>{{ date }}</span>
       <a class="cc-subscribe-btn" href="#cc-email-box" onclick="document.getElementById('cc-email-box').scrollIntoView({behavior:'smooth'}); return false;">Get the Daily Digest</a>
@@ -378,24 +378,26 @@
         </div>
       </div>
     </nav>
-  </div>
+  </header>
+<main>
+
 
   <!-- Welcome -->
-  <div class="cc-welcome">
+  <section class="cc-welcome">
     <h2 class="cc-welcome-hed">The conversations shaping evangelical Christianity.</h2>
     <p class="cc-welcome-sub">Because every curious Christian deserves clarity on the questions that matter most.</p>
-  </div>
+  </section>
 
   {% if featured_topics %}
   <!-- In the conversation today -->
-  <div class="cc-featured">
+  <section class="cc-featured">
     <div class="cc-featured-header">
       <div class="cc-featured-label">In the conversation today</div>
       <div class="cc-featured-date">{{ date }}</div>
     </div>
     <div class="cc-featured-grid">
       {% for topic in featured_topics %}
-      <div class="cc-featured-card">
+      <article class="cc-featured-card">
         <div class="cc-featured-cat">{{ topic.category }}</div>
         <div class="cc-featured-name">{{ topic.name }}</div>
         <p class="cc-featured-hook">{{ topic.summary or topic.hook }}</p>
@@ -424,15 +426,15 @@
         {% endfor %}
         {% endif %}
         <a class="cc-featured-cta" href="/topics/{{ topic.slug }}/">Explore this topic &rarr;</a>
-      </div>
+      </article>
       {% endfor %}
     </div>
-  </div>
+  </section>
   {% endif %}
 
   {% if articles %}
   <!-- Today's curated headlines -->
-  <div class="cc-headlines">
+  <section class="cc-headlines">
     <div class="cc-headlines-header">
       <div class="cc-headlines-label">Today&rsquo;s curated headlines</div>
       <div class="cc-headlines-date">{{ date }}</div>
@@ -440,7 +442,7 @@
 
     {# Lead: first article gets a larger treatment #}
     {% set lead = articles[0] %}
-    <div class="cc-headline-lead">
+    <article class="cc-headline-lead">
       <a href="{{ lead.url }}" class="cc-headline-lead-title" target="_blank" rel="noopener"
          onclick="gtag('event','article_click',{'article_title':'{{ (lead.rewritten_title or lead.title)|replace("'","") }}','article_source':'{{ lead.source_name }}','article_url':'{{ lead.url }}'});">
         {{ lead.rewritten_title or lead.title }}
@@ -458,12 +460,12 @@
         {%- endif -%}
         {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
       </div>
-    </div>
+    </article>
 
     {# Articles 2–10 #}
     <div class="cc-headline-list">
       {% for article in articles[1:] %}
-      <div class="cc-headline-item">
+      <article class="cc-headline-item">
         <div class="cc-headline-num">{{ loop.index + 1 }}</div>
         <div class="cc-headline-content">
           <a href="{{ article.url }}" class="cc-headline-title" target="_blank" rel="noopener"
@@ -484,15 +486,15 @@
             {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
           </div>
         </div>
-      </div>
+      </article>
       {% endfor %}
     </div>
-  </div>
+  </section>
   {% endif %}
 
   {% if world_news_articles %}
   <!-- World News -->
-  <div class="cc-world-news">
+  <section class="cc-world-news">
     <div class="cc-world-news-header">
       <div class="cc-world-news-label">World News &amp; Culture</div>
       <div class="cc-world-news-sub">Stories worth watching</div>
@@ -500,7 +502,7 @@
     <div class="cc-world-news-card">
       <div class="cc-world-news-intro">From the broader world — filtered for what matters to Christians</div>
       {% for article in world_news_articles %}
-      <div class="cc-world-news-item">
+      <article class="cc-world-news-item">
         <div class="cc-world-news-num">{{ loop.index }}</div>
         <div class="cc-world-news-content">
           <a href="{{ article.url }}" class="cc-world-news-title" target="_blank" rel="noopener"
@@ -521,15 +523,15 @@
             {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
           </div>
         </div>
-      </div>
+      </article>
       {% endfor %}
     </div>
-  </div>
+  </section>
   {% endif %}
 
   {% if yesterday_articles %}
   <!-- Yesterday's top articles -->
-  <div class="cc-yesterday">
+  <section class="cc-yesterday">
     <div class="cc-yesterday-header">
       <div class="cc-yesterday-label">Yesterday&rsquo;s top reads</div>
       <div class="cc-yesterday-date">In case you missed it</div>
@@ -537,7 +539,7 @@
 
     {# Lead article #}
     {% set ylead = yesterday_articles[0] %}
-    <div class="cc-headline-lead">
+    <article class="cc-headline-lead">
       <a href="{{ ylead.url }}" class="cc-headline-lead-title" target="_blank" rel="noopener"
          onclick="gtag('event','article_click',{'article_title':'{{ (ylead.rewritten_title or ylead.title)|replace("'","") }}','article_source':'{{ ylead.source_name }}','article_url':'{{ ylead.url }}'});">
         {{ ylead.rewritten_title or ylead.title }}
@@ -555,12 +557,12 @@
         {%- endif -%}
         {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
       </div>
-    </div>
+    </article>
 
     {# Articles 2–10 #}
     <div class="cc-headline-list">
       {% for article in yesterday_articles[1:] %}
-      <div class="cc-headline-item">
+      <article class="cc-headline-item">
         <div class="cc-headline-num">{{ loop.index + 1 }}</div>
         <div class="cc-headline-content">
           <a href="{{ article.url }}" class="cc-headline-title" target="_blank" rel="noopener"
@@ -581,10 +583,10 @@
             {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
           </div>
         </div>
-      </div>
+      </article>
       {% endfor %}
     </div>
-  </div>
+  </section>
   {% endif %}
 
   <!-- Subscribe -->
@@ -627,7 +629,8 @@
     </script>
   </div>
 
-  <div class="cc-footer">
+  </main>
+<footer class="cc-footer">
     <div class="cc-footer-name">Christian Curator</div>
     <div class="cc-footer-nav">
       <a href="/digest/">Daily Digest</a>
@@ -635,7 +638,7 @@
       <a href="/archive/">Archive</a>
     </div>
     <div>Curated from across the evangelical web.</div>
-  </div>
+  </footer>
 
 </div>
 </body>

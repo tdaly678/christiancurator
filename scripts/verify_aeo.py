@@ -46,6 +46,21 @@ def check_page(slug: str) -> list[str]:
     if len(h2s) < 4:
         problems.append(f"expected >= 4 <h2>, found {len(h2s)}")
 
+    # Semantic HTML5 landmarks — AEO auditors flag sites without them
+    if not soup.find("header"):
+        problems.append("missing <header> landmark")
+    mains = soup.find_all("main")
+    if len(mains) != 1:
+        problems.append(f"expected 1 <main>, found {len(mains)}")
+    if not soup.find("footer"):
+        problems.append("missing <footer> landmark")
+    # Each curated article card should be <article>, not <div class="cc-article-entry">
+    leftover_entries = soup.select("div.cc-article-entry")
+    if leftover_entries:
+        problems.append(
+            f"{len(leftover_entries)} cc-article-entry still <div>, expected <article>"
+        )
+
     meta_desc = soup.find("meta", attrs={"name": "description"})
     if not meta_desc or not meta_desc.get("content", "").strip():
         problems.append("missing/empty meta description")
@@ -119,6 +134,16 @@ def check_digest_template() -> list[str]:
         return [f"digest render failed: {e}"]
 
     soup = BeautifulSoup(html, "html.parser")
+
+    # Semantic landmarks on the digest
+    if not soup.find("header"):
+        problems.append("digest missing <header> landmark")
+    mains = soup.find_all("main")
+    if len(mains) != 1:
+        problems.append(f"digest expected 1 <main>, found {len(mains)}")
+    if not soup.find("footer"):
+        problems.append("digest missing <footer> landmark")
+
     jsonld_scripts = soup.find_all("script", attrs={"type": "application/ld+json"})
     article_found = False
     for s in jsonld_scripts:
