@@ -26,10 +26,18 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Christian Curator — Daily Digest",
+    "@type": "Article",
+    "headline": "Christian Curator — Daily Digest, {{ date }}",
+    "description": "Today's best evangelical writing on theology, church life, culture, and more — curated and rewritten for clarity.",
     "url": "https://www.christiancurator.com/digest/",
-    "description": "Today's best evangelical writing, curated and rewritten for clarity.",
+    "mainEntityOfPage": "https://www.christiancurator.com/digest/",
+    "datePublished": "{{ iso_date }}",
+    "dateModified": "{{ iso_date }}",
+    "author": {
+      "@type": "Organization",
+      "name": "Christian Curator Editorial",
+      "url": "https://www.christiancurator.com"
+    },
     "publisher": {
       "@type": "Organization",
       "name": "Christian Curator",
