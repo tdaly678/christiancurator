@@ -55,6 +55,21 @@ Runs automatically at **6:00 AM UTC** via `.github/workflows/daily_run.yml`.
 
 What it commits: `docs/index.html`, `docs/digest/`, `docs/yesterday.json`, `docs/email_draft.html`, `docs/article_history.json`, `docs/research_articles.json`, `docs/sitemap.xml`, `docs/archive/`, `docs/daily/`, `docs/_pagefind/`
 
+## Hand-curated content — do NOT bulk regenerate
+The topic pages at `docs/topics/<slug>/index.html` are **hand-curated**. They are edited directly (often by AI assistants at Tom's request) and are **not** regenerated from a template by any script. The daily pipeline intentionally excludes `docs/topics/` from its `git add` list, so pipeline runs never overwrite them.
+
+**Safe operations on topic pages:**
+- Targeted edits to a specific slug (fix a typo, update an article card, tweak copy)
+- Cross-cutting transformations that **preserve content** — e.g. the semantic-HTML upgrade that renamed `<div class="cc-*">` to `<header>`/`<main>`/`<section>`/`<article>`/`<footer>`/`<nav>` while keeping every class and every word of body copy
+- Scripted changes that are idempotent and reviewed via diff before committing
+
+**Unsafe without explicit confirmation from Tom:**
+- Wiping and re-emitting topic pages from `topics_data.py` or any other source
+- "Regenerating all topic pages" — the pages contain unique editorial content (editorial paragraphs, 5 key questions, 3-position debate card, synthesis, 10 curated articles with annotations) that is not stored anywhere else
+- Bulk find/replace that changes wording rather than structure
+
+If a request sounds like it implies bulk regeneration, stop and confirm scope before doing anything destructive.
+
 ## Navigation Structure (3-item nav, all pages)
 ```
 Home  |  Daily Digest  |  Archive
