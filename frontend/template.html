@@ -510,36 +510,118 @@
       <p class="cc-signup-sub">The best evangelical content, curated and delivered to your inbox each morning.</p>
 
       <form id="cc-signup-form" class="cc-signup-form"
-            action="https://252bf73d.sibforms.com/serve/MUIFAB7CIQuc2nJNb3F3vKnSjaBpMFNDbsi6MK_4uqstTr5i_Ja7ZVdjszNLkSe5RAdysOdcY-DDVrkYlvzoy-mJZQe-oaIbRqV0BfUYd-jli69OP21lSds8gIdS9vjXfoCRPiOESVzK7HOfbM1DlLkSimp2yR1_zYHWP2ar7d7X32wq6F-eyz7cDIoZ3lyhzNGXvQDWSAd5LBtnYA=="
+            action="#cc-email-box"
             method="post"
-            target="brevo-sink">
+            novalidate>
         <div class="cc-signup-row">
-          <input type="email" name="EMAIL" id="cc-signup-email"
+          <input type="email" name="email" id="cc-signup-email"
                  class="cc-signup-input"
                  placeholder="Your email address"
                  required autocomplete="email" />
           <button type="submit" class="cc-signup-submit">Subscribe</button>
         </div>
-        <!-- Brevo required fields -->
-        <input type="text" name="email_address_check" value="" style="position:absolute;left:-5000px;" tabindex="-1" autocomplete="off" />
-        <input type="hidden" name="locale" value="en" />
-        <input type="hidden" name="html_type" value="simple" />
+        <!-- Honeypot: real users leave this empty; bots fill it in -->
+        <input type="text" name="honeypot" value="" tabindex="-1" autocomplete="off" aria-hidden="true"
+               style="position:absolute;left:-5000px;" />
       </form>
 
       <div id="cc-signup-success" class="cc-signup-success" style="display:none;">
         ✓ You're in! Check your inbox for a confirmation email.
       </div>
-      <p class="cc-signup-privacy">No spam. Unsubscribe anytime.</p>
+      <div id="cc-signup-error" class="cc-signup-error" role="alert"
+           style="display:none; color:#b42318; margin-top:8px; font-size:0.95rem;"></div>
+      <p class="cc-signup-privacy">
+        No spam. Unsubscribe anytime.<br>
+        <span style="font-size:0.8rem; color:#888;">
+          Protected by reCAPTCHA &mdash;
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a> &amp;
+          <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms</a>.
+        </span>
+      </p>
     </div>
-    <!-- Hidden iframe absorbs Brevo's post-submit redirect so page never navigates away -->
-    <iframe name="brevo-sink" style="display:none;" title="subscription confirmation"></iframe>
+
+    <!-- reCAPTCHA v3 (invisible). Badge hidden via CSS; required disclaimer text is shown near the form above. -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfNEL4sAAAAAMOuBd1AqaSaL6GLd9WnkOXSjkMV"></script>
+    <style>.grecaptcha-badge { visibility: hidden !important; }</style>
+
     <script>
-      document.getElementById('cc-signup-form').addEventListener('submit', function() {
-        setTimeout(function() {
-          document.getElementById('cc-signup-form').style.display = 'none';
-          document.getElementById('cc-signup-success').style.display = 'block';
-        }, 400);
-      });
+      (function () {
+        var WORKER_URL = 'https://orange-bird-0b93.tdaly678.workers.dev/';
+        var RECAPTCHA_SITE_KEY = '6LfNEL4sAAAAAMOuBd1AqaSaL6GLd9WnkOXSjkMV';
+
+        var form = document.getElementById('cc-signup-form');
+        var successEl = document.getElementById('cc-signup-success');
+        var errorEl = document.getElementById('cc-signup-error');
+        var submitBtn = form.querySelector('.cc-signup-submit');
+        var emailInput = form.querySelector('input[name="email"]');
+        var honeypotInput = form.querySelector('input[name="honeypot"]');
+        var originalBtnText = submitBtn.textContent;
+
+        function showError(msg) {
+          errorEl.textContent = msg;
+          errorEl.style.display = 'block';
+        }
+        function resetButton() {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+        }
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          errorEl.style.display = 'none';
+
+          var email = (emailInput.value || '').trim();
+          var honeypot = honeypotInput.value || '';
+
+          if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+            showError('Please enter a valid email address.');
+            return;
+          }
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Subscribing…';
+
+          if (typeof grecaptcha === 'undefined' || !grecaptcha.ready) {
+            showError('Verification is still loading — please try again in a moment.');
+            resetButton();
+            return;
+          }
+
+          grecaptcha.ready(function () {
+            grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'subscribe' })
+              .then(function (token) {
+                return fetch(WORKER_URL, {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ email: email, token: token, honeypot: honeypot })
+                });
+              })
+              .then(function (resp) {
+                return resp.json().then(function (data) { return { ok: resp.ok, data: data }; });
+              })
+              .then(function (res) {
+                if (res.ok && res.data && res.data.success) {
+                  form.style.display = 'none';
+                  if (res.data.alreadySubscribed) {
+                    successEl.innerHTML = '✓ You\'re already subscribed — thanks!';
+                  }
+                  successEl.style.display = 'block';
+                  if (typeof gtag === 'function') {
+                    gtag('event', 'signup', { method: 'email' });
+                  }
+                } else {
+                  showError((res.data && res.data.error) || 'Signup failed. Please try again.');
+                  resetButton();
+                }
+              })
+              .catch(function (err) {
+                console.error('Signup error:', err);
+                showError('Network error. Please try again.');
+                resetButton();
+              });
+          });
+        });
+      })();
     </script>
   </div>
 
