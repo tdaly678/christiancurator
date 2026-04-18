@@ -2644,5 +2644,146 @@
     "website": "",
     "books": [],
     "initials": "ME"
+  },
+  {
+    "name": "Stan Gale",
+    "slug": "stan-gale",
+    "bio": "Stan Gale is a pastor and Christian author dedicated to helping believers grow in their faith and understanding of Scripture. His writing and ministry focus on practical discipleship and spiritual formation for modern Christians.",
+    "affiliation": "",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SG"
+  },
+  {
+    "name": "Roberto Carrera",
+    "slug": "roberto-carrera",
+    "bio": "Roberto Carrera is a Christian author and speaker dedicated to sharing biblical wisdom with Spanish-speaking and Latino communities. His work emphasizes faith, discipleship, and practical Christian living for modern believers.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RC"
+  },
+  {
+    "name": "Christina Grube",
+    "slug": "christina-grube",
+    "bio": "Christina Grube is a Christian writer and content creator dedicated to exploring faith, discipleship, and spiritual growth. Her work encourages readers to deepen their relationship with Christ through Scripture and practical biblical wisdom.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CG"
+  },
+  {
+    "name": "Ashley Hales",
+    "slug": "ashley-hales",
+    "bio": "Ashley Hales is a writer and speaker who explores faith, culture, and Christian living for contemporary audiences. She contributes to various Christian publications and speaks on topics related to discipleship, identity, and spiritual formation. Her work encourages believers to think deeply about how their faith intersects with daily life.",
+    "affiliation": "Christianity Today, Gospel Coalition",
+    "role": "Author & Writer",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Finding Jesus in All of Scripture",
+        "amazon_url": "https://www.amazon.com/s?k=Finding+Jesus+in+All+of+Scripture+Ashley+Hales"
+      },
+      {
+        "title": "Faithful Attendance: Spiritual Disciplines for the Long Haul",
+        "amazon_url": "https://www.amazon.com/s?k=Faithful+Attendance+Ashley+Hales"
+      }
+    ],
+    "initials": "AH"
+  },
+  {
+    "name": "Emmett Rensin",
+    "slug": "emmett-rensin",
+    "bio": "Emmett Rensin is a writer and editor known for his thoughtful commentary on culture, politics, and ideas. His work has explored themes relevant to Christian readers seeking to understand contemporary society through a reflective lens.",
+    "affiliation": "",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ER"
+  },
+  {
+    "name": "Eddie LaRow",
+    "slug": "eddie-larow",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EL"
+  },
+  {
+    "name": "Apoorva Mandavilli",
+    "slug": "apoorva-mandavilli",
+    "bio": "Apoorva Mandavilli is a science journalist and staff writer at The New York Times who covers infectious diseases, public health, and medical research. Her reporting combines rigorous scientific inquiry with clear, accessible storytelling that helps readers understand complex health issues affecting communities worldwide.",
+    "affiliation": "The New York Times",
+    "role": "Science Journalist & Staff Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AM"
+  },
+  {
+    "name": "Margaret Sullivan",
+    "slug": "margaret-sullivan",
+    "bio": "Margaret Sullivan is a media columnist and journalist known for her sharp cultural commentary and analysis of faith-related topics in contemporary media. Her work examines how Christian values intersect with journalism, public discourse, and institutional accountability.",
+    "affiliation": "The Washington Post",
+    "role": "Media Columnist & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MS"
+  },
+  {
+    "name": "Timothy W. Martin",
+    "slug": "timothy-w-martin",
+    "bio": "Timothy W. Martin is a Christian author and speaker known for his thoughtful engagement with biblical theology and contemporary faith issues. His work seeks to help believers deepen their understanding of Scripture and apply biblical principles to modern life.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TWM"
+  },
+  {
+    "name": "Stephen Kloosterman",
+    "slug": "stephen-kloosterman",
+    "bio": "Stephen Kloosterman is a pastor and Christian writer committed to helping believers grow in their faith through accessible biblical teaching. He focuses on practical application of Scripture and has contributed to various Christian publications and resources for church leaders and congregants seeking deeper spiritual growth.",
+    "affiliation": "",
+    "role": "Pastor & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SK"
+  },
+  {
+    "name": "Anat Peled",
+    "slug": "anat-peled",
+    "bio": "Anat Peled is a scholar and writer focused on biblical studies and Christian theology. Her work explores the intersection of Scripture, faith, and contemporary Christian life with scholarly rigor and pastoral sensitivity.",
+    "affiliation": "",
+    "role": "Biblical Scholar & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AP"
+  },
+  {
+    "name": "Nicola A. Menzie",
+    "slug": "nicola-a-menzie",
+    "bio": "Nicola A. Menzie is a religion journalist and editor known for her insightful coverage of faith, culture, and social issues affecting Black Christians and communities of color. Her work bridges the gap between faith communities and broader cultural conversations, exploring how Christianity intersects with contemporary social movements and cultural trends.",
+    "affiliation": "Religion News Service, The Christian Century",
+    "role": "Religion Journalist & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "NAM"
   }
 ]
