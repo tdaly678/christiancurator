@@ -156,6 +156,60 @@
     .cc-tldr-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #8b6f1e; margin-bottom: 0.45rem; }
     .cc-tldr p { font-size: 15px; line-height: 1.6; color: #2a2a2a; margin: 0; }
     .cc-last-updated { font-size: 12px; color: #999; margin-top: 0.6rem; }
+
+/* AEO-UNIFIED-CHROME */
+/* Outer frame: 980px for header/footer consistency across pages. */
+.cc-root { max-width: 980px; margin: 0 auto; padding: 0 20px 3rem; }
+/* Content stays narrow for long-form reading. */
+main.cc-prose { max-width: 740px; margin: 0 auto; padding-top: 1.5rem; }
+
+/* Header chrome */
+.cc-header { border-bottom: 1px solid #e0ddd8; padding: 0.75rem 0 0; margin-bottom: 0; }
+.cc-top-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; font-size: 12px; color: #888; letter-spacing: 0.02em; }
+.cc-top-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; }
+.cc-subscribe-btn { background: #2C4A2E; color: #fff; border: none; padding: 5px 14px; font-size: 12px; border-radius: 3px; cursor: pointer; font-family: inherit; letter-spacing: 0.03em; text-decoration: none; display: inline-block; }
+.cc-subscribe-btn:hover { background: #3a5f3c; color: #fff; }
+.cc-masthead { text-align: center; padding: 0.5rem 0 1rem; border-bottom: 2.5px solid #1a1a1a; }
+.cc-masthead-h1 { margin: 0; line-height: 1; }
+.cc-masthead .cc-site-name { font-family: 'Lora', Georgia, serif; font-size: 46px; font-weight: 600; letter-spacing: -0.02em; line-height: 1; color: #1a1a1a; text-decoration: none; }
+@media (max-width: 600px) { .cc-masthead .cc-site-name { font-size: 32px; } }
+.cc-tagline { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #888; margin: 8px 0 0; font-weight: 300; }
+.cc-nav { display: flex; justify-content: center; align-items: center; gap: 2rem; padding: 0.6rem 0 0.75rem; border-top: 1px solid #e0ddd8; margin-top: 0.75rem; }
+.cc-nav a { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #888; text-decoration: none; }
+.cc-nav a:hover { color: #2C4A2E; }
+.cc-nav-dropdown { position: relative; display: inline-block; }
+.cc-nav-dropdown-toggle { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #888; cursor: pointer; display: flex; align-items: center; gap: 4px; background: none; border: none; font-family: inherit; padding: 0; }
+.cc-nav-dropdown-toggle:hover { color: #2C4A2E; }
+.cc-nav-dropdown-toggle::after { content: '\25BE'; font-size: 10px; letter-spacing: 0; }
+.cc-nav-dropdown-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid #e0ddd8; border-radius: 4px; padding: 14px 0 6px; min-width: 140px; z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.cc-nav-dropdown:hover .cc-nav-dropdown-menu, .cc-nav-dropdown:focus-within .cc-nav-dropdown-menu { display: block; }
+.cc-nav-dropdown-menu a { display: block; padding: 7px 18px; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #888; text-decoration: none; white-space: nowrap; }
+.cc-nav-dropdown-menu a:hover { color: #2C4A2E; background: #f7f5f2; }
+
+/* Topic index (4-col grid at bottom, replaces pills) */
+.cc-topic-index { margin-top: 3rem; padding-top: 1.75rem; border-top: 1px solid #e0ddd8; }
+.cc-topic-index-header { border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 1.25rem; display: flex; align-items: baseline; justify-content: space-between; }
+.cc-topic-index-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #1a1a1a; }
+.cc-topic-index-meta { font-size: 11px; color: #aaa; }
+.cc-topic-index-meta a { color: #2C4A2E; text-decoration: none; font-weight: 600; }
+.cc-topic-index-meta a:hover { text-decoration: underline; }
+.cc-topic-index-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0 2rem; }
+@media (max-width: 760px) { .cc-topic-index-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem 2rem; } }
+@media (max-width: 480px) { .cc-topic-index-grid { grid-template-columns: 1fr; } }
+.cc-topic-index-cat { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #2C4A2E; border-bottom: 1px solid #e0ddd8; padding-bottom: 5px; margin-bottom: 8px; }
+.cc-topic-index-link { display: block; font-size: 12.5px; color: #444; text-decoration: none; padding: 4px 0; border-bottom: 1px solid #f5f3f0; line-height: 1.35; font-family: 'Lora', Georgia, serif; }
+.cc-topic-index-link:hover { color: #2C4A2E; }
+.cc-topic-index-link.active { color: #2C4A2E; font-weight: 600; }
+.cc-topic-index-link:last-child { border-bottom: none; }
+
+/* Unified footer */
+.cc-footer { border-top: 2.5px solid #1a1a1a; margin-top: 2.5rem; padding: 1rem 0; display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: #aaa; flex-wrap: wrap; gap: 8px; text-align: left; line-height: 1.4; }
+.cc-footer-name { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 15px; color: #1a1a1a; }
+.cc-footer-nav { display: flex; gap: 12px; }
+.cc-footer-nav a { font-size: 11px; color: #888; text-decoration: none; font-weight: 600; }
+.cc-footer-nav a:hover { color: #2C4A2E; }
+.cc-footer-tagline { font-size: 11px; color: #aaa; }
+
 </style>
 <script type="application/ld+json">
 /* AEO-FAQPAGE-SCHEMA */
@@ -208,12 +262,28 @@
 </script></head>
 <body>
 <div class="cc-root">
+<!-- AEO-SITE-HEADER:START -->
 <header class="cc-header">
 <div class="cc-top-bar">
-<a class="cc-back" href="/">← Back to Today’s Digest</a>
-<a class="cc-site-name" href="/">Christian Curator</a>
+<span class="cc-top-label">Deep-Dive Topic</span>
+<a class="cc-subscribe-btn" href="/#cc-email-box">Get the Daily Digest</a>
 </div>
-</header><main>
+<div class="cc-masthead">
+<div class="cc-masthead-h1"><a href="/" class="cc-site-name">Christian Curator</a></div>
+<p class="cc-tagline">Curated perspectives &middot; updated daily</p>
+</div>
+<nav class="cc-nav">
+<a href="/">Home</a>
+<div class="cc-nav-dropdown">
+<button class="cc-nav-dropdown-toggle">Resources</button>
+<div class="cc-nav-dropdown-menu">
+<a href="/voices/">Voices</a>
+<a href="/archive/">Archive</a>
+</div>
+</div>
+</nav>
+</header>
+<!-- AEO-SITE-HEADER:END --><main class="cc-prose">
 <nav aria-label="Breadcrumb" class="cc-breadcrumb"><a href="/">Home</a><span class="cc-breadcrumb-sep">›</span><a href="/#topics">Topics</a><span class="cc-breadcrumb-sep">›</span><span aria-current="page">Making Disciples</span></nav>
 <div class="cc-topic-hero">
 <div class="cc-series-label">Go Deeper · Spiritual Formation</div>
@@ -374,103 +444,110 @@
 </div>
 </article>
 </div>
-<nav class="cc-topics-strip">
-<div class="cc-topics-strip-label">Explore All Topics</div>
-<div class="cc-topics-category">
-<div class="cc-topics-cat-label">Core Theology</div>
-<div class="cc-topics-grid">
-<a class="cc-topic-link" href="/topics/atonement/">The Atonement</a>
-<a class="cc-topic-link" href="/topics/justification-by-faith/">Justification by Faith</a>
-<a class="cc-topic-link" href="/topics/biblical-inerrancy/">Biblical Inerrancy</a>
-<a class="cc-topic-link" href="/topics/baptism/">Baptism</a>
-<a class="cc-topic-link" href="/topics/lords-supper/">The Lord's Supper</a>
-<a class="cc-topic-link" href="/topics/heaven-hell-eternity/">Heaven, Hell &amp; Eternity</a>
-<a class="cc-topic-link" href="/topics/creation-evolution/">Creation &amp; Evolution</a>
-<a class="cc-topic-link" href="/topics/suffering-and-providence/">Suffering &amp; Providence</a>
-<a class="cc-topic-link" href="/topics/gender-and-biblical-anthropology/">Gender &amp; Biblical Anthropology</a>
-<a class="cc-topic-link" href="/topics/apologetics/">Apologetics</a>
-<a class="cc-topic-link" href="/topics/predestination-free-will/">Predestination &amp; Free Will</a>
-<a class="cc-topic-link" href="/topics/holy-spirit-spiritual-gifts/">The Holy Spirit &amp; Spiritual Gifts</a>
-<a class="cc-topic-link" href="/topics/the-trinity/">The Trinity</a>
-<a class="cc-topic-link" href="/topics/eschatology/">Eschatology &amp; End Times</a>
-<a class="cc-topic-link" href="/topics/israel-and-prophecy/">Israel &amp; Prophecy</a>
-<a class="cc-topic-link" href="/topics/christology/">Christology</a>
-<a class="cc-topic-link" href="/topics/covenant-theology/">Covenant Theology</a>
+
+<!-- AEO-TOPIC-INDEX:START -->
+<nav class="cc-topic-index" aria-label="All topics">
+<div class="cc-topic-index-header">
+<div class="cc-topic-index-label">Explore all 70 topics</div>
+<div class="cc-topic-index-meta"><a href="/digest/">Today’s digest →</a></div>
 </div>
+<div class="cc-topic-index-grid">
+<div class="cc-topic-index-col">
+<div class="cc-topic-index-cat">Core Theology</div>
+<a href="/topics/atonement/" class="cc-topic-index-link">The Atonement</a>
+<a href="/topics/justification-by-faith/" class="cc-topic-index-link">Justification by Faith</a>
+<a href="/topics/biblical-inerrancy/" class="cc-topic-index-link">Biblical Inerrancy</a>
+<a href="/topics/baptism/" class="cc-topic-index-link">Baptism</a>
+<a href="/topics/lords-supper/" class="cc-topic-index-link">The Lord's Supper</a>
+<a href="/topics/heaven-hell-eternity/" class="cc-topic-index-link">Heaven, Hell & Eternity</a>
+<a href="/topics/creation-evolution/" class="cc-topic-index-link">Creation & Evolution</a>
+<a href="/topics/suffering-and-providence/" class="cc-topic-index-link">Suffering & Providence</a>
+<a href="/topics/gender-and-biblical-anthropology/" class="cc-topic-index-link">Gender & Biblical Anthropology</a>
+<a href="/topics/apologetics/" class="cc-topic-index-link">Apologetics</a>
+<a href="/topics/predestination-free-will/" class="cc-topic-index-link">Predestination & Free Will</a>
+<a href="/topics/holy-spirit-spiritual-gifts/" class="cc-topic-index-link">The Holy Spirit & Spiritual Gifts</a>
+<a href="/topics/the-trinity/" class="cc-topic-index-link">The Trinity</a>
+<a href="/topics/eschatology/" class="cc-topic-index-link">Eschatology & End Times</a>
+<a href="/topics/israel-and-prophecy/" class="cc-topic-index-link">Israel & Prophecy</a>
+<a href="/topics/christology/" class="cc-topic-index-link">Christology</a>
+<a href="/topics/covenant-theology/" class="cc-topic-index-link">Covenant Theology</a>
 </div>
-<div class="cc-topics-category">
-<div class="cc-topics-cat-label">Church Life</div>
-<div class="cc-topics-grid">
-<a class="cc-topic-link" href="/topics/complementarianism-egalitarianism/">Complementarianism &amp; Egalitarianism</a>
-<a class="cc-topic-link" href="/topics/church-discipline/">Church Discipline</a>
-<a class="cc-topic-link" href="/topics/worship-and-liturgy/">Worship &amp; Liturgy</a>
-<a class="cc-topic-link" href="/topics/local-church/">The Local Church</a>
-<a class="cc-topic-link" href="/topics/missions-and-evangelism/">Missions &amp; Evangelism</a>
-<a class="cc-topic-link" href="/topics/church-history/">Church History</a>
-<a class="cc-topic-link" href="/topics/membership/">Church Membership</a>
-<a class="cc-topic-link" href="/topics/church-planting/">Church Planting</a>
-<a class="cc-topic-link" href="/topics/preaching/">Preaching</a>
-<a class="cc-topic-link" href="/topics/church-accountability/">Pastoral Accountability</a>
-<a class="cc-topic-link" href="/topics/spiritual-abuse/">Spiritual Abuse &amp; Toxic Churches</a>
-<a class="cc-topic-link" href="/topics/small-groups/">Small Groups</a>
-<a class="cc-topic-link" href="/topics/pastoral-ministry/">The Pastor's Role</a>
-<a class="cc-topic-link" href="/topics/church-governance/">Church Governance</a>
+<div class="cc-topic-index-col">
+<div class="cc-topic-index-cat">Church Life</div>
+<a href="/topics/complementarianism-egalitarianism/" class="cc-topic-index-link">Complementarianism & Egalitarianism</a>
+<a href="/topics/church-discipline/" class="cc-topic-index-link">Church Discipline</a>
+<a href="/topics/worship-and-liturgy/" class="cc-topic-index-link">Worship & Liturgy</a>
+<a href="/topics/local-church/" class="cc-topic-index-link">The Local Church</a>
+<a href="/topics/missions-and-evangelism/" class="cc-topic-index-link">Missions & Evangelism</a>
+<a href="/topics/church-history/" class="cc-topic-index-link">Church History</a>
+<a href="/topics/membership/" class="cc-topic-index-link">Church Membership</a>
+<a href="/topics/church-planting/" class="cc-topic-index-link">Church Planting</a>
+<a href="/topics/preaching/" class="cc-topic-index-link">Preaching</a>
+<a href="/topics/church-accountability/" class="cc-topic-index-link">Pastoral Accountability</a>
+<a href="/topics/spiritual-abuse/" class="cc-topic-index-link">Spiritual Abuse & Toxic Churches</a>
+<a href="/topics/small-groups/" class="cc-topic-index-link">Small Groups</a>
+<a href="/topics/pastoral-ministry/" class="cc-topic-index-link">The Pastor's Role</a>
+<a href="/topics/church-governance/" class="cc-topic-index-link">Church Governance</a>
 </div>
+<div class="cc-topic-index-col">
+<div class="cc-topic-index-cat">Spiritual Formation</div>
+<a href="/topics/prayer/" class="cc-topic-index-link">Prayer</a>
+<a href="/topics/discipleship/" class="cc-topic-index-link active">Discipleship</a>
+<a href="/topics/sanctification/" class="cc-topic-index-link">Sanctification</a>
+<a href="/topics/spiritual-disciplines/" class="cc-topic-index-link">Spiritual Disciplines</a>
+<a href="/topics/spiritual-warfare/" class="cc-topic-index-link">Spiritual Warfare</a>
+<a href="/topics/fasting/" class="cc-topic-index-link">Fasting</a>
+<a href="/topics/anxiety-and-fear/" class="cc-topic-index-link">Anxiety & Fear</a>
+<a href="/topics/mental-health/" class="cc-topic-index-link">Mental Health & Faith</a>
+<a href="/topics/faith-deconstruction/" class="cc-topic-index-link">Deconstruction & Faith</a>
+<a href="/topics/contemplative-prayer/" class="cc-topic-index-link">Contemplative Prayer</a>
+<a href="/topics/grief-and-lament/" class="cc-topic-index-link">Grief & Lament</a>
+<a href="/topics/forgiveness/" class="cc-topic-index-link">Forgiveness</a>
+<a href="/topics/christian-friendship/" class="cc-topic-index-link">Christian Friendship & Community</a>
+<a href="/topics/singleness/" class="cc-topic-index-link">Singleness</a>
+<a href="/topics/biblical-literacy/" class="cc-topic-index-link">Biblical Literacy</a>
+<a href="/topics/pornography/" class="cc-topic-index-link">Pornography & Sexual Purity</a>
+<a href="/topics/death-and-dying/" class="cc-topic-index-link">Death & Dying</a>
 </div>
-<div class="cc-topics-category">
-<div class="cc-topics-cat-label">Spiritual Formation</div>
-<div class="cc-topics-grid">
-<a class="cc-topic-link" href="/topics/prayer/">Prayer</a>
-<a class="cc-topic-link active" href="/topics/discipleship/">Discipleship</a>
-<a class="cc-topic-link" href="/topics/sanctification/">Sanctification</a>
-<a class="cc-topic-link" href="/topics/spiritual-disciplines/">Spiritual Disciplines</a>
-<a class="cc-topic-link" href="/topics/spiritual-warfare/">Spiritual Warfare</a>
-<a class="cc-topic-link" href="/topics/fasting/">Fasting</a>
-<a class="cc-topic-link" href="/topics/anxiety-and-fear/">Anxiety &amp; Fear</a>
-<a class="cc-topic-link" href="/topics/mental-health/">Mental Health &amp; Faith</a>
-<a class="cc-topic-link" href="/topics/faith-deconstruction/">Deconstruction &amp; Faith</a>
-<a class="cc-topic-link" href="/topics/contemplative-prayer/">Contemplative Prayer</a>
-<a class="cc-topic-link" href="/topics/grief-and-lament/">Grief &amp; Lament</a>
-<a class="cc-topic-link" href="/topics/forgiveness/">Forgiveness</a>
-<a class="cc-topic-link" href="/topics/christian-friendship/">Christian Friendship &amp; Community</a>
-<a class="cc-topic-link" href="/topics/singleness/">Singleness</a>
-<a class="cc-topic-link" href="/topics/biblical-literacy/">Biblical Literacy</a>
-<a class="cc-topic-link" href="/topics/pornography/">Pornography &amp; Sexual Purity</a>
-<a class="cc-topic-link" href="/topics/death-and-dying/">Death &amp; Dying</a>
-</div>
-</div>
-<div class="cc-topics-category">
-<div class="cc-topics-cat-label">Culture &amp; Society</div>
-<div class="cc-topics-grid">
-<a class="cc-topic-link" href="/topics/politics-and-the-church/">Politics &amp; the Church</a>
-<a class="cc-topic-link" href="/topics/racial-reconciliation/">Racial Reconciliation</a>
-<a class="cc-topic-link" href="/topics/technology/">Technology &amp; the Christian Life</a>
-<a class="cc-topic-link" href="/topics/technology-and-discipleship/">Technology &amp; Discipleship</a>
-<a class="cc-topic-link" href="/topics/marriage-and-family/">Marriage &amp; Family</a>
-<a class="cc-topic-link" href="/topics/christian-parenting/">Christian Parenting</a>
-<a class="cc-topic-link" href="/topics/christian-ethics/">Christian Ethics</a>
-<a class="cc-topic-link" href="/topics/vocation-and-work/">Vocation &amp; Work</a>
-<a class="cc-topic-link" href="/topics/evangelicalism/">The Future of Evangelicalism</a>
-<a class="cc-topic-link" href="/topics/christian-nationalism/">Christian Nationalism</a>
-<a class="cc-topic-link" href="/topics/biblical-sexuality/">Biblical Sexuality</a>
-<a class="cc-topic-link" href="/topics/ai-and-the-church/">Artificial Intelligence &amp; the Church</a>
-<a class="cc-topic-link" href="/topics/biblical-justice/">Biblical Justice &amp; the Social Gospel</a>
-<a class="cc-topic-link" href="/topics/prosperity-gospel/">The Prosperity Gospel</a>
-<a class="cc-topic-link" href="/topics/religious-liberty/">Religious Liberty</a>
-<a class="cc-topic-link" href="/topics/progressive-christianity/">Progressive Christianity</a>
-<a class="cc-topic-link" href="/topics/christian-education/">Christian Education</a>
-<a class="cc-topic-link" href="/topics/abortion/">Abortion &amp; the Pro-Life Movement</a>
-<a class="cc-topic-link" href="/topics/addiction-and-recovery/">Addiction &amp; Recovery</a>
-<a class="cc-topic-link" href="/topics/creation-care/">Creation Care</a>
-<a class="cc-topic-link" href="/topics/christian-masculinity/">Christian Masculinity</a>
-<a class="cc-topic-link" href="/topics/stewardship-and-generosity/">Stewardship &amp; Generosity</a>
+<div class="cc-topic-index-col">
+<div class="cc-topic-index-cat">Culture & Society</div>
+<a href="/topics/politics-and-the-church/" class="cc-topic-index-link">Politics & the Church</a>
+<a href="/topics/racial-reconciliation/" class="cc-topic-index-link">Racial Reconciliation</a>
+<a href="/topics/technology/" class="cc-topic-index-link">Technology & the Christian Life</a>
+<a href="/topics/technology-and-discipleship/" class="cc-topic-index-link">Technology & Discipleship</a>
+<a href="/topics/marriage-and-family/" class="cc-topic-index-link">Marriage & Family</a>
+<a href="/topics/christian-parenting/" class="cc-topic-index-link">Christian Parenting</a>
+<a href="/topics/christian-ethics/" class="cc-topic-index-link">Christian Ethics</a>
+<a href="/topics/vocation-and-work/" class="cc-topic-index-link">Vocation & Work</a>
+<a href="/topics/evangelicalism/" class="cc-topic-index-link">The Future of Evangelicalism</a>
+<a href="/topics/christian-nationalism/" class="cc-topic-index-link">Christian Nationalism</a>
+<a href="/topics/biblical-sexuality/" class="cc-topic-index-link">Biblical Sexuality</a>
+<a href="/topics/ai-and-the-church/" class="cc-topic-index-link">Artificial Intelligence & the Church</a>
+<a href="/topics/biblical-justice/" class="cc-topic-index-link">Biblical Justice & the Social Gospel</a>
+<a href="/topics/prosperity-gospel/" class="cc-topic-index-link">The Prosperity Gospel</a>
+<a href="/topics/religious-liberty/" class="cc-topic-index-link">Religious Liberty</a>
+<a href="/topics/progressive-christianity/" class="cc-topic-index-link">Progressive Christianity</a>
+<a href="/topics/christian-education/" class="cc-topic-index-link">Christian Education</a>
+<a href="/topics/abortion/" class="cc-topic-index-link">Abortion & the Pro-Life Movement</a>
+<a href="/topics/addiction-and-recovery/" class="cc-topic-index-link">Addiction & Recovery</a>
+<a href="/topics/creation-care/" class="cc-topic-index-link">Creation Care</a>
+<a href="/topics/christian-masculinity/" class="cc-topic-index-link">Christian Masculinity</a>
+<a href="/topics/stewardship-and-generosity/" class="cc-topic-index-link">Stewardship & Generosity</a>
 </div>
 </div>
 </nav>
-</main><footer class="cc-footer">
-<a href="/">Christian Curator</a> · Daily evangelical content, curated.<br/>
-<a href="/">Explore all topics</a> · <a href="/archive/">Archive</a>
+<!-- AEO-TOPIC-INDEX:END -->
+</main><!-- AEO-SITE-FOOTER:START -->
+<footer class="cc-footer">
+<div class="cc-footer-name">Christian Curator</div>
+<div class="cc-footer-nav">
+<a href="/digest/">Daily Digest</a>
+<a href="/voices/">Voices</a>
+<a href="/archive/">Archive</a>
+</div>
+<div class="cc-footer-tagline">Curated from across the evangelical web.</div>
 </footer>
+<!-- AEO-SITE-FOOTER:END -->
 </div>
 </body>
 </html>
