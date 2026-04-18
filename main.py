@@ -110,6 +110,19 @@ def main():
     render_html(articles, pairings, yesterday_articles, daily_summary=daily_summary,
                 research_articles=research_articles)
 
+    # --- Voice ↔ Topic cross-links: refresh "Featured in Deep-Dive Topics" block
+    #     on each voice page from the latest featured_topic_log + current digest.
+    #     Must run AFTER render_html so today's co-occurrences are visible. Wrapped
+    #     in try/except so a failure here never breaks the daily run. ---
+    try:
+        import subprocess
+        subprocess.run(
+            [sys.executable, "scripts/update_voice_backlinks.py"],
+            check=False, timeout=60,
+        )
+    except Exception as e:
+        print(f"  (voice backlinks refresh skipped: {e})")
+
     # --- Send Email ---
     if send_email_flag:
         print("\n[8/8] Sending daily email via Brevo...")
