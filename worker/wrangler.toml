@@ -1,0 +1,17 @@
+name = "cc-subscribe"
+main = "subscribe.js"
+compatibility_date = "2026-04-01"
+
+# Secrets are set via:
+#   wrangler secret put RECAPTCHA_SECRET
+#   wrangler secret put BREVO_API_KEY
+#   wrangler secret put BREVO_LIST_ID
+#   (optional) wrangler secret put RECAPTCHA_THRESHOLD   # default 0.5
+#
+# After deploy, the Worker URL will be:
+#   https://cc-subscribe.<your-cf-account>.workers.dev
+#
+# To bind it to a custom route under your domain (recommended once DNS is on Cloudflare):
+# [[routes]]
+# pattern = "christiancurator.com/api/subscribe"
+# zone_name = "christiancurator.com"
