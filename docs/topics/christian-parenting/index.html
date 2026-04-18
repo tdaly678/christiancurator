@@ -40,6 +40,32 @@
   "dateModified": "2026-04-17"
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.christiancurator.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Topics",
+      "item": "https://www.christiancurator.com/#topics"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Raising Children in the Faith",
+      "item": "https://www.christiancurator.com/topics/christian-parenting/"
+    }
+  ]
+}
+</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;family=Source+Sans+3:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -50,6 +76,12 @@
     .cc-top-bar { display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: #888; }
     .cc-back { font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; }
     .cc-back:hover { text-decoration: underline; }
+    /* Breadcrumb */
+    .cc-breadcrumb { font-size: 11px; color: #aaa; margin-bottom: 1.5rem; letter-spacing: 0.02em; }
+    .cc-breadcrumb a { color: #2C4A2E; text-decoration: none; }
+    .cc-breadcrumb a:hover { text-decoration: underline; }
+    .cc-breadcrumb-sep { margin: 0 6px; color: #ccc; }
+
     .cc-site-name { font-family: 'Lora', Georgia, serif; font-size: 22px; font-weight: 600; color: #1a1a1a; text-decoration: none; }
     .cc-series-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.5rem; }
     .cc-topic-hero { margin-bottom: 2.25rem; padding-bottom: 2rem; border-bottom: 2px solid #1a1a1a; }
@@ -77,6 +109,13 @@
     .cc-synthesis { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 2px solid #e0ddd8; }
     .cc-synthesis-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.75rem; }
     .cc-synthesis p { font-size: 15px; color: #333; line-height: 1.7; margin-bottom: 0.9rem; }
+    /* Related topics */
+    .cc-related-topics { margin: 2.25rem 0; padding: 1.1rem 1.25rem 1.25rem; background: #f7f5f2; border-radius: 5px; border: 1px solid #e0ddd8; }
+    .cc-related-topics-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.8rem; }
+    .cc-related-topics-list { display: flex; flex-wrap: wrap; gap: 0.45rem 0.7rem; }
+    .cc-related-topic-link { display: inline-block; font-size: 13px; color: #2C4A2E; text-decoration: none; padding: 5px 11px; background: #fff; border: 1px solid #d0d9d0; border-radius: 3px; font-weight: 600; letter-spacing: 0.02em; }
+    .cc-related-topic-link:hover { background: #2C4A2E; color: #fff; border-color: #2C4A2E; }
+
     .cc-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e0ddd8; font-size: 12px; color: #aaa; text-align: center; line-height: 1.8; }
     .cc-footer a { color: #2C4A2E; text-decoration: none; }
     .cc-footer a:hover { text-decoration: underline; }
@@ -175,6 +214,7 @@
 <a class="cc-site-name" href="/">Christian Curator</a>
 </div>
 </header><main>
+<nav aria-label="Breadcrumb" class="cc-breadcrumb"><a href="/">Home</a><span class="cc-breadcrumb-sep">›</span><a href="/#topics">Topics</a><span class="cc-breadcrumb-sep">›</span><span aria-current="page">Raising Children in the Faith</span></nav>
 <div class="cc-topic-hero">
 <div class="cc-series-label">Go Deeper · Spiritual Formation</div>
 <h1 class="cc-topic-title">On Raising Children in the Faith</h1>
@@ -240,6 +280,17 @@
 <p>The three major frameworks in evangelical parenting share deep common ground: they all insist that parenting is not a technical problem requiring the right method, but a spiritual calling requiring the gospel. Whether parents emphasize the heart-focused discipline of the Tripp school, the grace-rich security of the Kimmel approach, or the intentional discipleship emphasis of family worship advocates, they agree on the fundamental reorientation required: parents are not managers of behavior but stewards of souls, responsible to introduce their children to Jesus and model his kingdom. All three reject the false choice between authority and affection, structure and grace, formation and freedom. The deepest agreement is that the goal is not compliance but transformation — not children who obey because they fear punishment, but children who grow in their love for Jesus because they have experienced the gospel at home.</p>
 <p>What emerges across these conversations is a portrait of Christian parenting as costly, humbling, and utterly dependent on God’s grace. Parents cannot raise godly children through effort or technique alone. They are partners with God in the spiritual formation of their kids, and that partnership requires constant prayer, ongoing repentance, and radical trust in God’s sovereignty over their souls. In a secular age increasingly hostile to Christian faith, Christian parents serve as primary spiritual formation agents in their children’s lives. That role is not peripheral to the church’s mission; it is central to it. Whether through disciplined hearts, grace-soaked relationships, or intentional family worship, parents have the privilege and burden of being the primary means by which the gospel reaches the next generation.</p>
 </section>
+<!-- AEO-RELATED-TOPICS:START -->
+<nav aria-label="Related topics" class="cc-related-topics">
+  <div class="cc-related-topics-label">Related Deep-Dive Topics</div>
+  <div class="cc-related-topics-list">
+    <a class="cc-related-topic-link" href="/topics/technology/">Technology & the Christian Life</a>
+    <a class="cc-related-topic-link" href="/topics/christian-ethics/">Christian Ethics</a>
+    <a class="cc-related-topic-link" href="/topics/christian-nationalism/">Christian Nationalism</a>
+    <a class="cc-related-topic-link" href="/topics/christian-education/">Christian Education</a>
+  </div>
+</nav>
+<!-- AEO-RELATED-TOPICS:END -->
 <div>
 <h2 class="cc-article-list-label">The Evangelical Conversation, Curated</h2>
 <article class="cc-article-entry">

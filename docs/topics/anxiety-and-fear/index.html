@@ -40,6 +40,32 @@
   "dateModified": "2026-04-17"
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.christiancurator.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Topics",
+      "item": "https://www.christiancurator.com/#topics"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Anxiety &amp; Fear",
+      "item": "https://www.christiancurator.com/topics/anxiety-and-fear/"
+    }
+  ]
+}
+</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;family=Source+Sans+3:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -50,6 +76,12 @@
     .cc-top-bar { display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: #888; }
     .cc-back { font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; }
     .cc-back:hover { text-decoration: underline; }
+    /* Breadcrumb */
+    .cc-breadcrumb { font-size: 11px; color: #aaa; margin-bottom: 1.5rem; letter-spacing: 0.02em; }
+    .cc-breadcrumb a { color: #2C4A2E; text-decoration: none; }
+    .cc-breadcrumb a:hover { text-decoration: underline; }
+    .cc-breadcrumb-sep { margin: 0 6px; color: #ccc; }
+
     .cc-site-name { font-family: 'Lora', Georgia, serif; font-size: 22px; font-weight: 600; color: #1a1a1a; text-decoration: none; }
     .cc-series-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.5rem; }
     .cc-topic-hero { margin-bottom: 2.25rem; padding-bottom: 2rem; border-bottom: 2px solid #1a1a1a; }
@@ -77,6 +109,13 @@
     .cc-synthesis { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 2px solid #e0ddd8; }
     .cc-synthesis-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.75rem; }
     .cc-synthesis p { font-size: 15px; color: #333; line-height: 1.7; margin-bottom: 0.9rem; }
+    /* Related topics */
+    .cc-related-topics { margin: 2.25rem 0; padding: 1.1rem 1.25rem 1.25rem; background: #f7f5f2; border-radius: 5px; border: 1px solid #e0ddd8; }
+    .cc-related-topics-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.8rem; }
+    .cc-related-topics-list { display: flex; flex-wrap: wrap; gap: 0.45rem 0.7rem; }
+    .cc-related-topic-link { display: inline-block; font-size: 13px; color: #2C4A2E; text-decoration: none; padding: 5px 11px; background: #fff; border: 1px solid #d0d9d0; border-radius: 3px; font-weight: 600; letter-spacing: 0.02em; }
+    .cc-related-topic-link:hover { background: #2C4A2E; color: #fff; border-color: #2C4A2E; }
+
     /* Controversy Section */
     .cc-controversy { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 2px solid #e0ddd8; margin-bottom: 2.5rem; }
     .cc-controversy-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #8B1A1A; margin-bottom: 0.5rem; }
@@ -174,6 +213,7 @@
 <a class="cc-site-name" href="/">Christian Curator</a>
 </div>
 </header><main>
+<nav aria-label="Breadcrumb" class="cc-breadcrumb"><a href="/">Home</a><span class="cc-breadcrumb-sep">›</span><a href="/#topics">Topics</a><span class="cc-breadcrumb-sep">›</span><span aria-current="page">Anxiety &amp; Fear</span></nav>
 <div class="cc-topic-hero">
 <div class="cc-series-label">Go Deeper · Spiritual Formation</div>
 <h1 class="cc-topic-title">On Anxiety &amp; Fear</h1>
@@ -282,6 +322,17 @@
 <p>The most mature evangelical voices on anxiety today hold multiple dimensions in creative tension: the body is real, which means neuroscience and medicine matter; the soul is real, which means Scripture's categories matter; and God is sovereign, which means neither despair nor medical intervention is the final word. The best evangelical writing refuses to choose between "it's all spiritual" and "it's all biological" in favor of a more honest account of the anxious person as a whole creature — embodied, spiritual, relational — who needs both the Word of God and the wisdom of God embedded in creation.</p>
 <p>What the church uniquely offers the anxious person is not better coping skills but a changed relationship to the future and a community that witnesses to God's faithfulness. The anxious person is someone trying to manage an unmanageable tomorrow through their own resources; the gospel announces that the future belongs to God, and God has demonstrated his trustworthiness through the cross and resurrection of Jesus. This does not make anxiety disappear miraculously, but it provides a foundation from which the anxious Christian can face fear without being destroyed by it. The church's task is to embody this foundation: to be a community of people who take anxiety seriously, who do not shame the fearful, who point to Christ's presence, and who trust that the One to whom all authority belongs is sufficient for every anxious heart.</p>
 </section>
+<!-- AEO-RELATED-TOPICS:START -->
+<nav aria-label="Related topics" class="cc-related-topics">
+  <div class="cc-related-topics-label">Related Deep-Dive Topics</div>
+  <div class="cc-related-topics-list">
+    <a class="cc-related-topic-link" href="/topics/mental-health/">Mental Health & Faith</a>
+    <a class="cc-related-topic-link" href="/topics/prayer/">Prayer</a>
+    <a class="cc-related-topic-link" href="/topics/discipleship/">Discipleship</a>
+    <a class="cc-related-topic-link" href="/topics/sanctification/">Sanctification</a>
+  </div>
+</nav>
+<!-- AEO-RELATED-TOPICS:END -->
 <section class="cc-controversy">
 <h2 class="cc-controversy-label">The Evangelical Debate</h2>
 <h2 class="cc-controversy-title">Biblical Counseling vs. Integration: Where Is the Anxious Christian's Primary Hope?</h2>

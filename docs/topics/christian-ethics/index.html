@@ -40,6 +40,32 @@
   "dateModified": "2026-04-17"
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.christiancurator.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Topics",
+      "item": "https://www.christiancurator.com/#topics"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Christian Ethics",
+      "item": "https://www.christiancurator.com/topics/christian-ethics/"
+    }
+  ]
+}
+</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;family=Source+Sans+3:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -50,6 +76,12 @@
     .cc-top-bar { display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: #888; }
     .cc-back { font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; }
     .cc-back:hover { text-decoration: underline; }
+    /* Breadcrumb */
+    .cc-breadcrumb { font-size: 11px; color: #aaa; margin-bottom: 1.5rem; letter-spacing: 0.02em; }
+    .cc-breadcrumb a { color: #2C4A2E; text-decoration: none; }
+    .cc-breadcrumb a:hover { text-decoration: underline; }
+    .cc-breadcrumb-sep { margin: 0 6px; color: #ccc; }
+
     .cc-site-name { font-family: 'Lora', Georgia, serif; font-size: 22px; font-weight: 600; color: #1a1a1a; text-decoration: none; }
     .cc-series-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.5rem; }
     .cc-topic-hero { margin-bottom: 2.25rem; padding-bottom: 2rem; border-bottom: 2px solid #1a1a1a; }
@@ -77,6 +109,13 @@
     .cc-synthesis { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 2px solid #e0ddd8; }
     .cc-synthesis-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.75rem; }
     .cc-synthesis p { font-size: 15px; color: #333; line-height: 1.7; margin-bottom: 0.9rem; }
+    /* Related topics */
+    .cc-related-topics { margin: 2.25rem 0; padding: 1.1rem 1.25rem 1.25rem; background: #f7f5f2; border-radius: 5px; border: 1px solid #e0ddd8; }
+    .cc-related-topics-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.8rem; }
+    .cc-related-topics-list { display: flex; flex-wrap: wrap; gap: 0.45rem 0.7rem; }
+    .cc-related-topic-link { display: inline-block; font-size: 13px; color: #2C4A2E; text-decoration: none; padding: 5px 11px; background: #fff; border: 1px solid #d0d9d0; border-radius: 3px; font-weight: 600; letter-spacing: 0.02em; }
+    .cc-related-topic-link:hover { background: #2C4A2E; color: #fff; border-color: #2C4A2E; }
+
     /* Controversy Section */
     .cc-controversy { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 2px solid #e0ddd8; margin-bottom: 2.5rem; }
     .cc-controversy-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #8B1A1A; margin-bottom: 0.5rem; }
@@ -174,6 +213,7 @@
 <a class="cc-site-name" href="/">Christian Curator</a>
 </div>
 </header><main>
+<nav aria-label="Breadcrumb" class="cc-breadcrumb"><a href="/">Home</a><span class="cc-breadcrumb-sep">›</span><a href="/#topics">Topics</a><span class="cc-breadcrumb-sep">›</span><span aria-current="page">Christian Ethics</span></nav>
 <div class="cc-topic-hero">
 <div class="cc-series-label">Go Deeper · Culture &amp; Society</div>
 <h1 class="cc-topic-title">On Christian Ethics</h1>
@@ -239,6 +279,17 @@
 <p>All three positions agree on something decisive: Christian ethics is not a private matter of personal preference, and it cannot be abstracted from deep convictions about who God is and what he has revealed. The natural law tradition argues that Christian ethics has universal appeal and can be defended in terms accessible to all people. The Scripture-first tradition insists that biblical revelation is sufficient and normative for all ethical questions and that Christians should not hesitate to ground public argument in Scripture even in a secular age. The narrative tradition contends that the church's form of life — its practices and community — is itself the most persuasive ethical witness to the world. These three approaches need not be utterly opposed. The deepest evangelical conviction is that Christian ethics flows from the gospel and that the gospel transforms how we see ourselves, our neighbors, and our obligation to the common good.</p>
 <p>What evangelical ethics must resist is the reduction of morality to either ideology or sentiment. When Christians in the public square sound merely like partisan activists, or when they ground their moral claims only in personal conviction, they have lost something essential. Christian ethics in a pluralistic age requires both clear conviction about God's will and the humility to recognize that others may disagree in good faith. It requires that we not confuse Christian faithfulness with political victory, and that we remember that the church's first calling is to embody and proclaim the gospel, not to redeem the culture. Yet that gospel shapes people — and people shape the world they inhabit.</p>
 </section>
+<!-- AEO-RELATED-TOPICS:START -->
+<nav aria-label="Related topics" class="cc-related-topics">
+  <div class="cc-related-topics-label">Related Deep-Dive Topics</div>
+  <div class="cc-related-topics-list">
+    <a class="cc-related-topic-link" href="/topics/biblical-sexuality/">Biblical Sexuality</a>
+    <a class="cc-related-topic-link" href="/topics/technology/">Technology & the Christian Life</a>
+    <a class="cc-related-topic-link" href="/topics/christian-parenting/">Christian Parenting</a>
+    <a class="cc-related-topic-link" href="/topics/christian-nationalism/">Christian Nationalism</a>
+  </div>
+</nav>
+<!-- AEO-RELATED-TOPICS:END -->
 <div>
 <h2 class="cc-article-list-label">The Evangelical Conversation, Curated</h2>
 <article class="cc-article-entry">

@@ -40,6 +40,32 @@
   "dateModified": "2026-04-17"
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.christiancurator.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Topics",
+      "item": "https://www.christiancurator.com/#topics"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Biblical Justice &amp; the Social Gospel",
+      "item": "https://www.christiancurator.com/topics/biblical-justice/"
+    }
+  ]
+}
+</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;family=Source+Sans+3:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -50,6 +76,12 @@
     .cc-top-bar { display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: #888; }
     .cc-back { font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; }
     .cc-back:hover { text-decoration: underline; }
+    /* Breadcrumb */
+    .cc-breadcrumb { font-size: 11px; color: #aaa; margin-bottom: 1.5rem; letter-spacing: 0.02em; }
+    .cc-breadcrumb a { color: #2C4A2E; text-decoration: none; }
+    .cc-breadcrumb a:hover { text-decoration: underline; }
+    .cc-breadcrumb-sep { margin: 0 6px; color: #ccc; }
+
     .cc-site-name { font-family: 'Lora', Georgia, serif; font-size: 22px; font-weight: 600; color: #1a1a1a; text-decoration: none; }
     .cc-series-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.5rem; }
     .cc-topic-hero { margin-bottom: 2.25rem; padding-bottom: 2rem; border-bottom: 2px solid #1a1a1a; }
@@ -77,6 +109,13 @@
     .cc-synthesis { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 2px solid #e0ddd8; }
     .cc-synthesis-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.75rem; }
     .cc-synthesis p { font-size: 15px; color: #333; line-height: 1.7; margin-bottom: 0.9rem; }
+    /* Related topics */
+    .cc-related-topics { margin: 2.25rem 0; padding: 1.1rem 1.25rem 1.25rem; background: #f7f5f2; border-radius: 5px; border: 1px solid #e0ddd8; }
+    .cc-related-topics-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.8rem; }
+    .cc-related-topics-list { display: flex; flex-wrap: wrap; gap: 0.45rem 0.7rem; }
+    .cc-related-topic-link { display: inline-block; font-size: 13px; color: #2C4A2E; text-decoration: none; padding: 5px 11px; background: #fff; border: 1px solid #d0d9d0; border-radius: 3px; font-weight: 600; letter-spacing: 0.02em; }
+    .cc-related-topic-link:hover { background: #2C4A2E; color: #fff; border-color: #2C4A2E; }
+
     .cc-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e0ddd8; font-size: 12px; color: #aaa; text-align: center; line-height: 1.8; }
     .cc-footer a { color: #2C4A2E; text-decoration: none; }
     .cc-footer a:hover { text-decoration: underline; }
@@ -171,6 +210,7 @@
 <a class="cc-site-name" href="/">Christian Curator</a>
 </div>
 </header><main>
+<nav aria-label="Breadcrumb" class="cc-breadcrumb"><a href="/">Home</a><span class="cc-breadcrumb-sep">›</span><a href="/#topics">Topics</a><span class="cc-breadcrumb-sep">›</span><span aria-current="page">Biblical Justice &amp; the Social Gospel</span></nav>
 <div class="cc-topic-hero">
 <div class="cc-series-label">Go Deeper · Culture &amp; Society</div>
 <h1 class="cc-topic-title">On Biblical Justice &amp; the Social Gospel</h1>
@@ -235,6 +275,17 @@
 <p>The evangelical debate about justice reveals that Christians genuinely disagree about how to prioritize gospel concerns and what social responsibility looks like in practice. Yet there is emerging consensus that the gospel speaks to injustice; that Christians must serve the poor not as a competing agenda but as an expression of following Jesus; that systemic evil matters and cannot be dismissed as merely political; and that evangelical withdrawal from questions of justice is itself a choice with moral consequences. The healthiest churches are those that pursue both gospel proclamation and social advocacy, understanding them not as competing goods but as different expressions of love for God and neighbor.</p>
 <p>The deepest evangelical conviction is that Christ's gospel speaks to the whole person in the whole world. Justice without gospel grace becomes moralistic; gospel grace without justice becomes abstract and disconnected from human suffering. The call to evangelicals is to hold both truths, to pursue justice as an expression of gospel transformation, to resist political ideologies of right and left that would domesticate the gospel, and to remember that ultimate justice comes not from human effort but from Christ's return. In the meantime, Christians are called to reflect God's just and merciful character in our institutions, our relationships, and our advocacy for the vulnerable.</p>
 </section>
+<!-- AEO-RELATED-TOPICS:START -->
+<nav aria-label="Related topics" class="cc-related-topics">
+  <div class="cc-related-topics-label">Related Deep-Dive Topics</div>
+  <div class="cc-related-topics-list">
+    <a class="cc-related-topic-link" href="/topics/racial-reconciliation/">Racial Reconciliation</a>
+    <a class="cc-related-topic-link" href="/topics/biblical-sexuality/">Biblical Sexuality</a>
+    <a class="cc-related-topic-link" href="/topics/prosperity-gospel/">The Prosperity Gospel</a>
+    <a class="cc-related-topic-link" href="/topics/politics-and-the-church/">Politics & the Church</a>
+  </div>
+</nav>
+<!-- AEO-RELATED-TOPICS:END -->
 <div>
 <h2 class="cc-article-list-label">The Evangelical Conversation, Curated</h2>
 <article class="cc-article-entry">

@@ -40,6 +40,32 @@
   "dateModified": "2026-04-17"
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.christiancurator.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Topics",
+      "item": "https://www.christiancurator.com/#topics"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Fasting",
+      "item": "https://www.christiancurator.com/topics/fasting/"
+    }
+  ]
+}
+</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;family=Source+Sans+3:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -50,6 +76,12 @@
     .cc-top-bar { display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: #888; }
     .cc-back { font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; }
     .cc-back:hover { text-decoration: underline; }
+    /* Breadcrumb */
+    .cc-breadcrumb { font-size: 11px; color: #aaa; margin-bottom: 1.5rem; letter-spacing: 0.02em; }
+    .cc-breadcrumb a { color: #2C4A2E; text-decoration: none; }
+    .cc-breadcrumb a:hover { text-decoration: underline; }
+    .cc-breadcrumb-sep { margin: 0 6px; color: #ccc; }
+
     .cc-site-name { font-family: 'Lora', Georgia, serif; font-size: 22px; font-weight: 600; color: #1a1a1a; text-decoration: none; }
     .cc-series-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.5rem; }
     .cc-topic-hero { margin-bottom: 2.25rem; padding-bottom: 2rem; border-bottom: 2px solid #1a1a1a; }
@@ -77,6 +109,13 @@
     .cc-synthesis { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 2px solid #e0ddd8; }
     .cc-synthesis-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.75rem; }
     .cc-synthesis p { font-size: 15px; color: #333; line-height: 1.7; margin-bottom: 0.9rem; }
+    /* Related topics */
+    .cc-related-topics { margin: 2.25rem 0; padding: 1.1rem 1.25rem 1.25rem; background: #f7f5f2; border-radius: 5px; border: 1px solid #e0ddd8; }
+    .cc-related-topics-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.8rem; }
+    .cc-related-topics-list { display: flex; flex-wrap: wrap; gap: 0.45rem 0.7rem; }
+    .cc-related-topic-link { display: inline-block; font-size: 13px; color: #2C4A2E; text-decoration: none; padding: 5px 11px; background: #fff; border: 1px solid #d0d9d0; border-radius: 3px; font-weight: 600; letter-spacing: 0.02em; }
+    .cc-related-topic-link:hover { background: #2C4A2E; color: #fff; border-color: #2C4A2E; }
+
     /* Controversy Section */
     .cc-controversy { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 2px solid #e0ddd8; margin-bottom: 2.5rem; }
     .cc-controversy-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #8B1A1A; margin-bottom: 0.5rem; }
@@ -174,6 +213,7 @@
 <a class="cc-site-name" href="/">Christian Curator</a>
 </div>
 </header><main>
+<nav aria-label="Breadcrumb" class="cc-breadcrumb"><a href="/">Home</a><span class="cc-breadcrumb-sep">›</span><a href="/#topics">Topics</a><span class="cc-breadcrumb-sep">›</span><span aria-current="page">Fasting</span></nav>
 <div class="cc-topic-hero">
 <div class="cc-series-label">Go Deeper · Spiritual Formation</div>
 <h1 class="cc-topic-title">On Fasting</h1>
@@ -239,6 +279,17 @@
 <p>What unites these three positions, despite their differences, is a strong conviction that fasting is not optional accidental to Christian life but integral to it — whether practiced individually, communally, or both. All three acknowledge that fasting appears throughout Scripture as a genuine means of grace, that the evangelical church's near-total abandonment of it represents a real loss, and that recovery of the practice matters. None of these positions argues that fasting is irrelevant or merely cultural.</p>
 <p>The deeper agreement is also about the Spirit's role: authentic fasting cannot be mechanized or turned into a works-righteousness checklist. Fasting that is merely physical, undertaken for self-improvement or status, accomplishes nothing spiritually. Real fasting is always an act of seeking — seeking God's presence, direction, or intervention. It is the body joining the heart's cry. The theological logic of fasting is rooted in the gospel's insistence that in Christ, we have everything we need in God, and fasting is one way we practice that truth by temporarily laying aside even good gifts (food) to affirm that we hunger for Jesus more than anything else. The evangelical question is not whether to fast but how to recover it faithfully — and the answers vary according to whether your primary concern is individual spiritual intensity, pastoral wisdom about different believers' circumstances, or restoring the corporate rhythms that historically shaped Christian formation.</p>
 </section>
+<!-- AEO-RELATED-TOPICS:START -->
+<nav aria-label="Related topics" class="cc-related-topics">
+  <div class="cc-related-topics-label">Related Deep-Dive Topics</div>
+  <div class="cc-related-topics-list">
+    <a class="cc-related-topic-link" href="/topics/prayer/">Prayer</a>
+    <a class="cc-related-topic-link" href="/topics/discipleship/">Discipleship</a>
+    <a class="cc-related-topic-link" href="/topics/sanctification/">Sanctification</a>
+    <a class="cc-related-topic-link" href="/topics/spiritual-disciplines/">Spiritual Disciplines</a>
+  </div>
+</nav>
+<!-- AEO-RELATED-TOPICS:END -->
 <div>
 <h2 class="cc-article-list-label">The Evangelical Conversation, Curated</h2>
 <article class="cc-article-entry">

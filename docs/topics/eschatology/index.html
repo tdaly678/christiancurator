@@ -37,6 +37,32 @@
   "dateModified": "2026-04-17"
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.christiancurator.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Topics",
+      "item": "https://www.christiancurator.com/#topics"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Eschatology &amp; the End Times",
+      "item": "https://www.christiancurator.com/topics/eschatology/"
+    }
+  ]
+}
+</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;family=Source+Sans+3:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -47,6 +73,12 @@
     .cc-top-bar { display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: #888; }
     .cc-back { font-size: 12px; color: #2C4A2E; text-decoration: none; font-weight: 600; }
     .cc-back:hover { text-decoration: underline; }
+    /* Breadcrumb */
+    .cc-breadcrumb { font-size: 11px; color: #aaa; margin-bottom: 1.5rem; letter-spacing: 0.02em; }
+    .cc-breadcrumb a { color: #2C4A2E; text-decoration: none; }
+    .cc-breadcrumb a:hover { text-decoration: underline; }
+    .cc-breadcrumb-sep { margin: 0 6px; color: #ccc; }
+
     .cc-site-name { font-family: 'Lora', Georgia, serif; font-size: 22px; font-weight: 600; color: #1a1a1a; text-decoration: none; }
     .cc-series-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.5rem; }
     .cc-topic-hero { margin-bottom: 2.25rem; padding-bottom: 2rem; border-bottom: 2px solid #1a1a1a; }
@@ -74,6 +106,13 @@
     .cc-synthesis { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 2px solid #e0ddd8; }
     .cc-synthesis-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.75rem; }
     .cc-synthesis p { font-size: 15px; color: #333; line-height: 1.7; margin-bottom: 0.9rem; }
+    /* Related topics */
+    .cc-related-topics { margin: 2.25rem 0; padding: 1.1rem 1.25rem 1.25rem; background: #f7f5f2; border-radius: 5px; border: 1px solid #e0ddd8; }
+    .cc-related-topics-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.8rem; }
+    .cc-related-topics-list { display: flex; flex-wrap: wrap; gap: 0.45rem 0.7rem; }
+    .cc-related-topic-link { display: inline-block; font-size: 13px; color: #2C4A2E; text-decoration: none; padding: 5px 11px; background: #fff; border: 1px solid #d0d9d0; border-radius: 3px; font-weight: 600; letter-spacing: 0.02em; }
+    .cc-related-topic-link:hover { background: #2C4A2E; color: #fff; border-color: #2C4A2E; }
+
     .cc-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e0ddd8; font-size: 12px; color: #aaa; text-align: center; line-height: 1.8; }
     .cc-footer a { color: #2C4A2E; text-decoration: none; }
     .cc-footer a:hover { text-decoration: underline; }
@@ -169,6 +208,7 @@
 <span style="visibility: hidden;">spacer</span>
 </div>
 </header><main>
+<nav aria-label="Breadcrumb" class="cc-breadcrumb"><a href="/">Home</a><span class="cc-breadcrumb-sep">›</span><a href="/#topics">Topics</a><span class="cc-breadcrumb-sep">›</span><span aria-current="page">Eschatology &amp; the End Times</span></nav>
 <div class="cc-topic-hero">
 <div class="cc-series-label">Core Theology</div>
 <h1 class="cc-topic-title">On Eschatology &amp; the End Times</h1>
@@ -234,6 +274,17 @@
 <p>The eschatological divide exposes deeper questions about how we read the Bible. Dispensationalism prizes a more literal reading of prophetic Scripture, amillennialism emphasizes theological and typological interpretation, and historic premillennialism seeks a middle path. Each approach takes Scripture seriously but arrives at different conclusions about whether Revelation is chronological prophecy or symbolic theology, whether Israel and the church are distinct or continuous, and whether the future kingdom is imminent or gradually unfolding. These are hermeneutical questions before they are prophetic ones, and honest Christians can disagree while remaining committed to biblical authority.</p>
 <p>But beyond exegesis lies a pastoral reality: our eschatology shapes our hope. If we believe the end is imminent and this world is passing away, we may disengage from long-term justice, institutional faithfulness, and cultural renewal. If we believe Christ reigns now and will reign forever, we may be tempted to equate gospel progress with cultural progress or political power. If we believe the future is genuinely open but ultimately Christ's, we live in a creative tension—neither escapism nor utopianism, but faithful witness in a world that is falling apart and being renewed. The deepest issue in the eschatological debate is not whether the rapture occurs before or after the tribulation, but whether we believe Christ is truly Lord of history and whether his future reign should transform how we live and love and work right now.</p>
 </section>
+<!-- AEO-RELATED-TOPICS:START -->
+<nav aria-label="Related topics" class="cc-related-topics">
+  <div class="cc-related-topics-label">Related Deep-Dive Topics</div>
+  <div class="cc-related-topics-list">
+    <a class="cc-related-topic-link" href="/topics/holy-spirit-spiritual-gifts/">The Holy Spirit & Spiritual Gifts</a>
+    <a class="cc-related-topic-link" href="/topics/israel-and-prophecy/">Israel & Prophecy</a>
+    <a class="cc-related-topic-link" href="/topics/covenant-theology/">Covenant Theology</a>
+    <a class="cc-related-topic-link" href="/topics/atonement/">The Atonement</a>
+  </div>
+</nav>
+<!-- AEO-RELATED-TOPICS:END -->
 <div style="margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8;">
 <h2 class="cc-article-list-label">Curated Articles</h2>
 <article class="cc-article-entry">
