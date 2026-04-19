@@ -34,7 +34,6 @@ AVATAR_COLORS = [
 
 NAV_HTML = """    <nav class="cc-nav">
       <a href="/">Home</a>
-      <a href="/digest/">Daily Digest</a>
       <div class="cc-nav-dropdown">
         <button class="cc-nav-dropdown-toggle" style="color:#1a1a1a;">Resources</button>
         <div class="cc-nav-dropdown-menu">

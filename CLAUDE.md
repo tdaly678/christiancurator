@@ -79,25 +79,17 @@ Cross-cutting scripts inject content-additive blocks using HTML-comment markers 
 
 All three scripts are safe to re-run standalone. The breadcrumb insert (`scripts/add_breadcrumbs.py`) uses a `.cc-breadcrumb` class presence check and a `"@type": "BreadcrumbList"` substring check for idempotency rather than markers.
 
-## Navigation Structure — canonical top-level items
+## Navigation Structure — canonical 3-item nav
 
-Every site page **must** have these three top-level items in its `<nav class="cc-nav">`:
+Every site page has **exactly three** top-level items in its `<nav class="cc-nav">`, in this order:
 
 1. **Home** — `<a href="/">Home</a>`
 2. **Topics** — dropdown button with 4 submenus (Core Theology, Church Life, Spiritual Formation, Culture & Society)
 3. **Resources** — dropdown containing About, Voices, Archive
 
-A **Daily Digest** link (`<a href="/digest/">Daily Digest</a>`) is *optional* and appears only on deep pages where "home ≠ digest" would confuse the user:
+No "Daily Digest" link in the top nav — users reach the digest via the Home link (home = today's digest) or the "Get the Daily Digest" subscribe button. The footer nav does still include a Daily Digest link; that's intentional.
 
-| Page                           | Daily Digest link | Topics | Resources |
-|--------------------------------|:-:|:-:|:-:|
-| `template.html` (homepage)     | — | ✓ | ✓ |
-| `digest_template.html`         | — | ✓ | ✓ |
-| `archive_template.html`        | ✓ | ✓ | ✓ |
-| `daily_template.html`          | ✓ | ✓ | ✓ |
-| `docs/about/index.html` (hand-written) | ✓ | ✓ | ✓ |
-
-CSS class: `.cc-nav`. The canonical HTML pattern lives in `frontend/archive_template.html` (the "deep page" variant — use this when creating new standalone pages). The Topics dropdown block is bracketed by `<!-- CC-TOPICS-DROPDOWN:START -->` / `<!-- CC-TOPICS-DROPDOWN:END -->` markers in every template; keep the marker pair so future sync scripts can re-inject the list.
+CSS class: `.cc-nav`. The canonical HTML pattern lives in `frontend/archive_template.html` — use this when creating new standalone pages. The Topics dropdown block is bracketed by `<!-- CC-TOPICS-DROPDOWN:START -->` / `<!-- CC-TOPICS-DROPDOWN:END -->` markers in every template; keep the marker pair so sync scripts can re-inject the list.
 
 ### Guardrail — `scripts/check_nav_consistency.py`
 

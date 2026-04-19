@@ -1058,7 +1058,6 @@ def render_archive_index(env: Environment):
         '      </div>',
         '      <nav class="cc-nav">',
         "        <a href='/'>Home</a>",
-        "        <a href='/digest/'>Daily Digest</a>",
         '        <!-- CC-TOPICS-DROPDOWN:START -->',
         '        <div class="cc-nav-dropdown cc-nav-dropdown-topics">',
         '          <button class="cc-nav-dropdown-toggle" aria-haspopup="true">Topics</button>',
