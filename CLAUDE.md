@@ -79,15 +79,38 @@ Cross-cutting scripts inject content-additive blocks using HTML-comment markers 
 
 All three scripts are safe to re-run standalone. The breadcrumb insert (`scripts/add_breadcrumbs.py`) uses a `.cc-breadcrumb` class presence check and a `"@type": "BreadcrumbList"` substring check for idempotency rather than markers.
 
-## Navigation Structure (3-item nav, all pages)
-```
-Home  |  Daily Digest  |  Archive
-```
-- Homepage: Home is `.active`
-- Digest page: Daily Digest is `.active`
-- Archive pages: Archive is `.active`
+## Navigation Structure — canonical top-level items
 
-CSS class: `.cc-nav`. All archive day pages were patched to include this nav in April 2026.
+Every site page **must** have these three top-level items in its `<nav class="cc-nav">`:
+
+1. **Home** — `<a href="/">Home</a>`
+2. **Topics** — dropdown button with 4 submenus (Core Theology, Church Life, Spiritual Formation, Culture & Society)
+3. **Resources** — dropdown containing About, Voices, Archive
+
+A **Daily Digest** link (`<a href="/digest/">Daily Digest</a>`) is *optional* and appears only on deep pages where "home ≠ digest" would confuse the user:
+
+| Page                           | Daily Digest link | Topics | Resources |
+|--------------------------------|:-:|:-:|:-:|
+| `template.html` (homepage)     | — | ✓ | ✓ |
+| `digest_template.html`         | — | ✓ | ✓ |
+| `archive_template.html`        | ✓ | ✓ | ✓ |
+| `daily_template.html`          | ✓ | ✓ | ✓ |
+| `docs/about/index.html` (hand-written) | ✓ | ✓ | ✓ |
+
+CSS class: `.cc-nav`. The canonical HTML pattern lives in `frontend/archive_template.html` (the "deep page" variant — use this when creating new standalone pages). The Topics dropdown block is bracketed by `<!-- CC-TOPICS-DROPDOWN:START -->` / `<!-- CC-TOPICS-DROPDOWN:END -->` markers in every template; keep the marker pair so future sync scripts can re-inject the list.
+
+### Guardrail — `scripts/check_nav_consistency.py`
+
+Run after any change that touches the nav or when adding new standalone pages:
+
+```
+python scripts/check_nav_consistency.py                   # full site
+python scripts/check_nav_consistency.py --only-standalone # just hand-written pages
+```
+
+Exits non-zero if any page's `cc-nav` block is missing Home, Topics, or Resources. This catches drift like the April 2026 About-page launch (published without the Topics dropdown because it was hand-written rather than rendered from a Jinja template).
+
+> **Known pre-existing drift:** 16 archive day pages dated 2026-03-22 through 2026-04-06 plus `docs/archive/index.html` pre-date the Topics dropdown and will fail the full-site check. Backfilling them is a separate task.
 
 ## Topic Cards — hook vs. summary
 Each topic in `topics_data.py` has two description fields:
