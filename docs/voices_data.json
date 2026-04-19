@@ -2905,5 +2905,134 @@
     "website": "",
     "books": [],
     "initials": "NAM"
+  },
+  {
+    "name": "Jessica Burke",
+    "slug": "jessica-burke",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JB"
+  },
+  {
+    "name": "Blake Long",
+    "slug": "blake-long",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BL"
+  },
+  {
+    "name": "Brittany Allen",
+    "slug": "brittany-allen",
+    "bio": "Brittany Allen is a writer and speaker who explores faith, culture, and the Christian life with thoughtful insight. Her work encourages readers to deepen their relationship with God while engaging meaningfully with the world around them.",
+    "affiliation": "",
+    "role": "Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BA"
+  },
+  {
+    "name": "Tim Challies",
+    "slug": "tim-challies",
+    "bio": "Tim Challies is a Canadian Christian writer, blogger, and book reviewer known for his thoughtful analysis of theology, culture, and Christian living. He has been a consistent voice in evangelical Christianity for over two decades, helping readers navigate faith and culture with biblical wisdom. Through his popular blog and numerous written works, Challies has become a trusted resource for Christian discernment and spiritual growth.",
+    "affiliation": "Challies.com; Christianity Today",
+    "role": "Author, Blogger & Book Reviewer",
+    "education": "",
+    "website": "https://www.challies.com",
+    "books": [
+      {
+        "title": "The Discipline of Spiritual Discernment",
+        "amazon_url": "https://www.amazon.com/s?k=The+Discipline+of+Spiritual+Discernment+Tim+Challies"
+      },
+      {
+        "title": "Busy",
+        "amazon_url": "https://www.amazon.com/s?k=Busy+Tim+Challies"
+      },
+      {
+        "title": "The Next Story: Life and Faith After the Digital Explosion",
+        "amazon_url": "https://www.amazon.com/s?k=The+Next+Story+Tim+Challies"
+      },
+      {
+        "title": "Spectacular Sins: And Their Global Purpose in the Glory of Christ",
+        "amazon_url": "https://www.amazon.com/s?k=Spectacular+Sins+Tim+Challies"
+      },
+      {
+        "title": "Visual Theology: Seeing and Understanding the Truth About God",
+        "amazon_url": "https://www.amazon.com/s?k=Visual+Theology+Tim+Challies"
+      }
+    ],
+    "initials": "TC"
+  },
+  {
+    "name": "RELEVANT Staff",
+    "slug": "relevant-staff",
+    "bio": "RELEVANT Staff represents the editorial team at RELEVANT Magazine, a publication dedicated to equipping Christians to live out their faith in culture. The staff works collaboratively to curate and create content that explores the intersection of faith, culture, and social issues for young adults seeking to understand Christianity's relevance today.",
+    "affiliation": "RELEVANT Magazine",
+    "role": "Editorial Staff & Content Curators",
+    "education": "",
+    "website": "https://www.relevantmagazine.com",
+    "books": [],
+    "initials": "RS"
+  },
+  {
+    "name": "Lynsey Chutel",
+    "slug": "lynsey-chutel",
+    "bio": "Lynsey Chutel is an award-winning journalist and correspondent covering African affairs, faith, and social issues. Her reporting brings nuanced perspectives on Christianity, culture, and communities across the African continent and diaspora.",
+    "affiliation": "CNN, NPR",
+    "role": "Journalist & Correspondent",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LC"
+  },
+  {
+    "name": "Robert Mackey",
+    "slug": "robert-mackey",
+    "bio": "Robert Mackey is a Christian writer and content creator dedicated to exploring faith, Scripture, and spiritual growth. His work encourages readers to deepen their understanding of biblical truths and apply them to daily Christian living.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RM"
+  },
+  {
+    "name": "Yaroslav Trofimov",
+    "slug": "yaroslav-trofimov",
+    "bio": "Yaroslav Trofimov is a foreign correspondent and author known for his incisive reporting on geopolitics, religion, and international affairs. His work explores the intersection of faith, culture, and global conflict, offering thoughtful analysis for readers seeking to understand our complex world through a Christian perspective.",
+    "affiliation": "The Wall Street Journal",
+    "role": "Foreign Correspondent & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Faith at War: Religion and the Politics of Conflict",
+        "amazon_url": "https://www.amazon.com/s?k=Faith+at+War+Yaroslav+Trofimov"
+      },
+      {
+        "title": "The Siege: The Saga of Israel and Zionism",
+        "amazon_url": "https://www.amazon.com/s?k=The+Siege+Yaroslav+Trofimov"
+      }
+    ],
+    "initials": "YT"
+  },
+  {
+    "name": "Gavin",
+    "slug": "gavin",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "G"
   }
 ]
