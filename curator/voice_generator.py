@@ -38,6 +38,7 @@ NAV_HTML = """    <nav class="cc-nav">
       <div class="cc-nav-dropdown">
         <button class="cc-nav-dropdown-toggle" style="color:#1a1a1a;">Resources</button>
         <div class="cc-nav-dropdown-menu">
+          <a href="/about/">About</a>
           <a href="/voices/" class="active">Voices</a>
           <a href="/archive/">Archive</a>
         </div>
@@ -74,6 +75,7 @@ HEADER_HTML = """  <header class="cc-header">
 FOOTER_HTML = """  <footer class="cc-footer">
     <div class="cc-footer-name">Christian Curator</div>
     <div class="cc-footer-nav">
+      <a href="/about/">About</a>
       <a href="/digest/">Daily Digest</a>
       <a href="/voices/">Voices</a>
       <a href="/archive/">Archive</a>

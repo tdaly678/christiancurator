@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Christian Curator — Our Mission, How It Works, and What We Believe</title>
+  <meta name="description" content="Christian Curator is a daily digest of the most substantive evangelical content on the web — curated by Tom Daly, a pastor, engineer, and entrepreneur. Learn our mission, methodology, and statement of faith." />
+  <link rel="canonical" href="https://www.christiancurator.com/about/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Christian Curator" />
+  <meta property="og:title" content="About Christian Curator" />
+  <meta property="og:description" content="Our mission, how we curate, and what we believe. Curated daily by Tom Daly — pastor, engineer, and entrepreneur." />
+  <meta property="og:url" content="https://www.christiancurator.com/about/" />
+  <meta property="og:image" content="https://www.christiancurator.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="About Christian Curator" />
+  <meta name="twitter:description" content="Our mission, how we curate, and what we believe." />
+
+  <!-- Structured Data: AboutPage + Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Christian Curator",
+    "url": "https://www.christiancurator.com/about/",
+    "description": "Christian Curator's mission, methodology, and statement of faith. Founded by Tom Daly, Teaching Pastor at Lancaster Evangelical Free Church.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Christian Curator",
+      "url": "https://www.christiancurator.com/",
+      "description": "A daily curated digest of the best evangelical content on the web — theology, church life, culture, and spiritual formation.",
+      "founder": {
+        "@type": "Person",
+        "name": "Tom Daly",
+        "jobTitle": "Teaching Pastor",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Lancaster Evangelical Free Church"
+        }
+      }
+    }
+  }
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NJ5DSPFXL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3NJ5DSPFXL');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: #faf9f7;
+      color: #1a1a1a;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* ── Layout ──────────────────────────────────────────────────── */
+    .cc-root { max-width: 980px; margin: 0 auto; padding: 0 20px 3rem; }
+
+    /* ── Header ──────────────────────────────────────────────────── */
+    .cc-header { border-bottom: 1px solid #e0ddd8; padding: 0.75rem 0 0; }
+    .cc-top-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 0.75rem; font-size: 12px; color: #888; letter-spacing: 0.02em;
+    }
+    .cc-subscribe-btn {
+      background: #2C4A2E; color: #fff; border: none; padding: 5px 14px;
+      font-size: 12px; border-radius: 3px; cursor: pointer;
+      font-family: 'Source Sans 3', sans-serif; letter-spacing: 0.03em;
+      text-decoration: none; display: inline-block;
+    }
+    .cc-subscribe-btn:hover { background: #3a5f3c; color: #fff; }
+    .cc-masthead { text-align: center; padding: 0.5rem 0 1rem; border-bottom: 2.5px solid #1a1a1a; }
+    .cc-site-name {
+      font-family: 'Lora', Georgia, serif; font-size: 46px; font-weight: 600;
+      letter-spacing: -0.02em; line-height: 1; color: #1a1a1a; text-decoration: none;
+    }
+    .cc-tagline {
+      font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: #888; margin: 8px 0 0; font-weight: 300;
+    }
+    .cc-nav {
+      display: flex; justify-content: center; gap: 2rem;
+      padding: 0.6rem 0 0; border-top: 1px solid #e0ddd8; margin-top: 0.75rem;
+    }
+    .cc-nav a {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #888; text-decoration: none;
+    }
+    .cc-nav a:hover { color: #2C4A2E; }
+    .cc-nav a.active { color: #1a1a1a; border-bottom: 2px solid #1a1a1a; padding-bottom: 2px; }
+
+    .cc-nav-dropdown { position: relative; display: inline-block; }
+    .cc-nav-dropdown-toggle {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #888; text-decoration: none; cursor: pointer;
+      display: flex; align-items: center; gap: 4px; background: none; border: none;
+      font-family: inherit; padding: 0;
+    }
+    .cc-nav-dropdown-toggle:hover { color: #2C4A2E; }
+    .cc-nav-dropdown-toggle::after { content: '▾'; font-size: 10px; letter-spacing: 0; }
+    .cc-nav-dropdown-menu {
+      display: none; position: absolute; top: 100%; left: 50%;
+      transform: translateX(-50%);
+      background: #fff; border: 1px solid #e0ddd8; border-radius: 4px;
+      padding: 14px 0 6px; min-width: 140px; z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .cc-nav-dropdown:hover .cc-nav-dropdown-menu,
+    .cc-nav-dropdown:focus-within .cc-nav-dropdown-menu { display: block; }
+    .cc-nav-dropdown-menu a {
+      display: block; padding: 7px 18px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #888; text-decoration: none; white-space: nowrap;
+    }
+    .cc-nav-dropdown-menu a:hover { color: #2C4A2E; background: #f7f5f2; }
+    .cc-nav-dropdown-menu a.active { color: #1a1a1a; }
+
+    /* ── About page body ─────────────────────────────────────────── */
+    .cc-about-hero {
+      padding: 2.5rem 0 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid #e0ddd8;
+    }
+    .cc-about-kicker {
+      font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: #2C4A2E; font-weight: 600; margin-bottom: 0.75rem;
+    }
+    .cc-about-title {
+      font-family: 'Lora', Georgia, serif; font-weight: 600;
+      font-size: 42px; line-height: 1.15; color: #1a1a1a;
+      max-width: 720px; margin: 0 auto 1rem;
+    }
+    .cc-about-lede {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 20px; line-height: 1.55; color: #3a3a3a;
+      font-style: italic; font-weight: 400;
+      max-width: 680px; margin: 0 auto;
+    }
+
+    .cc-about-section {
+      max-width: 720px; margin: 2.75rem auto 0;
+      padding-top: 2rem;
+    }
+    .cc-about-section + .cc-about-section {
+      border-top: 1px solid #e0ddd8;
+    }
+    .cc-about-eyebrow {
+      font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: #888; font-weight: 600; margin-bottom: 0.6rem;
+    }
+    .cc-about-h2 {
+      font-family: 'Lora', Georgia, serif; font-weight: 600;
+      font-size: 28px; line-height: 1.2; color: #1a1a1a;
+      margin-bottom: 1rem;
+    }
+    .cc-about-h3 {
+      font-family: 'Source Sans 3', sans-serif; font-weight: 600;
+      font-size: 16px; letter-spacing: 0.02em; color: #1a1a1a;
+      margin: 1.5rem 0 0.5rem;
+    }
+    .cc-about-section p {
+      font-size: 17px; line-height: 1.65; color: #2a2a2a;
+      margin-bottom: 1rem;
+    }
+    .cc-about-section p a {
+      color: #2C4A2E; text-decoration: underline; text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+    .cc-about-section p a:hover { color: #3a5f3c; }
+
+    .cc-about-list {
+      list-style: none; padding: 0; margin: 0.5rem 0 1rem;
+    }
+    .cc-about-list li {
+      font-size: 16px; line-height: 1.6; color: #2a2a2a;
+      padding: 0.4rem 0 0.4rem 1.4rem;
+      position: relative;
+      border-bottom: 1px dotted #e0ddd8;
+    }
+    .cc-about-list li:last-child { border-bottom: none; }
+    .cc-about-list li::before {
+      content: '—';
+      position: absolute; left: 0; top: 0.4rem;
+      color: #2C4A2E; font-weight: 600;
+    }
+
+    .cc-about-pullquote {
+      font-family: 'Lora', Georgia, serif; font-style: italic;
+      font-size: 19px; line-height: 1.5; color: #2C4A2E;
+      border-left: 3px solid #2C4A2E;
+      padding: 0.25rem 0 0.25rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    /* ── Founder card ────────────────────────────────────────────── */
+    .cc-founder-card {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 1.75rem;
+      align-items: start;
+      background: #f3f1ed;
+      border: 1px solid #e0ddd8;
+      border-radius: 6px;
+      padding: 1.75rem;
+      margin-top: 1rem;
+    }
+    .cc-founder-photo {
+      width: 160px; height: 160px;
+      border-radius: 4px;
+      background: #e0ddd8;
+      display: flex; align-items: center; justify-content: center;
+      color: #888; font-size: 12px; letter-spacing: 0.1em;
+      text-transform: uppercase; text-align: center;
+      overflow: hidden;
+    }
+    .cc-founder-photo img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .cc-founder-name {
+      font-family: 'Lora', Georgia, serif; font-weight: 600;
+      font-size: 22px; color: #1a1a1a; margin-bottom: 0.25rem;
+    }
+    .cc-founder-role {
+      font-size: 13px; color: #666; letter-spacing: 0.04em;
+      margin-bottom: 0.9rem;
+    }
+    .cc-founder-bio {
+      font-size: 15px; line-height: 1.6; color: #2a2a2a;
+    }
+    .cc-founder-bio p { margin-bottom: 0.6rem; font-size: 15px; }
+    .cc-founder-bio p:last-child { margin-bottom: 0; }
+
+    @media (max-width: 600px) {
+      .cc-founder-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .cc-founder-photo { margin: 0 auto; }
+    }
+
+    /* ── Email signup block ─────────────────────────────────────── */
+    .cc-signup-block {
+      max-width: 540px; margin: 0 auto; text-align: center;
+      padding: 2.25rem 2rem; background: #f3f1ed;
+      border: 1px solid #e0ddd8; border-radius: 6px;
+    }
+    .cc-signup-heading {
+      font-family: 'Lora', Georgia, serif; font-size: 22px; font-weight: 600;
+      color: #1a1a1a; margin-bottom: 0.5rem;
+    }
+    .cc-signup-sub {
+      font-size: 14px; color: #666; margin-bottom: 1.25rem; line-height: 1.5;
+    }
+    .cc-signup-row {
+      display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;
+    }
+    .cc-signup-input {
+      flex: 1 1 220px; min-width: 180px; max-width: 320px;
+      padding: 9px 13px; font-size: 14px; font-family: 'Source Sans 3', sans-serif;
+      border: 1px solid #c8c4be; border-radius: 4px; background: #fff;
+      color: #1a1a1a; outline: none;
+    }
+    .cc-signup-input:focus { border-color: #2C4A2E; box-shadow: 0 0 0 2px rgba(44,74,46,0.12); }
+    .cc-signup-submit {
+      padding: 9px 22px; background: #2C4A2E; color: #fff; border: none;
+      border-radius: 4px; font-size: 14px; font-weight: 600; cursor: pointer;
+      font-family: 'Source Sans 3', sans-serif; white-space: nowrap;
+      transition: background 0.15s;
+    }
+    .cc-signup-submit:hover { background: #3a5f3c; }
+    .cc-signup-success {
+      font-size: 14px; color: #2C4A2E; font-weight: 600; padding: 0.5rem 0;
+    }
+    .cc-signup-privacy { font-size: 11px; color: #aaa; margin-top: 0.75rem; }
+
+    /* ── Footer ──────────────────────────────────────────────────── */
+    .cc-footer {
+      border-top: 2.5px solid #1a1a1a; margin-top: 2.5rem; padding-top: 1rem;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 11px; color: #aaa; flex-wrap: wrap; gap: 8px;
+    }
+    .cc-footer-name { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 15px; color: #1a1a1a; }
+    .cc-footer-nav { display: flex; gap: 12px; flex-wrap: wrap; }
+    .cc-footer-nav a { font-size: 11px; color: #888; text-decoration: none; font-weight: 600; }
+    .cc-footer-nav a:hover { color: #2C4A2E; }
+
+    @media (max-width: 660px) {
+      .cc-site-name { font-size: 32px; }
+      .cc-about-title { font-size: 30px; }
+      .cc-about-lede { font-size: 17px; }
+      .cc-about-h2 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+<div class="cc-root">
+
+  <!-- Header -->
+  <header class="cc-header">
+    <div class="cc-top-bar">
+      <span>About</span>
+      <a class="cc-subscribe-btn" href="#cc-email-box" onclick="document.getElementById('cc-email-box').scrollIntoView({behavior:'smooth'}); return false;">Get the Daily Digest</a>
+    </div>
+    <div class="cc-masthead">
+      <h1><a href="/" class="cc-site-name">Christian Curator</a></h1>
+      <p class="cc-tagline">Curated perspectives &middot; updated daily</p>
+    </div>
+    <nav class="cc-nav">
+      <a href="/">Home</a>
+      <a href="/digest/">Daily Digest</a>
+      <div class="cc-nav-dropdown">
+        <button class="cc-nav-dropdown-toggle">Resources</button>
+        <div class="cc-nav-dropdown-menu">
+          <a href="/about/" class="active">About</a>
+          <a href="/voices/">Voices</a>
+          <a href="/archive/">Archive</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<main>
+
+  <!-- ── HERO ─────────────────────────────────────────────────────── -->
+  <section class="cc-about-hero">
+    <div class="cc-about-kicker">About Christian Curator</div>
+    <h2 class="cc-about-title">Clarity for thoughtful Christians &mdash; curated every day.</h2>
+    <p class="cc-about-lede">
+      In a world flooded with content, we surface what&rsquo;s most useful, most trustworthy,
+      and most theologically grounded &mdash; so the pieces worth your attention actually reach you.
+    </p>
+  </section>
+
+  <!-- ── MISSION ──────────────────────────────────────────────────── -->
+  <section class="cc-about-section">
+    <div class="cc-about-eyebrow">Our mission</div>
+    <h3 class="cc-about-h2">Why Christian Curator exists</h3>
+    <p>
+      The Christian internet has never been noisier. Every day, thousands of articles, essays,
+      podcasts, and hot takes compete for our attention &mdash; and much of it is shallow,
+      reactive, or designed to inflame more than inform. Serious believers are asked to filter
+      an ocean to find a cup of clean water.
+    </p>
+    <p>
+      Christian Curator exists to do that filtering work on your behalf. We scan nearly a hundred
+      of the most trusted Christian publishers, pastors, theologians, and writers every morning,
+      and we surface what&rsquo;s most substantive &mdash; theologically grounded, intellectually
+      honest, and genuinely useful for the life of faith.
+    </p>
+    <blockquote class="cc-about-pullquote">
+      We&rsquo;re building the trusted daily brief for thoughtful Christians &mdash;
+      the one you&rsquo;d hand a pastor, a skeptic, or a busy parent alike.
+    </blockquote>
+    <p>
+      We&rsquo;re a broadly evangelical publication. That means we draw from Reformed, Baptist,
+      Anglican, Pentecostal, and non-denominational voices; we aim to represent the best of the
+      evangelical conversation rather than one narrow camp within it. Where the family of
+      evangelicalism genuinely disagrees &mdash; baptism, gifts of the Spirit, eschatology &mdash;
+      we present the best thinking on multiple sides rather than smoothing it into a single line.
+    </p>
+  </section>
+
+  <!-- ── HOW IT WORKS ─────────────────────────────────────────────── -->
+  <section class="cc-about-section">
+    <div class="cc-about-eyebrow">How it works</div>
+    <h3 class="cc-about-h2">Our editorial method</h3>
+    <p>
+      Transparency matters, especially for a site asking for your trust each morning.
+      Here&rsquo;s exactly how the daily digest comes together.
+    </p>
+
+    <h4 class="cc-about-h3">1. Sourcing</h4>
+    <p>
+      Each morning we pull from more than 95 trusted Christian publishers, independent
+      writers, ministry organizations, and news outlets &mdash; including long-established
+      voices in theology, pastoral ministry, biblical scholarship, Christian ethics, and
+      culture. We also track select mainstream outlets when they&rsquo;re covering stories
+      Christians need to understand.
+    </p>
+
+    <h4 class="cc-about-h3">2. Scoring</h4>
+    <p>
+      Every article is evaluated against an editorial rubric that weighs theological
+      grounding, argumentative substance, relevance to Christians today, originality,
+      and clarity. We use AI as a scaling tool &mdash; it helps us read far more than
+      any one editor could &mdash; but the rubric, the sources, and the final judgments
+      are human editorial decisions.
+    </p>
+
+    <h4 class="cc-about-h3">3. Classification &amp; context</h4>
+    <p>
+      Articles are sorted across a taxonomy of roughly four dozen topics &mdash; from
+      atonement and biblical inerrancy to marriage, vocation, and the church&rsquo;s
+      engagement with technology. Each topic has its own dedicated page, so readers
+      can go deep on a question they care about rather than only skim the day&rsquo;s
+      headlines.
+    </p>
+
+    <h4 class="cc-about-h3">4. Daily delivery</h4>
+    <p>
+      The digest is published to
+      <a href="/">christiancurator.com</a> every morning and sent by email to subscribers
+      around 6:00 AM. You can read the homepage, explore the
+      <a href="/digest/">full Daily Digest</a>, browse any of the
+      <a href="/#topics">topic pages</a>, or catch up on anything you missed in the
+      <a href="/archive/">archive</a>.
+    </p>
+
+    <p>
+      What you will <em>not</em> find here: clickbait, rage-bait, AI-generated articles
+      passed off as original reporting, or content designed to maximize engagement at the
+      expense of truth. We&rsquo;d rather surface ten excellent pieces than a hundred
+      mediocre ones.
+    </p>
+  </section>
+
+  <!-- ── STATEMENT OF FAITH ───────────────────────────────────────── -->
+  <section class="cc-about-section">
+    <div class="cc-about-eyebrow">What we believe</div>
+    <h3 class="cc-about-h2">Our statement of faith</h3>
+    <p>
+      Christian Curator stands within the great stream of historic, orthodox Christianity.
+      We confess the faith of the Apostles&rsquo; and Nicene Creeds &mdash; one God in three
+      persons; the full deity and humanity of Jesus Christ; his substitutionary death,
+      bodily resurrection, and return in glory; and one holy catholic and apostolic church.
+    </p>
+    <p>
+      We stand within the Protestant evangelical tradition, shaped by the Reformation&rsquo;s
+      five solas:
+    </p>
+    <ul class="cc-about-list">
+      <li><strong>Sola Scriptura</strong> &mdash; Scripture is the supreme, sufficient, and inerrant authority for faith and life.</li>
+      <li><strong>Sola Fide</strong> &mdash; we are justified by faith alone.</li>
+      <li><strong>Sola Gratia</strong> &mdash; by grace alone.</li>
+      <li><strong>Solus Christus</strong> &mdash; through Christ alone.</li>
+      <li><strong>Soli Deo Gloria</strong> &mdash; for the glory of God alone.</li>
+    </ul>
+    <p>
+      These commitments shape what we surface, how we evaluate, and where we draw editorial
+      lines. They also guard us from two failure modes: a progressivism that loses the
+      gospel, and a fundamentalism that loses the neighbor. We aim to honor Scripture and
+      love our neighbors &mdash; together, without apology.
+    </p>
+  </section>
+
+  <!-- ── ABOUT THE FOUNDER ────────────────────────────────────────── -->
+  <section class="cc-about-section">
+    <div class="cc-about-eyebrow">Who&rsquo;s behind this</div>
+    <h3 class="cc-about-h2">About Tom</h3>
+
+    <div class="cc-founder-card">
+      <div class="cc-founder-photo">
+        <!-- Drop Tom's photo at /docs/about/tom-daly.jpg and uncomment the img below -->
+        <!-- <img src="/about/tom-daly.jpg" alt="Tom Daly" /> -->
+        <span>Photo<br>coming soon</span>
+      </div>
+      <div class="cc-founder-bio">
+        <div class="cc-founder-name">Tom Daly</div>
+        <div class="cc-founder-role">Founder &amp; Editor &middot; Teaching Pastor, Lancaster Evangelical Free Church</div>
+        <p>
+          Hi, I&rsquo;m Tom. I started Christian Curator at the intersection of three parts
+          of my life that rarely get put on the same page: pastoral ministry, entrepreneurship,
+          and engineering.
+        </p>
+        <p>
+          I serve as a Teaching Pastor at <strong>Lancaster Evangelical Free Church (LEFC)</strong>
+          and have been a longtime business owner and elder. I&rsquo;m married, with three kids,
+          and I&rsquo;ve spent years thinking about how the best of modern technology can be
+          put to work in service of the local church and the broader body of Christ.
+        </p>
+        <p>
+          Christian Curator is one expression of that conviction. My hope is that it gives
+          busy, thoughtful believers a daily cup of clarity &mdash; and helps the most
+          substantive voices in evangelical Christianity reach the readers who need them most.
+        </p>
+        <p style="margin-top: 1rem; color: #666; font-style: italic;">
+          Grace and peace,<br>
+          Tom
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SUBSCRIBE CTA ────────────────────────────────────────────── -->
+  <div id="cc-email-box" style="margin-top:3rem; margin-bottom:2.75rem;">
+    <div class="cc-signup-block">
+      <h3 class="cc-signup-heading">Get the Daily Digest</h3>
+      <p class="cc-signup-sub">The best evangelical content, curated and delivered to your inbox each morning.</p>
+
+      <form id="cc-signup-form" class="cc-signup-form"
+            action="#cc-email-box"
+            method="post"
+            novalidate>
+        <div class="cc-signup-row">
+          <input type="email" name="email" id="cc-signup-email"
+                 class="cc-signup-input"
+                 placeholder="Your email address"
+                 required autocomplete="email" />
+          <button type="submit" class="cc-signup-submit">Subscribe</button>
+        </div>
+        <!-- Honeypot: real users leave this empty; bots fill it in -->
+        <input type="text" name="honeypot" value="" tabindex="-1" autocomplete="off" aria-hidden="true"
+               style="position:absolute;left:-5000px;" />
+      </form>
+
+      <div id="cc-signup-success" class="cc-signup-success" style="display:none;">
+        ✓ You&rsquo;re in! Check your inbox for a confirmation email.
+      </div>
+      <div id="cc-signup-error" class="cc-signup-error" role="alert"
+           style="display:none; color:#b42318; margin-top:8px; font-size:0.95rem;"></div>
+      <p class="cc-signup-privacy">
+        No spam. Unsubscribe anytime.<br>
+        <span style="font-size:0.8rem; color:#888;">
+          Protected by reCAPTCHA &mdash;
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a> &amp;
+          <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms</a>.
+        </span>
+      </p>
+    </div>
+
+    <!-- reCAPTCHA v3 (invisible). Badge hidden via CSS; required disclaimer text is shown near the form above. -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfNEL4sAAAAAMOuBd1AqaSaL6GLd9WnkOXSjkMV"></script>
+    <style>.grecaptcha-badge { visibility: hidden !important; }</style>
+
+    <script>
+      (function () {
+        var WORKER_URL = 'https://orange-bird-0b93.tdaly678.workers.dev/';
+        var RECAPTCHA_SITE_KEY = '6LfNEL4sAAAAAMOuBd1AqaSaL6GLd9WnkOXSjkMV';
+
+        var form = document.getElementById('cc-signup-form');
+        var successEl = document.getElementById('cc-signup-success');
+        var errorEl = document.getElementById('cc-signup-error');
+        var submitBtn = form.querySelector('.cc-signup-submit');
+        var emailInput = form.querySelector('input[name="email"]');
+        var honeypotInput = form.querySelector('input[name="honeypot"]');
+        var originalBtnText = submitBtn.textContent;
+
+        function showError(msg) {
+          errorEl.textContent = msg;
+          errorEl.style.display = 'block';
+        }
+        function resetButton() {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+        }
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          errorEl.style.display = 'none';
+
+          var email = (emailInput.value || '').trim();
+          var honeypot = honeypotInput.value || '';
+
+          if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+            showError('Please enter a valid email address.');
+            return;
+          }
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Subscribing…';
+
+          if (typeof grecaptcha === 'undefined' || !grecaptcha.ready) {
+            showError('Verification is still loading — please try again in a moment.');
+            resetButton();
+            return;
+          }
+
+          grecaptcha.ready(function () {
+            grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'subscribe' })
+              .then(function (token) {
+                return fetch(WORKER_URL, {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ email: email, token: token, honeypot: honeypot })
+                });
+              })
+              .then(function (resp) {
+                return resp.json().then(function (data) { return { ok: resp.ok, data: data }; });
+              })
+              .then(function (res) {
+                if (res.ok && res.data && res.data.success) {
+                  form.style.display = 'none';
+                  if (res.data.alreadySubscribed) {
+                    successEl.innerHTML = '✓ You\'re already subscribed — thanks!';
+                  }
+                  successEl.style.display = 'block';
+                  if (typeof gtag === 'function') {
+                    gtag('event', 'signup', { method: 'email' });
+                  }
+                } else {
+                  showError((res.data && res.data.error) || 'Signup failed. Please try again.');
+                  resetButton();
+                }
+              })
+              .catch(function (err) {
+                console.error('Signup error:', err);
+                showError('Network error. Please try again.');
+                resetButton();
+              });
+          });
+        });
+      })();
+    </script>
+  </div>
+
+</main>
+
+<footer class="cc-footer">
+  <div class="cc-footer-name">Christian Curator</div>
+  <div class="cc-footer-nav">
+    <a href="/about/">About</a>
+    <a href="/digest/">Daily Digest</a>
+    <a href="/voices/">Voices</a>
+    <a href="/archive/">Archive</a>
+  </div>
+  <div>Curated from across the evangelical web.</div>
+</footer>
+
+</div>
+</body>
+</html>

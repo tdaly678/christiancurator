@@ -1159,6 +1159,7 @@ def render_archive_index(env: Environment):
         "        <div class='cc-nav-dropdown'>",
         "          <button class='cc-nav-dropdown-toggle'>Resources</button>",
         "          <div class='cc-nav-dropdown-menu'>",
+        "            <a href='/about/'>About</a>",
         "            <a href='/voices/'>Voices</a>",
         "            <a href='/archive/' class='active'>Archive</a>",
         "          </div>",
@@ -1281,6 +1282,7 @@ def regenerate_sitemap():
     entries = [
         ("https://www.christiancurator.com/", "daily", "1.0", today_iso),
         ("https://www.christiancurator.com/digest/", "daily", "0.9", today_iso),
+        ("https://www.christiancurator.com/about/", "monthly", "0.8", today_iso),
     ]
 
     # Daily pulse pages
