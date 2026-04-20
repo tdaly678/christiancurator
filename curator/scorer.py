@@ -18,6 +18,8 @@ from email.utils import parsedate_to_datetime
 from collections import defaultdict
 from dotenv import load_dotenv
 
+from fetcher.sources import SOURCES
+
 load_dotenv()
 
 client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
@@ -351,25 +353,29 @@ TIER_1_SOURCES  = {"Christianity Today", "First Things", "Crossway", "Mere Ortho
 TIER_2_SOURCES  = {"World Magazine", "Relevant Magazine", "Reformation21", "Jen Wilkin", "Kyle Worley",
                    "Phylicia Masonheimer", "Laura Wifler"}
 
-# Independent author sources (Substacks + personal blogs) — used for the
-# independent floor guarantee (at least MIN_INDEPENDENT articles per day)
-INDEPENDENT_SOURCES = {
-    # Tier 2 independents
-    "Jen Wilkin", "Kyle Worley", "Phylicia Masonheimer", "Laura Wifler",
-    # Tier 3 — existing
-    "Karen Swallow Prior", "Tish Harrison Warren", "Jake Meador (Mere Orthodoxy)",
-    "Samuel James", "Alan Jacobs", "Carey Nieuwhof",
-    # Tier 3 — network discovery additions
-    "Russell Moore", "Scot McKnight", "Andy Crouch", "Carl Trueman",
-    "Matthew Lee Anderson", "O. Alan Noble", "Ryan Burge",
-    "Sam Allberry", "Trillia Newbell", "Joy Clarkson", "Mike Cosper",
-    "Bethel McGrew", "Bonnie Kristian", "Aimee Byrd", "Nadya Williams",
-    "Daniel K. Williams", "Tsh Oxenreider", "Gary Thomas", "Spencer Klavan",
-    "Diane Langberg", "Timothy Paul Jones", "BibleProject",
-    "Kate Shellnutt", "Jonathon Seidl",
-}
+# Independent author sources (Substacks + personal blogs) — derived from the
+# `independent: True` flag in fetcher/sources.py. Adding a new independent
+# voice over there automatically grants it floor protection + frequency boost.
+# (Previously this was a hardcoded set that drifted from sources.py — see
+#  the April 2026 Tier A expansion commit.)
+INDEPENDENT_SOURCES = {s["name"] for s in SOURCES if s.get("independent", False)}
 MIN_INDEPENDENT_ARTICLES = 3
 INDEPENDENT_FLOOR_BOOST  = 2.0  # boost applied to top independents if floor not met
+
+# ── Publishing-frequency boost (independents only) ────────────────────────────
+# Rewards independents who publish consistently. Computed per-source from the
+# count of articles published in the last 30 days across the current fetch.
+# Cap: +1.0 on final_score (applied after tier multiplier + recency boost, with
+# the standard 10.0 ceiling). Institutional outlets are intentionally excluded —
+# the goal is a curation-value edge for Substackers / independents.
+FREQUENCY_WINDOW_DAYS = 30
+FREQUENCY_BOOST_TIERS = [
+    # (min posts in last 30 days, boost). First threshold wins.
+    (16, 1.00),   # ≈4x/week or more
+    (8,  0.75),   # ≈weekly or better
+    (4,  0.50),   # ≈monthly pair-of-posts — still reliable
+    (2,  0.25),   # at least biweekly
+]
 
 def source_max(source_name: str) -> int:
     if source_name in TIER_1A_SOURCES or source_name in TIER_1_SOURCES:
@@ -462,6 +468,42 @@ def apply_topic_deduplication(articles: list[dict]) -> list[dict]:
     return articles
 
 
+def compute_source_post_counts(articles: list[dict], window_days: int = FREQUENCY_WINDOW_DAYS) -> dict[str, int]:
+    """Count articles per source published within the last `window_days`.
+
+    Used by the publishing-frequency boost for independents — a Substacker who
+    publishes weekly or more gets a larger score lift than one who posts
+    monthly. No persistent state is required because each feed delivers its
+    most recent ~20 entries on every fetch.
+    """
+    counts: dict[str, int] = defaultdict(int)
+    window_hours = window_days * 24
+    now = datetime.now(timezone.utc)
+    for a in articles:
+        published = a.get("published", "")
+        if not published:
+            continue
+        try:
+            pub_dt = parsedate_to_datetime(published)
+            if pub_dt.tzinfo is None:
+                pub_dt = pub_dt.replace(tzinfo=timezone.utc)
+            hours_old = (now - pub_dt).total_seconds() / 3600
+            if 0 <= hours_old <= window_hours:
+                counts[a.get("source_name", "")] += 1
+        except Exception:
+            continue
+    return counts
+
+
+def frequency_boost_for(count: int) -> float:
+    """Return the score bump a source earns for publishing `count` posts
+    in the last FREQUENCY_WINDOW_DAYS. Highest-matching tier wins."""
+    for threshold, bump in FREQUENCY_BOOST_TIERS:
+        if count >= threshold:
+            return bump
+    return 0.0
+
+
 def apply_independent_floor(articles: list[dict], top_n: int = 20) -> list[dict]:
     """Guarantee at least MIN_INDEPENDENT_ARTICLES from independent author sources
     appear in the top_n results. If the floor isn't met, boost the highest-scoring
@@ -540,16 +582,38 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
         print(f"  Scoring articles {i+1}-{min(i+BATCH_SIZE, len(articles))}...")
         scored.extend(score_batch(batch))
 
-    # Step 2: Apply source tier multiplier + recency boost → store in final_score
+    # Step 2: Apply source tier multiplier + recency boost + independent
+    # publishing-frequency boost → store in final_score.
     shown_urls = shown_urls or set()
     previously_shown_count = 0
     catholic_capped_count = 0
+    frequency_boosted_count = 0
+
+    # Precompute one post-count map for the whole fetch so we don't re-scan
+    # per article. Independents publishing more often earn a bigger bump.
+    post_counts = compute_source_post_counts(scored)
+
     for article in scored:
         base = float(article.get("score") or 5)
         multiplier = SOURCE_TIER_MULTIPLIERS.get(article.get("source_name", ""), DEFAULT_TIER_MULTIPLIER)
         base = round(min(base * multiplier, 10.0), 2)
         boost = apply_recency_boost(article)
-        raw_final = round(min(base + boost, 10.0), 2)
+
+        # Publishing-frequency boost — independents only.
+        # Applied per-article so a prolific Substacker's individual pieces
+        # each benefit, just like an institutional outlet's do via their
+        # (higher) tier multiplier.
+        source_name = article.get("source_name", "")
+        freq_bump = 0.0
+        if source_name in INDEPENDENT_SOURCES:
+            count_30d = post_counts.get(source_name, 0)
+            freq_bump = frequency_boost_for(count_30d)
+            if freq_bump > 0:
+                article["frequency_boost"] = freq_bump
+                article["source_posts_30d"] = count_30d
+                frequency_boosted_count += 1
+
+        raw_final = round(min(base + boost + freq_bump, 10.0), 2)
 
         # Apply previously-shown penalty
         if article.get("url") in shown_urls:
@@ -574,6 +638,16 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
         print(f"  Applied previously-shown penalty to {previously_shown_count} articles.")
     if catholic_capped_count:
         print(f"  Applied Catholic content cap to {catholic_capped_count} articles.")
+    if frequency_boosted_count:
+        # Summarize which independents earned the boost, sorted by boost size
+        boosted_sources = sorted(
+            {(a.get("source_name", ""), a.get("frequency_boost", 0.0), a.get("source_posts_30d", 0))
+             for a in scored if a.get("frequency_boost")},
+            key=lambda t: (-t[1], t[0]),
+        )
+        print(f"  Frequency boost: lifted {frequency_boosted_count} articles across {len(boosted_sources)} prolific independents:")
+        for name, bump, count in boosted_sources:
+            print(f"    +{bump:.2f}  {name}  ({count} posts / last {FREQUENCY_WINDOW_DAYS}d)")
 
     # Step 2b: Response/debate article boost
     # Articles whose title signals direct engagement with a named author or argument

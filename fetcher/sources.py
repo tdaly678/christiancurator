@@ -189,7 +189,8 @@ SOURCES = [
     },
     {
         "name": "Samuel James",
-        "url": "https://samueljames.substack.com/feed",
+        # Canonical home per author's own site (Challies 2026 roundup)
+        "url": "https://www.digitalliturgies.net/feed",
         "category": "culture",
         "independent": True,
     },
@@ -240,7 +241,8 @@ SOURCES = [
     },
     {
         "name": "O. Alan Noble",
-        "url": "https://oalannoble.substack.com/feed",
+        # Canonical feed per author's site (Challies 2026 roundup)
+        "url": "https://newsletter.oalannoble.com/feed",
         "category": "culture",
         "independent": True,
     },
@@ -301,7 +303,8 @@ SOURCES = [
     },
     {
         "name": "Bethel McGrew",
-        "url": "https://bethelmcgrew.substack.com/feed",
+        # Canonical feed "Further Up" per author's own site (Challies 2026)
+        "url": "https://www.furtherup.net/feed",
         "category": "culture",
         "independent": True,
     },
@@ -441,6 +444,157 @@ SOURCES = [
         "name": "Hannah Anderson",
         "url": "https://sometimesalight.substack.com/feed",
         "category": "theology",
+        "independent": True,
+    },
+
+    # ── April 2026: Tier A Independent Expansion ──
+    # Anchored in Tim Challies' 30 Christian Substacks (Feb 2026) + wider scan
+    # of prominent evangelical scholars, pastors, and journalists publishing
+    # independently. All marked independent: True so they feed the floor
+    # guarantee + publishing-frequency boost in scorer.py.
+
+    # Cultural commentary & public theology
+    {
+        "name": "Aaron Renn",
+        # "Life in the Negative World" author; posts several times a week
+        "url": "https://www.aaronrenn.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Stephen McAlpine",
+        # Australian public theologian ("Being the Bad Guys")
+        "url": "https://stephenmcalpine.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Chris Martin",
+        # Moody Publishers creative director; tech & digital discipleship
+        "url": "https://www.chrismartin.fyi/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Daniel Darling",
+        # Director, Southwestern Baptist Land Center for Cultural Engagement
+        "url": "https://dandarling.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+    {
+        "name": "Katelyn Beaty",
+        # Former CT managing editor; author of "Celebrities for Jesus"
+        "url": "https://katelynbeaty.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+
+    # Longest-running evangelical blogger
+    {
+        "name": "Tim Challies",
+        # 22+ years of daily Christian blogging — canonical hub
+        "url": "https://www.challies.com/feed/",
+        "category": "theology",
+        "independent": True,
+    },
+
+    # Pastors & pastoral theology
+    {
+        "name": "Wyatt Graham",
+        # Canadian pastor-theologian; engages primary sources
+        "url": "https://www.wyattgraham.com/feed",
+        "category": "theology",
+        "independent": True,
+    },
+    {
+        "name": "Tom Sugimura",
+        # Pastor & biblical counselor ("Counsel the Word")
+        "url": "https://tomsugi.substack.com/feed",
+        "category": "church life",
+        "independent": True,
+    },
+    {
+        "name": "J.A. Medders",
+        # Pastor-author; "Spiritual Theology" (Spurgeon-adjacent)
+        "url": "https://www.spiritualtheology.net/feed",
+        "category": "theology",
+        "independent": True,
+    },
+
+    # Biblical scholarship
+    {
+        "name": "Mitchell Chase",
+        # SBTS biblical theology prof ("Biblical Theology")
+        "url": "https://mitchchase.substack.com/feed",
+        "category": "theology",
+        "independent": True,
+    },
+    {
+        "name": "Michael Bird",
+        # Australian NT scholar ("Word from the Bird")
+        "url": "https://michaelfbird.substack.com/feed",
+        "category": "theology",
+        "independent": True,
+    },
+    {
+        "name": "Nijay Gupta",
+        # Northern Seminary NT scholar
+        "url": "https://nijaykgupta.substack.com/feed",
+        "category": "theology",
+        "independent": True,
+    },
+    {
+        "name": "Carmen Joy Imes",
+        # Biola OT scholar ("Being God's Image")
+        "url": "https://carmenjoyimes.substack.com/feed",
+        "category": "theology",
+        "independent": True,
+    },
+    {
+        "name": "Beth Felker Jones",
+        # Theologian; "Church Blogmatics"
+        "url": "https://bethfelkerjones.substack.com/feed",
+        "category": "theology",
+        "independent": True,
+    },
+
+    # Historians
+    {
+        "name": "Thomas Kidd",
+        # Midwestern Baptist Theological Seminary church historian
+        "url": "https://thomaskidd.substack.com/feed",
+        "category": "theology",
+        "independent": True,
+    },
+    {
+        "name": "Chris Gehrz",
+        # "The Pietist Schoolman"; Bethel University historian
+        "url": "https://chrisgehrz.substack.com/feed",
+        "category": "culture",
+        "independent": True,
+    },
+
+    # Devotional / formation / creative
+    {
+        "name": "Emily P. Freeman",
+        # NYT bestselling author; discernment & vocation
+        "url": "https://emilypfreeman.substack.com/feed",
+        "category": "devotional",
+        "independent": True,
+    },
+    {
+        "name": "A.J. Swoboda",
+        # Theologian, Bushnell University; consistent weekly publishing
+        "url": "https://ajswoboda.substack.com/feed",
+        "category": "theology",
+        "independent": True,
+    },
+    {
+        "name": "Nicholas McDonald",
+        # "The Bard Owl" — deconstruction-survivor voice, arts & faith
+        "url": "https://thebardowl.substack.com/feed",
+        "category": "culture",
         "independent": True,
     },
 ]
