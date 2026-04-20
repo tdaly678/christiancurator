@@ -2907,209 +2907,295 @@
     "initials": "NAM"
   },
   {
-    "name": "Jessica Burke",
-    "slug": "jessica-burke",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JB"
-  },
-  {
-    "name": "Blake Long",
-    "slug": "blake-long",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "BL"
-  },
-  {
-    "name": "Brittany Allen",
-    "slug": "brittany-allen",
-    "bio": "Brittany Allen is a writer and speaker who explores faith, culture, and the Christian life with thoughtful insight. Her work encourages readers to deepen their relationship with God while engaging meaningfully with the world around them.",
-    "affiliation": "",
-    "role": "Writer & Speaker",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "BA"
-  },
-  {
-    "name": "Tim Challies",
-    "slug": "tim-challies",
-    "bio": "Tim Challies is a Canadian Christian writer, blogger, and book reviewer known for his thoughtful analysis of theology, culture, and Christian living. He has been a consistent voice in evangelical Christianity for over two decades, helping readers navigate faith and culture with biblical wisdom. Through his popular blog and numerous written works, Challies has become a trusted resource for Christian discernment and spiritual growth.",
-    "affiliation": "Challies.com; Christianity Today",
-    "role": "Author, Blogger & Book Reviewer",
-    "education": "",
-    "website": "https://www.challies.com",
+    "slug": "ed-welch",
+    "name": "Ed Welch",
+    "initials": "EW",
+    "role": "Counselor & CCEF Faculty",
+    "affiliation": "Christian Counseling & Educational Foundation (CCEF)",
+    "bio": "Edward T. Welch is a senior faculty member at CCEF and a licensed psychologist whose writing has helped shape evangelical thinking on addiction, depression, anxiety, and shame. His book Addictions: A Banquet in the Grave reframed addiction as a worship disorder of the heart, grounding recovery in the gospel and the ordinary ministry of the local church.",
+    "education": "University of Utah (PhD, Counseling Psychology); Biblical Theological Seminary (MDiv)",
+    "website": "https://www.ccef.org/author/edward-welch/",
     "books": [
       {
-        "title": "The Discipline of Spiritual Discernment",
-        "amazon_url": "https://www.amazon.com/s?k=The+Discipline+of+Spiritual+Discernment+Tim+Challies"
+        "title": "Addictions: A Banquet in the Grave",
+        "amazon_url": "https://www.amazon.com/s?k=Addictions+Banquet+in+the+Grave+Ed+Welch"
       },
       {
-        "title": "Busy",
-        "amazon_url": "https://www.amazon.com/s?k=Busy+Tim+Challies"
+        "title": "Shame Interrupted",
+        "amazon_url": "https://www.amazon.com/s?k=Shame+Interrupted+Ed+Welch"
       },
       {
-        "title": "The Next Story: Life and Faith After the Digital Explosion",
-        "amazon_url": "https://www.amazon.com/s?k=The+Next+Story+Tim+Challies"
-      },
-      {
-        "title": "Spectacular Sins: And Their Global Purpose in the Glory of Christ",
-        "amazon_url": "https://www.amazon.com/s?k=Spectacular+Sins+Tim+Challies"
-      },
-      {
-        "title": "Visual Theology: Seeing and Understanding the Truth About God",
-        "amazon_url": "https://www.amazon.com/s?k=Visual+Theology+Tim+Challies"
+        "title": "When People Are Big and God Is Small",
+        "amazon_url": "https://www.amazon.com/s?k=When+People+Are+Big+and+God+Is+Small+Ed+Welch"
       }
-    ],
-    "initials": "TC"
+    ]
   },
   {
-    "name": "RELEVANT Staff",
-    "slug": "relevant-staff",
-    "bio": "RELEVANT Staff represents the editorial team at RELEVANT Magazine, a publication dedicated to equipping Christians to live out their faith in culture. The staff works collaboratively to curate and create content that explores the intersection of faith, culture, and social issues for young adults seeking to understand Christianity's relevance today.",
-    "affiliation": "RELEVANT Magazine",
-    "role": "Editorial Staff & Content Curators",
-    "education": "",
-    "website": "https://www.relevantmagazine.com",
-    "books": [],
-    "initials": "RS"
-  },
-  {
-    "name": "Lynsey Chutel",
-    "slug": "lynsey-chutel",
-    "bio": "Lynsey Chutel is an award-winning journalist and correspondent covering African affairs, faith, and social issues. Her reporting brings nuanced perspectives on Christianity, culture, and communities across the African continent and diaspora.",
-    "affiliation": "CNN, NPR",
-    "role": "Journalist & Correspondent",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "LC"
-  },
-  {
-    "name": "Robert Mackey",
-    "slug": "robert-mackey",
-    "bio": "Robert Mackey is a Christian writer and content creator dedicated to exploring faith, Scripture, and spiritual growth. His work encourages readers to deepen their understanding of biblical truths and apply them to daily Christian living.",
-    "affiliation": "",
-    "role": "Christian Writer & Content Creator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RM"
-  },
-  {
-    "name": "Yaroslav Trofimov",
-    "slug": "yaroslav-trofimov",
-    "bio": "Yaroslav Trofimov is a foreign correspondent and author known for his incisive reporting on geopolitics, religion, and international affairs. His work explores the intersection of faith, culture, and global conflict, offering thoughtful analysis for readers seeking to understand our complex world through a Christian perspective.",
-    "affiliation": "The Wall Street Journal",
-    "role": "Foreign Correspondent & Author",
-    "education": "",
-    "website": "",
+    "slug": "heath-lambert",
+    "name": "Heath Lambert",
+    "initials": "HL",
+    "role": "Pastor & Biblical Counselor",
+    "affiliation": "First Baptist Church of Jacksonville; ACBC",
+    "bio": "Heath Lambert is the senior pastor of First Baptist Church of Jacksonville, Florida, and former executive director of the Association of Certified Biblical Counselors. A leading voice in the biblical counseling movement, he has argued that the church's answer to addiction, pornography, and other life-dominating sins is found in Christ-centered discipleship, Scripture, and the ordinary means of grace.",
+    "education": "The Southern Baptist Theological Seminary (PhD)",
+    "website": "https://heathlambert.com",
     "books": [
       {
-        "title": "Faith at War: Religion and the Politics of Conflict",
-        "amazon_url": "https://www.amazon.com/s?k=Faith+at+War+Yaroslav+Trofimov"
+        "title": "Finally Free",
+        "amazon_url": "https://www.amazon.com/s?k=Finally+Free+Heath+Lambert"
       },
       {
-        "title": "The Siege: The Saga of Israel and Zionism",
-        "amazon_url": "https://www.amazon.com/s?k=The+Siege+Yaroslav+Trofimov"
+        "title": "A Theology of Biblical Counseling",
+        "amazon_url": "https://www.amazon.com/s?k=A+Theology+of+Biblical+Counseling+Heath+Lambert"
       }
-    ],
-    "initials": "YT"
+    ]
   },
   {
-    "name": "Gavin",
-    "slug": "gavin",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "G"
+    "slug": "mark-shaw",
+    "name": "Mark E. Shaw",
+    "initials": "MS",
+    "role": "Biblical Counselor & Author",
+    "affiliation": "Truth in Love Ministries",
+    "bio": "Mark E. Shaw is the founder of Truth in Love Ministries and Vision of Hope Recovery, and one of the most prolific evangelical authors on addiction from a biblical counseling perspective. His book The Heart of Addiction has become a standard resource in churches that view addiction primarily as a worship disorder to be addressed through the gospel and church community.",
+    "education": "The Master's University (MABC)",
+    "website": "https://www.truthinloveministries.org",
+    "books": [
+      {
+        "title": "The Heart of Addiction: A Biblical Perspective",
+        "amazon_url": "https://www.amazon.com/s?k=The+Heart+of+Addiction+Mark+Shaw"
+      },
+      {
+        "title": "Relapse: Biblical Prevention Strategies",
+        "amazon_url": "https://www.amazon.com/s?k=Relapse+Biblical+Prevention+Mark+Shaw"
+      }
+    ]
   },
   {
-    "name": "Paul Levy",
-    "slug": "paul-levy",
-    "bio": "Paul Levy is a thoughtful Christian writer and curator focused on biblical wisdom and spiritual formation. His work emphasizes the integration of faith with everyday life and cultural engagement from a Christian perspective.",
-    "affiliation": "",
-    "role": "Christian Writer & Content Curator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "PL"
+    "slug": "john-baker",
+    "name": "John Baker",
+    "initials": "JB",
+    "role": "Founder of Celebrate Recovery (1949–2021)",
+    "affiliation": "Saddleback Church; Celebrate Recovery",
+    "bio": "John Baker was a pastor at Saddleback Church and the founder of Celebrate Recovery, the twelve-step Christ-centered recovery program he launched with Rick Warren in 1991. Drawing on his own recovery from alcohol addiction, Baker developed a model that integrated the language of AA with the eight principles of the Beatitudes, giving millions an explicitly evangelical pathway out of addiction.",
+    "education": "Fuller Theological Seminary",
+    "website": "https://www.celebraterecovery.com",
+    "books": [
+      {
+        "title": "Celebrate Recovery Bible",
+        "amazon_url": "https://www.amazon.com/s?k=Celebrate+Recovery+Bible+John+Baker"
+      },
+      {
+        "title": "Life's Healing Choices",
+        "amazon_url": "https://www.amazon.com/s?k=Life%27s+Healing+Choices+John+Baker"
+      }
+    ]
   },
   {
-    "name": "Jacob Crouch",
-    "slug": "jacob-crouch",
-    "bio": "Jacob Crouch is a Christian writer and content creator dedicated to helping believers engage Scripture and apply biblical truth to daily life. His work reflects a passion for discipleship and practical theology that resonates with modern audiences seeking authentic faith.",
-    "affiliation": "",
-    "role": "Writer & Content Creator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JC"
+    "slug": "marshall-segal",
+    "name": "Marshall Segal",
+    "initials": "MS",
+    "role": "Writer & Managing Editor at Desiring God",
+    "affiliation": "Desiring God",
+    "bio": "Marshall Segal is managing editor at Desiring God and the author of Not Yet Married. He writes frequently on addiction, sanctification, and the everyday struggle against besetting sin, pressing readers to fight sin with the superior joy of Christ rather than with willpower alone — a distinctively Piperian approach to recovery.",
+    "education": "Bethlehem College & Seminary",
+    "website": "https://www.desiringgod.org/authors/marshall-segal",
+    "books": [
+      {
+        "title": "Not Yet Married",
+        "amazon_url": "https://www.amazon.com/s?k=Not+Yet+Married+Marshall+Segal"
+      }
+    ]
   },
   {
-    "name": "Mathew Santhosh Thomas",
-    "slug": "mathew-santhosh-thomas",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MST"
+    "slug": "jonathan-dodson",
+    "name": "Jonathan K. Dodson",
+    "initials": "JD",
+    "role": "Pastor & Author",
+    "affiliation": "City Life Church (Austin); Gospel-Centered Discipleship",
+    "bio": "Jonathan K. Dodson is the founding pastor of City Life Church in Austin, Texas, and the founder of GospelCenteredDiscipleship.com. He has written widely on discipleship, the gospel, and the formation of Christians inside a culture of addiction, arguing that genuine recovery begins with gospel-centered community in a local church.",
+    "education": "Trinity Evangelical Divinity School (MDiv)",
+    "website": "https://jonathandodson.org",
+    "books": [
+      {
+        "title": "Gospel-Centered Discipleship",
+        "amazon_url": "https://www.amazon.com/s?k=Gospel-Centered+Discipleship+Jonathan+Dodson"
+      },
+      {
+        "title": "Our Good Crisis",
+        "amazon_url": "https://www.amazon.com/s?k=Our+Good+Crisis+Jonathan+Dodson"
+      }
+    ]
   },
   {
-    "name": "Sarah Eekhoff Zylstra",
-    "slug": "sarah-eekhoff-zylstra",
-    "bio": "Sarah Eekhoff Zylstra is a senior writer at The Gospel Coalition, where she covers faith, culture, and the global church. She brings thoughtful analysis and reporting to contemporary Christian issues, helping readers understand how faith intersects with culture and current events.",
-    "affiliation": "The Gospel Coalition",
-    "role": "Senior Writer & Journalist",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SEZ"
+    "slug": "kent-dunnington",
+    "name": "Kent Dunnington",
+    "initials": "KD",
+    "role": "Philosopher & Professor",
+    "affiliation": "Biola University",
+    "bio": "Kent Dunnington is professor of philosophy at Biola University and author of Addiction and Virtue: Beyond the Models of Disease and Choice (IVP Academic). Drawing on Augustine and Aquinas, he argues that addiction is neither simply a disease nor simply a choice but a habit of disordered desire — a diagnosis that demands both theological seriousness and engagement with clinical realities.",
+    "education": "Baylor University (PhD, Philosophy)",
+    "website": "https://www.biola.edu/directory/people/kent-dunnington",
+    "books": [
+      {
+        "title": "Addiction and Virtue",
+        "amazon_url": "https://www.amazon.com/s?k=Addiction+and+Virtue+Kent+Dunnington"
+      },
+      {
+        "title": "Humility, Pride, and Christian Virtue Theory",
+        "amazon_url": "https://www.amazon.com/s?k=Humility+Pride+Christian+Virtue+Dunnington"
+      }
+    ]
   },
   {
-    "name": "Adam Kipp",
-    "slug": "adam-kipp",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AK"
+    "slug": "curt-thompson",
+    "name": "Curt Thompson",
+    "initials": "CT",
+    "role": "Psychiatrist & Author",
+    "affiliation": "Being Known; private practice",
+    "bio": "Curt Thompson is a board-certified psychiatrist in private practice in Falls Church, Virginia, and the founder of Being Known. His work integrates interpersonal neurobiology, Christian spiritual formation, and the ministry of the local church, arguing that addiction, shame, and trauma are healed not merely by cognitive or spiritual effort but by embodied community that mirrors the triune love of God.",
+    "education": "Wright State University School of Medicine (MD)",
+    "website": "https://curtthompsonmd.com",
+    "books": [
+      {
+        "title": "Anatomy of the Soul",
+        "amazon_url": "https://www.amazon.com/s?k=Anatomy+of+the+Soul+Curt+Thompson"
+      },
+      {
+        "title": "The Soul of Shame",
+        "amazon_url": "https://www.amazon.com/s?k=The+Soul+of+Shame+Curt+Thompson"
+      },
+      {
+        "title": "The Soul of Desire",
+        "amazon_url": "https://www.amazon.com/s?k=The+Soul+of+Desire+Curt+Thompson"
+      }
+    ]
   },
   {
-    "name": "RELEVANT",
-    "slug": "relevant",
-    "bio": "RELEVANT is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "R"
+    "slug": "jay-stringer",
+    "name": "Jay Stringer",
+    "initials": "JS",
+    "role": "Therapist & Author",
+    "affiliation": "The Allender Center; private practice",
+    "bio": "Jay Stringer is a licensed mental health counselor and ordained minister whose research on unwanted sexual behavior has shaped evangelical thinking about the roots of compulsive behavior. His book Unwanted argues that recovery requires tracing the story behind the symptom, integrating trauma-informed clinical work with the redemptive narrative of the gospel.",
+    "education": "The Seattle School of Theology & Psychology (MDiv, MA Counseling Psychology)",
+    "website": "https://www.jay-stringer.com",
+    "books": [
+      {
+        "title": "Unwanted: How Sexual Brokenness Reveals Our Way to Healing",
+        "amazon_url": "https://www.amazon.com/s?k=Unwanted+Jay+Stringer"
+      }
+    ]
   },
   {
-    "name": "Adam Gabbatt",
-    "slug": "adam-gabbatt",
-    "bio": "Adam Gabbatt is a journalist and reporter known for his work covering news and cultural issues with thoughtful analysis. He has contributed to major publications and brings a careful, investigative approach to contemporary stories that matter to readers seeking truth and context.",
-    "affiliation": "The Guardian",
-    "role": "Journalist & Reporter",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AG"
+    "slug": "tim-keller",
+    "name": "Tim Keller",
+    "initials": "TK",
+    "role": "Pastor, Author & Theologian (1950–2023)",
+    "affiliation": "Redeemer Presbyterian Church; The Gospel Coalition",
+    "bio": "Timothy J. Keller was the founding pastor of Redeemer Presbyterian Church in New York City and a co-founder of The Gospel Coalition. One of the most influential evangelical pastors of his generation, Keller wrote extensively on forgiveness — most fully in his 2022 book Forgive — arguing that gospel forgiveness is first an inward, unilateral release of bitterness rooted in God's forgiveness of us.",
+    "education": "Bucknell University (BA); Gordon-Conwell (MDiv); Westminster Theological Seminary (DMin)",
+    "website": "https://www.thegospelcoalition.org/profile/tim-keller/",
+    "books": [
+      {
+        "title": "Forgive: Why Should I and How Can I?",
+        "amazon_url": "https://www.amazon.com/s?k=Forgive+Tim+Keller"
+      },
+      {
+        "title": "The Reason for God",
+        "amazon_url": "https://www.amazon.com/s?k=The+Reason+for+God+Tim+Keller"
+      },
+      {
+        "title": "The Prodigal God",
+        "amazon_url": "https://www.amazon.com/s?k=The+Prodigal+God+Tim+Keller"
+      }
+    ]
+  },
+  {
+    "slug": "r-t-kendall",
+    "name": "R. T. Kendall",
+    "initials": "RK",
+    "role": "Pastor, Theologian & Author",
+    "affiliation": "Westminster Chapel (ret.)",
+    "bio": "R. T. Kendall served for twenty-five years as the senior minister of Westminster Chapel in London, succeeding Martyn Lloyd-Jones in 1977. His book Total Forgiveness is one of the most widely read evangelical arguments for unconditional forgiveness, insisting that Christians are called to release offenders fully and immediately — not because the offender deserves it, but because unforgiveness binds the forgiver in bitterness.",
+    "education": "Trevecca Nazarene; Southern Baptist Theological Seminary (MDiv); Oxford (DPhil)",
+    "website": "https://www.rtkendallministries.com",
+    "books": [
+      {
+        "title": "Total Forgiveness",
+        "amazon_url": "https://www.amazon.com/s?k=Total+Forgiveness+R.T.+Kendall"
+      },
+      {
+        "title": "How to Forgive Ourselves—Totally",
+        "amazon_url": "https://www.amazon.com/s?k=How+to+Forgive+Ourselves+R.T.+Kendall"
+      }
+    ]
+  },
+  {
+    "slug": "everett-worthington",
+    "name": "Everett L. Worthington Jr.",
+    "initials": "EW",
+    "role": "Christian Psychologist & Forgiveness Researcher",
+    "affiliation": "Virginia Commonwealth University (Emeritus)",
+    "bio": "Everett L. Worthington Jr. is Commonwealth Professor Emeritus of Psychology at Virginia Commonwealth University and the developer of the REACH Forgiveness model — the most widely studied empirical framework for forgiveness in clinical psychology. A committed evangelical Christian, Worthington has published more than forty books on forgiveness and the pastoral costs of unforgiveness.",
+    "education": "University of Missouri (PhD, Counseling Psychology)",
+    "website": "https://www.evworthington-forgiveness.com",
+    "books": [
+      {
+        "title": "Forgiving and Reconciling",
+        "amazon_url": "https://www.amazon.com/s?k=Forgiving+and+Reconciling+Everett+Worthington"
+      },
+      {
+        "title": "Handbook of Forgiveness",
+        "amazon_url": "https://www.amazon.com/s?k=Handbook+of+Forgiveness+Everett+Worthington"
+      }
+    ]
+  },
+  {
+    "slug": "david-powlison",
+    "name": "David Powlison",
+    "initials": "DP",
+    "role": "Counselor & Theologian (1949–2019)",
+    "affiliation": "Christian Counseling & Educational Foundation (CCEF)",
+    "bio": "David Powlison was the executive director of the Christian Counseling & Educational Foundation (CCEF), the editor of the Journal of Biblical Counseling, and one of the most influential evangelical voices on biblical counseling of the last fifty years. His writing on forgiveness insisted that forgiveness is a genuinely relational transaction that seeks reconciliation — not a private release of bitterness that ignores the need for repentance.",
+    "education": "University of Pennsylvania (PhD); Westminster Theological Seminary (MDiv)",
+    "website": "https://www.ccef.org/author/david-powlison/",
+    "books": [
+      {
+        "title": "Good and Angry: Redeeming Anger, Irritation, Complaining, and Bitterness",
+        "amazon_url": "https://www.amazon.com/s?k=Good+and+Angry+David+Powlison"
+      },
+      {
+        "title": "Seeing With New Eyes",
+        "amazon_url": "https://www.amazon.com/s?k=Seeing+With+New+Eyes+Powlison"
+      },
+      {
+        "title": "Speaking Truth in Love: Counsel in Community",
+        "amazon_url": "https://www.amazon.com/s?k=Speaking+Truth+in+Love+Powlison"
+      }
+    ]
+  },
+  {
+    "slug": "ken-sande",
+    "name": "Ken Sande",
+    "initials": "KS",
+    "role": "Peacemaking Ministry Founder & Author",
+    "affiliation": "Relational Wisdom 360",
+    "bio": "Ken Sande is the founder of Peacemaker Ministries and Relational Wisdom 360, and the author of The Peacemaker, one of the most widely read evangelical books on conflict resolution, forgiveness, and reconciliation. A former engineer and attorney, he has argued that biblical peacemaking requires distinguishing forgiveness (which Christians owe unilaterally) from full reconciliation (which requires the offender's genuine repentance).",
+    "education": "Montana State University (BS); University of Montana School of Law (JD)",
+    "website": "https://rw360.org",
+    "books": [
+      {
+        "title": "The Peacemaker: A Biblical Guide to Resolving Personal Conflict",
+        "amazon_url": "https://www.amazon.com/s?k=The+Peacemaker+Ken+Sande"
+      },
+      {
+        "title": "Resolving Everyday Conflict",
+        "amazon_url": "https://www.amazon.com/s?k=Resolving+Everyday+Conflict+Ken+Sande"
+      },
+      {
+        "title": "Peacemaking for Families",
+        "amazon_url": "https://www.amazon.com/s?k=Peacemaking+for+Families+Ken+Sande"
+      }
+    ]
   }
 ]
