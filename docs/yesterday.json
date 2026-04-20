@@ -1,113 +1,112 @@
 [
   {
+    "title": "Evangelicals Are Drifting From Their Foundations—Here's Why It Matters",
+    "url": "https://www.thegospelcoalition.org/reviews/here-stand-cambridge-declaration/",
+    "source_name": "The Gospel Coalition",
+    "author": "Andrew Spencer",
+    "final_score": 10.0,
+    "tags": [
+      "theology",
+      "church life"
+    ]
+  },
+  {
+    "title": "Christians Are Wasting Time. Here's Why That Matters.",
+    "url": "http://feeds.ligonier.org/~/954082598/0/ligonierministriesblog",
+    "source_name": "Ligonier Ministries",
+    "author": "Paul Levy",
+    "final_score": 10.0,
+    "tags": [
+      "theology",
+      "devotional"
+    ]
+  },
+  {
+    "title": "Abortion Advocates' Dangerous Gamble: Block Love Before It Forms",
+    "url": "https://theaquilareport.com/injustice-for-girls-a-response-to-bad-ideas/",
+    "source_name": "The Aquila Report",
+    "author": "Jacob Crouch",
+    "final_score": 10.0,
+    "tags": [
+      "theology",
+      "apologetics"
+    ]
+  },
+  {
+    "title": "Cognitive Decline Can't Erase What Makes Us Human",
+    "url": "https://theaquilareport.com/walking-in-faith-through-fears-of-cognitive-decline/",
+    "source_name": "The Aquila Report",
+    "author": "Mathew Santhosh Thomas",
+    "final_score": 8.75,
+    "tags": [
+      "suffering",
+      "theology",
+      "devotional"
+    ]
+  },
+  {
+    "title": "AI Is Reshaping Your Kids' Lives. Here's How to Protect Them.",
+    "url": "https://www.thegospelcoalition.org/podcasts/recorded/parenting-age-ai/",
+    "source_name": "The Gospel Coalition",
+    "author": "Sarah Eekhoff Zylstra",
+    "final_score": 8.55,
+    "tags": [
+      "family",
+      "culture"
+    ]
+  },
+  {
+    "title": "Rural Pastors Are Making the Same Two Mistakes",
+    "url": "https://research.lifeway.com/2026/04/20/2-leadership-mistakes-every-rural-church-pastor-must-avoid/",
+    "source_name": "Lifeway Research",
+    "author": "Adam Kipp",
+    "final_score": 7.5,
+    "tags": [
+      "church life",
+      "theology"
+    ]
+  },
+  {
+    "title": "Leaders Who Move Too Fast Lose Their Flock",
+    "url": "https://feed.desiringgod.org/link/22977/17320747/lead-at-a-pace-they-can-follow",
+    "source_name": "Desiring God",
+    "author": "Greg Morse",
+    "final_score": 5.35,
+    "tags": [
+      "church life",
+      "devotional"
+    ]
+  },
+  {
+    "title": "AI's Threat to Children Demands Proactive Parenting Now",
+    "url": "https://www.thegospelcoalition.org/article/parenting-age-ai/",
+    "source_name": "The Gospel Coalition",
+    "author": "Sarah Eekhoff Zylstra",
+    "final_score": 4.8,
+    "tags": [
+      "family",
+      "culture"
+    ]
+  },
+  {
+    "title": "Father and Son Crashed Boston Marathon—Then Changed It Forever",
+    "url": "https://wng.org/podcasts/carried-forward-1776615721",
+    "source_name": "World Magazine",
+    "author": "Keegan Martin",
+    "final_score": 4.65,
+    "tags": [
+      "news"
+    ]
+  },
+  {
     "title": "Learning Disabilities Don't Disqualify Kids From Gospel Joy",
     "url": "https://www.thegospelcoalition.org/article/kids-learning-disabilities-rejoice/",
     "source_name": "The Gospel Coalition",
     "author": "Jessica Burke",
-    "final_score": 10.0,
+    "final_score": 3.75,
     "tags": [
       "devotional",
       "family"
-    ]
-  },
-  {
-    "title": "God's Sovereignty Isn't Controversy—It's Worship",
-    "url": "https://theaquilareport.com/this-is-gods-world/",
-    "source_name": "The Aquila Report",
-    "author": "Blake Long",
-    "final_score": 9.5,
-    "tags": [
-      "theology",
-      "devotional"
-    ]
-  },
-  {
-    "title": "Sadness Isn't Discontent—And Christians Need to Know the Difference",
-    "url": "https://www.thegospelcoalition.org/article/difference-sadness-discontent/",
-    "source_name": "The Gospel Coalition",
-    "author": "Brittany Allen",
-    "final_score": 9.25,
-    "tags": [
-      "devotional",
-      "theology"
-    ]
-  },
-  {
-    "title": "Suffering Saints Still Sing: Why Winter Deepens Faith",
-    "url": "https://theaquilareport.com/winters-cold-and-heavens-joy/",
-    "source_name": "The Aquila Report",
-    "author": "Tim Challies",
-    "final_score": 8.75,
-    "tags": [
-      "devotional",
-      "suffering"
-    ]
-  },
-  {
-    "title": "Trump's De Minimis Kill Shot: Small Businesses Pay the Price",
-    "url": "https://wng.org/roundups/the-shipping-rule-squeezing-small-businesses-1776452332",
-    "source_name": "World Magazine",
-    "author": "Arla Eicher",
-    "final_score": 6.0,
-    "tags": [
-      "politics",
-      "work"
-    ]
-  },
-  {
-    "title": "Christians Have an Empathy Crisis — And America Has Noticed",
-    "url": "https://relevantmagazine.com/faith/only-22-percent-of-americans-think-christians-show-empathy-thats-a-problem/",
-    "source_name": "Relevant Magazine",
-    "author": "Emily Brown",
-    "final_score": 6.0,
-    "tags": [
-      "culture",
-      "data"
-    ]
-  },
-  {
-    "title": "Paul's Conversion Changed Everything—Here's What Came Before",
-    "url": "http://feeds.ligonier.org/~/953927330/0/ligonierministriesblog",
-    "source_name": "Ligonier Ministries",
-    "author": "Guy Prentiss Waters",
-    "final_score": 6.0,
-    "tags": [
-      "theology",
-      "devotional"
-    ]
-  },
-  {
-    "title": "Leaders Can't Force Their Flock to Keep Up",
-    "url": "https://feed.desiringgod.org/link/22977/17320747/lead-at-a-pace-they-can-follow",
-    "source_name": "Desiring God",
-    "author": "Greg Morse",
-    "final_score": 5.85,
-    "tags": [
-      "church life",
-      "devotional"
-    ]
-  },
-  {
-    "title": "Church Collapse Left Me Broken—Spotify Can't Fix That",
-    "url": "https://www.christianitytoday.com/2026/04/church-crisis-content-didnt-help-me-exvangelical-books/",
-    "source_name": "Christianity Today",
-    "author": "Bonnie Kristian",
-    "final_score": 4.65,
-    "tags": [
-      "devotional",
-      "church life",
-      "suffering"
-    ]
-  },
-  {
-    "title": "Religious Liberty's Reckoning: Two Americas Collide",
-    "url": "https://firstthings.com/two-visions-of-religious-liberty/",
-    "source_name": "First Things",
-    "author": "German Saucedo",
-    "final_score": 4.65,
-    "tags": [
-      "politics",
-      "theology"
     ]
   }
 ]
