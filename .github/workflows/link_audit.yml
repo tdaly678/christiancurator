@@ -1,0 +1,71 @@
+name: Topic Link Audit
+
+# Run on demand from the Actions tab. HTTP-checks every external article link
+# on docs/topics/*/index.html and uploads a report artifact. Also commits the
+# report to output/link_audit/ so Tom and Claude can pick it up in a session.
+
+on:
+  workflow_dispatch:
+    inputs:
+      only_slugs:
+        description: 'Optional: space-separated topic slugs to limit the audit (e.g. "preaching apologetics"). Leave blank for full site.'
+        required: false
+        default: ''
+      commit_report:
+        description: 'Commit the report files to main (output/link_audit/report.json + .csv)'
+        required: false
+        default: 'true'
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Run link audit
+        id: audit
+        continue-on-error: true
+        run: |
+          if [ -n "${{ github.event.inputs.only_slugs }}" ]; then
+            python3 scripts/audit_topic_links.py --only ${{ github.event.inputs.only_slugs }}
+          else
+            python3 scripts/audit_topic_links.py
+          fi
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-audit-report
+          path: output/link_audit/
+          if-no-files-found: error
+
+      - name: Commit report to repo
+        if: ${{ github.event.inputs.commit_report == 'true' }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin main
+          git add output/link_audit/report.json output/link_audit/report.csv
+          git diff --staged --quiet || git commit -m "chore: link audit $(date -u +%Y-%m-%d)"
+          git push origin main
+
+      - name: Fail the job if broken links were found
+        if: steps.audit.outcome == 'failure'
+        run: |
+          echo "Broken or unreachable links were found. See the uploaded artifact and/or output/link_audit/report.csv."
+          exit 1
