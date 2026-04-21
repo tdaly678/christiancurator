@@ -3837,5 +3837,231 @@
       }
     ],
     "initials": "KW"
+  },
+  {
+    "name": "Roland Barnes",
+    "slug": "roland-barnes",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RB"
+  },
+  {
+    "name": "Paul Christopher",
+    "slug": "paul-christopher",
+    "bio": "Paul Christopher is a Christian author and thought leader who writes on faith, culture, and spiritual discipleship. His work encourages believers to engage thoughtfully with contemporary issues through a biblical worldview.",
+    "affiliation": "",
+    "role": "Author & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PC"
+  },
+  {
+    "name": "Hayden Nesbit",
+    "slug": "hayden-nesbit",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "HN"
+  },
+  {
+    "name": "Samuel D. James",
+    "slug": "samuel-d-james",
+    "bio": "Samuel D. James is a writer and editor known for thoughtful commentary on faith, culture, and technology from a Christian perspective. He has contributed to leading evangelical publications and is recognized for helping Christians think biblically about contemporary cultural issues.",
+    "affiliation": "Crossway; The Gospel Coalition",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SDJ"
+  },
+  {
+    "name": "O. Alan Noble",
+    "slug": "o-alan-noble",
+    "bio": "O. Alan Noble is a writer and editor focused on Christian engagement with culture, technology, and faith. He has written extensively on how Christians can think critically about media, entertainment, and digital life while remaining grounded in biblical wisdom. Noble's work encourages believers to develop a thoughtful, redemptive perspective on contemporary culture.",
+    "affiliation": "Christ and Pop Culture",
+    "role": "Writer & Editor",
+    "education": "MA in English Literature, University of Nebraska",
+    "website": "https://www.oalaninnoble.com",
+    "books": [
+      {
+        "title": "Disruptive Witness: Speaking Truth in a Fragmented World",
+        "amazon_url": "https://www.amazon.com/s?k=Disruptive+Witness+O+Alan+Noble"
+      },
+      {
+        "title": "You Are Not Your Own: Belonging to God in an Inhuman World",
+        "amazon_url": "https://www.amazon.com/s?k=You+Are+Not+Your+Own+O+Alan+Noble"
+      },
+      {
+        "title": "Conscience: Three Generations of Abortion, Family, and Tradition",
+        "amazon_url": "https://www.amazon.com/s?k=Conscience+O+Alan+Noble"
+      }
+    ],
+    "initials": "OAN"
+  },
+  {
+    "name": "Aaron M. Renn",
+    "slug": "aaron-m-renn",
+    "bio": "Aaron M. Renn is a writer and analyst focused on Christianity's cultural and institutional place in American public life. He explores how Christian faith engages with broader cultural trends, offering thoughtful commentary on secularization, religious liberty, and the future of Christian witness in contemporary society.",
+    "affiliation": "First Things, The American Conservative",
+    "role": "Writer & Cultural Analyst",
+    "education": "",
+    "website": "https://www.aaronrenn.com/",
+    "books": [
+      {
+        "title": "The Masculinity Crisis: Why the Modern Male is Struggling, Why It Matters, and What to Do About It",
+        "amazon_url": "https://www.amazon.com/s?k=Masculinity+Crisis+Aaron+Renn"
+      }
+    ],
+    "initials": "AMR"
+  },
+  {
+    "name": "Collin Hansen",
+    "slug": "collin-hansen",
+    "bio": "Collin Hansen is a respected evangelical author and editor known for his work on church history, theology, and contemporary Christian issues. As editorial director for The Gospel Coalition, he has helped shape conversations among Reformed and evangelical leaders worldwide. His writing combines scholarly insight with pastoral concern for the local church.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Author, Editor & Ministry Leader",
+    "education": "M.A., Wheaton College",
+    "website": "https://collin-hansen.com/",
+    "books": [
+      {
+        "title": "Young, Restless, Reformed: A Journalist's Journey with the New Calvinism",
+        "amazon_url": "https://www.amazon.com/s?k=Young+Restless+Reformed+Collin+Hansen"
+      },
+      {
+        "title": "Blind Spots: Becoming a Courageous, Compassionate, and Commissioned Church",
+        "amazon_url": "https://www.amazon.com/s?k=Blind+Spots+Collin+Hansen"
+      },
+      {
+        "title": "That's Not What I Meant: Finding Grace When Words Backfire",
+        "amazon_url": "https://www.amazon.com/s?k=That's+Not+What+I+Meant+Collin+Hansen"
+      },
+      {
+        "title": "Redeeming Sex: Naked Conversations About Sexuality and Following Jesus",
+        "amazon_url": "https://www.amazon.com/s?k=Redeeming+Sex+Collin+Hansen"
+      },
+      {
+        "title": "Our Secular Age: Ten Years of Reading and Applying Charles Taylor",
+        "amazon_url": "https://www.amazon.com/s?k=Our+Secular+Age+Collin+Hansen"
+      }
+    ],
+    "initials": "CH"
+  },
+  {
+    "name": "Kathy Keller",
+    "slug": "kathy-keller",
+    "bio": "Kathy Keller is a writer, speaker, and co-founder of Redeemer City to City, an organization dedicated to planting and strengthening churches in global cities. She has written extensively on faith, marriage, and Christian living, drawing from her decades of experience in ministry alongside her husband, Timothy Keller. Her work encourages Christians to live out their faith authentically in contemporary culture.",
+    "affiliation": "Redeemer City to City, The Gospel Coalition",
+    "role": "Writer & Ministry Leader",
+    "education": "",
+    "website": "https://www.redeemercitytocity.com/",
+    "books": [
+      {
+        "title": "The Meaning of Marriage: Facing the Complexities of Commitment with the Wisdom of God",
+        "amazon_url": "https://www.amazon.com/s?k=The+Meaning+of+Marriage+Kathy+Keller"
+      },
+      {
+        "title": "Jesus the King: Understanding the Life and Death of the Son of God",
+        "amazon_url": "https://www.amazon.com/s?k=Jesus+the+King+Kathy+Keller"
+      },
+      {
+        "title": "God's Loving Plan: Experiencing the Gospel in Work, Relationships, and Even Loss",
+        "amazon_url": "https://www.amazon.com/s?k=Gods+Loving+Plan+Kathy+Keller"
+      }
+    ],
+    "initials": "KK"
+  },
+  {
+    "name": "Damien Cave",
+    "slug": "damien-cave",
+    "bio": "Damien Cave is an accomplished journalist and correspondent known for his investigative reporting and in-depth coverage of complex social and political issues. His work has appeared in major national publications where he has brought thoughtful analysis and human-centered storytelling to contemporary challenges.",
+    "affiliation": "The New York Times",
+    "role": "Journalist & Correspondent",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DC"
+  },
+  {
+    "name": "Chris Martin",
+    "slug": "chris-martin",
+    "bio": "Chris Martin is a worship leader, songwriter, and pastor known for his contributions to contemporary Christian music and spiritual leadership. He has dedicated his ministry to helping believers engage with God through authentic worship and biblical teaching.",
+    "affiliation": "",
+    "role": "Worship Leader & Pastor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CM"
+  },
+  {
+    "name": "Patricia Kowsmann",
+    "slug": "patricia-kowsmann",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PK"
+  },
+  {
+    "name": "Zia ur-Rehman and Asim Hafeez",
+    "slug": "zia-urrehman-and-asim-hafeez",
+    "bio": "Zia ur-Rehman and Asim Hafeez are Pakistani journalists and documentarians known for their investigative work covering conflict, terrorism, and security issues in South Asia. While not primarily Christian content creators, their reporting has provided important context on religious extremism and persecution for international audiences seeking to understand global challenges.",
+    "affiliation": "",
+    "role": "Journalists & Documentary Filmmakers",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ZH"
+  },
+  {
+    "name": "J. A. Medders",
+    "slug": "j-a-medders",
+    "bio": "J. A. Medders is a writer and pastor dedicated to helping Christians understand and live out their faith with greater depth and authenticity. His work focuses on biblical discipleship, spiritual growth, and the practical application of Scripture to everyday life.",
+    "affiliation": "",
+    "role": "Author & Pastor",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Sola Scriptura: What the Bible Says About Itself",
+        "amazon_url": "https://www.amazon.com/s?k=Sola+Scriptura+What+the+Bible+Says+About+Itself+J.A.+Medders"
+      },
+      {
+        "title": "The Expository Preacher: How to Preach the Whole Bible",
+        "amazon_url": "https://www.amazon.com/s?k=The+Expository+Preacher+How+to+Preach+the+Whole+Bible+J.A.+Medders"
+      }
+    ],
+    "initials": "JAM"
+  },
+  {
+    "name": "Wyatt Graham",
+    "slug": "wyatt-graham",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "WG"
+  },
+  {
+    "name": "Stephen Kalin",
+    "slug": "stephen-kalin",
+    "bio": "Stephen Kalin is a researcher and analyst specializing in Middle Eastern politics and religious affairs. His work examines the intersection of faith, geopolitics, and international relations, with particular focus on how religious identity shapes political outcomes in the region.",
+    "affiliation": "",
+    "role": "Political Analyst & Researcher",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SK"
   }
 ]
