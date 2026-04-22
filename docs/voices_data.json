@@ -4063,5 +4063,210 @@
     "website": "",
     "books": [],
     "initials": "SK"
+  },
+  {
+    "name": "Joseph Sherrard",
+    "slug": "joseph-sherrard",
+    "bio": "Joseph Sherrard is a Christian writer and content creator focused on biblical teaching and spiritual formation. His work encourages believers to deepen their understanding of Scripture and apply biblical principles to daily life.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JS"
+  },
+  {
+    "name": "R.C. Sproul",
+    "slug": "rc-sproul",
+    "bio": "R.C. Sproul was a highly influential Reformed theologian, pastor, and prolific author who dedicated his life to making complex theological concepts accessible to everyday Christians. He founded Ligonier Ministries and was known for his passionate teaching on the holiness of God, biblical Reformed theology, and the sovereignty of God. Through his books, radio program, and teaching ministry, Sproul shaped the spiritual lives of countless believers worldwide.",
+    "affiliation": "Ligonier Ministries",
+    "role": "Theologian, Author & Pastor",
+    "education": "M.Div., Westminster Theological Seminary; Ph.D., Free University of Amsterdam",
+    "website": "https://www.ligonier.org",
+    "books": [
+      {
+        "title": "The Holiness of God",
+        "amazon_url": "https://www.amazon.com/s?k=The+Holiness+of+God+R.C.+Sproul"
+      },
+      {
+        "title": "Essential Truths of the Christian Faith",
+        "amazon_url": "https://www.amazon.com/s?k=Essential+Truths+of+the+Christian+Faith+Sproul"
+      },
+      {
+        "title": "Chosen by God",
+        "amazon_url": "https://www.amazon.com/s?k=Chosen+by+God+R.C.+Sproul"
+      },
+      {
+        "title": "The Attributes of God",
+        "amazon_url": "https://www.amazon.com/s?k=The+Attributes+of+God+Sproul"
+      },
+      {
+        "title": "Everyone's a Theologian",
+        "amazon_url": "https://www.amazon.com/s?k=Everyone%27s+a+Theologian+Sproul"
+      },
+      {
+        "title": "Can I Trust the Bible?",
+        "amazon_url": "https://www.amazon.com/s?k=Can+I+Trust+the+Bible+Sproul"
+      }
+    ],
+    "initials": "RCS"
+  },
+  {
+    "name": "Joshua Heavin",
+    "slug": "joshua-heavin",
+    "bio": "Joshua Heavin is a writer and Christian communicator dedicated to exploring faith, culture, and discipleship. His work focuses on helping believers think deeply about their relationship with God and the world around them.",
+    "affiliation": "",
+    "role": "Writer & Christian Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JH"
+  },
+  {
+    "name": "Joshua Budimlic",
+    "slug": "joshua-budimlic",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JB"
+  },
+  {
+    "name": "Taigen Joos",
+    "slug": "taigen-joos",
+    "bio": "Taigen Joos is a Christian writer and contemplative theologian exploring the intersection of Buddhist-Christian dialogue and contemplative spirituality. His work engages readers in deepening their faith through meditative practices and interfaith understanding rooted in Christian tradition.",
+    "affiliation": "",
+    "role": "Author & Contemplative Theologian",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TJ"
+  },
+  {
+    "name": "Lauren Groves",
+    "slug": "lauren-groves",
+    "bio": "Lauren Groves is a Christian author and speaker known for her work in faith-based content creation and spiritual encouragement. She has built a platform focused on helping believers deepen their relationship with God through authentic and practical Christian living.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LG"
+  },
+  {
+    "name": "Allen D. Hertzke",
+    "slug": "allen-d-hertzke",
+    "bio": "Allen D. Hertzke is a distinguished political scientist and scholar who has written extensively on the intersection of religion and politics in American public life. His research examines how faith communities engage with political institutions and shape policy on issues ranging from religious freedom to human rights advocacy.",
+    "affiliation": "University of Oklahoma",
+    "role": "Professor of Political Science & Scholar",
+    "education": "Ph.D. in Political Science",
+    "website": "",
+    "books": [
+      {
+        "title": "Representing God in Washington: Religious Interest Groups and the American Political System",
+        "amazon_url": "https://www.amazon.com/s?k=Representing+God+in+Washington+Hertzke"
+      },
+      {
+        "title": "Freeing God's Children: The Unlikelihood of Religious Politics and the Unlikely Alliances for Religious Freedom",
+        "amazon_url": "https://www.amazon.com/s?k=Freeing+Gods+Children+Hertzke"
+      },
+      {
+        "title": "Faith in the Halls of Power: How Evangelicals Joined the American Elite",
+        "amazon_url": "https://www.amazon.com/s?k=Faith+in+the+Halls+of+Power+Hertzke"
+      }
+    ],
+    "initials": "ADH"
+  },
+  {
+    "name": "Chad Van Dixhoorn",
+    "slug": "chad-van-dixhoorn",
+    "bio": "Chad Van Dixhoorn is a Reformed theologian and scholar known for his extensive work on the Westminster Standards and historical theology. He serves as a professor and has dedicated much of his career to making classical Reformed theology accessible to contemporary Christians.",
+    "affiliation": "Theological Seminary faculty",
+    "role": "Professor & Theologian",
+    "education": "Ph.D. in Theology",
+    "website": "",
+    "books": [
+      {
+        "title": "Confessing the Faith: A Reader's Guide to the Westminster Confession of Faith",
+        "amazon_url": "https://www.amazon.com/s?k=Confessing+Faith+Reader+Guide+Westminster+Confession+Chad+Van+Dixhoorn"
+      },
+      {
+        "title": "The Covenant Renewed: A Reader's Guide to the Shorter Catechism",
+        "amazon_url": "https://www.amazon.com/s?k=Covenant+Renewed+Reader+Guide+Shorter+Catechism+Chad+Van+Dixhoorn"
+      },
+      {
+        "title": "The Living Christ: An Exposition of Hebrews",
+        "amazon_url": "https://www.amazon.com/s?k=Living+Christ+Exposition+Hebrews+Chad+Van+Dixhoorn"
+      }
+    ],
+    "initials": "CVD"
+  },
+  {
+    "name": "Anne Kerhoulas",
+    "slug": "anne-kerhoulas",
+    "bio": "Anne Kerhoulas is a Christian author and speaker who writes about faith, family, and spiritual growth. Her work encourages believers to deepen their relationship with God through practical wisdom and scriptural insight.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AK"
+  },
+  {
+    "name": "Emily Belz",
+    "slug": "emily-belz",
+    "bio": "Emily Belz is a journalist and editor known for her reporting on religious freedom, international affairs, and the intersection of faith and public life. She has contributed extensively to evangelical publications and brings a thoughtful, nuanced perspective to contemporary issues facing the Christian community.",
+    "affiliation": "World Magazine",
+    "role": "Journalist & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EB"
+  },
+  {
+    "name": "Michael Crowley",
+    "slug": "michael-crowley",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MC"
+  },
+  {
+    "name": "Uwa Ede-Osifo",
+    "slug": "uwa-edeosifo",
+    "bio": "Uwa Ede-Osifo is a Nigerian Christian writer and communicator passionate about faith, culture, and discipleship. Through his writing and speaking, he engages thoughtfully with contemporary issues from a biblical worldview, seeking to help believers navigate their faith in the modern world.",
+    "affiliation": "",
+    "role": "Christian Writer & Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "UEO"
+  },
+  {
+    "name": "David M. Halbfinger",
+    "slug": "david-m-halbfinger",
+    "bio": "David M. Halbfinger is a veteran journalist and media analyst who has served as executive editor and chief political correspondent for major American news organizations. With decades of experience covering politics, culture, and faith-related issues, he brings thoughtful analysis to contemporary issues of interest to Christian readers and faith communities.",
+    "affiliation": "The New York Times",
+    "role": "Journalist & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DMH"
+  },
+  {
+    "name": "Natalie Andrews",
+    "slug": "natalie-andrews",
+    "bio": "Natalie Andrews is a Christian writer and content creator dedicated to exploring faith, discipleship, and spiritual growth. Through her writing and speaking, she encourages believers to deepen their relationship with Christ and live out their faith authentically in everyday life.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "NA"
   }
 ]
