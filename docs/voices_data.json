@@ -4268,5 +4268,182 @@
     "website": "",
     "books": [],
     "initials": "NA"
+  },
+  {
+    "name": "Tyler Bauer",
+    "slug": "tyler-bauer",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TB"
+  },
+  {
+    "name": "Robert VanDoodewaard",
+    "slug": "robert-vandoodewaard",
+    "bio": "Robert VanDoodewaard is a pastor and Christian author known for his work on biblical theology and historical Christian thought. He has written extensively on topics including idolatry, the sufficiency of Scripture, and the practical application of Reformed theology to contemporary Christian life.",
+    "affiliation": "Evangelical Free Church",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Headcovering: A Study of the Biblical Basis and Application of Headcovering",
+        "amazon_url": "https://www.amazon.com/s?k=Robert+VanDoodewaard+Headcovering"
+      },
+      {
+        "title": "Idols of the Heart: Learning to Long for God Alone",
+        "amazon_url": "https://www.amazon.com/s?k=Robert+VanDoodewaard+Idols+Heart"
+      },
+      {
+        "title": "What Does the Bible Really Teach about Homosexuality",
+        "amazon_url": "https://www.amazon.com/s?k=Robert+VanDoodewaard+Homosexuality"
+      }
+    ],
+    "initials": "RVD"
+  },
+  {
+    "name": "Gray Ewing",
+    "slug": "gray-ewing",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "GE"
+  },
+  {
+    "name": "A PCA Ruling Elder",
+    "slug": "a-pca-ruling-elder",
+    "bio": "A PCA Ruling Elder serves as a lay leader in the Presbyterian Church in America, devoted to faithful church governance and spiritual oversight. Ruling Elders work alongside pastoral staff to shepherd their congregations with biblical wisdom and pastoral care.",
+    "affiliation": "",
+    "role": "Ruling Elder & Church Leader",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RE"
+  },
+  {
+    "name": "Haley Byrd Wilt",
+    "slug": "haley-byrd-wilt",
+    "bio": "Haley Byrd Wilt is a writer and editor known for her work in Christian publishing and content creation. She has contributed to various Christian publications and platforms, bringing thoughtful perspectives on faith, culture, and discipleship to evangelical audiences.",
+    "affiliation": "",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "HBW"
+  },
+  {
+    "name": "Stu Escalona",
+    "slug": "stu-escalona",
+    "bio": "Stu Escalona is a pastor and Christian communicator dedicated to helping believers grow in their faith and understanding of Scripture. Through teaching and writing, he seeks to make biblical truths accessible and applicable to everyday Christian living.",
+    "affiliation": "",
+    "role": "Pastor & Teacher",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SE"
+  },
+  {
+    "name": "Malcolm Guite",
+    "slug": "malcolm-guite",
+    "bio": "Malcolm Guite is a poet, priest, and scholar who serves as Chaplain of Girton College, Cambridge. He is known for his contemporary sonnets, theological reflections, and work in Christian apologetics and the integration of faith with literature and the arts. His writing draws on both classical Christian tradition and modern sensibilities to help readers encounter God's presence in beauty, nature, and everyday life.",
+    "affiliation": "Girton College, Cambridge; The Christian Institute",
+    "role": "Chaplain, Poet & Theologian",
+    "education": "University of Cambridge",
+    "website": "https://www.malcolmguite.wordpress.com",
+    "books": [
+      {
+        "title": "The Singing Life of Birds",
+        "amazon_url": "https://www.amazon.com/s?k=Malcolm+Guite+Singing+Life+Birds"
+      },
+      {
+        "title": "Sounding the Seasons",
+        "amazon_url": "https://www.amazon.com/s?k=Malcolm+Guite+Sounding+Seasons"
+      },
+      {
+        "title": "Love That Scales the Heights",
+        "amazon_url": "https://www.amazon.com/s?k=Malcolm+Guite+Love+Scales+Heights"
+      },
+      {
+        "title": "The Word in the Wilderness",
+        "amazon_url": "https://www.amazon.com/s?k=Malcolm+Guite+Word+Wilderness"
+      },
+      {
+        "title": "Consolations",
+        "amazon_url": "https://www.amazon.com/s?k=Malcolm+Guite+Consolations"
+      }
+    ],
+    "initials": "MG"
+  },
+  {
+    "name": "Tim Mascara",
+    "slug": "tim-mascara",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TM"
+  },
+  {
+    "name": "Grant Dutro",
+    "slug": "grant-dutro",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "GD"
+  },
+  {
+    "name": "David Kent",
+    "slug": "david-kent",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DK"
+  },
+  {
+    "name": "Andy Olsen",
+    "slug": "andy-olsen",
+    "bio": "Andy Olsen is a thoughtful voice in Christian ministry and content creation. He brings practical wisdom and biblical insight to contemporary faith discussions.",
+    "affiliation": "",
+    "role": "Christian Author & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AO"
+  },
+  {
+    "name": "Erika Solomon",
+    "slug": "erika-solomon",
+    "bio": "Erika Solomon is a Reuters correspondent and journalist known for her investigative reporting on Middle Eastern affairs, international politics, and religious dynamics in global contexts. Her work frequently examines complex geopolitical issues with nuance and depth.",
+    "affiliation": "Reuters",
+    "role": "Journalist & Correspondent",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ES"
+  },
+  {
+    "name": "Ashley Ahn",
+    "slug": "ashley-ahn",
+    "bio": "Ashley Ahn is a writer and content creator who engages Christian audiences with thoughtful perspectives on faith, culture, and discipleship. Her work encourages believers to deepen their understanding of Scripture and live out their faith authentically in today's world.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AA"
   }
 ]
