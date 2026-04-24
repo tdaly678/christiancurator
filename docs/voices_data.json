@@ -4445,5 +4445,191 @@
     "website": "",
     "books": [],
     "initials": "AA"
+  },
+  {
+    "name": "Bobby Jamieson",
+    "slug": "bobby-jamieson",
+    "bio": "Bobby Jamieson is a pastor, author, and editor known for his work on biblical ecclesiology and the doctrine of the local church. He has contributed significantly to evangelical conversations about church membership, discipline, and Baptist theology through both pastoral ministry and theological writing.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Pastor & Author",
+    "education": "PhD, Southern Baptist Theological Seminary",
+    "website": "",
+    "books": [
+      {
+        "title": "A Peculiar People: The Church as Culture",
+        "amazon_url": "https://www.amazon.com/s?k=A+Peculiar+People+Bobby+Jamieson"
+      },
+      {
+        "title": "Understanding Spiritual Gifts",
+        "amazon_url": "https://www.amazon.com/s?k=Understanding+Spiritual+Gifts+Bobby+Jamieson"
+      },
+      {
+        "title": "Going Public: Why Christians Should Care About Justice and the Common Good",
+        "amazon_url": "https://www.amazon.com/s?k=Going+Public+Bobby+Jamieson"
+      }
+    ],
+    "initials": "BJ"
+  },
+  {
+    "name": "Daniel R. Hyde",
+    "slug": "daniel-r-hyde",
+    "bio": "Daniel R. Hyde is a Reformed pastor and prolific Christian author known for his accessible theological writings. He has dedicated his ministry to helping believers understand biblical doctrine and church history through clear, engaging scholarship.",
+    "affiliation": "Oceanside Christian Fellowship; Ligonier Ministries",
+    "role": "Pastor & Author",
+    "education": "M.A. in Theological Studies, Westminster Seminary California",
+    "website": "https://oceanside.church/",
+    "books": [
+      {
+        "title": "Jesus Loves the Church: Female Ministry and the Office of Deacon",
+        "amazon_url": "https://www.amazon.com/s?k=Jesus+Loves+Church+Female+Ministry+Deacon+Daniel+Hyde"
+      },
+      {
+        "title": "The Ten Commandments: Living as God's Covenant People",
+        "amazon_url": "https://www.amazon.com/s?k=Ten+Commandments+Living+Covenant+People+Daniel+Hyde"
+      },
+      {
+        "title": "With Heart and Mind: A Guide to Loving God",
+        "amazon_url": "https://www.amazon.com/s?k=With+Heart+and+Mind+Guide+Loving+God+Daniel+Hyde"
+      },
+      {
+        "title": "The Serpent's Seed: A Reformation Understanding of Genesis 3:15",
+        "amazon_url": "https://www.amazon.com/s?k=Serpent+Seed+Reformation+Genesis+Daniel+Hyde"
+      },
+      {
+        "title": "What Can I Find in the Psalms? A Study of the Psalms",
+        "amazon_url": "https://www.amazon.com/s?k=What+Can+I+Find+Psalms+Daniel+Hyde"
+      }
+    ],
+    "initials": "DRH"
+  },
+  {
+    "name": "Ryan Currie",
+    "slug": "ryan-currie",
+    "bio": "Ryan Currie is a Christian writer and content creator focused on helping believers deepen their faith and understanding of Scripture. Through his work, he explores themes of discipleship, spiritual growth, and living out biblical principles in everyday life.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RC"
+  },
+  {
+    "name": "Hunter Beaumont",
+    "slug": "hunter-beaumont",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "HB"
+  },
+  {
+    "name": "David Smith",
+    "slug": "david-smith",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DS"
+  },
+  {
+    "name": "John Freeman",
+    "slug": "john-freeman",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JF"
+  },
+  {
+    "name": "Drake Osborn",
+    "slug": "drake-osborn",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DO"
+  },
+  {
+    "name": "Jake Meador",
+    "slug": "jakemeadorgmailcom-jake-meador",
+    "bio": "Jake Meador is a writer and editor known for his thoughtful engagement with Christianity, culture, and contemporary issues. He has contributed to various Christian publications and platforms, bringing a nuanced perspective to discussions of faith and public life.",
+    "affiliation": "Mere Orthodoxy",
+    "role": "Editor & Writer",
+    "education": "",
+    "website": "https://mereorthodoxy.com",
+    "books": [],
+    "initials": "JM"
+  },
+  {
+    "name": "Aamna Mohdin",
+    "slug": "aamna-mohdin-community-affairs-correspondent",
+    "bio": "Aamna Mohdin is a community affairs correspondent who reports on social issues, community developments, and human interest stories. Her journalism focuses on giving voice to underrepresented communities and exploring the real-world impact of social change.",
+    "affiliation": "The Guardian",
+    "role": "Community Affairs Correspondent & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AM"
+  },
+  {
+    "name": "Emma Brockes",
+    "slug": "emma-brockes",
+    "bio": "Emma Brockes is a British-American journalist and author known for her thoughtful reporting and personal essays exploring faith, culture, and human experience. Her work has appeared in major publications where she combines keen observation with emotional insight, often touching on themes relevant to Christian readers seeking depth and authenticity.",
+    "affiliation": "The Guardian, Granta",
+    "role": "Journalist & Author",
+    "education": "University of Cambridge",
+    "website": "",
+    "books": [
+      {
+        "title": "An Unsafe Haven: A Woman's Story of Escape from War",
+        "amazon_url": "https://www.amazon.com/s?k=An+Unsafe+Haven+Emma+Brockes"
+      },
+      {
+        "title": "She Left Me the Gun: A True Story of Youth, Madness, and Guns",
+        "amazon_url": "https://www.amazon.com/s?k=She+Left+Me+the+Gun+Emma+Brockes"
+      }
+    ],
+    "initials": "EB"
+  },
+  {
+    "name": "Chun Han Wong",
+    "slug": "chun-han-wong",
+    "bio": "Chun Han Wong is a journalist and author known for his insightful reporting on Christianity, faith communities, and religious dynamics in Asia and beyond. His work combines rigorous journalism with thoughtful analysis of how Christian faith intersects with culture, politics, and society.",
+    "affiliation": "Religion News Service, The Wall Street Journal",
+    "role": "Journalist & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CHW"
+  },
+  {
+    "name": "Stephen Castle",
+    "slug": "stephen-castle",
+    "bio": "Stephen Castle is a journalist and author known for his reporting on international affairs and social issues. While primarily known for secular journalism, his work often explores themes relevant to faith communities, including religious freedom, humanitarian concerns, and cultural commentary.",
+    "affiliation": "",
+    "role": "Journalist & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SC"
+  },
+  {
+    "name": "Dean Seal",
+    "slug": "dean-seal",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DS"
   }
 ]
