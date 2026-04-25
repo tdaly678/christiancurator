@@ -4631,5 +4631,123 @@
     "website": "",
     "books": [],
     "initials": "DS"
+  },
+  {
+    "name": "Rich Bitterman",
+    "slug": "rich-bitterman",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RB"
+  },
+  {
+    "name": "Stephen Witmer",
+    "slug": "stephen-witmer",
+    "bio": "Stephen Witmer is a pastor and author committed to helping Christians understand Scripture and live out their faith in practical ways. He serves as senior pastor of Pepperell Christian Fellowship in Massachusetts and has written extensively on biblical themes for Christian audiences. His teaching combines careful exegesis with pastoral sensitivity to real-life discipleship challenges.",
+    "affiliation": "Pepperell Christian Fellowship, The Gospel Coalition",
+    "role": "Pastor & Author",
+    "education": "MDiv, Gordon-Conwell Theological Seminary",
+    "website": "https://www.stephenwitmerwrites.com",
+    "books": [
+      {
+        "title": "Eternity Changes Everything: How to Live Now in Light of Forever",
+        "amazon_url": "https://www.amazon.com/s?k=Eternity+Changes+Everything+Stephen+Witmer"
+      },
+      {
+        "title": "10 Questions to Diagnose Your Spiritual Health",
+        "amazon_url": "https://www.amazon.com/s?k=10+Questions+Diagnose+Spiritual+Health+Stephen+Witmer"
+      }
+    ],
+    "initials": "SW"
+  },
+  {
+    "name": "Reagan Rose",
+    "slug": "reagan-rose",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RR"
+  },
+  {
+    "name": "Louis Markos",
+    "slug": "louis-markos",
+    "bio": "Louis Markos is a professor of literature and apologetics at Houston Baptist University who specializes in classical Christian thought and its integration with contemporary culture. He is a prolific author and speaker who helps Christians understand and defend their faith through the lens of classical literature, philosophy, and theology. His work bridges ancient wisdom with modern apologetic needs, making him a valued resource for thoughtful believers.",
+    "affiliation": "Houston Baptist University",
+    "role": "Professor of Literature & Apologetics, Author",
+    "education": "Ph.D. in Medieval and Renaissance Literature, University of Michigan",
+    "website": "https://www.hbu.edu",
+    "books": [
+      {
+        "title": "Apologetics for the 21st Century",
+        "amazon_url": "https://www.amazon.com/s?k=Apologetics+for+the+21st+Century+Louis+Markos"
+      },
+      {
+        "title": "From Achilles to Christ: Why Christians Should Read the Pagan Classics",
+        "amazon_url": "https://www.amazon.com/s?k=From+Achilles+to+Christ+Louis+Markos"
+      },
+      {
+        "title": "Heaven and Hell: Visions of the Afterlife in the Western Poetic Tradition",
+        "amazon_url": "https://www.amazon.com/s?k=Heaven+and+Hell+Louis+Markos"
+      },
+      {
+        "title": "The Myth of the Closed Mind: Seizing a Better Vision for the Next Generation",
+        "amazon_url": "https://www.amazon.com/s?k=The+Myth+of+the+Closed+Mind+Louis+Markos"
+      },
+      {
+        "title": "On the Shoulders of Hobbits: The Road to Virtue with Tolkien and Lewis",
+        "amazon_url": "https://www.amazon.com/s?k=On+the+Shoulders+of+Hobbits+Louis+Markos"
+      }
+    ],
+    "initials": "LM"
+  },
+  {
+    "name": "Pranav Baskar",
+    "slug": "pranav-baskar",
+    "bio": "Pranav Baskar is a Christian writer and content creator dedicated to exploring faith, theology, and spiritual growth for contemporary audiences. His work bridges biblical scholarship with accessible teaching for those seeking to deepen their understanding of Christian faith and practice.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PB"
+  },
+  {
+    "name": "Alice Speri",
+    "slug": "alice-speri",
+    "bio": "Alice Speri is an investigative journalist known for her work covering immigration, labor, and human rights issues. While not primarily a Christian content creator, her reporting often intersects with faith-based perspectives on justice, dignity, and compassion for vulnerable populations.",
+    "affiliation": "The Intercept",
+    "role": "Investigative Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AS"
+  },
+  {
+    "name": "Janakee Chavda",
+    "slug": "janakee-chavda",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JC"
+  },
+  {
+    "name": "Laurence Norman",
+    "slug": "laurence-norman",
+    "bio": "Laurence Norman is a journalist and religious correspondent known for his reporting on faith, politics, and cultural issues. His work has appeared in major publications covering the intersection of Christianity and contemporary society.",
+    "affiliation": "",
+    "role": "Journalist & Religious Correspondent",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LN"
   }
 ]
