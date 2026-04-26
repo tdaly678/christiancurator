@@ -4749,5 +4749,98 @@
     "website": "",
     "books": [],
     "initials": "LN"
+  },
+  {
+    "name": "Sharonda Cooper",
+    "slug": "sharonda-cooper",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SC"
+  },
+  {
+    "name": "John Beeson",
+    "slug": "john-beeson",
+    "bio": "John Beeson is a Christian writer and content creator focused on faith-based topics and spiritual growth. His work explores biblical principles and their practical application in modern Christian life.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JB"
+  },
+  {
+    "name": "Joanna Kimbrel",
+    "slug": "joanna-kimbrel",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JK"
+  },
+  {
+    "name": "William S. Plummer",
+    "slug": "william-s-plummer",
+    "bio": "William S. Plummer was a 19th-century Presbyterian minister and biblical scholar known for his expository writings and commentary work. His detailed exegetical approach to Scripture made him a respected voice in Reformed Christian circles during the Victorian era.",
+    "affiliation": "Presbyterian Church",
+    "role": "Minister & Biblical Commentator",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Psalms: A Critical and Expository Commentary",
+        "amazon_url": "https://www.amazon.com/s?k=Psalms+Critical+Expository+Commentary+Plummer"
+      }
+    ],
+    "initials": "WSP"
+  },
+  {
+    "name": "Elizabeth Russell",
+    "slug": "elizabeth-russell",
+    "bio": "Elizabeth Russell is a Christian author and speaker known for her work in faith-based content and spiritual development. Her writing encourages believers to deepen their relationship with Christ through practical wisdom and biblical insight.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ER"
+  },
+  {
+    "name": "Sam Wollaston",
+    "slug": "words-by-sam-wollaston",
+    "bio": "Sam Wollaston is a writer and journalist known for his thoughtful commentary and cultural criticism. His work explores contemporary issues with insight and clarity, often engaging with topics relevant to faith and values.",
+    "affiliation": "",
+    "role": "Writer & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SW"
+  },
+  {
+    "name": "Christopher Thomond",
+    "slug": "photography-by-christopher-thomond",
+    "bio": "Christopher Thomond is an accomplished photographer known for his compelling visual storytelling and documentary work. His lens captures authentic human moments and significant cultural narratives with artistic sensitivity and clarity.",
+    "affiliation": "",
+    "role": "Photographer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CT"
+  },
+  {
+    "name": "Steven Erlanger",
+    "slug": "steven-erlanger",
+    "bio": "Steven Erlanger is an accomplished journalist and foreign correspondent with extensive experience covering international affairs, conflict zones, and geopolitical developments. While his work spans secular media outlets, his reporting often explores themes relevant to global Christian communities and international religious concerns.",
+    "affiliation": "The New York Times",
+    "role": "Foreign Correspondent & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SE"
   }
 ]
