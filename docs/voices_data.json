@@ -4842,5 +4842,128 @@
     "website": "",
     "books": [],
     "initials": "SE"
+  },
+  {
+    "name": "Glen Scrivener",
+    "slug": "glen-scrivener",
+    "bio": "Glen Scrivener is a British author, speaker, and evangelist known for his accessible approach to Christian apologetics and cultural commentary. He has become well-known for making the gospel relevant to contemporary secular audiences through writing, podcasting, and public speaking. His work emphasizes the beauty of the Christian message and its implications for how we live in the modern world.",
+    "affiliation": "Speaker and author; associated with various Christian organizations and events",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "https://glenscrivener.com",
+    "books": [
+      {
+        "title": "The Against Everything Review",
+        "amazon_url": "https://www.amazon.com/s?k=Glen+Scrivener+Against+Everything+Review"
+      },
+      {
+        "title": "A Little Faith",
+        "amazon_url": "https://www.amazon.com/s?k=Glen+Scrivener+Little+Faith"
+      },
+      {
+        "title": "The Air We're Breathing",
+        "amazon_url": "https://www.amazon.com/s?k=Glen+Scrivener+Air+We+Are+Breathing"
+      }
+    ],
+    "initials": "GS"
+  },
+  {
+    "name": "Mitch Chase",
+    "slug": "mitch-chase",
+    "bio": "Mitch Chase is a pastor and Bible teacher known for his work in expository preaching and biblical theology. He has served in pastoral ministry and is recognized for helping churches and believers engage deeply with Scripture through teaching and written resources.",
+    "affiliation": "",
+    "role": "Pastor & Bible Teacher",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MC"
+  },
+  {
+    "name": "Andrew Lisi",
+    "slug": "andrew-lisi",
+    "bio": "Andrew Lisi is a Christian writer and content creator focused on biblical teaching and spiritual growth. His work aims to help believers deepen their understanding of Scripture and apply biblical principles to everyday life.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AL"
+  },
+  {
+    "name": "Zachary Conover",
+    "slug": "zachary-conover",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ZC"
+  },
+  {
+    "name": "Jason Wilson",
+    "slug": "jason-wilson",
+    "bio": "Jason Wilson is a writer whose work appears in evangelical publications curated by Christian Curator.",
+    "affiliation": "",
+    "role": "Author & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JW"
+  },
+  {
+    "name": "J. Stephen Yuille",
+    "slug": "j-stephen-yuille",
+    "bio": "J. Stephen Yuille is a biblical scholar and author dedicated to helping Christians develop a deeper understanding of Scripture. He is known for his thoughtful approach to biblical interpretation and his commitment to equipping believers with tools for meaningful study of God's Word.",
+    "affiliation": "",
+    "role": "Biblical Scholar & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JSY"
+  },
+  {
+    "name": "David Hammer and Ramon Antonio Vargas",
+    "slug": "david-hammer-of-wwl-louisiana-and-ramon-antonio-vargas",
+    "bio": "David Hammer and Ramon Antonio Vargas are investigative journalists based in New Orleans who have contributed reporting to WWL Louisiana and other major news outlets. Their work focuses on uncovering stories of public interest and accountability in Louisiana communities.",
+    "affiliation": "WWL Louisiana",
+    "role": "Investigative Journalists",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DH RAV"
+  },
+  {
+    "name": "Travis Kircher",
+    "slug": "travis-kircher",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TK"
+  },
+  {
+    "name": "Ruth Maclean",
+    "slug": "ruth-maclean",
+    "bio": "Ruth Maclean is a journalist and author known for her reporting on West African affairs and religious topics. Her work explores themes of faith, culture, and social change across the African continent, offering insights that resonate with Christian readers seeking to understand global perspectives on faith and community.",
+    "affiliation": "The Guardian",
+    "role": "Journalist & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RM"
+  },
+  {
+    "name": "Kejal Vyas",
+    "slug": "kejal-vyas",
+    "bio": "Kejal Vyas is a journalist and writer who covers faith, culture, and social issues for leading Christian and mainstream publications. Her work explores the intersection of belief and contemporary life, offering thoughtful perspectives on how Christians engage with the modern world.",
+    "affiliation": "Christianity Today, The Gospel Coalition",
+    "role": "Journalist & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KV"
   }
 ]
