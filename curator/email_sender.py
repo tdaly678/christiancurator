@@ -2,14 +2,20 @@
 email_sender.py — builds and sends the daily digest email via Brevo API.
 
 Email structure:
-  Preheader  (invisible inbox preview — first 3 headline titles)
-  Top bar    (date · Forwarded? Subscribe)
-  Masthead   (Christian Curator wordmark + tagline)
-  Top Stories (5 highest-scored non-world-news articles — title + source only)
-  CTA box    (+ N more stories today → christiancurator.com)
-  Go Deeper  (rotating topic spotlight — cycles through all topics)
+  Preheader     (invisible inbox preview — first 3 headline titles)
+  Top bar       (date · Forwarded? Subscribe)
+  Masthead      (Christian Curator wordmark + tagline)
+  Top Stories   (5 highest-scored non-world-news headlines — title + source)
+  More Headlines(remaining ~15 non-world-news + ~3 world-news — compact list)
+  CTA box       (Visit today's digest → christiancurator.com)
+  Go Deeper     (rotating topic spotlight — cycles through all topics)
   Forward nudge
   Footer
+
+Every headline links to https://www.christiancurator.com/#<article_anchor>
+where <article_anchor> = "a" + md5(article.url)[:8] — the same anchor id
+the homepage template.html applies to its article cards, so a click on an
+email headline lands at that exact article on the live site.
 """
 
 import hashlib
@@ -84,16 +90,69 @@ def _get_spotlight_topic() -> dict | None:
     return chosen
 
 
-# ── Section renderers ──────────────────────────────────────────────────────────
+# ── Helpers ────────────────────────────────────────────────────────────────────
 
-def _render_top_stories(articles: list[dict]) -> str:
-    """5 highest-scored non-world-news articles — title + source, no summaries."""
-    top5 = sorted(
-        [a for a in articles if a.get("source_type") != "world_news"],
+def _article_anchor_url(url: str) -> str:
+    """Return the homepage URL anchored to this article — matches the id
+    applied in frontend/template.html via the `article_anchor` Jinja filter."""
+    if not url:
+        return "https://www.christiancurator.com/"
+    anchor = "a" + hashlib.md5(url.encode()).hexdigest()[:8]
+    return f"https://www.christiancurator.com/#{anchor}"
+
+
+def _split_homepage_articles(articles: list[dict]) -> tuple[list[dict], list[dict], list[dict]]:
+    """Return (top5, remaining, world_news_top3) using the *same* diversified
+    selection the homepage uses, so every headline in the email has a matching
+    anchor id on christiancurator.com.
+
+    - top5: first 5 of the diversified front-page cards (10 total)
+    - remaining: the other 5 front-page cards + up to 10 'other_headlines' (~15)
+    - world_news_top3: top 3 world-news articles by score
+    """
+    try:
+        # Reuse the homepage's own diversification helpers so anchors line up.
+        from frontend import _build_diversified_cards, _build_diversified_headlines
+        from frontend.topics_data import TOPICS_BY_SLUG
+    except ImportError:
+        # Fallback: simple top-by-score split if frontend isn't importable.
+        non_world = sorted(
+            [a for a in articles if a.get("source_type") != "world_news"],
+            key=lambda a: a.get("final_score", a.get("score", 0)),
+            reverse=True,
+        )
+        world = sorted(
+            [a for a in articles if a.get("source_type") == "world_news"],
+            key=lambda a: a.get("final_score", a.get("score", 0)),
+            reverse=True,
+        )[:3]
+        return non_world[:5], non_world[5:20], world
+
+    front_page_cards = _build_diversified_cards(
+        articles, TOPICS_BY_SLUG, max_per_topic=2, total=10
+    )
+    front_page_articles = [c["article"] for c in front_page_cards]
+    front_page_urls = {a.get("url", "") for a in front_page_articles}
+
+    other_headlines = _build_diversified_headlines(
+        articles, TOPICS_BY_SLUG, front_page_urls, max_per_topic=2, total=10
+    )
+
+    world_news = sorted(
+        [a for a in articles if a.get("source_type") == "world_news"],
         key=lambda a: a.get("final_score", a.get("score", 0)),
         reverse=True,
-    )[:5]
+    )[:3]
 
+    top5 = front_page_articles[:5]
+    remaining = front_page_articles[5:] + other_headlines  # up to 15 items
+    return top5, remaining, world_news
+
+
+# ── Section renderers ──────────────────────────────────────────────────────────
+
+def _render_top_stories(top5: list[dict]) -> str:
+    """5 lead headlines — larger style, title + byline + source."""
     if not top5:
         return ""
 
@@ -108,8 +167,7 @@ def _render_top_stories(articles: list[dict]) -> str:
             if author and author.lower() != source.lower()
             else source
         )
-        anchor = "a" + hashlib.md5((url or "").encode()).hexdigest()[:8]
-        href   = f"https://www.christiancurator.com/#{anchor}" if url else "https://www.christiancurator.com/"
+        href   = _article_anchor_url(url)
         border = "" if i == len(top5) - 1 else "border-bottom:1px solid #eceae6;"
 
         rows += f"""
@@ -134,18 +192,73 @@ def _render_top_stories(articles: list[dict]) -> str:
     </div>"""
 
 
-def _render_cta(non_world_count: int) -> str:
-    """CTA box — dynamic story count + button to homepage."""
-    more = max(0, non_world_count - 5)
-    more_label = f"+ {more} more stories today" if more > 0 else "Read all stories today"
+def _render_more_headlines(remaining: list[dict], world_news: list[dict]) -> str:
+    """Compact list of all remaining homepage headlines, plus world news.
 
+    Every entry links to the homepage anchor so the click lands at the
+    article's spot on christiancurator.com (just like the top stories do).
+    """
+    if not remaining and not world_news:
+        return ""
+
+    def _row(a: dict, last: bool) -> str:
+        title  = a.get("rewritten_title") or a.get("title") or ""
+        source = (a.get("source_name") or "").strip()
+        url    = a.get("url") or ""
+        href   = _article_anchor_url(url)
+        border = "" if last else "border-bottom:1px solid #eceae6;"
+        return f"""
+      <div style="padding:10px 0;{border}">
+        <a href="{href}"
+           style="font-family:Georgia,'Times New Roman',serif;font-size:14px;
+                  font-weight:600;line-height:1.35;color:#1a1a1a;text-decoration:none;
+                  display:block;margin-bottom:3px;">
+          {title}
+        </a>
+        <div style="font-size:10.5px;color:#aaa;letter-spacing:0.01em;">{source}</div>
+      </div>"""
+
+    main_rows = ""
+    if remaining:
+        for i, a in enumerate(remaining):
+            last = (i == len(remaining) - 1) and not world_news
+            main_rows += _row(a, last)
+
+    world_section = ""
+    if world_news:
+        world_rows = ""
+        for i, a in enumerate(world_news):
+            world_rows += _row(a, last=(i == len(world_news) - 1))
+        world_section = f"""
+      <div style="margin-top:18px;padding-top:14px;border-top:1px solid #d8d4cd;">
+        <div style="font-size:9px;font-weight:700;text-transform:uppercase;
+                    letter-spacing:0.18em;color:#888;margin-bottom:4px;">
+          World News &amp; Culture
+        </div>
+        {world_rows}
+      </div>"""
+
+    return f"""
+    <div style="padding:24px 28px 0;">
+      <div style="font-size:9px;font-weight:700;text-transform:uppercase;
+                  letter-spacing:0.18em;color:#888;border-bottom:2.5px solid #1a1a1a;
+                  padding-bottom:8px;margin-bottom:0;">
+        More Headlines
+      </div>
+      {main_rows}
+      {world_section}
+    </div>"""
+
+
+def _render_cta(non_world_count: int) -> str:
+    """CTA box — invites readers to the live site for full context + commentary."""
     return f"""
     <div style="padding:24px 28px 0;">
       <div style="background:#f3f1ed;border:1px solid #e0ddd8;border-radius:6px;
                   padding:22px 20px;text-align:center;">
         <div style="font-size:12px;color:#888;margin-bottom:6px;letter-spacing:0.04em;
                     text-transform:uppercase;font-weight:600;">
-          {more_label}
+          Read on the site for full context
         </div>
         <div style="font-family:Georgia,'Times New Roman',serif;font-size:18px;
                     font-weight:600;color:#1a1a1a;line-height:1.3;margin-bottom:18px;">
@@ -223,25 +336,26 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
 
     today_long = date.today().strftime("%A, %B %-d, %Y")
 
-    # Preheader: first 3 non-world-news headline titles
+    non_world_count  = len([a for a in articles if a.get("source_type") != "world_news"])
+    spotlight_topic  = _get_spotlight_topic()
+
+    # Mirror the homepage's diversification so every headline below has a
+    # matching anchor id on christiancurator.com.
+    top5, remaining, world_news = _split_homepage_articles(articles)
+
+    # Preheader: first 3 headline titles from the top stories shown above
     top_titles = [
         a.get("rewritten_title") or a.get("title", "")
-        for a in sorted(
-            [a for a in articles if a.get("source_type") != "world_news"],
-            key=lambda a: a.get("final_score", a.get("score", 0)),
-            reverse=True,
-        )[:3]
+        for a in top5[:3]
     ]
     preheader = " &nbsp;·&nbsp; ".join(t for t in top_titles if t)
     if preheader:
         preheader += " &nbsp;·&nbsp; and more."
 
-    non_world_count  = len([a for a in articles if a.get("source_type") != "world_news"])
-    spotlight_topic  = _get_spotlight_topic()
-
-    top_stories_html = _render_top_stories(articles)
-    cta_html         = _render_cta(non_world_count)
-    go_deeper_html   = _render_go_deeper(spotlight_topic)
+    top_stories_html    = _render_top_stories(top5)
+    more_headlines_html = _render_more_headlines(remaining, world_news)
+    cta_html            = _render_cta(non_world_count)
+    go_deeper_html      = _render_go_deeper(spotlight_topic)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -287,6 +401,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
     </div>
 
     {top_stories_html}
+    {more_headlines_html}
     {cta_html}
     {go_deeper_html}
 

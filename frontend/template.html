@@ -773,7 +773,7 @@
       <div class="cc-world-news-intro">From the broader world — filtered for what matters to Christians</div>
       <div class="cc-world-news-list">
         {% for article in world_articles[:3] %}
-        <article class="cc-world-news-item">
+        <article class="cc-world-news-item" id="{{ article.url | article_anchor }}">
           <div class="cc-world-news-num">{{ loop.index }}</div>
           <div class="cc-world-news-content">
             <a href="{{ article.url }}" class="cc-world-news-title" target="_blank" rel="noopener"
