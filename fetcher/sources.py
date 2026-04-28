@@ -138,12 +138,6 @@ SOURCES = [
 
     # ── Evangelical Author Substacks — Tier 2 ──
     {
-        "name": "Daily Dose of Greek",
-        "url": "https://dailydoseofgreek.com/feed/",
-        "category": "theology",
-        "independent": True,
-    },
-    {
         "name": "Jen Wilkin",
         "url": "https://www.jenwilkin.net/blog?format=rss",
         "category": "theology",

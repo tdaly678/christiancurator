@@ -19,6 +19,11 @@ from collections import defaultdict
 from dotenv import load_dotenv
 
 from fetcher.sources import SOURCES
+from curator.trending import (
+    compute_trending,
+    trending_boost_for,
+    format_trending_summary,
+)
 
 load_dotenv()
 
@@ -311,19 +316,21 @@ def apply_diversity_penalty(articles: list[dict]) -> list[dict]:
     return kept
 
 
-# Source tier multipliers — applied to base score before recency boost
+# Source tier multipliers — applied to base score before recency boost.
+# Compressed April 2026 (1.3 → 1.15, 1.2 → 1.10) to narrow the institutional
+# advantage and give independent voices a more competitive landscape.
 SOURCE_TIER_MULTIPLIERS = {
-    # Tier 1A — 1.3x
-    "The Gospel Coalition":    1.3,
-    "Desiring God":            1.3,
-    "Ligonier Ministries":     1.3,
-    "9Marks":                  1.3,
-    # Tier 1 — 1.2x
-    "Christianity Today":      1.2,
-    "First Things":            1.2,
-    "Crossway":                1.2,
-    "Mere Orthodoxy":          1.2,
-    "American Reformer":       1.2,
+    # Tier 1A — 1.15x
+    "The Gospel Coalition":    1.15,
+    "Desiring God":            1.15,
+    "Ligonier Ministries":     1.15,
+    "9Marks":                  1.15,
+    # Tier 1 — 1.10x
+    "Christianity Today":      1.10,
+    "First Things":            1.10,
+    "Crossway":                1.10,
+    "Mere Orthodoxy":          1.10,
+    "American Reformer":       1.10,
     # Tier 2 — 1.05x
     "World Magazine":          1.05,
     "Relevant Magazine":       1.05,
@@ -359,8 +366,9 @@ TIER_2_SOURCES  = {"World Magazine", "Relevant Magazine", "Reformation21", "Jen 
 # (Previously this was a hardcoded set that drifted from sources.py — see
 #  the April 2026 Tier A expansion commit.)
 INDEPENDENT_SOURCES = {s["name"] for s in SOURCES if s.get("independent", False)}
-MIN_INDEPENDENT_ARTICLES = 3
+MIN_INDEPENDENT_ARTICLES = 5
 INDEPENDENT_FLOOR_BOOST  = 2.0  # boost applied to top independents if floor not met
+ROTATION_FRESH_WINDOW_DAYS = 14  # an independent is "fresh" if not surfaced in this window
 
 # ── Publishing-frequency boost (independents only) ────────────────────────────
 # Rewards independents who publish consistently. Computed per-source from the
@@ -387,6 +395,15 @@ def source_max(source_name: str) -> int:
 PREVIOUSLY_SHOWN_PENALTY = 4.0   # applied to articles already surfaced on the site
 DUPLICATE_TOPIC_PENALTY   = 3.0   # applied to same-topic same-perspective duplicates
 OPPOSING_VIEWS_BOOST      = 1.0   # applied to articles that form an opposing pair
+
+# Stale-source boost — applies to ALL sources (not just independents).
+# Any source whose articles haven't been surfaced in STALE_SOURCE_WINDOW_DAYS gets
+# this one-time bump on its highest-scoring article in the current fetch. Forces
+# the algorithm to actively try voices we're starving rather than re-running the
+# same winners. Per-source (not per-article) so a source that drops 8 posts in a
+# day doesn't get 8 boosts — just one shot at re-entering rotation.
+STALE_SOURCE_WINDOW_DAYS = 14
+STALE_SOURCE_BOOST       = 0.75
 
 # Response/debate article boost — applied when a title signals direct engagement
 # with another named author or argument, especially from Tier 1 outlets.
@@ -504,11 +521,52 @@ def frequency_boost_for(count: int) -> float:
     return 0.0
 
 
-def apply_independent_floor(articles: list[dict], top_n: int = 20) -> list[dict]:
+def load_source_last_shown(history_path: str = "docs/article_history.json") -> dict[str, str]:
+    """Returns {source_name: most_recent_date_shown_iso} from article_history.json.
+    Used by both the rotating-voices floor and the stale-source boost. Missing or
+    malformed history file → empty dict (i.e., every source treated as "fresh")."""
+    import json, os
+    if not os.path.exists(history_path):
+        return {}
+    try:
+        with open(history_path) as f:
+            history = json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return {}
+    last_shown: dict[str, str] = {}
+    for entry in history:
+        src = entry.get("source_name")
+        date = entry.get("date_shown", "")
+        if not src or not date:
+            continue
+        if src not in last_shown or date > last_shown[src]:
+            last_shown[src] = date
+    return last_shown
+
+
+def _is_source_stale(source_name: str, last_shown: dict[str, str], window_days: int) -> bool:
+    """A source is 'stale' (i.e., overdue for surfacing) if it has not appeared
+    in the last `window_days`, OR if it has never appeared at all."""
+    from datetime import date, timedelta
+    last = last_shown.get(source_name)
+    if not last:
+        return True  # never surfaced → maximally stale
+    cutoff = (date.today() - timedelta(days=window_days)).isoformat()
+    return last < cutoff
+
+
+def apply_independent_floor(
+    articles: list[dict],
+    top_n: int = 20,
+    source_last_shown: dict[str, str] | None = None,
+) -> list[dict]:
     """Guarantee at least MIN_INDEPENDENT_ARTICLES from independent author sources
-    appear in the top_n results. If the floor isn't met, boost the highest-scoring
-    independents that fell below the cutoff so they rise into contention.
+    appear in the top_n results. If the floor isn't met, boost independents from
+    *under-represented* voices first (sources not surfaced in the last
+    ROTATION_FRESH_WINDOW_DAYS), falling back to highest-scoring otherwise. This
+    breaks the same-five-Substackers-forever pattern.
     """
+    source_last_shown = source_last_shown or {}
     top = articles[:top_n]
     rest = articles[top_n:]
 
@@ -520,21 +578,50 @@ def apply_independent_floor(articles: list[dict], top_n: int = 20) -> list[dict]
         return articles  # floor already met
 
     needed = MIN_INDEPENDENT_ARTICLES - independent_in_top
-    # Find the best-scoring independents sitting outside the top_n
-    candidates = sorted(
-        [a for a in rest if a.get("source_name") in INDEPENDENT_SOURCES],
-        key=lambda x: x["final_score"], reverse=True
+
+    # Two-tier candidate pool: prefer FRESH (rotated-out) voices, then fall back
+    # to highest-scoring regardless of recency. Inside each tier, sort by score.
+    rest_indeps = [a for a in rest if a.get("source_name") in INDEPENDENT_SOURCES]
+    fresh = sorted(
+        [a for a in rest_indeps
+         if _is_source_stale(a["source_name"], source_last_shown, ROTATION_FRESH_WINDOW_DAYS)],
+        key=lambda x: x["final_score"], reverse=True,
     )
+    recent = sorted(
+        [a for a in rest_indeps
+         if not _is_source_stale(a["source_name"], source_last_shown, ROTATION_FRESH_WINDOW_DAYS)],
+        key=lambda x: x["final_score"], reverse=True,
+    )
+    # Deduplicate by source so the floor doesn't fill all 5 slots with one prolific
+    # Substacker — diversify across distinct voices first, then allow seconds.
+    def _dedup_by_source(pool):
+        seen, ordered, leftovers = set(), [], []
+        for a in pool:
+            src = a["source_name"]
+            if src in seen:
+                leftovers.append(a)
+            else:
+                seen.add(src)
+                ordered.append(a)
+        return ordered + leftovers
+
+    candidates = _dedup_by_source(fresh) + _dedup_by_source(recent)
+
     boosted = 0
+    fresh_names: list[str] = []
     for a in candidates:
         if boosted >= needed:
             break
         a["final_score"] = round(min(a["final_score"] + INDEPENDENT_FLOOR_BOOST, 10.0), 2)
         a["independent_floor_boosted"] = True
+        if _is_source_stale(a["source_name"], source_last_shown, ROTATION_FRESH_WINDOW_DAYS):
+            a["independent_floor_fresh"] = True
+            fresh_names.append(a["source_name"])
         boosted += 1
 
     if boosted:
-        print(f"  Independent floor: boosted {boosted} independent articles to meet minimum of {MIN_INDEPENDENT_ARTICLES}.")
+        fresh_note = f" (fresh voices: {', '.join(fresh_names)})" if fresh_names else ""
+        print(f"  Independent floor: boosted {boosted} articles to meet minimum of {MIN_INDEPENDENT_ARTICLES}{fresh_note}.")
 
     # Re-sort after boosts
     return sorted(articles, key=lambda a: a["final_score"], reverse=True)
@@ -592,6 +679,10 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     # Precompute one post-count map for the whole fetch so we don't re-scan
     # per article. Independents publishing more often earn a bigger bump.
     post_counts = compute_source_post_counts(scored)
+
+    # Load source-freshness map once — reused by stale-source boost (below) and
+    # by the rotating-voices independent floor (Step 7).
+    source_last_shown = load_source_last_shown()
 
     for article in scored:
         base = float(article.get("score") or 5)
@@ -668,6 +759,49 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     if response_boosted_count:
         print(f"  Response/debate boost: boosted {response_boosted_count} articles.")
 
+    # Step 2c-pre: Trending-topic boost — detect cross-source evangelical
+    # conversations from internal corpus + optional X listening, then lift
+    # articles in those topic_clusters by +0.75 / +1.0 / +1.5 (warm/hot/fire).
+    # Honors a kill-switch env var (TRENDING_BOOST_DISABLED=1) for fast rollback.
+    trending_boosted_count = 0
+    if not os.environ.get("TRENDING_BOOST_DISABLED"):
+        try:
+            trending = compute_trending(scored, use_x=True)
+        except Exception as e:
+            print(f"  Trending detection failed: {e} — skipping trending boost.")
+            trending = {}
+        if trending:
+            print(f"  Trending topics detected: {len(trending)} clusters")
+            for line in format_trending_summary(trending):
+                print(line)
+            for article in scored:
+                bump = trending_boost_for(article, trending)
+                if bump > 0:
+                    article["final_score"] = round(min(article["final_score"] + bump, 10.0), 2)
+                    article["trending_boost"] = bump
+                    trending_boosted_count += 1
+            if trending_boosted_count:
+                print(f"  Trending boost: lifted {trending_boosted_count} articles in trending clusters.")
+
+    # Step 2c: Stale-source boost — give a one-time +0.75 to the top article from
+    # any source we haven't surfaced in STALE_SOURCE_WINDOW_DAYS. Drives rotation
+    # so under-represented voices (incl. the 43 independents that have never
+    # appeared) get a real shot at the daily digest. Per-source, not per-article.
+    stale_boosted_sources: list[str] = []
+    seen_stale_sources: set[str] = set()
+    # Iterate in current-score order so each source's *highest-scoring* article wins the boost
+    for article in sorted(scored, key=lambda a: a["final_score"], reverse=True):
+        source_name = article.get("source_name", "")
+        if not source_name or source_name in seen_stale_sources:
+            continue
+        if _is_source_stale(source_name, source_last_shown, STALE_SOURCE_WINDOW_DAYS):
+            article["final_score"] = round(min(article["final_score"] + STALE_SOURCE_BOOST, 10.0), 2)
+            article["stale_source_boosted"] = True
+            stale_boosted_sources.append(source_name)
+        seen_stale_sources.add(source_name)
+    if stale_boosted_sources:
+        print(f"  Stale-source boost: lifted top article from {len(stale_boosted_sources)} under-represented sources (+{STALE_SOURCE_BOOST} each).")
+
     # Step 3: Sort by final_score before diversity pass
     scored.sort(key=lambda a: a["final_score"], reverse=True)
 
@@ -681,7 +815,8 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     # Step 6: Re-sort after diversity pass
     scored.sort(key=lambda a: a["final_score"], reverse=True)
 
-    # Step 7: Independent author floor — guarantee at least 3 independent articles
-    scored = apply_independent_floor(scored)
+    # Step 7: Independent author floor — guarantee at least MIN_INDEPENDENT_ARTICLES
+    # with rotating-voices preference (fresh voices first, then highest-scoring).
+    scored = apply_independent_floor(scored, source_last_shown=source_last_shown)
 
     return scored

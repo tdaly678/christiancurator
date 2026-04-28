@@ -77,6 +77,9 @@ def save_article_history(articles: list[dict]):
                 "date_shown": today,
                 "final_score": a.get("final_score", 0),
                 "tags": a.get("tags", []),
+                # topic_cluster — added April 2026 to power the trending detector.
+                # Older entries lack this field; trending logic handles missing values.
+                "topic_cluster": a.get("topic_cluster", ""),
                 "clicks": 0,  # placeholder for future GA integration
             })
 
