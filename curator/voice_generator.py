@@ -252,6 +252,11 @@ def render_bio_page(author: dict, index: int) -> str:
     initials = author.get("initials") or "".join(p[0].upper() for p in name.split()[:3] if p and p[0].isalpha()) or name[:2].upper()
     color = avatar_color(index)
 
+    # Split bio on blank lines to support multi-paragraph bios. Single-paragraph
+    # bios continue to render as one <p>; two-paragraph bios render as two <p>s.
+    bio_paragraphs = [p.strip() for p in re.split(r"\n\s*\n", bio.strip()) if p.strip()]
+    bio_html = "\n    ".join(f'<p class="cc-voice-bio">{p}</p>' for p in bio_paragraphs) if bio_paragraphs else f'<p class="cc-voice-bio">{bio}</p>'
+
     books_html = ""
     if books:
         books_html = '\n    <div class="cc-voice-section">\n      <div class="cc-section-label">Notable Books</div>\n      <div class="cc-books-list">'
@@ -354,7 +359,7 @@ def render_bio_page(author: dict, index: int) -> str:
         <div class="cc-voice-role">{role}</div>
       </div>
     </div>
-    <p class="cc-voice-bio">{bio}</p>
+    {bio_html}
     {meta_block}
     {books_html}
     <a href="/voices/" class="cc-back-link">&larr; All Voices</a>
