@@ -4965,5 +4965,180 @@
     "website": "",
     "books": [],
     "initials": "KV"
+  },
+  {
+    "name": "Andy Shurson",
+    "slug": "andy-shurson",
+    "bio": "Andy Shurson is a Christian communicator and content creator dedicated to helping believers grow in their faith and understanding of Scripture. Through his writing and teaching, he explores practical ways to apply biblical principles to everyday life and deepen one's relationship with Christ.",
+    "affiliation": "",
+    "role": "Christian Writer & Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AS"
+  },
+  {
+    "name": "Ligonier Editorial",
+    "slug": "ligonier-editorial",
+    "bio": "Ligonier Editorial represents the collective voice of Ligonier Ministries' editorial team, bringing Reformed Christian theology and biblical teaching to a global audience. Through articles, devotionals, and curated content, this editorial collective helps Christians deepen their understanding of God's Word and Reformed doctrine.",
+    "affiliation": "Ligonier Ministries",
+    "role": "Editorial Team & Content Curator",
+    "education": "",
+    "website": "https://www.ligonier.org",
+    "books": [],
+    "initials": "LE"
+  },
+  {
+    "name": "Alistair Chalmers",
+    "slug": "alistair-chalmers",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AC"
+  },
+  {
+    "name": "Amy Tyson",
+    "slug": "amy-tyson",
+    "bio": "Amy Tyson is a writer and speaker who explores faith, culture, and Christian living with thoughtfulness and grace. Her work encourages readers to deepen their relationship with God while engaging meaningfully with the world around them.",
+    "affiliation": "",
+    "role": "Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AT"
+  },
+  {
+    "name": "Aaron Summers",
+    "slug": "aaron-summers",
+    "bio": "Aaron Summers is a writer and Christian communicator who focuses on making biblical truth accessible to contemporary audiences. Through his work, he explores themes of faith, discipleship, and spiritual growth for modern believers.",
+    "affiliation": "",
+    "role": "Writer & Christian Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AS"
+  },
+  {
+    "name": "Thomas Christianson",
+    "slug": "thomas-christianson",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TC"
+  },
+  {
+    "name": "Brian Tabb",
+    "slug": "brian-tabb",
+    "bio": "Brian Tabb is a pastor, author, and teacher known for helping Christians understand Scripture with theological depth and practical wisdom. He has written extensively on biblical theology and the Gospel, with a passion for connecting God's Word to everyday Christian life.",
+    "affiliation": "Evangelical Free Church",
+    "role": "Pastor & Author",
+    "education": "M.Div., Trinity Evangelical Divinity School",
+    "website": "",
+    "books": [
+      {
+        "title": "The God Who Justifies: Justification in the Theology of John Calvin",
+        "amazon_url": "https://www.amazon.com/s?k=The+God+Who+Justifies+Brian+Tabb"
+      },
+      {
+        "title": "Justification and the New Perspective on Paul",
+        "amazon_url": "https://www.amazon.com/s?k=Justification+and+the+New+Perspective+on+Paul+Brian+Tabb"
+      }
+    ],
+    "initials": "BT"
+  },
+  {
+    "name": "J. V. Fesko",
+    "slug": "j-v-fesko",
+    "bio": "J. V. Fesko is a Reformed theologian and author known for his scholarly work on covenant theology, justification, and Christian doctrine. He has written numerous books designed to help Christians understand biblical theology and its practical implications for faith and practice.",
+    "affiliation": "Ligonier Ministries",
+    "role": "Author & Theologian",
+    "education": "Ph.D. in Systematic Theology, University of Aberdeen",
+    "website": "",
+    "books": [
+      {
+        "title": "Justification: Understanding God's Verdict",
+        "amazon_url": "https://www.amazon.com/s?k=Justification+Understanding+Gods+Verdict+Fesko"
+      },
+      {
+        "title": "The Covenant of Works",
+        "amazon_url": "https://www.amazon.com/s?k=The+Covenant+of+Works+Fesko"
+      },
+      {
+        "title": "Covenant and the Covenants",
+        "amazon_url": "https://www.amazon.com/s?k=Covenant+and+the+Covenants+Fesko"
+      },
+      {
+        "title": "The Rule of Faith",
+        "amazon_url": "https://www.amazon.com/s?k=The+Rule+of+Faith+Fesko"
+      },
+      {
+        "title": "The New Korah",
+        "amazon_url": "https://www.amazon.com/s?k=The+New+Korah+Fesko"
+      }
+    ],
+    "initials": "JVF"
+  },
+  {
+    "name": "John D. Wilsey",
+    "slug": "john-d-wilsey",
+    "bio": "John D. Wilsey is a historian and author who specializes in American religious history and the intersection of faith and public life. His scholarly work explores how Christian thought has shaped American culture and politics, offering evangelical readers a thoughtful examination of their faith's role in the nation's story.",
+    "affiliation": "Southwestern Baptist Theological Seminary",
+    "role": "Professor & Author",
+    "education": "Ph.D. in Church History",
+    "website": "",
+    "books": [
+      {
+        "title": "American Exceptionalism and Civil Religion: How the Ever-Present Past Shapes the American Future",
+        "amazon_url": "https://www.amazon.com/s?k=American+Exceptionalism+Civil+Religion+John+Wilsey"
+      },
+      {
+        "title": "One Nation Under God: An Evangelical's Plea for Faith-Based Political Engagement",
+        "amazon_url": "https://www.amazon.com/s?k=One+Nation+Under+God+John+Wilsey"
+      },
+      {
+        "title": "The Essential Evangelicalism of John Newton",
+        "amazon_url": "https://www.amazon.com/s?k=Essential+Evangelicalism+John+Newton+Wilsey"
+      }
+    ],
+    "initials": "JDW"
+  },
+  {
+    "name": "Choe Sang-Hun",
+    "slug": "choe-sanghun",
+    "bio": "Choe Sang-Hun is a respected journalist and foreign correspondent known for his reporting on East Asian affairs, particularly North Korea and South Korea. His work has provided Western audiences with critical insights into religious persecution and human rights issues in the region from a perspective informed by Christian values and concern for faith communities.",
+    "affiliation": "The New York Times",
+    "role": "Foreign Correspondent & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CSH"
+  },
+  {
+    "name": "Ephrat Livni",
+    "slug": "ephrat-livni",
+    "bio": "Ephrat Livni is a journalist and writer known for her work exploring culture, psychology, and human behavior through a thoughtful lens. She has contributed to various publications examining contemporary issues and their intersection with faith and values.",
+    "affiliation": "Quartz",
+    "role": "Journalist & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EL"
+  },
+  {
+    "name": "Chris Larson",
+    "slug": "chris-larson",
+    "bio": "Chris Larson is a Christian author and communicator dedicated to helping believers grow in their faith and understanding of Scripture. His work focuses on making biblical truths accessible and practical for contemporary Christian living.",
+    "affiliation": "",
+    "role": "Author & Christian Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CL"
   }
 ]
