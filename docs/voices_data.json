@@ -5255,5 +5255,455 @@
     "website": "",
     "books": [],
     "initials": "MC"
+  },
+  {
+    "name": "D.A. Carson",
+    "slug": "d-a-carson",
+    "bio": "Donald Arthur Carson (born December 21, 1946) is research professor of New Testament at Trinity Evangelical Divinity School, where he taught full-time from 1978 until 2018, and co-founder and president emeritus of The Gospel Coalition. A Canadian evangelical, he earned his PhD in New Testament from the University of Cambridge under C.F.D. Moule and has authored or edited more than sixty books spanning biblical theology, exegesis, hermeneutics, and Christian engagement with culture. Carson is widely regarded as one of the most prolific and influential evangelical New Testament scholars of his generation. His commentary work (especially on John, Matthew, and the General Epistles), his rigorous defenses of biblical authority, and his pastoral writing on prayer, suffering, and the gospel have shaped seminary education and pastoral ministry across the English-speaking evangelical world.",
+    "affiliation": "Trinity Evangelical Divinity School",
+    "role": "New Testament Scholar & Author",
+    "education": "McGill University (BSc); Central Baptist Seminary (MDiv); University of Cambridge (PhD)",
+    "website": "https://www.thegospelcoalition.org/profile/d-a-carson/"
+  },
+  {
+    "name": "Sinclair Ferguson",
+    "slug": "sinclair-ferguson",
+    "bio": "Sinclair B. Ferguson (born February 21, 1948) is a Scottish Reformed theologian and Presbyterian minister who serves as Chancellor's Professor of Systematic Theology at Reformed Theological Seminary and as a teaching fellow at Ligonier Ministries. He has pastored congregations on both sides of the Atlantic, including First Presbyterian Church (Columbia, SC) and St George's-Tron in Glasgow, and previously served as professor of systematic theology at Westminster Theological Seminary in Philadelphia. Ferguson is known for warm, accessible preaching of historic Reformed orthodoxy with a strong pastoral and Christ-centered emphasis. His book The Whole Christ revived twenty-first century interest in the Marrow Controversy and the relationship between law and gospel; his works on the Holy Spirit and the Christian life have become standard texts in Reformed seminaries.",
+    "affiliation": "Reformed Theological Seminary",
+    "role": "Reformed Theologian & Pastor",
+    "education": "University of Aberdeen (MA, BD, PhD)",
+    "website": "https://www.ligonier.org/teachers/sinclair-b-ferguson"
+  },
+  {
+    "name": "John MacArthur",
+    "slug": "john-macarthur",
+    "bio": "John Fullerton MacArthur Jr. (born June 19, 1939) is the longtime pastor-teacher of Grace Community Church in Sun Valley, California (since 1969), chancellor of The Master's University and The Master's Seminary, and the featured Bible teacher of the syndicated radio and online ministry Grace to You. The son of a pastor, MacArthur has spent more than five decades preaching expositionally through the New Testament and has produced a verse-by-verse commentary set covering the entire NT. MacArthur is one of the most prominent voices in contemporary fundamentalist-leaning evangelicalism, known for his uncompromising stance on the inerrancy and sufficiency of Scripture, cessationist doctrine of the Holy Spirit, and dispensational eschatology. He has authored or edited more than 150 books, and his MacArthur Study Bible has become one of the bestselling study Bibles of the modern era.",
+    "affiliation": "Grace Community Church / The Master's Seminary",
+    "role": "Pastor & Bible Teacher",
+    "education": "Bob Jones University; Los Angeles Pacific College; Talbot Theological Seminary (MDiv, DD)",
+    "website": "https://www.gty.org"
+  },
+  {
+    "name": "Michael Horton",
+    "slug": "michael-horton",
+    "bio": "Michael Scott Horton (born May 11, 1964) is the J. Gresham Machen Professor of Systematic Theology and Apologetics at Westminster Seminary California and host of the White Horse Inn radio program. An ordained minister in the United Reformed Churches in North America, he holds a PhD from the University of Coventry & Wycliffe Hall, Oxford, and is a leading voice in the Reformed confessional tradition in America. Horton is known for sharp critiques of American evangelicalism's drift into therapeutic, moralistic, and consumer-driven Christianity. His magnum opus The Christian Faith and his shorter Pilgrim Theology have become widely used systematic-theology textbooks. He has been a strong defender of covenant theology, the means of grace, and a confessional Reformed identity over against revivalism and pragmatism.",
+    "affiliation": "Westminster Seminary California",
+    "role": "Reformed Theologian",
+    "education": "Biola University (BA); Westminster Seminary California (MAR); University of Coventry / Wycliffe Hall, Oxford (PhD)",
+    "website": "https://www.michaelhorton.com"
+  },
+  {
+    "name": "Andy Crouch",
+    "slug": "andy-crouch",
+    "bio": "Andy Crouch (born 1968) is partner for theology and culture at Praxis, a venture-building organization that supports faith-driven entrepreneurs and innovators. He served for more than a decade as an editor at Christianity Today, where he was executive editor and senior editor for theology and culture, and was previously a campus minister with InterVarsity Christian Fellowship at Harvard University. Crouch's writing focuses on culture-making, technology, family life, and the formation of human persons in an age of distraction and disembodiment. His book Culture Making has become a standard reference for evangelical engagement with culture, and his more recent work (The Tech-Wise Family, The Life We're Looking For) has shaped the conversation about Christian discipleship in a digital age.",
+    "affiliation": "Praxis",
+    "role": "Author & Cultural Commentator",
+    "education": "Cornell University (BA); Boston University School of Theology (MDiv)",
+    "website": "https://andy-crouch.com"
+  },
+  {
+    "name": "N.T. Wright",
+    "slug": "n-t-wright",
+    "bio": "Nicholas Thomas Wright (born December 1, 1948) is a leading British New Testament scholar, Anglican theologian, and former Bishop of Durham (2003-2010). He has held senior teaching posts at Oxford, Cambridge, McGill, and the University of St Andrews, where he served as research professor of New Testament and early Christianity, and is now senior research fellow at Wycliffe Hall, Oxford. Wright is a central figure in the New Perspective on Paul and has authored a multi-volume series Christian Origins and the Question of God examining Jesus, Paul, and the resurrection within their first-century Jewish context. His more accessible works (Surprised by Hope, Simply Christian, After You Believe) have brought historical and theological scholarship to a wide lay readership, while his views on justification have sparked ongoing debate within Reformed circles.",
+    "affiliation": "Wycliffe Hall, Oxford / University of St Andrews",
+    "role": "New Testament Scholar & Anglican Theologian",
+    "education": "University of Oxford (BA, MA, DPhil, DD)",
+    "website": "https://ntwrightonline.org"
+  },
+  {
+    "name": "Doug Wilson",
+    "slug": "doug-wilson",
+    "bio": "Douglas James Wilson (born June 18, 1953) is the senior fellow of theology at New Saint Andrews College and pastor of Christ Church in Moscow, Idaho, the flagship congregation of the Communion of Reformed Evangelical Churches (CREC). A central figure in classical Christian education and postmillennial Reformed circles, he co-founded New Saint Andrews College and Logos School and has been a prolific author for more than four decades. Wilson is known for his combative, satirical writing style and his advocacy of Christian classical education, paedocommunion, postmillennial eschatology, and a robust application of biblical law to public life. He is a polarizing figure within the broader evangelical world: admired by readers who value his cultural confidence and theological clarity, and criticized by others over his views on slavery, patriarchy, and church controversies in Moscow.",
+    "affiliation": "Christ Church, Moscow, ID / New Saint Andrews College",
+    "role": "Pastor & Theologian",
+    "education": "University of Idaho (BA, MA philosophy)",
+    "website": "https://dougwils.com"
+  },
+  {
+    "name": "Jonathan Leeman",
+    "slug": "jonathan-leeman",
+    "bio": "Jonathan Leeman is the editorial director of 9Marks, a ministry founded by Mark Dever to recover biblically faithful church practice. He holds a PhD from the University of Wales (UK) on the subject of church membership and discipline, and serves as a teaching pastor at Cheverly Baptist Church in suburban Washington, D.C. Leeman has written extensively on ecclesiology, congregational polity, the church-state relationship, and the public dimension of the local church. His books on church membership and church discipline are foundational texts within the 9Marks movement, and his more political work (How the Nations Rage, Political Church) has framed evangelical conversations about Christian engagement with public life.",
+    "affiliation": "9Marks",
+    "role": "Theologian & Editorial Director",
+    "education": "University of Virginia (BA); Wales Evangelical School of Theology (PhD); Southern Baptist Theological Seminary (MDiv)",
+    "website": "https://www.9marks.org"
+  },
+  {
+    "name": "Thomas Schreiner",
+    "slug": "thomas-schreiner",
+    "bio": "Thomas R. Schreiner is the James Buchanan Harrison Professor of New Testament Interpretation and associate dean of the School of Theology at The Southern Baptist Theological Seminary, where he has taught since 1997. He previously taught for eleven years at Bethel Theological Seminary and served as preaching pastor of Clifton Baptist Church in Louisville. Schreiner is known for his commentaries on Romans, Galatians, Hebrews, and 1-2 Peter & Jude (BECNT and Pillar series), and for his Pauline theology in Paul, Apostle of God's Glory in Christ. A complementarian and confessional Reformed Baptist, he has been a steady scholarly voice on justification by faith, perseverance, and the unity of the biblical canon in The King in His Beauty.",
+    "affiliation": "The Southern Baptist Theological Seminary",
+    "role": "New Testament Scholar",
+    "education": "Western Oregon State College (BS); Western Conservative Baptist Seminary (MDiv, ThM); Fuller Theological Seminary (PhD)",
+    "website": "https://www.sbts.edu/profiles/thomas-r-schreiner/"
+  },
+  {
+    "name": "Diane Langberg",
+    "slug": "diane-langberg",
+    "bio": "Diane Langberg is a clinical psychologist who has spent nearly five decades caring for trauma survivors and equipping the church to do the same. She directs Diane Langberg, PhD & Associates—a group practice in suburban Philadelphia—and serves on the executive board of the American Bible Society, the boards of GRACE (Godly Response to Abuse in the Christian Environment) and Mission:Network, and as a faculty member of Westminster Theological Seminary's School of Christian Counseling and Educational Foundation curriculum. Langberg is internationally recognized for her work with survivors of childhood sexual abuse, clergy abuse, and global trafficking, and for her prophetic critique of how power is misused inside Christian institutions. Her writing—especially Suffering and the Heart of God and Redeeming Power—has reframed the evangelical conversation around abuse, trauma-informed care, and the church's complicity in protecting power.",
+    "affiliation": "Diane Langberg & Associates",
+    "role": "Christian Psychologist & Trauma Expert",
+    "education": "Taylor University (BA); Temple University (PhD)",
+    "website": "https://www.dianelangberg.com"
+  },
+  {
+    "name": "Carl Trueman",
+    "slug": "carl-trueman",
+    "bio": "Carl R. Trueman (born 1967) is a British-born historian and theologian who serves as professor of biblical and religious studies at Grove City College in Pennsylvania. He previously taught for nearly two decades at Westminster Theological Seminary, including as Paul Woolley Professor of Church History, and is a fellow at the Ethics and Public Policy Center. Trueman is best known for his cultural-historical analysis of modern selfhood and identity. His book The Rise and Triumph of the Modern Self traces the philosophical genealogy from Rousseau through the Romantics to today's expressive individualism and gender ideology, and has become one of the most widely cited evangelical books of the 2020s. His earlier work covers Reformation history, theology, and confessional Reformed identity.",
+    "affiliation": "Grove City College",
+    "role": "Church Historian",
+    "education": "University of Cambridge (MA); University of Aberdeen (PhD)",
+    "website": "https://www.gcc.edu/Home/Academics/Majors-Departments/Department-Detail/biblical-religious-studies/Faculty-Detail/EmployeeId/2436"
+  },
+  {
+    "name": "Jay Adams",
+    "slug": "jay-adams",
+    "bio": "Jay Edward Adams (1929-2020) was an American Reformed pastor, professor, and author whose 1970 book Competent to Counsel launched the modern biblical counseling movement. A graduate of Johns Hopkins, Reformed Episcopal Seminary, and the University of Missouri, he taught practical theology at Westminster Theological Seminary in Philadelphia for many years and co-founded the Christian Counseling and Educational Foundation (CCEF). Adams argued that Scripture is sufficient for addressing the non-organic problems of living that secular psychology had claimed as its territory, and he proposed \"nouthetic counseling\"—from the Greek word noutheteo (to admonish or instruct)—as a biblically grounded alternative to the Freudian and Rogerian models then dominant. His work decisively shaped the curriculum of CCEF, the founding of the Association of Certified Biblical Counselors (ACBC), and the broader recovery of pastoral counseling within evangelical churches.",
+    "affiliation": "Christian Counseling and Educational Foundation (CCEF)",
+    "role": "Biblical Counseling Pioneer",
+    "education": "Johns Hopkins University (BA); Reformed Episcopal Seminary (BD); Temple University (STM); University of Missouri (PhD)",
+    "website": "https://www.nouthetic.org"
+  },
+  {
+    "name": "Sam Allberry",
+    "slug": "sam-allberry",
+    "bio": "Sam Allberry is a British-born pastor, author, and speaker who serves as associate pastor at Immanuel Church in Nashville, Tennessee, and as a senior lecturer in pastoral theology at Reformed Theological Seminary. He is a co-founder of Living Out, a ministry that helps Christians who experience same-sex attraction live faithfully under the lordship of Christ. An ordained Anglican minister and a celibate same-sex-attracted Christian, Allberry has become one of the most widely read evangelical voices on biblical sexuality, singleness, and the body. His book Is God Anti-Gay? has been translated into more than fifteen languages, and 7 Myths About Singleness reframes singleness as a gift rather than a deficiency within the church's life.",
+    "affiliation": "Immanuel Nashville",
+    "role": "Pastor, Author & Speaker",
+    "education": "University of Oxford (BA); Wycliffe Hall, Oxford (BTh)",
+    "website": "https://samallberry.com"
+  },
+  {
+    "name": "Christopher Yuan",
+    "slug": "christopher-yuan",
+    "bio": "Christopher Yuan is an American speaker, author, and faculty member at Moody Bible Institute, where he has taught since 2008. A former dentist whose life unraveled into drug dealing, prison, and an HIV-positive diagnosis, he came to Christ in prison and has since devoted his ministry to teaching the church a biblical theology of sexuality. Yuan and his mother Angela co-wrote Out of a Far Country, the memoir of his journey and her parallel conversion. His later book Holy Sexuality and the Gospel and the accompanying Holy Sexuality Project have become widely used resources for parents, pastors, and same-sex-attracted Christians who want to think about sexuality through a biblical rather than identity-driven framework.",
+    "affiliation": "Moody Bible Institute",
+    "role": "Speaker & Author",
+    "education": "University of Louisville (DMD); Moody Bible Institute (MA); Wheaton College Graduate School (DMin)",
+    "website": "https://www.christopheryuan.com"
+  },
+  {
+    "name": "Andy Stanley",
+    "slug": "andy-stanley",
+    "bio": "Andy Stanley (born May 16, 1958) is the founder and senior pastor of North Point Ministries, a network of churches based in Alpharetta, Georgia, with weekly attendance of more than 30,000. The son of First Baptist Atlanta pastor Charles Stanley, he founded North Point Community Church in 1995 and has become one of the most influential voices in American megachurch ministry. Stanley is widely known for his communication style, his focus on \"unchurched\" people, and his attempts to reframe Christian preaching around relevance to seekers. His ministry philosophy and willingness to depart from traditional evangelical positions—on topics from biblical inerrancy to LGBTQ inclusion—have made him a polarizing figure: celebrated by pragmatists for his cultural reach and critiqued by confessional evangelicals for what they see as theological compromise.",
+    "affiliation": "North Point Ministries",
+    "role": "Pastor & Communicator",
+    "education": "Georgia State University (BA); Dallas Theological Seminary (ThM)",
+    "website": "https://andystanley.com"
+  },
+  {
+    "name": "Joni Eareckson Tada",
+    "slug": "joni-eareckson-tada",
+    "bio": "Joni Eareckson Tada (born October 15, 1949) is the founder and CEO of Joni and Friends International Disability Center, a global ministry to people affected by disability. A 1967 diving accident at age 17 left her a quadriplegic, and her subsequent journey through depression, faith, and vocation became the subject of her bestselling 1976 autobiography Joni and the 1979 motion picture of the same name. For nearly five decades Tada has spoken and written from a wheelchair about suffering, sovereignty, healing, and the dignity of disabled persons in the body of Christ. Joni and Friends provides wheelchairs to people in the developing world, trains churches in disability ministry, and runs Family Retreats for families affected by disability—and her writing has shaped how the evangelical world thinks about lament, providence, and embodiment.",
+    "affiliation": "Joni and Friends",
+    "role": "Disability Advocate & Author",
+    "education": "Honorary doctorates from Westminster Theological Seminary, Lancaster Bible College, others",
+    "website": "https://www.joniandfriends.org"
+  },
+  {
+    "name": "Sam Storms",
+    "slug": "sam-storms",
+    "bio": "Sam Storms is the lead pastor for preaching and vision at Bridgeway Church in Oklahoma City and the founder of Enjoying God Ministries. Before pastoring he taught for many years at Wheaton College, and he has served as president of the Evangelical Theological Society. Storms is a leading voice within the \"Reformed charismatic\" stream of contemporary evangelicalism—holding to historic Reformed soteriology while affirming the present-day operation of the spiritual gifts described in 1 Corinthians 12-14. He has written extensively on eschatology (defending an amillennial position), the gifts of the Spirit, and Christian hedonism in the tradition of Jonathan Edwards and John Piper.",
+    "affiliation": "Bridgeway Church, Oklahoma City",
+    "role": "Pastor & Charismatic Reformed Theologian",
+    "education": "University of Oklahoma (BA); Dallas Theological Seminary (ThM); University of Texas at Dallas (PhD)",
+    "website": "https://www.samstorms.org"
+  },
+  {
+    "name": "Roger Olson",
+    "slug": "roger-olson",
+    "bio": "Roger E. Olson is professor emeritus of Christian theology and ethics at the George W. Truett Theological Seminary at Baylor University, where he taught from 1999 until his retirement. Before Baylor he taught for fifteen years at Bethel College in St. Paul, Minnesota. Olson is one of the most prominent contemporary defenders of Arminian theology against both Calvinism and open theism, and a careful historian of post-Reformation Protestant thought. His one-volume narrative The Story of Christian Theology has become a widely used seminary textbook, and his blog at Patheos is an active venue for accessible theological reflection on evangelical identity, soteriology, and the doctrine of God.",
+    "affiliation": "George W. Truett Theological Seminary, Baylor University",
+    "role": "Theologian & Historian of Doctrine",
+    "education": "Open Bible College (BA); North American Baptist Seminary (MA); Rice University (PhD)",
+    "website": "https://www.patheos.com/blogs/rogereolson/"
+  },
+  {
+    "name": "Tish Harrison Warren",
+    "slug": "tish-harrison-warren",
+    "bio": "Tish Harrison Warren is an Anglican priest in the Anglican Church in North America (ACNA) and a writer whose work appears in The New York Times, Christianity Today, The Atlantic, and other outlets. She has served as a campus minister with InterVarsity at the University of Texas and Vanderbilt and as writer-in-residence at Resurrection South Austin. Warren writes from within the liturgical Christian tradition about the spiritual significance of ordinary embodied life—how making the bed, brushing teeth, drinking coffee, and eating leftovers can be sites of Christian formation. Her book Liturgy of the Ordinary won Christianity Today's 2018 Book of the Year, and her later Prayer in the Night reflects on the Compline prayer through her own experience of grief and miscarriage.",
+    "affiliation": "Anglican Church in North America",
+    "role": "Anglican Priest & Author",
+    "education": "University of Texas at Austin (BA); Fuller Theological Seminary (MDiv)",
+    "website": "https://tishharrisonwarren.com"
+  },
+  {
+    "name": "Miroslav Volf",
+    "slug": "miroslav-volf",
+    "bio": "Miroslav Volf (born September 25, 1956) is the Henry B. Wright Professor of Theology at Yale Divinity School and founding director of the Yale Center for Faith and Culture. A Croatian-born theologian, he was educated under Jürgen Moltmann at the University of Tübingen and has taught at Fuller Theological Seminary as well as Yale. Volf's work focuses on reconciliation, public faith, the human person, and the relationship between Christianity and Islam. His book Exclusion and Embrace—written in the wake of the wars in the former Yugoslavia—remains a landmark text on Christian theology of forgiveness and identity. More recent works (A Public Faith, Flourishing) address how religious communities can contribute to common life without coercion.",
+    "affiliation": "Yale Divinity School",
+    "role": "Theologian",
+    "education": "University of Tübingen (DrTheol, DrTheolHabil); Fuller Theological Seminary (MA)",
+    "website": "https://faith.yale.edu"
+  },
+  {
+    "name": "Mark McMinn",
+    "slug": "mark-mcminn",
+    "bio": "Mark R. McMinn is professor of psychology at George Fox University, where he serves as director of faith integration in the Graduate Department of Clinical Psychology. He previously taught at Wheaton College from 1993 to 2006, where he received teacher-of-the-year awards. He is board-certified by the American Board of Professional Psychology and a fellow of the American Psychological Association. McMinn is one of the most-cited evangelical voices on the integration of psychology, theology, and spirituality. His 1996 book Psychology, Theology, and Spirituality in Christian Counseling—a contemporary classic—argues that prayer, Scripture, sin, confession, forgiveness, and worship belong inside (not outside) the counseling room. His subsequent books extend that integrative project for both clinicians and pastors.",
+    "affiliation": "George Fox University",
+    "role": "Christian Psychologist",
+    "education": "George Fox College (BS); Vanderbilt University (PhD)",
+    "website": "https://www.georgefox.edu/psyd/"
+  },
+  {
+    "name": "John Frame",
+    "slug": "john-frame",
+    "bio": "John M. Frame (born April 8, 1939) is professor emeritus of systematic theology and philosophy at Reformed Theological Seminary in Orlando, where he held the J.D. Trimble Chair until his retirement. He previously taught at Westminster Theological Seminary in Philadelphia and at Westminster Seminary California, where he was one of the founding faculty. Frame is best known for his \"triperspectivalism\"—the framework that approaches every theological question from normative, situational, and existential perspectives—and for his work as a presuppositional apologist in the tradition of Cornelius Van Til. His four-volume Theology of Lordship series and one-volume Systematic Theology have shaped a generation of Reformed pastors and theology students.",
+    "affiliation": "Reformed Theological Seminary",
+    "role": "Reformed Theologian & Apologist",
+    "education": "Princeton University (AB); Westminster Theological Seminary (BD); Yale University (MA, MPhil)",
+    "website": "https://frame-poythress.org"
+  },
+  {
+    "name": "Clark Pinnock",
+    "slug": "clark-pinnock",
+    "bio": "Clark H. Pinnock (1937-2010) was a Canadian Baptist theologian who taught for many years at McMaster Divinity College in Hamilton, Ontario, and previously at New Orleans Baptist Theological Seminary, Trinity Evangelical Divinity School, and Regent College. Pinnock is best known for his theological pilgrimage from a strong defense of biblical inerrancy and Reformed theology in the 1960s to a much more open, Arminian-leaning theology in his later career. He became one of the most prominent advocates of \"open theism,\" the view that the future is genuinely open and that God does not exhaustively foreknow free creaturely decisions, and contributed to the controversial 1994 volume The Openness of God. His later work also softened on inclusivism with respect to the unevangelized.",
+    "affiliation": "McMaster Divinity College",
+    "role": "Theologian (1937-2010)",
+    "education": "University of Toronto (BA); University of Manchester (PhD)",
+    "website": ""
+  },
+  {
+    "name": "Andrew Walker",
+    "slug": "andrew-walker",
+    "bio": "Andrew T. Walker is associate professor of Christian ethics at The Southern Baptist Theological Seminary, fellow with the Ethics and Religious Liberty Commission of the SBC, and managing editor of WORLD Opinions. He previously served as director of policy studies at the ERLC. Walker writes at the intersection of Christian ethics, public theology, religious liberty, and political philosophy. His book God and the Transgender Debate has become a widely-used pastoral resource on biblical anthropology and gender, and his Liberty for All argues for religious liberty as a Christian principle that protects all people, not merely Christians.",
+    "affiliation": "The Southern Baptist Theological Seminary",
+    "role": "Christian Ethicist",
+    "education": "Southern Baptist Theological Seminary (PhD)",
+    "website": "https://andrewtwalker.com"
+  },
+  {
+    "name": "David VanDrunen",
+    "slug": "david-vandrunen",
+    "bio": "David VanDrunen is the Robert B. Strimple Professor of Systematic Theology and Christian Ethics at Westminster Seminary California, where he has taught since 2001. He is an ordained minister in the Orthodox Presbyterian Church and holds both a PhD in religious ethics from Northwestern and a JD from Loyola University Chicago. VanDrunen is the leading contemporary advocate of a Reformed two-kingdoms theology—the view that the redemptive kingdom of Christ (the church) and the common kingdom of God's providential rule over creation operate by distinct norms and ends. His work has reshaped Reformed conversations about politics, vocation, natural law, and the role of the church in public life.",
+    "affiliation": "Westminster Seminary California",
+    "role": "Reformed Ethicist & Theologian",
+    "education": "Calvin College (BA); Westminster Theological Seminary (MDiv); Northwestern University (MA, PhD); Loyola University Chicago (JD)",
+    "website": "https://www.wscal.edu/faculty/david-vandrunen"
+  },
+  {
+    "name": "Bill Hybels",
+    "slug": "bill-hybels",
+    "bio": "William Carlton Hybels (born December 12, 1951) is the founding pastor of Willow Creek Community Church in South Barrington, Illinois, which he led from its 1975 launch until his resignation in April 2018. Under his leadership Willow Creek became one of the largest and most-imitated churches in North America, and the Willow Creek Association (now the Global Leadership Network) trained hundreds of thousands of pastors worldwide in the seeker-sensitive model. Hybels resigned amid sexual misconduct allegations from multiple women that an independent review later found credible. The Willow Creek board acknowledged in 2018 that prior denials had been wrong and apologized. His pre-resignation books on leadership, evangelism, and church growth remain in wide circulation but are now read in light of subsequent revelations about his pastoral conduct.",
+    "affiliation": "Willow Creek Community Church (former)",
+    "role": "Pastor (Resigned 2018)",
+    "education": "Trinity College (BA); Trinity Evangelical Divinity School (MA)",
+    "website": ""
+  },
+  {
+    "name": "Rick Warren",
+    "slug": "rick-warren",
+    "bio": "Richard Duane Warren (born January 28, 1954) is the founding pastor of Saddleback Church in Lake Forest, California, which he started with his wife Kay in 1980. Saddleback grew into one of the largest churches in America, and Warren handed off the senior pastorate in 2022 to Andy Wood after more than four decades of leadership. Warren is best known for The Purpose Driven Life, a forty-day spiritual journey that has sold more than fifty million copies and become one of the bestselling nonfiction books in history. His earlier The Purpose Driven Church became the foundational text of a global ministry-training movement, and the P.E.A.C.E. Plan he and Kay launched mobilizes churches against poverty, illiteracy, disease, and corruption.",
+    "affiliation": "Saddleback Church (Founding Pastor, retired 2022)",
+    "role": "Pastor & Author",
+    "education": "California Baptist University (BA); Southwestern Baptist Theological Seminary (MDiv); Fuller Theological Seminary (DMin)",
+    "website": "https://pastorrick.com"
+  },
+  {
+    "name": "Lou Priolo",
+    "slug": "lou-priolo",
+    "bio": "Lou Priolo (1954-2023) was an American biblical counselor, author, and conference speaker who served full-time in biblical counseling for nearly forty years. A fellow in the Association of Certified Biblical Counselors (ACBC) and a member of the International Association of Biblical Counselors, he founded the nonprofit Competent to Counsel International, through which he trained pastors and laymen across the United States and overseas. Priolo authored more than a dozen counseling books for P&R Publishing and others, addressing anger, parenting, marriage, conflict, and people-pleasing. He was also the editor of the Resources for Biblical Living booklet series. Within the nouthetic counseling tradition pioneered by Jay Adams, Priolo's writing emphasized practical, sermon-on-the-mount-shaped applications of Scripture to the specific patterns of sinful and suffering human hearts.",
+    "affiliation": "Competent to Counsel International",
+    "role": "Biblical Counselor (1954-2023)",
+    "education": "Calvary Bible College (BA); Liberty University (MA); Calvary University (DD)",
+    "website": "https://competenttocounsel.org"
+  },
+  {
+    "name": "Robert Webber",
+    "slug": "robert-webber",
+    "bio": "Robert Eugene Webber (1933-2007) was an American theologian known for his work on Christian worship and the early church. He spent much of his career as professor of theology at Wheaton College (1968-2000) and later as the Myers Professor of Ministry at Northern Seminary in Lombard, Illinois. He also founded and served as president of the Institute for Worship Studies in Orange Park, Florida (now The Robert E. Webber Institute for Worship Studies). Webber wrote more than forty books and is best known for the Ancient-Future series, which argues that recovering practices from the early and patristic church—creedal confession, the church year, the Eucharist, embodied liturgy—is essential for the witness of evangelical Christianity in a postmodern age. He played a key role in the Convergence Movement, blending evangelical, charismatic, and liturgical streams of worship.",
+    "affiliation": "Northern Seminary / Institute for Worship Studies",
+    "role": "Theologian of Worship (1933-2007)",
+    "education": "Bob Jones University (BA); Reformed Episcopal Seminary (BD); Covenant Theological Seminary (ThM); Concordia Theological Seminary (ThD)",
+    "website": "https://webbercenter.tsm.edu"
+  },
+  {
+    "name": "Alan Hirsch",
+    "slug": "alan-hirsch",
+    "bio": "Alan Hirsch is an Australian-born author, missional church strategist, and serial entrepreneur whose work focuses on reactivating apostolic movements and equipping the body of Christ for cultural mission. He is the founding director of the Forge Mission Training Network, founder of 5Q Collective and 100Movements, and co-founder of the Wheaton College M.A. in Missional Church Movements. Hirsch's books develop a five-fold ministry framework (the APEST/5Q model) drawn from Ephesians 4:11—apostles, prophets, evangelists, shepherds, and teachers—as essential for the church to recover its missional capacity. The Forgotten Ways argues that the underground Chinese church and the early church share six core elements (mDNA) that today's institutional Western church has lost.",
+    "affiliation": "100Movements / Forge Mission Training Network",
+    "role": "Missional Theologian & Strategist",
+    "education": "Tabor College (Australia)",
+    "website": "https://www.alanhirsch.org"
+  },
+  {
+    "name": "Eugene Peterson",
+    "slug": "eugene-peterson",
+    "bio": "Eugene Hoiland Peterson (1932-2018) was an American Presbyterian pastor, scholar, poet, and translator best known for his contemporary-language paraphrase of the Bible, The Message. He pastored Christ Our King Presbyterian Church in Bel Air, Maryland, for nearly thirty years (1962-1991) before serving as professor of spiritual theology at Regent College in Vancouver until his retirement in 2006. Peterson's pastoral writing—shaped by long obedience, the spiritual disciplines, and a deep suspicion of the celebrity-and-program culture of American evangelicalism—has reframed how a generation of pastors think about their vocation. His five-volume Spiritual Theology series and his memoir The Pastor remain standard reading in pastoral theology courses, and The Message has been read in churches and homes around the world.",
+    "affiliation": "Regent College (Emeritus)",
+    "role": "Pastor, Author & Translator (1932-2018)",
+    "education": "Seattle Pacific University (BA); New York Theological Seminary (STB); Johns Hopkins University (MA)",
+    "website": ""
+  },
+  {
+    "name": "Richard Foster",
+    "slug": "richard-foster",
+    "bio": "Richard J. Foster (born May 11, 1942) is a Quaker theologian and author whose 1978 book Celebration of Discipline introduced a generation of evangelicals to the classical disciplines of the Christian spiritual life. A graduate of George Fox College and Fuller Seminary, he founded Renovaré in 1988 to renew the church through engagement with the historic streams of Christian spirituality. Foster's writing recovers practices long associated with monasticism, contemplative prayer, and the Roman Catholic and Orthodox traditions—solitude, silence, fasting, simplicity, study, confession, worship, service—and frames them as gifts available to all Christians. While his work has been welcomed by many evangelicals as a corrective to programmatic discipleship, it has also been critiqued by some Reformed writers concerned about its mystical sources and its treatment of the means of grace.",
+    "affiliation": "Renovaré",
+    "role": "Author & Founder of Renovaré",
+    "education": "George Fox College (BA); Fuller Theological Seminary (DPS)",
+    "website": "https://renovare.org"
+  },
+  {
+    "name": "David Platt",
+    "slug": "david-platt",
+    "bio": "David Platt (born December 11, 1978) is a Baptist pastor, author, and missionary advocate who founded Radical, a missions organization equipping believers to make disciples of all the nations. He served as senior pastor of The Church at Brook Hills in Birmingham, Alabama (2006-2014), as president of the International Mission Board of the SBC (2014-2018), and as lead pastor of McLean Bible Church in metro Washington, D.C. (2017-2024). Platt's first book Radical: Taking Back Your Faith from the American Dream became a New York Times bestseller and pressed evangelicals to examine the comforts and compromises of American Christian discipleship. His subsequent ministry has emphasized the unreached peoples of the world, costly Christian generosity, and an unflinching call to surrender wealth, ambition, and security for the sake of the gospel.",
+    "affiliation": "Radical / McLean Bible Church (former)",
+    "role": "Pastor & Author",
+    "education": "University of Georgia (BA); New Orleans Baptist Theological Seminary (MDiv, ThM, PhD)",
+    "website": "https://radical.net"
+  },
+  {
+    "name": "Tim Challies",
+    "slug": "tim-challies",
+    "bio": "Tim Challies is a Canadian Reformed Baptist pastor, author, and blogger who has written daily at Challies.com since 2003, making him one of the longest-running and most-read evangelical bloggers in the English-speaking world. He serves as a pastor at Grace Fellowship Church in Toronto and is a co-founder of Cruciform Press. Challies's books span topics from biblical discernment and pornography to visual theology and family devotions, and his Visual Theology project translates complex doctrinal categories into accessible infographic-style charts and books. After the unexpected death of his twenty-year-old son Nick in 2020, Challies published Seasons of Sorrow, a year-long journal of grief that has become a widely-read companion for bereaved Christians.",
+    "affiliation": "Grace Fellowship Church, Toronto",
+    "role": "Pastor, Author & Blogger",
+    "education": "McMaster University (BA)",
+    "website": "https://www.challies.com"
+  },
+  {
+    "name": "James K.A. Smith",
+    "slug": "james-k-a-smith",
+    "bio": "James K.A. Smith is professor of philosophy at Calvin University, where he holds the Gary & Henrietta Byker Chair in Applied Reformed Theology and Worldview. He served for many years as the editor-in-chief of Image journal and previously edited Comment magazine, and he is a senior fellow at Cardus. Smith's Cultural Liturgies trilogy (Desiring the Kingdom, Imagining the Kingdom, Awaiting the King) argues that human beings are fundamentally lovers shaped by the embodied liturgies they participate in—both ecclesial and secular—rather than primarily thinkers. His more popular-level work (You Are What You Love, On the Road with Saint Augustine, How (Not) to Be Secular) has translated those arguments to a broad evangelical audience and reframed conversations about formation, worship, and modern selfhood.",
+    "affiliation": "Calvin University",
+    "role": "Philosopher & Theologian",
+    "education": "Westminster Theological Seminary (MA); Institute for Christian Studies (MA); Villanova University (PhD)",
+    "website": "https://jameskasmith.com"
+  },
+  {
+    "name": "Derek Rishmawy",
+    "slug": "derek-rishmawy",
+    "bio": "Derek Zaglul Rishmawy is a Reformed University Fellowship (RUF) campus minister at the University of California, Irvine, and holds a PhD in systematic theology from Trinity Evangelical Divinity School. He is a contributor and former editor at Mere Orthodoxy, a contributing writer at The Gospel Coalition and Christianity Today, and a co-host of the Mere Fidelity podcast with Matthew Lee Anderson and Andrew Wilson. Rishmawy writes at his blog Reformedish and across evangelical outlets on systematic theology, Reformed orthodoxy, doctrine of God, and the cultural questions of younger evangelical readers. His academic work focuses on the relation between Christology and theology proper in classical Reformed thought.",
+    "affiliation": "Reformed University Fellowship, UC Irvine",
+    "role": "Theologian & Campus Minister",
+    "education": "California State University Long Beach (BA); Talbot School of Theology (MA); Trinity Evangelical Divinity School (PhD)",
+    "website": "https://derekzrishmawy.com"
+  },
+  {
+    "name": "John Lennox",
+    "slug": "john-lennox",
+    "bio": "John Carson Lennox (born November 7, 1943) is emeritus professor of mathematics at the University of Oxford and emeritus fellow in mathematics and philosophy of science at Green Templeton College, Oxford. A Northern Irish-born mathematician, he has published on group theory and serves as a senior teaching fellow at the Oxford Centre for Christian Apologetics. Lennox is one of the most prominent contemporary apologists for Christianity from within the world of mathematics and the natural sciences, and has publicly debated Richard Dawkins, Christopher Hitchens, Peter Singer, and Michael Shermer. His books address creation and evolution (Seven Days That Divide the World), the new atheism (God's Undertaker, Gunning for God), the problem of evil, and—most recently—the philosophical and theological challenges of artificial intelligence (2084).",
+    "affiliation": "University of Oxford (Emeritus)",
+    "role": "Mathematician & Apologist",
+    "education": "University of Cambridge (MA, PhD); University of Wales (DSc); University of Oxford (DPhil, DD)",
+    "website": "https://www.johnlennox.org"
+  },
+  {
+    "name": "Matthew Stanford",
+    "slug": "matthew-stanford",
+    "bio": "Matthew S. Stanford is the chief executive officer of the Hope and Healing Center & Institute in Houston and adjunct professor of psychiatry at Baylor College of Medicine and Houston Methodist Hospital's Institute for Academic Medicine. He earned his doctorate in behavioral neuroscience at Baylor University and completed a post-doctoral fellowship at the University of Texas Medical Branch at Galveston. Stanford has worked clinically with patients struggling with aggression, personality disorders, post-traumatic stress disorder, substance dependence, bipolar disorder, and schizophrenia, and his research on the interplay between psychology and faith has been featured in The New York Times, USA Today, and Christianity Today. His writing equips pastors and churches to support those with serious mental illness without abandoning either clinical realism or biblical hope.",
+    "affiliation": "Hope and Healing Center & Institute, Houston",
+    "role": "Neuroscientist & CEO",
+    "education": "Baylor University (PhD); University of Texas Medical Branch (postdoc)",
+    "website": "https://hopeandhealingcenter.org"
+  },
+  {
+    "name": "Kay Warren",
+    "slug": "kay-warren",
+    "bio": "Kay Warren is the co-founder of Saddleback Church in Lake Forest, California (with her husband Rick), an international speaker, Bible teacher, and one of the most prominent evangelical advocates for people living with mental illness. After her son Matthew took his life in 2013, she founded the Hope for Mental Health Initiative at Saddleback in 2014 and the BREATHE ministry in 2019 to support parents of children with serious mental illness. Warren writes and speaks on mental health, suffering, joy, and the privilege of pastoral life. Her work has helped shift evangelical conversation about mental illness away from stigma and toward a posture that combines biblical hope, clinical care, and church community.",
+    "affiliation": "Saddleback Church",
+    "role": "Author, Speaker & Mental Health Advocate",
+    "education": "California Baptist University (honorary)",
+    "website": "https://kaywarren.com"
+  },
+  {
+    "name": "William Lane Craig",
+    "slug": "william-lane-craig",
+    "bio": "William Lane Craig (born August 23, 1949) is research professor of philosophy at Houston Christian University and professor of philosophy at Talbot School of Theology, Biola University. He holds two earned doctorates—one in philosophy from the University of Birmingham and one in theology from the University of Munich, where he studied under Wolfhart Pannenberg—and is the founder of Reasonable Faith. Craig is one of the most prolific and widely-debated Christian apologists of the past half-century, best known for his contemporary defense of the kalam cosmological argument and the historicity of Jesus's resurrection. He has debated atheists including Christopher Hitchens, Sam Harris, and Lawrence Krauss, and his more recent work has addressed the historical Adam and the doctrine of the atonement.",
+    "affiliation": "Houston Christian University / Talbot School of Theology",
+    "role": "Philosopher & Apologist",
+    "education": "Wheaton College (BA); Trinity Evangelical Divinity School (MA); University of Birmingham (PhD); Ludwig Maximilians-Universität München (DTheol)",
+    "website": "https://www.reasonablefaith.org"
+  },
+  {
+    "name": "Alvin Plantinga",
+    "slug": "alvin-plantinga",
+    "bio": "Alvin Plantinga (born November 15, 1932) is the John A. O'Brien Professor Emeritus of Philosophy at the University of Notre Dame and was previously the William Harry Jellema Professor of Philosophy at Calvin College. A Reformed Christian philosopher, he is widely credited with leading the renaissance of analytic Christian philosophy in the latter half of the twentieth century. Plantinga's most influential work develops the \"free will defense\" against the logical problem of evil; advances Reformed epistemology, on which belief in God can be properly basic; and culminates in his Warrant trilogy, where he argues that Christian belief, if true, is warranted. His later book Where the Conflict Really Lies argues that the genuine conflict is between naturalism and science, not between Christianity and science.",
+    "affiliation": "University of Notre Dame (Emeritus)",
+    "role": "Philosopher",
+    "education": "Calvin College (AB); University of Michigan (MA); Yale University (PhD)",
+    "website": ""
+  },
+  {
+    "name": "Os Guinness",
+    "slug": "os-guinness",
+    "bio": "Os Guinness (born 1941 in Hsiang Cheng, China, the son of medical missionaries) is an English social critic, author, and Christian apologist who holds a doctorate from Oxford. A great-great-great-grandson of Arthur Guinness, the Dublin brewer, he was deeply shaped by his time at L'Abri Fellowship in Switzerland under Francis Schaeffer and has been a senior fellow at the Trinity Forum since the late 1980s. Guinness writes at the intersection of Christianity and the public square, addressing themes of vocation, freedom, religious liberty, and the cultural dynamics of late modern Western societies. His book The Call has become a classic on Christian vocation, and his more recent A Free People's Suicide and Last Call for Liberty argue that ordered liberty in the American republic depends on the moral and religious foundations its founders assumed.",
+    "affiliation": "The Trinity Forum (Senior Fellow)",
+    "role": "Author & Social Critic",
+    "education": "University of London (BD); Oriel College, Oxford (DPhil)",
+    "website": "https://www.osguinness.com"
+  },
+  {
+    "name": "Greg Boyd",
+    "slug": "greg-boyd",
+    "bio": "Gregory A. Boyd (born June 2, 1957) is the senior pastor of Woodland Hills Church in St. Paul, Minnesota, and the founder and president of ReKnew, a ministry that engages questions of theology, suffering, nonviolence, and Christ-centered hermeneutics. He previously served as professor of theology at Bethel University for sixteen years. Boyd is one of the most prominent contemporary defenders of \"open theism\" (the view that the future is partly settled and partly open, even to God) and of a strong Christian pacifism. His two-volume Crucifixion of the Warrior God develops a cruciform hermeneutic for reading Old Testament violence in light of the cross, and his earlier The Myth of a Christian Nation argued—controversially—against the fusion of evangelical Christianity with American political identity.",
+    "affiliation": "Woodland Hills Church, St. Paul, MN",
+    "role": "Pastor & Theologian",
+    "education": "University of Minnesota (BA); Yale Divinity School (MDiv); Princeton Theological Seminary (PhD)",
+    "website": "https://reknew.org"
+  },
+  {
+    "name": "Kevin Vanhoozer",
+    "slug": "kevin-vanhoozer",
+    "bio": "Kevin J. Vanhoozer (born 1957) is research professor of systematic theology at Trinity Evangelical Divinity School, where he holds the Research Professorship of Systematic Theology. He has previously taught at the University of Edinburgh, Trinity (where he held the Blanchard Chair) and Wheaton College Graduate School, and is one of the most influential contemporary evangelical voices on hermeneutics and theological method. Vanhoozer's work develops a \"canonical-linguistic\" theology—an approach that treats theology as an ongoing dramatic engagement with the canon of Scripture rather than primarily a system of propositions. His Is There a Meaning in This Text? and The Drama of Doctrine reframe debates about authorial intent, postmodern hermeneutics, and the role of doctrine in the church's life.",
+    "affiliation": "Trinity Evangelical Divinity School",
+    "role": "Theologian",
+    "education": "Westmont College (BA); Westminster Theological Seminary (MDiv); University of Cambridge (PhD)",
+    "website": "https://www.tiu.edu/divinity/academics/faculty/vanhoozer/"
+  },
+  {
+    "name": "Soong-Chan Rah",
+    "slug": "soong-chan-rah",
+    "bio": "Soong-Chan Rah is the Robert Boyd Munger Professor of Evangelism at Fuller Theological Seminary, a position he assumed in 2021. Previously he served for more than fifteen years as the Milton B. Engebretson Professor of Church Growth and Evangelism at North Park Theological Seminary in Chicago, and he was the founding senior pastor of the Cambridge Community Fellowship Church in Cambridge, Massachusetts. Rah is one of the most-read evangelical voices on race, the multi-ethnic church, and the recovery of biblical lament. His Prophetic Lament: A Call for Justice in Troubled Times reads the book of Lamentations as a needed corrective to American triumphalism, and his The Next Evangelicalism argues that the future of the church lies with the global majority and immigrant communities rather than with the Western white evangelical mainstream.",
+    "affiliation": "Fuller Theological Seminary",
+    "role": "Theologian & Professor of Evangelism",
+    "education": "Columbia University (BA); Gordon-Conwell Theological Seminary (MDiv, DMin); Harvard University (ThM); Duke University (ThD)",
+    "website": "https://fuller.edu/faculty/soong-chan-rah/"
+  },
+  {
+    "name": "Denny Burk",
+    "slug": "denny-burk",
+    "bio": "Denny Burk is professor of biblical studies and ethics at Boyce College, the undergraduate school of The Southern Baptist Theological Seminary, where he also directs the Center for Gospel and Culture. He serves as president of the Council on Biblical Manhood and Womanhood (CBMW) and is an associate pastor at Kenwood Baptist Church in Louisville, Kentucky. Burk writes on biblical interpretation, Christian ethics, biblical anthropology, and church-state issues from a complementarian and confessional Reformed Baptist perspective. His book What Is the Meaning of Sex? frames biblical sexual ethics around the telos of marriage, and his co-authored Transforming Homosexuality argues for the biblical possibility of change in same-sex desire.",
+    "affiliation": "Boyce College / Council on Biblical Manhood and Womanhood",
+    "role": "New Testament Scholar & Ethicist",
+    "education": "Criswell College (BA); The Southern Baptist Theological Seminary (MDiv, PhD)",
+    "website": "https://www.dennyburk.com"
+  },
+  {
+    "name": "Matthew Vines",
+    "slug": "matthew-vines",
+    "bio": "Matthew Vines is the founder and executive director of The Reformation Project, an organization that advocates for the inclusion of LGBTQ Christians in evangelical churches without rejecting biblical authority. He took a leave of absence from Harvard in 2010 to research the biblical texts on same-sex relationships, and a 2012 video of his talk \"The Gay Debate: The Bible and Homosexuality\" went viral on YouTube. Vines's 2014 book God and the Gay Christian became one of the most prominent examples of the \"affirming\" hermeneutic within the evangelical conversation about sexuality. His arguments have been answered in detail by complementarian scholars (e.g., the Southern Seminary volume God and the Gay Christian? edited by Albert Mohler), and Vines remains a central reference point in ongoing evangelical debates about marriage and sexuality.",
+    "affiliation": "The Reformation Project",
+    "role": "Author & Founder of The Reformation Project",
+    "education": "Harvard University (attended)",
+    "website": "https://www.reformationproject.org"
+  },
+  {
+    "name": "Thabiti Anyabwile",
+    "slug": "thabiti-anyabwile",
+    "bio": "Thabiti Anyabwile is a Reformed Baptist pastor and author who serves as senior pastor of Anacostia River Church in Washington, D.C., a congregation he helped plant in 2017 in partnership with Capitol Hill Baptist Church. A former Muslim, he previously served as senior pastor of First Baptist Church of Grand Cayman and was an assistant pastor at Capitol Hill Baptist under Mark Dever. Anyabwile is a council member with The Gospel Coalition and a longtime contributor to the 9Marks ministry. His writing engages the African-American church tradition, Reformed soteriology, and questions of racial reconciliation, justice, and complementarity in church life. Reviving the Black Church and The Faithful Preacher recover lessons from earlier black Reformed pastors for the present day.",
+    "affiliation": "Anacostia River Church, Washington, D.C.",
+    "role": "Pastor & Author",
+    "education": "North Carolina State University (BA, MS)",
+    "website": "https://www.anacostiariverchurch.org"
+  },
+  {
+    "name": "Stanley Hauerwas",
+    "slug": "stanley-hauerwas",
+    "bio": "Stanley Hauerwas (born July 24, 1940) is the Gilbert T. Rowe Professor Emeritus of Divinity and Law at Duke Divinity School, where he taught from 1984 until his retirement. He previously taught at the University of Notre Dame and was named \"America's best theologian\" by Time magazine in 2001. Although he comes from the Methodist tradition and is influenced by Mennonite ethics (especially John Howard Yoder), Hauerwas's communitarian and pacifist theology has shaped a wide swath of evangelical thinking about the church as polis, the formation of Christian character, and Christian witness in a post-Christendom culture. His co-authored Resident Aliens (with Will Willimon) is one of the most-read books on the post-Christendom church.",
+    "affiliation": "Duke Divinity School (Emeritus)",
+    "role": "Theologian & Ethicist",
+    "education": "Southwestern University (BA); Yale Divinity School (BD); Yale University (MA, MPhil, PhD)",
+    "website": ""
+  },
+  {
+    "name": "Paul Tripp",
+    "slug": "paul-tripp",
+    "bio": "Paul David Tripp is a pastor, author, and international conference speaker who is the founder and president of Paul Tripp Ministries. He has been a faculty member at the Christian Counseling and Educational Foundation (CCEF) and Westminster Theological Seminary, served as executive director of the Center for Pastoral Life and Care in Fort Worth, Texas, and is a current pastor at Tenth Presbyterian Church in Philadelphia. Tripp's ministry brings the daily relevance of the gospel into the routine of human life through writing, teaching, and speaking. His books on parenting (Age of Opportunity), marriage (What Did You Expect?), pastoral life (Dangerous Calling, Lead), and the Christian life (New Morning Mercies) have become widely-used resources for both individual readers and small groups within evangelical and Reformed congregations.",
+    "affiliation": "Paul Tripp Ministries",
+    "role": "Pastor, Author & Biblical Counselor",
+    "education": "Columbia Bible College (BA); Reformed Episcopal Seminary (MDiv); Westminster Theological Seminary (DMin)",
+    "website": "https://www.paultripp.com"
   }
 ]
