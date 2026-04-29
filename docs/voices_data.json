@@ -5140,5 +5140,120 @@
     "website": "",
     "books": [],
     "initials": "CL"
+  },
+  {
+    "name": "Michael Keller",
+    "slug": "michael-keller",
+    "bio": "Michael Keller is a Christian writer and content creator dedicated to exploring faith, theology, and biblical wisdom for contemporary audiences. His work focuses on helping believers deepen their understanding of Scripture and its practical application in daily life.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MK"
+  },
+  {
+    "name": "Aaron Garriott",
+    "slug": "aaron-garriott",
+    "bio": "Aaron Garriott is a Christian writer and content creator dedicated to exploring faith, discipleship, and spiritual growth. Through his work, he seeks to help believers deepen their understanding of Scripture and live out their faith authentically in today's world.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AG"
+  },
+  {
+    "name": "Cliff McManis",
+    "slug": "cliff-mcmanis",
+    "bio": "Cliff McManis is a pastor and Bible teacher with a heart for expository preaching and biblical theology. He has been instrumental in teaching Christians to understand Scripture in its proper context and apply God's Word to their daily lives. McManis is known for his clear, accessible approach to Christian doctrine and pastoral ministry.",
+    "affiliation": "The Master's Seminary",
+    "role": "Pastor & Bible Teacher",
+    "education": "The Master's Seminary",
+    "website": "",
+    "books": [
+      {
+        "title": "Confident in Christ: A New Perspective on the Gospel of John",
+        "amazon_url": "https://www.amazon.com/s?k=Confident+in+Christ+Cliff+McManis"
+      }
+    ],
+    "initials": "CM"
+  },
+  {
+    "name": "Elizabeth Stice",
+    "slug": "esticegmailcom-elizabeth-stice",
+    "bio": "Elizabeth Stice is a Christian writer and content creator dedicated to sharing faith-based insights with modern audiences. Through her work, she explores themes of spiritual growth, biblical application, and Christian living in contemporary contexts.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ES"
+  },
+  {
+    "name": "Mark MacDonald",
+    "slug": "mark-macdonald",
+    "bio": "Mark MacDonald is a respected voice in Christian leadership and pastoral ministry. His writings and teachings focus on helping believers develop deeper faith and navigate modern spiritual challenges with biblical wisdom.",
+    "affiliation": "",
+    "role": "Author & Teacher",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MM"
+  },
+  {
+    "name": "Alaina Demopoulos",
+    "slug": "alaina-demopoulos",
+    "bio": "Alaina Demopoulos is a writer and content creator focused on faith, culture, and Christian living. She contributes to various Christian publications and platforms, bringing thoughtful perspectives on contemporary issues through a biblical lens.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AD"
+  },
+  {
+    "name": "Alex Harris",
+    "slug": "alex-harris",
+    "bio": "Alex Harris is a Christian author and speaker known for his work on biblical worldview and faith development. He has contributed to conversations around Christian living and spiritual formation for evangelical audiences.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AH"
+  },
+  {
+    "name": "Elian Peltier and Safiullah Padshah",
+    "slug": "elian-peltier-and-safiullah-padshah",
+    "bio": "Elian Peltier is a journalist known for reporting on religious and social issues, while Safiullah Padshah brings expertise in international affairs and cultural analysis. Together, their collaborative work has informed readers about faith communities and global perspectives with journalistic integrity.",
+    "affiliation": "The New York Times",
+    "role": "Journalists & Reporters",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EP-SP"
+  },
+  {
+    "name": "Sachi Kitajima Mulkey and Harry Stevens",
+    "slug": "sachi-kitajima-mulkey-and-harry-stevens",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SKM & HS"
+  },
+  {
+    "name": "Mike Cherney",
+    "slug": "mike-cherney",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MC"
   }
 ]
