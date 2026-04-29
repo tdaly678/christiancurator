@@ -87,11 +87,6 @@ SCORING GUIDANCE:
   address it biblically. Length alone does not earn a high score — a short devotional that does all three deserves
   8 more than a long essay that does none.
 
-  SPECIAL CASE — DIRECT RESPONSE ARTICLES: If an article is a named author directly responding to, refuting,
-  or engaging the argument of another named author or position (e.g., "X Responds to Y", "A Reply to...",
-  "Why X is Wrong About..."), add +1 to whatever score you would otherwise give, capped at 10. These articles
-  represent live theological debate and are high editorial value for this audience.
-
 - SCORE 6-7: Solid theological or practical articles that apply Scripture to Christian life but lack an explicit
   gospel connection, OR good cultural commentary that offers a biblically-grounded constructive alternative (not
   just critique). Interviews and roundtables with substantive theological content may fall here.
@@ -209,13 +204,10 @@ def filter_world_news_batch(articles: list[dict]) -> list[dict]:
 
 def score_batch(articles: list[dict]) -> list[dict]:
     """Score and tag a batch of articles in a single API call."""
-    # Tier 1A sources get a longer summary window so the scorer sees enough
-    # theological content to distinguish an 8 from a 6.
-    def _summary_limit(article: dict) -> int:
-        return 400 if article.get("source_name", "") in TIER_1A_SOURCES else 200
-
+    # Flat 300-char summary window for all sources — keeps Tier 1A from having
+    # a structural advantage in how much theological content the scorer sees.
     articles_text = "\n".join(
-        f"{i+1}. Title: {a['title']}\n   Summary: {a['summary'][:_summary_limit(a)]}"
+        f"{i+1}. Title: {a['title']}\n   Summary: {a['summary'][:300]}"
         for i, a in enumerate(articles)
     )
     try:
@@ -317,28 +309,31 @@ def apply_diversity_penalty(articles: list[dict]) -> list[dict]:
 
 
 # Source tier multipliers — applied to base score before recency boost.
-# Compressed April 2026 (1.3 → 1.15, 1.2 → 1.10) to narrow the institutional
-# advantage and give independent voices a more competitive landscape.
+# Compressed April 2026 (1.3 → 1.15, 1.2 → 1.10), then flattened further
+# 2026-04-29: Tier 1A & 1 → 1.00x, Tier 2 → 1.02x. The institutional thumb
+# is off the scale; quality and diversity mechanics determine ranking.
 SOURCE_TIER_MULTIPLIERS = {
-    # Tier 1A — 1.15x
-    "The Gospel Coalition":    1.15,
-    "Desiring God":            1.15,
-    "Ligonier Ministries":     1.15,
-    "9Marks":                  1.15,
-    # Tier 1 — 1.10x
-    "Christianity Today":      1.10,
-    "First Things":            1.10,
-    "Crossway":                1.10,
-    "Mere Orthodoxy":          1.10,
-    "American Reformer":       1.10,
-    # Tier 2 — 1.05x
-    "World Magazine":          1.05,
-    "Relevant Magazine":       1.05,
-    "Reformation21":           1.05,
-    "Jen Wilkin":              1.05,
-    "Kyle Worley":             1.05,
-    "Phylicia Masonheimer":    1.05,
-    "Laura Wifler":            1.05,
+    # Tier 1A — was 1.15x, flattened 2026-04-29 to 1.00x to remove
+    # structural institutional advantage. Quality + diversity boosts
+    # (rotation, stale, trending, independent floor) do the lifting.
+    "The Gospel Coalition":    1.00,
+    "Desiring God":            1.00,
+    "Ligonier Ministries":     1.00,
+    "9Marks":                  1.00,
+    # Tier 1 — was 1.10x, flattened 2026-04-29 to 1.00x
+    "Christianity Today":      1.00,
+    "First Things":            1.00,
+    "Crossway":                1.00,
+    "Mere Orthodoxy":          1.00,
+    "American Reformer":       1.00,
+    # Tier 2 — was 1.05x, kept slight 1.02x as grassroots-evangelical signal
+    "World Magazine":          1.02,
+    "Relevant Magazine":       1.02,
+    "Reformation21":           1.02,
+    "Jen Wilkin":              1.02,
+    "Kyle Worley":             1.02,
+    "Phylicia Masonheimer":    1.02,
+    "Laura Wifler":            1.02,
     # Tier 3 — 1.0x (default, all others)
     # Tier 4A — 0.90x (high-quality centrist outlets)
     "Associated Press":          0.90,
