@@ -241,6 +241,12 @@
     }
     @media (max-width: 660px) { .cc-front-row2 { grid-template-columns: 1fr 1fr; gap: 1rem 0; } }
     @media (max-width: 400px) { .cc-front-row2 { grid-template-columns: 1fr; } }
+    .cc-front-row3 {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+      padding-top: 1.25rem; margin-top: 1.25rem; border-top: 1px solid #e0ddd8;
+    }
+    @media (max-width: 660px) { .cc-front-row3 { grid-template-columns: 1fr 1fr; gap: 1rem 0; } }
+    @media (max-width: 400px) { .cc-front-row3 { grid-template-columns: 1fr; } }
     .cc-card-small {
       padding: 0 1.25rem 0 0; border-right: 1px solid #e0ddd8;
       display: flex; flex-direction: column;
@@ -670,6 +676,43 @@
       </article>
       
     </div>
+    <!-- Row 3: extra small cards (front-page positions 8-10, anchored so email links land here) -->
+    <div class="cc-front-row3">
+    <article class="cc-card-small" id="ab1b7c285">
+        <a href="https://www.thegospelcoalition.org/reviews/why-not-atheist-beha/" class="cc-card-small-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Atheisms Void: Why Replacing God Never Fills It','article_source':'The Gospel Coalition','position':'front_small_row3'});">
+          Atheism's Void: Why Replacing God Never Fills It
+        </a>
+        <div class="cc-card-small-meta">The Gospel Coalition</div>
+        <a href="/topics/apologetics/" class="cc-card-small-cta"
+           onclick="gtag('event','topic_click',{'topic':'apologetics','position':'front_small_row3'});">
+          More on Defending the Faith &rarr;
+        </a>
+      </article>
+    <article class="cc-card-small" id="a0b3ca3dd">
+        <a href="https://research.lifeway.com/2026/04/30/what-does-the-bible-say-about-angels-and-demons/" class="cc-card-small-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'What Christians Actually Believe About Angels and Demons','article_source':'Lifeway Research','position':'front_small_row3'});">
+          What Christians Actually Believe About Angels and Demons
+        </a>
+        <div class="cc-card-small-meta">Lifeway Research</div>
+        <a href="/topics/spiritual-warfare/" class="cc-card-small-cta"
+           onclick="gtag('event','topic_click',{'topic':'spiritual-warfare','position':'front_small_row3'});">
+          More on Spiritual Warfare &rarr;
+        </a>
+      </article>
+    <article class="cc-card-small" id="a502021d0">
+        <a href="https://www.aaronrenn.com/p/the-state-of-americas-downtowns" class="cc-card-small-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'Downtowns in Ruins: The Recovery No Ones Talking About','article_source':'Aaron Renn','position':'front_small_row3'});">
+          Downtowns in Ruins: The Recovery No One's Talking About
+        </a>
+        <div class="cc-card-small-meta">Aaron Renn</div>
+        <a href="/topics/biblical-justice/" class="cc-card-small-cta"
+           onclick="gtag('event','topic_click',{'topic':'biblical-justice','position':'front_small_row3'});">
+          More on Biblical Justice & the Social Gospel &rarr;
+        </a>
+      </article>
+    </div>
+
     
     
   </section>

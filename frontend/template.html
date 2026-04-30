@@ -241,6 +241,12 @@
     }
     @media (max-width: 660px) { .cc-front-row2 { grid-template-columns: 1fr 1fr; gap: 1rem 0; } }
     @media (max-width: 400px) { .cc-front-row2 { grid-template-columns: 1fr; } }
+    .cc-front-row3 {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+      padding-top: 1.25rem; margin-top: 1.25rem; border-top: 1px solid #e0ddd8;
+    }
+    @media (max-width: 660px) { .cc-front-row3 { grid-template-columns: 1fr 1fr; gap: 1rem 0; } }
+    @media (max-width: 400px) { .cc-front-row3 { grid-template-columns: 1fr; } }
     .cc-card-small {
       padding: 0 1.25rem 0 0; border-right: 1px solid #e0ddd8;
       display: flex; flex-direction: column;
@@ -629,6 +635,32 @@
         </div>
         <a href="/topics/{{ card.topic_slug }}/" class="cc-card-small-cta"
            onclick="gtag('event','topic_click',{'topic':'{{ card.topic_slug }}','position':'front_small'});">
+          More on {{ card.topic_name }} &rarr;
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Row 3: extra small cards (front-page positions 8-10, anchored so email links land here) -->
+    {% if front_page_cards | length > 7 %}
+    <div class="cc-front-row3">
+      {% for card in front_page_cards[7:10] %}
+      <article class="cc-card-small" id="{{ card.article.url | article_anchor }}">
+        <a href="{{ card.article.url }}" class="cc-card-small-title" target="_blank" rel="noopener"
+           onclick="gtag('event','article_click',{'article_title':'{{ (card.article.rewritten_title or card.article.title)|replace("'","") }}','article_source':'{{ card.article.source_name }}','position':'front_small_row3'});">
+          {{ card.article.rewritten_title or card.article.title }}
+        </a>
+        <div class="cc-card-small-meta">
+          {%- set auth = card.article.author | default('') | trim -%}
+          {%- set src  = card.article.source_name | default('') | trim -%}
+          {%- if auth and auth | lower != src | lower -%}
+            {{ auth | format_author_links(voices_by_name if voices_by_name is defined else {}) }}
+             &middot; {{ src }}
+          {%- else -%}{{ src }}{%- endif -%}
+        </div>
+        <a href="/topics/{{ card.topic_slug }}/" class="cc-card-small-cta"
+           onclick="gtag('event','topic_click',{'topic':'{{ card.topic_slug }}','position':'front_small_row3'});">
           More on {{ card.topic_name }} &rarr;
         </a>
       </article>
