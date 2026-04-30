@@ -353,12 +353,7 @@
       {% set src  = article.source_name | default('') | trim %}
       {% set pub  = article.published_display | default('') | trim if article.published_display is defined else '' %}
       {% if auth and auth | lower != src | lower %}
-        {% set auth_slug = vbn.get(auth.lower(), '') if vbn else '' %}
-        {% if auth_slug %}
-          <a href="/voices/{{ auth_slug }}/" class="cc-author-link cc-article-author">{{ auth }}</a>
-        {% else %}
-          <span class="cc-article-author">{{ auth }}</span>
-        {% endif %}
+        {{ auth | format_author_links(vbn if vbn else {}, 'cc-author-link cc-article-author') }}
         <span class="cc-meta-dot">·</span>
         <span>{{ src }}</span>
       {% else %}
@@ -379,7 +374,7 @@
 
     {# Lead: first article gets a larger treatment #}
     {% set lead = articles[0] %}
-    <div class="cc-lead">
+    <article class="cc-lead">
       <a href="{{ lead.url }}" class="cc-lead-title" target="_blank" rel="noopener"
          onclick="gtag('event','article_click',{'article_title':'{{ (lead.rewritten_title or lead.title)|replace("'","") }}','article_source':'{{ lead.source_name }}','article_url':'{{ lead.url }}'});">
         {{ lead.rewritten_title or lead.title }}
@@ -389,12 +384,7 @@
         {% set src  = lead.source_name | default('') | trim %}
         {% set pub  = lead.published_display | default('') | trim if lead.published_display is defined else '' %}
         {% if auth and auth | lower != src | lower %}
-          {% set auth_slug = voices_by_name.get(auth.lower(), '') if voices_by_name is defined else '' %}
-          {% if auth_slug %}
-            <a href="/voices/{{ auth_slug }}/" class="cc-author-link cc-lead-author">{{ auth }}</a>
-          {% else %}
-            <span class="cc-lead-author">{{ auth }}</span>
-          {% endif %}
+          {{ auth | format_author_links(voices_by_name if voices_by_name is defined else {}, 'cc-author-link cc-lead-author') }}
           <span class="cc-meta-dot">·</span>
           <span>{{ src }}</span>
         {% else %}
@@ -405,12 +395,12 @@
           <span class="cc-date-chip">{{ pub }}</span>
         {% endif %}
       </div>
-    </div>
+    </article>
 
     {# Remaining articles 2-10 #}
     <div class="cc-article-list">
       {% for article in articles[1:] %}
-      <div class="cc-article">
+      <article class="cc-article">
         <div class="cc-article-num">{{ loop.index + 1 }}</div>
         <div class="cc-article-content">
           <a href="{{ article.url }}" class="cc-article-title" target="_blank" rel="noopener"
@@ -419,7 +409,7 @@
           </a>
           <div class="cc-article-meta">{{ byline(article, voices_by_name) }}</div>
         </div>
-      </div>
+      </article>
       {% endfor %}
     </div>
     {% endif %}
@@ -434,7 +424,7 @@
     </div>
     <div class="cc-article-list">
       {% for article in yesterday_articles %}
-      <div class="cc-article">
+      <article class="cc-article">
         <div class="cc-article-num">{{ loop.index }}</div>
         <div class="cc-article-content">
           <a href="{{ article.url }}" class="cc-article-title" target="_blank" rel="noopener"
@@ -443,7 +433,7 @@
           </a>
           <div class="cc-article-meta">{{ byline(article, voices_by_name) }}</div>
         </div>
-      </div>
+      </article>
       {% endfor %}
     </div>
     {% endif %}

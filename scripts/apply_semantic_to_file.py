@@ -61,6 +61,9 @@ DEFAULT_TAG_RENAMES: dict[str, str] = {
     "cc-card-large": "article",
     "cc-card-medium": "article",
     "cc-card-small": "article",
+    "cc-lead": "article",
+    "cc-article": "article",
+    "cc-related-item": "article",
     # Navigation
     "cc-topics-strip": "nav",
     "cc-topic-index": "nav",

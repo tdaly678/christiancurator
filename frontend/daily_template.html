@@ -342,12 +342,12 @@
       <div class="cc-related">
         <div class="cc-related-label">Continue the Conversation</div>
         {% for day in related_days %}
-        <div class="cc-related-item">
+        <article class="cc-related-item">
           <div class="cc-related-date">{{ day.date }}</div>
           <div class="cc-related-themes">{{ day.shared_themes | join(' · ') }}</div>
           <div class="cc-related-excerpt">{{ day.excerpt }}</div>
           <a class="cc-related-link" href="https://www.christiancurator.com/daily/{{ day.slug }}/">Read that day's pulse &rarr;</a>
-        </div>
+        </article>
         {% endfor %}
       </div>
       {% endif %}

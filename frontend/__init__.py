@@ -126,17 +126,26 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         return "a" + hashlib.md5((url or "").encode()).hexdigest()[:8]
 
     def format_author_links(author_str: str, voices: dict, css_class: str = "cc-author-link") -> str:
-        """Split a potentially comma-separated author string and hyperlink each name that has a voice page."""
+        """Split a multi-author string and hyperlink each name that has a voice page.
+
+        Splits on commas, semicolons, and the word ' and ' (case-insensitive).
+        Linked authors render as <a class={css_class}><strong>Name</strong></a>;
+        unlinked authors render as <span class={css_class}><strong>Name</strong></span>
+        so per-location styling (color, weight) flows through regardless of voice match.
+        Authors are joined with ', '.
+        """
         if not author_str:
             return ""
-        parts = [p.strip() for p in author_str.split(",") if p.strip()]
+        parts = re.split(r',|;|\s+and\s+', author_str, flags=re.IGNORECASE)
+        parts = [p.strip(" \t\n\r.") for p in parts]
+        parts = [p for p in parts if p]
         linked = []
         for name in parts:
             slug = voices.get(name.lower(), "") if voices else ""
             if slug:
                 linked.append(f'<a href="/voices/{slug}/" class="{css_class}"><strong>{name}</strong></a>')
             else:
-                linked.append(f"<strong>{name}</strong>")
+                linked.append(f'<span class="{css_class}"><strong>{name}</strong></span>')
         return ", ".join(linked)
 
     env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
@@ -629,6 +638,14 @@ def render_digest_page(articles: list[dict], env: Environment,
     print(f"  Rendered digest page to {output_path}")
 
 
+def _split_author_names(author_str: str) -> list[str]:
+    """Split a multi-author byline (commas, semicolons, ' and ') into clean individual names."""
+    if not author_str:
+        return []
+    parts = re.split(r',|;|\s+and\s+', author_str, flags=re.IGNORECASE)
+    return [p.strip(" \t\n\r.") for p in parts if p.strip(" \t\n\r.")]
+
+
 def _write_archive_meta(page_dir: Path, articles: list[dict]):
     """Write a slim meta.json alongside the archive page for the filter index."""
     non_world = [a for a in articles if a.get("source_type") != "world_news"]
@@ -638,18 +655,21 @@ def _write_archive_meta(page_dir: Path, articles: list[dict]):
         src  = (a.get("source_name") or "").strip()
         return auth if auth and auth.lower() != src.lower() else ""
 
-    article_data = [
-        {
-            "title":  a.get("rewritten_title") or a.get("title", ""),
-            "url":    a.get("url", ""),
-            "author": _author(a),
-            "source": (a.get("source_name") or "").strip(),
-            "tags":   a.get("tags") or [],
-        }
-        for a in non_world if a.get("url")
-    ]
+    article_data = []
+    for a in non_world:
+        if not a.get("url"):
+            continue
+        auth_str = _author(a)
+        article_data.append({
+            "title":   a.get("rewritten_title") or a.get("title", ""),
+            "url":     a.get("url", ""),
+            "author":  auth_str,
+            "authors": _split_author_names(auth_str),
+            "source":  (a.get("source_name") or "").strip(),
+            "tags":    a.get("tags") or [],
+        })
 
-    authors = sorted(set(d["author"] for d in article_data if d["author"]))
+    authors = sorted({name for d in article_data for name in d["authors"]})
     sources = sorted(set(d["source"] for d in article_data if d["source"]))
     tags    = sorted(set(t for d in article_data for t in d["tags"]))
 
@@ -782,9 +802,15 @@ def _backfill_archive_meta():
                 else:
                     author, source = "", ""
                 article_data.append({"title": title, "url": url,
-                                     "author": author, "source": source, "tags": tags})
+                                     "author": author,
+                                     "authors": _split_author_names(author),
+                                     "source": source, "tags": tags})
 
-            authors = sorted(set(d["author"] for d in article_data if d["author"]))
+            # Also enrich the lead entry (first item) with split author names
+            if article_data:
+                article_data[0]["authors"] = _split_author_names(article_data[0].get("author", ""))
+
+            authors = sorted({name for d in article_data for name in d.get("authors", [])})
             sources = sorted(set(d["source"] for d in article_data if d["source"]))
             tags    = sorted(set(t for d in article_data for t in d["tags"]))
 
@@ -1227,7 +1253,7 @@ def render_archive_index(env: Environment):
         '      var seenUrls = {};',
         '      ARCHIVE_DATA.forEach(function(day) {',
         '        var matching = (day.articles || []).filter(function(a) {',
-        '          var authorOk = !author || a.author === author;',
+        '          var authorOk = !author || (a.authors ? a.authors.indexOf(author) !== -1 : a.author === author);',
         '          var tagOk    = !tag    || (a.tags && a.tags.indexOf(tag) !== -1);',
         '          var outletOk = !outlet || a.source === outlet;',
         '          return authorOk && tagOk && outletOk && !seenUrls[a.url];',
