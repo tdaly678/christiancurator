@@ -5705,5 +5705,200 @@
     "role": "Pastor, Author & Biblical Counselor",
     "education": "Columbia Bible College (BA); Reformed Episcopal Seminary (MDiv); Westminster Theological Seminary (DMin)",
     "website": "https://www.paultripp.com"
+  },
+  {
+    "name": "Rebecca Woods",
+    "slug": "rebecca-woods",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RW"
+  },
+  {
+    "name": "Barry York",
+    "slug": "barry-york",
+    "bio": "Barry York is a pastor and theological writer who has contributed to Reformed Christian publications and communities. He is known for his thoughtful engagement with Scripture and Reformed theology, offering insights for contemporary Christian living.",
+    "affiliation": "Ligonier Ministries",
+    "role": "Pastor & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BY"
+  },
+  {
+    "name": "Kevin Bauder",
+    "slug": "kevin-bauder",
+    "bio": "Kevin Bauder is a theologian and educator known for his work in fundamentalism and evangelical ecclesiology. As president of Central Baptist Theological Seminary, he has contributed significantly to contemporary discussions on Baptist identity, separation, and biblical Christianity.",
+    "affiliation": "Central Baptist Theological Seminary",
+    "role": "President & Theologian",
+    "education": "Ph.D. in Systematic Theology",
+    "website": "https://www.cbts.edu/",
+    "books": [
+      {
+        "title": "The Fundamentals of the Faith",
+        "amazon_url": "https://www.amazon.com/s?k=The+Fundamentals+of+the+Faith+Kevin+Bauder"
+      },
+      {
+        "title": "Holy Separation",
+        "amazon_url": "https://www.amazon.com/s?k=Holy+Separation+Kevin+Bauder"
+      }
+    ],
+    "initials": "KB"
+  },
+  {
+    "name": "Wendy Alsup",
+    "slug": "wendy-alsup",
+    "bio": "Wendy Alsup is a Bible teacher and author who helps Christian women understand Scripture through a practical, theological lens. Her writing focuses on equipping believers to think deeply about their faith and apply biblical truth to everyday life.",
+    "affiliation": "Servant of Jesus Christ Ministries",
+    "role": "Bible Teacher & Author",
+    "education": "",
+    "website": "https://www.wendyalsup.com",
+    "books": [
+      {
+        "title": "Pray Big: Inviting God Into Your Greatest Dreams and Deepest Concerns",
+        "amazon_url": "https://www.amazon.com/s?k=Pray+Big+Wendy+Alsup"
+      },
+      {
+        "title": "Is the Homosexual My Neighbor? Revised Edition",
+        "amazon_url": "https://www.amazon.com/s?k=Is+the+Homosexual+My+Neighbor+Wendy+Alsup"
+      },
+      {
+        "title": "Missional Motherhood: The Everyday Ministry of Motherhood in the Grand Plan of God",
+        "amazon_url": "https://www.amazon.com/s?k=Missional+Motherhood+Wendy+Alsup"
+      },
+      {
+        "title": "Search the Scriptures Bible Study Series",
+        "amazon_url": "https://www.amazon.com/s?k=Search+the+Scriptures+Wendy+Alsup"
+      }
+    ],
+    "initials": "WA"
+  },
+  {
+    "name": "Derek King",
+    "slug": "dkinglewishouseorg-derek-king",
+    "bio": "Derek King is a thoughtful Christian writer and content curator with a passion for helping believers deepen their faith through quality resources. Based at Lewis House, Derek works to bring together meaningful Christian perspectives and biblical wisdom for contemporary audiences.",
+    "affiliation": "Lewis House",
+    "role": "Content Curator & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DK"
+  },
+  {
+    "name": "Luke Stamps",
+    "slug": "luke-stamps",
+    "bio": "Luke Stamps is a writer and theologian who engages contemporary culture through a Christian worldview. He contributes to various Christian publications and platforms, exploring themes of faith, theology, and cultural commentary.",
+    "affiliation": "",
+    "role": "Writer & Theologian",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LS"
+  },
+  {
+    "name": "Shane Morris",
+    "slug": "shane-morris",
+    "bio": "Shane Morris is a writer and cultural commentator who explores the intersection of faith, culture, and contemporary issues from a Christian worldview perspective. He has contributed to various Christian publications and media platforms, helping audiences navigate cultural conversations through a biblical lens.",
+    "affiliation": "BreakPoint, The Colson Center for Christian Worldview",
+    "role": "Writer & Cultural Commentator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SM"
+  },
+  {
+    "name": "Ryan Bangert",
+    "slug": "ryan-bangert",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RB"
+  },
+  {
+    "name": "Valerie Hopkins",
+    "slug": "valerie-hopkins",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "VH"
+  },
+  {
+    "name": "Lizzie Dearden",
+    "slug": "lizzie-dearden",
+    "bio": "Lizzie Dearden is a journalist and foreign correspondent known for her reporting on international security, terrorism, and religious extremism. Her investigative work has informed global conversations on complex geopolitical issues with careful attention to factual detail and human impact.",
+    "affiliation": "The Independent",
+    "role": "Journalist & Foreign Correspondent",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LD"
+  },
+  {
+    "name": "Nesrine Malik",
+    "slug": "nesrine-malik",
+    "bio": "Nesrine Malik is a Sudanese-British journalist and commentator known for her incisive writing on politics, religion, and social issues. Her work often explores the intersection of faith, identity, and contemporary culture from a thoughtful, critical perspective.",
+    "affiliation": "The Guardian",
+    "role": "Journalist & Columnist",
+    "education": "University of Khartoum",
+    "website": "",
+    "books": [
+      {
+        "title": "The Politically Incorrect Mom",
+        "amazon_url": "https://www.amazon.com/s?k=The+Politically+Incorrect+Mom+Nesrine+Malik"
+      },
+      {
+        "title": "We Need New Stories: Challenging the Toxic Myths Behind Our Age",
+        "amazon_url": "https://www.amazon.com/s?k=We+Need+New+Stories+Challenging+Toxic+Myths+Nesrine+Malik"
+      }
+    ],
+    "initials": "NM"
+  },
+  {
+    "name": "Annie Linskey",
+    "slug": "annie-linskey",
+    "bio": "Annie Linskey is an investigative journalist known for her in-depth reporting on politics and social issues. While not primarily known as a Christian author, her work often explores themes relevant to faith communities, including issues of justice, accountability, and leadership.",
+    "affiliation": "The Washington Post",
+    "role": "Investigative Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AL"
+  },
+  {
+    "name": "Brett McCracken",
+    "slug": "brett-mccracken",
+    "bio": "Brett McCracken is a writer and editor known for thoughtfully engaging contemporary culture from a Christian perspective. He explores how faith intersects with entertainment, technology, and modern life, helping Christians navigate cultural decisions with wisdom and discernment.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Writer & Cultural Commentator",
+    "education": "University of Oregon",
+    "website": "https://www.brettmccracken.com",
+    "books": [
+      {
+        "title": "Uncomfortable: The Life and Times of William F. Buckley Jr.",
+        "amazon_url": "https://www.amazon.com/s?k=Uncomfortable+William+Buckley+Brett+McCracken"
+      },
+      {
+        "title": "Gray Matters: Navigating the Space Between Legalism and Liberty",
+        "amazon_url": "https://www.amazon.com/s?k=Gray+Matters+Brett+McCracken"
+      },
+      {
+        "title": "Entertaining Ourselves to Death: How Television and Entertainment Values Are Reshaping Our Faith",
+        "amazon_url": "https://www.amazon.com/s?k=Entertaining+Ourselves+to+Death+Brett+McCracken"
+      },
+      {
+        "title": "The Revolt of the Elites: And the Betrayal of Democracy",
+        "amazon_url": "https://www.amazon.com/s?k=Revolt+Elites+Betrayal+Democracy+Brett+McCracken"
+      }
+    ],
+    "initials": "BM"
   }
 ]
