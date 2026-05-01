@@ -5,6 +5,9 @@ name: Topic Link Audit
 # report to output/link_audit/ so Tom and Claude can pick it up in a session.
 
 on:
+  push:
+    paths:
+      - '.github/audit-trigger.txt'
   workflow_dispatch:
     inputs:
       only_slugs:
