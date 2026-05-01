@@ -58,7 +58,8 @@ jobs:
           if-no-files-found: error
 
       - name: Commit report to repo
-        if: ${{ github.event.inputs.commit_report == 'true' }}
+        # Commit on workflow_dispatch when commit_report=true (default) OR on any push trigger.
+        if: ${{ github.event_name == 'push' || github.event.inputs.commit_report == 'true' }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
