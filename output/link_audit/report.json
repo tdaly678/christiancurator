@@ -59,8 +59,8 @@
     "line": 480,
     "anchor": "The Pro-Life Legacy of Francis Schaeffer",
     "url": "https://firstthings.com/the-pro-life-legacy-of-francis-schaeffer/",
-    "classification": "live",
-    "status": 200,
+    "classification": "rate_limited",
+    "status": 429,
     "final_url": "https://firstthings.com/the-pro-life-legacy-of-francis-schaeffer/",
     "method": "HEAD",
     "error": null
@@ -103,10 +103,10 @@
     "line": 530,
     "anchor": "Pro-Life from Womb to Tomb: Historical and Holistic Perspectives",
     "url": "https://www.desiringgod.org/articles/pro-life-from-womb-to-tomb/",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/articles/pro-life-from-womb-to-tomb/",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -180,10 +180,10 @@
     "line": 468,
     "anchor": "Two Underused Strategies for Addiction",
     "url": "https://www.desiringgod.org/articles/two-underused-strategies-for-addiction",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/articles/two-underused-strategies-for-addiction",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -246,10 +246,10 @@
     "line": 522,
     "anchor": "Two Underused Strategies for Addiction",
     "url": "https://www.desiringgod.org/articles/two-underused-strategies-for-addiction",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/articles/two-underused-strategies-for-addiction",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -348,7 +348,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.christianitytoday.com/2023/07/god-technology-christian-life-tony-reinke/",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -367,7 +367,7 @@
     "line": 476,
     "anchor": "The Technological Dimension of the Gospel",
     "url": "https://www.desiringgod.org/articles/technology-gospel/",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/technology-gospel/",
     "method": "GET",
@@ -392,7 +392,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.desiringgod.org/articles/let-god-blow-away-your-anxiety",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -620,7 +620,7 @@
     "line": 481,
     "anchor": "The Case for Christianity \u00b7 Desiring God",
     "url": "https://www.desiringgod.org/articles/the-case-for-christianity",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/the-case-for-christianity",
     "method": "GET",
@@ -697,7 +697,7 @@
     "line": 555,
     "anchor": "Historical Evidence for the Resurrection",
     "url": "https://www.desiringgod.org/articles/historical-evidence-for-the-resurrection",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/historical-evidence-for-the-resurrection",
     "method": "GET",
@@ -873,7 +873,7 @@
     "line": 553,
     "anchor": "Articulating the Glorious Cross to an Atonement-Rejecting Culture",
     "url": "https://www.desiringgod.org/interviews/articulating-the-glorious-cross-to-an-atonement-rejecting-culture",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/interviews/articulating-the-glorious-cross-to-an-atonement-rejecting-culture",
     "method": "GET",
@@ -906,8 +906,8 @@
     "line": 577,
     "anchor": "Triune Atonement",
     "url": "https://firstthings.com/triune-atonement-1/",
-    "classification": "live",
-    "status": 200,
+    "classification": "rate_limited",
+    "status": 429,
     "final_url": "https://firstthings.com/triune-atonement-1/",
     "method": "HEAD",
     "error": null
@@ -928,7 +928,7 @@
     "line": 474,
     "anchor": "What Does the Bible Say About Baptism?",
     "url": "https://www.desiringgod.org/articles/what-does-the-bible-say-about-baptism",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/what-does-the-bible-say-about-baptism",
     "method": "GET",
@@ -1005,7 +1005,7 @@
     "line": 538,
     "anchor": "What Does the Bible Say About Baptism? Six Texts We Cannot Ignore",
     "url": "https://www.desiringgod.org/articles/what-does-the-bible-say-about-baptism",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/what-does-the-bible-say-about-baptism",
     "method": "GET",
@@ -1192,7 +1192,7 @@
     "line": 530,
     "anchor": "What Is Inerrancy?",
     "url": "https://www.desiringgod.org/interviews/what-is-inerrancy",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/interviews/what-is-inerrancy",
     "method": "GET",
@@ -1239,7 +1239,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.desiringgod.org/articles/how-is-the-bible-without-error",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -1280,10 +1280,10 @@
     "line": 454,
     "anchor": "The Righteousness of God",
     "url": "https://www.desiringgod.org/articles/the-righteousness-of-god/",
-    "classification": "broken",
-    "status": 404,
-    "final_url": "https://www.desiringgod.org/articles/the-righteousness-of-god/",
-    "method": "HEAD",
+    "classification": "blocked",
+    "status": 403,
+    "final_url": "https://www.desiringgod.org/articles/the-righteousness-of-god",
+    "method": "GET",
     "error": null
   },
   {
@@ -1368,7 +1368,7 @@
     "line": 468,
     "anchor": "Resolved: To Read the Bible",
     "url": "https://www.desiringgod.org/articles/resolved-to-read-the-bible",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/resolved-to-read-the-bible",
     "method": "GET",
@@ -1434,10 +1434,10 @@
     "line": 522,
     "anchor": "How Do I Make the Most of Daily Bible Reading?",
     "url": "https://www.desiringgod.org/interviews/how-do-i-make-the-most-of-daily-bible-reading",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/interviews/how-do-i-make-the-most-of-daily-bible-reading",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -1536,7 +1536,7 @@
     "classification": "broken",
     "status": 404,
     "final_url": "https://www.christianitytoday.com/pastors/2013/fall/gospel-in-lgbt-world.html",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -1602,7 +1602,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.desiringgod.org/articles/the-great-vision-of-christian-education",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -1665,7 +1665,7 @@
     "line": 522,
     "anchor": "Public, Private, Online, Homeschool?",
     "url": "https://www.desiringgod.org/interviews/public-private-online-homeschool",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/interviews/public-private-online-homeschool",
     "method": "GET",
@@ -2083,10 +2083,10 @@
     "line": 468,
     "anchor": "The Meaning of Manhood",
     "url": "https://www.desiringgod.org/articles/the-meaning-of-manhood",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/articles/the-meaning-of-manhood",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -2292,8 +2292,8 @@
     "line": 458,
     "anchor": "Discipline That Connects with Our Children\u2019s Hearts",
     "url": "https://www.desiringgod.org/articles/discipline-that-connects-with-our-childrens-hearts",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/discipline-that-connects-with-our-childrens-hearts",
     "method": "GET",
     "error": null
@@ -2303,10 +2303,10 @@
     "line": 459,
     "anchor": "My Son, Give Me Your Heart",
     "url": "https://www.desiringgod.org/articles/my-son-give-me-your-heart",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/articles/my-son-give-me-your-heart",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -2369,8 +2369,8 @@
     "line": 515,
     "anchor": "Discipline That Connects with Our Children\u2019s Hearts",
     "url": "https://www.desiringgod.org/articles/discipline-that-connects-with-our-childrens-hearts",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/discipline-that-connects-with-our-childrens-hearts",
     "method": "GET",
     "error": null
@@ -2391,10 +2391,10 @@
     "line": 531,
     "anchor": "My Son, Give Me Your Heart: The First Desire of Fruitful Parenting",
     "url": "https://www.desiringgod.org/articles/my-son-give-me-your-heart",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/articles/my-son-give-me-your-heart",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -2424,7 +2424,7 @@
     "line": 555,
     "anchor": "Parents, Obey God and Require Obedience",
     "url": "https://www.desiringgod.org/articles/parents-obey-god-and-require-obedience",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/parents-obey-god-and-require-obedience",
     "method": "GET",
@@ -2545,10 +2545,10 @@
     "line": 514,
     "anchor": "Jesus Christ: Truly God, Truly Human",
     "url": "https://www.desiringgod.org/articles/jesus-truly-god-truly-human/",
-    "classification": "broken",
-    "status": 403,
-    "final_url": "https://www.desiringgod.org/articles/jesus-truly-god-truly-human",
-    "method": "GET",
+    "classification": "rate_limited",
+    "status": 429,
+    "final_url": "https://www.desiringgod.org/articles/jesus-truly-god-truly-human/",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -2633,10 +2633,10 @@
     "line": 454,
     "anchor": "Overseers of the Flock",
     "url": "https://www.desiringgod.org/articles/overseers-of-the-flock/",
-    "classification": "broken",
-    "status": 404,
-    "final_url": "https://www.desiringgod.org/articles/overseers-of-the-flock/",
-    "method": "HEAD",
+    "classification": "blocked",
+    "status": 403,
+    "final_url": "https://www.desiringgod.org/articles/overseers-of-the-flock",
+    "method": "GET",
     "error": null
   },
   {
@@ -2776,10 +2776,10 @@
     "line": 509,
     "anchor": "When Church Discipline Is Not Warranted",
     "url": "https://www.desiringgod.org/articles/when-church-discipline-is-not-warranted",
-    "classification": "broken",
-    "status": 404,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/when-church-discipline-is-not-warranted",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -2809,8 +2809,8 @@
     "line": 533,
     "anchor": "Mental Illness and Church Discipline: Seven Principles for Pastors",
     "url": "https://www.desiringgod.org/articles/mental-illness-and-church-discipline",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/mental-illness-and-church-discipline",
     "method": "GET",
     "error": null
@@ -2875,10 +2875,10 @@
     "line": 468,
     "anchor": "Who Governs the Local Church?",
     "url": "https://www.desiringgod.org/articles/who-governs-the-local-church",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/who-governs-the-local-church",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -2941,10 +2941,10 @@
     "line": 522,
     "anchor": "Who Governs the Local Church?",
     "url": "https://www.desiringgod.org/articles/who-governs-the-local-church",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/who-governs-the-local-church",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -3098,7 +3098,7 @@
     "classification": "broken",
     "status": 404,
     "final_url": "https://www.desiringgod.org/articles/how-church-history-strengthens-faith",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -3458,8 +3458,8 @@
     "line": 546,
     "anchor": "The Many Ministries of Godly Women",
     "url": "https://www.desiringgod.org/articles/the-many-ministries-of-godly-women",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/the-many-ministries-of-godly-women",
     "method": "GET",
     "error": null
@@ -3623,10 +3623,10 @@
     "line": 469,
     "anchor": "Israel and the Church: What Are the Differences?",
     "url": "https://www.desiringgod.org/articles/israel-and-the-church/",
-    "classification": "broken",
-    "status": 404,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/israel-and-the-church/",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -3700,10 +3700,10 @@
     "line": 538,
     "anchor": "Israel and the Church: What Are the Differences?",
     "url": "https://www.desiringgod.org/articles/israel-and-the-church/",
-    "classification": "broken",
-    "status": 404,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/israel-and-the-church/",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -3711,7 +3711,7 @@
     "line": 546,
     "anchor": "How Old Testament Prophecies Point to Christ",
     "url": "https://www.desiringgod.org/articles/how-old-testament-prophecies-point-to-christ",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/how-old-testament-prophecies-point-to-christ",
     "method": "GET",
@@ -3769,7 +3769,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.desiringgod.org/interviews/is-there-room-in-reformed-theology-for-environmental-concern",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -3835,7 +3835,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.desiringgod.org/interviews/is-there-room-in-reformed-theology-for-environmental-concern",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -3942,7 +3942,7 @@
     "line": 479,
     "anchor": "What Is Evolutionary Creationism?",
     "url": "https://biologos.org/common-questions/what-is-evolutionary-creationism",
-    "classification": "broken",
+    "classification": "rate_limited",
     "status": 429,
     "final_url": "https://biologos.org/common-questions/what-is-evolutionary-creationism",
     "method": "HEAD",
@@ -4019,7 +4019,7 @@
     "line": 546,
     "anchor": "What Is Evolutionary Creationism?",
     "url": "https://biologos.org/common-questions/what-is-evolutionary-creationism",
-    "classification": "broken",
+    "classification": "rate_limited",
     "status": 429,
     "final_url": "https://biologos.org/common-questions/what-is-evolutionary-creationism",
     "method": "HEAD",
@@ -4044,7 +4044,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.christianitytoday.com/2020/01/genealogical-adam-eve-evolution-joshua-swamidass/",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -4162,7 +4162,7 @@
     "line": 522,
     "anchor": "Dying for the Glory of Christ",
     "url": "https://www.desiringgod.org/articles/dying-for-the-glory-of-christ",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/dying-for-the-glory-of-christ",
     "method": "GET",
@@ -4261,7 +4261,7 @@
     "line": 470,
     "anchor": "How Did Jesus Make Disciples (Mathis)",
     "url": "https://www.desiringgod.org/articles/how-did-jesus-make-disciples",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/how-did-jesus-make-disciples",
     "method": "GET",
@@ -4305,7 +4305,7 @@
     "line": 515,
     "anchor": "How Did Jesus Make Disciples?",
     "url": "https://www.desiringgod.org/articles/how-did-jesus-make-disciples",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/how-did-jesus-make-disciples",
     "method": "GET",
@@ -4341,7 +4341,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.desiringgod.org/interviews/what-is-discipleship-and-how-is-it-done",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -4515,9 +4515,9 @@
     "anchor": "Does God Care About the End Times?",
     "url": "https://www.desiringgod.org/articles/does-god-care-about-the-end-times",
     "classification": "broken",
-    "status": 403,
+    "status": 404,
     "final_url": "https://www.desiringgod.org/articles/does-god-care-about-the-end-times",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -4844,10 +4844,10 @@
     "line": 458,
     "anchor": "A Hunger for God (Desiring God)",
     "url": "https://www.desiringgod.org/books/a-hunger-for-god",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/books/a-hunger-for-god",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -4976,10 +4976,10 @@
     "line": 562,
     "anchor": "Fasting from Food in a Land of Plenty",
     "url": "https://www.christianitytoday.com/2024/03/lent-food-fasting-spiritual-physical-benefits-body-theology/",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.christianitytoday.com/2024/03/lent-food-fasting-spiritual-physical-benefits-body-theology/",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -5086,7 +5086,7 @@
     "line": 495,
     "anchor": "Why You Should Forgive Your Enemy",
     "url": "https://www.desiringgod.org/articles/why-you-should-forgive-your-enemy",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/why-you-should-forgive-your-enemy",
     "method": "GET",
@@ -5130,10 +5130,10 @@
     "line": 527,
     "anchor": "How to Forgive Yourself",
     "url": "https://www.desiringgod.org/articles/how-to-forgive-yourself",
-    "classification": "broken",
-    "status": 404,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/how-to-forgive-yourself",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -5177,7 +5177,7 @@
     "classification": "broken",
     "status": 404,
     "final_url": "https://www.desiringgod.org/articles/christian-forgiveness-is-not-cheap",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -5287,7 +5287,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.desiringgod.org/articles/he-made-them-male-and-female",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -5306,10 +5306,10 @@
     "line": 531,
     "anchor": "What Causes Gender Dysphoria?",
     "url": "https://www.desiringgod.org/interviews/what-causes-gender-dysphoria",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/interviews/what-causes-gender-dysphoria",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -5384,9 +5384,9 @@
     "anchor": "When Grief Makes You Doubt (Desiring God)",
     "url": "https://www.desiringgod.org/articles/when-grief-makes-you-doubt",
     "classification": "broken",
-    "status": 403,
+    "status": 404,
     "final_url": "https://www.desiringgod.org/articles/when-grief-makes-you-doubt",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -5449,10 +5449,10 @@
     "line": 504,
     "anchor": "Psalms of Lament",
     "url": "https://www.desiringgod.org/articles/psalms-of-lament/",
-    "classification": "broken",
-    "status": 404,
-    "final_url": "https://www.desiringgod.org/articles/psalms-of-lament/",
-    "method": "HEAD",
+    "classification": "blocked",
+    "status": 403,
+    "final_url": "https://www.desiringgod.org/articles/psalms-of-lament",
+    "method": "GET",
     "error": null
   },
   {
@@ -5516,9 +5516,9 @@
     "anchor": "When Grief Makes You Doubt",
     "url": "https://www.desiringgod.org/articles/when-grief-makes-you-doubt",
     "classification": "broken",
-    "status": 403,
+    "status": 404,
     "final_url": "https://www.desiringgod.org/articles/when-grief-makes-you-doubt",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -5548,10 +5548,10 @@
     "line": 459,
     "anchor": "Desiring God: Eternal Punishment",
     "url": "https://www.desiringgod.org/articles/the-goal-of-god-in-eternal-punishment",
-    "classification": "broken",
-    "status": 404,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/the-goal-of-god-in-eternal-punishment",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -5617,7 +5617,7 @@
     "classification": "broken",
     "status": 404,
     "final_url": "https://www.desiringgod.org/articles/is-hell-real",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -5736,9 +5736,9 @@
     "anchor": "Israel, Palestinians, and the Promised Land (John Piper)",
     "url": "https://www.desiringgod.org/articles/israel-palestinians-and-the-promise-land",
     "classification": "broken",
-    "status": 403,
+    "status": 404,
     "final_url": "https://www.desiringgod.org/articles/israel-palestinians-and-the-promise-land",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -5771,7 +5771,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.christianitytoday.com/2020/04/daniel-hummel-covenant-brothers-zionism-israel-evangelicals/",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -5780,9 +5780,9 @@
     "anchor": "Israel, Palestinians, and the Promised Land",
     "url": "https://www.desiringgod.org/articles/israel-palestinians-and-the-promise-land",
     "classification": "broken",
-    "status": 403,
+    "status": 404,
     "final_url": "https://www.desiringgod.org/articles/israel-palestinians-and-the-promise-land",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -5878,9 +5878,9 @@
     "line": 560,
     "anchor": "How to Think Biblically About Israel and Palestine",
     "url": "https://www.thegospelcoalition.org/blogs/justin-taylor/how-to-think-biblically-about-israel-and-palestine/",
-    "classification": "broken",
-    "status": 404,
-    "final_url": "https://www.thegospelcoalition.org/blogs/justin-taylor/how-to-think-biblically-about-israel-and-palestine/",
+    "classification": "live",
+    "status": 200,
+    "final_url": "https://www.thegospelcoalition.org/blogs/justin-taylor/",
     "method": "HEAD",
     "error": null
   },
@@ -6021,8 +6021,8 @@
     "line": 555,
     "anchor": "Does God Really Save Us by Faith Alone?",
     "url": "https://www.desiringgod.org/articles/does-god-really-save-us-by-faith-alone",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/articles/does-god-really-save-us-by-faith-alone",
     "method": "GET",
     "error": null
@@ -6090,7 +6090,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.desiringgod.org/articles/why-join-a-church",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -6164,10 +6164,10 @@
     "line": 531,
     "anchor": "Will Membership Make a Difference? The Vital Joys of Joining a Church",
     "url": "https://www.desiringgod.org/articles/will-membership-make-a-difference",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/will-membership-make-a-difference",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -6330,9 +6330,9 @@
     "anchor": "The Real Presence of Christ at the Lord's Supper",
     "url": "https://www.desiringgod.org/articles/the-real-presence-of-christ-at-the-lords-supper",
     "classification": "broken",
-    "status": 403,
+    "status": 404,
     "final_url": "https://www.desiringgod.org/articles/the-real-presence-of-christ-at-the-lords-supper",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -6428,7 +6428,7 @@
     "line": 459,
     "anchor": "Husbands Who Love Like Christ (Desiring God)",
     "url": "https://www.desiringgod.org/messages/husbands-who-love-like-christ-and-the-wives-who-submit-to-them",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/messages/husbands-who-love-like-christ-and-the-wives-who-submit-to-them",
     "method": "GET",
@@ -6450,10 +6450,10 @@
     "line": 470,
     "anchor": "Marriage as Submission (Desiring God)",
     "url": "https://www.desiringgod.org/articles/marriage-as-submission",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/marriage-as-submission",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -6464,7 +6464,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.desiringgod.org/messages/marriage-gods-showcase-of-covenant-keeping-grace",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -6497,7 +6497,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.desiringgod.org/messages/marriage-gods-showcase-of-covenant-keeping-grace",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -6516,7 +6516,7 @@
     "line": 531,
     "anchor": "Husbands Who Love Like Christ and the Wives Who Submit to Them",
     "url": "https://www.desiringgod.org/messages/husbands-who-love-like-christ-and-the-wives-who-submit-to-them",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/messages/husbands-who-love-like-christ-and-the-wives-who-submit-to-them",
     "method": "GET",
@@ -6571,10 +6571,10 @@
     "line": 571,
     "anchor": "Marriage as Submission",
     "url": "https://www.desiringgod.org/articles/marriage-as-submission",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/marriage-as-submission",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -6585,7 +6585,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.desiringgod.org/interviews/when-love-wanes-the-marriage-covenant-remains",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -6681,8 +6681,8 @@
     "line": 522,
     "anchor": "The Meaning of Membership and Church Accountability",
     "url": "https://www.desiringgod.org/articles/the-meaning-of-membership-and-church-accountability",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/articles/the-meaning-of-membership-and-church-accountability",
     "method": "GET",
     "error": null
@@ -6703,10 +6703,10 @@
     "line": 538,
     "anchor": "Will Membership Make a Difference? The Vital Joys of Joining a Church",
     "url": "https://www.desiringgod.org/articles/will-membership-make-a-difference",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/will-membership-make-a-difference",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -6761,7 +6761,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.desiringgod.org/articles/why-join-a-church",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -6857,10 +6857,10 @@
     "line": 523,
     "anchor": "Scrambling for the Light: Christian Depression and the Use of Medication",
     "url": "https://www.desiringgod.org/articles/scrambling-for-the-light",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/articles/scrambling-for-the-light",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -6945,10 +6945,10 @@
     "line": 458,
     "anchor": "What Is the Mission of the Church? (Desiring God)",
     "url": "https://www.desiringgod.org/articles/what-is-the-mission-of-the-church",
-    "classification": "broken",
-    "status": 404,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/what-is-the-mission-of-the-church",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -7144,9 +7144,9 @@
     "anchor": "The Pastor's Role and Gospel-Centered Ministry",
     "url": "https://www.desiringgod.org/articles/what-is-the-pastors-primary-responsibility",
     "classification": "broken",
-    "status": 403,
+    "status": 404,
     "final_url": "https://www.desiringgod.org/articles/what-is-the-pastors-primary-responsibility",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -7168,7 +7168,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.christianitytoday.com/pastors/content/what-kind-of-pastor-am-i/",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -7176,8 +7176,8 @@
     "line": 480,
     "anchor": "Twelve Propositions for Pastors",
     "url": "https://firstthings.com/twelve-propositions-for-pastors/",
-    "classification": "live",
-    "status": 200,
+    "classification": "rate_limited",
+    "status": 429,
     "final_url": "https://firstthings.com/twelve-propositions-for-pastors/",
     "method": "HEAD",
     "error": null
@@ -7254,9 +7254,9 @@
     "anchor": "The Pastor's Role and Gospel-Centered Ministry",
     "url": "https://www.desiringgod.org/articles/what-is-the-pastors-primary-responsibility",
     "classification": "broken",
-    "status": 403,
+    "status": 404,
     "final_url": "https://www.desiringgod.org/articles/what-is-the-pastors-primary-responsibility",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -7264,9 +7264,9 @@
     "line": 562,
     "anchor": "Practicing The Pastor's Role: From Theology to Life",
     "url": "https://firstthings.com/the-pastor-as-wider-theologian-or-whats-wrong-with-theology-today",
-    "classification": "live",
-    "status": 200,
-    "final_url": "https://firstthings.com/the-pastor-as-wider-theologian-or-whats-wrong-with-theology-today/",
+    "classification": "rate_limited",
+    "status": 429,
+    "final_url": "https://firstthings.com/the-pastor-as-wider-theologian-or-whats-wrong-with-theology-today",
     "method": "HEAD",
     "error": null
   },
@@ -7289,7 +7289,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.desiringgod.org/articles/should-the-church-work-on-social-and-political-problems",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -7476,7 +7476,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.desiringgod.org/articles/victory-over-porn-is-closer-than-you-think",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -7539,10 +7539,10 @@
     "line": 522,
     "anchor": "You Can Say No to Porn",
     "url": "https://www.desiringgod.org/messages/you-can-say-no-to-porn",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/messages/you-can-say-no-to-porn",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -7616,7 +7616,7 @@
     "line": 459,
     "anchor": "The Sovereignty of God and Prayer",
     "url": "https://www.desiringgod.org/articles/the-sovereignty-of-god-and-prayer",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/the-sovereignty-of-god-and-prayer",
     "method": "GET",
@@ -7682,7 +7682,7 @@
     "line": 499,
     "anchor": "The Sovereignty of God and Prayer",
     "url": "https://www.desiringgod.org/articles/the-sovereignty-of-god-and-prayer",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/the-sovereignty-of-god-and-prayer",
     "method": "GET",
@@ -7693,8 +7693,8 @@
     "line": 507,
     "anchor": "Pray Because God Is Sovereign",
     "url": "https://www.desiringgod.org/articles/pray-because-god-is-sovereign",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/pray-because-god-is-sovereign",
     "method": "GET",
     "error": null
@@ -7913,10 +7913,10 @@
     "line": 554,
     "anchor": "The Primacy of Expository Preaching",
     "url": "https://www.desiringgod.org/messages/the-primacy-of-expository-preaching-part-1",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/messages/the-primacy-of-expository-preaching-part-1",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -7957,7 +7957,7 @@
     "line": 453,
     "anchor": "The Joy of Predestination",
     "url": "https://www.desiringgod.org/articles/the-joy-of-predestination/",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/the-joy-of-predestination/",
     "method": "GET",
@@ -8001,7 +8001,7 @@
     "line": 475,
     "anchor": "Middle Knowledge Q&A",
     "url": "https://www.reasonablefaith.org/writings/question-answer/middle-knowledge",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.reasonablefaith.org/writings/question-answer/middle-knowledge",
     "method": "GET",
@@ -8023,10 +8023,10 @@
     "line": 502,
     "anchor": "What We Mean by Predestination",
     "url": "https://www.desiringgod.org/articles/what-we-mean-by-predestination/",
-    "classification": "broken",
-    "status": 404,
-    "final_url": "https://www.desiringgod.org/articles/what-we-mean-by-predestination/",
-    "method": "HEAD",
+    "classification": "blocked",
+    "status": 403,
+    "final_url": "https://www.desiringgod.org/articles/what-we-mean-by-predestination",
+    "method": "GET",
     "error": null
   },
   {
@@ -8089,10 +8089,10 @@
     "line": 550,
     "anchor": "Chosen Before the Foundation of the World",
     "url": "https://www.desiringgod.org/articles/chosen-before-the-foundation-of-the-world/",
-    "classification": "broken",
-    "status": 404,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/chosen-before-the-foundation-of-the-world/",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -8103,7 +8103,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.christianitytoday.com/topics/arminianism/",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -8111,7 +8111,7 @@
     "line": 566,
     "anchor": "Divine Omniscience Scholarly Resources",
     "url": "https://www.reasonablefaith.org/writings/scholarly-writings/divine-omniscience",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.reasonablefaith.org/writings/scholarly-writings/divine-omniscience",
     "method": "GET",
@@ -8144,7 +8144,7 @@
     "line": 439,
     "anchor": "Michael Brown - Christian Post",
     "url": "https://www.christianpost.com/authors/michael-brown/",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.christianpost.com/authors/michael-brown/",
     "method": "GET",
@@ -8310,9 +8310,9 @@
     "anchor": "Why I Abominate the Prosperity Gospel \u2014 Desiring God",
     "url": "https://www.desiringgod.org/articles/why-i-abominate-the-prosperity-gospel",
     "classification": "broken",
-    "status": 403,
+    "status": 404,
     "final_url": "https://www.desiringgod.org/articles/why-i-abominate-the-prosperity-gospel",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -8376,9 +8376,9 @@
     "anchor": "Why I Abominate the Prosperity Gospel",
     "url": "https://www.desiringgod.org/articles/why-i-abominate-the-prosperity-gospel",
     "classification": "broken",
-    "status": 403,
+    "status": 404,
     "final_url": "https://www.desiringgod.org/articles/why-i-abominate-the-prosperity-gospel",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -8639,10 +8639,10 @@
     "line": 555,
     "anchor": "God Made Black and God Made White",
     "url": "https://www.desiringgod.org/articles/god-made-black-and-god-made-white",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/articles/god-made-black-and-god-made-white",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -8727,9 +8727,9 @@
     "line": 465,
     "anchor": "Stanley Hauerwas on the Church and State",
     "url": "https://www.thegospelcoalition.org/blogs/justin-taylor/stanley-hauerwas-church-and-state/",
-    "classification": "broken",
-    "status": 404,
-    "final_url": "https://www.thegospelcoalition.org/blogs/justin-taylor/stanley-hauerwas-church-and-state/",
+    "classification": "live",
+    "status": 200,
+    "final_url": "https://www.thegospelcoalition.org/blogs/justin-taylor/",
     "method": "HEAD",
     "error": null
   },
@@ -8837,8 +8837,8 @@
     "line": 549,
     "anchor": "Two Visions of Religious Liberty",
     "url": "https://firstthings.com/two-visions-of-religious-liberty/",
-    "classification": "live",
-    "status": 200,
+    "classification": "rate_limited",
+    "status": 429,
     "final_url": "https://firstthings.com/two-visions-of-religious-liberty/",
     "method": "HEAD",
     "error": null
@@ -8969,8 +8969,8 @@
     "line": 513,
     "anchor": "Sanctification: So Why the Long Word?",
     "url": "https://www.desiringgod.org/articles/sanctification-so-why-the-long-word",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/sanctification-so-why-the-long-word",
     "method": "GET",
     "error": null
@@ -8992,9 +8992,9 @@
     "anchor": "If I'm Dead to Sin, Why Must I Kill It Every Day?",
     "url": "https://www.desiringgod.org/articles/if-im-dead-to-sin-why-must-i-kill-it-every-day",
     "classification": "broken",
-    "status": 403,
+    "status": 404,
     "final_url": "https://www.desiringgod.org/articles/if-im-dead-to-sin-why-must-i-kill-it-every-day",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -9035,7 +9035,7 @@
     "line": 561,
     "anchor": "The Means of Grace We Might Despise",
     "url": "https://www.desiringgod.org/articles/the-means-of-grace-we-might-despise",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/the-means-of-grace-we-might-despise",
     "method": "GET",
@@ -9068,10 +9068,10 @@
     "line": 468,
     "anchor": "The Good Unwanted Gift of Singleness",
     "url": "https://www.desiringgod.org/articles/the-good-unwanted-gift-of-singleness",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/articles/the-good-unwanted-gift-of-singleness",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -9134,7 +9134,7 @@
     "line": 522,
     "anchor": "Single, Satisfied, and Sent: Mission for the Not-Yet-Married",
     "url": "https://www.desiringgod.org/articles/single-satisfied-and-sent",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/single-satisfied-and-sent",
     "method": "GET",
@@ -9288,7 +9288,7 @@
     "line": 522,
     "anchor": "Let Your Dream Small Group Die",
     "url": "https://www.desiringgod.org/articles/let-your-dream-small-group-die",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/let-your-dream-small-group-die",
     "method": "GET",
@@ -9324,7 +9324,7 @@
     "classification": "broken",
     "status": 404,
     "final_url": "https://www.christianitytoday.com/edstetzer/2014/september/small-groups-and-transformed-life.html",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -9343,8 +9343,8 @@
     "line": 562,
     "anchor": "Us and Them",
     "url": "https://firstthings.com/us-and-them/",
-    "classification": "live",
-    "status": 200,
+    "classification": "rate_limited",
+    "status": 429,
     "final_url": "https://firstthings.com/us-and-them/",
     "method": "HEAD",
     "error": null
@@ -9555,7 +9555,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.christianitytoday.com/2024/06/clergy-sex-abuse-consent-law-crime/",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -9563,10 +9563,10 @@
     "line": 458,
     "anchor": "What Are Spiritual Disciplines?",
     "url": "https://www.desiringgod.org/interviews/what-are-spiritual-disciplines",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/interviews/what-are-spiritual-disciplines",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -9629,10 +9629,10 @@
     "line": 491,
     "anchor": "What Are Spiritual Disciplines?",
     "url": "https://www.desiringgod.org/interviews/what-are-spiritual-disciplines",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/interviews/what-are-spiritual-disciplines",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -9761,7 +9761,7 @@
     "line": 468,
     "anchor": "Spiritual Warfare and Prayer (Desiring God)",
     "url": "https://www.desiringgod.org/messages/spiritual-warfare-and-prayer",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/messages/spiritual-warfare-and-prayer",
     "method": "GET",
@@ -9775,7 +9775,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.desiringgod.org/articles/cosmic-level-spiritual-warfare",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -9816,7 +9816,7 @@
     "line": 514,
     "anchor": "Spiritual Warfare and Prayer",
     "url": "https://www.desiringgod.org/messages/spiritual-warfare-and-prayer",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/messages/spiritual-warfare-and-prayer",
     "method": "GET",
@@ -9885,7 +9885,7 @@
     "classification": "live",
     "status": 200,
     "final_url": "https://www.desiringgod.org/articles/cosmic-level-spiritual-warfare",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -9937,10 +9937,10 @@
     "line": 451,
     "anchor": "Radical by David Platt",
     "url": "https://www.desiringgod.org/books/radical/",
-    "classification": "broken",
-    "status": 404,
-    "final_url": "https://www.desiringgod.org/books/radical/",
-    "method": "HEAD",
+    "classification": "blocked",
+    "status": 403,
+    "final_url": "https://www.desiringgod.org/books/radical",
+    "method": "GET",
     "error": null
   },
   {
@@ -9981,10 +9981,10 @@
     "line": 496,
     "anchor": "Generosity and the Gospel",
     "url": "https://www.desiringgod.org/articles/generosity-and-the-gospel/",
-    "classification": "broken",
-    "status": 404,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/generosity-and-the-gospel/",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -9995,7 +9995,7 @@
     "classification": "broken",
     "status": 404,
     "final_url": "https://www.christianitytoday.com/edstetzer/2012/july/consumerism-and-mission-of-god-closer-look.html",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -10037,9 +10037,9 @@
     "anchor": "The Macedonian Model: Joy and Generosity",
     "url": "https://www.desiringgod.org/articles/joy-of-giving/",
     "classification": "broken",
-    "status": 403,
+    "status": 404,
     "final_url": "https://www.desiringgod.org/articles/joy-of-giving/",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -10069,10 +10069,10 @@
     "line": 560,
     "anchor": "From Lord to Label: How Consumerism Undermines Our Faith",
     "url": "https://www.christianitytoday.com/pastors/2006/july-online-only/from-lord-to-label-how-consumerism-undermines-our-faith.html",
-    "classification": "broken",
-    "status": 404,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.christianitytoday.com/pastors/2006/july-online-only/from-lord-to-label-how-consumerism-undermines-our-faith.html",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -10083,7 +10083,7 @@
     "classification": "broken",
     "status": 404,
     "final_url": "https://www.desiringgod.org/articles/ten-aspects-of-gods-sovereignty-over-suffering",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -10149,7 +10149,7 @@
     "classification": "broken",
     "status": 404,
     "final_url": "https://www.desiringgod.org/articles/ten-aspects-of-gods-sovereignty-over-suffering",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -10190,7 +10190,7 @@
     "line": 540,
     "anchor": "Dare to Hope in God: How to Lament Well",
     "url": "https://www.desiringgod.org/articles/dare-to-hope-in-god",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/dare-to-hope-in-god",
     "method": "GET",
@@ -10278,10 +10278,10 @@
     "line": 469,
     "anchor": "Two Keys to Flourishing in the Digital Age",
     "url": "https://www.desiringgod.org/articles/two-keys-to-flourishing-in-the-digital-age",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/two-keys-to-flourishing-in-the-digital-age",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -10333,10 +10333,10 @@
     "line": 515,
     "anchor": "Two Keys to Flourishing in the Digital Age",
     "url": "https://www.desiringgod.org/articles/two-keys-to-flourishing-in-the-digital-age",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/two-keys-to-flourishing-in-the-digital-age",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -10454,10 +10454,10 @@
     "line": 469,
     "anchor": "Discipleship in the Age of the Spectacle",
     "url": "https://www.desiringgod.org/articles/discipleship-in-the-age-of-the-spectacle",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/articles/discipleship-in-the-age-of-the-spectacle",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -10509,10 +10509,10 @@
     "line": 515,
     "anchor": "Discipleship in the Age of the Spectacle",
     "url": "https://www.desiringgod.org/articles/discipleship-in-the-age-of-the-spectacle",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/articles/discipleship-in-the-age-of-the-spectacle",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
@@ -10641,10 +10641,10 @@
     "line": 465,
     "anchor": "The Mystery of the Trinity",
     "url": "https://www.desiringgod.org/articles/the-mystery-of-the-trinity/",
-    "classification": "broken",
-    "status": 404,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/the-mystery-of-the-trinity/",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -10762,7 +10762,7 @@
     "line": 515,
     "anchor": "Christian, Your Job Is a Ministry Job",
     "url": "https://www.desiringgod.org/articles/christian-your-job-is-a-ministry-job",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/christian-your-job-is-a-ministry-job",
     "method": "GET",
@@ -10795,10 +10795,10 @@
     "line": 539,
     "anchor": "God's Work and Ours: An Interview with Timothy Keller",
     "url": "https://www.desiringgod.org/interviews/gods-work-and-ours-an-interview-with-timothy-keller",
-    "classification": "live",
-    "status": 200,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/interviews/gods-work-and-ours-an-interview-with-timothy-keller",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -10894,7 +10894,7 @@
     "line": 469,
     "anchor": "On Contemporary Hymnody (Desiring God)",
     "url": "https://www.desiringgod.org/articles/contemporary-hymnody",
-    "classification": "broken",
+    "classification": "blocked",
     "status": 403,
     "final_url": "https://www.desiringgod.org/articles/contemporary-hymnody",
     "method": "GET",
@@ -10938,10 +10938,10 @@
     "line": 514,
     "anchor": "Worship Is Not Music",
     "url": "https://www.desiringgod.org/articles/worship-is-not-music",
-    "classification": "broken",
-    "status": 404,
+    "classification": "blocked",
+    "status": 403,
     "final_url": "https://www.desiringgod.org/articles/worship-is-not-music",
-    "method": "HEAD",
+    "method": "GET",
     "error": null
   },
   {
@@ -10982,10 +10982,10 @@
     "line": 546,
     "anchor": "Corporate Worship Is a Call to Love",
     "url": "https://www.desiringgod.org/articles/corporate-worship-is-a-call-to-love",
-    "classification": "broken",
-    "status": 403,
+    "classification": "live",
+    "status": 200,
     "final_url": "https://www.desiringgod.org/articles/corporate-worship-is-a-call-to-love",
-    "method": "GET",
+    "method": "HEAD",
     "error": null
   },
   {
