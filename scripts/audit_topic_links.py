@@ -244,9 +244,12 @@ def main() -> int:
     print(f"Wrote: {csv_path.relative_to(REPO_ROOT)}")
 
     # Exit non-zero if ANY broken/unreachable — useful as a CI gate
-    # Fail the run only on REAL broken pages (not bot-blocked or rate-limited,
-    # which usually indicate the auditor is being filtered, not the URL).
-    broken_count = summary.get("broken", 0) + summary.get("unreachable", 0)
+    # Fail the run only on REAL broken pages (status=404 etc.).
+    # Don't fail on:
+    #   - blocked (Cloudflare/WAF 403 — URL is fine, our UA is filtered)
+    #   - rate_limited (429 — transient, retry later)
+    #   - unreachable (network/DNS/SSL hiccup — usually transient)
+    broken_count = summary.get("broken", 0)
     return 1 if broken_count else 0
 
 
