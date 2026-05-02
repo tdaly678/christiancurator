@@ -6823,5 +6823,150 @@
     "website": "",
     "books": [],
     "initials": "GMB"
+  },
+  {
+    "name": "E. J. Hutchinson",
+    "slug": "e-j-hutchinson",
+    "bio": "E. J. Hutchinson is a scholar and writer focused on classical education, theology, and the intersection of faith and learning. His work emphasizes the importance of Christian intellectual formation and the study of ancient texts within a faith perspective.",
+    "affiliation": "Hillsdale College",
+    "role": "Associate Professor & Scholar",
+    "education": "PhD, University of Aberdeen",
+    "website": "",
+    "books": [
+      {
+        "title": "Reading the Gospels Wisely: A Narrative and Theological Introduction",
+        "amazon_url": "https://www.amazon.com/s?k=Reading+the+Gospels+Wisely+E.J.+Hutchinson"
+      }
+    ],
+    "initials": "EJH"
+  },
+  {
+    "name": "Keith Mathison",
+    "slug": "keith-mathison",
+    "bio": "Keith Mathison is a Reformed theologian and author known for his accessible writings on Christian doctrine and biblical interpretation. He has contributed significantly to contemporary Reformed theology through his books and articles, helping believers understand the foundations of their faith.",
+    "affiliation": "Ligonier Ministries",
+    "role": "Theologian & Author",
+    "education": "Master of Arts in Religion, Reformed Theological Seminary",
+    "website": "",
+    "books": [
+      {
+        "title": "The Shape of Things to Come: A Study of Systematic Eschatology",
+        "amazon_url": "https://www.amazon.com/s?k=The+Shape+of+Things+to+Come+Keith+Mathison"
+      },
+      {
+        "title": "Given For You: Reclaiming Calvin's Doctrine of the Lord's Supper",
+        "amazon_url": "https://www.amazon.com/s?k=Given+For+You+Keith+Mathison"
+      },
+      {
+        "title": "Postmillennialism: An Eschatology of Hope",
+        "amazon_url": "https://www.amazon.com/s?k=Postmillennialism+Keith+Mathison"
+      },
+      {
+        "title": "The Complete James Jordan Bibliography",
+        "amazon_url": "https://www.amazon.com/s?k=Complete+James+Jordan+Bibliography+Keith+Mathison"
+      }
+    ],
+    "initials": "KM"
+  },
+  {
+    "name": "Michael Hidalgo",
+    "slug": "michael-hidalgo",
+    "bio": "Michael Hidalgo is a pastor, author, and spiritual director who has dedicated his ministry to helping Christians integrate their faith into everyday life. He has served as a lead pastor and has written extensively on discipleship, spiritual formation, and living out biblical values in a secular culture. His work encourages believers toward deeper commitment to Christ and authentic Christian community.",
+    "affiliation": "Denver Bible Church",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Practicing the Way of Jesus",
+        "amazon_url": "https://www.amazon.com/s?k=Practicing+the+Way+of+Jesus+Michael+Hidalgo"
+      },
+      {
+        "title": "Redeeming Sex",
+        "amazon_url": "https://www.amazon.com/s?k=Redeeming+Sex+Michael+Hidalgo"
+      },
+      {
+        "title": "Spiritual Friendship",
+        "amazon_url": "https://www.amazon.com/s?k=Spiritual+Friendship+Michael+Hidalgo"
+      }
+    ],
+    "initials": "MH"
+  },
+  {
+    "name": "Alyson Punzi",
+    "slug": "alyson-punzi",
+    "bio": "Alyson Punzi is a Christian writer and content creator dedicated to helping believers grow in their faith and understanding of Scripture. Through her writing and speaking, she offers practical insights for living out biblical principles in everyday life.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AP"
+  },
+  {
+    "name": "Bekah McCallum",
+    "slug": "bekah-mccallum",
+    "bio": "Bekah McCallum is a Christian author and speaker passionate about helping women navigate faith, motherhood, and modern life with biblical wisdom. She writes thoughtfully about grace, discipleship, and the everyday challenges of following Jesus in contemporary culture.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BM"
+  },
+  {
+    "name": "Andrew Barber",
+    "slug": "andrew-barber",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AB"
+  },
+  {
+    "name": "Jim Tankersley",
+    "slug": "jim-tankersley",
+    "bio": "Jim Tankersley is an economics reporter and columnist who brings thoughtful analysis to complex policy issues affecting American families. His work explores how economic decisions impact faith communities and everyday life, offering readers a Christian perspective on financial stewardship and social responsibility.",
+    "affiliation": "New York Times",
+    "role": "Economics Columnist & Reporter",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JT"
+  },
+  {
+    "name": "David Luhnow",
+    "slug": "david-luhnow",
+    "bio": "David Luhnow is a journalist and author known for his investigative reporting on Latin America and international affairs. While not primarily a Christian content creator, his work often explores themes of faith, culture, and social justice that resonate with thoughtful Christian readers.",
+    "affiliation": "The Wall Street Journal, The New Yorker",
+    "role": "Journalist & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DL"
+  },
+  {
+    "name": "Michael Schwirtz and Tomas Dapkus",
+    "slug": "michael-schwirtz-and-tomas-dapkus",
+    "bio": "Michael Schwirtz and Tomas Dapkus are journalists who have reported extensively on religious freedom, persecution, and faith communities around the world. Their investigative work has brought important stories of Christian witness and resilience to global audiences through major publications.",
+    "affiliation": "The New York Times",
+    "role": "Journalists & Reporters",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MS-TD"
+  },
+  {
+    "name": "Benoit Faucon",
+    "slug": "benoit-faucon",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BF"
   }
 ]
