@@ -15,7 +15,9 @@ OUTPUT_HTML = DOCS_DIR / "index.html"
 DAILY_DIR = DOCS_DIR / "daily"
 ARCHIVE_DIR = DOCS_DIR / "archive"
 DIGEST_DIR = DOCS_DIR / "digest"
+VOICES_DIR = DOCS_DIR / "voices"
 SITEMAP_PATH = DOCS_DIR / "sitemap.xml"
+SITEMAP_DIR = DOCS_DIR  # per-section sitemap files live alongside sitemap.xml
 RESEARCH_ARTICLES_PATH = DOCS_DIR / "research_articles.json"
 
 # Sources whose articles always qualify for the Research & Data section
@@ -1299,47 +1301,18 @@ def render_archive_index(env: Environment):
 TOPICS_DIR = DOCS_DIR / "topics"
 
 
-def regenerate_sitemap():
-    """Regenerate sitemap.xml to include the homepage + all daily, archive, and topic pages."""
-    today_iso = date.today().isoformat()
+def _file_mtime_iso(path):
+    """Return the file's mtime as a YYYY-MM-DD string, or today if unreadable."""
+    try:
+        from datetime import datetime, timezone
+        ts = path.stat().st_mtime
+        return datetime.fromtimestamp(ts, tz=timezone.utc).date().isoformat()
+    except Exception:
+        return date.today().isoformat()
 
-    # Each entry: (url, changefreq, priority, lastmod)
-    entries = [
-        ("https://www.christiancurator.com/", "daily", "1.0", today_iso),
-        ("https://www.christiancurator.com/digest/", "daily", "0.9", today_iso),
-        ("https://www.christiancurator.com/about/", "monthly", "0.8", today_iso),
-    ]
 
-    # Daily pulse pages
-    if DAILY_DIR.exists():
-        for day_dir in sorted(DAILY_DIR.iterdir()):
-            if day_dir.is_dir() and (day_dir / "index.html").exists():
-                entries.append((
-                    f"https://www.christiancurator.com/daily/{day_dir.name}/",
-                    "never", "0.8", day_dir.name,
-                ))
-
-    # Archive index (changes every day)
-    entries.append(("https://www.christiancurator.com/archive/", "daily", "0.7", today_iso))
-
-    # Individual archive pages
-    if ARCHIVE_DIR.exists():
-        for day_dir in sorted(ARCHIVE_DIR.iterdir()):
-            if day_dir.is_dir() and (day_dir / "index.html").exists():
-                entries.append((
-                    f"https://www.christiancurator.com/archive/{day_dir.name}/",
-                    "never", "0.6", day_dir.name,
-                ))
-
-    # Individual topic pages (topics/index.html redirects to home — excluded from sitemap)
-    if TOPICS_DIR.exists():
-        for topic_dir in sorted(TOPICS_DIR.iterdir()):
-            if topic_dir.is_dir() and (topic_dir / "index.html").exists():
-                entries.append((
-                    f"https://www.christiancurator.com/topics/{topic_dir.name}/",
-                    "monthly", "0.85", today_iso,
-                ))
-
+def _write_urlset(path, entries):
+    """Write a sitemap urlset file. entries = [(url, changefreq, priority, lastmod), ...]"""
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for url, changefreq, priority, lastmod in entries:
@@ -1352,7 +1325,109 @@ def regenerate_sitemap():
             "  </url>",
         ]
     lines.append("</urlset>")
-
-    with open(SITEMAP_PATH, "w", encoding="utf-8") as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
-    print(f"  Regenerated sitemap with {len(entries)} URL(s).")
+
+
+def regenerate_sitemap():
+    """Regenerate sitemap.xml as a sitemap-index pointing to per-section sitemaps.
+
+    Sections: core (home/digest/about/hub indexes), topics, voices, daily, archive.
+    Each per-section sitemap uses accurate per-page lastmod (file mtime).
+
+    Priority/changefreq tuned to favor deep evergreen content (topics, voices)
+    over high-volume frozen content (daily/archive individual snapshots).
+    """
+    today_iso = date.today().isoformat()
+    base = "https://www.christiancurator.com"
+
+    # --- Core hub URLs (always-on, high priority) ---
+    core_entries = [
+        (f"{base}/",        "daily",   "1.0", today_iso),
+        (f"{base}/digest/", "daily",   "0.9", today_iso),
+        (f"{base}/about/",  "monthly", "0.6", today_iso),
+        (f"{base}/archive/","daily",   "0.7", today_iso),
+    ]
+    if (TOPICS_DIR / "index.html").exists():
+        core_entries.append((f"{base}/topics/", "weekly", "0.8",
+                             _file_mtime_iso(TOPICS_DIR / "index.html")))
+    if (VOICES_DIR / "index.html").exists():
+        core_entries.append((f"{base}/voices/", "weekly", "0.8",
+                             _file_mtime_iso(VOICES_DIR / "index.html")))
+
+    # --- Topics (deepest evergreen content) ---
+    topic_entries = []
+    if TOPICS_DIR.exists():
+        for topic_dir in sorted(TOPICS_DIR.iterdir()):
+            idx = topic_dir / "index.html"
+            if topic_dir.is_dir() and idx.exists():
+                topic_entries.append((
+                    f"{base}/topics/{topic_dir.name}/",
+                    "weekly", "0.9", _file_mtime_iso(idx),
+                ))
+
+    # --- Voices (deep author/contributor profiles) ---
+    voice_entries = []
+    if VOICES_DIR.exists():
+        for voice_dir in sorted(VOICES_DIR.iterdir()):
+            idx = voice_dir / "index.html"
+            if voice_dir.is_dir() and idx.exists():
+                voice_entries.append((
+                    f"{base}/voices/{voice_dir.name}/",
+                    "monthly", "0.9", _file_mtime_iso(idx),
+                ))
+
+    # --- Daily pulse pages (frozen snapshots, lower priority to preserve crawl budget) ---
+    daily_entries = []
+    if DAILY_DIR.exists():
+        for day_dir in sorted(DAILY_DIR.iterdir()):
+            idx = day_dir / "index.html"
+            if day_dir.is_dir() and idx.exists():
+                daily_entries.append((
+                    f"{base}/daily/{day_dir.name}/",
+                    "never", "0.5", day_dir.name,
+                ))
+
+    # --- Individual archive pages ---
+    archive_entries = []
+    if ARCHIVE_DIR.exists():
+        for day_dir in sorted(ARCHIVE_DIR.iterdir()):
+            idx = day_dir / "index.html"
+            if day_dir.is_dir() and idx.exists():
+                archive_entries.append((
+                    f"{base}/archive/{day_dir.name}/",
+                    "never", "0.5", day_dir.name,
+                ))
+
+    # Write per-section sitemaps
+    sections = [
+        ("sitemap-core.xml",    core_entries),
+        ("sitemap-topics.xml",  topic_entries),
+        ("sitemap-voices.xml",  voice_entries),
+        ("sitemap-daily.xml",   daily_entries),
+        ("sitemap-archive.xml", archive_entries),
+    ]
+    written = []
+    for filename, entries in sections:
+        if not entries:
+            continue
+        _write_urlset(SITEMAP_DIR / filename, entries)
+        written.append((filename, len(entries)))
+
+    # Write sitemap index at /sitemap.xml
+    idx_lines = ['<?xml version="1.0" encoding="UTF-8"?>',
+                 '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for filename, _count in written:
+        idx_lines += [
+            "  <sitemap>",
+            f"    <loc>{base}/{filename}</loc>",
+            f"    <lastmod>{today_iso}</lastmod>",
+            "  </sitemap>",
+        ]
+    idx_lines.append("</sitemapindex>")
+    with open(SITEMAP_PATH, "w", encoding="utf-8") as f:
+        f.write("\n".join(idx_lines) + "\n")
+
+    total = sum(c for _, c in written)
+    detail = ", ".join(f"{n}={c}" for n, c in written)
+    print(f"  Regenerated sitemap index with {total} URL(s) across {len(written)} sitemaps ({detail}).")

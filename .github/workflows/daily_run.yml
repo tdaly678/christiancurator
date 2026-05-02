@@ -42,6 +42,18 @@ jobs:
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
         run: python3 main.py ${{ github.event.inputs.force_email == 'true' && '--force-email' || '' }}
 
+      - name: Backfill orphan voice pages into voices_data.json
+        run: python3 scripts/backfill_voices_data.py
+
+      - name: Rebuild /topics/ hub index
+        run: python3 scripts/build_topics_index.py
+
+      - name: Inject Featured deep dives block into homepage + digest
+        run: python3 scripts/inject_featured_deep_dives.py
+
+      - name: Regenerate sitemap (post-injection)
+        run: python3 -c "import sys;sys.path.insert(0,'.');from frontend import regenerate_sitemap;regenerate_sitemap()"
+
       - name: Build Pagefind search index
         run: npx pagefind@latest --site docs --output-path docs/_pagefind
 
@@ -50,6 +62,15 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash origin main
-          git add docs/index.html docs/digest/ docs/yesterday.json docs/email_draft.html docs/article_history.json docs/research_articles.json docs/sitemap.xml docs/archive/ docs/daily/ docs/_pagefind/ docs/voices/ docs/voices_data.json docs/spotlight_topic_log.json
+          git add docs/index.html docs/digest/ docs/yesterday.json docs/email_draft.html docs/article_history.json docs/research_articles.json docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-topics.xml docs/sitemap-voices.xml docs/sitemap-daily.xml docs/sitemap-archive.xml docs/archive/ docs/daily/ docs/_pagefind/ docs/voices/ docs/voices_data.json docs/spotlight_topic_log.json
           git diff --staged --quiet || git commit -m "chore: daily curator run $(date -u +%Y-%m-%d)"
           git push origin main
+
+      - name: Ping IndexNow with changed URLs
+        # IndexNow notifies Bing / Yandex / Seznam / DuckDuckGo of changed pages.
+        # Google does NOT use IndexNow, but submitting accelerates indexing on the others
+        # and signals freshness, which is generally cheap and beneficial.
+        # Runs AFTER the commit step so HEAD~1 vs HEAD diffs exactly the run's changes.
+        if: success()
+        run: python3 scripts/indexnow_ping.py
+        continue-on-error: true
