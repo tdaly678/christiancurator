@@ -23,6 +23,12 @@ on:
 permissions:
   contents: write
 
+# Only let one audit run at a time. If a new audit is triggered while one is
+# running, queue it (cancel-in-progress: false) so we don't lose data.
+concurrency:
+  group: link-audit
+  cancel-in-progress: false
+
 jobs:
   audit:
     runs-on: ubuntu-latest
