@@ -67,12 +67,42 @@ jobs:
         # Commit on workflow_dispatch when commit_report=true (default) OR on any push trigger.
         if: ${{ github.event_name == 'push' || github.event.inputs.commit_report == 'true' }}
         run: |
+          set -euo pipefail
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase --autostash origin main
-          git add output/link_audit/report.json output/link_audit/report.csv
-          git diff --staged --quiet || git commit -m "chore: link audit $(date -u +%Y-%m-%d)"
-          git push origin main
+
+          # Stash the freshly-generated report files outside the working tree
+          # so a hard reset can't blow them away.
+          mkdir -p /tmp/link_audit_new
+          cp output/link_audit/report.json /tmp/link_audit_new/report.json
+          cp output/link_audit/report.csv  /tmp/link_audit_new/report.csv
+
+          # Retry-loop: if someone else pushed between our fetch and push, the
+          # push will fail with non-fast-forward; we redo the dance.
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+
+            # Restore our new reports after the reset.
+            mkdir -p output/link_audit
+            cp /tmp/link_audit_new/report.json output/link_audit/report.json
+            cp /tmp/link_audit_new/report.csv  output/link_audit/report.csv
+
+            git add output/link_audit/report.json output/link_audit/report.csv
+            if git diff --staged --quiet; then
+              echo "Report unchanged vs. main — nothing to commit."
+              exit 0
+            fi
+            git commit -m "chore: link audit $(date -u +%Y-%m-%d)"
+
+            if git push origin main; then
+              exit 0
+            fi
+            echo "Push failed (attempt $attempt) — refetching and retrying..."
+            sleep 2
+          done
+          echo "Could not push after 5 attempts." >&2
+          exit 1
 
       - name: Fail the job if broken links were found
         if: steps.audit.outcome == 'failure'

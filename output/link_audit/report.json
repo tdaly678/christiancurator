@@ -2633,17 +2633,10 @@
     "line": 454,
     "anchor": "Overseers of the Flock",
     "url": "https://www.desiringgod.org/articles/overseers-of-the-flock/",
-<<<<<<< Updated upstream
     "classification": "broken",
     "status": 404,
     "final_url": "https://www.desiringgod.org/articles/overseers-of-the-flock/",
     "method": "HEAD",
-=======
-    "classification": "blocked",
-    "status": 403,
-    "final_url": "https://www.desiringgod.org/articles/overseers-of-the-flock/",
-    "method": "GET",
->>>>>>> Stashed changes
     "error": null
   },
   {
@@ -4015,17 +4008,10 @@
     "line": 538,
     "anchor": "Genesis and Evolution",
     "url": "https://www.desiringgod.org/interviews/do-you-accept-old-earth-and-evolution",
-<<<<<<< Updated upstream
     "classification": "live",
     "status": 200,
     "final_url": "https://www.desiringgod.org/interviews/do-you-accept-old-earth-and-evolution",
     "method": "HEAD",
-=======
-    "classification": "blocked",
-    "status": 403,
-    "final_url": "https://www.desiringgod.org/interviews/do-you-accept-old-earth-and-evolution",
-    "method": "GET",
->>>>>>> Stashed changes
     "error": null
   },
   {
