@@ -48,12 +48,23 @@ OUT_DIR = REPO_ROOT / "output" / "link_audit"
 
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-    "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15"
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 )
 HEADERS = {
     "User-Agent": UA,
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Cache-Control": "no-cache",
+    "Pragma": "no-cache",
+    "Sec-Ch-Ua": '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+    "Sec-Ch-Ua-Mobile": "?0",
+    "Sec-Ch-Ua-Platform": '"macOS"',
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Upgrade-Insecure-Requests": "1",
 }
 TIMEOUT = 25
 MIN_GAP_SECONDS = 0.6  # per-domain politeness gap
@@ -94,6 +105,13 @@ class CheckResult:
             cls_ = "live"
         elif status and status < 400:
             cls_ = "redirect"  # rare — we allow_redirects=True so most land as 2xx
+        elif status == 403:
+            # Persistent 403 after HEAD+GET fallback is almost always Cloudflare /
+            # WAF bot-blocking, not a real broken page. Treat as 'blocked' so
+            # human reviewers don't waste cycles re-curating live URLs.
+            cls_ = "blocked"
+        elif status == 429:
+            cls_ = "rate_limited"
         else:
             cls_ = "broken"
         return cls(url=url, status=status, final_url=final_url, method=method, error=error, classification=cls_)
@@ -215,16 +233,19 @@ def main() -> int:
     from collections import Counter
     summary = Counter(r["classification"] for r in rows)
     unique_summary = Counter(r.classification for r in results.values())
+    cats = ("live", "redirect", "broken", "blocked", "rate_limited", "unreachable")
     print("\nResult summary (link occurrences):")
-    for k in ("live", "redirect", "broken", "unreachable"):
+    for k in cats:
         print(f"  {k:12s} {summary.get(k, 0)}")
     print("\nResult summary (unique URLs):")
-    for k in ("live", "redirect", "broken", "unreachable"):
+    for k in cats:
         print(f"  {k:12s} {unique_summary.get(k, 0)}")
     print(f"\nWrote: {json_path.relative_to(REPO_ROOT)}")
     print(f"Wrote: {csv_path.relative_to(REPO_ROOT)}")
 
     # Exit non-zero if ANY broken/unreachable — useful as a CI gate
+    # Fail the run only on REAL broken pages (not bot-blocked or rate-limited,
+    # which usually indicate the auditor is being filtered, not the URL).
     broken_count = summary.get("broken", 0) + summary.get("unreachable", 0)
     return 1 if broken_count else 0
 
