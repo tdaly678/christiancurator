@@ -7177,5 +7177,118 @@
     "website": "",
     "books": [],
     "initials": "OAB"
+  },
+  {
+    "name": "Jenny Hietbrink",
+    "slug": "jenny-hietbrink",
+    "bio": "Jenny Hietbrink is a Christian author and speaker dedicated to helping believers deepen their faith and understanding of Scripture. Through her writing and teaching, she encourages readers to encounter God's Word in fresh and transformative ways.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JH"
+  },
+  {
+    "name": "Stephen Spinnenweber",
+    "slug": "stephen-spinnenweber",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SS"
+  },
+  {
+    "name": "Peter Mead",
+    "slug": "peter-mead",
+    "bio": "Peter Mead is a Bible teacher and author known for his accessible approach to Scripture and pastoral insights. He has served in various ministry contexts and is recognized for his work helping Christians engage more deeply with God's Word through thoughtful exposition and application.",
+    "affiliation": "Sola Network; Various churches and ministry organizations",
+    "role": "Bible Teacher & Author",
+    "education": "",
+    "website": "https://www.petermeadministries.com",
+    "books": [
+      {
+        "title": "Pleased to Dwell: Old Testament Meditations for New Testament Christians",
+        "amazon_url": "https://www.amazon.com/s?k=Pleased+to+Dwell+Peter+Mead"
+      },
+      {
+        "title": "The Message of Leviticus",
+        "amazon_url": "https://www.amazon.com/s?k=The+Message+of+Leviticus+Peter+Mead"
+      }
+    ],
+    "initials": "PM"
+  },
+  {
+    "name": "Matt Boga",
+    "slug": "matt-boga",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MB"
+  },
+  {
+    "name": "Skylar Spradlin",
+    "slug": "skylar-spradlin",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SS"
+  },
+  {
+    "name": "Betsy Childs Howard",
+    "slug": "betsy-childs-howard",
+    "bio": "Betsy Childs Howard is a writer and editor who contributes regularly to The Gospel Coalition and other Christian publications. She explores themes of faith, family, and Christian living with thoughtfulness and grace, helping readers navigate their spiritual journeys with biblical wisdom.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Modesty: A Tim Challies Series",
+        "amazon_url": "https://www.amazon.com/s?k=Betsy+Childs+Howard+Modesty"
+      }
+    ],
+    "initials": "BCH"
+  },
+  {
+    "name": "Adrienne Matei",
+    "slug": "adrienne-matei",
+    "bio": "Adrienne Matei is a writer and journalist who explores themes of faith, culture, and identity. Her work has appeared in various publications where she examines contemporary issues through thoughtful, nuanced perspectives.",
+    "affiliation": "",
+    "role": "Writer & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AM"
+  },
+  {
+    "name": "Pragati K.B.",
+    "slug": "pragati-kb",
+    "bio": "Pragati K.B. is a Christian content creator and writer dedicated to sharing faith-focused insights with contemporary audiences. Her work emphasizes spiritual growth, biblical reflection, and practical Christian living for today's believers.",
+    "affiliation": "",
+    "role": "Content Creator & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PKB"
+  },
+  {
+    "name": "Vera Bergengruen",
+    "slug": "vera-bergengruen",
+    "bio": "Vera Bergengruen is a German-American author and journalist known for her thoughtful writing on faith, culture, and contemporary issues from a Christian perspective. Her work has appeared in major Christian and secular publications, where she explores the intersection of belief and modern life with nuance and insight.",
+    "affiliation": "Christianity Today, The Atlantic, Religion News Service",
+    "role": "Author & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "VB"
   }
 ]
