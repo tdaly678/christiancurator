@@ -7290,5 +7290,146 @@
     "website": "",
     "books": [],
     "initials": "VB"
+  },
+  {
+    "name": "Lyndon Jost",
+    "slug": "lyndon-jost",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LJ"
+  },
+  {
+    "name": "Brian Pell",
+    "slug": "brian-pell",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BP"
+  },
+  {
+    "name": "Brad Edwards",
+    "slug": "brad-edwards",
+    "bio": "Brad Edwards is a Christian author and speaker known for his work on biblical leadership and spiritual formation. He has contributed to various Christian publications and speaks at churches and conferences on topics related to faith, discipleship, and Christian living.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BE"
+  },
+  {
+    "name": "Caleb Cangelosi",
+    "slug": "caleb-cangelosi",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CC"
+  },
+  {
+    "name": "Tyler Hurst",
+    "slug": "tyler-hurst",
+    "bio": "Tyler Hurst is a Christian writer and content creator focused on faith, discipleship, and practical theology. He engages with contemporary issues through a biblical lens, helping believers think deeply about their faith and its application to daily life.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TH"
+  },
+  {
+    "name": "Phil Cotnoir",
+    "slug": "phil-cotnoir",
+    "bio": "Phil Cotnoir is a Christian author and communicator dedicated to helping believers deepen their faith and understanding of Scripture. His work focuses on making biblical truth accessible and practical for modern Christians seeking spiritual growth.",
+    "affiliation": "",
+    "role": "Author & Christian Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PC"
+  },
+  {
+    "name": "Rebecca Salazar",
+    "slug": "rebecca-salazar",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RS"
+  },
+  {
+    "name": "William Boekestein",
+    "slug": "william-boekestein",
+    "bio": "William Boekestein is a Reformed pastor and author who has served churches in the evangelical tradition while contributing to Christian publishing. He brings theological depth and pastoral wisdom to his writing on faith, Scripture, and Christian living.",
+    "affiliation": "Reformation Heritage Books; Christ Covenant Church",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Comfort in Sorrow: The Psalms of Lament",
+        "amazon_url": "https://www.amazon.com/s?k=Comfort+in+Sorrow+Psalms+of+Lament+William+Boekestein"
+      },
+      {
+        "title": "Day by Day in God's Kingdom",
+        "amazon_url": "https://www.amazon.com/s?k=Day+by+Day+in+God%27s+Kingdom+William+Boekestein"
+      }
+    ],
+    "initials": "WB"
+  },
+  {
+    "name": "Steven Morris",
+    "slug": "steven-morris",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SM"
+  },
+  {
+    "name": "Kimberley Kao",
+    "slug": "kimberley-kao",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KK"
+  },
+  {
+    "name": "Elisabetta Povoledo",
+    "slug": "elisabetta-povoledo",
+    "bio": "Elisabetta Povoledo is a journalist and Rome correspondent known for her coverage of Vatican affairs and religious news for major international publications. Her reporting offers insights into the Catholic Church's activities, papal developments, and the intersection of faith and culture in contemporary society.",
+    "affiliation": "The New York Times",
+    "role": "Journalist & Vatican Correspondent",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EP"
+  },
+  {
+    "name": "Lara Seligman",
+    "slug": "lara-seligman",
+    "bio": "Lara Seligman is a national security correspondent and journalist who covers defense, military affairs, and foreign policy. While not primarily known as a Christian content creator, her reporting often touches on faith-based perspectives in global affairs and humanitarian contexts.",
+    "affiliation": "POLITICO",
+    "role": "National Security Correspondent & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LS"
   }
 ]
