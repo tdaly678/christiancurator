@@ -7431,5 +7431,176 @@
     "website": "",
     "books": [],
     "initials": "LS"
+  },
+  {
+    "name": "Mia Staub",
+    "slug": "mia-staub",
+    "bio": "Mia Staub is a Christian writer and content creator dedicated to sharing faith-centered insights with modern audiences. Her work explores themes of spiritual growth, biblical living, and authentic discipleship for contemporary believers.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MS"
+  },
+  {
+    "name": "Kendall Lankford",
+    "slug": "kendall-lankford",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KL"
+  },
+  {
+    "name": "Chandler Vannoy",
+    "slug": "chandler-vannoy",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CV"
+  },
+  {
+    "name": "Daniel Nealon",
+    "slug": "daniel-nealon",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DN"
+  },
+  {
+    "name": "Christina Fox",
+    "slug": "christina-fox",
+    "bio": "Christina Fox is a writer and speaker who addresses faith, family, and the Christian life with warmth and biblical insight. She contributes to various Christian publications and platforms, helping readers navigate motherhood, marriage, and spiritual growth from a Reformed perspective.",
+    "affiliation": "Crossway, The Gospel Coalition",
+    "role": "Author & Writer",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Risen Motherhood: Gospel Hope for the Daily Grind",
+        "amazon_url": "https://www.amazon.com/s?k=Risen+Motherhood+Gospel+Hope+Daily+Grind+Christina+Fox"
+      },
+      {
+        "title": "A Holy Calling: Sanctification for Stay-at-Home Moms",
+        "amazon_url": "https://www.amazon.com/s?k=A+Holy+Calling+Sanctification+Stay+at+Home+Moms+Christina+Fox"
+      },
+      {
+        "title": "Journeying Through Proverbs: A 31-Day Journey with God's Wisdom",
+        "amazon_url": "https://www.amazon.com/s?k=Journeying+Through+Proverbs+31+Day+Journey+Gods+Wisdom+Christina+Fox"
+      }
+    ],
+    "initials": "CF"
+  },
+  {
+    "name": "Wil Moore",
+    "slug": "wil-moore",
+    "bio": "Wil Moore is a Christian writer and content creator dedicated to exploring faith, culture, and discipleship. His work engages contemporary issues through a biblical lens, encouraging believers to think deeply about their relationship with Christ and the world around them.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "WM"
+  },
+  {
+    "name": "Joe Carter",
+    "slug": "joe-carter",
+    "bio": "Joe Carter is a senior editor at The Gospel Coalition and a prolific Christian writer and editor known for making complex theological and cultural topics accessible to evangelical audiences. With a background in journalism and ministry, he brings both analytical rigor and pastoral concern to issues at the intersection of faith, culture, and public life.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Senior Editor & Writer",
+    "education": "Master of Arts in Theological Studies, Southern Baptist Theological Seminary",
+    "website": "https://www.joecarter.me",
+    "books": [
+      {
+        "title": "How to Argue Like Jesus: Learning Persuasion from History's Greatest Communicator",
+        "amazon_url": "https://www.amazon.com/s?k=How+to+Argue+Like+Jesus+Joe+Carter"
+      },
+      {
+        "title": "The Unspoken Rules of Evangelical Christianity",
+        "amazon_url": "https://www.amazon.com/s?k=The+Unspoken+Rules+of+Evangelical+Christianity+Joe+Carter"
+      }
+    ],
+    "initials": "JC"
+  },
+  {
+    "name": "Paul Vieira",
+    "slug": "paul-vieira",
+    "bio": "Paul Vieira is a Christian writer and content creator dedicated to exploring faith, Scripture, and discipleship for contemporary audiences. His work focuses on helping believers deepen their understanding of God's Word and live out their faith in practical, meaningful ways.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PV"
+  },
+  {
+    "name": "Robbie Gramer",
+    "slug": "robbie-gramer",
+    "bio": "Robbie Gramer is a journalist and foreign policy correspondent known for his reporting on international affairs and geopolitical issues. While his primary work focuses on secular news outlets, his analytical approach to global events and ethical journalism reflects values that resonate with thoughtful Christian readers interested in understanding world events through a principled lens.",
+    "affiliation": "Foreign Policy Magazine",
+    "role": "Journalist & Foreign Policy Correspondent",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RG"
+  },
+  {
+    "name": "Max Kim",
+    "slug": "max-kim",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MK"
+  },
+  {
+    "name": "Lynsey Chutel and Claire Moses",
+    "slug": "lynsey-chutel-and-claire-moses",
+    "bio": "Lynsey Chutel is an award-winning journalist covering African affairs and global development, while Claire Moses is a culture reporter and writer. Together and individually, they have contributed thoughtful reporting on social issues, human interest stories, and cultural trends to major publications.",
+    "affiliation": "The New York Times",
+    "role": "Journalists & Writers",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LCC"
+  },
+  {
+    "name": "David E. Sanger",
+    "slug": "david-e-sanger",
+    "bio": "David E. Sanger is a renowned national security correspondent and bestselling author who has spent decades investigating complex geopolitical issues affecting America and the world. His meticulously researched works examine the intersection of technology, politics, and global power dynamics with clarity and insight. For Christian readers interested in understanding contemporary world events through an informed journalistic lens, Sanger's analyses provide valuable context for informed citizenship and prayer.",
+    "affiliation": "The New York Times",
+    "role": "National Security Correspondent & Author",
+    "education": "Harvard University",
+    "website": "https://www.nytimes.com/by/david-e-sanger",
+    "books": [
+      {
+        "title": "The Perfect Weapon: War, Sabotage, and Fear in the Cyber Age",
+        "amazon_url": "https://www.amazon.com/s?k=The+Perfect+Weapon+David+Sanger"
+      },
+      {
+        "title": "Confront and Conceal: Obama's Secret Wars and Surprising Use of American Power",
+        "amazon_url": "https://www.amazon.com/s?k=Confront+and+Conceal+David+Sanger"
+      },
+      {
+        "title": "The Madman in the Middle: Trump, Iran, and the End of the Nuclear Deal",
+        "amazon_url": "https://www.amazon.com/s?k=The+Madman+in+the+Middle+David+Sanger"
+      },
+      {
+        "title": "New Cold Wars: China's Rise, Russia's Invasion, and America's Struggle to Defend the West",
+        "amazon_url": "https://www.amazon.com/s?k=New+Cold+Wars+David+Sanger"
+      }
+    ],
+    "initials": "DES"
   }
 ]
