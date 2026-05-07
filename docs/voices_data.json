@@ -7602,5 +7602,107 @@
       }
     ],
     "initials": "DES"
+  },
+  {
+    "name": "Dean Davis",
+    "slug": "dean-davis",
+    "bio": "Dean Davis is a respected Christian author and theologian known for his clear, accessible writing on biblical topics and Christian living. His work emphasizes biblical faithfulness and practical application of Scripture for modern believers.",
+    "affiliation": "",
+    "role": "Author & Theologian",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DD"
+  },
+  {
+    "name": "Christopher Cook",
+    "slug": "christopher-cook",
+    "bio": "Christopher Cook is a writer and Christian thought leader who contributes to various faith-based publications and platforms. His work engages contemporary issues through a biblical lens, offering thoughtful perspective for modern Christian audiences.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CC"
+  },
+  {
+    "name": "Bruce Henning",
+    "slug": "bruce-henning",
+    "bio": "Bruce Henning is a Christian author and speaker dedicated to helping believers deepen their faith and understanding of Scripture. His work focuses on practical Christian living and spiritual growth for contemporary audiences.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BH"
+  },
+  {
+    "name": "Jackie Gibson",
+    "slug": "jackie-gibson",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JG"
+  },
+  {
+    "name": "Scott Yenor",
+    "slug": "scott-yenor",
+    "bio": "Scott Yenor is a political philosopher and professor who writes thoughtfully about family, culture, and political order from a Christian perspective. His work examines how faith and traditional values intersect with contemporary social and political challenges.",
+    "affiliation": "Boise State University; The American Conservative; Public Discourse",
+    "role": "Professor of Political Science & Writer",
+    "education": "Ph.D. in Government, Claremont Graduate University",
+    "website": "",
+    "books": [
+      {
+        "title": "Family and the Politics of Modernity",
+        "amazon_url": "https://www.amazon.com/s?k=Family+Politics+Modernity+Scott+Yenor"
+      }
+    ],
+    "initials": "SY"
+  },
+  {
+    "name": "Ramon Presson",
+    "slug": "ramon-presson",
+    "bio": "Ramon Presson is a licensed marriage and family therapist and author who writes about relationships, faith, and personal growth from a Christian perspective. His work helps couples and families navigate life's challenges through practical wisdom rooted in biblical principles.",
+    "affiliation": "",
+    "role": "Marriage & Family Therapist, Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Fail Together: How to strengthen your relationship when life gets messy",
+        "amazon_url": "https://www.amazon.com/s?k=Fail+Together+Ramon+Presson"
+      },
+      {
+        "title": "The Relational Soul: Moving from False Self to Authentic Self",
+        "amazon_url": "https://www.amazon.com/s?k=The+Relational+Soul+Ramon+Presson"
+      }
+    ],
+    "initials": "RP"
+  },
+  {
+    "name": "Lingling Wei",
+    "slug": "lingling-wei",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LW"
+  },
+  {
+    "name": "James T. Areddy",
+    "slug": "james-t-areddy",
+    "bio": "James T. Areddy is a journalist and writer known for his reporting on economics, business, and cultural trends. His work appears in major publications where he brings thoughtful analysis to contemporary issues affecting society and faith communities.",
+    "affiliation": "The Wall Street Journal",
+    "role": "Journalist & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JTA"
   }
 ]
