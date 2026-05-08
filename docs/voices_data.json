@@ -7704,5 +7704,230 @@
     "website": "",
     "books": [],
     "initials": "JTA"
+  },
+  {
+    "name": "Scott McClellan",
+    "slug": "scott-mcclellan",
+    "bio": "Scott McClellan is a former White House Press Secretary and author who has written extensively about his experiences in government and his spiritual journey. His work offers insights into faith, integrity, and redemption from a uniquely informed perspective.",
+    "affiliation": "",
+    "role": "Author & Public Speaker",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "What Happened: Inside the Bush White House and Washington's Culture of Deception",
+        "amazon_url": "https://www.amazon.com/s?k=What+Happened+Scott+McClellan"
+      }
+    ],
+    "initials": "SM"
+  },
+  {
+    "name": "Audrey Finken",
+    "slug": "audrey-finken",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AF"
+  },
+  {
+    "name": "Emily Van Dixhoorn",
+    "slug": "emily-van-dixhoorn",
+    "bio": "Emily Van Dixhoorn is a scholar and writer focused on Reformed theology and church history. She brings academic rigor to exploring the depths of Christian doctrine and its practical implications for modern believers.",
+    "affiliation": "",
+    "role": "Scholar & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EVD"
+  },
+  {
+    "name": "Bob Stevenson",
+    "slug": "bob-stevenson",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BS"
+  },
+  {
+    "name": "Jordan B. Cooper",
+    "slug": "jordan-b-cooper",
+    "bio": "Jordan B. Cooper is a Lutheran pastor and theological writer known for his thoughtful engagement with contemporary Christian issues and classical Christian theology. Through his writing and ministry, he seeks to help believers understand their faith more deeply and live out their convictions with integrity in a changing culture.",
+    "affiliation": "The Federalist, Mere Orthodoxy",
+    "role": "Pastor & Theologian",
+    "education": "",
+    "website": "https://www.jordanbcooper.com/",
+    "books": [],
+    "initials": "JBC"
+  },
+  {
+    "name": "Lauren Washer",
+    "slug": "lauren-washer",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LW"
+  },
+  {
+    "name": "Pete Hurst",
+    "slug": "pete-hurst",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PH"
+  },
+  {
+    "name": "Bill Peacock",
+    "slug": "bill-peacock",
+    "bio": "Bill Peacock is a Christian writer and policy analyst who has contributed to conversations about faith, culture, and public issues. His work engages readers with thoughtful perspectives on how Christian values intersect with contemporary society.",
+    "affiliation": "",
+    "role": "Writer & Analyst",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BP"
+  },
+  {
+    "name": "Britta Lokting",
+    "slug": "britta-lokting",
+    "bio": "Britta Lokting is a writer and content creator focused on Christian living and faith development. Her work encourages readers to deepen their relationship with God through practical, biblically-grounded insights.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BL"
+  },
+  {
+    "name": "John Yoon and Muktita Suhartono",
+    "slug": "john-yoon-and-muktita-suhartono",
+    "bio": "John Yoon and Muktita Suhartono are journalists and writers who have contributed to major Christian and mainstream publications covering faith, culture, and social issues. Their work explores the intersection of Christianity with contemporary life and global perspectives.",
+    "affiliation": "",
+    "role": "Journalists & Writers",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JY/MS"
+  },
+  {
+    "name": "Stephen Bates",
+    "slug": "stephen-bates",
+    "bio": "Stephen Bates is a British author and journalist who has written extensively on religion, culture, and social issues from a thoughtful Christian perspective. His work examines the intersection of faith and contemporary society with both critical insight and pastoral sensitivity.",
+    "affiliation": "",
+    "role": "Author & Journalist",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "A Church at War: Anglicans and Homosexuality",
+        "amazon_url": "https://www.amazon.com/s?k=A+Church+at+War+Anglicans+and+Homosexuality+Stephen+Bates"
+      },
+      {
+        "title": "Battleground Britain: The New Political Conflict",
+        "amazon_url": "https://www.amazon.com/s?k=Battleground+Britain+The+New+Political+Conflict+Stephen+Bates"
+      }
+    ],
+    "initials": "SB"
+  },
+  {
+    "name": "Julie Smyth",
+    "slug": "julie-smyth",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JS"
+  },
+  {
+    "name": "Cameron Cole",
+    "slug": "cameron-cole",
+    "bio": "Cameron Cole is a pastor and author dedicated to helping young people understand their identity and purpose in Christ. He has worked extensively in youth ministry and discipleship, addressing topics like faith, identity, and spiritual growth for emerging generations.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Therefore I Have Hope: 12 Reasons Faith Makes Sense",
+        "amazon_url": "https://www.amazon.com/s?k=Therefore+I+Have+Hope+Cameron+Cole"
+      },
+      {
+        "title": "The Story Formed Life: How the Bible Shapes Identity and Purpose",
+        "amazon_url": "https://www.amazon.com/s?k=The+Story+Formed+Life+Cameron+Cole"
+      },
+      {
+        "title": "Created for Purpose: Discovering Why You Matter in God's Grand Story",
+        "amazon_url": "https://www.amazon.com/s?k=Created+for+Purpose+Cameron+Cole"
+      }
+    ],
+    "initials": "CC"
+  },
+  {
+    "name": "Anna Meade Harris",
+    "slug": "anna-meade-harris",
+    "bio": "Anna Meade Harris is a writer and content creator focused on Christian living and spiritual formation. Her work explores faith, discipleship, and the practical application of Scripture to everyday life. She contributes to various Christian publications and platforms seeking to help believers grow deeper in their relationship with Christ.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AMH"
+  },
+  {
+    "name": "Danny Kwon",
+    "slug": "danny-kwon",
+    "bio": "Danny Kwon is a pastor and Christian communicator dedicated to helping believers grow in their faith and understanding of Scripture. Through his teaching and writing, he seeks to make biblical truths accessible and transformative for modern audiences.",
+    "affiliation": "",
+    "role": "Pastor & Teacher",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DK"
+  },
+  {
+    "name": "Isaiah Marshall",
+    "slug": "isaiah-marshall",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "IM"
+  },
+  {
+    "name": "Chelsea Kingston Erickson",
+    "slug": "chelsea-kingston-erickson",
+    "bio": "Chelsea Kingston Erickson is a Christian author and speaker who writes about faith, discipleship, and spiritual growth. Her work encourages believers to deepen their relationship with Christ and live out their faith authentically in everyday life.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CKE"
+  },
+  {
+    "name": "FM AI",
+    "slug": "fm-ai",
+    "bio": "FM AI is an artificial intelligence assistant designed to help Christian content creators, researchers, and readers engage with Scripture and faith-based material. While not a human author, FM AI serves as a helpful tool for those seeking to deepen their understanding of Christian theology, biblical study, and spiritual growth.",
+    "affiliation": "",
+    "role": "AI Assistant",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "FM"
   }
 ]
