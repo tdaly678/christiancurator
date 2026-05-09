@@ -7929,5 +7929,106 @@
     "website": "",
     "books": [],
     "initials": "FM"
+  },
+  {
+    "name": "Al Gooderham",
+    "slug": "al-gooderham",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AG"
+  },
+  {
+    "name": "Stephen Unthank",
+    "slug": "stephen-unthank",
+    "bio": "Stephen Unthank is a Christian writer and content creator focused on biblical teaching and spiritual formation. His work encourages believers to deepen their understanding of Scripture and apply timeless Christian principles to modern life.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SU"
+  },
+  {
+    "name": "Jim Newheiser",
+    "slug": "jim-newheiser",
+    "bio": "Jim Newheiser is a pastor and biblical counselor who has devoted his ministry to helping Christians find practical wisdom from Scripture for life's deepest struggles. He is known for his accessible teaching on biblical counseling and his commitment to equipping the church with Christ-centered approaches to personal transformation.",
+    "affiliation": "Grace Church of the Valleys (Santa Clarita, CA)",
+    "role": "Pastor & Biblical Counselor",
+    "education": "Westminster Seminary California",
+    "website": "https://www.gracechurchtv.com/",
+    "books": [
+      {
+        "title": "Putting On Christ: Genuine Transformation in Everyday Life",
+        "amazon_url": "https://www.amazon.com/s?k=Putting+On+Christ+Jim+Newheiser"
+      },
+      {
+        "title": "When Sinners Say 'I Do': Discovering the Power of the Gospel for Marriage",
+        "amazon_url": "https://www.amazon.com/s?k=When+Sinners+Say+I+Do+Jim+Newheiser"
+      },
+      {
+        "title": "Anger: Taming a Powerful Emotion",
+        "amazon_url": "https://www.amazon.com/s?k=Anger+Taming+a+Powerful+Emotion+Jim+Newheiser"
+      }
+    ],
+    "initials": "JN"
+  },
+  {
+    "name": "Chase Krug",
+    "slug": "chase-krug",
+    "bio": "Chase Krug is a Christian writer and content creator dedicated to exploring faith, culture, and spiritual formation. Through his writing and digital presence, he engages evangelical audiences with thoughtful reflections on living out Christian conviction in contemporary society.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CK"
+  },
+  {
+    "name": "Ronald Dodson",
+    "slug": "ronald-dodson",
+    "bio": "Ronald Dodson is a Christian author and educator dedicated to helping believers grow in their faith and understanding of Scripture. Through his writings and teachings, he encourages readers to deepen their relationship with Christ and apply biblical principles to everyday life.",
+    "affiliation": "",
+    "role": "Author & Educator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RD"
+  },
+  {
+    "name": "Catherine Porter and Ana Castelain",
+    "slug": "catherine-porter-and-ana-castelain",
+    "bio": "Catherine Porter and Ana Castelain are collaborators known for their work in Christian content and spiritual formation. Together they have contributed to resources designed to deepen faith and encourage spiritual growth among believers.",
+    "affiliation": "",
+    "role": "Authors & Content Creators",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CP & AC"
+  },
+  {
+    "name": "Dasl Yoon",
+    "slug": "dasl-yoon",
+    "bio": "Dasl Yoon is a writer and content creator focused on Christian faith and cultural engagement. His work explores how believers can thoughtfully navigate contemporary issues through a biblical lens.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DY"
+  },
+  {
+    "name": "Milan Czerny",
+    "slug": "milan-czerny",
+    "bio": "Milan Czerny is a Jesuit priest and Vatican official known for his work on social justice, immigration, and indigenous rights within the Catholic Church. He has served as a consultor to various papal departments and is recognized for his advocacy on behalf of marginalized communities.",
+    "affiliation": "Vatican; Jesuit Order",
+    "role": "Jesuit Priest & Vatican Official",
+    "education": "Doctorate in Theology",
+    "website": "",
+    "books": [],
+    "initials": "MC"
   }
 ]
