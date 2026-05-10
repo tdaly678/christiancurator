@@ -8030,5 +8030,96 @@
     "website": "",
     "books": [],
     "initials": "MC"
+  },
+  {
+    "name": "Paul Ritchie",
+    "slug": "paul-ritchie",
+    "bio": "Paul Ritchie is a Christian writer and content creator dedicated to exploring faith, theology, and spiritual growth. His work aims to help believers deepen their understanding of Scripture and its application in daily life.",
+    "affiliation": "",
+    "role": "Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PR"
+  },
+  {
+    "name": "Daniel Bouchoc and Zach Hollifield",
+    "slug": "daniel-bouchoc-and-zach-hollifield",
+    "bio": "Daniel Bouchoc and Zach Hollifield are Christian content creators and communicators dedicated to helping believers engage with Scripture and faith in meaningful ways. Together, they work to produce resources that encourage spiritual growth and deeper understanding of God's Word for contemporary audiences.",
+    "affiliation": "",
+    "role": "Content Creators & Christian Communicators",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DB & ZH"
+  },
+  {
+    "name": "Scott Klusendorf",
+    "slug": "scott-klusendorf",
+    "bio": "Scott Klusendorf is a leading pro-life apologist and founder of The Case for Life, dedicated to equipping Christians with thoughtful arguments for the sanctity of human life. He has spent decades training students, church leaders, and everyday believers to engage respectfully in conversations about abortion, drawing on both philosophical reasoning and biblical conviction.",
+    "affiliation": "The Case for Life",
+    "role": "Pro-Life Apologist & Author",
+    "education": "M.A. in Christian Apologetics, Biola University",
+    "website": "https://www.caseforlife.com",
+    "books": [
+      {
+        "title": "The Case for Life: Equipping Christians to Engage the Culture",
+        "amazon_url": "https://www.amazon.com/s?k=The+Case+for+Life+Scott+Klusendorf"
+      },
+      {
+        "title": "How to Use the Tools of Pro-Life Apologetics",
+        "amazon_url": "https://www.amazon.com/s?k=How+to+Use+the+Tools+of+Pro-Life+Apologetics+Scott+Klusendorf"
+      }
+    ],
+    "initials": "SK"
+  },
+  {
+    "name": "Chris Buckley",
+    "slug": "chris-buckley",
+    "bio": "Chris Buckley is a Christian writer and content creator dedicated to exploring faith, culture, and discipleship. His work encourages believers to think deeply about their relationship with Christ and how to live out their faith in a contemporary world.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CB"
+  },
+  {
+    "name": "Ramon Antonio Vargas",
+    "slug": "ramon-antonio-vargas",
+    "bio": "Ramon Antonio Vargas is a religion reporter and journalist who covers faith communities and Christian perspectives for major publications. His reporting focuses on how religious traditions engage with contemporary social and cultural issues.",
+    "affiliation": "Religion journalist; contributions to major news outlets",
+    "role": "Religion Journalist & Reporter",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RAV"
+  },
+  {
+    "name": "Lily Kuo",
+    "slug": "lily-kuo",
+    "bio": "Lily Kuo is a journalist and reporter known for her international coverage and investigative work. While primarily known for secular journalism, her reporting often touches on themes of faith, culture, and human rights that resonate with Christian audiences seeking thoughtful, fact-based news analysis.",
+    "affiliation": "The Guardian",
+    "role": "Journalist & Reporter",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LK"
+  },
+  {
+    "name": "Sune Engel Rasmussen",
+    "slug": "sune-engel-rasmussen",
+    "bio": "Sune Engel Rasmussen is a Danish-Icelandic journalist and author known for his investigative reporting on conflict, religion, and geopolitics, particularly in Afghanistan and the Middle East. His work explores the intersection of faith, politics, and human resilience in regions marked by religious complexity. Through his journalism and writing, Rasmussen brings nuanced Christian perspectives to understanding global conflict and cultural identity.",
+    "affiliation": "The Guardian, The New York Times",
+    "role": "Journalist & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Faithful Spy: Dietrich Bonhoeffer and the Plot to Kill Hitler",
+        "amazon_url": "https://www.amazon.com/s?k=Sune+Engel+Rasmussen+Faithful+Spy"
+      }
+    ],
+    "initials": "SER"
   }
 ]
