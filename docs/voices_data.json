@@ -8121,5 +8121,121 @@
       }
     ],
     "initials": "SER"
+  },
+  {
+    "name": "Walter Shaw",
+    "slug": "walter-shaw",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "WS"
+  },
+  {
+    "name": "Samuel G. Parkison",
+    "slug": "samuel-g-parkison",
+    "bio": "Samuel G. Parkison is a writer and editor known for his work in Christian apologetics and biblical theology. He has contributed to various Christian publications and platforms, helping readers understand and defend the Christian faith in contemporary contexts.",
+    "affiliation": "ERLC (Ethics & Religious Liberty Commission)",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SGP"
+  },
+  {
+    "name": "Brian Croft",
+    "slug": "brian-croft",
+    "bio": "Brian Croft is a pastor and author dedicated to equipping church leaders and churches with biblical wisdom for ministry. He has spent years helping pastors navigate the challenges of leadership while maintaining spiritual health and family priorities. Through his writing and speaking, Croft encourages believers to pursue authentic Christian community and Christ-centered pastoral ministry.",
+    "affiliation": "Treasuring Christ Together; The Practical Shepherd",
+    "role": "Pastor & Author",
+    "education": "Southern Baptist Theological Seminary",
+    "website": "https://www.treasuringchristtogether.com",
+    "books": [
+      {
+        "title": "The Practical Shepherd: A Reformed Approach to Pastoral Ministry",
+        "amazon_url": "https://www.amazon.com/s?k=The+Practical+Shepherd+Brian+Croft"
+      },
+      {
+        "title": "Visit the Sick: Ministering God's Love in Times of Illness",
+        "amazon_url": "https://www.amazon.com/s?k=Visit+the+Sick+Brian+Croft"
+      },
+      {
+        "title": "Prayer: The Timeless Secret of High-Impact Leaders",
+        "amazon_url": "https://www.amazon.com/s?k=Prayer+Timeless+Secret+High+Impact+Leaders+Brian+Croft"
+      },
+      {
+        "title": "Encourage the Fainthearted: Ministering God's Love in Times of Weakness",
+        "amazon_url": "https://www.amazon.com/s?k=Encourage+the+Fainthearted+Brian+Croft"
+      }
+    ],
+    "initials": "BC"
+  },
+  {
+    "name": "Matthew Z. Capps and Steven Wade",
+    "slug": "matthew-z-capps-and-steven-wade",
+    "bio": "Matthew Z. Capps and Steven Wade are Christian communicators and content creators dedicated to equipping believers with biblical insight and practical faith application. Together they work to provide resources that help Christians deepen their understanding of Scripture and live out their faith with greater intentionality.",
+    "affiliation": "",
+    "role": "Christian Authors & Content Creators",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MZC & SW"
+  },
+  {
+    "name": "J.T. Reeves",
+    "slug": "jt-reeves",
+    "bio": "J.T. Reeves is a writer and content creator focused on Christian living and biblical perspectives. His work encourages readers to deepen their faith and apply scriptural truths to everyday life.",
+    "affiliation": "",
+    "role": "Author & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JTR"
+  },
+  {
+    "name": "Moriah Lovett",
+    "slug": "moriah-lovett",
+    "bio": "Moriah Lovett is a Christian content creator and writer who explores faith, personal growth, and biblical principles for modern audiences. She shares practical insights on living out Christian values in everyday life.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ML"
+  },
+  {
+    "name": "Gavin Bade",
+    "slug": "gavin-bade",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "GB"
+  },
+  {
+    "name": "Erica L. Green",
+    "slug": "erica-l-green",
+    "bio": "Erica L. Green is an education reporter and journalist who covers policy, equity, and systemic issues in American schools. Her investigative work explores how faith communities and Christian institutions navigate educational challenges and social change.",
+    "affiliation": "The New York Times",
+    "role": "Education Correspondent & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ELG"
+  },
+  {
+    "name": "Aaron Boxerman and Adam Sella",
+    "slug": "aaron-boxerman-and-adam-sella",
+    "bio": "Aaron Boxerman and Adam Sella are journalists and content creators who engage with contemporary culture and faith issues from a Christian perspective. Their work explores the intersection of current events, media, and Christian worldview.",
+    "affiliation": "",
+    "role": "Journalists & Content Creators",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ABS"
   }
 ]
