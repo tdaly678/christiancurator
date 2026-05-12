@@ -8237,5 +8237,182 @@
     "website": "",
     "books": [],
     "initials": "ABS"
+  },
+  {
+    "name": "D.V. Rider",
+    "slug": "dv-rider",
+    "bio": "D.V. Rider is a Christian author and content creator dedicated to exploring faith, spirituality, and biblical perspective in contemporary life. Through writing and teaching, Rider seeks to help readers deepen their understanding of Scripture and apply Christian principles to everyday challenges.",
+    "affiliation": "",
+    "role": "Author & Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DVR"
+  },
+  {
+    "name": "Dan Jarms",
+    "slug": "dan-jarms",
+    "bio": "Dan Jarms is a pastor and author who focuses on helping Christians develop a deeper understanding of Scripture and apply biblical principles to their daily lives. He is known for his clear, accessible teaching style that makes complex theological concepts relatable to modern audiences.",
+    "affiliation": "",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DJ"
+  },
+  {
+    "name": "Rosaria Butterfield",
+    "slug": "rosaria-butterfield",
+    "bio": "Rosaria Butterfield is a former tenured English professor and LGBTQ+ activist who became a committed Christian, documenting her transformation in her widely-read memoir. She writes thoughtfully about faith, sexuality, hospitality, and the power of the gospel to change lives, speaking from personal experience and deep theological conviction.",
+    "affiliation": "Christianity Today, The Gospel Coalition",
+    "role": "Author & Speaker",
+    "education": "PhD, Syracuse University",
+    "website": "",
+    "books": [
+      {
+        "title": "The Secret Thoughts of an Unlikely Convert",
+        "amazon_url": "https://www.amazon.com/s?k=The+Secret+Thoughts+of+an+Unlikely+Convert+Rosaria+Butterfield"
+      },
+      {
+        "title": "Openness Unhindered: Further Thoughts of an Unlikely Convert on Sexual Identity and Union with Christ",
+        "amazon_url": "https://www.amazon.com/s?k=Openness+Unhindered+Rosaria+Butterfield"
+      },
+      {
+        "title": "The Gospel Comes with a House Key: Practicing Radically Ordinary Hospitality in Our Post-Christian World",
+        "amazon_url": "https://www.amazon.com/s?k=The+Gospel+Comes+with+a+House+Key+Rosaria+Butterfield"
+      },
+      {
+        "title": "Repenting of Religion",
+        "amazon_url": "https://www.amazon.com/s?k=Repenting+of+Religion+Rosaria+Butterfield"
+      },
+      {
+        "title": "The Single Woman and the Will of God",
+        "amazon_url": "https://www.amazon.com/s?k=The+Single+Woman+and+the+Will+of+God+Rosaria+Butterfield"
+      }
+    ],
+    "initials": "RB"
+  },
+  {
+    "name": "Cassie Achermann",
+    "slug": "cassie-achermann",
+    "bio": "Cassie Achermann is a writer and content creator focused on helping Christians navigate faith, family, and modern life. Through her writing and online presence, she shares biblical insights and practical wisdom with a warm, relatable approach.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CA"
+  },
+  {
+    "name": "Stephen Williams",
+    "slug": "stephen-williams",
+    "bio": "Stephen Williams is a Christian author and communicator dedicated to helping believers deepen their faith and understanding of Scripture. His work focuses on practical spirituality and biblical teaching for modern Christians.",
+    "affiliation": "",
+    "role": "Author & Christian Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SW"
+  },
+  {
+    "name": "Kyle Strobel",
+    "slug": "kyle-strobel",
+    "bio": "Kyle Strobel is a theologian and author dedicated to helping Christians understand contemplative spirituality and the deeper life with God. He writes and teaches on themes of Christian formation, prayer, and union with Christ from a classical Christian perspective.",
+    "affiliation": "Biola University",
+    "role": "Professor & Author",
+    "education": "PhD in Theological Studies",
+    "website": "",
+    "books": [
+      {
+        "title": "The Emotional Logic of Spiritual Direction",
+        "amazon_url": "https://www.amazon.com/s?k=The+Emotional+Logic+of+Spiritual+Direction+Kyle+Strobel"
+      },
+      {
+        "title": "Contemplating the Cross",
+        "amazon_url": "https://www.amazon.com/s?k=Contemplating+the+Cross+Kyle+Strobel"
+      },
+      {
+        "title": "The Unbroken Christ",
+        "amazon_url": "https://www.amazon.com/s?k=The+Unbroken+Christ+Kyle+Strobel"
+      }
+    ],
+    "initials": "KS"
+  },
+  {
+    "name": "Abby Silva",
+    "slug": "abby-silva",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AS"
+  },
+  {
+    "name": "Susan Bruxvoort Lipscomb",
+    "slug": "susan-bruxvoort-lipscomb",
+    "bio": "Susan Bruxvoort Lipscomb is a writer and editor known for her work exploring faith, spirituality, and Christian living. She has contributed to various Christian publications and platforms, helping readers deepen their understanding of Scripture and spiritual formation. Her writing often reflects a thoughtful, accessible approach to contemporary faith questions.",
+    "affiliation": "Christianity Today, Relevant Magazine",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SBL"
+  },
+  {
+    "name": "Staff and agencies",
+    "slug": "staff-and-agencies",
+    "bio": "This represents content curated and published by the editorial staff and partner agencies of this Christian content platform. Our team of writers, editors, and contributors work together to bring you thoughtful, biblically-grounded resources designed to deepen your faith and understanding of Scripture.",
+    "affiliation": "",
+    "role": "Editorial Staff & Contributing Agencies",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SA"
+  },
+  {
+    "name": "Sui-Lee Wee",
+    "slug": "suilee-wee",
+    "bio": "Sui-Lee Wee is a journalist and correspondent known for reporting on religious and cultural issues. With a focus on faith communities and their intersection with society, Wee brings thoughtful analysis to stories affecting Christians and other religious groups around the world.",
+    "affiliation": "The New York Times",
+    "role": "Journalist & Correspondent",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SLW"
+  },
+  {
+    "name": "Aie Balagtas See and Jes Aznar",
+    "slug": "aie-balagtas-see-and-jes-aznar",
+    "bio": "Aie Balagtas See and Jes Aznar are content creators and writers engaged in Christian ministry and cultural commentary. They contribute to conversations about faith, discipleship, and contemporary issues from a Christian perspective.",
+    "affiliation": "",
+    "role": "Content Creators & Writers",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ABS JA"
+  },
+  {
+    "name": "Cath Clarke",
+    "slug": "cath-clarke",
+    "bio": "Cath Clarke is a British Christian writer and speaker known for her engaging content on faith, spirituality, and contemporary Christian living. She contributes to various Christian publications and platforms, bringing thoughtful reflection to modern spiritual questions.",
+    "affiliation": "",
+    "role": "Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CC"
+  },
+  {
+    "name": "Jared Malsin",
+    "slug": "jared-malsin",
+    "bio": "Jared Malsin is an international correspondent and journalist who has reported extensively from the Middle East and North Africa, covering stories of faith, conflict, and human resilience. His work has appeared in major publications and brings thoughtful Christian perspective to global events affecting believers in volatile regions.",
+    "affiliation": "TIME Magazine",
+    "role": "International Correspondent & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JM"
   }
 ]
