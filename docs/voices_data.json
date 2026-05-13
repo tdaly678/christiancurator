@@ -8414,5 +8414,134 @@
     "website": "",
     "books": [],
     "initials": "JM"
+  },
+  {
+    "name": "Dr Lucien Tuinstra",
+    "slug": "dr-lucien-tuinstra",
+    "bio": "Dr Lucien Tuinstra is a thoughtful Christian thinker and writer who engages with contemporary theological and spiritual themes for modern believers. His work encourages readers to deepen their faith through careful reflection and biblical engagement.",
+    "affiliation": "",
+    "role": "Author & Theologian",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LT"
+  },
+  {
+    "name": "Pete Nicholas",
+    "slug": "pete-nicholas",
+    "bio": "Pete Nicholas is a Christian author and speaker dedicated to helping believers grow in their faith and understanding of Scripture. His work focuses on practical discipleship and encouragement for modern Christians.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PN"
+  },
+  {
+    "name": "Jonathan Clark",
+    "slug": "jonathan-clark",
+    "bio": "Jonathan Clark is a thoughtful voice in Christian content and ministry. His work emphasizes biblical teaching and practical faith application for contemporary believers.",
+    "affiliation": "",
+    "role": "Christian Author & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JC"
+  },
+  {
+    "name": "Rebecca McLaughlin",
+    "slug": "rebecca-mclaughlin",
+    "bio": "Rebecca McLaughlin is an author and cultural commentator who writes at the intersection of faith, science, sexuality, and social issues for evangelical audiences. Her work encourages Christians to engage thoughtfully with contemporary culture while maintaining biblical conviction. She is known for her accessible yet intellectually rigorous approach to apologetics and cultural engagement.",
+    "affiliation": "The Gospel Coalition, Christianity Today",
+    "role": "Author & Cultural Commentator",
+    "education": "University of Cambridge",
+    "website": "https://www.rebeccamclaughlin.com",
+    "books": [
+      {
+        "title": "Confronting Christianity: 12 Hard Questions for the World's Largest Religion",
+        "amazon_url": "https://www.amazon.com/s?k=Confronting+Christianity+Rebecca+McLaughlin"
+      },
+      {
+        "title": "The Secular Creed: Engaging Five Contemporary Claims",
+        "amazon_url": "https://www.amazon.com/s?k=The+Secular+Creed+Rebecca+McLaughlin"
+      },
+      {
+        "title": "Do More to Be More: The Myth of Self-Improvement and the Truth of Transformation",
+        "amazon_url": "https://www.amazon.com/s?k=Do+More+to+Be+More+Rebecca+McLaughlin"
+      },
+      {
+        "title": "Christ and the Kingdoms of Men: Rediscovering the Tradition, Renewing the Church",
+        "amazon_url": "https://www.amazon.com/s?k=Christ+and+the+Kingdoms+of+Men+Rebecca+McLaughlin"
+      }
+    ],
+    "initials": "RM"
+  },
+  {
+    "name": "Jake Dell",
+    "slug": "jake-dell",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JD"
+  },
+  {
+    "name": "Kyle Cravens",
+    "slug": "kyle-cravens",
+    "bio": "Kyle Cravens is a Christian author and communicator dedicated to helping believers deepen their faith and understanding of Scripture. His work focuses on practical theology and spiritual growth for modern Christians.",
+    "affiliation": "",
+    "role": "Author & Christian Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KC"
+  },
+  {
+    "name": "Harvest Prude",
+    "slug": "harvest-prude",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "HP"
+  },
+  {
+    "name": "Edward Song",
+    "slug": "edward-song",
+    "bio": "Edward Song is a thoughtful voice in contemporary Christian writing and ministry. His work explores faith, discipleship, and the intersection of Christian conviction with modern life.",
+    "affiliation": "",
+    "role": "Author & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ES"
+  },
+  {
+    "name": "David S. Cloud",
+    "slug": "david-s-cloud",
+    "bio": "David S. Cloud is a Christian author, researcher, and editor known for his detailed studies of Bible translations, historical Christian figures, and contemporary Christian issues. He has been a prolific writer and editor within evangelical circles, focusing on apologetics and biblical discernment. His work emphasizes careful examination of Christian doctrine and practice from a fundamentalist perspective.",
+    "affiliation": "Way of Life Literature",
+    "role": "Author & Editor",
+    "education": "",
+    "website": "https://www.wayoflife.org",
+    "books": [
+      {
+        "title": "The History of the New King James Version",
+        "amazon_url": "https://www.amazon.com/s?k=The+History+of+the+New+King+James+Version+David+Cloud"
+      },
+      {
+        "title": "A Testimony of the Lord's Dealing",
+        "amazon_url": "https://www.amazon.com/s?k=A+Testimony+of+the+Lord%27s+Dealing+David+Cloud"
+      },
+      {
+        "title": "The Unfinished Reformation",
+        "amazon_url": "https://www.amazon.com/s?k=The+Unfinished+Reformation+David+Cloud"
+      }
+    ],
+    "initials": "DSC"
   }
 ]
