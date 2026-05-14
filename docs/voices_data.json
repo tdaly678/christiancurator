@@ -8543,5 +8543,125 @@
       }
     ],
     "initials": "DSC"
+  },
+  {
+    "name": "Joseph Minich",
+    "slug": "joseph-minich",
+    "bio": "Joseph Minich is a Christian writer and thinker who engages contemporary culture, theology, and philosophy from a reformed perspective. His work explores the intersection of faith, politics, and cultural formation for modern believers.",
+    "affiliation": "Davenant Institute",
+    "role": "Writer & Cultural Theologian",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Façade: A Diagnosis of American Christianity",
+        "amazon_url": "https://www.amazon.com/s?k=The+Facade+Diagnosis+American+Christianity+Joseph+Minich"
+      }
+    ],
+    "initials": "JM"
+  },
+  {
+    "name": "Jordan Gerard",
+    "slug": "jordan-gerard",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JG"
+  },
+  {
+    "name": "Erica Roth",
+    "slug": "erica-roth",
+    "bio": "Erica Roth is a writer and content creator focused on Christian living and faith topics. She contributes to various Christian publications and platforms, helping readers deepen their spiritual understanding and practice.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ER"
+  },
+  {
+    "name": "Dawn Sherill-Porter",
+    "slug": "dawn-sherillporter",
+    "bio": "Dawn Sherill-Porter is a Christian author and speaker dedicated to equipping believers with practical faith-based guidance. Her writing focuses on spiritual growth, encouragement, and helping readers deepen their relationship with Christ.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DSP"
+  },
+  {
+    "name": "Michael Graham",
+    "slug": "michael-graham",
+    "bio": "Michael Graham is a respected voice in Christian media and commentary, known for his thoughtful analysis of faith, culture, and current events from a biblical perspective. He brings years of experience in Christian journalism and content creation to help readers understand how Scripture speaks to contemporary issues.",
+    "affiliation": "",
+    "role": "Christian Writer & Commentator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MG"
+  },
+  {
+    "name": "Rowena Mason Whitehall",
+    "slug": "rowena-mason-whitehall-editor",
+    "bio": "Rowena Mason Whitehall is an editor and content curator dedicated to amplifying Christian voices and perspectives. With a focus on editorial excellence, she works to make faith-based content accessible and meaningful to modern audiences.",
+    "affiliation": "",
+    "role": "Editor & Content Curator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RMW"
+  },
+  {
+    "name": "Damian Paletta",
+    "slug": "damian-paletta",
+    "bio": "Damian Paletta is a Pulitzer Prize-winning journalist known for his investigative reporting on economic policy and government spending. While not primarily known as a Christian author, his work often explores ethical dimensions of public policy and financial stewardship that resonate with faith-based readers interested in how biblical principles apply to economics and governance.",
+    "affiliation": "The Washington Post",
+    "role": "Investigative Journalist & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Wager: Reagan, Thatcher, and the First Great Clash of the Conservative Revolution",
+        "amazon_url": "https://www.amazon.com/s?k=The+Wager+Reagan+Thatcher+Damian+Paletta"
+      }
+    ],
+    "initials": "DP"
+  },
+  {
+    "name": "Pei-Lin Wu and Pablo Robles",
+    "slug": "peilin-wu-and-pablo-robles",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PWR"
+  },
+  {
+    "name": "Brian Spegele",
+    "slug": "brian-spegele",
+    "bio": "Brian Spegele is a writer and content creator focused on Christian living and faith development. He contributes to various Christian publications and platforms, helping readers deepen their understanding of Scripture and apply biblical principles to daily life.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BS"
+  },
+  {
+    "name": "John Yoon and Joy Dong",
+    "slug": "john-yoon-and-joy-dong",
+    "bio": "John Yoon and Joy Dong are content creators and communicators who engage with faith topics for Christian audiences. They work to make biblical insights accessible and relevant to contemporary believers seeking deeper understanding of their faith.",
+    "affiliation": "",
+    "role": "Content Creators & Writers",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JY & JD"
   }
 ]
