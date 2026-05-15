@@ -8663,5 +8663,208 @@
     "website": "",
     "books": [],
     "initials": "JY & JD"
+  },
+  {
+    "name": "John Brown of Wamphray",
+    "slug": "john-brown-of-wamphray",
+    "bio": "John Brown of Wamphray (1610-1679) was a Scottish Presbyterian minister and theologian known for his faithful pastoral ministry during a turbulent period in Scottish church history. Though he lived through significant religious and political upheaval, he remained devoted to Reformed theology and the advancement of biblical Christianity in his congregation.",
+    "affiliation": "Church of Scotland (Presbyterian)",
+    "role": "Minister & Theologian",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JBW"
+  },
+  {
+    "name": "Guy Waters",
+    "slug": "guy-waters",
+    "bio": "Guy Waters is a Reformed theologian and pastor known for his scholarly yet accessible writing on biblical interpretation, systematic theology, and Christian living. He has served in pastoral ministry and academic settings, contributing significantly to evangelical understanding of Scripture and doctrine.",
+    "affiliation": "Reformed Presbyterian Church of North America; Academic theology and pastoral ministry",
+    "role": "Pastor, Theologian & Author",
+    "education": "Ph.D. in New Testament, Duke University",
+    "website": "",
+    "books": [
+      {
+        "title": "The End Times Made Simple",
+        "amazon_url": "https://www.amazon.com/s?k=The+End+Times+Made+Simple+Guy+Waters"
+      },
+      {
+        "title": "How Jesus Runs the Church",
+        "amazon_url": "https://www.amazon.com/s?k=How+Jesus+Runs+the+Church+Guy+Waters"
+      },
+      {
+        "title": "Justification and the New Perspectives on Paul",
+        "amazon_url": "https://www.amazon.com/s?k=Justification+and+the+New+Perspectives+on+Paul+Guy+Waters"
+      },
+      {
+        "title": "The Federal Vision and Covenant Theology",
+        "amazon_url": "https://www.amazon.com/s?k=The+Federal+Vision+and+Covenant+Theology+Guy+Waters"
+      }
+    ],
+    "initials": "GW"
+  },
+  {
+    "name": "Vika Pechersky",
+    "slug": "vika-pechersky",
+    "bio": "Vika Pechersky is a writer and content creator who engages with Christian themes and contemporary faith discussions. Her work explores the intersection of modern life and biblical wisdom for today's believers.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "VP"
+  },
+  {
+    "name": "Abraham Cho",
+    "slug": "abraham-cho",
+    "bio": "Abraham Cho is a thoughtful voice in contemporary Christian discourse, known for his insights on faith, culture, and discipleship. His writing engages evangelical audiences with a focus on integrating biblical wisdom into everyday life.",
+    "affiliation": "",
+    "role": "Author & Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AC"
+  },
+  {
+    "name": "Stephen Eide",
+    "slug": "stephen-eide",
+    "bio": "Stephen Eide is a senior fellow at the Manhattan Institute and a leading voice on urban policy, homelessness, and the role of civil society in addressing social challenges. His work explores how Christian principles of compassion and community responsibility can inform practical solutions to poverty and social dysfunction in American cities.",
+    "affiliation": "Manhattan Institute for Policy Research",
+    "role": "Senior Fellow & Policy Analyst",
+    "education": "M.A. in Political Science",
+    "website": "",
+    "books": [
+      {
+        "title": "Homelessness in San Francisco: The Progressive Paradox",
+        "amazon_url": "https://www.amazon.com/s?k=Homelessness+San+Francisco+Progressive+Paradox+Stephen+Eide"
+      }
+    ],
+    "initials": "SE"
+  },
+  {
+    "name": "Michael Aitcheson",
+    "slug": "michael-aitcheson",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MA"
+  },
+  {
+    "name": "Irwyn Ince",
+    "slug": "irwyn-ince",
+    "bio": "Irwyn Ince is a pastor and writer passionate about helping Christians understand the biblical foundation for racial reconciliation and justice. He has served in pastoral ministry and speaks and writes on topics including diversity, discipleship, and the church's witness in a divided world.",
+    "affiliation": "Gospel Coalition, various Christian publications",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Beautiful Community: Unity, Diversity, and the Church at Its Best",
+        "amazon_url": "https://www.amazon.com/s?k=The+Beautiful+Community+Irwyn+Ince"
+      }
+    ],
+    "initials": "II"
+  },
+  {
+    "name": "George Robertson",
+    "slug": "george-robertson",
+    "bio": "George Robertson is a Christian author and speaker known for his work in biblical teaching and spiritual formation. His writings encourage believers to deepen their faith and apply scriptural principles to everyday life.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "GR"
+  },
+  {
+    "name": "Colin Redemer",
+    "slug": "colin-redemer",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CR"
+  },
+  {
+    "name": "Justine Coleman",
+    "slug": "justine-coleman",
+    "bio": "Justine Coleman is a journalist and political correspondent who brings thoughtful, fact-based reporting to contemporary issues. While not primarily known as a Christian author, her work often intersects with values-based coverage relevant to faith communities.",
+    "affiliation": "",
+    "role": "Journalist & Political Correspondent",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JC"
+  },
+  {
+    "name": "Carl Peetz",
+    "slug": "carl-peetz",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CP"
+  },
+  {
+    "name": "Andrew E. Kramer",
+    "slug": "andrew-e-kramer",
+    "bio": "Andrew E. Kramer is a Christian author and theological writer dedicated to exploring biblical themes and their practical application in contemporary faith. His work engages evangelical audiences with thoughtful analysis of Scripture and Christian living.",
+    "affiliation": "",
+    "role": "Author & Theological Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AEK"
+  },
+  {
+    "name": "Santiago Pérez",
+    "slug": "santiago-prez",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SP"
+  },
+  {
+    "name": "J. Panyard",
+    "slug": "jpanyardchristianitytodaycom",
+    "bio": "J. Panyard is a writer and editor associated with Christianity Today, one of the leading evangelical Christian publications. With a focus on contemporary Christian issues and faith-based content curation, Panyard contributes to meaningful conversations within the Christian community.",
+    "affiliation": "Christianity Today",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JP"
+  },
+  {
+    "name": "Luke Broadwater",
+    "slug": "luke-broadwater",
+    "bio": "Luke Broadwater is an investigative journalist who has covered politics, government accountability, and significant national events for major publications. While primarily known for his political reporting, his work often intersects with issues of ethics, integrity, and leadership that resonate with Christian audiences interested in cultural and civic matters.",
+    "affiliation": "The Washington Post",
+    "role": "Investigative Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LB"
+  },
+  {
+    "name": "Todd Johnson",
+    "slug": "todd-johnson",
+    "bio": "Todd Johnson is a respected voice in Christian content and apologetics, known for his thoughtful exploration of faith, culture, and biblical truth. He engages contemporary questions through a distinctly Christian worldview, helping believers think deeply about their convictions.",
+    "affiliation": "",
+    "role": "Christian Author & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TJ"
   }
 ]
