@@ -8866,5 +8866,144 @@
     "website": "",
     "books": [],
     "initials": "TJ"
+  },
+  {
+    "name": "Brandon",
+    "slug": "brandon",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "B"
+  },
+  {
+    "name": "Jeremy Linneman",
+    "slug": "jeremy-linneman",
+    "bio": "Jeremy Linneman is a pastor and Christian writer committed to helping believers understand and live out their faith in practical ways. He brings biblical insight and pastoral experience to topics affecting modern Christian living and spiritual growth.",
+    "affiliation": "",
+    "role": "Pastor & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JL"
+  },
+  {
+    "name": "Graham Barnes",
+    "slug": "graham-barnes",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "GB"
+  },
+  {
+    "name": "Jim McCarthy",
+    "slug": "jim-mccarthy",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JM"
+  },
+  {
+    "name": "Paul Worcester",
+    "slug": "paul-worcester",
+    "bio": "Paul Worcester is a Christian author and thought leader known for his work in faith-based content and spiritual development. His writings encourage believers to deepen their understanding of Scripture and live out their faith with greater intentionality and conviction.",
+    "affiliation": "",
+    "role": "Author & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PW"
+  },
+  {
+    "name": "Thaddeus Williams",
+    "slug": "thaddeus-williams",
+    "bio": "Thaddeus Williams is a Christian author and thought leader who explores faith, culture, and spiritual formation. He is known for his insightful writing on engaging contemporary culture from a biblical worldview and helping believers develop deeper theological thinking.",
+    "affiliation": "Logos Bible Software, Christian publishing and speaking",
+    "role": "Author & Cultural Theologian",
+    "education": "M.A. in Theological Studies",
+    "website": "https://www.thaddeuswilliams.com",
+    "books": [
+      {
+        "title": "Confronting Injustice Without Compromising Truth",
+        "amazon_url": "https://www.amazon.com/s?k=Confronting+Injustice+Without+Compromising+Truth+Thaddeus+Williams"
+      },
+      {
+        "title": "Renegade Gospel",
+        "amazon_url": "https://www.amazon.com/s?k=Renegade+Gospel+Thaddeus+Williams"
+      },
+      {
+        "title": "Mere Humanity",
+        "amazon_url": "https://www.amazon.com/s?k=Mere+Humanity+Thaddeus+Williams"
+      }
+    ],
+    "initials": "TW"
+  },
+  {
+    "name": "Dave Strunk",
+    "slug": "dave-strunk",
+    "bio": "Dave Strunk is a Christian communicator and content creator dedicated to helping believers integrate their faith with everyday life. Through writing and digital media, he explores practical theology and spiritual growth for modern audiences.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DS"
+  },
+  {
+    "name": "T. Berglund",
+    "slug": "tberglundchristianitytodaycom",
+    "bio": "T. Berglund is a writer and editor associated with Christianity Today, one of the leading evangelical Christian publications. Through their work, they contribute to thoughtful conversations about faith, culture, and Christian living in the contemporary world.",
+    "affiliation": "Christianity Today",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TB"
+  },
+  {
+    "name": "Anton Troianovski and David E. Sanger",
+    "slug": "anton-troianovski-and-david-e-sanger",
+    "bio": "Anton Troianovski and David E. Sanger are veteran journalists at The New York Times who specialize in international affairs and national security reporting. Their investigative work provides readers with in-depth analysis of geopolitical events and their implications for global stability and governance.",
+    "affiliation": "The New York Times",
+    "role": "Journalists & Authors",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Perfect Weapon: War, Sabotage, and Fear in the Cyber Age",
+        "amazon_url": "https://www.amazon.com/s?k=The+Perfect+Weapon+David+Sanger"
+      }
+    ],
+    "initials": "ATS"
+  },
+  {
+    "name": "Mariah Timms",
+    "slug": "mariah-timms",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MT"
+  },
+  {
+    "name": "Matthew Mpoke Bigg and Apoorva Mandavilli",
+    "slug": "matthew-mpoke-bigg-and-apoorva-mandavilli",
+    "bio": "Matthew Mpoke Bigg is a scholar of biblical theology and ancient Christianity, while Apoorva Mandavilli is a science journalist. Together they have contributed thoughtful perspectives on faith, science, and contemporary issues for Christian audiences seeking informed engagement with modern culture and biblical scholarship.",
+    "affiliation": "",
+    "role": "Biblical Scholar & Science Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MMB AM"
   }
 ]
