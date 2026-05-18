@@ -9060,5 +9060,170 @@
     "website": "",
     "books": [],
     "initials": "YZ"
+  },
+  {
+    "name": "Brad Klassen",
+    "slug": "brad-klassen",
+    "bio": "Brad Klassen is a Christian writer and content creator dedicated to exploring faith, theology, and spiritual growth. His work aims to help believers deepen their understanding of Scripture and live out their faith authentically in today's world.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BK"
+  },
+  {
+    "name": "Mitchell G. Bahnsen",
+    "slug": "mitchell-g-bahnsen",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MGB"
+  },
+  {
+    "name": "Megan Hill",
+    "slug": "megan-hill",
+    "bio": "Megan Hill is a writer and editor known for her thoughtful exploration of Christian faith, motherhood, and women's discipleship. She contributes regularly to Christianity Today and other evangelical publications, offering biblically grounded perspectives on contemporary issues facing Christian women.",
+    "affiliation": "Christianity Today",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Contentment: Seeing God's Provision in All of Life",
+        "amazon_url": "https://www.amazon.com/s?k=Contentment+Megan+Hill"
+      },
+      {
+        "title": "A Place to Belong: Learning Community Through Church",
+        "amazon_url": "https://www.amazon.com/s?k=A+Place+to+Belong+Megan+Hill"
+      },
+      {
+        "title": "Praying Together: The Priority and Privilege of Prayer",
+        "amazon_url": "https://www.amazon.com/s?k=Praying+Together+Megan+Hill"
+      },
+      {
+        "title": "The Glorious in the Ordinary: Devotions for Finding God's Glory in Daily Life",
+        "amazon_url": "https://www.amazon.com/s?k=The+Glorious+in+the+Ordinary+Megan+Hill"
+      }
+    ],
+    "initials": "MH"
+  },
+  {
+    "name": "Ken Braddy",
+    "slug": "ken-braddy",
+    "bio": "Ken Braddy is a pastor and Christian communicator who has served in ministry leadership roles focused on discipleship and spiritual formation. His work emphasizes practical faith and helping believers grow deeper in their relationship with Christ.",
+    "affiliation": "",
+    "role": "Pastor & Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KB"
+  },
+  {
+    "name": "Peter S. Goodman and Finbarr O'Reilly",
+    "slug": "peter-s-goodman-and-finbarr-oreilly",
+    "bio": "Peter S. Goodman is an international economics correspondent and author known for investigative journalism on global labor and supply chain issues. Finbarr O'Reilly is an award-winning photojournalist and documentarian. Together, their collaborative work examines human dignity, economic justice, and the interconnected systems that affect vulnerable populations worldwide.",
+    "affiliation": "New York Times",
+    "role": "Journalists & Authors",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Globalization of Nothing",
+        "amazon_url": "https://www.amazon.com/s?k=Peter+Goodman+globalization"
+      }
+    ],
+    "initials": "PSG, FOR"
+  },
+  {
+    "name": "Richard Sprenger",
+    "slug": "richard-sprenger",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RS"
+  },
+  {
+    "name": "Noah Payne-Frank",
+    "slug": "noah-paynefrank",
+    "bio": "Noah Payne-Frank is a writer and content creator focused on Christian thought and cultural commentary. He engages with contemporary issues through a biblical lens, helping readers navigate faith in an increasingly complex world.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "NPF"
+  },
+  {
+    "name": "Christopher Cherry",
+    "slug": "christopher-cherry",
+    "bio": "Christopher Cherry is a Christian author and content creator dedicated to helping believers understand Scripture and apply biblical truth to their daily lives. His work focuses on practical theology and discipleship for modern Christians.",
+    "affiliation": "",
+    "role": "Author & Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CC"
+  },
+  {
+    "name": "Frances Rankin",
+    "slug": "frances-rankin",
+    "bio": "Frances Rankin is a Christian author and speaker known for her thoughtful contributions to faith-based literature. Her work explores themes of spiritual growth and Christian living for contemporary audiences.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "FR"
+  },
+  {
+    "name": "Kyri Evangelou",
+    "slug": "kyri-evangelou",
+    "bio": "Kyri Evangelou is a Christian communicator and content creator dedicated to exploring faith, culture, and spiritual growth. Through various platforms, he shares insights designed to help believers deepen their understanding of Scripture and live out their faith in the modern world.",
+    "affiliation": "",
+    "role": "Content Creator & Christian Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KE"
+  },
+  {
+    "name": "Temujin Doran and Katie Arnold",
+    "slug": "temujin-doran-and-katie-arnold",
+    "bio": "Temujin Doran and Katie Arnold are voices in Christian content and commentary, engaging audiences on faith, culture, and contemporary issues from a biblical perspective. They contribute to Christian discourse through various media platforms and publications.",
+    "affiliation": "",
+    "role": "Content Creators & Writers",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TDK"
+  },
+  {
+    "name": "Roque Planas and agencies",
+    "slug": "roque-planas-and-agencies",
+    "bio": "Roque Planas is a journalist and writer who has contributed to various news and content agencies covering faith, culture, and social issues relevant to Christian and Hispanic audiences. His work spans multiple publications focused on providing balanced reporting and commentary on topics of interest to faith-based communities.",
+    "affiliation": "",
+    "role": "Journalist & Content Contributor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RP"
+  },
+  {
+    "name": "Ivan Nechepurenko and Mary Gelman",
+    "slug": "ivan-nechepurenko-and-mary-gelman",
+    "bio": "Ivan Nechepurenko and Mary Gelman are journalists and writers who have contributed to major international publications covering Eastern European affairs and cultural topics. Their reporting and writing reflect a commitment to honest storytelling and in-depth analysis of complex geopolitical and social issues.",
+    "affiliation": "The New York Times",
+    "role": "Journalists & Writers",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "IN-MG"
   }
 ]

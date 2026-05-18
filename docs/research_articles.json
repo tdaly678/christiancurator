@@ -1,76 +1,85 @@
 [
   {
-    "source_name": "World Magazine",
-    "source_category": "news",
+    "source_name": "Lifeway Research",
+    "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Stephen Kloosterman",
-    "title": "Drug overdose deaths decline for third year",
-    "url": "https://wng.org/sift/drug-overdose-deaths-decline-for-third-year-1778874007",
-    "summary": "",
+    "author": "Ken Braddy",
+    "title": "What Role Does Service Play in Discipleship?",
+    "url": "https://research.lifeway.com/2026/05/18/what-role-does-service-play-in-discipleship/",
+    "summary": "<p>Discipleship that doesn’t move people toward service is incomplete because it doesn’t fully reflect the life of Christ. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/05/18/what-role-does-service-play-in-discipleship/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/05/18/what-role-does-service-play-in-discipleship/\">What Role Does Service Play in Discipleship?</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "full_content": "",
-    "published": "Fri, 15 May 2026 16:06:00 -0400",
-    "fetched_at": "2026-05-17T08:07:09.265330",
+    "published": "Mon, 18 May 2026 06:47:00 +0000",
+    "fetched_at": "2026-05-18T09:37:02.345578",
+    "score": 6,
+    "tags": [
+      "theology",
+      "church life"
+    ],
+    "rewritten_title": "Discipleship Without Service Is Incomplete, Christian Leaders Argue",
+    "personas": [
+      "pastor",
+      "parent"
+    ],
+    "topic_cluster": "discipleship_service",
+    "perspective": "neutral",
+    "final_score": 7.5,
+    "recency_boost": 1.5
+  },
+  {
+    "source_name": "Lifeway Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Paul Worcester",
+    "title": "3 Keys to Healthy Disciple Making Relationships",
+    "url": "https://research.lifeway.com/2026/05/15/3-keys-to-healthy-disciple-making-relationships/",
+    "summary": "<p>Whether you’re leading a discipleship ministry or personally discipling someone, we all make missteps in these relationships. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/05/15/3-keys-to-healthy-disciple-making-relationships/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/05/15/3-keys-to-healthy-disciple-making-relationships/\">3 Keys to Healthy Disciple Making Relationships</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "full_content": "",
+    "published": "Fri, 15 May 2026 13:08:44 +0000",
+    "fetched_at": "2026-05-18T09:37:02.345593",
+    "score": 6,
+    "tags": [
+      "theology",
+      "church life"
+    ],
+    "rewritten_title": "Discipleship Programs Are Failing. Here's What's Breaking.",
+    "personas": [
+      "pastor",
+      "professional"
+    ],
+    "topic_cluster": "discipleship_relationships",
+    "perspective": "neutral",
+    "previously_shown": true,
+    "final_score": 1.5,
+    "recency_boost": 0.25
+  },
+  {
+    "source_name": "Ryan Burge",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": true,
+    "author": "Ryan Burge",
+    "title": "What's Happening with America's Seminaries?",
+    "url": "https://www.graphsaboutreligion.com/p/whos-training-americas-pastors",
+    "summary": "The ATS data tells a more complicated &#8212; and more hopeful &#8212; story than the headlines suggest.",
+    "full_content": "<p>Fun fact &#8212; I <em>almost</em> went to seminary. In my last year of undergraduate I took the LSAT twice, didn&#8217;t love my scores, and applied to a handful of law schools. I didn&#8217;t get into any of them. (For those wondering, this is one of those &#8220;blessings in disguise&#8221; in my life &#8212; I would have hated being a lawyer.) So, in an act of desperation in the late summer of 2004, I put in an application for the theology program at Saint Louis University. I got accepted, but decided to turn it down. Again, I&#8217;m really glad I didn&#8217;t go down that road.</p><p>But, due to my work tracing American religion and politics, I have a lot of interaction with seminaries. I&#8217;ve given more talks and webinars at graduate schools in religion, theology, divinity, etc. than I can count. <strong>And I think that tracking seminaries is actually a very worthwhile endeavor because it gives us a sense of where things are headed in the future of religious leadership in the United States.</strong></p><p>After futzing around with Claude Code for a couple of hours, I managed to pull in and merge most of the Data Tables that the Association of Theological Schools posts<a href=\"https://www.ats.edu/Annual-Data-Tables\"> on their website</a>. I don&#8217;t want to spend too much time describing this process except to say: <strong>it&#8217;s a tremendous pain in the butt, even with the help of artificial intelligence</strong>. </p><p>That&#8217;s true for two reasons. One is that the information is published in PDF format &#8212; a fact that will make any data analyst shudder in horror. The other impediment is that these ATS reports don&#8217;t all follow the same format in successive years. New columns are added, others are removed. Again, that just makes the job of scraping and cleaning much harder.</p><div class=\"digest-post-embed\"></div><p>But with a lot of effort and too many Claude tokens, I&#8217;ve managed to organize a fairly clean spreadsheet with data going back to 2007. Let me start with this interesting nugget: <strong>the number of full-time equivalent (FTE) students in ATS programs has increased just slightly over the last 17 years, from 49,915 in 2007 to 50,259 in 2025. That&#8217;s a .7% increase</strong>. That&#8217;s actually not bad at all, considering everything else happening in the world. During the same time period, the share of Americans with no religious affiliation rose by about ten percentage points. So, not bad compared to that benchmark.</p><p>What follows is basically this &#8212; I poked around in the data a whole bunch and found a lot of interesting little nuggets to think about when considering the future of seminary education in the United States.</p><p>The first thing I noticed? The SBC is doing well. For those who didn&#8217;t grow up in the orbit of the Southern Baptist Convention, you need to know that the SBC owns six different seminaries located all over the United States. They are:</p><ul><li><p><a href=\"http://www.gs.edu/\">Gateway Seminary of the Southern Baptist Convention</a> in Ontario, California</p></li><li><p><a href=\"http://www.mbts.edu/\">Midwestern Baptist Theological Seminary</a> in Kansas City, Missouri</p></li><li><p><a href=\"http://www.nobts.edu/\">New Orleans Baptist Theological Seminary</a> in New Orleans, Louisiana</p></li><li><p><a href=\"http://www.sebts.edu/\">The Southeastern Baptist Theological Seminary</a> in Wake Forest, North Carolina</p></li><li><p><a href=\"http://www.sbts.edu/\">The Southern Baptist Theological Seminary</a> in Louisville, Kentucky</p></li><li><p><a href=\"http://www.swbts.edu/\">The Southwestern Baptist Theological Seminary</a> in Fort Worth, Texas</p></li></ul><p>The Convention sends a significant amount of money to these institutions each year, making tuition more affordable in hopes that they will crank out the next generation of men to fill the pulpits of the 40,000+ SBC churches across the country. <a href=\"https://baptistnews.com/article/from-1925-to-2024-why-the-sbcs-funding-formula-is-being-questioned-a-century-later\">In the 2023&#8211;2024 cycle, the Southern Baptist Convention sent over $40M their way.</a></p><p>By any metric, this has been a huge success.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!muHh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26d1eeb3-4a12-4f31-8986-34f567390c94_2700x1800.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"971\" src=\"https://substackcdn.com/image/fetch/$s_!muHh!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26d1eeb3-4a12-4f31-8986-34f567390c94_2700x1800.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p></p><p>Of the top seven largest seminaries in the ATS database in 2025, five of them are the ones mentioned above. Southern Baptist Theological Seminary (often considered the flagship of the system) had 1,964 FTE students, and Midwestern Baptist Theological Seminary came in third with 1,587 FTE. Behind Liberty University (which we will talk about in a minute), there are no larger graduate schools training up pastors in the United States.</p><p>The only non-SBC exception besides Liberty is Dallas Theological Seminary. It&#8217;s really impressive to consider that the SBC is training over 7,400 people across these institutions. To put that in perspective, the United Church of Christ had fewer than 90 people graduate from seminary last year. This is a system that is clearly working.</p><p>That becomes even more apparent when you look at the overall change in enrollment among the largest twenty seminaries. For almost all of them, I can trace the change in FTE going back to 2007, but in a couple of cases these institutions didn&#8217;t join the ATS until later, so I used the first year they appeared as the baseline for comparison.</p>\n      <p>\n          <a href=\"https://www.graphsaboutreligion.com/p/whos-training-americas-pastors\">\n              Read more\n          </a>\n      </p>",
+    "published": "Thu, 14 May 2026 11:30:37 GMT",
+    "fetched_at": "2026-05-18T09:37:01.637194",
     "score": 4,
     "tags": [
       "data",
       "news"
     ],
-    "rewritten_title": "Drug overdose deaths decline for third year",
-    "personas": [],
-    "topic_cluster": "public_health_trends",
+    "rewritten_title": "Seminaries Aren't Dying. The Data Shows Something Messier.",
+    "personas": [
+      "pastor"
+    ],
+    "topic_cluster": "seminary_trends",
     "perspective": "neutral",
-    "final_score": 4.83,
-    "recency_boost": 0.75
-  },
-  {
-    "source_name": "Pew Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Beshay",
-    "title": "A majority of Americans say the country’s best years are behind us",
-    "url": "https://www.pewresearch.org/short-reads/2026/05/15/a-majority-of-americans-say-the-countrys-best-years-are-behind-us/",
-    "summary": "Americans are also much more pessimistic (44%) than optimistic (28%) when asked to think about what things will be like in the U.S. 50 years from now.",
-    "full_content": "",
-    "published": "Fri, 15 May 2026 13:55:16 +0000",
-    "fetched_at": "2026-05-17T08:08:41.092475",
-    "score": 4,
-    "tags": [
-      "data"
-    ],
-    "rewritten_title": "American Pessimism Peaks: Majority Believes Best Days Are Gone",
-    "personas": [
-      "professional"
-    ],
-    "topic_cluster": "american_pessimism_trends",
-    "perspective": "news",
-    "final_score": 4.75,
-    "recency_boost": 0.75
-  },
-  {
-    "source_name": "Pew Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Beshay",
-    "title": "What Americans think it takes to be a good news consumer",
-    "url": "https://www.pewresearch.org/short-reads/2026/05/14/what-americans-think-it-takes-to-be-a-good-news-consumer/",
-    "summary": "One of the most common things Americans associate with being a good news consumer is a sense of skepticism or discernment.",
-    "full_content": "",
-    "published": "Thu, 14 May 2026 13:57:51 +0000",
-    "fetched_at": "2026-05-17T08:08:41.092482",
-    "score": 4,
-    "tags": [
-      "data"
-    ],
-    "rewritten_title": "Skepticism Separates Good News Consumers From the Rest, Americans Say",
-    "personas": [
-      "professional"
-    ],
-    "topic_cluster": "media_literacy_trends",
-    "perspective": "news",
-    "final_score": 3.5,
-    "recency_boost": 0.25
+    "frequency_boost": 0.75,
+    "source_posts_30d": 8,
+    "previously_shown": true,
+    "final_score": 0.0
   }
 ]
