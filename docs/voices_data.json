@@ -9225,5 +9225,145 @@
     "website": "",
     "books": [],
     "initials": "IN-MG"
+  },
+  {
+    "name": "Winfree Brisley",
+    "slug": "winfree-brisley",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "WB"
+  },
+  {
+    "name": "Darryl Dash",
+    "slug": "darryl-dash",
+    "bio": "Darryl Dash is a pastor, author, and speaker known for helping churches and Christian leaders navigate practical ministry challenges with biblical wisdom. He has served in pastoral ministry for decades and shares insights on leadership, faith, and Christian living through various platforms. His work encourages believers to think deeply about their faith and its application to everyday life.",
+    "affiliation": "Tap Unstuck",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "https://www.darryldash.com",
+    "books": [
+      {
+        "title": "Do Better: A Guide to Growing as a Leader",
+        "amazon_url": "https://www.amazon.com/s?k=Do+Better+Darryl+Dash"
+      },
+      {
+        "title": "Laughing at the Devil: Exposing the Enemy's Lies",
+        "amazon_url": "https://www.amazon.com/s?k=Laughing+at+the+Devil+Darryl+Dash"
+      }
+    ],
+    "initials": "DD"
+  },
+  {
+    "name": "Erik Coonce",
+    "slug": "erik-coonce",
+    "bio": "Erik Coonce is a Christian communicator and content creator dedicated to helping believers engage their faith in meaningful ways. His work focuses on discipleship, biblical teaching, and practical Christian living for contemporary audiences.",
+    "affiliation": "",
+    "role": "Christian Content Creator & Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EC"
+  },
+  {
+    "name": "Brad Wetherell",
+    "slug": "brad-wetherell",
+    "bio": "Brad Wetherell is a Christian author and communicator passionate about helping believers grow in their faith and understanding of Scripture. His work focuses on practical discipleship and spiritual growth for modern Christians.",
+    "affiliation": "",
+    "role": "Author & Christian Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BW"
+  },
+  {
+    "name": "Chad Huffman",
+    "slug": "chad-huffman",
+    "bio": "Chad Huffman is a Christian communicator and content creator dedicated to helping believers grow in their faith and understanding of Scripture. Through his writing and teaching, he explores themes of discipleship, spiritual growth, and practical Christianity for modern believers.",
+    "affiliation": "",
+    "role": "Author & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CH"
+  },
+  {
+    "name": "Daniel Strand",
+    "slug": "daniel-strand",
+    "bio": "Daniel Strand is a Christian writer and content creator focused on biblical teaching and spiritual formation. His work emphasizes practical discipleship and deepening faith through Scripture.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DS"
+  },
+  {
+    "name": "Nataliya Vasilyeva",
+    "slug": "nataliya-vasilyeva",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "NV"
+  },
+  {
+    "name": "Aaron Boxerman",
+    "slug": "aaron-boxerman",
+    "bio": "Aaron Boxerman is a journalist and writer who covers religious and cultural topics with thoughtful analysis. His work explores the intersection of faith, politics, and contemporary issues from a balanced perspective.",
+    "affiliation": "",
+    "role": "Journalist & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AB"
+  },
+  {
+    "name": "Ronnie Harui",
+    "slug": "ronnie-harui",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RH"
+  },
+  {
+    "name": "Allen C. Guelzo",
+    "slug": "allen-c-guelzo",
+    "bio": "Allen C. Guelzo is a respected historian and author known for his scholarly works on American history, faith, and ethics. A prolific writer and educator, he brings deep historical insight to contemporary Christian discussions about America's spiritual heritage and moral foundations.",
+    "affiliation": "Newsweek, The Gospel Coalition, Intercollegiate Studies Institute",
+    "role": "Historian, Author & Scholar",
+    "education": "Ph.D. in American History, University of Pennsylvania",
+    "website": "https://www.allenguelzo.com",
+    "books": [
+      {
+        "title": "Lincoln's Emancipation Proclamation: The End of Slavery in America",
+        "amazon_url": "https://www.amazon.com/s?k=Lincoln%27s+Emancipation+Proclamation+Allen+Guelzo"
+      },
+      {
+        "title": "Abraham Lincoln: Redeemer President",
+        "amazon_url": "https://www.amazon.com/s?k=Abraham+Lincoln+Redeemer+President+Allen+Guelzo"
+      },
+      {
+        "title": "The Crisis of the American Republic: A History of Intellectual and Political Thought",
+        "amazon_url": "https://www.amazon.com/s?k=Crisis+American+Republic+Allen+Guelzo"
+      },
+      {
+        "title": "Evangelicalism and the Future of Christianity",
+        "amazon_url": "https://www.amazon.com/s?k=Evangelicalism+Future+Christianity+Allen+Guelzo"
+      },
+      {
+        "title": "The God and the Gold: A Narrative History of Banking",
+        "amazon_url": "https://www.amazon.com/s?k=The+God+and+the+Gold+Allen+Guelzo"
+      }
+    ],
+    "initials": "ACG"
   }
 ]
