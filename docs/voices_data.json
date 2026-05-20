@@ -9365,5 +9365,130 @@
       }
     ],
     "initials": "ACG"
+  },
+  {
+    "name": "Michael Kelley",
+    "slug": "michael-kelley",
+    "bio": "Michael Kelley is a pastor and author known for his work in Christian discipleship and spiritual formation. He has served in pastoral ministry and is committed to helping believers develop a deeper relationship with Christ through practical, biblical teaching.",
+    "affiliation": "Lifeway Christian Resources",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Wednesdays Were Pretty Normal",
+        "amazon_url": "https://www.amazon.com/s?k=Wednesdays+Were+Pretty+Normal+Michael+Kelley"
+      },
+      {
+        "title": "Boring: Finding an Extraordinary God in an Ordinary Life",
+        "amazon_url": "https://www.amazon.com/s?k=Boring+Finding+an+Extraordinary+God+in+an+Ordinary+Life+Michael+Kelley"
+      },
+      {
+        "title": "God Hides in Plain Sight: How to See the Sacred in a Skeptical World",
+        "amazon_url": "https://www.amazon.com/s?k=God+Hides+in+Plain+Sight+Michael+Kelley"
+      }
+    ],
+    "initials": "MK"
+  },
+  {
+    "name": "Clayton Chancey",
+    "slug": "clayton-chancey",
+    "bio": "Clayton Chancey is a Christian author and content creator dedicated to helping believers deepen their faith and understanding of Scripture. His work focuses on practical Christian living and biblical wisdom for contemporary audiences.",
+    "affiliation": "",
+    "role": "Author & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CC"
+  },
+  {
+    "name": "John Ehrett",
+    "slug": "john-ehrett",
+    "bio": "John Ehrett is a writer and editor focused on Christian thought, culture, and public faith. He contributes to various Christian publications and engages contemporary issues through a theologically informed perspective. His work explores how Christian conviction intersects with cultural engagement and intellectual discourse.",
+    "affiliation": "The Dispatch, Christianity Today, and other Christian publications",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JE"
+  },
+  {
+    "name": "Glenn A. Moots",
+    "slug": "glenn-a-moots",
+    "bio": "Glenn A. Moots is a scholar and author specializing in the intersection of Christian faith, American history, and political philosophy. His work explores how biblical principles have shaped American thought and institutions, offering evangelical readers a thoughtful perspective on faith's role in public life.",
+    "affiliation": "Grove City College",
+    "role": "Professor & Author",
+    "education": "Ph.D. in Political Science",
+    "website": "",
+    "books": [
+      {
+        "title": "Politics Is a Calling",
+        "amazon_url": "https://www.amazon.com/s?k=Politics+Is+a+Calling+Glenn+Moots"
+      },
+      {
+        "title": "The God Who Governs",
+        "amazon_url": "https://www.amazon.com/s?k=The+God+Who+Governs+Glenn+Moots"
+      },
+      {
+        "title": "Grounds for Agreement",
+        "amazon_url": "https://www.amazon.com/s?k=Grounds+for+Agreement+Glenn+Moots"
+      }
+    ],
+    "initials": "GAM"
+  },
+  {
+    "name": "Kyle Bueermann",
+    "slug": "kyle-bueermann",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KB"
+  },
+  {
+    "name": "Aimee Joseph",
+    "slug": "aimee-joseph",
+    "bio": "Aimee Joseph is a writer and content creator focused on Christian living and faith development. Her work encourages believers to deepen their relationship with Christ through practical wisdom and biblical reflection.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AJ"
+  },
+  {
+    "name": "Haley Isbell",
+    "slug": "haley-isbell",
+    "bio": "Haley Isbell is a writer and content creator focused on helping Christians navigate faith, relationships, and personal growth. Her work encourages readers to deepen their relationship with Christ through practical biblical insights and honest reflection.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "HI"
+  },
+  {
+    "name": "Yan Zhuang and Ephrat Livni",
+    "slug": "yan-zhuang-and-ephrat-livni",
+    "bio": "Yan Zhuang and Ephrat Livni are journalists and writers who explore faith, culture, and contemporary issues. Their work has appeared in major publications where they thoughtfully examine how belief intersects with modern life and society.",
+    "affiliation": "",
+    "role": "Journalists & Writers",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "YZ-EL"
+  },
+  {
+    "name": "David Pierson",
+    "slug": "david-pierson",
+    "bio": "David Pierson is a Christian author and speaker who focuses on biblical teaching and spiritual growth. His work emphasizes authentic faith and practical Christian living for modern believers.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DP"
   }
 ]
