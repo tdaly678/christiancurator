@@ -4,24 +4,25 @@
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Kyle Bueermann",
-    "title": "4 Marks of Success in a Rural Church",
-    "url": "https://research.lifeway.com/2026/05/20/4-marks-of-success-in-a-rural-church/",
-    "summary": "<p>How can pastors and church leaders effectively measure “success” in a rural church, with the unique aspects of ministry in rural contexts? <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/05/20/4-marks-of-success-in-a-rural-church/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/05/20/4-marks-of-success-in-a-rural-church/\">4 Marks of Success in a Rural Church</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "author": "Hannah Depledge",
+    "title": "Benefits of Hosting a Digital Event for Women",
+    "url": "https://research.lifeway.com/2026/05/21/benefits-of-hosting-a-digital-event-for-women/",
+    "summary": "<p>A digital event can support your leaders, enhance the ministry you’re stewarding, and open new doors to invite women into what God is doing. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/05/21/benefits-of-hosting-a-digital-event-for-women/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/05/21/benefits-of-hosting-a-digital-event-for-women/\">Benefits of Hosting a Digital Event for Women</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "full_content": "",
-    "published": "Wed, 20 May 2026 07:01:00 +0000",
-    "fetched_at": "2026-05-20T08:51:54.239078",
-    "score": 6,
+    "published": "Thu, 21 May 2026 06:53:00 +0000",
+    "fetched_at": "2026-05-21T08:54:08.938411",
+    "score": 5,
     "tags": [
       "church life"
     ],
-    "rewritten_title": "Rural Churches Face a Success Problem—How to Measure It",
+    "rewritten_title": "Digital Events Are Reshaping Women's Ministry — Here's Why",
     "personas": [
-      "pastor"
+      "pastor",
+      "women"
     ],
-    "topic_cluster": "rural_church_ministry",
-    "perspective": "neutral",
-    "final_score": 7.5,
+    "topic_cluster": "digital_ministry_women",
+    "perspective": "supportive",
+    "final_score": 6.5,
     "recency_boost": 1.5
   },
   {
@@ -35,45 +36,44 @@
     "summary": "<p>Living unashamed is a key signpost of discipleship, but many churchgoers don't see spiritual matters as pervasive throughout their lives. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/05/19/spiritual-matters-missing-from-many-churchgoers-conversations/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/05/19/spiritual-matters-missing-from-many-churchgoers-conversations/\">Spiritual Matters Missing From Many Churchgoers’ Conversations</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "full_content": "",
     "published": "Tue, 19 May 2026 14:50:00 +0000",
-    "fetched_at": "2026-05-20T08:51:54.239093",
+    "fetched_at": "2026-05-21T08:54:08.938433",
     "score": 5,
     "tags": [
       "church life",
       "data"
     ],
-    "rewritten_title": "Churchgoers Are Hiding Their Faith From Daily Life",
+    "rewritten_title": "Discipleship Demands Spiritual Urgency. Most Christians Aren't Having It.",
     "personas": [
-      "pastor",
-      "professional"
+      "pastor"
     ],
     "topic_cluster": "discipleship_trends",
     "perspective": "neutral",
-    "final_score": 5.75,
-    "recency_boost": 1.5
+    "final_score": 5.0,
+    "recency_boost": 0.75
   },
   {
-    "source_name": "The New York Times",
-    "source_category": "news",
-    "source_type": "world_news",
+    "source_name": "Pew Research",
+    "source_category": "culture",
+    "source_type": "christian",
     "independent": false,
-    "author": "Lynsey Chutel, Yan Zhuang and Ephrat Livni",
-    "title": "Ebola Outbreak in Central Africa Could Last Months, W.H.O. Says",
-    "url": "https://www.nytimes.com/2026/05/19/world/africa/ebola-outbreak-deaths-congo-who.html",
-    "summary": "Health officials reported more than 130 suspected deaths and 540 cases in the Democratic Republic of Congo and Uganda, but experts say the figures could be much higher.",
-    "full_content": "A visitor has their temperature checked before entering Kyeshero Hospital in Goma on Monday.",
-    "published": "Tue, 19 May 2026 21:19:34 +0000",
-    "fetched_at": "2026-05-20T08:50:28.700690",
+    "author": "Beshay",
+    "title": "5 facts about Africa’s population growth",
+    "url": "https://www.pewresearch.org/short-reads/2026/05/19/5-facts-about-africas-population-growth/",
+    "summary": "While global population growth is projected to slow over the rest of the century, Africa stands out for its relatively young and growing population.",
+    "full_content": "",
+    "published": "Tue, 19 May 2026 13:54:24 +0000",
+    "fetched_at": "2026-05-21T08:54:08.552098",
     "score": 4,
     "tags": [
-      "news",
       "data"
     ],
-    "rewritten_title": "Ebola's Deadly Spread in Africa Defies Containment Efforts",
-    "top_world_story": true,
-    "personas": [],
-    "topic_cluster": "ebola_outbreak_drc",
-    "perspective": "news",
-    "final_score": 5.1,
-    "recency_boost": 1.5
+    "rewritten_title": "Africa's Population Boom Defies Global Slowdown",
+    "personas": [
+      "professional"
+    ],
+    "topic_cluster": "africa_demographics",
+    "perspective": "neutral",
+    "final_score": 4.75,
+    "recency_boost": 0.75
   }
 ]

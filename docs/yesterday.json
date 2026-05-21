@@ -1,53 +1,20 @@
 [
   {
-    "title": "A Newsroom's Secret Weapon: Why CT Editors Pray Together",
-    "url": "https://www.christianitytoday.com/2026/05/why-ct-journalists-gather-for-prayer/",
-    "source_name": "Christianity Today",
-    "author": "Mia Staub",
-    "final_score": 10.0,
-    "tags": [
-      "church life",
-      "prayer"
-    ]
-  },
-  {
-    "title": "Christ's Resurrection Offers Hope the Secular World Rejects",
-    "url": "https://theaquilareport.com/the-hope-the-world-needs-but-just-cant-find/",
+    "title": "Rebuke Is a Spiritual Gift—If You'll Actually Accept It",
+    "url": "https://theaquilareport.com/a-tough-means-of-grace/",
     "source_name": "The Aquila Report",
-    "author": "Michael Kelley",
-    "final_score": 10.0,
+    "author": "Derek Brown",
+    "final_score": 9.5,
     "tags": [
       "devotional",
       "theology"
     ]
   },
   {
-    "title": "Van Fire Couldn't Stop Her Book on Finding Joy",
-    "url": "https://www.christianitytoday.com/2026/05/my-camper-van-burned-in-a-freak-accident/",
-    "source_name": "Christianity Today",
-    "author": "Haley Byrd Wilt",
-    "final_score": 9.25,
-    "tags": [
-      "devotional",
-      "work"
-    ]
-  },
-  {
-    "title": "AI's Power Is Real. Its Limits Are Spiritual.",
-    "url": "https://www.thegospelcoalition.org/article/ai-impressive-not-transcendent/",
-    "source_name": "The Gospel Coalition",
-    "author": "Clayton Chancey",
-    "final_score": 9.25,
-    "tags": [
-      "theology",
-      "culture"
-    ]
-  },
-  {
-    "title": "Clinging to Christ Isn't About Fear — It's About Assurance",
-    "url": "https://theaquilareport.com/what-does-it-mean-to-cling-to-christ/",
+    "title": "God Isn't Withholding Blessings—He's Building Your Capacity",
+    "url": "https://theaquilareport.com/god-is-not-the-reason-your-life-feels-stuck/",
     "source_name": "The Aquila Report",
-    "author": "D.V. Rider",
+    "author": "Christopher Cook",
     "final_score": 8.75,
     "tags": [
       "devotional",
@@ -55,58 +22,92 @@
     ]
   },
   {
-    "title": "Worship Star Anna Golden: Success Left Me Spiritually Empty",
-    "url": "https://relevantmagazine.com/culture/music/worship-artist-anna-golden-reveals-the-spiritual-cost-of-chasing-success/",
+    "title": "Christians Are Trading Faithfulness for Outrage—and Losing Everything",
+    "url": "https://relevantmagazine.com/culture/trillia-newbell-christians-are-fighting-the-wrong-battle/",
     "source_name": "Relevant Magazine",
-    "author": "Emily Brown",
+    "author": "Ellen Hayes",
     "final_score": 8.64,
     "tags": [
       "devotional",
-      "work"
+      "culture"
     ]
   },
   {
-    "title": "Reformed Scholar Argues \"Religion\" Obscures True Christian Governance",
-    "url": "https://mereorthodoxy.com/the-problem-with-religion",
-    "source_name": "Mere Orthodoxy",
-    "author": "John Ehrett",
+    "title": "Lament Is the Language Christians Forgot—and Desperately Need",
+    "url": "https://www.thegospelcoalition.org/reviews/free-weep-courage-heals/",
+    "source_name": "The Gospel Coalition",
+    "author": "Rachel Culver",
+    "final_score": 8.5,
+    "tags": [
+      "devotional",
+      "theology"
+    ]
+  },
+  {
+    "title": "Christian Nationalism Is Winning. Russell Moore Says the Church Must Fight Back.",
+    "url": "https://www.christianitytoday.com/2026/05/america-christian-nationalism-rededicate-250-revival-washington-dc/",
+    "source_name": "Christianity Today",
+    "author": "Elise Brandon",
     "final_score": 8.5,
     "tags": [
       "theology",
-      "apologetics"
+      "culture",
+      "politics"
     ]
   },
   {
-    "title": "Christians Are Chasing \"Re-Enchantment.\" That's a Mistake.",
-    "url": "https://www.christianitytoday.com/2026/05/only-christ-can-re-enchant-downcast-hearts/",
-    "source_name": "Christianity Today",
-    "author": "Haley Byrd Wilt",
-    "final_score": 8.0,
+    "title": "A Taxonomy of Pride in 'The Great Divorce'",
+    "url": "https://mereorthodoxy.com/a-taxonomy-of-pride-in-the-great-divorce",
+    "source_name": "Mere Orthodoxy",
+    "author": "Steven Willing",
+    "final_score": 8.5,
     "tags": [
       "theology",
       "devotional"
     ]
   },
   {
-    "title": "Bureaucracy Is Killing Your Ministry. Here's How to Fight Back.",
-    "url": "https://www.chrismartin.fyi/p/do-less-to-do-more",
-    "source_name": "Chris Martin",
-    "author": "Chris Martin",
-    "final_score": 8.0,
+    "title": "Pro-Life Movement Crumbles as Christian Political Power Fades",
+    "url": "https://www.aaronrenn.com/p/the-end-of-the-moral-majority",
+    "source_name": "Aaron Renn",
+    "author": "Aaron M. Renn",
+    "final_score": 8.5,
     "tags": [
-      "work",
+      "politics",
+      "culture"
+    ]
+  },
+  {
+    "title": "Kinkade's Painted Paradise Hid a Fallen Life—What Does That Mean for Christian Art?",
+    "url": "https://www.thegospelcoalition.org/article/artists-ignore-fall/",
+    "source_name": "The Gospel Coalition",
+    "author": "Ryan Currie",
+    "final_score": 7.75,
+    "tags": [
+      "theology",
+      "culture"
+    ]
+  },
+  {
+    "title": "China's Persecuted Christians Reject Western Saviors — Here's Why",
+    "url": "https://www.christianitytoday.com/2026/05/chinas-persecuted-christians-skeptical-western-advocates-grace-jin-drexel/",
+    "source_name": "Christianity Today",
+    "author": "tberglund@christianitytoday.com",
+    "final_score": 7.75,
+    "tags": [
+      "missions",
       "church life"
     ]
   },
   {
-    "title": "Christian Hospitality Can't Survive a Liquid World",
-    "url": "https://firstthings.com/the-truth-about-christian-hospitality/",
-    "source_name": "First Things",
-    "author": "Abby Silva",
-    "final_score": 7.75,
+    "title": "Political Targeting Is Driving Citizens Away From Public Service",
+    "url": "https://wng.org/podcasts/the-cost-of-lawfare-1779304092",
+    "source_name": "World Magazine",
+    "author": "Keegan Martin",
+    "final_score": 7.62,
     "tags": [
-      "theology",
-      "devotional"
+      "politics",
+      "culture"
     ]
   }
 ]
