@@ -9578,5 +9578,117 @@
     "website": "",
     "books": [],
     "initials": "EWJ"
+  },
+  {
+    "name": "Justin Jackson",
+    "slug": "justin-jackson",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JJ"
+  },
+  {
+    "name": "Philip Ryan",
+    "slug": "philip-ryan",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PR"
+  },
+  {
+    "name": "Matthew Cluraghty",
+    "slug": "matthew-cluraghty",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MC"
+  },
+  {
+    "name": "John Ahern",
+    "slug": "johnraherngmailcom-john-ahern",
+    "bio": "John Ahern is a thoughtful voice in Christian content and commentary. Writing from a faith-centered perspective, he engages with contemporary issues through a biblical lens.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JA"
+  },
+  {
+    "name": "Christopher F. Schuetze and Tatiana Firsova",
+    "slug": "christopher-f-schuetze-and-tatiana-firsova",
+    "bio": "Christopher F. Schuetze and Tatiana Firsova are journalists and writers who have contributed to major publications covering international affairs, culture, and human interest stories. Their work often explores themes of faith, family, and social issues from a thoughtful, narrative-driven perspective.",
+    "affiliation": "The New York Times",
+    "role": "Journalists & Writers",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CS-TF"
+  },
+  {
+    "name": "Christopher F. Schuetze",
+    "slug": "christopher-f-schuetze",
+    "bio": "Christopher F. Schuetze is a religion correspondent and journalist known for his thoughtful reporting on faith communities and religious life. His work has explored topics ranging from church governance to denominational movements, bringing nuanced perspective to contemporary Christian issues.",
+    "affiliation": "New York Times",
+    "role": "Religion Correspondent & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CFS"
+  },
+  {
+    "name": "Henna Moussavi",
+    "slug": "henna-moussavi",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "HM"
+  },
+  {
+    "name": "Joyu Wang",
+    "slug": "joyu-wang",
+    "bio": "Joyu Wang is a Christian writer and content creator focused on exploring faith, culture, and spiritual growth for contemporary audiences. With a passion for making biblical wisdom accessible and relevant, Wang contributes to conversations about living out Christian values in an increasingly complex world.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JW"
+  },
+  {
+    "name": "James Eglinton",
+    "slug": "james-eglinton",
+    "bio": "James Eglinton is a scholar and theologian specializing in Reformed theology, Scottish church history, and the thought of figures like Samuel Rutherford. He combines academic rigor with accessible writing to help contemporary Christians understand their theological heritage and its relevance today.",
+    "affiliation": "Reformation Trust Publishing; various academic institutions",
+    "role": "Theologian, Scholar & Writer",
+    "education": "PhD in Theology",
+    "website": "",
+    "books": [
+      {
+        "title": "Času Sjedinjenih Djela Samuela Rutherfoorda",
+        "amazon_url": "https://www.amazon.com/s?k=James+Eglinton+Samuel+Rutherford"
+      },
+      {
+        "title": "Principled Expediency: On Statecraft and the Duty to Rescue the Innocent",
+        "amazon_url": "https://www.amazon.com/s?k=Principled+Expediency+James+Eglinton"
+      },
+      {
+        "title": "The Man of Sorrows and His Holy People",
+        "amazon_url": "https://www.amazon.com/s?k=Man+of+Sorrows+James+Eglinton"
+      }
+    ],
+    "initials": "JE"
   }
 ]
