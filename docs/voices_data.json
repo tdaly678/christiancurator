@@ -9756,5 +9756,54 @@
     "website": "",
     "books": [],
     "initials": "CE"
+  },
+  {
+    "name": "Courtney Reissig",
+    "slug": "courtney-reissig",
+    "bio": "Courtney Reissig is a writer and speaker known for addressing topics related to Christian womanhood, marriage, and faith. She contributes to various Christian publications and is passionate about helping women navigate their roles and identities through a biblical lens.",
+    "affiliation": "The Gospel Coalition, ERLC",
+    "role": "Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Surprising Unhappiness of Women and Why It Matters",
+        "amazon_url": "https://www.amazon.com/s?k=The+Surprising+Unhappiness+of+Women+and+Why+It+Matters+Courtney+Reissig"
+      }
+    ],
+    "initials": "CR"
+  },
+  {
+    "name": "Matt Fraser",
+    "slug": "matt-fraser",
+    "bio": "Matt Fraser is a Christian communicator and content creator known for his work in digital ministry and faith-based media. He is dedicated to helping believers grow in their understanding of Scripture and navigate their spiritual journey with practical wisdom.",
+    "affiliation": "",
+    "role": "Content Creator & Christian Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MF"
+  },
+  {
+    "name": "Ephrat Livni and Lynsey Chutel",
+    "slug": "ephrat-livni-and-lynsey-chutel",
+    "bio": "Ephrat Livni and Lynsey Chutel are accomplished journalists known for their reporting on global issues, culture, and human interest stories. Their work has appeared in major publications where they investigate compelling narratives that resonate with diverse audiences seeking deeper understanding of our world.",
+    "affiliation": "Quartz",
+    "role": "Journalists & Writers",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ELC"
+  },
+  {
+    "name": "Raffaele Huang",
+    "slug": "raffaele-huang",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RH"
   }
 ]
