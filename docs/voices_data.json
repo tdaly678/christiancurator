@@ -9805,5 +9805,77 @@
     "website": "",
     "books": [],
     "initials": "RH"
+  },
+  {
+    "name": "Paul Koch",
+    "slug": "paul-koch",
+    "bio": "Paul Koch is a Lutheran pastor and writer who explores the intersection of faith, culture, and everyday life. His work engages thoughtfully with contemporary issues from a Christian perspective, offering readers both theological insight and practical wisdom for modern discipleship.",
+    "affiliation": "Gottesdienst Online, Lutheran publications",
+    "role": "Pastor & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PK"
+  },
+  {
+    "name": "Luke Mansfield",
+    "slug": "luke-mansfield",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LM"
+  },
+  {
+    "name": "H. B. Charles Jr.",
+    "slug": "h-b-charles",
+    "bio": "H. B. Charles Jr. is a preacher, author, and Bible teacher known for his expository preaching and practical theological insights. He has served in pastoral ministry and is recognized for his work in Christian publishing and conference speaking.",
+    "affiliation": "Moody Publishers, The Expositor's Summit",
+    "role": "Pastor, Author & Bible Teacher",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Unseen Realm",
+        "amazon_url": "https://www.amazon.com/s?k=The+Unseen+Realm+H+B+Charles+Jr"
+      },
+      {
+        "title": "God Loves the Ugly",
+        "amazon_url": "https://www.amazon.com/s?k=God+Loves+the+Ugly+H+B+Charles+Jr"
+      },
+      {
+        "title": "Fasting",
+        "amazon_url": "https://www.amazon.com/s?k=Fasting+H+B+Charles+Jr"
+      },
+      {
+        "title": "The Preacher's Checklist",
+        "amazon_url": "https://www.amazon.com/s?k=The+Preacher%27s+Checklist+H+B+Charles+Jr"
+      }
+    ],
+    "initials": "HBC"
+  },
+  {
+    "name": "Amelia Nierenberg and Ephrat Livni",
+    "slug": "amelia-nierenberg-and-ephrat-livni",
+    "bio": "Amelia Nierenberg and Ephrat Livni are journalists and writers who contribute to major publications covering culture, faith, and human interest stories. Their work often explores the intersection of personal belief, ethics, and contemporary life with thoughtfulness and nuance that resonates with readers seeking deeper understanding of faith in modern times.",
+    "affiliation": "The New York Times, Quartz",
+    "role": "Journalists & Writers",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AN-EL"
+  },
+  {
+    "name": "Declan Walsh and Arlette Bashizi",
+    "slug": "declan-walsh-and-arlette-bashizi",
+    "bio": "Declan Walsh is an award-winning journalist known for his international reporting, while Arlette Bashizi is a dedicated humanitarian worker and advocate. Together, they bring firsthand experience from conflict zones and underserved communities to their storytelling, offering Christian perspectives on justice, compassion, and faith in action across the globe.",
+    "affiliation": "",
+    "role": "Journalists & Humanitarian Advocates",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DW-AB"
   }
 ]

@@ -15770,5 +15770,170 @@
     ],
     "topic_cluster": "walter_bingham_tribute",
     "clicks": 0
+  },
+  {
+    "url": "https://theaquilareport.com/jesus-raged/",
+    "title": "Jesus Got Angry—And That Changes Everything",
+    "source_name": "The Aquila Report",
+    "date_shown": "2026-05-25",
+    "final_score": 10.0,
+    "tags": [
+      "devotional",
+      "theology"
+    ],
+    "topic_cluster": "unique",
+    "clicks": 0
+  },
+  {
+    "url": "https://theaquilareport.com/fellowship-of-the-suffering/",
+    "title": "Suffering Doesn't Mean Your Faith Failed. Here's Why.",
+    "source_name": "The Aquila Report",
+    "date_shown": "2026-05-25",
+    "final_score": 9.25,
+    "tags": [
+      "devotional",
+      "theology",
+      "suffering"
+    ],
+    "topic_cluster": "unique",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.thegospelcoalition.org/article/witness-army-buddy/",
+    "title": "Christian Witness Works—Even When Your Faith Is Messy",
+    "source_name": "The Gospel Coalition",
+    "date_shown": "2026-05-25",
+    "final_score": 8.5,
+    "tags": [
+      "devotional",
+      "theology"
+    ],
+    "topic_cluster": "personal_witness_evangelism",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.challies.com/articles/you-may-not-need-nearly-as-much-house-as-you-think-you-do/",
+    "title": "Empty Nest, Oversized Mortgage: Why Christians Are Reckoning With Too Much House",
+    "source_name": "Tim Challies",
+    "date_shown": "2026-05-25",
+    "final_score": 7.5,
+    "tags": [
+      "work",
+      "family"
+    ],
+    "topic_cluster": "simplicity_living",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.thegospelcoalition.org/podcasts/everyday-pastor/power-pulpit-hb-charles-jr/",
+    "title": "Faithful Preaching Still Changes Lives—Here's How Pastors Survive",
+    "source_name": "The Gospel Coalition",
+    "date_shown": "2026-05-25",
+    "final_score": 6.75,
+    "tags": [
+      "church life",
+      "theology"
+    ],
+    "topic_cluster": "preaching_pulpit",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/how-the-world-went-insane-ft-j-budziszewski/",
+    "title": "Budziszewski: The West's Epidemic of Unreason—And How to Escape It",
+    "source_name": "First Things",
+    "date_shown": "2026-05-25",
+    "final_score": 6.5,
+    "tags": [
+      "culture",
+      "apologetics"
+    ],
+    "topic_cluster": "cultural_decline",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.bbc.com/news/articles/ce3pgn48wnqo?at_medium=RSS&at_campaign=rss",
+    "title": "Afghan Girls' Dreams Vanish as Taliban's School Ban Holds Fast",
+    "source_name": "BBC News",
+    "date_shown": "2026-05-25",
+    "final_score": 6.0,
+    "tags": [
+      "culture",
+      "politics"
+    ],
+    "topic_cluster": "afghanistan_girls_education",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/roundups/the-housing-shortage-stalemate-1779470318",
+    "title": "Housing Crisis Stalls as Congress Splits on Popular Solution",
+    "source_name": "World Magazine",
+    "date_shown": "2026-05-25",
+    "final_score": 4.33,
+    "tags": [
+      "politics"
+    ],
+    "topic_cluster": "housing_shortage_congress",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.nytimes.com/2026/05/24/world/middleeast/five-main-issues-iran-israel-nuclear.html",
+    "title": "Trump's Iran Gambit: Five Obstacles Between War and Deal",
+    "source_name": "The New York Times",
+    "date_shown": "2026-05-25",
+    "final_score": 4.2,
+    "tags": [
+      "politics",
+      "news"
+    ],
+    "topic_cluster": "iran_us_relations",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.challies.com/a-la-carte/a-la-carte-may-25-2026/",
+    "title": "Why Christian Sermons Aren't Changing Lives—and What's Underneath",
+    "source_name": "Tim Challies",
+    "date_shown": "2026-05-25",
+    "final_score": 3.75,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "link_roundup",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.wsj.com/world/kyiv-suffers-one-of-ukraine-wars-heaviest-russian-barrages-37a191d9",
+    "title": "Russian Missiles Rain Down on Kyiv in Devastating Barrage",
+    "source_name": "Wall Street Journal",
+    "date_shown": "2026-05-25",
+    "final_score": 3.3,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "ukraine_russia_war",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/podcasts/the-world-and-everything-in-it-may-25-2026-1779654300",
+    "title": "Alabama Execution Case Forces Courts to Rule on IQ and Capital Punishment",
+    "source_name": "World Magazine",
+    "date_shown": "2026-05-25",
+    "final_score": 2.79,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "daily_news_roundup",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.nytimes.com/2026/05/24/world/africa/ebola-virus-congo-response.html",
+    "title": "Congo's Ebola Crisis Spirals While the World Moves in Slow Motion",
+    "source_name": "The New York Times",
+    "date_shown": "2026-05-25",
+    "final_score": 2.55,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "global_health_crises",
+    "clicks": 0
   }
 ]
