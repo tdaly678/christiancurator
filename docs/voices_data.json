@@ -9877,5 +9877,80 @@
     "website": "",
     "books": [],
     "initials": "DW-AB"
+  },
+  {
+    "name": "Geoffrey R. Kirkland",
+    "slug": "geoffrey-r-kirkland",
+    "bio": "Geoffrey R. Kirkland is a pastor and Christian writer devoted to expository preaching and biblical teaching. He serves in pastoral ministry and is passionate about helping believers understand and apply Scripture to their daily lives.",
+    "affiliation": "",
+    "role": "Pastor & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "GRK"
+  },
+  {
+    "name": "Joshua Chatraw",
+    "slug": "joshua-chatraw",
+    "bio": "Joshua Chatraw is a Christian apologist and author known for helping believers engage thoughtfully with contemporary cultural and philosophical challenges. He has written extensively on topics including religious freedom, apologetics, and the integration of faith with public life.",
+    "affiliation": "Apologetics Resource Center; various Christian publications",
+    "role": "Apologist & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Apologetics at the Cross: An Introduction to Pungent Biblical Defense of the Christian Faith",
+        "amazon_url": "https://www.amazon.com/s?k=Apologetics+at+the+Cross+Joshua+Chatraw"
+      },
+      {
+        "title": "The Inclusive Jesus: Calling All People to Follow",
+        "amazon_url": "https://www.amazon.com/s?k=The+Inclusive+Jesus+Joshua+Chatraw"
+      }
+    ],
+    "initials": "JC"
+  },
+  {
+    "name": "Mere Orthodoxy",
+    "slug": "mere-orthodoxy",
+    "bio": "Mere Orthodoxy is a Christian journal and online publication dedicated to exploring classical Christian thought and its application to contemporary culture. The platform features a diverse community of writers committed to defending traditional Christian orthodoxy while engaging thoughtfully with modern intellectual discourse. Through essays, reviews, and cultural commentary, Mere Orthodoxy seeks to articulate a winsome vision of Christian faith rooted in Scripture and the historic creeds.",
+    "affiliation": "Mere Orthodoxy (independent Christian journal)",
+    "role": "Christian Journal & Publication Platform",
+    "education": "",
+    "website": "https://www.mereorthodoxy.com",
+    "books": [],
+    "initials": "MO"
+  },
+  {
+    "name": "Emma Brown",
+    "slug": "emma-brown",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EB"
+  },
+  {
+    "name": "Elisabetta Povoledo and Elizabeth Dias",
+    "slug": "elisabetta-povoledo-and-elizabeth-dias",
+    "bio": "Elisabetta Povoledo is a Vatican correspondent and religion writer known for her reporting on the Catholic Church and papal activities. Elizabeth Dias is a religion reporter who covers faith, spirituality, and the intersection of religion with American culture and politics. Together, their work provides comprehensive coverage of religious institutions and their impact on contemporary society.",
+    "affiliation": "The New York Times",
+    "role": "Religion Reporters & Journalists",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EP-ED"
+  },
+  {
+    "name": "Editorial",
+    "slug": "editorial",
+    "bio": "The Editorial team curates and produces thoughtful Christian content designed to deepen faith and encourage spiritual growth. With a commitment to biblical truth and accessible writing, the Editorial section represents collaborative efforts to bring meaningful resources to our Christian audience.",
+    "affiliation": "",
+    "role": "Editorial Team",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ED"
   }
 ]
