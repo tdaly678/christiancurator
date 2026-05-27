@@ -9952,5 +9952,205 @@
     "website": "",
     "books": [],
     "initials": "ED"
+  },
+  {
+    "name": "Matthew Harmon",
+    "slug": "matthew-harmon",
+    "bio": "Matthew Harmon is a biblical scholar and author known for his work in New Testament studies and biblical theology. He has contributed significantly to evangelical Christian understanding of Scripture through his writing and teaching ministry.",
+    "affiliation": "",
+    "role": "Biblical Scholar & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MH"
+  },
+  {
+    "name": "John Seel",
+    "slug": "john-seel",
+    "bio": "John Seel is a writer and cultural commentator who explores the intersection of Christian faith and contemporary culture. He engages thoughtfully with how believers can navigate modern life while maintaining biblical convictions.",
+    "affiliation": "",
+    "role": "Writer & Cultural Commentator",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The New Evangelicalism",
+        "amazon_url": "https://www.amazon.com/s?k=The+New+Evangelicalism+John+Seel"
+      }
+    ],
+    "initials": "JS"
+  },
+  {
+    "name": "Susan Bennett",
+    "slug": "susan-bennett",
+    "bio": "Susan Bennett is a voice actress and author known for her contributions to Christian media and entertainment. While best recognized for her work in technology and voice acting, she has been involved in faith-based projects that resonate with Christian audiences seeking quality content.",
+    "affiliation": "",
+    "role": "Voice Actress & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SB"
+  },
+  {
+    "name": "Derwin Gray",
+    "slug": "derwin-gray",
+    "bio": "Derwin Gray is a pastor, author, and speaker who leads Transformation Church in the Charlotte area, where he serves a multiethnic congregation. He is passionate about helping Christians understand their identity in Christ and live out authentic faith in a diverse world. Through his writing and ministry, Gray addresses topics of racial reconciliation, spiritual growth, and Kingdom community.",
+    "affiliation": "Transformation Church",
+    "role": "Pastor, Author & Speaker",
+    "education": "Master of Divinity, Southern Baptist Theological Seminary",
+    "website": "https://www.derwingray.com",
+    "books": [
+      {
+        "title": "The High Definition Leader",
+        "amazon_url": "https://www.amazon.com/s?k=The+High+Definition+Leader+Derwin+Gray"
+      },
+      {
+        "title": "SterGeboren",
+        "amazon_url": "https://www.amazon.com/s?k=Stergeboren+Derwin+Gray"
+      },
+      {
+        "title": "Loveology",
+        "amazon_url": "https://www.amazon.com/s?k=Loveology+Derwin+Gray"
+      },
+      {
+        "title": "I Am Restored",
+        "amazon_url": "https://www.amazon.com/s?k=I+Am+Restored+Derwin+Gray"
+      }
+    ],
+    "initials": "DG"
+  },
+  {
+    "name": "Sebastian Y. Kim",
+    "slug": "sebastian-y-kim",
+    "bio": "Sebastian Y. Kim is a scholar and thought leader exploring the intersection of Christianity, culture, and global faith movements. His work examines how Christian communities navigate contemporary social issues and theological questions with biblical integrity and cultural sensitivity.",
+    "affiliation": "",
+    "role": "Scholar & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SYK"
+  },
+  {
+    "name": "Daniel Darling",
+    "slug": "daniel-darling",
+    "bio": "Daniel Darling is an author, speaker, and director of the Land Center for Cultural Engagement at Southwestern Baptist Theological Seminary. He is known for writing thoughtfully about faith, culture, and Christian witness in contemporary society, helping believers navigate complex cultural and political issues from a biblical perspective.",
+    "affiliation": "Southwestern Baptist Theological Seminary, Christianity Today",
+    "role": "Director of Cultural Engagement & Author",
+    "education": "M.Div., Southern Baptist Theological Seminary",
+    "website": "https://www.danieldarling.com",
+    "books": [
+      {
+        "title": "The Important Thing: A Story About Discovering What Matters Most",
+        "amazon_url": "https://www.amazon.com/s?k=The+Important+Thing+Daniel+Darling"
+      },
+      {
+        "title": "Icon: A Christ-Centered Approach to Celebrity",
+        "amazon_url": "https://www.amazon.com/s?k=Icon+Daniel+Darling"
+      },
+      {
+        "title": "The Doubter's Parish: Living Faithfully in an Age of Skepticism",
+        "amazon_url": "https://www.amazon.com/s?k=The+Doubters+Parish+Daniel+Darling"
+      },
+      {
+        "title": "Speak Up: Finding Your Voice in a World of Noise",
+        "amazon_url": "https://www.amazon.com/s?k=Speak+Up+Daniel+Darling"
+      },
+      {
+        "title": "Sidewalks: A Meditation on Christianity and American Culture",
+        "amazon_url": "https://www.amazon.com/s?k=Sidewalks+Daniel+Darling"
+      }
+    ],
+    "initials": "DD"
+  },
+  {
+    "name": "Tyler Hicks",
+    "slug": "tyler-hicks",
+    "bio": "Tyler Hicks is a Christian writer and content creator focused on helping believers deepen their faith and understanding of Scripture. His work emphasizes practical application of biblical principles to everyday Christian living.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TH"
+  },
+  {
+    "name": "Nicole Unice",
+    "slug": "nicole-unice",
+    "bio": "Nicole Unice is a writer and communicator who helps Christians develop healthier relationships and stronger faith foundations. Her work focuses on practical wisdom for modern spiritual life, drawing from both Scripture and real-world experience.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Miracle Worker",
+        "amazon_url": "https://www.amazon.com/s?k=The+Miracle+Worker+Nicole+Unice"
+      }
+    ],
+    "initials": "NU"
+  },
+  {
+    "name": "Mark Johnston",
+    "slug": "mark-johnston",
+    "bio": "Mark Johnston is a Scottish theologian and pastor known for his thoughtful biblical teaching and pastoral ministry. He has served in significant leadership roles within the evangelical church and contributed to Christian theological discourse through writing and speaking.",
+    "affiliation": "",
+    "role": "Pastor & Theologian",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MJ"
+  },
+  {
+    "name": "Tyler Hicks and Gaëlle Girbes",
+    "slug": "tyler-hicks-and-galle-girbes",
+    "bio": "Tyler Hicks and Gaëlle Girbes are content creators and communicators who engage with Christian audiences through various media platforms. Their work focuses on making faith relevant and accessible to contemporary believers seeking to integrate their spirituality with daily life.",
+    "affiliation": "",
+    "role": "Content Creators & Communicators",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "THG"
+  },
+  {
+    "name": "Jake Meador",
+    "slug": "jake-meador",
+    "bio": "Jake Meador is a writer and editor known for his thoughtful commentary on faith, culture, and politics from a Christian perspective. He has contributed to various Christian publications and is recognized for his work exploring how Christian conviction intersects with contemporary cultural issues.",
+    "affiliation": "Mere Orthodoxy",
+    "role": "Editor & Writer",
+    "education": "",
+    "website": "https://jakemeador.com",
+    "books": [],
+    "initials": "JM"
+  },
+  {
+    "name": "Abigail Geiger",
+    "slug": "abigail-geiger",
+    "bio": "Abigail Geiger is a researcher and writer known for her work on religious trends and demographic studies within Christian communities. Her research has provided valuable insights into faith practices, beliefs, and the changing landscape of American Christianity.",
+    "affiliation": "Pew Research Center",
+    "role": "Senior Researcher & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AG"
+  },
+  {
+    "name": "Ligonier Ministries",
+    "slug": "ligonier-ministries",
+    "bio": "Ligonier Ministries is a leading Christian organization dedicated to equipping believers with biblical truth through reformed theology education and resources. Founded in 1971, they provide sermons, teachings, articles, and educational materials designed to help Christians understand and apply Scripture more deeply.",
+    "affiliation": "Ligonier Ministries",
+    "role": "Christian Teaching Ministry & Content Platform",
+    "education": "",
+    "website": "https://www.ligonier.org",
+    "books": [
+      {
+        "title": "The Holiness of God",
+        "amazon_url": "https://www.amazon.com/s?k=The+Holiness+of+God+R.C.+Sproul"
+      },
+      {
+        "title": "Truths We Confess: A Reformation Study of the Heidelberg Catechism",
+        "amazon_url": "https://www.amazon.com/s?k=Truths+We+Confess+Heidelberg+Catechism"
+      }
+    ],
+    "initials": "LM"
   }
 ]
