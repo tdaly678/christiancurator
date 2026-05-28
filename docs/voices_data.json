@@ -10152,5 +10152,117 @@
       }
     ],
     "initials": "LM"
+  },
+  {
+    "name": "Melissa Collier Gepford",
+    "slug": "melissa-collier-gepford",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MCG"
+  },
+  {
+    "name": "Joel Fick",
+    "slug": "joel-fick",
+    "bio": "Joel Fick is a Christian author and speaker focused on helping believers develop a deeper faith and biblical worldview. His work encourages readers to integrate their Christian convictions with everyday life and culture.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JF"
+  },
+  {
+    "name": "Noe Garcia",
+    "slug": "noe-garcia",
+    "bio": "Noe Garcia is a Christian author and speaker dedicated to helping believers grow in their faith and understand Scripture more deeply. His work focuses on practical discipleship and biblical teaching for modern Christians.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "NG"
+  },
+  {
+    "name": "Andrew Ballard",
+    "slug": "andrew-ballard",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AB"
+  },
+  {
+    "name": "B.A. Castle",
+    "slug": "ba-castle",
+    "bio": "B.A. Castle is a Christian author and writer dedicated to exploring themes of faith, spirituality, and personal transformation through a biblical lens. His work engages readers seeking to deepen their understanding of Christian living and theology.",
+    "affiliation": "",
+    "role": "Author & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BAC"
+  },
+  {
+    "name": "Texas",
+    "slug": "texas",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TX"
+  },
+  {
+    "name": "Brandon Crowe",
+    "slug": "brandon-crowe",
+    "bio": "Brandon Crowe is a New Testament scholar and theologian committed to helping Christians understand Scripture more deeply. He combines rigorous academic study with accessible teaching, making biblical scholarship available to churches and believers. His work emphasizes the unity of Scripture and its practical application to Christian life.",
+    "affiliation": "Crossway; Reformed Theological Seminary",
+    "role": "Scholar, Author & Editor",
+    "education": "Ph.D. in New Testament, University of Edinburgh",
+    "website": "",
+    "books": [
+      {
+        "title": "The Last Adam: A Theology of the Obedient Life of Jesus in the Gospels",
+        "amazon_url": "https://www.amazon.com/s?k=The+Last+Adam+Brandon+Crowe"
+      },
+      {
+        "title": "Raised with Christ: How the Resurrection Changes Everything",
+        "amazon_url": "https://www.amazon.com/s?k=Raised+with+Christ+Brandon+Crowe"
+      },
+      {
+        "title": "The God Who Commands: Old Testament Ethics and the Authority of Jesus",
+        "amazon_url": "https://www.amazon.com/s?k=The+God+Who+Commands+Brandon+Crowe"
+      }
+    ],
+    "initials": "BC"
+  },
+  {
+    "name": "Michael R. Gordon",
+    "slug": "michael-r-gordon",
+    "bio": "Michael R. Gordon is a respected voice in Christian publishing and biblical scholarship. His work focuses on helping believers understand Scripture and apply its principles to modern life.",
+    "affiliation": "",
+    "role": "Author & Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MRG"
+  },
+  {
+    "name": "Eric Schmitt",
+    "slug": "eric-schmitt",
+    "bio": "Eric Schmitt is a Missouri politician and public servant who has advocated for faith-based values and religious liberty in political discourse. As a committed Christian, he has integrated his faith perspective into his work in public office.",
+    "affiliation": "",
+    "role": "Politician & Public Official",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ES"
   }
 ]

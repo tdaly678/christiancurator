@@ -4,23 +4,50 @@
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Daniel Darling",
-    "title": "Wise Decision Making in Everyday Life",
-    "url": "https://research.lifeway.com/2026/05/27/wise-decision-making-in-everyday-life/",
-    "summary": "<p>How do we pursue wise decision making about questions and decisions that are not explicitly mentioned in Scripture? <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/05/27/wise-decision-making-in-everyday-life/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/05/27/wise-decision-making-in-everyday-life/\">Wise Decision Making in Everyday Life</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "author": "Noe Garcia",
+    "title": "4 Father’s Day Sermon Ideas That Reinforce Biblical Manhood",
+    "url": "https://research.lifeway.com/2026/05/28/4-fathers-day-sermon-ideas-that-reinforce-biblical-manhood/",
+    "summary": "<p>These sermon ideas will help you to approach Father’s Day with truth and grace, preaching boldly while speaking life, hope, and healing. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/05/28/4-fathers-day-sermon-ideas-that-reinforce-biblical-manhood/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/05/28/4-fathers-day-sermon-ideas-that-reinforce-biblical-manhood/\">4 Father’s Day Sermon Ideas That Reinforce Biblical Manhood</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "full_content": "",
-    "published": "Wed, 27 May 2026 06:13:00 +0000",
-    "fetched_at": "2026-05-27T08:59:14.449767",
+    "published": "Thu, 28 May 2026 06:49:00 +0000",
+    "fetched_at": "2026-05-28T09:42:53.708395",
+    "score": 6,
+    "tags": [
+      "devotional",
+      "church life"
+    ],
+    "rewritten_title": "How to Preach Biblical Manhood Without Losing Your Congregation",
+    "personas": [
+      "pastor"
+    ],
+    "topic_cluster": "fathers_day_biblical_manhood",
+    "perspective": "neutral",
+    "final_score": 7.5,
+    "recency_boost": 1.5
+  },
+  {
+    "source_name": "Pew Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Sara Atske",
+    "title": "What Political Issues Do Americans Hear About in Church?",
+    "url": "https://www.pewresearch.org/religion/2026/05/27/what-political-issues-do-americans-hear-about-in-church/",
+    "summary": "Most U.S. adults who go to religious services say they’ve recently heard from their clergy about at least one political or social issue.",
+    "full_content": "",
+    "published": "Wed, 27 May 2026 17:52:21 +0000",
+    "fetched_at": "2026-05-28T09:42:53.310273",
     "score": 5,
     "tags": [
-      "theology"
+      "data",
+      "politics"
     ],
-    "rewritten_title": "When Scripture Is Silent, How Do Christians Decide?",
+    "rewritten_title": "Pulpits Are Getting Political—and Most Congregants Are Hearing It",
     "personas": [
       "pastor",
       "professional"
     ],
-    "topic_cluster": "wise_decision_making",
+    "topic_cluster": "church_politics_pulpit",
     "perspective": "neutral",
     "final_score": 6.5,
     "recency_boost": 1.5
@@ -36,42 +63,18 @@
     "summary": "<p>Canadians aren’t looking to religion or the Bible for conviction and expertise, according to the new Canadian State of Theology study. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/05/26/canadians-see-split-on-religious-beliefs-and-truth-state-of-theology-finds/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/05/26/canadians-see-split-on-religious-beliefs-and-truth-state-of-theology-finds/\">Canadians See Split Between Religious Beliefs and Truth, State of Theology Finds</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "full_content": "",
     "published": "Tue, 26 May 2026 14:50:00 +0000",
-    "fetched_at": "2026-05-27T08:59:14.449780",
-    "score": 4,
+    "fetched_at": "2026-05-28T09:42:53.708416",
+    "score": 5,
     "tags": [
       "data"
     ],
-    "rewritten_title": "Canadian Christians Abandon the Bible as Source of Truth",
+    "rewritten_title": "Canada's Crisis of Faith: Religion Losing Ground on Truth",
     "personas": [
       "pastor"
     ],
-    "topic_cluster": "canadian_state_of_theology",
+    "topic_cluster": "canadian_state_theology",
     "perspective": "neutral",
-    "final_score": 4.75,
-    "recency_boost": 1.5
-  },
-  {
-    "source_name": "Pew Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Janakee Chavda",
-    "title": "Quiz: How much do you know about NATO?",
-    "url": "https://www.pewresearch.org/quiz/quiz-how-much-do-you-know-about-nato/",
-    "summary": "",
-    "full_content": "",
-    "published": "Tue, 26 May 2026 21:29:50 +0000",
-    "fetched_at": "2026-05-27T08:59:13.986918",
-    "score": 1,
-    "tags": [
-      "news"
-    ],
-    "rewritten_title": "Quiz: How much do you know about NATO?",
-    "personas": [],
-    "topic_cluster": "unique",
-    "perspective": "news",
-    "final_score": 3.5,
-    "recency_boost": 1.5,
-    "trending_boost": 1.0
+    "final_score": 5.0,
+    "recency_boost": 0.75
   }
 ]
