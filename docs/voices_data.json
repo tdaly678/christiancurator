@@ -10264,5 +10264,134 @@
     "website": "",
     "books": [],
     "initials": "ES"
+  },
+  {
+    "name": "Kim Riddlebarger",
+    "slug": "kim-riddlebarger",
+    "bio": "Kim Riddlebarger is a Reformed pastor and theologian known for his work in biblical eschatology and church history. He has served as a pastor in Southern California and is a frequent contributor to Christian media, offering thoughtful biblical perspectives on contemporary issues and end-times theology.",
+    "affiliation": "Christ Church of the Valley; White Horse Inn",
+    "role": "Pastor & Theologian",
+    "education": "Westminster Theological Seminary",
+    "website": "https://kimriddlebarger.com",
+    "books": [
+      {
+        "title": "A Case for Amillennialism: Understanding the End Times",
+        "amazon_url": "https://www.amazon.com/s?k=Case+for+Amillennialism+Kim+Riddlebarger"
+      },
+      {
+        "title": "The Man of Sin: Toward an Identification of the Antichrist",
+        "amazon_url": "https://www.amazon.com/s?k=Man+of+Sin+Kim+Riddlebarger"
+      },
+      {
+        "title": "When Shall These Things Be? A Reformed Response to the Doctrine of Preterism",
+        "amazon_url": "https://www.amazon.com/s?k=When+Shall+These+Things+Be+Riddlebarger"
+      },
+      {
+        "title": "From Main Street to Mainline: Tracing Evangelical Roots of the Inerrancy Debate",
+        "amazon_url": "https://www.amazon.com/s?k=From+Main+Street+to+Mainline+Riddlebarger"
+      }
+    ],
+    "initials": "KR"
+  },
+  {
+    "name": "Brian Rosner",
+    "slug": "brian-rosner",
+    "bio": "Brian Rosner is a New Testament scholar and theologian known for his work on biblical ethics and Pauline theology. He has contributed significantly to evangelical biblical scholarship through both academic research and pastoral teaching.",
+    "affiliation": "Ridley College, Melbourne",
+    "role": "Biblical Scholar & Theologian",
+    "education": "Ph.D., University of Cambridge",
+    "website": "",
+    "books": [
+      {
+        "title": "Paul and the Law",
+        "amazon_url": "https://www.amazon.com/s?k=Paul+and+the+Law+Brian+Rosner"
+      },
+      {
+        "title": "Greed as Idolatry: The Origin and Meaning of a Pauline Metaphor",
+        "amazon_url": "https://www.amazon.com/s?k=Greed+as+Idolatry+Brian+Rosner"
+      },
+      {
+        "title": "Known by God: A Biblical Theology of Personal Relationships",
+        "amazon_url": "https://www.amazon.com/s?k=Known+by+God+Brian+Rosner"
+      }
+    ],
+    "initials": "BR"
+  },
+  {
+    "name": "Bruce A. Little",
+    "slug": "bruce-a-little",
+    "bio": "Bruce A. Little is a Christian author and thinker who has contributed thoughtfully to evangelical discourse on faith, philosophy, and Christian living. His writings reflect a commitment to helping believers develop a more robust theological understanding of their faith and its practical implications.",
+    "affiliation": "",
+    "role": "Author & Christian Thinker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BAL"
+  },
+  {
+    "name": "J. Chase Davis",
+    "slug": "j-chase-davis",
+    "bio": "J. Chase Davis is a Christian author and communicator dedicated to helping believers grow in their faith and understanding of Scripture. His writings focus on practical discipleship, biblical theology, and the Christian life in contemporary culture.",
+    "affiliation": "",
+    "role": "Author & Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JCD"
+  },
+  {
+    "name": "Cody Benjamin",
+    "slug": "cody-benjamin",
+    "bio": "Cody Benjamin is a sports writer and analyst known for his work covering the intersection of faith and athletics. He has contributed to various Christian and mainstream sports media outlets, bringing a thoughtful perspective to sports commentary.",
+    "affiliation": "",
+    "role": "Sports Writer & Analyst",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CB"
+  },
+  {
+    "name": "John Yoon and Tatsiana Chypsanava",
+    "slug": "john-yoon-and-tatsiana-chypsanava",
+    "bio": "John Yoon and Tatsiana Chypsanava are writers and content creators who engage with contemporary Christian topics and cultural issues from a biblical perspective. Their collaborative work explores faith, discipleship, and practical Christian living for modern audiences.",
+    "affiliation": "",
+    "role": "Writers & Content Creators",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JYT"
+  },
+  {
+    "name": "Nadia Khomami",
+    "slug": "nadia-khomami-arts-and-culture-correspondent",
+    "bio": "Nadia Khomami is an arts and culture correspondent who brings thoughtful journalism to discussions of creativity, faith, and human expression. Her reporting explores the intersection of culture and society with nuance and insight.",
+    "affiliation": "The Guardian",
+    "role": "Arts and Culture Correspondent",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "NK"
+  },
+  {
+    "name": "Philip Wegmann",
+    "slug": "philip-wegmann",
+    "bio": "Philip Wegmann is a political correspondent and opinion writer known for his commentary on faith, politics, and culture from a conservative Christian perspective. He brings thoughtful analysis to contemporary issues affecting the American church and society.",
+    "affiliation": "RealClearPolitics",
+    "role": "Political Correspondent & Commentator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PW"
+  },
+  {
+    "name": "Brian Cosby",
+    "slug": "brian-cosby",
+    "bio": "Brian Cosby is a pastor and author who has served in ministry leadership and writes on topics relevant to Christian faith and practice. He is known for his pastoral insights and contributions to Christian literature.",
+    "affiliation": "",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BC"
   }
 ]
