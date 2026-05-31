@@ -10448,5 +10448,62 @@
     "website": "",
     "books": [],
     "initials": "SL"
+  },
+  {
+    "name": "Jim Elliff",
+    "slug": "jim-elliff",
+    "bio": "Jim Elliff is a pastor, author, and founder of Christian Communicators Worldwide, dedicated to equipping church leaders and believers with sound biblical teaching. With decades of ministry experience, he has written extensively on Christian leadership, discipleship, and spiritual growth. His work emphasizes practical application of Scripture for authentic Christian living and effective ministry.",
+    "affiliation": "Christian Communicators Worldwide",
+    "role": "Pastor, Author & Ministry Leader",
+    "education": "",
+    "website": "https://www.ccwonline.org",
+    "books": [
+      {
+        "title": "Praying for Loved Ones",
+        "amazon_url": "https://www.amazon.com/s?k=Praying+for+Loved+Ones+Jim+Elliff"
+      },
+      {
+        "title": "A Shepherd's Heart",
+        "amazon_url": "https://www.amazon.com/s?k=A+Shepherd's+Heart+Jim+Elliff"
+      },
+      {
+        "title": "When God's Patience Runs Out",
+        "amazon_url": "https://www.amazon.com/s?k=When+God's+Patience+Runs+Out+Jim+Elliff"
+      }
+    ],
+    "initials": "JE"
+  },
+  {
+    "name": "Sam Cheng",
+    "slug": "sam-cheng",
+    "bio": "Sam Cheng is a thoughtful voice in Christian apologetics and cultural commentary, engaging contemporary issues through a biblical lens. His work addresses how Christians can thoughtfully navigate faith in an increasingly pluralistic world.",
+    "affiliation": "",
+    "role": "Author & Apologist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SC"
+  },
+  {
+    "name": "Amelia Nierenberg",
+    "slug": "amelia-nierenberg",
+    "bio": "Amelia Nierenberg is a journalist and writer who has contributed to major publications covering stories of faith, culture, and social issues. Her reporting often explores the intersection of Christian values and contemporary life, bringing thoughtful analysis to complex topics facing modern believers.",
+    "affiliation": "New York Times",
+    "role": "Journalist & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AN"
+  },
+  {
+    "name": "Sanya Mansoor",
+    "slug": "sanya-mansoor",
+    "bio": "Sanya Mansoor is a writer and content creator who explores faith, culture, and Christian living through a contemporary lens. Her work engages thoughtfully with questions that matter to modern believers seeking to live out their faith authentically.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SM"
   }
 ]
