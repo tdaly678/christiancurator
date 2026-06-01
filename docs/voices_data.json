@@ -10505,5 +10505,112 @@
     "website": "",
     "books": [],
     "initials": "SM"
+  },
+  {
+    "name": "Peter Jones",
+    "slug": "peter-jones",
+    "bio": "Peter Jones is a Reformed theologian and author known for his work exploring worldview issues and spiritual apologetics. He has spent decades examining contemporary culture through a Christian lens and defending biblical truth in the modern context.",
+    "affiliation": "",
+    "role": "Theologian & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PJ"
+  },
+  {
+    "name": "Jen Oshman",
+    "slug": "jen-oshman",
+    "bio": "Jen Oshman is an author and speaker who writes about faith, womanhood, and Christian living for modern women. Her work encourages believers to integrate their faith into everyday life with authenticity and biblical grounding. She is known for her accessible, conversational approach to spiritual topics that resonate with contemporary Christian women.",
+    "affiliation": "Various Christian publications and speaking platforms",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Toward Home: God's Call to Community",
+        "amazon_url": "https://www.amazon.com/s?k=Toward+Home+God%27s+Call+to+Community+Jen+Oshman"
+      },
+      {
+        "title": "Awake: A Practical Guide to Confidently Living Out Your Faith",
+        "amazon_url": "https://www.amazon.com/s?k=Awake+Practical+Guide+Confidently+Living+Out+Your+Faith+Jen+Oshman"
+      }
+    ],
+    "initials": "JO"
+  },
+  {
+    "name": "Bryan Rose",
+    "slug": "bryan-rose",
+    "bio": "Bryan Rose is a Christian author and communicator dedicated to helping believers deepen their faith and understanding of Scripture. His work emphasizes practical application of biblical principles to everyday life.",
+    "affiliation": "",
+    "role": "Author & Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BR"
+  },
+  {
+    "name": "Annie Kelly and Alaina Demopoulos",
+    "slug": "presented-by-annie-kelly-with-alaina-demopoulos-produced-by-hanna-adan",
+    "bio": "Annie Kelly and Alaina Demopoulos collaborate on content curation and production, with Hanna Adan providing production support. Together they work to present meaningful stories and insights for Christian audiences.",
+    "affiliation": "",
+    "role": "Content Presenters & Producers",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AK"
+  },
+  {
+    "name": "Tom Glasser and Ross Burns; executive producer Homa Khaleeli and Elizabeth Cassin",
+    "slug": "tom-glasser-and-ross-burns-executive-producer-homa-khaleeli-and-elizabeth-cassin",
+    "bio": "This collaborative team brings together diverse creative talents in media production and content curation. While specific details about their individual backgrounds remain limited in public sources, their work in executive production and content development suggests a commitment to thoughtful storytelling and meaningful media.",
+    "affiliation": "",
+    "role": "Producers & Content Creators",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TGRH"
+  },
+  {
+    "name": "Andrew Dowell",
+    "slug": "andrew-dowell",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AD"
+  },
+  {
+    "name": "Tedd Tripp",
+    "slug": "tedd-tripp",
+    "bio": "Tedd Tripp is a pastor, counselor, and author known for his practical approach to biblical parenting and discipleship. His ministry focuses on helping Christians understand Scripture's wisdom for raising children and living out their faith in everyday family life. Through writing and speaking, he equips parents with gospel-centered principles for training the next generation.",
+    "affiliation": "Messenger International; Various evangelical churches and conferences",
+    "role": "Pastor, Counselor & Author",
+    "education": "Westminster Theological Seminary",
+    "website": "https://www.teddtripp.com",
+    "books": [
+      {
+        "title": "Shepherding a Child's Heart",
+        "amazon_url": "https://www.amazon.com/s?k=Shepherding+Child%27s+Heart+Tedd+Tripp"
+      },
+      {
+        "title": "Age of Opportunity: A Biblical Guide to Parenting Teens",
+        "amazon_url": "https://www.amazon.com/s?k=Age+of+Opportunity+Tedd+Tripp"
+      },
+      {
+        "title": "Do You Feel Their Pain? Compassion and the Call of God",
+        "amazon_url": "https://www.amazon.com/s?k=Do+You+Feel+Their+Pain+Tedd+Tripp"
+      },
+      {
+        "title": "Instructing a Child's Heart",
+        "amazon_url": "https://www.amazon.com/s?k=Instructing+Child%27s+Heart+Tedd+Tripp"
+      },
+      {
+        "title": "Parenting: 14 Gospel Principles That Can Radically Change Your Family",
+        "amazon_url": "https://www.amazon.com/s?k=Parenting+Gospel+Principles+Tedd+Tripp"
+      }
+    ],
+    "initials": "TT"
   }
 ]
