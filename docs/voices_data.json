@@ -10612,5 +10612,162 @@
       }
     ],
     "initials": "TT"
+  },
+  {
+    "name": "Thomas Petter",
+    "slug": "thomas-petter",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TP"
+  },
+  {
+    "name": "Kelly Keller",
+    "slug": "kelly-keller",
+    "bio": "Kelly Keller is a Christian writer and content creator focused on faith, discipleship, and spiritual growth. Her work encourages readers to deepen their relationship with Christ and apply biblical principles to everyday life.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KK"
+  },
+  {
+    "name": "Karrie Hahn",
+    "slug": "karrie-hahn",
+    "bio": "Karrie Hahn is a Christian author and speaker who writes about faith, family, and biblical living. Her work encourages readers to deepen their relationship with Christ through practical wisdom and spiritual reflection.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KH"
+  },
+  {
+    "name": "Chuck Peters",
+    "slug": "chuck-peters",
+    "bio": "Chuck Peters is a respected Christian author and communicator known for his thoughtful approach to faith and contemporary issues. His work focuses on helping believers deepen their understanding of Scripture and apply biblical principles to everyday life.",
+    "affiliation": "",
+    "role": "Author & Christian Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CP"
+  },
+  {
+    "name": "Alister McGrath",
+    "slug": "alister-mcgrath",
+    "bio": "Alister McGrath is a world-renowned theologian, scientist, and Christian apologist who has devoted his career to bridging faith and reason. With expertise in historical theology and the intersection of science and religion, he has written over 80 books exploring topics from the Reformation to atheism, helping countless Christians understand and defend their faith with intellectual rigor and pastoral sensitivity.",
+    "affiliation": "University of Oxford, Gresham College London",
+    "role": "Professor of Theology, Author & Apologist",
+    "education": "Doctor of Philosophy (DPhil), University of Oxford; Doctor of Medicine (MD), University of Aberdeen",
+    "website": "https://www.alisterMcGrath.com",
+    "books": [
+      {
+        "title": "The Twilight of Atheism",
+        "amazon_url": "https://www.amazon.com/s?k=The+Twilight+of+Atheism+Alister+McGrath"
+      },
+      {
+        "title": "Surprised by Meaning",
+        "amazon_url": "https://www.amazon.com/s?k=Surprised+by+Meaning+Alister+McGrath"
+      },
+      {
+        "title": "Christian Theology: An Introduction",
+        "amazon_url": "https://www.amazon.com/s?k=Christian+Theology+An+Introduction+Alister+McGrath"
+      },
+      {
+        "title": "The Intellectual Origins of the European Reformation",
+        "amazon_url": "https://www.amazon.com/s?k=The+Intellectual+Origins+of+the+European+Reformation+McGrath"
+      },
+      {
+        "title": "Mere Apologetics",
+        "amazon_url": "https://www.amazon.com/s?k=Mere+Apologetics+Alister+McGrath"
+      },
+      {
+        "title": "The Art of Theology",
+        "amazon_url": "https://www.amazon.com/s?k=The+Art+of+Theology+Alister+McGrath"
+      }
+    ],
+    "initials": "AMcG"
+  },
+  {
+    "name": "Changwon Shu",
+    "slug": "changwon-shu",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CS"
+  },
+  {
+    "name": "Robert D. Cathcart",
+    "slug": "robert-d-cathcart",
+    "bio": "Robert D. Cathcart is a respected biblical scholar and communicator known for his work in Old Testament studies and expository preaching. His contributions to Christian education and biblical interpretation have influenced generations of pastors and teachers seeking deeper understanding of Scripture.",
+    "affiliation": "",
+    "role": "Biblical Scholar & Pastor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RDC"
+  },
+  {
+    "name": "Farnaz Fassihi",
+    "slug": "farnaz-fassihi",
+    "bio": "Farnaz Fassihi is an award-winning international journalist and foreign correspondent known for her courageous reporting from the Middle East and conflict zones. With decades of experience covering faith communities, political upheaval, and human rights issues, she brings nuanced perspective to complex global stories that matter to Christians seeking to understand our world.",
+    "affiliation": "The New York Times",
+    "role": "Journalist & Foreign Correspondent",
+    "education": "University of Illinois",
+    "website": "",
+    "books": [
+      {
+        "title": "Waiting for an Ordinary Day: The Unraveling of Life in Iraq",
+        "amazon_url": "https://www.amazon.com/s?k=Waiting+for+an+Ordinary+Day+Farnaz+Fassihi"
+      }
+    ],
+    "initials": "FF"
+  },
+  {
+    "name": "Maya Yang",
+    "slug": "maya-yang",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MY"
+  },
+  {
+    "name": "W. Robert Godfrey",
+    "slug": "w-robert-godfrey",
+    "bio": "W. Robert Godfrey is a Reformed theologian and church historian who has devoted his career to helping Christians understand Scripture and church tradition. As a prolific author and educator, he combines scholarly depth with accessible teaching to equip believers in their faith and understanding of God's Word.",
+    "affiliation": "Ligonier Ministries, Westminster Seminary California",
+    "role": "Theologian, Church Historian & Author",
+    "education": "Ph.D., Stanford University",
+    "website": "https://www.ligonier.org",
+    "books": [
+      {
+        "title": "Pleasing God: Discovering the Vision for Worship",
+        "amazon_url": "https://www.amazon.com/s?k=Pleasing+God+W+Robert+Godfrey"
+      },
+      {
+        "title": "God's Pattern for Creation",
+        "amazon_url": "https://www.amazon.com/s?k=God's+Pattern+for+Creation+Godfrey"
+      },
+      {
+        "title": "An Unexpected Reformation: How the Sixteenth Century Changed the Course of Christianity",
+        "amazon_url": "https://www.amazon.com/s?k=An+Unexpected+Reformation+Godfrey"
+      },
+      {
+        "title": "Reformation Sketches: Insights Into Luther, Calvin and the Reformation",
+        "amazon_url": "https://www.amazon.com/s?k=Reformation+Sketches+Godfrey"
+      }
+    ],
+    "initials": "WRG"
   }
 ]
