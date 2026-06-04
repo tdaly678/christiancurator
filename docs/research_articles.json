@@ -4,48 +4,24 @@
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Reid Patton",
-    "title": "Why Teaching Deep Theology Matters to Your Church",
-    "url": "https://research.lifeway.com/2026/06/03/why-teaching-deep-theology-matters-to-your-church/",
-    "summary": "<p>We often shy away from introducing new believers to deep theology. But the church is called to disciple believers into theological depths. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/06/03/why-teaching-deep-theology-matters-to-your-church/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/06/03/why-teaching-deep-theology-matters-to-your-church/\">Why Teaching Deep Theology Matters to Your Church</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "author": "Aaron Earls",
+    "title": "6 Steps to Eliminate Confusion for Unchurched in Your Worship Services",
+    "url": "https://research.lifeway.com/2026/06/04/6-steps-to-eliminate-confusion-for-unchurched-in-your-worship-services/",
+    "summary": "<p>Our worship services often bring unnecessary confusion to non-Christians. Here&#8217;s how to communicate more clearly and effectively. By Aaron Earls We almost can’t help ourselves. When we gather with a group of friends or people who share something in common, we often start talking in a way that excludes others. We don’t mean to leave [&#8230;] <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/06/04/6-steps-to-eliminate-confusion-for-unchurched-in-your-worship-services/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/06/04/6-steps-to-eliminate-confusion-for-unchurched-in-your-worship-services/\">6 Steps to Eliminate Confusion for Unchurched in Your Worship Services</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "full_content": "",
-    "published": "Wed, 03 Jun 2026 06:28:00 +0000",
-    "fetched_at": "2026-06-03T10:33:42.522170",
+    "published": "Thu, 04 Jun 2026 06:22:00 +0000",
+    "fetched_at": "2026-06-04T09:42:04.795742",
     "score": 6,
     "tags": [
-      "theology",
       "church life"
     ],
-    "rewritten_title": "Churches Are Skipping Theology. That's the Problem.",
+    "rewritten_title": "Unchurched Visitors Are Confused. Your Worship Service Is Why.",
     "personas": [
       "pastor"
     ],
-    "topic_cluster": "theological_discipleship",
-    "perspective": "supportive",
+    "topic_cluster": "worship_accessibility",
+    "perspective": "neutral",
     "final_score": 7.5,
-    "recency_boost": 1.5
-  },
-  {
-    "source_name": "Pew Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Seth Rubenstein",
-    "title": "Update for Political Typology Quiz group creators (verified) (TEST)",
-    "url": "https://www.pewresearch.org/?prc_newsletter=update-for-political-typology-quiz-group-creators-verified-test",
-    "summary": "Hello! Our records indicate that you created a version of Pew Research Center’s 2021 political typology quiz for your community or group. Access to the results from 2021 community quizzes will no longer be available after June 9, 2026, as we prepare to release an updated version of our political typology report and quiz. If [&#8230;]",
-    "full_content": "",
-    "published": "Tue, 02 Jun 2026 22:24:31 +0000",
-    "fetched_at": "2026-06-03T10:33:42.018966",
-    "score": 2,
-    "tags": [
-      "data"
-    ],
-    "rewritten_title": "Update for Political Typology Quiz group creators (verified) (TEST)",
-    "personas": [],
-    "topic_cluster": "pew_research_admin",
-    "perspective": "news",
-    "final_score": 3.5,
     "recency_boost": 1.5
   },
   {
@@ -59,16 +35,42 @@
     "summary": "A new Trump administration memo could require green card seekers already in the U.S. to apply from abroad, potentially affecting hundreds of thousands annually.",
     "full_content": "",
     "published": "Tue, 02 Jun 2026 18:00:21 +0000",
-    "fetched_at": "2026-06-03T10:33:42.018995",
-    "score": 1,
+    "fetched_at": "2026-06-04T09:42:04.277528",
+    "score": 4,
     "tags": [
+      "data",
       "politics"
     ],
-    "rewritten_title": "Trump Plan Would Force Green Card Seekers Out of the Country",
-    "personas": [],
+    "rewritten_title": "Trump's Green Card Plan Could Force Out Hundreds of Thousands of Immigrants",
+    "personas": [
+      "professional"
+    ],
     "topic_cluster": "immigration_policy",
     "perspective": "news",
-    "final_score": 1.75,
-    "recency_boost": 1.5
+    "final_score": 4.75,
+    "recency_boost": 0.75
+  },
+  {
+    "source_name": "Pew Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Beshay",
+    "title": "Who do Americans think is going to win the World Cup?",
+    "url": "https://www.pewresearch.org/short-reads/2026/06/02/who-do-americans-think-is-going-to-win-the-world-cup/",
+    "summary": "Most Americans say they are unlikely to follow the 2026 World Cup, though immigrants are far more likely than U.S.-born adults to tune in.",
+    "full_content": "",
+    "published": "Tue, 02 Jun 2026 13:51:28 +0000",
+    "fetched_at": "2026-06-04T09:42:04.277536",
+    "score": 2,
+    "tags": [
+      "data"
+    ],
+    "rewritten_title": "Americans Are Tuning Out the World Cup — Except Immigrants",
+    "personas": [],
+    "topic_cluster": "world_cup_engagement",
+    "perspective": "news",
+    "final_score": 2.0,
+    "recency_boost": 0.75
   }
 ]

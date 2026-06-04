@@ -10835,5 +10835,84 @@
     "website": "",
     "books": [],
     "initials": "ATK"
+  },
+  {
+    "name": "Miranda Carls",
+    "slug": "miranda-carls",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MC"
+  },
+  {
+    "name": "Joel Morris",
+    "slug": "joel-morris",
+    "bio": "Joel Morris is a Christian writer and content creator dedicated to helping believers grow in their faith and understanding of Scripture. His work focuses on practical theology and spiritual formation for contemporary Christians.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JM"
+  },
+  {
+    "name": "Darin White",
+    "slug": "darin-white",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DW"
+  },
+  {
+    "name": "Lesley Crews",
+    "slug": "lesley-crews",
+    "bio": "Lesley Crews is a Christian writer and content creator dedicated to helping believers deepen their faith and biblical understanding. Through her writing and teaching, she encourages readers to apply Scripture to their daily lives with clarity and conviction.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LC"
+  },
+  {
+    "name": "Bruce Gilley",
+    "slug": "bruce-gilley",
+    "bio": "Bruce Gilley is a political scientist and scholar known for his work on colonialism, governance, and international relations from a classical liberal perspective. His writing engages with historical and contemporary political questions, often challenging prevailing academic orthodoxies with rigorous analysis and contrarian perspectives.",
+    "affiliation": "Portland State University",
+    "role": "Political Scientist & Author",
+    "education": "Ph.D. in Political Science",
+    "website": "",
+    "books": [
+      {
+        "title": "The Right to Rule: How States Win Respect",
+        "amazon_url": "https://www.amazon.com/s?k=The+Right+to+Rule+Bruce+Gilley"
+      },
+      {
+        "title": "In Defense of Colonialism",
+        "amazon_url": "https://www.amazon.com/s?k=In+Defense+of+Colonialism+Bruce+Gilley"
+      },
+      {
+        "title": "The Case for Colonialism",
+        "amazon_url": "https://www.amazon.com/s?k=The+Case+for+Colonialism+Bruce+Gilley"
+      }
+    ],
+    "initials": "BG"
+  },
+  {
+    "name": "Arlette Bashizi",
+    "slug": "arlette-bashizi",
+    "bio": "Arlette Bashizi is a Christian writer and speaker who brings African perspectives to contemporary faith discussions. Her work emphasizes reconciliation, spiritual growth, and the intersection of culture and Christian discipleship.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AB"
   }
 ]
