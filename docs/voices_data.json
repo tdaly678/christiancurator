@@ -10914,5 +10914,141 @@
     "website": "",
     "books": [],
     "initials": "AB"
+  },
+  {
+    "name": "Dorothy Greco",
+    "slug": "dorothy-greco",
+    "bio": "Dorothy Greco is a writer and speaker who addresses faith, parenting, and spiritual growth with honesty and biblical insight. She has contributed to various Christian publications and speaks at conferences on topics related to family, faith, and discipleship.",
+    "affiliation": "",
+    "role": "Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DG"
+  },
+  {
+    "name": "Andrew Davis",
+    "slug": "andrew-davis",
+    "bio": "Andrew Davis is a pastor and Bible teacher known for his expository preaching and commitment to helping Christians understand Scripture deeply. He has ministered in pastoral roles and is recognized for his work in discipleship and biblical exposition within evangelical churches.",
+    "affiliation": "",
+    "role": "Pastor & Bible Teacher",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AD"
+  },
+  {
+    "name": "David Huffstutler",
+    "slug": "david-huffstutler",
+    "bio": "David Huffstutler is a Christian author and content creator dedicated to exploring faith, biblical truth, and spiritual growth. Through his writing and teaching, he seeks to help believers deepen their understanding of Scripture and live out their faith with authenticity and purpose.",
+    "affiliation": "",
+    "role": "Author & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DH"
+  },
+  {
+    "name": "Eric Demeter",
+    "slug": "eric-demeter",
+    "bio": "Eric Demeter is a Christian author and content creator focused on faith-based topics and spiritual growth. His work aims to help believers deepen their understanding of Scripture and live out their faith with greater intentionality.",
+    "affiliation": "",
+    "role": "Author & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ED"
+  },
+  {
+    "name": "David Mitchell",
+    "slug": "david-mitchell",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DM"
+  },
+  {
+    "name": "John Starke",
+    "slug": "john-starke",
+    "bio": "John Starke is a writer and editor who has contributed thoughtful articles on Christian faith, culture, and theology to various evangelical publications. He is known for exploring how biblical truth intersects with contemporary life and culture in accessible, engaging ways.",
+    "affiliation": "Desiring God, The Gospel Coalition",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JS"
+  },
+  {
+    "name": "Scott Rae",
+    "slug": "scott-rae",
+    "bio": "Scott Rae is a leading Christian ethicist and professor who has spent decades helping believers think carefully about faith and culture. He specializes in bioethics, business ethics, and Christian worldview development, offering practical biblical guidance on complex moral issues. Through his teaching, writing, and speaking, Rae equips Christians to make wise decisions grounded in Scripture.",
+    "affiliation": "Talbot School of Theology at Biola University",
+    "role": "Professor of Christian Ethics & Apologetics",
+    "education": "Ph.D., University of Southern California",
+    "website": "https://www.scottrae.net/",
+    "books": [
+      {
+        "title": "Moral Choices: An Introduction to Ethics",
+        "amazon_url": "https://www.amazon.com/s?k=Moral+Choices+Scott+Rae"
+      },
+      {
+        "title": "Christian Ethics",
+        "amazon_url": "https://www.amazon.com/s?k=Christian+Ethics+Scott+Rae"
+      },
+      {
+        "title": "The Ethical Decisions of Jesus",
+        "amazon_url": "https://www.amazon.com/s?k=The+Ethical+Decisions+of+Jesus+Scott+Rae"
+      },
+      {
+        "title": "Does God Help Those Who Help Themselves?",
+        "amazon_url": "https://www.amazon.com/s?k=Does+God+Help+Those+Who+Help+Themselves+Scott+Rae"
+      },
+      {
+        "title": "Body and Soul: Sports the Way God Intended",
+        "amazon_url": "https://www.amazon.com/s?k=Body+and+Soul+Sports+Scott+Rae"
+      }
+    ],
+    "initials": "SR"
+  },
+  {
+    "name": "Rick Langer",
+    "slug": "rick-langer",
+    "bio": "Rick Langer is a scholar and communicator dedicated to helping Christians understand and engage thoughtfully with contemporary culture and philosophy. With expertise in apologetics and worldview studies, he works to bridge the gap between academic rigor and accessible Christian teaching, equipping believers to think deeply about their faith.",
+    "affiliation": "Biola University",
+    "role": "Professor & Author",
+    "education": "Ph.D., University of Southern California",
+    "website": "",
+    "books": [
+      {
+        "title": "Eating with the Church Fathers",
+        "amazon_url": "https://www.amazon.com/s?k=Eating+with+the+Church+Fathers+Rick+Langer"
+      }
+    ],
+    "initials": "RL"
+  },
+  {
+    "name": "Isabel Choat",
+    "slug": "isabel-choat",
+    "bio": "Isabel Choat is a scholar and writer focused on Christian history and theology. Her work explores the intersections of faith, culture, and historical understanding within Christian traditions.",
+    "affiliation": "",
+    "role": "Scholar & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "IC"
+  },
+  {
+    "name": "Lydia Bugg",
+    "slug": "lydia-bugg",
+    "bio": "Lydia Bugg is a Christian writer and content creator dedicated to helping believers deepen their faith and understanding of Scripture. Through her writing and speaking, she explores themes of discipleship, spiritual growth, and God's transformative work in everyday life.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LB"
   }
 ]
