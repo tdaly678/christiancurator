@@ -11215,5 +11215,85 @@
     "website": "",
     "books": [],
     "initials": "GS"
+  },
+  {
+    "name": "Jay Sklar",
+    "slug": "jay-sklar",
+    "bio": "Jay Sklar is a biblical scholar and author known for his work on Old Testament theology and biblical interpretation. He has contributed significantly to Christian education and theological understanding through his writing and teaching.",
+    "affiliation": "",
+    "role": "Biblical Scholar & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JS"
+  },
+  {
+    "name": "Mark Dance",
+    "slug": "mark-dance",
+    "bio": "Mark Dance is a pastor, author, and leadership consultant who serves the local church through practical resources and training. He is passionate about helping church leaders navigate change, build healthy teams, and develop sustainable ministry practices that strengthen congregational life.",
+    "affiliation": "LifeWay Christian Resources",
+    "role": "Pastor, Author & Leadership Consultant",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Tribal Church: Lead Small, Impact Big",
+        "amazon_url": "https://www.amazon.com/s?k=Tribal+Church+Mark+Dance"
+      },
+      {
+        "title": "The Advent Conspiracy: Reclaiming the True Meaning of Christmas",
+        "amazon_url": "https://www.amazon.com/s?k=Advent+Conspiracy+Mark+Dance"
+      }
+    ],
+    "initials": "MD"
+  },
+  {
+    "name": "Ben Brophy",
+    "slug": "ben-brophy",
+    "bio": "Ben Brophy is a Christian content creator and writer known for exploring faith, theology, and contemporary culture from a biblical perspective. Through his writing and online presence, he engages with audiences seeking thoughtful Christian insights on current issues and spiritual growth.",
+    "affiliation": "",
+    "role": "Author & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BB"
+  },
+  {
+    "name": "Mary Mohler",
+    "slug": "mary-mohler",
+    "bio": "Mary Mohler is a writer and speaker known for her thoughtful contributions to Christian culture and family life. As the wife of seminary president R. Albert Mohler Jr., she brings a pastor's heart to conversations about faith, motherhood, and Christian living.",
+    "affiliation": "The Briefing, Southern Baptist Theological Seminary",
+    "role": "Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MM"
+  },
+  {
+    "name": "Damian Carrington",
+    "slug": "damian-carrington-environment-editor",
+    "bio": "Damian Carrington is the Environment Editor at The Guardian, where he covers critical environmental issues including climate change, biodiversity, and conservation. With a background in science journalism, he brings rigorous reporting and clarity to complex ecological topics that matter to Christians concerned with stewardship of God's creation.",
+    "affiliation": "The Guardian",
+    "role": "Environment Editor & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DC"
+  },
+  {
+    "name": "Maggie Haberman and Jonathan Swan",
+    "slug": "maggie-haberman-and-jonathan-swan",
+    "bio": "Maggie Haberman and Jonathan Swan are prominent political journalists known for their investigative reporting on U.S. politics and governance. While not primarily faith-focused writers, their work on political accountability and truthfulness aligns with Christian values of justice and integrity in public life.",
+    "affiliation": "CNN (Maggie Haberman); Axios (Jonathan Swan)",
+    "role": "Political Journalists & Reporters",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Confidence Man: The Making of Donald Trump and the Breaking of America",
+        "amazon_url": "https://www.amazon.com/s?k=Confidence+Man+Maggie+Haberman"
+      }
+    ],
+    "initials": "MH/JS"
   }
 ]
