@@ -1,9 +1,52 @@
 [
   {
-    "title": "God Works in the Whisper, Not Just the Fire",
-    "url": "https://theaquilareport.com/the-providence-of-posterity-news-from-a-distant-land-gen-2220-24/",
+    "title": "Dreams of Glory: How Christians Discern God's Call From Distraction",
+    "url": "https://relevantmagazine.com/life5/3-ways-know-your-ambition-god/",
+    "source_name": "Relevant Magazine",
+    "author": "Jonathan Malm",
+    "final_score": 10.0,
+    "tags": [
+      "devotional",
+      "prayer"
+    ]
+  },
+  {
+    "title": "Showing Up Wins. Here's Why Consistency Beats Restlessness.",
+    "url": "https://www.chrismartin.fyi/p/restlessness",
+    "source_name": "Chris Martin",
+    "author": "Chris Martin",
+    "final_score": 10.0,
+    "tags": [
+      "devotional"
+    ]
+  },
+  {
+    "title": "Christians Can Obey God Differently—And That Terrifies Us",
+    "url": "https://www.challies.com/articles/you-can-conform-to-christ-even-if-you-dont-conform-to-me/",
+    "source_name": "Tim Challies",
+    "author": "Tim Challies",
+    "final_score": 10.0,
+    "tags": [
+      "theology",
+      "devotional"
+    ]
+  },
+  {
+    "title": "Bible Finally Arrives in Papua New Guinea Village After 39-Year Wait",
+    "url": "https://www.christianitytoday.com/2026/06/papua-new-guinea-notsi-bible-translation/",
+    "source_name": "Christianity Today",
+    "author": "jgarcia@external.christianitytoday.com",
+    "final_score": 9.5,
+    "tags": [
+      "missions",
+      "devotional"
+    ]
+  },
+  {
+    "title": "Fear of Man Dies When Fear of God Awakens",
+    "url": "https://theaquilareport.com/the-fear-of-man/",
     "source_name": "The Aquila Report",
-    "author": "Tony Arsenal",
+    "author": "Jacob Crouch",
     "final_score": 9.5,
     "tags": [
       "devotional",
@@ -11,21 +54,21 @@
     ]
   },
   {
-    "title": "Reaching Every Language Demands Sacrifice—Here's How",
-    "url": "https://www.challies.com/sponsored/six-counsels-for-a-sending-church/",
-    "source_name": "Tim Challies",
-    "author": "Tim Challies",
+    "title": "Aliens Won't Kill God—They'll Prove Intelligent Design",
+    "url": "https://seanmcdowell.org/blog/the-ufo-disclosure-what-does-it-mean-for-god",
+    "source_name": "Sean McDowell",
+    "author": "Sean McDowell",
     "final_score": 9.5,
     "tags": [
-      "missions",
-      "church life"
+      "apologetics",
+      "theology"
     ]
   },
   {
-    "title": "God's Holiness Demands a Palace—But He Wanted One Thing More",
-    "url": "https://theaquilareport.com/why-was-the-tabernacle-so-intricate-exodus-25-31/",
+    "title": "God's Promise Against Anxiety: Fight Fear With Future Grace",
+    "url": "https://theaquilareport.com/the-root-of-anxiety-and-how-to-fight-it/",
     "source_name": "The Aquila Report",
-    "author": "Jay Sklar",
+    "author": "John Piper",
     "final_score": 8.75,
     "tags": [
       "devotional",
@@ -33,78 +76,35 @@
     ]
   },
   {
-    "title": "Down Syndrome Abortion Debate Ignites Social Media Firestorm",
-    "url": "https://firstthings.com/when-eugenics-goes-viral/",
+    "title": "PCA's Christian Nationalism Report: A Reckoning or a Reprieve?",
+    "url": "https://www.digitalliturgies.net/p/the-pcas-report-can-help-us-move",
+    "source_name": "Samuel James",
+    "author": "Samuel D. James",
+    "final_score": 8.75,
+    "tags": [
+      "theology",
+      "politics"
+    ]
+  },
+  {
+    "title": "Cyril of Alexandria: Christianity's Most Overlooked Theological Giant",
+    "url": "https://feeds.ligonier.org/~/957912692/0/ligonierministriesblog",
+    "source_name": "Ligonier Ministries",
+    "author": "Daniel Hames",
+    "final_score": 8.5,
+    "tags": [
+      "theology"
+    ]
+  },
+  {
+    "title": "Worth Beyond Our Works",
+    "url": "https://firstthings.com/worth-beyond-our-works/",
     "source_name": "First Things",
     "author": "German Saucedo",
     "final_score": 8.5,
     "tags": [
-      "culture",
-      "apologetics"
-    ]
-  },
-  {
-    "title": "Family Vacations: Why You're Not Feeling the Joy You're Supposed To",
-    "url": "https://newsletter.oalannoble.com/p/on-family-vacations",
-    "source_name": "O. Alan Noble",
-    "author": "O. Alan Noble",
-    "final_score": 8.25,
-    "tags": [
+      "theology",
       "devotional"
-    ]
-  },
-  {
-    "title": "Benedictine Monks Had It Right: Work Shouldn't Destroy You",
-    "url": "https://www.thegospelcoalition.org/article/monk-exhausted-worker-today/",
-    "source_name": "The Gospel Coalition",
-    "author": "Gage Arnold",
-    "final_score": 7.75,
-    "tags": [
-      "work",
-      "devotional"
-    ]
-  },
-  {
-    "title": "Pro-Life States Defend Miscarriage Care Against Abortion Comparison",
-    "url": "https://wng.org/podcasts/a-fake-choice-1780937753",
-    "source_name": "World Magazine",
-    "author": "Keegan Martin",
-    "final_score": 7.62,
-    "tags": [
-      "politics",
-      "culture"
-    ]
-  },
-  {
-    "title": "Faith's Windstorm: How to Stop Losing Your Balance",
-    "url": "https://relevantmagazine.com/faith/how-to-build-a-faith-that-lasts-through-hard-seasons/",
-    "source_name": "Relevant Magazine",
-    "author": "John Taylor",
-    "final_score": 7.62,
-    "tags": [
-      "devotional"
-    ]
-  },
-  {
-    "title": "Gen Z Africans Reject the Duty to Fund Their Parents' Households",
-    "url": "https://www.christianitytoday.com/2026/06/africans-debate-giving-money-to-parents/",
-    "source_name": "Christianity Today",
-    "author": "Julie Smyth",
-    "final_score": 7.5,
-    "tags": [
-      "culture",
-      "family"
-    ]
-  },
-  {
-    "title": "God's Blessing Hinges on How Seriously You Guard Sabbath",
-    "url": "https://research.lifeway.com/2026/06/09/4-reasons-to-take-sabbath-seriously/",
-    "source_name": "Lifeway Research",
-    "author": "Mark Dance",
-    "final_score": 7.5,
-    "tags": [
-      "devotional",
-      "theology"
     ]
   }
 ]
