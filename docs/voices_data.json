@@ -11457,5 +11457,69 @@
     "website": "",
     "books": [],
     "initials": "RD"
+  },
+  {
+    "name": "Bill Elliff",
+    "slug": "bill-elliff",
+    "bio": "Bill Elliff is a pastor, author, and conference speaker known for his ministry in revival and spiritual leadership. He has served as senior pastor of the Summit Church in Arkansas and is deeply committed to equipping believers for authentic Christian living and biblical discipleship.",
+    "affiliation": "The Summit Church",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Prayed On: How to Pray for Your Pastor and Leaders",
+        "amazon_url": "https://www.amazon.com/s?k=Prayed+On+Bill+Elliff"
+      },
+      {
+        "title": "Believing God",
+        "amazon_url": "https://www.amazon.com/s?k=Believing+God+Bill+Elliff"
+      }
+    ],
+    "initials": "BE"
+  },
+  {
+    "name": "PJ Dunn",
+    "slug": "pj-dunn",
+    "bio": "PJ Dunn is a Christian writer and content creator focused on faith, discipleship, and contemporary spiritual issues. His work encourages believers to deepen their relationship with Christ and live out their faith authentically in today's world.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PJD"
+  },
+  {
+    "name": "Zak Mellgren",
+    "slug": "zak-mellgren",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ZM"
+  },
+  {
+    "name": "Ivan Mesa",
+    "slug": "ivan-mesa",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "IM"
+  },
+  {
+    "name": "Marc Santora",
+    "slug": "marc-santora",
+    "bio": "Marc Santora is a seasoned journalist and author who has covered major news stories for prominent publications including The New York Times. Drawing on his extensive reporting experience, he brings investigative insight and storytelling depth to his work, often exploring themes relevant to faith, culture, and human experience.",
+    "affiliation": "The New York Times",
+    "role": "Journalist & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MS"
   }
 ]
