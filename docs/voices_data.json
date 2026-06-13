@@ -11565,5 +11565,43 @@
     "website": "",
     "books": [],
     "initials": "CM"
+  },
+  {
+    "name": "Dawson Knaul",
+    "slug": "dawson-knaul",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DK"
+  },
+  {
+    "name": "Jonathan Swan and David E. Sanger",
+    "slug": "jonathan-swan-and-david-e-sanger",
+    "bio": "Jonathan Swan is a national political reporter known for his investigative journalism on Washington politics and policy, while David E. Sanger is a Pulitzer Prize-winning national security correspondent with deep expertise in foreign policy and cybersecurity. Together, they have collaborated on significant reporting projects examining government decisions and their consequences for Americans.",
+    "affiliation": "Axios (Swan); The New York Times (Sanger)",
+    "role": "Political and National Security Journalists",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Perfect Weapon: War, Sabotage, and Fear in the Cyber Age",
+        "amazon_url": "https://www.amazon.com/s?k=The+Perfect+Weapon+David+Sanger"
+      }
+    ],
+    "initials": "JS-DES"
+  },
+  {
+    "name": "Ashifa Kassam",
+    "slug": "ashifa-kassam-european-community-affairs-correspondent",
+    "bio": "Ashifa Kassam is a European community affairs correspondent who reports on social, cultural, and community issues across Europe. Her journalism focuses on human interest stories and grassroots movements that reflect the lived experiences of European communities. Through her reporting, she brings attention to voices and perspectives often underrepresented in mainstream media coverage.",
+    "affiliation": "The Guardian",
+    "role": "Journalist & Correspondent",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AK"
   }
 ]
