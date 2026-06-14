@@ -11603,5 +11603,43 @@
     "website": "",
     "books": [],
     "initials": "AK"
+  },
+  {
+    "name": "Kyle Burks",
+    "slug": "kyle-burks",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KB"
+  },
+  {
+    "name": "James Marson",
+    "slug": "james-marson",
+    "bio": "James Marson is a journalist and author known for his investigative work on religious persecution and faith-based issues. His reporting has focused on the experiences of Christians facing persecution in various parts of the world, bringing attention to underreported stories of faith and resilience.",
+    "affiliation": "",
+    "role": "Journalist & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Cost of Living Out Your Faith",
+        "amazon_url": "https://www.amazon.com/s?k=The+Cost+of+Living+Out+Your+Faith+James+Marson"
+      }
+    ],
+    "initials": "JM"
+  },
+  {
+    "name": "Amelia Nierenberg and Matthew Mpoke Bigg",
+    "slug": "amelia-nierenberg-and-matthew-mpoke-bigg",
+    "bio": "Amelia Nierenberg and Matthew Mpoke Bigg are journalists and writers who have contributed to major publications covering faith, culture, and social issues. Their work explores the intersection of Christianity, contemporary society, and human stories with depth and nuance.",
+    "affiliation": "The New York Times",
+    "role": "Journalists & Writers",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ANB"
   }
 ]
