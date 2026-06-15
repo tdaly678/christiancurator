@@ -11641,5 +11641,92 @@
     "website": "",
     "books": [],
     "initials": "ANB"
+  },
+  {
+    "name": "R. Kent Hughes",
+    "slug": "r-kent-hughes",
+    "bio": "R. Kent Hughes is a respected evangelical pastor, author, and Bible teacher known for his expository preaching and thoughtful theological writing. He served as senior pastor of College Church in Wheaton, Illinois for over three decades, where he became known for his verse-by-verse biblical exposition and pastoral care. His numerous books on Scripture, worship, and Christian living have influenced countless believers seeking deeper engagement with God's Word.",
+    "affiliation": "College Church in Wheaton, Illinois; Preaching the Word commentary series",
+    "role": "Pastor, Author & Bible Teacher",
+    "education": "Wheaton College",
+    "website": "",
+    "books": [
+      {
+        "title": "Disciplines of a Godly Man",
+        "amazon_url": "https://www.amazon.com/s?k=Disciplines+of+a+Godly+Man+R+Kent+Hughes"
+      },
+      {
+        "title": "Covenant with God",
+        "amazon_url": "https://www.amazon.com/s?k=Covenant+with+God+R+Kent+Hughes"
+      },
+      {
+        "title": "Preaching the Word: 1 Timothy",
+        "amazon_url": "https://www.amazon.com/s?k=1+Timothy+Preaching+the+Word+R+Kent+Hughes"
+      },
+      {
+        "title": "Preaching the Word: 2 Timothy",
+        "amazon_url": "https://www.amazon.com/s?k=2+Timothy+Preaching+the+Word+R+Kent+Hughes"
+      },
+      {
+        "title": "Set Apart: Calling a Worldly Church to a Godly Life",
+        "amazon_url": "https://www.amazon.com/s?k=Set+Apart+R+Kent+Hughes"
+      }
+    ],
+    "initials": "RKH"
+  },
+  {
+    "name": "Robert Hasler",
+    "slug": "robert-hasler",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RH"
+  },
+  {
+    "name": "Joel Cho",
+    "slug": "joel-cho",
+    "bio": "Joel Cho is a Christian author and speaker known for his work in spiritual growth and biblical teaching. He has contributed to various Christian publications and platforms dedicated to equipping believers in their faith journeys.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JC"
+  },
+  {
+    "name": "Dwayne McCrary",
+    "slug": "dwayne-mccrary",
+    "bio": "Dwayne McCrary is a Christian author and speaker who focuses on faith-based topics and spiritual growth. He is dedicated to helping believers deepen their relationship with God through thoughtful writing and teaching.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DM"
+  },
+  {
+    "name": "Maria Varenikova",
+    "slug": "maria-varenikova",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MV"
+  },
+  {
+    "name": "Josh Dawsey",
+    "slug": "josh-dawsey",
+    "bio": "Josh Dawsey is a political reporter and journalist known for his investigative work covering national politics and the Trump administration. While not primarily a Christian content creator, his reporting has been widely followed by evangelical audiences interested in political news and analysis from a major news perspective.",
+    "affiliation": "The Washington Post",
+    "role": "Political Reporter & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JD"
   }
 ]
