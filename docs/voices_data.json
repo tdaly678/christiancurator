@@ -11728,5 +11728,107 @@
     "website": "",
     "books": [],
     "initials": "JD"
+  },
+  {
+    "name": "John Owen",
+    "slug": "john-owen",
+    "bio": "John Owen (1616–1683) was an English Congregationalist theologian and pastor whose works profoundly shaped Reformed theology and Christian spirituality. Known for his deep biblical scholarship and pastoral sensitivity, Owen served as Vice-Chancellor of Oxford University and ministered through both preaching and prolific theological writing. His treatises on sin, the Holy Spirit, and biblical interpretation remain influential among evangelicals seeking robust theological foundations.",
+    "affiliation": "Oxford University; Independent/Congregationalist Churches",
+    "role": "Theologian, Pastor & Scholar",
+    "education": "Oxford University",
+    "website": "",
+    "books": [
+      {
+        "title": "Of Communion with God the Father, Son, and Holy Ghost",
+        "amazon_url": "https://www.amazon.com/s?k=John+Owen+Communion+with+God"
+      },
+      {
+        "title": "The Mortification of Sin in Believers",
+        "amazon_url": "https://www.amazon.com/s?k=John+Owen+Mortification+of+Sin"
+      },
+      {
+        "title": "Of the Divine Original, Authority, Self-Evidencing Light and Power of the Scripture",
+        "amazon_url": "https://www.amazon.com/s?k=John+Owen+Divine+Original+Scripture"
+      },
+      {
+        "title": "The Glory of Christ",
+        "amazon_url": "https://www.amazon.com/s?k=John+Owen+Glory+of+Christ"
+      },
+      {
+        "title": "Pneumatologia: Of the Holy Ghost",
+        "amazon_url": "https://www.amazon.com/s?k=John+Owen+Holy+Ghost"
+      },
+      {
+        "title": "Biblical Theology",
+        "amazon_url": "https://www.amazon.com/s?k=John+Owen+Biblical+Theology"
+      }
+    ],
+    "initials": "JO"
+  },
+  {
+    "name": "Chrys Jones",
+    "slug": "chrys-jones",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CJ"
+  },
+  {
+    "name": "Karsten Harrison",
+    "slug": "karsten-harrison",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KH"
+  },
+  {
+    "name": "Alex DiPrima",
+    "slug": "alex-diprima",
+    "bio": "Alex DiPrima is a Christian writer and content creator dedicated to exploring faith, theology, and spiritual growth. Through his work, he seeks to help believers deepen their understanding of Scripture and live out their faith with greater intentionality and conviction.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AD"
+  },
+  {
+    "name": "Norimitsu Onishi and Hubert Hayaud",
+    "slug": "norimitsu-onishi-and-hubert-hayaud",
+    "bio": "Norimitsu Onishi is an accomplished journalist known for his reporting on African affairs and international development issues. Hubert Hayaud is a French researcher and writer focused on social and humanitarian topics. Together, their collaborative work explores complex global challenges through rigorous reporting and analysis.",
+    "affiliation": "The New York Times",
+    "role": "Journalists & Reporters",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "NOH"
+  },
+  {
+    "name": "Luis Ferré-Sadurní and Federico Rios",
+    "slug": "luis-ferrsadurn-and-federico-rios",
+    "bio": "Luis Ferré-Sadurní and Federico Rios are investigative journalists known for their in-depth reporting on complex social and environmental issues. While not primarily Christian content creators, their work often touches on themes of justice, stewardship, and human dignity that resonate with Christian values and concerns.",
+    "affiliation": "The New York Times",
+    "role": "Investigative Journalists & Reporters",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LFS-FR"
+  },
+  {
+    "name": "Jonathan Cheng",
+    "slug": "jonathan-cheng",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JC"
   }
 ]
