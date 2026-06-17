@@ -11830,5 +11830,120 @@
     "website": "",
     "books": [],
     "initials": "JC"
+  },
+  {
+    "name": "Tilly Dillehay",
+    "slug": "tilly-dillehay",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TD"
+  },
+  {
+    "name": "T M. Suffield",
+    "slug": "t-m-suffield",
+    "bio": "T M. Suffield is a British author and theologian who writes thoughtfully about faith, culture, and the Christian life. His work engages contemporary issues with theological depth and practical wisdom for modern believers.",
+    "affiliation": "Mere Orthodoxy, The Gospel Coalition",
+    "role": "Author & Theologian",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Reclanting: What It Means to Abandon the Faith",
+        "amazon_url": "https://www.amazon.com/s?k=Reclanting+T+M+Suffield"
+      }
+    ],
+    "initials": "TMS"
+  },
+  {
+    "name": "Benjamin Vincent",
+    "slug": "benjamin-vincent",
+    "bio": "Benjamin Vincent is a biblical scholar and author dedicated to helping Christians understand Scripture more deeply. His work focuses on making biblical languages and theological concepts accessible to everyday believers.",
+    "affiliation": "",
+    "role": "Biblical Scholar & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BV"
+  },
+  {
+    "name": "Beth Claes",
+    "slug": "beth-claes",
+    "bio": "Beth Claes is a Christian writer and content creator dedicated to helping believers grow in their faith and understanding of Scripture. Through her writing and speaking, she encourages readers to deepen their relationship with Jesus and apply biblical truths to everyday life.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BC"
+  },
+  {
+    "name": "Brian Daniel",
+    "slug": "brian-daniel",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BD"
+  },
+  {
+    "name": "Matthew Hall",
+    "slug": "matthew-hall",
+    "bio": "Matthew Hall is a theologian and author known for his work in Christian doctrine and biblical studies. He has contributed significantly to evangelical scholarship through his writing and teaching on topics central to Christian faith and practice.",
+    "affiliation": "",
+    "role": "Theologian & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MH"
+  },
+  {
+    "name": "Kristy Etheridge",
+    "slug": "kristy-etheridge",
+    "bio": "Kristy Etheridge is a Christian writer and content creator who shares insights on faith, family, and living out biblical principles in everyday life. Her writing resonates with readers seeking practical wisdom grounded in Scripture.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KE"
+  },
+  {
+    "name": "Kate Lucky",
+    "slug": "kate-lucky",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KL"
+  },
+  {
+    "name": "Zane Irwin",
+    "slug": "zane-irwin",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ZI"
+  },
+  {
+    "name": "Laetitia Vancon",
+    "slug": "laetitia-vancon",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LV"
   }
 ]
