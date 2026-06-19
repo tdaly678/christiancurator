@@ -12117,5 +12117,106 @@
     "website": "",
     "books": [],
     "initials": "YT"
+  },
+  {
+    "name": "Joshua Torrey",
+    "slug": "joshua-torrey",
+    "bio": "Joshua Torrey is a Christian writer and curator focused on biblical theology and spiritual formation. He founded The Cripplegate, a popular Christian blog dedicated to equipping believers with sound doctrine and biblical thinking. Through his writing and content curation work, Torrey seeks to help Christians deepen their understanding of Scripture and live out their faith with integrity.",
+    "affiliation": "The Cripplegate",
+    "role": "Author & Content Curator",
+    "education": "",
+    "website": "https://thecripplegate.com",
+    "books": [],
+    "initials": "JT"
+  },
+  {
+    "name": "Don Carson",
+    "slug": "don-carson",
+    "bio": "D.A. Carson is a renowned biblical scholar and theologian who has shaped evangelical Christianity through decades of rigorous Scripture study and teaching. As co-founder of The Gospel Coalition and professor emeritus at Trinity Evangelical Divinity School, he has written extensively on New Testament theology, biblical interpretation, and Christian apologetics. His work emphasizes careful exegesis, doctrinal clarity, and the practical application of God's Word to contemporary faith.",
+    "affiliation": "The Gospel Coalition, Trinity Evangelical Divinity School",
+    "role": "Biblical Scholar, Theologian & Author",
+    "education": "Ph.D. in New Testament, University of Cambridge",
+    "website": "https://www.thegospelcoalition.org/",
+    "books": [
+      {
+        "title": "The Intrepid Gospel",
+        "amazon_url": "https://www.amazon.com/s?k=The+Intrepid+Gospel+Don+Carson"
+      },
+      {
+        "title": "The Difficult Doctrine of the Love of God",
+        "amazon_url": "https://www.amazon.com/s?k=The+Difficult+Doctrine+of+the+Love+of+God+Don+Carson"
+      },
+      {
+        "title": "Exegetical Fallacies",
+        "amazon_url": "https://www.amazon.com/s?k=Exegetical+Fallacies+Don+Carson"
+      },
+      {
+        "title": "How Long, O Lord?",
+        "amazon_url": "https://www.amazon.com/s?k=How+Long+O+Lord+Don+Carson"
+      },
+      {
+        "title": "The God Who Is There",
+        "amazon_url": "https://www.amazon.com/s?k=The+God+Who+Is+There+Don+Carson"
+      },
+      {
+        "title": "Scandalous: The Cross and Resurrection of Jesus",
+        "amazon_url": "https://www.amazon.com/s?k=Scandalous+The+Cross+and+Resurrection+of+Jesus+Don+Carson"
+      }
+    ],
+    "initials": "DAC"
+  },
+  {
+    "name": "Kathleen Nielson",
+    "slug": "kathleen-nielson",
+    "bio": "Kathleen Nielson is a writer, speaker, and Bible teacher known for her work in Christian discipleship and women's ministry. She has served as Director of Gospel Life Women's Initiative at The Gospel Coalition and is passionate about equipping women to study and teach Scripture. Her work emphasizes the importance of women engaging deeply with God's Word and living out biblical truths in community.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Writer, Bible Teacher & Speaker",
+    "education": "Ph.D., University of Wisconsin-Madison",
+    "website": "https://kathleennielson.com",
+    "books": [
+      {
+        "title": "Living Word, Living Church: Revitalizing Your Congregation Through Scripture",
+        "amazon_url": "https://www.amazon.com/s?k=Living+Word+Living+Church+Kathleen+Nielson"
+      },
+      {
+        "title": "In Every Season: Finding God's Purpose in Our Trials",
+        "amazon_url": "https://www.amazon.com/s?k=In+Every+Season+Kathleen+Nielson"
+      },
+      {
+        "title": "Proverbs: A Woman Who Fears the Lord",
+        "amazon_url": "https://www.amazon.com/s?k=Proverbs+Woman+Who+Fears+Lord+Kathleen+Nielson"
+      },
+      {
+        "title": "Dwelling: Deep in Deuteronomy",
+        "amazon_url": "https://www.amazon.com/s?k=Dwelling+Deep+Deuteronomy+Kathleen+Nielson"
+      },
+      {
+        "title": "The Message of Ruth: Redeeming Losses",
+        "amazon_url": "https://www.amazon.com/s?k=Message+of+Ruth+Kathleen+Nielson"
+      }
+    ],
+    "initials": "KN"
+  },
+  {
+    "name": "Amy Mantravadi",
+    "slug": "amy-mantravadi",
+    "bio": "Amy Mantravadi is a writer and speaker who explores faith, culture, and the Christian worldview. She engages thoughtfully with contemporary issues through a biblical lens, encouraging believers to think deeply about their convictions and live out their faith authentically in today's world.",
+    "affiliation": "",
+    "role": "Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AM"
+  },
+  {
+    "name": "Brian Smith",
+    "slug": "brian-smith",
+    "bio": "Brian Smith is a Christian writer and content creator dedicated to helping believers deepen their faith and understanding of Scripture. With a passion for practical theology and spiritual growth, he contributes to conversations about Christian living in the modern world.",
+    "affiliation": "",
+    "role": "Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BS"
   }
 ]
