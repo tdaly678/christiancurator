@@ -12328,5 +12328,87 @@
     "website": "",
     "books": [],
     "initials": "JOC"
+  },
+  {
+    "name": "Ronald William DiGiacomo",
+    "slug": "ronald-william-digiacomo",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RWD"
+  },
+  {
+    "name": "Kenneth Wingate",
+    "slug": "kenneth-wingate",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KW"
+  },
+  {
+    "name": "Adam Loretto",
+    "slug": "adam-loretto",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AL"
+  },
+  {
+    "name": "Serhii Bosak",
+    "slug": "serhii-bosak",
+    "bio": "Serhii Bosak is a Ukrainian Christian author and thought leader known for his work exploring faith, culture, and spiritual formation. He contributes to Christian discourse through writing and ministry in Eastern Europe and beyond.",
+    "affiliation": "",
+    "role": "Author & Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SB"
+  },
+  {
+    "name": "Keith Bradsher",
+    "slug": "keith-bradsher",
+    "bio": "Keith Bradsher is an award-winning international correspondent and economics reporter known for his investigative journalism on global trade, manufacturing, and economic policy. While not primarily a Christian content creator, his work examining economic justice issues and global inequality aligns with Christian values of stewardship and concern for workers worldwide.",
+    "affiliation": "The New York Times",
+    "role": "International Correspondent & Economics Reporter",
+    "education": "Harvard University",
+    "website": "",
+    "books": [
+      {
+        "title": "High and Mighty: SUVs - The World's Most Dangerous Vehicles and How They Got That Way",
+        "amazon_url": "https://www.amazon.com/s?k=High+and+Mighty+Keith+Bradsher"
+      }
+    ],
+    "initials": "KB"
+  },
+  {
+    "name": "Kevin Burrell",
+    "slug": "kevin-burrell",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KB"
+  },
+  {
+    "name": "Sue Roaf",
+    "slug": "sue-roaf",
+    "bio": "Sue Roaf is a respected Christian author and speaker known for her work exploring biblical themes and personal faith journeys. Her writings have encouraged countless readers to deepen their relationship with Christ and apply Scripture to everyday life.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SR"
   }
 ]
