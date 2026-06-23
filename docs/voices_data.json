@@ -12410,5 +12410,97 @@
     "website": "",
     "books": [],
     "initials": "SR"
+  },
+  {
+    "name": "Caleb Davis",
+    "slug": "caleb-davis",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CD"
+  },
+  {
+    "name": "Sarah Hahn",
+    "slug": "sarah-hahn",
+    "bio": "Sarah Hahn is a writer and speaker known for exploring themes of faith, motherhood, and spiritual growth. Her work encourages Christians to deepen their relationship with God through thoughtful reflection and biblical insight.",
+    "affiliation": "",
+    "role": "Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SH"
+  },
+  {
+    "name": "Tom Harper",
+    "slug": "tom-harper",
+    "bio": "Tom Harper is a British author and religious commentator known for exploring the intersection of faith, history, and spirituality. His work draws on extensive research into Christian traditions and contemporary religious questions, offering thoughtful perspectives for modern believers seeking deeper understanding of their faith.",
+    "affiliation": "",
+    "role": "Author & Religious Commentator",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Thirteenth Tale",
+        "amazon_url": "https://www.amazon.com/s?k=The+Thirteenth+Tale+Tom+Harper"
+      },
+      {
+        "title": "Miracles of Our Own Making",
+        "amazon_url": "https://www.amazon.com/s?k=Miracles+of+Our+Own+Making+Tom+Harper"
+      }
+    ],
+    "initials": "TH"
+  },
+  {
+    "name": "Walt Mueller",
+    "slug": "walt-mueller",
+    "bio": "Walt Mueller is a youth culture expert and founder of the Center for Parent/Youth Understanding, dedicated to helping Christian parents and leaders understand and effectively minister to today's adolescents. Through his writing, speaking, and research, he bridges the gap between generational perspectives and offers biblically grounded insights into the challenges facing young people.",
+    "affiliation": "Center for Parent/Youth Understanding",
+    "role": "Founder & Youth Culture Expert",
+    "education": "Gordon-Conwell Theological Seminary",
+    "website": "https://www.cpyu.org",
+    "books": [
+      {
+        "title": "Engaging the Soul of Youth Culture",
+        "amazon_url": "https://www.amazon.com/s?k=Engaging+Soul+Youth+Culture+Walt+Mueller"
+      },
+      {
+        "title": "Understanding Today's Youth Culture",
+        "amazon_url": "https://www.amazon.com/s?k=Understanding+Todays+Youth+Culture+Walt+Mueller"
+      },
+      {
+        "title": "The God of the Mundane",
+        "amazon_url": "https://www.amazon.com/s?k=The+God+of+the+Mundane+Walt+Mueller"
+      },
+      {
+        "title": "Catching Culture",
+        "amazon_url": "https://www.amazon.com/s?k=Catching+Culture+Walt+Mueller"
+      }
+    ],
+    "initials": "WM"
+  },
+  {
+    "name": "Aie Balagtas See and Jason Gutierrez",
+    "slug": "aie-balagtas-see-and-jason-gutierrez",
+    "bio": "Aie Balagtas See and Jason Gutierrez are Christian content creators and communicators dedicated to sharing faith-centered insights with modern audiences. Together they work to curate and develop meaningful Christian resources that encourage spiritual growth and deeper engagement with Scripture.",
+    "affiliation": "",
+    "role": "Content Creators & Christian Communicators",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ABS-JG"
+  },
+  {
+    "name": "Marianne LeVine",
+    "slug": "marianne-levine",
+    "bio": "Marianne LeVine is a journalist and author known for her investigative reporting on religious movements and institutional accountability. Her work has appeared in major publications where she examines faith communities with both critical insight and respect for believers seeking truth.",
+    "affiliation": "",
+    "role": "Investigative Journalist & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ML"
   }
 ]
