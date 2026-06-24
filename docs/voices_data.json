@@ -12502,5 +12502,140 @@
     "website": "",
     "books": [],
     "initials": "ML"
+  },
+  {
+    "name": "Rachel Gilson",
+    "slug": "rachel-gilson",
+    "bio": "Rachel Gilson is a writer and speaker who addresses faith, identity, and sexuality from a biblical perspective. Her work explores how Christian conviction intersects with cultural conversations, particularly around LGBTQ+ issues and discipleship. She is known for her thoughtful, compassionate approach to difficult theological topics.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "https://www.rachelgilson.com",
+    "books": [
+      {
+        "title": "Born Again This Way: Coming Out, Coming to Faith, and What Comes Next",
+        "amazon_url": "https://www.amazon.com/s?k=Born+Again+This+Way+Rachel+Gilson"
+      }
+    ],
+    "initials": "RG"
+  },
+  {
+    "name": "Kevin Schaal",
+    "slug": "kevin-schaal",
+    "bio": "Kevin Schaal is a Christian writer and content creator who focuses on faith-based topics for modern audiences. His work encourages believers to deepen their spiritual understanding and live out their faith in practical ways.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KS"
+  },
+  {
+    "name": "Tom Ascol",
+    "slug": "tom-ascol",
+    "bio": "Tom Ascol is a pastor, author, and advocate for Reformed theology and biblical fidelity in the local church. He is known for his work promoting Calvinism and expositional preaching within evangelical Christianity. Ascol has been influential in encouraging pastors to embrace a high view of Scripture and doctrinal precision in their ministry.",
+    "affiliation": "Founders Ministries",
+    "role": "Pastor, Author & Ministry Leader",
+    "education": "",
+    "website": "https://www.founders.org",
+    "books": [
+      {
+        "title": "The Loveliness of Christ",
+        "amazon_url": "https://www.amazon.com/s?k=The+Loveliness+of+Christ+Tom+Ascol"
+      },
+      {
+        "title": "Serving the Seeker-Sensitive Church",
+        "amazon_url": "https://www.amazon.com/s?k=Serving+the+Seeker-Sensitive+Church+Tom+Ascol"
+      }
+    ],
+    "initials": "TA"
+  },
+  {
+    "name": "Jeri Choi",
+    "slug": "jeri-choi",
+    "bio": "Jeri Choi is a Christian writer and content creator focused on faith, culture, and discipleship. Her work encourages believers to engage thoughtfully with contemporary issues through a biblical lens.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JC"
+  },
+  {
+    "name": "Jeremy Bell",
+    "slug": "jeremy-bell",
+    "bio": "Jeremy Bell is a writer and content creator focused on faith, culture, and Christian living. His work explores how believers can engage thoughtfully with contemporary issues while maintaining biblical conviction.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JB"
+  },
+  {
+    "name": "Benjamin L. Mabry",
+    "slug": "benjamin-l-mabry",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BLM"
+  },
+  {
+    "name": "Scott McConnell",
+    "slug": "scott-mcconnell",
+    "bio": "Scott McConnell is a respected voice in Christian media and leadership development. He has contributed significantly to conversations around faith, culture, and discipleship within evangelical communities.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Leader",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SM"
+  },
+  {
+    "name": "Zane Irwin and Shirin Hakim",
+    "slug": "zane-irwin-and-shirin-hakim",
+    "bio": "Zane Irwin and Shirin Hakim are content creators and communicators who engage with contemporary Christian topics and cultural conversations. Their work aims to bridge faith perspectives with modern life and relevant social discourse for thoughtful believers.",
+    "affiliation": "",
+    "role": "Content Creators & Communicators",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ZS"
+  },
+  {
+    "name": "Hannah Beech and Daniel Berehulak",
+    "slug": "hannah-beech-and-daniel-berehulak",
+    "bio": "Hannah Beech is an award-winning international correspondent and journalist who has covered some of the world's most critical stories, bringing important global narratives to light. Daniel Berehulak is an acclaimed photojournalist known for his powerful visual storytelling across conflict zones and humanitarian crises. Together, they represent a commitment to truth-telling and bearing witness to human experiences across the globe.",
+    "affiliation": "The New York Times",
+    "role": "Journalist & Photojournalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "HB/DB"
+  },
+  {
+    "name": "Caroline Davies",
+    "slug": "caroline-davies",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CD"
+  },
+  {
+    "name": "Laetitia Vançon",
+    "slug": "laetitia-vanon",
+    "bio": "Laetitia Vançon is a French Christian author and speaker known for her work in Christian discipleship and spiritual formation. She writes and ministers primarily in French-speaking contexts, offering biblical insights for contemporary believers seeking deeper faith and practical Christian living.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LV"
   }
 ]
