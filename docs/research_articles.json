@@ -1,28 +1,30 @@
 [
   {
-    "source_name": "Lifeway Research",
+    "source_name": "Ryan Burge",
     "source_category": "culture",
     "source_type": "christian",
-    "independent": false,
-    "author": "Jon Watts",
-    "title": "Dear Pastor, Pursue God, Not Merely a Quiet Time",
-    "url": "https://research.lifeway.com/2026/06/25/dear-pastor-pursue-god-not-merely-a-quiet-time/",
-    "summary": "<p>Are you seeking to feed your flock but starving yourself? Have you lost sight of the riches of an entire life lived before God? <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/06/25/dear-pastor-pursue-god-not-merely-a-quiet-time/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/06/25/dear-pastor-pursue-god-not-merely-a-quiet-time/\">Dear Pastor, Pursue God, Not Merely a Quiet Time</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
-    "full_content": "",
-    "published": "Thu, 25 Jun 2026 06:09:00 +0000",
-    "fetched_at": "2026-06-25T08:46:01.786451",
-    "score": 5,
+    "independent": true,
+    "author": "Ryan Burge",
+    "title": "America's Largest Churches: Over a Decade of Data",
+    "url": "https://www.graphsaboutreligion.com/p/americas-largest-churches-over-a",
+    "summary": "Megachurches rise, fall, and evolve &#8212; but the biggest keep getting bigger.",
+    "full_content": "<p><strong>People are obsessed with the size of churches</strong>. That&#8217;s what I&#8217;ve learned in doing a bunch of Q&amp;A sessions with folks from various constituencies around the country. They want to know what a typical church looks like, but they are also deeply interested in understanding what&#8217;s going on with the largest churches in the United States. They almost seem impossible to really wrap your head around. How can a single religious body have a regular attendance that is 20,000 or 30,000 people? For most of us, church is a place where 100 folks gather on a Sunday. For people who attend mega-churches, it&#8217;s something else entirely. <br /><br />I&#8217;ve visited a couple of these churches in my travels and I&#8217;m always struck by just the enormity of the whole outfit. <strong>Of course, the physical campuses are huge. One thing that really struck me was how wide their hallways were in these humongous buildings.</strong> They have to be to make it faster and safer for those exiting the sanctuary to get out to their cars in an orderly fashion. But, also I am struck by the professionalism of the folks working there. The sound person is not some retired guy who knows just enough to unmute the pastor&#8217;s mic at the right time. In fact, they have numerous folks working the soundboard who have degrees in audio engineering.</p><p>I&#8217;ve written a bit about mega-churches before <a href=\"https://hirr.hartfordinternational.edu/research/megachurch-database/?gad_source=1&amp;gad_campaignid=21950310869&amp;gbraid=0AAAAAD9Aj0LgDnM6hsAoTl5k_eGvH4dOe&amp;gclid=Cj0KCQjw4PPNBhD8ARIsAMo-icxoX3knHtqCS7Ppg_uAYokn05CDEgZUqFExaVi8vxPkzLzgRpPW3tcaAtF2EALw_wcB\">based on a list</a> provided from the Hartford Institute and there&#8217;s a lot to learn there. But, I have another data source now that gives me even more insight into the largest churches in the United States.</p><p><strong>For the last decade, Outreach Magazine (in collaboration with Lifeway Research) has collected a list of the <a href=\"https://outreach100.com/largest-churches-in-america\">100 largest churches in the United States</a>.</strong> I am in no way responsible for the data collection for this project and I&#8217;m sure that the research team would tell you that this list is probably not 100% accurate. But guess what? It would be next to impossible to compile a list like this without leaving out a church or two. This is as good as we are going to get. If you are interested in how this list was pulled together, there&#8217;s a bit about their methodology to be found at <a href=\"https://outreach100.com/about\">this link</a>. </p><p>This data has been collected with regularity all the way back to 2015. I wrote a scraping program to acquire the information from the <a href=\"https://outreachmagazine.com/\">Outreach website</a> and now I&#8217;ve got an absolute treasure trove of information about these churches. <strong>In total there are 1,100 entries on my list (100 churches x 11 years of data), but here&#8217;s the first big revelation from this effort: there are only 209 unique churches to be found.</strong> Which means that a whole lot of these congregations are &#8220;frequent flyers&#8221; in that they appear every time. In fact, 20 churches show up every single year and another 18 show up in ten of the eleven years. Big churches stay big. <br /><br />However, there is some real variation at the top of the list. I just visualized the largest 10 churches from the 2015 list and then the 2025 list.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!B9vq!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6c1a0c1-09e8-431f-8d71-04ba4b2a3018_1600x1600.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1456\" src=\"https://substackcdn.com/image/fetch/$s_!B9vq!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6c1a0c1-09e8-431f-8d71-04ba4b2a3018_1600x1600.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong>One huge thing that jumps out to me is that the biggest churches in the United States have gotten a whole lot bigger in the last decade</strong>. In 2015, the ten largest churches combined for a total membership of just over 260,000. In 2025, that attendance number rose to over 427,000. The fifth largest church in the 2025 data (North Point), had 37,000 attenders. That number would have put it at the top of the list in 2015. Speaking of <a href=\"https://northpoint.org/\">North Point</a> - they are one of the churches that shows up in the top ten in both years. There are several on the list like this: <a href=\"https://churchofthehighlands.com/\">Church of the Highlands</a> (Birmingham), <a href=\"https://ccv.church/\">CCV</a> (Peoria, AZ), <a href=\"https://crossroadschurch.net/?kw=crossroads%20church&amp;mt=b&amp;loc=9022693&amp;n=g&amp;d=c&amp;adp=&amp;cid=10180659809&amp;adgid=102716416460&amp;tid=kwd-91730754&amp;gad_source=1&amp;gad_campaignid=10180659809&amp;gbraid=0AAAAADs43J_F47aqMPs3jqpfZESll3wRH&amp;gclid=CjwKCAjwg_nNBhAGEiwAiYPYAzvQ46cCiPTSWLXjpURL08M5t1sQeLumBaebPK1lE3VB-Tt9OzadnhoC1xAQAvD_BwE\">Crossroads Church</a> (Cincinnati), <a href=\"https://www.cfmiami.org/sermons?gad_source=1&amp;gad_campaignid=22634426616&amp;gbraid=0AAAAADvSWBiDwM89AP40e0LX-iOJFySVw&amp;gclid=CjwKCAjwg_nNBhAGEiwAiYPYAyW8N1j1YYEuHbBYFzLPSllgoWEWQAi7LHW_DuJB0uZcMzPD68En3BoCBG8QAvD_BwE\">Christ Fellowship Church</a> (Palm Beach Gardens), <a href=\"https://www.se.church/\">Southeast Christian</a> (Louisville), and <a href=\"https://saddleback.com/watch/\">Saddleback</a> (Lake Forest, CA).</p><p>There are some newcomers to the list in 2025, though. One is <a href=\"https://www.life.church/\">Life.Church</a>. It&#8217;s based in Edmond, OK and was just added to the dataset in 2022. (Don&#8217;t ask me why it wasn&#8217;t there before that date, I don&#8217;t know). But you&#8217;ve also had the addition of <a href=\"https://www.lakewoodchurch.com/\">Lakewood Church</a>, which is run by Joel Osteen. Again, that one has been very large for a while but only recently was added to the Outreach list. The other newcomer was <a href=\"https://www.eaglebrookchurch.com/\">Eagle Brook Church</a> in Centerville, MN.</p><p>But I know what you all really want to do - <strong>you want an interactive map where you can pan and zoom and look at where these churches are located</strong>. That&#8217;s exactly what I&#8217;ve done for you below. Each church is marked with a pin and you can click on that pin to give you the name, location, and the last reported attendance from each church. I&#8217;ve also colored in the circles with the last year they appeared on the list and the size of the circles denotes the last reported attendance.</p>\n      <p>\n          <a href=\"https://www.graphsaboutreligion.com/p/americas-largest-churches-over-a\">\n              Read more\n          </a>\n      </p>",
+    "published": "Thu, 25 Jun 2026 11:30:34 GMT",
+    "fetched_at": "2026-06-26T08:48:24.853329",
+    "score": 4,
     "tags": [
-      "devotional",
-      "church life"
+      "data"
     ],
-    "rewritten_title": "Pastors Are Starving Themselves on Empty Devotional Routines",
+    "rewritten_title": "Megachurches Keep Growing While Others Collapse",
     "personas": [
-      "pastor"
+      "pastor",
+      "professional"
     ],
-    "topic_cluster": "pastor_spiritual_life",
-    "perspective": "supportive",
-    "final_score": 6.5,
+    "topic_cluster": "church_statistics",
+    "perspective": "news",
+    "frequency_boost": 0.75,
+    "source_posts_30d": 9,
+    "final_score": 6.25,
     "recency_boost": 1.5
   },
   {
@@ -36,46 +38,46 @@
     "summary": "<p>Gen Z churchgoers frequently attend church on Sunday, but their faith often fails to shape their lives during the week. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/06/23/gen-z-churchgoers-attend-more-but-often-lag-in-application/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/06/23/gen-z-churchgoers-attend-more-but-often-lag-in-application/\">Gen Z Churchgoers Attend More but Often Lag in Application</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "full_content": "",
     "published": "Tue, 23 Jun 2026 14:45:00 +0000",
-    "fetched_at": "2026-06-25T08:46:01.786474",
+    "fetched_at": "2026-06-26T08:48:26.049735",
     "score": 5,
     "tags": [
-      "data",
-      "church life"
+      "data"
     ],
-    "rewritten_title": "Gen Z Shows Up to Church—But Leaves Faith at the Door",
+    "rewritten_title": "Gen Z Shows Up to Church—But Faith Doesn't Follow Home",
     "personas": [
       "pastor",
       "parent"
     ],
     "topic_cluster": "gen_z_faith_application",
     "perspective": "neutral",
-    "final_score": 5.0,
-    "recency_boost": 0.75
+    "final_score": 5.25,
+    "recency_boost": 0.25
   },
   {
-    "source_name": "Pew Research",
+    "source_name": "First Things",
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Janakee Chavda",
-    "title": "Trump Gets Negative Reviews Internationally as Fewer Say U.S. Is a Reliable Partner",
-    "url": "https://www.pewresearch.org/global/2026/06/23/trump-gets-negative-reviews-internationally-as-fewer-say-u-s-is-a-reliable-partner/",
-    "summary": "A 36-country survey finds declining ratings for the U.S. amid rising concerns about its foreign policy and the health of its democracy.",
-    "full_content": "",
-    "published": "Tue, 23 Jun 2026 13:41:11 +0000",
-    "fetched_at": "2026-06-25T08:46:01.357139",
+    "author": "Jillian Parks",
+    "title": "The Community Answering the College Faith-Abandonment Crisis",
+    "url": "https://firstthings.com/the-community-answering-the-college-faith-abandonment-crisis/",
+    "summary": "<p>A 2007 Lifeway study found that 70 percent of young American adults who regularly attended a Protestant church in high school stopped attending upon reaching college age. Unhappy with...</p>\n<p>The post <a href=\"https://firstthings.com/the-community-answering-the-college-faith-abandonment-crisis/\">The Community Answering the College Faith-Abandonment Crisis </a> appeared first on <a href=\"https://firstthings.com\">First Things</a>.</p>",
+    "full_content": "<p class=\"is-style-drop-cap\">A 2007 <a href=\"https://research.lifeway.com/2019/01/15/most-teenagers-drop-out-of-church-as-young-adults/\" rel=\"noreferrer noopener\" target=\"_blank\">Lifeway study</a> found that 70 percent of young American adults who regularly attended a Protestant church in high school stopped attending upon reaching college age. Unhappy with the trend, Trace Hamiter founded The Oaks Collaborative in 2012, an interdenominational nonprofit that helps college students build faith communities through retreats. When Lifeway repeated the study in 2017, it found similar results, but participant testimonies and The Oaks’ growing footprint—reaching nearly 15,000 freshmen and 7,000 student leaders—suggest that the 2027 findings could be more encouraging.</p>\n\n\n\n<p>The Oaks Collaborative invites incoming college students, upperclassmen leaders, and local churches and campus ministries to a three-day retreat before the school year begins. Students participate in activities, hear sermons by local pastors, debrief in small groups led by upperclassmen, and connect with campus and community ministries. Since its founding at Auburn University, it has expanded to more than twenty college campuses nationwide, with each retreat bearing a distinct name shaped by a local and biblical vision.&nbsp;</p>\n\n\n\n<p>After learning about the Oaks Retreat during her Auburn tour, Caitlyn Holmes decided to attend the Arch Retreat as a freshman at the University of Georgia. During her sophomore year, she signed up to be a counselor and saw the retreat double in size. “Our prayer is that it would be impossible for freshmen to not know about it,” Holmes said.&nbsp;</p>\n\n\n\n<p>Signing up to be a counselor extends beyond a three-day commitment. Counselors are expected to follow up with their small group members throughout the following semester: remembering birthdays, helping with move-in, offering rides to church. This summer will mark Holmes’s third year of involvement.</p>\n\n\n\n<p>“I am involved in Greek life, and honestly, had I not at first really gotten plugged into ministry, I wouldn’t be surprised if that would have been my biggest commitment,” Holmes said. “I don’t think I would have the same level of ministry involvement that I do without it. Yes, I believe I’m at college to get a degree, but . . . how can I grow my faith and how can I minister to those around me? I really think that’s my primary purpose.”</p>\n\n\n\n<p>This past year, about 17 percent of Auburn’s six-thousand-person freshman class attended the retreat. When the Hills Retreat began at Clemson University, one local church had no college ministry; today, it reaches a few hundred students. At the University of Georgia, a ministry that once drew thirty to forty students now regularly reaches three to four hundred.&nbsp;</p>\n\n\n\n<p>“I do want to be clear that I would never take credit for that. Those churches are also doing an amazing job,” Hamiter said. “We’re trying to blow some wind into the sails of the churches and ministries that are already on campus, and we’re trying to create a situation where we close the back door to the church.”&nbsp;</p>\n\n\n\n<p>According to Hamiter, the reason students fall away from faith in college is less about the Big Bad Atheist professor who tells his students that God is dead than social dynamics. “They say yes to things they never thought they’d say yes to in those first couple weeks, and that leads them down a path they never thought they’d go down,” Hamiter said.&nbsp;</p>\n\n\n\n<p>Research suggests that the first few weeks of college are especially consequential to a student’s adjustment, relationship building, and habit formation; Brandon Clark attended The Oaks Retreat at Auburn in 2019 and saw this work out decisively. “Before I even got a chance to live what people think is a great college experience of partying and everything, [the retreat] allowed me to meet and surround myself with people who encouraged and developed me, not only as a Christian, but as a man, which I think has greatly impacted what I do for work and how I interact with people,” Clark said.&nbsp;</p>\n\n\n\n<p>The Oaks Collaborative helps students see that following Christ is not something to postpone until after college, but a path worth pursuing during a student’s most formative years. “One of the things that I say [to students] is that you can trust him, not only with eternity, but also with the next four years of your life,” Hamiter said. “Living the life of Christ in college is actually more abundant than anything the world has to offer.”</p>\n<p>The post <a href=\"https://firstthings.com/the-community-answering-the-college-faith-abandonment-crisis/\">The Community Answering the College Faith-Abandonment Crisis </a> appeared first on <a href=\"https://firstthings.com\">First Things</a>.</p>",
+    "published": "Fri, 26 Jun 2026 05:00:00 +0000",
+    "fetched_at": "2026-06-26T08:46:54.512409",
     "score": 4,
     "tags": [
       "data",
-      "politics"
+      "church life"
     ],
-    "rewritten_title": "Global Allies Lose Faith in America Under Trump",
+    "rewritten_title": "Seventy Percent of Church Kids Quit in College. Here's Who's Fighting Back.",
     "personas": [
-      "professional"
+      "pastor",
+      "student"
     ],
-    "topic_cluster": "trump_global_approval",
+    "topic_cluster": "youth_faith_retention",
     "perspective": "news",
     "final_score": 4.75,
-    "recency_boost": 0.75
+    "recency_boost": 1.5
   }
 ]
