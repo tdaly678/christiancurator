@@ -13011,5 +13011,129 @@
     "website": "",
     "books": [],
     "initials": "IH & GG"
+  },
+  {
+    "name": "Stephen Mattson",
+    "slug": "stephen-mattson",
+    "bio": "Stephen Mattson is a writer and journalist who explores the intersection of faith, politics, and social justice from an evangelical perspective. His work challenges Christians to engage thoughtfully with contemporary issues while remaining rooted in biblical values and compassion.",
+    "affiliation": "Relevant Magazine, The Christian Post",
+    "role": "Writer & Journalist",
+    "education": "",
+    "website": "https://stephenmattson.com",
+    "books": [
+      {
+        "title": "The Millennial Mosaic: Restoring Hope and Purpose to a Generation",
+        "amazon_url": "https://www.amazon.com/s?k=The+Millennial+Mosaic+Stephen+Mattson"
+      }
+    ],
+    "initials": "SM"
+  },
+  {
+    "name": "Sadie Maples",
+    "slug": "sadie-maples",
+    "bio": "Sadie Maples is a Christian writer and content creator known for her thoughtful exploration of faith, culture, and contemporary issues from a biblical perspective. She connects with audiences through accessible, grace-centered writing that encourages deeper spiritual reflection.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SM"
+  },
+  {
+    "name": "Arthur Gonçalves",
+    "slug": "arthur-gonalves",
+    "bio": "Arthur Gonçalves is a Christian writer and content creator dedicated to exploring faith, spirituality, and biblical wisdom for contemporary audiences. His work focuses on helping believers deepen their relationship with God through thoughtful reflection and scriptural insight.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AG"
+  },
+  {
+    "name": "Peter Rosenberger",
+    "slug": "peter-rosenberger",
+    "bio": "Peter Rosenberger is a Christian author, radio host, and caregiver advocate who has devoted his ministry to supporting those navigating the complexities of chronic illness and caregiving. Through his writing, broadcasting, and speaking engagements, he encourages believers to find hope and purpose amid life's most difficult circumstances.",
+    "affiliation": "Hope for the Caregiver",
+    "role": "Author, Radio Host & Caregiver Advocate",
+    "education": "",
+    "website": "https://www.hopeforthcaregiver.com",
+    "books": [
+      {
+        "title": "A Place Called Home: Finding Hope When Chronic Illness Strikes",
+        "amazon_url": "https://www.amazon.com/s?k=A+Place+Called+Home+Peter+Rosenberger"
+      },
+      {
+        "title": "The Christian Caregiver's Manual",
+        "amazon_url": "https://www.amazon.com/s?k=The+Christian+Caregiver+Manual+Peter+Rosenberger"
+      }
+    ],
+    "initials": "PR"
+  },
+  {
+    "name": "Erin Ford",
+    "slug": "erin-ford",
+    "bio": "Erin Ford is a speaker and author passionate about helping women navigate faith, relationships, and personal growth from a biblical perspective. Through her writing and speaking engagements, she encourages believers to deepen their walk with Christ and find authentic community.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EF"
+  },
+  {
+    "name": "Cal Crucis",
+    "slug": "cal-crucis",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CC"
+  },
+  {
+    "name": "Isayen Herrera",
+    "slug": "isayen-herrera",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "IH"
+  },
+  {
+    "name": "Fabiola Ferrero",
+    "slug": "fabiola-ferrero",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "FF"
+  },
+  {
+    "name": "Luis Ferré-Sadurní and Leo Sands",
+    "slug": "luis-ferrsadurn-and-leo-sands",
+    "bio": "Luis Ferré-Sadurní and Leo Sands are journalists and writers who have contributed reporting and analysis to major publications. Their work often explores social, political, and cultural issues with careful research and journalistic integrity.",
+    "affiliation": "",
+    "role": "Journalists & Writers",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LFS"
+  },
+  {
+    "name": "Frances Robles",
+    "slug": "frances-robles",
+    "bio": "Frances Robles is a journalist and author known for her investigative reporting on social justice issues and human interest stories. Her work, often grounded in compassion and truth-telling, has appeared in major publications and reflects a commitment to amplifying marginalized voices.",
+    "affiliation": "",
+    "role": "Journalist & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "FR"
   }
 ]
