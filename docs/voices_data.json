@@ -13245,5 +13245,136 @@
     "website": "",
     "books": [],
     "initials": "PWN"
+  },
+  {
+    "name": "Jacob Leeming",
+    "slug": "jacob-leeming",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JL"
+  },
+  {
+    "name": "Michael Grayston",
+    "slug": "michael-grayston",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MG"
+  },
+  {
+    "name": "Zach Carter",
+    "slug": "zach-carter",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ZC"
+  },
+  {
+    "name": "George Grant",
+    "slug": "george-grant",
+    "bio": "George Grant is a prolific Christian author, educator, and cultural commentator known for his thoughtful exploration of faith, history, and public policy. His work bridges classical Christian thought with contemporary social issues, offering readers a distinctly Reformed perspective on culture and stewardship.",
+    "affiliation": "King's Meadow Study Center",
+    "role": "Author, Educator & Cultural Commentator",
+    "education": "Studied at Hillsdale College and Reformed Theological Seminary",
+    "website": "https://www.kingmeadow.com",
+    "books": [
+      {
+        "title": "The Micah Mandate: Balancing the Christian Life",
+        "amazon_url": "https://www.amazon.com/s?k=The+Micah+Mandate+George+Grant"
+      },
+      {
+        "title": "Carry a Big Stick: The Uncommon Heroism of Theodore Roosevelt",
+        "amazon_url": "https://www.amazon.com/s?k=Carry+a+Big+Stick+George+Grant"
+      },
+      {
+        "title": "The Blood of the Moon: The Dedication of the Thomas Jefferson Memorial",
+        "amazon_url": "https://www.amazon.com/s?k=The+Blood+of+the+Moon+George+Grant"
+      },
+      {
+        "title": "Sorrow and Blood: Suffering in the Christian Life",
+        "amazon_url": "https://www.amazon.com/s?k=Sorrow+and+Blood+George+Grant"
+      },
+      {
+        "title": "The Patriot's Handbook: A Cyclopedia of American Quotations",
+        "amazon_url": "https://www.amazon.com/s?k=The+Patriot's+Handbook+George+Grant"
+      }
+    ],
+    "initials": "GG"
+  },
+  {
+    "name": "Zac Workun",
+    "slug": "zac-workun",
+    "bio": "Zac Workun is a thoughtful voice in Christian media and content creation, known for his work exploring faith, culture, and discipleship. His writing and speaking engage contemporary audiences with biblical insight and practical wisdom.",
+    "affiliation": "",
+    "role": "Content Creator & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ZW"
+  },
+  {
+    "name": "Ben White",
+    "slug": "ben-white",
+    "bio": "Ben White is a writer and speaker known for his work in Christian apologetics and cultural commentary. He has contributed to various Christian publications and platforms, engaging thoughtfully with contemporary issues from a Christian worldview perspective.",
+    "affiliation": "",
+    "role": "Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BW"
+  },
+  {
+    "name": "Fonie Mitsopoulou",
+    "slug": "fonie-mitsopoulou",
+    "bio": "Fonie Mitsopoulou is a Christian author and speaker who writes on faith, spirituality, and personal transformation. Her work encourages believers to deepen their relationship with God through practical wisdom and biblical insight.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "FM"
+  },
+  {
+    "name": "Dalya Alberge",
+    "slug": "dalya-alberge",
+    "bio": "Dalya Alberge is a distinguished arts and cultural correspondent known for her insightful reporting on faith, heritage, and the arts. Her work bridges Christian perspectives with cultural commentary, exploring how faith intersects with society, tradition, and creative expression.",
+    "affiliation": "The Times, The Sunday Times",
+    "role": "Arts & Cultural Correspondent",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DA"
+  },
+  {
+    "name": "Tibisay Romero",
+    "slug": "tibisay-romero",
+    "bio": "Tibisay Romero is a Christian content creator and communicator focused on faith, culture, and personal growth. Her work encourages believers to engage thoughtfully with contemporary issues through a biblical lens.",
+    "affiliation": "",
+    "role": "Content Creator & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TR"
+  },
+  {
+    "name": "Luis Ferré-Sadurní and Genevieve Glatsky",
+    "slug": "luis-ferrsadurn-and-genevieve-glatsky",
+    "bio": "Luis Ferré-Sadurní and Genevieve Glatsky are journalists who have reported on significant social and political issues affecting communities across the United States. Their investigative work often examines systemic challenges and human stories that reflect broader concerns about justice and community welfare.",
+    "affiliation": "The New York Times",
+    "role": "Journalists & Reporters",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LFS-GG"
   }
 ]
