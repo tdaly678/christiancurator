@@ -13464,5 +13464,43 @@
     "website": "",
     "books": [],
     "initials": "ALD YT"
+  },
+  {
+    "name": "Thomas West",
+    "slug": "thomas-west",
+    "bio": "Thomas West is a Christian author and thinker known for his work exploring the intersection of faith, culture, and classical Christian education. His writings engage evangelical audiences with thoughtful analysis of how Christian worldview shapes contemporary life and learning.",
+    "affiliation": "",
+    "role": "Author & Christian Educator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TW"
+  },
+  {
+    "name": "Abdi Latif Dahir",
+    "slug": "abdi-latif-dahir",
+    "bio": "Abdi Latif Dahir is an award-winning journalist and author known for his investigative reporting on East Africa, human rights, and social justice issues. His work explores themes of faith, identity, and community resilience across the African continent and diaspora.",
+    "affiliation": "The New York Times, National Geographic, The Guardian",
+    "role": "Journalist & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Year of the Pupil",
+        "amazon_url": "https://www.amazon.com/s?k=The+Year+of+the+Pupil+Abdi+Latif+Dahir"
+      }
+    ],
+    "initials": "ALD"
+  },
+  {
+    "name": "Veronica Clarke",
+    "slug": "veronica-clarke",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "VC"
   }
 ]
