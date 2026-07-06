@@ -13502,5 +13502,60 @@
     "website": "",
     "books": [],
     "initials": "VC"
+  },
+  {
+    "name": "Wayne Blakely",
+    "slug": "wayne-blakely",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "WB"
+  },
+  {
+    "name": "Chris Reynolds",
+    "slug": "chris-reynolds",
+    "bio": "Chris Reynolds is a Christian communicator and content creator dedicated to helping believers deepen their faith and engage with Scripture in meaningful ways. Through writing and speaking, he encourages Christians to live out their convictions with authenticity and biblical grounding.",
+    "affiliation": "",
+    "role": "Christian Writer & Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CR"
+  },
+  {
+    "name": "Simon Tisdall",
+    "slug": "simon-tisdall",
+    "bio": "Simon Tisdall is a seasoned international affairs columnist and editor known for his incisive analysis of global politics, diplomacy, and conflict. Writing primarily for The Guardian, he brings decades of experience covering major world events and their implications for peace, justice, and human rights—values central to Christian engagement with the world.",
+    "affiliation": "The Guardian",
+    "role": "Columnist & International Affairs Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ST"
+  },
+  {
+    "name": "Cassandra Vinograd and Carlotta Gall",
+    "slug": "cassandra-vinograd-and-carlotta-gall",
+    "bio": "Cassandra Vinograd and Carlotta Gall are accomplished international journalists known for their investigative reporting on global conflicts and humanitarian issues. Their work has appeared in major publications where they provide thoughtful, detailed coverage of complex international stories that affect communities worldwide.",
+    "affiliation": "NBC News, The New York Times",
+    "role": "Journalists & Reporters",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CV-CG"
+  },
+  {
+    "name": "Carlotta Gall and Stanislav Kozliuk",
+    "slug": "carlotta-gall-and-stanislav-kozliuk",
+    "bio": "Carlotta Gall is an acclaimed international journalist known for her investigative reporting on conflict zones and human rights issues, while Stanislav Kozliuk is a Ukrainian political analyst and scholar. Together they have collaborated on research examining Eastern European politics, religious freedom, and geopolitical tensions affecting Christian communities in the region.",
+    "affiliation": "The New York Times, Radio Free Europe/Radio Liberty",
+    "role": "Journalists & Researchers",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CG & SK"
   }
 ]
