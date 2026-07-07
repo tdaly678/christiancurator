@@ -13557,5 +13557,194 @@
     "website": "",
     "books": [],
     "initials": "CG & SK"
+  },
+  {
+    "name": "Nik Schatz",
+    "slug": "nik-schatz",
+    "bio": "Nik Schatz is a Christian writer and content creator focused on helping believers deepen their faith and understanding of Scripture. Through accessible teaching and thoughtful reflection, he encourages readers to apply biblical truths to their daily lives.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "NS"
+  },
+  {
+    "name": "Iain Duguid",
+    "slug": "iain-duguid",
+    "bio": "Iain Duguid is a Reformed theologian and Old Testament scholar known for his accessible biblical commentaries and teaching. As a minister in the Presbyterian Church and professor of Old Testament, he combines scholarly rigor with pastoral warmth to help Christians understand and apply Scripture.",
+    "affiliation": "Reformation Bible College; The Bible Teaching Ministry",
+    "role": "Professor, Pastor & Author",
+    "education": "Ph.D. in Old Testament Studies, University of Cambridge",
+    "website": "",
+    "books": [
+      {
+        "title": "Ezekiel: An Introduction and Commentary",
+        "amazon_url": "https://www.amazon.com/s?k=Ezekiel+Introduction+Commentary+Iain+Duguid"
+      },
+      {
+        "title": "Living in the Gap Between Promise and Practice",
+        "amazon_url": "https://www.amazon.com/s?k=Living+Gap+Between+Promise+Practice+Iain+Duguid"
+      },
+      {
+        "title": "The NIV Application Commentary: Nehemiah",
+        "amazon_url": "https://www.amazon.com/s?k=NIV+Application+Commentary+Nehemiah+Iain+Duguid"
+      },
+      {
+        "title": "Is Jesus in the Old Testament?",
+        "amazon_url": "https://www.amazon.com/s?k=Is+Jesus+in+the+Old+Testament+Iain+Duguid"
+      }
+    ],
+    "initials": "ID"
+  },
+  {
+    "name": "Hywel George",
+    "slug": "hywel-george",
+    "bio": "Hywel George is a Welsh Christian writer and theologian known for his thoughtful contributions to contemporary Christian discourse. His work reflects a commitment to exploring faith, culture, and pastoral ministry from a distinctly evangelical perspective.",
+    "affiliation": "",
+    "role": "Christian Writer & Theologian",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "HG"
+  },
+  {
+    "name": "Robert Ventura",
+    "slug": "robert-ventura",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RV"
+  },
+  {
+    "name": "Arie Van Weelden",
+    "slug": "arie-van-weelden",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AVW"
+  },
+  {
+    "name": "Sadie Robertson",
+    "slug": "sadie-robertson",
+    "bio": "Sadie Robertson is a speaker, author, and media personality known for sharing her Christian faith with young audiences. Rising to prominence through the reality television show Duck Dynasty, she has leveraged her platform to inspire others through books, speaking engagements, and social media. Her ministry focuses on encouraging young women to live authentically for Christ.",
+    "affiliation": "Duck Dynasty, Sadie Robertson Ministries",
+    "role": "Author, Speaker & Media Personality",
+    "education": "",
+    "website": "https://www.sadierobertson.com",
+    "books": [
+      {
+        "title": "Live Original",
+        "amazon_url": "https://www.amazon.com/s?k=Live+Original+Sadie+Robertson"
+      },
+      {
+        "title": "Live Fearless",
+        "amazon_url": "https://www.amazon.com/s?k=Live+Fearless+Sadie+Robertson"
+      },
+      {
+        "title": "Live Pursued",
+        "amazon_url": "https://www.amazon.com/s?k=Live+Pursued+Sadie+Robertson"
+      }
+    ],
+    "initials": "SR"
+  },
+  {
+    "name": "Doug Hankins",
+    "slug": "doug-hankins",
+    "bio": "Doug Hankins is a writer and content curator focused on faith, culture, and Christian living. He has contributed to various Christian publications and platforms, helping readers navigate contemporary issues through a biblical worldview.",
+    "affiliation": "",
+    "role": "Writer & Content Curator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DH"
+  },
+  {
+    "name": "Frank Powell",
+    "slug": "frank-powell",
+    "bio": "Frank Powell is a pastor and Christian communicator dedicated to helping believers grow in their faith and understanding of Scripture. He has invested years in ministry leadership and creating accessible content that encourages spiritual transformation.",
+    "affiliation": "",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "FP"
+  },
+  {
+    "name": "Stephen O. Presley",
+    "slug": "stephen-o-presley",
+    "bio": "Stephen O. Presley is a theologian and author who writes on Reformed theology and Christian worldview topics. He is known for his thoughtful exploration of biblical doctrine and its practical application to contemporary Christian life.",
+    "affiliation": "",
+    "role": "Theologian & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SOP"
+  },
+  {
+    "name": "Ravi Holy",
+    "slug": "ravi-holy",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RH"
+  },
+  {
+    "name": "Victoria Kim and Chris Buckley",
+    "slug": "victoria-kim-and-chris-buckley",
+    "bio": "Victoria Kim and Chris Buckley are journalists and authors who have collaborated on investigative reporting and books exploring faith, culture, and contemporary issues through a Christian lens. Their work combines rigorous research with accessible storytelling, engaging readers interested in understanding how Christian faith intersects with modern society.",
+    "affiliation": "",
+    "role": "Journalists & Authors",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "VK & CB"
+  },
+  {
+    "name": "Mary Willson Hannah",
+    "slug": "mary-willson-hannah",
+    "bio": "Mary Willson Hannah is a Christian writer and content creator dedicated to helping believers deepen their faith and understanding of Scripture. Her work focuses on spiritual growth, biblical encouragement, and practical Christian living for modern audiences.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MWH"
+  },
+  {
+    "name": "Carlotta Gall",
+    "slug": "carlotta-gall",
+    "bio": "Carlotta Gall is an award-winning international journalist and foreign correspondent known for her extensive reporting from Afghanistan, Pakistan, and the Middle East. Her work combines rigorous investigative journalism with compelling human narratives, offering readers deep insight into complex geopolitical issues affecting the Christian community and broader global stability.",
+    "affiliation": "The New York Times, The Guardian",
+    "role": "Journalist & Author",
+    "education": "University of Cambridge",
+    "website": "",
+    "books": [
+      {
+        "title": "The Wrong Enemy: America in Afghanistan 2001-2014",
+        "amazon_url": "https://www.amazon.com/s?k=The+Wrong+Enemy+Carlotta+Gall"
+      }
+    ],
+    "initials": "CG"
+  },
+  {
+    "name": "Stanislav Kozliuk and Cassandra Vinograd",
+    "slug": "stanislav-kozliuk-and-cassandra-vinograd",
+    "bio": "Stanislav Kozliuk and Cassandra Vinograd are journalists and correspondents known for their reporting on international affairs and religious freedom issues. Their work has focused on documenting stories from regions experiencing conflict and persecution, with particular attention to how faith communities navigate challenging circumstances.",
+    "affiliation": "Reuters, NBC News",
+    "role": "Journalists & Correspondents",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SKC"
   }
 ]
