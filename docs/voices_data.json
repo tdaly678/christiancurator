@@ -13746,5 +13746,135 @@
     "website": "",
     "books": [],
     "initials": "SKC"
+  },
+  {
+    "name": "Sara Hagerty",
+    "slug": "sara-hagerty",
+    "bio": "Sara Hagerty is an author and speaker who writes about intimacy with God, spiritual formation, and the contemplative Christian life. Her work encourages believers to deepen their prayer practices and encounter God's presence in the everyday moments of life. She has become a trusted voice for Christians seeking a more authentic and transformative spiritual journey.",
+    "affiliation": "The Gospel Coalition, Christianity Today",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "https://www.sarahagerty.com",
+    "books": [
+      {
+        "title": "Every Common Bush: A Book of Readings",
+        "amazon_url": "https://www.amazon.com/s?k=Every+Common+Bush+Sara+Hagerty"
+      },
+      {
+        "title": "Unseen: The Gift of Hidden Things",
+        "amazon_url": "https://www.amazon.com/s?k=Unseen+The+Gift+of+Hidden+Things+Sara+Hagerty"
+      },
+      {
+        "title": "Hagerty on Prayer",
+        "amazon_url": "https://www.amazon.com/s?k=Hagerty+Prayer+Sara+Hagerty"
+      }
+    ],
+    "initials": "SH"
+  },
+  {
+    "name": "Virgil Walker",
+    "slug": "virgil-walker",
+    "bio": "Virgil Walker is a writer and cultural commentator who engages contemporary issues from a Christian worldview perspective. He contributes thoughtful analysis on faith, culture, and society for Christian audiences seeking to understand current events through a biblical lens.",
+    "affiliation": "The Dispatch",
+    "role": "Writer & Cultural Commentator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "VW"
+  },
+  {
+    "name": "Chris Watkin",
+    "slug": "chris-watkin",
+    "bio": "Chris Watkin is a writer and editor known for thoughtful cultural commentary from a Christian perspective. He explores how faith intersects with literature, media, and contemporary ideas, helping readers navigate culture with biblical wisdom.",
+    "affiliation": "Mere Orthodoxy",
+    "role": "Writer & Cultural Commentator",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Gospel of Ruth: Rethinking Hospitality",
+        "amazon_url": "https://www.amazon.com/s?k=Gospel+of+Ruth+Rethinking+Hospitality+Chris+Watkin"
+      }
+    ],
+    "initials": "CW"
+  },
+  {
+    "name": "Ben R. Crenshaw",
+    "slug": "ben-r-crenshaw",
+    "bio": "Ben R. Crenshaw is a Christian author and speaker devoted to helping believers deepen their faith and understanding of Scripture. His work focuses on practical Christian living and spiritual growth for contemporary audiences.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BRC"
+  },
+  {
+    "name": "Pierce Taylor Hibbs",
+    "slug": "pierce-taylor-hibbs",
+    "bio": "Pierce Taylor Hibbs is a Christian author and thinker who writes on faith, theology, and cultural engagement. His work reflects a commitment to helping believers thoughtfully navigate contemporary issues through a biblical worldview.",
+    "affiliation": "",
+    "role": "Author & Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PTH"
+  },
+  {
+    "name": "Bonnie Gray",
+    "slug": "bonnie-gray",
+    "bio": "Bonnie Gray is an author and speaker who writes about finding God's presence in the midst of life's struggles and anxieties. Through her candid storytelling and biblical insights, she encourages readers to embrace faith during uncertain seasons and discover peace in Christ's promises.",
+    "affiliation": "Relevant Magazine, Christianity Today",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "https://www.bonniegrays.com",
+    "books": [
+      {
+        "title": "Holding Onto Hope",
+        "amazon_url": "https://www.amazon.com/s?k=Holding+Onto+Hope+Bonnie+Gray"
+      },
+      {
+        "title": "Find Your Way Back to God",
+        "amazon_url": "https://www.amazon.com/s?k=Find+Your+Way+Back+to+God+Bonnie+Gray"
+      },
+      {
+        "title": "Courage, Dear Heart",
+        "amazon_url": "https://www.amazon.com/s?k=Courage+Dear+Heart+Bonnie+Gray"
+      }
+    ],
+    "initials": "BG"
+  },
+  {
+    "name": "Cesar Custodio",
+    "slug": "cesar-custodio",
+    "bio": "Cesar Custodio is a Christian content creator and writer dedicated to sharing biblical insights and spiritual encouragement with diverse audiences. His work focuses on helping believers grow deeper in their faith through thoughtful, accessible teaching.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CC"
+  },
+  {
+    "name": "Julie Turkewitz",
+    "slug": "julie-turkewitz",
+    "bio": "Julie Turkewitz is an award-winning journalist and author known for her in-depth reporting on Latin America, faith communities, and social issues. Her work has appeared in major publications including The New York Times, where she has covered stories of resilience, spirituality, and cultural transformation across the region.",
+    "affiliation": "The New York Times",
+    "role": "Journalist & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JT"
+  },
+  {
+    "name": "Austin Ramzy",
+    "slug": "austin-ramzy",
+    "bio": "Austin Ramzy is a journalist and writer known for his reporting on religious freedom, persecution, and faith-related issues from a global perspective. His work has brought important stories of Christian communities and religious minorities to international audiences.",
+    "affiliation": "The New York Times",
+    "role": "Journalist & Reporter",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AR"
   }
 ]
