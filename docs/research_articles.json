@@ -1,61 +1,5 @@
 [
   {
-    "source_name": "Ryan Burge",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": true,
-    "author": "Ryan Burge",
-    "title": "The Denomination That's Half Evangelical, Half Black Protestant — And somehow holding together",
-    "url": "https://www.graphsaboutreligion.com/p/the-denomination-thats-half-evangelical",
-    "summary": "A deep dive into Seventh-day Adventists",
-    "full_content": "<p><strong>There are roughly 1.3 million Seventh-day Adventists in the United States. That&#8217;s not a small number &#8212; it&#8217;s larger than the Episcopal Church and not far behind the Presbyterian Church (USA)</strong>. And yet, when scholars and journalists talk about American religion, Adventists rarely come up. They exist in a kind of demographic blind spot, too big to ignore but somehow consistently overlooked. You can probably  guess where this post is going, right? <br /><br />I&#8217;ve actually given several talks to the SDA crowd and I really enjoy hanging out with them. Wonderfully warm folks who have a real appreciation for the data. A couple of months ago, I got invited to speak to a gathering of Seventh-day Adventists in Alabama and I did a bunch of data analysis of the SDA data. And like almost every smaller religious group I&#8217;ve encountered, they were extremely pleased to see some charts, graphs, and maps about their specific tradition.  I got an email a couple of weeks ago from a reader who asked me if I could pull together some information on Seventh-day Adventists, so I grabbed some stuff from that presentation and thought I would lay out some really interesting patterns I am seeing.</p><div><hr /></div><div class=\"digest-post-embed\"></div><div><hr /></div><p>First, just a bit of background on the Seventh day Adventist movement. The SDA church traces its roots back to the mid-1800s, arising from the <a href=\"https://en.wikipedia.org/wiki/Millerism\">Millerite movement</a>, named after William Miller, a prophet who believed that Jesus Christ would return to earth in short order. From the aftermath of that failed prophecy, a number of groups spun off, including what would become the Seventh-day Adventist Church. The SDA denomination has a few distinctives: <strong>worship on Saturday rather than Sunday, a strong emphasis on health and diet (a significant share of Adventists are vegetarian), and a robust global missionary infrastructure</strong> that has made them one of the fastest-growing denominations worldwide. They also operate one of the largest hospital systems in the United States - <a href=\"https://en.wikipedia.org/wiki/AdventHealth\">AdventHealth</a>.</p><p>Let&#8217;s just start this whole thing by giving you a sense of the size of Seventh-day Adventists.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!PU6B!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff68884dc-04a3-47be-b696-09599a7fb48c_1600x1066.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"970\" src=\"https://substackcdn.com/image/fetch/$s_!PU6B!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff68884dc-04a3-47be-b696-09599a7fb48c_1600x1066.png\" title=\"sda_size.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong>The data here is remarkably consistent - somewhere between .3% and .5% of all adults in the Cooperative Election Study identify as SDAs</strong>. I think there&#8217;s some evidence here that the trend line is moving in the downward direction, but I wouldn&#8217;t stake my career on that claim. When you are dealing with a group that is this small, it doesn&#8217;t take much to send a trend line downward. In fact, it probably only takes 20-30 fewer respondents identifying as Seventh-day Adventists (out of a sample of 60,000) to move the overall trends. <br /><br />Of course, it&#8217;s always nice to have a type of &#8220;reference case&#8221; to compare the SDAs. They are about the same share of Americans as Hindus. They are likely half the size of Latter-day Saints or Muslims. And for every Seventh-day Adventist there are three Jews in the United States. <strong>So, pretty small in the grand sweep of American religion.</strong></p><p>There&#8217;s another way to get at the size estimate, though: the Religion Census. It just goes to individual religious denominations and asks for a copy of their membership records. That provides another way at figuring out just how large they are compared to other well known religious groups.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!TZaC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe4d99b21-6122-436c-9eb8-9e5b3374e260_1600x1066.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"970\" src=\"https://substackcdn.com/image/fetch/$s_!TZaC!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe4d99b21-6122-436c-9eb8-9e5b3374e260_1600x1066.png\" title=\"twenty_largest_trads.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p>Obviously the Catholic church dominates. I&#8217;ve written about this plenty. There are nearly 62 million Catholics in the United States. The non-denominationals are listed at 21.1M, but I&#8217;m almost certain that&#8217;s an undercount. About 14% of all Americans identify as non-denominational. That works out to 35-40M folks. Then we have the Southern Baptists and United Methodists below that.</p><p>But if you take your eye down to the bottom half of the graph you can see a whole bunch of denominations that are tightly clustered between 1M and 1.8M. You&#8217;ve got a lot of the most widely discussed groups here: Missouri Synod Lutherans, Episcopalians, PCUSA and American Baptists are all pretty similar in size. <strong>This is exactly where the SDAs land: 1.3M members back in 2020. They are essentially the same size as most mainline denominations.</strong> Again, not tiny, but also not that consequential in our larger understanding of Protestantism.</p><p>But where are Seventh-day Adventists in terms of geography? Let me show you one way to visualize this and then another way. I think both are helpful to get a more accurate picture of this religious group.</p>\n      <p>\n          <a href=\"https://www.graphsaboutreligion.com/p/the-denomination-thats-half-evangelical\">\n              Read more\n          </a>\n      </p>",
-    "published": "Thu, 09 Jul 2026 11:30:41 GMT",
-    "fetched_at": "2026-07-10T08:58:47.706163",
-    "score": 5,
-    "tags": [
-      "church life",
-      "news"
-    ],
-    "rewritten_title": "Seventh-day Adventists: Holding Together Despite Deep Divides",
-    "personas": [
-      "pastor"
-    ],
-    "topic_cluster": "seventh_day_adventist_profile",
-    "perspective": "neutral",
-    "frequency_boost": 0.75,
-    "source_posts_30d": 9,
-    "final_score": 7.25,
-    "recency_boost": 1.5
-  },
-  {
-    "source_name": "Aaron Renn",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": true,
-    "author": "Aaron M. Renn",
-    "title": "Most of America Is Pittsburgh Now",
-    "url": "https://www.aaronrenn.com/p/demographic-inversion",
-    "summary": "Deaths now outnumber births across most of the country &#8212; and the effects are just beginning to arrive.",
-    "full_content": "<p>Demographics may be destiny, but fate takes a long time to show up. People have been discussing falling birth rates as a problem for at least two decades, but we are only now starting to see the tangible impact of that.</p><p>The Baby Boomers, a huge and overwhelmingly white generation, are starting to reach the later stages of life, while at the same time the number of children has been being born has fallen significantly. We&#8217;ve known these facts for some time, but their tangible impact on society is just starting to show up in the data and social trends.</p><p>For example, it was once so normal for births to outnumber deaths that demographers referred to this as &#8220;natural increase.&#8221; A place like Pittsburgh, with more deaths than births, was so unusual it attracted attention as an oddity. </p><p>Now most of America is Pittsburgh. Two-thirds of America&#8217;s counties, over 2,000 of them, had more deaths than births this year. A few years ago the Census Bureau renamed its &#8220;Natural Increase&#8221; data field to &#8220;Natural Change.&#8221; Here&#8217;s a map of those declining counties in red.<a class=\"footnote-anchor\" href=\"https://www.aaronrenn.com/feed#footnote-1\" id=\"footnote-anchor-1\" target=\"_self\">1</a> The legend is total number of people.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!unGF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0853e5b7-7d35-417c-bde1-6f5a3630fafb_1166x780.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"383.9794168096055\" src=\"https://substackcdn.com/image/fetch/$s_!unGF!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0853e5b7-7d35-417c-bde1-6f5a3630fafb_1166x780.png\" width=\"574\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><h3>The Decline of White America</h3><p>Because the Boomer generation was so white, this demographic inversion is starting to show up in the overall white (non-Hispanic) American population, which is now actually declining in much of the country. Here&#8217;s a percentage change map of white population by county last year. (Multiply legend values by 100).</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!dpLV!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa22f7fa0-e81a-47fb-873d-3f73dd75aaa9_1152x770.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"421.09375\" src=\"https://substackcdn.com/image/fetch/$s_!dpLV!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa22f7fa0-e81a-47fb-873d-3f73dd75aaa9_1152x770.png\" width=\"630\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p>This is also about two-thirds of all counties. It is present not just in rural areas, but also in big cities. There are 56 major metropolitan areas with a population greater than one million people. Only 14 of them added white population last year, and most of those had very little white growth. The top percentage gainer was Greenville, South Carolina at 1.1%. Only two metros in the entire country added more than 10,000 new white residents last year, Nashville and Charlotte. </p><p>Dallas-Fort Worth, Houston, Atlanta, and Phoenix are all big growth regions that are frequently discussed in the media as boomtowns. All of them have falling white populations - on a regional basis, not just in the central city. This is the rule, not the exception for growth cities.</p><p>This is not the image most people have in mind of what&#8217;s happening there. They probably think Dallas is booming with white middle-class families fleeing high tax New Jersey or Illinois. That may have been true 25 years ago. But while there might still be some of that today, it&#8217;s more likely a second or third generation middle class Mexican family fleeing California&#8217;s high housing prices, or new immigrants from India. </p><p>The steepest white population decline has been in large coastal elite metros like the Bay Area, Los Angeles, and Miami.</p><p>While immigration is undoubtedly the necessary factor in America&#8217;s rising diversity, the white population is not getting &#8220;great replaced&#8221; - it&#8217;s dying off. It is self-liquidating, at least to some extent. This is increasingly the norm around the world, so there&#8217;s likely no reason unique this is happening to white Americans.  But it is still happening.</p><p>Ryan Burge, the scholar of American religion, notes that further decline of Christianity in America is baked into the cake. The Boomers represent such a high percentage of church attenders that even if there were a true Gen Z religious revival, simple generational turnover is still going to produce large scale declines.</p><p>This applies more broadly as well. America will be much more diverse in the future. Even if immigration went to zero, simple generational turnover in light of falling birth rates means far fewer white people in many places in the future. The idea that a large share of post-1965 immigrants and their descendants will be deported is a delusional fantasy. It&#8217;s unlikely even a third of people here illegally will ever leave.</p><p>Our immigration regime has many serious problems, and mass immigration poses many challenges to our country. America is going to change significantly in the future to address those and accommodate itself to a more diverse population. Almost nobody really likes change, so that will be very uncomfortable for many people. It also won&#8217;t be without its legitimate problems or losses to our society. </p><p>But it&#8217;s nothing to fear either. America has gone through this in the past, and we all like being on the other side of it. Nobody really wants to go back to living in 1870 or 1790. That America would be a completely alien and unpleasant country to us socially, quite apart from the technology gap. As a modern American, I much prefer our own time and country.</p><p>There&#8217;s no guarantee we&#8217;ll successfully navigate this transition, but there are ample resources within the American experience to pull it off. I&#8217;m optimistic we can do it, and that our future can be great. Reform of our immigration system, including ending its many abuses and significantly reducing immigration levels for a period of time, would be a start. But real work lies in building a more cohesive society with our new more diverse, post-Boomer demographics. We need much more focus on how to create that.</p><h3>Disappearing Children</h3><p>Dealing with diversity isn&#8217;t the only reality of the birth dearth. We are also experiencing a significant decline in the number of children that&#8217;s hitting many places. Here, the figures are also stark.</p>\n      <p>\n          <a href=\"https://www.aaronrenn.com/p/demographic-inversion\">\n              Read more\n          </a>\n      </p>",
-    "published": "Thu, 09 Jul 2026 18:36:23 GMT",
-    "fetched_at": "2026-07-10T08:58:54.581217",
-    "score": 4,
-    "tags": [
-      "data",
-      "culture"
-    ],
-    "rewritten_title": "Death Now Outnumbers Birth Across Most of America",
-    "personas": [
-      "professional"
-    ],
-    "topic_cluster": "demographic_decline_us",
-    "perspective": "neutral",
-    "frequency_boost": 0.75,
-    "source_posts_30d": 11,
-    "final_score": 6.25,
-    "recency_boost": 1.5
-  },
-  {
     "source_name": "Pew Research",
     "source_category": "culture",
     "source_type": "christian",
@@ -66,19 +10,69 @@
     "summary": "Americans' views of the Israeli people and government have grown more negative across party lines and age groups, while opinions of Palestinians have held largely steady.",
     "full_content": "",
     "published": "Thu, 09 Jul 2026 15:02:32 +0000",
-    "fetched_at": "2026-07-10T08:58:48.419459",
+    "fetched_at": "2026-07-11T07:31:04.398471",
     "score": 4,
     "tags": [
-      "politics",
-      "data"
+      "data",
+      "politics"
     ],
-    "rewritten_title": "Americans Turn Against Israel. Palestinians Gain No Ground.",
+    "rewritten_title": "Americans Turn Against Israel. Palestinians Remain Distant.",
     "personas": [
-      "professional"
+      "professional",
+      "pastor"
     ],
     "topic_cluster": "israel_palestine_american_opinion",
     "perspective": "news",
-    "final_score": 5.5,
+    "final_score": 4.75,
+    "recency_boost": 0.75
+  },
+  {
+    "source_name": "The Guardian",
+    "source_category": "news",
+    "source_type": "world_news",
+    "independent": false,
+    "author": "Tory Shepherd",
+    "title": "Losing our religion? Australia would no longer be majority religious if format of census question changed, survey finds",
+    "url": "https://www.theguardian.com/world/2026/jul/11/australia-would-not-be-majority-religious-if-census-question-changed-survey-finds",
+    "summary": "<p>Ahead of the census in August, campaign group suggests current poll design overstates the nation’s religiousness</p><ul><li><p>Get our <a href=\"https://www.theguardian.com/email-newsletters?CMP=cvau_sfl\">breaking news email</a>, <a href=\"https://app.adjust.com/w4u7jx3\">free app</a> or <a href=\"https://www.theguardian.com/australia-news/series/full-story?CMP=cvau_sfl\">daily news podcast</a></p></li></ul><p>Australia would no longer be a majority religious country if the format of a question in the census was changed, according to a new survey.</p><p>The Essential Media poll tested the existing census format, where people choose from a list that includes the most common religions, “no religion” and “other”.</p> <a href=\"https://www.theguardian.com/world/2026/jul/11/australia-would-not-be-majority-religious-if-census-question-changed-survey-finds\">Continue reading...</a>",
+    "full_content": "",
+    "published": "Sat, 11 Jul 2026 05:41:03 GMT",
+    "fetched_at": "2026-07-11T07:29:42.305852",
+    "score": 4,
+    "tags": [
+      "data"
+    ],
+    "rewritten_title": "Australia's Census Would Show a Secular Nation With One Question Changed",
+    "personas": [],
+    "topic_cluster": "australia_religious_decline",
+    "perspective": "neutral",
+    "final_score": 4.7,
     "recency_boost": 1.5
+  },
+  {
+    "source_name": "Pew Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Sara Atske",
+    "title": "U.S. Hispanics Are Divided on Whether Their Identity Helps or Hurts Them in America",
+    "url": "https://www.pewresearch.org/race-and-ethnicity/2026/07/09/u-s-hispanics-are-divided-on-whether-their-identity-helps-or-hurts-them-in-america/",
+    "summary": "Some say being Latino is a source of advantage or connection but others say it is tied to barriers and discrimination.",
+    "full_content": "",
+    "published": "Thu, 09 Jul 2026 13:59:17 +0000",
+    "fetched_at": "2026-07-11T07:31:04.398480",
+    "score": 4,
+    "tags": [
+      "data",
+      "culture"
+    ],
+    "rewritten_title": "Hispanic America's Identity Crisis: Asset or Obstacle?",
+    "personas": [
+      "professional"
+    ],
+    "topic_cluster": "hispanic_identity_america",
+    "perspective": "news",
+    "final_score": 4.0,
+    "recency_boost": 0.75
   }
 ]
