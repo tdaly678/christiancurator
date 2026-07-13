@@ -82,6 +82,141 @@ FOOTER_HTML = """  <footer class="cc-footer">
     <div>Curated from across the evangelical web.</div>
   </footer>"""
 
+SITE_URL = "https://www.christiancurator.com"
+PERSON_MARKER = "CC-PERSON-SCHEMA"
+FAQ_MARKER = "AEO-FAQPAGE-SCHEMA"
+
+# CSS for the Quick Facts box + FAQ section. Kept in sync with
+# scripts/apply_voice_enrichment.py so newly generated pages match enriched ones.
+ENRICH_CSS = """
+    .cc-qf{background:#fff;border:1px solid #e0ddd8;border-radius:5px;padding:1.1rem 1.4rem;margin:0 0 2rem;}
+    .cc-qf-label{font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#2C4A2E;margin-bottom:0.7rem;}
+    .cc-qf-item{display:flex;gap:1rem;padding:0.5rem 0;border-bottom:1px solid #f0ede8;align-items:baseline;}
+    .cc-qf-item:last-child{border-bottom:none;padding-bottom:0;}
+    .cc-qf-item:first-of-type{padding-top:0;}
+    .cc-qf-key{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#aaa;min-width:96px;flex-shrink:0;}
+    .cc-qf-val{font-size:14px;color:#333;line-height:1.55;}
+    .cc-faq{margin-top:2.5rem;padding-top:1.75rem;border-top:2px solid #e0ddd8;}
+    .cc-faq-label{font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#2C4A2E;margin-bottom:0.5rem;}
+    .cc-faq-title{font-family:'Lora',Georgia,serif;font-size:22px;font-weight:600;margin-bottom:1.25rem;color:#1a1a1a;}
+    .cc-faq-item{margin-bottom:1.4rem;}
+    .cc-faq-item:last-child{margin-bottom:0;}
+    .cc-faq-q{font-family:'Lora',Georgia,serif;font-size:16px;font-weight:600;line-height:1.35;margin-bottom:0.35rem;color:#1a1a1a;}
+    .cc-faq-a{font-size:15px;color:#333;line-height:1.7;}""".rstrip()
+
+# Quick-facts rows: (data key, visible label). current_role is dropped for deceased voices.
+_QF_ROWS = [
+    ("denomination", "Denomination"),
+    ("tradition", "Tradition"),
+    ("current_role", "Current role"),
+    ("known_for", "Known for"),
+]
+
+
+def _esc(text: str) -> str:
+    """Minimal HTML escaping for text nodes."""
+    return (
+        str(text)
+        .replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+    )
+
+
+def render_quick_facts(author: dict) -> str:
+    """Render the Quick Facts box, or '' when no quick-facts data exists."""
+    deceased = bool(author.get("deceased"))
+    rows = []
+    for key, label in _QF_ROWS:
+        if key == "current_role" and deceased:
+            continue
+        val = author.get(key)
+        if val:
+            rows.append((label, str(val).strip()))
+    if not rows:
+        return ""
+    items = "".join(
+        f'\n      <div class="cc-qf-item"><span class="cc-qf-key">{_esc(label)}</span>'
+        f'<span class="cc-qf-val">{_esc(val)}</span></div>'
+        for label, val in rows
+    )
+    return (
+        '\n    <div class="cc-qf">'
+        '\n      <div class="cc-qf-label">Quick Facts</div>'
+        f'{items}'
+        '\n    </div>'
+    )
+
+
+def render_faq_section(author: dict) -> str:
+    """Render the visible FAQ section, or '' when no faqs exist."""
+    faqs = author.get("faqs") or []
+    if not faqs:
+        return ""
+    name = author.get("name", "")
+    items = ""
+    for qa in faqs:
+        items += (
+            '\n      <div class="cc-faq-item">'
+            f'\n        <h3 class="cc-faq-q">{_esc(qa["q"])}</h3>'
+            f'\n        <p class="cc-faq-a">{_esc(qa["a"])}</p>'
+            '\n      </div>'
+        )
+    return (
+        '\n    <section class="cc-faq">'
+        '\n      <div class="cc-faq-label">Frequently Asked Questions</div>'
+        f'\n      <h2 class="cc-faq-title">Frequently Asked Questions about {_esc(name)}</h2>'
+        f'{items}'
+        '\n    </section>'
+    )
+
+
+def render_jsonld(author: dict) -> str:
+    """Render Person (+ FAQPage when faqs exist) JSON-LD script tags."""
+    slug = author["slug"]
+    person = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": author["name"],
+        "url": f"{SITE_URL}/voices/{slug}/",
+    }
+    if author.get("bio"):
+        person["description"] = author["bio"]
+    if author.get("role"):
+        person["jobTitle"] = author["role"]
+    if author.get("affiliation"):
+        person["affiliation"] = {"@type": "Organization", "name": author["affiliation"]}
+    same_as = [u for u in [author.get("website")] if u]
+    if same_as:
+        person["sameAs"] = same_as
+
+    blocks = [
+        f'  <script type="application/ld+json" data-cc-marker="{PERSON_MARKER}">\n'
+        + json.dumps(person, ensure_ascii=False, indent=2)
+        + "\n  </script>"
+    ]
+
+    faqs = author.get("faqs") or []
+    if faqs:
+        faq_data = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": qa["q"],
+                    "acceptedAnswer": {"@type": "Answer", "text": qa["a"]},
+                }
+                for qa in faqs
+            ],
+        }
+        blocks.append(
+            f'  <script type="application/ld+json" data-cc-marker="{FAQ_MARKER}">\n'
+            + json.dumps(faq_data, ensure_ascii=False, indent=2)
+            + "\n  </script>"
+        )
+    return "\n" + "\n".join(blocks)
+
 
 # ── Utilities ──────────────────────────────────────────────────────────────────
 
@@ -122,6 +257,33 @@ def get_existing_slugs() -> set:
     return existing
 
 
+_EMAIL_RE = r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}'
+
+# Production-credit bylines ("executive producer ...", "produced by ...") are
+# credits, not authors — they generate junk description-as-slug voice pages.
+_CREDIT_RE = re.compile(
+    r'\b(executive producer|produced by|presented by|narrated by|photographs? by|'
+    r'sound design|series editor)\b', re.IGNORECASE)
+
+
+def normalize_author_name(raw: str) -> str:
+    """Normalize a byline fragment before slugging.
+
+    RSS 2.0 <author> fields arrive as "email@example.com (Real Name)" — extract
+    "Real Name". Bare emails return "" (skip), so slugs like
+    "jpanyardchristianitytodaycom" never regenerate.
+    """
+    raw = (raw or "").strip()
+    m = re.fullmatch(_EMAIL_RE + r'\s*\((.+?)\)', raw)
+    if m:
+        return m.group(1).strip()
+    if re.fullmatch(_EMAIL_RE, raw):
+        return ""
+    # Strip any embedded email address left in the byline
+    raw = re.sub(_EMAIL_RE, '', raw)
+    return re.sub(r'\s{2,}', ' ', raw).strip(' \t,;:()-')
+
+
 def extract_new_authors(articles: list, existing_slugs: set) -> list:
     """Return list of (name, slug) tuples for authors not yet in the voices section."""
     seen_names = set()
@@ -130,11 +292,17 @@ def extract_new_authors(articles: list, existing_slugs: set) -> list:
         raw = (article.get("author") or "").strip()
         if not raw:
             continue
-        # Split comma-separated multi-author bylines into individual names
-        candidates = [n.strip() for n in raw.split(",") if n.strip()]
+        # Drop production-credit bylines entirely (not real author names)
+        if _CREDIT_RE.search(raw):
+            continue
+        # Split comma/semicolon-separated multi-author bylines into individual names
+        candidates = [normalize_author_name(n) for n in re.split(r'[,;]', raw)]
+        candidates = [n for n in candidates if n]
         for name in candidates:
             # Skip blanks, short strings, known junk
             if len(name) < 4:
+                continue
+            if '@' in name:
                 continue
             if name.lower() in SKIP_AUTHORS:
                 continue
@@ -275,6 +443,10 @@ def render_bio_page(author: dict, index: int) -> str:
     meta_html = '\n      '.join(meta_items)
     meta_block = f'    <div class="cc-voice-meta">\n      {meta_html}\n    </div>' if meta_items else ''
 
+    quickfacts_block = render_quick_facts(author)
+    faq_block = render_faq_section(author)
+    jsonld_block = render_jsonld(author)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -293,6 +465,7 @@ def render_bio_page(author: dict, index: int) -> str:
   <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-3NJ5DSPFXL");</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+{jsonld_block}
   <style>
     *,*::before,*::after{{box-sizing:border-box;margin:0;padding:0;}}
     body{{font-family:"Source Sans 3",sans-serif;background:#faf9f7;color:#1a1a1a;font-size:16px;line-height:1.5;}}
@@ -308,6 +481,7 @@ def render_bio_page(author: dict, index: int) -> str:
     .cc-tagline{{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:8px 0 0;font-weight:300;}}
     @media(max-width:600px){{.cc-site-name{{font-size:32px;}}}}
     {NAV_CSS}
+    {ENRICH_CSS}
     .cc-breadcrumb{{font-size:11px;color:#aaa;margin-bottom:1.5rem;}}
     .cc-breadcrumb a{{color:#2C4A2E;text-decoration:none;}}
     .cc-breadcrumb a:hover{{text-decoration:underline;}}
@@ -359,9 +533,11 @@ def render_bio_page(author: dict, index: int) -> str:
         <div class="cc-voice-role">{role}</div>
       </div>
     </div>
+    {quickfacts_block}
     {bio_html}
     {meta_block}
     {books_html}
+    {faq_block}
     <a href="/voices/" class="cc-back-link">&larr; All Voices</a>
   </main>
 
