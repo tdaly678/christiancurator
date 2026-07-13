@@ -134,7 +134,7 @@ PAGE = """<!DOCTYPE html>
 <body>
   <header class="cc-header">
     <div class="cc-root">
-      <div class="cc-top-bar"><span>{today}</span><a class="cc-subscribe-btn" href="/#subscribe">Subscribe</a></div>
+      <div class="cc-top-bar"><span>Updated daily</span><a class="cc-subscribe-btn" href="/#subscribe">Subscribe</a></div>
       <div class="cc-masthead">
         <a class="cc-site-name" href="/">Christian Curator</a>
         <p class="cc-tagline">The Best of Christian Thought, Curated Daily</p>
@@ -180,7 +180,6 @@ def main() -> int:
     page = PAGE.format(
         n=len(topics),
         cards="\n".join(cards),
-        today=date.today().strftime("%A, %B %-d, %Y"),
         year=date.today().year,
         nav_block=canonical_nav(),
     )
