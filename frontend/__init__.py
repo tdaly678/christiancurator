@@ -1085,7 +1085,7 @@ def render_archive_index(env: Environment):
         "        <p class='cc-tagline'>Evangelical News &amp; Theology — Curated Daily</p>",
         '      </div>',
         '      <nav class="cc-nav">',
-        "        <a href='/'>Home</a>",
+        '        <a href="/">Home</a>',
         '        <!-- CC-TOPICS-DROPDOWN:START -->',
         '        <div class="cc-nav-dropdown cc-nav-dropdown-topics">',
         '          <button class="cc-nav-dropdown-toggle" aria-haspopup="true">Topics</button>',
