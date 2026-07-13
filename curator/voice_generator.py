@@ -32,7 +32,10 @@ AVATAR_COLORS = [
     "#385e35", "#2a4a3a", "#506840", "#3b5e2e",
 ]
 
-NAV_HTML = """    <nav class="cc-nav">
+# Fallback nav (pre-Topics). Used only if the canonical nav can't be read from
+# frontend/template.html. The canonical nav (Home + Topics mega-menu + Resources)
+# is the single source of truth and is loaded at import time below.
+_SIMPLE_NAV_HTML = """    <nav class="cc-nav">
       <a href="/">Home</a>
       <div class="cc-nav-dropdown">
         <button class="cc-nav-dropdown-toggle" style="color:#1a1a1a;">Resources</button>
@@ -43,6 +46,33 @@ NAV_HTML = """    <nav class="cc-nav">
         </div>
       </div>
     </nav>"""
+
+TEMPLATE_PATH = DOCS_DIR.parent / "frontend" / "template.html"
+
+
+def load_canonical_nav(active: str = "/voices/") -> tuple[str, str]:
+    """Extract the canonical <nav class="cc-nav"> block and its Topics-submenu CSS
+    from frontend/template.html so generated voice pages match the rest of the site
+    (Home + Topics mega-menu + Resources). `active` marks which top-level link/section
+    is current. Falls back to the simple nav if the template can't be read."""
+    try:
+        src = TEMPLATE_PATH.read_text(encoding="utf-8")
+        nav = re.search(r'<nav class="cc-nav">.*?</nav>', src, re.DOTALL).group(0)
+        # Reset active state, then mark the requested link active (voice pages = Voices)
+        nav = re.sub(r'\s+class="active"', '', nav)
+        nav = re.sub(rf'(<a href="{re.escape(active)}")', r'\1 class="active"', nav, count=1)
+        css_m = re.search(
+            r'/\* CC-NAV-TOPICS-SUBMENU:START \*/.*?/\* CC-NAV-TOPICS-SUBMENU:END \*/',
+            src, re.DOTALL,
+        )
+        css = css_m.group(0) if css_m else ""
+        return nav, css
+    except Exception as e:  # pragma: no cover - defensive
+        print(f"    ⚠️  Could not load canonical nav from template ({e}); using simple nav")
+        return _SIMPLE_NAV_HTML, ""
+
+
+NAV_HTML, TOPICS_SUBMENU_CSS = load_canonical_nav()
 
 NAV_CSS = """
     .cc-nav{display:flex;justify-content:center;align-items:center;gap:2rem;padding:0.6rem 0 0;border-top:1px solid #e0ddd8;margin-top:0.75rem;}
@@ -481,6 +511,7 @@ def render_bio_page(author: dict, index: int) -> str:
     .cc-tagline{{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:8px 0 0;font-weight:300;}}
     @media(max-width:600px){{.cc-site-name{{font-size:32px;}}}}
     {NAV_CSS}
+    {TOPICS_SUBMENU_CSS}
     {ENRICH_CSS}
     .cc-breadcrumb{{font-size:11px;color:#aaa;margin-bottom:1.5rem;}}
     .cc-breadcrumb a{{color:#2C4A2E;text-decoration:none;}}
