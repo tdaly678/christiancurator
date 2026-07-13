@@ -210,9 +210,13 @@ def _normalize(s: str) -> str:
 
 def upgrade_faq_schema(soup: BeautifulSoup, questions: list[str], answers: dict) -> bool:
     """Add (or refresh) a FAQPage JSON-LD using the page's questions and provided answers."""
-    # Remove any prior block we inserted
+    # Remove any prior block we inserted (new data-attribute style or legacy
+    # /* comment */ style — the comment made the JSON invalid, so any legacy
+    # block found is replaced with a clean one)
     for s in _jsonld_scripts(soup):
-        if s.string and FAQ_MARKER_COMMENT in s.string:
+        if s.get("data-cc-marker") == FAQ_MARKER_COMMENT or (
+            s.string and FAQ_MARKER_COMMENT in s.string
+        ):
             s.decompose()
 
     # Build a normalized lookup so smart-quote/curly-apostrophe mismatches don't drop answers
@@ -239,10 +243,14 @@ def upgrade_faq_schema(soup: BeautifulSoup, questions: list[str], answers: dict)
         "mainEntity": faq_items,
     }
     body = json.dumps(faq_data, ensure_ascii=False, indent=2)
-    # Marker comment lets us find and refresh this block on re-runs
-    wrapped = f"\n/* {FAQ_MARKER_COMMENT} */\n{body}\n"
-    tag = soup.new_tag("script", attrs={"type": "application/ld+json"})
-    tag.string = wrapped
+    # data-cc-marker lets us find and refresh this block on re-runs without
+    # embedding a comment inside the JSON (comments make JSON-LD invalid and
+    # search engines ignore the block entirely)
+    tag = soup.new_tag(
+        "script",
+        attrs={"type": "application/ld+json", "data-cc-marker": FAQ_MARKER_COMMENT},
+    )
+    tag.string = f"\n{body}\n"
     soup.find("head").append(tag)
     return True
 
