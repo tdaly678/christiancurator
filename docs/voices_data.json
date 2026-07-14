@@ -761,9 +761,9 @@
   {
     "name": "Brandon Corley",
     "slug": "brandon-corley",
-    "bio": "Biblical studies graduate and MDiv student at Southern Baptist Theological Seminary. Contributor to American Reformer on Christian theology and reform.",
-    "affiliation": "Southern Baptist Theological Seminary",
-    "role": "Theological Student & Writer",
+    "bio": "Brandon Corley is a graduate of The Master's University (Biblical Studies) and an MDiv student at The Southern Baptist Theological Seminary. He writes for American Reformer on Reformed theology and Christian scholarship, engaging topics such as Thomistic philosophy and the relationship of nature and grace.",
+    "affiliation": "American Reformer (contributor)",
+    "role": "Writer & Seminary Student",
     "education": "The Master's University (BA Biblical Studies); Southern Baptist Theological Seminary (MDiv student)",
     "website": "https://americanreformer.org/author/brandon-corley/",
     "books": [],
@@ -986,11 +986,11 @@
   {
     "name": "Doug Eaton",
     "slug": "doug-eaton",
-    "bio": "Associate Vice President of Enrollment at Trinity International University and adjunct faculty member specializing in theology and Christian apologetics.",
+    "bio": "Doug Eaton serves as Associate Vice President of Enrollment for Trinity International University and Trinity Law School, where he is also an adjunct faculty member. A member of Bethel Grace Baptist Church in Bellflower, California, he teaches Bible and systematic theology and produces the 'Fight of Faith' blog and YouTube channel.",
     "affiliation": "Trinity International University",
-    "role": "Associate Vice President of Enrollment",
+    "role": "Educator & Theology Writer",
     "education": "",
-    "website": "https://fightoffaithblog.com",
+    "website": "https://fightoffaithblog.com/",
     "books": [],
     "initials": "DE"
   },
@@ -1468,17 +1468,6 @@
     "role": "Author & Speaker",
     "education": "",
     "website": "",
-    "books": [],
-    "initials": "EH"
-  },
-  {
-    "name": "Edward Helmore",
-    "slug": "edward-helmore",
-    "bio": "A journalist covering politics, government, and legal matters at The Guardian since 2010, with longstanding experience reporting on evolving news stories.",
-    "affiliation": "The Guardian",
-    "role": "Reporter",
-    "education": "",
-    "website": "https://www.theguardian.com",
     "books": [],
     "initials": "EH"
   },
@@ -2930,17 +2919,6 @@
     "initials": "AP"
   },
   {
-    "name": "Anat Peled",
-    "slug": "anat-peled",
-    "bio": "Rhodes Scholar and journalist covering Israel and Palestinian territories for The Wall Street Journal. Holds Master's in Modern European History from Oxford.",
-    "affiliation": "The Wall Street Journal",
-    "role": "Reporter",
-    "education": "Stanford University (BA History, Minor Symbolic Systems); University of Oxford (MA Modern European History)",
-    "website": "https://www.haaretz.com/ty-WRITER/0000017f-da5a-d718-a5ff-fadeca640000",
-    "books": [],
-    "initials": "AP"
-  },
-  {
     "name": "Dan Perkins",
     "slug": "dan-perkins",
     "bio": "Political cartoonist best known by pen name Tom Tomorrow, creating political satire through the syndicated cartoon This Modern World for over 25 years.",
@@ -3631,11 +3609,11 @@
   {
     "name": "Daniel Stegeman",
     "slug": "daniel-stegeman",
-    "bio": "Director of Pastoral Care with Fruitful Vine Ministry and author on pastoral guidance, serving churches across multiple states with theological resources.",
+    "bio": "Daniel Stegeman (DMin, Gordon-Conwell) has pastored churches in Ohio, New York, and Pennsylvania and serves as director of pastoral care with Fruitful Vine Ministry. He is the author of 'Help! I Want to Be a Loving Husband' (Shepherd Press), blogs at pastoral-theology.com, and contributes to The Gospel Coalition.",
     "affiliation": "Fruitful Vine Ministry",
-    "role": "Director of Pastoral Care",
+    "role": "Pastor & Director of Pastoral Care",
     "education": "DMin, Gordon-Conwell Theological Seminary",
-    "website": "https://pastoral-theology.com",
+    "website": "https://pastoral-theology.com/",
     "books": [
       {
         "title": "Help! I Want to Be a Loving Husband",
@@ -4395,17 +4373,6 @@
     "initials": "CM"
   },
   {
-    "name": "Patricia Kowsmann",
-    "slug": "patricia-kowsmann",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "PK"
-  },
-  {
     "name": "Zia ur-Rehman and Asim Hafeez",
     "slug": "zia-urrehman-and-asim-hafeez",
     "bio": "Zia ur-Rehman and Asim Hafeez are Pakistani journalists and documentarians known for their investigative work covering conflict, terrorism, and security issues in South Asia. While not primarily Christian content creators, their reporting has provided important context on religious extremism and persecution for international audiences seeking to understand global challenges.",
@@ -4637,17 +4604,6 @@
     "website": "",
     "books": [],
     "initials": "EB"
-  },
-  {
-    "name": "Michael Crowley",
-    "slug": "michael-crowley",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MC"
   },
   {
     "name": "Uwa Ede-Osifo",
@@ -4979,9 +4935,9 @@
   {
     "name": "Drake Osborn",
     "slug": "drake-osborn",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Drake Osborn serves as Pastor of Teaching and Liturgy at Grace Church in Waco, Texas. He writes on theology, Scripture, and the Christian life for outlets including Mere Orthodoxy and The Spurgeon Library, and shares regular theological reflections through his church's teaching ministry.",
+    "affiliation": "Grace Church, Waco, TX",
+    "role": "Pastor & Writer",
     "education": "",
     "website": "",
     "books": [],
@@ -5039,17 +4995,6 @@
     "website": "",
     "books": [],
     "initials": "SC"
-  },
-  {
-    "name": "Dean Seal",
-    "slug": "dean-seal",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "DS"
   },
   {
     "name": "Rich Bitterman",
@@ -5146,17 +5091,6 @@
     "website": "",
     "books": [],
     "initials": "AS"
-  },
-  {
-    "name": "Janakee Chavda",
-    "slug": "janakee-chavda",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JC"
   },
   {
     "name": "Laurence Norman",
@@ -5443,9 +5377,9 @@
   {
     "name": "Thomas Christianson",
     "slug": "thomas-christianson",
-    "bio": "",
+    "bio": "Thomas Christianson is a Christian writer, speaker, and professor based in the Baltimore area. He holds a master's degree in practical theology from Regent University and a doctorate from Fuller Theological Seminary, and is the author of 'The Unreasonable Jesus.' His work has appeared in RELEVANT and on the I Am Second blog.",
     "affiliation": "",
-    "role": "",
+    "role": "Writer & Professor",
     "education": "",
     "website": "",
     "books": [],
@@ -5663,28 +5597,6 @@
     "website": "",
     "books": [],
     "initials": "EP-SP"
-  },
-  {
-    "name": "Sachi Kitajima Mulkey and Harry Stevens",
-    "slug": "sachi-kitajima-mulkey-and-harry-stevens",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SKM & HS"
-  },
-  {
-    "name": "Mike Cherney",
-    "slug": "mike-cherney",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MC"
   },
   {
     "name": "D.A. Carson",
@@ -6497,24 +6409,13 @@
   {
     "name": "Ryan Bangert",
     "slug": "ryan-bangert",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Ryan Bangert is senior vice president for strategic initiatives and special counsel to the president at Alliance Defending Freedom, a Christian legal ministry defending religious liberty. A graduate of SMU's law school, he previously served in the Texas and Missouri attorney general offices, and writes on faith, law, and culture for outlets including the ERLC and American Reformer.",
+    "affiliation": "Alliance Defending Freedom",
+    "role": "Attorney & Writer",
     "education": "",
     "website": "",
     "books": [],
     "initials": "RB"
-  },
-  {
-    "name": "Valerie Hopkins",
-    "slug": "valerie-hopkins",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "VH"
   },
   {
     "name": "Lizzie Dearden",
@@ -7569,17 +7470,6 @@
     "initials": "MSK"
   },
   {
-    "name": "Lex McMenamin",
-    "slug": "lex-mcmenamin",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "LM"
-  },
-  {
     "name": "John Eligon",
     "slug": "john-eligon",
     "bio": "John Eligon is an award-winning journalist and author known for his thoughtful coverage of race, religion, and American culture. His work has appeared in major publications and explores the intersection of faith, identity, and contemporary social issues with nuance and compassion.",
@@ -7736,17 +7626,6 @@
     "initials": "MS-TD"
   },
   {
-    "name": "Benoit Faucon",
-    "slug": "benoit-faucon",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "BF"
-  },
-  {
     "name": "Adam Gabbatt",
     "slug": "adam-gabbatt",
     "bio": "Adam Gabbatt is a journalist and reporter known for his work covering news and cultural issues with thoughtful analysis. He has contributed to major publication",
@@ -7760,11 +7639,11 @@
   {
     "name": "Adam Kipp",
     "slug": "adam-kipp",
-    "bio": "",
-    "affiliation": "",
-    "role": "Contributor",
+    "bio": "Adam Kipp is lead pastor of Living Hope Church in Gambrills, Maryland, which he joined in 2021 after twelve years of ministry at Mercy Hill in Charlotte. A graduate of the Sovereign Grace Pastors College, he earned his MDiv from The Southern Baptist Theological Seminary in 2018.",
+    "affiliation": "Living Hope Church, Gambrills, MD",
+    "role": "Lead Pastor",
     "education": "",
-    "website": "",
+    "website": "https://livinghopechurchmd.org/",
     "books": [],
     "initials": "AK"
   },
@@ -7843,22 +7722,11 @@
     "initials": "JB"
   },
   {
-    "name": "Lynsey Chutel",
-    "slug": "lynsey-chutel",
-    "bio": "Lynsey Chutel is an award-winning journalist and correspondent covering African affairs, faith, and social issues. Her reporting brings nuanced perspectives on ",
-    "affiliation": "",
-    "role": "Contributor",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "LC"
-  },
-  {
     "name": "Mathew Santhosh Thomas",
     "slug": "mathew-santhosh-thomas",
-    "bio": "",
-    "affiliation": "Emmanuel Hospital Association (former Chief Functionary); ICMDA",
-    "role": "Contributor",
+    "bio": "Dr. Mathew Santhosh Thomas is a physician who works part-time in a mission hospital and with the International Christian Medical and Dental Association. He contributes articles on faith, ministry, and parenting to The Gospel Coalition India, and lives in Kottayam, Kerala, with his wife, Saira.",
+    "affiliation": "The Gospel Coalition India (contributor)",
+    "role": "Physician & Ministry Writer",
     "education": "",
     "website": "",
     "books": [],
@@ -7936,17 +7804,6 @@
     "website": "",
     "books": [],
     "initials": "SEZ"
-  },
-  {
-    "name": "Yaroslav Trofimov",
-    "slug": "yaroslav-trofimov",
-    "bio": "Yaroslav Trofimov is a foreign correspondent and author known for his incisive reporting on geopolitics, religion, and international affairs. His work explores ",
-    "affiliation": "",
-    "role": "Contributor",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "YT"
   },
   {
     "name": "Beautiful Christian Life Staff",
@@ -8203,28 +8060,6 @@
     "initials": "WB"
   },
   {
-    "name": "Steven Morris",
-    "slug": "steven-morris",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SM"
-  },
-  {
-    "name": "Kimberley Kao",
-    "slug": "kimberley-kao",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "KK"
-  },
-  {
     "name": "Elisabetta Povoledo",
     "slug": "elisabetta-povoledo",
     "bio": "Elisabetta Povoledo is a journalist and Rome correspondent known for her coverage of Vatican affairs and religious news for major international publications. Her reporting offers insights into the Catholic Church's activities, papal developments, and the intersection of faith and culture in contemporary society.",
@@ -8385,17 +8220,6 @@
     "initials": "RG"
   },
   {
-    "name": "Max Kim",
-    "slug": "max-kim",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MK"
-  },
-  {
     "name": "Lynsey Chutel and Claire Moses",
     "slug": "lynsey-chutel-and-claire-moses",
     "bio": "Lynsey Chutel is an award-winning journalist covering African affairs and global development, while Claire Moses is a culture reporter and writer. Together and individually, they have contributed thoughtful reporting on social issues, human interest stories, and cultural trends to major publications.",
@@ -8530,17 +8354,6 @@
       }
     ],
     "initials": "RP"
-  },
-  {
-    "name": "Lingling Wei",
-    "slug": "lingling-wei",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "LW"
   },
   {
     "name": "James T. Areddy",
@@ -8748,9 +8561,9 @@
   {
     "name": "Isaiah Marshall",
     "slug": "isaiah-marshall",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Isaiah Marshall is an evangelical spoken word artist, author, and speaker who communicates the gospel through creative arts. He serves as Director of Ministry Development for Rooted Ministry and has been a chaplain in the Air Force Reserve for over a decade. He wrote 'Identity Theft: Reclaiming the Truth in the Midst of Lies' and hosts the 'Front Runner' podcast.",
+    "affiliation": "Rooted Ministry",
+    "role": "Ministry Leader & Author",
     "education": "",
     "website": "",
     "books": [],
@@ -9054,17 +8867,6 @@
     "initials": "ML"
   },
   {
-    "name": "Gavin Bade",
-    "slug": "gavin-bade",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "GB"
-  },
-  {
     "name": "Erica L. Green",
     "slug": "erica-l-green",
     "bio": "Erica L. Green is an education reporter and journalist who covers policy, equity, and systemic issues in American schools. Her investigative work explores how faith communities and Christian institutions navigate educational challenges and social change.",
@@ -9327,9 +9129,9 @@
   {
     "name": "Jake Dell",
     "slug": "jake-dell",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Jake Dell is a pastor of the First Congregational Church of Woodbury, Connecticut, a former Episcopal priest, and a Yale graduate. He writes on faith, politics, and culture for Reformed and conservative Christian outlets including American Reformer and TruthScript, and publishes the Experimental Sermons newsletter.",
+    "affiliation": "First Congregational Church, Woodbury, CT",
+    "role": "Pastor & Writer",
     "education": "",
     "website": "",
     "books": [],
@@ -9480,17 +9282,6 @@
     "initials": "DP"
   },
   {
-    "name": "Pei-Lin Wu and Pablo Robles",
-    "slug": "peilin-wu-and-pablo-robles",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "PWR"
-  },
-  {
     "name": "Brian Spegele",
     "slug": "brian-spegele",
     "bio": "Brian Spegele is a writer and content creator focused on Christian living and faith development. He contributes to various Christian publications and platforms, helping readers deepen their understanding of Scripture and apply biblical principles to daily life.",
@@ -9592,9 +9383,9 @@
   {
     "name": "Michael Aitcheson",
     "slug": "michael-aitcheson",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Michael Aitcheson (MDiv, Reformed Theological Seminary) is the senior pastor and planter of Christ United Fellowship (PCA) in Orlando, Florida, and a Council member of The Gospel Coalition. He co-hosts the As in Heaven podcast and writes for The Gospel Coalition.",
+    "affiliation": "Christ United Fellowship (PCA), Orlando, FL",
+    "role": "Pastor",
     "education": "",
     "website": "",
     "books": [],
@@ -9630,9 +9421,9 @@
   {
     "name": "Colin Redemer",
     "slug": "colin-redemer",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Colin Chan Redemer (PhD, University of Aberdeen) is Director of Education at American Reformer and a professor at Saint Mary's College of California. A Protestant writer on ethics, technology, and classical education, he has contributed to First Things, Mere Orthodoxy, and Ad Fontes Journal and authored 'Made Like the Maker.'",
+    "affiliation": "American Reformer",
+    "role": "Educator & Writer",
     "education": "",
     "website": "",
     "books": [],
@@ -9670,17 +9461,6 @@
     "website": "",
     "books": [],
     "initials": "AEK"
-  },
-  {
-    "name": "Santiago Pérez",
-    "slug": "santiago-prez",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SP"
   },
   {
     "name": "Luke Broadwater",
@@ -9811,17 +9591,6 @@
     "initials": "ATS"
   },
   {
-    "name": "Mariah Timms",
-    "slug": "mariah-timms",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MT"
-  },
-  {
     "name": "Matthew Mpoke Bigg and Apoorva Mandavilli",
     "slug": "matthew-mpoke-bigg-and-apoorva-mandavilli",
     "bio": "Matthew Mpoke Bigg is a scholar of biblical theology and ancient Christianity, while Apoorva Mandavilli is a science journalist. Together they have contributed thoughtful perspectives on faith, science, and contemporary issues for Christian audiences seeking informed engagement with modern culture and biblical scholarship.",
@@ -9864,17 +9633,6 @@
     "website": "",
     "books": [],
     "initials": "JS"
-  },
-  {
-    "name": "Jonathan Wolfe",
-    "slug": "jonathan-wolfe",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JW"
   },
   {
     "name": "Yan Zhuang",
@@ -9963,17 +9721,6 @@
       }
     ],
     "initials": "PSG, FOR"
-  },
-  {
-    "name": "Richard Sprenger",
-    "slug": "richard-sprenger",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RS"
   },
   {
     "name": "Noah Payne-Frank",
@@ -10145,17 +9892,6 @@
     "initials": "DS"
   },
   {
-    "name": "Nataliya Vasilyeva",
-    "slug": "nataliya-vasilyeva",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "NV"
-  },
-  {
     "name": "Aaron Boxerman",
     "slug": "aaron-boxerman",
     "bio": "Aaron Boxerman is a journalist and writer who covers religious and cultural topics with thoughtful analysis. His work explores the intersection of faith, politics, and contemporary issues from a balanced perspective.",
@@ -10182,17 +9918,6 @@
         "a": "No. Boxerman is a mainstream news journalist, and his work does not indicate an evangelical affiliation. His byline appears in Christian news digests because of his coverage of Israel and the Middle East."
       }
     ]
-  },
-  {
-    "name": "Ronnie Harui",
-    "slug": "ronnie-harui",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RH"
   },
   {
     "name": "Allen C. Guelzo",
@@ -10299,9 +10024,9 @@
   {
     "name": "Kyle Bueermann",
     "slug": "kyle-bueermann",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Kyle Bueermann is a Rural Specialist with the North American Mission Board's Replant team and a former Southern Baptist pastor in New Mexico. He is the author of 'Replanting Rural Churches,' co-hosts the Not Another Baptist Podcast, and writes for Lifeway Research.",
+    "affiliation": "North American Mission Board (Replant)",
+    "role": "Rural Specialist & Author",
     "education": "",
     "website": "",
     "books": [],
@@ -14400,17 +14125,6 @@
     "initials": "SDF"
   },
   {
-    "name": "Christopher Knaus",
-    "slug": "christopher-knaus",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CK"
-  },
-  {
     "name": "Lara Jakes",
     "slug": "lara-jakes",
     "bio": "Lara Jakes is an accomplished journalist and foreign affairs correspondent known for her incisive reporting on international politics and global issues. Her work has appeared in major publications where she provides thoughtful analysis on complex world events from a perspective informed by Christian values and ethics.",
@@ -14611,11 +14325,11 @@
   {
     "name": "Arie Van Weelden",
     "slug": "arie-van-weelden",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Arie Van Weelden is Assistant Pastor of Families and Youth at Skyview Presbyterian Church (PCA) in Centennial, Colorado. A graduate of Westminster Seminary California, he has contributed writing and book reviews to Core Christianity and Modern Reformation.",
+    "affiliation": "Skyview Presbyterian Church (PCA), Centennial, CO",
+    "role": "Assistant Pastor",
     "education": "",
-    "website": "",
+    "website": "https://www.skyviewpca.org/",
     "books": [],
     "initials": "AVW"
   },
@@ -14957,11 +14671,11 @@
   {
     "name": "Samantha Decker",
     "slug": "samantha-decker",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Samantha Decker is a writer and Bible teacher passionate about encouraging believers to deepen their walk with Jesus through discipleship and love for Scripture. Her debut book, 'Unhurried: An Invitation to Slow Down, Create Margin, and Surrender Control to God,' was released by Moody Publishers in 2025. She and her husband live in Oklahoma with their four children.",
+    "affiliation": "Moody Publishers (author)",
+    "role": "Author & Bible Teacher",
     "education": "",
-    "website": "",
+    "website": "https://www.samanthadeckerwrites.com/",
     "books": [],
     "initials": "SD"
   },

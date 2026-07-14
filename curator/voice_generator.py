@@ -319,6 +319,12 @@ def extract_new_authors(articles: list, existing_slugs: set) -> list:
     seen_names = set()
     new_authors = []
     for article in articles:
+        # Don't create voice pages for mainstream/secular news bylines. Those
+        # feeds (source_type="world_news": AP, BBC, NYT, WSJ, Guardian, WaPo)
+        # are curated for their content, but their reporters are not evangelical
+        # "voices" and were cluttering the Voices directory.
+        if article.get("source_type") == "world_news":
+            continue
         raw = (article.get("author") or "").strip()
         if not raw:
             continue
