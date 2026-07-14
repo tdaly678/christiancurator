@@ -15118,5 +15118,153 @@
     "website": "",
     "books": [],
     "initials": "KN"
+  },
+  {
+    "name": "Stephen Chandler",
+    "slug": "stephen-chandler",
+    "bio": "Stephen Chandler is a Christian author and speaker dedicated to helping believers develop a deeper understanding of Scripture and authentic faith. His work encourages readers to engage meaningfully with God's Word and apply biblical principles to everyday life.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SC"
+  },
+  {
+    "name": "Peter Daniel Joseph",
+    "slug": "peter-daniel-joseph",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PDJ"
+  },
+  {
+    "name": "John V. Fesko",
+    "slug": "john-v-fesko",
+    "bio": "John V. Fesko is a Reformed theologian and author known for his accessible writings on Christian doctrine and biblical theology. He has served in pastoral and academic roles, contributing thoughtfully to contemporary evangelical and Reformed discussions on Scripture, covenant theology, and Christian living.",
+    "affiliation": "Reformation Trust Publishing; various Reformed and evangelical platforms",
+    "role": "Author & Theologian",
+    "education": "Ph.D., Westminster Theological Seminary",
+    "website": "",
+    "books": [
+      {
+        "title": "Justification: Understanding the Classic Protestant Doctrine",
+        "amazon_url": "https://www.amazon.com/s?k=Justification+Understanding+Classic+Protestant+Doctrine+John+Fesko"
+      },
+      {
+        "title": "The Covenant of Works: The Origins, Development, and Reception of the Doctrine",
+        "amazon_url": "https://www.amazon.com/s?k=Covenant+of+Works+Origins+Development+Reception+Fesko"
+      },
+      {
+        "title": "Word, Water, and Spirit: A Reformed Perspective on Baptism",
+        "amazon_url": "https://www.amazon.com/s?k=Word+Water+Spirit+Reformed+Perspective+Baptism+Fesko"
+      },
+      {
+        "title": "The Trinity and the Covenant of Redemption",
+        "amazon_url": "https://www.amazon.com/s?k=Trinity+Covenant+of+Redemption+Fesko"
+      }
+    ],
+    "initials": "JVF"
+  },
+  {
+    "name": "Madelyn Moses",
+    "slug": "madelyn-moses",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MM"
+  },
+  {
+    "name": "Zac Fuller",
+    "slug": "zac-fuller",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ZF"
+  },
+  {
+    "name": "Michael Abraham",
+    "slug": "michael-abraham",
+    "bio": "Michael Abraham is a thoughtful Christian writer and thinker who contributes to conversations on faith, culture, and biblical living. His work encourages readers to engage Scripture thoughtfully and live out their convictions with integrity in an increasingly complex world.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MA"
+  },
+  {
+    "name": "Kat Wong",
+    "slug": "kat-wong",
+    "bio": "Kat Wong is a writer and content creator focused on Christian living and faith integration. She explores themes of discipleship, spirituality, and personal growth through a contemporary lens for modern believers.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KW"
+  },
+  {
+    "name": "Simonetta Carr",
+    "slug": "simonetta-carr",
+    "bio": "Simonetta Carr is an author and illustrator known for her engaging biographical works that introduce children and adults to inspiring Christian figures throughout history. Her richly illustrated books combine careful historical research with accessible storytelling, helping readers discover the faith and courage of believers from the Reformation and beyond.",
+    "affiliation": "Christian Focus Publications",
+    "role": "Author & Illustrator",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Martyn Lloyd-Jones: From Wales to Westminster",
+        "amazon_url": "https://www.amazon.com/s?k=Martyn+Lloyd-Jones+From+Wales+to+Westminster+Simonetta+Carr"
+      },
+      {
+        "title": "John Calvin: A Heart for Devotion, Doctrine, and Doxology",
+        "amazon_url": "https://www.amazon.com/s?k=John+Calvin+Heart+for+Devotion+Doctrine+Doxology+Simonetta+Carr"
+      },
+      {
+        "title": "Gaspard de Coligny: Admiral of France",
+        "amazon_url": "https://www.amazon.com/s?k=Gaspard+de+Coligny+Admiral+of+France+Simonetta+Carr"
+      },
+      {
+        "title": "Lady Jane Grey: Nine Days a Queen",
+        "amazon_url": "https://www.amazon.com/s?k=Lady+Jane+Grey+Nine+Days+a+Queen+Simonetta+Carr"
+      },
+      {
+        "title": "Ulrich Zwingli: A Life",
+        "amazon_url": "https://www.amazon.com/s?k=Ulrich+Zwingli+A+Life+Simonetta+Carr"
+      }
+    ],
+    "initials": "SC"
+  },
+  {
+    "name": "Rebecca Feng",
+    "slug": "rebecca-feng",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RF"
+  },
+  {
+    "name": "Leo Sands and Michael Levenson",
+    "slug": "leo-sands-and-michael-levenson",
+    "bio": "Leo Sands and Michael Levenson are collaborative writers and researchers known for their work in Christian apologetics and biblical scholarship. They bring complementary expertise to their analysis of faith, culture, and scriptural interpretation for modern Christian audiences.",
+    "affiliation": "",
+    "role": "Authors & Researchers",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LSL"
   }
 ]

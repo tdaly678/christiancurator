@@ -1,41 +1,64 @@
 [
   {
-    "title": "God Places You Where You're Meant to Be—Not Where You Dreamed",
-    "url": "https://www.challies.com/articles/everything-i-might-have-been/",
-    "source_name": "Tim Challies",
-    "author": "Tim Challies",
+    "title": "It’s Always Desperate Times Somewhere",
+    "url": "https://www.christianitytoday.com/2026/07/desperate-times-call-for-desperate-measures-righteousness-integrity-christ/",
+    "source_name": "Christianity Today",
+    "author": "Bonnie Kristian",
     "final_score": 10.0,
     "tags": [
       "devotional",
-      "theology"
+      "culture"
     ]
   },
   {
-    "title": "God's Sovereignty Over Evil Divides the Faithful",
-    "url": "https://feeds.ligonier.org/~/960223676/0/ligonierministriesblog",
-    "source_name": "Ligonier Ministries",
-    "author": "R.C. Sproul",
-    "final_score": 9.5,
+    "title": "Jonathan's Sword Against an Army: When Faith Demands Risk",
+    "url": "https://relevantmagazine.com/magazine/taking-a-wise-risk/",
+    "source_name": "Relevant Magazine",
+    "author": "Stephen Chandler",
+    "final_score": 10.0,
     "tags": [
-      "theology"
+      "theology",
+      "devotional"
     ]
   },
   {
-    "title": "Grace Breaks What Reason Cannot: Christianity's Answer to Unbelief",
-    "url": "https://theaquilareport.com/the-science-of-unbelief-the-triumph-of-grace-over-unbelief/",
+    "title": "Jesus' Incarnation Does What No Other Faith Can Claim",
+    "url": "https://theaquilareport.com/why-jesus-incarnation-stands-alone-among-all-faiths/",
     "source_name": "The Aquila Report",
-    "author": "Danson Ottawa",
-    "final_score": 9.5,
+    "author": "Peter Daniel Joseph",
+    "final_score": 10.0,
     "tags": [
       "theology",
       "apologetics"
     ]
   },
   {
-    "title": "The Psalms God Wants You to Pray Against Your Enemies",
-    "url": "https://theaquilareport.com/what-about-the-awkward-psalms/",
+    "title": "Parenting Through Mental Illness: Duty When You're Broken",
+    "url": "https://newsletter.oalannoble.com/p/how-to-parent-while-suffering-from",
+    "source_name": "O. Alan Noble",
+    "author": "O. Alan Noble",
+    "final_score": 9.25,
+    "tags": [
+      "devotional",
+      "family"
+    ]
+  },
+  {
+    "title": "AI Won't Fix Your Theology. It'll Just Save Your Time.",
+    "url": "https://careynieuwhof.com/does-ai-expand-your-green-zone/",
+    "source_name": "Carey Nieuwhof",
+    "author": "Carey Nieuwhof",
+    "final_score": 9.0,
+    "tags": [
+      "work",
+      "culture"
+    ]
+  },
+  {
+    "title": "Christ or Willpower: Why Christians Keep Getting the Gospel Wrong",
+    "url": "https://theaquilareport.com/christ-and-the-third-use-of-the-law/",
     "source_name": "The Aquila Report",
-    "author": "Robert Ventura",
+    "author": "John V. Fesko",
     "final_score": 8.75,
     "tags": [
       "theology",
@@ -43,67 +66,47 @@
     ]
   },
   {
-    "title": "African Christianity's Collapse: What Rome's Fall Reveals",
-    "url": "https://firstthings.com/the-sudden-death-of-the-african-church/",
-    "source_name": "First Things",
-    "author": "Jillian Parks",
+    "title": "When Ungodly Critics Say Something True",
+    "url": "https://www.9marks.org/article/handling-ungodly-criticism/?utm_source=rss&utm_medium=rss&utm_campaign=handling-ungodly-criticism",
+    "source_name": "9Marks",
+    "author": "Jeri Choi",
     "final_score": 8.5,
     "tags": [
-      "theology",
-      "missions"
-    ]
-  },
-  {
-    "title": "Professor's Firing Tests Free Speech Limits at Christian University",
-    "url": "https://wng.org/podcasts/legal-docket-conscience-and-consequences-1783892923",
-    "source_name": "World Magazine",
-    "author": "Keegan Martin",
-    "final_score": 7.62,
-    "tags": [
-      "politics",
-      "culture"
-    ]
-  },
-  {
-    "title": "Christians Must Reclaim Work From the AI Revolution",
-    "url": "https://www.thegospelcoalition.org/podcasts/silicon-spiritualities/ai-and-work-what-happens-when-ai-can-do-your-job-better/",
-    "source_name": "The Gospel Coalition",
-    "author": "Chris Watkin, Rachel Gilson",
-    "final_score": 7.5,
-    "tags": [
-      "work",
-      "theology"
-    ]
-  },
-  {
-    "title": "Discipleship Programs Keep Failing. Here's How to Fix Them.",
-    "url": "https://research.lifeway.com/2026/07/13/3-ways-to-ensure-programs-are-making-disciples/",
-    "source_name": "Lifeway Research",
-    "author": "Chad Higgins",
-    "final_score": 7.5,
-    "tags": [
+      "devotional",
       "church life"
     ]
   },
   {
-    "title": "Academics Built Walls. Now Nobody's Reading",
-    "url": "https://firstthings.com/to-live-fittingly/",
-    "source_name": "First Things",
-    "author": "Jillian Parks",
-    "final_score": 7.25,
+    "title": "Medical Assistance in Dying Targets the Mentally Ill",
+    "url": "https://mereorthodoxy.com/no-last-rites-for-maid/",
+    "source_name": "Mere Orthodoxy",
+    "author": "Mere Orthodoxy",
+    "final_score": 8.5,
     "tags": [
+      "theology",
       "culture"
     ]
   },
   {
-    "title": "Rural Churches Face Extinction as Pulpits Go Empty",
-    "url": "https://www.thegospelcoalition.org/article/little-white-church/",
-    "source_name": "The Gospel Coalition",
-    "author": "Johnnie Each, Selah Bang",
-    "final_score": 6.75,
+    "title": "Wizards Don't Need Muggle Inventions. So Why Does He?",
+    "url": "https://www.christianitytoday.com/2026/07/common-grace-gadgets-doohickeys-ian-bogost-small-stuff-review/",
+    "source_name": "Christianity Today",
+    "author": "Bonnie Kristian",
+    "final_score": 8.25,
     "tags": [
-      "church life",
+      "theology",
       "culture"
+    ]
+  },
+  {
+    "title": "Before the Wedding: How a Couple Survived Heartbreak and Reunited",
+    "url": "https://relevantmagazine.com/culture/5-ways-to-start-divorce-proofing-your-marriage/",
+    "source_name": "Relevant Magazine",
+    "author": "Dorothy Greco",
+    "final_score": 7.89,
+    "tags": [
+      "devotional",
+      "family"
     ]
   }
 ]
