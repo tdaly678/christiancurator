@@ -4924,11 +4924,11 @@
   {
     "name": "John Freeman",
     "slug": "john-freeman",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "John Freeman is the founder of Harvest USA, a ministry begun in 1983 through Philadelphia's Tenth Presbyterian Church that helps the church minister to those affected by sexual struggles and brokenness. A graduate of the University of Tennessee and Westminster Theological Seminary, he is the author of 'Hide or Seek: When Men Get Real with God about Sex.'",
+    "affiliation": "Harvest USA",
+    "role": "Ministry Founder & Author",
     "education": "",
-    "website": "",
+    "website": "https://harvestusa.org/",
     "books": [],
     "initials": "JF"
   },
@@ -5256,11 +5256,11 @@
   {
     "name": "Jason Wilson",
     "slug": "jason-wilson",
-    "bio": "Jason Wilson is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
+    "bio": "Jason Wilson is a Christian author, youth mentor, and speaker who founded the Cave of Adullam Transformational Training Academy in Detroit, mentoring young men through martial arts, emotional regulation, and Scripture-based principles. His best-selling books 'Cry Like a Man,' 'Battle Cry,' and 'The Man the Moment Demands' address biblical masculinity and emotional wholeness for men.",
+    "affiliation": "The Yunion / Cave of Adullam",
+    "role": "Author & Mentor",
     "education": "",
-    "website": "",
+    "website": "https://theyunion.org/",
     "books": [],
     "initials": "JW"
   },
@@ -7689,17 +7689,6 @@
     "initials": "BA"
   },
   {
-    "name": "Gavin",
-    "slug": "gavin",
-    "bio": "",
-    "affiliation": "",
-    "role": "Contributor",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "G"
-  },
-  {
     "name": "Jacob Crouch",
     "slug": "jacob-crouch",
     "bio": "Jacob Crouch is a Christian writer whose essays on discipleship, worship, and everyday faithfulness appear at The Bee Hive, the writing ministry connected to New Life Bible Fellowship in Tucson, Arizona, and are regularly republished at The Aquila Report. His pieces address topics such as the fear of man, loneliness, and the ordinary rhythms of life in the local church.",
@@ -8027,17 +8016,6 @@
     "website": "",
     "books": [],
     "initials": "PC"
-  },
-  {
-    "name": "Rebecca Salazar",
-    "slug": "rebecca-salazar",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RS"
   },
   {
     "name": "William Boekestein",
@@ -9211,17 +9189,6 @@
     "initials": "JM"
   },
   {
-    "name": "Jordan Gerard",
-    "slug": "jordan-gerard",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JG"
-  },
-  {
     "name": "Erica Roth",
     "slug": "erica-roth",
     "bio": "Erica Roth is a writer and content creator focused on Christian living and faith topics. She contributes to various Christian publications and platforms, helping readers deepen their spiritual understanding and practice.",
@@ -9443,11 +9410,11 @@
   {
     "name": "Carl Peetz",
     "slug": "carl-peetz",
-    "bio": "",
+    "bio": "Carl Peetz is a Bible teacher and Christian audio producer who has worked in Christian radio and broadcasting since the 1980s, including years with Christian Financial Concepts / Crown Financial Ministries. Through his site he offers Bible teaching alongside audio production, and his teaching content has aired on Christian radio outlets.",
     "affiliation": "",
-    "role": "",
+    "role": "Bible Teacher & Broadcaster",
     "education": "",
-    "website": "",
+    "website": "https://carlpeetz.com/",
     "books": [],
     "initials": "CP"
   },
@@ -9485,17 +9452,6 @@
     "initials": "TJ"
   },
   {
-    "name": "Brandon",
-    "slug": "brandon",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "B"
-  },
-  {
     "name": "Jeremy Linneman",
     "slug": "jeremy-linneman",
     "bio": "Jeremy Linneman is a pastor and Christian writer committed to helping believers understand and live out their faith in practical ways. He brings biblical insight and pastoral experience to topics affecting modern Christian living and spiritual growth.",
@@ -9520,9 +9476,9 @@
   {
     "name": "Jim McCarthy",
     "slug": "jim-mccarthy",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Jim (James G.) McCarthy is an evangelical author and evangelist who came to faith out of a Roman Catholic background and founded Good News for Catholics. He is best known for 'The Gospel According to Rome,' which compares Catholic tradition with Scripture, along with the video 'Catholicism: Crisis of Faith.' A former missionary to Ireland, he writes on the gospel and evangelism.",
+    "affiliation": "Good News for Catholics",
+    "role": "Author & Evangelist",
     "education": "",
     "website": "",
     "books": [],
@@ -10112,9 +10068,9 @@
   {
     "name": "Owen Anderson",
     "slug": "owen-anderson",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Owen Anderson (PhD, Arizona State University) is a professor of philosophy and religious studies at Arizona State University, an adjunct instructor at Phoenix Seminary, and a pastor at Christ the King Reformed Church in Phoenix. A Christian philosopher focused on general revelation and the clarity of God's existence, he has authored books including 'The Clarity of God's Existence' and 'The Natural Moral Law,' and writes for American Reformer and Credo.",
+    "affiliation": "Arizona State University",
+    "role": "Professor & Pastor",
     "education": "",
     "website": "",
     "books": [],
@@ -10218,17 +10174,6 @@
     "website": "",
     "books": [],
     "initials": "CFS"
-  },
-  {
-    "name": "Henna Moussavi",
-    "slug": "henna-moussavi",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "HM"
   },
   {
     "name": "Joyu Wang",
@@ -10387,17 +10332,6 @@
     "initials": "ELC"
   },
   {
-    "name": "Raffaele Huang",
-    "slug": "raffaele-huang",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RH"
-  },
-  {
     "name": "Paul Koch",
     "slug": "paul-koch",
     "bio": "Paul Koch is a Lutheran pastor and writer who explores the intersection of faith, culture, and everyday life. His work engages thoughtfully with contemporary issues from a Christian perspective, offering readers both theological insight and practical wisdom for modern discipleship.",
@@ -10528,17 +10462,6 @@
         "a": "The magazine writes from a broadly Reformed, confessional Protestant perspective and aims to form Christians for faithful participation in public life. Its essays on evangelical fracturing, family, work, and political theology are widely discussed across the evangelical world."
       }
     ]
-  },
-  {
-    "name": "Emma Brown",
-    "slug": "emma-brown",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "EB"
   },
   {
     "name": "Elisabetta Povoledo and Elizabeth Dias",
@@ -10798,9 +10721,9 @@
   {
     "name": "Andrew Ballard",
     "slug": "andrew-ballard",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Andrew Ballard serves as Assistant Pastor for College and Youth at Bull Street Baptist Church in Savannah, Georgia, and is pursuing an MDiv from Bethlehem College and Seminary. A graduate of Georgia Southern University, he is a contributing author for Desiring God, where he writes on discipleship, relationships, and Christian living.",
+    "affiliation": "Bull Street Baptist Church, Savannah, GA",
+    "role": "Assistant Pastor & Writer",
     "education": "",
     "website": "",
     "books": [],
@@ -10816,17 +10739,6 @@
     "website": "",
     "books": [],
     "initials": "BAC"
-  },
-  {
-    "name": "Texas",
-    "slug": "texas",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "TX"
   },
   {
     "name": "Brandon Crowe",
@@ -11169,17 +11081,6 @@
     "initials": "AK"
   },
   {
-    "name": "Andrew Dowell",
-    "slug": "andrew-dowell",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AD"
-  },
-  {
     "name": "Tedd Tripp",
     "slug": "tedd-tripp",
     "bio": "Tedd Tripp is a pastor, counselor, and author known for his practical approach to biblical parenting and discipleship. His ministry focuses on helping Christians understand Scripture's wisdom for raising children and living out their faith in everyday family life. Through writing and speaking, he equips parents with gospel-centered principles for training the next generation.",
@@ -11317,9 +11218,9 @@
   {
     "name": "Changwon Shu",
     "slug": "changwon-shu",
-    "bio": "",
+    "bio": "Changwon Shu is a Korean Reformed writer who studied at the Free Church College in Edinburgh. He contributes to Reformed evangelical publications including Banner of Truth, Evangelical Times, and Ligonier's Tabletalk magazine, often writing about the work of God in Korea, his native land.",
     "affiliation": "",
-    "role": "",
+    "role": "Reformed Writer",
     "education": "",
     "website": "",
     "books": [],
@@ -11351,17 +11252,6 @@
       }
     ],
     "initials": "FF"
-  },
-  {
-    "name": "Maya Yang",
-    "slug": "maya-yang",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MY"
   },
   {
     "name": "W. Robert Godfrey",
@@ -11434,28 +11324,6 @@
     "website": "",
     "books": [],
     "initials": "RJ"
-  },
-  {
-    "name": "Seth Rubenstein",
-    "slug": "seth-rubenstein",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SR"
-  },
-  {
-    "name": "Alex Travelli and Hari Kumar",
-    "slug": "alex-travelli-and-hari-kumar",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "ATK"
   },
   {
     "name": "Miranda Carls",
@@ -12032,17 +11900,6 @@
     "initials": "KB"
   },
   {
-    "name": "Whitney Shefte",
-    "slug": "whitney-shefte",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "WS"
-  },
-  {
     "name": "Michael Anthony Adams",
     "slug": "michael-anthony-adams",
     "bio": "Michael Anthony Adams is a Christian author and thought leader whose work explores faith, culture, and discipleship for contemporary believers. His writings engage thoughtfully with how Christians can live out their convictions in an increasingly pluralistic world.",
@@ -12078,9 +11935,9 @@
   {
     "name": "Ryan Denton",
     "slug": "ryan-denton",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Ryan Denton is a Reformed evangelist and director of Christ in the Wild Ministries, which he founded in 2016 after serving as a Southern Baptist pastor on the Navajo Reservation. An open-air preacher affiliated with Vanguard Presbyterian Church, he has studied at Puritan Reformed Theological Seminary and authored works on evangelism including 'A Certain Sound' and 'Even If None.'",
+    "affiliation": "Christ in the Wild Ministries",
+    "role": "Evangelist & Author",
     "education": "",
     "website": "",
     "books": [],
@@ -12131,9 +11988,9 @@
   {
     "name": "Ivan Mesa",
     "slug": "ivan-mesa",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Ivan Mesa (PhD, The Southern Baptist Theological Seminary) is editorial director for The Gospel Coalition, where he oversees its book review section and annual book awards. He is the editor of several books, including 'Before You Lose Your Faith: Deconstructing Doubt in the Church,' 'Faithful Exiles,' and 'Scrolling Ourselves to Death.'",
+    "affiliation": "The Gospel Coalition",
+    "role": "Editorial Director",
     "education": "",
     "website": "",
     "books": [],
@@ -12173,17 +12030,6 @@
     "initials": "CMC"
   },
   {
-    "name": "Nzanetti",
-    "slug": "nzanetti",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "NZ"
-  },
-  {
     "name": "Constant Méheut",
     "slug": "constant-mheut",
     "bio": "Constant Méheut was a French Christian artist and illustrator known for his devotional works and spiritual contributions to Christian literature. His artistic vision was shaped by a deep faith that influenced his illustrations and design work for religious publications.",
@@ -12197,9 +12043,9 @@
   {
     "name": "Dawson Knaul",
     "slug": "dawson-knaul",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Dawson Knaul is a writer contributing to American Reformer, a publication focused on Protestant social and political thought. His work engages questions of theology, ontology, and cultural renewal from a confessional Reformed perspective, including essays critiquing theological liberalism and defending historic Christian orthodoxy.",
+    "affiliation": "American Reformer",
+    "role": "Writer",
     "education": "",
     "website": "",
     "books": [],
@@ -12235,11 +12081,11 @@
   {
     "name": "Kyle Burks",
     "slug": "kyle-burks",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Kyle Burks (MDiv, The Southern Baptist Theological Seminary) is a pastoral resident at Creekside Community Church in Gainesville, Florida. He writes for The Gospel Coalition and publishes on his Substack, 'Sweetheart, I'm Busy,' offering pastoral reflection on Christian living and discipleship.",
+    "affiliation": "Creekside Community Church, Gainesville, FL",
+    "role": "Pastoral Resident & Writer",
     "education": "",
-    "website": "",
+    "website": "https://kyleburks.substack.com/",
     "books": [],
     "initials": "KB"
   },
@@ -12353,17 +12199,6 @@
     "initials": "DM"
   },
   {
-    "name": "Maria Varenikova",
-    "slug": "maria-varenikova",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MV"
-  },
-  {
     "name": "Josh Dawsey",
     "slug": "josh-dawsey",
     "bio": "Josh Dawsey is a political reporter and journalist known for his investigative work covering national politics and the Trump administration. While not primarily a Christian content creator, his reporting has been widely followed by evangelical audiences interested in political news and analysis from a major news perspective.",
@@ -12466,17 +12301,6 @@
     "initials": "LFS-FR"
   },
   {
-    "name": "Jonathan Cheng",
-    "slug": "jonathan-cheng",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JC"
-  },
-  {
     "name": "Tilly Dillehay",
     "slug": "tilly-dillehay",
     "bio": "Tilly Dillehay is an author, journalist, and podcast cohost who has written on beauty, envy, food, and the Christian home in books such as 'Seeing Green' and 'My Dear Hemlock.' A graduate of Lipscomb University, she contributes to The Gospel Coalition and Desiring God. She and her pastor husband raise their children in Tennessee.",
@@ -12528,9 +12352,9 @@
   {
     "name": "Brian Daniel",
     "slug": "brian-daniel",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Brian Daniel serves at Lifeway Christian Resources in Nashville, where he leads a team resourcing and training small-group and Bible-study leaders. He hosts the Group Answers Podcast and writes for Lifeway Research and Lifeway Voices, focusing on discipleship, group ministry, and equipping local churches.",
+    "affiliation": "Lifeway Christian Resources",
+    "role": "Ministry Leader & Writer",
     "education": "",
     "website": "",
     "books": [],
@@ -12568,28 +12392,6 @@
     "website": "http://katherinelucky.com/",
     "books": [],
     "initials": "KL"
-  },
-  {
-    "name": "Zane Irwin",
-    "slug": "zane-irwin",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "ZI"
-  },
-  {
-    "name": "Laetitia Vancon",
-    "slug": "laetitia-vancon",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "LV"
   },
   {
     "name": "Andrew Wilson",
@@ -12741,9 +12543,9 @@
   {
     "name": "Rebecca Pate",
     "slug": "rebecca-pate",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Rebecca Pate is a Christian writer who served as Director of Marketing and Communications at Southeastern Baptist Theological Seminary and has contributed articles to the seminary's Christ and Culture platform. Her writing engages faith, culture, and the Christian life from an evangelical, Baptist perspective.",
+    "affiliation": "Southeastern Baptist Theological Seminary",
+    "role": "Writer",
     "education": "",
     "website": "",
     "books": [],
@@ -12787,17 +12589,6 @@
         "a": "Garner is known for his book Sons in the Son: The Riches and Reach of Adoption in Christ, which develops the biblical doctrine of adoption, and for his global theological education work. He earned his PhD from Westminster and also served as a missionary educator in Eastern Europe."
       }
     ]
-  },
-  {
-    "name": "Andy Cush",
-    "slug": "andy-cush",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AC"
   },
   {
     "name": "Chris Osuh",
@@ -12969,24 +12760,13 @@
   {
     "name": "Cyril Chavis Jr.",
     "slug": "cyril-chavis",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Cyril Chavis Jr. is a Reformed University Fellowship campus pastor serving at Howard University in Washington, DC, and a contributor to The Gospel Coalition. A graduate of the University of Virginia and Reformed Theological Seminary, he is the founder of Hidase Publishing and author of 'The Bible Explained,' a guide helping college students understand the essentials of the Christian faith.",
+    "affiliation": "Reformed University Fellowship (Howard University)",
+    "role": "Campus Pastor & Author",
     "education": "",
     "website": "",
     "books": [],
     "initials": "CCJ"
-  },
-  {
-    "name": "Jhas Williams",
-    "slug": "jhas-williams",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JW"
   },
   {
     "name": "Siobhán O'Grady",
@@ -13106,9 +12886,9 @@
   {
     "name": "Kevin Burrell",
     "slug": "kevin-burrell",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Kevin Burrell is the co-lead pastor of StoneBridge Church Community in Charlotte, North Carolina, where his responsibilities include preaching and congregational care. He is the author of 'Considering Sparrows: What Birds Teach Us About Who We Are, Where We're Going, and the Joy of Following Jesus' and writes the devotional blog 'Ornitheology.'",
+    "affiliation": "StoneBridge Church Community, Charlotte, NC",
+    "role": "Pastor & Author",
     "education": "",
     "website": "",
     "books": [],
@@ -13289,9 +13069,9 @@
   {
     "name": "Benjamin L. Mabry",
     "slug": "benjamin-l-mabry",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Benjamin L. Mabry, PhD, is an assistant professor of political science at Lincoln Memorial University and a regular contributor to American Reformer, writing on Christian social and political thought. His work also appears in First Things and The American Mind, examining how belief systems shape political action.",
+    "affiliation": "American Reformer",
+    "role": "Professor & Writer",
     "education": "",
     "website": "",
     "books": [],
@@ -13329,17 +13109,6 @@
     "website": "",
     "books": [],
     "initials": "HB/DB"
-  },
-  {
-    "name": "Caroline Davies",
-    "slug": "caroline-davies",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CD"
   },
   {
     "name": "Laetitia Vançon",
@@ -13430,17 +13199,6 @@
     "initials": "AM"
   },
   {
-    "name": "Ismaeel Naar",
-    "slug": "ismaeel-naar",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "IN"
-  },
-  {
     "name": "Erica Barthalow",
     "slug": "erica-barthalow",
     "bio": "Erica Barthalow is an author, blogger, and writing coach who helps people wrestle well with faith when it is difficult. A former missionary to India and a pastor's wife, she writes on doubt and prayer and is the author of 'Holy Doubt' and 'Praying is (not) Hard.' She and her family live in central Iowa.",
@@ -13487,11 +13245,11 @@
   {
     "name": "Jill E. McCormick",
     "slug": "jill-e-mccormick",
-    "bio": "",
+    "bio": "Jill E. McCormick is a Christian writer, speaker, and church communications director who connects women to Jesus through 'common-sense grace.' She hosts the Grace In Real Life podcast and writes at jillemccormick.com, with work featured in RELEVANT and For Every Mom, and speaks at women's retreats and mom's groups.",
     "affiliation": "",
-    "role": "",
+    "role": "Writer & Speaker",
     "education": "",
-    "website": "",
+    "website": "https://www.jillemccormick.com/",
     "books": [],
     "initials": "JEM"
   },
@@ -13505,39 +13263,6 @@
     "website": "",
     "books": [],
     "initials": "NG"
-  },
-  {
-    "name": "Aurelien Breeden and Zane Irwin",
-    "slug": "aurelien-breeden-and-zane-irwin",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AZ"
-  },
-  {
-    "name": "Daria Matviichuk",
-    "slug": "daria-matviichuk",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "DM"
-  },
-  {
-    "name": "Samantha Pearson",
-    "slug": "samantha-pearson",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SP"
   },
   {
     "name": "Jon Coombs",
@@ -13617,17 +13342,6 @@
     "initials": "LT"
   },
   {
-    "name": "Ishani Desai",
-    "slug": "ishani-desai",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "ID"
-  },
-  {
     "name": "Dan Olinger",
     "slug": "dan-olinger",
     "bio": "Dan Olinger is a writer and editor known for his work in Christian publishing and content creation. He has contributed to various evangelical publications and is recognized for his thoughtful approach to contemporary Christian issues.",
@@ -13659,17 +13373,6 @@
     "website": "",
     "books": [],
     "initials": "AG"
-  },
-  {
-    "name": "Jane Bradley",
-    "slug": "jane-bradley",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JB"
   },
   {
     "name": "Dustin Volz and Michael Schwirtz",
@@ -13714,17 +13417,6 @@
     "website": "",
     "books": [],
     "initials": "KC"
-  },
-  {
-    "name": "Isayen Herrera and Genevieve Glatsky",
-    "slug": "isayen-herrera-and-genevieve-glatsky",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "IH & GG"
   },
   {
     "name": "Stephen Mattson",
@@ -13798,35 +13490,13 @@
   {
     "name": "Cal Crucis",
     "slug": "cal-crucis",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Cal Crucis is a Reformed, Anglican-minded Christian writer whose essays on theology, church history, and Christian political thought appear at American Reformer, the Theopolis Institute, and The North American Anglican. Writing under a pen name, he draws on patristics, philosophy, and early modern British history to explore faithful Christian politics.",
+    "affiliation": "American Reformer",
+    "role": "Writer",
     "education": "",
     "website": "",
     "books": [],
     "initials": "CC"
-  },
-  {
-    "name": "Isayen Herrera",
-    "slug": "isayen-herrera",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "IH"
-  },
-  {
-    "name": "Fabiola Ferrero",
-    "slug": "fabiola-ferrero",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "FF"
   },
   {
     "name": "Luis Ferré-Sadurní and Leo Sands",
@@ -13928,17 +13598,6 @@
     "initials": "EB"
   },
   {
-    "name": "Leo Sands",
-    "slug": "leo-sands",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "LS"
-  },
-  {
     "name": "Isayen Herrera and Tibisay Romero",
     "slug": "isayen-herrera-and-tibisay-romero",
     "bio": "Isayen Herrera and Tibisay Romero are Christian content creators and writers dedicated to sharing faith-based insights with Spanish-speaking and bilingual audiences. Through their collaborative work, they seek to inspire and encourage believers in their spiritual journeys.",
@@ -13948,17 +13607,6 @@
     "website": "",
     "books": [],
     "initials": "IH & TR"
-  },
-  {
-    "name": "Pei-Lin Wu and Kiuko Notoya",
-    "slug": "peilin-wu-and-kiuko-notoya",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "PWN"
   },
   {
     "name": "Jacob Leeming",
@@ -13974,9 +13622,9 @@
   {
     "name": "Michael Grayston",
     "slug": "michael-grayston",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Michael Grayston (EdD) is the Discipleship and Groups Pastor at LifeFamily, with prior service as a location pastor at Next Level Church and as Next Steps and Multisite Pastor at Centerpointe Church. He writes on spiritual formation and small-group discipleship, drawing on more than a decade in healthcare leadership before entering full-time ministry.",
+    "affiliation": "LifeFamily",
+    "role": "Discipleship Pastor",
     "education": "",
     "website": "",
     "books": [],
@@ -14594,9 +14242,9 @@
   {
     "name": "Tyler Harden",
     "slug": "tyler-harden",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Tyler Harden is a church growth consultant and co-founder of Firm Foundations Marketing, where he helps plateaued churches clarify their focus and reach their communities. A graduate of Liberty University, he writes for Lifeway Research on church revitalization, outreach, and communications, and lives in Roanoke, Virginia.",
+    "affiliation": "Lifeway Research (contributor)",
+    "role": "Church Growth Consultant & Writer",
     "education": "",
     "website": "",
     "books": [],
@@ -14693,11 +14341,11 @@
   {
     "name": "Seth Lewis",
     "slug": "seth-lewis",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Seth Lewis is pastor of Carrigtwohill Baptist Church on the south coast of Ireland and the author of 'Dream Small: The Secret Power of the Ordinary Christian Life' and 'The Language of Rivers and Stars.' He writes weekly at sethlewis.ie and contributes to outlets such as The Good Book Company and Common Good.",
+    "affiliation": "Carrigtwohill Baptist Church, Ireland",
+    "role": "Pastor & Author",
     "education": "",
-    "website": "",
+    "website": "https://sethlewis.ie/",
     "books": [],
     "initials": "SL"
   },
@@ -14711,17 +14359,6 @@
     "website": "",
     "books": [],
     "initials": "TS"
-  },
-  {
-    "name": "Thomas Grove",
-    "slug": "thomas-grove",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "TG"
   },
   {
     "name": "Selam Gebrekidan and Pei-Lin Wu",
@@ -14823,17 +14460,6 @@
     "initials": "LK PW"
   },
   {
-    "name": "Katrina Northrop",
-    "slug": "katrina-northrop",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "KN"
-  },
-  {
     "name": "Stephen Chandler",
     "slug": "stephen-chandler",
     "bio": "Stephen Chandler is a Christian author and speaker dedicated to helping believers develop a deeper understanding of Scripture and authentic faith. His work encourages readers to engage meaningfully with God's Word and apply biblical principles to everyday life.",
@@ -14886,9 +14512,9 @@
   {
     "name": "Madelyn Moses",
     "slug": "madelyn-moses",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
+    "bio": "Madelyn Moses is a Christian writer with a passion to provide biblical resources to edify the church, contributing articles to Reformation21, the online magazine of the Alliance of Confessing Evangelicals. Her writing addresses topics such as singleness and faithful Christian living, rooted in her involvement with a church plant.",
+    "affiliation": "Reformation21 / Alliance of Confessing Evangelicals",
+    "role": "Writer",
     "education": "",
     "website": "",
     "books": [],
@@ -14958,17 +14584,6 @@
       }
     ],
     "initials": "SC"
-  },
-  {
-    "name": "Rebecca Feng",
-    "slug": "rebecca-feng",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RF"
   },
   {
     "name": "Leo Sands and Michael Levenson",
