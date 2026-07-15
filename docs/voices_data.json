@@ -14595,5 +14595,48 @@
     "website": "",
     "books": [],
     "initials": "LSL"
+  },
+  {
+    "name": "Chris Hutchinson",
+    "slug": "chris-hutchinson",
+    "bio": "Chris Hutchinson is a leadership coach and author dedicated to helping Christians develop character and competence in their personal and professional lives. His work focuses on bridging faith and practical leadership development, offering insights rooted in biblical wisdom for modern leaders.",
+    "affiliation": "",
+    "role": "Leadership Coach & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Trap of Discouragement",
+        "amazon_url": "https://www.amazon.com/s?k=The+Trap+of+Discouragement+Chris+Hutchinson"
+      }
+    ],
+    "initials": "CH"
+  },
+  {
+    "name": "Shane Pruitt",
+    "slug": "shane-pruitt",
+    "bio": "Shane Pruitt is a pastor, author, and speaker who focuses on helping Christians navigate faith in the modern world. He is known for his practical teaching on biblical topics and his work in discipleship and ministry leadership.",
+    "affiliation": "The Crossing Church",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The God of All Comfort",
+        "amazon_url": "https://www.amazon.com/s?k=The+God+of+All+Comfort+Shane+Pruitt"
+      }
+    ],
+    "initials": "SP"
+  },
+  {
+    "name": "Travis Mitchell",
+    "slug": "travis-mitchell",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TM"
   }
 ]
