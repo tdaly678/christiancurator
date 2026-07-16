@@ -1,26 +1,51 @@
 [
   {
+    "source_name": "BBC News",
+    "source_category": "news",
+    "source_type": "world_news",
+    "independent": false,
+    "author": "",
+    "title": "China economic growth falls sharply, missing target",
+    "url": "https://www.bbc.co.uk/news/articles/cd959x4edy8o?at_medium=RSS&at_campaign=rss",
+    "summary": "Weak demand domestically and the impact of the Iran war on oil prices overshadowed the country's strong exports.",
+    "full_content": "",
+    "published": "Wed, 15 Jul 2026 10:21:48 GMT",
+    "fetched_at": "2026-07-16T07:51:56.282375",
+    "score": 4,
+    "tags": [
+      "data",
+      "news"
+    ],
+    "rewritten_title": "China's Growth Engine Stalls Despite Export Wins",
+    "top_world_story": true,
+    "personas": [],
+    "topic_cluster": "unique",
+    "perspective": "news",
+    "final_score": 6.6,
+    "recency_boost": 1.5,
+    "trending_boost": 1.5
+  },
+  {
     "source_name": "Lifeway Research",
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Shane Pruitt",
-    "title": "How to Reach Generation Alpha by Equipping Their Parents",
-    "url": "https://research.lifeway.com/2026/07/15/how-to-reach-generation-alpha-by-equipping-their-parents/",
-    "summary": "<p>If we want to reach Generation Alpha, in addition to being strategic about ministering to children and students, we must focus on the parents. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/07/15/how-to-reach-generation-alpha-by-equipping-their-parents/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/07/15/how-to-reach-generation-alpha-by-equipping-their-parents/\">How to Reach Generation Alpha by Equipping Their Parents</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "author": "Jason McConnell",
+    "title": "6 Reasons Your Rural Church Isn’t Experiencing Growth",
+    "url": "https://research.lifeway.com/2026/07/16/6-reasons-your-rural-church-isnt-experiencing-growth/",
+    "summary": "<p>Rural church growth may be limited, but the significance of these congregations remains substantial, as they continue to offer the gospel. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/07/16/6-reasons-your-rural-church-isnt-experiencing-growth/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/07/16/6-reasons-your-rural-church-isnt-experiencing-growth/\">6 Reasons Your Rural Church Isn’t Experiencing Growth</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "full_content": "",
-    "published": "Wed, 15 Jul 2026 06:31:00 +0000",
-    "fetched_at": "2026-07-15T07:48:27.095248",
+    "published": "Thu, 16 Jul 2026 06:19:00 +0000",
+    "fetched_at": "2026-07-16T07:53:21.465880",
     "score": 5,
     "tags": [
-      "data"
+      "church life"
     ],
-    "rewritten_title": "Gen Alpha Is Slipping Away—Unless the Church Reaches Their Parents First",
+    "rewritten_title": "Rural Churches Are Shrinking. They're Not Irrelevant.",
     "personas": [
-      "parent",
       "pastor"
     ],
-    "topic_cluster": "gen_alpha_ministry",
+    "topic_cluster": "rural_church_ministry",
     "perspective": "neutral",
     "final_score": 6.5,
     "recency_boost": 1.5
@@ -30,49 +55,25 @@
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Reem Nadeem",
-    "title": "Party Affiliation Fact Sheet (NPORS)",
-    "url": "https://www.pewresearch.org/politics/fact-sheet/party-affiliation-fact-sheet-npors/",
-    "summary": "Explore trends in partisan identification among U.S. adults using data from Pew Research Center’s National Public Opinion Reference Survey (NPORS).",
+    "author": "Beshay",
+    "title": "How do views of China differ across high- and middle-income countries?",
+    "url": "https://www.pewresearch.org/global/2026/07/15/how-do-views-of-china-differ-across-high-and-middle-income-countries/",
+    "summary": "People in middle-income countries are more likely that those in wealthier nations to see China favorably and to say its government respects personal freedoms.",
     "full_content": "",
-    "published": "Tue, 14 Jul 2026 17:56:26 +0000",
-    "fetched_at": "2026-07-15T07:48:26.691716",
+    "published": "Wed, 15 Jul 2026 16:58:36 +0000",
+    "fetched_at": "2026-07-16T07:53:21.058494",
     "score": 4,
     "tags": [
-      "data"
+      "data",
+      "politics"
     ],
-    "rewritten_title": "Christians' Political Realignment: Where the Evangelical Vote Is Shifting",
+    "rewritten_title": "Middle-Income Nations See China Differently Than the West Does",
     "personas": [
       "professional"
     ],
-    "topic_cluster": "pew_partisan_trends",
+    "topic_cluster": "china_global_views",
     "perspective": "neutral",
     "final_score": 5.5,
-    "recency_boost": 1.5
-  },
-  {
-    "source_name": "Lifeway Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Aaron Earls",
-    "title": "Men and Women Have Unique Discipleship Strengths, Weaknesses",
-    "url": "https://research.lifeway.com/2026/07/14/men-and-women-have-unique-discipleship-strengths-weaknesses/",
-    "summary": "<p>In general, women have higher discipleship scores than men, according to analysis from Lifeway Research's State of Discipleship study. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/07/14/men-and-women-have-unique-discipleship-strengths-weaknesses/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/07/14/men-and-women-have-unique-discipleship-strengths-weaknesses/\">Men and Women Have Unique Discipleship Strengths, Weaknesses</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
-    "full_content": "",
-    "published": "Tue, 14 Jul 2026 14:45:00 +0000",
-    "fetched_at": "2026-07-15T07:48:27.095267",
-    "score": 4,
-    "tags": [
-      "data"
-    ],
-    "rewritten_title": "The Discipleship Gap: Why Women Are Outpacing Men in Faith",
-    "personas": [
-      "pastor"
-    ],
-    "topic_cluster": "discipleship_research",
-    "perspective": "neutral",
-    "final_score": 4.75,
     "recency_boost": 1.5
   }
 ]
