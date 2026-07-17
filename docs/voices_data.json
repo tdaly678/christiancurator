@@ -14704,5 +14704,76 @@
     "website": "",
     "books": [],
     "initials": "JC"
+  },
+  {
+    "name": "William Barclay",
+    "slug": "william-barcley",
+    "bio": "William Barclay was a renowned Scottish biblical scholar and theologian whose accessible commentaries have helped millions understand Scripture. His prolific writing and teaching ministry at the University of Glasgow made complex theological concepts available to everyday Christians. Barclay's warm pastoral approach and commitment to making the Bible relevant earned him deep respect across denominational lines.",
+    "affiliation": "University of Glasgow, Church of Scotland",
+    "role": "Biblical Scholar, Professor & Author",
+    "education": "D.D., University of Glasgow",
+    "website": "",
+    "books": [
+      {
+        "title": "The Daily Study Bible Series",
+        "amazon_url": "https://www.amazon.com/s?k=Daily+Study+Bible+William+Barclay"
+      },
+      {
+        "title": "A New Testament Wordbook",
+        "amazon_url": "https://www.amazon.com/s?k=New+Testament+Wordbook+William+Barclay"
+      },
+      {
+        "title": "The Gospel of Matthew",
+        "amazon_url": "https://www.amazon.com/s?k=Gospel+of+Matthew+William+Barclay"
+      },
+      {
+        "title": "The Gospel of Mark",
+        "amazon_url": "https://www.amazon.com/s?k=Gospel+of+Mark+William+Barclay"
+      },
+      {
+        "title": "The Letter to the Romans",
+        "amazon_url": "https://www.amazon.com/s?k=Letter+to+the+Romans+William+Barclay"
+      },
+      {
+        "title": "Ethics in a Permissive Society",
+        "amazon_url": "https://www.amazon.com/s?k=Ethics+Permissive+Society+William+Barclay"
+      }
+    ],
+    "initials": "WB"
+  },
+  {
+    "name": "Scott Aniol",
+    "slug": "scott-aniol",
+    "bio": "Scott Aniol is a Christian author, musician, and cultural commentator who writes extensively on worship, aesthetics, and discernment in the modern church. He is known for his thoughtful analysis of contemporary Christian culture and his advocacy for biblical standards in worship and the arts. Through his writing and speaking, Aniol encourages believers to think critically about how faith intersects with culture.",
+    "affiliation": "Religious Affections Ministries; G3 Ministries",
+    "role": "Author, Musician & Cultural Commentator",
+    "education": "",
+    "website": "https://religiousaffections.org",
+    "books": [
+      {
+        "title": "Worship in the Melting Pot",
+        "amazon_url": "https://www.amazon.com/s?k=Worship+in+the+Melting+Pot+Scott+Aniol"
+      },
+      {
+        "title": "Thought Life",
+        "amazon_url": "https://www.amazon.com/s?k=Thought+Life+Scott+Aniol"
+      },
+      {
+        "title": "For Love of the Church",
+        "amazon_url": "https://www.amazon.com/s?k=For+Love+of+the+Church+Scott+Aniol"
+      }
+    ],
+    "initials": "SA"
+  },
+  {
+    "name": "Robert Ordway",
+    "slug": "robert-ordway",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RO"
   }
 ]
