@@ -48,6 +48,12 @@ jobs:
       - name: Rebuild /topics/ hub index
         run: python3 scripts/build_topics_index.py
 
+      - name: Rebuild /voices/ category hubs
+        run: python3 scripts/build_voice_hubs.py
+
+      - name: Refresh recent-articles sections on voice + topic pages
+        run: python3 scripts/build_recent_articles.py
+
       - name: Inject Featured deep dives block into homepage + digest
         run: python3 scripts/inject_featured_deep_dives.py
 
@@ -62,7 +68,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash origin main
-          git add docs/index.html docs/topics/index.html docs/digest/ docs/yesterday.json docs/email_draft.html docs/article_history.json docs/research_articles.json docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-topics.xml docs/sitemap-voices.xml docs/sitemap-daily.xml docs/sitemap-archive.xml docs/archive/ docs/daily/ docs/_pagefind/ docs/voices/ docs/voices_data.json docs/spotlight_topic_log.json
+          git add docs/index.html docs/topics/ docs/digest/ docs/yesterday.json docs/email_draft.html docs/article_history.json docs/research_articles.json docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-topics.xml docs/sitemap-voices.xml docs/sitemap-daily.xml docs/sitemap-archive.xml docs/archive/ docs/daily/ docs/_pagefind/ docs/voices/ docs/voices_data.json docs/spotlight_topic_log.json
           git diff --staged --quiet || git commit -m "chore: daily curator run $(date -u +%Y-%m-%d)"
           git push origin main
 

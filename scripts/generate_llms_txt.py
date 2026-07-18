@@ -51,6 +51,7 @@ DAILY_CONTENT = f"""
 - [Today's Digest]({SITE_URL}/digest/): Today's curated roundup of the best evangelical writing from across the web
 - [Archive]({SITE_URL}/archive/): Past daily digests, searchable by date
 - [Voices]({SITE_URL}/voices/): Authors and publications featured across our curation
+- [Pastors & Church Leaders]({SITE_URL}/voices/pastors/), [Theologians & Scholars]({SITE_URL}/voices/theologians-scholars/), [Writers & Authors]({SITE_URL}/voices/writers/), [Apologists]({SITE_URL}/voices/apologists/), [Bible Teachers]({SITE_URL}/voices/bible-teachers/), [Journalists]({SITE_URL}/voices/journalists/), [Ministry Leaders]({SITE_URL}/voices/ministry-leaders/), [Speakers & Creators]({SITE_URL}/voices/speakers-creators/): Voice profiles by category
 - [About Christian Curator]({SITE_URL}/about/): Our mission, editorial methodology, statement of faith, and founder bio (Tom Daly, Teaching Pastor at Lancaster Evangelical Free Church)
 """
 

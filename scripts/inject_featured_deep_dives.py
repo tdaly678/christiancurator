@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Inject a "Featured deep dives" block into docs/index.html and docs/digest/index.html.
 
-Picks 5 topic pages + 5 voice pages at random, seeded by today's date so the
+Picks 6 deep-dive topic pages at random, seeded by today's date so the
 selection rotates daily but is deterministic per day. Refreshes inbound links to
 otherwise-static deep-dive URLs from the highest-authority pages on the site,
 which (a) signals freshness to crawlers on every daily run and (b) ensures every
@@ -31,8 +31,8 @@ TARGETS = [
 BLOCK_START = "<!-- CC-FEATURED-DEEP-DIVES:START -->"
 BLOCK_END = "<!-- CC-FEATURED-DEEP-DIVES:END -->"
 
-N_TOPICS = 5
-N_VOICES = 5
+N_TOPICS = 6
+N_VOICES = 0  # voices are surfaced via /voices/ hub pages, not the homepage deep-dives block
 
 
 def parse_meta(html: str, attr: str, name_value: str) -> str:
@@ -150,7 +150,7 @@ def build_block(topics: list[dict], voices: list[dict]) -> str:
         f'  <section class="cc-fdd-section" aria-label="Featured deep dives">\n'
         f'    {style}\n'
         f'    <h2 class="cc-fdd-heading">Featured deep dives</h2>\n'
-        f'    <div class="cc-fdd-sub">A daily-rotating selection from our topic and voice archives.</div>\n'
+        f'    <div class="cc-fdd-sub">A daily-rotating selection from our topic archives.</div>\n'
         f'    <div class="cc-fdd-grid">\n'
         + "\n".join(rows)
         + f'\n    </div>\n'
