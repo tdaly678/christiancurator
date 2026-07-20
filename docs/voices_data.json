@@ -14929,5 +14929,58 @@
     "website": "",
     "books": [],
     "initials": "CWA"
+  },
+  {
+    "name": "Gerrit Scott Dawson",
+    "slug": "gerrit-scott-dawson",
+    "bio": "Gerrit Scott Dawson is a pastor and author who has devoted his ministry to helping Christians deepen their understanding of Scripture and grow in their faith. Through his writing and pastoral work, he emphasizes the transformative power of God's Word and encourages believers to engage thoughtfully with biblical truth.",
+    "affiliation": "Clearnote Church; Lexington Theological Seminary",
+    "role": "Pastor & Author",
+    "education": "Gordon-Conwell Theological Seminary (M.Div.)",
+    "website": "",
+    "books": [
+      {
+        "title": "The Blessing Life",
+        "amazon_url": "https://www.amazon.com/s?k=The+Blessing+Life+Gerrit+Scott+Dawson"
+      },
+      {
+        "title": "Jesus Ascended",
+        "amazon_url": "https://www.amazon.com/s?k=Jesus+Ascended+Gerrit+Scott+Dawson"
+      }
+    ],
+    "initials": "GSD"
+  },
+  {
+    "name": "Michael Clary",
+    "slug": "michael-clary",
+    "bio": "Michael Clary is a Christian author and speaker known for his work in faith-based content creation and spiritual encouragement. His writings focus on helping believers deepen their relationship with Christ and navigate modern challenges through a biblical lens.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MC"
+  },
+  {
+    "name": "Mark Croston",
+    "slug": "mark-croston",
+    "bio": "Mark Croston is a Christian author and communicator who writes about faith, culture, and discipleship. His work encourages believers to engage thoughtfully with contemporary issues through a biblical worldview.",
+    "affiliation": "",
+    "role": "Author & Christian Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MC"
+  },
+  {
+    "name": "Nformankatz",
+    "slug": "nformankatz",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "NK"
   }
 ]
