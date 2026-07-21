@@ -14982,5 +14982,43 @@
     "website": "",
     "books": [],
     "initials": "NK"
+  },
+  {
+    "name": "Erik Raymond",
+    "slug": "erik-raymond",
+    "bio": "Erik Raymond is a pastor, author, and thoughtful voice in contemporary Christian discourse who has contributed to various evangelical publications and platforms. He is known for his work exploring biblical theology, church leadership, and practical Christian living with a focus on Reformed evangelical perspectives.",
+    "affiliation": "The Gospel Coalition, Desiring God",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Inthirst: Living in the Overflow of God's Provision",
+        "amazon_url": "https://www.amazon.com/s?k=Inthirst+Living+Overflow+Gods+Provision+Erik+Raymond"
+      }
+    ],
+    "initials": "ER"
+  },
+  {
+    "name": "William B. Fullilove",
+    "slug": "william-b-fullilove",
+    "bio": "William B. Fullilove is a Christian author and scholar dedicated to exploring theological themes and their practical application in contemporary faith. His work focuses on enriching Christian understanding through accessible and thoughtful writing.",
+    "affiliation": "",
+    "role": "Author & Scholar",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "WBF"
+  },
+  {
+    "name": "Jonathan Tomes",
+    "slug": "jonathan-tomes",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JT"
   }
 ]
