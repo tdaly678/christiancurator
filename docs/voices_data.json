@@ -15020,5 +15020,104 @@
     "website": "",
     "books": [],
     "initials": "JT"
+  },
+  {
+    "name": "Costi Hinn",
+    "slug": "costi-hinn",
+    "bio": "Costi Hinn is a pastor, author, and speaker known for his biblical teaching and commitment to expository preaching. He has been involved in Christian ministry and has written on topics related to faith, discipleship, and church leadership. Costi is dedicated to helping believers grow deeper in their understanding of Scripture and its practical application to daily life.",
+    "affiliation": "Renewal Chapel",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Knowing Jesus Through the Old Testament",
+        "amazon_url": "https://www.amazon.com/s?k=Knowing+Jesus+Through+the+Old+Testament+Costi+Hinn"
+      },
+      {
+        "title": "The Messiah Conspiracy",
+        "amazon_url": "https://www.amazon.com/s?k=The+Messiah+Conspiracy+Costi+Hinn"
+      }
+    ],
+    "initials": "CH"
+  },
+  {
+    "name": "Carter Moore",
+    "slug": "carter-moore",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CM"
+  },
+  {
+    "name": "Adam Callaway",
+    "slug": "adam-callaway",
+    "bio": "Adam Callaway is a Christian content creator and speaker dedicated to helping believers grow in their faith and understanding of Scripture. Through his writing and teaching, he encourages Christians to deepen their relationship with God and live out their convictions in daily life.",
+    "affiliation": "",
+    "role": "Christian Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AC"
+  },
+  {
+    "name": "Jared Jeter",
+    "slug": "jared-jeter",
+    "bio": "Jared Jeter is a Christian author and content creator dedicated to exploring faith, culture, and spiritual growth. His writing resonates with readers seeking thoughtful perspectives on living out their faith in today's world.",
+    "affiliation": "",
+    "role": "Author & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JJ"
+  },
+  {
+    "name": "Chris Maxwell",
+    "slug": "chris-maxwell",
+    "bio": "Chris Maxwell is a prolific Christian author and speaker known for his inspirational and devotional works that encourage spiritual growth and practical faith. His writing often explores themes of hope, redemption, and God's grace in everyday life, resonating deeply with evangelical readers seeking deeper spiritual insight.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Shepherd's Life",
+        "amazon_url": "https://www.amazon.com/s?k=The+Shepherd%27s+Life+Chris+Maxwell"
+      },
+      {
+        "title": "Evergreen: Staying Fresh Through the Seasons of Life",
+        "amazon_url": "https://www.amazon.com/s?k=Evergreen+Staying+Fresh+Through+Seasons+Life+Chris+Maxwell"
+      },
+      {
+        "title": "Pause: Finding Rest and Renewal in Your Faith",
+        "amazon_url": "https://www.amazon.com/s?k=Pause+Finding+Rest+Renewal+Faith+Chris+Maxwell"
+      }
+    ],
+    "initials": "CM"
+  },
+  {
+    "name": "Stephanie Granada",
+    "slug": "stephanie-granada",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SG"
+  },
+  {
+    "name": "Michael Thomas Jones",
+    "slug": "michael-thomas-jones",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MTJ"
   }
 ]
