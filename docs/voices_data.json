@@ -15119,5 +15119,102 @@
     "website": "",
     "books": [],
     "initials": "MTJ"
+  },
+  {
+    "name": "Adam Niess",
+    "slug": "adam-niess",
+    "bio": "Adam Niess is a Christian author and content creator dedicated to helping believers deepen their faith and understanding of Scripture. Through his writing and teaching, he explores practical applications of biblical truth for contemporary Christian living.",
+    "affiliation": "",
+    "role": "Author & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AN"
+  },
+  {
+    "name": "Jackie Hill Perry",
+    "slug": "jackie-hill-perry",
+    "bio": "Jackie Hill Perry is a poet, author, and speaker who writes from a distinctly Christian perspective on faith, identity, and culture. Known for her thoughtful engagement with complex theological topics and her authentic voice, she has become a trusted voice for many evangelical readers seeking depth and honesty in Christian content.",
+    "affiliation": "The Gospel Coalition, Christianity Today",
+    "role": "Author, Poet & Speaker",
+    "education": "New Orleans Baptist Theological Seminary",
+    "website": "https://www.jackiehillperry.com",
+    "books": [
+      {
+        "title": "Gay Girl, Good God: The Story of Who I Was and Who God Has Always Been",
+        "amazon_url": "https://www.amazon.com/s?k=Gay+Girl+Good+God+Jackie+Hill+Perry"
+      },
+      {
+        "title": "Holier Than Thou: How God's Holiness Helps Us Trust Him",
+        "amazon_url": "https://www.amazon.com/s?k=Holier+Than+Thou+Jackie+Hill+Perry"
+      },
+      {
+        "title": "Every Common Bush: A Book of Everyday Insubordination",
+        "amazon_url": "https://www.amazon.com/s?k=Every+Common+Bush+Jackie+Hill+Perry"
+      }
+    ],
+    "initials": "JHP"
+  },
+  {
+    "name": "Rory Shiner",
+    "slug": "rory-shiner",
+    "bio": "Rory Shiner is an Australian pastor and author known for his thoughtful biblical teaching and engagement with Reformed theology. He serves in pastoral ministry and writes to help Christians understand and apply Scripture to their lives with clarity and warmth.",
+    "affiliation": "The Pulse Church",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "https://www.roryshiner.com",
+    "books": [
+      {
+        "title": "How to Read the Bible Without Losing Your Mind",
+        "amazon_url": "https://www.amazon.com/s?k=How+to+Read+the+Bible+Without+Losing+Your+Mind+Rory+Shiner"
+      }
+    ],
+    "initials": "RS"
+  },
+  {
+    "name": "Earle Martin Combs V",
+    "slug": "earle-martin-combs-v",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EMC"
+  },
+  {
+    "name": "Neal Samudre",
+    "slug": "neal-samudre",
+    "bio": "Neal Samudre is a writer and content creator focused on Christian discipleship and spiritual formation. His work explores practical theology and helping believers grow deeper in their faith through accessible, thoughtful writing.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "NS"
+  },
+  {
+    "name": "Daniel Strange",
+    "slug": "daniel-strange",
+    "bio": "Daniel Strange is a theologian and author who has written extensively on Christian worldview, apologetics, and cultural engagement. His work seeks to help believers think Christianly about contemporary issues and develop a robust biblical perspective on modern life.",
+    "affiliation": "Crossway; The Christian Institute",
+    "role": "Author & Theologian",
+    "education": "PhD in Theology",
+    "website": "",
+    "books": [
+      {
+        "title": "Making Sense of the Good, the Bad, and the Ugly",
+        "amazon_url": "https://www.amazon.com/s?k=Making+Sense+of+the+Good+the+Bad+and+the+Ugly+Daniel+Strange"
+      },
+      {
+        "title": "God and the Good Life",
+        "amazon_url": "https://www.amazon.com/s?k=God+and+the+Good+Life+Daniel+Strange"
+      },
+      {
+        "title": "Plugged In",
+        "amazon_url": "https://www.amazon.com/s?k=Plugged+In+Daniel+Strange"
+      }
+    ],
+    "initials": "DS"
   }
 ]
