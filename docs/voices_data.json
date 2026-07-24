@@ -15216,5 +15216,58 @@
       }
     ],
     "initials": "DS"
+  },
+  {
+    "name": "Steve Mathewson",
+    "slug": "steve-mathewson",
+    "bio": "Steve Mathewson is a pastor and author known for his work in biblical preaching and sermon development. He has served as a pastor and leadership mentor, equipping church leaders to communicate God's Word more effectively through practical biblical instruction.",
+    "affiliation": "Calvary Chapel",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Art of Preaching with Power",
+        "amazon_url": "https://www.amazon.com/s?k=Art+of+Preaching+with+Power+Steve+Mathewson"
+      },
+      {
+        "title": "Preaching the Whole Bible as Christian Scripture",
+        "amazon_url": "https://www.amazon.com/s?k=Preaching+the+Whole+Bible+as+Christian+Scripture+Mathewson"
+      }
+    ],
+    "initials": "SM"
+  },
+  {
+    "name": "Levi Berntson",
+    "slug": "levi-berntson",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LB"
+  },
+  {
+    "name": "John Simons",
+    "slug": "john-simons",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JS"
+  },
+  {
+    "name": "Zephram Foster",
+    "slug": "zephram-foster",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ZF"
   }
 ]
