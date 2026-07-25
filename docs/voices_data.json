@@ -15269,5 +15269,66 @@
     "website": "",
     "books": [],
     "initials": "ZF"
+  },
+  {
+    "name": "Richard Baxter",
+    "slug": "richard-baxter",
+    "bio": "Richard Baxter (1615-1691) was an English Puritan theologian and pastor who profoundly shaped Reformed Christianity through his pastoral ministry and prolific writings. Known for his compassionate approach to ministry and emphasis on practical godliness, Baxter served as pastor of Kidderminster for nearly two decades and authored over 140 works that addressed theology, devotion, and Christian living. His life exemplified faithful witness through suffering, as he endured imprisonment and hardship during times of religious persecution.",
+    "affiliation": "Kidderminster Church",
+    "role": "Puritan Pastor & Theologian",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Saints' Everlasting Rest",
+        "amazon_url": "https://www.amazon.com/s?k=The+Saints+Everlasting+Rest+Richard+Baxter"
+      },
+      {
+        "title": "A Call to the Unconverted",
+        "amazon_url": "https://www.amazon.com/s?k=A+Call+to+the+Unconverted+Richard+Baxter"
+      },
+      {
+        "title": "The Reformed Pastor",
+        "amazon_url": "https://www.amazon.com/s?k=The+Reformed+Pastor+Richard+Baxter"
+      },
+      {
+        "title": "Christian Directory",
+        "amazon_url": "https://www.amazon.com/s?k=Christian+Directory+Richard+Baxter"
+      }
+    ],
+    "initials": "RB"
+  },
+  {
+    "name": "Barbara Harper",
+    "slug": "barbara-harper",
+    "bio": "Barbara Harper is a recognized voice in Christian education and discipleship, known for her thoughtful approach to faith formation and biblical teaching. She has contributed to various Christian publications and speaking engagements focused on helping believers deepen their spiritual understanding.",
+    "affiliation": "",
+    "role": "Christian Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BH"
+  },
+  {
+    "name": "Abby Wong-Heffter",
+    "slug": "abby-wongheffter",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AWH"
+  },
+  {
+    "name": "Will Plonk",
+    "slug": "will-plonk",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "WP"
   }
 ]

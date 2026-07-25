@@ -1,5 +1,31 @@
 [
   {
+    "source_name": "Pew Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Reem Nadeem",
+    "title": "How political typology groups feel about the midterm elections and Trump",
+    "url": "https://www.pewresearch.org/politics/2026/07/23/how-political-typology-groups-feel-about-the-midterm-elections-and-trump/",
+    "summary": "The groups in Pew Research Center’s political typology – which goes beyond political party to place Americans into groups based on their political values and attitudes – vary a great deal in how much attention they are paying to the midterm elections, what their early voting preferences are, and how their views of Donald Trump [&#8230;]",
+    "full_content": "",
+    "published": "Thu, 23 Jul 2026 15:46:31 +0000",
+    "fetched_at": "2026-07-25T07:49:00.427925",
+    "score": 4,
+    "tags": [
+      "data"
+    ],
+    "rewritten_title": "Trump's Shadow Looms Over Midterms as America Fractures Into Five Political Tribes",
+    "personas": [
+      "professional",
+      "student"
+    ],
+    "topic_cluster": "us_political_typology",
+    "perspective": "neutral",
+    "final_score": 4.75,
+    "recency_boost": 0.75
+  },
+  {
     "source_name": "Ryan Burge",
     "source_category": "culture",
     "source_type": "christian",
@@ -10,71 +36,48 @@
     "summary": "In an era of civic withdrawal, houses of worship are doing disproportionate social work for those who need it most",
     "full_content": "<p>If you&#8217;ve been around my work at all, you know very well that the relationship between education and religious attendance cuts against the prevailing view. If you walked up to the average American and asked them, &#8220;<strong>Who is more likely to go to church this weekend &#8212; a person who earned no more than a high school diploma or someone with a graduate degree?</strong>&#8221; I bet that the vast majority of those being quizzed would choose the person with less education.</p><p>Here are three different datasets, all collected in a pretty similar time frame, that just test that relationship.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!OEBT!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F923a40f4-6d02-4775-862e-2436a75e677f_2048x1365.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"970\" src=\"https://substackcdn.com/image/fetch/$s_!OEBT!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F923a40f4-6d02-4775-862e-2436a75e677f_2048x1365.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p>You can see that in the Cooperative Election Study, the relationship is a positive one: an individual with a graduate degree is four percentage points more likely to attend a house of worship weekly compared to someone who stopped at high school. In the General Social Survey, there&#8217;s not a clear pattern at all. It&#8217;s 24% among high school grads compared to 25% among those with a graduate degree. That&#8217;s inside the margin of error.</p><p>In the 2023-2024 Pew Religious Landscape Study, the relationship is not clearly linear. Attendance is 25% among those with a high school diploma or less, then it dips slightly among those with some college credits, only to rise among those with a four-year degree and go even higher for folks with a master&#8217;s degree. Among the most highly educated in Pew&#8217;s sample, 28% go to a house of worship on a weekly basis.</p><div class=\"digest-post-embed\"></div><p><strong>Thus, it&#8217;s empirically false to say: people with less education go to church more. There&#8217;s zero evidence of that in the best data we have</strong>. It&#8217;s also accurate to say that the relationship is likely mildly positive &#8212; those with higher education are more likely to be frequent worship attenders. It&#8217;s not a huge difference, but it&#8217;s persistent.</p><p>Now let me simplify and expand this using Pew&#8217;s Religious Landscape Survey because they also included a question about frequency of attendance at online worship.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!5cq7!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0c5cec40-f1de-4aff-af09-42a035b0dfc3_1800x1800.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1456\" src=\"https://substackcdn.com/image/fetch/$s_!5cq7!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0c5cec40-f1de-4aff-af09-42a035b0dfc3_1800x1800.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p>The bars on the left should come as little surprise based on the previous graph. Among folks who have at least a four-year college degree, 26.2% attend a house of worship weekly. For those who stopped at high school, it&#8217;s 24.8% &#8212; a difference of just 1.4 points. But look at the online attendance difference. <strong>For those whose education stopped at high school, 20.3% say that they watch a service online every week. The college-educated crowd is much less inclined to participate this way: 11.6%.</strong></p><p>Now wherever I post either of the above graphs on social media, I get the same comment over and over again. <strong>People believe that the discrepancy can best be explained by the fact that those without a lot of education have to work on the weekends, while those with a college degree work a traditional Monday through Friday schedule.</strong></p><p>I must admit that the data from the Bureau of Labor Statistics that addresses this <a href=\"https://www.bls.gov/news.release/atus.nr0.htm\">is incredibly muddy</a>. Which frustrates me to no end. And I don&#8217;t know of any survey that asks about this possibility directly. So that&#8217;s where the best part of my job kicks in &#8212; I have to get creative. One possibility was to just limit my sample to those who are retired. That would absolutely control for the &#8220;working on Sunday&#8221; confounding variable.</p><p>The problem with that is: people who are retired are old. When they were growing up, educational access was much different than it is today. Thus, people with a four-year college degree (let alone a graduate degree) were a very specific type of individual. It wasn&#8217;t just a general cross-section of the American public who went to college in the 1970s. I had to set that idea aside.</p><p>I wanted to attack the problem from a different angle. After doing data analysis for nearly twenty years, <strong>I&#8217;m pretty convinced that education really runs on the same causal tracks as being pro-social</strong>. Educated folks are just more likely to be engaged in all kinds of social activities. They serve on school boards. They volunteer at their local library. They&#8217;ve just built a thicker, more robust social network than those who stopped at high school. I&#8217;ve used this phrase a lot &#8212; &#8220;Dropping out begets dropping out&#8221; &#8212; and I really do believe it&#8217;s true.</p><p>But after poking around the data a whole bunch for this post, I&#8217;m convinced of something very important. If a person at the lower end of the educational spectrum can become a regular churchgoer, it opens a door for them to engage in much more pro-social activities. And it will actually make their lives better and close that &#8220;drop out&#8221; gap in some very meaningful ways.</p>\n      <p>\n          <a href=\"https://www.graphsaboutreligion.com/p/the-socializing-power-of-the-pew\">\n              Read more\n          </a>\n      </p>",
     "published": "Thu, 23 Jul 2026 11:30:58 GMT",
-    "fetched_at": "2026-07-24T08:05:38.219143",
-    "score": 7,
+    "fetched_at": "2026-07-25T07:48:59.800175",
+    "score": 6,
     "tags": [
       "church life",
-      "sociology"
+      "culture"
     ],
-    "rewritten_title": "Church Is Doing America's Social Work. Will It Last?",
+    "rewritten_title": "Church Is Closing the Education Gap. Washington Isn't Noticing.",
     "personas": [
       "pastor",
       "professional"
     ],
-    "topic_cluster": "church_social_role",
+    "topic_cluster": "civic_engagement_church",
     "perspective": "neutral",
     "frequency_boost": 0.75,
     "source_posts_30d": 9,
-    "final_score": 9.25,
-    "recency_boost": 1.5
+    "previously_shown": true,
+    "final_score": 3.5,
+    "recency_boost": 0.75
   },
   {
-    "source_name": "Lifeway Research",
+    "source_name": "Christianity Today",
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "John Simons",
-    "title": "5 Ways to Deepen Your Men’s Ministry",
-    "url": "https://research.lifeway.com/2026/07/23/5-ways-to-deepen-your-mens-ministry/",
-    "summary": "<p>When you implement these strategies, you won’t just have more spiritual depth in your men’s ministry but also a healthier church as a whole. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/07/23/5-ways-to-deepen-your-mens-ministry/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/07/23/5-ways-to-deepen-your-mens-ministry/\">5 Ways to Deepen Your Men’s Ministry</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "author": "Emily Belz",
+    "title": "US Megachurches Grow Bigger as Smaller Churches Decline",
+    "url": "https://www.christianitytoday.com/2026/07/megachurch-growth-church-attendance-statistics/",
+    "summary": "<p>On a recent Sunday worship service at 12Stone, one of Georgia’s largest churches, attendees packed the sanctuary to sing energetic worship music, and pastors celebrated the end of a weeklong camp hosting more than 1,500 students. It was one sign of growth many US megachurches are seeing now. A new survey from the Hartford Institute <a class=\"more-link\" href=\"https://www.christianitytoday.com/2026/07/megachurch-growth-church-attendance-statistics/\">Read more...</a></p>\n<p>The post <a href=\"https://www.christianitytoday.com/2026/07/megachurch-growth-church-attendance-statistics/\">US Megachurches Grow Bigger as Smaller Churches Decline</a> appeared first on <a href=\"https://www.christianitytoday.com\">Christianity Today</a>.</p>",
     "full_content": "",
-    "published": "Thu, 23 Jul 2026 08:08:00 +0000",
-    "fetched_at": "2026-07-24T08:05:39.651615",
-    "score": 6,
-    "tags": [
-      "church life"
-    ],
-    "rewritten_title": "Men's Ministry Has a Depth Problem. Here's How to Fix It.",
-    "personas": [
-      "pastor",
-      "professional"
-    ],
-    "topic_cluster": "mens_ministry",
-    "perspective": "supportive",
-    "final_score": 7.5,
-    "recency_boost": 1.5
-  },
-  {
-    "source_name": "Pew Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Beshay",
-    "title": "What Americans think about the global AI race",
-    "url": "https://www.pewresearch.org/short-reads/2026/07/23/what-americans-think-about-the-global-ai-race/",
-    "summary": "Most Americans see China as more advanced than the U.S. in AI development, while 43% say U.S. leadership in AI is extremely or very important.",
-    "full_content": "",
-    "published": "Thu, 23 Jul 2026 17:51:19 +0000",
-    "fetched_at": "2026-07-24T08:05:39.170991",
+    "published": "Fri, 24 Jul 2026 10:00:00 +0000",
+    "fetched_at": "2026-07-25T07:47:13.800742",
     "score": 4,
     "tags": [
       "data"
     ],
-    "rewritten_title": "Americans Fear China Is Winning the AI Race",
-    "personas": [],
-    "topic_cluster": "ai_global_race",
+    "rewritten_title": "Megachurches Are Booming. Everybody Else Is Dying.",
+    "personas": [
+      "pastor"
+    ],
+    "topic_cluster": "megachurch_growth_decline",
     "perspective": "neutral",
-    "final_score": 5.5,
+    "final_score": 3.25,
     "recency_boost": 1.5
   }
 ]
