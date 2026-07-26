@@ -15330,5 +15330,40 @@
     "website": "",
     "books": [],
     "initials": "WP"
+  },
+  {
+    "name": "John Stonestreet and S. Michael Craven",
+    "slug": "john-stonestreet-and-s-michael-craven",
+    "bio": "John Stonestreet is the President of the Colson Center for Christian Worldview and a leading voice on contemporary cultural issues from a Christian perspective. S. Michael Craven is a Christian worldview analyst and author who has written extensively on faith, culture, and apologetics. Together and separately, they have addressed how Christians can engage thoughtfully with modern culture while maintaining biblical conviction.",
+    "affiliation": "Colson Center for Christian Worldview",
+    "role": "Cultural Commentators & Worldview Analysts",
+    "education": "",
+    "website": "https://www.colsoncenter.org",
+    "books": [
+      {
+        "title": "Restoring All Things: God's Radiant Vision for Global Renewal",
+        "amazon_url": "https://www.amazon.com/s?k=Restoring+All+Things+John+Stonestreet"
+      },
+      {
+        "title": "A Practical Guide to Culture: Helping the Next Generation Navigate Today's World",
+        "amazon_url": "https://www.amazon.com/s?k=A+Practical+Guide+to+Culture+John+Stonestreet"
+      },
+      {
+        "title": "Uncommon Decency: Christian Civility in an Uncivil World",
+        "amazon_url": "https://www.amazon.com/s?k=Uncommon+Decency+Christian+Civility"
+      }
+    ],
+    "initials": "JSC"
+  },
+  {
+    "name": "Amy Hornbuckle",
+    "slug": "amy-hornbuckle",
+    "bio": "Amy Hornbuckle is a Christian author and speaker who shares practical insights on faith, family, and spiritual growth. Her writing reflects a heart for helping believers navigate life's challenges through a biblical lens.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AH"
   }
 ]
