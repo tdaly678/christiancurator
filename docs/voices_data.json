@@ -15365,5 +15365,58 @@
     "website": "",
     "books": [],
     "initials": "AH"
+  },
+  {
+    "name": "Jamila Davison",
+    "slug": "jamila-davison",
+    "bio": "Jamila Davison is a writer and speaker who explores themes of faith, identity, and Christian living. Her work engages thoughtfully with contemporary issues from a biblical perspective, offering readers insight into living out their faith authentically in today's world.",
+    "affiliation": "",
+    "role": "Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JD"
+  },
+  {
+    "name": "Stephen Driscoll",
+    "slug": "stephen-driscoll",
+    "bio": "Stephen Driscoll is a Scottish historian and academic known for his scholarly work on early medieval Scotland and Celtic Christianity. His research has contributed significantly to our understanding of the spiritual and cultural heritage of Britain during the formative Christian centuries.",
+    "affiliation": "University of Glasgow",
+    "role": "Historian & Scholar",
+    "education": "Ph.D. in Medieval History",
+    "website": "",
+    "books": [
+      {
+        "title": "Calf of Man: A Survey and Reinterpretation of the Early Medieval Monuments",
+        "amazon_url": "https://www.amazon.com/s?k=Calf+of+Man+Stephen+Driscoll"
+      },
+      {
+        "title": "Alba of the Britons: Theocratic Experimentation and Frontier Expansionism in Early Medieval Scotland",
+        "amazon_url": "https://www.amazon.com/s?k=Alba+of+the+Britons+Stephen+Driscoll"
+      }
+    ],
+    "initials": "SD"
+  },
+  {
+    "name": "John Kwasny",
+    "slug": "john-kwasny",
+    "bio": "John Kwasny is a pastor and Christian author dedicated to helping believers grow in their faith and understanding of Scripture. Through his writing and ministry, he encourages Christians to deepen their relationship with God and live out their faith authentically in daily life.",
+    "affiliation": "",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JK"
+  },
+  {
+    "name": "Cody Barnhart",
+    "slug": "cody-barnhart",
+    "bio": "Cody Barnhart is a Christian writer and content creator dedicated to helping believers deepen their faith and navigate life's challenges through a biblical perspective. His work focuses on discipleship, spiritual growth, and practical Christian living for modern audiences.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CB"
   }
 ]
