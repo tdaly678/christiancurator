@@ -15418,5 +15418,59 @@
     "website": "",
     "books": [],
     "initials": "CB"
+  },
+  {
+    "name": "Ryan Swale",
+    "slug": "ryan-swale",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RS"
+  },
+  {
+    "name": "Jonathan Edwards",
+    "slug": "jonathan-edwards",
+    "bio": "Jonathan Edwards (1703-1758) was a brilliant American theologian and philosopher who became one of the most influential figures in Christian history and a key leader of the Great Awakening. His passionate preaching and profound theological writings shaped American Christianity and continue to inspire reformed theology today. Edwards emphasized the sovereignty of God, the beauty of divine holiness, and the necessity of genuine spiritual conversion.",
+    "affiliation": "Northampton Church; College of New Jersey (now Princeton University)",
+    "role": "Theologian, Pastor & Philosopher",
+    "education": "Bachelor of Arts, Yale College",
+    "website": "",
+    "books": [
+      {
+        "title": "A Treatise Concerning Religious Affections",
+        "amazon_url": "https://www.amazon.com/s?k=A+Treatise+Concerning+Religious+Affections+Jonathan+Edwards"
+      },
+      {
+        "title": "Freedom of the Will",
+        "amazon_url": "https://www.amazon.com/s?k=Freedom+of+the+Will+Jonathan+Edwards"
+      },
+      {
+        "title": "Sinners in the Hands of an Angry God",
+        "amazon_url": "https://www.amazon.com/s?k=Sinners+in+the+Hands+of+an+Angry+God+Jonathan+Edwards"
+      },
+      {
+        "title": "The End for Which God Created the World",
+        "amazon_url": "https://www.amazon.com/s?k=The+End+for+Which+God+Created+the+World+Jonathan+Edwards"
+      },
+      {
+        "title": "Images or Shadows of Divine Things",
+        "amazon_url": "https://www.amazon.com/s?k=Images+Shadows+Divine+Things+Jonathan+Edwards"
+      }
+    ],
+    "initials": "JE"
+  },
+  {
+    "name": "Allyn Bock",
+    "slug": "allyn-bock",
+    "bio": "Allyn Bock is a Christian writer and content creator dedicated to sharing faith-centered perspectives with modern audiences. His work focuses on helping believers navigate contemporary issues through a biblical lens.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AB"
   }
 ]
