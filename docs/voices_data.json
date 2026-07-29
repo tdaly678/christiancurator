@@ -15472,5 +15472,51 @@
     "website": "",
     "books": [],
     "initials": "AB"
+  },
+  {
+    "name": "Steve Burchett",
+    "slug": "steve-burchett",
+    "bio": "Steve Burchett is a pastor and Bible teacher who has served in pastoral ministry for decades, helping congregations develop deeper biblical understanding and spiritual growth. He is known for his expository teaching approach and commitment to sound doctrine.",
+    "affiliation": "",
+    "role": "Pastor & Bible Teacher",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SB"
+  },
+  {
+    "name": "Dean Inserra",
+    "slug": "dean-inserra",
+    "bio": "Dean Inserra is a pastor, author, and church planter focused on reaching unchurched Americans with the Gospel. He has planted and pastored churches while writing books that help Christians engage with culture and share their faith effectively. His work emphasizes practical discipleship and evangelism for the modern church.",
+    "affiliation": "City Church",
+    "role": "Pastor, Author & Church Planter",
+    "education": "",
+    "website": "https://www.deaninserra.com",
+    "books": [
+      {
+        "title": "The Unsaved Christian: Reaching Cultural Christianity with the Gospel",
+        "amazon_url": "https://www.amazon.com/s?k=The+Unsaved+Christian+Dean+Inserra"
+      },
+      {
+        "title": "Discover Church: Why the Church Matters and How to Find One",
+        "amazon_url": "https://www.amazon.com/s?k=Discover+Church+Dean+Inserra"
+      },
+      {
+        "title": "Come and See: Everything You Need to Know About Following Jesus",
+        "amazon_url": "https://www.amazon.com/s?k=Come+and+See+Dean+Inserra"
+      }
+    ],
+    "initials": "DI"
+  },
+  {
+    "name": "Ella Nichter",
+    "slug": "ella-nichter",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EN"
   }
 ]
