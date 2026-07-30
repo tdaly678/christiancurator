@@ -15518,5 +15518,66 @@
     "website": "",
     "books": [],
     "initials": "EN"
+  },
+  {
+    "name": "Andrew Smith",
+    "slug": "andrew-smith",
+    "bio": "Andrew Smith is a Christian writer and content creator dedicated to helping believers explore their faith through thoughtful, biblically-grounded resources. His work focuses on practical applications of Scripture for modern Christian living.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AS"
+  },
+  {
+    "name": "Jeffrey A. Stivason",
+    "slug": "jeffrey-a-stivason",
+    "bio": "Jeffrey A. Stivason is a pastor and theological writer who contributes regularly to Christian publications and platforms. He is known for his thoughtful engagement with Reformed theology and practical Christian living. Stivason brings a pastoral heart to equipping believers in their faith and understanding of Scripture.",
+    "affiliation": "Ligonier Ministries; The Aquila Report",
+    "role": "Pastor & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JAS"
+  },
+  {
+    "name": "Landry Holmes",
+    "slug": "landry-holmes",
+    "bio": "Landry Holmes is a Christian content creator and communicator dedicated to helping believers deepen their faith and understanding of Scripture. Through various platforms and publications, Holmes shares insights on Christian living, discipleship, and spiritual growth with a focus on making biblical truths accessible and practical for modern believers.",
+    "affiliation": "",
+    "role": "Content Creator & Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LH"
+  },
+  {
+    "name": "James Spiegel",
+    "slug": "james-spiegel",
+    "bio": "James Spiegel is a Christian philosopher and apologist who has written extensively on faith, reason, and the existence of God. His work seeks to demonstrate the rationality of Christian belief and address contemporary philosophical challenges to faith. He is known for making complex theological and philosophical concepts accessible to general Christian audiences.",
+    "affiliation": "Taylor University",
+    "role": "Professor of Philosophy & Author",
+    "education": "Ph.D. in Philosophy",
+    "website": "",
+    "books": [
+      {
+        "title": "The Making of an Atheist: How Ideas Have Consequences",
+        "amazon_url": "https://www.amazon.com/s?k=The+Making+of+an+Atheist+James+Spiegel"
+      },
+      {
+        "title": "How to Be Good in a World Gone Bad",
+        "amazon_url": "https://www.amazon.com/s?k=How+to+Be+Good+in+a+World+Gone+Bad+James+Spiegel"
+      },
+      {
+        "title": "The Apostles' Creed: A Faith to Live By",
+        "amazon_url": "https://www.amazon.com/s?k=The+Apostles+Creed+A+Faith+to+Live+By+James+Spiegel"
+      },
+      {
+        "title": "Virtues of the Mind: An Inquiry into the Structure of Virtue",
+        "amazon_url": "https://www.amazon.com/s?k=Virtues+of+the+Mind+James+Spiegel"
+      }
+    ],
+    "initials": "JS"
   }
 ]
