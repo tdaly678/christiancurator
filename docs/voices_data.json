@@ -15579,5 +15579,49 @@
       }
     ],
     "initials": "JS"
+  },
+  {
+    "name": "Zhang San",
+    "slug": "zhang-san",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ZS"
+  },
+  {
+    "name": "Henrik Schildt",
+    "slug": "henrik-schildt",
+    "bio": "Henrik Schildt is a Finnish author and Christian thinker known for his contributions to Christian literature and theological reflection. His work explores faith, spirituality, and the integration of Christian values in contemporary life.",
+    "affiliation": "",
+    "role": "Author & Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "HS"
+  },
+  {
+    "name": "Anna Jackson",
+    "slug": "anna-jackson",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AJ"
+  },
+  {
+    "name": "Cstaubin",
+    "slug": "cstaubin",
+    "bio": "Cstaubin is a Christian content creator and digital voice in contemporary Christian spaces. Their work focuses on sharing faith perspectives and biblical insights with modern audiences.",
+    "affiliation": "",
+    "role": "Content Creator & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CS"
   }
 ]
