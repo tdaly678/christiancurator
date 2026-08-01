@@ -1,5 +1,29 @@
 [
   {
+    "source_name": "Lifeway Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Ella Nichter",
+    "title": "Most Churchgoers Content With Congregation’s Worship Style",
+    "url": "https://research.lifeway.com/2026/07/28/most-churchgoers-content-with-congregations-worship-style/",
+    "summary": "<p>Even with wide differences across congregations, most attendees are content with their church’s worship style. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/07/28/most-churchgoers-content-with-congregations-worship-style/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/07/28/most-churchgoers-content-with-congregations-worship-style/\">Most Churchgoers Content With Congregation’s Worship Style</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "full_content": "",
+    "published": "Tue, 28 Jul 2026 14:50:00 +0000",
+    "fetched_at": "2026-08-01T08:00:31.072135",
+    "score": 4,
+    "tags": [
+      "data"
+    ],
+    "rewritten_title": "Worship Wars Over? Most Churchgoers Say Their Style Works",
+    "personas": [
+      "pastor"
+    ],
+    "topic_cluster": "worship_style_preferences",
+    "perspective": "neutral",
+    "final_score": 2.0
+  },
+  {
     "source_name": "Ryan Burge",
     "source_category": "culture",
     "source_type": "christian",
@@ -10,49 +34,24 @@
     "summary": "Controlling for demographics doesn't make the clergy gap disappear. If anything, it makes it more interesting",
     "full_content": "<p>Back in November, I wrote a post that I knew was going to cause a stir because it answered one of the most burning questions in my mind: &#8220;How Big is the Political Divide Between Mainline Clergy and Laity?&#8221; The <a href=\"https://prri.org/\">Public Religion Research Institute</a> had done a wonderful survey of pastors in the mainline Protestant tradition, and it allowed me to actually document, with as much accuracy as possible, the political differences between those who stand in the pulpit and those who sit in the pews of the local Episcopal or United Methodist church.</p><p>It became one of the most widely read posts on my newsletter, and I still get asked about it on a near-weekly basis. <strong>The findings are pretty much what most people guessed: mainline clergy are way more politically and ideologically left-wing than their congregants</strong>. For instance, 45% of mainline clergy are liberal Democrats, compared to 24% of people sitting in the pews. And the laity are three times more likely to be conservative Republicans compared to their pastors.</p><div class=\"digest-post-embed\"></div><p>There was some pushback, of course. Any time you write something that gets read tens of thousands of times, it&#8217;s going to happen. Some of it was actually really thoughtful, though, and I wanted to focus on one specific criticism that I hadn&#8217;t wrestled with too much: mainline clergy have a unique mix of demographic factors that make it difficult to compare them to the folks sitting in the pews. Namely? Almost all mainline clergy have graduate degrees. In the PRRI sample, over <a href=\"https://thearda.com/data-archive?fid=CLERGY23&amp;tab=4&amp;vName=EDUC2\">90% of them</a> had an MA or more.</p><p>That&#8217;s a critique that I want to tackle head on in this post, but let me walk you through a bit of data exploration before we get there. <br /><br />What I discovered by poking around the archives at <a href=\"https://www.thearda.com/\">ARDA</a> was that PRRI had replicated some of the questions on the mainline clergy survey in <a href=\"https://thearda.com/data-archive?fid=PRRIHOC22\">other data collection efforts</a>. For instance, they have often included this question: Is America a Christian Nation?</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!Bwyp!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F38ae7e5a-ddeb-46fd-936b-a9dbf01a7b8f_2048x910.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"647\" src=\"https://substackcdn.com/image/fetch/$s_!Bwyp!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F38ae7e5a-ddeb-46fd-936b-a9dbf01a7b8f_2048x910.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong>Among mainline clergy, only 6% said that America has &#8220;always&#8221; been a Christian country</strong>. Is that high or low? I wanted to compare those mainline pastors against a bunch of different reference groups, which is what I did in the graph above. And guess what? That&#8217;s incredibly low compared to almost everyone else in American society.</p><p>In the full sample of the general public, 36% of people agreed that America has always been a Christian country. Heck, even among the non-religious, it was 26%. The numbers are particularly higher among Christian churchgoers, too. Among mainline churchgoers, 44% say that America has always been a Christian country. That&#8217;s seven times the rate of their clergy.</p><p>So the differences that I made plain in the prior post about ideology and partisanship are not just confined to those two questions. <strong>The data says that the mainline leadership holds views on topics like this that are far out of step with almost all other groups in the United States.</strong></p><p>But let&#8217;s zoom out to a whole question battery that was included in that mainline clergy survey as well as another PRRI instrument - the 2022 <a href=\"https://thearda.com/data-archive?fid=PRRIHOC22\">Health of Congregations study</a>. Its total sample size was nearly 5,900.</p>\n      <p>\n          <a href=\"https://www.graphsaboutreligion.com/p/mainline-clergy-are-different-and\">\n              Read more\n          </a>\n      </p>",
     "published": "Thu, 30 Jul 2026 11:30:19 GMT",
-    "fetched_at": "2026-07-31T08:30:50.045315",
+    "fetched_at": "2026-08-01T08:00:30.512443",
     "score": 4,
     "tags": [
       "data",
       "church life"
     ],
-    "rewritten_title": "The Clergy Gap That Demographics Can't Explain",
+    "rewritten_title": "The Clergy Gap Isn't About Demographics. So What Is It?",
     "personas": [
-      "pastor"
+      "pastor",
+      "professional"
     ],
-    "topic_cluster": "unique",
+    "topic_cluster": "clergy_demographics",
     "perspective": "neutral",
     "frequency_boost": 0.75,
     "source_posts_30d": 9,
-    "final_score": 7.75,
-    "recency_boost": 1.5,
-    "trending_boost": 1.5
-  },
-  {
-    "source_name": "Pew Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Anna Jackson",
-    "title": "Views of all-day school cellphone bans",
-    "url": "https://www.pewresearch.org/newsletter/weekly-roundup/views-of-all-day-school-cellphone-bans/",
-    "summary": "Weekly Roundup The latest findings from Pew Research Center · Subscribe ↗ From our research The number of democracies with a constitution that is harder to amend than the U.S. founding document.",
-    "full_content": "",
-    "published": "Thu, 30 Jul 2026 19:35:08 +0000",
-    "fetched_at": "2026-07-31T08:30:50.768314",
-    "score": 4,
-    "tags": [
-      "data"
-    ],
-    "rewritten_title": "Views of all-day school cellphone bans",
-    "personas": [
-      "parent",
-      "professional"
-    ],
-    "topic_cluster": "pew_research_roundup",
-    "perspective": "neutral",
-    "final_score": 5.5,
-    "recency_boost": 1.5
+    "previously_shown": true,
+    "final_score": 1.5,
+    "recency_boost": 0.75
   },
   {
     "source_name": "First Things",
@@ -65,19 +64,18 @@
     "summary": "<p>A 2025 YouGov poll revealed some interesting factoids about Americans’ reading habits—or lack thereof. Forty percent of us didn’t read a book last year. About a quarter of the...</p>\n<p>The post <a href=\"https://firstthings.com/the-summer-reading-list-2026/\">The Summer Reading List: 2026</a> appeared first on <a href=\"https://firstthings.com\">First Things</a>.</p>",
     "full_content": "<p class=\"is-style-drop-cap\">A 2025 YouGov <a href=\"https://yougov.com/en-us/articles/53804-most-americans-didnt-read-many-books-in-2025\" rel=\"noreferrer noopener\" target=\"_blank\">poll</a> revealed some interesting factoids about Americans’ reading habits—or lack thereof. Forty percent of us didn’t read a book last year. About a quarter of the country read one to four books in 2025, and 13 percent clocked in at between five and nine books in all formats (print, electronic, audio). Nineteen percent of us did 82 percent of America’s book reading.</p>\n\n\n\n<p>So let’s up our game. Herewith, some suggestions for your own reading pleasure this summer, which I hope you’ll pass along to friends:&nbsp;</p>\n\n\n\n<p>Erik Varden, <a href=\"https://www.amazon.com/Alight-Hidden-Glory-Erik-Varden/dp/1399434918?tag=firstthings20-20\" rel=\"noreferrer noopener\" target=\"_blank\"><em>Alight with Hidden Glory</em></a>: A Trappist monk and the bishop of Trondheim in Norway, Varden was invited by Pope Leo XIV to give the 2026 Lenten retreat to the Roman Curia. It was a wise papal decision, as there are very few Catholics who can break open the riches of biblical faith like Bishop Varden, whose command of sources ranging from literature and music to theology, philosophy, and the lives of the saints is amazing. That he writes in a crystalline prose accessible to all makes this small book, composed of Varden’s papal retreat conferences, a spiritual feast worthy to stand with Karol Wojtyła’s <a href=\"https://www.amazon.com/Sign-Contradiction-Karol-Wojtyla/dp/1952826772?tag=firstthings20-20\" rel=\"noreferrer noopener\" target=\"_blank\"><em>Sign of Contradiction</em></a> in the history of the genre.</p>\n\n\n\n<p>Carl Trueman, <a href=\"https://www.amazon.com/Desecration-Man-Rejection-Degrades-Humanity/dp/0593713850?tag=firstthings20-20\" rel=\"noreferrer noopener\" target=\"_blank\"><em>The Desecration of Man</em></a>: When the New York state legislature, with time on its hands and nonsense on its mind, decides that the terms “mother” and “father” are transphobic and should be replaced on state birth certificates with “gestating parent” and “non-gestating parent,” you know we’ve gone far beyond Alice’s Wonderland. Carl Trueman, America’s most scintillating Protestant thinker and a veteran pastor, explains how the rejection of God in Western high culture led to the self-harming and self-degrading deconstruction of the human now evident in Albany and elsewhere. </p>\n\n\n\n<p>Matthew Mehan with illustrations by John Folley, <a href=\"https://www.amazon.com/American-Book-Fables-Matthew-Mehan/dp/B0G1XYVC54?tag=firstthings20-20\" rel=\"noreferrer noopener\" target=\"_blank\"><em>The American Book of Fables</em></a>: As its back cover suggests, this book “invites you to rediscover the beauty and goodness of America” in a transcontinental romp “from the Everglades to the Great Lakes [and] from the sequoias of California to the rocky islands of Maine,” accompanied by a treasure trove of stories, historical texts, lyrics, letters, nursery rhymes, and poems that make this <a href=\"https://www.youtube.com/watch?v=f_Abmu6GIaY\" rel=\"noreferrer noopener\" target=\"_blank\">handsome volume</a> perfect for family reading during the national semiquincentennial.</p>\n\n\n\n<p>Joseph Carola, <a href=\"https://www.amazon.com/Dragons-Requiem-Fr-Joseph-Carola/dp/B0GWTL4NQ9?tag=firstthings20-20\" rel=\"noreferrer noopener\" target=\"_blank\"><em>Dragons: A Roman Requiem</em></a>: Fr. Carola is one of Catholicism’s most gifted teachers. In his first novel, he recreates the tense political, cultural, and spiritual atmosphere of Rome as the forces of an aggressively secular Italian Risorgimento<em> </em>closed in on the rump of the Papal States. <em>Dragons</em> is also a poignant reminder of what the Society of Jesus once represented in the Church and what we must hope it comes to embody again: dynamic orthodoxy in service to the conversion of the world.</p>\n\n\n\n<p>Carter Griffin, <a href=\"https://www.amazon.com/Reclaimed-Freedom-Self-Mastery-Holy-Purity/dp/0933932359?tag=firstthings20-20\" rel=\"noreferrer noopener\" target=\"_blank\"><em>Reclaimed: Win the War of Freedom, Self-Mastery, and Holy Purity</em></a>: Fr. Griffin is a wonderful priest and a masterful spiritual guide, who offers in this brief book a primer for men wanting to live chastity as what Pope St. John Paul II called “the integrity of love.”</p>\n\n\n\n<p>Samantha Kelley’s <a href=\"https://www.amazon.com/BE-FIERCE-Athletes-Physically-Spiritually/dp/B0C1J2Q9TX?tag=firstthings20-20\"><em>Be Fierce</em></a> is published by FIERCE Athlete, an innovative apostolate that works with women athletes to integrate their athletic and spiritual lives, thereby growing into a more complete humanity. Author Sam Kelley, founder and president of FIERCE Athlete, was a D-1 soccer player in college and continues to compete in rowing, triathlon, and, yes, pickleball. She knows of what she writes.&nbsp;</p>\n\n\n\n<p>Sergei Chapnin, <a href=\"https://www.amazon.com/Religious-Communities-Under-Pressure-Documenting/dp/B0H5G277LW?tag=firstthings20-20\" rel=\"noreferrer noopener\" target=\"_blank\"><em>Religious Communities Under Pressure: Documenting Religious Persecution in Russia 2022–2026</em></a>: Through dozens of case studies, an expert on Russian Orthodoxy describes the corruption of the Church he loves by its willful self-subordination to the power of the Kremlin. Give it to anyone you know who fancies Tsar Putin a defender of Christian values and to any Catholic integralists in your circle. Additionally, Bishop Robert Barron suggests practical ways to support persecuted brethren around the world in <a href=\"https://www.amazon.com/Their-Deaths-Demand-Christian-Persecution/dp/1685783759?tag=firstthings20-20\" rel=\"noreferrer noopener\" target=\"_blank\"><em>What Do Their Deaths Demand? Christian Persecution Today</em></a>.</p>\n\n\n\n<p>Charles Fountain,<em> </em><a href=\"https://www.amazon.com/-/es/Betrayal-World-Birth-Modern-Baseball/dp/0199795134?tag=firstthings20-20\" rel=\"noreferrer noopener\" target=\"_blank\"><em>The Betrayal: The 1919 World Series and the Birth of Modern Baseball</em></a>: The infamous “Black Sox” scandal of 1919 previewed the inevitable outcome of today’s rampant sports betting—a <a href=\"https://www.theatlantic.com/magazine/2026/04/online-sports-betting-app-addiction/686061/\">no-win addiction</a> now idiotically supported by MLB, the NFL, the NBA, and the NHL: to the further, and perhaps terminal, corruption of our games. </p>\n\n\n\n<p>Benedict XVI, <a href=\"https://www.amazon.com/Lord-Holds-Us-Hand-Homilies/dp/1621649180?tag=firstthings20-20\" rel=\"noreferrer noopener\" target=\"_blank\"><em>The Lord Holds Us by the Hand</em></a>: Pope Benedict was arguably the greatest papal preacher since St. Gregory the Great. This marvelous collection of mini-sermons, preached to his small post-papal household on different feasts and during various liturgical seasons, demonstrates that his homiletic gifts did not lie fallow in his retirement.</p>\n<p>The post <a href=\"https://firstthings.com/the-summer-reading-list-2026/\">The Summer Reading List: 2026</a> appeared first on <a href=\"https://firstthings.com\">First Things</a>.</p>",
     "published": "Wed, 29 Jul 2026 05:00:00 +0000",
-    "fetched_at": "2026-07-31T08:29:22.604681",
+    "fetched_at": "2026-08-01T07:59:04.851170",
     "score": 4,
     "tags": [
-      "data"
+      "data",
+      "culture"
     ],
-    "rewritten_title": "Americans Stopped Reading Books. Churches Are Next to Suffer.",
+    "rewritten_title": "Americans Stopped Reading Books. Churches Should Worry.",
     "personas": [
       "professional"
     ],
-    "topic_cluster": "unique",
+    "topic_cluster": "reading_habits_trends",
     "perspective": "neutral",
-    "final_score": 5.0,
-    "recency_boost": 0.25,
-    "trending_boost": 1.5
+    "final_score": 0.5
   }
 ]
