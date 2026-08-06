@@ -15733,5 +15733,32 @@
     "website": "",
     "books": [],
     "initials": "NR"
+  },
+  {
+    "name": "Donny Friederichsen",
+    "slug": "donny-friederichsen",
+    "bio": "Donny Friederichsen is a Christian writer and content creator dedicated to exploring faith, theology, and spiritual growth. His work encourages readers to deepen their understanding of Scripture and live out their faith in practical, meaningful ways.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DF"
+  },
+  {
+    "name": "Neil Shenvi",
+    "slug": "neil-shenvi",
+    "bio": "Neil Shenvi is a Christian apologist and cultural commentator known for thoughtfully engaging contemporary social issues through a biblical lens. He writes extensively on topics including critical race theory, social justice, and cultural worldviews, helping Christians think critically about modern ideologies.",
+    "affiliation": "Apologetics315, The Gospel Coalition",
+    "role": "Apologist & Writer",
+    "education": "Ph.D. in Theoretical Chemistry, University of California, Berkeley",
+    "website": "https://www.neilshenvi.com",
+    "books": [
+      {
+        "title": "Engaging Critical Theory and the Social Justice Movement: A Conversation",
+        "amazon_url": "https://www.amazon.com/s?k=Neil+Shenvi+Engaging+Critical+Theory+Social+Justice"
+      }
+    ],
+    "initials": "NS"
   }
 ]
