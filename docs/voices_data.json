@@ -15760,5 +15760,130 @@
       }
     ],
     "initials": "NS"
+  },
+  {
+    "name": "Candace Echols",
+    "slug": "candace-echols",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CE"
+  },
+  {
+    "name": "Jonathan Gemmell",
+    "slug": "jonathan-gemmell",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JG"
+  },
+  {
+    "name": "Scott Sauls",
+    "slug": "scott-sauls",
+    "bio": "Scott Sauls is a pastor, author, and speaker known for his thoughtful approach to Christianity and cultural engagement. He has written extensively on topics including Jesus, leadership, and reconciliation, seeking to help Christians live out their faith with authenticity and grace in a complex world.",
+    "affiliation": "Christ Presbyterian Church (Nashville); Redeemer City to City",
+    "role": "Pastor & Author",
+    "education": "M.Div., Reformed Theological Seminary",
+    "website": "https://scottsauls.com",
+    "books": [
+      {
+        "title": "Jesus Outside the Lines",
+        "amazon_url": "https://www.amazon.com/s?k=Jesus+Outside+the+Lines+Scott+Sauls"
+      },
+      {
+        "title": "Befriend",
+        "amazon_url": "https://www.amazon.com/s?k=Befriend+Scott+Sauls"
+      },
+      {
+        "title": "From Weakness to Strength",
+        "amazon_url": "https://www.amazon.com/s?k=From+Weakness+to+Strength+Scott+Sauls"
+      },
+      {
+        "title": "A Gentle Answer",
+        "amazon_url": "https://www.amazon.com/s?k=A+Gentle+Answer+Scott+Sauls"
+      },
+      {
+        "title": "Presence",
+        "amazon_url": "https://www.amazon.com/s?k=Presence+Scott+Sauls"
+      }
+    ],
+    "initials": "SS"
+  },
+  {
+    "name": "Daniel Devine",
+    "slug": "daniel-devine",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DD"
+  },
+  {
+    "name": "Aaron Roberts",
+    "slug": "aaron-roberts",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AR"
+  },
+  {
+    "name": "Chris Carneal",
+    "slug": "chris-carneal",
+    "bio": "Chris Carneal is a Christian communicator and content creator focused on helping believers deepen their faith and understanding of Scripture. Through various platforms and projects, he works to make biblical truth accessible and engaging for modern audiences seeking spiritual growth.",
+    "affiliation": "",
+    "role": "Content Creator & Christian Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CC"
+  },
+  {
+    "name": "Jessica Cicali",
+    "slug": "jessica-cicali",
+    "bio": "Jessica Cicali is a writer and content creator dedicated to exploring faith, grace, and spiritual growth from a Christian perspective. Her work encourages readers to deepen their relationship with Christ through thoughtful reflection and biblical insight.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JC"
+  },
+  {
+    "name": "Bob Doll",
+    "slug": "bob-doll",
+    "bio": "Bob Doll is a respected voice in Christian investing and financial stewardship, bringing decades of experience in portfolio management and market analysis to faith-based audiences. He combines his expertise in economics and investing with biblical principles to help Christians think wisely about wealth and financial decision-making.",
+    "affiliation": "Nuveen Asset Management",
+    "role": "Chief Equity Strategist & Investment Professional",
+    "education": "University of Kansas",
+    "website": "",
+    "books": [
+      {
+        "title": "Discovering the Wealth in You",
+        "amazon_url": "https://www.amazon.com/s?k=Discovering+the+Wealth+in+You+Bob+Doll"
+      }
+    ],
+    "initials": "BD"
+  },
+  {
+    "name": "Darryl Williamson",
+    "slug": "darryl-williamson",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DW"
   }
 ]
