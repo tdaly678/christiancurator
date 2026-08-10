@@ -15929,5 +15929,54 @@
     "website": "",
     "books": [],
     "initials": "EK"
+  },
+  {
+    "name": "William Wood",
+    "slug": "william-wood",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "WW"
+  },
+  {
+    "name": "Gregory Zackary",
+    "slug": "gregory-zackary",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "GZ"
+  },
+  {
+    "name": "Steve Bateman",
+    "slug": "steve-bateman",
+    "bio": "Steve Bateman is a pastor and Christian leader known for his commitment to biblical teaching and spiritual growth. He has dedicated his ministry to equipping believers with God's Word and helping them grow deeper in their faith.",
+    "affiliation": "",
+    "role": "Pastor & Teacher",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SB"
+  },
+  {
+    "name": "Rosalind Picard",
+    "slug": "rosalind-picard",
+    "bio": "Rosalind Picard is an MIT media scientist and inventor whose research on affective computing explores how technology can understand and respond to human emotions. Her work bridges the gap between technology and human wellbeing, offering insights relevant to Christian perspectives on stewardship of innovation and caring for the whole person.",
+    "affiliation": "MIT Media Lab",
+    "role": "Professor & Researcher",
+    "education": "Ph.D. in Electrical Engineering and Computer Science, MIT",
+    "website": "https://affect.media.mit.edu/",
+    "books": [
+      {
+        "title": "Affective Computing",
+        "amazon_url": "https://www.amazon.com/s?k=Affective+Computing+Rosalind+Picard"
+      }
+    ],
+    "initials": "RP"
   }
 ]
