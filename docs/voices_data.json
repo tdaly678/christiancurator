@@ -15978,5 +15978,84 @@
       }
     ],
     "initials": "RP"
+  },
+  {
+    "name": "Max Lucado",
+    "slug": "max-lucado",
+    "bio": "Max Lucado is a bestselling Christian author and pastor known for his accessible, grace-filled approach to faith and Scripture. His works have sold millions of copies worldwide and touch on themes of God's love, redemption, and encouragement for daily living. He served as senior minister at Oak Hills Church in San Antonio, Texas for over two decades.",
+    "affiliation": "Oak Hills Church; Thomas Nelson Publishers",
+    "role": "Author & Pastor",
+    "education": "Abilene Christian University",
+    "website": "https://www.maxlucado.com",
+    "books": [
+      {
+        "title": "You Are Never Alone",
+        "amazon_url": "https://www.amazon.com/s?k=You+Are+Never+Alone+Max+Lucado"
+      },
+      {
+        "title": "Unshakable Hope",
+        "amazon_url": "https://www.amazon.com/s?k=Unshakable+Hope+Max+Lucado"
+      },
+      {
+        "title": "Grace: More Than We Deserve, Greater Than We Imagine",
+        "amazon_url": "https://www.amazon.com/s?k=Grace+More+Than+We+Deserve+Max+Lucado"
+      },
+      {
+        "title": "Outlive Your Life",
+        "amazon_url": "https://www.amazon.com/s?k=Outlive+Your+Life+Max+Lucado"
+      },
+      {
+        "title": "3:16 The Numbers of Hope",
+        "amazon_url": "https://www.amazon.com/s?k=3:16+The+Numbers+of+Hope+Max+Lucado"
+      },
+      {
+        "title": "The Cure for the Common Life",
+        "amazon_url": "https://www.amazon.com/s?k=The+Cure+for+the+Common+Life+Max+Lucado"
+      }
+    ],
+    "initials": "ML"
+  },
+  {
+    "name": "Josh Greene",
+    "slug": "josh-greene",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JG"
+  },
+  {
+    "name": "Kevin J. Vanhoozer",
+    "slug": "kevin-j-vanhoozer",
+    "bio": "Kevin J. Vanhoozer is a leading evangelical theologian and scholar of hermeneutics, known for his work bridging biblical interpretation and practical theology. He has spent decades exploring how Christians can faithfully read and understand Scripture in the context of contemporary culture. His writings combine rigorous theological scholarship with accessible guidance for pastors and thoughtful believers.",
+    "affiliation": "Trinity Evangelical Divinity School",
+    "role": "Research Professor of Theology, Author & Theologian",
+    "education": "Ph.D. in Theological Studies, University of Cambridge",
+    "website": "https://www.kevinvanhoozer.com",
+    "books": [
+      {
+        "title": "Is There a Meaning in This Text?",
+        "amazon_url": "https://www.amazon.com/s?k=Is+There+Meaning+This+Text+Kevin+Vanhoozer"
+      },
+      {
+        "title": "The Drama of Doctrine",
+        "amazon_url": "https://www.amazon.com/s?k=Drama+Doctrine+Kevin+Vanhoozer"
+      },
+      {
+        "title": "Remythologizing Theology",
+        "amazon_url": "https://www.amazon.com/s?k=Remythologizing+Theology+Kevin+Vanhoozer"
+      },
+      {
+        "title": "Pictures at a Theological Exhibition",
+        "amazon_url": "https://www.amazon.com/s?k=Pictures+Theological+Exhibition+Kevin+Vanhoozer"
+      },
+      {
+        "title": "Biblical Narrative and the Theology of Narrative",
+        "amazon_url": "https://www.amazon.com/s?k=Biblical+Narrative+Theology+Kevin+Vanhoozer"
+      }
+    ],
+    "initials": "KJV"
   }
 ]
