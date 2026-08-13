@@ -1,29 +1,53 @@
 [
   {
-    "source_name": "Lifeway Research",
+    "source_name": "Pew Research",
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Aaron Earls",
-    "title": "Churches Believe They’re Welcoming to Those With Disabilities",
-    "url": "https://research.lifeway.com/2026/08/11/churches-believe-theyre-welcoming-to-those-with-disabilities/",
-    "summary": "<p>Almost all churches believe those with disabilities would feel welcomed, even if pastors have grown less confident. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/08/11/churches-believe-theyre-welcoming-to-those-with-disabilities/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/08/11/churches-believe-theyre-welcoming-to-those-with-disabilities/\">Churches Believe They’re Welcoming to Those With Disabilities</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "author": "Beshay",
+    "title": "Second Trump administration has ended Temporary Protected Status for most immigrants who had it",
+    "url": "https://www.pewresearch.org/short-reads/2026/08/12/second-trump-administration-has-ended-temporary-protected-status-for-most-immigrants-who-had-it/",
+    "summary": "The second Trump administration has ended Temporary Protected Status for 13 countries, affecting roughly 1 million recipients.",
     "full_content": "",
-    "published": "Tue, 11 Aug 2026 14:50:00 +0000",
-    "fetched_at": "2026-08-12T07:05:21.180340",
-    "score": 5,
+    "published": "Wed, 12 Aug 2026 17:56:54 +0000",
+    "fetched_at": "2026-08-13T07:09:18.189760",
+    "score": 4,
     "tags": [
-      "data",
-      "church life"
+      "news",
+      "politics"
     ],
-    "rewritten_title": "Churches Say They're Welcoming Disabled. Pastors Aren't So Sure.",
+    "rewritten_title": "Trump Ends TPS for 13 Nations, Expelling a Million Immigrants",
     "personas": [
-      "pastor",
       "professional"
     ],
-    "topic_cluster": "disability_inclusion_churches",
-    "perspective": "neutral",
-    "final_score": 6.5,
+    "topic_cluster": "immigration_policy_trump",
+    "perspective": "news",
+    "final_score": 5.5,
+    "recency_boost": 1.5
+  },
+  {
+    "source_name": "Relevant Magazine",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Emily Brown",
+    "title": "Nearly Half of Americans Say They’ve Gotten a Miraculous Answer to Prayer",
+    "url": "https://relevantmagazine.com/current/buzzworthy/nearly-half-of-americans-say-theyve-gotten-a-miraculous-answer-to-prayer/",
+    "summary": "At a time when most research about faith focuses on declining church attendance or shrinking religious affiliation, the American Bible Society’s latest State of the Bible report points in a different direction: nearly half of Americans say they’ve personally experienced a miraculous answer to prayer. According to the organization’s State of the Bible USA 2026&#8230;",
+    "full_content": "<p class=\"p2\">At a time when most research about faith focuses on declining church attendance or shrinking religious affiliation, the American Bible Society’s latest <span class=\"s1\"><i>State of the Bible</i></span> report points in a different direction: nearly half of Americans say they’ve personally experienced a miraculous answer to prayer.</p>\n<p class=\"p2\">According to the organization’s <span class=\"s1\"><i>State of the Bible USA 2026</i></span> survey, 48% of U.S. adults say God has answered one of their prayers in a miraculous way. Among practicing Christians, that number rises to roughly 90%.</p>\n<p class=\"p2\">The findings come from the American Bible Society’s 16th annual survey of U.S. adults, which tracks Americans’ beliefs and spiritual practices.</p>\n<p class=\"p2\">“These findings remind us that many Americans don’t simply believe God exists — they believe He is active in their lives,” Dr. John Plake, chief innovation officer at the American Bible Society and editor-in-chief of the <span class=\"s1\"><i>State of the Bible</i></span> series, said in the report.</p>\n<p class=\"p2\">The prayer findings also fit into a broader trend the organization has identified this year. Earlier chapters of the <span class=\"s1\"><i>State of the Bible</i></span> report found that about 9 million more Americans now fall into what the American Bible Society calls the “Movable Middle”: people who are curious about the Bible or open to engaging with it, even if they aren’t regular readers or active churchgoers.</p>\n<p class=\"p2\">Taken together, the findings suggest that while participation in organized religion has shifted in recent years, belief in God’s involvement in everyday life remains widespread. That’s especially notable given that the 48% figure represents the general U.S. population, not just people who identify as Christian.</p>\n<p class=\"p2\">One qualifying note: the survey doesn’t attempt to verify individual miracle claims. Instead, it measures what Americans say they’ve experienced.</p>\n<p class=\"p2\">But according to this year’s research, millions of Americans believe they’ve seen God answer a prayer in a way they can only describe as miraculous.</p>",
+    "published": "Wed, 12 Aug 2026 21:34:17 +0000",
+    "fetched_at": "2026-08-13T07:07:42.696044",
+    "score": 5,
+    "tags": [
+      "data"
+    ],
+    "rewritten_title": "Prayer Still Works — Half of Americans Say They've Experienced Miracles",
+    "personas": [
+      "professional"
+    ],
+    "topic_cluster": "prayer_miracles_survey",
+    "perspective": "news",
+    "final_score": 5.1,
     "recency_boost": 1.5
   },
   {
@@ -32,48 +56,23 @@
     "source_type": "christian",
     "independent": false,
     "author": "Beshay",
-    "title": "Most Americans are uncomfortable with transgender athletes on sports teams that don’t match their birth sex",
-    "url": "https://www.pewresearch.org/short-reads/2026/08/11/most-americans-are-uncomfortable-with-transgender-athletes-on-sports-teams-that-dont-match-their-birth-sex/",
-    "summary": "Most Americans are not comfortable with transgender athletes competing on teams that don't match their birth sex.",
+    "title": "Most U.S. adults have lived with a romantic partner they’re not married to by their early 40s",
+    "url": "https://www.pewresearch.org/short-reads/2026/08/12/most-us-adults-have-lived-with-a-romantic-partner-theyre-not-married-to-by-their-early-40s/",
+    "summary": "Around three-quarters of Americans in their late 30s or early 40s have lived with a romantic partner they’re not married to at some point in their lives.",
     "full_content": "",
-    "published": "Tue, 11 Aug 2026 15:22:21 +0000",
-    "fetched_at": "2026-08-12T07:05:20.736632",
-    "score": 4,
-    "tags": [
-      "data"
-    ],
-    "rewritten_title": "Most Americans Oppose Trans Athletes in Sports. Churches Stay Silent.",
-    "personas": [
-      "professional"
-    ],
-    "topic_cluster": "transgender_sports_polling",
-    "perspective": "neutral",
-    "final_score": 5.5,
-    "recency_boost": 1.5
-  },
-  {
-    "source_name": "Lifeway Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Aaron Earls",
-    "title": "1 in 6 Protestant Churchgoers Attend Megachurches",
-    "url": "https://research.lifeway.com/2026/08/12/1-in-6-protestant-churchgoers-attend-megachurches/",
-    "summary": "<p>Megachurches account for less than 1% of U.S. Protestant churches, but they draw 17% of churchgoers. By Aaron Earls Fewer than 2,000 megachurches exist in the United States, but they draw 10 million worshipers each week. While those congregations with more than 2,000 in attendance each week account for less than 1% of all U.S. [&#8230;] <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/08/12/1-in-6-protestant-churchgoers-attend-megachurches/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/08/12/1-in-6-protestant-churchgoers-attend-megachurches/\">1 in 6 Protestant Churchgoers Attend Megachurches</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
-    "full_content": "",
-    "published": "Wed, 12 Aug 2026 06:50:00 +0000",
-    "fetched_at": "2026-08-12T07:05:21.180321",
+    "published": "Wed, 12 Aug 2026 14:57:25 +0000",
+    "fetched_at": "2026-08-13T07:09:18.189772",
     "score": 4,
     "tags": [
       "data",
-      "church life"
+      "culture"
     ],
-    "rewritten_title": "Megachurches Are 1% of Churches but Control a Third of Worship",
+    "rewritten_title": "Cohabitation Before Marriage Is Now the American Norm",
     "personas": [
-      "pastor",
-      "professional"
+      "professional",
+      "parent"
     ],
-    "topic_cluster": "megachurch_trends",
+    "topic_cluster": "cohabitation_trends",
     "perspective": "neutral",
     "final_score": 4.75,
     "recency_boost": 1.5

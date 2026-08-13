@@ -16112,5 +16112,53 @@
     "website": "",
     "books": [],
     "initials": "AR"
+  },
+  {
+    "name": "Sharon James",
+    "slug": "sharon-james",
+    "bio": "Sharon James is a British author and speaker known for her thoughtful writing on Christian living, particularly regarding women's roles in the church and biblical womanhood. She has contributed significantly to reformed evangelical discourse through her books and articles, encouraging believers to think deeply about Scripture's teachings on identity and purpose.",
+    "affiliation": "Evangelical Press, Christian publications",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "God's Design for Women",
+        "amazon_url": "https://www.amazon.com/s?k=God%27s+Design+for+Women+Sharon+James"
+      },
+      {
+        "title": "Equal: What the Bible Says About Women, Men, and Authority",
+        "amazon_url": "https://www.amazon.com/s?k=Equal+What+the+Bible+Says+About+Women+Men+and+Authority+Sharon+James"
+      },
+      {
+        "title": "The Vocation of a Christian Woman",
+        "amazon_url": "https://www.amazon.com/s?k=The+Vocation+of+a+Christian+Woman+Sharon+James"
+      }
+    ],
+    "initials": "SJ"
+  },
+  {
+    "name": "Laura Story",
+    "slug": "laura-story",
+    "bio": "Laura Story is a contemporary Christian music artist and songwriter known for her powerful hymn-inspired compositions and authentic faith journey. Her music, including the beloved song \"Blessings,\" reflects deep theological truths about God's goodness during life's difficult seasons. Through her writing and speaking, she encourages believers to find hope and purpose in Christ amid suffering and uncertainty.",
+    "affiliation": "Provident Label Group, North Point Community Church",
+    "role": "Christian Music Artist & Author",
+    "education": "Furman University",
+    "website": "https://www.laurastory.com",
+    "books": [
+      {
+        "title": "When God Doesn't Fix It",
+        "amazon_url": "https://www.amazon.com/s?k=When+God+Doesn%27t+Fix+It+Laura+Story"
+      },
+      {
+        "title": "Open Hands, Open Heart",
+        "amazon_url": "https://www.amazon.com/s?k=Open+Hands+Open+Heart+Laura+Story"
+      },
+      {
+        "title": "What if Your Blessings Come Through Raindrops?",
+        "amazon_url": "https://www.amazon.com/s?k=What+if+Your+Blessings+Come+Through+Raindrops+Laura+Story"
+      }
+    ],
+    "initials": "LS"
   }
 ]
