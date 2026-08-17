@@ -16215,5 +16215,92 @@
     "website": "",
     "books": [],
     "initials": "KE"
+  },
+  {
+    "name": "J.I. Packer",
+    "slug": "ji-packer",
+    "bio": "J.I. Packer was a renowned British-born theologian and Anglican clergyman whose scholarly yet accessible writings shaped evangelical Christianity for over six decades. Best known for his classic work *Knowing God*, Packer combined rigorous theological thinking with pastoral warmth, making deep biblical truths available to ordinary believers. His influence extended across denominations as a trusted guide to Christian doctrine, spirituality, and the recovery of biblical wisdom.",
+    "affiliation": "Regent College; Christianity Today",
+    "role": "Theologian, Author & Professor",
+    "education": "DPhil, University of Oxford",
+    "website": "",
+    "books": [
+      {
+        "title": "Knowing God",
+        "amazon_url": "https://www.amazon.com/s?k=Knowing+God+J.I.+Packer"
+      },
+      {
+        "title": "Concise Theology",
+        "amazon_url": "https://www.amazon.com/s?k=Concise+Theology+J.I.+Packer"
+      },
+      {
+        "title": "God's Words",
+        "amazon_url": "https://www.amazon.com/s?k=God's+Words+J.I.+Packer"
+      },
+      {
+        "title": "Evangelism and the Sovereignty of God",
+        "amazon_url": "https://www.amazon.com/s?k=Evangelism+and+the+Sovereignty+of+God+Packer"
+      },
+      {
+        "title": "The Problem of Eternally Functional Subordination of the Son",
+        "amazon_url": "https://www.amazon.com/s?k=Problem+Eternally+Functional+Subordination+Son+Packer"
+      },
+      {
+        "title": "Keep in Step with the Spirit",
+        "amazon_url": "https://www.amazon.com/s?k=Keep+in+Step+with+the+Spirit+Packer"
+      }
+    ],
+    "initials": "JIP"
+  },
+  {
+    "name": "Keith Evans",
+    "slug": "keith-evans",
+    "bio": "Keith Evans is a Christian writer and content creator focused on biblical teaching and discipleship. He contributes to various Christian publications and platforms, helping believers deepen their understanding of Scripture and faith.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KE"
+  },
+  {
+    "name": "Kristen Wetherell",
+    "slug": "kristen-wetherell",
+    "bio": "Kristen Wetherell is an author and Bible teacher who equips women to live out their faith with deeper intentionality. She is known for her work helping Christian women navigate personal growth, biblical womanhood, and spiritual disciplines through accessible, practical teaching.",
+    "affiliation": "The Gospel Coalition, Crossway",
+    "role": "Author & Bible Teacher",
+    "education": "",
+    "website": "https://kristenwetherell.com",
+    "books": [
+      {
+        "title": "Fight Fear: A Christ-Centered Approach to Managing Anxiety",
+        "amazon_url": "https://www.amazon.com/s?k=Fight+Fear+Kristen+Wetherell"
+      },
+      {
+        "title": "Longing for Lovely: Creating a Life That Reflects the Gospel",
+        "amazon_url": "https://www.amazon.com/s?k=Longing+for+Lovely+Kristen+Wetherell"
+      },
+      {
+        "title": "Gospel Meditations for Women: Meditating on Scripture for Life and Hope",
+        "amazon_url": "https://www.amazon.com/s?k=Gospel+Meditations+for+Women+Kristen+Wetherell"
+      }
+    ],
+    "initials": "KW"
+  },
+  {
+    "name": "Sarah Walton",
+    "slug": "sarah-walton",
+    "bio": "Sarah Walton is a writer and speaker who helps women think biblically about their daily lives and relationships. She has contributed to various Christian publications and speaks at conferences about faith, marriage, and spiritual growth.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Hope When It Hurts: Finding God's Goodness in Life's Storms",
+        "amazon_url": "https://www.amazon.com/s?k=Hope+When+It+Hurts+Sarah+Walton"
+      }
+    ],
+    "initials": "SW"
   }
 ]
