@@ -16302,5 +16302,32 @@
       }
     ],
     "initials": "SW"
+  },
+  {
+    "name": "John Samson",
+    "slug": "john-samson",
+    "bio": "John Samson is a pastor, author, and Christian communicator known for his clear teaching on biblical theology and Christian living. He has ministered in various pastoral roles and is recognized for his work in equipping Christians to understand and apply Scripture. His writing and speaking emphasize the importance of sound doctrine grounded in grace.",
+    "affiliation": "Gbehren Mission Church",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Possessed: What the New Testament Teaches About Demon Possession and Spiritual Warfare",
+        "amazon_url": "https://www.amazon.com/s?k=Possessed+John+Samson"
+      }
+    ],
+    "initials": "JS"
+  },
+  {
+    "name": "Autumn Alcott Ridenour",
+    "slug": "autumn-alcott-ridenour",
+    "bio": "Autumn Alcott Ridenour is a writer and content creator dedicated to exploring faith, biblical wisdom, and Christian living. She shares thoughtfully curated resources and original writing that encourage believers to deepen their relationship with God and apply Scripture to everyday life.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AAR"
   }
 ]
