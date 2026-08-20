@@ -16362,5 +16362,88 @@
     "website": "",
     "books": [],
     "initials": "MM"
+  },
+  {
+    "name": "Paul Carter",
+    "slug": "paul-carter",
+    "bio": "Paul Carter is a pastor and Christian author known for his thoughtful teaching on Scripture and contemporary faith issues. He has ministered in pastoral roles and contributed to Christian publications, helping believers engage their faith more deeply.",
+    "affiliation": "",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PC"
+  },
+  {
+    "name": "Michael G. Brown",
+    "slug": "michael-g-brown",
+    "bio": "Michael G. Brown is a respected Christian author and apologist known for his accessible writing on biblical topics and cultural issues facing the Church today. His work combines scholarly insight with pastoral sensitivity, helping readers deepen their faith and engage thoughtfully with contemporary challenges.",
+    "affiliation": "AskDrBrown.org",
+    "role": "Author & Christian Apologist",
+    "education": "Ph.D., New York University",
+    "website": "https://www.askdrbrown.org",
+    "books": [
+      {
+        "title": "Answering Jewish Objections to Jesus",
+        "amazon_url": "https://www.amazon.com/s?k=Answering+Jewish+Objections+to+Jesus+Michael+Brown"
+      },
+      {
+        "title": "The End of the American Gospel Custom",
+        "amazon_url": "https://www.amazon.com/s?k=The+End+of+the+American+Gospel+Custom+Michael+Brown"
+      },
+      {
+        "title": "Israel and the Church",
+        "amazon_url": "https://www.amazon.com/s?k=Israel+and+the+Church+Michael+Brown"
+      },
+      {
+        "title": "Has God Really Said?",
+        "amazon_url": "https://www.amazon.com/s?k=Has+God+Really+Said+Michael+Brown"
+      }
+    ],
+    "initials": "MGB"
+  },
+  {
+    "name": "Dwayne Ewers",
+    "slug": "dwayne-ewers",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DE"
+  },
+  {
+    "name": "Timothy Hall",
+    "slug": "timothy-hall",
+    "bio": "Timothy Hall is a respected Christian author and scholar who has contributed thoughtfully to evangelical literature and biblical studies. His work explores themes central to Christian faith and practice, offering readers accessible yet substantive engagement with Scripture and theology.",
+    "affiliation": "",
+    "role": "Author & Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TH"
+  },
+  {
+    "name": "Caleb Woodbridge",
+    "slug": "caleb-woodbridge",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CW"
+  },
+  {
+    "name": "Rebecca Leppert",
+    "slug": "rebecca-leppert",
+    "bio": "Rebecca Leppert is a Christian writer and content creator focused on faith, discipleship, and spiritual growth. She contributes to various Christian publications and platforms, helping readers deepen their relationship with Jesus Christ through practical biblical insights.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RL"
   }
 ]
