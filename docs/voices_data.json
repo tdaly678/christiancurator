@@ -16445,5 +16445,93 @@
     "website": "",
     "books": [],
     "initials": "RL"
+  },
+  {
+    "name": "John Stonestreet and Thaddeus Williams",
+    "slug": "john-stonestreet-and-thaddeus-williams",
+    "bio": "John Stonestreet is the president of the Colson Center for Christian Worldview and a leading voice on faith, culture, and public policy. Thaddeus Williams is a professor of philosophy and systematic theology known for his work on worldview apologetics. Together, they have collaborated on projects exploring how Christians can engage contemporary culture with biblical conviction and intellectual integrity.",
+    "affiliation": "Colson Center for Christian Worldview, BreakPoint",
+    "role": "Authors, Apologists & Cultural Commentators",
+    "education": "",
+    "website": "https://www.colsoncenter.org",
+    "books": [
+      {
+        "title": "Confronting Injustice Without Compromising Truth",
+        "amazon_url": "https://www.amazon.com/s?k=Confronting+Injustice+Without+Compromising+Truth+Stonestreet"
+      },
+      {
+        "title": "Restoring All Things: God's Audacious Plan to Change the World",
+        "amazon_url": "https://www.amazon.com/s?k=Restoring+All+Things+Stonestreet"
+      },
+      {
+        "title": "Making Sense of Your Money: 10 Decisions That Will Change Your Financial Life",
+        "amazon_url": "https://www.amazon.com/s?k=Making+Sense+of+Your+Money+Stonestreet"
+      },
+      {
+        "title": "Repairing the Ruins: The Case for Biblical Worldview",
+        "amazon_url": "https://www.amazon.com/s?k=Repairing+the+Ruins+Williams"
+      }
+    ],
+    "initials": "JSW"
+  },
+  {
+    "name": "Brian Najapfour",
+    "slug": "brian-najapfour",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BN"
+  },
+  {
+    "name": "Will Dole",
+    "slug": "will-dole",
+    "bio": "Will Dole is a writer and content creator dedicated to exploring faith, culture, and Christian living in the modern world. His work encourages readers to think deeply about how their beliefs intersect with everyday life and contemporary issues.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "WD"
+  },
+  {
+    "name": "Gracie MacCaughelty",
+    "slug": "gracie-maccaughelty",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "GM"
+  },
+  {
+    "name": "Karrie Hahn Devlin",
+    "slug": "karrie-hahn-devlin",
+    "bio": "Karrie Hahn Devlin is a writer and content creator known for her work in Christian publishing and media. She has contributed to various Christian platforms and publications, focusing on topics relevant to faith and contemporary Christian life.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KHD"
+  },
+  {
+    "name": "Tara-Leigh Cobble",
+    "slug": "taraleigh-cobble",
+    "bio": "Tara-Leigh Cobble is a Bible teacher and author known for her Inductive Bible study method and her passion for helping women engage deeply with Scripture. She is the creator of The Bible Recap, a daily Bible reading plan designed to help Christians read through the entire Bible in a year while gaining meaningful insights.",
+    "affiliation": "The Bible Recap",
+    "role": "Bible Teacher & Author",
+    "education": "",
+    "website": "https://www.thebiblrecap.com/",
+    "books": [
+      {
+        "title": "The Bible Recap: An Inductive Guide to Taking Back Your Time in Scripture",
+        "amazon_url": "https://www.amazon.com/s?k=The+Bible+Recap+Tara-Leigh+Cobble"
+      }
+    ],
+    "initials": "TLC"
   }
 ]
