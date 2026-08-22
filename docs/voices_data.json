@@ -16533,5 +16533,52 @@
       }
     ],
     "initials": "TLC"
+  },
+  {
+    "name": "Bob Cutillo",
+    "slug": "bob-cutillo",
+    "bio": "Bob Cutillo is a Christian communicator and content creator focused on helping believers engage with Scripture and contemporary faith issues. He brings a thoughtful, accessible approach to Christian discipleship and spiritual growth.",
+    "affiliation": "",
+    "role": "Christian Writer & Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BC"
+  },
+  {
+    "name": "Michael J. Kruger",
+    "slug": "michael-j-kruger",
+    "bio": "Michael J. Kruger is a respected New Testament scholar and theologian known for his work on biblical canon, apostolic authority, and the historical reliability of Scripture. As president and professor at Reformed Theological Seminary, he combines academic rigor with accessible Christian teaching, helping believers understand the foundations of their faith. His scholarship bridges the gap between the academy and the church, offering thoughtful defenses of biblical Christianity.",
+    "affiliation": "Reformed Theological Seminary",
+    "role": "President, Professor & Author",
+    "education": "Ph.D. in New Testament, University of Edinburgh",
+    "website": "https://michaeljkruger.com",
+    "books": [
+      {
+        "title": "The Question of Canon: Challenging the Status Quo in the New Testament Debate",
+        "amazon_url": "https://www.amazon.com/s?k=Question+of+Canon+Kruger"
+      },
+      {
+        "title": "Canon Revisited: Establishing the Origins and Authority of the New Testament Books",
+        "amazon_url": "https://www.amazon.com/s?k=Canon+Revisited+Kruger"
+      },
+      {
+        "title": "The Heresy of Orthodoxy: How Contemporary Culture's Fascination with Diversity Has Created a New Kind of Heresy",
+        "amazon_url": "https://www.amazon.com/s?k=Heresy+of+Orthodoxy+Kruger"
+      },
+      {
+        "title": "Christianity at the Crossroads: How the Second Century Shaped the Future of the Church",
+        "amazon_url": "https://www.amazon.com/s?k=Christianity+at+the+Crossroads+Kruger"
+      },
+      {
+        "title": "Reorienting the Christian Worldview",
+        "amazon_url": "https://www.amazon.com/s?k=Reorienting+the+Christian+Worldview+Kruger"
+      },
+      {
+        "title": "The Ten Commandments: The Significance of God's Law in the Christian Life",
+        "amazon_url": "https://www.amazon.com/s?k=Ten+Commandments+Kruger"
+      }
+    ],
+    "initials": "MJK"
   }
 ]
