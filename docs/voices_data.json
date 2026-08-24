@@ -16602,5 +16602,36 @@
     "website": "",
     "books": [],
     "initials": "SW"
+  },
+  {
+    "name": "Sam Emadi",
+    "slug": "sam-emadi",
+    "bio": "Sam Emadi is a pastor, author, and speaker passionate about helping Christians understand and live out their faith with greater depth and conviction. Through his writing and teaching, he addresses contemporary spiritual challenges while pointing readers back to biblical truth and the centrality of Christ.",
+    "affiliation": "The Statsraad Church",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "https://samemadi.com",
+    "books": [
+      {
+        "title": "Scandal of Obedience",
+        "amazon_url": "https://www.amazon.com/s?k=Scandal+of+Obedience+Sam+Emadi"
+      },
+      {
+        "title": "Glorious Ruin",
+        "amazon_url": "https://www.amazon.com/s?k=Glorious+Ruin+Sam+Emadi"
+      }
+    ],
+    "initials": "SE"
+  },
+  {
+    "name": "Rob Edenfield",
+    "slug": "rob-edenfield",
+    "bio": "Rob Edenfield is a writer and content creator focused on helping Christians think deeply about faith, culture, and discipleship. Through his writing and speaking, he encourages believers to engage thoughtfully with contemporary issues from a biblical perspective.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RE"
   }
 ]
