@@ -16677,5 +16677,70 @@
     "website": "",
     "books": [],
     "initials": "JB"
+  },
+  {
+    "name": "Richard Bennett and Martin Buckinham",
+    "slug": "richard-bennett-and-martin-buckinham",
+    "bio": "Richard Bennett and Martin Buckinham are known for their collaborative work in Christian ministry and content creation. Together they have contributed to conversations around faith, discipleship, and spiritual growth within evangelical communities.",
+    "affiliation": "",
+    "role": "Christian Authors & Ministry Leaders",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RB & MB"
+  },
+  {
+    "name": "Editors",
+    "slug": "editors",
+    "bio": "Our editorial team curates thoughtful, biblically-grounded content to help Christians grow in faith and understanding. We are committed to presenting diverse voices within the Christian tradition while maintaining theological integrity and relevance to contemporary life.",
+    "affiliation": "",
+    "role": "Editorial Team",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ED"
+  },
+  {
+    "name": "Marc LiVecche",
+    "slug": "marc-livecche",
+    "bio": "Marc LiVecche is a scholar and writer focused on Christian ethics, just war theory, and faith-based perspectives on conflict and defense. He has contributed thoughtfully to conversations about how Christian principles apply to complex issues of security, military ethics, and statecraft.",
+    "affiliation": "The Institute on Religion and Democracy",
+    "role": "Scholar & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ML"
+  },
+  {
+    "name": "Graham Tomlin",
+    "slug": "graham-tomlin",
+    "bio": "Graham Tomlin is a respected Anglican theologian and writer who has served in various leadership roles within the Church of England. Known for his accessible yet thoughtful approach to Christian theology and discipleship, he has been influential in shaping contemporary evangelical Anglican thought and practice.",
+    "affiliation": "St Mellitus College; Anglican Church",
+    "role": "Theologian, Author & Church Leader",
+    "education": "DPhil, University of Oxford",
+    "website": "https://www.grahamtomlin.com",
+    "books": [
+      {
+        "title": "The Provocative Church",
+        "amazon_url": "https://www.amazon.com/s?k=The+Provocative+Church+Graham+Tomlin"
+      },
+      {
+        "title": "The Apostles' Creed: A Guide to the Ancient Christian Faith",
+        "amazon_url": "https://www.amazon.com/s?k=The+Apostles+Creed+Graham+Tomlin"
+      },
+      {
+        "title": "Spiritual Fitness: Christian Character in a Consumer Culture",
+        "amazon_url": "https://www.amazon.com/s?k=Spiritual+Fitness+Graham+Tomlin"
+      },
+      {
+        "title": "Seven Deadly Sins: And How to Overcome Them",
+        "amazon_url": "https://www.amazon.com/s?k=Seven+Deadly+Sins+Graham+Tomlin"
+      },
+      {
+        "title": "The Power of Small: Why Little Things Make All the Difference",
+        "amazon_url": "https://www.amazon.com/s?k=The+Power+of+Small+Graham+Tomlin"
+      }
+    ],
+    "initials": "GT"
   }
 ]
