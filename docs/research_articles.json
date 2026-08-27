@@ -1,77 +1,85 @@
 [
   {
-    "source_name": "Pew Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Reem Nadeem",
-    "title": "Do Americans think chatbots help or hurt people using them for loneliness, depression or stress?",
-    "url": "https://www.pewresearch.org/science/2026/08/25/do-americans-think-chatbots-help-or-hurt-people-using-them-for-loneliness-depression-or-stress/",
-    "summary": "Key takeaways: At a time of public debate and high-profile cases of chatbot use for social and mental health, a new Pew Research Center survey finds that, on balance, Americans say chatbots do more to hurt than help people who use them for loneliness, depression or stress. But sizable shares of Americans are unsure of [&#8230;]",
-    "full_content": "",
-    "published": "Tue, 25 Aug 2026 13:58:28 +0000",
-    "fetched_at": "2026-08-26T06:27:31.916473",
-    "score": 5,
-    "tags": [],
-    "rewritten_title": "Americans Say Chatbots Hurt More Than Help the Lonely and Depressed",
-    "personas": [],
-    "topic_cluster": "unique",
-    "perspective": "neutral",
-    "final_score": 8.0,
-    "recency_boost": 1.5,
-    "trending_boost": 1.5
-  },
-  {
     "source_name": "Lifeway Research",
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
-    "author": "Scott McConnell",
-    "title": "Despite the Secularization Trend, Jesus Still Saves",
-    "url": "https://research.lifeway.com/2026/08/26/despite-the-secularization-trend-jesus-still-saves/",
-    "summary": "<p>While society moves toward secularization, Jesus can still save people disengaged from Christianity and transform those barely hanging on. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/08/26/despite-the-secularization-trend-jesus-still-saves/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/08/26/despite-the-secularization-trend-jesus-still-saves/\">Despite the Secularization Trend, Jesus Still Saves</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "author": "Bob Bunn",
+    "title": "What Is Biblical Manhood?",
+    "url": "https://research.lifeway.com/2026/08/27/what-is-biblical-manhood/",
+    "summary": "<p>As leaders, we can help men identify what biblical manhood practically looks like and offer handles for demonstrating godly masculinity. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/08/27/what-is-biblical-manhood/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/08/27/what-is-biblical-manhood/\">What Is Biblical Manhood?</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "full_content": "",
-    "published": "Wed, 26 Aug 2026 06:08:00 +0000",
-    "fetched_at": "2026-08-26T06:27:32.518750",
+    "published": "Thu, 27 Aug 2026 06:26:00 +0000",
+    "fetched_at": "2026-08-27T17:00:27.359895",
     "score": 6,
     "tags": [
       "theology",
-      "devotional"
+      "church life"
     ],
-    "rewritten_title": "Jesus Still Saves the Spiritually Adrift—Even Now",
+    "rewritten_title": "Biblical Manhood Debate: Leaders Must Define It—or Lose Men",
     "personas": [
       "pastor",
       "professional"
     ],
-    "topic_cluster": "evangelism_secularization",
-    "perspective": "supportive",
+    "topic_cluster": "biblical_manhood",
+    "perspective": "neutral",
     "final_score": 7.5,
     "recency_boost": 1.5
   },
   {
-    "source_name": "Lifeway Research",
+    "source_name": "Ryan Burge",
     "source_category": "culture",
     "source_type": "christian",
-    "independent": false,
-    "author": "Aaron Earls",
-    "title": "Smallest, Largest Churches See Strongest Discipleship Scores",
-    "url": "https://research.lifeway.com/2026/08/25/smallest-largest-churches-see-strongest-discipleship-scores/",
-    "summary": "<p>The size and location of a church may reveal more than we realize about the discipleship of its churchgoers. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/08/25/smallest-largest-churches-see-strongest-discipleship-scores/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/08/25/smallest-largest-churches-see-strongest-discipleship-scores/\">Smallest, Largest Churches See Strongest Discipleship Scores</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
-    "full_content": "",
-    "published": "Tue, 25 Aug 2026 14:45:00 +0000",
-    "fetched_at": "2026-08-26T06:27:32.518767",
-    "score": 5,
+    "independent": true,
+    "author": "Ryan Burge",
+    "title": "How Well Do We Actually Know American Religion?",
+    "url": "https://www.graphsaboutreligion.com/p/how-well-do-we-actually-know-american",
+    "summary": "What happens when you check two major religion surveys against each other",
+    "full_content": "<p>Let&#8217;s get nerdy. For those of you who sit around and wonder about the intricacies of polling about religion, this is the post for you.</p><p>Let me start by stating a fact that seems incomprehensible to even type out, but it undergirds almost every single graph that I produce: <strong>we don&#8217;t actually know the religious composition of the United States with any real precision</strong>. I know that sounds bizarre. But the honest truth is that we are relying on a whole bunch of &#8220;best guesses&#8221; based on sound methodology and replication &#8212; and we have no way to know for certain if any of them are right.</p><p>The reason is simple: <strong>the United States made it illegal to ask about religious affiliation on the Census back in the 1970s</strong>. (This<a href=\"https://www.pewresearch.org/short-reads/2023/04/12/why-the-us-census-doesnt-ask-americans-about-their-religion/\"> short piece from Pew</a> explains the whole mess well.) That puts researchers like me in a real bind, because without a Census benchmark there&#8217;s no authoritative reference point to weight our surveys against. We know exactly what share of Americans have a four-year college degree because the Census tells us. We have no equivalent anchor for Catholics, or evangelicals, or the religiously unaffiliated.</p><p>To their great credit &#8212; and great expense &#8212; Pew has tried to fill this void with the National Public Opinion Reference Survey (<a href=\"https://www.pewresearch.org/methods/fact-sheet/national-public-opinion-reference-survey-npors/\">NPORS</a>), and it&#8217;s a genuine methodological achievement. <strong>But everyone working in this space knows that what we really need is a Census benchmark, and we don&#8217;t have one.</strong></p><p>In a post from February, I pulled back the curtain on survey methodology &#8212; specifically the difference between probability-based polls and opt-in panels. I&#8217;m not going to rehash all of that here, so I&#8217;d strongly encourage you to<a href=\"https://www.graphsaboutreligion.com/p/who-is-telling-the-truth-about-american\"> go read it first</a>. But in short: probability-based surveys like the Pew Religious Landscape Study randomly select respondents from the full population, while opt-in panels like the Cooperative Election Study draw from volunteers &#8212; and that distinction can produce meaningfully different pictures of American religion.</p><p>How meaningfully different? That&#8217;s exactly what today&#8217;s post is about. Let&#8217;s start by comparing the two surveys on the basics: religious attendance and religious affiliation across the full sample.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!n5jw!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3e44b00e-3a93-4c4a-8d34-29ad249adfc3_2048x1365.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"970\" src=\"https://substackcdn.com/image/fetch/$s_!n5jw!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3e44b00e-3a93-4c4a-8d34-29ad249adfc3_2048x1365.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p>It doesn&#8217;t take long to find a meaningful difference between the two instruments. <strong>In the CES, 34% of respondents say they never attend religious services, compared to just 25% in the Pew data &#8212; a nine-point gap that would be genuinely alarming if it held up across the board</strong>. But zoom out a little and the picture gets more complicated. Pew actually records a higher share of &#8220;seldom&#8221; attenders than the CES &#8212; 25% versus 21%. Add those two bottom categories together and the gap shrinks considerably: <strong>55% of CES respondents attend less than once a year compared to 50% in Pew</strong>. That&#8217;s a five-point difference, which is not nothing, but it&#8217;s hardly a chasm.</p><p>What I find most reassuring is the right side of the graph. The share of CES respondents who attend weekly or more? Exactly 25% &#8212; the same figure Pew produces. <strong>On the measure that matters most for congregational health and religious vitality, the two surveys are in complete agreement.</strong></p><p>The non-religion picture tells a similar story. In the full CES sample, 34.5% identify as religiously unaffiliated compared to 29.4% in the Pew data &#8212; that same five-point gap showing up again. But the more interesting question isn&#8217;t the overall margin, it&#8217;s where that gap comes from. Here&#8217;s what it looks like when I break it down by birth decade.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!Ga0U!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fea0def8b-1d83-4dfd-9dbd-72f9742a2b56_1707x2048.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1747\" src=\"https://substackcdn.com/image/fetch/$s_!Ga0U!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fea0def8b-1d83-4dfd-9dbd-72f9742a2b56_1707x2048.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p>It&#8217;s certainly the case that older Americans are much more likely to be recorded as non-religious in the CES compared to the Pew RLS. <strong>Among those born in the 1950s, the figures are 25% versus 17%. The gap is eight points among those born in the 1960s, and seven points for those born in the 1970s &#8212; 36% versus 29%</strong>. These are real, substantive differences that are impossible to simply wave away.</p><p>When we dig into the type of none, though, a clearer picture emerges. The primary driver of the divergence is the &#8220;nothing in particular&#8221; category &#8212; older CES respondents are considerably more likely to land there compared to the Pew sample. The atheist and agnostic gaps exist too, but they&#8217;re modest by comparison.</p><p>I&#8217;ve turned this over in my head many times and I can&#8217;t fully resolve it. My first instinct was social desirability bias &#8212; the idea that Pew respondents were more likely to be talking to a live interviewer and therefore less willing to disavow religion. But Pew&#8217;s <a href=\"https://www.pewresearch.org/religion/2025/02/26/religious-landscape-study-methodology/\">own methodology</a> indicates that 97% of RLS participants completed the survey through a web browser, just like CES respondents. That levels the playing field and takes my best explanation off the table.</p><p>The most I can say with confidence is that address-based sampling and opt-in panels are recruiting fundamentally different kinds of older Americans, and those differences show up in how they answer questions about religious identity. But I&#8217;d be overstating my certainty if I claimed to know exactly why. Sometimes the honest answer is that the data surfaces a question I can&#8217;t fully resolve.</p><p>What makes this even more puzzling is what happens at the other end of the age spectrum. <strong>Among the youngest Americans &#8212; those born in 1990 or later &#8212; the two surveys are essentially in agreement, never diverging by more than a couple of points</strong>. If the gap were simply a product of opt-in panels attracting a certain kind of respondent, you&#8217;d expect it to show up across all age groups. The fact that it&#8217;s concentrated among older Americans suggests something specific is happening with that cohort, not a universal feature of how these two instruments measure religion.</p><p>With that caveat on the table, let&#8217;s press on. I pulled together Pew&#8217;s estimates for the share of various religious groups with a four-year college degree and compared them to the same figures from the CES.</p>\n      <p>\n          <a href=\"https://www.graphsaboutreligion.com/p/how-well-do-we-actually-know-american\">\n              Read more\n          </a>\n      </p>",
+    "published": "Thu, 27 Aug 2026 11:30:54 GMT",
+    "fetched_at": "2026-08-27T17:00:25.114292",
+    "score": 4,
+    "tags": [
+      "data"
+    ],
+    "rewritten_title": "Two Major Religion Surveys Reveal They Don't Match Up",
+    "personas": [
+      "pastor",
+      "professional"
+    ],
+    "topic_cluster": "religious_measurement",
+    "perspective": "neutral",
+    "frequency_boost": 0.75,
+    "source_posts_30d": 9,
+    "final_score": 6.25,
+    "recency_boost": 1.5
+  },
+  {
+    "source_name": "Aaron Renn",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": true,
+    "author": "Aaron M. Renn",
+    "title": "What the New Right Actually Reads",
+    "url": "https://www.aaronrenn.com/p/what-the-new-right-actually-reads",
+    "summary": "A Washington firm analyzed 29,000 citations across seven institutions and ranked me its most influential thinker",
+    "full_content": "<p>Baron Public Affairs, a Washington political risk firm, in an analysis of over 29,000 citations made between January 2025 and March 2026 by seven organizations it identifies as populist-nationalist - American Affairs, American Compass, the America First Policy Institute, Center for Renewing America, the Claremont Institute, the Foundation for American Innovation, and the Heritage Foundation - found that I was the number one &#8220;policy Super Influencer&#8221; on their top twenty list of people cited. Baron discusses this research in its <a href=\"https://www.baronpa.com/library/towns-and-country\">new political risk brief</a>. </p><p>Baron counts many blue chip organizations among its clients, ranging from Fortune 10 companies to the Department of Defense. It is known for its influencer analytics, such its <a href=\"https://www.baronpa.com/library/biden-influencers\">Biden influencer study</a> that noted the influence of people like the anti-monopoly writer Matt Stoller, which was an early signal of the Biden administration&#8217;s more aggressive stance on antitrust. </p><p>This current Baron study is an interesting window into what people at these seven specific institutions are reading. Who are the people they are drawing on for insight and ideas? Baron&#8217;s <a href=\"https://www.baronpa.com/the-political-risk-brief/whos-right\">podcast about their research</a> notes, &#8220;It's a community that is searching for an intellectual leader, and that search is why we see so much diversity within the list.&#8221; These groups are still building up their specific programs and positions, and are open to drawing on a wide range of thinkers in doing that. This list is, in effect, supply meeting demand in the intellectual marketplace. </p><p>I am on the right, though am not specifically populist-nationalist (or new right or post-liberal or Christian nationalist). But as Jonathan Baron put it in their podcast, &#8220;<span>These Super Influencers include people who very much are not within the nationalist populist tribe, but they come from outside it and nonetheless are having a disproportionate impact on the thinking of these organizations.&#8221;</span></p><p><span>Baron&#8217;s twenty Super Influencers are a mix of &#8220;conservative thought leaders,&#8221; &#8220;technical experts,&#8221; &#8220;economists,&#8221; and &#8220;heterodox liberals.&#8221; They, &#8220;</span>respect scholarship, nuance, and coalition building&#8221; and have &#8220;genteel temperaments.&#8221; Their top concern is, &#8220;Encouraging family formation and raising fertility rates.&#8221; And, &#8220;Departing from the previous generation of conservatives who focused on broad themes such as GDP growth, free trade, and democratization, the current group of Super Influencers prioritizes improving day-to-day conditions for average Americans who live outside of major cities.&#8221; Interestingly, &#8220;More than a quarter of the Super Influencers earned their professional <em>bona fides</em> in center-left environments.&#8221; </p><p>While Baron did not disclose the rest of its top twenty list, two of the other people on it, Brad Wilcox and Michael Lind, were mentioned in Baron&#8217;s podcast.</p><p>One of the more interesting findings is that there is a big divide between the seven organizations Baron examined:</p><blockquote><p>Almost half of the citations of Super Influencers by American Affairs, American Compass, and FAI &#8211; the organizations within the &#8220;New Right&#8221; (as distinct from the other tribes within the Nationalist-Populist quadrant) &#8211; were of heterodox liberals and economists; in fact, none of the other four organizations included in Baron&#8217;s analysis cited a single heterodox liberal. </p></blockquote><p>AFPI, CRA, and Heritage are more political movement organizations, so perhaps it makes sense that they would not cite any heterodox liberals. And Claremont has its own deep intellectual history to draw on for its contemporary work, with a long history of, for example, criticizing the growth of the administrative state. American Affairs, American Compass, and FAI all work with a variegated collection of people, and have always been open to engaging the center-left. (I have personally written for American Affairs, American Compass, and Claremont). </p><p>The outsized significance of family formation and fertility among the Super Influencers is also interesting. Three of the Super Influencers are at the Institute for Family Studies (including Wilcox). As Jonathan Baron put it, &#8220;The Institute for Family Studies is killing it.&#8221; Also, while Baron found that they didn&#8217;t have a significant foreign policy focus in general, thirteen Super Influencers wrote about South Korea, eight of whom talked negatively about its low birth rate.</p><p>The podcast notes that people like David Goldman and AEI&#8217;s Nick Eberstadt had been writing on these topics for a while, although mostly focusing on non-US countries. Eberstadt has been writing on fertility since <a href=\"https://www.nationalaffairs.com/public_interest/detail/world-population-implosion\">at least 1997</a>, a generation ago. Tracing the evolution of this issue and the prominent figures engaging on it is a topic for a future essay, but it&#8217;s important to note that traditional conservatism was engaged on this topic before populist-nationalism came on the scene. </p><p>Perhaps because this was not seen as a problem relevant to the United States - we still seemed like the exception back then - the demand side was not yet there for these ideas to catch fire. The Baron report shows the idea side intersecting with much greater public and institutional interest on some of these topics, and the family formation and fertility one is the prime example.</p><p>This also helps explain the influence of Michael Lind. Lind has been pretty consistent in his beliefs, with books like <em>The Next American Nation</em> talking about transition back in 1995. Among his issues in that book was restriction of low-skill immigration. Now, the transition is upon us, and his ideas, which always had a following, are now specially in vogue. Back in the 1990s, Lind worked for the New Yorker, Harper&#8217;s, and The New Republic, whereas today those same ideas are taken more seriously by groups such as the seven institutions in this study. That&#8217;s shows how the institutional landscape of America has shifted since then.</p><p>As for my showing at the top of the list, I&#8217;ve always applied the lens from my management consulting heritage to my own work. In the absence of deep personal networks into major institutions, there&#8217;s no alpha for me in covering topics in a conventional way. For people to read me, I need to provide unique, valuable insights in the white space areas that aren&#8217;t getting the attention they deserve. </p><p>What Baron&#8217;s research shows is that the idea space I&#8217;ve been working, focused more on the human-social side of an America in transition - with topics like regenerating leadership in America, the renewal of Christianity, gender dynamics and men&#8217;s issues, family formation and fertility, political economy, and urbanism and place - is where there&#8217;s been a big gap in the market in terms of serious analysis tuned to today&#8217;s cultural conditions. </p><p>The <a href=\"https://www.aaronrenn.com/p/institutions-of-the-american-transition\">institutions of the American transition map</a> I recently posted shows this in a broader form. There&#8217;s significant demand for new engagement with both acceleration and formation, on both left and right. A slew of new institutions have emerged to provide it, with my work focusing on the human, cultural, and institutional foundations of American flourishing in a time of transition.</p><p>Cover image: Rose Room at the New York Public Library by Los Paseos/Wikimedia, CC BY-SA 2.0</p><p></p>",
+    "published": "Thu, 27 Aug 2026 13:03:50 GMT",
+    "fetched_at": "2026-08-27T17:00:35.738842",
+    "score": 4,
     "tags": [
       "data",
-      "church life"
+      "culture"
     ],
-    "rewritten_title": "Small and Mega Churches Are Winning at Discipleship. Mid-Size Churches Aren't.",
+    "rewritten_title": "New Right's Brain Trust: One Thinker Towers Over the Rest",
     "personas": [
-      "pastor"
+      "professional"
     ],
-    "topic_cluster": "church_discipleship_trends",
-    "perspective": "neutral",
-    "final_score": 5.75,
+    "topic_cluster": "intellectual_influence_analysis",
+    "perspective": "news",
+    "frequency_boost": 0.75,
+    "source_posts_30d": 14,
+    "final_score": 6.25,
     "recency_boost": 1.5
   }
 ]

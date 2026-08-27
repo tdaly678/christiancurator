@@ -16742,5 +16742,111 @@
       }
     ],
     "initials": "GT"
+  },
+  {
+    "name": "Ardel Caneday",
+    "slug": "ardel-caneday",
+    "bio": "Ardel Caneday is a respected evangelical scholar and theologian known for his work in biblical studies and systematic theology. He has contributed significantly to Christian academic discourse through his writing, teaching, and editorial work in theological publications.",
+    "affiliation": "The Master's University",
+    "role": "Professor & Theologian",
+    "education": "Ph.D. in New Testament Studies",
+    "website": "",
+    "books": [
+      {
+        "title": "The Evangelical Worldview: Essentials from the Bible",
+        "amazon_url": "https://www.amazon.com/s?k=Ardel+Caneday+Evangelical+Worldview"
+      }
+    ],
+    "initials": "AC"
+  },
+  {
+    "name": "Gideon Rossouw",
+    "slug": "gideon-rossouw",
+    "bio": "Gideon Rossouw is a Christian writer and thought leader who engages contemporary faith issues with biblical insight and pastoral sensitivity. His work addresses the intersection of theology, culture, and Christian living for modern believers.",
+    "affiliation": "",
+    "role": "Author & Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "GR"
+  },
+  {
+    "name": "Gavin Ortlund",
+    "slug": "gavin-ortlund",
+    "bio": "Gavin Ortlund is a pastor, author, and theologian known for making biblical scholarship accessible to everyday Christians. He serves as senior pastor at Immanuel Church in Virginia and is the founder of The Evangelical Instance, a resource dedicated to exploring Christian theology and practice. His work emphasizes the unity of the church while addressing contemporary theological and pastoral concerns.",
+    "affiliation": "Immanuel Church; The Evangelical Instance",
+    "role": "Pastor, Author & Theologian",
+    "education": "M.Div., Reformed Theological Seminary",
+    "website": "https://www.gavinortlund.com",
+    "books": [
+      {
+        "title": "Themelios: The Newsroom of the Gospel",
+        "amazon_url": "https://www.amazon.com/s?k=Gavin+Ortlund+Themelios"
+      },
+      {
+        "title": "Finding the Right Hills to Die On: Why and How to Distinguish between Core Christian Convictions and Non-Essentials",
+        "amazon_url": "https://www.amazon.com/s?k=Finding+the+Right+Hills+to+Die+On+Gavin+Ortlund"
+      },
+      {
+        "title": "Gentle Reformation: Resisting the Extremes of a Polarized Age",
+        "amazon_url": "https://www.amazon.com/s?k=Gentle+Reformation+Gavin+Ortlund"
+      }
+    ],
+    "initials": "GO"
+  },
+  {
+    "name": "Bob Bunn",
+    "slug": "bob-bunn",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BB"
+  },
+  {
+    "name": "Lauren Ducommun",
+    "slug": "lauren-ducommun",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LD"
+  },
+  {
+    "name": "Carrie Blazina",
+    "slug": "carrie-blazina",
+    "bio": "Carrie Blazina is a writer and speaker who explores faith, family, and personal growth from a Christian perspective. Her work encourages readers to deepen their spiritual journey and find purpose in their daily lives.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CB"
+  },
+  {
+    "name": "Mary Van Weelden",
+    "slug": "mary-van-weelden",
+    "bio": "Mary Van Weelden is a Christian writer and content creator focused on faith, family, and spiritual growth. She shares practical biblical insights designed to encourage believers in their daily walk with Christ.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MVW"
+  },
+  {
+    "name": "Beshay Sakla",
+    "slug": "beshay-sakla",
+    "bio": "Beshay Sakla is a Coptic Orthodox Christian author and spiritual writer who contributes to Christian media and publications. His work focuses on Orthodox Christian theology, spirituality, and faith perspectives for contemporary audiences.",
+    "affiliation": "",
+    "role": "Author & Spiritual Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BS"
   }
 ]
