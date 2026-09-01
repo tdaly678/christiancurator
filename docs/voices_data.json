@@ -16892,5 +16892,58 @@
     "website": "",
     "books": [],
     "initials": "KP"
+  },
+  {
+    "name": "Kaspars Ozolins",
+    "slug": "kaspars-ozolins",
+    "bio": "Kaspars Ozolins is a Christian author and thought leader focused on faith, culture, and contemporary issues. His work explores how Christian principles apply to modern life and cultural conversations.",
+    "affiliation": "",
+    "role": "Author & Christian Commentator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KO"
+  },
+  {
+    "name": "Mackenzie Slagle",
+    "slug": "mackenzie-slagle",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MS"
+  },
+  {
+    "name": "Alex Chediak",
+    "slug": "alex-chediak",
+    "bio": "Alex Chediak is a writer and speaker who helps young adults navigate faith, purpose, and calling in the modern world. He is known for his thoughtful exploration of how Christians can live intentionally and align their careers with their spiritual convictions.",
+    "affiliation": "Desiring God",
+    "role": "Author & Speaker",
+    "education": "Stanford University",
+    "website": "https://alexchediak.com",
+    "books": [
+      {
+        "title": "Trophies of Grace: Living Purposefully in Christ",
+        "amazon_url": "https://www.amazon.com/s?k=Trophies+of+Grace+Alex+Chediak"
+      },
+      {
+        "title": "The Secular Creed: Engaging Five Contemporary False Gospels",
+        "amazon_url": "https://www.amazon.com/s?k=The+Secular+Creed+Alex+Chediak"
+      }
+    ],
+    "initials": "AC"
+  },
+  {
+    "name": "Audrey Hendricks",
+    "slug": "audrey-hendricks",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AH"
   }
 ]
