@@ -16945,5 +16945,51 @@
     "website": "",
     "books": [],
     "initials": "AH"
+  },
+  {
+    "name": "J. Alasdair Groves",
+    "slug": "j-alasdair-groves",
+    "bio": "J. Alasdair Groves is a counselor and author who helps Christians understand biblical wisdom for everyday struggles. He is known for his accessible approach to connecting Scripture with real-life challenges in areas like suffering, anxiety, and relationships.",
+    "affiliation": "Servant Ministry, Biblical Counseling Coalition",
+    "role": "Counselor & Author",
+    "education": "",
+    "website": "https://www.servant-ministry.org/",
+    "books": [
+      {
+        "title": "Grieving, Hope, and Solace: The Unexpected Gifts of Suffering",
+        "amazon_url": "https://www.amazon.com/s?k=Grieving+Hope+Solace+Groves"
+      },
+      {
+        "title": "Fierce Comfort: Mining the Richness of God's Sovereignty",
+        "amazon_url": "https://www.amazon.com/s?k=Fierce+Comfort+Groves"
+      },
+      {
+        "title": "How to Talk to Your Kids About Porn",
+        "amazon_url": "https://www.amazon.com/s?k=How+to+Talk+Kids+About+Porn+Groves"
+      }
+    ],
+    "initials": "JAG"
+  },
+  {
+    "name": "Brad Larson",
+    "slug": "brad-larson",
+    "bio": "Brad Larson is a Christian author and speaker known for his work in faith-based content and discipleship. He is passionate about helping believers deepen their understanding of Scripture and grow in their spiritual journey.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BL"
+  },
+  {
+    "name": "Marissa Sullivan",
+    "slug": "marissa-sullivan",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MS"
   }
 ]
