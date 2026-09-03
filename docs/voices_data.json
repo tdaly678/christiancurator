@@ -16991,5 +16991,58 @@
     "website": "",
     "books": [],
     "initials": "MS"
+  },
+  {
+    "name": "Patrick Luscri",
+    "slug": "patrick-luscri",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PL"
+  },
+  {
+    "name": "Blair Linne",
+    "slug": "blair-linne",
+    "bio": "Blair Linne is a Christian artist, author, and speaker known for her thoughtful exploration of faith, identity, and social justice from a biblical perspective. She uses her platform to encourage believers toward deeper theological reflection and authentic discipleship.",
+    "affiliation": "The Gospel Coalition, Cru",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "https://blairlinne.com",
+    "books": [
+      {
+        "title": "The Ella Project: Candid Conversations About Identity and Faith",
+        "amazon_url": "https://www.amazon.com/s?k=The+Ella+Project+Blair+Linne"
+      },
+      {
+        "title": "Still",
+        "amazon_url": "https://www.amazon.com/s?k=Still+Blair+Linne"
+      }
+    ],
+    "initials": "BL"
+  },
+  {
+    "name": "Skyler Flowers",
+    "slug": "skyler-flowers",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SF"
+  },
+  {
+    "name": "Justin Estrada",
+    "slug": "justin-estrada",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JE"
   }
 ]
