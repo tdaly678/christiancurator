@@ -17044,5 +17044,102 @@
     "website": "",
     "books": [],
     "initials": "JE"
+  },
+  {
+    "name": "Rick Reed",
+    "slug": "rick-reed",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RR"
+  },
+  {
+    "name": "Mary Hannah",
+    "slug": "mary-hannah",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MH"
+  },
+  {
+    "name": "Casey Harper",
+    "slug": "casey-harper",
+    "bio": "Casey Harper is a journalist and political correspondent known for reporting on faith, culture, and policy issues affecting Christians. His work has focused on documenting stories at the intersection of faith and public life.",
+    "affiliation": "",
+    "role": "Journalist & Political Correspondent",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CH"
+  },
+  {
+    "name": "Katy Faust",
+    "slug": "katy-faust",
+    "bio": "Katy Faust is an author and speaker known for her advocacy around marriage, family, and children's rights from a Christian perspective. She has become a prominent voice in discussions about gender ideology, parental rights, and the importance of the traditional family structure in contemporary culture.",
+    "affiliation": "The Homeschool Legal Defense Association, Public Discourse",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "https://www.katyfaust.com",
+    "books": [
+      {
+        "title": "Them Before Us: Why We Need a Global Children's Rights Movement",
+        "amazon_url": "https://www.amazon.com/s?k=Them+Before+Us+Katy+Faust"
+      }
+    ],
+    "initials": "KF"
+  },
+  {
+    "name": "Daniel Hyde",
+    "slug": "daniel-hyde",
+    "bio": "Daniel Hyde is a Reformed pastor and author who has dedicated his ministry to expounding Scripture and promoting biblical theology. He is known for his accessible yet theologically rich writing that encourages Christians to think deeply about their faith and live faithfully in response to God's Word.",
+    "affiliation": "Oceanside Christian Fellowship",
+    "role": "Pastor & Author",
+    "education": "Westminster Seminary California",
+    "website": "https://www.oceanside.cc/",
+    "books": [
+      {
+        "title": "Jesus Loves the Church",
+        "amazon_url": "https://www.amazon.com/s?k=Jesus+Loves+the+Church+Daniel+Hyde"
+      },
+      {
+        "title": "Is Jesus Really God?",
+        "amazon_url": "https://www.amazon.com/s?k=Is+Jesus+Really+God+Daniel+Hyde"
+      },
+      {
+        "title": "The Ten Commandments: What They Mean, Why They Matter, and Why We Need Them",
+        "amazon_url": "https://www.amazon.com/s?k=The+Ten+Commandments+Daniel+Hyde"
+      },
+      {
+        "title": "Knowing the God of the Bible",
+        "amazon_url": "https://www.amazon.com/s?k=Knowing+the+God+of+the+Bible+Daniel+Hyde"
+      }
+    ],
+    "initials": "DH"
+  },
+  {
+    "name": "Jeffrey Bilbro",
+    "slug": "jeffrey-bilbro",
+    "bio": "Jeffrey Bilbro is a writer and editor focused on Christian perspectives on literature, culture, and agrarianism. He has contributed to numerous Christian publications and is known for exploring how faith intersects with contemporary issues and rural life. His work encourages readers to think deeply about stewardship, community, and the integration of Christian conviction into everyday living.",
+    "affiliation": "Image Journal, Mere Orthodoxy",
+    "role": "Writer & Editor",
+    "education": "Ph.D. in English, University of Notre Dame",
+    "website": "https://www.jeffreybilbro.com",
+    "books": [
+      {
+        "title": "Virtues of the Homestead: Hospitality, Generosity, and Community in Jefferson and the Early American Republic",
+        "amazon_url": "https://www.amazon.com/s?k=Virtues+of+the+Homestead+Jeffrey+Bilbro"
+      },
+      {
+        "title": "The Garden and thereal: Medieval Monasticism, Agriculture, and God's Creation",
+        "amazon_url": "https://www.amazon.com/s?k=Garden+Real+Jeffrey+Bilbro"
+      }
+    ],
+    "initials": "JB"
   }
 ]

@@ -1,5 +1,58 @@
 [
   {
+    "source_name": "Ryan Burge",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": true,
+    "author": "Ryan Burge",
+    "title": "The Two Dimensions of Religious Belief in America",
+    "url": "https://www.graphsaboutreligion.com/p/the-two-dimensions-of-religious-belief",
+    "summary": "Some people believe in hell and creationism. Others just feel connected to something larger. Most Americans are somewhere in between.",
+    "full_content": "<p>I&#8217;ve always been under the impression that people have a very different approach to belief. <strong>Some can listen to a sermon where the pastor speaks with certainty and conviction about salvation through Jesus alone and feel completely compelled by that message</strong>. Folks like this tend to lean toward black and white thinking. They like structure and order and believe that the Bible provides them with a perfect guidebook for how to live their lives in almost every circumstance.</p><p>Others could hear that same sermon and can&#8217;t wait for the altar call to begin &#8212; not so they can head down front and make a public commitment to Jesus, but so they can get out of there as soon as possible. <strong>As they hear the pastor pound the pulpit and speak with such resolve, the question that keeps coming up in their head is, &#8220;How is this guy so sure that he&#8217;s right?&#8221;</strong> These are folks who are often consumed by doubts and second-guessing, and they struggle to know what &#8220;right&#8221; is in many situations because of their inability &#8212; or unwillingness &#8212; to just embrace certainty.</p><p>I think about the nature of belief a lot and have always wished I could wrap my head around it in an empirical way. <strong>Asking questions in this area is hard</strong>. No one ever seems to like the response options to a query about what folks believe about God, or evolution, or the existence of the soul. We all hold positions that seem to land between two response items instead of being perfectly captured by one of them.</p><p>Well, I was tinkering around in the Pew Religious Landscape Survey the other day and came to the conclusion that it contains more questions about belief than anything else I have available, and it was fielded to a larger sample to boot. <strong>I was wondering if I could begin to model dimensions of faith &#8212; hoping to clearly identify whether there are two, three, or four ways that people seem to orient themselves to belief items.</strong></p><p>I think I&#8217;ve stumbled upon something that may be helpful in understanding belief among American adults.</p><p>Here&#8217;s how I did it. I pulled ten belief items into an <a href=\"https://en.wikipedia.org/wiki/Exploratory_factor_analysis\">exploratory factor analysis</a>, which is a statistical technique for understanding how a group of items &#8220;hang&#8221; together. What I ended up with is two dimensions that made the most sense.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!POoS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8c58f777-aa1b-47cc-b255-d0952b7deb10_2048x1463.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1040\" src=\"https://substackcdn.com/image/fetch/$s_!POoS!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8c58f777-aa1b-47cc-b255-d0952b7deb10_2048x1463.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong>The first dimension is what I&#8217;ve come to call &#8220;doctrinal commitment.&#8221;</strong> The items with the darker blue circles all loaded on the same factor and it was pretty clear they were focused on propositional claims &#8212; the kinds of questions that show up in creeds and catechisms. Folks who are sure that people who don&#8217;t believe in God can&#8217;t be moral will score high on this dimension. There were six items that fit the bill here.</p><p><strong>The second dimension focuses on what I&#8217;d call an existential understanding of faith.</strong> To be a little colloquial, these are the &#8220;woo woo&#8221; aspects of religion and spirituality. They tend to focus on the idea that we all have spirits and that we can&#8217;t be entirely certain God really exists in a concrete, definable way. When I looked over the data, I got the distinct impression that these are folks who would say things like, &#8220;I just feel that we are all connected somehow.&#8221; People who load high on this dimension have a softer and more diffuse perspective on faith. They aren&#8217;t bound by a specific doctrine or creed.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!BKHz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe3adda16-cf39-45ff-8cfe-a47f1950ddbb_1176x1114.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1114\" src=\"https://substackcdn.com/image/fetch/$s_!BKHz!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe3adda16-cf39-45ff-8cfe-a47f1950ddbb_1176x1114.png\" width=\"1176\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div>\n      <p>\n          <a href=\"https://www.graphsaboutreligion.com/p/the-two-dimensions-of-religious-belief\">\n              Read more\n          </a>\n      </p>",
+    "published": "Thu, 03 Sep 2026 11:30:18 GMT",
+    "fetched_at": "2026-09-04T10:05:40.820889",
+    "score": 4,
+    "tags": [
+      "data"
+    ],
+    "rewritten_title": "America's Faith Crisis: Doctrine vs. Feeling",
+    "personas": [
+      "pastor",
+      "professional"
+    ],
+    "topic_cluster": "american_belief_typology",
+    "perspective": "neutral",
+    "frequency_boost": 0.75,
+    "source_posts_30d": 9,
+    "final_score": 6.25,
+    "recency_boost": 1.5
+  },
+  {
+    "source_name": "Lifeway Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "author": "Aaron Earls",
+    "title": "Pastors Report Growing Attendance, but Fewer Unchurched Newcomers",
+    "url": "https://research.lifeway.com/2026/09/01/pastors-report-growing-attendance-but-fewer-unchurched-newcomers/",
+    "summary": "<p>Slightly more than half of U.S. Protestant pastors (54%) report their average worship service attendance has increased since 2023. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/09/01/pastors-report-growing-attendance-but-fewer-unchurched-newcomers/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/09/01/pastors-report-growing-attendance-but-fewer-unchurched-newcomers/\">Pastors Report Growing Attendance, but Fewer Unchurched Newcomers</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "full_content": "",
+    "published": "Tue, 01 Sep 2026 14:50:00 +0000",
+    "fetched_at": "2026-09-04T10:05:41.693325",
+    "score": 4,
+    "tags": [
+      "data"
+    ],
+    "rewritten_title": "Church Attendance Up, But Pastors Aren't Reaching the Unchurched",
+    "personas": [
+      "pastor"
+    ],
+    "topic_cluster": "church_attendance_trends",
+    "perspective": "neutral",
+    "final_score": 4.25,
+    "recency_boost": 0.25
+  },
+  {
     "source_name": "Lifeway Research",
     "source_category": "culture",
     "source_type": "christian",
@@ -10,71 +63,19 @@
     "summary": "<p>Every student ministry needs volunteers, but the goal can't simply be filling enough positions to make Wednesday night work. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/09/03/5-ways-to-help-your-student-ministry-volunteers-win/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/09/03/5-ways-to-help-your-student-ministry-volunteers-win/\">5 Ways to Help Your Student Ministry Volunteers Win</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "full_content": "",
     "published": "Thu, 03 Sep 2026 06:59:00 +0000",
-    "fetched_at": "2026-09-03T10:16:46.425287",
+    "fetched_at": "2026-09-04T10:05:41.693296",
     "score": 6,
     "tags": [
       "church life"
     ],
-    "rewritten_title": "Student Ministry Volunteers Are Burning Out. Here's How to Stop It.",
+    "rewritten_title": "Student Ministry Volunteers Are Burning Out. Here's How to Save Them.",
     "personas": [
       "pastor"
     ],
-    "topic_cluster": "student_ministry_leadership",
-    "perspective": "neutral",
-    "final_score": 7.5,
-    "recency_boost": 1.5
-  },
-  {
-    "source_name": "Relevant Magazine",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "RELEVANT",
-    "title": "‘Time’ Says There Isn’t a Gen Z Revival. The Data Backs Them Up — But They Looked in the Wrong Rooms.",
-    "url": "https://relevantmagazine.com/faith/time-says-there-isnt-a-gen-z-revival-the-data-backs-them-up-but-they-looked-in-the-wrong-rooms/",
-    "summary": "Time magazine ran a piece this month asking whether there&#8217;s a religious revival happening among Gen Z. It opens on a 23-year-old named Anthony Gross who moved to New York, didn&#8217;t know anyone, started ranking Catholic churches on TikTok, and walked into a packed Sunday mass in Greenwich Village where he says everybody was under&#8230;",
-    "full_content": "<p dir=\"ltr\"><em>Time</em> magazine <a href=\"https://time.com/article/2026/08/14/religion-gen-z-revival-christianity/\">ran a piece</a> this month asking whether there&#8217;s a religious revival happening among Gen Z. It opens on a 23-year-old named Anthony Gross who moved to New York, didn&#8217;t know anyone, started ranking Catholic churches on TikTok, and walked into a packed Sunday mass in Greenwich Village where he says everybody was under 30.</p>\n<p dir=\"ltr\">Then it asks the researchers, and they say no.</p>\n<p dir=\"ltr\">About 25% of Americans report attending church weekly. Move that to 28% — three points — and you have added 12 million people.</p>\n<p dir=\"ltr\">Ryan Burge, a political scientist who has become the designated skeptic in every one of these stories, ran that out for us. There are roughly 300,000 Christian churches in America, so 12 million people means every one of them adds 35 to 40 faces that weren&#8217;t there a year ago. The average American church runs about 70 on a Sunday. That church goes to 110, and stays.</p>\n<p dir=\"ltr\">&#8220;How many stories have you heard of a church that&#8217;s 75 people now is 125 people?&#8221; Burge told RELEVANT. &#8220;I&#8217;ve not heard any.&#8221;</p>\n<p dir=\"ltr\">That&#8217;s the modest version. Nobody is describing it because it isn&#8217;t happening. So <em>Time</em> got the big thing right. What they got wrong is narrower: almost every scene in the article is Catholic.</p>\n<p dir=\"ltr\">The TikToker ranks Catholic parishes. The bishop is the Diocese of Phoenix. Three of the four gatherings they cite are Catholic youth conferences. That&#8217;s a strange way to describe a generation that is overwhelmingly not Catholic.</p>\n<p dir=\"ltr\">The one evangelical data point they include, they drop. Passion, the largest conference for 18-to-25-year-olds, is expanding into two stadiums for the first time in its history — Texas in December, Georgia in February. That&#8217;s 120,000 Gen Z attendees, and it gets a clause.</p>\n<p dir=\"ltr\">Bishop Dolan&#8217;s hundreds of Easter baptisms, most of them Gen Z, get the same treatment. If the argument is that the anecdotes don&#8217;t add up to a trend, the anecdotes are worth gathering first.</p>\n<p dir=\"ltr\">There&#8217;s also a number doing work it can&#8217;t do. <em>Time</em> cites PRRI finding more than 75% of Americans over 65 identify as Christian against 54% of adults under 30, and offers it as evidence against a resurgence. That gap isn&#8217;t new and it isn&#8217;t a direction. Young people have been less religious than old people for as long as anyone has measured it, and the distance between two age groups says nothing about which way either is moving. The decline stopped.</p>\n<p dir=\"ltr\">For 30 years every survey of American religion pointed the same way, down, generation over generation. <strong>That&#8217;s no longer true. </strong></p>\n<p dir=\"ltr\">The share of Gen Z claiming no religious affiliation has flattened around 42%. The religiosity gap between millennials and Gen Z is roughly half the gap between millennials and Gen X, or Gen X and boomers. Pew finds people born in the 1990s and people born in the early 2000s look about the same.</p>\n<p dir=\"ltr\">Burge won&#8217;t give an inch on the word revival and gives that much. He puts the country&#8217;s floor at about 45% Christian, 45% unaffiliated, 10% everything else. &#8220;That&#8217;s still an amazingly Christian country for a Western democracy to be,&#8221; he said.</p>\n<p dir=\"ltr\">A generation that was supposed to keep falling stopped falling. Nobody posts about it, because it doesn&#8217;t come with a stadium photo. It&#8217;s also the first floor anyone has found in three decades.</p>\n<p dir=\"ltr\">Both things are true at once, and holding both is harder than picking one. There&#8217;s no national revival. There are also full rooms, and they aren&#8217;t imaginary — Burge allows the pockets of growth even while the macro number sits flat.</p>\n<p dir=\"ltr\">The move to avoid is the one that&#8217;s been everywhere this year: finding the single survey that points the right direction and treating it as settled.</p>\n<p dir=\"ltr\">&#8220;I got one poll over here is not extraordinary evidence, folks,&#8221; Burge said. &#8220;It&#8217;s cherry picking.&#8221;</p>\n<p dir=\"ltr\">The people filling those rooms don&#8217;t need the national number to move. It would be nice, eventually, if it did.</p>",
-    "published": "Mon, 31 Aug 2026 17:20:25 +0000",
-    "fetched_at": "2026-09-03T10:15:11.821981",
-    "score": 5,
-    "tags": [
-      "data"
-    ],
-    "rewritten_title": "Gen Z's Catholic Revival Is Real—Just Not Where Time Magazine Looked",
-    "personas": [
-      "pastor",
-      "professional"
-    ],
-    "topic_cluster": "gen_z_religious_revival",
-    "perspective": "neutral",
-    "final_score": 5.35,
-    "recency_boost": 0.25
-  },
-  {
-    "source_name": "Pew Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "author": "Beshay Sakla",
-    "title": "About half of Americans say they spend too much time on their smartphone",
-    "url": "https://www.pewresearch.org/short-reads/2026/09/01/about-half-of-americans-say-they-spend-too-much-time-on-their-smartphone/",
-    "summary": "Seven-in-ten adults under 30 say they spend too much time on their smartphone, as do about two-thirds of those ages 30 to 49.",
-    "full_content": "",
-    "published": "Tue, 01 Sep 2026 18:11:05 +0000",
-    "fetched_at": "2026-09-03T10:16:45.939427",
-    "score": 4,
-    "tags": [
-      "data",
-      "culture"
-    ],
-    "rewritten_title": "Young Americans Are Drowning in Their Phones. Older Generations Are Following.",
-    "personas": [
-      "parent",
-      "professional"
-    ],
-    "topic_cluster": "smartphone_usage_trends",
-    "perspective": "neutral",
-    "final_score": 4.75,
+    "topic_cluster": "student_ministry_volunteers",
+    "perspective": "supportive",
+    "previously_shown": true,
+    "final_score": 2.0,
     "recency_boost": 0.75
   }
 ]
