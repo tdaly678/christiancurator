@@ -15,14 +15,14 @@ Curate evangelical Christian content from across the web and become the #1 autho
   - `docs/digest/index.html` — Daily Digest page (featured topic cards + today's top 10 + yesterday's top 10, re-rendered daily)
   - `docs/archive/index.html` — Archive index listing all past days
   - `docs/archive/YYYY-MM-DD/index.html` — per-day archive snapshots
-  - `docs/topics/[slug]/index.html` — 46 topic pages
+  - `docs/topics/[slug]/index.html` — 70 topic pages
   - `docs/daily/[date]/index.html` — daily editorial pulse pages
   - `docs/sitemap.xml` — SEO sitemap (auto-generated daily)
 - `frontend/` — Jinja2 templates + rendering code
   - `frontend/template.html` — homepage template
   - `frontend/digest_template.html` — Daily Digest template (mirrors homepage layout)
   - `frontend/archive_template.html` — per-day archive template
-  - `frontend/topics_data.py` — canonical 46-topic taxonomy (slug, name, category, hook, summary, keywords)
+  - `frontend/topics_data.py` — canonical 70-topic taxonomy (slug, name, category, hook, summary, keywords)
   - `frontend/__init__.py` — render functions: render_html(), render_digest_page(), render_archive_page(), render_archive_index()
 - `curator/` — scoring, classification, email
   - `curator/topic_classifier.py` — keyword classifier mapping articles → topic slugs
@@ -32,31 +32,56 @@ Curate evangelical Christian content from across the web and become the #1 autho
 - `regenerate_daily.py` — re-render pages from cached articles (requires Claude API for daily summary)
 - `/tmp/rerender_only.py` — minimal re-render script (no Claude API needed; recreate each session from session notes)
 
-## Git Push Workaround
-The mounted filesystem has a persistent `index.lock` that blocks git operations. **Always push via a temp clone:**
+## Working copy and pushing
+
+**Never keep this repo inside OneDrive, iCloud Drive, or any other syncing folder.** A copy previously lived under
+`~/Library/CloudStorage/OneDrive-Personal/Personal/Claude/Projects/Christian Curator/christiancurator`
+(reached through a symlink at `~/Documents/Claude/Projects/Christian Curator`). OneDrive renamed git's temporary
+object files mid write, which left hundreds of `.git/objects/xx/moved_tmp_obj_*` entries, broke `git fetch`
+with `pack has 4720 unresolved deltas`, and stranded HEAD two months behind origin. That copy is an archive only.
+
+**The working copy is `~/Projects/christiancurator`** (created 2026-09-25 by a fresh clone). It is a normal local
+path, `git fsck` is clean, and it is the folder connected to Cowork.
+
+Push credentials are stored in the macOS keychain, not in the remote URL and not in any file:
 
 ```bash
-git clone https://tdaly678:[TOKEN]@github.com/tdaly678/christiancurator.git /tmp/check_repo
-cd /tmp/check_repo
-git config user.email "tdaly@brookstoneind.com"
-git config user.name "Christian Curator"
-# copy files, then:
-git add [files]
-git commit -m "..."
-git push origin main
+git config credential.helper osxkeychain
+printf 'protocol=https\nhost=github.com\nusername=tdaly678\npassword=<TOKEN>\n\n' | git credential approve
 ```
 
-GitHub token is stored in `.env` as `GITHUB_TOKEN`. Username is `tdaly678`.
+`git remote -v` must show a clean `https://github.com/tdaly678/christiancurator.git` with no credentials in it.
 
-The `/tmp/` directory is cleared between sessions, so re-clone if `/tmp/check_repo` doesn't exist.
+**Always pull before pushing.** GitHub Actions commits to `main` every morning at 6:00 AM UTC, so a local run
+that skips the pull will be rejected as non fast forward:
+
+```bash
+cd ~/Projects/christiancurator
+git pull --no-rebase origin main
+# ... make changes ...
+git add <files> && git commit -m "..." && git push origin main
+```
+
 
 ## Daily Pipeline (GitHub Actions)
 Runs automatically at **6:00 AM UTC** via `.github/workflows/daily_run.yml`.
 
-What it commits: `docs/index.html`, `docs/digest/`, `docs/yesterday.json`, `docs/email_draft.html`, `docs/article_history.json`, `docs/research_articles.json`, `docs/sitemap.xml`, `docs/archive/`, `docs/daily/`, `docs/_pagefind/`
+What it commits: `docs/index.html`, `docs/topics/`, `docs/digest/`, `docs/yesterday.json`, `docs/email_draft.html`,
+`docs/article_history.json`, `docs/research_articles.json`, all five sitemaps (`sitemap.xml`, `sitemap-core.xml`,
+`sitemap-topics.xml`, `sitemap-voices.xml`, `sitemap-archive.xml`, `sitemap-daily.xml`), `docs/archive/`, `docs/daily/`,
+`docs/_pagefind/`, `docs/voices/`, `docs/voices_data.json`, `docs/spotlight_topic_log.json`.
+
+Steps after the pipeline itself: backfill orphan voice pages, rebuild the `/topics/` hub index, rebuild the `/voices/`
+category hubs, refresh recent-articles sections, inject the Featured deep dives block, regenerate the sitemaps,
+build the Pagefind index, commit, then ping IndexNow.
+
+### Sitemaps — there are six files, not one
+`docs/sitemap.xml` is an **index** that points at five children: `sitemap-core.xml` (6 URLs), `sitemap-topics.xml` (70),
+`sitemap-voices.xml` (1,192), `sitemap-daily.xml` (123), `sitemap-archive.xml` (186). Anything that suppresses a page
+must also remove it from the relevant child sitemap, or the signals conflict.
 
 ## Hand-curated content — do NOT bulk regenerate
-The topic pages at `docs/topics/<slug>/index.html` are **hand-curated**. They are edited directly (often by AI assistants at Tom's request) and are **not** regenerated from a template by any script. The daily pipeline intentionally excludes `docs/topics/` from its `git add` list, so pipeline runs never overwrite them.
+The topic pages at `docs/topics/<slug>/index.html` are **hand-curated**. They are edited directly (often by AI assistants at Tom's request) and are **not** regenerated from a template by any script. **This changed:** the daily pipeline now DOES `git add docs/topics/`, because `build_recent_articles.py` refreshes the recent-articles block on topic pages each day. It only edits between the injection markers below, so hand-written editorial survives, but topic pages are no longer outside the pipeline's reach.
 
 **Safe operations on topic pages:**
 - Targeted edits to a specific slug (fix a typo, update an article card, tweak copy)
@@ -135,7 +160,7 @@ Daily email via Brevo API. Structure:
 
 Topic deduplication uses `output/featured_topic_log.json` (today) and `output/sent_topic_log.json` (what was emailed before).
 
-## Topic Pages — Structure (46 topics as of April 2026)
+## Topic Pages — Structure (70 topics as of September 2026)
 
 All topic pages have this structure:
 1. **Head** — `title: "On [Topic] — Christian Curator"`, meta description ≤160 chars, OG/Twitter tags, Schema.org JSON-LD
@@ -158,69 +183,100 @@ All topic pages have this structure:
 - `.cc-synthesis` — synthesis section
 - `.cc-article-entry` — numbered article with annotation
 
-## The 46 Topic Pages
+## The 70 Topic Pages
 
-### Core Theology (12)
-| Slug | Title |
-|------|-------|
+Generated from `frontend/topics_data.py` on 2026-09-25. Page titles are the live `<title>` values, so the seven `On On` double-prefix defects are visible here rather than hidden.
+
+### Core Theology (17)
+
+| Slug | Page title |
+|------|------------|
 | apologetics | On Defending the Faith |
 | atonement | On the Atonement |
 | baptism | On Baptism |
 | biblical-inerrancy | On the Authority of Scripture |
+| christology | On Christology |
+| covenant-theology | On Covenant Theology |
 | creation-evolution | On Creation & Science |
+| eschatology | On Eschatology & the End Times |
 | gender-and-biblical-anthropology | On Gender & Biblical Anthropology |
 | heaven-hell-eternity | On Heaven, Hell & Eternity |
 | holy-spirit-spiritual-gifts | On the Holy Spirit & Spiritual Gifts |
+| israel-and-prophecy | On Israel & Prophecy \| Christian Curator |
 | justification-by-faith | On Justification by Faith |
 | lords-supper | On the Lord's Supper |
 | predestination-free-will | On Predestination & Free Will |
 | suffering-and-providence | On Suffering & Providence |
-| the-trinity | On the Trinity |
+| the-trinity | On On the Trinity |
 
-### Church Life (11)
-| Slug | Title |
-|------|-------|
-| church-accountability | On Pastoral Accountability |
+### Church Life (14)
+
+| Slug | Page title |
+|------|------------|
+| church-accountability | On On Pastoral Accountability |
 | church-discipline | On Church Discipline |
+| church-governance | On Church Governance |
 | church-history | On Church History |
 | church-planting | On Church Planting |
 | complementarianism-egalitarianism | On Men, Women & the Church |
-| discipleship | On Making Disciples |
 | local-church | On the Local Church |
 | membership | On Church Membership |
 | missions-and-evangelism | On Missions & Evangelism |
-| politics-and-the-church | On the Church & Political Life |
+| pastoral-ministry | On The Pastor's Role |
 | preaching | On Preaching |
+| small-groups | On Small Groups |
+| spiritual-abuse | On Spiritual Abuse \| Christian Curator |
 | worship-and-liturgy | On Worship & Liturgy |
 
-### Spiritual Formation (9)
-| Slug | Title |
-|------|-------|
+### Spiritual Formation (17)
+
+| Slug | Page title |
+|------|------------|
 | anxiety-and-fear | On Anxiety & Fear |
-| contemplative-prayer | On Contemplative Prayer |
-| faith-deconstruction | On Deconstruction & Faith |
+| biblical-literacy | On Biblical Literacy |
+| christian-friendship | On Christian Friendship |
+| contemplative-prayer | On On Contemplative Prayer |
+| death-and-dying | On Death & Dying |
+| discipleship | On Making Disciples |
+| faith-deconstruction | Faith Deconstruction |
 | fasting | On Fasting |
+| forgiveness | On Forgiveness \| Christian Curator |
+| grief-and-lament | On Grief & Lament \| Christian Curator |
 | mental-health | On Mental Health & the Church |
+| pornography | On Pornography & Sexual Purity |
 | prayer | On Prayer |
 | sanctification | On Sanctification |
+| singleness | On Singleness |
 | spiritual-disciplines | On the Spiritual Disciplines |
 | spiritual-warfare | On Spiritual Warfare |
 
-### Culture & Society (10)
-| Slug | Title |
-|------|-------|
-| ai-and-the-church | On Artificial Intelligence & the Church |
-| biblical-justice | On Biblical Justice & the Social Gospel |
-| biblical-sexuality | On Biblical Sexuality |
+### Culture & Society (22)
+
+| Slug | Page title |
+|------|------------|
+| abortion | On Abortion & the Pro-Life Movement |
+| addiction-and-recovery | On Addiction & Recovery |
+| ai-and-the-church | On On Artificial Intelligence & the Church |
+| biblical-justice | On On Biblical Justice & the Social Gospel |
+| biblical-sexuality | On On Biblical Sexuality |
+| christian-education | On Christian Education |
 | christian-ethics | On Christian Ethics |
-| christian-nationalism | On Christian Nationalism |
+| christian-masculinity | On Christian Masculinity |
+| christian-nationalism | On On Christian Nationalism |
 | christian-parenting | On Raising Children in the Faith |
-| evangelicalism | On the Future of Evangelicalism |
+| creation-care | On Creation Care |
+| evangelicalism | On Evangelicalism |
 | marriage-and-family | On Marriage & Family |
+| politics-and-the-church | On the Church & Political Life |
+| progressive-christianity | On Progressive Christianity \| Christian Curator |
+| prosperity-gospel | On the Prosperity Gospel |
 | racial-reconciliation | On Racial Reconciliation |
+| religious-liberty | On Religious Liberty \| Christian Curator |
+| stewardship-and-generosity | On Stewardship & Generosity |
 | technology | On Technology & the Christian Life |
 | technology-and-discipleship | On Technology & Discipleship |
 | vocation-and-work | On Vocation & Work |
+
 
 ## SEO Fixes Applied (April 2026)
 - Removed `/topics/` index page from sitemap.xml (was a soft 404 signal)
