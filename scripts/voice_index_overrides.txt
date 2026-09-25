@@ -1,0 +1,27 @@
+# Per-slug overrides for scripts/apply_voice_noindex.py
+#
+#   slug      force the page to STAY INDEXED even if it fails the word/QF/FAQ bar
+#   -slug     force the page to be NOINDEXED even if it passes
+#
+# Blank lines and everything after a # are ignored.
+# Use this for judgment calls the thresholds cannot see: a short page for a
+# genuinely load-bearing voice, or a long page that is still filler.
+#
+# Category hubs (pastors, theologians-scholars, apologists, bible-teachers,
+# journalists, ministry-leaders, writers, speakers-creators) are always kept
+# and do not need an entry here.
+
+# ── Recommended, added 2026-09-25 during the WP-1 rebuild ────────────────────
+# These eight pages clear the word/QF/FAQ bar only because the July 2026
+# enrichment sweep gave them Quick Facts and FAQ markup. None of them is an
+# evangelical voice, which was the standard Tom set in July ("evangelical
+# only"). Seven are New York Times reporters; one is a Pew researcher. Delete
+# any line below to let that page stay indexed.
+-aaron-boxerman            # The New York Times
+-ben-hubbard               # The New York Times
+-catie-edmondson           # The New York Times
+-david-e-sanger            # The New York Times
+-david-m-halbfinger        # The New York Times
+-elisabetta-povoledo       # The New York Times
+-motoko-rich               # The New York Times
+-reem-nadeem               # Pew Research Center

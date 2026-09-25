@@ -1329,6 +1329,27 @@ def _write_urlset(path, entries):
         f.write("\n".join(lines) + "\n")
 
 
+# ── WP-1: suppressed pages must not appear in the sitemap ────────────────────
+_ROBOTS_NOINDEX_RE = re.compile(
+    r'<meta\b(?=[^>]*\bname=["\']robots["\'])(?=[^>]*noindex)[^>]*>', re.I
+)
+
+
+def _is_noindexed(path) -> bool:
+    """True if the page carries a robots meta containing noindex.
+
+    Attribute order is NOT stable in this repo (931 voice pages put rel before
+    href, 262 the other way), so both lookaheads are order independent. A page
+    that is noindexed but still listed in a sitemap sends conflicting signals
+    and the suppression does nothing, so every sitemap section filters on this.
+    """
+    try:
+        head = path.read_text(encoding="utf-8", errors="ignore")[:8000]
+    except OSError:
+        return False
+    return bool(_ROBOTS_NOINDEX_RE.search(head))
+
+
 def regenerate_sitemap():
     """Regenerate sitemap.xml as a sitemap-index pointing to per-section sitemaps.
 
@@ -1360,7 +1381,7 @@ def regenerate_sitemap():
     if TOPICS_DIR.exists():
         for topic_dir in sorted(TOPICS_DIR.iterdir()):
             idx = topic_dir / "index.html"
-            if topic_dir.is_dir() and idx.exists():
+            if topic_dir.is_dir() and idx.exists() and not _is_noindexed(idx):
                 topic_entries.append((
                     f"{base}/topics/{topic_dir.name}/",
                     "weekly", "0.9", _file_mtime_iso(idx),
@@ -1371,7 +1392,7 @@ def regenerate_sitemap():
     if VOICES_DIR.exists():
         for voice_dir in sorted(VOICES_DIR.iterdir()):
             idx = voice_dir / "index.html"
-            if voice_dir.is_dir() and idx.exists():
+            if voice_dir.is_dir() and idx.exists() and not _is_noindexed(idx):
                 voice_entries.append((
                     f"{base}/voices/{voice_dir.name}/",
                     "monthly", "0.9", _file_mtime_iso(idx),

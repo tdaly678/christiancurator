@@ -15,6 +15,7 @@ import os
 import re
 import anthropic
 from pathlib import Path
+from curator.slug_guard import is_junk_slug
 
 DOCS_DIR = Path(__file__).parent.parent / "docs"
 VOICES_DIR = DOCS_DIR / "voices"
@@ -349,6 +350,12 @@ def extract_new_authors(articles: list, existing_slugs: set) -> list:
                 continue
             seen_names.add(name)
             slug = name_to_slug(name)
+            # WP-1: reject wire-service and desk bylines before they ever get a
+            # page. The comma/semicolon split above misses " and "-joined
+            # bylines ("Jonathan Swan and David E. Sanger"), which is how 18
+            # junk slugs reached /voices/ in the first place.
+            if is_junk_slug(slug):
+                continue
             if slug and slug not in existing_slugs:
                 new_authors.append({"name": name, "slug": slug})
     return new_authors
