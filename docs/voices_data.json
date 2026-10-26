@@ -63,28 +63,6 @@
     "initials": "JA"
   },
   {
-    "name": "Guardian staff and agencies",
-    "slug": "guardian-staff-and-agencies",
-    "bio": "A shared byline used by The Guardian for wire-service and staff reporting on international news stories. Represents collective journalism across the organization's newsroom.",
-    "affiliation": "The Guardian",
-    "role": "News Reporting Byline",
-    "education": "",
-    "website": "https://www.theguardian.com/",
-    "books": [],
-    "initials": "GSA"
-  },
-  {
-    "name": "Richard Luscombe and agency",
-    "slug": "richard-luscombe-and-agency",
-    "bio": "Richard Luscombe is a Christian content creator and agency leader dedicated to helping churches and ministries communicate their faith-based messages effectively. Through his agency work, he partners with Christian organizations to develop strategic content that resonates with evangelical audiences.",
-    "affiliation": "",
-    "role": "Content Curator & Agency Leader",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RL"
-  },
-  {
     "slug": "randy-alcorn",
     "name": "Randy Alcorn",
     "initials": "RA",
@@ -617,17 +595,6 @@
         "amazon_url": "https://www.amazon.com/s?k=Crazy+Love+Francis+Chan"
       }
     ]
-  },
-  {
-    "name": "Cassandra Vinograd and Oleksandr Chubko",
-    "slug": "cassandra-vinograd-and-oleksandr-chubko",
-    "bio": "Journalists at The New York Times who co-report from Eastern Europe, covering conflict and geopolitical stories including the war in Ukraine and its impact on civilians.",
-    "affiliation": "The New York Times",
-    "role": "Senior Editor, International (Vinograd); Correspondent (Chubko)",
-    "education": "",
-    "website": "https://www.nytimes.com",
-    "books": [],
-    "initials": "CV-OC"
   },
   {
     "slug": "r-scott-clark",
@@ -3241,28 +3208,6 @@
     "initials": "VRR"
   },
   {
-    "name": "Emiliano Rodríguez Mega and César Rodríguez",
-    "slug": "emiliano-rodrguez-mega-and-csar-rodrguez",
-    "bio": "Emiliano Rodríguez Mega and César Rodríguez are collaborative reporters covering politics and science in Latin America. Emiliano, a Mexico City-based journalist, reports for The New York Times in Spanish, while César collaborates on election coverage and political reporting, including pieces published in The New York Times en Español and Infobae.",
-    "affiliation": "The New York Times, Infobea, Scientific American, Science magazine",
-    "role": "Science journalists and political reporters",
-    "education": "",
-    "website": "https://www.emilianorm.com/",
-    "books": [],
-    "initials": "ERM, CR"
-  },
-  {
-    "name": "Emiliano Rodríguez Mega and Simon Romero",
-    "slug": "emiliano-rodrguez-mega-and-simon-romero",
-    "bio": "Emiliano Rodríguez Mega and Simon Romero are journalists who have covered major news stories across Latin America and the Caribbean. Their reporting often intersects with themes of faith, culture, and social issues relevant to Christian communities in the region.",
-    "affiliation": "The New York Times",
-    "role": "Journalists & Correspondents",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "ERM-SR"
-  },
-  {
     "name": "Tim Rosenberger",
     "slug": "tim-rosenberger",
     "bio": "Tim Rosenberger is a writer at Mere Orthodoxy who explores the relationship between authentic faith and the cultural forces that can distort it. His essays examine how sentiment, aesthetics, and cultural Christianity can substitute for genuine conviction, calling evangelicals back to a more robust theological and spiritual foundation.",
@@ -4373,17 +4318,6 @@
     "initials": "CM"
   },
   {
-    "name": "Zia ur-Rehman and Asim Hafeez",
-    "slug": "zia-urrehman-and-asim-hafeez",
-    "bio": "Zia ur-Rehman and Asim Hafeez are Pakistani journalists and documentarians known for their investigative work covering conflict, terrorism, and security issues in South Asia. While not primarily Christian content creators, their reporting has provided important context on religious extremism and persecution for international audiences seeking to understand global challenges.",
-    "affiliation": "",
-    "role": "Journalists & Documentary Filmmakers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "ZH"
-  },
-  {
     "name": "J. A. Medders",
     "slug": "j-a-medders",
     "bio": "J. A. Medders is a writer and pastor dedicated to helping Christians understand and live out their faith with greater depth and authenticity. His work focuses on biblical discipleship, spiritual growth, and the practical application of Scripture to everyday life.",
@@ -4702,17 +4636,6 @@
     "initials": "GE"
   },
   {
-    "name": "A PCA Ruling Elder",
-    "slug": "a-pca-ruling-elder",
-    "bio": "A PCA Ruling Elder serves as a lay leader in the Presbyterian Church in America, devoted to faithful church governance and spiritual oversight. Ruling Elders work alongside pastoral staff to shepherd their congregations with biblical wisdom and pastoral care.",
-    "affiliation": "",
-    "role": "Ruling Elder & Church Leader",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RE"
-  },
-  {
     "name": "Haley Byrd Wilt",
     "slug": "haley-byrd-wilt",
     "bio": "Haley Byrd Wilt is a writer and editor known for her work in Christian publishing and content creation. She has contributed to various Christian publications and platforms, bringing thoughtful perspectives on faith, culture, and discipleship to evangelical audiences.",
@@ -4942,17 +4865,6 @@
     "website": "",
     "books": [],
     "initials": "DO"
-  },
-  {
-    "name": "Aamna Mohdin",
-    "slug": "aamna-mohdin-community-affairs-correspondent",
-    "bio": "Aamna Mohdin is a community affairs correspondent who reports on social issues, community developments, and human interest stories. Her journalism focuses on giving voice to underrepresented communities and exploring the real-world impact of social change.",
-    "affiliation": "The Guardian",
-    "role": "Community Affairs Correspondent & Journalist",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AM"
   },
   {
     "name": "Emma Brockes",
@@ -5276,17 +5188,6 @@
     "initials": "JSY"
   },
   {
-    "name": "David Hammer and Ramon Antonio Vargas",
-    "slug": "david-hammer-of-wwl-louisiana-and-ramon-antonio-vargas",
-    "bio": "David Hammer and Ramon Antonio Vargas are investigative journalists based in New Orleans who have contributed reporting to WWL Louisiana and other major news outlets. Their work focuses on uncovering stories of public interest and accountability in Louisiana communities.",
-    "affiliation": "WWL Louisiana",
-    "role": "Investigative Journalists",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "DH RAV"
-  },
-  {
     "name": "Travis Kircher",
     "slug": "travis-kircher",
     "bio": "Travis Kircher is a Louisville, Kentucky-based journalist serving as an associate breaking news editor for WORLD News Group. A longtime reporter whose work has appeared in numerous publications, he is also a licensed pilot who volunteers with Mission Aviation Fellowship and hosts the podcast 'A Log by the Fire.'",
@@ -5329,17 +5230,6 @@
     "website": "",
     "books": [],
     "initials": "AS"
-  },
-  {
-    "name": "Ligonier Editorial",
-    "slug": "ligonier-editorial",
-    "bio": "Ligonier Editorial represents the collective voice of Ligonier Ministries' editorial team, bringing Reformed Christian theology and biblical teaching to a global audience. Through articles, devotionals, and curated content, this editorial collective helps Christians deepen their understanding of God's Word and Reformed doctrine.",
-    "affiliation": "Ligonier Ministries",
-    "role": "Editorial Team & Content Curator",
-    "education": "",
-    "website": "https://www.ligonier.org",
-    "books": [],
-    "initials": "LE"
   },
   {
     "name": "Alistair Chalmers",
@@ -5586,17 +5476,6 @@
         "a": "The Rebelution is a movement Alex and Brett Harris launched as teenagers, calling young people to a 'rebellion against low expectations' by doing hard things for the glory of God. It spawned conferences, the bestselling book Do Hard Things, and a lasting online community."
       }
     ]
-  },
-  {
-    "name": "Elian Peltier and Safiullah Padshah",
-    "slug": "elian-peltier-and-safiullah-padshah",
-    "bio": "Elian Peltier is a journalist known for reporting on religious and social issues, while Safiullah Padshah brings expertise in international affairs and cultural analysis. Together, their collaborative work has informed readers about faith communities and global perspectives with journalistic integrity.",
-    "affiliation": "The New York Times",
-    "role": "Journalists & Reporters",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "EP-SP"
   },
   {
     "name": "D.A. Carson",
@@ -7459,17 +7338,6 @@
     "initials": "JD"
   },
   {
-    "name": "Megan Specia and Koba Ryckewaert",
-    "slug": "megan-specia-and-koba-ryckewaert",
-    "bio": "Megan Specia and Koba Ryckewaert are journalists and reporters known for their work covering international news and humanitarian stories. Their reporting often explores the human dimension of global events, bringing attention to communities and voices that deserve Christian compassion and understanding.",
-    "affiliation": "New York Times",
-    "role": "Journalists & International Correspondents",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MSK"
-  },
-  {
     "name": "John Eligon",
     "slug": "john-eligon",
     "bio": "John Eligon is an award-winning journalist and author known for his thoughtful coverage of race, religion, and American culture. His work has appeared in major publications and explores the intersection of faith, identity, and contemporary social issues with nuance and compassion.",
@@ -7479,17 +7347,6 @@
     "website": "",
     "books": [],
     "initials": "JE"
-  },
-  {
-    "name": "Golden Matonga and Matthew Mpoke Bigg",
-    "slug": "golden-matonga-and-matthew-mpoke-bigg",
-    "bio": "Golden Matonga is a Malawian investigative journalist and director of investigations at the Platform for Investigative Journalism in Lilongwe; his reporting has appeared in the New York Times, the Financial Times, and the Mail & Guardian, and he has contributed to ICIJ investigations including the Pandora Papers. Matthew Mpoke Bigg is a New York Times journalist who has served as the paper's East Africa bureau chief in Nairobi.",
-    "affiliation": "The New York Times",
-    "role": "Journalists",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "GMB"
   },
   {
     "name": "E. J. Hutchinson",
@@ -7613,17 +7470,6 @@
     "website": "",
     "books": [],
     "initials": "DL"
-  },
-  {
-    "name": "Michael Schwirtz and Tomas Dapkus",
-    "slug": "michael-schwirtz-and-tomas-dapkus",
-    "bio": "Michael Schwirtz and Tomas Dapkus are journalists who have reported extensively on religious freedom, persecution, and faith communities around the world. Their investigative work has brought important stories of Christian witness and resilience to global audiences through major publications.",
-    "affiliation": "The New York Times",
-    "role": "Journalists & Reporters",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MS-TD"
   },
   {
     "name": "Adam Gabbatt",
@@ -7751,28 +7597,6 @@
     "initials": "PL"
   },
   {
-    "name": "RELEVANT",
-    "slug": "relevant",
-    "bio": "RELEVANT is a magazine and media company covering faith, culture, and intentional living for Christians in their 20s and 30s. Founded in 2000 by Cameron Strang, the Florida-based publication produces articles, podcasts, and digital content exploring music, film, justice, and spiritual life, and staff-bylined pieces represent the collective work of its editorial team.",
-    "affiliation": "RELEVANT Media Group",
-    "role": "Magazine & Media Brand",
-    "education": "",
-    "website": "https://relevantmagazine.com",
-    "books": [],
-    "initials": "R"
-  },
-  {
-    "name": "RELEVANT Staff",
-    "slug": "relevant-staff",
-    "bio": "RELEVANT Staff represents the editorial team at RELEVANT Magazine, a publication dedicated to equipping Christians to live out their faith in culture. The staff",
-    "affiliation": "",
-    "role": "Contributor",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RS"
-  },
-  {
     "name": "Robert Mackey",
     "slug": "robert-mackey",
     "bio": "Robert Mackey is a writer and editor at The Guardian who previously spent years at The New York Times, where he anchored the paper's breaking-news blog The Lede, and later served as a senior writer at The Intercept. A Mirror Award winner, he specializes in making sense of world events through close reading of firsthand accounts, images, and video shared by witnesses.",
@@ -7793,17 +7617,6 @@
     "website": "",
     "books": [],
     "initials": "SEZ"
-  },
-  {
-    "name": "Beautiful Christian Life Staff",
-    "slug": "beautiful-christian-life-staff",
-    "bio": "The Beautiful Christian Life is a collaborative platform dedicated to sharing biblical wisdom, spiritual encouragement, and practical Christian living resources. Their team works together to curate and create content that helps believers grow deeper in their faith and understand Scripture more fully.",
-    "affiliation": "Beautiful Christian Life",
-    "role": "Content Curation & Publishing Team",
-    "education": "",
-    "website": "https://www.beautifulchristianlife.com",
-    "books": [],
-    "initials": "BCL"
   },
   {
     "name": "Mike McGarry",
@@ -8198,17 +8011,6 @@
     "initials": "RG"
   },
   {
-    "name": "Lynsey Chutel and Claire Moses",
-    "slug": "lynsey-chutel-and-claire-moses",
-    "bio": "Lynsey Chutel is an award-winning journalist covering African affairs and global development, while Claire Moses is a culture reporter and writer. Together and individually, they have contributed thoughtful reporting on social issues, human interest stories, and cultural trends to major publications.",
-    "affiliation": "The New York Times",
-    "role": "Journalists & Writers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "LCC"
-  },
-  {
     "name": "David E. Sanger",
     "slug": "david-e-sanger",
     "bio": "David E. Sanger is a renowned national security correspondent and bestselling author who has spent decades investigating complex geopolitical issues affecting America and the world. His meticulously researched works examine the intersection of technology, politics, and global power dynamics with clarity and insight. For Christian readers interested in understanding contemporary world events through an informed journalistic lens, Sanger's analyses provide valuable context for informed citizenship and prayer.",
@@ -8449,17 +8251,6 @@
     "initials": "BL"
   },
   {
-    "name": "John Yoon and Muktita Suhartono",
-    "slug": "john-yoon-and-muktita-suhartono",
-    "bio": "John Yoon and Muktita Suhartono are journalists and writers who have contributed to major Christian and mainstream publications covering faith, culture, and social issues. Their work explores the intersection of Christianity with contemporary life and global perspectives.",
-    "affiliation": "",
-    "role": "Journalists & Writers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JY/MS"
-  },
-  {
     "name": "Stephen Bates",
     "slug": "stephen-bates",
     "bio": "Stephen Bates is a British author and journalist who has written extensively on religion, culture, and social issues from a thoughtful Christian perspective. His work examines the intersection of faith and contemporary society with both critical insight and pastoral sensitivity.",
@@ -8638,17 +8429,6 @@
     "initials": "RD"
   },
   {
-    "name": "Catherine Porter and Ana Castelain",
-    "slug": "catherine-porter-and-ana-castelain",
-    "bio": "Catherine Porter and Ana Castelain are collaborators known for their work in Christian content and spiritual formation. Together they have contributed to resources designed to deepen faith and encourage spiritual growth among believers.",
-    "affiliation": "",
-    "role": "Authors & Content Creators",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CP & AC"
-  },
-  {
     "name": "Dasl Yoon",
     "slug": "dasl-yoon",
     "bio": "Dasl Yoon is a writer and content creator focused on Christian faith and cultural engagement. His work explores how believers can thoughtfully navigate contemporary issues through a biblical lens.",
@@ -8680,17 +8460,6 @@
     "website": "",
     "books": [],
     "initials": "PR"
-  },
-  {
-    "name": "Daniel Bouchoc and Zach Hollifield",
-    "slug": "daniel-bouchoc-and-zach-hollifield",
-    "bio": "Daniel Bouchoc and Zach Hollifield are Christian content creators and communicators dedicated to helping believers engage with Scripture and faith in meaningful ways. Together, they work to produce resources that encourage spiritual growth and deeper understanding of God's Word for contemporary audiences.",
-    "affiliation": "",
-    "role": "Content Creators & Christian Communicators",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "DB & ZH"
   },
   {
     "name": "Scott Klusendorf",
@@ -8812,17 +8581,6 @@
     "initials": "BC"
   },
   {
-    "name": "Matthew Z. Capps and Steven Wade",
-    "slug": "matthew-z-capps-and-steven-wade",
-    "bio": "Matthew Z. Capps and Steven Wade are Christian communicators and content creators dedicated to equipping believers with biblical insight and practical faith application. Together they work to provide resources that help Christians deepen their understanding of Scripture and live out their faith with greater intentionality.",
-    "affiliation": "",
-    "role": "Christian Authors & Content Creators",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MZC & SW"
-  },
-  {
     "name": "J.T. Reeves",
     "slug": "jt-reeves",
     "bio": "J.T. Reeves is a writer and content creator focused on Christian living and biblical perspectives. His work encourages readers to deepen their faith and apply scriptural truths to everyday life.",
@@ -8854,17 +8612,6 @@
     "website": "",
     "books": [],
     "initials": "ELG"
-  },
-  {
-    "name": "Aaron Boxerman and Adam Sella",
-    "slug": "aaron-boxerman-and-adam-sella",
-    "bio": "Aaron Boxerman and Adam Sella are journalists and content creators who engage with contemporary culture and faith issues from a Christian perspective. Their work explores the intersection of current events, media, and Christian worldview.",
-    "affiliation": "",
-    "role": "Journalists & Content Creators",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "ABS"
   },
   {
     "name": "D.V. Rider",
@@ -8989,17 +8736,6 @@
     "initials": "SBL"
   },
   {
-    "name": "Staff and agencies",
-    "slug": "staff-and-agencies",
-    "bio": "This represents content curated and published by the editorial staff and partner agencies of this Christian content platform. Our team of writers, editors, and contributors work together to bring you thoughtful, biblically-grounded resources designed to deepen your faith and understanding of Scripture.",
-    "affiliation": "",
-    "role": "Editorial Staff & Contributing Agencies",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SA"
-  },
-  {
     "name": "Sui-Lee Wee",
     "slug": "suilee-wee",
     "bio": "Sui-Lee Wee is a journalist and correspondent known for reporting on religious and cultural issues. With a focus on faith communities and their intersection with society, Wee brings thoughtful analysis to stories affecting Christians and other religious groups around the world.",
@@ -9009,17 +8745,6 @@
     "website": "",
     "books": [],
     "initials": "SLW"
-  },
-  {
-    "name": "Aie Balagtas See and Jes Aznar",
-    "slug": "aie-balagtas-see-and-jes-aznar",
-    "bio": "Aie Balagtas See is a Filipino freelance journalist who covers human rights, criminal justice, and the Philippine drug war, with reporting appearing in The New York Times and leading Philippine outlets. Jes Aznar is a Manila-based documentary photographer and regular New York Times contributor who founded the EverydayImpunity project and won a 2026 World Press Photo award for the Asia-Pacific region.",
-    "affiliation": "The New York Times (contributors)",
-    "role": "Journalist & Photojournalist",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "ABS JA"
   },
   {
     "name": "Cath Clarke",
@@ -9042,17 +8767,6 @@
     "website": "",
     "books": [],
     "initials": "JM"
-  },
-  {
-    "name": "Dr Lucien Tuinstra",
-    "slug": "dr-lucien-tuinstra",
-    "bio": "Dr Lucien Tuinstra is a thoughtful Christian thinker and writer who engages with contemporary theological and spiritual themes for modern believers. His work encourages readers to deepen their faith through careful reflection and biblical engagement.",
-    "affiliation": "",
-    "role": "Author & Theologian",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "LT"
   },
   {
     "name": "Pete Nicholas",
@@ -9222,17 +8936,6 @@
     "initials": "MG"
   },
   {
-    "name": "Rowena Mason Whitehall",
-    "slug": "rowena-mason-whitehall-editor",
-    "bio": "Rowena Mason Whitehall is an editor and content curator dedicated to amplifying Christian voices and perspectives. With a focus on editorial excellence, she works to make faith-based content accessible and meaningful to modern audiences.",
-    "affiliation": "",
-    "role": "Editor & Content Curator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RMW"
-  },
-  {
     "name": "Damian Paletta",
     "slug": "damian-paletta",
     "bio": "Damian Paletta is a Pulitzer Prize-winning journalist known for his investigative reporting on economic policy and government spending. While not primarily known as a Christian author, his work often explores ethical dimensions of public policy and financial stewardship that resonate with faith-based readers interested in how biblical principles apply to economics and governance.",
@@ -9258,17 +8961,6 @@
     "website": "",
     "books": [],
     "initials": "BS"
-  },
-  {
-    "name": "John Yoon and Joy Dong",
-    "slug": "john-yoon-and-joy-dong",
-    "bio": "John Yoon and Joy Dong are content creators and communicators who engage with faith topics for Christian audiences. They work to make biblical insights accessible and relevant to contemporary believers seeking deeper understanding of their faith.",
-    "affiliation": "",
-    "role": "Content Creators & Writers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JY & JD"
   },
   {
     "name": "John Brown of Wamphray",
@@ -9531,33 +9223,6 @@
     "initials": "DS"
   },
   {
-    "name": "Anton Troianovski and David E. Sanger",
-    "slug": "anton-troianovski-and-david-e-sanger",
-    "bio": "Anton Troianovski and David E. Sanger are veteran journalists at The New York Times who specialize in international affairs and national security reporting. Their investigative work provides readers with in-depth analysis of geopolitical events and their implications for global stability and governance.",
-    "affiliation": "The New York Times",
-    "role": "Journalists & Authors",
-    "education": "",
-    "website": "",
-    "books": [
-      {
-        "title": "The Perfect Weapon: War, Sabotage, and Fear in the Cyber Age",
-        "amazon_url": "https://www.amazon.com/s?k=The+Perfect+Weapon+David+Sanger"
-      }
-    ],
-    "initials": "ATS"
-  },
-  {
-    "name": "Matthew Mpoke Bigg and Apoorva Mandavilli",
-    "slug": "matthew-mpoke-bigg-and-apoorva-mandavilli",
-    "bio": "Matthew Mpoke Bigg is a scholar of biblical theology and ancient Christianity, while Apoorva Mandavilli is a science journalist. Together they have contributed thoughtful perspectives on faith, science, and contemporary issues for Christian audiences seeking informed engagement with modern culture and biblical scholarship.",
-    "affiliation": "",
-    "role": "Biblical Scholar & Science Journalist",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MMB AM"
-  },
-  {
     "name": "Mark J. Henninger",
     "slug": "mark-j-henninger",
     "bio": "Mark J. Henninger is a Christian writer and content creator dedicated to exploring faith, culture, and discipleship. His work encourages believers to think deeply about their convictions and live out their faith authentically in contemporary society.",
@@ -9663,22 +9328,6 @@
     "initials": "KB"
   },
   {
-    "name": "Peter S. Goodman and Finbarr O'Reilly",
-    "slug": "peter-s-goodman-and-finbarr-oreilly",
-    "bio": "Peter S. Goodman is an international economics correspondent and author known for investigative journalism on global labor and supply chain issues. Finbarr O'Reilly is an award-winning photojournalist and documentarian. Together, their collaborative work examines human dignity, economic justice, and the interconnected systems that affect vulnerable populations worldwide.",
-    "affiliation": "New York Times",
-    "role": "Journalists & Authors",
-    "education": "",
-    "website": "",
-    "books": [
-      {
-        "title": "The Globalization of Nothing",
-        "amazon_url": "https://www.amazon.com/s?k=Peter+Goodman+globalization"
-      }
-    ],
-    "initials": "PSG, FOR"
-  },
-  {
     "name": "Noah Payne-Frank",
     "slug": "noah-paynefrank",
     "bio": "Noah Payne-Frank is a writer and content creator focused on Christian thought and cultural commentary. He engages with contemporary issues through a biblical lens, helping readers navigate faith in an increasingly complex world.",
@@ -9721,56 +9370,6 @@
     "website": "",
     "books": [],
     "initials": "KE"
-  },
-  {
-    "name": "Temujin Doran and Katie Arnold",
-    "slug": "temujin-doran-and-katie-arnold",
-    "bio": "Temujin Doran and Katie Arnold are voices in Christian content and commentary, engaging audiences on faith, culture, and contemporary issues from a biblical perspective. They contribute to Christian discourse through various media platforms and publications.",
-    "affiliation": "",
-    "role": "Content Creators & Writers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "TDK"
-  },
-  {
-    "name": "Roque Planas and agencies",
-    "slug": "roque-planas-and-agencies",
-    "bio": "Roque Planas is a journalist and writer who has contributed to various news and content agencies covering faith, culture, and social issues relevant to Christian and Hispanic audiences. His work spans multiple publications focused on providing balanced reporting and commentary on topics of interest to faith-based communities.",
-    "affiliation": "HuffPost",
-    "role": "Journalist & Content Contributor",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RP",
-    "known_for": "Reporting on immigration, Latin America, and the U.S. Latino community for HuffPost.",
-    "current_role": "National Reporter, HuffPost (based in Austin), covering immigration and voting rights",
-    "deceased": false,
-    "faqs": [
-      {
-        "q": "Who is Roque Planas?",
-        "a": "Roque Planas is a national reporter for HuffPost based in Austin, Texas, covering immigration and voting rights. He co-founded the Latin America News Dispatch, holds a journalism master's from NYU, and previously worked at the New York Daily News and Fox News Latino."
-      },
-      {
-        "q": "What does 'Roque Planas and agencies' mean?",
-        "a": "This byline indicates an article written by Planas with additional material from wire services such as the Associated Press or Reuters. It is a common newsroom convention for stories combining original reporting with agency copy."
-      },
-      {
-        "q": "Is Roque Planas a Christian author?",
-        "a": "No. Planas is a mainstream news journalist covering immigration and Latin America, and his public work does not indicate a religious affiliation. His stories occasionally intersect with faith communities through coverage of immigration and Latino life."
-      }
-    ]
-  },
-  {
-    "name": "Ivan Nechepurenko and Mary Gelman",
-    "slug": "ivan-nechepurenko-and-mary-gelman",
-    "bio": "Ivan Nechepurenko and Mary Gelman are journalists and writers who have contributed to major international publications covering Eastern European affairs and cultural topics. Their reporting and writing reflect a commitment to honest storytelling and in-depth analysis of complex geopolitical and social issues.",
-    "affiliation": "The New York Times",
-    "role": "Journalists & Writers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "IN-MG"
   },
   {
     "name": "Winfree Brisley",
@@ -10011,17 +9610,6 @@
     "initials": "HI"
   },
   {
-    "name": "Yan Zhuang and Ephrat Livni",
-    "slug": "yan-zhuang-and-ephrat-livni",
-    "bio": "Yan Zhuang and Ephrat Livni are journalists and writers who explore faith, culture, and contemporary issues. Their work has appeared in major publications where they thoughtfully examine how belief intersects with modern life and society.",
-    "affiliation": "",
-    "role": "Journalists & Writers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "YZ-EL"
-  },
-  {
     "name": "David Pierson",
     "slug": "david-pierson",
     "bio": "David Pierson is a Christian author and speaker who focuses on biblical teaching and spiritual growth. His work emphasizes authentic faith and practical Christian living for modern believers.",
@@ -10088,17 +9676,6 @@
     "initials": "HD"
   },
   {
-    "name": "David Pierson and Paul Sonne",
-    "slug": "david-pierson-and-paul-sonne",
-    "bio": "David Pierson and Paul Sonne are journalists and reporters who have covered international news with particular attention to religious freedom, persecution, and humanitarian issues affecting Christians worldwide. Their reporting brings important stories of faith and resilience to global audiences.",
-    "affiliation": "The Wall Street Journal",
-    "role": "Journalists & Reporters",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "DP-PS"
-  },
-  {
     "name": "Case Thorp",
     "slug": "case-thorp",
     "bio": "Case Thorp is a Christian writer and communicator dedicated to helping people understand and live out their faith with authenticity and depth. His work focuses on discipleship, spiritual growth, and practical theology for contemporary believers.",
@@ -10108,17 +9685,6 @@
     "website": "",
     "books": [],
     "initials": "CT"
-  },
-  {
-    "name": "Euan Ward and Jenny Gross",
-    "slug": "euan-ward-and-jenny-gross",
-    "bio": "Euan Ward is a reporter for The New York Times based in Beirut, covering Lebanon and Syria and the region's overlapping conflicts; he previously contributed to The Guardian. Jenny Gross is a New York Times reporter covering breaking and international news, having previously reported for The Wall Street Journal in London, where she covered British politics.",
-    "affiliation": "The New York Times",
-    "role": "Reporters",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "EWJ"
   },
   {
     "name": "Justin Jackson",
@@ -10152,17 +9718,6 @@
     "website": "",
     "books": [],
     "initials": "MC"
-  },
-  {
-    "name": "Christopher F. Schuetze and Tatiana Firsova",
-    "slug": "christopher-f-schuetze-and-tatiana-firsova",
-    "bio": "Christopher F. Schuetze and Tatiana Firsova are journalists and writers who have contributed to major publications covering international affairs, culture, and human interest stories. Their work often explores themes of faith, family, and social issues from a thoughtful, narrative-driven perspective.",
-    "affiliation": "The New York Times",
-    "role": "Journalists & Writers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CS-TF"
   },
   {
     "name": "Christopher F. Schuetze",
@@ -10321,17 +9876,6 @@
     "initials": "MF"
   },
   {
-    "name": "Ephrat Livni and Lynsey Chutel",
-    "slug": "ephrat-livni-and-lynsey-chutel",
-    "bio": "Ephrat Livni and Lynsey Chutel are accomplished journalists known for their reporting on global issues, culture, and human interest stories. Their work has appeared in major publications where they investigate compelling narratives that resonate with diverse audiences seeking deeper understanding of our world.",
-    "affiliation": "Quartz",
-    "role": "Journalists & Writers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "ELC"
-  },
-  {
     "name": "Paul Koch",
     "slug": "paul-koch",
     "bio": "Paul Koch is a Lutheran pastor and writer who explores the intersection of faith, culture, and everyday life. His work engages thoughtfully with contemporary issues from a Christian perspective, offering readers both theological insight and practical wisdom for modern discipleship.",
@@ -10380,28 +9924,6 @@
       }
     ],
     "initials": "HBC"
-  },
-  {
-    "name": "Amelia Nierenberg and Ephrat Livni",
-    "slug": "amelia-nierenberg-and-ephrat-livni",
-    "bio": "Amelia Nierenberg and Ephrat Livni are journalists and writers who contribute to major publications covering culture, faith, and human interest stories. Their work often explores the intersection of personal belief, ethics, and contemporary life with thoughtfulness and nuance that resonates with readers seeking deeper understanding of faith in modern times.",
-    "affiliation": "The New York Times, Quartz",
-    "role": "Journalists & Writers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AN-EL"
-  },
-  {
-    "name": "Declan Walsh and Arlette Bashizi",
-    "slug": "declan-walsh-and-arlette-bashizi",
-    "bio": "Declan Walsh is an award-winning journalist known for his international reporting, while Arlette Bashizi is a dedicated humanitarian worker and advocate. Together, they bring firsthand experience from conflict zones and underserved communities to their storytelling, offering Christian perspectives on justice, compassion, and faith in action across the globe.",
-    "affiliation": "",
-    "role": "Journalists & Humanitarian Advocates",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "DW-AB"
   },
   {
     "name": "Geoffrey R. Kirkland",
@@ -10462,28 +9984,6 @@
         "a": "The magazine writes from a broadly Reformed, confessional Protestant perspective and aims to form Christians for faithful participation in public life. Its essays on evangelical fracturing, family, work, and political theology are widely discussed across the evangelical world."
       }
     ]
-  },
-  {
-    "name": "Elisabetta Povoledo and Elizabeth Dias",
-    "slug": "elisabetta-povoledo-and-elizabeth-dias",
-    "bio": "Elisabetta Povoledo is a Vatican correspondent and religion writer known for her reporting on the Catholic Church and papal activities. Elizabeth Dias is a religion reporter who covers faith, spirituality, and the intersection of religion with American culture and politics. Together, their work provides comprehensive coverage of religious institutions and their impact on contemporary society.",
-    "affiliation": "The New York Times",
-    "role": "Religion Reporters & Journalists",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "EP-ED"
-  },
-  {
-    "name": "Editorial",
-    "slug": "editorial",
-    "bio": "The Editorial team curates and produces thoughtful Christian content designed to deepen faith and encourage spiritual growth. With a commitment to biblical truth and accessible writing, the Editorial section represents collaborative efforts to bring meaningful resources to our Christian audience.",
-    "affiliation": "",
-    "role": "Editorial Team",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "ED"
   },
   {
     "name": "Matthew Harmon",
@@ -10633,17 +10133,6 @@
     "initials": "MJ"
   },
   {
-    "name": "Tyler Hicks and Gaëlle Girbes",
-    "slug": "tyler-hicks-and-galle-girbes",
-    "bio": "Tyler Hicks and Gaëlle Girbes are content creators and communicators who engage with Christian audiences through various media platforms. Their work focuses on making faith relevant and accessible to contemporary believers seeking to integrate their spirituality with daily life.",
-    "affiliation": "",
-    "role": "Content Creators & Communicators",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "THG"
-  },
-  {
     "name": "Jake Meador",
     "slug": "jake-meador",
     "bio": "Jake Meador is a writer and editor known for his thoughtful commentary on faith, culture, and politics from a Christian perspective. He has contributed to various Christian publications and is recognized for his work exploring how Christian conviction intersects with contemporary cultural issues.",
@@ -10664,26 +10153,6 @@
     "website": "",
     "books": [],
     "initials": "AG"
-  },
-  {
-    "name": "Ligonier Ministries",
-    "slug": "ligonier-ministries",
-    "bio": "Ligonier Ministries is a leading Christian organization dedicated to equipping believers with biblical truth through reformed theology education and resources. Founded in 1971, they provide sermons, teachings, articles, and educational materials designed to help Christians understand and apply Scripture more deeply.",
-    "affiliation": "Ligonier Ministries",
-    "role": "Christian Teaching Ministry & Content Platform",
-    "education": "",
-    "website": "https://www.ligonier.org",
-    "books": [
-      {
-        "title": "The Holiness of God",
-        "amazon_url": "https://www.amazon.com/s?k=The+Holiness+of+God+R.C.+Sproul"
-      },
-      {
-        "title": "Truths We Confess: A Reformation Study of the Heidelberg Catechism",
-        "amazon_url": "https://www.amazon.com/s?k=Truths+We+Confess+Heidelberg+Catechism"
-      }
-    ],
-    "initials": "LM"
   },
   {
     "name": "Melissa Collier Gepford",
@@ -10872,28 +10341,6 @@
     "initials": "CB"
   },
   {
-    "name": "John Yoon and Tatsiana Chypsanava",
-    "slug": "john-yoon-and-tatsiana-chypsanava",
-    "bio": "John Yoon and Tatsiana Chypsanava are writers and content creators who engage with contemporary Christian topics and cultural issues from a biblical perspective. Their collaborative work explores faith, discipleship, and practical Christian living for modern audiences.",
-    "affiliation": "",
-    "role": "Writers & Content Creators",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JYT"
-  },
-  {
-    "name": "Nadia Khomami",
-    "slug": "nadia-khomami-arts-and-culture-correspondent",
-    "bio": "Nadia Khomami is an arts and culture correspondent who brings thoughtful journalism to discussions of creativity, faith, and human expression. Her reporting explores the intersection of culture and society with nuance and insight.",
-    "affiliation": "The Guardian",
-    "role": "Arts and Culture Correspondent",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "NK"
-  },
-  {
     "name": "Philip Wegmann",
     "slug": "philip-wegmann",
     "bio": "Philip Wegmann is a political correspondent and opinion writer known for his commentary on faith, politics, and culture from a conservative Christian perspective. He brings thoughtful analysis to contemporary issues affecting the American church and society.",
@@ -10947,28 +10394,6 @@
     "website": "https://sethtroutt.com",
     "books": [],
     "initials": "ST"
-  },
-  {
-    "name": "Jenny Gross and Aurelien Breeden",
-    "slug": "jenny-gross-and-aurelien-breeden",
-    "bio": "Jenny Gross and Aurelien Breeden are journalists who have contributed reporting to major Christian and general interest publications. Their work often explores intersections of faith, culture, and contemporary issues affecting Christian communities.",
-    "affiliation": "New York Times, Religion News Service",
-    "role": "Journalists & Religion Reporters",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JGB"
-  },
-  {
-    "name": "Rev Simon Lockett",
-    "slug": "rev-simon-lockett",
-    "bio": "Rev Simon Lockett is an Anglican clergyman and Christian author known for his thoughtful engagement with Scripture and contemporary faith issues. He brings pastoral experience and theological depth to his writing, helping readers navigate questions of belief and discipleship.",
-    "affiliation": "",
-    "role": "Reverend & Author",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SL"
   },
   {
     "name": "Jim Elliff",
@@ -11592,17 +11017,6 @@
     "initials": "BG"
   },
   {
-    "name": "Max Kim and Chang W. Lee",
-    "slug": "max-kim-and-chang-w-lee",
-    "bio": "Max Kim is a Seoul-based journalist reporting for The New York Times, previously a Korea correspondent for the Los Angeles Times, whose feature writing has won SOPA and Sigma Delta Chi awards. Chang W. Lee is a veteran New York Times staff photojournalist who has covered wars, Olympics, and world events for the paper since 1994.",
-    "affiliation": "The New York Times",
-    "role": "Journalist & Photojournalist",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MKA"
-  },
-  {
     "name": "Jason Douglas",
     "slug": "jason-douglas",
     "bio": "Jason Douglas is Tokyo bureau chief for The Wall Street Journal, after covering Asian economies from the paper's Singapore bureau with a focus on China's economy and global trade. He previously reported on economics and public policy from London, covering Brexit and the pandemic, and began his career at newspapers in Northern Ireland before joining Dow Jones in 2007.",
@@ -11645,17 +11059,6 @@
     "website": "https://research.lifeway.com",
     "books": [],
     "initials": "LR"
-  },
-  {
-    "name": "Rosaria Butterfield and Jared Moore",
-    "slug": "rosaria-butterfield-and-jared-moore",
-    "bio": "Rosaria Butterfield is a former tenured professor of English at Syracuse University who, after her conversion to Christ, became one of evangelicalism's most influential voices on sexuality, hospitality, and identity; her books include The Secret Thoughts of an Unlikely Convert and The Gospel Comes with a House Key. Jared Moore (PhD, Southern Baptist Theological Seminary) is a Tennessee pastor and author of The Lust of the Flesh.",
-    "affiliation": "Authors",
-    "role": "Authors & Speakers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RBA"
   },
   {
     "name": "Dov Lieber",
@@ -11713,17 +11116,6 @@
     "initials": "GA"
   },
   {
-    "name": "Guardian Staff",
-    "slug": "guardian-staff",
-    "bio": "Guardian staff is the collective byline used by The Guardian, the British news organization founded in Manchester in 1821 and owned by the Scott Trust, for articles produced by its newsroom rather than an individual reporter. The Guardian's global editions in the UK, US, and Australia cover world news, politics, and culture, including extensive reporting on religion and public life.",
-    "affiliation": "The Guardian",
-    "role": "News Organization",
-    "education": "",
-    "website": "https://www.theguardian.com",
-    "books": [],
-    "initials": "GS"
-  },
-  {
     "name": "Jay Sklar",
     "slug": "jay-sklar",
     "bio": "Jay Sklar is a biblical scholar and author known for his work on Old Testament theology and biblical interpretation. He has contributed significantly to Christian education and theological understanding through his writing and teaching.",
@@ -11775,33 +11167,6 @@
     "website": "",
     "books": [],
     "initials": "MM"
-  },
-  {
-    "name": "Damian Carrington",
-    "slug": "damian-carrington-environment-editor",
-    "bio": "Damian Carrington is the Environment Editor at The Guardian, where he covers critical environmental issues including climate change, biodiversity, and conservation. With a background in science journalism, he brings rigorous reporting and clarity to complex ecological topics that matter to Christians concerned with stewardship of God's creation.",
-    "affiliation": "The Guardian",
-    "role": "Environment Editor & Journalist",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "DC"
-  },
-  {
-    "name": "Maggie Haberman and Jonathan Swan",
-    "slug": "maggie-haberman-and-jonathan-swan",
-    "bio": "Maggie Haberman and Jonathan Swan are prominent political journalists known for their investigative reporting on U.S. politics and governance. While not primarily faith-focused writers, their work on political accountability and truthfulness aligns with Christian values of justice and integrity in public life.",
-    "affiliation": "CNN (Maggie Haberman); Axios (Jonathan Swan)",
-    "role": "Political Journalists & Reporters",
-    "education": "",
-    "website": "",
-    "books": [
-      {
-        "title": "Confidence Man: The Making of Donald Trump and the Breaking of America",
-        "amazon_url": "https://www.amazon.com/s?k=Confidence+Man+Maggie+Haberman"
-      }
-    ],
-    "initials": "MH/JS"
   },
   {
     "name": "Jonathan Malm",
@@ -11920,17 +11285,6 @@
     "website": "",
     "books": [],
     "initials": "OM"
-  },
-  {
-    "name": "Sutton Raphael and Rebecca Suner",
-    "slug": "sutton-raphael-and-rebecca-suner",
-    "bio": "Sutton Raphael and Rebecca Suner are video journalists at The New York Times. Raphael produces visual journalism for the paper's digital platforms, and Suner, who joined the Times in 2023 after serving as a senior producer at the digital media startup Brut, works on the social visuals team. Their collaborations include on-the-ground video reporting from Ukraine.",
-    "affiliation": "The New York Times",
-    "role": "Video Journalists",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SR"
   },
   {
     "name": "Ryan Denton",
@@ -12052,33 +11406,6 @@
     "initials": "DK"
   },
   {
-    "name": "Jonathan Swan and David E. Sanger",
-    "slug": "jonathan-swan-and-david-e-sanger",
-    "bio": "Jonathan Swan is a national political reporter known for his investigative journalism on Washington politics and policy, while David E. Sanger is a Pulitzer Prize-winning national security correspondent with deep expertise in foreign policy and cybersecurity. Together, they have collaborated on significant reporting projects examining government decisions and their consequences for Americans.",
-    "affiliation": "Axios (Swan); The New York Times (Sanger)",
-    "role": "Political and National Security Journalists",
-    "education": "",
-    "website": "",
-    "books": [
-      {
-        "title": "The Perfect Weapon: War, Sabotage, and Fear in the Cyber Age",
-        "amazon_url": "https://www.amazon.com/s?k=The+Perfect+Weapon+David+Sanger"
-      }
-    ],
-    "initials": "JS-DES"
-  },
-  {
-    "name": "Ashifa Kassam",
-    "slug": "ashifa-kassam-european-community-affairs-correspondent",
-    "bio": "Ashifa Kassam is a European community affairs correspondent who reports on social, cultural, and community issues across Europe. Her journalism focuses on human interest stories and grassroots movements that reflect the lived experiences of European communities. Through her reporting, she brings attention to voices and perspectives often underrepresented in mainstream media coverage.",
-    "affiliation": "The Guardian",
-    "role": "Journalist & Correspondent",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AK"
-  },
-  {
     "name": "Kyle Burks",
     "slug": "kyle-burks",
     "bio": "Kyle Burks (MDiv, The Southern Baptist Theological Seminary) is a pastoral resident at Creekside Community Church in Gainesville, Florida. He writes for The Gospel Coalition and publishes on his Substack, 'Sweetheart, I'm Busy,' offering pastoral reflection on Christian living and discipleship.",
@@ -12104,34 +11431,6 @@
       }
     ],
     "initials": "JM"
-  },
-  {
-    "name": "Amelia Nierenberg and Matthew Mpoke Bigg",
-    "slug": "amelia-nierenberg-and-matthew-mpoke-bigg",
-    "bio": "Amelia Nierenberg and Matthew Mpoke Bigg are journalists and writers who have contributed to major publications covering faith, culture, and social issues. Their work explores the intersection of Christianity, contemporary society, and human stories with depth and nuance.",
-    "affiliation": "The New York Times",
-    "role": "Journalists & Writers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "ANB",
-    "known_for": "Co-bylined international breaking-news coverage for The New York Times.",
-    "current_role": "Reporters, The New York Times (both based in London, covering international news)",
-    "deceased": false,
-    "faqs": [
-      {
-        "q": "Who are Amelia Nierenberg and Matthew Mpoke Bigg?",
-        "a": "They are two New York Times journalists whose names appear together on co-bylined international stories. Amelia Nierenberg is a London-based reporter covering international news who previously wrote for the Food desk; Matthew Mpoke Bigg is a London-based reporter on the Times's live breaking-news team, writing mainly on the Middle East and Ukraine, after a career at Reuters."
-      },
-      {
-        "q": "Are they Christian authors?",
-        "a": "No. Both are mainstream news journalists, and their public work does not indicate a religious affiliation. Their co-bylined coverage of world events, including the Middle East, is sometimes shared in Christian news digests."
-      },
-      {
-        "q": "What do they cover?",
-        "a": "Both cover international and breaking news from London for The New York Times, including the Middle East, Ukraine, and Europe."
-      }
-    ]
   },
   {
     "name": "R. Kent Hughes",
@@ -12277,28 +11576,6 @@
     "website": "",
     "books": [],
     "initials": "AD"
-  },
-  {
-    "name": "Norimitsu Onishi and Hubert Hayaud",
-    "slug": "norimitsu-onishi-and-hubert-hayaud",
-    "bio": "Norimitsu Onishi is an accomplished journalist known for his reporting on African affairs and international development issues. Hubert Hayaud is a French researcher and writer focused on social and humanitarian topics. Together, their collaborative work explores complex global challenges through rigorous reporting and analysis.",
-    "affiliation": "The New York Times",
-    "role": "Journalists & Reporters",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "NOH"
-  },
-  {
-    "name": "Luis Ferré-Sadurní and Federico Rios",
-    "slug": "luis-ferrsadurn-and-federico-rios",
-    "bio": "Luis Ferré-Sadurní and Federico Rios are investigative journalists known for their in-depth reporting on complex social and environmental issues. While not primarily Christian content creators, their work often touches on themes of justice, stewardship, and human dignity that resonate with Christian values and concerns.",
-    "affiliation": "The New York Times",
-    "role": "Investigative Journalists & Reporters",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "LFS-FR"
   },
   {
     "name": "Tilly Dillehay",
@@ -12591,17 +11868,6 @@
     ]
   },
   {
-    "name": "Chris Osuh",
-    "slug": "chris-osuh-community-affairs-correspondent",
-    "bio": "Chris Osuh is a community affairs correspondent dedicated to covering stories that matter to everyday people and communities. With a focus on bringing light to important social issues and human interest narratives, Chris works to amplify voices often unheard in mainstream media.",
-    "affiliation": "",
-    "role": "Community Affairs Correspondent",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CO"
-  },
-  {
     "name": "Aaron Coleman",
     "slug": "aaron-coleman",
     "bio": "",
@@ -12723,17 +11989,6 @@
     "website": "https://www.thechristianathlete.com",
     "books": [],
     "initials": "BS"
-  },
-  {
-    "name": "Everyday Theology Staff",
-    "slug": "everyday-theology-staff",
-    "bio": "The Everyday Theology team is dedicated to exploring how Christian faith intersects with daily life, culture, and practice. Their collaborative approach brings together multiple perspectives to help readers think biblically about the ordinary moments and decisions they face.",
-    "affiliation": "Everyday Theology",
-    "role": "Editorial Team & Contributors",
-    "education": "",
-    "website": "https://everydaytheology.com",
-    "books": [],
-    "initials": "ETS"
   },
   {
     "name": "Shawn Wright",
@@ -12976,17 +12231,6 @@
     "initials": "WM"
   },
   {
-    "name": "Aie Balagtas See and Jason Gutierrez",
-    "slug": "aie-balagtas-see-and-jason-gutierrez",
-    "bio": "Aie Balagtas See is a Filipino freelance journalist who covers human rights, criminal justice, and the Philippine drug war, with reporting appearing in The New York Times and leading Philippine outlets. Jason Gutierrez is an award-winning Manila-based journalist and New York Times reporter who spent two decades as a correspondent for Agence France-Presse and served as news chief of BenarNews.",
-    "affiliation": "The New York Times",
-    "role": "Journalists",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "ABS-JG"
-  },
-  {
     "name": "Marianne LeVine",
     "slug": "marianne-levine",
     "bio": "Marianne LeVine is a journalist and author known for her investigative reporting on religious movements and institutional accountability. Her work has appeared in major publications where she examines faith communities with both critical insight and respect for believers seeking truth.",
@@ -13087,28 +12331,6 @@
     "website": "",
     "books": [],
     "initials": "SM"
-  },
-  {
-    "name": "Zane Irwin and Shirin Hakim",
-    "slug": "zane-irwin-and-shirin-hakim",
-    "bio": "Zane Irwin and Shirin Hakim are content creators and communicators who engage with contemporary Christian topics and cultural conversations. Their work aims to bridge faith perspectives with modern life and relevant social discourse for thoughtful believers.",
-    "affiliation": "",
-    "role": "Content Creators & Communicators",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "ZS"
-  },
-  {
-    "name": "Hannah Beech and Daniel Berehulak",
-    "slug": "hannah-beech-and-daniel-berehulak",
-    "bio": "Hannah Beech is an award-winning international correspondent and journalist who has covered some of the world's most critical stories, bringing important global narratives to light. Daniel Berehulak is an acclaimed photojournalist known for his powerful visual storytelling across conflict zones and humanitarian crises. Together, they represent a commitment to truth-telling and bearing witness to human experiences across the globe.",
-    "affiliation": "The New York Times",
-    "role": "Journalist & Photojournalist",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "HB/DB"
   },
   {
     "name": "Laetitia Vançon",
@@ -13298,17 +12520,6 @@
     "initials": "JP"
   },
   {
-    "name": "Jessica Murray",
-    "slug": "jessica-murray-social-affairs-correspondent",
-    "bio": "Jessica Murray is a social affairs correspondent who reports on issues affecting communities and society. Her work examines social trends, policy impacts, and human interest stories that shape our world.",
-    "affiliation": "",
-    "role": "Social Affairs Correspondent",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JM"
-  },
-  {
     "name": "Joyce Garcia",
     "slug": "joyce-garcia",
     "bio": "",
@@ -13373,17 +12584,6 @@
     "website": "",
     "books": [],
     "initials": "AG"
-  },
-  {
-    "name": "Dustin Volz and Michael Schwirtz",
-    "slug": "dustin-volz-and-michael-schwirtz",
-    "bio": "Dustin Volz is a cybersecurity and national security reporter, while Michael Schwirtz is an investigative journalist. Together and separately, they have covered complex geopolitical and security issues with rigorous reporting.",
-    "affiliation": "The New York Times, Reuters",
-    "role": "Investigative Journalists",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "DV & MS"
   },
   {
     "name": "Scott W. Kay",
@@ -13499,17 +12699,6 @@
     "initials": "CC"
   },
   {
-    "name": "Luis Ferré-Sadurní and Leo Sands",
-    "slug": "luis-ferrsadurn-and-leo-sands",
-    "bio": "Luis Ferré-Sadurní and Leo Sands are journalists and writers who have contributed reporting and analysis to major publications. Their work often explores social, political, and cultural issues with careful research and journalistic integrity.",
-    "affiliation": "",
-    "role": "Journalists & Writers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "LFS"
-  },
-  {
     "name": "Frances Robles",
     "slug": "frances-robles",
     "bio": "Frances Robles is a journalist and author known for her investigative reporting on social justice issues and human interest stories. Her work, often grounded in compassion and truth-telling, has appeared in major publications and reflects a commitment to amplifying marginalized voices.",
@@ -13596,17 +12785,6 @@
     "website": "",
     "books": [],
     "initials": "EB"
-  },
-  {
-    "name": "Isayen Herrera and Tibisay Romero",
-    "slug": "isayen-herrera-and-tibisay-romero",
-    "bio": "Isayen Herrera and Tibisay Romero are Christian content creators and writers dedicated to sharing faith-based insights with Spanish-speaking and bilingual audiences. Through their collaborative work, they seek to inspire and encourage believers in their spiritual journeys.",
-    "affiliation": "",
-    "role": "Content Creators & Writers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "IH & TR"
   },
   {
     "name": "Jacob Leeming",
@@ -13729,17 +12907,6 @@
     "initials": "TR"
   },
   {
-    "name": "Luis Ferré-Sadurní and Genevieve Glatsky",
-    "slug": "luis-ferrsadurn-and-genevieve-glatsky",
-    "bio": "Luis Ferré-Sadurní and Genevieve Glatsky are journalists who have reported on significant social and political issues affecting communities across the United States. Their investigative work often examines systemic challenges and human stories that reflect broader concerns about justice and community welfare.",
-    "affiliation": "The New York Times",
-    "role": "Journalists & Reporters",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "LFS-GG"
-  },
-  {
     "name": "Corinne Carver",
     "slug": "corinne-carver",
     "bio": "Corinne Carver is a writer and cross-cultural worker originally from Portland, Oregon, who has served in ministry in the Dominican Republic. She writes on faith, ministry, and life overseas for Velvet Ashes, a community for Christian women serving in missions around the world.",
@@ -13804,17 +12971,6 @@
     "website": "",
     "books": [],
     "initials": "AE"
-  },
-  {
-    "name": "Abdi Latif Dahir and Yeganeh Torbati",
-    "slug": "abdi-latif-dahir-and-yeganeh-torbati",
-    "bio": "Abdi Latif Dahir and Yeganeh Torbati are accomplished investigative journalists who have collaborated on impactful reporting for major news organizations. Their work often explores humanitarian issues, global affairs, and stories of resilience across diverse communities.",
-    "affiliation": "Reuters, The New York Times",
-    "role": "Investigative Journalists & Reporters",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "ALD YT"
   },
   {
     "name": "Thomas West",
@@ -13886,28 +13042,6 @@
     "website": "",
     "books": [],
     "initials": "ST"
-  },
-  {
-    "name": "Cassandra Vinograd and Carlotta Gall",
-    "slug": "cassandra-vinograd-and-carlotta-gall",
-    "bio": "Cassandra Vinograd and Carlotta Gall are accomplished international journalists known for their investigative reporting on global conflicts and humanitarian issues. Their work has appeared in major publications where they provide thoughtful, detailed coverage of complex international stories that affect communities worldwide.",
-    "affiliation": "NBC News, The New York Times",
-    "role": "Journalists & Reporters",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CV-CG"
-  },
-  {
-    "name": "Carlotta Gall and Stanislav Kozliuk",
-    "slug": "carlotta-gall-and-stanislav-kozliuk",
-    "bio": "Carlotta Gall is an acclaimed international journalist known for her investigative reporting on conflict zones and human rights issues, while Stanislav Kozliuk is a Ukrainian political analyst and scholar. Together they have collaborated on research examining Eastern European politics, religious freedom, and geopolitical tensions affecting Christian communities in the region.",
-    "affiliation": "The New York Times, Radio Free Europe/Radio Liberty",
-    "role": "Journalists & Researchers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CG & SK"
   },
   {
     "name": "Nik Schatz",
@@ -14050,17 +13184,6 @@
     "initials": "RH"
   },
   {
-    "name": "Victoria Kim and Chris Buckley",
-    "slug": "victoria-kim-and-chris-buckley",
-    "bio": "Victoria Kim and Chris Buckley are journalists and authors who have collaborated on investigative reporting and books exploring faith, culture, and contemporary issues through a Christian lens. Their work combines rigorous research with accessible storytelling, engaging readers interested in understanding how Christian faith intersects with modern society.",
-    "affiliation": "",
-    "role": "Journalists & Authors",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "VK & CB"
-  },
-  {
     "name": "Mary Willson Hannah",
     "slug": "mary-willson-hannah",
     "bio": "Mary Willson Hannah (PhD, Trinity Evangelical Divinity School) is director of women in ministry at Second Presbyterian Church in Memphis, Tennessee, and teaches Old Testament part-time at Memphis City Seminary. A frequent Gospel Coalition conference teacher, she is the author of the devotional Heavenly Minded and is passionate about training others to teach the Scriptures in the local church.",
@@ -14086,17 +13209,6 @@
       }
     ],
     "initials": "CG"
-  },
-  {
-    "name": "Stanislav Kozliuk and Cassandra Vinograd",
-    "slug": "stanislav-kozliuk-and-cassandra-vinograd",
-    "bio": "Stanislav Kozliuk and Cassandra Vinograd are journalists and correspondents known for their reporting on international affairs and religious freedom issues. Their work has focused on documenting stories from regions experiencing conflict and persecution, with particular attention to how faith communities navigate challenging circumstances.",
-    "affiliation": "Reuters, NBC News",
-    "role": "Journalists & Correspondents",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SKC"
   },
   {
     "name": "Sara Hagerty",
@@ -14295,28 +13407,6 @@
     "initials": "JNM"
   },
   {
-    "name": "Abdi Latif Dahir and Leo Sands",
-    "slug": "abdi-latif-dahir-and-leo-sands",
-    "bio": "Abdi Latif Dahir is an acclaimed journalist and author known for his reporting on Africa, faith, and culture, while Leo Sands is a writer and editor who collaborates on various content projects. Together, they bring diverse perspectives to storytelling that explores the intersection of spirituality, community, and social issues.",
-    "affiliation": "The New York Times, Quartz Africa",
-    "role": "Journalists & Authors",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "ALD-LS"
-  },
-  {
-    "name": "C.M. Joyner",
-    "slug": "cmjoyner",
-    "bio": "C.M. Joyner is a Christian writer and content creator focused on faith, discipleship, and spiritual growth. Through engaging storytelling and biblical insight, Joyner helps believers deepen their relationship with Christ and navigate their faith journeys with authenticity and hope.",
-    "affiliation": "",
-    "role": "Christian Writer & Content Creator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CMJ"
-  },
-  {
     "name": "Samantha Decker",
     "slug": "samantha-decker",
     "bio": "Samantha Decker is a writer and Bible teacher passionate about encouraging believers to deepen their walk with Jesus through discipleship and love for Scripture. Her debut book, 'Unhurried: An Invitation to Slow Down, Create Margin, and Surrender Control to God,' was released by Moody Publishers in 2025. She and her husband live in Oklahoma with their four children.",
@@ -14361,17 +13451,6 @@
     "initials": "TS"
   },
   {
-    "name": "Selam Gebrekidan and Pei-Lin Wu",
-    "slug": "selam-gebrekidan-and-peilin-wu",
-    "bio": "Selam Gebrekidan and Pei-Lin Wu are journalists known for their investigative reporting on global issues affecting vulnerable communities. Their work explores complex social and ethical challenges with nuance and compassion, offering Christian readers insight into how faith intersects with contemporary world events.",
-    "affiliation": "The New York Times",
-    "role": "Investigative Journalists",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SG & PW"
-  },
-  {
     "name": "Colton Taylor",
     "slug": "colton-taylor",
     "bio": "Colton Taylor serves as student pastor at Green Valley Church in Hoover, Alabama, where he has ministered for over a decade. He holds a Master of Divinity from Beeson Divinity School at Samford University and a BA in theology from the University of Mobile, and he writes for For The Church.",
@@ -14394,39 +13473,6 @@
     "initials": "SN"
   },
   {
-    "name": "Declan Walsh and John Yoon",
-    "slug": "declan-walsh-and-john-yoon",
-    "bio": "Declan Walsh is an award-winning foreign correspondent and investigative journalist known for his courageous reporting from conflict zones and his commitment to uncovering truth. John Yoon is a writer and editor who contributes to Christian and secular publications. Together and separately, they bring journalistic integrity and thoughtful analysis to contemporary issues.",
-    "affiliation": "The New York Times, The Guardian",
-    "role": "Journalists & Correspondents",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "DW & JY"
-  },
-  {
-    "name": "Christopher Knaus and Nino Bucci",
-    "slug": "christopher-knaus-and-nino-bucci",
-    "bio": "Christopher Knaus and Nino Bucci are collaborators in Christian content creation and digital ministry. Together they work to produce faith-focused resources designed to encourage and equip believers in their spiritual journeys.",
-    "affiliation": "",
-    "role": "Content Creators & Digital Ministers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CKB"
-  },
-  {
-    "name": "Carlos Barragán and Lynsey Chutel",
-    "slug": "carlos-barragn-and-lynsey-chutel",
-    "bio": "Carlos Barragán and Lynsey Chutel are journalists and authors who have contributed to major publications covering faith, culture, and global issues. Their work explores the intersection of spirituality, social justice, and contemporary society through a thoughtful, investigative lens.",
-    "affiliation": "NPR, Reuters, The New York Times",
-    "role": "Journalists & Authors",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CB-LC"
-  },
-  {
     "name": "Johnnie Each",
     "slug": "johnnie-each",
     "bio": "",
@@ -14447,17 +13493,6 @@
     "website": "",
     "books": [],
     "initials": "SB"
-  },
-  {
-    "name": "Lily Kuo and Pei-Lin Wu",
-    "slug": "lily-kuo-and-peilin-wu",
-    "bio": "Lily Kuo and Pei-Lin Wu are journalists and reporters known for their international coverage and in-depth reporting on global issues. Their work has appeared in major publications, offering thoughtful analysis on complex world events from a perspective that values human dignity and justice.",
-    "affiliation": "",
-    "role": "Journalists & Reporters",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "LK PW"
   },
   {
     "name": "Stephen Chandler",
@@ -14584,17 +13619,6 @@
       }
     ],
     "initials": "SC"
-  },
-  {
-    "name": "Leo Sands and Michael Levenson",
-    "slug": "leo-sands-and-michael-levenson",
-    "bio": "Leo Sands and Michael Levenson are collaborative writers and researchers known for their work in Christian apologetics and biblical scholarship. They bring complementary expertise to their analysis of faith, culture, and scriptural interpretation for modern Christian audiences.",
-    "affiliation": "",
-    "role": "Authors & Researchers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "LSL"
   },
   {
     "name": "Chris Hutchinson",
@@ -14883,17 +13907,6 @@
     "website": "",
     "books": [],
     "initials": "MC"
-  },
-  {
-    "name": "Nformankatz",
-    "slug": "nformankatz",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "NK"
   },
   {
     "name": "Erik Raymond",
@@ -15244,30 +14257,6 @@
     "initials": "WP"
   },
   {
-    "name": "John Stonestreet and S. Michael Craven",
-    "slug": "john-stonestreet-and-s-michael-craven",
-    "bio": "John Stonestreet is the President of the Colson Center for Christian Worldview and a leading voice on contemporary cultural issues from a Christian perspective. S. Michael Craven is a Christian worldview analyst and author who has written extensively on faith, culture, and apologetics. Together and separately, they have addressed how Christians can engage thoughtfully with modern culture while maintaining biblical conviction.",
-    "affiliation": "Colson Center for Christian Worldview",
-    "role": "Cultural Commentators & Worldview Analysts",
-    "education": "",
-    "website": "https://www.colsoncenter.org",
-    "books": [
-      {
-        "title": "Restoring All Things: God's Radiant Vision for Global Renewal",
-        "amazon_url": "https://www.amazon.com/s?k=Restoring+All+Things+John+Stonestreet"
-      },
-      {
-        "title": "A Practical Guide to Culture: Helping the Next Generation Navigate Today's World",
-        "amazon_url": "https://www.amazon.com/s?k=A+Practical+Guide+to+Culture+John+Stonestreet"
-      },
-      {
-        "title": "Uncommon Decency: Christian Civility in an Uncivil World",
-        "amazon_url": "https://www.amazon.com/s?k=Uncommon+Decency+Christian+Civility"
-      }
-    ],
-    "initials": "JSC"
-  },
-  {
     "name": "Amy Hornbuckle",
     "slug": "amy-hornbuckle",
     "bio": "Amy Hornbuckle is a Christian author and speaker who shares practical insights on faith, family, and spiritual growth. Her writing reflects a heart for helping believers navigate life's challenges through a biblical lens.",
@@ -15493,17 +14482,6 @@
     "initials": "JS"
   },
   {
-    "name": "Zhang San",
-    "slug": "zhang-san",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "ZS"
-  },
-  {
     "name": "Henrik Schildt",
     "slug": "henrik-schildt",
     "bio": "Henrik Schildt is a Finnish author and Christian thinker known for his contributions to Christian literature and theological reflection. His work explores faith, spirituality, and the integration of Christian values in contemporary life.",
@@ -15524,17 +14502,6 @@
     "website": "",
     "books": [],
     "initials": "AJ"
-  },
-  {
-    "name": "Cstaubin",
-    "slug": "cstaubin",
-    "bio": "Cstaubin is a Christian content creator and digital voice in contemporary Christian spaces. Their work focuses on sharing faith perspectives and biblical insights with modern audiences.",
-    "affiliation": "",
-    "role": "Content Creator & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CS"
   },
   {
     "name": "Rob Brockman",
@@ -16015,17 +14982,6 @@
     "initials": "AD"
   },
   {
-    "name": "American Reformer",
-    "slug": "american-reformer",
-    "bio": "American Reformer is a voice committed to renewing Christian thought and practice in contemporary American culture. Drawing on historical reformation principles, this author explores how biblical truth can address modern challenges facing the church and society.",
-    "affiliation": "",
-    "role": "Author & Cultural Commentator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AR"
-  },
-  {
     "name": "Sharon James",
     "slug": "sharon-james",
     "bio": "Sharon James is a British author and speaker known for her thoughtful writing on Christian living, particularly regarding women's roles in the church and biblical womanhood. She has contributed significantly to reformed evangelical discourse through her books and articles, encouraging believers to think deeply about Scripture's teachings on identity and purpose.",
@@ -16359,34 +15315,6 @@
     "initials": "RL"
   },
   {
-    "name": "John Stonestreet and Thaddeus Williams",
-    "slug": "john-stonestreet-and-thaddeus-williams",
-    "bio": "John Stonestreet is the president of the Colson Center for Christian Worldview and a leading voice on faith, culture, and public policy. Thaddeus Williams is a professor of philosophy and systematic theology known for his work on worldview apologetics. Together, they have collaborated on projects exploring how Christians can engage contemporary culture with biblical conviction and intellectual integrity.",
-    "affiliation": "Colson Center for Christian Worldview, BreakPoint",
-    "role": "Authors, Apologists & Cultural Commentators",
-    "education": "",
-    "website": "https://www.colsoncenter.org",
-    "books": [
-      {
-        "title": "Confronting Injustice Without Compromising Truth",
-        "amazon_url": "https://www.amazon.com/s?k=Confronting+Injustice+Without+Compromising+Truth+Stonestreet"
-      },
-      {
-        "title": "Restoring All Things: God's Audacious Plan to Change the World",
-        "amazon_url": "https://www.amazon.com/s?k=Restoring+All+Things+Stonestreet"
-      },
-      {
-        "title": "Making Sense of Your Money: 10 Decisions That Will Change Your Financial Life",
-        "amazon_url": "https://www.amazon.com/s?k=Making+Sense+of+Your+Money+Stonestreet"
-      },
-      {
-        "title": "Repairing the Ruins: The Case for Biblical Worldview",
-        "amazon_url": "https://www.amazon.com/s?k=Repairing+the+Ruins+Williams"
-      }
-    ],
-    "initials": "JSW"
-  },
-  {
     "name": "Brian Najapfour",
     "slug": "brian-najapfour",
     "bio": "",
@@ -16589,28 +15517,6 @@
     "website": "",
     "books": [],
     "initials": "JB"
-  },
-  {
-    "name": "Richard Bennett and Martin Buckinham",
-    "slug": "richard-bennett-and-martin-buckinham",
-    "bio": "Richard Bennett and Martin Buckinham are known for their collaborative work in Christian ministry and content creation. Together they have contributed to conversations around faith, discipleship, and spiritual growth within evangelical communities.",
-    "affiliation": "",
-    "role": "Christian Authors & Ministry Leaders",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RB & MB"
-  },
-  {
-    "name": "Editors",
-    "slug": "editors",
-    "bio": "Our editorial team curates thoughtful, biblically-grounded content to help Christians grow in faith and understanding. We are committed to presenting diverse voices within the Christian tradition while maintaining theological integrity and relevance to contemporary life.",
-    "affiliation": "",
-    "role": "Editorial Team",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "ED"
   },
   {
     "name": "Marc LiVecche",
@@ -17308,17 +16214,6 @@
     "initials": "MG"
   },
   {
-    "name": "Mbonkoski",
-    "slug": "mbonkoski",
-    "bio": "Mbonkoski is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "M"
-  },
-  {
     "name": "Justine Bathurst",
     "slug": "justine-bathurst",
     "bio": "Justine Bathurst is a writer whose work appears in evangelical publications curated by Christian Curator.",
@@ -17350,28 +16245,6 @@
     "website": "",
     "books": [],
     "initials": "BB"
-  },
-  {
-    "name": "Jli1",
-    "slug": "jli1",
-    "bio": "Jli1 is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "J"
-  },
-  {
-    "name": "byFaith Staff",
-    "slug": "byfaith-staff",
-    "bio": "byFaith Staff is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "BS"
   },
   {
     "name": "Matt Martens",
@@ -17440,28 +16313,6 @@
     "initials": "SM"
   },
   {
-    "name": "Byron Johnson and Thomas Kidd",
-    "slug": "byron-johnson-and-thomas-kidd",
-    "bio": "Byron Johnson and Thomas Kidd is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "BJA"
-  },
-  {
-    "name": "Don and Joy Veinot",
-    "slug": "don-and-joy-veinot",
-    "bio": "Don and Joy Veinot is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "DAJ"
-  },
-  {
     "name": "Bill Haynes",
     "slug": "bill-haynes",
     "bio": "Bill Haynes is a writer whose work appears in evangelical publications curated by Christian Curator.",
@@ -17506,17 +16357,6 @@
     "initials": "BZ"
   },
   {
-    "name": "Intercessor Todd",
-    "slug": "intercessor-todd",
-    "bio": "Intercessor Todd is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "IT"
-  },
-  {
     "name": "Jensen Holmes",
     "slug": "jensen-holmes",
     "bio": "Jensen Holmes is a writer whose work appears in evangelical publications curated by Christian Curator.",
@@ -17537,17 +16377,6 @@
     "website": "",
     "books": [],
     "initials": "CD"
-  },
-  {
-    "name": "Alyssa Preiser",
-    "slug": "alyssapreiser",
-    "bio": "Alyssa Preiser is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AP"
   },
   {
     "name": "Shawn Thornton",
@@ -18155,17 +16984,6 @@
     "initials": "EW"
   },
   {
-    "name": "Brad Green and Ardel Caneday",
-    "slug": "brad-green-and-ardel-caneday",
-    "bio": "Brad Green and Ardel Caneday is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "BGA"
-  },
-  {
     "name": "Daniel Parkins",
     "slug": "daniel-parkins",
     "bio": "Daniel Parkins is a writer whose work appears in evangelical publications curated by Christian Curator.",
@@ -18219,17 +17037,6 @@
     "website": "",
     "books": [],
     "initials": "SC"
-  },
-  {
-    "name": "Jhaner",
-    "slug": "jhaner",
-    "bio": "Jhaner is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "J"
   },
   {
     "name": "Samuel James",
@@ -18298,17 +17105,6 @@
     "initials": "AK"
   },
   {
-    "name": "Aloprete",
-    "slug": "aloprete",
-    "bio": "Aloprete is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "A"
-  },
-  {
     "name": "Mary Wiley",
     "slug": "mary-wiley",
     "bio": "Mary Wiley is a writer whose work appears in evangelical publications curated by Christian Curator.",
@@ -18318,28 +17114,6 @@
     "website": "",
     "books": [],
     "initials": "MW"
-  },
-  {
-    "name": "Gentle Reformation",
-    "slug": "gentle-reformation",
-    "bio": "Gentle Reformation is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "GR"
-  },
-  {
-    "name": "Guest Author",
-    "slug": "guest-author",
-    "bio": "Guest Author is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "GA"
   },
   {
     "name": "RaShan Frost",
@@ -18494,17 +17268,6 @@
     "website": "",
     "books": [],
     "initials": "RA"
-  },
-  {
-    "name": "Alex Harris and Randy Alcorn",
-    "slug": "alex-harris-and-randy-alcorn",
-    "bio": "Alex Harris and Randy Alcorn is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AHA"
   },
   {
     "name": "Brandon D. Smith",
