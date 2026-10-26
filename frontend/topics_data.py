@@ -45,6 +45,9 @@ TOPICS = [
         "category": "Core Theology",
         "hook": "Is the Bible without error in everything it affirms, or only in matters of faith and practice?",
         "summary": "How evangelicals understand Scripture's authority, reliability, and relationship to science, history, and theology.",
+        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " — Christian Curator".
+        "seo_title": "What Is Biblical Inerrancy?",
+        "seo_description": "What is biblical inerrancy? How evangelicals understand the Bible's truthfulness and authority, the Chicago Statement, and answers to common objections.",
         "keywords": [
             "inerrancy", "infallibility", "biblical inerrancy", "scripture",
             "sola scriptura", "chicago statement", "biblical authority",
@@ -133,6 +136,9 @@ TOPICS = [
         "category": "Core Theology",
         "hook": "Should Christians defend the faith through reason and evidence, or simply proclaim the gospel?",
         "summary": "How Christians make the case for the faith — through reason, evidence, presupposition, and engagement with doubt.",
+        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " — Christian Curator".
+        "seo_title": "What Is Christian Apologetics?",
+        "seo_description": "What is Christian apologetics? A guide to defending the faith with evidence, reason and grace, plus the best evangelical articles on doubt and hard questions.",
         "keywords": [
             "apologetics", "defense of the faith", "presuppositional",
             "classical apologetics", "evidentialism", "natural theology",
@@ -275,6 +281,9 @@ TOPICS = [
         "category": "Spiritual Formation",
         "hook": "What does it actually mean to make disciples — and are most churches doing it?",
         "summary": "How Christians grow in maturity — one-on-one mentoring, church programs, and the meaning of making disciples.",
+        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " — Christian Curator".
+        "seo_title": "Discipleship: How to Make Disciples",
+        "seo_description": "What is discipleship, and how do you make disciples? Evangelical wisdom on following Jesus, growing to maturity, and helping others obey all Christ commanded.",
         "keywords": [
             "discipleship", "disciple-making", "spiritual growth",
             "Christian formation", "mentoring", "one-on-one discipleship",
@@ -524,6 +533,9 @@ TOPICS = [
         "category": "Spiritual Formation",
         "hook": "When Christians begin questioning their beliefs, what does faithful deconstruction look like — and how should churches and pastors respond?",
         "summary": "Why Christians are deconstructing, what churches can do, and what healthy faith rebuilding looks like.",
+        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " — Christian Curator".
+        "seo_title": "What Is Faith Deconstruction?",
+        "seo_description": "What is faith deconstruction? Why Christians are deconstructing faith, how doubt differs from unbelief, and how to rebuild on Christ with biblical wisdom.",
         "keywords": [
             "deconstruction", "deconversion", "faith crisis", "questioning faith",
             "leaving evangelicalism", "religious trauma", "faith doubt", "apostasy",
@@ -805,6 +817,9 @@ TOPICS = [
         "category": "Spiritual Formation",
         "hook": "Why do so many Christians read the Bible so little — and what would change if the church actually knew Scripture?",
         "summary": "Evangelical concern about declining biblical knowledge, how Christians should read and engage Scripture, and what it looks like to recover genuine biblical literacy.",
+        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " — Christian Curator".
+        "seo_title": "Biblical Literacy: How to Read the Bible",
+        "seo_description": "What is biblical literacy? How to read the Bible well, why Scripture knowledge is fading among Christians, and evangelical guides to knowing God's Word.",
         "keywords": [
             "biblical literacy", "bible reading", "scripture engagement", "read the bible",
             "bible knowledge", "old testament", "hermeneutics", "bible reading plan",

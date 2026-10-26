@@ -278,6 +278,21 @@ def update_meta_descriptions(soup: BeautifulSoup, meta_description: str) -> bool
     return changed
 
 
+def set_page_title(soup: BeautifulSoup, title: str) -> bool:
+    """Set <title>, og:title and twitter:title to a hand-tuned SEO title."""
+    changed = False
+    title_tag = soup.find("title")
+    if title_tag is not None and title_tag.get_text(strip=True) != title:
+        title_tag.string = title
+        changed = True
+    for attrs in ({"property": "og:title"}, {"name": "twitter:title"}):
+        tag = soup.find("meta", attrs=attrs)
+        if tag is not None and tag.get("content") != title:
+            tag["content"] = title
+            changed = True
+    return changed
+
+
 def ensure_head_metadata(soup: BeautifulSoup, slug: str, topic_name: str, url: str) -> bool:
     """Make sure canonical, og:type, og:site_name, og:title, og:url, twitter:card,
     twitter:title exist. Page-specific titles are derived from the <title> tag."""
@@ -330,19 +345,23 @@ def process_page(slug: str, enrichment: dict) -> str:
     html = html_path.read_text(encoding="utf-8")
     soup = BeautifulSoup(html, "html.parser")
 
+    topic = TOPICS_BY_SLUG.get(slug, {})
+
     tldr = data["tldr"]
-    meta = data["meta_description"]
+    # Hand-tuned seo_description in topics_data.py wins over the generated one.
+    meta = topic.get("seo_description") or data["meta_description"]
     questions = data.get("_questions_on_page", [])
     answers = data.get("faq_answers", {})
 
     url = f"{SITE_URL}/topics/{slug}/"
 
-    topic = TOPICS_BY_SLUG.get(slug, {})
     upgrade_section_labels_to_h2(soup)
     ensure_tldr_css(soup)
     insert_tldr_block(soup, tldr)
     insert_last_updated(soup, TODAY_ISO)
     update_meta_descriptions(soup, meta)
+    if topic.get("seo_title"):
+        set_page_title(soup, f"{topic['seo_title']} — {PUBLISHER_NAME}")
     ensure_head_metadata(soup, slug, topic.get("name", slug), url)
     upgrade_article_schema(soup, meta, url)
     upgrade_faq_schema(soup, questions, answers)
