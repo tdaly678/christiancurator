@@ -1329,6 +1329,19 @@ def _write_urlset(path, entries):
         f.write("\n".join(lines) + "\n")
 
 
+VOICES_NOINDEX_PATH = Path(__file__).parent / "voices_noindex.json"
+
+
+def load_noindex_voices() -> set:
+    """Slugs of voice pages deliberately noindexed by scripts/prepare_noindex.py."""
+    if not VOICES_NOINDEX_PATH.exists():
+        return set()
+    try:
+        return set(json.loads(VOICES_NOINDEX_PATH.read_text(encoding="utf-8")))
+    except Exception:
+        return set()
+
+
 def regenerate_sitemap():
     """Regenerate sitemap.xml as a sitemap-index pointing to per-section sitemaps.
 
@@ -1367,10 +1380,16 @@ def regenerate_sitemap():
                 ))
 
     # --- Voices (deep author/contributor profiles) ---
+    # Pages listed in frontend/voices_noindex.json (written only by
+    # scripts/prepare_noindex.py --apply) carry a robots noindex tag, so they
+    # are left out here to keep the sitemap and the page in agreement.
     voice_entries = []
+    noindex_voices = load_noindex_voices()
     if VOICES_DIR.exists():
         for voice_dir in sorted(VOICES_DIR.iterdir()):
             idx = voice_dir / "index.html"
+            if voice_dir.name in noindex_voices:
+                continue
             if voice_dir.is_dir() and idx.exists():
                 voice_entries.append((
                     f"{base}/voices/{voice_dir.name}/",
