@@ -26,6 +26,8 @@ _INSTITUTIONAL_TOKENS = frozenset({
     "magazine", "ministries", "ministry", "podcast", "institute", "coalition",
     "reformation", "reformer", "report", "journal", "blog", "webmaster",
     "anonymous", "unknown", "guest",
+    # job titles appended to a byline ("aamna-mohdin-community-affairs-correspondent")
+    "correspondent", "reporter", "columnist",
 })
 
 # Well-known placeholder names (zhang-san is the Chinese "John Doe").
@@ -44,6 +46,8 @@ def junk_reason(slug: str) -> str | None:
         return None
     if slug in _PLACEHOLDER_SLUGS:
         return "placeholder name"
+    if "ruling-elder" in slug:
+        return "role description, not a name"
     if "-and-" in slug:
         return "multiple authors in one byline (-and-)"
     tokens = slug.split("-")

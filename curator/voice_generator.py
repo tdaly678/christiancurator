@@ -224,7 +224,7 @@ def render_jsonld(author: dict) -> str:
 
     blocks = [
         f'  <script type="application/ld+json" data-cc-marker="{PERSON_MARKER}">\n'
-        + json.dumps(person, ensure_ascii=False, indent=2)
+        + json.dumps(person, ensure_ascii=False, indent=2).replace("</", "<\\/")
         + "\n  </script>"
     ]
 
@@ -244,7 +244,7 @@ def render_jsonld(author: dict) -> str:
         }
         blocks.append(
             f'  <script type="application/ld+json" data-cc-marker="{FAQ_MARKER}">\n'
-            + json.dumps(faq_data, ensure_ascii=False, indent=2)
+            + json.dumps(faq_data, ensure_ascii=False, indent=2).replace("</", "<\\/")
             + "\n  </script>"
         )
     return "\n" + "\n".join(blocks)
