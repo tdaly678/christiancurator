@@ -28,6 +28,8 @@ from datetime import date
 from pathlib import Path
 from dotenv import load_dotenv
 
+from curator.ai_health import record_failure
+
 load_dotenv()
 
 client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
@@ -291,6 +293,7 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
                 data = json.loads(cleaned)
             except json.JSONDecodeError:
                 print(f"  Daily summary: JSON parse error — {json_err}")
+                record_failure("daily_summary", f"JSON parse error: {json_err}")
                 print(f"  Raw response was: {raw[:300]}")
                 return None
         paragraphs_raw = data.get("paragraphs", [])
@@ -316,4 +319,5 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
 
     except Exception as e:
         print(f"  Daily summary error: {e}")
+        record_failure("daily_summary", e)
         return None

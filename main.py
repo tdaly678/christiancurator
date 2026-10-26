@@ -27,6 +27,7 @@ from curator.point_counterpoint import build_point_counterpoint
 from curator.daily_summary import generate_daily_summary, save_theme_history
 from curator.email_sender import send_email
 from curator.voice_generator import generate_new_voice_pages
+from curator.ai_health import write_report as write_ai_health_report
 from output import OUTPUT_JSON_PATH, write_output, save_yesterday, load_yesterday, load_shown_urls, save_article_history
 from frontend import render_html, update_research_articles
 
@@ -130,6 +131,10 @@ def main():
                    research_articles=research_articles)
     else:
         print("\n[8/8] Email skipped (--no-email). Run send_email.py when ready to send.")
+
+    # --- AI health: AI steps swallow their own errors so the site still
+    #     publishes; record what degraded so the workflow can fail loudly. ---
+    write_ai_health_report(daily_summary_ok=bool(daily_summary))
 
     print("=== Pipeline Complete ===")
     print(f"Output written to {OUTPUT_JSON_PATH}")

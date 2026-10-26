@@ -7,3 +7,4 @@ output/articles.json
 .fuse_hidden*
 .env.save
 .env.*
+output/ai_health.json

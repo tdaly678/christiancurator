@@ -11,6 +11,8 @@ import json
 import anthropic
 from dotenv import load_dotenv
 
+from curator.ai_health import record_failure
+
 load_dotenv()
 
 client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
@@ -79,4 +81,5 @@ def build_point_counterpoint(articles: list[dict]) -> list[dict]:
 
     except Exception as e:
         print(f"  Point/counterpoint error: {e}")
+        record_failure("point_counterpoint", e)
         return []

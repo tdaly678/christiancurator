@@ -15,6 +15,7 @@ import os
 import re
 import anthropic
 from pathlib import Path
+from curator.ai_health import record_failure
 
 DOCS_DIR = Path(__file__).parent.parent / "docs"
 VOICES_DIR = DOCS_DIR / "voices"
@@ -423,6 +424,7 @@ Rules:
         return data
     except Exception as e:
         print(f"    ⚠️  Bio generation failed for {name}: {e}")
+        record_failure("voice_bio", e)
         return _stub_bio(name)
 
 

@@ -18,6 +18,8 @@ from email.utils import parsedate_to_datetime
 from collections import defaultdict
 from dotenv import load_dotenv
 
+from curator.ai_health import record_failure
+
 from fetcher.sources import SOURCES
 from curator.trending import (
     compute_trending,
@@ -199,6 +201,7 @@ def filter_world_news_batch(articles: list[dict]) -> list[dict]:
         return kept
     except Exception as e:
         print(f"  World news filter error: {e}")
+        record_failure("world_news_filter", e)
         return articles
 
 
@@ -244,6 +247,7 @@ def score_batch(articles: list[dict]) -> list[dict]:
                 article["perspective"] = "neutral"
     except Exception as e:
         print(f"  Batch scoring error: {e}")
+        record_failure("scorer", e)
         for article in articles:
             article["score"] = 5
             article["tags"] = []

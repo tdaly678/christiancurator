@@ -10,6 +10,8 @@ import time
 import anthropic
 from dotenv import load_dotenv
 
+from curator.ai_health import record_failure
+
 load_dotenv()
 
 client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
@@ -91,10 +93,12 @@ def rewrite_title(article: dict) -> dict:
                 time.sleep(delay)
             else:
                 print(f"  Title rewrite error for '{article['title']}': {e}")
+                record_failure("title_rewriter", e)
                 article["rewritten_title"] = article["title"]
                 return article
         except Exception as e:
             print(f"  Title rewrite error for '{article['title']}': {e}")
+            record_failure("title_rewriter", e)
             article["rewritten_title"] = article["title"]
             return article
     article["rewritten_title"] = article["title"]
