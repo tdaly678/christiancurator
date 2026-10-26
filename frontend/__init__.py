@@ -44,9 +44,20 @@ def load_voices_by_name() -> dict:
         return {}
     try:
         voices = json.loads(voices_path.read_text(encoding="utf-8"))
-        return {v["name"].lower(): v["slug"] for v in voices if "name" in v and "slug" in v}
+        by_name = {v["name"].lower(): v["slug"] for v in voices if "name" in v and "slug" in v}
     except Exception:
         return {}
+    # Merged duplicates (scripts/merge_duplicate_voices.py): a byline under the
+    # old name ("Carl R. Trueman") links to the surviving page, not the stub.
+    redirects_path = Path(__file__).parent / "voices_redirects.json"
+    if redirects_path.exists():
+        try:
+            for r in json.loads(redirects_path.read_text(encoding="utf-8")).values():
+                if r.get("name"):
+                    by_name.setdefault(r["name"].lower(), r["to"])
+        except Exception:
+            pass
+    return by_name
 
 
 def update_research_articles(new_articles: list[dict]) -> list[dict]:

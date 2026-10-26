@@ -57,8 +57,12 @@ def main() -> int:
     )
     # Category hub pages (/voices/pastors/ etc.) are not people, and junk
     # bylines should stay out of the index until Tom decides on deletion.
+    # Redirect stubs left by merge_duplicate_voices.py are not orphans either.
+    redirects_path = REPO_ROOT / "frontend" / "voices_redirects.json"
+    redirected = set(json.loads(redirects_path.read_text())) if redirects_path.exists() else set()
     orphans = [s for s in on_disk
-               if s not in known_slugs and s not in HUB_SLUGS and not junk_reason(s)]
+               if s not in known_slugs and s not in HUB_SLUGS and s not in redirected
+               and not junk_reason(s)]
 
     if not orphans:
         print("backfill: no orphan voice pages — nothing to do")
