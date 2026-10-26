@@ -14,7 +14,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
-from curator.voice_filters import HUB_SLUGS, junk_reason  # noqa: E402
+from curator.voice_filters import HUB_SLUGS, junk_reason, name_junk_reason  # noqa: E402
 DOCS_DIR = REPO_ROOT / "docs"
 VOICES_DIR = DOCS_DIR / "voices"
 VOICES_DATA_PATH = DOCS_DIR / "voices_data.json"
@@ -68,6 +68,9 @@ def main() -> int:
     for slug in orphans:
         html = (VOICES_DIR / slug / "index.html").read_text(encoding="utf-8")
         name = parse_title_name(html) or slug.replace("-", " ").title()
+        if name_junk_reason(name):
+            print(f"  skip {slug}  ({name}: {name_junk_reason(name)})")
+            continue
         bio = parse_meta(html, "name", "description")
         entry = {
             "name": name,

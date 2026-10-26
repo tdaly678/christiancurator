@@ -16,7 +16,7 @@ import re
 import anthropic
 from pathlib import Path
 from curator.ai_health import record_failure
-from curator.voice_filters import is_voice_worthy
+from curator.voice_filters import is_voice_worthy, source_creates_voices
 
 DOCS_DIR = Path(__file__).parent.parent / "docs"
 VOICES_DIR = DOCS_DIR / "voices"
@@ -323,16 +323,9 @@ def extract_new_authors(articles: list, existing_slugs: set) -> list:
     seen_names = set()
     new_authors = []
     for article in articles:
-        # Don't create voice pages for mainstream/secular news bylines. Those
-        # feeds (source_type="world_news": AP, BBC, NYT, WSJ, Guardian, WaPo)
-        # are curated for their content, but their reporters are not evangelical
-        # "voices" and were cluttering the Voices directory.
-        if article.get("source_type") == "world_news":
-            continue
-        # Research shops (Pew, Barna, Lifeway Research) byline staff analysts
-        # and usernames ("jli1", "aloprete"); sources opt out with
-        # "creates_voices": False in fetcher/sources.py.
-        if article.get("creates_voices") is False:
+        # Secular world_news feeds and research shops (creates_voices=False)
+        # are curated for content but never mint voice pages.
+        if not source_creates_voices(article):
             continue
         raw = (article.get("author") or "").strip()
         if not raw:
@@ -340,30 +333,25 @@ def extract_new_authors(articles: list, existing_slugs: set) -> list:
         # Drop production-credit bylines entirely (not real author names)
         if _CREDIT_RE.search(raw):
             continue
-        # Split comma/semicolon-separated multi-author bylines into individual names
-        candidates = [normalize_author_name(n) for n in re.split(r'[,;]', raw)]
-        candidates = [n for n in candidates if n]
-        for name in candidates:
-            # Skip blanks, short strings, known junk
-            if len(name) < 4:
-                continue
-            if '@' in name:
-                continue
-            if name.lower() in SKIP_AUTHORS:
-                continue
-            # Skip obvious news bylines like "Name in City"
-            if re.search(r'\b(in |at )\b', name):
-                continue
-            if name in seen_names:
-                continue
-            seen_names.add(name)
-            slug = name_to_slug(name)
-            # Denylist: multi-author "-and-" bylines, staff/editors/guest-author,
-            # bare handles, placeholder names, hub slugs (curator/voice_filters.py)
-            if not slug or not is_voice_worthy(slug):
-                continue
-            if slug not in existing_slugs:
-                new_authors.append({"name": name, "slug": slug})
+        # Co-bylines ("X and Y", "X & Y", "X, Y") are rejected whole by
+        # name_junk_reason rather than split into guessed individual names.
+        name = normalize_author_name(raw)
+        # Skip blanks, short strings, known junk
+        if len(name) < 4 or name.lower() in SKIP_AUTHORS:
+            continue
+        # Skip obvious news bylines like "Name in City"
+        if re.search(r'\b(in |at )\b', name):
+            continue
+        if name in seen_names:
+            continue
+        seen_names.add(name)
+        slug = name_to_slug(name)
+        # Denylist: co-bylines, staff/wire/org bylines, bare handles, emails,
+        # placeholder names, hub slugs (curator/voice_filters.py)
+        if not slug or not is_voice_worthy(slug, name):
+            continue
+        if slug not in existing_slugs:
+            new_authors.append({"name": name, "slug": slug})
     return new_authors
 
 
@@ -734,9 +722,15 @@ def generate_new_voice_pages(articles: list) -> int:
     voices_data = load_voices_data()
     existing_data_slugs = {a["slug"] for a in voices_data}
     total_existing = len(voices_data)
+    created = 0
 
     for entry in new_authors:
         name, slug = entry["name"], entry["slug"]
+        # Last gate before anything touches disk, in case a future caller
+        # builds new_authors without going through extract_new_authors.
+        if not is_voice_worthy(slug, name):
+            print(f"    ✗ {name} — not voice-worthy, skipped")
+            continue
         print(f"    → {name}")
         bio_data = generate_bio_data(name)
         bio_data["slug"] = slug  # use our computed slug for consistency
@@ -746,6 +740,7 @@ def generate_new_voice_pages(articles: list) -> int:
         author_dir.mkdir(parents=True, exist_ok=True)
         page_html = render_bio_page(bio_data, total_existing + len(voices_data))
         (author_dir / "index.html").write_text(page_html, encoding="utf-8")
+        created += 1
 
         # Add to data store
         if slug not in existing_data_slugs:
@@ -759,5 +754,5 @@ def generate_new_voice_pages(articles: list) -> int:
     # Persist updated data
     save_voices_data(voices_data)
 
-    print(f"  Voices: {len(new_authors)} new page(s) created. Index updated.")
-    return len(new_authors)
+    print(f"  Voices: {created} new page(s) created. Index updated.")
+    return created
