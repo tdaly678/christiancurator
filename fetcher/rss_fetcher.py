@@ -60,6 +60,7 @@ def fetch_feed(source: dict) -> list[dict]:
                 "source_category": source["category"],
                 "source_type": source.get("source_type", "christian"),
                 "independent": source.get("independent", False),
+                "creates_voices": source.get("creates_voices", True),
                 "author": author,
                 "title": entry.get("title", "").strip(),
                 "url": entry.get("link", ""),

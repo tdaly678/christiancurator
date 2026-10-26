@@ -13,6 +13,8 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+from curator.voice_filters import HUB_SLUGS, junk_reason  # noqa: E402
 DOCS_DIR = REPO_ROOT / "docs"
 VOICES_DIR = DOCS_DIR / "voices"
 VOICES_DATA_PATH = DOCS_DIR / "voices_data.json"
@@ -53,7 +55,10 @@ def main() -> int:
         d.name for d in VOICES_DIR.iterdir()
         if d.is_dir() and (d / "index.html").exists()
     )
-    orphans = [s for s in on_disk if s not in known_slugs]
+    # Category hub pages (/voices/pastors/ etc.) are not people, and junk
+    # bylines should stay out of the index until Tom decides on deletion.
+    orphans = [s for s in on_disk
+               if s not in known_slugs and s not in HUB_SLUGS and not junk_reason(s)]
 
     if not orphans:
         print("backfill: no orphan voice pages — nothing to do")

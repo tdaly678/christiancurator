@@ -251,18 +251,21 @@ SOURCES = [
         "url": "https://www.pewresearch.org/religion/feed/",
         "category": "culture",
         "independent": False,
+        "creates_voices": False,  # research staff bylines, not voices
     },
     {
         "name": "Barna Group",
         "url": "https://www.barna.com/feed/",
         "category": "culture",
         "independent": False,
+        "creates_voices": False,  # research staff bylines, not voices
     },
     {
         "name": "Lifeway Research",
         "url": "https://lifewayresearch.com/feed/",
         "category": "culture",
         "independent": False,
+        "creates_voices": False,  # research staff bylines, not voices
     },
     {
         "name": "Ed Stetzer",

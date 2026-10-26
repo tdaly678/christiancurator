@@ -16,6 +16,7 @@ import re
 import anthropic
 from pathlib import Path
 from curator.ai_health import record_failure
+from curator.voice_filters import is_voice_worthy
 
 DOCS_DIR = Path(__file__).parent.parent / "docs"
 VOICES_DIR = DOCS_DIR / "voices"
@@ -312,6 +313,8 @@ def normalize_author_name(raw: str) -> str:
         return ""
     # Strip any embedded email address left in the byline
     raw = re.sub(_EMAIL_RE, '', raw)
+    # Drop leading honorifics so "Dr. Owen Anderson" maps to owen-anderson
+    raw = re.sub(r'^\s*(Dr|Rev|Pastor|Prof|Professor)\.?\s+', '', raw, flags=re.IGNORECASE)
     return re.sub(r'\s{2,}', ' ', raw).strip(' \t,;:()-')
 
 
@@ -325,6 +328,11 @@ def extract_new_authors(articles: list, existing_slugs: set) -> list:
         # are curated for their content, but their reporters are not evangelical
         # "voices" and were cluttering the Voices directory.
         if article.get("source_type") == "world_news":
+            continue
+        # Research shops (Pew, Barna, Lifeway Research) byline staff analysts
+        # and usernames ("jli1", "aloprete"); sources opt out with
+        # "creates_voices": False in fetcher/sources.py.
+        if article.get("creates_voices") is False:
             continue
         raw = (article.get("author") or "").strip()
         if not raw:
@@ -350,7 +358,11 @@ def extract_new_authors(articles: list, existing_slugs: set) -> list:
                 continue
             seen_names.add(name)
             slug = name_to_slug(name)
-            if slug and slug not in existing_slugs:
+            # Denylist: multi-author "-and-" bylines, staff/editors/guest-author,
+            # bare handles, placeholder names, hub slugs (curator/voice_filters.py)
+            if not slug or not is_voice_worthy(slug):
+                continue
+            if slug not in existing_slugs:
                 new_authors.append({"name": name, "slug": slug})
     return new_authors
 
