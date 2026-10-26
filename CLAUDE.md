@@ -185,16 +185,16 @@ All topic pages have this structure:
 
 ## The 70 Topic Pages
 
-Generated from `frontend/topics_data.py` on 2026-09-25. Page titles are the live `<title>` values (minus the ` — Christian Curator` suffix). The seven `On On` double prefixes and six `| Christian Curator` suffixes were fixed on 2026-10-25; `faith-deconstruction` still uses a long-form title with no `On` prefix.
+Generated from `frontend/topics_data.py` on 2026-09-25. Page titles are the live `<title>` values (minus the ` — Christian Curator` suffix). The seven `On On` double prefixes and six `| Christian Curator` suffixes were fixed on 2026-10-25; On 2026-10-26 five topics (apologetics, biblical-inerrancy, biblical-literacy, discipleship, faith-deconstruction) moved to search-intent titles; their canonical `seo_title`/`seo_description` live in `topics_data.py` and `scripts/apply_aeo_upgrades.py` honours them.
 
 ### Core Theology (17)
 
 | Slug | Page title |
 |------|------------|
-| apologetics | On Defending the Faith |
+| apologetics | What Is Christian Apologetics? |
 | atonement | On the Atonement |
 | baptism | On Baptism |
-| biblical-inerrancy | On the Authority of Scripture |
+| biblical-inerrancy | What Is Biblical Inerrancy? |
 | christology | On Christology |
 | covenant-theology | On Covenant Theology |
 | creation-evolution | On Creation & Science |
@@ -233,12 +233,12 @@ Generated from `frontend/topics_data.py` on 2026-09-25. Page titles are the live
 | Slug | Page title |
 |------|------------|
 | anxiety-and-fear | On Anxiety & Fear |
-| biblical-literacy | On Biblical Literacy |
+| biblical-literacy | Biblical Literacy: How to Read the Bible |
 | christian-friendship | On Christian Friendship |
 | contemplative-prayer | On Contemplative Prayer |
 | death-and-dying | On Death & Dying |
-| discipleship | On Making Disciples |
-| faith-deconstruction | Faith Deconstruction |
+| discipleship | Discipleship: How to Make Disciples |
+| faith-deconstruction | What Is Faith Deconstruction? |
 | fasting | On Fasting |
 | forgiveness | On Forgiveness |
 | grief-and-lament | On Grief & Lament |
