@@ -76,9 +76,14 @@ category hubs, refresh recent-articles sections, inject the Featured deep dives 
 build the Pagefind index, commit, then ping IndexNow.
 
 ### Sitemaps — there are six files, not one
-`docs/sitemap.xml` is an **index** that points at five children: `sitemap-core.xml` (6 URLs), `sitemap-topics.xml` (70),
-`sitemap-voices.xml` (1,192), `sitemap-daily.xml` (123), `sitemap-archive.xml` (186). Anything that suppresses a page
-must also remove it from the relevant child sitemap, or the signals conflict.
+`docs/sitemap.xml` is an **index** that points at three children: `sitemap-core.xml` (6 URLs), `sitemap-topics.xml` (70),
+`sitemap-voices.xml` (1,158). `sitemap-daily.xml` and `sitemap-archive.xml` are still written by `regenerate_sitemap()` but,
+since 2026-10-26, are deliberately **not listed** in the index (crawl budget goes to topics and voices). Anything that
+suppresses a page must also remove it from the relevant child sitemap, or the signals conflict.
+
+Voice pages listed in `frontend/voices_noindex.json` are skipped by the sitemap generator. Merged duplicate voices are
+recorded in `frontend/voices_redirects.json` (loser → survivor); the loser's page is a noindex meta-refresh stub, and
+`scripts/merge_duplicate_voices.py` holds the pair list.
 
 ## Hand-curated content — do NOT bulk regenerate
 The topic pages at `docs/topics/<slug>/index.html` are **hand-curated**. They are edited directly (often by AI assistants at Tom's request) and are **not** regenerated from a template by any script. **This changed:** the daily pipeline now DOES `git add docs/topics/`, because `build_recent_articles.py` refreshes the recent-articles block on topic pages each day. It only edits between the injection markers below, so hand-written editorial survives, but topic pages are no longer outside the pipeline's reach.

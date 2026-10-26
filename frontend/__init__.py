@@ -1444,10 +1444,16 @@ def regenerate_sitemap():
         _write_urlset(SITEMAP_DIR / filename, entries)
         written.append((filename, len(entries)))
 
-    # Write sitemap index at /sitemap.xml
+    # Write sitemap index at /sitemap.xml. The daily and archive sitemaps are
+    # still written (and their pages stay crawlable via links), but they are
+    # not submitted: 300+ frozen snapshot pages dilute crawl budget that should
+    # go to topics and voices.
+    unlisted = {"sitemap-daily.xml", "sitemap-archive.xml"}
     idx_lines = ['<?xml version="1.0" encoding="UTF-8"?>',
                  '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for filename, _count in written:
+        if filename in unlisted:
+            continue
         idx_lines += [
             "  <sitemap>",
             f"    <loc>{base}/{filename}</loc>",
@@ -1458,6 +1464,8 @@ def regenerate_sitemap():
     with open(SITEMAP_PATH, "w", encoding="utf-8") as f:
         f.write("\n".join(idx_lines) + "\n")
 
-    total = sum(c for _, c in written)
-    detail = ", ".join(f"{n}={c}" for n, c in written)
-    print(f"  Regenerated sitemap index with {total} URL(s) across {len(written)} sitemaps ({detail}).")
+    listed = [(n, c) for n, c in written if n not in unlisted]
+    total = sum(c for _, c in listed)
+    detail = ", ".join(f"{n}={c}" for n, c in listed)
+    print(f"  Regenerated sitemap index with {total} URL(s) across {len(listed)} sitemaps ({detail}); "
+          f"also wrote unlisted {', '.join(sorted(unlisted))}.")
