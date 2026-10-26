@@ -185,7 +185,7 @@ All topic pages have this structure:
 
 ## The 70 Topic Pages
 
-Generated from `frontend/topics_data.py` on 2026-09-25. Page titles are the live `<title>` values, so the seven `On On` double-prefix defects are visible here rather than hidden.
+Generated from `frontend/topics_data.py` on 2026-09-25. Page titles are the live `<title>` values (minus the ` — Christian Curator` suffix). The seven `On On` double prefixes and six `| Christian Curator` suffixes were fixed on 2026-10-25; `faith-deconstruction` still uses a long-form title with no `On` prefix.
 
 ### Core Theology (17)
 
@@ -202,18 +202,18 @@ Generated from `frontend/topics_data.py` on 2026-09-25. Page titles are the live
 | gender-and-biblical-anthropology | On Gender & Biblical Anthropology |
 | heaven-hell-eternity | On Heaven, Hell & Eternity |
 | holy-spirit-spiritual-gifts | On the Holy Spirit & Spiritual Gifts |
-| israel-and-prophecy | On Israel & Prophecy \| Christian Curator |
+| israel-and-prophecy | On Israel & Prophecy |
 | justification-by-faith | On Justification by Faith |
 | lords-supper | On the Lord's Supper |
 | predestination-free-will | On Predestination & Free Will |
 | suffering-and-providence | On Suffering & Providence |
-| the-trinity | On On the Trinity |
+| the-trinity | On the Trinity |
 
 ### Church Life (14)
 
 | Slug | Page title |
 |------|------------|
-| church-accountability | On On Pastoral Accountability |
+| church-accountability | On Pastoral Accountability |
 | church-discipline | On Church Discipline |
 | church-governance | On Church Governance |
 | church-history | On Church History |
@@ -225,7 +225,7 @@ Generated from `frontend/topics_data.py` on 2026-09-25. Page titles are the live
 | pastoral-ministry | On The Pastor's Role |
 | preaching | On Preaching |
 | small-groups | On Small Groups |
-| spiritual-abuse | On Spiritual Abuse \| Christian Curator |
+| spiritual-abuse | On Spiritual Abuse |
 | worship-and-liturgy | On Worship & Liturgy |
 
 ### Spiritual Formation (17)
@@ -235,13 +235,13 @@ Generated from `frontend/topics_data.py` on 2026-09-25. Page titles are the live
 | anxiety-and-fear | On Anxiety & Fear |
 | biblical-literacy | On Biblical Literacy |
 | christian-friendship | On Christian Friendship |
-| contemplative-prayer | On On Contemplative Prayer |
+| contemplative-prayer | On Contemplative Prayer |
 | death-and-dying | On Death & Dying |
 | discipleship | On Making Disciples |
 | faith-deconstruction | Faith Deconstruction |
 | fasting | On Fasting |
-| forgiveness | On Forgiveness \| Christian Curator |
-| grief-and-lament | On Grief & Lament \| Christian Curator |
+| forgiveness | On Forgiveness |
+| grief-and-lament | On Grief & Lament |
 | mental-health | On Mental Health & the Church |
 | pornography | On Pornography & Sexual Purity |
 | prayer | On Prayer |
@@ -256,22 +256,22 @@ Generated from `frontend/topics_data.py` on 2026-09-25. Page titles are the live
 |------|------------|
 | abortion | On Abortion & the Pro-Life Movement |
 | addiction-and-recovery | On Addiction & Recovery |
-| ai-and-the-church | On On Artificial Intelligence & the Church |
-| biblical-justice | On On Biblical Justice & the Social Gospel |
-| biblical-sexuality | On On Biblical Sexuality |
+| ai-and-the-church | On Artificial Intelligence & the Church |
+| biblical-justice | On Biblical Justice & the Social Gospel |
+| biblical-sexuality | On Biblical Sexuality |
 | christian-education | On Christian Education |
 | christian-ethics | On Christian Ethics |
 | christian-masculinity | On Christian Masculinity |
-| christian-nationalism | On On Christian Nationalism |
+| christian-nationalism | On Christian Nationalism |
 | christian-parenting | On Raising Children in the Faith |
 | creation-care | On Creation Care |
 | evangelicalism | On Evangelicalism |
 | marriage-and-family | On Marriage & Family |
 | politics-and-the-church | On the Church & Political Life |
-| progressive-christianity | On Progressive Christianity \| Christian Curator |
+| progressive-christianity | On Progressive Christianity |
 | prosperity-gospel | On the Prosperity Gospel |
 | racial-reconciliation | On Racial Reconciliation |
-| religious-liberty | On Religious Liberty \| Christian Curator |
+| religious-liberty | On Religious Liberty |
 | stewardship-and-generosity | On Stewardship & Generosity |
 | technology | On Technology & the Christian Life |
 | technology-and-discipleship | On Technology & Discipleship |
