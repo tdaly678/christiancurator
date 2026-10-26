@@ -69,6 +69,12 @@ def main() -> int:
         print("Nothing selected. Tick items ([x]) in the review file or pass --include-unchecked.")
         return 0
 
+    # Slugs already merged into a survivor keep their redirect stub.
+    redirects_path = REPO_ROOT / "frontend" / "voices_redirects.json"
+    redirected = set(json.loads(redirects_path.read_text())) if redirects_path.exists() else set()
+    for s in sorted(redirected & {i["slug"] for i in items}):
+        print(f"  =  {s}  (redirect stub from merge_duplicate_voices.py; kept)")
+    items = [i for i in items if i["slug"] not in redirected]
     slugs = {i["slug"] for i in items if i["slug"] not in HUB_SLUGS}
     on_disk = {s for s in slugs if (VOICES_DIR / s).is_dir()}
 
