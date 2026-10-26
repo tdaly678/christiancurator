@@ -80,3 +80,11 @@ jobs:
         if: success()
         run: python3 scripts/indexnow_ping.py
         continue-on-error: true
+
+      - name: Fail run if AI steps degraded
+        # Runs last so the site is already committed. A non-zero exit here marks
+        # the run failed and triggers GitHub's failure email, instead of the
+        # silent "success" that hid the empty Anthropic credit balance from
+        # 2026-09-05 onward. Details land in the job summary.
+        if: always()
+        run: python3 scripts/check_ai_health.py
