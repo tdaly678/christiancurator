@@ -105,7 +105,7 @@ Blocks placeholder entries in the "Evangelical Conversation, Curated" lists: `hr
 template titles that paste the topic name in ("The Biblical Basis for On X", "Rethinking On X for a New Generation"), and
 boilerplate annotations ("A pastoral reflection on how X connects…"). It runs in `daily_run.yml` **before** the commit
 step and in `topic_quality.yml` on every push to `docs/topics/`. It is ratcheted against `scripts/topic_quality_baseline.json`.
-Pages that still carried filler on 2026-10-28 are listed there. A page may not get worse, and a page not in the baseline
+As of 2026-10-29 the baseline is empty: every topic page is clean, so any new filler fails the check. A page may not get worse, and a page not in the baseline
 must stay clean. After cleaning a page, run `python scripts/check_topic_quality.py --update-baseline`. Every new curated
 entry needs a real, verified URL, the real author/outlet, and a summary specific to that piece. Never invent a URL or
 byline.
