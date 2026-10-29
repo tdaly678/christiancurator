@@ -1,0 +1,33 @@
+name: Topic Quality Gate
+
+# Hand edits to topic pages are pushed straight to main, so this re-runs the
+# curated-list guard on every such push. A red run here means a page now has
+# more placeholder/filler entries than its baseline allows; fix the page (or,
+# if you cleaned a page, run --update-baseline to lock in the lower count).
+
+on:
+  push:
+    paths:
+      - 'docs/topics/**'
+      - 'scripts/check_topic_quality.py'
+      - 'scripts/topic_quality_baseline.json'
+  pull_request:
+    paths:
+      - 'docs/topics/**'
+      - 'scripts/check_topic_quality.py'
+      - 'scripts/topic_quality_baseline.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Check topic curated lists
+        run: python3 scripts/check_topic_quality.py --report

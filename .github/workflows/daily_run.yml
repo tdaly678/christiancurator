@@ -63,6 +63,13 @@ jobs:
       - name: Build Pagefind search index
         run: npx pagefind@latest --site docs --output-path docs/_pagefind
 
+      - name: Gate topic curated lists (no placeholder / filler entries)
+        # Runs BEFORE the commit so a regression never reaches docs/ on main.
+        # Ratcheted against scripts/topic_quality_baseline.json; see the script
+        # docstring for the rules ("Article on…", href="#", template titles,
+        # boilerplate annotations).
+        run: python3 scripts/check_topic_quality.py
+
       - name: Commit output files
         run: |
           git config --global user.name "github-actions[bot]"

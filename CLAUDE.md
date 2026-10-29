@@ -100,6 +100,16 @@ The topic pages at `docs/topics/<slug>/index.html` are **hand-curated**. They ar
 
 If a request sounds like it implies bulk regeneration, stop and confirm scope before doing anything destructive.
 
+### Curated-list quality gate — `scripts/check_topic_quality.py`
+Blocks placeholder entries in the "Evangelical Conversation, Curated" lists: `href="#"`/missing URLs, "Article on…" titles,
+template titles that paste the topic name in ("The Biblical Basis for On X", "Rethinking On X for a New Generation"), and
+boilerplate annotations ("A pastoral reflection on how X connects…"). It runs in `daily_run.yml` **before** the commit
+step and in `topic_quality.yml` on every push to `docs/topics/`. It is ratcheted against `scripts/topic_quality_baseline.json`.
+Pages that still carried filler on 2026-10-28 are listed there. A page may not get worse, and a page not in the baseline
+must stay clean. After cleaning a page, run `python scripts/check_topic_quality.py --update-baseline`. Every new curated
+entry needs a real, verified URL, the real author/outlet, and a summary specific to that piece. Never invent a URL or
+byline.
+
 ### Idempotent injection markers
 Cross-cutting scripts inject content-additive blocks using HTML-comment markers so re-runs replace the block in place instead of duplicating it. When extending any of these, update between the markers rather than editing around them:
 
