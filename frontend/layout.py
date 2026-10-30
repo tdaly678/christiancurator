@@ -119,8 +119,11 @@ def _pick_lead(pool: list[dict], n: int) -> list[dict]:
 def _build_debate(articles: list[dict], pairings: list[dict]) -> list[dict]:
     """Side-by-side pairs. Claude's point/counterpoint pairings first; if there
     are none, fall back to the scorer's supportive vs. critical opposing pairs
-    (same topic_cluster). Returns [] when nothing pairs, so the module is omitted.
+    (same topic_cluster). Every pair, including cached ones, must pass
+    point_counterpoint.validate_pair(). Returns [] when nothing pairs, so the
+    module is omitted.
     """
+    from curator.point_counterpoint import validate_pair
     by_url = {a.get("url"): a for a in articles}
     debates, used = [], set()
     for p in pairings or []:
@@ -132,6 +135,8 @@ def _build_debate(articles: list[dict], pairings: list[dict]) -> list[dict]:
         if not point or not counter:
             continue
         if point.get("url") in used or counter.get("url") in used:
+            continue
+        if validate_pair(point, counter):
             continue
         debates.append({"topic": p.get("topic", ""), "label_a": "Point", "label_b": "Counterpoint",
                         "a": point, "b": counter})
@@ -146,7 +151,7 @@ def _build_debate(articles: list[dict], pairings: list[dict]) -> list[dict]:
     for cluster, group in clusters.items():
         pro = next((a for a in group if a.get("perspective") == "supportive"), None)
         con = next((a for a in group if a.get("perspective") == "critical"), None)
-        if not cluster or not pro or not con:
+        if not cluster or not pro or not con or validate_pair(pro, con):
             continue
         debates.append({"topic": cluster.replace("_", " ").capitalize(),
                         "label_a": "Pro", "label_b": "Con", "a": pro, "b": con})

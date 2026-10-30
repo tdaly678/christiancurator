@@ -118,6 +118,10 @@ it, and `main.py` passes it to `send_email()` so page and email agree. Each URL 
    `board_column()` routes by world_news source, perspective `news`, or tags news/data/politics, then
    theology/church life/missions/devotional/prayer/apologetics tags or a theology/devotional source; else commentary
 4. The Debate: Claude point/counterpoint pairings, else scorer `opposing_pair` supportive vs. critical; omitted when none
+   (`curator/point_counterpoint.py`, tightened 2026-10-30). Claude sees title, source, perspective, cluster/tags and a
+   snippet, must state thesis A and thesis B, and every pair (Claude, cached or fallback) must pass `validate_pair()`:
+   different sources, not both news/neutral, not the same stance, not the same story (shared distinctive proper nouns
+   unless one is supportive and the other critical). Empty is the expected result on most days. Tests: `tests/test_point_counterpoint.py`
 5. Worth Your Time (depth lane), 6. Watch and Listen (media lane, below), 7. Research & Data
    (`docs/research_articles.json`), then signup, then the 70-topic grid
 Headline clicks are tracked by one delegated gtag listener reading `data-pos` / `data-src`. Sample render: ~78 outbound
