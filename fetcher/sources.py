@@ -15,6 +15,15 @@ Optional keys:
                      homepage, digest, or email (aggregators and roundups).
   - discovery_title_pattern: regex; matching titles from an otherwise
                      primary source are treated as discovery (e.g. link roundups)
+  - role "media":    video and podcast feeds (see MEDIA SOURCES at the end of
+                     SOURCES). Fetched and health-logged, never scored or
+                     ranked; they only feed the Watch and Listen lane
+                     (curator/lanes.py select_watch_and_listen). Media sources
+                     also set media_format: "video" or "podcast". YouTube
+                     Shorts are dropped at fetch time.
+  - apple_podcast_id: for podcast feeds whose items have no episode page (no
+                     link, or every item links the show homepage). The fetcher
+                     maps each episode guid to its Apple Podcasts episode URL.
 
 Feed health is logged every run to docs/feed_health.json (see
 fetcher/rss_fetcher.py). Check it before adding or pruning sources.
@@ -504,6 +513,85 @@ SOURCES = [
         "category": "culture",
         "independent": True,
     },
+
+    # ── MEDIA SOURCES: Watch and Listen lane only (P1 Wave 3, 2026-10-30) ──
+    # role "media": never scored, never on the board. Order is editorial
+    # priority (earlier wins ties in select_watch_and_listen). Every feed was
+    # verified live on 2026-10-30 with a post inside the last 60 days.
+    # YouTube channel feeds: youtube.com/feeds/videos.xml?channel_id=<UC id>.
+    {
+        "name": "Truth Unites (Gavin Ortlund)",
+        "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCtWDnUokOD--s2aFxLT5uVA",
+        "category": "theology",
+        "role": "media",
+        "media_format": "video",
+        "creates_voices": False,
+    },
+    {
+        "name": "The Gospel Coalition (Video)",
+        "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQMwm-DeHyFK5VPp6KySR5Q",
+        "category": "theology",
+        "role": "media",
+        "media_format": "video",
+        "creates_voices": False,
+    },
+    {
+        "name": "Mere Fidelity",
+        # Mere Orthodoxy's podcast (Derek Rishmawy, Alastair Roberts, et al.)
+        "url": "https://rss.buzzsprout.com/2612792.rss",
+        "category": "theology",
+        "role": "media",
+        "media_format": "podcast",
+        "apple_podcast_id": "885758537",
+        "creates_voices": False,
+    },
+    {
+        "name": "The Russell Moore Show",
+        # Christianity Today
+        "url": "https://feeds.megaphone.fm/CHRTDY1120709803",
+        "category": "culture",
+        "role": "media",
+        "media_format": "podcast",
+        "apple_podcast_id": "1074011166",
+        "creates_voices": False,
+    },
+    {
+        "name": "BibleProject Podcast",
+        "url": "https://feeds.simplecast.com/3NVmUWZO",
+        "category": "theology",
+        "role": "media",
+        "media_format": "podcast",
+        "apple_podcast_id": "1050832450",
+        "creates_voices": False,
+    },
+    {
+        "name": "Gospelbound",
+        # The Gospel Coalition (Collin Hansen)
+        "url": "https://feeds.simplecast.com/FSKZVjpz",
+        "category": "culture",
+        "role": "media",
+        "media_format": "podcast",
+        "apple_podcast_id": "1499898207",
+        "creates_voices": False,
+    },
+    {
+        "name": "The Holy Post",
+        # Phil Vischer and Skye Jethani
+        "url": "https://rss.libsyn.com/shows/40819/destinations/121777.xml",
+        "category": "culture",
+        "role": "media",
+        "media_format": "podcast",
+        "creates_voices": False,
+    },
+    {
+        "name": "Ask Pastor John",
+        # Desiring God (John Piper), short weekday episodes
+        "url": "https://feed.desiringgod.org/ask-pastor-john.rss",
+        "category": "devotional",
+        "role": "media",
+        "media_format": "podcast",
+        "creates_voices": False,
+    },
 ]
 
 # ── Voices watchlist (NOT fetched) ──
@@ -522,6 +610,14 @@ SOURCES = [
 #   Jonathon Seidl         substack 404; personal site unreachable
 #   Patrick Miller         patrickkmiller.substack.com 404; patrickmiller.substack.com last post 2021
 #   Jen Wilkin             jenwilkin.net/blog last post 2021-12; jenwilkin.substack.com has no posts
-#   Gavin Ortlund          truthunites.org/feed only 2 posts in 2026 (last 2026-05-26). He publishes on
-#                          YouTube: youtube.com/feeds/videos.xml?channel_id=UCtWDnUokOD--s2aFxLT5uVA
-#                          (video items; would be a new content type for the daily ranking)
+#   Gavin Ortlund          truthunites.org/feed only 2 posts in 2026 (last 2026-05-26). His YouTube
+#                          channel is now a media source ("Truth Unites (Gavin Ortlund)") above.
+#
+# ── Media candidates rejected on 2026-10-30 ──
+#   Mere Orthodoxy YouTube (UC7OSRV3__GWWMMyhmXh8Ihg)  feed returns 0 entries
+#   BibleProject YouTube (UCVfwlh9XpX2Y_tQfjeln9QA)    nearly all Shorts; the podcast is used instead
+#   Truth Unites podcast (anchor.fm/s/7378ad98)       audio of the same YouTube videos
+#   Desiring God / Ligonier / Crossway YouTube         high-volume clips; their articles are already sources
+#   Renewing Your Mind (Ligonier)                     daily, mostly rebroadcast teaching series
+#   The Bulletin (CT)                                 weekly news recap; CT is already a source and
+#                                                     The Russell Moore Show covers CT audio

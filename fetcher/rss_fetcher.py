@@ -102,6 +102,51 @@ def _entry_published(entry, dt: datetime | None) -> str:
     return entry.get("published") or entry.get("updated") or ""
 
 
+def parse_duration(raw) -> int | None:
+    """Seconds from an itunes:duration value ("3591", "26:24", "01:33:02")."""
+    raw = str(raw or "").strip()
+    if not raw:
+        return None
+    try:
+        secs = 0
+        for part in raw.split(":"):
+            secs = secs * 60 + int(float(part))
+        return secs or None
+    except ValueError:
+        return None
+
+
+APPLE_LOOKUP_URL = "https://itunes.apple.com/lookup"
+
+
+def apple_episode_urls(apple_id, timeout: int = FETCH_TIMEOUT) -> dict[str, str]:
+    """{episode guid: Apple Podcasts episode URL} for one show, or {} on failure.
+
+    Many podcast feeds give every episode the show's homepage as its link, or no
+    link at all. The Watch and Listen lane needs a page for the episode itself,
+    and Apple's episode pages play in any browser.
+    """
+    try:
+        resp = requests.get(APPLE_LOOKUP_URL, timeout=timeout, params={
+            "id": apple_id, "entity": "podcastEpisode", "limit": 50})
+        results = resp.json().get("results", [])
+    except Exception:
+        return {}
+    return {r["episodeGuid"]: r["trackViewUrl"].replace("&uo=4", "")
+            for r in results if r.get("episodeGuid") and r.get("trackViewUrl")}
+
+
+def _generic_links(feed) -> set[str]:
+    """Entry links that are not episode-specific: the channel link, or any link
+    shared by several entries (e.g. every episode pointing at the show page)."""
+    seen, shared = set(), set()
+    for e in feed.entries:
+        link = e.get("link", "")
+        (shared if link in seen else seen).add(link)
+    channel = feed.feed.get("link")
+    return shared | ({channel} if channel else set()) | {""}
+
+
 def _article_role(source: dict, title: str) -> str:
     role = source.get("role", "primary")
     pattern = source.get("discovery_title_pattern")
@@ -155,7 +200,19 @@ def fetch_feed(source: dict) -> tuple[list[dict], dict]:
         dt = _entry_datetime(entry)
         if dt and (newest is None or dt > newest):
             newest = dt
+    is_media = source.get("role") == "media"
+    # Podcast feeds without episode pages: swap in Apple Podcasts episode URLs.
+    # Episodes that still have no page get url "" and never reach the lane.
+    generic, apple = set(), {}
+    if is_media and source.get("apple_podcast_id"):
+        generic = _generic_links(feed)
+        if any(e.get("link", "") in generic for e in feed.entries[:MAX_ARTICLES_PER_SOURCE]):
+            apple = apple_episode_urls(source["apple_podcast_id"])
+            health["apple_episode_urls"] = len(apple)
     for entry in feed.entries[:MAX_ARTICLES_PER_SOURCE]:
+        # YouTube channel feeds mix in Shorts; the media lane wants full videos.
+        if is_media and "/shorts/" in entry.get("link", ""):
+            continue
         dt = _entry_datetime(entry)
         # Extract author — prefer entry-level, fall back to feed-level
         author = clean_author(
@@ -171,7 +228,17 @@ def fetch_feed(source: dict) -> tuple[list[dict], dict]:
         full_content = content_list[0].get("value", "") if content_list else ""
         title = entry.get("title", "").strip()
 
+        url = entry.get("link", "")
+        if url in generic:
+            url = apple.get(entry.get("id", ""), "")
+        media_fields = {}
+        if is_media:
+            media_fields = {
+                "media_format": source.get("media_format", "podcast"),
+                "duration_seconds": parse_duration(entry.get("itunes_duration")),
+            }
         articles.append({
+            **media_fields,
             "source_name": source["name"],
             "source_category": source["category"],
             "source_type": source.get("source_type", "christian"),
@@ -180,7 +247,7 @@ def fetch_feed(source: dict) -> tuple[list[dict], dict]:
             "role": _article_role(source, title),
             "author": author,
             "title": title,
-            "url": entry.get("link", ""),
+            "url": url,
             "summary": entry.get("summary", ""),
             "full_content": full_content,
             "published": _entry_published(entry, dt),

@@ -691,6 +691,10 @@ def apply_independent_floor(
 
 def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     """Score, boost, and diversify all articles. Returns sorted by final_score (importance)."""
+    # Media items (video/podcast feeds) belong to the Watch and Listen lane only.
+    # main.py splits them off before scoring; this is the backstop.
+    articles = [a for a in articles if a.get("role") != "media"]
+
     # Step -2: Cross-feed canonical dedup, so reposts, syndication, and
     # tracking-param variants can never take two slots. Primary beats discovery.
     articles = dedupe_articles(articles)
