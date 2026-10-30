@@ -812,10 +812,14 @@
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[data-pos]');
     if (!a || typeof gtag !== 'function') return;
+    // link_url feeds GA4's built-in Link URL dimension, which
+    // scripts/fetch_click_counts.py reads to store per-article click counts.
     gtag('event', 'article_click', {
       article_title: a.textContent.trim().slice(0, 100),
       article_source: a.getAttribute('data-src') || '',
-      position: a.getAttribute('data-pos')
+      position: a.getAttribute('data-pos'),
+      link_url: a.href,
+      transport_type: 'beacon'
     });
   });
 </script>

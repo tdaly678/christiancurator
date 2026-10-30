@@ -93,7 +93,7 @@ def save_article_history(articles: list[dict]):
                 "canonical_url": a.get("canonical_url", ""),
                 "boosts": a.get("boosts", {}),
                 "scored_by": a.get("scored_by", "unknown"),
-                "clicks": 0,  # placeholder for future GA integration
+                "clicks": 0,  # filled from GA4 by scripts/fetch_click_counts.py
             })
 
     with open(HISTORY_JSON_PATH, "w", encoding="utf-8") as f:

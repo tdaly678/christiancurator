@@ -42,6 +42,15 @@ jobs:
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
         run: python3 main.py ${{ github.event.inputs.force_email == 'true' && '--force-email' || '' }}
 
+      - name: Store outbound headline clicks from GA4
+        # Writes docs/click_counts.json and article_history.json `clicks`.
+        # Skips cleanly when the GA4 secrets are not set.
+        env:
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GA4_SERVICE_ACCOUNT_JSON: ${{ secrets.GA4_SERVICE_ACCOUNT_JSON }}
+        run: python3 scripts/fetch_click_counts.py
+        continue-on-error: true
+
       - name: Backfill orphan voice pages into voices_data.json
         run: python3 scripts/backfill_voices_data.py
 
@@ -75,7 +84,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash origin main
-          git add docs/index.html docs/topics/ docs/digest/ docs/yesterday.json docs/email_draft.html docs/article_history.json docs/research_articles.json docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-topics.xml docs/sitemap-voices.xml docs/sitemap-daily.xml docs/sitemap-archive.xml docs/archive/ docs/daily/ docs/_pagefind/ docs/voices/ docs/voices_data.json docs/spotlight_topic_log.json docs/feed_health.json
+          git add docs/index.html docs/topics/ docs/digest/ docs/yesterday.json docs/email_draft.html docs/article_history.json docs/research_articles.json docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-topics.xml docs/sitemap-voices.xml docs/sitemap-daily.xml docs/sitemap-archive.xml docs/archive/ docs/daily/ docs/_pagefind/ docs/voices/ docs/voices_data.json docs/spotlight_topic_log.json docs/feed_health.json docs/click_counts.json
           git diff --staged --quiet || git commit -m "chore: daily curator run $(date -u +%Y-%m-%d)"
           git push origin main
 

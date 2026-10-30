@@ -172,6 +172,23 @@ Voice pages listed in `frontend/voices_noindex.json` are skipped by the sitemap 
 recorded in `frontend/voices_redirects.json` (loser → survivor); the loser's page is a noindex meta-refresh stub, and
 `scripts/merge_duplicate_voices.py` holds the pair list.
 
+## P2: engagement and sourcing (2026-10-30)
+
+### P2.1 Click tracking (GA4, no second analytics stack)
+- Recording: homepage headlines (`data-pos` / `data-src`) fire one delegated GA4 `article_click` event with
+  `link_url` = the publisher URL (beacon transport). Digest and archive pages send the same event inline. GA4
+  enhanced measurement also logs every outbound link as `click` with the same built-in Link URL dimension.
+- Storing: `scripts/fetch_click_counts.py` (daily step after the pipeline, `continue-on-error`) asks the GA4 Data API
+  for eventCount by date, eventName and linkUrl over the last 7 days, takes the larger of `article_click` and `click`
+  per day and URL (same physical click, never summed), keys by `canonical_url`, and writes `docs/click_counts.json`
+  (`urls[canonical] = {url, total, by_day}`, every clicked outbound link including board items) plus the `clicks`
+  field on matching `article_history.json` rows. Backfill with `--days 90`.
+- Reading: `python scripts/fetch_click_counts.py --top 20` prints the most clicked URLs from the stored file.
+  Clicks are stored only; they do not feed scoring yet.
+- Needs Tom: GitHub secrets `GA4_PROPERTY_ID` and `GA4_SERVICE_ACCOUNT_JSON` (a Google Cloud service account key with
+  the Analytics Data API enabled, added as Viewer on the GA4 property). Without them the step prints a skip notice.
+- Email clicks are not included; Brevo's own click stats cover the email.
+
 ## Hand-curated content — do NOT bulk regenerate
 The topic pages at `docs/topics/<slug>/index.html` are **hand-curated**. They are edited directly (often by AI assistants at Tom's request) and are **not** regenerated from a template by any script. **This changed:** the daily pipeline now DOES `git add docs/topics/`, because `build_recent_articles.py` refreshes the recent-articles block on topic pages each day. It only edits between the injection markers below, so hand-written editorial survives, but topic pages are no longer outside the pipeline's reach.
 
