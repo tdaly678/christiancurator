@@ -12,6 +12,7 @@ import json
 from pathlib import Path
 from curator.email_sender import send_email
 from frontend import load_research_articles
+from frontend.layout import build_homepage_layout
 from output import load_yesterday
 
 OUTPUT_JSON = Path("output/articles.json")
@@ -38,8 +39,22 @@ def main():
     # Reconstruct daily_summary from articles.json if stored there
     daily_summary = data.get("daily_summary") if isinstance(data, dict) else None
 
+    # Rebuild the homepage layout with the cached Debate pairings and media
+    # items so a resend matches the page (without them The Debate and Watch
+    # and Listen were silently empty).
+    raw_pairings = data.get("pairings", []) if isinstance(data, dict) else []
+    pairings = [
+        {"topic": p.get("topic", ""),
+         "point": {"title": p.get("point_title", ""), "url": p.get("point_url")},
+         "counterpoint": {"title": p.get("counterpoint_title", ""), "url": p.get("counterpoint_url")}}
+        for p in raw_pairings
+    ]
+    media_items = data.get("media", []) if isinstance(data, dict) else []
+    layout = build_homepage_layout(articles, pairings, research_articles,
+                                   media_items=media_items)
+
     send_email(articles, yesterday_articles, daily_summary=daily_summary,
-               research_articles=research_articles)
+               research_articles=research_articles, layout=layout)
     print("=== Email Sent ===")
 
 

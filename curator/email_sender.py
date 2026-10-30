@@ -127,7 +127,8 @@ def _email_layout(articles: list[dict], research_articles: list[dict] = None,
     """The homepage v2 layout, trimmed for email.
 
     main.py passes the layout render_html() returned so the email matches the
-    page exactly; send_email.py (cached run) rebuilds it without pairings.
+    page exactly; send_email.py (cached run) rebuilds it from the cached
+    pairings and media items in output/articles.json.
     """
     if layout is None:
         from frontend.layout import build_homepage_layout
