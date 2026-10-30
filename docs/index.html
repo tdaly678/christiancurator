@@ -175,167 +175,131 @@
     .cc-author-link:hover { text-decoration: underline; color: #2C4A2E; }
     .cc-pub-date { color: #aaa; }
 
-    /* ── NEWSPAPER FRONT PAGE ────────────────────────────────────── */
-    .cc-front { margin-top: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
+    /* ── HOMEPAGE V2: masthead strip ─────────────────────────────── */
+    .cc-strip {
+      display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px;
+      font-size: 12.5px; color: #666; padding: 0.6rem 0; border-bottom: 1px solid #e0ddd8;
+    }
+    .cc-strip-updated { color: #999; }
+    .cc-strip-pulse { color: #1a1a1a; text-decoration: none; font-family: 'Lora', Georgia, serif; font-style: italic; }
+    .cc-strip-pulse strong {
+      font-family: 'Source Sans 3', sans-serif; font-style: normal; font-size: 10px;
+      letter-spacing: 0.14em; text-transform: uppercase; color: #2C4A2E; margin-right: 4px;
+    }
+    .cc-strip-pulse:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
 
-    /* Row 1: large feature + 2 stacked mediums */
-    .cc-front-row1 {
+    /* Source line: small caps, shared by every headline */
+    .cc-src { font-size: 11px; color: #888; font-variant: small-caps; letter-spacing: 0.04em; }
+    .cc-src strong { color: #555; font-weight: 600; }
+    .cc-src .cc-pub-date { font-variant: normal; }
+
+    /* ── Lead block ──────────────────────────────────────────────── */
+    .cc-lead-block {
       display: grid; grid-template-columns: 3fr 2fr; gap: 0;
-      padding-bottom: 1.5rem; border-bottom: 1px solid #e0ddd8;
+      padding: 1.25rem 0 1.25rem; border-bottom: 2.5px solid #1a1a1a;
     }
-    @media (max-width: 660px) { .cc-front-row1 { grid-template-columns: 1fr; } }
-
-    .cc-card-large {
-      padding: 1.25rem 2rem 0 0;
-      border-right: 1px solid #e0ddd8;
-      display: flex; flex-direction: column;
-    }
+    @media (max-width: 660px) { .cc-lead-block { grid-template-columns: 1fr; } }
+    .cc-lead { padding-right: 1.75rem; border-right: 1px solid #e0ddd8; }
     @media (max-width: 660px) {
-      .cc-card-large { border-right: none; padding-right: 0; padding-bottom: 1.25rem; border-bottom: 1px solid #e0ddd8; }
+      .cc-lead { border-right: none; padding-right: 0; padding-bottom: 1rem; border-bottom: 1px solid #e0ddd8; }
     }
-    .cc-card-large-title {
-      font-family: 'Lora', Georgia, serif; font-size: 36px; font-weight: 600;
-      line-height: 1.12; color: #1a1a1a; text-decoration: none; display: block;
-      margin-bottom: 0.75rem;
+    .cc-lead-title {
+      font-family: 'Lora', Georgia, serif; font-size: 32px; font-weight: 600;
+      line-height: 1.15; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 0.5rem;
     }
-    .cc-card-large-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-card-large-preview {
-      font-size: 14px; color: #555; line-height: 1.65; margin-bottom: 1rem; flex: 1;
+    .cc-lead-title:hover, .cc-sublead-title:hover, .cc-board-title:hover,
+    .cc-debate-title:hover, .cc-wyt-title:hover, .cc-wl-title:hover, .cc-research-title:hover {
+      text-decoration: underline; text-decoration-color: #2C4A2E;
     }
-    .cc-card-large-meta { font-size: 11.5px; color: #888; margin-bottom: 0.75rem; }
-    .cc-card-large-meta strong { color: #555; font-weight: 600; }
-    .cc-card-large-cta {
-      font-size: 12px; font-weight: 600; color: #2C4A2E; text-decoration: none;
-      display: inline-block; margin-top: auto; padding-top: 0;
+    .cc-lead-preview { font-size: 14px; color: #555; line-height: 1.6; margin-top: 0.5rem; }
+    .cc-topic-link { font-size: 11.5px; font-weight: 600; color: #2C4A2E; text-decoration: none; }
+    .cc-topic-link:hover { text-decoration: underline; }
+    .cc-subleads { padding-left: 1.5rem; display: flex; flex-direction: column; }
+    @media (max-width: 660px) { .cc-subleads { padding-left: 0; } }
+    .cc-sublead { padding: 0.7rem 0; border-bottom: 1px solid #e0ddd8; }
+    .cc-sublead:first-child { padding-top: 0; }
+    .cc-sublead:last-child { border-bottom: none; padding-bottom: 0; }
+    @media (max-width: 660px) { .cc-sublead:first-child { padding-top: 0.7rem; } }
+    .cc-sublead-title {
+      font-family: 'Lora', Georgia, serif; font-size: 18px; font-weight: 600;
+      line-height: 1.25; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 3px;
     }
-    .cc-card-large-cta:hover { text-decoration: underline; }
 
-    /* Medium cards (stacked right column) */
-    .cc-front-mediums { display: flex; flex-direction: column; }
-    .cc-card-medium {
-      padding: 1.25rem 0 1.25rem 1.75rem;
-      flex: 1; display: flex; flex-direction: column;
-      border-bottom: 1px solid #e0ddd8;
-    }
-    .cc-card-medium:last-child { border-bottom: none; }
-    @media (max-width: 660px) { .cc-card-medium { padding-left: 0; } }
-    .cc-card-medium-title {
-      font-family: 'Lora', Georgia, serif; font-size: 19px; font-weight: 600;
-      line-height: 1.2; color: #1a1a1a; text-decoration: none; display: block;
-      margin-bottom: 0.5rem;
-    }
-    .cc-card-medium-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-card-medium-preview {
-      font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 0.6rem; flex: 1;
-    }
-    .cc-card-medium-meta { font-size: 11px; color: #aaa; margin-bottom: 0.4rem; }
-    .cc-card-medium-meta strong { color: #777; font-weight: 600; }
-    .cc-card-medium-cta {
-      font-size: 11.5px; font-weight: 600; color: #2C4A2E; text-decoration: none; margin-top: auto;
-    }
-    .cc-card-medium-cta:hover { text-decoration: underline; }
-
-    /* Row 2: small cards */
-    .cc-front-row2 {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; padding-top: 1.25rem;
-    }
-    @media (max-width: 660px) { .cc-front-row2 { grid-template-columns: 1fr 1fr; gap: 1rem 0; } }
-    @media (max-width: 400px) { .cc-front-row2 { grid-template-columns: 1fr; } }
-    .cc-front-row3 {
+    /* ── Headline board ──────────────────────────────────────────── */
+    .cc-board {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
-      padding-top: 1.25rem; margin-top: 1.25rem; border-top: 1px solid #e0ddd8;
+      padding: 1.25rem 0 1.75rem; border-bottom: 1px solid #e0ddd8;
     }
-    @media (max-width: 660px) { .cc-front-row3 { grid-template-columns: 1fr 1fr; gap: 1rem 0; } }
-    @media (max-width: 400px) { .cc-front-row3 { grid-template-columns: 1fr; } }
-    .cc-card-small {
-      padding: 0 1.25rem 0 0; border-right: 1px solid #e0ddd8;
-      display: flex; flex-direction: column;
+    @media (max-width: 760px) { .cc-board { grid-template-columns: 1fr; gap: 1.5rem; } }
+    .cc-board-col { padding: 0 1.1rem; border-right: 1px solid #e0ddd8; min-width: 0; }
+    .cc-board-col:first-child { padding-left: 0; }
+    .cc-board-col:last-child { padding-right: 0; border-right: none; }
+    @media (max-width: 760px) { .cc-board-col { padding: 0; border-right: none; } }
+    .cc-board-head {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+      color: #2C4A2E; border-bottom: 2px solid #1a1a1a; padding-bottom: 5px; margin-bottom: 4px;
     }
-    .cc-card-small:last-child { border-right: none; padding-right: 0; }
-    .cc-card-small + .cc-card-small { padding-left: 1.25rem; }
-    @media (max-width: 660px) {
-      .cc-card-small:nth-child(even) { border-right: none; padding-right: 0; }
-      .cc-card-small:nth-child(odd) { padding-left: 0; }
-      .cc-card-small:nth-child(even) { padding-left: 1.25rem; }
-    }
-    .cc-card-small-title {
-      font-family: 'Lora', Georgia, serif; font-size: 15px; font-weight: 500;
-      line-height: 1.3; color: #1a1a1a; text-decoration: none; display: block;
-      margin-bottom: 0.4rem;
-    }
-    .cc-card-small-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-card-small-meta { font-size: 11px; color: #aaa; margin-bottom: 0.35rem; }
-    .cc-card-small-meta strong { color: #777; font-weight: 600; }
-    .cc-card-small-cta {
-      font-size: 11px; font-weight: 600; color: #2C4A2E; text-decoration: none; margin-top: auto;
-    }
-    .cc-card-small-cta:hover { text-decoration: underline; }
-
-    /* ── OTHER HEADLINES ─────────────────────────────────────────── */
-    .cc-headlines { margin-top: 1.75rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
-    .cc-headline-item {
-      display: flex; align-items: baseline; gap: 0.5rem;
-      padding: 0.6rem 0; border-bottom: 1px solid #f0ede8;
-    }
-    .cc-headline-item:last-child { border-bottom: none; }
-    .cc-headline-num {
-      font-size: 11px; font-weight: 600; color: #ccc;
-      min-width: 22px; flex-shrink: 0; font-variant-numeric: tabular-nums;
-    }
-    .cc-headline-content { flex: 1; min-width: 0; }
-    .cc-headline-title {
-      font-family: 'Lora', Georgia, serif; font-size: 14.5px; font-weight: 500;
-      line-height: 1.35; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 2px;
-    }
-    .cc-headline-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-headline-meta { font-size: 11px; color: #aaa; }
-    .cc-headline-meta strong { color: #777; font-weight: 600; }
-    .cc-headline-topic {
-      flex-shrink: 0; margin-left: auto; padding-left: 1.5rem;
-      font-size: 11px; font-weight: 600; color: #2C4A2E;
-      text-decoration: none; white-space: nowrap; align-self: center;
-    }
-    .cc-headline-topic:hover { text-decoration: underline; }
-    .cc-digest-cta { margin-top: 1rem; text-align: right; }
-    .cc-digest-cta a { font-size: 12.5px; font-weight: 600; color: #2C4A2E; text-decoration: none; }
-    .cc-digest-cta a:hover { text-decoration: underline; }
-
-    /* ── WORLD NEWS ─────────────────────────────────────────────── */
-    .cc-world-news { margin-top: 1.75rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
-    .cc-world-news-section-header {
-      display: flex; align-items: baseline; justify-content: space-between;
-      border-bottom: 2px solid #1E3A6E; padding-bottom: 6px; margin-bottom: 1.25rem;
-    }
-    .cc-world-news-section-label {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
-      text-transform: uppercase; color: #1E3A6E;
-    }
-    .cc-world-news-section-sub { font-size: 11px; color: #7a93b8; font-style: italic; }
-    .cc-world-news-card {
-      background: #f0f4fb; border: 1px solid #c5d4ea; border-radius: 6px;
-      padding: 1.1rem 1.4rem 1rem;
-    }
-    .cc-world-news-intro {
-      font-size: 11.5px; color: #5a7099; font-style: italic; margin-bottom: 0.9rem;
-    }
-    .cc-world-news-list { display: flex; flex-direction: column; }
-    .cc-world-news-item {
-      display: flex; gap: 0; padding: 0.6rem 0;
-      border-top: 1px solid #d6e2f0; align-items: flex-start;
-    }
-    .cc-world-news-item:first-child { border-top: none; padding-top: 0; }
-    .cc-world-news-num {
-      font-size: 11px; font-weight: 600; color: #7a93b8;
-      min-width: 26px; padding-top: 2px; font-variant-numeric: tabular-nums;
-    }
-    .cc-world-news-content { flex: 1; }
-    .cc-world-news-title {
+    .cc-board-list { list-style: none; }
+    .cc-board-item { padding: 6px 0; border-bottom: 1px solid #f0ede8; }
+    .cc-board-item:last-child { border-bottom: none; }
+    .cc-board-title {
       font-family: 'Lora', Georgia, serif; font-size: 14px; font-weight: 500;
-      line-height: 1.35; color: #12284a; text-decoration: none; display: block; margin-bottom: 3px;
+      line-height: 1.3; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 1px;
     }
-    .cc-world-news-title:hover { text-decoration: underline; text-decoration-color: #1E3A6E; }
-    .cc-world-news-meta { font-size: 11px; color: #7a93b8; }
-    .cc-world-news-meta strong { color: #4a6a99; font-weight: 600; }
+
+    /* ── The Debate ──────────────────────────────────────────────── */
+    .cc-debate { margin-top: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-debate .cc-section-header { border-bottom-color: #8B1A1A; margin-bottom: 1rem; }
+    .cc-debate .cc-section-label { color: #8B1A1A; }
+    .cc-debate-pair + .cc-debate-pair { margin-top: 1.25rem; }
+    .cc-debate-topic { font-family: 'Lora', Georgia, serif; font-size: 15px; font-style: italic; color: #555; margin-bottom: 0.5rem; }
+    .cc-debate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 660px) { .cc-debate-grid { grid-template-columns: 1fr; } }
+    .cc-debate-card { background: #fff; border: 1px solid #e0ddd8; border-top: 3px solid #2C4A2E; padding: 0.8rem 1rem; }
+    .cc-debate-card.side-b { border-top-color: #8B4513; }
+    .cc-debate-side-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      color: #2C4A2E; margin-bottom: 4px;
+    }
+    .cc-debate-card.side-b .cc-debate-side-label { color: #8B4513; }
+    .cc-debate-title {
+      font-family: 'Lora', Georgia, serif; font-size: 16px; font-weight: 600;
+      line-height: 1.3; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 3px;
+    }
+
+    /* ── Worth Your Time ─────────────────────────────────────────── */
+    .cc-wyt { margin-top: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-wyt-list { list-style: none; }
+    .cc-wyt-item { padding: 0.7rem 0; border-bottom: 1px solid #f0ede8; }
+    .cc-wyt-item:last-child { border-bottom: none; }
+    .cc-wyt-title {
+      font-family: 'Lora', Georgia, serif; font-size: 17px; font-weight: 600;
+      line-height: 1.3; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 2px;
+    }
+    .cc-wyt-note { font-size: 13px; color: #666; line-height: 1.5; margin-top: 2px; }
+
+    /* ── Watch and Listen (media lane) ───────────────────────────── */
+    .cc-wl { margin-top: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-wl-grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem 1.5rem; }
+    .cc-wl-item { border-left: 2px solid #2C4A2E; padding-left: 0.75rem; }
+    .cc-wl-format {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      color: #2C4A2E; margin-bottom: 3px;
+    }
+    .cc-wl-format .cc-wl-duration { color: #888; font-weight: 400; letter-spacing: 0.04em; text-transform: none; }
+    .cc-wl-title {
+      font-family: 'Lora', Georgia, serif; font-size: 15px; font-weight: 600;
+      line-height: 1.3; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 3px;
+    }
+
+    /* ── Research & Data ─────────────────────────────────────────── */
+    .cc-research { margin-top: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem 1.5rem; }
+    .cc-research-item { border-left: 2px solid #2C4A2E; padding-left: 0.75rem; }
+    .cc-research-title {
+      font-family: 'Lora', Georgia, serif; font-size: 14px; font-weight: 500;
+      line-height: 1.3; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 2px;
+    }
 
     /* ── TOPIC INDEX ─────────────────────────────────────────────── */
     .cc-topic-index { margin-top: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
@@ -420,7 +384,6 @@
     @media (max-width: 660px) {
       .cc-site-name { font-size: 32px; }
       .cc-lead-title { font-size: 26px; }
-      .cc-card-grid, .cc-card-grid.two-col { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -430,7 +393,7 @@
   <!-- Header -->
   <header class="cc-header">
     <div class="cc-top-bar">
-      <span>October 30, 2026</span>
+      <span></span>
       <a class="cc-subscribe-btn" href="#cc-email-box" onclick="document.getElementById('cc-email-box').scrollIntoView({behavior:'smooth'}); return false;">Get the Daily Digest</a>
     </div>
     <div class="cc-masthead">
@@ -547,182 +510,509 @@
     </nav>
   </header>
 <main>
-
-
-  <!-- ── NEWSPAPER FRONT PAGE ─────────────────────────────────────── -->
   
-  <section class="cc-front">
-    <div style="margin-top:1.75rem;">
-      <div class="cc-section-header">
-        <div class="cc-section-label">In the conversation today</div>
-        <div class="cc-section-meta">October 30, 2026</div>
+
+  <!-- ── MASTHEAD STRIP ─────────────────────────────────────────────── -->
+  <div class="cc-strip">
+    <span>October 30, 2026</span>
+    <span class="cc-strip-updated">Updated 4:28 PM ET</span>
+  </div>
+
+  <!-- ── LEAD BLOCK ─────────────────────────────────────────────────── -->
+  
+  
+  <section class="cc-lead-block">
+    <article class="cc-lead" id="a84b73d89">
+      <a href="https://roysreport.com/compassion-international-flagged-25k-suspected-grooming-cases-then-failed-to-act/" class="cc-lead-title" target="_blank" rel="noopener" data-pos="lead" data-src="The Roys Report">Whistleblower: Compassion International flagged 25K suspected grooming cases, then failed to act</a>
+      <div class="cc-src"><a href="/voices/rebecca-hopkins/" class="cc-author-link"><strong>Rebecca Hopkins</strong></a> &middot; The Roys Report</div>
+      
+      <p class="cc-lead-preview">When Wayne, a 75-year-old man with a friendly smile, sponsored a Filipina teen with Compassion International for $43 a month and wrote her flowery letters, no one suspected a thing. Everyone assumed that he, like some 1…</p>
+      
+      <a href="/topics/evangelicalism/" class="cc-topic-link">More on The Future of Evangelicalism &rarr;</a>
+    </article>
+    <div class="cc-subleads">
+      
+      <article class="cc-sublead" id="a30d467fd">
+        <a href="https://relevantmagazine.com/faith/church/pew-americans-ages-23-to-26-are-among-the-least-religious-adults-in-the-country-while-18-to-22-year-olds-attend-church-at-higher-rates-than-anyone/" class="cc-sublead-title" target="_blank" rel="noopener" data-pos="sublead" data-src="Relevant Magazine">Pew: Americans Ages 23 to 26 Are Among the Least Religious Adults in the Country, While 18-to-22-Year-Olds Attend Church at Higher Rates Than Anyone</a>
+        <div class="cc-src"><span class="cc-author-link"><strong>RELEVANT Staff</strong></span> &middot; Relevant Magazine</div>
+      </article>
+      
+      <article class="cc-sublead" id="a6c4b7cda">
+        <a href="https://religionnews.com/2026/10/30/rod-dreher-among-prominent-conservatives-focusing-fight-on-groypers-christian-nationalists/" class="cc-sublead-title" target="_blank" rel="noopener" data-pos="sublead" data-src="Religion News Service">Rod Dreher among prominent conservatives focusing fight on Groypers, Christian nationalists</a>
+        <div class="cc-src"><span class="cc-author-link"><strong>Liam Adams</strong></span> &middot; Religion News Service</div>
+      </article>
+      
+      <article class="cc-sublead" id="ae80e38d6">
+        <a href="https://erlc.com/scotus-center/international-partners-for-ethical-care-v-ferguson/" class="cc-sublead-title" target="_blank" rel="noopener" data-pos="sublead" data-src="ERLC">International Partners for Ethical Care v. Ferguson</a>
+        <div class="cc-src"><a href="/voices/amanda-hays/" class="cc-author-link"><strong>Amanda Hays</strong></a> &middot; ERLC</div>
+      </article>
+      
+    </div>
+  </section>
+  
+
+  <!-- ── HEADLINE BOARD ─────────────────────────────────────────────── -->
+  
+  <section class="cc-board" aria-label="Today's headlines">
+    
+    <div class="cc-board-col cc-board-news">
+      <h2 class="cc-board-head">News</h2>
+      <ul class="cc-board-list">
+        
+        <li class="cc-board-item" id="aff40851a">
+          <a href="https://danielkwilliams.substack.com/p/what-led-to-christianity-todays-crisis" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="Daniel K. Williams">What Led to Christianity Today’s Crisis?</a>
+          <div class="cc-src"><strong>Daniel K. Williams</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="aebf031d8">
+          <a href="https://www.russellmoore.com/2026/10/28/n-t-wright-on-how-an-ancient-prophet-explains-our-crazy-world/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="Russell Moore">N.T. Wright on How an Ancient Prophet Explains Our Crazy World</a>
+          <div class="cc-src"><strong>Russell Moore</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a1b479780">
+          <a href="https://www.nytimes.com/2026/10/30/world/asia/afghan-refugees-deported-flight-pakistan.html" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="The New York Times">U.S. to Send Dozens Back to Afghanistan, Despite Risk of Persecution</a>
+          <div class="cc-src"><strong>The New York Times</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a27a013fb">
+          <a href="https://www.christianitytoday.com/2026/10/black-church-midterms-souls-to-the-gerrymandered-polls/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="Christianity Today">Souls to the Gerrymandered Polls</a>
+          <div class="cc-src"><strong>Christianity Today</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a1f8b4f09">
+          <a href="https://feeds.ligonier.org/~/972099341/0/ligonierministriesblog" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="Ligonier Ministries">Who Is God? 39% of UK Adults Aren’t Sure</a>
+          <div class="cc-src"><strong>Ligonier Ministries</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="aa560f81d">
+          <a href="https://wng.org/sift/pearl-street-mall-attacker-pleads-guilty-to-federal-hate-crime-charges-1793366320" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="World Magazine">Molotov cocktail-thrower pleads guilty to federal hate crimes</a>
+          <div class="cc-src"><strong>World Magazine</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a4dfbcec4">
+          <a href="https://relevantmagazine.com/faith/the-most-searched-thing-in-the-bible-app-this-year-was-psalm-91-anxiety-hope-and-healing-werent-far-behind/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="Relevant Magazine">The Most-Searched Thing in the Bible App This Year Was Psalm 91. ‘Anxiety,’ ‘Hope’ and ‘Healing’ Weren’t Far Behind.</a>
+          <div class="cc-src"><strong>Relevant Magazine</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="ac37db27e">
+          <a href="https://jemartisby.substack.com/p/the-midterms-wont-end-on-election" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="Jemar Tisby">What Could Happen After the Midterms?</a>
+          <div class="cc-src"><strong>Jemar Tisby</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a2a7e8816">
+          <a href="https://www.theguardian.com/us-news/2026/oct/29/new-mexico-church-endorses-republicans" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="The Guardian">New Mexico megachurch endorses Republican candidates, testing federal ban</a>
+          <div class="cc-src"><strong>The Guardian</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="aa37c679b">
+          <a href="https://www.christianitytoday.com/2026/10/religion-public-square-letters-to-editor/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="Christianity Today">Ground Rules for Religion in the Public Square</a>
+          <div class="cc-src"><strong>Christianity Today</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="acb92f772">
+          <a href="https://www.bbc.co.uk/news/articles/c60me298k1yeo?at_medium=RSS&at_campaign=rss" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="BBC News">Hundreds evacuated from Russian-occupied Oleshky during rare Ukraine ceasefire</a>
+          <div class="cc-src"><strong>BBC News</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a69716b58">
+          <a href="https://wng.org/sift/umc-appoints-new-leader-to-megachurch-amid-legal-battle-1793371657" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="World Magazine">UMC appoints new leader to megachurch amid legal battle</a>
+          <div class="cc-src"><strong>World Magazine</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a592b3d72">
+          <a href="https://research.lifeway.com/2026/10/27/analysis-reveals-factors-most-impactful-to-discipleship/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="Lifeway Research">Analysis Reveals Most Impactful Keys to Discipleship</a>
+          <div class="cc-src"><strong>Lifeway Research</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a4d054406">
+          <a href="https://roysreport.com/whistleblower-compassion-international-has-no-off-ramp-for-sponsors-accused-of-grooming/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="The Roys Report">Whistleblower: Compassion International has no ‘off ramp’ for sponsors accused of grooming</a>
+          <div class="cc-src"><strong>The Roys Report</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="aec1ae8cb">
+          <a href="https://www.russellmoore.com/2026/10/26/how-i-changed-my-mind-kind-of-on-the-death-penalty/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="Russell Moore">How I Changed My Mind (Kind of) on the Death Penalty</a>
+          <div class="cc-src"><strong>Russell Moore</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a24dddccb">
+          <a href="https://bonniekristian.substack.com/p/4-faqs-about-the-chaos-at-ct" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="Bonnie Kristian">4 FAQs about the chaos at CT</a>
+          <div class="cc-src"><strong>Bonnie Kristian</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a83be89ad">
+          <a href="https://www.americanreformer.org/p/california-dreaming-a-review-of-michael" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="American Reformer">California Dreaming: A Review of Michael Anton’s Dispatches from the Late Republic</a>
+          <div class="cc-src"><strong>American Reformer</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a76ea1a91">
+          <a href="https://www.bbc.co.uk/news/articles/cmn4egvez1yzo?at_medium=RSS&at_campaign=rss" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="BBC News">Syrians struggle with soaring prices as crisis challenges post-Assad recovery</a>
+          <div class="cc-src"><strong>BBC News</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="ab5631173">
+          <a href="https://www.christianitytoday.com/2026/10/reader-responses-elisabeth-elliot-lucy-austen/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="Christianity Today">Reader Responses to ‘What We Know—and Cannot Know—About Elisabeth Elliot’s Sexuality’</a>
+          <div class="cc-src"><strong>Christianity Today</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a4ad3d1a7">
+          <a href="https://erlc.com/scotus-center/grand-v-city-of-university-heights/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="ERLC">Grand v. City of University Heights</a>
+          <div class="cc-src"><strong>ERLC</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a0c896790">
+          <a href="https://www.aaronrenn.com/p/midterm-preview" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="Aaron Renn">Midterm Preview</a>
+          <div class="cc-src"><strong>Aaron Renn</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="aae78a446">
+          <a href="https://wng.org/podcasts/a-ballot-not-armageddon-1793302500" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_news" data-src="World Magazine">A ballot, not Armageddon</a>
+          <div class="cc-src"><strong>World Magazine</strong></div>
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="cc-board-col cc-board-commentary">
+      <h2 class="cc-board-head">Commentary & Debate</h2>
+      <ul class="cc-board-list">
+        
+        <li class="cc-board-item" id="a73dcae29">
+          <a href="https://newsletter.oalannoble.com/p/how-ai-brought-a-mathematician-to" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_commentary" data-src="O. Alan Noble">How AI Brought a Mathematician to Ecclesiastes</a>
+          <div class="cc-src"><strong>O. Alan Noble</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a6a6c9be4">
+          <a href="https://www.aaronrenn.com/p/the-husband-of-his-first-wife" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_commentary" data-src="Aaron Renn">The Husband of His First Wife</a>
+          <div class="cc-src"><strong>Aaron Renn</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a5956f185">
+          <a href="https://firstthings.com/inside-the-roman-mind/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_commentary" data-src="First Things">Inside the Roman Mind</a>
+          <div class="cc-src"><strong>First Things</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a9bb1bd5c">
+          <a href="https://firstthings.com/earnest-lives-new-and-notable-books/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_commentary" data-src="First Things">Earnest Lives: New and Notable Books</a>
+          <div class="cc-src"><strong>First Things</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="aa57aef5b">
+          <a href="https://kateshellnutt.substack.com/p/im-not-the-smartest-person-in-my" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_commentary" data-src="Kate Shellnutt">I’m Not the Smartest Person in My Inbox</a>
+          <div class="cc-src"><strong>Kate Shellnutt</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a804cb628">
+          <a href="https://www.christianitytoday.com/2026/10/bobby-fijan-american-housing-corporation/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_commentary" data-src="Christianity Today">What If Having Kids Didn’t Require Moving to the ’Burbs?</a>
+          <div class="cc-src"><strong>Christianity Today</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="ab27ee372">
+          <a href="https://thebardowl.substack.com/p/notes-for-the-weekend-some-chillthoughtful" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_commentary" data-src="Nicholas McDonald">notes for the weekend: some chill/thoughtful tunes</a>
+          <div class="cc-src"><strong>Nicholas McDonald</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="ade953138">
+          <a href="https://dandarling.substack.com/p/why-paper-books-endure" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_commentary" data-src="Daniel Darling">Why Paper Books Endure</a>
+          <div class="cc-src"><strong>Daniel Darling</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="ae82bbee7">
+          <a href="https://joyclarkson.substack.com/p/my-nine-books" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_commentary" data-src="Joy Clarkson">My Nine Books</a>
+          <div class="cc-src"><strong>Joy Clarkson</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="acef5547d">
+          <a href="https://thebardowl.substack.com/p/wading-into-narnia" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_commentary" data-src="Nicholas McDonald">Slouching Toward Narnia</a>
+          <div class="cc-src"><strong>Nicholas McDonald</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a27fddce6">
+          <a href="https://karenswallowprior.substack.com/p/frances-burneys-evelina-week-1" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_commentary" data-src="Karen Swallow Prior">Frances Burney’s Evelina: Week 1</a>
+          <div class="cc-src"><strong>Karen Swallow Prior</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a92aae223">
+          <a href="https://kateshellnutt.substack.com/p/an-editor-keeps-your-secrets" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_commentary" data-src="Kate Shellnutt">An Editor Keeps Your Secrets</a>
+          <div class="cc-src"><strong>Kate Shellnutt</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a4dbdd1fa">
+          <a href="https://joyclarkson.substack.com/p/on-my-bedside-table-e8a" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_commentary" data-src="Joy Clarkson">On my bedside table</a>
+          <div class="cc-src"><strong>Joy Clarkson</strong></div>
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="cc-board-col cc-board-church">
+      <h2 class="cc-board-head">Church & Theology</h2>
+      <ul class="cc-board-list">
+        
+        <li class="cc-board-item" id="addabf80c">
+          <a href="https://michaelfbird.substack.com/p/manufacturing-the-millennium" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Michael Bird">Manufacturing the Millennium?</a>
+          <div class="cc-src"><strong>Michael Bird</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a23542f55">
+          <a href="https://chrisgehrz.substack.com/p/a-free-society-neednt-fear-freedom" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Chris Gehrz">A Free Society Needn’t Fear Freedom</a>
+          <div class="cc-src"><strong>Chris Gehrz</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a6a2ae446">
+          <a href="https://www.christianitytoday.com/2026/10/race-justice-and-the-way-forward/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Christianity Today">Race, Justice, and the Way Forward</a>
+          <div class="cc-src"><strong>Christianity Today</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="ac5e89561">
+          <a href="https://www.thegospelcoalition.org/article/pastor-be-opportunistic/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="The Gospel Coalition">Pastor, Be Opportunistic</a>
+          <div class="cc-src"><strong>The Gospel Coalition</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a316b7aa4">
+          <a href="https://mereorthodoxy.com/the-gospel-in-a-haunted-world/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Mere Orthodoxy">The Gospel in a Haunted World</a>
+          <div class="cc-src"><strong>Mere Orthodoxy</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="aff13707b">
+          <a href="https://www.crossway.org/articles/honoring-god-and-his-word-on-the-occasion-of-the-25th-anniversary-of-the-esv/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Crossway">Honoring God and His Word on the Occasion of the 25th Anniversary of the ESV</a>
+          <div class="cc-src"><strong>Crossway</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="aa9ae1aa9">
+          <a href="https://scotmcknight.substack.com/p/what-they-see-and-hear" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Scot McKnight">What They See and Hear</a>
+          <div class="cc-src"><strong>Scot McKnight</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a9a9fcd5f">
+          <a href="https://matthewleeanderson.substack.com/p/791-the-ascension-and-theological" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Matthew Lee Anderson">#791: The Ascension and Theological Anthropology</a>
+          <div class="cc-src"><strong>Matthew Lee Anderson</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a35499625">
+          <a href="https://carmenjoyimes.substack.com/p/what-will-christianity-tomorrow-look" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Carmen Joy Imes">What Will Christianity Tomorrow Look Like?</a>
+          <div class="cc-src"><strong>Carmen Joy Imes</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="aa1941d99">
+          <a href="https://scotmcknight.substack.com/p/re-approaching-the-pharisees" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Scot McKnight">Re-Approaching the Pharisees</a>
+          <div class="cc-src"><strong>Scot McKnight</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a8bec9f0e">
+          <a href="https://sacredslang.substack.com/p/cs-lewis-poking-holes-and-the-longing" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Kyle Worley">C.S. Lewis, poking holes, & the longing soul.</a>
+          <div class="cc-src"><strong>Kyle Worley</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="af7c86c6d">
+          <a href="https://phyliciamasonheimer.substack.com/p/you-are-not-too-much-for-god" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Phylicia Masonheimer">You Are Not Too Much for God</a>
+          <div class="cc-src"><strong>Phylicia Masonheimer</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a63989a27">
+          <a href="https://garythomas.com/2026/10/30/seeking-first-the-kingdom-of-god/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Gary Thomas">Seeking First the Kingdom of God</a>
+          <div class="cc-src"><strong>Gary Thomas</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a4550f36d">
+          <a href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/ministry-marriage-healthy-team/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="The Gospel Coalition">Ministry and Marriage: How to Be a Healthy Team</a>
+          <div class="cc-src"><strong>The Gospel Coalition</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a7b1ae26d">
+          <a href="https://feeds.ligonier.org/~/926995124/0/ligonierministriesblog" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Ligonier Ministries">Who Was Martin Luther?</a>
+          <div class="cc-src"><strong>Ligonier Ministries</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a441283e1">
+          <a href="https://jemartisby.substack.com/p/the-history-you-might-have-missed" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Jemar Tisby">The History You Might Have Missed in “Sinners”</a>
+          <div class="cc-src"><strong>Jemar Tisby</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a5b14332c">
+          <a href="https://www.crossway.org/articles/10-things-you-should-know-about-the-westminster-confession-of-faith/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Crossway">10 Things You Should Know About the Westminster Confession of Faith</a>
+          <div class="cc-src"><strong>Crossway</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="aa6f14089">
+          <a href="https://garythomas.com/2026/10/28/you-cant-judge-your-own-parenting-2/" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Gary Thomas">You Can’t Judge Your Own Parenting</a>
+          <div class="cc-src"><strong>Gary Thomas</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a86bdba63">
+          <a href="https://chrisgehrz.substack.com/p/from-a-flagship-to-lifeboats" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Chris Gehrz">From a Flagship to Lifeboats</a>
+          <div class="cc-src"><strong>Chris Gehrz</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a6170b574">
+          <a href="https://www.furtherup.net/p/the-ordinary-greatness-of-kaylub" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Bethel McGrew">The Ordinary Greatness of Kaylub Giamanco</a>
+          <div class="cc-src"><strong>Bethel McGrew</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a00be9d7b">
+          <a href="https://stephenmcalpine.substack.com/p/but-what-about-wilberforce-i-hear" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Stephen McAlpine">“But What About Wilberforce?” I hear you ask.</a>
+          <div class="cc-src"><strong>Stephen McAlpine</strong></div>
+        </li>
+        
+        <li class="cc-board-item" id="a7ef2a95f">
+          <a href="https://katelynbeaty.substack.com/p/whats-happening-christianity-today-journalism-nyt-evangelical-movement-leadership" class="cc-board-title" target="_blank" rel="noopener" data-pos="board_church" data-src="Katelyn Beaty">The Stakes of What’s Happening at Christianity Today</a>
+          <div class="cc-src"><strong>Katelyn Beaty</strong></div>
+        </li>
+        
+      </ul>
+    </div>
+    
+  </section>
+  
+
+  <!-- ── THE DEBATE (omitted when nothing pairs) ────────────────────── -->
+  
+  <section class="cc-debate">
+    <div class="cc-section-header">
+      <h2 class="cc-section-label">The Debate</h2>
+      <div class="cc-section-meta">Two sides, read both</div>
+    </div>
+    
+    <div class="cc-debate-pair">
+      <div class="cc-debate-topic">Whether religion in the U.S. is declining or stable</div>
+      <div class="cc-debate-grid">
+        <div class="cc-debate-card side-a">
+          <div class="cc-debate-side-label">Point</div>
+          <a href="https://www.pewresearch.org/religion/2026/10/28/religion-remains-stable-in-the-us-with-mixed-signals-for-young-adults/" class="cc-debate-title" target="_blank" rel="noopener" data-pos="debate" data-src="Pew Research">Religion Remains Stable in the U.S., With Mixed Signals for Young Adults</a>
+          <div class="cc-src"><span class="cc-author-link"><strong>Joy Li</strong></span> &middot; Pew Research</div>
+        </div>
+        <div class="cc-debate-card side-b">
+          <div class="cc-debate-side-label">Counterpoint</div>
+          <a href="https://www.christianpost.com/news/religious-identification-remains-steady-in-2026-pew-research.html" class="cc-debate-title" target="_blank" rel="noopener" data-pos="debate" data-src="The Christian Post">Religious identification, service attendance remains steady after years of decline: Pew</a>
+          <div class="cc-src"><a href="/voices/michael-gryboski/" class="cc-author-link"><strong>Michael Gryboski</strong></a> &middot; The Christian Post</div>
+        </div>
       </div>
     </div>
-
     
-    <!-- Row 1: large + 2 stacked mediums -->
-    <div class="cc-front-row1">
-      
-      <article class="cc-card-large" id="a89b4c190">
-        <a href="https://feed.desiringgod.org/link/22977/17511231/worldliness-and-the-friendship-of-god" class="cc-card-large-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Loving the World More Than God — And Why It Destroys Us','article_source':'Desiring God','position':'front_large'});">
-          Loving the World More Than God — And Why It Destroys Us
-        </a>
-        <div class="cc-card-large-meta"><a href="/voices/marshall-segal/" class="cc-author-link"><strong>Marshall Segal</strong></a>
-             &middot; Desiring God</div>
-        
-        
-        <p class="cc-card-large-preview">Marshall Segal | Do you love the world more than the one who made it? Worldliness may entice, but it promises only to deceive, defile, disappoint, and eventually destroy us.</p>
-        
-        <a href="/topics/evangelicalism/" class="cc-card-large-cta"
-           onclick="gtag('event','topic_click',{'topic':'evangelicalism','position':'front_large'});">
-          More on The Future of Evangelicalism &rarr;
-        </a>
-      </article>
-
-      <div class="cc-front-mediums">
-        
-        <article class="cc-card-medium" id="a18a81596">
-          <a href="https://mereorthodoxy.com/what-remains-of-our-remains/" class="cc-card-medium-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Miscarriage Grief Has No Grave: A Mothers Lament','article_source':'Mere Orthodoxy','position':'front_medium'});">
-            Miscarriage Grief Has No Grave: A Mother's Lament
-          </a>
-          
-          
-          <p class="cc-card-medium-preview">God will redeem my grief when I hold my babies in my arms. But today I honor their bodies with the grief I carry inside of me that they hav…</p>
-          
-          <div class="cc-card-medium-meta">Mere Orthodoxy</div>
-          <a href="/topics/heaven-hell-eternity/" class="cc-card-medium-cta"
-             onclick="gtag('event','topic_click',{'topic':'heaven-hell-eternity','position':'front_medium'});">
-            More on Heaven, Hell & Eternity &rarr;
-          </a>
-        </article>
-        
-        <article class="cc-card-medium" id="ae745d814">
-          <a href="https://theaquilareport.com/how-is-gods-power-made-perfect-in-our-weakness-2-corinthians-127-10/" class="cc-card-medium-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'Gods Power Thrives in Your Weakness—Heres Why Paul Believed It','article_source':'The Aquila Report','position':'front_medium'});">
-            God's Power Thrives in Your Weakness—Here's Why Paul Believed It
-          </a>
-          
-          
-          <p class="cc-card-medium-preview">How is spiritual power released in a person’s life? By accepting the truth that God allows weakness for good in our lives, and by being wil…</p>
-          
-          <div class="cc-card-medium-meta"><a href="/voices/kenneth-berding/" class="cc-author-link"><strong>Kenneth Berding</strong></a>
-               &middot; The Aquila Report</div>
-          <a href="/topics/evangelicalism/" class="cc-card-medium-cta"
-             onclick="gtag('event','topic_click',{'topic':'evangelicalism','position':'front_medium'});">
-            More on The Future of Evangelicalism &rarr;
-          </a>
-        </article>
-        
+    <div class="cc-debate-pair">
+      <div class="cc-debate-topic">UMC bishop authority over disaffiliating Texas churches</div>
+      <div class="cc-debate-grid">
+        <div class="cc-debate-card side-a">
+          <div class="cc-debate-side-label">Point</div>
+          <a href="https://www.christianpost.com/news/umc-appoints-new-leader-to-texas-megachurch-that-voted-to-leave.html" class="cc-debate-title" target="_blank" rel="noopener" data-pos="debate" data-src="The Christian Post">UMC Bishop appoints new pastor to Texas megachurch that voted to disaffiliate</a>
+          <div class="cc-src"><a href="/voices/michael-gryboski/" class="cc-author-link"><strong>Michael Gryboski</strong></a> &middot; The Christian Post</div>
+        </div>
+        <div class="cc-debate-card side-b">
+          <div class="cc-debate-side-label">Counterpoint</div>
+          <a href="https://religionnews.com/2026/10/29/umc-bishop-removes-ministers-from-highland-park-church-says-they-will-stay/" class="cc-debate-title" target="_blank" rel="noopener" data-pos="debate" data-src="Religion News Service">UMC bishop removes ministers from Dallas’ Highland Park; church says they will stay</a>
+          <div class="cc-src"><span class="cc-author-link"><strong>Yonat Shimron</strong></span> &middot; Religion News Service</div>
+        </div>
       </div>
     </div>
-
-    <!-- Row 2: small cards -->
     
-    <div class="cc-front-row2">
+  </section>
+  
+
+  <!-- ── WORTH YOUR TIME (depth lane) ───────────────────────────────── -->
+  
+  <section class="cc-wyt">
+    <div class="cc-section-header">
+      <h2 class="cc-section-label">Worth Your Time</h2>
+      <div class="cc-section-meta">Slower reads for formation</div>
+    </div>
+    <ol class="cc-wyt-list">
       
-      <article class="cc-card-small" id="a82992be9">
-        <a href="https://relevantmagazine.com/justice/a-broken-system-protects-traffickers-not-girls/" class="cc-card-small-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Jailed for Exploitation: Why Sex Trafficking Victims Face Prison','article_source':'Relevant Magazine','position':'front_small'});">
-          Jailed for Exploitation: Why Sex Trafficking Victims Face Prison
-        </a>
-        <div class="cc-card-small-meta"><a href="/voices/sharon-cohn-wu/" class="cc-author-link"><strong>Sharon Cohn Wu</strong></a>
-             &middot; Relevant Magazine</div>
-        <a href="/topics/biblical-justice/" class="cc-card-small-cta"
-           onclick="gtag('event','topic_click',{'topic':'biblical-justice','position':'front_small'});">
-          More on Biblical Justice & the Social Gospel &rarr;
-        </a>
-      </article>
+      <li class="cc-wyt-item" id="a18a81596">
+        <a href="https://mereorthodoxy.com/what-remains-of-our-remains/" class="cc-wyt-title" target="_blank" rel="noopener" data-pos="worth_your_time" data-src="Mere Orthodoxy">What Remains of Our Remains</a>
+        <div class="cc-src"><strong>Mere Orthodoxy</strong></div>
+        
+        <p class="cc-wyt-note">God will redeem my grief when I hold my babies in my arms. But today I honor their bodies with the grief I carry inside of me that they have no resting place o…</p>
+      </li>
       
-      <article class="cc-card-small" id="a6a2ae446">
-        <a href="https://www.christianitytoday.com/2026/10/race-justice-and-the-way-forward/" class="cc-card-small-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Christians Clash on What Justice Demands in Americas Racial Reckoning','article_source':'Christianity Today','position':'front_small'});">
-          Christians Clash on What Justice Demands in America's Racial Reckoning
-        </a>
-        <div class="cc-card-small-meta"><a href="/voices/haleluya-hadero/" class="cc-author-link"><strong>Haleluya Hadero</strong></a>
-             &middot; Christianity Today</div>
-        <a href="/topics/church-discipline/" class="cc-card-small-cta"
-           onclick="gtag('event','topic_click',{'topic':'church-discipline','position':'front_small'});">
-          More on Church Discipline &rarr;
-        </a>
-      </article>
+      <li class="cc-wyt-item" id="a89b4c190">
+        <a href="https://feed.desiringgod.org/link/22977/17511231/worldliness-and-the-friendship-of-god" class="cc-wyt-title" target="_blank" rel="noopener" data-pos="worth_your_time" data-src="Desiring God">Worldliness and the Friendship of God</a>
+        <div class="cc-src"><a href="/voices/marshall-segal/" class="cc-author-link"><strong>Marshall Segal</strong></a> &middot; Desiring God</div>
+        
+        <p class="cc-wyt-note">Marshall Segal | Do you love the world more than the one who made it? Worldliness may entice, but it promises only to deceive, defile, disappoint, and eventual…</p>
+      </li>
       
-      <article class="cc-card-small" id="a9af7be2f">
-        <a href="https://theaquilareport.com/how-can-heaven-be-better-than-earth-if-we-are-married-on-earth-but-unmarried-in-heaven/" class="cc-card-small-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Heavens Marriage Problem: Why God Ends Earthly Unions','article_source':'The Aquila Report','position':'front_small'});">
-          Heaven's Marriage Problem: Why God Ends Earthly Unions
-        </a>
-        <div class="cc-card-small-meta"><a href="/voices/tim-challies/" class="cc-author-link"><strong>Tim Challies</strong></a>
-             &middot; The Aquila Report</div>
-        <a href="/topics/heaven-hell-eternity/" class="cc-card-small-cta"
-           onclick="gtag('event','topic_click',{'topic':'heaven-hell-eternity','position':'front_small'});">
-          More on Heaven, Hell & Eternity &rarr;
-        </a>
-      </article>
+      <li class="cc-wyt-item" id="a50d619ad">
+        <a href="https://matthewleeanderson.substack.com/p/790-romans-121-8" class="cc-wyt-title" target="_blank" rel="noopener" data-pos="worth_your_time" data-src="Matthew Lee Anderson">790. Romans 12.1-8</a>
+        <div class="cc-src"><strong>Matthew Lee Anderson</strong></div>
+        
+        <p class="cc-wyt-note">The individual and the church.</p>
+      </li>
       
-      <article class="cc-card-small" id="aac0b64fc">
-        <a href="https://wng.org/roundups/moral-choices-on-the-ballot-1793317288" class="cc-card-small-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Religious Groups Fight Virginias Abortion and Marriage Amendments','article_source':'World Magazine','position':'front_small'});">
-          Religious Groups Fight Virginia's Abortion and Marriage Amendments
-        </a>
-        <div class="cc-card-small-meta"><a href="/voices/arla-eicher/" class="cc-author-link"><strong>Arla Eicher</strong></a>
-             &middot; World Magazine</div>
-        <a href="/topics/christian-ethics/" class="cc-card-small-cta"
-           onclick="gtag('event','topic_click',{'topic':'christian-ethics','position':'front_small'});">
-          More on Christian Ethics &rarr;
-        </a>
-      </article>
+      <li class="cc-wyt-item" id="ad76f7aab">
+        <a href="https://michaelfbird.substack.com/p/1-corinthians-11-messianic-mutuality" class="cc-wyt-title" target="_blank" rel="noopener" data-pos="worth_your_time" data-src="Michael Bird">1 Corinthians 11 - Messianic Mutuality</a>
+        <div class="cc-src"><a href="/voices/michael-f-bird/" class="cc-author-link"><strong>Michael F. Bird</strong></a> &middot; Michael Bird</div>
+        
+        <p class="cc-wyt-note">I&#8217;m continuing the series on 1 Corinthians 11:2-16 about women, men, and headwear.</p>
+      </li>
+      
+      <li class="cc-wyt-item" id="ad95e7fb6">
+        <a href="https://ajswoboda.substack.com/p/the-self-subversion-of-sin" class="cc-wyt-title" target="_blank" rel="noopener" data-pos="worth_your_time" data-src="A.J. Swoboda">The Self Subversion of Sin</a>
+        <div class="cc-src"><strong>A.J. Swoboda</strong></div>
+        
+        <p class="cc-wyt-note">Learning to love yourself by loving God most</p>
+      </li>
+      
+    </ol>
+  </section>
+  
+
+  <!-- ── WATCH AND LISTEN (media lane) ──────────────────────────────── -->
+  
+  <section class="cc-wl">
+    <div class="cc-section-header">
+      <h2 class="cc-section-label">Watch and Listen</h2>
+      <div class="cc-section-meta">Video and podcasts from trusted voices</div>
+    </div>
+    <ul class="cc-wl-grid">
+      
+      <li class="cc-wl-item">
+        <div class="cc-wl-format">Video</div>
+        <a href="https://www.youtube.com/watch?v=vvIpdglPmGg" class="cc-wl-title" target="_blank" rel="noopener" data-pos="watch_listen" data-src="Truth Unites (Gavin Ortlund)">Were the 95 Theses Protestant?</a>
+        <div class="cc-src"><strong>Truth Unites (Gavin Ortlund)</strong></div>
+      </li>
+      
+      <li class="cc-wl-item">
+        <div class="cc-wl-format">Video</div>
+        <a href="https://www.youtube.com/watch?v=TLI4xhQvx80" class="cc-wl-title" target="_blank" rel="noopener" data-pos="watch_listen" data-src="The Gospel Coalition (Video)">Ministry and Marriage: How to Be a Healthy Team</a>
+        <div class="cc-src"><strong>The Gospel Coalition (Video)</strong></div>
+      </li>
+      
+      <li class="cc-wl-item">
+        <div class="cc-wl-format">Podcast <span class="cc-wl-duration">&middot; 15 min</span></div>
+        <a href="https://feed.desiringgod.org/link/10715/17510548/was-piper-unprepared" class="cc-wl-title" target="_blank" rel="noopener" data-pos="watch_listen" data-src="Ask Pastor John">Was Piper Unprepared?</a>
+        <div class="cc-src"><strong>Ask Pastor John</strong></div>
+      </li>
+      
+      <li class="cc-wl-item">
+        <div class="cc-wl-format">Podcast <span class="cc-wl-duration">&middot; 56 min</span></div>
+        <a href="https://podcasts.apple.com/us/podcast/the-old-testaments-fingerprints-on-acts/id885758537?i=1000798501231" class="cc-wl-title" target="_blank" rel="noopener" data-pos="watch_listen" data-src="Mere Fidelity">The Old Testament's Fingerprints on Acts</a>
+        <div class="cc-src"><strong>Mere Fidelity</strong></div>
+      </li>
+      
+      <li class="cc-wl-item">
+        <div class="cc-wl-format">Podcast <span class="cc-wl-duration">&middot; 1 hr</span></div>
+        <a href="https://podcasts.apple.com/us/podcast/n-t-wright-on-how-an-ancient-prophet-explains-our-crazy-world/id1074011166?i=1000798493794" class="cc-wl-title" target="_blank" rel="noopener" data-pos="watch_listen" data-src="The Russell Moore Show">N.T. Wright on How an Ancient Prophet Explains Our Crazy World</a>
+        <div class="cc-src"><strong>The Russell Moore Show</strong></div>
+      </li>
+      
+    </ul>
+  </section>
+  
+
+  <!-- ── RESEARCH & DATA ────────────────────────────────────────────── -->
+  
+  <section class="cc-research">
+    <div class="cc-section-header">
+      <h2 class="cc-section-label">Research &amp; Data</h2>
+      <div class="cc-section-meta">Surveys and studies</div>
+    </div>
+    <div class="cc-research-grid">
+      
+      <div class="cc-research-item">
+        <a href="https://relevantmagazine.com/life5/gallup-americans-under-30-rate-their-lives-20-points-lower-than-they-did-in-2010/" class="cc-research-title" target="_blank" rel="noopener" data-pos="research" data-src="Relevant Magazine">Gallup: Americans Under 30 Rate Their Lives 20 Points Lower Than They Did in 2010</a>
+        <div class="cc-src"><strong>Relevant Magazine</strong></div>
+      </div>
       
     </div>
-    
-
-    <!-- Row 3: extra small cards (front-page positions 8-10, anchored so email links land here) -->
-    
-    <div class="cc-front-row3">
-      
-      <article class="cc-card-small" id="a4550f36d">
-        <a href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/ministry-marriage-healthy-team/" class="cc-card-small-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Ministry Marriages Face Unique Pressures—Heres How to Survive','article_source':'The Gospel Coalition','position':'front_small_row3'});">
-          Ministry Marriages Face Unique Pressures—Here's How to Survive
-        </a>
-        <div class="cc-card-small-meta"><a href="/voices/michael-aitcheson/" class="cc-author-link"><strong>Michael Aitcheson</strong></a>, <span class="cc-author-link"><strong>Lucy Aitcheson</strong></span>, <span class="cc-author-link"><strong>Jim Davis</strong></span>, <span class="cc-author-link"><strong>Angela Davis</strong></span>
-             &middot; The Gospel Coalition</div>
-        <a href="/topics/marriage-and-family/" class="cc-card-small-cta"
-           onclick="gtag('event','topic_click',{'topic':'marriage-and-family','position':'front_small_row3'});">
-          More on Marriage & Family &rarr;
-        </a>
-      </article>
-      
-      <article class="cc-card-small" id="a7b1ae26d">
-        <a href="https://feeds.ligonier.org/~/926995124/0/ligonierministriesblog" class="cc-card-small-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Luther Held a Complete Bible Once—and Changed Everything','article_source':'Ligonier Ministries','position':'front_small_row3'});">
-          Luther Held a Complete Bible Once—and Changed Everything
-        </a>
-        <div class="cc-card-small-meta"><a href="/voices/gene-edward-veith/" class="cc-author-link"><strong>Gene Edward Veith</strong></a>
-             &middot; Ligonier Ministries</div>
-        <a href="/topics/church-history/" class="cc-card-small-cta"
-           onclick="gtag('event','topic_click',{'topic':'church-history','position':'front_small_row3'});">
-          More on Church History &rarr;
-        </a>
-      </article>
-      
-      <article class="cc-card-small" id="af967789d">
-        <a href="https://firstthings.com/aaron-sorkins-facebook-fumble/" class="cc-card-small-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Sorkins Leaked-Emails Gambit Backfires: The Journalists Dilemma','article_source':'First Things','position':'front_small_row3'});">
-          Sorkin's Leaked-Emails Gambit Backfires: The Journalist's Dilemma
-        </a>
-        <div class="cc-card-small-meta"><a href="/voices/paul-howard/" class="cc-author-link"><strong>Paul Howard</strong></a>
-             &middot; First Things</div>
-        <a href="/topics/christian-ethics/" class="cc-card-small-cta"
-           onclick="gtag('event','topic_click',{'topic':'christian-ethics','position':'front_small_row3'});">
-          More on Christian Ethics &rarr;
-        </a>
-      </article>
-      
-    </div>
-    
-    
   </section>
   
 
@@ -847,236 +1137,6 @@
       })();
     </script>
   </div>
-
-  <!-- ── WORLD NEWS ───────────────────────────────────────────────────── -->
-  
-  
-  <section class="cc-world-news">
-    <div class="cc-world-news-section-header">
-      <div class="cc-world-news-section-label">World News &amp; Culture</div>
-      <div class="cc-world-news-section-sub">Stories worth watching</div>
-    </div>
-    <div class="cc-world-news-card">
-      <div class="cc-world-news-intro">From the broader world — filtered for what matters to Christians</div>
-      <div class="cc-world-news-list">
-        
-        <article class="cc-world-news-item" id="a6ba1d579">
-          <div class="cc-world-news-num">1</div>
-          <div class="cc-world-news-content">
-            <a href="https://www.bbc.co.uk/news/articles/cq5ynw94k7kzo?at_medium=RSS&at_campaign=rss" class="cc-world-news-title" target="_blank" rel="noopener"
-               onclick="gtag('event','article_click',{'article_title':'Xis Purge Machine: How Anti-Corruption Became Power Consolidation','article_source':'BBC News','position':'world_news'});">
-              Xi's Purge Machine: How Anti-Corruption Became Power Consolidation
-            </a>
-            <div class="cc-world-news-meta">BBC News</div>
-          </div>
-        </article>
-        
-        <article class="cc-world-news-item" id="a2a7e8816">
-          <div class="cc-world-news-num">2</div>
-          <div class="cc-world-news-content">
-            <a href="https://www.theguardian.com/us-news/2026/oct/29/new-mexico-church-endorses-republicans" class="cc-world-news-title" target="_blank" rel="noopener"
-               onclick="gtag('event','article_click',{'article_title':'Legacy Churchs Gamble: Megachurch Openly Defies Political Endorsement Ban','article_source':'The Guardian','position':'world_news'});">
-              Legacy Church's Gamble: Megachurch Openly Defies Political Endorsement Ban
-            </a>
-            <div class="cc-world-news-meta"><span class="cc-author-link"><strong>Cecilia Nowell</strong></span>
-                 &middot; The Guardian</div>
-          </div>
-        </article>
-        
-        <article class="cc-world-news-item" id="a370c168b">
-          <div class="cc-world-news-num">3</div>
-          <div class="cc-world-news-content">
-            <a href="https://www.bbc.co.uk/news/articles/c9p8gdlz1p2ko?at_medium=RSS&at_campaign=rss" class="cc-world-news-title" target="_blank" rel="noopener"
-               onclick="gtag('event','article_click',{'article_title':'Russian Strike on Ukrainian Train Station Kills 14, Wounds Child','article_source':'BBC News','position':'world_news'});">
-              Russian Strike on Ukrainian Train Station Kills 14, Wounds Child
-            </a>
-            <div class="cc-world-news-meta">BBC News</div>
-          </div>
-        </article>
-        
-      </div>
-    </div>
-  </section>
-  
-
-  <!-- ── OTHER HEADLINES ──────────────────────────────────────────────── -->
-  
-  <section class="cc-headlines">
-    <div class="cc-section-header">
-      <div class="cc-section-label">Other Headlines</div>
-      <div class="cc-section-meta">10 articles</div>
-    </div>
-    
-    
-    <article class="cc-headline-item" id="a316b7aa4">
-      <div class="cc-headline-num">1</div>
-      <div class="cc-headline-content">
-        <a href="https://mereorthodoxy.com/the-gospel-in-a-haunted-world/" class="cc-headline-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Re-Enchantment Is Calling. Christians Must Resist Its Siren Song.','article_source':'Mere Orthodoxy','position':'other_headlines'});">
-          Re-Enchantment Is Calling. Christians Must Resist Its Siren Song.
-        </a>
-        <div class="cc-headline-meta">Mere Orthodoxy</div>
-      </div>
-      <a href="/topics/evangelicalism/" class="cc-headline-topic"
-         onclick="gtag('event','topic_click',{'topic':'evangelicalism','position':'other_headlines'});">
-        More on The Future of Evangelicalism &rarr;
-      </a>
-    </article>
-    
-    
-    <article class="cc-headline-item" id="ac5e89561">
-      <div class="cc-headline-num">2</div>
-      <div class="cc-headline-content">
-        <a href="https://www.thegospelcoalition.org/article/pastor-be-opportunistic/" class="cc-headline-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Gospel Coasting Will Cost You Souls, Pastor','article_source':'The Gospel Coalition','position':'other_headlines'});">
-          Gospel Coasting Will Cost You Souls, Pastor
-        </a>
-        <div class="cc-headline-meta"><a href="/voices/justin-jackson/" class="cc-author-link"><strong>Justin Jackson</strong></a>
-             &middot; The Gospel Coalition</div>
-      </div>
-      <a href="/topics/evangelicalism/" class="cc-headline-topic"
-         onclick="gtag('event','topic_click',{'topic':'evangelicalism','position':'other_headlines'});">
-        More on The Future of Evangelicalism &rarr;
-      </a>
-    </article>
-    
-    
-    <article class="cc-headline-item" id="a8bb10b22">
-      <div class="cc-headline-num">3</div>
-      <div class="cc-headline-content">
-        <a href="https://www.wyattgraham.com/p/how-john-1030-gave-tertullian-words" class="cc-headline-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Tertullian Found the Trinitys Language Long Before Nicaea','article_source':'Wyatt Graham','position':'other_headlines'});">
-          Tertullian Found the Trinity's Language Long Before Nicaea
-        </a>
-        <div class="cc-headline-meta">Wyatt Graham</div>
-      </div>
-      <a href="/topics/the-trinity/" class="cc-headline-topic"
-         onclick="gtag('event','topic_click',{'topic':'the-trinity','position':'other_headlines'});">
-        More on The Trinity &rarr;
-      </a>
-    </article>
-    
-    
-    <article class="cc-headline-item" id="aae78a446">
-      <div class="cc-headline-num">4</div>
-      <div class="cc-headline-content">
-        <a href="https://wng.org/podcasts/a-ballot-not-armageddon-1793302500" class="cc-headline-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Christians Must Vote—But Stop Expecting Political Salvation','article_source':'World Magazine','position':'other_headlines'});">
-          Christians Must Vote—But Stop Expecting Political Salvation
-        </a>
-        <div class="cc-headline-meta"><a href="/voices/keegan-martin/" class="cc-author-link"><strong>Keegan Martin</strong></a>
-             &middot; World Magazine</div>
-      </div>
-      <a href="/topics/politics-and-the-church/" class="cc-headline-topic"
-         onclick="gtag('event','topic_click',{'topic':'politics-and-the-church','position':'other_headlines'});">
-        More on Politics & the Church &rarr;
-      </a>
-    </article>
-    
-    
-    <article class="cc-headline-item" id="a4dfbcec4">
-      <div class="cc-headline-num">5</div>
-      <div class="cc-headline-content">
-        <a href="https://relevantmagazine.com/faith/the-most-searched-thing-in-the-bible-app-this-year-was-psalm-91-anxiety-hope-and-healing-werent-far-behind/" class="cc-headline-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Americans Turned to Psalm 91 for Answers. What Their Bible App Searches Really Reveal.','article_source':'Relevant Magazine','position':'other_headlines'});">
-          Americans Turned to Psalm 91 for Answers. What Their Bible App Searches Really Reveal.
-        </a>
-        <div class="cc-headline-meta"><span class="cc-author-link"><strong>RELEVANT Staff</strong></span>
-             &middot; Relevant Magazine</div>
-      </div>
-      <a href="/topics/anxiety-and-fear/" class="cc-headline-topic"
-         onclick="gtag('event','topic_click',{'topic':'anxiety-and-fear','position':'other_headlines'});">
-        More on Anxiety & Fear &rarr;
-      </a>
-    </article>
-    
-    
-    <article class="cc-headline-item" id="a74c15b1f">
-      <div class="cc-headline-num">6</div>
-      <div class="cc-headline-content">
-        <a href="https://www.pewresearch.org/science/2026/10/29/americans-are-open-to-ai-in-healthcare-but-want-humans-making-final-calls/" class="cc-headline-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Americans Trust AI in Medicine—Just Not Without a Doctor in the Room','article_source':'Pew Research','position':'other_headlines'});">
-          Americans Trust AI in Medicine—Just Not Without a Doctor in the Room
-        </a>
-        <div class="cc-headline-meta"><a href="/voices/reem-nadeem/" class="cc-author-link"><strong>Reem Nadeem</strong></a>
-             &middot; Pew Research</div>
-      </div>
-      <a href="/topics/technology-and-discipleship/" class="cc-headline-topic"
-         onclick="gtag('event','topic_click',{'topic':'technology-and-discipleship','position':'other_headlines'});">
-        More on Technology & Discipleship &rarr;
-      </a>
-    </article>
-    
-    
-    <article class="cc-headline-item" id="a592b3d72">
-      <div class="cc-headline-num">7</div>
-      <div class="cc-headline-content">
-        <a href="https://research.lifeway.com/2026/10/27/analysis-reveals-factors-most-impactful-to-discipleship/" class="cc-headline-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Why Most Christians Arent Growing—and How to Fix It','article_source':'Lifeway Research','position':'other_headlines'});">
-          Why Most Christians Aren't Growing—and How to Fix It
-        </a>
-        <div class="cc-headline-meta"><a href="/voices/aaron-earls/" class="cc-author-link"><strong>Aaron Earls</strong></a>
-             &middot; Lifeway Research</div>
-      </div>
-      <a href="/topics/discipleship/" class="cc-headline-topic"
-         onclick="gtag('event','topic_click',{'topic':'discipleship','position':'other_headlines'});">
-        More on Discipleship &rarr;
-      </a>
-    </article>
-    
-    
-    <article class="cc-headline-item" id="aa37c679b">
-      <div class="cc-headline-num">8</div>
-      <div class="cc-headline-content">
-        <a href="https://www.christianitytoday.com/2026/10/religion-public-square-letters-to-editor/" class="cc-headline-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Evangelicals Political Entanglement Tests Faith and Citizenship','article_source':'Christianity Today','position':'other_headlines'});">
-          Evangelicals' Political Entanglement Tests Faith and Citizenship
-        </a>
-        <div class="cc-headline-meta"><a href="/voices/alex-mellen/" class="cc-author-link"><strong>Alex Mellen</strong></a>
-             &middot; Christianity Today</div>
-      </div>
-      <a href="/topics/politics-and-the-church/" class="cc-headline-topic"
-         onclick="gtag('event','topic_click',{'topic':'politics-and-the-church','position':'other_headlines'});">
-        More on Politics & the Church &rarr;
-      </a>
-    </article>
-    
-    
-    <article class="cc-headline-item" id="a5d3a07c1">
-      <div class="cc-headline-num">9</div>
-      <div class="cc-headline-content">
-        <a href="https://relevantmagazine.com/culture/sports/spurs-rookie-tarris-reed-jr-got-baptized-i-went-from-wanting-nothing-to-do-with-the-lord-to-now-desiring-to-live-for-him/" class="cc-headline-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'NBA Rookies Baptism Signals Radical Spiritual Turnaround: "Jesus Saves','article_source':'Relevant Magazine','position':'other_headlines'});">
-          NBA Rookie's Baptism Signals Radical Spiritual Turnaround: "Jesus Saves
-        </a>
-        <div class="cc-headline-meta"><span class="cc-author-link"><strong>RELEVANT Staff</strong></span>
-             &middot; Relevant Magazine</div>
-      </div>
-      <a href="/topics/baptism/" class="cc-headline-topic"
-         onclick="gtag('event','topic_click',{'topic':'baptism','position':'other_headlines'});">
-        More on Baptism &rarr;
-      </a>
-    </article>
-    
-    
-    <article class="cc-headline-item" id="a804cb628">
-      <div class="cc-headline-num">10</div>
-      <div class="cc-headline-content">
-        <a href="https://www.christianitytoday.com/2026/10/bobby-fijan-american-housing-corporation/" class="cc-headline-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'Young Christian Families Are Rejecting the Suburban Escape','article_source':'Christianity Today','position':'other_headlines'});">
-          Young Christian Families Are Rejecting the Suburban Escape
-        </a>
-        <div class="cc-headline-meta"><a href="/voices/grant-dutro/" class="cc-author-link"><strong>Grant Dutro</strong></a>
-             &middot; Christianity Today</div>
-      </div>
-      <a href="/topics/marriage-and-family/" class="cc-headline-topic"
-         onclick="gtag('event','topic_click',{'topic':'marriage-and-family','position':'other_headlines'});">
-        More on Marriage & Family &rarr;
-      </a>
-    </article>
-    
-  </section>
-    
 
   <!-- ── TOPIC INDEX ────────────────────────────────────────────────── -->
   <nav id="topics" class="cc-topic-index">
@@ -1459,24 +1519,18 @@
     </div>
   </nav>
 
-  
-  <!-- CC-FEATURED-DEEP-DIVES:START -->
-  <section class="cc-fdd-section" aria-label="Featured deep dives">
-    <style>.cc-fdd-section{margin:2.5rem 0 1.5rem;padding:1.5rem 0;border-top:1px solid #e0ddd8;border-bottom:1px solid #e0ddd8;}.cc-fdd-heading{font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600;letter-spacing:-0.01em;margin-bottom:0.25rem;color:#1a1a1a;}.cc-fdd-sub{font-size:12px;color:#888;margin-bottom:1rem;letter-spacing:0.04em;}.cc-fdd-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0.75rem;}@media(max-width:600px){.cc-fdd-grid{grid-template-columns:1fr;}}.cc-fdd-card{display:block;padding:0.75rem 0.9rem;background:#fff;border:1px solid #e0ddd8;border-radius:4px;text-decoration:none;color:#1a1a1a;transition:border-color 0.15s,box-shadow 0.15s;}.cc-fdd-card:hover{border-color:#2C4A2E;box-shadow:0 1px 6px rgba(44,74,46,0.08);}.cc-fdd-kind{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#2C4A2E;margin-bottom:4px;}.cc-fdd-title{font-family:'Lora',Georgia,serif;font-size:15px;font-weight:600;line-height:1.3;margin-bottom:4px;color:#1a1a1a;}.cc-fdd-desc{font-size:12.5px;color:#666;line-height:1.5;}</style>
-    <h2 class="cc-fdd-heading">Featured deep dives</h2>
-    <div class="cc-fdd-sub">A daily-rotating selection from our topic archives.</div>
-    <div class="cc-fdd-grid">
-      <a href="/topics/worship-and-liturgy/" class="cc-fdd-card cc-fdd-topic"><div class="cc-fdd-kind">Topic</div><div class="cc-fdd-title">On Worship &amp; Liturgy</div><div class="cc-fdd-desc">Should evangelical worship be contemporary or liturgical? Explore how evangelicals balance Spirit-led freedom with historic forms in corpora</div></a>
-      <a href="/topics/death-and-dying/" class="cc-fdd-card cc-fdd-topic"><div class="cc-fdd-kind">Topic</div><div class="cc-fdd-title">On Death &amp; Dying</div><div class="cc-fdd-desc">How Christians prepare for death through hope in resurrection, spiritual practices, and community care. Evangelical perspectives on dying we</div></a>
-      <a href="/topics/lords-supper/" class="cc-fdd-card cc-fdd-topic"><div class="cc-fdd-kind">Topic</div><div class="cc-fdd-title">On the Lord&#x27;s Supper</div><div class="cc-fdd-desc">Evangelicals debate whether Christ is truly present in communion and how. Explore memorialist, Lutheran, and Reformed views on the Lord</div></a>
-      <a href="/topics/predestination-free-will/" class="cc-fdd-card cc-fdd-topic"><div class="cc-fdd-kind">Topic</div><div class="cc-fdd-title">On Predestination &amp; Free Will</div><div class="cc-fdd-desc">Evangelicals debate whether salvation depends on God</div></a>
-      <a href="/topics/apologetics/" class="cc-fdd-card cc-fdd-topic"><div class="cc-fdd-kind">Topic</div><div class="cc-fdd-title">What Is Christian Apologetics?</div><div class="cc-fdd-desc">What is Christian apologetics? A guide to defending the faith with evidence, reason and grace, plus the best evangelical articles on doubt a</div></a>
-      <a href="/topics/fasting/" class="cc-fdd-card cc-fdd-topic"><div class="cc-fdd-kind">Topic</div><div class="cc-fdd-title">On Fasting</div><div class="cc-fdd-desc">Fasting is both neglected and misunderstood in evangelical churches. Discover what the Bible teaches and why many consider it essential spir</div></a>
-    </div>
-  </section>
-  <!-- CC-FEATURED-DEEP-DIVES:END -->
-
   </main>
+<script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[data-pos]');
+    if (!a || typeof gtag !== 'function') return;
+    gtag('event', 'article_click', {
+      article_title: a.textContent.trim().slice(0, 100),
+      article_source: a.getAttribute('data-src') || '',
+      position: a.getAttribute('data-pos')
+    });
+  });
+</script>
 <footer class="cc-footer">
     <div class="cc-footer-name">Christian Curator</div>
     <div class="cc-footer-nav">

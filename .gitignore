@@ -8,3 +8,4 @@ output/articles.json
 .env.save
 .env.*
 output/ai_health.json
+.venv/

@@ -53463,5 +53463,622 @@
     ],
     "topic_cluster": "discipleship_research",
     "clicks": 0
+  },
+  {
+    "url": "https://roysreport.com/compassion-international-flagged-25k-suspected-grooming-cases-then-failed-to-act/",
+    "title": "Whistleblower: Compassion International flagged 25K suspected grooming cases, then failed to act",
+    "source_name": "The Roys Report",
+    "date_shown": "2026-10-30",
+    "final_score": 10.0,
+    "tags": [
+      "news",
+      "church life"
+    ],
+    "topic_cluster": "compassion_international_grooming",
+    "base_score": 8.0,
+    "importance": 10.0,
+    "depth": 3.0,
+    "base_importance": 8.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://roysreport.com/compassion-international-flagged-25k-suspected-grooming-cases-then-failed-to-act",
+    "boosts": {
+      "recency": 1.5,
+      "stale_source": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/faith/church/pew-americans-ages-23-to-26-are-among-the-least-religious-adults-in-the-country-while-18-to-22-year-olds-attend-church-at-higher-rates-than-anyone/",
+    "title": "Pew: Americans Ages 23 to 26 Are Among the Least Religious Adults in the Country, While 18-to-22-Year-Olds Attend Church at Higher Rates Than Anyone",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-10-30",
+    "final_score": 9.5,
+    "tags": [
+      "data"
+    ],
+    "topic_cluster": "gen_z_religiosity_decline",
+    "base_score": 8.0,
+    "importance": 9.5,
+    "depth": 4.0,
+    "base_importance": 8.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://relevantmagazine.com/faith/church/pew-americans-ages-23-to-26-are-among-the-least-religious-adults-in-the-country-while-18-to-22-year-olds-attend-church-at-higher-rates-than-anyone",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://religionnews.com/2026/10/30/rod-dreher-among-prominent-conservatives-focusing-fight-on-groypers-christian-nationalists/",
+    "title": "Rod Dreher among prominent conservatives focusing fight on Groypers, Christian nationalists",
+    "source_name": "Religion News Service",
+    "date_shown": "2026-10-30",
+    "final_score": 9.0,
+    "tags": [
+      "theology",
+      "politics"
+    ],
+    "topic_cluster": "christian_nationalism_debate",
+    "base_score": 7.0,
+    "importance": 9.0,
+    "depth": 6.0,
+    "base_importance": 7.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://religionnews.com/2026/10/30/rod-dreher-among-prominent-conservatives-focusing-fight-on-groypers-christian-nationalists",
+    "boosts": {
+      "recency": 1.5,
+      "trending": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://erlc.com/scotus-center/international-partners-for-ethical-care-v-ferguson/",
+    "title": "International Partners for Ethical Care v. Ferguson",
+    "source_name": "ERLC",
+    "date_shown": "2026-10-30",
+    "final_score": 9.0,
+    "tags": [
+      "politics"
+    ],
+    "topic_cluster": "supreme_court_parental_rights",
+    "base_score": 8.0,
+    "importance": 9.0,
+    "depth": 2.0,
+    "base_importance": 8.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://erlc.com/scotus-center/international-partners-for-ethical-care-v-ferguson",
+    "boosts": {
+      "recency": 0.25,
+      "stale_source": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://danielkwilliams.substack.com/p/what-led-to-christianity-todays-crisis",
+    "title": "What Led to Christianity Today’s Crisis?",
+    "source_name": "Daniel K. Williams",
+    "date_shown": "2026-10-30",
+    "final_score": 8.75,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "christianity_today_crisis",
+    "base_score": 7.0,
+    "importance": 8.75,
+    "depth": 3.0,
+    "base_importance": 7.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://danielkwilliams.substack.com/p/what-led-to-christianity-todays-crisis",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.25,
+      "stale_source": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.russellmoore.com/2026/10/28/n-t-wright-on-how-an-ancient-prophet-explains-our-crazy-world/",
+    "title": "N.T. Wright on How an Ancient Prophet Explains Our Crazy World",
+    "source_name": "Russell Moore",
+    "date_shown": "2026-10-30",
+    "final_score": 8.5,
+    "tags": [
+      "theology",
+      "culture",
+      "politics"
+    ],
+    "topic_cluster": "wright_power_politics",
+    "base_score": 7.0,
+    "importance": 8.5,
+    "depth": 7.0,
+    "base_importance": 7.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://russellmoore.com/2026/10/28/n-t-wright-on-how-an-ancient-prophet-explains-our-crazy-world",
+    "boosts": {
+      "recency": 0.25,
+      "frequency": 0.5,
+      "stale_source": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianpost.com/news/umc-appoints-new-leader-to-texas-megachurch-that-voted-to-leave.html",
+    "title": "UMC Bishop appoints new pastor to Texas megachurch that voted to disaffiliate",
+    "source_name": "The Christian Post",
+    "date_shown": "2026-10-30",
+    "final_score": 8.3,
+    "tags": [
+      "news",
+      "church life"
+    ],
+    "topic_cluster": "umc_disaffiliation_texas",
+    "base_score": 7.0,
+    "importance": 8.3,
+    "depth": 2.0,
+    "base_importance": 7.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://christianpost.com/news/umc-appoints-new-leader-to-texas-megachurch-that-voted-to-leave.html",
+    "boosts": {
+      "tier": -0.7,
+      "recency": 1.5,
+      "stale_source": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.pewresearch.org/religion/2026/10/28/religion-remains-stable-in-the-us-with-mixed-signals-for-young-adults/",
+    "title": "Religion Remains Stable in the U.S., With Mixed Signals for Young Adults",
+    "source_name": "Pew Research",
+    "date_shown": "2026-10-30",
+    "final_score": 8.25,
+    "tags": [
+      "data",
+      "church life"
+    ],
+    "topic_cluster": "american_religious_trends",
+    "base_score": 8.0,
+    "importance": 8.25,
+    "depth": 4.0,
+    "base_importance": 8.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://pewresearch.org/religion/2026/10/28/religion-remains-stable-in-the-us-with-mixed-signals-for-young-adults",
+    "boosts": {
+      "recency": 0.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/life5/gallup-americans-under-30-rate-their-lives-20-points-lower-than-they-did-in-2010/",
+    "title": "Gallup: Americans Under 30 Rate Their Lives 20 Points Lower Than They Did in 2010",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-10-30",
+    "final_score": 8.0,
+    "tags": [
+      "data",
+      "culture"
+    ],
+    "topic_cluster": "young_adult_wellbeing_decline",
+    "base_score": 8.0,
+    "importance": 8.0,
+    "depth": 4.0,
+    "base_importance": 8.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://relevantmagazine.com/life5/gallup-americans-under-30-rate-their-lives-20-points-lower-than-they-did-in-2010",
+    "boosts": {
+      "recency": 0.75,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://newsletter.oalannoble.com/p/how-ai-brought-a-mathematician-to",
+    "title": "How AI Brought a Mathematician to Ecclesiastes",
+    "source_name": "O. Alan Noble",
+    "date_shown": "2026-10-30",
+    "final_score": 8.0,
+    "tags": [
+      "culture",
+      "work"
+    ],
+    "topic_cluster": "ai_and_faith",
+    "base_score": 6.0,
+    "importance": 8.0,
+    "depth": 5.0,
+    "base_importance": 6.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://newsletter.oalannoble.com/p/how-ai-brought-a-mathematician-to",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://michaelfbird.substack.com/p/manufacturing-the-millennium",
+    "title": "Manufacturing the Millennium?",
+    "source_name": "Michael Bird",
+    "date_shown": "2026-10-30",
+    "final_score": 8.0,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "eschatology_american_evangelicals",
+    "base_score": 6.0,
+    "importance": 8.0,
+    "depth": 6.0,
+    "base_importance": 6.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://michaelfbird.substack.com/p/manufacturing-the-millennium",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.nytimes.com/2026/10/30/world/asia/afghan-refugees-deported-flight-pakistan.html",
+    "title": "U.S. to Send Dozens Back to Afghanistan, Despite Risk of Persecution",
+    "source_name": "The New York Times",
+    "date_shown": "2026-10-30",
+    "final_score": 7.8,
+    "tags": [
+      "news",
+      "suffering"
+    ],
+    "topic_cluster": "afghanistan_deportations",
+    "base_score": 7.0,
+    "importance": 7.8,
+    "depth": 2.0,
+    "base_importance": 7.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://nytimes.com/2026/10/30/world/asia/afghan-refugees-deported-flight-pakistan.html",
+    "boosts": {
+      "tier": -0.7,
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/10/black-church-midterms-souls-to-the-gerrymandered-polls/",
+    "title": "Souls to the Gerrymandered Polls",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-10-30",
+    "final_score": 7.75,
+    "tags": [
+      "politics",
+      "church life"
+    ],
+    "topic_cluster": "evangelical_voting_representation",
+    "base_score": 7.0,
+    "importance": 7.75,
+    "depth": 5.0,
+    "base_importance": 7.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://christianitytoday.com/2026/10/black-church-midterms-souls-to-the-gerrymandered-polls",
+    "boosts": {
+      "recency": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://feeds.ligonier.org/~/972099341/0/ligonierministriesblog",
+    "title": "Who Is God? 39% of UK Adults Aren’t Sure",
+    "source_name": "Ligonier Ministries",
+    "date_shown": "2026-10-30",
+    "final_score": 7.75,
+    "tags": [
+      "data",
+      "theology"
+    ],
+    "topic_cluster": "uk_theology_survey",
+    "base_score": 7.0,
+    "importance": 7.75,
+    "depth": 5.0,
+    "base_importance": 7.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://feeds.ligonier.org/~/972099341/0/ligonierministriesblog",
+    "boosts": {
+      "recency": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/sift/pearl-street-mall-attacker-pleads-guilty-to-federal-hate-crime-charges-1793366320",
+    "title": "Molotov cocktail-thrower pleads guilty to federal hate crimes",
+    "source_name": "World Magazine",
+    "date_shown": "2026-10-30",
+    "final_score": 7.62,
+    "tags": [
+      "news",
+      "suffering"
+    ],
+    "topic_cluster": "hate_crimes_religious_persecution",
+    "base_score": 6.0,
+    "importance": 7.62,
+    "depth": 2.0,
+    "base_importance": 6.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://wng.org/sift/pearl-street-mall-attacker-pleads-guilty-to-federal-hate-crime-charges-1793366320",
+    "boosts": {
+      "tier": 0.12,
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianpost.com/news/religious-identification-remains-steady-in-2026-pew-research.html",
+    "title": "Religious identification, service attendance remains steady after years of decline: Pew",
+    "source_name": "The Christian Post",
+    "date_shown": "2026-10-30",
+    "final_score": 7.05,
+    "tags": [
+      "data"
+    ],
+    "topic_cluster": "pew_religious_trends",
+    "base_score": 7.0,
+    "importance": 7.05,
+    "depth": 4.0,
+    "base_importance": 7.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://christianpost.com/news/religious-identification-remains-steady-in-2026-pew-research.html",
+    "boosts": {
+      "tier": -0.7,
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://jemartisby.substack.com/p/the-midterms-wont-end-on-election",
+    "title": "What Could Happen After the Midterms?",
+    "source_name": "Jemar Tisby",
+    "date_shown": "2026-10-30",
+    "final_score": 7.0,
+    "tags": [
+      "politics",
+      "news"
+    ],
+    "topic_cluster": "2024_midterms",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 2.0,
+    "base_importance": 5.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://jemartisby.substack.com/p/the-midterms-wont-end-on-election",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.aaronrenn.com/p/the-husband-of-his-first-wife",
+    "title": "The Husband of His First Wife",
+    "source_name": "Aaron Renn",
+    "date_shown": "2026-10-30",
+    "final_score": 7.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 4.0,
+    "base_importance": 5.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://aaronrenn.com/p/the-husband-of-his-first-wife",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://chrisgehrz.substack.com/p/a-free-society-neednt-fear-freedom",
+    "title": "A Free Society Needn’t Fear Freedom",
+    "source_name": "Chris Gehrz",
+    "date_shown": "2026-10-30",
+    "final_score": 7.0,
+    "tags": [
+      "culture",
+      "apologetics"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 6.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://chrisgehrz.substack.com/p/a-free-society-neednt-fear-freedom",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.75,
+      "trending": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://matthewleeanderson.substack.com/p/790-romans-121-8",
+    "title": "790. Romans 12.1-8",
+    "source_name": "Matthew Lee Anderson",
+    "date_shown": "2026-10-30",
+    "final_score": 2.75,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 2.75,
+    "depth": 7.0,
+    "base_importance": 4.0,
+    "base_depth": 8.0,
+    "canonical_url": "https://matthewleeanderson.substack.com/p/790-romans-121-8",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.75,
+      "trending": 0.75,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://michaelfbird.substack.com/p/1-corinthians-11-messianic-mutuality",
+    "title": "1 Corinthians 11 - Messianic Mutuality",
+    "source_name": "Michael Bird",
+    "date_shown": "2026-10-30",
+    "final_score": 6.0,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "1_corinthians_11_exegesis",
+    "base_score": 5.0,
+    "importance": 6.0,
+    "depth": 7.0,
+    "base_importance": 5.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://michaelfbird.substack.com/p/1-corinthians-11-messianic-mutuality",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 1.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://ajswoboda.substack.com/p/the-self-subversion-of-sin",
+    "title": "The Self Subversion of Sin",
+    "source_name": "A.J. Swoboda",
+    "date_shown": "2026-10-30",
+    "final_score": 6.0,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 6.0,
+    "depth": 7.0,
+    "base_importance": 4.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://ajswoboda.substack.com/p/the-self-subversion-of-sin",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.5,
+      "trending": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=vvIpdglPmGg",
+    "title": "Were the 95 Theses Protestant?",
+    "source_name": "Truth Unites (Gavin Ortlund)",
+    "date_shown": "2026-10-30",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=TLI4xhQvx80",
+    "title": "Ministry and Marriage: How to Be a Healthy Team",
+    "source_name": "The Gospel Coalition (Video)",
+    "date_shown": "2026-10-30",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
+  },
+  {
+    "url": "https://feed.desiringgod.org/link/10715/17510548/was-piper-unprepared",
+    "title": "Was Piper Unprepared?",
+    "source_name": "Ask Pastor John",
+    "date_shown": "2026-10-30",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
+  },
+  {
+    "url": "https://podcasts.apple.com/us/podcast/the-old-testaments-fingerprints-on-acts/id885758537?i=1000798501231",
+    "title": "The Old Testament's Fingerprints on Acts",
+    "source_name": "Mere Fidelity",
+    "date_shown": "2026-10-30",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
+  },
+  {
+    "url": "https://podcasts.apple.com/us/podcast/n-t-wright-on-how-an-ancient-prophet-explains-our-crazy-world/id1074011166?i=1000798493794",
+    "title": "N.T. Wright on How an Ancient Prophet Explains Our Crazy World",
+    "source_name": "The Russell Moore Show",
+    "date_shown": "2026-10-30",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
   }
 ]

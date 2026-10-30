@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-10-30T17:55:40+00:00",
+  "run_at": "2026-10-30T20:22:45+00:00",
   "sources": [
     {
       "source": "The Gospel Coalition",
@@ -67,7 +67,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 100,
-      "newest_date": "2026-10-29",
+      "newest_date": "2026-10-30",
       "bozo": false,
       "stale": false
     },
@@ -177,7 +177,7 @@
       "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 56,
+      "n_entries": 55,
       "newest_date": "2026-10-30",
       "bozo": false,
       "stale": false
@@ -187,7 +187,7 @@
       "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 72,
+      "n_entries": 73,
       "newest_date": "2026-10-30",
       "bozo": false,
       "stale": false
@@ -203,22 +203,12 @@
       "stale": false
     },
     {
-      "source": "Jen Wilkin",
-      "url": "https://www.jenwilkin.net/blog?format=rss",
-      "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2021-12-17",
-      "bozo": false,
-      "stale": true
-    },
-    {
       "source": "Kyle Worley",
       "url": "https://sacredslang.substack.com/feed",
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-10-25",
+      "newest_date": "2026-10-30",
       "bozo": false,
       "stale": false
     },
@@ -253,24 +243,6 @@
       "stale": false
     },
     {
-      "source": "Tish Harrison Warren",
-      "url": "https://tishharrisonwarren.substack.com/feed",
-      "role": "primary",
-      "http_status": 200,
-      "n_entries": 0,
-      "newest_date": null,
-      "bozo": false
-    },
-    {
-      "source": "Jake Meador (Mere Orthodoxy)",
-      "url": "https://jakemeador.substack.com/feed",
-      "role": "primary",
-      "http_status": 200,
-      "n_entries": 0,
-      "newest_date": null,
-      "bozo": false
-    },
-    {
       "source": "Samuel James",
       "url": "https://www.digitalliturgies.net/feed",
       "role": "primary",
@@ -279,15 +251,6 @@
       "newest_date": "2026-10-30",
       "bozo": false,
       "stale": false
-    },
-    {
-      "source": "Alan Jacobs",
-      "url": "https://ayjay.substack.com/feed",
-      "role": "primary",
-      "http_status": 200,
-      "n_entries": 0,
-      "newest_date": null,
-      "bozo": false
     },
     {
       "source": "Carey Nieuwhof",
@@ -355,7 +318,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 100,
-      "newest_date": "2026-10-29",
+      "newest_date": "2026-10-30",
       "bozo": false,
       "stale": false
     },
@@ -368,35 +331,6 @@
       "newest_date": "2026-10-29",
       "bozo": false,
       "stale": false
-    },
-    {
-      "source": "Ed Stetzer",
-      "url": "https://edstetzer.substack.com/feed",
-      "role": "primary",
-      "http_status": 200,
-      "n_entries": 0,
-      "newest_date": null,
-      "bozo": false
-    },
-    {
-      "source": "Sam Allberry",
-      "url": "https://samallberry.substack.com/feed",
-      "role": "primary",
-      "http_status": 404,
-      "n_entries": 0,
-      "newest_date": null,
-      "bozo": false,
-      "error": "HTTP 404"
-    },
-    {
-      "source": "Trillia Newbell",
-      "url": "https://trillianewbell.substack.com/feed",
-      "role": "primary",
-      "http_status": 200,
-      "n_entries": 0,
-      "newest_date": null,
-      "bozo": true,
-      "error": "parse error: <unknown>:191:36: not well-formed (invalid token)"
     },
     {
       "source": "Joy Clarkson",
@@ -470,42 +404,23 @@
     },
     {
       "source": "Tsh Oxenreider",
-      "url": "https://tshoxenreider.substack.com/feed",
+      "url": "https://thecommon.place/feed",
       "role": "primary",
-      "http_status": 404,
-      "n_entries": 0,
-      "newest_date": null,
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-30",
       "bozo": false,
-      "error": "HTTP 404"
+      "stale": false
     },
     {
       "source": "Gary Thomas",
-      "url": "https://garythomas.substack.com/feed",
+      "url": "https://garythomas.com/feed/",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 1,
-      "newest_date": "2021-07-22",
+      "n_entries": 10,
+      "newest_date": "2026-10-30",
       "bozo": false,
-      "stale": true
-    },
-    {
-      "source": "Spencer Klavan",
-      "url": "https://spencerklavan.substack.com/feed",
-      "role": "primary",
-      "http_status": 200,
-      "n_entries": 0,
-      "newest_date": null,
-      "bozo": true,
-      "error": "parse error: <unknown>:191:36: not well-formed (invalid token)"
-    },
-    {
-      "source": "Diane Langberg",
-      "url": "https://dianelangberg.substack.com/feed",
-      "role": "primary",
-      "http_status": 200,
-      "n_entries": 0,
-      "newest_date": null,
-      "bozo": false
+      "stale": false
     },
     {
       "source": "Timothy Paul Jones",
@@ -526,16 +441,6 @@
       "newest_date": "2026-10-30",
       "bozo": false,
       "stale": false
-    },
-    {
-      "source": "Jonathon Seidl",
-      "url": "https://jonathonseidl.substack.com/feed",
-      "role": "primary",
-      "http_status": 404,
-      "n_entries": 0,
-      "newest_date": null,
-      "bozo": false,
-      "error": "HTTP 404"
     },
     {
       "source": "Albert Mohler",
@@ -588,34 +493,14 @@
       "stale": false
     },
     {
-      "source": "Gavin Ortlund",
-      "url": "https://truthunites.org/feed/",
+      "source": "Hannah Anderson",
+      "url": "https://hannahanderson.substack.com/feed",
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-05-26",
+      "newest_date": "2026-09-03",
       "bozo": false,
-      "stale": true
-    },
-    {
-      "source": "Patrick Miller",
-      "url": "https://patrickkmiller.substack.com/feed",
-      "role": "primary",
-      "http_status": 404,
-      "n_entries": 0,
-      "newest_date": null,
-      "bozo": false,
-      "error": "HTTP 404"
-    },
-    {
-      "source": "Hannah Anderson",
-      "url": "https://sometimesalight.substack.com/feed",
-      "role": "primary",
-      "http_status": 200,
-      "n_entries": 2,
-      "newest_date": "2023-03-11",
-      "bozo": false,
-      "stale": true
+      "stale": false
     },
     {
       "source": "Aaron Renn",
@@ -806,63 +691,91 @@
       "newest_date": "2026-10-30",
       "bozo": false,
       "stale": false
+    },
+    {
+      "source": "Truth Unites (Gavin Ortlund)",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCtWDnUokOD--s2aFxLT5uVA",
+      "role": "media",
+      "http_status": 200,
+      "n_entries": 15,
+      "newest_date": "2026-10-29",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "The Gospel Coalition (Video)",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQMwm-DeHyFK5VPp6KySR5Q",
+      "role": "media",
+      "http_status": 200,
+      "n_entries": 15,
+      "newest_date": "2026-10-29",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Mere Fidelity",
+      "url": "https://rss.buzzsprout.com/2612792.rss",
+      "role": "media",
+      "http_status": 200,
+      "n_entries": 324,
+      "newest_date": "2026-10-28",
+      "bozo": false,
+      "apple_episode_urls": 50,
+      "stale": false
+    },
+    {
+      "source": "The Russell Moore Show",
+      "url": "https://feeds.megaphone.fm/CHRTDY1120709803",
+      "role": "media",
+      "http_status": 200,
+      "n_entries": 503,
+      "newest_date": "2026-10-28",
+      "bozo": false,
+      "apple_episode_urls": 50,
+      "stale": false
+    },
+    {
+      "source": "BibleProject Podcast",
+      "url": "https://feeds.simplecast.com/3NVmUWZO",
+      "role": "media",
+      "http_status": 200,
+      "n_entries": 547,
+      "newest_date": "2026-10-26",
+      "bozo": false,
+      "apple_episode_urls": 50,
+      "stale": false
+    },
+    {
+      "source": "Gospelbound",
+      "url": "https://feeds.simplecast.com/FSKZVjpz",
+      "role": "media",
+      "http_status": 200,
+      "n_entries": 201,
+      "newest_date": "2026-10-20",
+      "bozo": false,
+      "apple_episode_urls": 50,
+      "stale": false
+    },
+    {
+      "source": "The Holy Post",
+      "url": "https://rss.libsyn.com/shows/40819/destinations/121777.xml",
+      "role": "media",
+      "http_status": 200,
+      "n_entries": 811,
+      "newest_date": "2026-10-28",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Ask Pastor John",
+      "url": "https://feed.desiringgod.org/ask-pastor-john.rss",
+      "role": "media",
+      "http_status": 200,
+      "n_entries": 1000,
+      "newest_date": "2026-10-29",
+      "bozo": false,
+      "stale": false
     }
   ],
-  "zero_streaks": {
-    "Tish Harrison Warren": {
-      "since": "2026-10-30",
-      "last_date": "2026-10-30",
-      "days": 1
-    },
-    "Jake Meador (Mere Orthodoxy)": {
-      "since": "2026-10-30",
-      "last_date": "2026-10-30",
-      "days": 1
-    },
-    "Alan Jacobs": {
-      "since": "2026-10-30",
-      "last_date": "2026-10-30",
-      "days": 1
-    },
-    "Ed Stetzer": {
-      "since": "2026-10-30",
-      "last_date": "2026-10-30",
-      "days": 1
-    },
-    "Sam Allberry": {
-      "since": "2026-10-30",
-      "last_date": "2026-10-30",
-      "days": 1
-    },
-    "Trillia Newbell": {
-      "since": "2026-10-30",
-      "last_date": "2026-10-30",
-      "days": 1
-    },
-    "Tsh Oxenreider": {
-      "since": "2026-10-30",
-      "last_date": "2026-10-30",
-      "days": 1
-    },
-    "Spencer Klavan": {
-      "since": "2026-10-30",
-      "last_date": "2026-10-30",
-      "days": 1
-    },
-    "Diane Langberg": {
-      "since": "2026-10-30",
-      "last_date": "2026-10-30",
-      "days": 1
-    },
-    "Jonathon Seidl": {
-      "since": "2026-10-30",
-      "last_date": "2026-10-30",
-      "days": 1
-    },
-    "Patrick Miller": {
-      "since": "2026-10-30",
-      "last_date": "2026-10-30",
-      "days": 1
-    }
-  }
+  "zero_streaks": {}
 }
