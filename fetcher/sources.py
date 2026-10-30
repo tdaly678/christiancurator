@@ -5,6 +5,19 @@ Add or remove sources here. Each entry is a dict with:
   - name:     human-readable source name
   - url:      RSS feed URL
   - category: broad topic tag (e.g. "theology", "culture", "missions")
+
+Optional keys:
+  - source_type:     "christian" (default) or "world_news"
+  - independent:     True for individual writers (floor + frequency boost)
+  - creates_voices:  False to stop bylines from spawning /voices/ pages
+  - role:            "primary" (default) or "discovery". Discovery items are
+                     fetched and health-logged but never ranked onto the
+                     homepage, digest, or email (aggregators and roundups).
+  - discovery_title_pattern: regex; matching titles from an otherwise
+                     primary source are treated as discovery (e.g. link roundups)
+
+Feed health is logged every run to docs/feed_health.json (see
+fetcher/rss_fetcher.py). Check it before adding or pruning sources.
 """
 
 SOURCES = [
@@ -34,12 +47,35 @@ SOURCES = [
         "category": "culture",
     },
 
-    # ── Tier 1A: Institutional Evangelical Voices ──
+    # ── Religion newsrooms (added 2026-10-30, all verified live that day) ──
+    # Replace the retired AP / NYT / WaPo / BBC religion feeds.
     {
-        "name": "EFCA Blog",
-        "url": "https://blogs.efca.org/feed/",
-        "category": "theology",
+        "name": "Religion News Service",
+        "url": "https://religionnews.com/feed/",
+        "category": "news",
+        "creates_voices": False,  # wire reporters, not voices
     },
+    {
+        "name": "The Roys Report",
+        "url": "https://julieroys.com/feed/",
+        "category": "church life",
+    },
+    {
+        # News wire, not opinion; held at a lower tier in curator/scorer.py.
+        "name": "The Christian Post",
+        "url": "https://www.christianpost.com/rss",
+        "category": "news",
+        "creates_voices": False,
+    },
+    {
+        "name": "ERLC",
+        "url": "https://erlc.com/feed/",
+        "category": "culture",
+    },
+    # TODO(baptist-press): https://www.baptistpress.com/feed/ returns 200 with an
+    # empty channel, and every other feed path (/feed/atom/, /feed/rss2/,
+    # /category/news/feed/, wp-json) is 403 behind their WAF as of 2026-10-30.
+    # Add Baptist Press once a feed URL with items is found.
 
     # ── Theology & Ministry ──
     {
@@ -54,7 +90,7 @@ SOURCES = [
     },
     {
         "name": "Crossway",
-        "url": "https://www.crossway.org/articles/feed/",
+        "url": "https://www.crossway.org/articles/rss/",
         "category": "theology",
     },
 
@@ -82,38 +118,14 @@ SOURCES = [
 
     # ── World News (mainstream outlets — religion + general top news) ──
     {
-        "name": "Associated Press",
-        "url": "https://feeds.apnews.com/rss/apf-topnews",
-        "category": "news",
-        "source_type": "world_news",
-    },
-    {
-        "name": "Associated Press Religion",
-        "url": "https://feeds.apnews.com/rss/apf-Religion",
-        "category": "news",
-        "source_type": "world_news",
-    },
-    {
         "name": "BBC News",
         "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
         "category": "news",
         "source_type": "world_news",
     },
     {
-        "name": "BBC Religion",
-        "url": "https://feeds.bbci.co.uk/news/religion/rss.xml",
-        "category": "news",
-        "source_type": "world_news",
-    },
-    {
         "name": "The New York Times",
         "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-        "category": "news",
-        "source_type": "world_news",
-    },
-    {
-        "name": "The New York Times Religion",
-        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Religion.xml",
         "category": "news",
         "source_type": "world_news",
     },
@@ -126,12 +138,6 @@ SOURCES = [
     {
         "name": "The Guardian",
         "url": "https://www.theguardian.com/world/religion/rss",
-        "category": "news",
-        "source_type": "world_news",
-    },
-    {
-        "name": "Washington Post",
-        "url": "https://feeds.washingtonpost.com/rss/lifestyle/faith",
         "category": "news",
         "source_type": "world_news",
     },
@@ -205,25 +211,14 @@ SOURCES = [
     # Major evangelical scholars and thinkers
     {
         "name": "Russell Moore",
-        "url": "https://russellmoore.substack.com/feed",
+        # Substack went quiet in 2020; his own site is current (verified 2026-10-30)
+        "url": "https://www.russellmoore.com/feed/",
         "category": "culture",
         "independent": True,
     },
     {
         "name": "Scot McKnight",
         "url": "https://scotmcknight.substack.com/feed",
-        "category": "theology",
-        "independent": True,
-    },
-    {
-        "name": "Andy Crouch",
-        "url": "https://andycrouch.substack.com/feed",
-        "category": "culture",
-        "independent": True,
-    },
-    {
-        "name": "Carl Trueman",
-        "url": "https://carltrueman.substack.com/feed",
         "category": "theology",
         "independent": True,
     },
@@ -249,13 +244,6 @@ SOURCES = [
     {
         "name": "Pew Research",
         "url": "https://www.pewresearch.org/religion/feed/",
-        "category": "culture",
-        "independent": False,
-        "creates_voices": False,  # research staff bylines, not voices
-    },
-    {
-        "name": "Barna Group",
-        "url": "https://www.barna.com/feed/",
         "category": "culture",
         "independent": False,
         "creates_voices": False,  # research staff bylines, not voices
@@ -360,12 +348,6 @@ SOURCES = [
         "independent": True,
     },
     {
-        "name": "BibleProject",
-        "url": "https://bibleproject.substack.com/feed",
-        "category": "theology",
-        "independent": True,
-    },
-    {
         "name": "Kate Shellnutt",
         "url": "https://kateshellnutt.substack.com/feed",
         "category": "culture",
@@ -385,14 +367,13 @@ SOURCES = [
         "category": "culture",
     },
     {
-        "name": "Gospel in Life",
-        "url": "https://gospelinlife.com/feed/",
-        "category": "theology",
-    },
-    {
         "name": "The Aquila Report",
         "url": "https://theaquilareport.com/feed/",
         "category": "theology",
+        # Repost aggregator: credit belongs to the original publisher. Its item
+        # pages sit behind a Cloudflare challenge, so originals can't be
+        # resolved automatically yet. Kept for discovery, never ranked.
+        "role": "discovery",
     },
 
     # ── New Additions: Black Evangelical Voices ──
@@ -417,12 +398,6 @@ SOURCES = [
     },
 
     # ── New Additions: Reformed Voices ──
-    {
-        "name": "Kevin DeYoung",
-        "url": "https://www.thegospelcoalition.org/blogs/kevin-deyoung/feed/",
-        "category": "theology",
-        "independent": True,
-    },
     {
         "name": "Gavin Ortlund",
         "url": "https://truthunites.org/feed/",
@@ -494,6 +469,11 @@ SOURCES = [
         "url": "https://www.challies.com/feed/",
         "category": "theology",
         "independent": True,
+        # Daily link roundups and Kindle deal lists are discovery material;
+        # only his original essays may rank.
+        "discovery_title_pattern": (
+            r"A La Carte|Kindle|Deals|Free Stuff Fridays|This Week in Christian Books|New and Notable Christian Books"
+        ),
     },
 
     # Pastors & pastoral theology

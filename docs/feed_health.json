@@ -1,0 +1,868 @@
+{
+  "run_at": "2026-10-30T17:55:40+00:00",
+  "sources": [
+    {
+      "source": "The Gospel Coalition",
+      "url": "https://www.thegospelcoalition.org/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 100,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Christianity Today",
+      "url": "https://www.christianitytoday.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 10,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Desiring God",
+      "url": "https://feed.desiringgod.org/articles-by-desiring-god.rss",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 640,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "World Magazine",
+      "url": "https://wng.org/feeds/rss/topics.rss",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 10,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Relevant Magazine",
+      "url": "https://relevantmagazine.com/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 50,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Religion News Service",
+      "url": "https://religionnews.com/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 10,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "The Roys Report",
+      "url": "https://julieroys.com/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 100,
+      "newest_date": "2026-10-29",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "The Christian Post",
+      "url": "https://www.christianpost.com/rss",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 30,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "ERLC",
+      "url": "https://erlc.com/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 10,
+      "newest_date": "2026-10-29",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Ligonier Ministries",
+      "url": "https://www.ligonier.org/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 42,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "user_agent": "reader",
+      "stale": false
+    },
+    {
+      "source": "9Marks",
+      "url": "https://www.9marks.org/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 50,
+      "newest_date": "2026-10-27",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Crossway",
+      "url": "https://www.crossway.org/articles/rss/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 15,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "American Reformer",
+      "url": "https://americanreformer.org/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "First Things",
+      "url": "https://www.firstthings.com/rss",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 15,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Mere Orthodoxy",
+      "url": "https://mereorthodoxy.com/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 15,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Reformation21",
+      "url": "https://www.reformation21.org/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 10,
+      "newest_date": "2026-10-26",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "BBC News",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 37,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "The New York Times",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 56,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Wall Street Journal",
+      "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 72,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/religion/rss",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Jen Wilkin",
+      "url": "https://www.jenwilkin.net/blog?format=rss",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2021-12-17",
+      "bozo": false,
+      "stale": true
+    },
+    {
+      "source": "Kyle Worley",
+      "url": "https://sacredslang.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-25",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Phylicia Masonheimer",
+      "url": "https://phyliciamasonheimer.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Laura Wifler",
+      "url": "https://laurawifler.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-22",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Karen Swallow Prior",
+      "url": "https://karenswallowprior.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-27",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Tish Harrison Warren",
+      "url": "https://tishharrisonwarren.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 0,
+      "newest_date": null,
+      "bozo": false
+    },
+    {
+      "source": "Jake Meador (Mere Orthodoxy)",
+      "url": "https://jakemeador.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 0,
+      "newest_date": null,
+      "bozo": false
+    },
+    {
+      "source": "Samuel James",
+      "url": "https://www.digitalliturgies.net/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Alan Jacobs",
+      "url": "https://ayjay.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 0,
+      "newest_date": null,
+      "bozo": false
+    },
+    {
+      "source": "Carey Nieuwhof",
+      "url": "https://careynieuwhof.com/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 12,
+      "newest_date": "2026-10-29",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Russell Moore",
+      "url": "https://www.russellmoore.com/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 10,
+      "newest_date": "2026-10-28",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Scot McKnight",
+      "url": "https://scotmcknight.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Matthew Lee Anderson",
+      "url": "https://matthewleeanderson.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "O. Alan Noble",
+      "url": "https://newsletter.oalannoble.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Ryan Burge",
+      "url": "https://www.graphsaboutreligion.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-29",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Pew Research",
+      "url": "https://www.pewresearch.org/religion/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 100,
+      "newest_date": "2026-10-29",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Lifeway Research",
+      "url": "https://lifewayresearch.com/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 10,
+      "newest_date": "2026-10-29",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Ed Stetzer",
+      "url": "https://edstetzer.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 0,
+      "newest_date": null,
+      "bozo": false
+    },
+    {
+      "source": "Sam Allberry",
+      "url": "https://samallberry.substack.com/feed",
+      "role": "primary",
+      "http_status": 404,
+      "n_entries": 0,
+      "newest_date": null,
+      "bozo": false,
+      "error": "HTTP 404"
+    },
+    {
+      "source": "Trillia Newbell",
+      "url": "https://trillianewbell.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 0,
+      "newest_date": null,
+      "bozo": true,
+      "error": "parse error: <unknown>:191:36: not well-formed (invalid token)"
+    },
+    {
+      "source": "Joy Clarkson",
+      "url": "https://joyclarkson.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-24",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Mike Cosper",
+      "url": "https://mikecosper.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-09-18",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Bethel McGrew",
+      "url": "https://www.furtherup.net/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-28",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Bonnie Kristian",
+      "url": "https://bonniekristian.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-28",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Aimee Byrd",
+      "url": "https://aimeebyrd.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-09-03",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Nadya Williams",
+      "url": "https://nadyawilliams.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-24",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Daniel K. Williams",
+      "url": "https://danielkwilliams.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-29",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Tsh Oxenreider",
+      "url": "https://tshoxenreider.substack.com/feed",
+      "role": "primary",
+      "http_status": 404,
+      "n_entries": 0,
+      "newest_date": null,
+      "bozo": false,
+      "error": "HTTP 404"
+    },
+    {
+      "source": "Gary Thomas",
+      "url": "https://garythomas.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 1,
+      "newest_date": "2021-07-22",
+      "bozo": false,
+      "stale": true
+    },
+    {
+      "source": "Spencer Klavan",
+      "url": "https://spencerklavan.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 0,
+      "newest_date": null,
+      "bozo": true,
+      "error": "parse error: <unknown>:191:36: not well-formed (invalid token)"
+    },
+    {
+      "source": "Diane Langberg",
+      "url": "https://dianelangberg.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 0,
+      "newest_date": null,
+      "bozo": false
+    },
+    {
+      "source": "Timothy Paul Jones",
+      "url": "https://timothypauljones.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-20",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Kate Shellnutt",
+      "url": "https://kateshellnutt.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 13,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Jonathon Seidl",
+      "url": "https://jonathonseidl.substack.com/feed",
+      "role": "primary",
+      "http_status": 404,
+      "n_entries": 0,
+      "newest_date": null,
+      "bozo": false,
+      "error": "HTTP 404"
+    },
+    {
+      "source": "Albert Mohler",
+      "url": "https://albertmohler.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 12,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "The Aquila Report",
+      "url": "https://theaquilareport.com/feed/",
+      "role": "discovery",
+      "http_status": 200,
+      "n_entries": 10,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Jemar Tisby",
+      "url": "https://jemartisby.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Faithfully Magazine",
+      "url": "https://faithfullymagazine.com/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 4,
+      "newest_date": "2026-10-03",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Sean McDowell",
+      "url": "https://seanmcdowell.org/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 6,
+      "newest_date": "2026-10-27",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Gavin Ortlund",
+      "url": "https://truthunites.org/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 10,
+      "newest_date": "2026-05-26",
+      "bozo": false,
+      "stale": true
+    },
+    {
+      "source": "Patrick Miller",
+      "url": "https://patrickkmiller.substack.com/feed",
+      "role": "primary",
+      "http_status": 404,
+      "n_entries": 0,
+      "newest_date": null,
+      "bozo": false,
+      "error": "HTTP 404"
+    },
+    {
+      "source": "Hannah Anderson",
+      "url": "https://sometimesalight.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 2,
+      "newest_date": "2023-03-11",
+      "bozo": false,
+      "stale": true
+    },
+    {
+      "source": "Aaron Renn",
+      "url": "https://www.aaronrenn.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Stephen McAlpine",
+      "url": "https://stephenmcalpine.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-26",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Chris Martin",
+      "url": "https://www.chrismartin.fyi/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-15",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Daniel Darling",
+      "url": "https://dandarling.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-26",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Katelyn Beaty",
+      "url": "https://katelynbeaty.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-23",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Tim Challies",
+      "url": "https://www.challies.com/feed/",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Wyatt Graham",
+      "url": "https://www.wyattgraham.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-28",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Tom Sugimura",
+      "url": "https://tomsugi.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-23",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "J.A. Medders",
+      "url": "https://www.spiritualtheology.net/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-27",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Mitchell Chase",
+      "url": "https://mitchchase.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-27",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Michael Bird",
+      "url": "https://michaelfbird.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Nijay Gupta",
+      "url": "https://nijaykgupta.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Carmen Joy Imes",
+      "url": "https://carmenjoyimes.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-25",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Beth Felker Jones",
+      "url": "https://bethfelkerjones.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-12",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Thomas Kidd",
+      "url": "https://thomaskidd.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-23",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Chris Gehrz",
+      "url": "https://chrisgehrz.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-29",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Emily P. Freeman",
+      "url": "https://emilypfreeman.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-22",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "A.J. Swoboda",
+      "url": "https://ajswoboda.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-29",
+      "bozo": false,
+      "stale": false
+    },
+    {
+      "source": "Nicholas McDonald",
+      "url": "https://thebardowl.substack.com/feed",
+      "role": "primary",
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-30",
+      "bozo": false,
+      "stale": false
+    }
+  ],
+  "zero_streaks": {
+    "Tish Harrison Warren": {
+      "since": "2026-10-30",
+      "last_date": "2026-10-30",
+      "days": 1
+    },
+    "Jake Meador (Mere Orthodoxy)": {
+      "since": "2026-10-30",
+      "last_date": "2026-10-30",
+      "days": 1
+    },
+    "Alan Jacobs": {
+      "since": "2026-10-30",
+      "last_date": "2026-10-30",
+      "days": 1
+    },
+    "Ed Stetzer": {
+      "since": "2026-10-30",
+      "last_date": "2026-10-30",
+      "days": 1
+    },
+    "Sam Allberry": {
+      "since": "2026-10-30",
+      "last_date": "2026-10-30",
+      "days": 1
+    },
+    "Trillia Newbell": {
+      "since": "2026-10-30",
+      "last_date": "2026-10-30",
+      "days": 1
+    },
+    "Tsh Oxenreider": {
+      "since": "2026-10-30",
+      "last_date": "2026-10-30",
+      "days": 1
+    },
+    "Spencer Klavan": {
+      "since": "2026-10-30",
+      "last_date": "2026-10-30",
+      "days": 1
+    },
+    "Diane Langberg": {
+      "since": "2026-10-30",
+      "last_date": "2026-10-30",
+      "days": 1
+    },
+    "Jonathon Seidl": {
+      "since": "2026-10-30",
+      "last_date": "2026-10-30",
+      "days": 1
+    },
+    "Patrick Miller": {
+      "since": "2026-10-30",
+      "last_date": "2026-10-30",
+      "days": 1
+    }
+  }
+}

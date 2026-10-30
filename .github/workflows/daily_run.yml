@@ -75,7 +75,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash origin main
-          git add docs/index.html docs/topics/ docs/digest/ docs/yesterday.json docs/email_draft.html docs/article_history.json docs/research_articles.json docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-topics.xml docs/sitemap-voices.xml docs/sitemap-daily.xml docs/sitemap-archive.xml docs/archive/ docs/daily/ docs/_pagefind/ docs/voices/ docs/voices_data.json docs/spotlight_topic_log.json
+          git add docs/index.html docs/topics/ docs/digest/ docs/yesterday.json docs/email_draft.html docs/article_history.json docs/research_articles.json docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-topics.xml docs/sitemap-voices.xml docs/sitemap-daily.xml docs/sitemap-archive.xml docs/archive/ docs/daily/ docs/_pagefind/ docs/voices/ docs/voices_data.json docs/spotlight_topic_log.json docs/feed_health.json
           git diff --staged --quiet || git commit -m "chore: daily curator run $(date -u +%Y-%m-%d)"
           git push origin main
 
@@ -87,6 +87,13 @@ jobs:
         if: success()
         run: python3 scripts/indexnow_ping.py
         continue-on-error: true
+
+      - name: Fail run if a feed has been empty for 7+ days
+        # docs/feed_health.json carries per-source zero-item streaks across
+        # runs (it is committed above). Like the AI check, this runs after the
+        # commit so the site still publishes.
+        if: always()
+        run: python3 scripts/check_feed_health.py
 
       - name: Fail run if AI steps degraded
         # Runs last so the site is already committed. A non-zero exit here marks
