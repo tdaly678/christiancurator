@@ -103,8 +103,21 @@ to a separate Worth Your Time lane.
   trending, stale_source, opposing_views, independent_floor) is capped at `MAX_TOTAL_BOOST = 2.0` per article.
   Penalties are uncapped. `INDEPENDENT_FLOOR_BOOST` dropped from 2.0 to 1.0. The used budget is `boost_total`.
 - `curator/lanes.py` `select_worth_your_time()` returns the top 5 by depth (min depth 6, one per source), excluding
-  the front page and Other Headlines URLs. `render_html()` passes it to `template.html` as `worth_your_time`; the
-  template does not render it yet (Wave 2).
+  URLs already placed in the importance lane. Rendered on the homepage and email since Wave 2, and the picks are
+  written to `article_history.json` so the depth lane does not repeat.
+
+### Homepage v2 (P1 Wave 2, 2026-10-30)
+`frontend/layout.py` `build_homepage_layout()` decides every homepage placement; `render_html()` renders it, returns
+it, and `main.py` passes it to `send_email()` so page and email agree. Each URL appears once. Order on the page:
+1. Masthead strip: date, `Updated H:MM AM ET` (actual render time), one-line Pulse (first sentence, max 20 words)
+2. Lead + 3 subleads: top 4 by importance, one per source, not previously shown
+3. Board: three columns (News / Commentary & Debate / Church & Theology), 22 each, max 3 per source per column.
+   `board_column()` routes by world_news source, perspective `news`, or tags news/data/politics, then
+   theology/church life/missions/devotional/prayer/apologetics tags or a theology/devotional source; else commentary
+4. The Debate: Claude point/counterpoint pairings, else scorer `opposing_pair` supportive vs. critical; omitted when none
+5. Worth Your Time (depth lane), 6. Research & Data (`docs/research_articles.json`), then signup, then the 70-topic grid
+Headline clicks are tracked by one delegated gtag listener reading `data-pos` / `data-src`. Sample render: ~76 outbound
+article links. Only the top 20 by score plus Worth Your Time are logged to history; board items are not.
 - Tags and personas are validated against `curator/vocab.py` allowlists (with an alias map); unknowns are dropped
   and logged once per run.
 - `curator/dedup.py` collapses cross-feed duplicates before ranking: canonical URL (https, no www, no tracking params,
@@ -205,18 +218,19 @@ The digest page shows "Yesterday's top reads" below today's headlines. `save_yes
 
 ## Email Design (Updated October 2026)
 Daily email via Brevo API, built in `curator/email_sender.py` after `render_html()` (which assigns `debate_topics`).
-Structure:
+Structure mirrors homepage v2 (same `layout` dict):
 1. Date line + "Forwarded to you? Subscribe Free" banner
 2. Masthead + byline: *"For curious Christians seeking clarity on the questions that matter most"*
-3. **Today's Top Stories**: first 5 of the homepage's diversified front-page cards
+3. **The Lead**: lead + 3 subleads
 4. **The Daily Pulse**: `daily_summary["paragraphs_html"]` plus a link to `/daily/YYYY-MM-DD/`; omitted when the summary is missing or empty
-5. **More Headlines**: the other front-page cards + "Other Headlines", then up to 3 World News items
-6. CTA to the homepage, then the **Go Deeper** spotlight topic (rotation logged in `docs/spotlight_topic_log.json`, no repeats for 70 days)
-7. Forward nudge + footer
+5. **Board**: News, Commentary & Debate, Church & Theology, 6 headlines each
+6. **The Debate** (when pairs exist), **Worth Your Time**
+7. CTA to the homepage, then the **Go Deeper** spotlight topic (rotation logged in `docs/spotlight_topic_log.json`, no repeats for 70 days)
+8. Forward nudge + footer
 
 Every headline links **directly to the article URL**. (Homepage anchors `/#a<hash>` were dropped in October 2026 because
 the next day's re-render removes them; if an article has no URL the link falls back to `/archive/YYYY-MM-DD/`.)
-Subject line: `{lead headline} · + N more stories`, lead truncated at 70 characters (`build_subject()`).
+Subject line: `{lead headline} · + N more stories` (N = other article links in the email), lead truncated at 70 characters (`build_subject()`).
 
 ## Topic Pages — Structure (70 topics as of September 2026)
 
