@@ -18,7 +18,6 @@ the homepage template.html applies to its article cards, so a click on an
 email headline lands at that exact article on the live site.
 """
 
-import hashlib
 import os
 import json
 import requests
@@ -92,13 +91,33 @@ def _get_spotlight_topic() -> dict | None:
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
 
-def _article_anchor_url(url: str) -> str:
-    """Return the homepage URL anchored to this article — matches the id
-    applied in frontend/template.html via the `article_anchor` Jinja filter."""
-    if not url:
-        return "https://www.christiancurator.com/"
-    anchor = "a" + hashlib.md5(url.encode()).hexdigest()[:8]
-    return f"https://www.christiancurator.com/#{anchor}"
+def _article_link(url: str) -> str:
+    """Link straight to the article.
+
+    Emails used to link to homepage anchors (/#a<hash>), but the next morning's
+    re-render removes those anchors, so late or forwarded opens landed on a
+    different day's page. If an article has no URL, fall back to today's
+    dated archive page, which never changes.
+    """
+    if url:
+        return url
+    return f"https://www.christiancurator.com/archive/{date.today().isoformat()}/"
+
+
+SUBJECT_LEAD_MAX = 70  # characters of lead headline before truncating
+
+
+def build_subject(lead_title: str, more_count: int) -> str:
+    """'{Lead headline} · + N more stories', kept short enough for mobile."""
+    lead = " ".join((lead_title or "").split())
+    if not lead:
+        return f"Christian Curator · {date.today().strftime('%B %-d, %Y')}"
+    if len(lead) > SUBJECT_LEAD_MAX:
+        lead = lead[:SUBJECT_LEAD_MAX].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+    if more_count <= 0:
+        return lead
+    noun = "story" if more_count == 1 else "stories"
+    return f"{lead} · + {more_count} more {noun}"
 
 
 def _split_homepage_articles(articles: list[dict]) -> tuple[list[dict], list[dict], list[dict]]:
@@ -167,7 +186,7 @@ def _render_top_stories(top5: list[dict]) -> str:
             if author and author.lower() != source.lower()
             else source
         )
-        href   = _article_anchor_url(url)
+        href   = _article_link(url)
         border = "" if i == len(top5) - 1 else "border-bottom:1px solid #eceae6;"
 
         rows += f"""
@@ -195,8 +214,7 @@ def _render_top_stories(top5: list[dict]) -> str:
 def _render_more_headlines(remaining: list[dict], world_news: list[dict]) -> str:
     """Compact list of all remaining homepage headlines, plus world news.
 
-    Every entry links to the homepage anchor so the click lands at the
-    article's spot on christiancurator.com (just like the top stories do).
+    Every entry links straight to the article, like the top stories do.
     """
     if not remaining and not world_news:
         return ""
@@ -205,7 +223,7 @@ def _render_more_headlines(remaining: list[dict], world_news: list[dict]) -> str
         title  = a.get("rewritten_title") or a.get("title") or ""
         source = (a.get("source_name") or "").strip()
         url    = a.get("url") or ""
-        href   = _article_anchor_url(url)
+        href   = _article_link(url)
         border = "" if last else "border-bottom:1px solid #eceae6;"
         return f"""
       <div style="padding:10px 0;{border}">
@@ -247,6 +265,34 @@ def _render_more_headlines(remaining: list[dict], world_news: list[dict]) -> str
       </div>
       {main_rows}
       {world_section}
+    </div>"""
+
+
+def _render_pulse(daily_summary: dict | None) -> str:
+    """The Daily Pulse paragraphs, or "" when the summary is missing/empty."""
+    if not daily_summary:
+        return ""
+    paragraphs = [p for p in (daily_summary.get("paragraphs_html") or []) if p and p.strip()]
+    if not paragraphs:
+        return ""
+    slug = daily_summary.get("slug") or date.today().isoformat()
+    body = "".join(
+        f'<p style="margin:0 0 12px;font-family:Georgia,\'Times New Roman\',serif;'
+        f'font-size:15px;line-height:1.6;color:#333;">{p}</p>'
+        for p in paragraphs
+    )
+    return f"""
+    <div style="padding:24px 28px 0;">
+      <div style="font-size:9px;font-weight:700;text-transform:uppercase;
+                  letter-spacing:0.18em;color:#888;border-bottom:2.5px solid #1a1a1a;
+                  padding-bottom:8px;margin-bottom:14px;">
+        The Daily Pulse
+      </div>
+      {body}
+      <a href="https://www.christiancurator.com/daily/{slug}/"
+         style="font-size:12px;color:#2C4A2E;font-weight:700;text-decoration:none;">
+        Read today&rsquo;s Pulse on the site &rarr;
+      </a>
     </div>"""
 
 
@@ -352,6 +398,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
     if preheader:
         preheader += " &nbsp;·&nbsp; and more."
 
+    pulse_html          = _render_pulse(daily_summary)
     top_stories_html    = _render_top_stories(top5)
     more_headlines_html = _render_more_headlines(remaining, world_news)
     cta_html            = _render_cta(non_world_count)
@@ -401,6 +448,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
     </div>
 
     {top_stories_html}
+    {pulse_html}
     {more_headlines_html}
     {cta_html}
     {go_deeper_html}
@@ -458,7 +506,10 @@ def send_email(articles: list[dict], yesterday_articles: list[dict] = None,
         articles = articles.get("articles", [])
 
     today        = date.today().strftime("%B %-d, %Y")
-    subject      = f"Christian Curator — {today}"
+    top5, remaining, world_news = _split_homepage_articles(articles)
+    lead         = (top5[0].get("rewritten_title") or top5[0].get("title", "")) if top5 else ""
+    more_count   = len(top5) - 1 + len(remaining) + len(world_news) if top5 else 0
+    subject      = build_subject(lead, more_count)
     html_content = build_email_html(articles, yesterday_articles,
                                     daily_summary=daily_summary,
                                     research_articles=research_articles)
