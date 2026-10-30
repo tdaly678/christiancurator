@@ -1,26 +1,31 @@
 """
 email_sender.py: builds and sends the daily email via Brevo API.
 
-Email structure mirrors homepage v2 (frontend/layout.py, P1 Wave 2):
-  Preheader     (invisible inbox preview: lead + two subleads)
+Email structure follows homepage v2 (frontend/layout.py, P1 Wave 2), trimmed
+for the inbox:
+  Preheader     (invisible inbox preview: first Pulse sentence, else two subleads)
   Top bar       (date · Forwarded? Subscribe)
   Masthead      (Christian Curator wordmark + tagline)
   The Lead      (lead story + three subleads, by importance)
-  Daily Pulse   (omitted when the summary is missing)
-  Board         (News / Commentary & Debate / Church & Theology, 6 each)
-  The Debate    (point/counterpoint pairs, omitted when none)
-  Worth Your Time (depth lane)
-  Watch and Listen (videos and podcasts from the media feeds, omitted when none)
-  CTA box, Go Deeper (rotating topic spotlight), forward nudge, footer
+  Daily Pulse   (plain lead + subleads fallback when the Claude summary failed)
+  The Debate    (Claude point/counterpoint pairs only, omitted when none)
+  Board         (News / Commentary & Debate / Church & Theology, 3 each)
+  CTA box       (see all of today's headlines on the site)
+  Worth Your Time (depth lane, 3 picks)
+  Watch and Listen (2 picks: a video and a podcast when both exist)
+  Go Deeper (rotating topic spotlight), forward nudge, footer
 
-Every headline links straight to the article URL.
+Every headline links straight to the article URL. Links to christiancurator.com
+carry UTM parameters (utm_content = section); publisher links stay clean.
 """
 
 import html
 import os
 import json
+import re
 import requests
 from datetime import date, timedelta
+from urllib.parse import urlsplit, urlunsplit
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -90,6 +95,34 @@ def _get_spotlight_topic() -> dict | None:
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
 
+SITE_URL = "https://www.christiancurator.com"
+
+
+def _site_link(url: str, section: str) -> str:
+    """Add email UTM parameters to a christiancurator.com URL.
+
+    Publisher URLs are returned unchanged: Brevo's click tracking covers
+    those, and their owners should see a clean link.
+    """
+    parts = urlsplit(url)
+    host = (parts.hostname or "").lower()
+    if host not in ("christiancurator.com", "www.christiancurator.com"):
+        return url
+    utm = (f"utm_source=cc_email&utm_medium=email"
+           f"&utm_campaign=daily_{date.today().isoformat()}&utm_content={section}")
+    query = f"{parts.query}&{utm}" if parts.query else utm
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, query, parts.fragment))
+
+
+def _tag_site_hrefs(fragment: str, section: str) -> str:
+    """Apply _site_link() to every href inside a block of HTML (Pulse paragraphs)."""
+    def _tag(m):
+        url = html.unescape(m.group(1))
+        tagged = _site_link(url, section)
+        return m.group(0) if tagged == url else f'href="{tagged}"'
+    return re.sub(r'href="([^"]+)"', _tag, fragment)
+
+
 def _article_link(url: str) -> str:
     """Link straight to the article.
 
@@ -100,26 +133,94 @@ def _article_link(url: str) -> str:
     """
     if url:
         return url
-    return f"https://www.christiancurator.com/archive/{date.today().isoformat()}/"
+    return _site_link(f"{SITE_URL}/archive/{date.today().isoformat()}/", "archive")
 
 
-SUBJECT_LEAD_MAX = 70  # characters of lead headline before truncating
+def _clip(text: str, limit: int) -> str:
+    """Collapse whitespace and cut to `limit` characters on a word boundary."""
+    text = " ".join((text or "").split())
+    if len(text) <= limit:
+        return text
+    return text[:limit - 1].rsplit(" ", 1)[0].rstrip(",;:") + "…"
 
 
-def build_subject(lead_title: str, more_count: int) -> str:
-    """'{Lead headline} · + N more stories', kept short enough for mobile."""
-    lead = " ".join((lead_title or "").split())
+SUBJECT_MAX = 60    # mobile inboxes show about 40 to 60 characters
+PREHEADER_MAX = 90
+
+
+def build_subject(lead_title: str) -> str:
+    """The lead headline alone, cut to 60 characters on a word boundary.
+
+    No story count: it used mobile characters and signalled volume, not value.
+    """
+    lead = _clip(lead_title, SUBJECT_MAX)
     if not lead:
         return f"Christian Curator · {date.today().strftime('%B %-d, %Y')}"
-    if len(lead) > SUBJECT_LEAD_MAX:
-        lead = lead[:SUBJECT_LEAD_MAX].rsplit(" ", 1)[0].rstrip(",;:") + "…"
-    if more_count <= 0:
-        return lead
-    noun = "story" if more_count == 1 else "stories"
-    return f"{lead} · + {more_count} more {noun}"
+    return lead
 
 
-EMAIL_BOARD_PER_COLUMN = 6  # headlines per board section in the email
+def build_preheader(layout: dict, daily_summary: dict | None) -> str:
+    """Inbox preview line (plain text). The subject already shows the lead,
+    so this is the first Pulse sentence, else 'Also: {sublead 1} | {sublead 2}'.
+    """
+    from frontend.layout import pulse_line
+    if daily_summary and not daily_summary.get("fallback"):
+        sentence = pulse_line(daily_summary, max_words=200)
+        if sentence:
+            return _clip(sentence, PREHEADER_MAX)
+    subs = [_clip(a.get("rewritten_title") or a.get("title") or "", 60)
+            for a in layout.get("subleads", [])[:2]]
+    subs = [t for t in subs if t]
+    return f"Also: {' | '.join(subs)}" if subs else ""
+
+
+def fallback_pulse(layout: dict) -> dict | None:
+    """A plain Pulse built from the lead block, for days the Claude summary
+    failed, so the email never opens straight into headlines."""
+    lead = layout.get("lead")
+    if not lead:
+        return None
+    def _t(a):
+        return html.escape(a.get("rewritten_title") or a.get("title") or "", quote=False)
+    text = f"Today&rsquo;s lead: {_t(lead)}"
+    if lead.get("source_name"):
+        text += f" ({html.escape(lead['source_name'], quote=False)})"
+    text += "."
+    subs = [_t(a) for a in layout.get("subleads", [])[:2] if _t(a)]
+    if subs:
+        text += f" Also leading: {' and '.join(subs)}."
+    return {"paragraphs_html": [text], "fallback": True}
+
+
+# Email-only caps; the homepage layout keeps its own sizes.
+EMAIL_BOARD_PER_COLUMN = 3  # headlines per board section
+EMAIL_WYT_MAX          = 3  # Worth Your Time picks
+EMAIL_WATCH_LISTEN_MAX = 2  # Watch and Listen picks
+
+
+def _email_watch_listen(picks: list[dict]) -> list[dict]:
+    """First pick, plus the first pick of the other format when there is one."""
+    if len(picks) <= EMAIL_WATCH_LISTEN_MAX:
+        return picks
+    first = picks[0]
+    other = next((a for a in picks[1:] if a.get("media_format") != first.get("media_format")),
+                 picks[1])
+    return [first, other]
+
+
+def _email_debate(debates: list[dict]) -> list[dict]:
+    """Only Claude point/counterpoint pairs (validated in build_homepage_layout),
+    and only with both theses when the pairing recorded them. The scorer's
+    Pro/Con fallback is fine on the page but costs trust in an inbox."""
+    keep = []
+    for d in debates:
+        if d.get("kind") != "claude":
+            continue
+        if ("thesis_a" in d or "thesis_b" in d) and not (
+                (d.get("thesis_a") or "").strip() and (d.get("thesis_b") or "").strip()):
+            continue
+        keep.append(d)
+    return keep
 
 
 def _email_layout(articles: list[dict], research_articles: list[dict] = None,
@@ -137,17 +238,10 @@ def _email_layout(articles: list[dict], research_articles: list[dict] = None,
         **layout,
         "board": [{**col, "articles": col["articles"][:EMAIL_BOARD_PER_COLUMN]}
                   for col in layout.get("board", [])],
+        "debate": _email_debate(layout.get("debate") or []),
+        "worth_your_time": (layout.get("worth_your_time") or [])[:EMAIL_WYT_MAX],
+        "watch_listen": _email_watch_listen(layout.get("watch_listen") or []),
     }
-
-
-def _email_headline_count(layout: dict) -> int:
-    """Article links in the email body, for the subject's '+ N more stories'."""
-    n = len(layout.get("subleads", []))
-    n += sum(len(c["articles"]) for c in layout.get("board", []))
-    n += 2 * len(layout.get("debate", []))
-    n += len(layout.get("worth_your_time", []))
-    n += len(layout.get("watch_listen", []))
-    return n
 
 
 # ── Section renderers ──────────────────────────────────────────────────────────
@@ -309,9 +403,15 @@ def _render_pulse(daily_summary: dict | None) -> str:
     slug = daily_summary.get("slug") or date.today().isoformat()
     body = "".join(
         f'<p style="margin:0 0 12px;font-family:Georgia,\'Times New Roman\',serif;'
-        f'font-size:15px;line-height:1.6;color:#333;">{p}</p>'
+        f'font-size:15px;line-height:1.6;color:#333;">{_tag_site_hrefs(p, "pulse")}</p>'
         for p in paragraphs
     )
+    # The fallback Pulse has no /daily/ page behind it.
+    more = "" if daily_summary.get("fallback") else f"""
+      <a href="{_site_link(f"{SITE_URL}/daily/{slug}/", "pulse")}"
+         style="font-size:12px;color:#2C4A2E;font-weight:700;text-decoration:none;">
+        Read today&rsquo;s Pulse on the site &rarr;
+      </a>"""
     return f"""
     <div style="padding:24px 28px 0;">
       <div style="font-size:9px;font-weight:700;text-transform:uppercase;
@@ -319,33 +419,30 @@ def _render_pulse(daily_summary: dict | None) -> str:
                   padding-bottom:8px;margin-bottom:14px;">
         The Daily Pulse
       </div>
-      {body}
-      <a href="https://www.christiancurator.com/daily/{slug}/"
-         style="font-size:12px;color:#2C4A2E;font-weight:700;text-decoration:none;">
-        Read today&rsquo;s Pulse on the site &rarr;
-      </a>
+      {body}{more}
     </div>"""
 
 
-def _render_cta(non_world_count: int) -> str:
-    """CTA box — invites readers to the live site for full context + commentary."""
+def _render_cta() -> str:
+    """Primary CTA, right below the board: the email shows a few headlines per
+    section, the front page has the rest."""
     return f"""
     <div style="padding:24px 28px 0;">
       <div style="background:#f3f1ed;border:1px solid #e0ddd8;border-radius:6px;
                   padding:22px 20px;text-align:center;">
         <div style="font-size:12px;color:#888;margin-bottom:6px;letter-spacing:0.04em;
                     text-transform:uppercase;font-weight:600;">
-          Read on the site for full context
+          The email has the top few
         </div>
         <div style="font-family:Georgia,'Times New Roman',serif;font-size:18px;
                     font-weight:600;color:#1a1a1a;line-height:1.3;margin-bottom:18px;">
           Theology &nbsp;·&nbsp; Church Life &nbsp;·&nbsp; Culture &nbsp;·&nbsp; World News
         </div>
-        <a href="https://www.christiancurator.com/"
+        <a href="{_site_link(f"{SITE_URL}/", "cta")}"
            style="display:inline-block;background:#2C4A2E;color:#fff;
                   font-size:14px;font-weight:700;padding:13px 32px;
                   border-radius:4px;text-decoration:none;letter-spacing:0.03em;">
-          Read today&rsquo;s digest &rarr;
+          See all of today&rsquo;s headlines on the front page &rarr;
         </a>
       </div>
     </div>"""
@@ -361,7 +458,7 @@ def _render_go_deeper(topic: dict) -> str:
     category = topic.get("category", "")
     question = topic.get("hook", "")
     summary  = topic.get("summary") or topic.get("hook", "")
-    url      = f"https://www.christiancurator.com/topics/{slug}/"
+    url      = _site_link(f"{SITE_URL}/topics/{slug}/", "go_deeper")
 
     return f"""
     <div style="padding:28px 28px 0;">
@@ -414,18 +511,17 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
 
     today_long = date.today().strftime("%A, %B %-d, %Y")
 
-    non_world_count  = len([a for a in articles if a.get("source_type") != "world_news"])
     spotlight_topic  = _get_spotlight_topic()
 
-    # Same picks as the homepage (frontend/layout.py), board trimmed for email.
+    # Same picks as the homepage (frontend/layout.py), trimmed for email.
     layout = _email_layout(articles, research_articles, layout)
 
-    # Preheader: lead and first two subleads
-    top = ([layout["lead"]] if layout.get("lead") else []) + layout.get("subleads", [])[:2]
-    preheader = " &nbsp;·&nbsp; ".join(
-        t for t in (a.get("rewritten_title") or a.get("title", "") for a in top) if t)
-    if preheader:
-        preheader += " &nbsp;·&nbsp; and more."
+    preheader = html.escape(build_preheader(layout, daily_summary), quote=False)
+
+    # Never open straight into headlines: if the Claude Pulse is missing,
+    # use the plain lead + subleads version.
+    if not _render_pulse(daily_summary):
+        daily_summary = fallback_pulse(layout)
 
     lead_html           = _render_lead(layout)
     pulse_html          = _render_pulse(daily_summary)
@@ -433,7 +529,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
     debate_html         = _render_debate(layout)
     wyt_html            = _render_worth_your_time(layout)
     watch_listen_html   = _render_watch_listen(layout)
-    cta_html            = _render_cta(non_world_count)
+    cta_html            = _render_cta()
     go_deeper_html      = _render_go_deeper(spotlight_topic)
 
     return f"""<!DOCTYPE html>
@@ -457,7 +553,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
       </div>
       <div style="display:table-cell;text-align:right;vertical-align:middle;">
         <span style="font-size:11px;color:#aaa;">Forwarded to you?&nbsp;</span>
-        <a href="https://www.christiancurator.com/#cc-email-box"
+        <a href="{_site_link(f"{SITE_URL}/#cc-email-box", "subscribe")}"
            style="background:#2C4A2E;color:#fff;font-size:11px;font-weight:700;
                   padding:4px 12px;border-radius:3px;text-decoration:none;
                   display:inline-block;letter-spacing:0.04em;">
@@ -467,7 +563,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
     </div>
 
     <div style="text-align:center;padding:8px 28px 18px;border-bottom:2.5px solid #1a1a1a;margin:0 28px;">
-      <a href="https://www.christiancurator.com/" style="text-decoration:none;">
+      <a href="{_site_link(f"{SITE_URL}/", "masthead")}" style="text-decoration:none;">
         <div style="font-family:Georgia,'Times New Roman',serif;font-size:42px;font-weight:600;
                     letter-spacing:-0.02em;color:#1a1a1a;line-height:1;">
           Christian Curator
@@ -481,11 +577,11 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
 
     {lead_html}
     {pulse_html}
-    {board_html}
     {debate_html}
+    {board_html}
+    {cta_html}
     {wyt_html}
     {watch_listen_html}
-    {cta_html}
     {go_deeper_html}
 
     <div style="padding:20px 28px 0;text-align:center;">
@@ -506,7 +602,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
             Christian Curator
           </td>
           <td style="text-align:right;vertical-align:middle;">
-            <a href="https://www.christiancurator.com/"
+            <a href="{_site_link(f"{SITE_URL}/", "footer")}"
                style="font-size:11px;color:#aaa;text-decoration:none;font-weight:600;
                       letter-spacing:0.04em;text-transform:uppercase;">
               Visit Site
@@ -545,8 +641,7 @@ def send_email(articles: list[dict], yesterday_articles: list[dict] = None,
     email_layout = _email_layout(articles, research_articles, layout)
     lead_article = email_layout.get("lead") or {}
     lead         = lead_article.get("rewritten_title") or lead_article.get("title", "")
-    more_count   = _email_headline_count(email_layout) if lead else 0
-    subject      = build_subject(lead, more_count)
+    subject      = build_subject(lead)
     html_content = build_email_html(articles, yesterday_articles,
                                     daily_summary=daily_summary,
                                     research_articles=research_articles,
