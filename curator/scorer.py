@@ -239,12 +239,14 @@ def score_batch(articles: list[dict]) -> list[dict]:
                 article["personas"] = results[i].get("personas", [])
                 article["topic_cluster"] = results[i].get("topic_cluster", "unique")
                 article["perspective"] = results[i].get("perspective", "neutral")
+                article["scored_by"] = "claude"
             else:
                 article["score"] = 5
                 article["tags"] = []
                 article["personas"] = []
                 article["topic_cluster"] = "unique"
                 article["perspective"] = "neutral"
+                article["scored_by"] = "fallback"
     except Exception as e:
         print(f"  Batch scoring error: {e}")
         record_failure("scorer", e)
@@ -254,7 +256,22 @@ def score_batch(articles: list[dict]) -> list[dict]:
             article["personas"] = []
             article["topic_cluster"] = "unique"
             article["perspective"] = "neutral"
+            article["scored_by"] = "fallback"
     return articles
+
+
+def _adjust(article: dict, key: str, new_score: float) -> None:
+    """Set final_score and record the actual change under article["boosts"][key].
+
+    Persisted to article_history.json (with base_score and scored_by) so the
+    editorial score can be separated from mechanical boosts when tuning.
+    """
+    new_score = round(new_score, 2)
+    delta = round(new_score - article.get("final_score", 0.0), 2)
+    article["final_score"] = new_score
+    if delta:
+        boosts = article.setdefault("boosts", {})
+        boosts[key] = round(boosts.get(key, 0.0) + delta, 2)
 
 
 def apply_recency_boost(article: dict) -> float:
@@ -307,7 +324,7 @@ def apply_diversity_penalty(articles: list[dict]) -> list[dict]:
         if count > cap:
             continue  # hard cap — drop article entirely
         penalty = (count - 1) * DIVERSITY_PENALTY_PER_EXTRA
-        article["final_score"] = round(article["final_score"] - penalty, 2)
+        _adjust(article, "diversity_penalty", article["final_score"] - penalty)
         kept.append(article)
     return kept
 
@@ -332,7 +349,8 @@ SOURCE_TIER_MULTIPLIERS = {
     "American Reformer":       1.00,
     # Tier 2 — was 1.05x, kept slight 1.02x as grassroots-evangelical signal
     "World Magazine":          1.02,
-    "Relevant Magazine":       1.02,
+    # Relevant dropped to 1.00 on 2026-10-30: heavy lifestyle/entertainment mix.
+    "Relevant Magazine":       1.00,
     "Reformation21":           1.02,
     "Jen Wilkin":              1.02,
     "Kyle Worley":             1.02,
@@ -340,16 +358,15 @@ SOURCE_TIER_MULTIPLIERS = {
     "Laura Wifler":            1.02,
     # Tier 3 — 1.0x (default, all others)
     # Tier 4A — 0.90x (high-quality centrist outlets)
-    "Associated Press":          0.90,
-    "Associated Press Religion": 0.90,
+    # (AP, AP Religion, BBC Religion, NYT Religion, and Washington Post feeds
+    # were dead and removed from sources.py on 2026-10-30.)
     "BBC News":                  0.90,
-    "BBC Religion":              0.90,
     "The New York Times":        0.90,
-    "The New York Times Religion": 0.90,
     "Wall Street Journal":       0.90,
+    # Christian news wire: useful for coverage, not for formative depth.
+    "The Christian Post":        0.90,
     # Tier 4B — 0.80x (perspective-driven outlets)
     "The Guardian":              0.80,
-    "Washington Post":           0.80,
 }
 DEFAULT_TIER_MULTIPLIER = 1.0  # Tier 3 author substacks and unlisted sources
 
@@ -455,12 +472,12 @@ def apply_topic_deduplication(articles: list[dict]) -> list[dict]:
             critical = sorted([a for a in group if a.get("perspective") == "critical"],
                               key=lambda x: x["final_score"], reverse=True)
             if supportive:
-                supportive[0]["final_score"] = round(
-                    min(supportive[0]["final_score"] + OPPOSING_VIEWS_BOOST, 10.0), 2)
+                _adjust(supportive[0], "opposing_views",
+                        min(supportive[0]["final_score"] + OPPOSING_VIEWS_BOOST, 10.0))
                 supportive[0]["opposing_pair"] = True
             if critical:
-                critical[0]["final_score"] = round(
-                    min(critical[0]["final_score"] + OPPOSING_VIEWS_BOOST, 10.0), 2)
+                _adjust(critical[0], "opposing_views",
+                        min(critical[0]["final_score"] + OPPOSING_VIEWS_BOOST, 10.0))
                 critical[0]["opposing_pair"] = True
             # Penalize the rest in the cluster
             boosted_urls = set()
@@ -468,14 +485,14 @@ def apply_topic_deduplication(articles: list[dict]) -> list[dict]:
             if critical: boosted_urls.add(critical[0]["url"])
             for a in group:
                 if a["url"] not in boosted_urls:
-                    a["final_score"] = round(max(a["final_score"] - DUPLICATE_TOPIC_PENALTY, 0.0), 2)
+                    _adjust(a, "duplicate_topic", max(a["final_score"] - DUPLICATE_TOPIC_PENALTY, 0.0))
                     a["duplicate_suppressed"] = True
         else:
             # Same topic, same take — keep only the best, penalize the rest
             best = max(group, key=lambda x: x["final_score"])
             for a in group:
                 if a["url"] != best["url"]:
-                    a["final_score"] = round(max(a["final_score"] - DUPLICATE_TOPIC_PENALTY, 0.0), 2)
+                    _adjust(a, "duplicate_topic", max(a["final_score"] - DUPLICATE_TOPIC_PENALTY, 0.0))
                     a["duplicate_suppressed"] = True
 
     suppressed = sum(1 for a in articles if a.get("duplicate_suppressed"))
@@ -611,7 +628,7 @@ def apply_independent_floor(
     for a in candidates:
         if boosted >= needed:
             break
-        a["final_score"] = round(min(a["final_score"] + INDEPENDENT_FLOOR_BOOST, 10.0), 2)
+        _adjust(a, "independent_floor", min(a["final_score"] + INDEPENDENT_FLOOR_BOOST, 10.0))
         a["independent_floor_boosted"] = True
         if _is_source_stale(a["source_name"], source_last_shown, ROTATION_FRESH_WINDOW_DAYS):
             a["independent_floor_fresh"] = True
@@ -628,6 +645,17 @@ def apply_independent_floor(
 
 def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     """Score, boost, and diversify all articles. Returns sorted by final_score."""
+    # Step -1: Discovery-only items (aggregator reposts, link roundups) are
+    # fetched and health-logged but never ranked or sent to Claude.
+    discovery = [a for a in articles if a.get("role") == "discovery"]
+    if discovery:
+        articles = [a for a in articles if a.get("role") != "discovery"]
+        by_source = defaultdict(int)
+        for a in discovery:
+            by_source[a.get("source_name", "")] += 1
+        summary = ", ".join(f"{n} {s}" for s, n in sorted(by_source.items()))
+        print(f"  Discovery only (not ranked): {len(discovery)} items ({summary}).")
+
     # Step 0: Filter world news articles for evangelical relevance
     world_news = [a for a in articles if a.get("source_type") == "world_news"]
     christian = [a for a in articles if a.get("source_type") != "world_news"]
@@ -684,9 +712,13 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     source_last_shown = load_source_last_shown()
 
     for article in scored:
-        base = float(article.get("score") or 5)
+        # base_score = the editorial score before any multiplier or boost.
+        base_score = float(article.get("score") or 5)
+        article["base_score"] = base_score
+        article["final_score"] = base_score
+        article["boosts"] = {}
         multiplier = SOURCE_TIER_MULTIPLIERS.get(article.get("source_name", ""), DEFAULT_TIER_MULTIPLIER)
-        base = round(min(base * multiplier, 10.0), 2)
+        _adjust(article, "tier", min(base_score * multiplier, 10.0))
         boost = apply_recency_boost(article)
 
         # Publishing-frequency boost — independents only.
@@ -703,11 +735,12 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
                 article["source_posts_30d"] = count_30d
                 frequency_boosted_count += 1
 
-        raw_final = round(min(base + boost + freq_bump, 10.0), 2)
+        _adjust(article, "recency", min(article["final_score"] + boost, 10.0))
+        _adjust(article, "frequency", min(article["final_score"] + freq_bump, 10.0))
 
         # Apply previously-shown penalty
         if article.get("url") in shown_urls:
-            raw_final = round(max(raw_final - PREVIOUSLY_SHOWN_PENALTY, 0.0), 2)
+            _adjust(article, "previously_shown", max(article["final_score"] - PREVIOUSLY_SHOWN_PENALTY, 0.0))
             article["previously_shown"] = True
             previously_shown_count += 1
 
@@ -715,12 +748,11 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
         cluster = (article.get("topic_cluster") or "").lower()
         title = (article.get("title") or "").lower()
         is_catholic = any(kw in cluster or kw in title for kw in CATHOLIC_CLUSTER_KEYWORDS)
-        if is_catholic and raw_final > CATHOLIC_SCORE_CAP:
-            raw_final = CATHOLIC_SCORE_CAP
+        if is_catholic and article["final_score"] > CATHOLIC_SCORE_CAP:
+            _adjust(article, "catholic_cap", CATHOLIC_SCORE_CAP)
             article["catholic_capped"] = True
             catholic_capped_count += 1
 
-        article["final_score"] = raw_final
         if boost > 0:
             article["recency_boost"] = boost
 
@@ -752,7 +784,7 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
             boost_amount = RESPONSE_ARTICLE_BOOST
             if article.get("source_name", "") in _tier1_sources:
                 boost_amount += RESPONSE_TIER1_EXTRA_BOOST
-            article["final_score"] = round(min(article["final_score"] + boost_amount, 10.0), 2)
+            _adjust(article, "response", min(article["final_score"] + boost_amount, 10.0))
             article["response_boosted"] = True
             response_boosted_count += 1
     if response_boosted_count:
@@ -776,7 +808,7 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
             for article in scored:
                 bump = trending_boost_for(article, trending)
                 if bump > 0:
-                    article["final_score"] = round(min(article["final_score"] + bump, 10.0), 2)
+                    _adjust(article, "trending", min(article["final_score"] + bump, 10.0))
                     article["trending_boost"] = bump
                     trending_boosted_count += 1
             if trending_boosted_count:
@@ -794,7 +826,7 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
         if not source_name or source_name in seen_stale_sources:
             continue
         if _is_source_stale(source_name, source_last_shown, STALE_SOURCE_WINDOW_DAYS):
-            article["final_score"] = round(min(article["final_score"] + STALE_SOURCE_BOOST, 10.0), 2)
+            _adjust(article, "stale_source", min(article["final_score"] + STALE_SOURCE_BOOST, 10.0))
             article["stale_source_boosted"] = True
             stale_boosted_sources.append(source_name)
         seen_stale_sources.add(source_name)

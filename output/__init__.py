@@ -80,6 +80,11 @@ def save_article_history(articles: list[dict]):
                 # topic_cluster — added April 2026 to power the trending detector.
                 # Older entries lack this field; trending logic handles missing values.
                 "topic_cluster": a.get("topic_cluster", ""),
+                # Scoring provenance, added 2026-10-30 so tuning can separate the
+                # editorial score from mechanical boosts and skip fallback rows.
+                "base_score": a.get("base_score"),
+                "boosts": a.get("boosts", {}),
+                "scored_by": a.get("scored_by", "unknown"),
                 "clicks": 0,  # placeholder for future GA integration
             })
 
