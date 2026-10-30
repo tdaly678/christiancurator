@@ -234,6 +234,30 @@ def _strip_markdown_links(text: str) -> str:
 # Main entry point
 # ---------------------------------------------------------------------------
 
+STRICT_JSON_REMINDER = """
+
+IMPORTANT: a previous reply could not be parsed. Return ONLY one valid JSON object
+with the keys shown above. No prose before or after it, no code fences, and use straight
+ASCII double quotes for JSON strings (never curly quotes)."""
+
+
+def _parse_summary_json(raw: str):
+    """(data, None) on success, (None, error) when the reply isn't valid JSON."""
+    try:
+        return json.loads(raw), None
+    except json.JSONDecodeError as json_err:
+        # Second attempt: replace smart quotes and common non-standard characters
+        cleaned = (raw
+                   .replace('\u201c', '\\"').replace('\u201d', '\\"')  # curly double quotes
+                   .replace('\u2018', "\\'").replace('\u2019', "\\'")  # curly single quotes
+                   .replace('\u2014', '-').replace('\u2013', '-')      # em/en dashes
+                   .replace('\u2026', '...'))                          # ellipsis
+        try:
+            return json.loads(cleaned), None
+        except json.JSONDecodeError:
+            return None, json_err
+
+
 def generate_daily_summary(articles: list[dict]) -> dict | None:
     """Generate a 3-paragraph pastoral daily summary from the top articles."""
     today = date.today()
@@ -270,32 +294,25 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
     )
 
     try:
-        def _call():
-            return client.messages.create(
-                model="claude-sonnet-4-6",
-                max_tokens=800,
-                messages=[{"role": "user", "content": prompt}],
-            )
-        message = _api_call_with_retry(_call, "Daily summary")
-        raw = message.content[0].text.strip()
-        raw = _extract_json(raw)
-
-        try:
-            data = json.loads(raw)
-        except json.JSONDecodeError as json_err:
-            # Second attempt: replace smart quotes and common non-standard characters
-            cleaned = (raw
-                       .replace('\u201c', '\\"').replace('\u201d', '\\"')  # curly double quotes
-                       .replace('\u2018', "\\'").replace('\u2019', "\\'")  # curly single quotes
-                       .replace('\u2014', '-').replace('\u2013', '-')      # em/en dashes
-                       .replace('\u2026', '...'))                          # ellipsis
-            try:
-                data = json.loads(cleaned)
-            except json.JSONDecodeError:
-                print(f"  Daily summary: JSON parse error — {json_err}")
-                record_failure("daily_summary", f"JSON parse error: {json_err}")
-                print(f"  Raw response was: {raw[:300]}")
-                return None
+        data = None
+        for attempt, content in enumerate((prompt, prompt + STRICT_JSON_REMINDER), 1):
+            def _call():
+                return client.messages.create(
+                    model="claude-sonnet-4-6",
+                    max_tokens=800,
+                    messages=[{"role": "user", "content": content}],
+                )
+            message = _api_call_with_retry(_call, "Daily summary")
+            raw = _extract_json(message.content[0].text.strip())
+            data, json_err = _parse_summary_json(raw)
+            if data is not None:
+                break
+            print(f"  Daily summary: JSON parse error (attempt {attempt}): {json_err}")
+            print(f"  Raw response was: {raw[:300]}")
+        if data is None:
+            # The email builds a plain lead + subleads Pulse when this is None.
+            record_failure("daily_summary", f"JSON parse error after retry: {json_err}")
+            return None
         paragraphs_raw = data.get("paragraphs", [])
         themes = data.get("themes", [])
 
