@@ -192,6 +192,9 @@
     .cc-src { font-size: 11px; color: #888; font-variant: small-caps; letter-spacing: 0.04em; }
     .cc-src strong { color: #555; font-weight: 600; }
     .cc-src .cc-pub-date { font-variant: normal; }
+    .cc-also { font-size: 11px; color: #888; margin-top: 2px; }
+    .cc-also a { color: #555; text-decoration: underline; text-decoration-color: #ccc; }
+    .cc-also a:hover { color: #2C4A2E; }
 
     /* ── Lead block ──────────────────────────────────────────────── */
     .cc-lead-block {
@@ -517,6 +520,13 @@
   {% macro headline(a, pos, cls) -%}
   <a href="{{ a.url }}" class="{{ cls }}" target="_blank" rel="noopener" data-pos="{{ pos }}" data-src="{{ a.source_name }}">{{ a.rewritten_title or a.title }}</a>
   {%- endmacro %}
+  {#- "also:" links for a story several outlets covered (layout.siblings, P2.2). -#}
+  {% macro also_line(a) -%}
+  {%- set sibs = (layout.siblings or {}).get(a.url) if layout is defined else none -%}
+  {%- if sibs %}
+  <div class="cc-also">also:{% for s in sibs %} <a href="{{ s.url }}" target="_blank" rel="noopener" data-pos="also" data-src="{{ s.source_name }}" title="{{ s.title | e }}">{{ s.source_name }}</a>{% if not loop.last %} &middot;{% endif %}{% endfor %}</div>
+  {%- endif %}
+  {%- endmacro %}
   {% macro source_line(a, show_author=true) -%}
   {%- set auth = a.author | default('') | trim -%}
   {%- set src  = a.source_name | default('') | trim -%}
@@ -545,6 +555,7 @@
     <article class="cc-lead" id="{{ lead.url | article_anchor }}">
       {{ headline(lead, 'lead', 'cc-lead-title') }}
       {{ source_line(lead) }}
+      {{ also_line(lead) }}
       {% set preview = (lead.summary or lead.full_content) | strip_html %}
       {% if preview %}<p class="cc-lead-preview">{{ preview | truncate(220, true, '…') }}</p>{% endif %}
       {% set ltopic = article_topic_map.get(lead.url, {}) %}
@@ -555,6 +566,7 @@
       <article class="cc-sublead" id="{{ a.url | article_anchor }}">
         {{ headline(a, 'sublead', 'cc-sublead-title') }}
         {{ source_line(a) }}
+        {{ also_line(a) }}
       </article>
       {% endfor %}
     </div>
@@ -572,6 +584,7 @@
         <li class="cc-board-item" id="{{ a.url | article_anchor }}">
           {{ headline(a, 'board_' ~ col.key, 'cc-board-title') }}
           {{ source_line(a, show_author=false) }}
+          {{ also_line(a) }}
         </li>
         {% endfor %}
       </ul>

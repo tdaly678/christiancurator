@@ -12,6 +12,8 @@ see the same picks:
                     curator.lanes.select_watch_and_listen (Wave 3)
   board             three columns of headlines by importance
   research          Research & Data strip (docs/research_articles.json)
+  siblings          multi-outlet stories (P2.2): representative URL ->
+                    "also:" links; the other outlets' copies are not placed
 
 No API clients here, so render-only scripts can import it.
 """
@@ -20,6 +22,7 @@ import re
 from datetime import datetime
 from urllib.parse import urlsplit
 
+from curator.clusters import build_story_clusters
 from curator.dedup import canonical_url
 from curator.lanes import select_watch_and_listen, select_worth_your_time
 
@@ -208,6 +211,10 @@ def build_homepage_layout(articles: list[dict], pairings: list[dict] | None = No
                     key=_score, reverse=True)
     fresh = _cap_audio_video(
         [a for a in ranked if not a.get("previously_shown") and not a.get("catholic_capped")])
+    # One story, one slot: same-story copies from other outlets collapse into
+    # an "also:" line under the best-ranked one.
+    siblings, clustered_away = build_story_clusters(fresh)
+    fresh = [a for a in fresh if a["url"] not in clustered_away]
 
     lead_pool = [a for a in fresh if a.get("source_type") != "world_news"]
     top = _pick_lead(lead_pool, 1 + SUBLEAD_COUNT)
@@ -233,7 +240,7 @@ def build_homepage_layout(articles: list[dict], pairings: list[dict] | None = No
     # Worth Your Time excludes the top of the importance lane: lead block plus
     # the first rows of each board column, so depth picks aren't repeats.
     board_preview = {a["url"] for a in fresh[:1 + SUBLEAD_COUNT + 3 * 6]}
-    worth_your_time = select_worth_your_time(articles, exclude_urls=placed | board_preview)
+    worth_your_time = select_worth_your_time(articles, exclude_urls=placed | board_preview | clustered_away)
     placed |= {a["url"] for a in worth_your_time}
 
     watch_listen = select_watch_and_listen(media_items or [], exclude_urls=placed)
@@ -257,6 +264,12 @@ def build_homepage_layout(articles: list[dict], pairings: list[dict] | None = No
             placed.add(a["url"])
 
     board = [{"key": key, "label": label, "articles": columns[key]} for key, label in BOARD_COLUMNS]
+    # Keep sibling lines only on placed stories, and never repeat a URL that
+    # has its own slot (a debate side, say).
+    siblings = {
+        url: kept for url, sibs in siblings.items()
+        if url in placed and (kept := [s for s in sibs if s["url"] not in placed])
+    }
     return {
         "lead": lead,
         "subleads": subleads,
@@ -265,6 +278,7 @@ def build_homepage_layout(articles: list[dict], pairings: list[dict] | None = No
         "watch_listen": watch_listen,
         "board": board,
         "research": research,
+        "siblings": siblings,
     }
 
 

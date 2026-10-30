@@ -189,6 +189,16 @@ recorded in `frontend/voices_redirects.json` (loser → survivor); the loser's p
   the Analytics Data API enabled, added as Viewer on the GA4 property). Without them the step prints a skip notice.
 - Email clicks are not included; Brevo's own click stats cover the email.
 
+### P2.2 Story clustering
+- `curator/clusters.py` `build_story_clusters()` groups the ranked fresh pool by `topic_cluster` (never `unique` or
+  empty) and folds in dedup copies (`also_from`, plus `also_links` = [{source_name, url, title}], which
+  `curator/dedup.py` now records for each collapsed copy). A story with 3+ distinct outlets (`MIN_OUTLETS`) shows
+  once, at its best-ranked article, with an `also: World · RNS` line (max 4 links, one per source). The other copies
+  are removed from the lead pool, board and Worth Your Time. Under threshold nothing changes.
+- `build_homepage_layout()` returns `siblings` (representative URL -> links); `also_line()` in `frontend/template.html`
+  renders it under the lead, subleads and board items with `data-pos="also"` so the clicks are tracked. The email
+  ignores `siblings`, so the CTR trims are unchanged. Tests: `tests/test_clusters.py`.
+
 ## Hand-curated content — do NOT bulk regenerate
 The topic pages at `docs/topics/<slug>/index.html` are **hand-curated**. They are edited directly (often by AI assistants at Tom's request) and are **not** regenerated from a template by any script. **This changed:** the daily pipeline now DOES `git add docs/topics/`, because `build_recent_articles.py` refreshes the recent-articles block on topic pages each day. It only edits between the injection markers below, so hand-written editorial survives, but topic pages are no longer outside the pipeline's reach.
 

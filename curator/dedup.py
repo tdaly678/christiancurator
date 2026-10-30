@@ -16,7 +16,9 @@ Within a duplicate group the survivor is chosen by:
   primary role over discovery, then the copy whose source domain matches the
   link domain (the original publisher), then christian over world_news, then
   feed order (sources.py order, which fetch_all preserves).
-The losing sources are recorded on the survivor as `also_from`.
+The losing sources are recorded on the survivor as `also_from`, and their
+links as `also_links` ([{source_name, url, title}]) so the homepage story
+cluster line (curator/clusters.py) can link them.
 """
 
 import re
@@ -111,6 +113,14 @@ def _collapse(articles: list[dict], key_fn) -> tuple[list[dict], int]:
             for n in names:
                 if n and n != survivor.get("source_name") and n not in survivor.get("also_from", []):
                     survivor.setdefault("also_from", []).append(n)
+            links = [{"source_name": loser.get("source_name", ""), "url": loser.get("url", ""),
+                      "title": loser.get("title", "")}] + loser.get("also_links", [])
+            known = {l["source_name"] for l in survivor.get("also_links", [])}
+            for l in links:
+                if (l["url"] and l["source_name"] and l["source_name"] != survivor.get("source_name")
+                        and l["source_name"] not in known):
+                    survivor.setdefault("also_links", []).append(l)
+                    known.add(l["source_name"])
         out.append(survivor)
     return out, removed
 
