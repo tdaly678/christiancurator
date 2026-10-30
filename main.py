@@ -105,7 +105,7 @@ def main():
         print("      Daily summary skipped.\n")
 
     # --- Output ---
-    write_output(articles, pairings, media_items=media_items)
+    write_output(articles, pairings, media_items=media_items, daily_summary=daily_summary)
     save_yesterday(articles)
     # Only mark the top 20 articles as "shown" — saves Substack/independent authors
     # from having ALL their recent content penalised the next day just because it

@@ -46,7 +46,8 @@ def main():
     pairings = [
         {"topic": p.get("topic", ""),
          "point": {"title": p.get("point_title", ""), "url": p.get("point_url")},
-         "counterpoint": {"title": p.get("counterpoint_title", ""), "url": p.get("counterpoint_url")}}
+         "counterpoint": {"title": p.get("counterpoint_title", ""), "url": p.get("counterpoint_url")},
+         **{k: p[k] for k in ("thesis_a", "thesis_b") if k in p}}
         for p in raw_pairings
     ]
     media_items = data.get("media", []) if isinstance(data, dict) else []

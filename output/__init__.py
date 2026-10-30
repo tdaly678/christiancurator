@@ -101,10 +101,16 @@ def save_article_history(articles: list[dict]):
     print(f"  Article history updated: {len(history)} total articles tracked.")
 
 
-def write_output(articles: list[dict], pairings: list[dict], media_items: list[dict] | None = None):
-    """Write articles, pairings and media-feed items to articles.json."""
+def write_output(articles: list[dict], pairings: list[dict], media_items: list[dict] | None = None,
+                 daily_summary: dict | None = None):
+    """Write articles, pairings, media-feed items and the Daily Pulse to articles.json.
+
+    send_email.py resends from this file, so it needs the Pulse and the
+    Debate theses as well as the articles.
+    """
     payload = {
         "articles": articles,
+        "daily_summary": daily_summary,
         # Watch and Listen candidates, so same-day re-renders keep the lane.
         "media": media_items or [],
         "pairings": [
@@ -114,6 +120,8 @@ def write_output(articles: list[dict], pairings: list[dict], media_items: list[d
                 "point_url": p["point"]["url"],
                 "counterpoint_title": p["counterpoint"].get("rewritten_title") or p["counterpoint"]["title"],
                 "counterpoint_url": p["counterpoint"]["url"],
+                "thesis_a": p.get("thesis_a", ""),
+                "thesis_b": p.get("thesis_b", ""),
             }
             for p in pairings
         ],

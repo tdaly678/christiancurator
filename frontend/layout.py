@@ -138,8 +138,14 @@ def _build_debate(articles: list[dict], pairings: list[dict]) -> list[dict]:
             continue
         if validate_pair(point, counter):
             continue
-        debates.append({"topic": p.get("topic", ""), "label_a": "Point", "label_b": "Counterpoint",
-                        "a": point, "b": counter})
+        d = {"topic": p.get("topic", ""), "label_a": "Point", "label_b": "Counterpoint",
+             "a": point, "b": counter, "kind": "claude"}
+        # Theses ride along when the pairing (fresh or cached) recorded them;
+        # the email only shows Claude pairs that state both.
+        for key in ("thesis_a", "thesis_b"):
+            if key in p:
+                d[key] = p.get(key) or ""
+        debates.append(d)
         used |= {point.get("url"), counter.get("url")}
         if len(debates) >= DEBATE_MAX_PAIRS:
             return debates
@@ -154,7 +160,8 @@ def _build_debate(articles: list[dict], pairings: list[dict]) -> list[dict]:
         if not cluster or not pro or not con or validate_pair(pro, con):
             continue
         debates.append({"topic": cluster.replace("_", " ").capitalize(),
-                        "label_a": "Pro", "label_b": "Con", "a": pro, "b": con})
+                        "label_a": "Pro", "label_b": "Con", "a": pro, "b": con,
+                        "kind": "scorer"})
         if len(debates) >= DEBATE_MAX_PAIRS:
             break
     return debates

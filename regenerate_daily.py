@@ -49,6 +49,7 @@ def main():
             "topic": p["topic"],
             "point": {"rewritten_title": p["point_title"], "title": p["point_title"], "url": p["point_url"]},
             "counterpoint": {"rewritten_title": p["counterpoint_title"], "title": p["counterpoint_title"], "url": p["counterpoint_url"]},
+            **{k: p[k] for k in ("thesis_a", "thesis_b") if k in p},
         }
         for p in raw_pairings
     ]
@@ -64,6 +65,12 @@ def main():
 
     print(f"  Summary generated for {daily_summary['date']}.")
     save_theme_history(daily_summary)
+
+    # Cache it so a send_email.py resend includes the Pulse.
+    if isinstance(data, dict):
+        data["daily_summary"] = daily_summary
+        with open(ARTICLES_PATH, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
 
     # Re-render index.html so the Today's Pulse sidebar link appears
     yesterday_articles = load_yesterday()
