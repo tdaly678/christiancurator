@@ -17392,5 +17392,40 @@
     "website": "",
     "books": [],
     "initials": "AM"
+  },
+  {
+    "name": "Kenneth Berding",
+    "slug": "kenneth-berding",
+    "bio": "Kenneth Berding is a New Testament scholar and professor who specializes in biblical languages, exegesis, and pneumatology. He brings academic rigor and pastoral sensitivity to help Christians understand Scripture more deeply. His work bridges scholarly research with practical application for church communities.",
+    "affiliation": "Biola University",
+    "role": "Professor & Biblical Scholar",
+    "education": "Ph.D. in New Testament, University of Aberdeen",
+    "website": "",
+    "books": [
+      {
+        "title": "Polity: A Guide for Churches",
+        "amazon_url": "https://www.amazon.com/s?k=Polity+Guide+Churches+Kenneth+Berding"
+      },
+      {
+        "title": "What Are Spiritual Gifts?: Charismata and Christian Service",
+        "amazon_url": "https://www.amazon.com/s?k=What+Are+Spiritual+Gifts+Charismata+Christian+Service+Kenneth+Berding"
+      },
+      {
+        "title": "3 Roles of the Pastor",
+        "amazon_url": "https://www.amazon.com/s?k=3+Roles+of+the+Pastor+Kenneth+Berding"
+      }
+    ],
+    "initials": "KB"
+  },
+  {
+    "name": "Sharon Cohn Wu",
+    "slug": "sharon-cohn-wu",
+    "bio": "Sharon Cohn Wu is a writer and cultural commentator who explores faith, identity, and discipleship through a thoughtful, nuanced lens. Her work engages Christian audiences on topics ranging from biblical teaching to contemporary cultural issues, bringing both theological depth and pastoral sensitivity to complex conversations.",
+    "affiliation": "",
+    "role": "Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SCW"
   }
 ]
