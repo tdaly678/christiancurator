@@ -308,6 +308,9 @@ TOPICS = [
         "category": "Spiritual Formation",
         "hook": "Are the spiritual disciplines a path to growth — or a path to legalism?",
         "summary": "How practices like solitude, silence, Scripture reading, and fasting shape the Christian life.",
+        # SEO title/description (2026-10-30 spoke pass) — the live <title> is seo_title + " — Christian Curator".
+        "seo_title": "What Are the Spiritual Disciplines?",
+        "seo_description": "What are the spiritual disciplines? A biblical definition, a list of the classic disciplines, why they are means of grace, and how to start practicing them.",
         "keywords": [
             "spiritual disciplines", "disciplines", "solitude",
             "scripture memorization", "journaling", "sabbath keeping",
@@ -704,6 +707,9 @@ TOPICS = [
         "category": "Culture & Society",
         "hook": "Is progressive Christianity a reform of the faith — or has it progressed so far it has become a different religion altogether?",
         "summary": "Evangelical responses to progressive Christianity — its departure from biblical authority, sexual ethics, and exclusivity — and what distinguishes it from historic orthodoxy.",
+        # SEO title/description (2026-10-30 spoke pass) — the live <title> is seo_title + " — Christian Curator".
+        "seo_title": "What Is Progressive Christianity?",
+        "seo_description": "What is progressive Christianity? What progressive Christians believe, how it differs from historic Christianity, and why it draws people deconstructing faith.",
         "keywords": [
             "progressive Christianity", "progressive christian",
             "alisa childers", "another gospel", "rachel held evans",
@@ -818,8 +824,8 @@ TOPICS = [
         "hook": "Why do so many Christians read the Bible so little — and what would change if the church actually knew Scripture?",
         "summary": "Evangelical concern about declining biblical knowledge, how Christians should read and engage Scripture, and what it looks like to recover genuine biblical literacy.",
         # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " — Christian Curator".
-        "seo_title": "Biblical Literacy: How to Read the Bible",
-        "seo_description": "What is biblical literacy? How to read the Bible well, why Scripture knowledge is fading among Christians, and evangelical guides to knowing God's Word.",
+        "seo_title": "What Is Biblical Literacy?",
+        "seo_description": "What is biblical literacy? A clear definition, what it means to be biblically literate, why Bible literacy matters, and how to grow in knowing Scripture.",
         "keywords": [
             "biblical literacy", "bible reading", "scripture engagement", "read the bible",
             "bible knowledge", "old testament", "hermeneutics", "bible reading plan",
