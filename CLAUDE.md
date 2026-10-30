@@ -90,6 +90,30 @@ Steps after the pipeline itself: backfill orphan voice pages, rebuild the `/topi
 category hubs, refresh recent-articles sections, inject the Featured deep dives block, regenerate the sitemaps,
 build the Pagefind index, commit, then ping IndexNow.
 
+### Editorial scoring: two axes (P1 Wave 1, 2026-10-30)
+Product thesis: RealClearPolitics for evangelicals. The front page ranks by importance; formative depth goes
+to a separate Worth Your Time lane.
+
+- `curator/scorer.py` asks Claude for `importance` (news value, evangelical significance, debate heat) and
+  `depth` (theological and formative quality), each 1 to 10. News and data are no longer capped below devotionals.
+- `final_score` = importance after boosts and penalties, so every existing sort by `final_score` ranks by importance.
+  `importance` mirrors it. `depth` gets penalties only (half the age penalty, previously shown, Catholic cap), no boosts.
+  `base_importance`, `base_depth` are Claude's raw values; `score` and `base_score` equal base importance for old callers.
+- Boost cap: the combined upward movement from mechanical boosts (`BOOST_KEYS`: tier, recency, frequency, response,
+  trending, stale_source, opposing_views, independent_floor) is capped at `MAX_TOTAL_BOOST = 2.0` per article.
+  Penalties are uncapped. `INDEPENDENT_FLOOR_BOOST` dropped from 2.0 to 1.0. The used budget is `boost_total`.
+- `curator/lanes.py` `select_worth_your_time()` returns the top 5 by depth (min depth 6, one per source), excluding
+  the front page and Other Headlines URLs. `render_html()` passes it to `template.html` as `worth_your_time`; the
+  template does not render it yet (Wave 2).
+- Tags and personas are validated against `curator/vocab.py` allowlists (with an alias map); unknowns are dropped
+  and logged once per run.
+- `curator/dedup.py` collapses cross-feed duplicates before ranking: canonical URL (https, no www, no tracking params,
+  no trailing slash), then normalized title (25+ chars). Survivor preference: primary over discovery, the source whose
+  domain matches the link, christian over world_news, then sources.py order. Losers are listed in `also_from`.
+- Headlines: original publisher titles everywhere. `curator/title_rewriter.py` is off unless `CC_REWRITE_TITLES=1`.
+- `article_history.json` rows now also carry `importance`, `depth`, `base_importance`, `base_depth`, `canonical_url`.
+  Rows before 2026-10-31 are single-axis; do not mix them with two-axis rows when tuning.
+
 ### Sitemaps — there are six files, not one
 `docs/sitemap.xml` is an **index** that points at three children: `sitemap-core.xml` (6 URLs), `sitemap-topics.xml` (70),
 `sitemap-voices.xml` (1,158). `sitemap-daily.xml` and `sitemap-archive.xml` are still written by `regenerate_sitemap()` but,

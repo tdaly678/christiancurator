@@ -8,7 +8,8 @@ Usage:
 
 Steps:
     1. Fetch articles from RSS sources (fetcher layer)
-    2. Score, tag, and rewrite titles (curator layer)
+    2. Score (importance + depth) and tag (curator layer). Publisher headlines
+       are kept; title rewriting is off unless CC_REWRITE_TITLES=1.
     3. Generate point/counterpoint pairs (curator layer)
     4. Write output JSON and regenerate HTML (output layer)
     5. Generate daily summary
@@ -22,7 +23,7 @@ import sys
 from datetime import date
 from fetcher.rss_fetcher import fetch_all
 from curator.scorer import score_articles
-from curator.title_rewriter import rewrite_titles
+from curator.title_rewriter import rewrite_titles, REWRITE_TITLES_ENABLED
 from curator.point_counterpoint import build_point_counterpoint
 from curator.daily_summary import generate_daily_summary, save_theme_history
 from curator.email_sender import send_email
@@ -72,10 +73,13 @@ def main():
     boosted = sum(1 for a in articles if a.get("recency_boost", 0) > 0)
     print(f"      Scoring complete. ({boosted} articles received a recency boost)\n")
 
-    # --- Layer 3: Rewrite Titles ---
-    print("[3/4] Rewriting titles...")
-    articles = rewrite_titles(articles)
-    print("      Title rewriting complete.\n")
+    # --- Layer 3: Headlines. Original publisher titles by default (P1 policy). ---
+    if REWRITE_TITLES_ENABLED:
+        print("[3/4] Rewriting titles (CC_REWRITE_TITLES=1)...")
+        articles = rewrite_titles(articles, enabled=True)
+        print("      Title rewriting complete.\n")
+    else:
+        print("[3/4] Keeping original publisher headlines (title rewriting off).\n")
 
     # --- Layer 4: Point / Counterpoint ---
     print("[4/4] Building point/counterpoint pairs...")

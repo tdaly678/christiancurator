@@ -3,6 +3,12 @@ title_rewriter.py — uses Claude to rewrite article titles for a Christian audi
 
 Goal: make titles more engaging and clear without being clickbait.
 The original title is preserved; the rewritten version is stored separately.
+
+OFF by default since 2026-10-30 (P1 headline policy): the front page, digest,
+archive, and email show the original publisher headline. Every display path
+reads `rewritten_title or title`, and the fetcher leaves rewritten_title as
+None, so with the flag off the publisher title is what readers see. Set
+CC_REWRITE_TITLES=1 to opt back in (for experiments only, not the daily product).
 """
 
 import os
@@ -15,6 +21,8 @@ from curator.ai_health import record_failure
 load_dotenv()
 
 client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+
+REWRITE_TITLES_ENABLED = os.environ.get("CC_REWRITE_TITLES", "").strip() == "1"
 
 REWRITE_PROMPT = """\
 You are a headline editor for a Christian news aggregator, writing in the style of \
@@ -105,6 +113,14 @@ def rewrite_title(article: dict) -> dict:
     return article
 
 
-def rewrite_titles(articles: list[dict]) -> list[dict]:
-    """Rewrite titles for all articles."""
+def rewrite_titles(articles: list[dict], enabled: bool | None = None) -> list[dict]:
+    """Rewrite titles for all articles, only when explicitly enabled.
+
+    When disabled (the default) articles are returned untouched and keep the
+    original publisher headline.
+    """
+    if enabled is None:
+        enabled = REWRITE_TITLES_ENABLED
+    if not enabled:
+        return articles
     return [rewrite_title(a) for a in articles]
