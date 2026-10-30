@@ -175,167 +175,117 @@
     .cc-author-link:hover { text-decoration: underline; color: #2C4A2E; }
     .cc-pub-date { color: #aaa; }
 
-    /* ── NEWSPAPER FRONT PAGE ────────────────────────────────────── */
-    .cc-front { margin-top: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
+    /* ── HOMEPAGE V2: masthead strip ─────────────────────────────── */
+    .cc-strip {
+      display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px;
+      font-size: 12.5px; color: #666; padding: 0.6rem 0; border-bottom: 1px solid #e0ddd8;
+    }
+    .cc-strip-updated { color: #999; }
+    .cc-strip-pulse { color: #1a1a1a; text-decoration: none; font-family: 'Lora', Georgia, serif; font-style: italic; }
+    .cc-strip-pulse strong {
+      font-family: 'Source Sans 3', sans-serif; font-style: normal; font-size: 10px;
+      letter-spacing: 0.14em; text-transform: uppercase; color: #2C4A2E; margin-right: 4px;
+    }
+    .cc-strip-pulse:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
 
-    /* Row 1: large feature + 2 stacked mediums */
-    .cc-front-row1 {
+    /* Source line: small caps, shared by every headline */
+    .cc-src { font-size: 11px; color: #888; font-variant: small-caps; letter-spacing: 0.04em; }
+    .cc-src strong { color: #555; font-weight: 600; }
+    .cc-src .cc-pub-date { font-variant: normal; }
+
+    /* ── Lead block ──────────────────────────────────────────────── */
+    .cc-lead-block {
       display: grid; grid-template-columns: 3fr 2fr; gap: 0;
-      padding-bottom: 1.5rem; border-bottom: 1px solid #e0ddd8;
+      padding: 1.25rem 0 1.25rem; border-bottom: 2.5px solid #1a1a1a;
     }
-    @media (max-width: 660px) { .cc-front-row1 { grid-template-columns: 1fr; } }
-
-    .cc-card-large {
-      padding: 1.25rem 2rem 0 0;
-      border-right: 1px solid #e0ddd8;
-      display: flex; flex-direction: column;
-    }
+    @media (max-width: 660px) { .cc-lead-block { grid-template-columns: 1fr; } }
+    .cc-lead { padding-right: 1.75rem; border-right: 1px solid #e0ddd8; }
     @media (max-width: 660px) {
-      .cc-card-large { border-right: none; padding-right: 0; padding-bottom: 1.25rem; border-bottom: 1px solid #e0ddd8; }
+      .cc-lead { border-right: none; padding-right: 0; padding-bottom: 1rem; border-bottom: 1px solid #e0ddd8; }
     }
-    .cc-card-large-title {
-      font-family: 'Lora', Georgia, serif; font-size: 36px; font-weight: 600;
-      line-height: 1.12; color: #1a1a1a; text-decoration: none; display: block;
-      margin-bottom: 0.75rem;
+    .cc-lead-title {
+      font-family: 'Lora', Georgia, serif; font-size: 32px; font-weight: 600;
+      line-height: 1.15; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 0.5rem;
     }
-    .cc-card-large-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-card-large-preview {
-      font-size: 14px; color: #555; line-height: 1.65; margin-bottom: 1rem; flex: 1;
+    .cc-lead-title:hover, .cc-sublead-title:hover, .cc-board-title:hover,
+    .cc-debate-title:hover, .cc-wyt-title:hover, .cc-research-title:hover {
+      text-decoration: underline; text-decoration-color: #2C4A2E;
     }
-    .cc-card-large-meta { font-size: 11.5px; color: #888; margin-bottom: 0.75rem; }
-    .cc-card-large-meta strong { color: #555; font-weight: 600; }
-    .cc-card-large-cta {
-      font-size: 12px; font-weight: 600; color: #2C4A2E; text-decoration: none;
-      display: inline-block; margin-top: auto; padding-top: 0;
+    .cc-lead-preview { font-size: 14px; color: #555; line-height: 1.6; margin-top: 0.5rem; }
+    .cc-topic-link { font-size: 11.5px; font-weight: 600; color: #2C4A2E; text-decoration: none; }
+    .cc-topic-link:hover { text-decoration: underline; }
+    .cc-subleads { padding-left: 1.5rem; display: flex; flex-direction: column; }
+    @media (max-width: 660px) { .cc-subleads { padding-left: 0; } }
+    .cc-sublead { padding: 0.7rem 0; border-bottom: 1px solid #e0ddd8; }
+    .cc-sublead:first-child { padding-top: 0; }
+    .cc-sublead:last-child { border-bottom: none; padding-bottom: 0; }
+    @media (max-width: 660px) { .cc-sublead:first-child { padding-top: 0.7rem; } }
+    .cc-sublead-title {
+      font-family: 'Lora', Georgia, serif; font-size: 18px; font-weight: 600;
+      line-height: 1.25; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 3px;
     }
-    .cc-card-large-cta:hover { text-decoration: underline; }
 
-    /* Medium cards (stacked right column) */
-    .cc-front-mediums { display: flex; flex-direction: column; }
-    .cc-card-medium {
-      padding: 1.25rem 0 1.25rem 1.75rem;
-      flex: 1; display: flex; flex-direction: column;
-      border-bottom: 1px solid #e0ddd8;
-    }
-    .cc-card-medium:last-child { border-bottom: none; }
-    @media (max-width: 660px) { .cc-card-medium { padding-left: 0; } }
-    .cc-card-medium-title {
-      font-family: 'Lora', Georgia, serif; font-size: 19px; font-weight: 600;
-      line-height: 1.2; color: #1a1a1a; text-decoration: none; display: block;
-      margin-bottom: 0.5rem;
-    }
-    .cc-card-medium-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-card-medium-preview {
-      font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 0.6rem; flex: 1;
-    }
-    .cc-card-medium-meta { font-size: 11px; color: #aaa; margin-bottom: 0.4rem; }
-    .cc-card-medium-meta strong { color: #777; font-weight: 600; }
-    .cc-card-medium-cta {
-      font-size: 11.5px; font-weight: 600; color: #2C4A2E; text-decoration: none; margin-top: auto;
-    }
-    .cc-card-medium-cta:hover { text-decoration: underline; }
-
-    /* Row 2: small cards */
-    .cc-front-row2 {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; padding-top: 1.25rem;
-    }
-    @media (max-width: 660px) { .cc-front-row2 { grid-template-columns: 1fr 1fr; gap: 1rem 0; } }
-    @media (max-width: 400px) { .cc-front-row2 { grid-template-columns: 1fr; } }
-    .cc-front-row3 {
+    /* ── Headline board ──────────────────────────────────────────── */
+    .cc-board {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
-      padding-top: 1.25rem; margin-top: 1.25rem; border-top: 1px solid #e0ddd8;
+      padding: 1.25rem 0 1.75rem; border-bottom: 1px solid #e0ddd8;
     }
-    @media (max-width: 660px) { .cc-front-row3 { grid-template-columns: 1fr 1fr; gap: 1rem 0; } }
-    @media (max-width: 400px) { .cc-front-row3 { grid-template-columns: 1fr; } }
-    .cc-card-small {
-      padding: 0 1.25rem 0 0; border-right: 1px solid #e0ddd8;
-      display: flex; flex-direction: column;
+    @media (max-width: 760px) { .cc-board { grid-template-columns: 1fr; gap: 1.5rem; } }
+    .cc-board-col { padding: 0 1.1rem; border-right: 1px solid #e0ddd8; min-width: 0; }
+    .cc-board-col:first-child { padding-left: 0; }
+    .cc-board-col:last-child { padding-right: 0; border-right: none; }
+    @media (max-width: 760px) { .cc-board-col { padding: 0; border-right: none; } }
+    .cc-board-head {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+      color: #2C4A2E; border-bottom: 2px solid #1a1a1a; padding-bottom: 5px; margin-bottom: 4px;
     }
-    .cc-card-small:last-child { border-right: none; padding-right: 0; }
-    .cc-card-small + .cc-card-small { padding-left: 1.25rem; }
-    @media (max-width: 660px) {
-      .cc-card-small:nth-child(even) { border-right: none; padding-right: 0; }
-      .cc-card-small:nth-child(odd) { padding-left: 0; }
-      .cc-card-small:nth-child(even) { padding-left: 1.25rem; }
-    }
-    .cc-card-small-title {
-      font-family: 'Lora', Georgia, serif; font-size: 15px; font-weight: 500;
-      line-height: 1.3; color: #1a1a1a; text-decoration: none; display: block;
-      margin-bottom: 0.4rem;
-    }
-    .cc-card-small-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-card-small-meta { font-size: 11px; color: #aaa; margin-bottom: 0.35rem; }
-    .cc-card-small-meta strong { color: #777; font-weight: 600; }
-    .cc-card-small-cta {
-      font-size: 11px; font-weight: 600; color: #2C4A2E; text-decoration: none; margin-top: auto;
-    }
-    .cc-card-small-cta:hover { text-decoration: underline; }
-
-    /* ── OTHER HEADLINES ─────────────────────────────────────────── */
-    .cc-headlines { margin-top: 1.75rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
-    .cc-headline-item {
-      display: flex; align-items: baseline; gap: 0.5rem;
-      padding: 0.6rem 0; border-bottom: 1px solid #f0ede8;
-    }
-    .cc-headline-item:last-child { border-bottom: none; }
-    .cc-headline-num {
-      font-size: 11px; font-weight: 600; color: #ccc;
-      min-width: 22px; flex-shrink: 0; font-variant-numeric: tabular-nums;
-    }
-    .cc-headline-content { flex: 1; min-width: 0; }
-    .cc-headline-title {
-      font-family: 'Lora', Georgia, serif; font-size: 14.5px; font-weight: 500;
-      line-height: 1.35; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 2px;
-    }
-    .cc-headline-title:hover { text-decoration: underline; text-decoration-color: #2C4A2E; }
-    .cc-headline-meta { font-size: 11px; color: #aaa; }
-    .cc-headline-meta strong { color: #777; font-weight: 600; }
-    .cc-headline-topic {
-      flex-shrink: 0; margin-left: auto; padding-left: 1.5rem;
-      font-size: 11px; font-weight: 600; color: #2C4A2E;
-      text-decoration: none; white-space: nowrap; align-self: center;
-    }
-    .cc-headline-topic:hover { text-decoration: underline; }
-    .cc-digest-cta { margin-top: 1rem; text-align: right; }
-    .cc-digest-cta a { font-size: 12.5px; font-weight: 600; color: #2C4A2E; text-decoration: none; }
-    .cc-digest-cta a:hover { text-decoration: underline; }
-
-    /* ── WORLD NEWS ─────────────────────────────────────────────── */
-    .cc-world-news { margin-top: 1.75rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
-    .cc-world-news-section-header {
-      display: flex; align-items: baseline; justify-content: space-between;
-      border-bottom: 2px solid #1E3A6E; padding-bottom: 6px; margin-bottom: 1.25rem;
-    }
-    .cc-world-news-section-label {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
-      text-transform: uppercase; color: #1E3A6E;
-    }
-    .cc-world-news-section-sub { font-size: 11px; color: #7a93b8; font-style: italic; }
-    .cc-world-news-card {
-      background: #f0f4fb; border: 1px solid #c5d4ea; border-radius: 6px;
-      padding: 1.1rem 1.4rem 1rem;
-    }
-    .cc-world-news-intro {
-      font-size: 11.5px; color: #5a7099; font-style: italic; margin-bottom: 0.9rem;
-    }
-    .cc-world-news-list { display: flex; flex-direction: column; }
-    .cc-world-news-item {
-      display: flex; gap: 0; padding: 0.6rem 0;
-      border-top: 1px solid #d6e2f0; align-items: flex-start;
-    }
-    .cc-world-news-item:first-child { border-top: none; padding-top: 0; }
-    .cc-world-news-num {
-      font-size: 11px; font-weight: 600; color: #7a93b8;
-      min-width: 26px; padding-top: 2px; font-variant-numeric: tabular-nums;
-    }
-    .cc-world-news-content { flex: 1; }
-    .cc-world-news-title {
+    .cc-board-list { list-style: none; }
+    .cc-board-item { padding: 6px 0; border-bottom: 1px solid #f0ede8; }
+    .cc-board-item:last-child { border-bottom: none; }
+    .cc-board-title {
       font-family: 'Lora', Georgia, serif; font-size: 14px; font-weight: 500;
-      line-height: 1.35; color: #12284a; text-decoration: none; display: block; margin-bottom: 3px;
+      line-height: 1.3; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 1px;
     }
-    .cc-world-news-title:hover { text-decoration: underline; text-decoration-color: #1E3A6E; }
-    .cc-world-news-meta { font-size: 11px; color: #7a93b8; }
-    .cc-world-news-meta strong { color: #4a6a99; font-weight: 600; }
+
+    /* ── The Debate ──────────────────────────────────────────────── */
+    .cc-debate { margin-top: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-debate .cc-section-header { border-bottom-color: #8B1A1A; margin-bottom: 1rem; }
+    .cc-debate .cc-section-label { color: #8B1A1A; }
+    .cc-debate-pair + .cc-debate-pair { margin-top: 1.25rem; }
+    .cc-debate-topic { font-family: 'Lora', Georgia, serif; font-size: 15px; font-style: italic; color: #555; margin-bottom: 0.5rem; }
+    .cc-debate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 660px) { .cc-debate-grid { grid-template-columns: 1fr; } }
+    .cc-debate-card { background: #fff; border: 1px solid #e0ddd8; border-top: 3px solid #2C4A2E; padding: 0.8rem 1rem; }
+    .cc-debate-card.side-b { border-top-color: #8B4513; }
+    .cc-debate-side-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      color: #2C4A2E; margin-bottom: 4px;
+    }
+    .cc-debate-card.side-b .cc-debate-side-label { color: #8B4513; }
+    .cc-debate-title {
+      font-family: 'Lora', Georgia, serif; font-size: 16px; font-weight: 600;
+      line-height: 1.3; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 3px;
+    }
+
+    /* ── Worth Your Time ─────────────────────────────────────────── */
+    .cc-wyt { margin-top: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-wyt-list { list-style: none; }
+    .cc-wyt-item { padding: 0.7rem 0; border-bottom: 1px solid #f0ede8; }
+    .cc-wyt-item:last-child { border-bottom: none; }
+    .cc-wyt-title {
+      font-family: 'Lora', Georgia, serif; font-size: 17px; font-weight: 600;
+      line-height: 1.3; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 2px;
+    }
+    .cc-wyt-note { font-size: 13px; color: #666; line-height: 1.5; margin-top: 2px; }
+
+    /* ── Research & Data ─────────────────────────────────────────── */
+    .cc-research { margin-top: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid #e0ddd8; }
+    .cc-research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem 1.5rem; }
+    .cc-research-item { border-left: 2px solid #2C4A2E; padding-left: 0.75rem; }
+    .cc-research-title {
+      font-family: 'Lora', Georgia, serif; font-size: 14px; font-weight: 500;
+      line-height: 1.3; color: #1a1a1a; text-decoration: none; display: block; margin-bottom: 2px;
+    }
 
     /* ── TOPIC INDEX ─────────────────────────────────────────────── */
     .cc-topic-index { margin-top: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e0ddd8; }
@@ -420,7 +370,6 @@
     @media (max-width: 660px) {
       .cc-site-name { font-size: 32px; }
       .cc-lead-title { font-size: 26px; }
-      .cc-card-grid, .cc-card-grid.two-col { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -430,7 +379,7 @@
   <!-- Header -->
   <header class="cc-header">
     <div class="cc-top-bar">
-      <span>{{ date }}</span>
+      <span></span>
       <a class="cc-subscribe-btn" href="#cc-email-box" onclick="document.getElementById('cc-email-box').scrollIntoView({behavior:'smooth'}); return false;">Get the Daily Digest</a>
     </div>
     <div class="cc-masthead">
@@ -549,125 +498,136 @@
 <main>
 
 
-  <!-- ── NEWSPAPER FRONT PAGE ─────────────────────────────────────── -->
-  {% if front_page_cards %}
-  <section class="cc-front">
-    <div style="margin-top:1.75rem;">
-      <div class="cc-section-header">
-        <div class="cc-section-label">In the conversation today</div>
-        <div class="cc-section-meta">{{ date }}</div>
-      </div>
-    </div>
+  {#- One headline link. Clicks are reported by the delegated gtag listener at
+      the end of the page (data-pos / data-src), so titles never sit inside JS. -#}
+  {% macro headline(a, pos, cls) -%}
+  <a href="{{ a.url }}" class="{{ cls }}" target="_blank" rel="noopener" data-pos="{{ pos }}" data-src="{{ a.source_name }}">{{ a.rewritten_title or a.title }}</a>
+  {%- endmacro %}
+  {% macro source_line(a, show_author=true) -%}
+  {%- set auth = a.author | default('') | trim -%}
+  {%- set src  = a.source_name | default('') | trim -%}
+  {%- set pub  = a.published_display | default('') | trim -%}
+  <div class="cc-src">
+    {%- if show_author and auth and auth | lower != src | lower -%}
+      {{ auth | format_author_links(voices_by_name if voices_by_name is defined else {}) }} &middot; {{ src }}
+    {%- else -%}<strong>{{ src }}</strong>{%- endif -%}
+    {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
+  </div>
+  {%- endmacro %}
 
-    {% if front_page_cards %}
-    <!-- Row 1: large + 2 stacked mediums -->
-    <div class="cc-front-row1">
-      {% set large = front_page_cards[0] %}
-      <article class="cc-card-large" id="{{ large.article.url | article_anchor }}">
-        <a href="{{ large.article.url }}" class="cc-card-large-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'{{ (large.article.rewritten_title or large.article.title)|replace("'","") }}','article_source':'{{ large.article.source_name }}','position':'front_large'});">
-          {{ large.article.rewritten_title or large.article.title }}
-        </a>
-        <div class="cc-card-large-meta">
-          {%- set auth = large.article.author | default('') | trim -%}
-          {%- set src  = large.article.source_name | default('') | trim -%}
-          {%- set pub  = large.article.published_display | default('') | trim -%}
-          {%- if auth and auth | lower != src | lower -%}
-            {{ auth | format_author_links(voices_by_name if voices_by_name is defined else {}) }}
-             &middot; {{ src }}
-          {%- else -%}{{ src }}{%- endif -%}
-          {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
-        </div>
-        {% set preview = (large.article.full_content or large.article.summary) | strip_html %}
-        {% if preview %}
-        <p class="cc-card-large-preview">{{ preview | truncate(500, true, '…') }}</p>
-        {% endif %}
-        <a href="/topics/{{ large.topic_slug }}/" class="cc-card-large-cta"
-           onclick="gtag('event','topic_click',{'topic':'{{ large.topic_slug }}','position':'front_large'});">
-          More on {{ large.topic_name }} &rarr;
-        </a>
+  <!-- ── MASTHEAD STRIP ─────────────────────────────────────────────── -->
+  <div class="cc-strip">
+    <span>{{ date }}</span>
+    <span class="cc-strip-updated">{{ updated_label }}</span>
+    {%- if pulse_line %}
+    <a class="cc-strip-pulse" href="/daily/{{ daily_summary.slug }}/"><strong>The Pulse</strong>{{ pulse_line }}</a>
+    {%- endif %}
+  </div>
+
+  <!-- ── LEAD BLOCK ─────────────────────────────────────────────────── -->
+  {% if layout.lead %}
+  {% set lead = layout.lead %}
+  <section class="cc-lead-block">
+    <article class="cc-lead" id="{{ lead.url | article_anchor }}">
+      {{ headline(lead, 'lead', 'cc-lead-title') }}
+      {{ source_line(lead) }}
+      {% set preview = (lead.summary or lead.full_content) | strip_html %}
+      {% if preview %}<p class="cc-lead-preview">{{ preview | truncate(220, true, '…') }}</p>{% endif %}
+      {% set ltopic = article_topic_map.get(lead.url, {}) %}
+      {% if ltopic.slug %}<a href="/topics/{{ ltopic.slug }}/" class="cc-topic-link">More on {{ ltopic.name }} &rarr;</a>{% endif %}
+    </article>
+    <div class="cc-subleads">
+      {% for a in layout.subleads %}
+      <article class="cc-sublead" id="{{ a.url | article_anchor }}">
+        {{ headline(a, 'sublead', 'cc-sublead-title') }}
+        {{ source_line(a) }}
       </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
 
-      <div class="cc-front-mediums">
-        {% for card in front_page_cards[1:3] %}
-        <article class="cc-card-medium" id="{{ card.article.url | article_anchor }}">
-          <a href="{{ card.article.url }}" class="cc-card-medium-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'{{ (card.article.rewritten_title or card.article.title)|replace("'","") }}','article_source':'{{ card.article.source_name }}','position':'front_medium'});">
-            {{ card.article.rewritten_title or card.article.title }}
-          </a>
-          {% set preview = card.article.summary | strip_html %}
-          {% if preview %}
-          <p class="cc-card-medium-preview">{{ preview | truncate(140, true, '…') }}</p>
-          {% endif %}
-          <div class="cc-card-medium-meta">
-            {%- set auth = card.article.author | default('') | trim -%}
-            {%- set src  = card.article.source_name | default('') | trim -%}
-            {%- if auth and auth | lower != src | lower -%}
-              {{ auth | format_author_links(voices_by_name if voices_by_name is defined else {}) }}
-               &middot; {{ src }}
-            {%- else -%}{{ src }}{%- endif -%}
-          </div>
-          <a href="/topics/{{ card.topic_slug }}/" class="cc-card-medium-cta"
-             onclick="gtag('event','topic_click',{'topic':'{{ card.topic_slug }}','position':'front_medium'});">
-            More on {{ card.topic_name }} &rarr;
-          </a>
-        </article>
+  <!-- ── HEADLINE BOARD ─────────────────────────────────────────────── -->
+  {% if layout.board | selectattr('articles') | list %}
+  <section class="cc-board" aria-label="Today's headlines">
+    {% for col in layout.board %}
+    <div class="cc-board-col cc-board-{{ col.key }}">
+      <h2 class="cc-board-head">{{ col.label }}</h2>
+      <ul class="cc-board-list">
+        {% for a in col.articles %}
+        <li class="cc-board-item" id="{{ a.url | article_anchor }}">
+          {{ headline(a, 'board_' ~ col.key, 'cc-board-title') }}
+          {{ source_line(a, show_author=false) }}
+        </li>
         {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  <!-- ── THE DEBATE (omitted when nothing pairs) ────────────────────── -->
+  {% if layout.debate %}
+  <section class="cc-debate">
+    <div class="cc-section-header">
+      <h2 class="cc-section-label">The Debate</h2>
+      <div class="cc-section-meta">Two sides, read both</div>
+    </div>
+    {% for d in layout.debate %}
+    <div class="cc-debate-pair">
+      {% if d.topic %}<div class="cc-debate-topic">{{ d.topic }}</div>{% endif %}
+      <div class="cc-debate-grid">
+        <div class="cc-debate-card side-a">
+          <div class="cc-debate-side-label">{{ d.label_a }}</div>
+          {{ headline(d.a, 'debate', 'cc-debate-title') }}
+          {{ source_line(d.a) }}
+        </div>
+        <div class="cc-debate-card side-b">
+          <div class="cc-debate-side-label">{{ d.label_b }}</div>
+          {{ headline(d.b, 'debate', 'cc-debate-title') }}
+          {{ source_line(d.b) }}
+        </div>
       </div>
     </div>
+    {% endfor %}
+  </section>
+  {% endif %}
 
-    <!-- Row 2: small cards -->
-    {% if front_page_cards | length > 3 %}
-    <div class="cc-front-row2">
-      {% for card in front_page_cards[3:7] %}
-      <article class="cc-card-small" id="{{ card.article.url | article_anchor }}">
-        <a href="{{ card.article.url }}" class="cc-card-small-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'{{ (card.article.rewritten_title or card.article.title)|replace("'","") }}','article_source':'{{ card.article.source_name }}','position':'front_small'});">
-          {{ card.article.rewritten_title or card.article.title }}
-        </a>
-        <div class="cc-card-small-meta">
-          {%- set auth = card.article.author | default('') | trim -%}
-          {%- set src  = card.article.source_name | default('') | trim -%}
-          {%- if auth and auth | lower != src | lower -%}
-            {{ auth | format_author_links(voices_by_name if voices_by_name is defined else {}) }}
-             &middot; {{ src }}
-          {%- else -%}{{ src }}{%- endif -%}
-        </div>
-        <a href="/topics/{{ card.topic_slug }}/" class="cc-card-small-cta"
-           onclick="gtag('event','topic_click',{'topic':'{{ card.topic_slug }}','position':'front_small'});">
-          More on {{ card.topic_name }} &rarr;
-        </a>
-      </article>
+  <!-- ── WORTH YOUR TIME (depth lane) ───────────────────────────────── -->
+  {% if layout.worth_your_time %}
+  <section class="cc-wyt">
+    <div class="cc-section-header">
+      <h2 class="cc-section-label">Worth Your Time</h2>
+      <div class="cc-section-meta">Slower reads for formation</div>
+    </div>
+    <ol class="cc-wyt-list">
+      {% for a in layout.worth_your_time %}
+      <li class="cc-wyt-item" id="{{ a.url | article_anchor }}">
+        {{ headline(a, 'worth_your_time', 'cc-wyt-title') }}
+        {{ source_line(a) }}
+        {% set note = a.summary | strip_html %}
+        {% if note %}<p class="cc-wyt-note">{{ note | truncate(160, true, '…') }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+
+  <!-- ── RESEARCH & DATA ────────────────────────────────────────────── -->
+  {% if layout.research %}
+  <section class="cc-research">
+    <div class="cc-section-header">
+      <h2 class="cc-section-label">Research &amp; Data</h2>
+      <div class="cc-section-meta">Surveys and studies</div>
+    </div>
+    <div class="cc-research-grid">
+      {% for r in layout.research %}
+      <div class="cc-research-item">
+        <a href="{{ r.url }}" class="cc-research-title" target="_blank" rel="noopener" data-pos="research" data-src="{{ r.source_name }}">{{ r.title }}</a>
+        <div class="cc-src"><strong>{{ r.source_name }}</strong></div>
+      </div>
       {% endfor %}
     </div>
-    {% endif %}
-
-    <!-- Row 3: extra small cards (front-page positions 8-10, anchored so email links land here) -->
-    {% if front_page_cards | length > 7 %}
-    <div class="cc-front-row3">
-      {% for card in front_page_cards[7:10] %}
-      <article class="cc-card-small" id="{{ card.article.url | article_anchor }}">
-        <a href="{{ card.article.url }}" class="cc-card-small-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'{{ (card.article.rewritten_title or card.article.title)|replace("'","") }}','article_source':'{{ card.article.source_name }}','position':'front_small_row3'});">
-          {{ card.article.rewritten_title or card.article.title }}
-        </a>
-        <div class="cc-card-small-meta">
-          {%- set auth = card.article.author | default('') | trim -%}
-          {%- set src  = card.article.source_name | default('') | trim -%}
-          {%- if auth and auth | lower != src | lower -%}
-            {{ auth | format_author_links(voices_by_name if voices_by_name is defined else {}) }}
-             &middot; {{ src }}
-          {%- else -%}{{ src }}{%- endif -%}
-        </div>
-        <a href="/topics/{{ card.topic_slug }}/" class="cc-card-small-cta"
-           onclick="gtag('event','topic_click',{'topic':'{{ card.topic_slug }}','position':'front_small_row3'});">
-          More on {{ card.topic_name }} &rarr;
-        </a>
-      </article>
-      {% endfor %}
-    </div>
-    {% endif %}
-    {% endif %}
   </section>
   {% endif %}
 
@@ -793,87 +753,6 @@
     </script>
   </div>
 
-  <!-- ── WORLD NEWS ───────────────────────────────────────────────────── -->
-  {% set world_articles = articles | selectattr("source_type", "equalto", "world_news") | list %}
-  {% if world_articles %}
-  <section class="cc-world-news">
-    <div class="cc-world-news-section-header">
-      <div class="cc-world-news-section-label">World News &amp; Culture</div>
-      <div class="cc-world-news-section-sub">Stories worth watching</div>
-    </div>
-    <div class="cc-world-news-card">
-      <div class="cc-world-news-intro">From the broader world — filtered for what matters to Christians</div>
-      <div class="cc-world-news-list">
-        {% for article in world_articles[:3] %}
-        <article class="cc-world-news-item" id="{{ article.url | article_anchor }}">
-          <div class="cc-world-news-num">{{ loop.index }}</div>
-          <div class="cc-world-news-content">
-            <a href="{{ article.url }}" class="cc-world-news-title" target="_blank" rel="noopener"
-               onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','position':'world_news'});">
-              {{ article.rewritten_title or article.title }}
-            </a>
-            <div class="cc-world-news-meta">
-              {%- set auth = article.author | default('') | trim -%}
-              {%- set src  = article.source_name | default('') | trim -%}
-              {%- set pub  = article.published_display | default('') | trim -%}
-              {%- if auth and auth | lower != src | lower -%}
-                {{ auth | format_author_links(voices_by_name if voices_by_name is defined else {}) }}
-                 &middot; {{ src }}
-              {%- else -%}
-                {{ src }}
-              {%- endif -%}
-              {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
-            </div>
-          </div>
-        </article>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-  {% endif %}
-
-  <!-- ── OTHER HEADLINES ──────────────────────────────────────────────── -->
-  {% if other_headlines %}
-  <section class="cc-headlines">
-    <div class="cc-section-header">
-      <div class="cc-section-label">Other Headlines</div>
-      <div class="cc-section-meta">{{ other_headlines | length }} articles</div>
-    </div>
-    {% for article in other_headlines %}
-    {% set atopic = article_topic_map.get(article.url, {}) if article_topic_map is defined else {} %}
-    <article class="cc-headline-item" id="{{ article.url | article_anchor }}">
-      <div class="cc-headline-num">{{ loop.index }}</div>
-      <div class="cc-headline-content">
-        <a href="{{ article.url }}" class="cc-headline-title" target="_blank" rel="noopener"
-           onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','position':'other_headlines'});">
-          {{ article.rewritten_title or article.title }}
-        </a>
-        <div class="cc-headline-meta">
-          {%- set auth = article.author | default('') | trim -%}
-          {%- set src  = article.source_name | default('') | trim -%}
-          {%- set pub  = article.published_display | default('') | trim -%}
-          {%- if auth and auth | lower != src | lower -%}
-            {{ auth | format_author_links(voices_by_name if voices_by_name is defined else {}) }}
-             &middot; {{ src }}
-          {%- else -%}
-            {{ src }}
-          {%- endif -%}
-          {%- if pub %} &middot; <span class="cc-pub-date">{{ pub }}</span>{%- endif -%}
-        </div>
-      </div>
-      {%- if atopic.slug %}
-      <a href="/topics/{{ atopic.slug }}/" class="cc-headline-topic"
-         onclick="gtag('event','topic_click',{'topic':'{{ atopic.slug }}','position':'other_headlines'});">
-        More on {{ atopic.name }} &rarr;
-      </a>
-      {%- else %}
-      <a href="/digest/" class="cc-headline-topic">More stories &rarr;</a>
-      {%- endif %}
-    </article>
-    {% endfor %}
-  </section>
-  {% endif %}  {# /other_headlines #}
-
   <!-- ── TOPIC INDEX ────────────────────────────────────────────────── -->
   <nav id="topics" class="cc-topic-index">
     <div class="cc-section-header">
@@ -896,6 +775,17 @@
   </nav>
 
   </main>
+<script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[data-pos]');
+    if (!a || typeof gtag !== 'function') return;
+    gtag('event', 'article_click', {
+      article_title: a.textContent.trim().slice(0, 100),
+      article_source: a.getAttribute('data-src') || '',
+      position: a.getAttribute('data-pos')
+    });
+  });
+</script>
 <footer class="cc-footer">
     <div class="cc-footer-name">Christian Curator</div>
     <div class="cc-footer-nav">

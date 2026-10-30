@@ -1,21 +1,18 @@
 """
-email_sender.py — builds and sends the daily digest email via Brevo API.
+email_sender.py: builds and sends the daily email via Brevo API.
 
-Email structure:
-  Preheader     (invisible inbox preview — first 3 headline titles)
+Email structure mirrors homepage v2 (frontend/layout.py, P1 Wave 2):
+  Preheader     (invisible inbox preview: lead + two subleads)
   Top bar       (date · Forwarded? Subscribe)
   Masthead      (Christian Curator wordmark + tagline)
-  Top Stories   (5 highest-scored non-world-news headlines — title + source)
-  More Headlines(remaining ~15 non-world-news + ~3 world-news — compact list)
-  CTA box       (Visit today's digest → christiancurator.com)
-  Go Deeper     (rotating topic spotlight — cycles through all topics)
-  Forward nudge
-  Footer
+  The Lead      (lead story + three subleads, by importance)
+  Daily Pulse   (omitted when the summary is missing)
+  Board         (News / Commentary & Debate / Church & Theology, 6 each)
+  The Debate    (point/counterpoint pairs, omitted when none)
+  Worth Your Time (depth lane)
+  CTA box, Go Deeper (rotating topic spotlight), forward nudge, footer
 
-Every headline links to https://www.christiancurator.com/#<article_anchor>
-where <article_anchor> = "a" + md5(article.url)[:8] — the same anchor id
-the homepage template.html applies to its article cards, so a click on an
-email headline lands at that exact article on the live site.
+Every headline links straight to the article URL.
 """
 
 import os
@@ -120,151 +117,151 @@ def build_subject(lead_title: str, more_count: int) -> str:
     return f"{lead} · + {more_count} more {noun}"
 
 
-def _split_homepage_articles(articles: list[dict]) -> tuple[list[dict], list[dict], list[dict]]:
-    """Return (top5, remaining, world_news_top3) using the *same* diversified
-    selection the homepage uses, so every headline in the email has a matching
-    anchor id on christiancurator.com.
+EMAIL_BOARD_PER_COLUMN = 6  # headlines per board section in the email
 
-    - top5: first 5 of the diversified front-page cards (10 total)
-    - remaining: the other 5 front-page cards + up to 10 'other_headlines' (~15)
-    - world_news_top3: top 3 world-news articles by score
+
+def _email_layout(articles: list[dict], research_articles: list[dict] = None,
+                  layout: dict = None) -> dict:
+    """The homepage v2 layout, trimmed for email.
+
+    main.py passes the layout render_html() returned so the email matches the
+    page exactly; send_email.py (cached run) rebuilds it without pairings.
     """
-    try:
-        # Reuse the homepage's own diversification helpers so anchors line up.
-        from frontend import _build_diversified_cards, _build_diversified_headlines
-        from frontend.topics_data import TOPICS_BY_SLUG
-    except ImportError:
-        # Fallback: simple top-by-score split if frontend isn't importable.
-        non_world = sorted(
-            [a for a in articles if a.get("source_type") != "world_news"],
-            key=lambda a: a.get("final_score", a.get("score", 0)),
-            reverse=True,
-        )
-        world = sorted(
-            [a for a in articles if a.get("source_type") == "world_news"],
-            key=lambda a: a.get("final_score", a.get("score", 0)),
-            reverse=True,
-        )[:3]
-        return non_world[:5], non_world[5:20], world
+    if layout is None:
+        from frontend.layout import build_homepage_layout
+        layout = build_homepage_layout(articles, None, research_articles)
+    return {
+        **layout,
+        "board": [{**col, "articles": col["articles"][:EMAIL_BOARD_PER_COLUMN]}
+                  for col in layout.get("board", [])],
+    }
 
-    front_page_cards = _build_diversified_cards(
-        articles, TOPICS_BY_SLUG, max_per_topic=2, total=10
-    )
-    front_page_articles = [c["article"] for c in front_page_cards]
-    front_page_urls = {a.get("url", "") for a in front_page_articles}
 
-    other_headlines = _build_diversified_headlines(
-        articles, TOPICS_BY_SLUG, front_page_urls, max_per_topic=2, total=10
-    )
-
-    world_news = sorted(
-        [a for a in articles if a.get("source_type") == "world_news"],
-        key=lambda a: a.get("final_score", a.get("score", 0)),
-        reverse=True,
-    )[:3]
-
-    top5 = front_page_articles[:5]
-    remaining = front_page_articles[5:] + other_headlines  # up to 15 items
-    return top5, remaining, world_news
+def _email_headline_count(layout: dict) -> int:
+    """Article links in the email body, for the subject's '+ N more stories'."""
+    n = len(layout.get("subleads", []))
+    n += sum(len(c["articles"]) for c in layout.get("board", []))
+    n += 2 * len(layout.get("debate", []))
+    n += len(layout.get("worth_your_time", []))
+    return n
 
 
 # ── Section renderers ──────────────────────────────────────────────────────────
 
-def _render_top_stories(top5: list[dict]) -> str:
-    """5 lead headlines — larger style, title + byline + source."""
-    if not top5:
-        return ""
+_LABEL_STYLE = ("font-size:9px;font-weight:700;text-transform:uppercase;"
+                "letter-spacing:0.18em;color:#888;border-bottom:2.5px solid #1a1a1a;"
+                "padding-bottom:8px;margin-bottom:0;")
 
-    rows = ""
-    for i, a in enumerate(top5):
-        title  = a.get("rewritten_title") or a.get("title") or ""
-        author = (a.get("author") or "").strip()
-        source = (a.get("source_name") or "").strip()
-        url    = a.get("url") or ""
-        byline = (
-            f"{author} &nbsp;·&nbsp; {source}"
-            if author and author.lower() != source.lower()
-            else source
-        )
-        href   = _article_link(url)
-        border = "" if i == len(top5) - 1 else "border-bottom:1px solid #eceae6;"
 
-        rows += f"""
-      <div style="padding:14px 0;{border}">
-        <a href="{href}"
-           style="font-family:Georgia,'Times New Roman',serif;font-size:16px;
+def _byline(a: dict, show_author: bool = True) -> str:
+    author = (a.get("author") or "").strip()
+    source = (a.get("source_name") or "").strip()
+    if show_author and author and author.lower() != source.lower():
+        return f"{author} &nbsp;·&nbsp; {source}"
+    return source
+
+
+def _headline_row(a: dict, size: int, last: bool, show_author: bool = True) -> str:
+    title  = a.get("rewritten_title") or a.get("title") or ""
+    href   = _article_link(a.get("url") or "")
+    border = "" if last else "border-bottom:1px solid #eceae6;"
+    pad    = 14 if size >= 16 else 9
+    return f"""
+      <div style="padding:{pad}px 0;{border}">
+        <a href="{href}" target="_blank"
+           style="font-family:Georgia,'Times New Roman',serif;font-size:{size}px;
                   font-weight:600;line-height:1.35;color:#1a1a1a;text-decoration:none;
-                  display:block;margin-bottom:5px;">
+                  display:block;margin-bottom:3px;">
           {title}
         </a>
-        <div style="font-size:11px;color:#aaa;letter-spacing:0.01em;">{byline}</div>
+        <div style="font-size:10.5px;color:#aaa;letter-spacing:0.03em;font-variant:small-caps;">{_byline(a, show_author)}</div>
       </div>"""
 
+
+def _render_lead(layout: dict) -> str:
+    """Lead story large, then the three subleads."""
+    lead = layout.get("lead")
+    if not lead:
+        return ""
+    title = lead.get("rewritten_title") or lead.get("title") or ""
+    href  = _article_link(lead.get("url") or "")
+    subs  = layout.get("subleads", [])
+    rows  = "".join(_headline_row(a, 16, last=(i == len(subs) - 1)) for i, a in enumerate(subs))
     return f"""
     <div style="padding:24px 28px 0;">
-      <div style="font-size:9px;font-weight:700;text-transform:uppercase;
-                  letter-spacing:0.18em;color:#888;border-bottom:2.5px solid #1a1a1a;
-                  padding-bottom:8px;margin-bottom:0;">
-        Today&rsquo;s Top Stories
+      <div style="{_LABEL_STYLE}">The Lead</div>
+      <div style="padding:16px 0 12px;border-bottom:1px solid #d8d4cd;">
+        <a href="{href}" target="_blank"
+           style="font-family:Georgia,'Times New Roman',serif;font-size:24px;
+                  font-weight:600;line-height:1.2;color:#1a1a1a;text-decoration:none;
+                  display:block;margin-bottom:6px;">
+          {title}
+        </a>
+        <div style="font-size:11px;color:#999;letter-spacing:0.03em;font-variant:small-caps;">{_byline(lead)}</div>
       </div>
       {rows}
     </div>"""
 
 
-def _render_more_headlines(remaining: list[dict], world_news: list[dict]) -> str:
-    """Compact list of all remaining homepage headlines, plus world news.
+def _render_board(layout: dict) -> str:
+    """The three board columns, stacked: News, Commentary & Debate, Church & Theology."""
+    sections = ""
+    for col in layout.get("board", []):
+        arts = col["articles"]
+        if not arts:
+            continue
+        rows = "".join(_headline_row(a, 14, last=(i == len(arts) - 1), show_author=False)
+                       for i, a in enumerate(arts))
+        sections += f"""
+    <div style="padding:24px 28px 0;">
+      <div style="{_LABEL_STYLE}">{col['label'].replace('&', '&amp;')}</div>
+      {rows}
+    </div>"""
+    return sections
 
-    Every entry links straight to the article, like the top stories do.
-    """
-    if not remaining and not world_news:
+
+def _render_debate(layout: dict) -> str:
+    """Point / counterpoint pairs, side by side; omitted when nothing pairs."""
+    debates = layout.get("debate") or []
+    if not debates:
         return ""
 
-    def _row(a: dict, last: bool) -> str:
-        title  = a.get("rewritten_title") or a.get("title") or ""
-        source = (a.get("source_name") or "").strip()
-        url    = a.get("url") or ""
-        href   = _article_link(url)
-        border = "" if last else "border-bottom:1px solid #eceae6;"
+    def _cell(a: dict, label: str, color: str) -> str:
+        title = a.get("rewritten_title") or a.get("title") or ""
         return f"""
-      <div style="padding:10px 0;{border}">
-        <a href="{href}"
-           style="font-family:Georgia,'Times New Roman',serif;font-size:14px;
-                  font-weight:600;line-height:1.35;color:#1a1a1a;text-decoration:none;
-                  display:block;margin-bottom:3px;">
-          {title}
-        </a>
-        <div style="font-size:10.5px;color:#aaa;letter-spacing:0.01em;">{source}</div>
-      </div>"""
+          <td width="50%" valign="top" style="padding:10px 12px;background:#fff;border:1px solid #e0ddd8;border-top:3px solid {color};">
+            <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:{color};margin-bottom:4px;">{label}</div>
+            <a href="{_article_link(a.get('url') or '')}" target="_blank"
+               style="font-family:Georgia,'Times New Roman',serif;font-size:14px;font-weight:600;
+                      line-height:1.35;color:#1a1a1a;text-decoration:none;display:block;margin-bottom:3px;">{title}</a>
+            <div style="font-size:10.5px;color:#aaa;font-variant:small-caps;">{_byline(a, False)}</div>
+          </td>"""
 
-    main_rows = ""
-    if remaining:
-        for i, a in enumerate(remaining):
-            last = (i == len(remaining) - 1) and not world_news
-            main_rows += _row(a, last)
-
-    world_section = ""
-    if world_news:
-        world_rows = ""
-        for i, a in enumerate(world_news):
-            world_rows += _row(a, last=(i == len(world_news) - 1))
-        world_section = f"""
-      <div style="margin-top:18px;padding-top:14px;border-top:1px solid #d8d4cd;">
-        <div style="font-size:9px;font-weight:700;text-transform:uppercase;
-                    letter-spacing:0.18em;color:#888;margin-bottom:4px;">
-          World News &amp; Culture
-        </div>
-        {world_rows}
-      </div>"""
-
+    pairs = ""
+    for d in debates:
+        topic = f'<div style="font-family:Georgia,serif;font-style:italic;font-size:14px;color:#555;margin:14px 0 6px;">{d["topic"]}</div>' if d.get("topic") else '<div style="height:14px;"></div>'
+        pairs += f"""
+      {topic}
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;border-spacing:6px 0;">
+        <tr>{_cell(d['a'], d['label_a'], '#2C4A2E')}{_cell(d['b'], d['label_b'], '#8B4513')}</tr>
+      </table>"""
     return f"""
     <div style="padding:24px 28px 0;">
-      <div style="font-size:9px;font-weight:700;text-transform:uppercase;
-                  letter-spacing:0.18em;color:#888;border-bottom:2.5px solid #1a1a1a;
-                  padding-bottom:8px;margin-bottom:0;">
-        More Headlines
-      </div>
-      {main_rows}
-      {world_section}
+      <div style="{_LABEL_STYLE}color:#8B1A1A;border-bottom-color:#8B1A1A;">The Debate</div>
+      {pairs}
+    </div>"""
+
+
+def _render_worth_your_time(layout: dict) -> str:
+    """Depth lane: slower formative reads."""
+    picks = layout.get("worth_your_time") or []
+    if not picks:
+        return ""
+    rows = "".join(_headline_row(a, 15, last=(i == len(picks) - 1)) for i, a in enumerate(picks))
+    return f"""
+    <div style="padding:24px 28px 0;">
+      <div style="{_LABEL_STYLE}">Worth Your Time</div>
+      {rows}
     </div>"""
 
 
@@ -375,7 +372,8 @@ def _render_go_deeper(topic: dict) -> str:
 # ── Main builder ───────────────────────────────────────────────────────────────
 
 def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None,
-                     daily_summary: dict = None, research_articles: list[dict] = None) -> str:
+                     daily_summary: dict = None, research_articles: list[dict] = None,
+                     layout: dict = None) -> str:
 
     if isinstance(articles, dict):
         articles = articles.get("articles", [])
@@ -385,22 +383,21 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
     non_world_count  = len([a for a in articles if a.get("source_type") != "world_news"])
     spotlight_topic  = _get_spotlight_topic()
 
-    # Mirror the homepage's diversification so every headline below has a
-    # matching anchor id on christiancurator.com.
-    top5, remaining, world_news = _split_homepage_articles(articles)
+    # Same picks as the homepage (frontend/layout.py), board trimmed for email.
+    layout = _email_layout(articles, research_articles, layout)
 
-    # Preheader: first 3 headline titles from the top stories shown above
-    top_titles = [
-        a.get("rewritten_title") or a.get("title", "")
-        for a in top5[:3]
-    ]
-    preheader = " &nbsp;·&nbsp; ".join(t for t in top_titles if t)
+    # Preheader: lead and first two subleads
+    top = ([layout["lead"]] if layout.get("lead") else []) + layout.get("subleads", [])[:2]
+    preheader = " &nbsp;·&nbsp; ".join(
+        t for t in (a.get("rewritten_title") or a.get("title", "") for a in top) if t)
     if preheader:
         preheader += " &nbsp;·&nbsp; and more."
 
+    lead_html           = _render_lead(layout)
     pulse_html          = _render_pulse(daily_summary)
-    top_stories_html    = _render_top_stories(top5)
-    more_headlines_html = _render_more_headlines(remaining, world_news)
+    board_html          = _render_board(layout)
+    debate_html         = _render_debate(layout)
+    wyt_html            = _render_worth_your_time(layout)
     cta_html            = _render_cta(non_world_count)
     go_deeper_html      = _render_go_deeper(spotlight_topic)
 
@@ -447,9 +444,11 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
       </div>
     </div>
 
-    {top_stories_html}
+    {lead_html}
     {pulse_html}
-    {more_headlines_html}
+    {board_html}
+    {debate_html}
+    {wyt_html}
     {cta_html}
     {go_deeper_html}
 
@@ -500,19 +499,22 @@ def save_email_html(html_content: str) -> str:
 # ── Send ───────────────────────────────────────────────────────────────────────
 
 def send_email(articles: list[dict], yesterday_articles: list[dict] = None,
-               daily_summary: dict = None, research_articles: list[dict] = None) -> bool:
+               daily_summary: dict = None, research_articles: list[dict] = None,
+               layout: dict = None) -> bool:
 
     if isinstance(articles, dict):
         articles = articles.get("articles", [])
 
     today        = date.today().strftime("%B %-d, %Y")
-    top5, remaining, world_news = _split_homepage_articles(articles)
-    lead         = (top5[0].get("rewritten_title") or top5[0].get("title", "")) if top5 else ""
-    more_count   = len(top5) - 1 + len(remaining) + len(world_news) if top5 else 0
+    email_layout = _email_layout(articles, research_articles, layout)
+    lead_article = email_layout.get("lead") or {}
+    lead         = lead_article.get("rewritten_title") or lead_article.get("title", "")
+    more_count   = _email_headline_count(email_layout) if lead else 0
     subject      = build_subject(lead, more_count)
     html_content = build_email_html(articles, yesterday_articles,
                                     daily_summary=daily_summary,
-                                    research_articles=research_articles)
+                                    research_articles=research_articles,
+                                    layout=layout)
     path = save_email_html(html_content)
     print(f"  Email HTML saved to: {path}")
 

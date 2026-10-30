@@ -112,8 +112,12 @@ def main():
     print("\n[7/8] Checking for new Voices...")
     generate_new_voice_pages(articles)
 
-    render_html(articles, pairings, yesterday_articles, daily_summary=daily_summary,
-                research_articles=research_articles)
+    layout = render_html(articles, pairings, yesterday_articles, daily_summary=daily_summary,
+                         research_articles=research_articles)
+    # Worth Your Time picks are now on the page, so log them as shown; the
+    # previously-shown filter then keeps the depth lane from repeating.
+    if layout and layout.get("worth_your_time"):
+        save_article_history(layout["worth_your_time"])
 
     # --- Voice ↔ Topic cross-links: refresh "Featured in Deep-Dive Topics" block
     #     on each voice page from the latest featured_topic_log + current digest.
@@ -132,7 +136,7 @@ def main():
     if send_email_flag:
         print("\n[8/8] Sending daily email via Brevo...")
         send_email(articles, yesterday_articles, daily_summary=daily_summary,
-                   research_articles=research_articles)
+                   research_articles=research_articles, layout=layout)
     else:
         print("\n[8/8] Email skipped (--no-email). Run send_email.py when ready to send.")
 

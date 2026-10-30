@@ -122,7 +122,11 @@ def update_research_articles(new_articles: list[dict]) -> list[dict]:
 
 def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: list[dict] = None,
                 daily_summary: dict = None, research_articles: list[dict] = None):
-    """Render index.html from template.html using Jinja2."""
+    """Render index.html from template.html using Jinja2.
+
+    Returns the homepage layout dict (frontend/layout.py) so the caller can
+    log which picks were shown.
+    """
     from frontend.topic_matcher import match_topics
     from curator.topic_classifier import classify_articles, compute_featured_topics
     from frontend.topics_data import TOPICS, TOPICS_BY_CATEGORY, CATEGORIES
@@ -206,24 +210,17 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
     # Persist today's featured topics so the email sender can use them (and look up yesterday's)
     _save_featured_topic_log(featured_topics)
 
-    # Build diversified front-page cards: max 2 per topic slug, top 10 total
-    front_page_cards = _build_diversified_cards(articles, TOPICS_BY_SLUG, max_per_topic=2, total=10)
-    front_page_urls  = {c["article"]["url"] for c in front_page_cards}
-
-    # Build diversified other-headlines: max 2 per topic slug, top 10, excluding front-page URLs
-    other_headlines = _build_diversified_headlines(articles, TOPICS_BY_SLUG, front_page_urls, max_per_topic=2, total=10)
-
-    if front_page_cards:
-        topics_shown = [c["topic_name"] for c in front_page_cards[:3]]
-        print(f"  Front-page cards (top 3): {topics_shown}")
-
-    # Worth Your Time lane: top by depth, excluding everything already placed by
-    # importance. Passed to the template now; template.html renders it in Wave 2.
-    from curator.lanes import select_worth_your_time
-    worth_your_time = select_worth_your_time(
-        articles, exclude_urls=front_page_urls | {a.get("url") for a in other_headlines})
-    if worth_your_time:
-        print(f"  Worth Your Time: {[a.get('source_name') for a in worth_your_time]}")
+    # Homepage v2 (P1 Wave 2): lead + subleads, three-column board, debate,
+    # Worth Your Time and Research & Data, all picked in frontend/layout.py.
+    from frontend.layout import build_homepage_layout, outbound_urls, pulse_line, updated_label
+    layout = build_homepage_layout(articles, pairings, research_articles or load_research_articles())
+    if layout["lead"]:
+        print(f"  Lead: {layout['lead'].get('source_name')}; board columns: "
+              f"{ {c['key']: len(c['articles']) for c in layout['board']} }; "
+              f"debate pairs: {len(layout['debate'])}")
+    if layout["worth_your_time"]:
+        print(f"  Worth Your Time: {[a.get('source_name') for a in layout['worth_your_time']]}")
+    print(f"  Homepage outbound article links: {len(outbound_urls(layout))}")
 
     # Compute recent archive dates for the homepage archive list
     archive_dates = []
@@ -249,9 +246,9 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         research_articles=research_articles or load_research_articles(),
         matched_topics=matched_topics,
         featured_topics=featured_topics,
-        front_page_cards=front_page_cards,
-        other_headlines=other_headlines,
-        worth_your_time=worth_your_time,
+        layout=layout,
+        pulse_line=pulse_line(daily_summary),
+        updated_label=updated_label(),
         article_topic_map=article_topic_map,
         all_topics=TOPICS,
         topics_by_category=TOPICS_BY_CATEGORY,
@@ -281,98 +278,10 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
     # Regenerate sitemap to include all daily and archive pages
     regenerate_sitemap()
 
+    return layout
+
 
 FEATURED_TOPIC_LOG_PATH = DOCS_DIR / "featured_topic_log.json"
-
-
-def _build_diversified_cards(articles: list, topics_by_slug: dict,
-                              max_per_topic: int = 2, total: int = 10) -> list:
-    """
-    Return up to `total` front-page cards drawn from all non-world-news classified articles,
-    capped at `max_per_topic` cards per topic slug.  Cards are sorted by article score so the
-    best articles surface first, while no single topic dominates the layout.
-    Each card is a dict: {article, topic_name, topic_slug}.
-    """
-    from curator.topic_classifier import _fmt_date  # reuse existing date formatter
-
-    topic_counts: dict = {}
-    cards = []
-    seen_urls: set = set()
-
-    # Score-ranked pool: only non-world-news articles that have at least one topic match
-    pool = sorted(
-        [a for a in articles
-         if a.get("source_type") != "world_news" and a.get("debate_topics")],
-        key=lambda a: a.get("final_score", 0),
-        reverse=True,
-    )
-
-    for article in pool:
-        if len(cards) >= total:
-            break
-        url = article.get("url", "")
-        if url in seen_urls:
-            continue
-
-        # Pick the first valid topic slug
-        slug = next(
-            (s for s in article.get("debate_topics", []) if s in topics_by_slug),
-            None,
-        )
-        if not slug:
-            continue
-        if topic_counts.get(slug, 0) >= max_per_topic:
-            continue
-
-        topic = topics_by_slug[slug]
-        cards.append({
-            "article": article,
-            "topic_name": topic["name"],
-            "topic_slug": slug,
-        })
-        topic_counts[slug] = topic_counts.get(slug, 0) + 1
-        seen_urls.add(url)
-
-    return cards
-
-
-def _build_diversified_headlines(articles: list, topics_by_slug: dict,
-                                  exclude_urls: set, max_per_topic: int = 2,
-                                  total: int = 10) -> list:
-    """
-    Return up to `total` other-headlines articles (non-world-news, not in exclude_urls),
-    capped at `max_per_topic` per topic slug.  Articles with no topic match are still
-    included but count against a shared 'unclassified' bucket (no per-topic cap applied).
-    """
-    topic_counts: dict = {}
-    headlines = []
-
-    pool = sorted(
-        [a for a in articles if a.get("source_type") != "world_news"],
-        key=lambda a: a.get("final_score", 0),
-        reverse=True,
-    )
-
-    for article in pool:
-        if len(headlines) >= total:
-            break
-        url = article.get("url", "")
-        if url in exclude_urls:
-            continue
-
-        slug = next(
-            (s for s in article.get("debate_topics", []) if s in topics_by_slug),
-            None,
-        )
-        if slug and topic_counts.get(slug, 0) >= max_per_topic:
-            continue
-
-        headlines.append(article)
-        if slug:
-            topic_counts[slug] = topic_counts.get(slug, 0) + 1
-        exclude_urls.add(url)  # prevent duplicates within this list too
-
-    return headlines
 
 
 def _save_featured_topic_log(featured_topics: list):
