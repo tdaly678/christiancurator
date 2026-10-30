@@ -144,12 +144,6 @@ SOURCES = [
 
     # ── Evangelical Author Substacks — Tier 2 ──
     {
-        "name": "Jen Wilkin",
-        "url": "https://www.jenwilkin.net/blog?format=rss",
-        "category": "theology",
-        "independent": True,
-    },
-    {
         "name": "Kyle Worley",
         "url": "https://sacredslang.substack.com/feed",
         "category": "theology",
@@ -176,27 +170,9 @@ SOURCES = [
         "independent": True,
     },
     {
-        "name": "Tish Harrison Warren",
-        "url": "https://tishharrisonwarren.substack.com/feed",
-        "category": "culture",
-        "independent": True,
-    },
-    {
-        "name": "Jake Meador (Mere Orthodoxy)",
-        "url": "https://jakemeador.substack.com/feed",
-        "category": "culture",
-        "independent": True,
-    },
-    {
         "name": "Samuel James",
         # Canonical home per author's own site (Challies 2026 roundup)
         "url": "https://www.digitalliturgies.net/feed",
-        "category": "culture",
-        "independent": True,
-    },
-    {
-        "name": "Alan Jacobs",
-        "url": "https://ayjay.substack.com/feed",
         "category": "culture",
         "independent": True,
     },
@@ -255,25 +231,7 @@ SOURCES = [
         "independent": False,
         "creates_voices": False,  # research staff bylines, not voices
     },
-    {
-        "name": "Ed Stetzer",
-        "url": "https://edstetzer.substack.com/feed",
-        "category": "culture",
-        "independent": True,
-    },
     # Evangelical authors and voices
-    {
-        "name": "Sam Allberry",
-        "url": "https://samallberry.substack.com/feed",
-        "category": "theology",
-        "independent": True,
-    },
-    {
-        "name": "Trillia Newbell",
-        "url": "https://trillianewbell.substack.com/feed",
-        "category": "theology",
-        "independent": True,
-    },
     {
         "name": "Joy Clarkson",
         "url": "https://joyclarkson.substack.com/feed",
@@ -319,26 +277,16 @@ SOURCES = [
     },
     {
         "name": "Tsh Oxenreider",
-        "url": "https://tshoxenreider.substack.com/feed",
+        # "The Commonplace" (tsh.substack.com redirects here; verified 2026-10-30)
+        "url": "https://thecommon.place/feed",
         "category": "culture",
         "independent": True,
     },
     {
         "name": "Gary Thomas",
-        "url": "https://garythomas.substack.com/feed",
+        # Substack dormant since 2021; his own site is current (verified 2026-10-30)
+        "url": "https://garythomas.com/feed/",
         "category": "devotional",
-        "independent": True,
-    },
-    {
-        "name": "Spencer Klavan",
-        "url": "https://spencerklavan.substack.com/feed",
-        "category": "culture",
-        "independent": True,
-    },
-    {
-        "name": "Diane Langberg",
-        "url": "https://dianelangberg.substack.com/feed",
-        "category": "church life",
         "independent": True,
     },
     {
@@ -350,12 +298,6 @@ SOURCES = [
     {
         "name": "Kate Shellnutt",
         "url": "https://kateshellnutt.substack.com/feed",
-        "category": "culture",
-        "independent": True,
-    },
-    {
-        "name": "Jonathon Seidl",
-        "url": "https://jonathonseidl.substack.com/feed",
         "category": "culture",
         "independent": True,
     },
@@ -397,24 +339,12 @@ SOURCES = [
         "independent": True,
     },
 
-    # ── New Additions: Reformed Voices ──
-    {
-        "name": "Gavin Ortlund",
-        "url": "https://truthunites.org/feed/",
-        "category": "theology",
-        "independent": True,
-    },
 
     # ── New Additions: Young Evangelical Voices ──
     {
-        "name": "Patrick Miller",
-        "url": "https://patrickkmiller.substack.com/feed",
-        "category": "culture",
-        "independent": True,
-    },
-    {
         "name": "Hannah Anderson",
-        "url": "https://sometimesalight.substack.com/feed",
+        # "The Occasional Writings"; old sometimesalight feed ended 2023 (verified 2026-10-30)
+        "url": "https://hannahanderson.substack.com/feed",
         "category": "theology",
         "independent": True,
     },
@@ -575,3 +505,23 @@ SOURCES = [
         "independent": True,
     },
 ]
+
+# ── Voices watchlist (NOT fetched) ──
+# Removed from SOURCES on 2026-10-30 because the feed was empty, dead, or
+# dormant (too stale for a daily product). Keep these names for topic-page
+# curation, and re-add one here if a live feed turns up.
+#
+#   Tish Harrison Warren   tishharrisonwarren.substack.com: publication has no posts
+#   Jake Meador            jakemeador.substack.com: no posts; his writing comes in via the Mere Orthodoxy source
+#   Alan Jacobs            blog.ayjay.org closed 2026-09-14 ("the last post"); social.ayjay.org is untitled microposts
+#   Ed Stetzer             edstetzer.substack.com: no posts; edstetzer.com/feed returns 403
+#   Sam Allberry           samallberry.substack.com 404; no site feed found
+#   Trillia Newbell        substack redirects to a profile page (no publication); trillianewbell.com/feed 404
+#   Spencer Klavan         substack redirects to a profile page (no publication)
+#   Diane Langberg         substack has no posts; dianelangberg.com/feed last post 2024-04
+#   Jonathon Seidl         substack 404; personal site unreachable
+#   Patrick Miller         patrickkmiller.substack.com 404; patrickmiller.substack.com last post 2021
+#   Jen Wilkin             jenwilkin.net/blog last post 2021-12; jenwilkin.substack.com has no posts
+#   Gavin Ortlund          truthunites.org/feed only 2 posts in 2026 (last 2026-05-26). He publishes on
+#                          YouTube: youtube.com/feeds/videos.xml?channel_id=UCtWDnUokOD--s2aFxLT5uVA
+#                          (video items; would be a new content type for the daily ranking)
