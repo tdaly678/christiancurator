@@ -67,7 +67,9 @@ def main():
 
     # Re-render index.html so the Today's Pulse sidebar link appears
     yesterday_articles = load_yesterday()
-    render_html(articles, pairings, yesterday_articles, daily_summary=daily_summary)
+    media_items = data.get("media", []) if isinstance(data, dict) else []
+    render_html(articles, pairings, yesterday_articles, daily_summary=daily_summary,
+                media_items=media_items)
 
     print("\n=== Done. index.html and docs/daily/ updated. ===")
     print("Remember to: git add docs/ && git commit -m '...' && git push")

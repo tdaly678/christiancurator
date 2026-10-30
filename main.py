@@ -14,6 +14,8 @@ Steps:
     4. Write output JSON and regenerate HTML (output layer)
     5. Generate daily summary
     6. Update Research & Data section
+       (role "media" video/podcast items skip steps 2-5 and only feed the
+       Watch and Listen lane picked in frontend/layout.py)
     7. Send email (skipped with --no-email, or if already sent today)
 """
 
@@ -65,7 +67,14 @@ def main():
     # --- Layer 1: Fetch ---
     print("[1/4] Fetching articles from RSS sources...")
     articles = fetch_all()
-    print(f"      Fetched {len(articles)} articles.\n")
+    # Video/podcast feeds (role "media") skip scoring and the board; they only
+    # feed the Watch and Listen lane. Mark repeats so the lane rotates.
+    media_items = [a for a in articles if a.get("role") == "media"]
+    articles = [a for a in articles if a.get("role") != "media"]
+    for a in media_items:
+        a["previously_shown"] = a.get("url") in shown_urls
+        a["scored_by"] = "media"  # history rows from the lane are never Claude-scored
+    print(f"      Fetched {len(articles)} articles and {len(media_items)} media items.\n")
 
     # --- Layer 2: Score & Tag ---
     print("[2/4] Scoring and tagging articles...")
@@ -96,7 +105,7 @@ def main():
         print("      Daily summary skipped.\n")
 
     # --- Output ---
-    write_output(articles, pairings)
+    write_output(articles, pairings, media_items=media_items)
     save_yesterday(articles)
     # Only mark the top 20 articles as "shown" — saves Substack/independent authors
     # from having ALL their recent content penalised the next day just because it
@@ -113,11 +122,14 @@ def main():
     generate_new_voice_pages(articles)
 
     layout = render_html(articles, pairings, yesterday_articles, daily_summary=daily_summary,
-                         research_articles=research_articles)
-    # Worth Your Time picks are now on the page, so log them as shown; the
-    # previously-shown filter then keeps the depth lane from repeating.
-    if layout and layout.get("worth_your_time"):
-        save_article_history(layout["worth_your_time"])
+                         research_articles=research_articles, media_items=media_items)
+    # Worth Your Time and Watch and Listen picks are now on the page, so log
+    # them as shown; the previously-shown filter then keeps both lanes from
+    # repeating day after day.
+    if layout:
+        lane_picks = layout.get("worth_your_time", []) + layout.get("watch_listen", [])
+        if lane_picks:
+            save_article_history(lane_picks)
 
     # --- Voice ↔ Topic cross-links: refresh "Featured in Deep-Dive Topics" block
     #     on each voice page from the latest featured_topic_log + current digest.

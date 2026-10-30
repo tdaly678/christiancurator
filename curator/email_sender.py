@@ -10,11 +10,13 @@ Email structure mirrors homepage v2 (frontend/layout.py, P1 Wave 2):
   Board         (News / Commentary & Debate / Church & Theology, 6 each)
   The Debate    (point/counterpoint pairs, omitted when none)
   Worth Your Time (depth lane)
+  Watch and Listen (videos and podcasts from the media feeds, omitted when none)
   CTA box, Go Deeper (rotating topic spotlight), forward nudge, footer
 
 Every headline links straight to the article URL.
 """
 
+import html
 import os
 import json
 import requests
@@ -143,6 +145,7 @@ def _email_headline_count(layout: dict) -> int:
     n += sum(len(c["articles"]) for c in layout.get("board", []))
     n += 2 * len(layout.get("debate", []))
     n += len(layout.get("worth_your_time", []))
+    n += len(layout.get("watch_listen", []))
     return n
 
 
@@ -262,6 +265,36 @@ def _render_worth_your_time(layout: dict) -> str:
     <div style="padding:24px 28px 0;">
       <div style="{_LABEL_STYLE}">Worth Your Time</div>
       {rows}
+    </div>"""
+
+
+def _render_watch_listen(layout: dict) -> str:
+    """Media lane: a few videos and podcast episodes, format and length up front."""
+    picks = layout.get("watch_listen") or []
+    if not picks:
+        return ""
+    rows = []
+    for i, a in enumerate(picks):
+        fmt = "Video" if a.get("media_format") == "video" else "Podcast"
+        if a.get("duration_display"):
+            fmt += f" &nbsp;·&nbsp; {a['duration_display']}"
+        border = "" if i == len(picks) - 1 else "border-bottom:1px solid #eceae6;"
+        rows.append(f"""
+      <div style="padding:9px 0;{border}">
+        <div style="font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;
+                    color:#2C4A2E;margin-bottom:3px;">{fmt}</div>
+        <a href="{_article_link(a.get("url") or "")}" target="_blank"
+           style="font-family:Georgia,'Times New Roman',serif;font-size:15px;
+                  font-weight:600;line-height:1.35;color:#1a1a1a;text-decoration:none;
+                  display:block;margin-bottom:3px;">
+          {html.escape(a.get("title") or "", quote=False)}
+        </a>
+        <div style="font-size:10.5px;color:#aaa;letter-spacing:0.03em;font-variant:small-caps;">{_byline(a, False)}</div>
+      </div>""")
+    return f"""
+    <div style="padding:24px 28px 0;">
+      <div style="{_LABEL_STYLE}">Watch and Listen</div>
+      {"".join(rows)}
     </div>"""
 
 
@@ -398,6 +431,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
     board_html          = _render_board(layout)
     debate_html         = _render_debate(layout)
     wyt_html            = _render_worth_your_time(layout)
+    watch_listen_html   = _render_watch_listen(layout)
     cta_html            = _render_cta(non_world_count)
     go_deeper_html      = _render_go_deeper(spotlight_topic)
 
@@ -449,6 +483,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
     {board_html}
     {debate_html}
     {wyt_html}
+    {watch_listen_html}
     {cta_html}
     {go_deeper_html}
 

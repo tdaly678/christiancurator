@@ -121,7 +121,8 @@ def update_research_articles(new_articles: list[dict]) -> list[dict]:
 
 
 def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: list[dict] = None,
-                daily_summary: dict = None, research_articles: list[dict] = None):
+                daily_summary: dict = None, research_articles: list[dict] = None,
+                media_items: list[dict] = None):
     """Render index.html from template.html using Jinja2.
 
     Returns the homepage layout dict (frontend/layout.py) so the caller can
@@ -213,13 +214,16 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
     # Homepage v2 (P1 Wave 2): lead + subleads, three-column board, debate,
     # Worth Your Time and Research & Data, all picked in frontend/layout.py.
     from frontend.layout import build_homepage_layout, outbound_urls, pulse_line, updated_label
-    layout = build_homepage_layout(articles, pairings, research_articles or load_research_articles())
+    layout = build_homepage_layout(articles, pairings, research_articles or load_research_articles(),
+                                   media_items=media_items)
     if layout["lead"]:
         print(f"  Lead: {layout['lead'].get('source_name')}; board columns: "
               f"{ {c['key']: len(c['articles']) for c in layout['board']} }; "
               f"debate pairs: {len(layout['debate'])}")
     if layout["worth_your_time"]:
         print(f"  Worth Your Time: {[a.get('source_name') for a in layout['worth_your_time']]}")
+    if layout["watch_listen"]:
+        print(f"  Watch and Listen: {[a.get('source_name') for a in layout['watch_listen']]}")
     print(f"  Homepage outbound article links: {len(outbound_urls(layout))}")
 
     # Compute recent archive dates for the homepage archive list

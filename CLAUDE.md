@@ -82,6 +82,9 @@ Sources can set `role: "discovery"` (fetched and health-logged, never ranked: Th
 `discovery_title_pattern` (Tim Challies' A La Carte / Kindle deals / book roundups). `score_articles()` drops discovery
 items before Claude scoring.
 
+Sources can also set `role: "media"` (video and podcast feeds for the Watch and Listen lane, below). Media items are
+health-logged like any feed but never scored, never deduped against articles, and never placed on the board.
+
 `docs/article_history.json` rows carry `base_score` (Claude's editorial score before boosts), `boosts` (actual delta per
 mechanism), and `scored_by` (`claude` / `fallback`). Rows from 2026-09-06 to 2026-10-25 (Anthropic credit outage) are
 marked `scored_by: "fallback"`, `scored_by_backfilled: true` by `scripts/backfill_scored_by.py`; exclude them when tuning.
@@ -115,9 +118,13 @@ it, and `main.py` passes it to `send_email()` so page and email agree. Each URL 
    `board_column()` routes by world_news source, perspective `news`, or tags news/data/politics, then
    theology/church life/missions/devotional/prayer/apologetics tags or a theology/devotional source; else commentary
 4. The Debate: Claude point/counterpoint pairings, else scorer `opposing_pair` supportive vs. critical; omitted when none
-5. Worth Your Time (depth lane), 6. Research & Data (`docs/research_articles.json`), then signup, then the 70-topic grid
-Headline clicks are tracked by one delegated gtag listener reading `data-pos` / `data-src`. Sample render: ~76 outbound
-article links. Only the top 20 by score plus Worth Your Time are logged to history; board items are not.
+5. Worth Your Time (depth lane), 6. Watch and Listen (media lane, below), 7. Research & Data
+   (`docs/research_articles.json`), then signup, then the 70-topic grid
+Headline clicks are tracked by one delegated gtag listener reading `data-pos` / `data-src`. Sample render: ~78 outbound
+article links. Only the top 20 by score plus the Worth Your Time and Watch and Listen picks are logged to history;
+board items are not.
+- Audio/video cap: at most `MAIN_LANE_MAX_AUDIO_VIDEO = 2` podcast or video items (`is_audio_video()`: a `/podcast`
+  URL path, a YouTube/Vimeo host, a "Podcast:"/"Video:" title prefix) in the lead block plus board combined.
 - Tags and personas are validated against `curator/vocab.py` allowlists (with an alias map); unknowns are dropped
   and logged once per run.
 - `curator/dedup.py` collapses cross-feed duplicates before ranking: canonical URL (https, no www, no tracking params,
@@ -126,6 +133,30 @@ article links. Only the top 20 by score plus Worth Your Time are logged to histo
 - Headlines: original publisher titles everywhere. `curator/title_rewriter.py` is off unless `CC_REWRITE_TITLES=1`.
 - `article_history.json` rows now also carry `importance`, `depth`, `base_importance`, `base_depth`, `canonical_url`.
   Rows before 2026-10-31 are single-axis; do not mix them with two-axis rows when tuning.
+
+### Watch and Listen media lane (P1 Wave 3, 2026-10-30)
+A compact homepage and email section of 3 to 5 videos and podcast episodes from trusted evangelical voices.
+- Sources: the `MEDIA SOURCES` block at the end of `SOURCES` in `fetcher/sources.py`, each with `role: "media"` and
+  `media_format` (`video` / `podcast`). Their order is editorial priority. Current list: Truth Unites (Gavin Ortlund,
+  YouTube), The Gospel Coalition (Video) (YouTube), Mere Fidelity, The Russell Moore Show, BibleProject Podcast,
+  Gospelbound, The Holy Post, Ask Pastor John. Rejected candidates and the reason are listed under the watchlist at the
+  bottom of `sources.py`. Before adding one, confirm the feed returns items with a post in the last 60 days.
+- Fetching (`fetcher/rss_fetcher.py`): YouTube Shorts (`/shorts/` links) are dropped. Podcast items carry
+  `duration_seconds` from `itunes:duration`. Feeds whose episodes have no page of their own (no link, or every item
+  links the show homepage) set `apple_podcast_id`; the fetcher maps each episode guid to its Apple Podcasts episode URL
+  with one lookup call. Items that still have no episode URL are never shown.
+- `main.py` splits media items off right after the fetch (they skip scoring, the title rewriter, pairings and voices),
+  marks `previously_shown` from `article_history.json`, stores them under `"media"` in `output/articles.json` (so
+  `regenerate_daily.py` keeps the lane) and passes them to `render_html(media_items=...)`. `score_articles()` also drops
+  `role: "media"` as a backstop.
+- Selection: `curator/lanes.py` `select_watch_and_listen()`: published in the last 7 days, not previously shown, not
+  placed elsewhere on the page (canonical URL), newest item per source, one per source. Items from the last 2 days
+  first, then source priority, then recency. Keeps at least one video and one podcast when both qualify. Returns []
+  (section omitted on page and in email) when fewer than 3 qualify. No Claude call.
+- `build_homepage_layout()` picks the lane after Worth Your Time and before the board, adds it to the placed set and
+  `outbound_urls()`. The page shows format, duration when known, original title and source; links open in a new tab.
+- Picks shown are written to `article_history.json` with `scored_by: "media"`, so the lane rotates. Exclude those rows
+  when tuning the scorer.
 
 ### Sitemaps — there are six files, not one
 `docs/sitemap.xml` is an **index** that points at three children: `sitemap-core.xml` (6 URLs), `sitemap-topics.xml` (70),
@@ -224,7 +255,7 @@ Structure mirrors homepage v2 (same `layout` dict):
 3. **The Lead**: lead + 3 subleads
 4. **The Daily Pulse**: `daily_summary["paragraphs_html"]` plus a link to `/daily/YYYY-MM-DD/`; omitted when the summary is missing or empty
 5. **Board**: News, Commentary & Debate, Church & Theology, 6 headlines each
-6. **The Debate** (when pairs exist), **Worth Your Time**
+6. **The Debate** (when pairs exist), **Worth Your Time**, **Watch and Listen** (when it has picks)
 7. CTA to the homepage, then the **Go Deeper** spotlight topic (rotation logged in `docs/spotlight_topic_log.json`, no repeats for 70 days)
 8. Forward nudge + footer
 

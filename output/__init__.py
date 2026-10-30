@@ -101,10 +101,12 @@ def save_article_history(articles: list[dict]):
     print(f"  Article history updated: {len(history)} total articles tracked.")
 
 
-def write_output(articles: list[dict], pairings: list[dict]):
-    """Write articles and pairings to articles.json."""
+def write_output(articles: list[dict], pairings: list[dict], media_items: list[dict] | None = None):
+    """Write articles, pairings and media-feed items to articles.json."""
     payload = {
         "articles": articles,
+        # Watch and Listen candidates, so same-day re-renders keep the lane.
+        "media": media_items or [],
         "pairings": [
             {
                 "topic": p["topic"],
