@@ -1,11 +1,17 @@
 """
 scorer.py — uses Claude to score and tag articles in batches for efficiency.
 
-Each article receives:
-  - score:       int 1-10 from Claude (content quality & relevance)
-  - final_score: float after recency boost and diversity penalty
-  - tags:        list of topic strings
-  - personas:    list of reader persona strings
+Two-axis scoring (P1, 2026-10-30). Each article receives:
+  - base_importance: int 1-10 from Claude (news value, evangelical significance, debate heat)
+  - base_depth:      int 1-10 from Claude (theological / formative quality)
+  - importance:      float, base_importance after mechanical boosts and penalties.
+                     Drives the front page, lead, Other Headlines, World News, email.
+  - depth:           float, base_depth after penalties only (no boosts). Drives the
+                     "Worth Your Time" lane via select_worth_your_time().
+  - final_score:     same value as importance; kept so every existing caller that
+                     sorts by final_score now ranks by importance.
+  - score / base_score: same as base_importance, kept for history and old callers.
+  - tags, personas:  validated against curator/vocab.py allowlists
 """
 
 import os
@@ -19,6 +25,9 @@ from collections import defaultdict
 from dotenv import load_dotenv
 
 from curator.ai_health import record_failure
+from curator.dedup import canonical_url, dedupe_articles
+from curator.vocab import ALLOWED_TAGS, ALLOWED_PERSONAS, clean_tags, clean_personas, report_drops
+from curator.vocab import dropped as vocab_dropped
 
 from fetcher.sources import SOURCES
 from curator.trending import (
@@ -77,57 +86,55 @@ Articles:
 """
 
 BATCH_PROMPT = """\
-You are a curator for a Christian news digest targeting EVANGELICAL PROTESTANT Christians.
+You are the front-page editor for a Christian news digest targeting EVANGELICAL PROTESTANT Christians.
+Think RealClearPolitics for evangelicals: the front page ranks by what happened and what is being argued,
+and a separate "Worth Your Time" lane holds the most formative reading. Score every article on TWO
+independent axes. An article can be high on one and low on the other.
 
-SCORING GUIDANCE:
-- Score 1-10 based on theological depth, practical relevance to everyday Christian life, and writing quality.
+IMPORTANCE (1-10): news value for the evangelical world.
+- 9-10: Major events or rulings that shape evangelical life (denominational votes, court decisions on
+  religious liberty, a prominent leader's fall or death, persecution crises, landmark data), or the
+  central argument of a debate the whole movement is having today.
+- 7-8: Significant news, new research or polling about faith in America, or a substantive entry in a live
+  debate (named responses, rebuttals, open letters) that many evangelical readers will hear about.
+- 5-6: Useful commentary on current events or culture, regional or institutional news of moderate reach.
+- 3-4: Evergreen teaching, devotionals, and how-to pieces with no news hook. Good reading, not news.
+- 1-2: Podcast episode descriptions, radio recaps, promotional announcements, product or event ads.
+  Do NOT cap news, data, or debate below devotionals. A strong news or data story should outrank a good
+  devotional on importance.
 
-- SCORE 8-10: Essays or devotionals that (a) explicitly connect the topic to the gospel — Christ's death,
-  resurrection, or atonement as the answer, not just general theism — (b) exposit a specific Scripture passage
-  with context and meaning rather than merely citing verses as footnotes, and (c) close with concrete application
-  for the Christian life. Bonus: articles that begin by naming a real struggle or question the reader faces, then
-  address it biblically. Length alone does not earn a high score — a short devotional that does all three deserves
-  8 more than a long essay that does none.
+DEPTH (1-10): theological and formative quality, used for the Worth Your Time lane.
+- 8-10: Explicitly connects the topic to the gospel (Christ's death, resurrection, atonement, not general
+  theism), exposits a specific Scripture passage with context rather than proof-texting, and closes with
+  concrete application. Length alone does not earn depth; a short piece that does all three beats a long
+  one that does none.
+- 6-7: Solid theological or practical writing grounded in Scripture but without an explicit gospel
+  connection, or cultural commentary that offers a biblically grounded constructive alternative.
+  Substantive theological interviews belong here.
+- 4-5: Commentary that critiques without a constructive biblical answer; listicles and pragmatic how-to
+  pieces; data and research pieces (valuable context, not formative).
+- 1-3: Straight news reporting, announcements, obituaries, podcast or promotional blurbs.
 
-- SCORE 6-7: Solid theological or practical articles that apply Scripture to Christian life but lack an explicit
-  gospel connection, OR good cultural commentary that offers a biblically-grounded constructive alternative (not
-  just critique). Interviews and roundtables with substantive theological content may fall here.
-
-- SCORE 5-6: CULTURAL COMMENTARY that critiques secular trends or cultural moments without offering a substantive
-  biblical or gospel-based constructive response — the observation without the answer. Also score 5-6: listicles
-  and pragmatic "how-to" articles that assume Christian motivation without grounding it doctrinally.
-
-- SCORE 4-5: DATA, RESEARCH, or STATISTICS-DRIVEN articles about Christian trends, church demographics,
-  religious identity, or sociological observations about faith in America. These are genuinely valuable for
-  context but are not devotionally formative. Tag these with "data" — they are curated separately in a
-  Research & Data section and should NOT compete with theological or devotional content for main feed placement.
-  Examples: church attendance surveys, generational faith trends, religious polling data, Pew/Barna/Burge analysis.
-
-- OBITUARIES, TRIBUTES, and PERSON-SPECIFIC NEWS (deaths, memorial essays, tribute pieces, appointments, awards,
-  biographical profiles) should score 4 or below. This includes legacy/tribute framing such as "A Courageous Voice
-  for...", "Remembering...", "Celebrating the Life of...", or "[Name]: [Adjective] [Noun]" title patterns.
-  Only score 5+ if the article contains substantial theological teaching that stands fully independent of the
-  person — i.e., a reader would benefit equally without knowing who the subject is.
-  Example: "John Perkins Dies at 95" = score 2 max. "John Perkins: A Courageous Voice for Justice" = score 4 max.
-  "What Racial Reconciliation Demands of the Church Today" (Perkins as one example among many) = score normally.
-
-- PODCAST EPISODE DESCRIPTIONS, RADIO RECAPS, and PROMOTIONAL ANNOUNCEMENTS should score 2 or below.
-
-- CATHOLIC-SPECIFIC CONTENT should score 3 or below. This includes: papal encyclicals, papal appointments,
-  Vatican decisions, the Synod on Synodality, Catholic doctrine debates, Pope Francis statements, Cardinal
-  appointments, and other Roman Catholic institutional news. The audience is evangelical Protestant — they
-  have limited interest in internal Catholic Church affairs. Exception: score normally if the article has
-  clear relevance to all Christians (e.g., broad pro-life coalitions, shared persecution, ecumenical topics
-  with direct evangelical application).
+SPECIAL CASES:
+- OBITUARIES, TRIBUTES, and PERSON-SPECIFIC NEWS: importance reflects how much the person or event matters
+  to evangelicals (the death of a movement-defining leader can be 8+; a routine appointment is 3-4).
+  Depth stays 4 or below unless the piece teaches theology that stands apart from the person.
+- CATHOLIC-SPECIFIC CONTENT (papal statements, Vatican decisions, synodality, cardinal appointments,
+  internal Catholic doctrine debates): importance 3 or below and depth 3 or below. The audience is
+  evangelical Protestant. Exception: score normally when it has clear relevance to all Christians
+  (pro-life coalitions, shared persecution, ecumenical topics with direct evangelical application).
+- DATA, RESEARCH, and STATISTICS pieces (Pew, Barna, Burge, Lifeway, Gallup, PRRI, church demographics,
+  generational trends): tag "data". Score importance on its merits; new findings can be 7+.
 
 For each article, return a JSON object with:
-  - "score": integer 1-10
+  - "importance": integer 1-10 (see IMPORTANCE above)
+  - "depth": integer 1-10 (see DEPTH above)
   - "tags": array of 1-3 tags chosen ONLY from this exact list:
-      theology, culture, apologetics, church life, missions, politics, devotional, news, family, prayer, suffering, work, data
+      __TAGS__
       Use "data" for research, statistics, polling, and sociological analysis articles (Pew Research, Barna Group, Ryan Burge,
       Lifeway Research, Ed Stetzer, PRRI, Gallup, etc.)
   - "personas": array of 1-3 reader personas chosen ONLY from this exact list:
-      pastor, professional, parent, student, women, seeker
+      __PERSONAS__
   - "topic_cluster": a short snake_case string grouping articles on the same news story or topic.
       IMPORTANT: Articles about the same person or institution should share a cluster even if the angle differs.
       Examples: all Pope Francis / Vatican / synodality articles → "pope_francis_vatican";
@@ -148,6 +155,9 @@ No explanation, no markdown, just the raw JSON array.
 Articles:
 {articles}
 """
+BATCH_PROMPT = (BATCH_PROMPT
+                .replace("__TAGS__", ", ".join(ALLOWED_TAGS))
+                .replace("__PERSONAS__", ", ".join(ALLOWED_PERSONAS)))
 
 
 MAX_RETRIES = 4
@@ -217,7 +227,7 @@ def score_batch(articles: list[dict]) -> list[dict]:
         def _call():
             return client.messages.create(
                 model="claude-haiku-4-5-20251001",
-                max_tokens=2000,
+                max_tokens=2500,
                 messages=[{"role": "user", "content": BATCH_PROMPT.format(articles=articles_text)}],
             )
         message = _api_call_with_retry(_call, "Scoring")
@@ -233,41 +243,77 @@ def score_batch(articles: list[dict]) -> list[dict]:
             raise ValueError("Empty response")
         results = json.loads(raw)
         for i, article in enumerate(articles):
-            if i < len(results):
-                article["score"] = results[i].get("score", 5)
-                article["tags"] = results[i].get("tags", [])
-                article["personas"] = results[i].get("personas", [])
-                article["topic_cluster"] = results[i].get("topic_cluster", "unique")
-                article["perspective"] = results[i].get("perspective", "neutral")
+            if i < len(results) and isinstance(results[i], dict):
+                r = results[i]
+                # "score" is accepted as a fallback in case the model answers in
+                # the old single-axis shape.
+                importance = _axis(r.get("importance", r.get("score")))
+                article["importance"] = importance
+                article["depth"] = _axis(r.get("depth", r.get("score")))
+                article["score"] = importance
+                article["tags"] = clean_tags(r.get("tags", []))
+                article["personas"] = clean_personas(r.get("personas", []))
+                article["topic_cluster"] = r.get("topic_cluster", "unique")
+                article["perspective"] = r.get("perspective", "neutral")
                 article["scored_by"] = "claude"
             else:
-                article["score"] = 5
-                article["tags"] = []
-                article["personas"] = []
-                article["topic_cluster"] = "unique"
-                article["perspective"] = "neutral"
-                article["scored_by"] = "fallback"
+                _fallback_fields(article)
     except Exception as e:
         print(f"  Batch scoring error: {e}")
         record_failure("scorer", e)
         for article in articles:
-            article["score"] = 5
-            article["tags"] = []
-            article["personas"] = []
-            article["topic_cluster"] = "unique"
-            article["perspective"] = "neutral"
-            article["scored_by"] = "fallback"
+            _fallback_fields(article)
     return articles
+
+
+def _axis(value, default: int = 5) -> int:
+    """Coerce a model-returned axis score to an int in 1..10."""
+    try:
+        return max(1, min(10, int(round(float(value)))))
+    except (TypeError, ValueError):
+        return default
+
+
+def _fallback_fields(article: dict) -> None:
+    article["importance"] = 5
+    article["depth"] = 5
+    article["score"] = 5
+    article["tags"] = []
+    article["personas"] = []
+    article["topic_cluster"] = "unique"
+    article["perspective"] = "neutral"
+    article["scored_by"] = "fallback"
+
+
+# ── Boost cap (P1, 2026-10-30) ───────────────────────────────────────────────
+# Mechanical boosts apply to the importance axis (final_score). Their combined
+# upward movement per article is capped at MAX_TOTAL_BOOST so stacked boosts
+# (recency + frequency + trending + stale + floor + ...) can no longer lift a
+# middling piece over a genuinely important one. Penalties are never capped,
+# and a penalty does not refund boost budget. Depth gets no boosts at all.
+MAX_TOTAL_BOOST = 2.0
+BOOST_KEYS = {
+    "tier", "recency", "frequency", "response", "trending",
+    "stale_source", "opposing_views", "independent_floor",
+}
 
 
 def _adjust(article: dict, key: str, new_score: float) -> None:
     """Set final_score and record the actual change under article["boosts"][key].
 
-    Persisted to article_history.json (with base_score and scored_by) so the
-    editorial score can be separated from mechanical boosts when tuning.
+    Upward moves under BOOST_KEYS draw on a per-article budget of
+    MAX_TOTAL_BOOST; anything beyond it is discarded. Persisted to
+    article_history.json (with base_score and scored_by) so the editorial
+    score can be separated from mechanical boosts when tuning.
     """
+    current = article.get("final_score", 0.0)
     new_score = round(new_score, 2)
-    delta = round(new_score - article.get("final_score", 0.0), 2)
+    if key in BOOST_KEYS and new_score > current:
+        used = article.get("boost_total", 0.0)
+        allowed = max(0.0, round(MAX_TOTAL_BOOST - used, 2))
+        new_score = round(min(new_score, current + allowed), 2)
+        article["boost_total"] = round(used + (new_score - current), 2)
+    delta = round(new_score - current, 2)
     article["final_score"] = new_score
     if delta:
         boosts = article.setdefault("boosts", {})
@@ -383,7 +429,7 @@ TIER_2_SOURCES  = {"World Magazine", "Relevant Magazine", "Reformation21", "Jen 
 #  the April 2026 Tier A expansion commit.)
 INDEPENDENT_SOURCES = {s["name"] for s in SOURCES if s.get("independent", False)}
 MIN_INDEPENDENT_ARTICLES = 5
-INDEPENDENT_FLOOR_BOOST  = 2.0  # boost applied to top independents if floor not met
+INDEPENDENT_FLOOR_BOOST  = 1.0  # was 2.0; dropped 2026-10-30 (P1). Still subject to MAX_TOTAL_BOOST.
 ROTATION_FRESH_WINDOW_DAYS = 14  # an independent is "fresh" if not surfaced in this window
 
 # ── Publishing-frequency boost (independents only) ────────────────────────────
@@ -644,7 +690,12 @@ def apply_independent_floor(
 
 
 def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
-    """Score, boost, and diversify all articles. Returns sorted by final_score."""
+    """Score, boost, and diversify all articles. Returns sorted by final_score (importance)."""
+    # Step -2: Cross-feed canonical dedup, so reposts, syndication, and
+    # tracking-param variants can never take two slots. Primary beats discovery.
+    articles = dedupe_articles(articles)
+    vocab_dropped.clear()  # count only this run's parse
+
     # Step -1: Discovery-only items (aggregator reposts, link roundups) are
     # fetched and health-logged but never ranked or sent to Claude.
     discovery = [a for a in articles if a.get("role") == "discovery"]
@@ -699,6 +750,7 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     # Step 2: Apply source tier multiplier + recency boost + independent
     # publishing-frequency boost → store in final_score.
     shown_urls = shown_urls or set()
+    shown_canonical = {canonical_url(u) for u in shown_urls}
     previously_shown_count = 0
     catholic_capped_count = 0
     frequency_boosted_count = 0
@@ -712,11 +764,19 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     source_last_shown = load_source_last_shown()
 
     for article in scored:
-        # base_score = the editorial score before any multiplier or boost.
-        base_score = float(article.get("score") or 5)
+        # base_score = the editorial importance score before any multiplier or boost.
+        base_score = float(article.get("importance") or article.get("score") or 5)
+        base_depth = float(article.get("depth") or base_score)
         article["base_score"] = base_score
+        article["base_importance"] = base_score
+        article["base_depth"] = base_depth
         article["final_score"] = base_score
         article["boosts"] = {}
+        article["boost_total"] = 0.0
+        # Depth gets penalties only: half the age penalty (Worth Your Time is
+        # more evergreen than the front page), plus previously-shown and the
+        # Catholic cap below.
+        depth = base_depth
         multiplier = SOURCE_TIER_MULTIPLIERS.get(article.get("source_name", ""), DEFAULT_TIER_MULTIPLIER)
         _adjust(article, "tier", min(base_score * multiplier, 10.0))
         boost = apply_recency_boost(article)
@@ -737,10 +797,13 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
 
         _adjust(article, "recency", min(article["final_score"] + boost, 10.0))
         _adjust(article, "frequency", min(article["final_score"] + freq_bump, 10.0))
+        if boost < 0:
+            depth += boost / 2
 
         # Apply previously-shown penalty
-        if article.get("url") in shown_urls:
+        if article.get("url") in shown_urls or article.get("canonical_url") in shown_canonical:
             _adjust(article, "previously_shown", max(article["final_score"] - PREVIOUSLY_SHOWN_PENALTY, 0.0))
+            depth -= PREVIOUSLY_SHOWN_PENALTY
             article["previously_shown"] = True
             previously_shown_count += 1
 
@@ -752,6 +815,9 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
             _adjust(article, "catholic_cap", CATHOLIC_SCORE_CAP)
             article["catholic_capped"] = True
             catholic_capped_count += 1
+        if is_catholic:
+            depth = min(depth, CATHOLIC_SCORE_CAP)
+        article["depth"] = round(max(depth, 0.0), 2)
 
         if boost > 0:
             article["recency_boost"] = boost
@@ -850,4 +916,13 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     # with rotating-voices preference (fresh voices first, then highest-scoring).
     scored = apply_independent_floor(scored, source_last_shown=source_last_shown)
 
+    # importance mirrors final_score so Wave 2 templates can use the explicit name.
+    for article in scored:
+        article["importance"] = article["final_score"]
+    capped = sum(1 for a in scored if a.get("boost_total", 0) >= MAX_TOTAL_BOOST)
+    if capped:
+        print(f"  Boost cap: {capped} articles hit the +{MAX_TOTAL_BOOST} combined boost ceiling.")
+    report_drops()
+
     return scored
+

@@ -22,6 +22,8 @@ def save_yesterday(articles: list[dict]):
             "source_name": a.get("source_name", ""),
             "author": a.get("author", ""),
             "final_score": a.get("final_score", a.get("score", 0)),
+            "importance": a.get("importance", a.get("final_score")),
+            "depth": a.get("depth"),
             "tags": a.get("tags", []),
         }
         for a in articles
@@ -83,6 +85,12 @@ def save_article_history(articles: list[dict]):
                 # Scoring provenance, added 2026-10-30 so tuning can separate the
                 # editorial score from mechanical boosts and skip fallback rows.
                 "base_score": a.get("base_score"),
+                # Two-axis scoring, added 2026-10-30 (P1). importance == final_score.
+                "importance": a.get("importance", a.get("final_score")),
+                "depth": a.get("depth"),
+                "base_importance": a.get("base_importance", a.get("base_score")),
+                "base_depth": a.get("base_depth"),
+                "canonical_url": a.get("canonical_url", ""),
                 "boosts": a.get("boosts", {}),
                 "scored_by": a.get("scored_by", "unknown"),
                 "clicks": 0,  # placeholder for future GA integration

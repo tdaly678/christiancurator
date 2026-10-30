@@ -217,6 +217,14 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         topics_shown = [c["topic_name"] for c in front_page_cards[:3]]
         print(f"  Front-page cards (top 3): {topics_shown}")
 
+    # Worth Your Time lane: top by depth, excluding everything already placed by
+    # importance. Passed to the template now; template.html renders it in Wave 2.
+    from curator.lanes import select_worth_your_time
+    worth_your_time = select_worth_your_time(
+        articles, exclude_urls=front_page_urls | {a.get("url") for a in other_headlines})
+    if worth_your_time:
+        print(f"  Worth Your Time: {[a.get('source_name') for a in worth_your_time]}")
+
     # Compute recent archive dates for the homepage archive list
     archive_dates = []
     if ARCHIVE_DIR.exists():
@@ -243,6 +251,7 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         featured_topics=featured_topics,
         front_page_cards=front_page_cards,
         other_headlines=other_headlines,
+        worth_your_time=worth_your_time,
         article_topic_map=article_topic_map,
         all_topics=TOPICS,
         topics_by_category=TOPICS_BY_CATEGORY,
