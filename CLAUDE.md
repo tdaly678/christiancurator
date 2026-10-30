@@ -69,7 +69,22 @@ Runs automatically at **6:00 AM UTC** via `.github/workflows/daily_run.yml`.
 What it commits: `docs/index.html`, `docs/topics/`, `docs/digest/`, `docs/yesterday.json`, `docs/email_draft.html`,
 `docs/article_history.json`, `docs/research_articles.json`, all five sitemaps (`sitemap.xml`, `sitemap-core.xml`,
 `sitemap-topics.xml`, `sitemap-voices.xml`, `sitemap-archive.xml`, `sitemap-daily.xml`), `docs/archive/`, `docs/daily/`,
-`docs/_pagefind/`, `docs/voices/`, `docs/voices_data.json`, `docs/spotlight_topic_log.json`.
+`docs/_pagefind/`, `docs/voices/`, `docs/voices_data.json`, `docs/spotlight_topic_log.json`, `docs/feed_health.json`.
+
+### Feed health and source roles (added 2026-10-30)
+`fetcher/rss_fetcher.py` fetches feeds with `requests` (15s timeout, browser UA with a feed-reader UA retry, 8 threads)
+and writes `docs/feed_health.json` every run: per-source `http_status`, `n_entries`, `newest_date`, `bozo`, `stale`,
+`error`, plus `zero_streaks` (consecutive run days with 0 items). `scripts/check_feed_health.py` runs after the commit
+and fails the workflow once any configured source hits 7 days at 0 items. Fix the URL in `fetcher/sources.py` or remove
+the source.
+
+Sources can set `role: "discovery"` (fetched and health-logged, never ranked: The Aquila Report) or a
+`discovery_title_pattern` (Tim Challies' A La Carte / Kindle deals / book roundups). `score_articles()` drops discovery
+items before Claude scoring.
+
+`docs/article_history.json` rows carry `base_score` (Claude's editorial score before boosts), `boosts` (actual delta per
+mechanism), and `scored_by` (`claude` / `fallback`). Rows from 2026-09-06 to 2026-10-25 (Anthropic credit outage) are
+marked `scored_by: "fallback"`, `scored_by_backfilled: true` by `scripts/backfill_scored_by.py`; exclude them when tuning.
 
 Steps after the pipeline itself: backfill orphan voice pages, rebuild the `/topics/` hub index, rebuild the `/voices/`
 category hubs, refresh recent-articles sections, inject the Featured deep dives block, regenerate the sitemaps,
@@ -164,16 +179,20 @@ Keywords removed from topics in April 2026 for being too generic: `media`, `tech
 ## Daily Digest — Yesterday Section (Added April 6 2026)
 The digest page shows "Yesterday's top reads" below today's headlines. `save_yesterday()` in `output/__init__.py` saves the top 10 scored articles daily to `docs/yesterday.json`. `render_digest_page()` in `frontend/__init__.py` accepts `yesterday_articles` and sorts to top 10 before passing to the template. The browse grid ("Explore all topics") was removed from the digest page — it lives on the homepage only.
 
-## Email Design (Updated April 2026)
-Daily email via Brevo API. Structure:
-1. Forwarded banner
+## Email Design (Updated October 2026)
+Daily email via Brevo API, built in `curator/email_sender.py` after `render_html()` (which assigns `debate_topics`).
+Structure:
+1. Date line + "Forwarded to you? Subscribe Free" banner
 2. Masthead + byline: *"For curious Christians seeking clarity on the questions that matter most"*
-3. **"In the Conversation Today"** — top featured topic card (name, summary, article list)
-4. **"In Case You Missed It — Yesterday"** — yesterday's top topic card (never the same slug as today's)
-5. CTA to homepage
-6. Forward nudge + footer
+3. **Today's Top Stories**: first 5 of the homepage's diversified front-page cards
+4. **The Daily Pulse**: `daily_summary["paragraphs_html"]` plus a link to `/daily/YYYY-MM-DD/`; omitted when the summary is missing or empty
+5. **More Headlines**: the other front-page cards + "Other Headlines", then up to 3 World News items
+6. CTA to the homepage, then the **Go Deeper** spotlight topic (rotation logged in `docs/spotlight_topic_log.json`, no repeats for 70 days)
+7. Forward nudge + footer
 
-Topic deduplication uses `output/featured_topic_log.json` (today) and `output/sent_topic_log.json` (what was emailed before).
+Every headline links **directly to the article URL**. (Homepage anchors `/#a<hash>` were dropped in October 2026 because
+the next day's re-render removes them; if an article has no URL the link falls back to `/archive/YYYY-MM-DD/`.)
+Subject line: `{lead headline} · + N more stories`, lead truncated at 70 characters (`build_subject()`).
 
 ## Topic Pages — Structure (70 topics as of September 2026)
 
