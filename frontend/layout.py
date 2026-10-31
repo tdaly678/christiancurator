@@ -210,7 +210,8 @@ def build_homepage_layout(articles: list[dict], pairings: list[dict] | None = No
     ranked = sorted((a for a in articles if a.get("url") and a.get("role") != "media"),
                     key=_score, reverse=True)
     fresh = _cap_audio_video(
-        [a for a in ranked if not a.get("previously_shown") and not a.get("catholic_capped")])
+        [a for a in ranked if not a.get("previously_shown") and not a.get("catholic_capped")
+         and not a.get("mainline_capped")])
     # One story, one slot: same-story copies from other outlets collapse into
     # an "also:" line under the best-ranked one.
     siblings, clustered_away = build_story_clusters(fresh)

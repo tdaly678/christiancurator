@@ -153,6 +153,15 @@ def _norm_title(a: dict) -> str:
     return re.sub(r"[^a-z0-9 ]", "", _title(a).lower())
 
 
+def _off_focus(a: dict) -> bool:
+    """Catholic-specific or mainline polity items (curator/scorer.py caps) never
+    headline The Debate. Checks the title too, so cached pairings that carry only
+    title + url are caught."""
+    from curator.scorer import is_mainline_polity
+    return bool(a.get("catholic_capped") or a.get("mainline_capped")
+                or is_mainline_polity(a.get("title", "")))
+
+
 def validate_pair(a: dict, b: dict, pairing: dict | None = None) -> str | None:
     """Return a rejection reason, or None when the pair is a real debate."""
     pairing = pairing or {}
@@ -162,6 +171,8 @@ def validate_pair(a: dict, b: dict, pairing: dict | None = None) -> str | None:
         return "same url"
     if a.get("source_name") and a.get("source_name") == b.get("source_name"):
         return "same source"
+    if _off_focus(a) or _off_focus(b):
+        return "off evangelical focus"
 
     pa, pb = a.get("perspective"), b.get("perspective")
     opposed = {pa, pb} == _STANCES
@@ -192,7 +203,8 @@ def validate_pair(a: dict, b: dict, pairing: dict | None = None) -> str | None:
 def build_point_counterpoint(articles: list[dict]) -> list[dict]:
     """Ask Claude for genuine thesis-vs-thesis pairs among the top articles."""
     candidates = [a for a in articles
-                  if (a.get("score") or 0) >= 6 and a.get("role") != "media"][:MAX_CANDIDATES]
+                  if (a.get("score") or 0) >= 6 and a.get("role") != "media"
+                  and not _off_focus(a)][:MAX_CANDIDATES]
     if len(candidates) < 2:
         return []
 

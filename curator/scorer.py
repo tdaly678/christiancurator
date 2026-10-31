@@ -123,6 +123,16 @@ SPECIAL CASES:
   internal Catholic doctrine debates): importance 3 or below and depth 3 or below. The audience is
   evangelical Protestant. Exception: score normally when it has clear relevance to all Christians
   (pro-life coalitions, shared persecution, ecumenical topics with direct evangelical application).
+- MAINLINE INSTITUTIONAL POLITY AND PERSONNEL (United Methodist bishops, appointments, annual or general
+  conference process, judicial council rulings; routine Episcopal Church, ELCA, PC(USA) or UCC internal
+  business such as elections, resignations, budgets, diocesan or synod decisions): importance 3 or below and
+  depth 3 or below. Most evangelical readers do not follow mainline internal affairs. Score normally only when
+  the story clearly matters to evangelicals: a large disaffiliation wave or Global Methodist growth,
+  a doctrine fight evangelicals are already tracking (Asbury, a seminary's stance on marriage), religious
+  liberty with broad Protestant stakes, or data on mainline decline. An evangelical outlet (WORLD,
+  Christianity Today) framing a mainline story around an evangelical angle can rank on that angle.
+  BAPTIST (SBC and others) and PRESBYTERIAN (PCA, EPC, ECO, OPC) news is core evangelical coverage: score it
+  normally, including denominational votes and leadership news.
 - DATA, RESEARCH, and STATISTICS pieces (Pew, Barna, Burge, Lifeway, Gallup, PRRI, church demographics,
   generational trends): tag "data". Score importance on its merits; new findings can be 7+.
 
@@ -490,6 +500,40 @@ CATHOLIC_CLUSTER_KEYWORDS = {
 }
 CATHOLIC_SCORE_CAP = 3.0  # max final_score for Catholic-specific content
 
+# Mainline polity/personnel headlines: same hard cap as Catholic content.
+# Tom, 2026-10-31: the front page stays evangelical (Baptist and Presbyterian
+# are welcome); UMC bishop and annual-conference stories (e.g. a bishop
+# appointing a pastor to Highland Park) are noise for most evangelicals.
+# Needs BOTH a mainline body and a polity/personnel term in the title, so the
+# bare word "Methodist" is never banned. Exempt titles carry an evangelical
+# angle (Asbury, Global/Free Methodist, seminaries, religious liberty, courts,
+# counts of departing churches) and fall back to Claude's score.
+MAINLINE_BODY_RE = re.compile(
+    r"\bUMC\b|\bMethodists?\b|\bEpiscopal(ian)?s?\b|\bELCA\b|Evangelical Lutheran Church in America"
+    r"|\bPC\s?\(?USA\)?|Presbyterian Church \(?U\.?S\.?A\.?\)?|United Church of Christ|\bUCC\b"
+    r"|Disciples of Christ|\bannual conference\b",
+    re.IGNORECASE,
+)
+MAINLINE_POLITY_RE = re.compile(
+    r"\bbishops?\b|\bconferences?\b|judicial council|\bappoint|\bdiocese|\bdiocesan\b|\bsynod"
+    r"|\bconsecrat|\bpresiding\b|\bsuperintendent|\bdelegates?\b|\bapportionment|\bclergy\b"
+    r"|\bresign|\bretire|\binstall|\belect(s|ed|ion)?\b|\bchurch trial\b|\bpolity\b",
+    re.IGNORECASE,
+)
+MAINLINE_EXEMPT_RE = re.compile(
+    r"asbury|global methodist|free methodist|seminary|religious (liberty|freedom)|supreme court|\bcourt\b"
+    r"|\b\d[\d,]*\s+(churches|congregations)\b",
+    re.IGNORECASE,
+)
+MAINLINE_SCORE_CAP = 3.0
+
+
+def is_mainline_polity(title: str) -> bool:
+    """True for mainline internal polity/personnel headlines (UMC bishops, etc.)."""
+    title = title or ""
+    return (bool(MAINLINE_BODY_RE.search(title)) and bool(MAINLINE_POLITY_RE.search(title))
+            and not MAINLINE_EXEMPT_RE.search(title))
+
 
 def apply_topic_deduplication(articles: list[dict]) -> list[dict]:
     """
@@ -757,6 +801,7 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     shown_canonical = {canonical_url(u) for u in shown_urls}
     previously_shown_count = 0
     catholic_capped_count = 0
+    mainline_capped_count = 0
     frequency_boosted_count = 0
 
     # Precompute one post-count map for the whole fetch so we don't re-scan
@@ -821,6 +866,13 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
             catholic_capped_count += 1
         if is_catholic:
             depth = min(depth, CATHOLIC_SCORE_CAP)
+
+        if is_mainline_polity(article.get("title")):
+            if article["final_score"] > MAINLINE_SCORE_CAP:
+                _adjust(article, "mainline_cap", MAINLINE_SCORE_CAP)
+                mainline_capped_count += 1
+            article["mainline_capped"] = True
+            depth = min(depth, MAINLINE_SCORE_CAP)
         article["depth"] = round(max(depth, 0.0), 2)
 
         if boost > 0:
@@ -830,6 +882,8 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
         print(f"  Applied previously-shown penalty to {previously_shown_count} articles.")
     if catholic_capped_count:
         print(f"  Applied Catholic content cap to {catholic_capped_count} articles.")
+    if mainline_capped_count:
+        print(f"  Applied mainline polity cap to {mainline_capped_count} articles.")
     if frequency_boosted_count:
         # Summarize which independents earned the boost, sorted by boost size
         boosted_sources = sorted(

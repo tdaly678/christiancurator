@@ -37,8 +37,8 @@ def select_worth_your_time(
 
     Skips anything in `exclude_urls` (pass the front-page and Other Headlines
     URLs) or, when no set is given, the top `exclude_top_n` by importance, so
-    the two lanes don't repeat each other. Previously shown and Catholic-capped
-    items are skipped, as is anything below `min_depth`.
+    the two lanes don't repeat each other. Previously shown, Catholic-capped and
+    mainline-polity-capped items are skipped, as is anything below `min_depth`.
     """
     pool = [a for a in articles if a.get("source_type") != "world_news"]
     if exclude_urls is None:
@@ -48,6 +48,7 @@ def select_worth_your_time(
         (a for a in pool
          if a.get("url") and a.get("url") not in exclude_urls
          and not a.get("previously_shown") and not a.get("catholic_capped")
+         and not a.get("mainline_capped")
          and float(a.get("depth") or 0) >= min_depth),
         key=lambda a: (a.get("depth") or 0, a.get("base_depth") or 0, a.get("final_score") or 0),
         reverse=True,

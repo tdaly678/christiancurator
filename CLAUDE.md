@@ -109,6 +109,15 @@ to a separate Worth Your Time lane.
   URLs already placed in the importance lane. Rendered on the homepage and email since Wave 2, and the picks are
   written to `article_history.json` so the depth lane does not repeat.
 
+### Evangelical focus: mainline polity cap (Tom, 2026-10-31)
+Baptist and Presbyterian news is core coverage; mainline internal polity (UMC bishops and appointments, annual
+conference process, routine TEC / ELCA / PC(USA) / UCC business) is not. The scorer prompt scores it 3 or below unless
+it clearly matters to evangelicals (disaffiliation waves, Asbury/seminary doctrine fights, religious liberty).
+`is_mainline_polity()` in `curator/scorer.py` is the title backstop: mainline body AND polity term, minus exemptions
+(Asbury, Global/Free Methodist, seminary, religious liberty, court, "N churches"). Matches are capped at 3.0, flagged
+`mainline_capped`, and kept out of the lead, board, Worth Your Time and The Debate. Never drop RNS, Christian Post or
+WORLD to fix this. Tests: `tests/test_mainline_focus.py`. Notes: `.christian-orchestrator/evangelical-focus-and-schedule-2026-10-31.md`.
+
 ### Homepage v2 (P1 Wave 2, 2026-10-30)
 `frontend/layout.py` `build_homepage_layout()` decides every homepage placement; `render_html()` renders it, returns
 it, and `main.py` passes it to `send_email()` so page and email agree. Each URL appears once. Order on the page:
