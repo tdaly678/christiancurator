@@ -84,7 +84,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash origin main
-          git add docs/index.html docs/topics/ docs/digest/ docs/yesterday.json docs/email_draft.html docs/article_history.json docs/research_articles.json docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-topics.xml docs/sitemap-voices.xml docs/sitemap-daily.xml docs/sitemap-archive.xml docs/archive/ docs/daily/ docs/_pagefind/ docs/voices/ docs/voices_data.json docs/spotlight_topic_log.json docs/feed_health.json docs/click_counts.json
+          git add docs/index.html docs/topics/ docs/digest/ docs/yesterday.json docs/email_draft.html docs/article_history.json docs/research_articles.json docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-topics.xml docs/sitemap-voices.xml docs/sitemap-daily.xml docs/sitemap-archive.xml docs/archive/ docs/daily/ docs/_pagefind/ docs/voices/ docs/voices_data.json docs/spotlight_topic_log.json docs/feed_health.json docs/click_counts.json docs/discovery_queue.json
           git diff --staged --quiet || git commit -m "chore: daily curator run $(date -u +%Y-%m-%d)"
           git push origin main
 

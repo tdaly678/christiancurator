@@ -76,6 +76,15 @@ def main():
         a["scored_by"] = "media"  # history rows from the lane are never Claude-scored
     print(f"      Fetched {len(articles)} articles and {len(media_items)} media items.\n")
 
+    # --- Discovery queue (P2.3): links harvested from roundups (Challies'
+    #     A La Carte) are fetched and join the scoring pool as ordinary
+    #     candidates. A failure here never blocks the run. ---
+    try:
+        from fetcher.discovery import run_discovery_queue
+        articles.extend(run_discovery_queue(articles, shown_urls))
+    except Exception as e:
+        print(f"  (discovery queue skipped: {type(e).__name__}: {e})")
+
     # --- Layer 2: Score & Tag ---
     print("[2/4] Scoring and tagging articles...")
     articles = score_articles(articles, shown_urls=shown_urls)

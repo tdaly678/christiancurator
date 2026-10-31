@@ -15,6 +15,10 @@ Optional keys:
                      homepage, digest, or email (aggregators and roundups).
   - discovery_title_pattern: regex; matching titles from an otherwise
                      primary source are treated as discovery (e.g. link roundups)
+  - harvest_links / discovery_harvest_pattern: discovery items from this
+                     source (all, or titles matching the regex) have their
+                     outbound links queued in docs/discovery_queue.json and
+                     scored as ordinary candidates (fetcher/discovery.py)
   - role "media":    video and podcast feeds (see MEDIA SOURCES at the end of
                      SOURCES). Fetched and health-logged, never scored or
                      ranked; they only feed the Watch and Listen lane
@@ -413,6 +417,9 @@ SOURCES = [
         "discovery_title_pattern": (
             r"A La Carte|Kindle|Deals|Free Stuff Fridays|This Week in Christian Books|New and Notable Christian Books"
         ),
+        # A La Carte links out to the day's best pieces: harvest those links
+        # into the discovery queue (Kindle deals and giveaways are skipped).
+        "discovery_harvest_pattern": r"A La Carte",
     },
 
     # Pastors & pastoral theology

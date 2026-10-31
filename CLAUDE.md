@@ -199,6 +199,20 @@ recorded in `frontend/voices_redirects.json` (loser → survivor); the loser's p
   renders it under the lead, subleads and board items with `data-pos="also"` so the clicks are tracked. The email
   ignores `siblings`, so the CTR trims are unchanged. Tests: `tests/test_clusters.py`.
 
+### P2.3 Discovery queue
+- `fetcher/discovery.py` `run_discovery_queue()` runs in `main.py` right after the fetch (wrapped in try/except).
+  Discovery items from sources that opt in (`harvest_links: True`, or a `discovery_harvest_pattern` title regex; Tim
+  Challies sets `r"A La Carte"`) have their outbound links harvested from the feed HTML. Dropped: the roundup's own
+  domain, stores, social and video hosts, `store.`/`shop.`/`grow.`/`gift.` subdomains, images, bare homepages,
+  sponsor links (`utm_source=challies`), anchors under 3 words, roundups older than 3 days.
+- Queue: `docs/discovery_queue.json` (`entries[canonical_url] = {url, anchor, found_via, found_in, found_on, status,
+  attempts}`), committed daily. Already-shown URLs are skipped; entries expire after 7 days.
+- Graduation: up to 25 pending entries per run are fetched; og:title, description, site name, author and published
+  time become a normal article (`role: "primary"`, `discovered_via`, `creates_voices: False` unless the domain belongs
+  to a configured source, whose name and category it then takes). They go through `score_articles()` like any feed
+  item, and dedup collapses them against feed copies. Status becomes `graduated`; two failed fetches mark `failed`.
+- The Aquila Report does not harvest: its feed has no original link and its pages are behind a Cloudflare challenge.
+
 ## Hand-curated content — do NOT bulk regenerate
 The topic pages at `docs/topics/<slug>/index.html` are **hand-curated**. They are edited directly (often by AI assistants at Tom's request) and are **not** regenerated from a template by any script. **This changed:** the daily pipeline now DOES `git add docs/topics/`, because `build_recent_articles.py` refreshes the recent-articles block on topic pages each day. It only edits between the injection markers below, so hand-written editorial survives, but topic pages are no longer outside the pipeline's reach.
 
