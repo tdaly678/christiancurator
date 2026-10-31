@@ -118,6 +118,16 @@ it clearly matters to evangelicals (disaffiliation waves, Asbury/seminary doctri
 `mainline_capped`, and kept out of the lead, board, Worth Your Time and The Debate. Never drop RNS, Christian Post or
 WORLD to fix this. Tests: `tests/test_mainline_focus.py`. Notes: `.christian-orchestrator/evangelical-focus-and-schedule-2026-10-31.md`.
 
+### Evangelical focus: world-news mission gate (Tom, 2026-10-31)
+BBC, NYT and WSJ world feeds (`source_type: "world_news"`) carried wars, disasters, foreign politics and markets onto
+the News board (Iran bases, Spain rail, Tigray, a Russian newspaper). Cause: the Haiku world-news filter had to keep one
+"top story" per batch of 10 regardless of faith angle, and it kept every item when the API call failed. Both are gone.
+`curator/mission.py` `has_faith_hook()` is a keyword gate (Christianity, church, clergy, religion, persecution,
+religious liberty, abortion and life issues) on title + summary. In `filter_world_news_batch()` an item must pass the
+gate AND be marked relevant by Claude; on an API error the gate alone decides. `build_homepage_layout()` drops any
+world_news item failing the gate (`is_off_mission()`) from every lane, so cached re-renders are covered too. Christian
+outlets are never gated. Tests: `tests/test_world_news_mission.py`.
+
 ### Headline voice: hard rejects (2026-10-31)
 RealClear headlines (1,423 sampled, 2012 to 2026) never carry emoji, issue numbers or launch promos.
 `curator/headline_voice.py` `hard_reject(title)` returns `HARD_REJECT_EMOJI`, `HARD_REJECT_ISSUE_NUMBER` (#432, Issue 12,

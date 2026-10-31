@@ -25,6 +25,7 @@ from urllib.parse import urlsplit
 from curator.clusters import build_story_clusters
 from curator.dedup import canonical_url
 from curator.lanes import select_watch_and_listen, select_worth_your_time
+from curator.mission import is_off_mission
 
 SUBLEAD_COUNT = 3
 BOARD_PER_COLUMN = 22
@@ -207,6 +208,9 @@ def build_homepage_layout(articles: list[dict], pairings: list[dict] | None = No
     `media_items` are the role "media" feed items (main.py splits them off
     before scoring); they only ever reach the Watch and Listen lane.
     """
+    # General world news with no faith hook never reaches any lane, even from
+    # cached articles scored before the mission gate existed.
+    articles = [a for a in articles if not is_off_mission(a)]
     ranked = sorted((a for a in articles if a.get("url") and a.get("role") != "media"),
                     key=_score, reverse=True)
     fresh = _cap_audio_video(

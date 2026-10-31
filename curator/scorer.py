@@ -27,6 +27,7 @@ from dotenv import load_dotenv
 from curator.ai_health import record_failure
 from curator.dedup import canonical_url, dedupe_articles
 from curator.headline_voice import apply_display_title, hard_reject, voice_adjustments
+from curator.mission import has_faith_hook
 from curator.vocab import ALLOWED_TAGS, ALLOWED_PERSONAS, clean_tags, clean_personas, report_drops
 from curator.vocab import dropped as vocab_dropped
 
@@ -64,21 +65,21 @@ DIVERSITY_PENALTY_PER_EXTRA = 0.75  # -0.75 per article beyond the first
 MAX_PER_SOURCE = 5                  # hard cap per source
 
 WORLD_NEWS_FILTER_PROMPT = """\
-You are a filter for a Christian news digest that also surfaces the most important world event each day.
+You are a filter for a news digest for EVANGELICAL PROTESTANT Christians. These articles come from
+general world-news feeds (BBC, NYT, WSJ, Guardian). Keep only the ones with a clear faith angle.
 
 For each article, return a JSON object with:
   - "relevant": true or false
-      An article IS relevant if it covers: Protestant or Catholic Christianity, religious freedom,
-      church-state issues, persecution of Christians, Christian cultural influence, Christian leaders
-      or institutions, faith and public life, or major religious events affecting Christians.
-      An article is NOT relevant if it primarily covers: Islam, Hinduism, Buddhism, Judaism (unless
-      related to Christian-Jewish relations), general spirituality, New Age, or topics with no
-      direct Christian angle.
-  - "top_story": true for exactly ONE article — the single most important and newsworthy world event
-      of the day based on significance, global impact, and timeliness. This article should be surfaced
-      regardless of whether it has a direct Christian angle. Choose the story that a well-informed
-      person would consider the most consequential news of the day. All other articles should have
-      "top_story": false.
+      An article IS relevant if it is about: Protestant or Catholic Christianity, Christian leaders,
+      churches or institutions, persecution of Christians or of religious minorities, religious
+      liberty or church-state cases, faith in public life, abortion and life issues, or major
+      religious events affecting Christians.
+      An article is NOT relevant if it is general news with no faith or church angle, even when it is
+      the biggest story of the day: wars and military strikes, terrorism, natural or transport
+      disasters, elections and foreign politics, ministers and resignations, press freedom, business,
+      markets, oil and trade. Also NOT relevant: Islam, Hinduism, Buddhism, Judaism (unless related to
+      Christian-Jewish relations), general spirituality, New Age.
+      When in doubt, return false.
 
 Respond with ONLY a JSON array, one object per article, in the same order.
 
@@ -190,7 +191,16 @@ def _api_call_with_retry(fn, label="API call"):
 
 
 def filter_world_news_batch(articles: list[dict]) -> list[dict]:
-    """Filter world news articles for evangelical relevance and flag the top world story."""
+    """Keep world-news articles Claude marks relevant AND that pass has_faith_hook().
+
+    Claude used to pick one "top story" per batch of 10 to keep regardless of
+    faith angle, so every batch let a war, disaster or market story through
+    onto the News board. That exemption is gone. On an API error the keyword
+    gate alone decides (it used to keep everything).
+    """
+    articles = [a for a in articles if has_faith_hook(a.get("title", ""), a.get("summary", ""))]
+    if not articles:
+        return []
     articles_text = "\n".join(
         f"{i+1}. Title: {a['title']}\n   Summary: {a['summary'][:200]}"
         for i, a in enumerate(articles)
@@ -210,16 +220,8 @@ def filter_world_news_batch(articles: list[dict]) -> list[dict]:
                 raw = raw[4:]
             raw = raw.strip()
         results = json.loads(raw)
-        kept = []
-        for i, a in enumerate(articles):
-            if i >= len(results):
-                break
-            if results[i].get("top_story", False):
-                a["top_world_story"] = True
-                kept.append(a)
-            elif results[i].get("relevant", False):
-                kept.append(a)
-        return kept
+        return [a for i, a in enumerate(articles)
+                if i < len(results) and results[i].get("relevant", False)]
     except Exception as e:
         print(f"  World news filter error: {e}")
         record_failure("world_news_filter", e)
@@ -758,7 +760,8 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
         summary = ", ".join(f"{n} {s}" for s, n in sorted(by_source.items()))
         print(f"  Discovery only (not ranked): {len(discovery)} items ({summary}).")
 
-    # Step 0: Filter world news articles for evangelical relevance
+    # Step 0: Filter world news articles for evangelical relevance. Keyword
+    # gate first (no faith hook, no Claude call), then Claude relevance.
     world_news = [a for a in articles if a.get("source_type") == "world_news"]
     christian = [a for a in articles if a.get("source_type") != "world_news"]
     if world_news:
