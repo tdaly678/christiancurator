@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-10-30T20:22:45+00:00",
+  "run_at": "2026-10-31T09:45:11+00:00",
   "sources": [
     {
       "source": "The Gospel Coalition",
@@ -7,7 +7,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 100,
-      "newest_date": "2026-10-30",
+      "newest_date": "2026-10-31",
       "bozo": false,
       "stale": false
     },
@@ -37,7 +37,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-10-30",
+      "newest_date": "2026-10-31",
       "bozo": false,
       "stale": false
     },
@@ -77,7 +77,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 30,
-      "newest_date": "2026-10-30",
+      "newest_date": "2026-10-31",
       "bozo": false,
       "stale": false
     },
@@ -96,7 +96,7 @@
       "url": "https://www.ligonier.org/feed/",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 42,
+      "n_entries": 41,
       "newest_date": "2026-10-30",
       "bozo": false,
       "user_agent": "reader",
@@ -167,8 +167,8 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 37,
-      "newest_date": "2026-10-30",
+      "n_entries": 36,
+      "newest_date": "2026-10-31",
       "bozo": false,
       "stale": false
     },
@@ -177,8 +177,8 @@
       "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 55,
-      "newest_date": "2026-10-30",
+      "n_entries": 58,
+      "newest_date": "2026-10-31",
       "bozo": false,
       "stale": false
     },
@@ -187,8 +187,8 @@
       "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 73,
-      "newest_date": "2026-10-30",
+      "n_entries": 70,
+      "newest_date": "2026-10-31",
       "bozo": false,
       "stale": false
     },
@@ -206,41 +206,41 @@
       "source": "Kyle Worley",
       "url": "https://sacredslang.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-30",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Phylicia Masonheimer",
       "url": "https://phyliciamasonheimer.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-30",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Laura Wifler",
       "url": "https://laurawifler.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-22",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Karen Swallow Prior",
       "url": "https://karenswallowprior.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-27",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Samuel James",
@@ -276,21 +276,21 @@
       "source": "Scot McKnight",
       "url": "https://scotmcknight.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-30",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Matthew Lee Anderson",
       "url": "https://matthewleeanderson.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-30",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "O. Alan Noble",
@@ -336,21 +336,21 @@
       "source": "Joy Clarkson",
       "url": "https://joyclarkson.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-24",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Mike Cosper",
       "url": "https://mikecosper.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-09-18",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Bethel McGrew",
@@ -366,41 +366,41 @@
       "source": "Bonnie Kristian",
       "url": "https://bonniekristian.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-28",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Aimee Byrd",
       "url": "https://aimeebyrd.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-09-03",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Nadya Williams",
       "url": "https://nadyawilliams.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-24",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Daniel K. Williams",
       "url": "https://danielkwilliams.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-29",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Tsh Oxenreider",
@@ -426,21 +426,21 @@
       "source": "Timothy Paul Jones",
       "url": "https://timothypauljones.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-20",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Kate Shellnutt",
       "url": "https://kateshellnutt.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 13,
-      "newest_date": "2026-10-30",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Albert Mohler",
@@ -458,7 +458,7 @@
       "role": "discovery",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-10-30",
+      "newest_date": "2026-10-31",
       "bozo": false,
       "stale": false
     },
@@ -466,11 +466,11 @@
       "source": "Jemar Tisby",
       "url": "https://jemartisby.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-30",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Faithfully Magazine",
@@ -488,7 +488,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 6,
-      "newest_date": "2026-10-27",
+      "newest_date": "2026-10-31",
       "bozo": false,
       "stale": false
     },
@@ -496,11 +496,11 @@
       "source": "Hannah Anderson",
       "url": "https://hannahanderson.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 10,
-      "newest_date": "2026-09-03",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Aaron Renn",
@@ -516,11 +516,11 @@
       "source": "Stephen McAlpine",
       "url": "https://stephenmcalpine.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-26",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Chris Martin",
@@ -536,21 +536,21 @@
       "source": "Daniel Darling",
       "url": "https://dandarling.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-26",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Katelyn Beaty",
       "url": "https://katelynbeaty.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-23",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Tim Challies",
@@ -558,7 +558,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-10-30",
+      "newest_date": "2026-10-31",
       "bozo": false,
       "stale": false
     },
@@ -576,11 +576,11 @@
       "source": "Tom Sugimura",
       "url": "https://tomsugi.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-23",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "J.A. Medders",
@@ -596,101 +596,101 @@
       "source": "Mitchell Chase",
       "url": "https://mitchchase.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-27",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Michael Bird",
       "url": "https://michaelfbird.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-30",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Nijay Gupta",
       "url": "https://nijaykgupta.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-30",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Carmen Joy Imes",
       "url": "https://carmenjoyimes.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-25",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Beth Felker Jones",
       "url": "https://bethfelkerjones.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-12",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Thomas Kidd",
       "url": "https://thomaskidd.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-23",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Chris Gehrz",
       "url": "https://chrisgehrz.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-29",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Emily P. Freeman",
       "url": "https://emilypfreeman.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-22",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "A.J. Swoboda",
       "url": "https://ajswoboda.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-29",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Nicholas McDonald",
       "url": "https://thebardowl.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-30",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Truth Unites (Gavin Ortlund)",
@@ -777,5 +777,156 @@
       "stale": false
     }
   ],
-  "zero_streaks": {}
+  "zero_streaks": {
+    "Kyle Worley": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Phylicia Masonheimer": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Laura Wifler": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Karen Swallow Prior": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Scot McKnight": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Matthew Lee Anderson": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Joy Clarkson": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Mike Cosper": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Bonnie Kristian": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Aimee Byrd": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Nadya Williams": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Daniel K. Williams": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Timothy Paul Jones": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Kate Shellnutt": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Jemar Tisby": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Hannah Anderson": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Stephen McAlpine": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Daniel Darling": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Katelyn Beaty": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Tom Sugimura": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Mitchell Chase": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Michael Bird": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Nijay Gupta": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Carmen Joy Imes": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Beth Felker Jones": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Thomas Kidd": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Chris Gehrz": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Emily P. Freeman": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "A.J. Swoboda": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    },
+    "Nicholas McDonald": {
+      "since": "2026-10-31",
+      "last_date": "2026-10-31",
+      "days": 1
+    }
+  }
 }

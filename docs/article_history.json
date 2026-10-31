@@ -54080,5 +54080,659 @@
     "boosts": {},
     "scored_by": "media",
     "clicks": 0
+  },
+  {
+    "url": "https://roysreport.com/former-acts-29-ceo-stephen-timmis-wife-janet-face-eight-rape-charges-in-uk/",
+    "title": "Former Acts 29 CEO Stephen Timmis, wife Janet, face eight rape charges in UK",
+    "source_name": "The Roys Report",
+    "date_shown": "2026-10-31",
+    "final_score": 9.5,
+    "tags": [
+      "news",
+      "church life"
+    ],
+    "topic_cluster": "stephen_timmis_acts29",
+    "base_score": 8.0,
+    "importance": 9.5,
+    "depth": 2.0,
+    "base_importance": 8.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://roysreport.com/former-acts-29-ceo-stephen-timmis-wife-janet-face-eight-rape-charges-in-uk",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://roysreport.com/whistleblower-compassion-international-has-no-off-ramp-for-sponsors-accused-of-grooming/",
+    "title": "Whistleblower: Compassion International has no ‘off ramp’ for sponsors accused of grooming",
+    "source_name": "The Roys Report",
+    "date_shown": "2026-10-31",
+    "final_score": 8.75,
+    "tags": [
+      "news",
+      "church life"
+    ],
+    "topic_cluster": "compassion_international_safeguarding",
+    "base_score": 8.0,
+    "importance": 8.75,
+    "depth": 2.0,
+    "base_importance": 8.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://roysreport.com/whistleblower-compassion-international-has-no-off-ramp-for-sponsors-accused-of-grooming",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/justice/this-sunday-the-global-church-will-pray-for-the-388-million-christians-facing-high-levels-of-persecution/",
+    "title": "This Sunday, the Global Church Will Pray for 388 Million Christians Facing High Levels of Persecution",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-10-31",
+    "final_score": 8.5,
+    "tags": [
+      "missions",
+      "prayer",
+      "suffering"
+    ],
+    "topic_cluster": "persecuted_church",
+    "base_score": 7.0,
+    "importance": 8.5,
+    "depth": 6.0,
+    "base_importance": 7.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://relevantmagazine.com/justice/this-sunday-the-global-church-will-pray-for-the-388-million-christians-facing-high-levels-of-persecution",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianpost.com/news/network-launched-to-fund-christian-school-scholarships.html",
+    "title": "Network launched to fund Christian school scholarships under new federal school choice program",
+    "source_name": "The Christian Post",
+    "date_shown": "2026-10-31",
+    "final_score": 7.8,
+    "tags": [
+      "church life",
+      "culture"
+    ],
+    "topic_cluster": "school_choice_program",
+    "base_score": 7.0,
+    "importance": 7.8,
+    "depth": 4.0,
+    "base_importance": 7.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://christianpost.com/news/network-launched-to-fund-christian-school-scholarships.html",
+    "boosts": {
+      "tier": -0.7,
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://religionnews.com/2026/10/30/samuel-sey-christian-blogger-arrested-by-ice-is-now-in-canada/",
+    "title": "Christian blogger Samuel Sey, arrested by ICE, has been removed to Canada, family says",
+    "source_name": "Religion News Service",
+    "date_shown": "2026-10-31",
+    "final_score": 7.5,
+    "tags": [
+      "news",
+      "politics"
+    ],
+    "topic_cluster": "samuel_sey_ice_arrest",
+    "base_score": 6.0,
+    "importance": 7.5,
+    "depth": 2.0,
+    "base_importance": 6.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://religionnews.com/2026/10/30/samuel-sey-christian-blogger-arrested-by-ice-is-now-in-canada",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cmewepdr109do?at_medium=RSS&at_campaign=rss",
+    "title": "They strangled us, says founder of Russian newspaper shut under pressure from authorities",
+    "source_name": "BBC News",
+    "date_shown": "2026-10-31",
+    "final_score": 6.9,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "russian_press_freedom",
+    "base_score": 6.0,
+    "importance": 6.9,
+    "depth": 2.0,
+    "base_importance": 6.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://bbc.co.uk/news/articles/cmewepdr109do?at_campaign=rss&at_medium=RSS",
+    "boosts": {
+      "tier": -0.6,
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.modernreformation.org/resources/essays/god-s-left-hand",
+    "title": "God’s Left Hand",
+    "source_name": "modernreformation.org",
+    "date_shown": "2026-10-31",
+    "final_score": 6.75,
+    "tags": [
+      "politics",
+      "theology"
+    ],
+    "topic_cluster": "faith_and_politics",
+    "base_score": 6.0,
+    "importance": 6.75,
+    "depth": 6.0,
+    "base_importance": 6.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://modernreformation.org/resources/essays/god-s-left-hand",
+    "boosts": {
+      "stale_source": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/sift/doj-charges-18-in-n-c-with-voting-illegally-in-u-s-elections-1793374090",
+    "title": "DOJ charges 18 in N.C. with voting illegally in U.S. elections",
+    "source_name": "World Magazine",
+    "date_shown": "2026-10-31",
+    "final_score": 6.6,
+    "tags": [
+      "news",
+      "politics"
+    ],
+    "topic_cluster": "election_integrity",
+    "base_score": 5.0,
+    "importance": 6.6,
+    "depth": 1.0,
+    "base_importance": 5.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://wng.org/sift/doj-charges-18-in-n-c-with-voting-illegally-in-u-s-elections-1793374090",
+    "boosts": {
+      "tier": 0.1,
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/10/reader-responses-elisabeth-elliot-lucy-austen/",
+    "title": "Reader Responses to ‘What We Know—and Cannot Know—About Elisabeth Elliot’s Sexuality’",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-10-31",
+    "final_score": 6.5,
+    "tags": [
+      "news",
+      "culture"
+    ],
+    "topic_cluster": "elisabeth_elliot_sexuality_debate",
+    "base_score": 5.0,
+    "importance": 6.5,
+    "depth": 4.0,
+    "base_importance": 5.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://christianitytoday.com/2026/10/reader-responses-elisabeth-elliot-lucy-austen",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.theguardian.com/us-news/2026/oct/29/new-mexico-church-endorses-republicans",
+    "title": "New Mexico megachurch endorses Republican candidates, testing federal ban",
+    "source_name": "The Guardian",
+    "date_shown": "2026-10-31",
+    "final_score": 6.35,
+    "tags": [
+      "politics",
+      "church life"
+    ],
+    "topic_cluster": "church_political_endorsement",
+    "base_score": 7.0,
+    "importance": 6.35,
+    "depth": 2.0,
+    "base_importance": 7.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://theguardian.com/us-news/2026/oct/29/new-mexico-church-endorses-republicans",
+    "boosts": {
+      "tier": -1.4,
+      "recency": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianpost.com/voices/why-couldnt-jesus-tell-his-disciples-everything.html",
+    "title": "Why couldn’t Jesus tell His disciples everything?",
+    "source_name": "The Christian Post",
+    "date_shown": "2026-10-31",
+    "final_score": 6.3,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "pneumatology_pentecost",
+    "base_score": 7.0,
+    "importance": 6.3,
+    "depth": 8.0,
+    "base_importance": 7.0,
+    "base_depth": 8.0,
+    "canonical_url": "https://christianpost.com/voices/why-couldnt-jesus-tell-his-disciples-everything.html",
+    "boosts": {
+      "tier": -0.7,
+      "recency": 0.75,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.wsj.com/world/middle-east/iran-war-us-bases-damage-88db3224?mod=rss_worldnews",
+    "title": "How Iran Battered U.S. Bases and Caused Billions in Damage",
+    "source_name": "Wall Street Journal",
+    "date_shown": "2026-10-31",
+    "final_score": 6.0,
+    "tags": [
+      "news",
+      "politics"
+    ],
+    "topic_cluster": "iran_regional_conflict",
+    "base_score": 5.0,
+    "importance": 6.0,
+    "depth": 2.0,
+    "base_importance": 5.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://wsj.com/world/middle-east/iran-war-us-bases-damage-88db3224?mod=rss_worldnews",
+    "boosts": {
+      "tier": -0.5,
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.sandiegouniontribune.com/2026/10/28/opinion-when-you-trick-or-treat-nod-to-martin-luther/?share=ehorttduhrywrniibrn2",
+    "title": "Opinion: When you trick-or-treat, nod to Martin Luther",
+    "source_name": "San Diego Union-Tribune",
+    "date_shown": "2026-10-31",
+    "final_score": 6.0,
+    "tags": [
+      "culture",
+      "theology"
+    ],
+    "topic_cluster": "halloween_reformation",
+    "base_score": 4.0,
+    "importance": 6.0,
+    "depth": 6.0,
+    "base_importance": 4.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://sandiegouniontribune.com/2026/10/28/opinion-when-you-trick-or-treat-nod-to-martin-luther",
+    "boosts": {
+      "recency": 0.25,
+      "stale_source": 0.75,
+      "opposing_views": 1.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://religionnews.com/2026/10/30/chicago-area-hindu-community-shaken-but-resilient-after-alleged-mass-shooting-plan-was-thwarted/",
+    "title": "Chicago-area Hindu community shaken but resilient after alleged mass shooting plan was thwarted",
+    "source_name": "Religion News Service",
+    "date_shown": "2026-10-31",
+    "final_score": 5.75,
+    "tags": [
+      "news",
+      "culture"
+    ],
+    "topic_cluster": "religious_persecution_us",
+    "base_score": 5.0,
+    "importance": 5.75,
+    "depth": 2.0,
+    "base_importance": 5.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://religionnews.com/2026/10/30/chicago-area-hindu-community-shaken-but-resilient-after-alleged-mass-shooting-plan-was-thwarted",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://erlc.com/erlc-podcast/the-importance-of-adoption-and-foster-care/",
+    "title": "The importance of adoption and foster care",
+    "source_name": "ERLC",
+    "date_shown": "2026-10-31",
+    "final_score": 5.75,
+    "tags": [
+      "church life",
+      "family"
+    ],
+    "topic_cluster": "adoption_foster_care",
+    "base_score": 5.0,
+    "importance": 5.75,
+    "depth": 6.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://erlc.com/erlc-podcast/the-importance-of-adoption-and-foster-care",
+    "boosts": {
+      "recency": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.pewresearch.org/short-reads/2026/10/29/the-2026-midterms-will-be-uniquely-difficult-for-polls/",
+    "title": "The 2026 Midterms Will Be Uniquely Difficult for Polls",
+    "source_name": "Pew Research",
+    "date_shown": "2026-10-31",
+    "final_score": 5.75,
+    "tags": [
+      "politics"
+    ],
+    "topic_cluster": "polling_methodology_2026",
+    "base_score": 5.0,
+    "importance": 5.75,
+    "depth": 1.0,
+    "base_importance": 5.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://pewresearch.org/short-reads/2026/10/29/the-2026-midterms-will-be-uniquely-difficult-for-polls",
+    "boosts": {
+      "recency": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.thegospelcoalition.org/article/latin-phrases-martin-luther/",
+    "title": "Martin Luther in 5 Latin Phrases",
+    "source_name": "The Gospel Coalition",
+    "date_shown": "2026-10-31",
+    "final_score": 5.5,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "martin_luther_reformation",
+    "base_score": 4.0,
+    "importance": 5.5,
+    "depth": 6.0,
+    "base_importance": 4.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://thegospelcoalition.org/article/latin-phrases-martin-luther",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/inside-the-roman-mind/",
+    "title": "Inside the Roman Mind",
+    "source_name": "First Things",
+    "date_shown": "2026-10-31",
+    "final_score": 5.5,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 5.5,
+    "depth": 5.0,
+    "base_importance": 4.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://firstthings.com/inside-the-roman-mind",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/opinions/it-can-happen-here-too-1793086344",
+    "title": "It can happen here, too",
+    "source_name": "World Magazine",
+    "date_shown": "2026-10-31",
+    "final_score": 5.37,
+    "tags": [
+      "culture",
+      "apologetics"
+    ],
+    "topic_cluster": "cultural_decline_nihilism",
+    "base_score": 6.0,
+    "importance": 5.37,
+    "depth": 6.0,
+    "base_importance": 6.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://wng.org/opinions/it-can-happen-here-too-1793086344",
+    "boosts": {
+      "tier": 0.12,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.desiringgod.org/interviews/was-piper-unprepared",
+    "title": "Was Piper Unprepared?",
+    "source_name": "Desiring God",
+    "date_shown": "2026-10-31",
+    "final_score": 5.25,
+    "tags": [
+      "church life",
+      "news"
+    ],
+    "topic_cluster": "john_piper",
+    "base_score": 5.0,
+    "importance": 5.25,
+    "depth": 5.0,
+    "base_importance": 5.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://desiringgod.org/interviews/was-piper-unprepared",
+    "boosts": {
+      "recency": 0.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.joshuabudimlic.com/post/time-flies-and-death-comes-speedily",
+    "title": "Time Flies—and Death Comes Speedily",
+    "source_name": "Iotas in Eternity",
+    "date_shown": "2026-10-31",
+    "final_score": 5.0,
+    "tags": [
+      "devotional",
+      "theology"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 5.0,
+    "depth": 7.0,
+    "base_importance": 4.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://joshuabudimlic.com/post/time-flies-and-death-comes-speedily",
+    "boosts": {
+      "recency": 0.25,
+      "stale_source": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.desiringgod.org/articles/the-day-of-pioneer-missions-is-not-over",
+    "title": "The Day of Pioneer Missions Is Not Over",
+    "source_name": "Desiring God",
+    "date_shown": "2026-10-31",
+    "final_score": 3.25,
+    "tags": [
+      "missions",
+      "theology"
+    ],
+    "topic_cluster": "missions_calling",
+    "base_score": 6.0,
+    "importance": 3.25,
+    "depth": 6.0,
+    "base_importance": 6.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://desiringgod.org/articles/the-day-of-pioneer-missions-is-not-over",
+    "boosts": {
+      "recency": -2.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.crossway.org/articles/how-nancy-guthrie-began-to-see-jesus-in-more-than-just-prophecies/",
+    "title": "How Nancy Guthrie Began to See Jesus in More Than Just Prophecies",
+    "source_name": "Crossway",
+    "date_shown": "2026-10-31",
+    "final_score": 0.5,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "biblical_hermeneutics",
+    "base_score": 4.0,
+    "importance": 0.5,
+    "depth": 6.0,
+    "base_importance": 4.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://crossway.org/articles/how-nancy-guthrie-began-to-see-jesus-in-more-than-just-prophecies",
+    "boosts": {
+      "recency": -2.0,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/10/religion-public-square-letters-to-editor/",
+    "title": "Ground Rules for Religion in the Public Square",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-10-31",
+    "final_score": 3.75,
+    "tags": [
+      "theology",
+      "politics"
+    ],
+    "topic_cluster": "evangelicals_public_square_citizenship",
+    "base_score": 5.0,
+    "importance": 3.75,
+    "depth": 6.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://christianitytoday.com/2026/10/religion-public-square-letters-to-editor",
+    "boosts": {
+      "recency": 0.25,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=xYVY8hUZPr8",
+    "title": "The Dangers of Christian Nationalism",
+    "source_name": "Truth Unites (Gavin Ortlund)",
+    "date_shown": "2026-10-31",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=OlIZSbWauqM",
+    "title": "Women in the Church: You Don't Need More Information. You Need Relationships.",
+    "source_name": "The Gospel Coalition (Video)",
+    "date_shown": "2026-10-31",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
+  },
+  {
+    "url": "https://podcasts.apple.com/us/podcast/how-i-changed-my-mind-kind-of-on-the-death-penalty/id1074011166?i=1000798150279",
+    "title": "How I Changed My Mind (Kind of) on the Death Penalty",
+    "source_name": "The Russell Moore Show",
+    "date_shown": "2026-10-31",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
+  },
+  {
+    "url": "https://podcasts.apple.com/us/podcast/the-spirit-as-the-third-person-of-the-trinity/id1050832450?i=1000798124912",
+    "title": "The Spirit as the Third Person of the Trinity",
+    "source_name": "BibleProject Podcast",
+    "date_shown": "2026-10-31",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
+  },
+  {
+    "url": "https://thephilvischerpodcast.libsyn.com/744-pagan-nationalism-asking-better-questions-with-kaitlyn-schiess",
+    "title": "744: Pagan Nationalism & Asking Better Questions with Kaitlyn Schiess",
+    "source_name": "The Holy Post",
+    "date_shown": "2026-10-31",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
   }
 ]
