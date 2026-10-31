@@ -54734,5 +54734,197 @@
     "boosts": {},
     "scored_by": "media",
     "clicks": 0
+  },
+  {
+    "url": "https://www.christianpost.com/news/sudanese-pastors-son-freed-from-prison-but-danger-remains.html",
+    "title": "Sudanese pastor's son freed from prison, but danger remains",
+    "source_name": "The Christian Post",
+    "date_shown": "2026-10-31",
+    "final_score": 7.8,
+    "tags": [
+      "suffering",
+      "news"
+    ],
+    "topic_cluster": "sudan_religious_persecution",
+    "base_score": 7.0,
+    "importance": 7.8,
+    "depth": 3.0,
+    "base_importance": 7.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://christianpost.com/news/sudanese-pastors-son-freed-from-prison-but-danger-remains.html",
+    "boosts": {
+      "tier": -0.7,
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.pewresearch.org/newsletter/religion-weekly/religon-weekly-update-oct-28-2026/",
+    "title": "Mixed signals on religion for young adults in U.S.",
+    "source_name": "Pew Research",
+    "date_shown": "2026-10-31",
+    "final_score": 7.25,
+    "tags": [
+      "data"
+    ],
+    "topic_cluster": "youth_religion_trends",
+    "base_score": 7.0,
+    "importance": 7.25,
+    "depth": 4.0,
+    "base_importance": 7.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://pewresearch.org/newsletter/religion-weekly/religon-weekly-update-oct-28-2026",
+    "boosts": {
+      "recency": 0.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianpost.com/news/tony-dungy-challenges-pastor-who-claims-monogamy-is-unbiblical.html",
+    "title": "Tony Dungy challenges pastor who claims monogamy is 'unbiblical'",
+    "source_name": "The Christian Post",
+    "date_shown": "2026-10-31",
+    "final_score": 7.05,
+    "tags": [
+      "theology",
+      "church life",
+      "news"
+    ],
+    "topic_cluster": "monogamy_polygamy_debate",
+    "base_score": 7.0,
+    "importance": 7.05,
+    "depth": 3.0,
+    "base_importance": 7.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://christianpost.com/news/tony-dungy-challenges-pastor-who-claims-monogamy-is-unbiblical.html",
+    "boosts": {
+      "tier": -0.7,
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/roundups/ai-on-the-bookshelf-1793393688",
+    "title": "AI on the bookshelf?",
+    "source_name": "World Magazine",
+    "date_shown": "2026-10-31",
+    "final_score": 7.0,
+    "tags": [
+      "culture",
+      "work"
+    ],
+    "topic_cluster": "ai_and_faith",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 5.0,
+    "base_importance": 5.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://wng.org/roundups/ai-on-the-bookshelf-1793393688",
+    "boosts": {
+      "tier": 0.1,
+      "recency": 1.5,
+      "trending": 0.4
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.crossway.org/articles/how-the-book-of-ruth-points-us-to-christ/",
+    "title": "How the Book of Ruth Points Us to Christ",
+    "source_name": "Crossway",
+    "date_shown": "2026-10-31",
+    "final_score": 6.0,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "christology_ot",
+    "base_score": 4.0,
+    "importance": 6.0,
+    "depth": 7.0,
+    "base_importance": 4.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://crossway.org/articles/how-the-book-of-ruth-points-us-to-christ",
+    "boosts": {
+      "recency": 1.5,
+      "voice": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://garythomas.com/2026/10/30/seeking-first-the-kingdom-of-god/",
+    "title": "Seeking First the Kingdom of God",
+    "source_name": "Gary Thomas",
+    "date_shown": "2026-10-31",
+    "final_score": 6.0,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 6.0,
+    "depth": 6.0,
+    "base_importance": 4.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://garythomas.com/2026/10/30/seeking-first-the-kingdom-of-god",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.nytimes.com/2026/10/30/world/europe/russia-novaya-gazeta-newspaper.html",
+    "title": "Russian News Outlet That Defied Kremlin Will Shut Down: ‘They Killed Us’",
+    "source_name": "The New York Times",
+    "date_shown": "2026-10-31",
+    "final_score": 6.0,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "russia_press_freedom",
+    "base_score": 5.0,
+    "importance": 6.0,
+    "depth": 1.0,
+    "base_importance": 5.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://nytimes.com/2026/10/30/world/europe/russia-novaya-gazeta-newspaper.html",
+    "boosts": {
+      "tier": -0.5,
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://garythomas.com/2026/10/28/you-cant-judge-your-own-parenting-2/",
+    "title": "You Can’t Judge Your Own Parenting",
+    "source_name": "Gary Thomas",
+    "date_shown": "2026-10-31",
+    "final_score": 5.25,
+    "tags": [
+      "theology",
+      "family"
+    ],
+    "topic_cluster": "parenting_faith",
+    "base_score": 5.0,
+    "importance": 5.25,
+    "depth": 7.0,
+    "base_importance": 5.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://garythomas.com/2026/10/28/you-cant-judge-your-own-parenting-2",
+    "boosts": {
+      "recency": 0.25,
+      "frequency": 0.75,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
   }
 ]

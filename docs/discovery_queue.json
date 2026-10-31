@@ -7,8 +7,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-october-31-2026/",
    "found_on": "2026-10-31",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://dashhouse.com/why-christians-dont-have-to-fear-the-collapse": {
@@ -31,8 +31,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-october-31-2026/",
    "found_on": "2026-10-31",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://heidelblog.net/2026/10/reformation-day-myths": {
@@ -42,8 +42,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-october-31-2026/",
    "found_on": "2026-10-31",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://theguardian.com/news/ng-interactive/2026/oct/08/a-death-a-plagiarism-scandal-and-a-quest-for-revenge-the-bizarre-tale-of-otto-z": {
@@ -79,8 +79,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-october-31-2026/",
    "found_on": "2026-10-31",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 429"
   },
   "https://joshuabudimlic.com/post/time-flies-and-death-comes-speedily": {
@@ -155,8 +155,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-october-30-2026/",
    "found_on": "2026-10-31",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://wng.org/opinions/it-can-happen-here-too-1793086344": {
@@ -192,8 +192,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-october-29-2026/",
    "found_on": "2026-10-31",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://beautifulchristianlife.com/blog/3-reasons-why-christians-should-lay-rip-to-rest": {
@@ -216,8 +216,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-october-28-2026/",
    "found_on": "2026-10-31",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://stephenmcalpine.substack.com/p/aslan-sane-the-bowiefication-of-narnia": {
@@ -227,8 +227,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-october-28-2026/",
    "found_on": "2026-10-31",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://thesimplepastor.co.uk/meryl-streep-aslan-narnia": {
@@ -258,5 +258,5 @@
    "source_name": "Desiring God"
   }
  },
- "updated": "2026-10-31T09:45:15+00:00"
+ "updated": "2026-10-31T11:25:44+00:00"
 }

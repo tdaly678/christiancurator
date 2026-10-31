@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-10-31T09:45:11+00:00",
+  "run_at": "2026-10-31T11:25:43+00:00",
   "sources": [
     {
       "source": "The Gospel Coalition",
@@ -57,7 +57,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-10-30",
+      "newest_date": "2026-10-31",
       "bozo": false,
       "stale": false
     },
@@ -118,7 +118,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-10-30",
+      "newest_date": "2026-10-31",
       "bozo": false,
       "stale": false
     },
@@ -177,7 +177,7 @@
       "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 58,
+      "n_entries": 55,
       "newest_date": "2026-10-31",
       "bozo": false,
       "stale": false
