@@ -54926,5 +54926,93 @@
     },
     "scored_by": "claude",
     "clicks": 0
+  },
+  {
+    "url": "https://www.pewresearch.org/newsletter/weekly-roundup/weekly-10-31-26/",
+    "title": "Young adults and religion in 2026",
+    "source_name": "Pew Research",
+    "date_shown": "2026-10-31",
+    "final_score": 8.5,
+    "tags": [
+      "data"
+    ],
+    "topic_cluster": "young_adults_religion_2026",
+    "base_score": 7.0,
+    "importance": 8.5,
+    "depth": 4.0,
+    "base_importance": 7.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://pewresearch.org/newsletter/weekly-roundup/weekly-10-31-26",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.russellmoore.com/2026/10/26/how-i-changed-my-mind-kind-of-on-the-death-penalty/",
+    "title": "How I Changed My Mind (Kind of) on the Death Penalty",
+    "source_name": "Russell Moore",
+    "date_shown": "2026-10-31",
+    "final_score": 6.0,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "death_penalty_christian_ethics",
+    "base_score": 7.0,
+    "importance": 6.0,
+    "depth": 5.0,
+    "base_importance": 7.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://russellmoore.com/2026/10/26/how-i-changed-my-mind-kind-of-on-the-death-penalty",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.5,
+      "voice": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cj5ynryyep2yo?at_medium=RSS&at_campaign=rss",
+    "title": "More than 5,000 die from Ebola in DR Congo's deadliest outbreak",
+    "source_name": "BBC News",
+    "date_shown": "2026-10-31",
+    "final_score": 6.0,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "ebola_drc_outbreak",
+    "base_score": 5.0,
+    "importance": 6.0,
+    "depth": 1.0,
+    "base_importance": 5.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://bbc.co.uk/news/articles/cj5ynryyep2yo?at_campaign=rss&at_medium=RSS",
+    "boosts": {
+      "tier": -0.5,
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Tc3JXj9fj7Y",
+    "title": "Why We Can't Move Beyond the Reformation (with Tim Keller, Don Carson, and John Piper)",
+    "source_name": "The Gospel Coalition (Video)",
+    "date_shown": "2026-10-31",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
   }
 ]

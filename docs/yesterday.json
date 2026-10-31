@@ -6,10 +6,49 @@
     "author": "Rebecca Hopkins",
     "final_score": 9.5,
     "importance": 9.5,
-    "depth": 3.0,
+    "depth": 2.0,
     "tags": [
       "news",
       "church life"
+    ]
+  },
+  {
+    "title": "Whistleblower: Compassion International has no ‘off ramp’ for sponsors accused of grooming",
+    "url": "https://roysreport.com/whistleblower-compassion-international-has-no-off-ramp-for-sponsors-accused-of-grooming/",
+    "source_name": "The Roys Report",
+    "author": "Rebecca Hopkins",
+    "final_score": 8.75,
+    "importance": 8.75,
+    "depth": 2.0,
+    "tags": [
+      "news",
+      "church life"
+    ]
+  },
+  {
+    "title": "This Sunday, the Global Church Will Pray for 388 Million Christians Facing High Levels of Persecution",
+    "url": "https://relevantmagazine.com/justice/this-sunday-the-global-church-will-pray-for-the-388-million-christians-facing-high-levels-of-persecution/",
+    "source_name": "Relevant Magazine",
+    "author": "RELEVANT Staff",
+    "final_score": 8.5,
+    "importance": 8.5,
+    "depth": 6.0,
+    "tags": [
+      "news",
+      "prayer",
+      "suffering"
+    ]
+  },
+  {
+    "title": "Young adults and religion in 2026",
+    "url": "https://www.pewresearch.org/newsletter/weekly-roundup/weekly-10-31-26/",
+    "source_name": "Pew Research",
+    "author": "Anna Jackson",
+    "final_score": 8.5,
+    "importance": 8.5,
+    "depth": 4.0,
+    "tags": [
+      "data"
     ]
   },
   {
@@ -21,34 +60,7 @@
     "importance": 7.8,
     "depth": 3.0,
     "tags": [
-      "suffering",
-      "news"
-    ]
-  },
-  {
-    "title": "Whistleblower: Compassion International has no ‘off ramp’ for sponsors accused of grooming",
-    "url": "https://roysreport.com/whistleblower-compassion-international-has-no-off-ramp-for-sponsors-accused-of-grooming/",
-    "source_name": "The Roys Report",
-    "author": "Rebecca Hopkins",
-    "final_score": 7.75,
-    "importance": 7.75,
-    "depth": 3.0,
-    "tags": [
       "news",
-      "church life"
-    ]
-  },
-  {
-    "title": "This Sunday, the Global Church Will Pray for 388 Million Christians Facing High Levels of Persecution",
-    "url": "https://relevantmagazine.com/justice/this-sunday-the-global-church-will-pray-for-the-388-million-christians-facing-high-levels-of-persecution/",
-    "source_name": "Relevant Magazine",
-    "author": "RELEVANT Staff",
-    "final_score": 7.5,
-    "importance": 7.5,
-    "depth": 4.0,
-    "tags": [
-      "news",
-      "missions",
       "suffering"
     ]
   },
@@ -61,34 +73,20 @@
     "importance": 7.5,
     "depth": 3.0,
     "tags": [
-      "news",
-      "politics"
+      "news"
     ]
   },
   {
-    "title": "Mixed signals on religion for young adults in U.S.",
-    "url": "https://www.pewresearch.org/newsletter/religion-weekly/religon-weekly-update-oct-28-2026/",
-    "source_name": "Pew Research",
-    "author": "Jeffrey Diamant",
+    "title": "Ground Rules for Religion in the Public Square",
+    "url": "https://www.christianitytoday.com/2026/10/religion-public-square-letters-to-editor/",
+    "source_name": "Christianity Today",
+    "author": "Alex Mellen",
     "final_score": 7.25,
     "importance": 7.25,
-    "depth": 4.0,
-    "tags": [
-      "data"
-    ]
-  },
-  {
-    "title": "Tony Dungy challenges pastor who claims monogamy is 'unbiblical'",
-    "url": "https://www.christianpost.com/news/tony-dungy-challenges-pastor-who-claims-monogamy-is-unbiblical.html",
-    "source_name": "The Christian Post",
-    "author": "Ryan Foley",
-    "final_score": 7.05,
-    "importance": 7.05,
-    "depth": 3.0,
+    "depth": 6.0,
     "tags": [
       "theology",
-      "church life",
-      "news"
+      "politics"
     ]
   },
   {
@@ -98,36 +96,35 @@
     "author": "Arla Eicher",
     "final_score": 7.0,
     "importance": 7.0,
-    "depth": 5.0,
+    "depth": 4.0,
     "tags": [
-      "culture",
-      "work"
+      "culture"
     ]
   },
   {
-    "title": "Chicago-area Hindu community shaken but resilient after alleged mass shooting plan was thwarted",
-    "url": "https://religionnews.com/2026/10/30/chicago-area-hindu-community-shaken-but-resilient-after-alleged-mass-shooting-plan-was-thwarted/",
-    "source_name": "Religion News Service",
-    "author": "Susanna Granieri",
-    "final_score": 6.75,
-    "importance": 6.75,
-    "depth": 3.0,
+    "title": "Network launched to fund Christian school scholarships under new federal school choice program",
+    "url": "https://www.christianpost.com/news/network-launched-to-fund-christian-school-scholarships.html",
+    "source_name": "The Christian Post",
+    "author": "Ryan Foley",
+    "final_score": 6.3,
+    "importance": 6.3,
+    "depth": 2.0,
+    "tags": [
+      "church life",
+      "news"
+    ]
+  },
+  {
+    "title": "DOJ charges 18 in N.C. with voting illegally in U.S. elections",
+    "url": "https://wng.org/sift/doj-charges-18-in-n-c-with-voting-illegally-in-u-s-elections-1793374090",
+    "source_name": "World Magazine",
+    "author": "Elizabeth Russell",
+    "final_score": 6.25,
+    "importance": 6.25,
+    "depth": 1.0,
     "tags": [
       "news",
-      "culture"
-    ]
-  },
-  {
-    "title": "Inside the Roman Mind",
-    "url": "https://firstthings.com/inside-the-roman-mind/",
-    "source_name": "First Things",
-    "author": "Paul Howard",
-    "final_score": 6.5,
-    "importance": 6.5,
-    "depth": 6.0,
-    "tags": [
-      "theology",
-      "culture"
+      "politics"
     ]
   }
 ]

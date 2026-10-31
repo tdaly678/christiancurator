@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-10-31T11:25:43+00:00",
+  "run_at": "2026-10-31T15:36:15+00:00",
   "sources": [
     {
       "source": "The Gospel Coalition",
@@ -167,7 +167,7 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 36,
+      "n_entries": 31,
       "newest_date": "2026-10-31",
       "bozo": false,
       "stale": false
@@ -177,7 +177,7 @@
       "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 55,
+      "n_entries": 57,
       "newest_date": "2026-10-31",
       "bozo": false,
       "stale": false
@@ -198,7 +198,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-10-30",
+      "newest_date": "2026-10-31",
       "bozo": false,
       "stale": false
     },
@@ -708,7 +708,7 @@
       "role": "media",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-10-29",
+      "newest_date": "2026-10-31",
       "bozo": false,
       "stale": false
     },
