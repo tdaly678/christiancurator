@@ -24,6 +24,7 @@ import os
 import sys
 from datetime import date
 from fetcher.rss_fetcher import fetch_all
+from curator.headline_voice import apply_display_title
 from curator.scorer import score_articles
 from curator.title_rewriter import rewrite_titles, REWRITE_TITLES_ENABLED
 from curator.point_counterpoint import build_point_counterpoint
@@ -74,6 +75,7 @@ def main():
     for a in media_items:
         a["previously_shown"] = a.get("url") in shown_urls
         a["scored_by"] = "media"  # history rows from the lane are never Claude-scored
+        apply_display_title(a)
     print(f"      Fetched {len(articles)} articles and {len(media_items)} media items.\n")
 
     # --- Discovery queue (P2.3): links harvested from roundups (Challies'

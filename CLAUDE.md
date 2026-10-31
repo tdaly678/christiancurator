@@ -126,7 +126,24 @@ giveaway, book launch; never bare "launch" or "sale") or `HARD_REJECT_ROUNDUP` (
 Reading, Friday Five, Open Thread, a leading "Links"), else None. `score_articles()` drops matches right after the age
 cutoff, before Claude scoring, and logs each title plus a count by reason. Curly quotes are normalized first. The
 patterns are documented at the top of the module. Tests: `tests/test_headline_voice.py`. Spec:
-`.christian-orchestrator/realclear-headline-voice-2026-10-31.md`. Still to come: `voice_score` and `display_title`.
+`.christian-orchestrator/realclear-headline-voice-2026-10-31.md`.
+
+Slice 2 (2026-10-31), same module:
+- `voice_score(title)` returns a net int: caps shout -30 (acronym allow-list `ACRONYMS`, quoted text ignored), `!` outside
+  quotes -25, newsletter meta voice -20 ("My Week", "What I'm Reading"; not "Why I Left the PCA"), under 3 or over 14
+  words -10, subject + news verb +10 (`NEWS_VERBS`), issue question opener +5. `score_articles()` adds `voice_score / 10`
+  to `final_score` under the `voice` key (in `BOOST_KEYS`, so lifts share the 2.0 cap; demotions are uncapped) and stores
+  `voice_score` and `voice_rules` on the article.
+- `display_title(title, source)` is conservative cleanup, never new words: strips emoji, em/en dashes (comma for clause
+  breaks, hyphen for ranges), ` | Outlet` tails, ` - Outlet` when it matches the source, and service tails ("here's why",
+  "what you need to know", "read more"); Title Cases only an ALL CAPS shout. `apply_display_title()` runs on every
+  article that passes the hard rejects (and on media items in `main.py`); when it changes something it sets
+  `display_title` and fills `rewritten_title`, which every display path already reads. Claude rewriting stays off.
+- `display_byline(author, source)` returns "Author, Outlet".
+- Pulse: no em dashes. The `curator/daily_summary.py` prompt bans them and `sanitize_pulse()` (via `strip_dashes()`)
+  cleans every generated paragraph. Tests: `tests/test_pulse_sanitizer.py`.
+- Site-only republish: run the Daily Curator Run workflow with `no_email: true` (runs `main.py --no-email`, overrides
+  `force_email`).
 
 ### Homepage v2 (P1 Wave 2, 2026-10-30)
 `frontend/layout.py` `build_homepage_layout()` decides every homepage placement; `render_html()` renders it, returns

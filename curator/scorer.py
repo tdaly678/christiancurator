@@ -26,7 +26,7 @@ from dotenv import load_dotenv
 
 from curator.ai_health import record_failure
 from curator.dedup import canonical_url, dedupe_articles
-from curator.headline_voice import hard_reject
+from curator.headline_voice import apply_display_title, hard_reject, voice_adjustments
 from curator.vocab import ALLOWED_TAGS, ALLOWED_PERSONAS, clean_tags, clean_personas, report_drops
 from curator.vocab import dropped as vocab_dropped
 
@@ -305,8 +305,10 @@ def _fallback_fields(article: dict) -> None:
 MAX_TOTAL_BOOST = 2.0
 BOOST_KEYS = {
     "tier", "recency", "frequency", "response", "trending",
-    "stale_source", "opposing_views", "independent_floor",
+    "stale_source", "opposing_views", "independent_floor", "voice",
 }
+# voice_score() points per 1.0 of final_score (-30 -> -3.0, +10 -> +1.0).
+VOICE_SCORE_SCALE = 10.0
 
 
 def _adjust(article: dict, key: str, new_score: float) -> None:
@@ -798,6 +800,8 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
             reject_counts[reason] += 1
             print(f"    {reason}: {a.get('title', '')!r} ({a.get('source_name', '?')})")
             continue
+        if apply_display_title(a):
+            print(f"    display_title: {a.get('title', '')!r} -> {a['display_title']!r}")
         kept_titles.append(a)
     if reject_counts:
         summary = ", ".join(f"{k} x{v}" for k, v in sorted(reject_counts.items()))
@@ -819,6 +823,7 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     catholic_capped_count = 0
     mainline_capped_count = 0
     frequency_boosted_count = 0
+    voice_demoted_count = 0
 
     # Precompute one post-count map for the whole fetch so we don't re-scan
     # per article. Independents publishing more often earn a bigger bump.
@@ -862,6 +867,18 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
 
         _adjust(article, "recency", min(article["final_score"] + boost, 10.0))
         _adjust(article, "frequency", min(article["final_score"] + freq_bump, 10.0))
+
+        # RealClear headline voice: demotions are uncapped penalties, the
+        # small news-verb / issue-question lift draws on the boost budget.
+        voice_rules = voice_adjustments(article.get("title", ""))
+        if voice_rules:
+            voice = sum(voice_rules.values())
+            article["voice_score"] = voice
+            article["voice_rules"] = sorted(voice_rules)
+            _adjust(article, "voice",
+                    min(max(article["final_score"] + voice / VOICE_SCORE_SCALE, 0.0), 10.0))
+            if voice < 0:
+                voice_demoted_count += 1
         if boost < 0:
             depth += boost / 2
 
@@ -900,6 +917,8 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
         print(f"  Applied Catholic content cap to {catholic_capped_count} articles.")
     if mainline_capped_count:
         print(f"  Applied mainline polity cap to {mainline_capped_count} articles.")
+    if voice_demoted_count:
+        print(f"  Headline voice: demoted {voice_demoted_count} articles (caps, exclamation, meta voice, length).")
     if frequency_boosted_count:
         # Summarize which independents earned the boost, sorted by boost size
         boosted_sources = sorted(

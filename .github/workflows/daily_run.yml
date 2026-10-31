@@ -13,6 +13,11 @@ on:
         required: false
         default: 'false'
         type: boolean
+      no_email:
+        description: 'Rebuild and republish the site WITHOUT sending the Brevo email (runs main.py --no-email; overrides force_email)'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -42,7 +47,8 @@ jobs:
           X_API_SECRET: ${{ secrets.X_API_SECRET }}
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
-        run: python3 main.py ${{ github.event.inputs.force_email == 'true' && '--force-email' || '' }}
+        # no_email wins over force_email: a site-only republish never sends Brevo email.
+        run: python3 main.py ${{ inputs.no_email && '--no-email' || (inputs.force_email && '--force-email' || '') }}
 
       - name: Store outbound headline clicks from GA4
         # Writes docs/click_counts.json and article_history.json `clicks`.

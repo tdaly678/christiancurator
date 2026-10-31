@@ -29,6 +29,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from curator.ai_health import record_failure
+from curator.headline_voice import strip_dashes
 
 load_dotenv()
 
@@ -70,7 +71,7 @@ RELATED_DAYS_SHOWN = 3  # how many related days to surface on each daily page
 
 SUMMARY_PROMPT = """\
 You are a writer for Christian Curator, a daily digest for evangelical Protestant Christians.
-Write a 2-paragraph dispatch — 8 to 10 sentences total — about what the church is talking
+Write a 2-paragraph dispatch (8 to 10 sentences total) about what the church is talking
 about today. Use the articles listed below as your source material.
 {history_section}
 STUDY THIS EXAMPLE CAREFULLY. Write in exactly this style:
@@ -80,14 +81,14 @@ Russell Moore said something last year that keeps coming back to me. He was writ
 the temptation for Christians to turn every news cycle into a referendum on their identity,
 and he put it plainly: the church is not a political party with better songs.
 [The Gospel Coalition](https://example.com) and [Christianity Today](https://example.com)
-are circling the same problem this week. TGC says the threat is doctrinal — bad theology
+are circling the same problem this week. TGC says the threat is doctrinal: bad theology
 quietly replacing good. CT says the problem is pace. The speed of social media leaves no
 room for the kind of slow discernment faith actually requires. Neither outlet is wrong.
 
 [Mere Orthodoxy](https://example.com) ran a piece for World Down Syndrome Day asking who
 the church counts as a full theological participant. Not a rhetorical question. A real one
 with stakes. A federal judge also ordered an ICE facility in Minneapolis to allow clergy
-access to detainees — [World Magazine](https://example.com) had the item. Small legal
+access to detainees. [World Magazine](https://example.com) had the item. Small legal
 story. Larger question about who the church shows up for.
 ---EXAMPLE END---
 
@@ -98,8 +99,9 @@ Notice what this example does:
 - Paragraph 2 starts mid-thought, not with a transition word
 - No transition words between paragraphs: not "Meanwhile", "Additionally", "On a different
   note", "Furthermore", "However", "Notably", "Interestingly", or any variant
-- "Neither outlet is wrong" — direct, not "both diagnoses feel true at the same time"
+- "Neither outlet is wrong" is direct, not "both diagnoses feel true at the same time"
 - Links mid-sentence, not announced
+- No em dashes (—) or en dashes (–) anywhere. Use commas, periods, colons or parentheses
 
 NEVER WRITE THESE PHRASES (AI tells that detectors flag immediately):
 "on a different/completely different register", "both X and Y feel true",
@@ -109,7 +111,7 @@ NEVER WRITE THESE PHRASES (AI tells that detectors flag immediately):
 "it is important to", "the argument is simple", "in today's world"
 
 Now write the actual dispatch using TODAY'S ARTICLES below.
-Use 2–4 markdown links [title](url) placed naturally.
+Use 2 to 4 markdown links [title](url) placed naturally.
 Surface the real theological tension, not just what the articles are about.
 Name writers and outlets by name.
 Where they disagree, say so plainly.
@@ -121,23 +123,23 @@ pieces connect to that theme. Don't make the reader figure out the connection th
 TODAY'S ARTICLES (title | source | url):
 {article_list}
 
-Respond with a JSON object in this exact format — nothing else:
+Respond with a JSON object in this exact format and nothing else:
 {{
   "paragraphs": ["paragraph 1 text", "paragraph 2 text"],
   "themes": ["theme 1", "theme 2", "theme 3"]
 }}
 
-Themes should be 3–5 short theological/topical labels (e.g. "pastoral authority",
+Themes should be 3 to 5 short theological/topical labels (e.g. "pastoral authority",
 "church and culture", "sanctification", "suffering and lament").
 """
 
 HISTORY_SECTION_TEMPLATE = """\
-RECENT THEOLOGICAL CONVERSATIONS (from previous days — use these to create continuity):
+RECENT THEOLOGICAL CONVERSATIONS (from previous days; use these to create continuity):
 {history_lines}
 
-If today's content revisits one of these themes, weave in a natural reference in your prose
-— e.g. "Earlier this week we were watching [this same tension](https://www.christiancurator.com/daily/SLUG/) play out..."
-or "That question hasn't gone away — [on March 19](https://www.christiancurator.com/daily/2026-03-19/) several
+If today's content revisits one of these themes, weave in a natural reference in your prose,
+e.g. "Earlier this week we were watching [this same tension](https://www.christiancurator.com/daily/SLUG/) play out..."
+or "That question hasn't gone away. [On March 19](https://www.christiancurator.com/daily/2026-03-19/) several
 writers approached it from a different angle."
 Only reference previous days when it's genuinely relevant and adds insight. Don't force it.
 
@@ -226,6 +228,11 @@ def _markdown_links_to_html(text: str) -> str:
     )
 
 
+def sanitize_pulse(text: str) -> str:
+    """Strip em and en dashes from Pulse copy (Tom's standing no-em-dash rule)."""
+    return strip_dashes(text or "")
+
+
 def _strip_markdown_links(text: str) -> str:
     return re.sub(r'\[([^\]]+)\]\(https?://[^\)]+\)', r'\1', text)
 
@@ -281,7 +288,7 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
     if recent:
         history_lines = "\n".join(
             f"- {h['date']} (https://www.christiancurator.com/daily/{h['slug']}/): "
-            f"{', '.join(h['themes'])} — \"{h['excerpt'][:120]}...\""
+            f"{', '.join(h['themes'])}: \"{sanitize_pulse(h['excerpt'][:120])}...\""
             for h in reversed(recent)  # most recent first
         )
         history_section = HISTORY_SECTION_TEMPLATE.format(history_lines=history_lines)
@@ -313,7 +320,7 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
             # The email builds a plain lead + subleads Pulse when this is None.
             record_failure("daily_summary", f"JSON parse error after retry: {json_err}")
             return None
-        paragraphs_raw = data.get("paragraphs", [])
+        paragraphs_raw = [sanitize_pulse(p) for p in data.get("paragraphs", [])]
         themes = data.get("themes", [])
 
         if not paragraphs_raw:
