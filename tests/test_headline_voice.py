@@ -32,6 +32,9 @@ def test_tom_fixture_newsletter_issue():
     ("Field Notes Vol. 3", HARD_REJECT_ISSUE_NUMBER),
     ("Ep. 112: On Calvin", HARD_REJECT_ISSUE_NUMBER),
     ("Episode 9 with Russell Moore", HARD_REJECT_ISSUE_NUMBER),
+    ("Episode 123", HARD_REJECT_ISSUE_NUMBER),
+    ("Episode 840: Russell Moore and Tim Keller", HARD_REJECT_ISSUE_NUMBER),
+    ("Episode 7: Issue 12 of the Letter Today", HARD_REJECT_ISSUE_NUMBER),
     ("Dispatch No. 45", HARD_REJECT_ISSUE_NUMBER),
     ("My New Book Is Out Now", HARD_REJECT_PROMO),
     ("Now Available: A Study of Romans", HARD_REJECT_PROMO),
@@ -195,6 +198,37 @@ def test_meta_question_not_boosted():
 
 def test_scores_stack():
     assert voice_score("AMAZING News!") == DEMOTE_ALL_CAPS + DEMOTE_EXCLAIM + DEMOTE_LENGTH
+
+
+# Carey Nieuwhof episode titles (2026-10-31): the number is display noise when a
+# real claim follows the colon.
+NIEUWHOF_EPISODES = [
+    "Episode 839: Philip Anthony Mitchell on Overcoming Jealousy, Surviving a "
+    "Suicidal Season, How to Lead If Your Church Doesn’t Grow",
+    "Episode 837: The Overcorrection Against Church Growth: Andrew Hopper on Why "
+    "We Shouldn’t Celebrate Church Decline",
+    "Episode 838: “I Don’t Want to Be That Guy”: Chuck DeGroat on Shame, Burnout",
+    "Episode 831: Is AI Worse for Mental Health Than Social Media?",
+    "Ep. 12: Why the Church Needs Revival Now",
+]
+
+
+@pytest.mark.parametrize("title", NIEUWHOF_EPISODES)
+def test_episode_with_claim_passes(title):
+    assert hard_reject(title) is None
+
+
+def test_display_title_strips_episode_prefix():
+    assert display_title(NIEUWHOF_EPISODES[1]) == (
+        "The Overcorrection Against Church Growth: Andrew Hopper on Why "
+        "We Shouldn’t Celebrate Church Decline")
+    assert display_title("Ep. 12: Why the Church Needs Revival Now") == \
+        "Why the Church Needs Revival Now"
+
+
+def test_display_title_keeps_thin_episode_prefix():
+    assert display_title("Episode 840: Russell Moore and Tim Keller") == \
+        "Episode 840: Russell Moore and Tim Keller"
 
 
 # ── Slice 2: display_title ───────────────────────────────────────────────────

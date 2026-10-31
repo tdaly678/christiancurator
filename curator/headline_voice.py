@@ -12,7 +12,12 @@ hard_reject(title) returns one of these reason codes, or None:
                             emoji presentation selector U+FE0F)
   HARD_REJECT_ISSUE_NUMBER  "#432", "Issue 12", "Vol. 3", "Ep. 7" / "Episode 7",
                             "No. 45" (two or more digits, so "the No. 1 threat"
-                            still passes)
+                            still passes). A leading "Episode 839: <claim>" or
+                            "Ep. 12: <claim>" is display noise, not an issue
+                            number: when the rest is 4+ words and not just guest
+                            names, the prefix is ignored and the rest is checked
+                            (display_title() strips it). "Ep. 112: On Calvin"
+                            and "Episode 9 with Russell Moore" still reject.
   HARD_REJECT_PROMO         promo collocates only, never bare "launch" or "sale"
                             (so "SpaceX Launch" and "Church Sale" stay news):
                             '"X" is HERE' / 'book is here' / 'is here!', out now,
@@ -100,6 +105,35 @@ ISSUE_NUMBER_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Leading "Episode 839:" / "Ep. 12 -" / "EP 7 |" prefix; group 1 is the rest.
+_EPISODE_PREFIX_RE = re.compile(
+    r"^\s*Ep(?:isode)?\.?\s*#?\d+\s*[:|\-–—.]\s*(.+)$", re.IGNORECASE)
+_NAME_JOINERS = frozenset({"and", "with", "&", "feat", "feat.", "ft", "ft."})
+_COMMON_WORDS = frozenset(
+    "a an the and but or nor for of in on at to by as vs via up per "
+    "is are was were be how why what when who where which can do does will "
+    "should your you our we my not no".split())
+
+
+def _episode_claim(title: str) -> str | None:
+    """Return the claim after a leading episode prefix, or None.
+
+    None means there is no prefix, or what follows is too thin to be a
+    headline: under 4 words, or only capitalized names joined by and/with.
+    """
+    m = _EPISODE_PREFIX_RE.match(title)
+    if not m:
+        return None
+    rest = m.group(1).strip()
+    words = [w for w in rest.split() if any(c.isalnum() for c in w)]
+    if len(words) < 4:
+        return None
+    content = [w for w in words if w.lower().strip(",") not in _NAME_JOINERS]
+    names_only = all(w[:1].isupper() and w.lower().strip(",.") not in _COMMON_WORDS
+                     for w in content)
+    return None if names_only else rest
+
+
 _PROMO_CS_RE = re.compile(r"\bis HERE\b")  # shouting "HERE" is the promo tell
 _PROMO_RE = re.compile(
     r"(?:[\"']|\b(?:book|course|album|podcast|season|edition|study))\s+is\s+here\b"
@@ -142,7 +176,7 @@ def hard_reject(title: str) -> str | None:
         return None
     if EMOJI_RE.search(t):
         return HARD_REJECT_EMOJI
-    if ISSUE_NUMBER_RE.search(t):
+    if ISSUE_NUMBER_RE.search(_episode_claim(t) or t):
         return HARD_REJECT_ISSUE_NUMBER
     if _PROMO_CS_RE.search(t) or _PROMO_RE.search(t):
         return HARD_REJECT_PROMO
@@ -344,6 +378,7 @@ def display_title(title: str, source: str | None = None) -> str:
         return title or ""
     t = EMOJI_RE.sub("", title)
     t = " ".join(t.split())
+    t = _episode_claim(t) or t
     m = _PIPE_TAIL_RE.search(t)
     if m and len(_words(m.group(1))) <= 6 and len(_words(t[:m.start()])) >= 3:
         t = t[:m.start()]
