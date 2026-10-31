@@ -213,6 +213,17 @@ recorded in `frontend/voices_redirects.json` (loser → survivor); the loser's p
   item, and dedup collapses them against feed copies. Status becomes `graduated`; two failed fetches mark `failed`.
 - The Aquila Report does not harvest: its feed has no original link and its pages are behind a Cloudflare challenge.
 
+### P2.4 Quarterly prune of quiet independents
+- `scripts/prune_sources.py` checks every `independent: True` primary source. It moves when it has 0 placements in 90
+  days (article_history rows plus `docs/archive/` day pages) AND under 2 posts a month (live feed, items in the last
+  90 days / 3). Sources first added under 90 days ago (per `git log -S`) are exempt.
+- Default is a dry run that prints a table; `--report PATH` also writes it as markdown. `--apply` removes each mover's
+  dict from `SOURCES` and appends a dated line to the "Voices watchlist (NOT fetched)" comment block at the bottom of
+  `fetcher/sources.py`, which is for topic-page curation only. Review the diff and commit by hand.
+- Run early Jan / Apr / Jul / Oct. First dry run (2026-10-30, not applied): Hannah Anderson, Katelyn Beaty, Aimee Byrd,
+  Kate Shellnutt, Thomas Kidd. Report: `.christian-orchestrator/prune-dry-run-2026-10-30.md` (untracked).
+  Tests: `tests/test_prune_sources.py`.
+
 ## Hand-curated content — do NOT bulk regenerate
 The topic pages at `docs/topics/<slug>/index.html` are **hand-curated**. They are edited directly (often by AI assistants at Tom's request) and are **not** regenerated from a template by any script. **This changed:** the daily pipeline now DOES `git add docs/topics/`, because `build_recent_articles.py` refreshes the recent-articles block on topic pages each day. It only edits between the injection markers below, so hand-written editorial survives, but topic pages are no longer outside the pipeline's reach.
 
