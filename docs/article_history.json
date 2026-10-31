@@ -55014,5 +55014,52 @@
     "boosts": {},
     "scored_by": "media",
     "clicks": 0
+  },
+  {
+    "url": "https://erlc.com/scotus-center/polk-v-montgomery-county-public-schools/",
+    "title": "Polk v. Montgomery County Public Schools",
+    "source_name": "ERLC",
+    "date_shown": "2026-10-31",
+    "final_score": 5.0,
+    "tags": [
+      "news",
+      "politics"
+    ],
+    "topic_cluster": "polk_v_montgomery_schools",
+    "base_score": 9.0,
+    "importance": 5.0,
+    "depth": 0.0,
+    "base_importance": 9.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://erlc.com/scotus-center/polk-v-montgomery-county-public-schools",
+    "boosts": {
+      "recency": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.furtherup.net/p/be-not-afraid",
+    "title": "Be Not Afraid",
+    "source_name": "Bethel McGrew",
+    "date_shown": "2026-10-31",
+    "final_score": 5.0,
+    "tags": [
+      "culture",
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 5.0,
+    "depth": 4.0,
+    "base_importance": 3.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://furtherup.net/p/be-not-afraid",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
   }
 ]
