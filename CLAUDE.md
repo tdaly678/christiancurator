@@ -118,6 +118,16 @@ it clearly matters to evangelicals (disaffiliation waves, Asbury/seminary doctri
 `mainline_capped`, and kept out of the lead, board, Worth Your Time and The Debate. Never drop RNS, Christian Post or
 WORLD to fix this. Tests: `tests/test_mainline_focus.py`. Notes: `.christian-orchestrator/evangelical-focus-and-schedule-2026-10-31.md`.
 
+### Headline voice: hard rejects (2026-10-31)
+RealClear headlines (1,423 sampled, 2012 to 2026) never carry emoji, issue numbers or launch promos.
+`curator/headline_voice.py` `hard_reject(title)` returns `HARD_REJECT_EMOJI`, `HARD_REJECT_ISSUE_NUMBER` (#432, Issue 12,
+Vol. 3, Ep. 7, No. 45), `HARD_REJECT_PROMO` (promo collocates such as `"X" is HERE`, out now, now available, pre-order,
+giveaway, book launch; never bare "launch" or "sale") or `HARD_REJECT_ROUNDUP` (Quick Things, Weekly Roundup, Things I'm
+Reading, Friday Five, Open Thread, a leading "Links"), else None. `score_articles()` drops matches right after the age
+cutoff, before Claude scoring, and logs each title plus a count by reason. Curly quotes are normalized first. The
+patterns are documented at the top of the module. Tests: `tests/test_headline_voice.py`. Spec:
+`.christian-orchestrator/realclear-headline-voice-2026-10-31.md`. Still to come: `voice_score` and `display_title`.
+
 ### Homepage v2 (P1 Wave 2, 2026-10-30)
 `frontend/layout.py` `build_homepage_layout()` decides every homepage placement; `render_html()` renders it, returns
 it, and `main.py` passes it to `send_email()` so page and email agree. Each URL appears once. Order on the page:

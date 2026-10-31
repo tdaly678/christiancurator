@@ -26,6 +26,7 @@ from dotenv import load_dotenv
 
 from curator.ai_health import record_failure
 from curator.dedup import canonical_url, dedupe_articles
+from curator.headline_voice import hard_reject
 from curator.vocab import ALLOWED_TAGS, ALLOWED_PERSONAS, clean_tags, clean_personas, report_drops
 from curator.vocab import dropped as vocab_dropped
 
@@ -787,6 +788,21 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     if dropped_old:
         print(f"  Hard cutoff: dropped {dropped_old} articles older than {HARD_CUTOFF_DAYS} days.")
     articles = fresh
+
+    # Step 0c: Headline voice hard rejects (emoji, issue numbers, promos, roundups)
+    kept_titles = []
+    reject_counts = defaultdict(int)
+    for a in articles:
+        reason = hard_reject(a.get("title", ""))
+        if reason:
+            reject_counts[reason] += 1
+            print(f"    {reason}: {a.get('title', '')!r} ({a.get('source_name', '?')})")
+            continue
+        kept_titles.append(a)
+    if reject_counts:
+        summary = ", ".join(f"{k} x{v}" for k, v in sorted(reject_counts.items()))
+        print(f"  Headline hard rejects: dropped {sum(reject_counts.values())} articles ({summary}).")
+    articles = kept_titles
 
     # Step 1: Claude scoring in batches
     scored = []
