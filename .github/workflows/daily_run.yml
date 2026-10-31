@@ -2,8 +2,10 @@ name: Daily Curator Run
 
 on:
   schedule:
-    # Runs every day at 6:00 AM UTC (adjust as needed)
-    - cron: "0 6 * * *"
+    # 10:00 UTC = 6:00 AM Eastern during EDT (Mar-Nov), 5:00 AM Eastern during EST.
+    # GitHub Actions cron is UTC-only (no time zone setting), so the Eastern time
+    # shifts by an hour at each daylight-saving change. Tom asked for ~6 AM ET (2026-10-31).
+    - cron: "0 10 * * *"
   workflow_dispatch:
     inputs:
       force_email:

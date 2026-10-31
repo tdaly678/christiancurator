@@ -52,7 +52,7 @@ printf 'protocol=https\nhost=github.com\nusername=tdaly678\npassword=<TOKEN>\n\n
 
 `git remote -v` must show a clean `https://github.com/tdaly678/christiancurator.git` with no credentials in it.
 
-**Always pull before pushing.** GitHub Actions commits to `main` every morning at 6:00 AM UTC, so a local run
+**Always pull before pushing.** GitHub Actions commits to `main` every morning at 10:00 UTC (6:00 AM EDT / 5:00 AM EST), so a local run
 that skips the pull will be rejected as non fast forward:
 
 ```bash
@@ -64,7 +64,7 @@ git add <files> && git commit -m "..." && git push origin main
 
 
 ## Daily Pipeline (GitHub Actions)
-Runs automatically at **6:00 AM UTC** via `.github/workflows/daily_run.yml`.
+Runs automatically at **10:00 UTC** (6:00 AM Eastern during EDT, 5:00 AM during EST; cron is UTC-only) via `.github/workflows/daily_run.yml`.
 
 What it commits: `docs/index.html`, `docs/topics/`, `docs/digest/`, `docs/yesterday.json`, `docs/email_draft.html`,
 `docs/article_history.json`, `docs/research_articles.json`, all five sitemaps (`sitemap.xml`, `sitemap-core.xml`,
