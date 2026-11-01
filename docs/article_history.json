@@ -55061,5 +55061,451 @@
     },
     "scored_by": "claude",
     "clicks": 0
+  },
+  {
+    "url": "https://www.christianpost.com/news/christians-facing-risks-for-sharing-jesus-fertile-soil.html",
+    "title": "Disowned by family, jailed for faith: Former Muslim refuses to stop sharing the Gospel",
+    "source_name": "The Christian Post",
+    "date_shown": "2026-11-01",
+    "final_score": 8.7,
+    "tags": [
+      "suffering",
+      "missions"
+    ],
+    "topic_cluster": "persecuted_christians_2024",
+    "base_score": 8.0,
+    "importance": 8.7,
+    "depth": 7.0,
+    "base_importance": 8.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://christianpost.com/news/christians-facing-risks-for-sharing-jesus-fertile-soil.html",
+    "boosts": {
+      "tier": -0.8,
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://roysreport.com/evangelical-financier-sentenced-to-15-years-for-georgia-investment-fraud/",
+    "title": "Evangelical financier sentenced to 15 years for Georgia investment fraud",
+    "source_name": "The Roys Report",
+    "date_shown": "2026-11-01",
+    "final_score": 7.75,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "evangelical_fraud_crime",
+    "base_score": 7.0,
+    "importance": 7.75,
+    "depth": 2.0,
+    "base_importance": 7.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://roysreport.com/evangelical-financier-sentenced-to-15-years-for-georgia-investment-fraud",
+    "boosts": {
+      "recency": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.thegospelcoalition.org/article/voice-martyrs-prayers-persecuted/",
+    "title": "The Voice of the Martyrs: Prayers of the Persecuted",
+    "source_name": "The Gospel Coalition",
+    "date_shown": "2026-11-01",
+    "final_score": 7.5,
+    "tags": [
+      "prayer",
+      "suffering"
+    ],
+    "topic_cluster": "persecution_prayer",
+    "base_score": 6.0,
+    "importance": 7.5,
+    "depth": 7.0,
+    "base_importance": 6.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://thegospelcoalition.org/article/voice-martyrs-prayers-persecuted",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianpost.com/news/megachurch-endorses-republican-candidates-tests-federal-ban.html",
+    "title": "New Mexico megachurch's endorsement of Republican candidates tests Johnson Amendment",
+    "source_name": "The Christian Post",
+    "date_shown": "2026-11-01",
+    "final_score": 7.05,
+    "tags": [
+      "politics",
+      "church life"
+    ],
+    "topic_cluster": "johnson_amendment_churches",
+    "base_score": 7.0,
+    "importance": 7.05,
+    "depth": 4.0,
+    "base_importance": 7.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://christianpost.com/news/megachurch-endorses-republican-candidates-tests-federal-ban.html",
+    "boosts": {
+      "tier": -0.7,
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://roysreport.com/ohio-megachurch-pastor-lonnie-snell-fired-for-sexual-misconduct/",
+    "title": "Ohio megachurch pastor Lonnie Snell fired for sexual misconduct",
+    "source_name": "The Roys Report",
+    "date_shown": "2026-11-01",
+    "final_score": 6.5,
+    "tags": [
+      "news",
+      "church life"
+    ],
+    "topic_cluster": "lonnie_snell_misconduct",
+    "base_score": 7.0,
+    "importance": 6.5,
+    "depth": 2.0,
+    "base_importance": 7.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://roysreport.com/ohio-megachurch-pastor-lonnie-snell-fired-for-sexual-misconduct",
+    "boosts": {
+      "recency": 0.25,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/sift/births-in-england-and-wales-hit-nearly-50-year-low-1793405104",
+    "title": "Births in England and Wales hit nearly 50-year low",
+    "source_name": "World Magazine",
+    "date_shown": "2026-11-01",
+    "final_score": 5.85,
+    "tags": [
+      "data",
+      "culture"
+    ],
+    "topic_cluster": "demographics_fertility",
+    "base_score": 5.0,
+    "importance": 5.85,
+    "depth": 4.0,
+    "base_importance": 5.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://wng.org/sift/births-in-england-and-wales-hit-nearly-50-year-low-1793405104",
+    "boosts": {
+      "tier": 0.1,
+      "recency": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.theguardian.com/us-news/2026/oct/31/lance-wallnau-donald-trump-evangelicals",
+    "title": "This rightwing evangelical was one of Trump’s biggest backers. Why isn’t he talking about the midterms?",
+    "source_name": "The Guardian",
+    "date_shown": "2026-11-01",
+    "final_score": 5.3,
+    "tags": [
+      "politics",
+      "news"
+    ],
+    "topic_cluster": "evangelical_midterm_politics",
+    "base_score": 6.0,
+    "importance": 5.3,
+    "depth": 2.0,
+    "base_importance": 6.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://theguardian.com/us-news/2026/oct/31/lance-wallnau-donald-trump-evangelicals",
+    "boosts": {
+      "tier": -1.2,
+      "recency": 1.5,
+      "voice": -1.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.challies.com/articles/works-wonders-november-1/",
+    "title": "Works & Wonders (November 1)",
+    "source_name": "Tim Challies",
+    "date_shown": "2026-11-01",
+    "final_score": 5.0,
+    "tags": [
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 5.0,
+    "depth": 3.0,
+    "base_importance": 3.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://challies.com/articles/works-wonders-november-1",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.americanreformer.org/p/california-dreaming-a-review-of-michael",
+    "title": "California Dreaming: A Review of Michael Anton’s Dispatches from the Late Republic",
+    "source_name": "American Reformer",
+    "date_shown": "2026-11-01",
+    "final_score": 4.75,
+    "tags": [
+      "culture",
+      "politics"
+    ],
+    "topic_cluster": "political_philosophy_review",
+    "base_score": 4.0,
+    "importance": 4.75,
+    "depth": 5.0,
+    "base_importance": 4.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://americanreformer.org/p/california-dreaming-a-review-of-michael",
+    "boosts": {
+      "recency": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/podcasts/the-world-and-everything-in-it-october-30-2026-1793302499",
+    "title": "The World and Everything in It: October 30, 2026",
+    "source_name": "World Magazine",
+    "date_shown": "2026-11-01",
+    "final_score": 4.6,
+    "tags": [
+      "culture",
+      "politics"
+    ],
+    "topic_cluster": "christian_voting_politics",
+    "base_score": 5.0,
+    "importance": 4.6,
+    "depth": 5.0,
+    "base_importance": 5.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://wng.org/podcasts/the-world-and-everything-in-it-october-30-2026-1793302499",
+    "boosts": {
+      "tier": 0.1,
+      "recency": 0.25,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://feed.desiringgod.org/link/22977/17512367/the-tyranny-of-preferences",
+    "title": "The Tyranny of Preferences",
+    "source_name": "Desiring God",
+    "date_shown": "2026-11-01",
+    "final_score": 4.5,
+    "tags": [
+      "devotional",
+      "theology"
+    ],
+    "topic_cluster": "small_sins_series",
+    "base_score": 3.0,
+    "importance": 4.5,
+    "depth": 6.0,
+    "base_importance": 3.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://feed.desiringgod.org/link/22977/17512367/the-tyranny-of-preferences",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/10/church-history-for-everyone-lives-up-review-john-fea/",
+    "title": "‘Church History for Everyone’ Lives Up to Its Title",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-01",
+    "final_score": 4.25,
+    "tags": [
+      "church life"
+    ],
+    "topic_cluster": "kevin_deyoung_church_history",
+    "base_score": 4.0,
+    "importance": 4.25,
+    "depth": 5.0,
+    "base_importance": 4.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://christianitytoday.com/2026/10/church-history-for-everyone-lives-up-review-john-fea",
+    "boosts": {
+      "recency": 0.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/faith/franni-cash-on-leaving-the-family-band-her-solo-debut-and-growing-up-in-a-cult/",
+    "title": "Franni Cash on Leaving the Family Band, Her Solo Debut and Growing Up in a Cult",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-11-01",
+    "final_score": 4.25,
+    "tags": [
+      "culture",
+      "suffering"
+    ],
+    "topic_cluster": "franni_cash_cult",
+    "base_score": 5.0,
+    "importance": 4.25,
+    "depth": 5.0,
+    "base_importance": 5.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://relevantmagazine.com/faith/franni-cash-on-leaving-the-family-band-her-solo-debut-and-growing-up-in-a-cult",
+    "boosts": {
+      "recency": 0.25,
+      "voice": -1.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://religionnews.com/2026/10/30/what-is-sharia-law-and-why-is-it-so-controversial-in-the-united-states/",
+    "title": "What is Sharia law, and why is it so controversial in the United States?",
+    "source_name": "Religion News Service",
+    "date_shown": "2026-11-01",
+    "final_score": 4.25,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 4.25,
+    "depth": 4.0,
+    "base_importance": 3.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://religionnews.com/2026/10/30/what-is-sharia-law-and-why-is-it-so-controversial-in-the-united-states",
+    "boosts": {
+      "recency": 0.75,
+      "voice": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://erlc.com/scotus-center/grand-v-city-of-university-heights/",
+    "title": "Grand v. City of University Heights",
+    "source_name": "ERLC",
+    "date_shown": "2026-11-01",
+    "final_score": 4.0,
+    "tags": [
+      "news",
+      "politics"
+    ],
+    "topic_cluster": "supreme_court_religious_liberty_2024",
+    "base_score": 8.0,
+    "importance": 4.0,
+    "depth": 0.0,
+    "base_importance": 8.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://erlc.com/scotus-center/grand-v-city-of-university-heights",
+    "boosts": {
+      "recency": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.crossway.org/articles/honoring-god-and-his-word-on-the-occasion-of-the-25th-anniversary-of-the-esv/",
+    "title": "Honoring God and His Word on the Occasion of the 25th Anniversary of the ESV",
+    "source_name": "Crossway",
+    "date_shown": "2026-11-01",
+    "final_score": 3.25,
+    "tags": [
+      "devotional"
+    ],
+    "topic_cluster": "esv_anniversary",
+    "base_score": 4.0,
+    "importance": 3.25,
+    "depth": 5.0,
+    "base_importance": 4.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://crossway.org/articles/honoring-god-and-his-word-on-the-occasion-of-the-25th-anniversary-of-the-esv",
+    "boosts": {
+      "recency": 0.25,
+      "voice": -1.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://religionnews.com/2026/10/31/the-fall-of-the-etsy-witch/",
+    "title": "The fall of the Etsy witch",
+    "source_name": "Religion News Service",
+    "date_shown": "2026-11-01",
+    "final_score": 3.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 3.0,
+    "depth": 2.0,
+    "base_importance": 3.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://religionnews.com/2026/10/31/the-fall-of-the-etsy-witch",
+    "boosts": {
+      "recency": 0.75,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.pewresearch.org/short-reads/2026/10/26/americans-views-of-ice-grow-more-negative/",
+    "title": "Americans’ Views of ICE Grow More Negative",
+    "source_name": "Pew Research",
+    "date_shown": "2026-11-01",
+    "final_score": 3.0,
+    "tags": [
+      "politics",
+      "data"
+    ],
+    "topic_cluster": "immigration_policy",
+    "base_score": 5.0,
+    "importance": 3.0,
+    "depth": 0.0,
+    "base_importance": 5.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://pewresearch.org/short-reads/2026/10/26/americans-views-of-ice-grow-more-negative",
+    "boosts": {
+      "recency": -2.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.crossway.org/articles/where-the-story-of-jesus-begins/",
+    "title": "Where the Story of Jesus Begins",
+    "source_name": "Crossway",
+    "date_shown": "2026-11-01",
+    "final_score": 1.5,
+    "tags": [
+      "theology",
+      "apologetics"
+    ],
+    "topic_cluster": "christology_old_testament",
+    "base_score": 7.0,
+    "importance": 1.5,
+    "depth": 6.0,
+    "base_importance": 7.0,
+    "base_depth": 8.0,
+    "canonical_url": "https://crossway.org/articles/where-the-story-of-jesus-begins",
+    "boosts": {
+      "recency": -4.0,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
   }
 ]

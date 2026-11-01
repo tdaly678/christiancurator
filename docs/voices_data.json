@@ -17821,5 +17821,43 @@
     "website": "",
     "books": [],
     "initials": "LP"
+  },
+  {
+    "name": "Daniel Silliman",
+    "slug": "daniel-silliman",
+    "bio": "Daniel Silliman is a religion reporter and journalist who covers faith, culture, and spirituality for major Christian and secular publications. His reporting explores the intersection of Christianity with contemporary issues, offering thoughtful analysis of how faith communities engage with modern challenges.",
+    "affiliation": "Religion News Service, The Christian Century",
+    "role": "Religion Reporter & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DS"
+  },
+  {
+    "name": "Matthew Boswell",
+    "slug": "matthew-boswell",
+    "bio": "Matthew Boswell is a worship leader, songwriter, and author who has contributed significantly to modern Christian music and theology. He is known for his work in helping believers understand and experience authentic worship, blending theological depth with accessible teaching for contemporary church settings.",
+    "affiliation": "Dayspring Records, Christian music publishing",
+    "role": "Worship Leader, Songwriter & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Pierced for Our Transgressions",
+        "amazon_url": "https://www.amazon.com/s?k=Pierced+for+Our+Transgressions+Matthew+Boswell"
+      }
+    ],
+    "initials": "MB"
+  },
+  {
+    "name": "William R. Osborne",
+    "slug": "william-r-osborne",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "WRO"
   }
 ]

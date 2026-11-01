@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-10-31T21:13:12+00:00",
+  "run_at": "2026-11-01T11:47:28+00:00",
   "sources": [
     {
       "source": "The Gospel Coalition",
@@ -7,7 +7,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 100,
-      "newest_date": "2026-10-31",
+      "newest_date": "2026-11-01",
       "bozo": false,
       "stale": false
     },
@@ -26,8 +26,8 @@
       "url": "https://feed.desiringgod.org/articles-by-desiring-god.rss",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 640,
-      "newest_date": "2026-10-30",
+      "n_entries": 641,
+      "newest_date": "2026-11-01",
       "bozo": false,
       "stale": false
     },
@@ -77,7 +77,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 30,
-      "newest_date": "2026-10-31",
+      "newest_date": "2026-11-01",
       "bozo": false,
       "stale": false
     },
@@ -167,8 +167,8 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 28,
-      "newest_date": "2026-10-31",
+      "n_entries": 25,
+      "newest_date": "2026-11-01",
       "bozo": false,
       "stale": false
     },
@@ -178,7 +178,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 56,
-      "newest_date": "2026-10-31",
+      "newest_date": "2026-11-01",
       "bozo": false,
       "stale": false
     },
@@ -188,7 +188,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 70,
-      "newest_date": "2026-10-31",
+      "newest_date": "2026-11-01",
       "bozo": false,
       "stale": false
     },
@@ -458,7 +458,7 @@
       "role": "discovery",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-10-31",
+      "newest_date": "2026-11-01",
       "bozo": false,
       "stale": false
     },
@@ -558,7 +558,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-10-31",
+      "newest_date": "2026-11-01",
       "bozo": false,
       "stale": false
     },
@@ -780,153 +780,153 @@
   "zero_streaks": {
     "Kyle Worley": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Phylicia Masonheimer": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Laura Wifler": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Karen Swallow Prior": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Scot McKnight": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Matthew Lee Anderson": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Joy Clarkson": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Mike Cosper": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Bonnie Kristian": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Aimee Byrd": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Nadya Williams": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Daniel K. Williams": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Timothy Paul Jones": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Kate Shellnutt": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Jemar Tisby": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Hannah Anderson": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Stephen McAlpine": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Daniel Darling": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Katelyn Beaty": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Tom Sugimura": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Mitchell Chase": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Michael Bird": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Nijay Gupta": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Carmen Joy Imes": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Beth Felker Jones": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Thomas Kidd": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Chris Gehrz": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Emily P. Freeman": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "A.J. Swoboda": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     },
     "Nicholas McDonald": {
       "since": "2026-10-31",
-      "last_date": "2026-10-31",
-      "days": 1
+      "last_date": "2026-11-01",
+      "days": 2
     }
   }
 }
