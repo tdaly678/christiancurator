@@ -1,0 +1,17 @@
+name = "cc-morning-ping"
+main = "ping.js"
+compatibility_date = "2026-04-01"
+
+# UTC cron. ping.js only calls GitHub inside 4:50–8:00 AM America/New_York,
+# so the 09:00 UTC trigger is the 5:00 AM ping during EDT and a no-op during
+# EST, and the 10:00 UTC trigger is the reverse. 11:00 UTC is the 6:00 AM EST
+# / 7:00 AM EDT backup. Cloudflare cron does not accept a time zone.
+#
+# Workers Free allows 5 cron triggers per account. This worker uses 3.
+# worker/wrangler.toml (cc-subscribe) uses none.
+#
+# The token is NOT stored here:
+#   npx wrangler secret put GITHUB_DISPATCH_TOKEN
+# Deploy steps: .github/morning-trigger.md
+[triggers]
+crons = ["0 9 * * *", "0 10 * * *", "0 11 * * *"]

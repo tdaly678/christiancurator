@@ -70,7 +70,7 @@ step 2).
 
 ### 5. Regenerate and deploy the site
 The templates are used by the daily pipeline. Either:
-- Wait for the next 10:00 UTC daily run (6 AM EDT), OR
+- Wait for the next morning's Daily Curator Run (about 5:00 AM ET; see `.github/morning-trigger.md`), OR
 - Run `/tmp/rerender_only.py` (the re-rendering helper documented in project memory) to rebuild `docs/` immediately, then commit & push.
 
 ---
