@@ -717,7 +717,7 @@
   <div id="cc-email-box" style="margin-top:2.75rem;">
     <div class="cc-signup-block">
       <h3 class="cc-signup-heading">Get the Daily Digest</h3>
-      <p class="cc-signup-sub">The best evangelical content, curated and delivered to your inbox each morning.</p>
+      <p class="cc-signup-sub">The morning edition of the front page: the lead stories, the day&rsquo;s headlines in news, commentary and theology, and a few slower reads, sent each morning.</p>
 
       <form id="cc-signup-form" class="cc-signup-form"
             action="#cc-email-box"
@@ -736,14 +736,14 @@
       </form>
 
       <div id="cc-signup-success" class="cc-signup-success" style="display:none;">
-        ✓ You're in! Check your inbox for a confirmation email.
+        ✓ You're subscribed. Check your inbox for a confirmation email.
       </div>
       <div id="cc-signup-error" class="cc-signup-error" role="alert"
            style="display:none; color:#b42318; margin-top:8px; font-size:0.95rem;"></div>
       <p class="cc-signup-privacy">
         No spam. Unsubscribe anytime.<br>
         <span style="font-size:0.8rem; color:#888;">
-          Protected by reCAPTCHA &mdash;
+          Protected by reCAPTCHA. Google
           <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a> &amp;
           <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms</a>.
         </span>
@@ -792,7 +792,7 @@
           submitBtn.textContent = 'Subscribing…';
 
           if (typeof grecaptcha === 'undefined' || !grecaptcha.ready) {
-            showError('Verification is still loading — please try again in a moment.');
+            showError('Verification is still loading. Please try again in a moment.');
             resetButton();
             return;
           }
@@ -813,7 +813,7 @@
                 if (res.ok && res.data && res.data.success) {
                   form.style.display = 'none';
                   if (res.data.alreadySubscribed) {
-                    successEl.innerHTML = '✓ You\'re already subscribed — thanks!';
+                    successEl.innerHTML = '✓ You\'re already subscribed. Thank you.';
                   }
                   successEl.style.display = 'block';
                   if (typeof gtag === 'function') {

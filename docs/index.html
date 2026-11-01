@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christian Curator — Evangelical Perspectives &amp; Daily Digest</title>
-  <meta name="description" content="Clarity on the conversations shaping evangelical Christianity. Curated perspectives on theology, church life, culture, and more." />
+  <title>Christian Curator: The Daily Front Page for Evangelicals</title>
+  <meta name="description" content="A daily ranked front page of evangelical news, commentary and theology, drawn from 76 sources and updated every morning." />
   <link rel="canonical" href="https://www.christiancurator.com/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Christian Curator" />
-  <meta property="og:title" content="Christian Curator — Evangelical Perspectives &amp; Daily Digest" />
-  <meta property="og:description" content="Clarity on the conversations shaping evangelical Christianity. Curated perspectives on theology, church life, culture, and more." />
+  <meta property="og:title" content="Christian Curator: The Daily Front Page for Evangelicals" />
+  <meta property="og:description" content="A daily ranked front page of evangelical news, commentary and theology, drawn from 76 sources and updated every morning." />
   <meta property="og:url" content="https://www.christiancurator.com/" />
   <meta property="og:image" content="https://www.christiancurator.com/og-image.png" />
   <meta property="og:image:width" content="1200" />
@@ -19,8 +19,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Christian Curator — Evangelical Perspectives &amp; Daily Digest" />
-  <meta name="twitter:description" content="Clarity on the conversations shaping evangelical Christianity. Curated perspectives, surfaced daily." />
+  <meta name="twitter:title" content="Christian Curator: The Daily Front Page for Evangelicals" />
+  <meta name="twitter:description" content="A daily ranked front page of evangelical news, commentary and theology, updated every morning." />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -29,7 +29,7 @@
     "@type": "WebSite",
     "name": "Christian Curator",
     "url": "https://www.christiancurator.com/",
-    "description": "Clarity on the conversations shaping evangelical Christianity. Curated perspectives on theology, church life, culture, and more.",
+    "description": "A daily ranked front page of evangelical news, commentary and theology, updated every morning.",
     "publisher": {
       "@type": "Organization",
       "name": "Christian Curator"
@@ -83,6 +83,10 @@
     .cc-tagline {
       font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
       color: #888; margin: 8px 0 0; font-weight: 300;
+    }
+    .cc-masthead-claim {
+      font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 13.5px;
+      color: #666; margin: 6px 0 0;
     }
     .cc-nav {
       display: flex; justify-content: center; gap: 2rem;
@@ -371,7 +375,15 @@
       font-size: 14px; color: #2C4A2E; font-weight: 600; padding: 0.5rem 0;
     }
     .cc-signup-privacy { font-size: 11px; color: #aaa; margin-top: 0.75rem; }
+    .cc-signup-proof { font-size: 12px; color: #888; margin: -0.5rem 0 1.1rem; }
 
+    /* Quiet second subscribe line after the Lead: a sentence, not a banner */
+    .cc-subscribe-inline {
+      font-size: 13px; color: #666; text-align: center;
+      padding: 0.7rem 0; border-bottom: 1px solid #e0ddd8;
+    }
+    .cc-subscribe-inline a { color: #2C4A2E; font-weight: 600; text-decoration: none; }
+    .cc-subscribe-inline a:hover { text-decoration: underline; }
     /* ── Footer ──────────────────────────────────────────────────── */
     .cc-footer {
       border-top: 2.5px solid #1a1a1a; margin-top: 2.5rem; padding-top: 1rem;
@@ -401,7 +413,8 @@
     </div>
     <div class="cc-masthead">
       <h1><a href="/" class="cc-site-name">Christian Curator</a></h1>
-      <p class="cc-tagline">Curated perspectives &middot; updated daily</p>
+      <p class="cc-tagline">The daily front page for evangelicals</p>
+      <p class="cc-masthead-claim">A daily ranked front page from 76 evangelical sources.</p>
     </div>
     <nav class="cc-nav">
       <a href="/" class="active">Home</a>
@@ -519,7 +532,7 @@
   <div class="cc-strip">
     <span>November 1, 2026</span>
     <span class="cc-strip-updated">Updated 6:50 AM ET</span>
-    <a class="cc-strip-pulse" href="/daily/2026-11-01/"><strong>The Pulse</strong>Today the church is staring at a credibility gap: Christians are suffering for the Gospel overseas while Christian institutions at…</a>
+    <a class="cc-strip-pulse" href="/daily/2026-11-01/"><strong>The Pulse</strong>Today the church is staring at a credibility gap: Christians are suffering for the Gospel overseas while Christian institutions at home keep failing the people they're supposed to serve.</a>
   </div>
 
   <!-- ── LEAD BLOCK ─────────────────────────────────────────────────── -->
@@ -559,6 +572,9 @@
   </section>
   
 
+  <!-- ── QUIET SUBSCRIBE LINE (second signup point, editorial voice) ─── -->
+  <p class="cc-subscribe-inline">This front page arrives by email each morning.
+    <a href="#cc-email-box" onclick="document.getElementById('cc-email-box').scrollIntoView({behavior:'smooth'}); var i=document.getElementById('cc-signup-email'); if(i){i.focus({preventScroll:true});} return false;">Receive the Daily Digest</a></p>
   <!-- ── HEADLINE BOARD ─────────────────────────────────────────────── -->
   
   <section class="cc-board" aria-label="Today's headlines">
@@ -838,8 +854,8 @@
   <div id="cc-email-box" style="margin-top:2.75rem; margin-bottom:2.75rem;">
     <div class="cc-signup-block">
       <h3 class="cc-signup-heading">Get the Daily Digest</h3>
-      <p class="cc-signup-sub">The best evangelical content, curated and delivered to your inbox each morning.</p>
-
+      <p class="cc-signup-sub">The morning edition of this page: the lead stories, the day&rsquo;s headlines in news, commentary and theology, and a few slower reads, sent each morning.</p>
+      <p class="cc-signup-proof">223 daily editions published since March 2026 &middot; 1,181 writers indexed in <a href="/voices/" style="color:inherit;">Voices</a>.</p>
       <form id="cc-signup-form" class="cc-signup-form"
             action="#cc-email-box"
             method="post"
@@ -857,14 +873,14 @@
       </form>
 
       <div id="cc-signup-success" class="cc-signup-success" style="display:none;">
-        ✓ You're in! Check your inbox for a confirmation email.
+        ✓ You're subscribed. Check your inbox for a confirmation email.
       </div>
       <div id="cc-signup-error" class="cc-signup-error" role="alert"
            style="display:none; color:#b42318; margin-top:8px; font-size:0.95rem;"></div>
       <p class="cc-signup-privacy">
         No spam. Unsubscribe anytime.<br>
         <span style="font-size:0.8rem; color:#888;">
-          Protected by reCAPTCHA &mdash;
+          Protected by reCAPTCHA. Google
           <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a> &amp;
           <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms</a>.
         </span>
@@ -913,7 +929,7 @@
           submitBtn.textContent = 'Subscribing…';
 
           if (typeof grecaptcha === 'undefined' || !grecaptcha.ready) {
-            showError('Verification is still loading — please try again in a moment.');
+            showError('Verification is still loading. Please try again in a moment.');
             resetButton();
             return;
           }
@@ -934,7 +950,7 @@
                 if (res.ok && res.data && res.data.success) {
                   form.style.display = 'none';
                   if (res.data.alreadySubscribed) {
-                    successEl.innerHTML = '✓ You\'re already subscribed — thanks!';
+                    successEl.innerHTML = '✓ You\'re already subscribed. Thank you.';
                   }
                   successEl.style.display = 'block';
                   if (typeof gtag === 'function') {
@@ -1338,19 +1354,19 @@
   </nav>
 
   
+  
+  
   <!-- CC-FEATURED-DEEP-DIVES:START -->
   <section class="cc-fdd-section" aria-label="Featured deep dives">
-    <style>.cc-fdd-section{margin:2.5rem 0 1.5rem;padding:1.5rem 0;border-top:1px solid #e0ddd8;border-bottom:1px solid #e0ddd8;}.cc-fdd-heading{font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600;letter-spacing:-0.01em;margin-bottom:0.25rem;color:#1a1a1a;}.cc-fdd-sub{font-size:12px;color:#888;margin-bottom:1rem;letter-spacing:0.04em;}.cc-fdd-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0.75rem;}@media(max-width:600px){.cc-fdd-grid{grid-template-columns:1fr;}}.cc-fdd-card{display:block;padding:0.75rem 0.9rem;background:#fff;border:1px solid #e0ddd8;border-radius:4px;text-decoration:none;color:#1a1a1a;transition:border-color 0.15s,box-shadow 0.15s;}.cc-fdd-card:hover{border-color:#2C4A2E;box-shadow:0 1px 6px rgba(44,74,46,0.08);}.cc-fdd-kind{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#2C4A2E;margin-bottom:4px;}.cc-fdd-title{font-family:'Lora',Georgia,serif;font-size:15px;font-weight:600;line-height:1.3;margin-bottom:4px;color:#1a1a1a;}.cc-fdd-desc{font-size:12.5px;color:#666;line-height:1.5;}</style>
+    <style>.cc-fdd-section{margin:2.5rem 0 1.5rem;padding:1.5rem 0;border-top:1px solid #e0ddd8;border-bottom:1px solid #e0ddd8;}.cc-fdd-heading{font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600;letter-spacing:-0.01em;margin-bottom:0.25rem;color:#1a1a1a;}.cc-fdd-sub{font-size:12px;color:#888;margin-bottom:1rem;letter-spacing:0.04em;}.cc-fdd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;}@media(max-width:600px){.cc-fdd-grid{grid-template-columns:1fr;}}.cc-fdd-card{display:block;padding:0.75rem 0.9rem;background:#fff;border:1px solid #e0ddd8;border-radius:4px;text-decoration:none;color:#1a1a1a;transition:border-color 0.15s,box-shadow 0.15s;}.cc-fdd-card:hover{border-color:#2C4A2E;box-shadow:0 1px 6px rgba(44,74,46,0.08);}.cc-fdd-kind{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#2C4A2E;margin-bottom:4px;}.cc-fdd-title{font-family:'Lora',Georgia,serif;font-size:15px;font-weight:600;line-height:1.3;margin-bottom:4px;color:#1a1a1a;}.cc-fdd-desc{font-size:12.5px;color:#666;line-height:1.5;}.cc-fdd-more{margin-top:0.9rem;font-size:12.5px;}.cc-fdd-more a{color:#2C4A2E;font-weight:600;text-decoration:none;}.cc-fdd-more a:hover{text-decoration:underline;}</style>
     <h2 class="cc-fdd-heading">Featured deep dives</h2>
-    <div class="cc-fdd-sub">A daily-rotating selection from our topic archives.</div>
+    <div class="cc-fdd-sub">Three guides from the topic library, changing daily.</div>
     <div class="cc-fdd-grid">
-      <a href="/topics/christian-education/" class="cc-fdd-card cc-fdd-topic"><div class="cc-fdd-kind">Topic</div><div class="cc-fdd-title">On Christian Education</div><div class="cc-fdd-desc">Should Christian parents choose public schools, Christian schools, or homeschooling? Explore what Scripture teaches and evangelical perspect</div></a>
-      <a href="/topics/christian-masculinity/" class="cc-fdd-card cc-fdd-topic"><div class="cc-fdd-kind">Topic</div><div class="cc-fdd-title">On Christian Masculinity</div><div class="cc-fdd-desc">What does biblical manhood mean today? Explore evangelical perspectives on Christian masculinity, male church engagement, and healthy models</div></a>
-      <a href="/topics/prayer/" class="cc-fdd-card cc-fdd-topic"><div class="cc-fdd-kind">Topic</div><div class="cc-fdd-title">On Prayer</div><div class="cc-fdd-desc">Does prayer change God</div></a>
-      <a href="/topics/biblical-inerrancy/" class="cc-fdd-card cc-fdd-topic"><div class="cc-fdd-kind">Topic</div><div class="cc-fdd-title">What Is Biblical Inerrancy?</div><div class="cc-fdd-desc">What is biblical inerrancy? How evangelicals understand the Bible</div></a>
-      <a href="/topics/atonement/" class="cc-fdd-card cc-fdd-topic"><div class="cc-fdd-kind">Topic</div><div class="cc-fdd-title">On the Atonement</div><div class="cc-fdd-desc">What did Jesus</div></a>
-      <a href="/topics/baptism/" class="cc-fdd-card cc-fdd-topic"><div class="cc-fdd-kind">Topic</div><div class="cc-fdd-title">On Baptism</div><div class="cc-fdd-desc">Evangelicals debate infant vs. believer</div></a>
+      <a href="/topics/christian-education/" class="cc-fdd-card cc-fdd-topic"><div class="cc-fdd-kind">Topic</div><div class="cc-fdd-title">On Christian Education</div><div class="cc-fdd-desc">Should Christian parents choose public schools, Christian schools, or homeschooling? Explore what Scripture teaches and evangelical perspectives on this debate.</div></a>
+      <a href="/topics/christian-masculinity/" class="cc-fdd-card cc-fdd-topic"><div class="cc-fdd-kind">Topic</div><div class="cc-fdd-title">On Christian Masculinity</div><div class="cc-fdd-desc">What does biblical manhood mean today? Explore evangelical perspectives on Christian masculinity, male church engagement, and healthy models of manhood.</div></a>
+      <a href="/topics/prayer/" class="cc-fdd-card cc-fdd-topic"><div class="cc-fdd-kind">Topic</div><div class="cc-fdd-title">On Prayer</div><div class="cc-fdd-desc">Does prayer change God&#x27;s plans or change us? Explore evangelical perspectives on prayer&#x27;s purpose, the Lord&#x27;s Prayer, persistence, and building a prayer life.</div></a>
     </div>
+    <div class="cc-fdd-more"><a href="/topics/">All 70 topic guides &rarr;</a></div>
   </section>
   <!-- CC-FEATURED-DEEP-DIVES:END -->
 

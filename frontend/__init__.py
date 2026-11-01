@@ -214,6 +214,7 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
     # Homepage v2 (P1 Wave 2): lead + subleads, three-column board, debate,
     # Worth Your Time and Research & Data, all picked in frontend/layout.py.
     from frontend.layout import build_homepage_layout, outbound_urls, pulse_line, updated_label
+    from frontend.site_stats import site_stats
     layout = build_homepage_layout(articles, pairings, research_articles or load_research_articles(),
                                    media_items=media_items)
     if layout["lead"]:
@@ -259,6 +260,7 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
         categories=CATEGORIES,
         archive_dates=archive_dates,
         voices_by_name=load_voices_by_name(),
+        stats=site_stats(),
     )
 
     with open(OUTPUT_HTML, "w", encoding="utf-8") as f:

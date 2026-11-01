@@ -165,7 +165,7 @@ def build_preheader(layout: dict, daily_summary: dict | None) -> str:
     """
     from frontend.layout import pulse_line
     if daily_summary and not daily_summary.get("fallback"):
-        sentence = pulse_line(daily_summary, max_words=200)
+        sentence = pulse_line(daily_summary)
         if sentence:
             return _clip(sentence, PREHEADER_MAX)
     subs = [_clip(a.get("rewritten_title") or a.get("title") or "", 60)

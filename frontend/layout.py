@@ -34,6 +34,7 @@ from curator.dedup import canonical_url
 from curator.headline_voice import is_claimless_short, is_dated_briefing
 from curator.lanes import select_watch_and_listen, select_worth_your_time
 from curator.mission import is_off_mission
+from frontend.text import clean_copy, first_sentence
 
 SUBLEAD_COUNT = 3
 BOARD_PER_COLUMN = 22
@@ -201,22 +202,18 @@ def _build_debate(articles: list[dict], pairings: list[dict]) -> list[dict]:
     return debates
 
 
-def pulse_line(daily_summary: dict | None, max_words: int = 20) -> str:
-    """First sentence of the Daily Pulse, capped at `max_words`, or ""."""
+def pulse_line(daily_summary: dict | None) -> str:
+    """The complete first sentence of the Daily Pulse, or "".
+
+    No word cap: a cap bisected clauses ("...the PCA's vote on…"). The masthead
+    strip wraps, so a long first sentence still reads cleanly.
+    """
     if not daily_summary:
         return ""
     plain = (daily_summary.get("paragraphs_plain") or [""])[0] or ""
     if not plain:
-        html = (daily_summary.get("paragraphs_html") or [""])[0] or ""
-        plain = re.sub(r"<[^>]+>", "", html)
-    plain = " ".join(plain.split())
-    if not plain:
-        return ""
-    sentence = re.split(r"(?<=[.!?])\s", plain, maxsplit=1)[0]
-    words = sentence.split()
-    if len(words) > max_words:
-        sentence = " ".join(words[:max_words]).rstrip(",;:") + "…"
-    return sentence
+        plain = (daily_summary.get("paragraphs_html") or [""])[0] or ""
+    return first_sentence(clean_copy(plain))
 
 
 def updated_label(now: datetime | None = None) -> str:

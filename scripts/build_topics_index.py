@@ -17,20 +17,25 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DOCS_DIR = REPO_ROOT / "docs"
 TOPICS_DIR = DOCS_DIR / "topics"
 OUTPUT = TOPICS_DIR / "index.html"
+BLURB_LIMIT = 200  # every current topic meta description fits whole
+
+sys.path.insert(0, str(REPO_ROOT))
+from frontend.text import complete_blurb  # noqa: E402
 
 
 def parse_meta(html: str, attr: str, name_value: str) -> str:
+    # The content value may contain the other quote character ("God's").
     m = re.search(
-        rf'<meta[^>]*\s{attr}=["\']{re.escape(name_value)}["\'][^>]*\scontent=["\']([^"\']*)["\']',
+        rf'<meta[^>]*\s{attr}=["\']{re.escape(name_value)}["\'][^>]*\scontent=(["\'])(.*?)\1',
         html, re.IGNORECASE,
     )
     if m:
-        return m.group(1)
+        return m.group(2)
     m = re.search(
-        rf'<meta[^>]*\scontent=["\']([^"\']*)["\'][^>]*\s{attr}=["\']{re.escape(name_value)}["\']',
+        rf'<meta[^>]*\scontent=(["\'])(.*?)\1[^>]*\s{attr}=["\']{re.escape(name_value)}["\']',
         html, re.IGNORECASE,
     )
-    return m.group(1) if m else ""
+    return m.group(2) if m else ""
 
 
 def parse_title(html: str) -> str:
@@ -88,12 +93,12 @@ PAGE = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Topics — Christian Curator</title>
-  <meta name="description" content="Browse {n} curated deep-dive topic hubs — apologetics, theology, the church, culture, family, and more — from across evangelical Christianity." />
+  <title>Topic Guides | Christian Curator</title>
+  <meta name="description" content="Browse {n} curated topic guides on apologetics, theology, the church, culture and family, drawn from across evangelical Christianity." />
   <link rel="canonical" href="https://www.christiancurator.com/topics/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Christian Curator" />
-  <meta property="og:title" content="Topics — Christian Curator" />
+  <meta property="og:title" content="Topic Guides | Christian Curator" />
   <meta property="og:description" content="Browse {n} curated deep-dive topic hubs across evangelical Christianity." />
   <meta property="og:url" content="https://www.christiancurator.com/topics/" />
   <meta property="og:image" content="https://www.christiancurator.com/og-image.png" />
@@ -134,10 +139,10 @@ PAGE = """<!DOCTYPE html>
 <body>
   <header class="cc-header">
     <div class="cc-root">
-      <div class="cc-top-bar"><span>Updated daily</span><a class="cc-subscribe-btn" href="/#subscribe">Subscribe</a></div>
+      <div class="cc-top-bar"><span>Updated daily</span><a class="cc-subscribe-btn" href="/#cc-email-box">Subscribe</a></div>
       <div class="cc-masthead">
         <a class="cc-site-name" href="/">Christian Curator</a>
-        <p class="cc-tagline">The Best of Christian Thought, Curated Daily</p>
+        <p class="cc-tagline">The daily front page for evangelicals</p>
       </div>
 {nav_block}
     </div>
@@ -170,7 +175,7 @@ def main() -> int:
     cards = []
     for t in topics:
         title = html_mod.escape(t["title"])
-        desc = html_mod.escape(t["description"])[:180]
+        desc = html_mod.escape(complete_blurb(t["description"], BLURB_LIMIT))
         cards.append(
             f'      <a href="/topics/{t["slug"]}/" class="cc-topic-card">\n'
             f'        <div class="cc-topic-card-title">{title}</div>\n'

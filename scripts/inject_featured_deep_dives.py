@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """Inject a "Featured deep dives" block into docs/index.html and docs/digest/index.html.
 
-Picks 6 deep-dive topic pages at random, seeded by today's date so the
+Picks 3 deep-dive topic pages at random, seeded by today's date so the
 selection rotates daily but is deterministic per day. Refreshes inbound links to
 otherwise-static deep-dive URLs from the highest-authority pages on the site,
 which (a) signals freshness to crawlers on every daily run and (b) ensures every
 deep-dive page eventually gets an inbound link from the homepage over time.
+
+Demoted 2026-11-01: 3 picks plus a link to the full /topics/ hub, placed at
+the end of <main> (below the board). Blurbs are cut on sentence or clause
+boundaries only (frontend/text.py complete_blurb), never mid-word.
 
 Idempotent: if a previous block exists, replace it.
 """
@@ -23,6 +27,9 @@ DOCS_DIR = REPO_ROOT / "docs"
 TOPICS_DIR = DOCS_DIR / "topics"
 VOICES_DATA = DOCS_DIR / "voices_data.json"
 
+sys.path.insert(0, str(REPO_ROOT))
+from frontend.text import complete_blurb  # noqa: E402
+
 TARGETS = [
     DOCS_DIR / "index.html",
     DOCS_DIR / "digest" / "index.html",
@@ -31,22 +38,24 @@ TARGETS = [
 BLOCK_START = "<!-- CC-FEATURED-DEEP-DIVES:START -->"
 BLOCK_END = "<!-- CC-FEATURED-DEEP-DIVES:END -->"
 
-N_TOPICS = 6
+N_TOPICS = 3
+BLURB_LIMIT = 160
 N_VOICES = 0  # voices are surfaced via /voices/ hub pages, not the homepage deep-dives block
 
 
 def parse_meta(html: str, attr: str, name_value: str) -> str:
+    # The content value may contain the other quote character ("God's").
     m = re.search(
-        rf'<meta[^>]*\s{attr}=["\']{re.escape(name_value)}["\'][^>]*\scontent=["\']([^"\']*)["\']',
+        rf'<meta[^>]*\s{attr}=["\']{re.escape(name_value)}["\'][^>]*\scontent=(["\'])(.*?)\1',
         html, re.IGNORECASE,
     )
     if m:
-        return m.group(1)
+        return m.group(2)
     m = re.search(
-        rf'<meta[^>]*\scontent=["\']([^"\']*)["\'][^>]*\s{attr}=["\']{re.escape(name_value)}["\']',
+        rf'<meta[^>]*\scontent=(["\'])(.*?)\1[^>]*\s{attr}=["\']{re.escape(name_value)}["\']',
         html, re.IGNORECASE,
     )
-    return m.group(1) if m else ""
+    return m.group(2) if m else ""
 
 
 def parse_title(html: str) -> str:
@@ -74,7 +83,7 @@ def collect_topics() -> list[dict]:
         out.append({
             "slug": d.name,
             "title": title,
-            "desc": desc[:140],
+            "desc": complete_blurb(desc, BLURB_LIMIT),
             "url": f"/topics/{d.name}/",
         })
     return out
@@ -94,7 +103,7 @@ def collect_voices() -> list[dict]:
             "slug": v["slug"],
             "name": v["name"],
             "role": role,
-            "desc": bio[:140],
+            "desc": complete_blurb(bio, BLURB_LIMIT),
             "url": f"/voices/{v['slug']}/",
         })
     return out
@@ -106,7 +115,7 @@ def pick(items: list, n: int, rng: random.Random) -> list:
     return rng.sample(items, n)
 
 
-def build_block(topics: list[dict], voices: list[dict]) -> str:
+def build_block(topics: list[dict], voices: list[dict], total_topics: int = 70) -> str:
     rows: list[str] = []
     for t in topics:
         rows.append(
@@ -131,7 +140,7 @@ def build_block(topics: list[dict], voices: list[dict]) -> str:
         ".cc-fdd-heading{font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600;"
         "letter-spacing:-0.01em;margin-bottom:0.25rem;color:#1a1a1a;}"
         ".cc-fdd-sub{font-size:12px;color:#888;margin-bottom:1rem;letter-spacing:0.04em;}"
-        ".cc-fdd-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0.75rem;}"
+        ".cc-fdd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;}"
         "@media(max-width:600px){.cc-fdd-grid{grid-template-columns:1fr;}}"
         ".cc-fdd-card{display:block;padding:0.75rem 0.9rem;background:#fff;"
         "border:1px solid #e0ddd8;border-radius:4px;text-decoration:none;color:#1a1a1a;"
@@ -142,6 +151,9 @@ def build_block(topics: list[dict], voices: list[dict]) -> str:
         ".cc-fdd-title{font-family:'Lora',Georgia,serif;font-size:15px;font-weight:600;"
         "line-height:1.3;margin-bottom:4px;color:#1a1a1a;}"
         ".cc-fdd-desc{font-size:12.5px;color:#666;line-height:1.5;}"
+        ".cc-fdd-more{margin-top:0.9rem;font-size:12.5px;}"
+        ".cc-fdd-more a{color:#2C4A2E;font-weight:600;text-decoration:none;}"
+        ".cc-fdd-more a:hover{text-decoration:underline;}"
         "</style>"
     )
 
@@ -150,10 +162,11 @@ def build_block(topics: list[dict], voices: list[dict]) -> str:
         f'  <section class="cc-fdd-section" aria-label="Featured deep dives">\n'
         f'    {style}\n'
         f'    <h2 class="cc-fdd-heading">Featured deep dives</h2>\n'
-        f'    <div class="cc-fdd-sub">A daily-rotating selection from our topic archives.</div>\n'
+        f'    <div class="cc-fdd-sub">Three guides from the topic library, changing daily.</div>\n'
         f'    <div class="cc-fdd-grid">\n'
         + "\n".join(rows)
         + f'\n    </div>\n'
+        f'    <div class="cc-fdd-more"><a href="/topics/">All {total_topics} topic guides &rarr;</a></div>\n'
         f'  </section>\n'
         f'  {BLOCK_END}\n'
     )
@@ -186,7 +199,7 @@ def main() -> int:
     chosen_topics = pick(topics, N_TOPICS, rng)
     chosen_voices = pick(voices, N_VOICES, rng)
 
-    block = build_block(chosen_topics, chosen_voices)
+    block = build_block(chosen_topics, chosen_voices, total_topics=len(topics))
 
     for path in TARGETS:
         if not path.exists():
