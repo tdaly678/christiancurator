@@ -30,6 +30,18 @@ hard_reject(title) returns one of these reason codes, or None:
                             only as the whole title or its lead word ("Links:",
                             "Weekend Links"), so "Missing Links in Theology" passes
 
+  HARD_REJECT_DATED_COLUMN  a dated column: the title ends in a calendar date
+                            set off by "(", ":", a dash or a comma, or is only
+                            a weekday date ("Works & Wonders (November 1)",
+                            "Works & Wonders: October 25", "Weekend A La Carte
+                            (October 24)"). Allow-listed by source
+                            (DATED_ALLOW): World Magazine "The World and
+                            Everything in It: <date>" and Albert Mohler's
+                            weekday-date Briefing. Those pass, but
+                            is_dated_briefing() bars them from the lead slot
+  HARD_REJECT_REVIEW_META   review meta copy: "lives up to its title / the hype
+                            / its billing / its name / its promise"
+
 Checks run in the order above; the first match wins. Curly quotes and
 apostrophes are normalized to straight ones before matching.
 
@@ -47,6 +59,14 @@ MAX_TOTAL_BOOST budget like other boosts; demotions are uncapped penalties.
                                   Readers". Substantive first person ("Why I Left
                                   the PCA") is not demoted
   DEMOTE_LENGTH              -10  under 3 or over 14 words
+  REVIEW_SOFT                -20  review framing: a leading "Review:" / "A Review:",
+                                  "a review of", "New and Notable"
+  DEMOTE_CLAIMLESS_SHORT     -15  2 to 5 words, no ":" or "?", no verb, no claim
+                                  noun (CLAIM_NOUNS: myth, danger, case, crisis,
+                                  ...), and either starts with "The" or reads
+                                  "Noun of Noun" ("Tyranny of Preferences"). A
+                                  label, not a headline: build_homepage_layout()
+                                  keeps it out of the lead, subleads and email
   BOOST_NEWS_VERB            +10  a subject followed by a strong news verb
                                   (NEWS_VERBS: Urges, Votes, Dies, Resigns, ...;
                                   base form after a plural: "Churches Leave")
@@ -78,6 +98,8 @@ HARD_REJECT_EMOJI = "HARD_REJECT_EMOJI"
 HARD_REJECT_ISSUE_NUMBER = "HARD_REJECT_ISSUE_NUMBER"
 HARD_REJECT_PROMO = "HARD_REJECT_PROMO"
 HARD_REJECT_ROUNDUP = "HARD_REJECT_ROUNDUP"
+HARD_REJECT_DATED_COLUMN = "HARD_REJECT_DATED_COLUMN"
+HARD_REJECT_REVIEW_META = "HARD_REJECT_REVIEW_META"
 
 _SMART_QUOTES = str.maketrans({
     "‘": "'", "’": "'", "‚": "'", "‛": "'",
@@ -164,13 +186,47 @@ _ROUNDUP_RE = re.compile(
 )
 
 
+_MONTH = (r"(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?"
+          r"|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\.?")
+_WEEKDAY = r"(?:Mon|Tues|Wednes|Thurs|Fri|Satur|Sun)day"
+_DATE = rf"{_MONTH}\s+\d{{1,2}}(?:st|nd|rd|th)?(?:,?\s+\d{{4}})?"
+
+# A date that closes the title, set off by "(", ":", a dash or a comma, or a
+# title that is only a (weekday) date.
+_DATED_COLUMN_RE = re.compile(
+    rf"(?:^|[(:\-–—,]\s*)(?:{_WEEKDAY},?\s+)?{_DATE}\s*\)?\s*$", re.IGNORECASE)
+
+# Dated shows that are real daily news briefings: (source, title pattern).
+DATED_ALLOW = (
+    ("World Magazine", re.compile(r"^The World and Everything in It: ")),
+    ("Albert Mohler", re.compile(rf"^{_WEEKDAY},?\s+{_DATE}\s*$", re.IGNORECASE)),
+)
+
+_REVIEW_META_RE = re.compile(
+    r"\blives up to (?:its|the|their) (?:title|hype|billing|name|promise)\b", re.IGNORECASE)
+
+
+def is_dated_briefing(title: str, source: str | None) -> bool:
+    """True for an allow-listed dated daily briefing (WORLD, Mohler).
+
+    These skip HARD_REJECT_DATED_COLUMN and may sit on the board or in Watch
+    and Listen, but never take the lead slot.
+    """
+    t = normalize_title(title)
+    src = (source or "").strip()
+    return any(src == s and rx.search(t) for s, rx in DATED_ALLOW)
+
+
 def normalize_title(title: str) -> str:
     """Straighten curly quotes and apostrophes and collapse whitespace."""
     return " ".join((title or "").translate(_SMART_QUOTES).split())
 
 
-def hard_reject(title: str) -> str | None:
-    """Return a HARD_REJECT_* reason code if the title is not a headline, else None."""
+def hard_reject(title: str, source: str | None = None) -> str | None:
+    """Return a HARD_REJECT_* reason code if the title is not a headline, else None.
+
+    `source` is the source_name; it only matters for the dated-column allow-list.
+    """
     t = normalize_title(title)
     if not t:
         return None
@@ -182,6 +238,10 @@ def hard_reject(title: str) -> str | None:
         return HARD_REJECT_PROMO
     if _ROUNDUP_RE.search(t):
         return HARD_REJECT_ROUNDUP
+    if _DATED_COLUMN_RE.search(t) and not is_dated_briefing(t, source):
+        return HARD_REJECT_DATED_COLUMN
+    if _REVIEW_META_RE.search(t):
+        return HARD_REJECT_REVIEW_META
     return None
 
 
@@ -191,6 +251,8 @@ DEMOTE_ALL_CAPS = -30
 DEMOTE_EXCLAIM = -25
 DEMOTE_FIRST_PERSON_META = -20
 DEMOTE_LENGTH = -10
+REVIEW_SOFT = -20
+DEMOTE_CLAIMLESS_SHORT = -15
 BOOST_NEWS_VERB = 10
 BOOST_ISSUE_QUESTION = 5
 
@@ -237,6 +299,52 @@ NEWS_VERBS = frozenset("""
     halts launches announces reveals calls slams blasts quits
 """.split())
 
+
+
+_REVIEW_SOFT_RE = re.compile(
+    r"^(?:a\s+)?review:|\ba review of\b|\bnew and notable\b", re.IGNORECASE)
+
+# A short title naming one of these makes a claim ("The Myth of St. Francis",
+# "Dangers of Christian Nationalism"), so it is not claimless. "tyranny" is
+# deliberately absent: "Tyranny of Preferences" is the case this rule targets.
+CLAIM_NOUNS = frozenset("""
+    myth myths danger dangers case failure crisis death end return problem
+    lie lies cost rise fall decline collapse future
+""".split())
+
+# Words that make a short title a sentence or clause rather than a label.
+_VERBISH = frozenset("""
+    is are was were be been being am has have had do does did can could will
+    would should shall may might must isn't aren't wasn't won't can't don't
+    doesn't didn't who that which
+""".split())
+
+
+def _is_verbish(word: str) -> bool:
+    w = word.lower()
+    return (w in _VERBISH or w in NEWS_VERBS or w in NEWS_VERBS_PLURAL
+            or (len(w) > 4 and w.endswith(("ing", "ed"))))
+
+
+def is_claimless_short(title: str) -> bool:
+    """True for a 2 to 5 word label with no verb and no claim noun.
+
+    Must start with "The" or read "Noun of Noun". Colons and question marks
+    signal a claim or question, so those titles are never claimless.
+    """
+    t = normalize_title(title)
+    if not t or ":" in t or "?" in t:
+        return False
+    words = _words(t)
+    if not 2 <= len(words) <= 5:
+        return False
+    lower = [w.lower() for w in words]
+    if any(w in CLAIM_NOUNS for w in lower) or any(_is_verbish(w) for w in words):
+        return False
+    starts_the = lower[0] == "the"
+    noun_of_noun = (len(words) >= 3 and lower[1] == "of" and words[0][:1].isupper()
+                    and lower[0] not in _NOT_SUBJECT)
+    return starts_the or noun_of_noun
 
 
 def _base_form(verb: str) -> str:
@@ -293,6 +401,10 @@ def voice_adjustments(title: str) -> dict[str, int]:
     words = _words(t)
     if len(words) < MIN_WORDS or len(words) > MAX_WORDS:
         out["DEMOTE_LENGTH"] = DEMOTE_LENGTH
+    if _REVIEW_SOFT_RE.search(t):
+        out["REVIEW_SOFT"] = REVIEW_SOFT
+    if is_claimless_short(t):
+        out["DEMOTE_CLAIMLESS_SHORT"] = DEMOTE_CLAIMLESS_SHORT
     # Subject + news verb: the verb is not the first word and follows a
     # capitalized word or a number ("Pastor Resigns", "SBC Votes", "3 Churches Leave").
     for prev, word in zip(words, words[1:]):

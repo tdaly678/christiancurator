@@ -738,8 +738,21 @@ def apply_independent_floor(
     return sorted(articles, key=lambda a: a["final_score"], reverse=True)
 
 
-def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
-    """Score, boost, and diversify all articles. Returns sorted by final_score (importance)."""
+def matches_history(article: dict, urls: set, canonical_urls: set) -> bool:
+    """True when the article's url or canonical URL is in a history URL set."""
+    canon = article.get("canonical_url") or canonical_url(article.get("url") or "")
+    return article.get("url") in urls or canon in canonical_urls
+
+
+def score_articles(articles: list[dict], shown_urls: set = None,
+                   yesterday_urls: set = None, yesterday_date: str = "") -> list[dict]:
+    """Score, boost, and diversify all articles. Returns sorted by final_score (importance).
+
+    `shown_urls` is every URL shown before today (soft PREVIOUSLY_SHOWN_PENALTY).
+    `yesterday_urls` is the subset shown on the latest publish date before
+    today (`yesterday_date`); those are also flagged shown_yesterday, which
+    build_homepage_layout() bars from the lead, subleads and every email slot.
+    """
     # Media items (video/podcast feeds) belong to the Watch and Listen lane only.
     # main.py splits them off before scoring; this is the backstop.
     articles = [a for a in articles if a.get("role") != "media"]
@@ -798,7 +811,7 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     kept_titles = []
     reject_counts = defaultdict(int)
     for a in articles:
-        reason = hard_reject(a.get("title", ""))
+        reason = hard_reject(a.get("title", ""), a.get("source_name"))
         if reason:
             reject_counts[reason] += 1
             print(f"    {reason}: {a.get('title', '')!r} ({a.get('source_name', '?')})")
@@ -822,7 +835,10 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
     # publishing-frequency boost → store in final_score.
     shown_urls = shown_urls or set()
     shown_canonical = {canonical_url(u) for u in shown_urls}
+    yesterday_urls = yesterday_urls or set()
+    yesterday_canonical = {canonical_url(u) for u in yesterday_urls}
     previously_shown_count = 0
+    shown_yesterday_count = 0
     catholic_capped_count = 0
     mainline_capped_count = 0
     frequency_boosted_count = 0
@@ -885,12 +901,17 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
         if boost < 0:
             depth += boost / 2
 
-        # Apply previously-shown penalty
-        if article.get("url") in shown_urls or article.get("canonical_url") in shown_canonical:
+        # Cross-day repeats. Yesterday's picks are flagged for the layout's
+        # hard exclude; everything shown before today takes the soft penalty.
+        if matches_history(article, yesterday_urls, yesterday_canonical):
+            article["shown_yesterday"] = True
+            shown_yesterday_count += 1
+        if matches_history(article, shown_urls, shown_canonical):
             _adjust(article, "previously_shown", max(article["final_score"] - PREVIOUSLY_SHOWN_PENALTY, 0.0))
             depth -= PREVIOUSLY_SHOWN_PENALTY
             article["previously_shown"] = True
-            previously_shown_count += 1
+            if not article.get("shown_yesterday"):
+                previously_shown_count += 1
 
         # Apply Catholic content cap: check topic_cluster and title for Catholic keywords
         cluster = (article.get("topic_cluster") or "").lower()
@@ -914,8 +935,10 @@ def score_articles(articles: list[dict], shown_urls: set = None) -> list[dict]:
         if boost > 0:
             article["recency_boost"] = boost
 
-    if previously_shown_count:
-        print(f"  Applied previously-shown penalty to {previously_shown_count} articles.")
+    print(f"  Cross-day exclude: {shown_yesterday_count} articles shown on {yesterday_date or 'n/a'} "
+          f"barred from lead/subleads/email (url or canonical match).")
+    print(f"  Previously-shown penalty (-{PREVIOUSLY_SHOWN_PENALTY}) applied to "
+          f"{previously_shown_count} older articles.")
     if catholic_capped_count:
         print(f"  Applied Catholic content cap to {catholic_capped_count} articles.")
     if mainline_capped_count:

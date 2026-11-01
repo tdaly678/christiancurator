@@ -155,6 +155,30 @@ Slice 2 (2026-10-31), same module:
 - Site-only republish: run the Daily Curator Run workflow with `no_email: true` (runs `main.py --no-email`, overrides
   `force_email`).
 
+Slice 3 (Nov 1, Jarvis-greenlit), same module:
+- `hard_reject(title, source)` also returns `HARD_REJECT_DATED_COLUMN` (title ends in a date set off by `(`, `:`, a dash
+  or comma, or is only a weekday date: Works & Wonders, A La Carte, WORLD "morning news", Pew weekly updates) and
+  `HARD_REJECT_REVIEW_META` ("lives up to its title / the hype / ..."). Allow-list `DATED_ALLOW`: World Magazine
+  `^The World and Everything in It: ` and Albert Mohler weekday-date Briefing titles. `is_dated_briefing()` lets those
+  sit on the board or in Watch and Listen but never the lead.
+- `voice_adjustments()` adds `REVIEW_SOFT` -20 (`^review:`, "a review of", "new and notable") and
+  `DEMOTE_CLAIMLESS_SHORT` -15 (`is_claimless_short()`: 2 to 5 words, no `:`/`?`, no verb, no `CLAIM_NOUNS`, starts
+  with "The" or "Noun of Noun"; "tyranny" is deliberately not a claim noun). Claimless titles are board/lane fill only:
+  never lead, sublead or any email slot. Title rewriting stays off.
+
+### Cross-day repeats (Nov 1)
+- `output.load_yesterday_shown()` returns the latest `date_shown` before today and its URLs (url + canonical_url).
+  `score_articles(..., yesterday_urls, yesterday_date)` flags matches `shown_yesterday`; every earlier-shown match
+  gets the soft `PREVIOUSLY_SHOWN_PENALTY` (-4.0). Both are logged as "Cross-day exclude: ..." and
+  "Previously-shown penalty ... applied to M older articles."
+- `build_homepage_layout()` no longer drops `previously_shown` from the pool. `shown_yesterday` items are barred from
+  the lead, subleads and debate; `email_sender._email_layout()` filters every email slot with `email_eligible()`.
+  They may still appear on the page board. Worth Your Time and Watch and Listen still skip all previously shown items.
+- `save_article_history(outbound_articles(layout))` in `main.py` replaces the old top-20 + lane-picks saves.
+- `scripts/backfill_history.py` (dry run by default, `--write`) appends rows (`scored_by: "backfill"`) for editions
+  read from git (`EDITIONS`); Oct 31 and Nov 1 were backfilled on 2026-11-01. Exclude those rows when tuning.
+  Tests: `tests/test_cross_day_and_voice.py`.
+
 ### Homepage v2 (P1 Wave 2, 2026-10-30)
 `frontend/layout.py` `build_homepage_layout()` decides every homepage placement; `render_html()` renders it, returns
 it, and `main.py` passes it to `send_email()` so page and email agree. Each URL appears once. Order on the page:
@@ -171,8 +195,8 @@ it, and `main.py` passes it to `send_email()` so page and email agree. Each URL 
 5. Worth Your Time (depth lane), 6. Watch and Listen (media lane, below), 7. Research & Data
    (`docs/research_articles.json`), then signup, then the 70-topic grid
 Headline clicks are tracked by one delegated gtag listener reading `data-pos` / `data-src`. Sample render: ~78 outbound
-article links. Only the top 20 by score plus the Worth Your Time and Watch and Listen picks are logged to history;
-board items are not.
+article links. Since 2026-11-01 every rendered article (`outbound_articles(layout)`: lead, subleads, board, debate,
+lanes, research) is logged to history with url + canonical_url, one row per article per day (see Cross-day repeats).
 - Audio/video cap: at most `MAIN_LANE_MAX_AUDIO_VIDEO = 2` podcast or video items (`is_audio_video()`: a `/podcast`
   URL path, a YouTube/Vimeo host, a "Podcast:"/"Video:" title prefix) in the lead block plus board combined.
 - Tags and personas are validated against `curator/vocab.py` allowlists (with an alias map); unknowns are dropped

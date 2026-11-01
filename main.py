@@ -32,8 +32,10 @@ from curator.daily_summary import generate_daily_summary, save_theme_history
 from curator.email_sender import send_email
 from curator.voice_generator import generate_new_voice_pages
 from curator.ai_health import write_report as write_ai_health_report
-from output import OUTPUT_JSON_PATH, write_output, save_yesterday, load_yesterday, load_shown_urls, save_article_history
+from output import (OUTPUT_JSON_PATH, write_output, save_yesterday, load_yesterday, load_shown_urls,
+                    load_yesterday_shown, save_article_history)
 from frontend import render_html, update_research_articles
+from frontend.layout import outbound_articles
 
 
 def already_ran_today() -> bool:
@@ -63,7 +65,9 @@ def main():
 
     # --- Load previously shown article URLs ---
     shown_urls = load_shown_urls()
-    print(f"      Tracking {len(shown_urls)} previously shown articles.\n")
+    yesterday_date, yesterday_urls = load_yesterday_shown()
+    print(f"      Tracking {len(shown_urls)} previously shown URLs "
+          f"({len(yesterday_urls)} from {yesterday_date or 'no prior day'}).\n")
 
     # --- Layer 1: Fetch ---
     print("[1/4] Fetching articles from RSS sources...")
@@ -89,7 +93,8 @@ def main():
 
     # --- Layer 2: Score & Tag ---
     print("[2/4] Scoring and tagging articles...")
-    articles = score_articles(articles, shown_urls=shown_urls)
+    articles = score_articles(articles, shown_urls=shown_urls,
+                              yesterday_urls=yesterday_urls, yesterday_date=yesterday_date)
     boosted = sum(1 for a in articles if a.get("recency_boost", 0) > 0)
     print(f"      Scoring complete. ({boosted} articles received a recency boost)\n")
 
@@ -118,10 +123,6 @@ def main():
     # --- Output ---
     write_output(articles, pairings, media_items=media_items, daily_summary=daily_summary)
     save_yesterday(articles)
-    # Only mark the top 20 articles as "shown" — saves Substack/independent authors
-    # from having ALL their recent content penalised the next day just because it
-    # was scored but never actually featured on the site.
-    save_article_history(articles[:20])
 
     # --- Research & Data section (persistent) ---
     print("\n[6/7] Updating Research & Data section...")
@@ -134,13 +135,14 @@ def main():
 
     layout = render_html(articles, pairings, yesterday_articles, daily_summary=daily_summary,
                          research_articles=research_articles, media_items=media_items)
-    # Worth Your Time and Watch and Listen picks are now on the page, so log
-    # them as shown; the previously-shown filter then keeps both lanes from
-    # repeating day after day.
+    # Log every article the page links to (lead, subleads, board, debate,
+    # lanes, research). The email reuses this layout, so it is covered too.
+    # Tomorrow these are "shown yesterday" and barred from the lead block and
+    # email; after that they carry the soft previously-shown penalty.
     if layout:
-        lane_picks = layout.get("worth_your_time", []) + layout.get("watch_listen", [])
-        if lane_picks:
-            save_article_history(lane_picks)
+        save_article_history(outbound_articles(layout))
+    else:
+        print("  (no layout returned; article history not updated)")
 
     # --- Voice ↔ Topic cross-links: refresh "Featured in Deep-Dive Topics" block
     #     on each voice page from the latest featured_topic_log + current digest.

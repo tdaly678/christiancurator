@@ -15,6 +15,13 @@ see the same picks:
   siblings          multi-outlet stories (P2.2): representative URL ->
                     "also:" links; the other outlets' copies are not placed
 
+Cross-day repeats (2026-11-01): articles flagged shown_yesterday (shown on the
+latest publish date before today) never take the lead, a sublead, a debate
+side or any email slot; older repeats carry only the scorer's soft
+PREVIOUSLY_SHOWN_PENALTY and may still fill the board. Claimless short labels
+("Tyranny of Preferences") are board/lane fill only, and allow-listed dated
+briefings (WORLD, Mohler) never take the lead.
+
 No API clients here, so render-only scripts can import it.
 """
 
@@ -24,6 +31,7 @@ from urllib.parse import urlsplit
 
 from curator.clusters import build_story_clusters
 from curator.dedup import canonical_url
+from curator.headline_voice import is_claimless_short, is_dated_briefing
 from curator.lanes import select_watch_and_listen, select_worth_your_time
 from curator.mission import is_off_mission
 
@@ -106,17 +114,36 @@ def format_duration(seconds) -> str:
     return f"{hours} hr {rest} min" if rest else f"{hours} hr"
 
 
+def is_claimless(a: dict) -> bool:
+    return is_claimless_short(a.get("title") or "")
+
+
+def lead_block_eligible(a: dict) -> bool:
+    """May sit in the lead or a sublead (and so in the email's Lead section)."""
+    return not a.get("shown_yesterday") and not is_claimless(a)
+
+
+def email_eligible(a: dict) -> bool:
+    """May appear anywhere in the email: not shown yesterday, not a claimless label."""
+    return not a.get("shown_yesterday") and not is_claimless(a)
+
+
 def _pick_lead(pool: list[dict], n: int) -> list[dict]:
-    """Top `n` by importance, one per source."""
-    picks, sources = [], set()
+    """Top `n` by importance, one per source. The first pick (the lead) is
+    never an allow-listed dated briefing; those can still be subleads."""
+    lead = next((a for a in pool
+                 if not is_dated_briefing(a.get("title") or "", a.get("source_name", ""))), None)
+    if lead is None:
+        return []
+    picks, sources = [lead], {lead.get("source_name", "")}
     for a in pool:
+        if len(picks) >= n:
+            break
         src = a.get("source_name", "")
-        if src in sources:
+        if a is lead or src in sources:
             continue
         picks.append(a)
         sources.add(src)
-        if len(picks) >= n:
-            break
     return picks
 
 
@@ -131,6 +158,9 @@ def _build_debate(articles: list[dict], pairings: list[dict]) -> list[dict]:
     by_url = {a.get("url"): a for a in articles}
     debates, used = [], set()
     for p in pairings or []:
+        if any((by_url.get((p.get(k) or {}).get("url")) or p.get(k) or {}).get("shown_yesterday")
+               for k in ("point", "counterpoint")):
+            continue
         # Cached pairings (regenerate_daily.py) carry only title + url, so use
         # the full article dict when we have it.
         point, counter = p.get("point"), p.get("counterpoint")
@@ -156,7 +186,7 @@ def _build_debate(articles: list[dict], pairings: list[dict]) -> list[dict]:
 
     clusters: dict = {}
     for a in articles:
-        if a.get("opposing_pair") and a.get("url") not in used:
+        if a.get("opposing_pair") and a.get("url") not in used and not a.get("shown_yesterday"):
             clusters.setdefault(a.get("topic_cluster") or "", []).append(a)
     for cluster, group in clusters.items():
         pro = next((a for a in group if a.get("perspective") == "supportive"), None)
@@ -213,15 +243,16 @@ def build_homepage_layout(articles: list[dict], pairings: list[dict] | None = No
     articles = [a for a in articles if not is_off_mission(a)]
     ranked = sorted((a for a in articles if a.get("url") and a.get("role") != "media"),
                     key=_score, reverse=True)
+    # Older repeats stay in the pool with the scorer's soft penalty; only
+    # yesterday's picks are barred, and only from the lead block and email.
     fresh = _cap_audio_video(
-        [a for a in ranked if not a.get("previously_shown") and not a.get("catholic_capped")
-         and not a.get("mainline_capped")])
+        [a for a in ranked if not a.get("catholic_capped") and not a.get("mainline_capped")])
     # One story, one slot: same-story copies from other outlets collapse into
     # an "also:" line under the best-ranked one.
     siblings, clustered_away = build_story_clusters(fresh)
     fresh = [a for a in fresh if a["url"] not in clustered_away]
 
-    lead_pool = [a for a in fresh if a.get("source_type") != "world_news"]
+    lead_pool = [a for a in fresh if a.get("source_type") != "world_news" and lead_block_eligible(a)]
     top = _pick_lead(lead_pool, 1 + SUBLEAD_COUNT)
     lead, subleads = (top[0] if top else None), top[1:]
     placed = {a["url"] for a in top}
@@ -287,17 +318,22 @@ def build_homepage_layout(articles: list[dict], pairings: list[dict] | None = No
     }
 
 
+def outbound_articles(layout: dict) -> list[dict]:
+    """Every article dict the layout links to, in page order."""
+    items = []
+    if layout.get("lead"):
+        items.append(layout["lead"])
+    items += layout.get("subleads", [])
+    for col in layout.get("board", []):
+        items += col["articles"]
+    for d in layout.get("debate", []):
+        items += [d["a"], d["b"]]
+    items += layout.get("worth_your_time", [])
+    items += layout.get("watch_listen", [])
+    items += layout.get("research", [])
+    return items
+
+
 def outbound_urls(layout: dict) -> list[str]:
     """Every article URL the layout links to, in page order."""
-    urls = []
-    if layout.get("lead"):
-        urls.append(layout["lead"]["url"])
-    urls += [a["url"] for a in layout.get("subleads", [])]
-    for col in layout.get("board", []):
-        urls += [a["url"] for a in col["articles"]]
-    for d in layout.get("debate", []):
-        urls += [d["a"]["url"], d["b"]["url"]]
-    urls += [a["url"] for a in layout.get("worth_your_time", [])]
-    urls += [a["url"] for a in layout.get("watch_listen", [])]
-    urls += [r["url"] for r in layout.get("research", [])]
-    return urls
+    return [a["url"] for a in outbound_articles(layout)]

@@ -231,16 +231,20 @@ def _email_layout(articles: list[dict], research_articles: list[dict] = None,
     page exactly; send_email.py (cached run) rebuilds it from the cached
     pairings and media items in output/articles.json.
     """
+    from frontend.layout import build_homepage_layout, email_eligible
     if layout is None:
-        from frontend.layout import build_homepage_layout
         layout = build_homepage_layout(articles, None, research_articles)
+    # Every email slot skips yesterday's picks and claimless labels; the
+    # layout already keeps both out of the lead and subleads.
+    ok = lambda items: [a for a in items or [] if email_eligible(a)]
     return {
         **layout,
-        "board": [{**col, "articles": col["articles"][:EMAIL_BOARD_PER_COLUMN]}
+        "board": [{**col, "articles": ok(col["articles"])[:EMAIL_BOARD_PER_COLUMN]}
                   for col in layout.get("board", [])],
-        "debate": _email_debate(layout.get("debate") or []),
-        "worth_your_time": (layout.get("worth_your_time") or [])[:EMAIL_WYT_MAX],
-        "watch_listen": _email_watch_listen(layout.get("watch_listen") or []),
+        "debate": _email_debate([d for d in layout.get("debate") or []
+                                 if email_eligible(d["a"]) and email_eligible(d["b"])]),
+        "worth_your_time": ok(layout.get("worth_your_time"))[:EMAIL_WYT_MAX],
+        "watch_listen": _email_watch_listen(ok(layout.get("watch_listen"))),
     }
 
 

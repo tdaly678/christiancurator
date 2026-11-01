@@ -7,6 +7,8 @@ import os
 from pathlib import Path
 from datetime import date
 
+from curator.dedup import canonical_url
+
 OUTPUT_DIR = Path(__file__).parent
 OUTPUT_JSON_PATH = OUTPUT_DIR / "articles.json"
 YESTERDAY_JSON_PATH = Path(__file__).parent.parent / "docs" / "yesterday.json"
@@ -43,62 +45,105 @@ def load_yesterday() -> list[dict]:
         return []
 
 
+def _load_history() -> list[dict]:
+    try:
+        with open(HISTORY_JSON_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+
+def _row_urls(entry: dict) -> set:
+    return {u for u in (entry.get("url"), entry.get("canonical_url")) if u}
+
+
 def load_shown_urls() -> set:
-    """Load URLs of articles shown on previous days only.
+    """Load URLs (and canonical URLs) of articles shown on previous days only.
 
     Articles shown today are excluded so re-running the pipeline on the same
     day doesn't penalise freshly published stories.
     """
     today = date.today().isoformat()
-    try:
-        with open(HISTORY_JSON_PATH, "r", encoding="utf-8") as f:
-            history = json.load(f)
-            return {entry["url"] for entry in history if entry.get("date_shown") != today}
-    except (FileNotFoundError, json.JSONDecodeError):
-        return set()
+    urls = set()
+    for entry in _load_history():
+        if entry.get("date_shown") != today:
+            urls |= _row_urls(entry)
+    return urls
 
 
-def save_article_history(articles: list[dict]):
-    """Append today's shown articles to the persistent history file."""
-    try:
-        with open(HISTORY_JSON_PATH, "r", encoding="utf-8") as f:
-            history = json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
-        history = []
+def load_yesterday_shown(today: str | None = None) -> tuple[str, set]:
+    """(date, urls) for the latest publish date before today.
 
-    existing_urls = {entry["url"] for entry in history}
-    today = date.today().isoformat()
+    "Yesterday" is the last day anything was published, not the calendar day,
+    so a skipped run doesn't let the previous edition repeat. Urls include
+    canonical URLs. Returns ("", set()) with no history.
+    """
+    today = today or date.today().isoformat()
+    history = _load_history()
+    dates = {e.get("date_shown") for e in history if e.get("date_shown") and e["date_shown"] < today}
+    if not dates:
+        return "", set()
+    latest = max(dates)
+    urls = set()
+    for entry in history:
+        if entry.get("date_shown") == latest:
+            urls |= _row_urls(entry)
+    return latest, urls
 
+
+def history_row(a: dict, day: str) -> dict:
+    return {
+        "url": a.get("url", ""),
+        "title": a.get("rewritten_title") or a.get("title", ""),
+        "source_name": a.get("source_name", ""),
+        "date_shown": day,
+        "final_score": a.get("final_score", 0),
+        "tags": a.get("tags", []),
+        # topic_cluster — added April 2026 to power the trending detector.
+        # Older entries lack this field; trending logic handles missing values.
+        "topic_cluster": a.get("topic_cluster", ""),
+        # Scoring provenance, added 2026-10-30 so tuning can separate the
+        # editorial score from mechanical boosts and skip fallback rows.
+        "base_score": a.get("base_score"),
+        # Two-axis scoring, added 2026-10-30 (P1). importance == final_score.
+        "importance": a.get("importance", a.get("final_score")),
+        "depth": a.get("depth"),
+        "base_importance": a.get("base_importance", a.get("base_score")),
+        "base_depth": a.get("base_depth"),
+        "canonical_url": a.get("canonical_url") or canonical_url(a.get("url", "")),
+        "boosts": a.get("boosts", {}),
+        "scored_by": a.get("scored_by", "unknown"),
+        "clicks": 0,  # filled from GA4 by scripts/fetch_click_counts.py
+    }
+
+
+def save_article_history(articles: list[dict], day: str | None = None):
+    """Append today's shown articles to the persistent history file.
+
+    main.py passes every article the rendered layout links to (lead, subleads,
+    board, debate, lanes, research), so the email is covered too. One row per
+    article per day: an older article shown again today gets a new row, which
+    is what makes it "shown yesterday" tomorrow.
+    """
+    history = _load_history()
+    day = day or date.today().isoformat()
+    existing = {(u, e.get("date_shown")) for e in history for u in _row_urls(e)}
+
+    added = 0
     for a in articles:
         url = a.get("url", "")
-        if url and url not in existing_urls:
-            history.append({
-                "url": url,
-                "title": a.get("rewritten_title") or a.get("title", ""),
-                "source_name": a.get("source_name", ""),
-                "date_shown": today,
-                "final_score": a.get("final_score", 0),
-                "tags": a.get("tags", []),
-                # topic_cluster — added April 2026 to power the trending detector.
-                # Older entries lack this field; trending logic handles missing values.
-                "topic_cluster": a.get("topic_cluster", ""),
-                # Scoring provenance, added 2026-10-30 so tuning can separate the
-                # editorial score from mechanical boosts and skip fallback rows.
-                "base_score": a.get("base_score"),
-                # Two-axis scoring, added 2026-10-30 (P1). importance == final_score.
-                "importance": a.get("importance", a.get("final_score")),
-                "depth": a.get("depth"),
-                "base_importance": a.get("base_importance", a.get("base_score")),
-                "base_depth": a.get("base_depth"),
-                "canonical_url": a.get("canonical_url", ""),
-                "boosts": a.get("boosts", {}),
-                "scored_by": a.get("scored_by", "unknown"),
-                "clicks": 0,  # filled from GA4 by scripts/fetch_click_counts.py
-            })
+        if not url:
+            continue
+        canon = a.get("canonical_url") or canonical_url(url)
+        if (url, day) in existing or (canon, day) in existing:
+            continue
+        history.append(history_row(a, day))
+        existing |= {(url, day), (canon, day)}
+        added += 1
 
     with open(HISTORY_JSON_PATH, "w", encoding="utf-8") as f:
         json.dump(history, f, indent=2, ensure_ascii=False)
-    print(f"  Article history updated: {len(history)} total articles tracked.")
+    print(f"  Article history updated: +{added} rows for {day}, {len(history)} total.")
 
 
 def write_output(articles: list[dict], pairings: list[dict], media_items: list[dict] | None = None,
