@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-01T11:47:28+00:00",
+  "run_at": "2026-11-01T12:57:57+00:00",
   "sources": [
     {
       "source": "The Gospel Coalition",
@@ -118,7 +118,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-10-31",
+      "newest_date": "2026-11-01",
       "bozo": false,
       "stale": false
     },

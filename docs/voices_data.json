@@ -17859,5 +17859,40 @@
     "website": "",
     "books": [],
     "initials": "WRO"
+  },
+  {
+    "name": "Andrew T. Walker",
+    "slug": "andrew-t-walker",
+    "bio": "Andrew T. Walker is a prominent Christian ethicist and cultural commentator who addresses contemporary moral and social issues from a biblical worldview. He serves as Senior Fellow in Religious Liberty at The Heritage Foundation and is a regular voice in evangelical discussions on faith, politics, and cultural engagement. Walker is committed to helping Christians think carefully about how their convictions intersect with the pressing issues of our time.",
+    "affiliation": "The Heritage Foundation; Christianity Today; various evangelical publications",
+    "role": "Christian Ethicist & Cultural Commentator",
+    "education": "Ph.D. in Christian Ethics",
+    "website": "",
+    "books": [
+      {
+        "title": "God and the Transgender Debate",
+        "amazon_url": "https://www.amazon.com/s?k=God+and+the+Transgender+Debate+Andrew+Walker"
+      },
+      {
+        "title": "Life to the Full: Christian Joblessness and Purposeful Work",
+        "amazon_url": "https://www.amazon.com/s?k=Life+to+the+Full+Andrew+Walker"
+      },
+      {
+        "title": "The Evangelical Left",
+        "amazon_url": "https://www.amazon.com/s?k=The+Evangelical+Left+Andrew+Walker"
+      }
+    ],
+    "initials": "ATW"
+  },
+  {
+    "name": "Lindsay Nicolet",
+    "slug": "lindsay-nicolet",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LN"
   }
 ]

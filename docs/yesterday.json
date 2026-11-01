@@ -8,8 +8,21 @@
     "importance": 8.7,
     "depth": 7.0,
     "tags": [
-      "suffering",
-      "missions"
+      "missions",
+      "suffering"
+    ]
+  },
+  {
+    "title": "How Christians Can Overcome Polarization and Engage in Culture with Civility",
+    "url": "https://www.crossway.org/articles/how-christians-can-overcome-polarization-and-engage-in-culture-with-civility/",
+    "source_name": "Crossway",
+    "author": "Andrew T. Walker",
+    "final_score": 8.0,
+    "importance": 8.0,
+    "depth": 7.0,
+    "tags": [
+      "theology",
+      "culture"
     ]
   },
   {
@@ -19,22 +32,9 @@
     "author": "Daniel Silliman",
     "final_score": 7.75,
     "importance": 7.75,
-    "depth": 2.0,
+    "depth": 3.0,
     "tags": [
       "news"
-    ]
-  },
-  {
-    "title": "The Voice of the Martyrs: Prayers of the Persecuted",
-    "url": "https://www.thegospelcoalition.org/article/voice-martyrs-prayers-persecuted/",
-    "source_name": "The Gospel Coalition",
-    "author": "Ryan Swale",
-    "final_score": 7.5,
-    "importance": 7.5,
-    "depth": 7.0,
-    "tags": [
-      "prayer",
-      "suffering"
     ]
   },
   {
@@ -47,7 +47,8 @@
     "depth": 4.0,
     "tags": [
       "politics",
-      "church life"
+      "church life",
+      "news"
     ]
   },
   {
@@ -64,54 +65,41 @@
     ]
   },
   {
-    "title": "Births in England and Wales hit nearly 50-year low",
-    "url": "https://wng.org/sift/births-in-england-and-wales-hit-nearly-50-year-low-1793405104",
-    "source_name": "World Magazine",
-    "author": "Daniel Devine",
-    "final_score": 5.85,
-    "importance": 5.85,
-    "depth": 4.0,
+    "title": "The Voice of the Martyrs: Prayers of the Persecuted",
+    "url": "https://www.thegospelcoalition.org/article/voice-martyrs-prayers-persecuted/",
+    "source_name": "The Gospel Coalition",
+    "author": "Ryan Swale",
+    "final_score": 6.5,
+    "importance": 6.5,
+    "depth": 6.0,
     "tags": [
-      "data",
-      "culture"
+      "prayer",
+      "suffering"
     ]
   },
   {
-    "title": "Works & Wonders (November 1)",
-    "url": "https://www.challies.com/articles/works-wonders-november-1/",
-    "source_name": "Tim Challies",
-    "author": "Tim Challies",
-    "final_score": 5.0,
-    "importance": 5.0,
-    "depth": 3.0,
+    "title": "From Paradise Lost to Paradise Restored",
+    "url": "https://www.crossway.org/articles/from-paradise-lost-to-paradise-restored/",
+    "source_name": "Crossway",
+    "author": "Dane Ortlund",
+    "final_score": 5.75,
+    "importance": 5.75,
+    "depth": 8.0,
     "tags": [
-      "devotional"
+      "theology"
     ]
   },
   {
-    "title": "California Dreaming: A Review of Michael Anton’s Dispatches from the Late Republic",
-    "url": "https://www.americanreformer.org/p/california-dreaming-a-review-of-michael",
-    "source_name": "American Reformer",
-    "author": "American Reformer",
+    "title": "The fall of the Etsy witch",
+    "url": "https://religionnews.com/2026/10/31/the-fall-of-the-etsy-witch/",
+    "source_name": "Religion News Service",
+    "author": "Kathryn Post",
     "final_score": 4.75,
     "importance": 4.75,
-    "depth": 5.0,
+    "depth": 3.0,
     "tags": [
       "culture",
-      "politics"
-    ]
-  },
-  {
-    "title": "The World and Everything in It: October 30, 2026",
-    "url": "https://wng.org/podcasts/the-world-and-everything-in-it-october-30-2026-1793302499",
-    "source_name": "World Magazine",
-    "author": "Keegan Martin",
-    "final_score": 4.6,
-    "importance": 4.6,
-    "depth": 5.0,
-    "tags": [
-      "culture",
-      "politics"
+      "apologetics"
     ]
   },
   {
@@ -119,12 +107,25 @@
     "url": "https://feed.desiringgod.org/link/22977/17512367/the-tyranny-of-preferences",
     "source_name": "Desiring God",
     "author": "Clinton Manley",
-    "final_score": 4.5,
-    "importance": 4.5,
-    "depth": 6.0,
+    "final_score": 4.0,
+    "importance": 4.0,
+    "depth": 7.0,
     "tags": [
-      "devotional",
-      "theology"
+      "theology",
+      "church life"
+    ]
+  },
+  {
+    "title": "Supreme Court will hear case of Jewish man prevented from hosting prayer meeting",
+    "url": "https://erlc.com/press/supreme-court-will-hear-case-of-jewish-man-prevented-from-hosting-prayer-meeting/",
+    "source_name": "ERLC",
+    "author": "Lauren Pratt",
+    "final_score": 4.0,
+    "importance": 4.0,
+    "depth": 0.0,
+    "tags": [
+      "news",
+      "politics"
     ]
   }
 ]

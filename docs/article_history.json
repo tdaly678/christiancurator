@@ -56332,5 +56332,998 @@
     "scored_by": "backfill",
     "backfill_pos": "research",
     "clicks": 0
+  },
+  {
+    "url": "https://www.crossway.org/articles/how-christians-can-overcome-polarization-and-engage-in-culture-with-civility/",
+    "title": "How Christians Can Overcome Polarization and Engage in Culture with Civility",
+    "source_name": "Crossway",
+    "date_shown": "2026-11-01",
+    "final_score": 8.0,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "christian_civility_polarization",
+    "base_score": 6.0,
+    "importance": 8.0,
+    "depth": 7.0,
+    "base_importance": 6.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://crossway.org/articles/how-christians-can-overcome-polarization-and-engage-in-culture-with-civility",
+    "boosts": {
+      "recency": 1.5,
+      "voice": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/sift/doj-charges-18-in-n-c-with-voting-illegally-in-u-s-elections-1793374090",
+    "title": "DOJ charges 18 in N.C. with voting illegally in U.S. elections",
+    "source_name": "World Magazine",
+    "date_shown": "2026-11-01",
+    "final_score": 3.87,
+    "tags": [
+      "news",
+      "politics"
+    ],
+    "topic_cluster": "voting_integrity",
+    "base_score": 6.0,
+    "importance": 3.87,
+    "depth": 0.0,
+    "base_importance": 6.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://wng.org/sift/doj-charges-18-in-n-c-with-voting-illegally-in-u-s-elections-1793374090",
+    "boosts": {
+      "tier": 0.12,
+      "recency": 0.75,
+      "voice": 1.0,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.aaronrenn.com/p/the-husband-of-his-first-wife",
+    "title": "The Husband of His First Wife",
+    "source_name": "Aaron Renn",
+    "date_shown": "2026-11-01",
+    "final_score": 2.5,
+    "tags": [
+      "culture",
+      "news"
+    ],
+    "topic_cluster": "weekly_news_digest",
+    "base_score": 5.0,
+    "importance": 2.5,
+    "depth": 0.0,
+    "base_importance": 5.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://aaronrenn.com/p/the-husband-of-his-first-wife",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.75,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.theguardian.com/world/2026/oct/19/kenya-starvation-cult-leader-guilty-murder-190-children",
+    "title": "Kenyan starvation cult leader guilty of murder of 190 children and one adult",
+    "source_name": "The Guardian",
+    "date_shown": "2026-11-01",
+    "final_score": 2.4,
+    "tags": [
+      "news",
+      "suffering"
+    ],
+    "topic_cluster": "kenyan_starvation_cult",
+    "base_score": 8.0,
+    "importance": 2.4,
+    "depth": 2.0,
+    "base_importance": 8.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://theguardian.com/world/2026/oct/19/kenya-starvation-cult-leader-guilty-murder-190-children",
+    "boosts": {
+      "tier": -1.6,
+      "recency": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://erlc.com/policy-content/erlc-supports-human-dignity-and-emerging-technologies-act/",
+    "title": "ERLC Supports Human Dignity and Emerging Technologies Act",
+    "source_name": "ERLC",
+    "date_shown": "2026-11-01",
+    "final_score": 2.25,
+    "tags": [
+      "politics",
+      "theology",
+      "news"
+    ],
+    "topic_cluster": "erlc_human_dignity_emerging_technologies",
+    "base_score": 5.0,
+    "importance": 2.25,
+    "depth": 1.0,
+    "base_importance": 5.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://erlc.com/policy-content/erlc-supports-human-dignity-and-emerging-technologies-act",
+    "boosts": {
+      "recency": -2.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.theguardian.com/us-news/2026/oct/19/catholic-church-excommunication-appeal-louisiana",
+    "title": "Vatican upholds excommunication of US deacon who resigned after son was molested by priest",
+    "source_name": "The Guardian",
+    "date_shown": "2026-11-01",
+    "final_score": 1.05,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "catholic_clergy_abuse_response",
+    "base_score": 6.0,
+    "importance": 1.05,
+    "depth": 1.0,
+    "base_importance": 6.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://theguardian.com/us-news/2026/oct/19/catholic-church-excommunication-appeal-louisiana",
+    "boosts": {
+      "tier": -1.2,
+      "recency": -4.0,
+      "voice": 1.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/10/reader-responses-elisabeth-elliot-lucy-austen/",
+    "title": "Reader Responses to ‘What We Know, and Cannot Know, About Elisabeth Elliot’s Sexuality’",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-01",
+    "final_score": 0.5,
+    "tags": [
+      "news",
+      "culture"
+    ],
+    "topic_cluster": "elisabeth_elliot_legacy",
+    "base_score": 5.0,
+    "importance": 0.5,
+    "depth": 0.0,
+    "base_importance": 5.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://christianitytoday.com/2026/10/reader-responses-elisabeth-elliot-lucy-austen",
+    "boosts": {
+      "recency": 0.25,
+      "previously_shown": -4.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://albertmohler.com/2026/10/29/is-the-religious-left-roaring-back-democratic-candidates-reach-out-with-religious-message/",
+    "title": "Is the religious left roaring back? Democratic candidates reach out with religious message",
+    "source_name": "Albert Mohler",
+    "date_shown": "2026-11-01",
+    "final_score": 0.5,
+    "tags": [
+      "politics",
+      "culture"
+    ],
+    "topic_cluster": "religious_left_democratic_outreach",
+    "base_score": 6.0,
+    "importance": 0.5,
+    "depth": 0.0,
+    "base_importance": 6.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://albertmohler.com/2026/10/29/is-the-religious-left-roaring-back-democratic-candidates-reach-out-with-religious-message",
+    "boosts": {
+      "recency": -2.0,
+      "voice": 0.5,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://reformation21.org/preaching-in-paragraphs/",
+    "title": "Preaching in Paragraphs",
+    "source_name": "Reformation21",
+    "date_shown": "2026-11-01",
+    "final_score": 0.0,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 0.0,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://reformation21.org/preaching-in-paragraphs",
+    "boosts": {
+      "tier": 0.02,
+      "recency": -2.0,
+      "previously_shown": 0.98
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://careynieuwhof.com/episode-839/",
+    "title": "Philip Anthony Mitchell on Overcoming Jealousy, Surviving a Suicidal Season, How to Lead If Your Church Doesn’t Grow (And If It Explodes), and Answering His Critics",
+    "source_name": "Carey Nieuwhof",
+    "date_shown": "2026-11-01",
+    "final_score": 0.0,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "podcast_philip_anthony_mitchell",
+    "base_score": 2.0,
+    "importance": 0.0,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://careynieuwhof.com/episode-839",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.75,
+      "voice": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.graphsaboutreligion.com/p/you-cant-move-a-church-to-the-suburbs",
+    "title": "You Can’t Move a Church to the Suburbs",
+    "source_name": "Ryan Burge",
+    "date_shown": "2026-11-01",
+    "final_score": 0.0,
+    "tags": [
+      "culture",
+      "news"
+    ],
+    "topic_cluster": "mainline_decline",
+    "base_score": 5.0,
+    "importance": 0.0,
+    "depth": 0.0,
+    "base_importance": 5.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://graphsaboutreligion.com/p/you-cant-move-a-church-to-the-suburbs",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.75,
+      "previously_shown": -3.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/10/religion-public-square-letters-to-editor/",
+    "title": "Ground Rules for Religion in the Public Square",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-01",
+    "final_score": -0.5,
+    "tags": [
+      "theology",
+      "politics"
+    ],
+    "topic_cluster": "christian_citizenship_politics",
+    "base_score": 6.0,
+    "importance": -0.5,
+    "depth": 1.0,
+    "base_importance": 6.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://christianitytoday.com/2026/10/religion-public-square-letters-to-editor",
+    "boosts": {
+      "recency": -2.0,
+      "voice": 1.0,
+      "previously_shown": -4.0,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://careynieuwhof.com/episode-838/",
+    "title": "“I Don’t Want to Be That Guy”: Chuck DeGroat on Shame, Burnout, the Limits of Spiritual Disciplines and the Nervous System",
+    "source_name": "Carey Nieuwhof",
+    "date_shown": "2026-11-01",
+    "final_score": -0.75,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "podcast_chuck_degroa",
+    "base_score": 2.0,
+    "importance": -0.75,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://careynieuwhof.com/episode-838",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.75,
+      "voice": -0.75,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/culture/music/i-need-a-little-gravy-on-my-god-kirk-franklins-new-double-album-is-his-answer-to-33-years-of-critics/",
+    "title": "‘I Need a Little Gravy on My God’: Kirk Franklin’s New Double Album Is His Answer to 33 Years of Critics",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-11-01",
+    "final_score": 1.25,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "kirk_franklin_album",
+    "base_score": 3.0,
+    "importance": 1.25,
+    "depth": 3.0,
+    "base_importance": 3.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://relevantmagazine.com/culture/music/i-need-a-little-gravy-on-my-god-kirk-franklins-new-double-album-is-his-answer-to-33-years-of-critics",
+    "boosts": {
+      "recency": 0.75,
+      "voice": -1.0,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.aaronrenn.com/p/how-the-mainstream-recruits-for-the-manosphere",
+    "title": "How the Mainstream Recruits for the Manosphere",
+    "source_name": "Aaron Renn",
+    "date_shown": "2026-11-01",
+    "final_score": -0.5,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "manosphere_masculinity",
+    "base_score": 5.0,
+    "importance": -0.5,
+    "depth": 0.0,
+    "base_importance": 5.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://aaronrenn.com/p/how-the-mainstream-recruits-for-the-manosphere",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.75,
+      "voice": 0.5,
+      "previously_shown": -4.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.americanreformer.org/p/ethnos-and-the-american-question",
+    "title": "Ethnos and the American Question",
+    "source_name": "American Reformer",
+    "date_shown": "2026-11-01",
+    "final_score": -0.75,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": -0.75,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://americanreformer.org/p/ethnos-and-the-american-question",
+    "boosts": {
+      "recency": -2.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/aaron-sorkins-facebook-fumble/",
+    "title": "Aaron Sorkin’s Facebook Fumble",
+    "source_name": "First Things",
+    "date_shown": "2026-11-01",
+    "final_score": -1.25,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": -1.25,
+    "depth": 1.0,
+    "base_importance": 4.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://firstthings.com/aaron-sorkins-facebook-fumble",
+    "boosts": {
+      "recency": 0.25,
+      "previously_shown": -4.0,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/10/sports-betting-kalshi-polymarket-draft-kings/",
+    "title": "A College-Town Bar as Hushed as a Church",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-01",
+    "final_score": -2.0,
+    "tags": [
+      "culture",
+      "work"
+    ],
+    "topic_cluster": "christian_perspective_gambling",
+    "base_score": 4.0,
+    "importance": -2.0,
+    "depth": 1.0,
+    "base_importance": 4.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://christianitytoday.com/2026/10/sports-betting-kalshi-polymarket-draft-kings",
+    "boosts": {
+      "recency": 0.25,
+      "previously_shown": -4.0,
+      "diversity_penalty": -2.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.americanreformer.org/p/fertility-needs-friendship",
+    "title": "Fertility Needs Friendship",
+    "source_name": "American Reformer",
+    "date_shown": "2026-11-01",
+    "final_score": -2.25,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 5.0,
+    "importance": -2.25,
+    "depth": 0.0,
+    "base_importance": 5.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://americanreformer.org/p/fertility-needs-friendship",
+    "boosts": {
+      "recency": -4.0,
+      "previously_shown": -1.0,
+      "diversity_penalty": -2.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.crossway.org/articles/from-paradise-lost-to-paradise-restored/",
+    "title": "From Paradise Lost to Paradise Restored",
+    "source_name": "Crossway",
+    "date_shown": "2026-11-01",
+    "final_score": 5.75,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "biblical_theology_temple",
+    "base_score": 5.0,
+    "importance": 5.75,
+    "depth": 8.0,
+    "base_importance": 5.0,
+    "base_depth": 8.0,
+    "canonical_url": "https://crossway.org/articles/from-paradise-lost-to-paradise-restored",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/justice/this-sunday-the-global-church-will-pray-for-the-388-million-christians-facing-high-levels-of-persecution/",
+    "title": "This Sunday, the Global Church Will Pray for 388 Million Christians Facing High Levels of Persecution",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-11-01",
+    "final_score": 3.75,
+    "tags": [
+      "missions",
+      "prayer",
+      "suffering"
+    ],
+    "topic_cluster": "persecution_syria",
+    "base_score": 8.0,
+    "importance": 3.75,
+    "depth": 2.0,
+    "base_importance": 8.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://relevantmagazine.com/justice/this-sunday-the-global-church-will-pray-for-the-388-million-christians-facing-high-levels-of-persecution",
+    "boosts": {
+      "recency": 0.75,
+      "voice": -1.0,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://newsletter.oalannoble.com/p/how-ai-brought-a-mathematician-to",
+    "title": "How AI Brought a Mathematician to Ecclesiastes",
+    "source_name": "O. Alan Noble",
+    "date_shown": "2026-11-01",
+    "final_score": 2.5,
+    "tags": [
+      "theology",
+      "work"
+    ],
+    "topic_cluster": "ai_purpose_labor",
+    "base_score": 5.0,
+    "importance": 2.5,
+    "depth": 2.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://newsletter.oalannoble.com/p/how-ai-brought-a-mathematician-to",
+    "boosts": {
+      "recency": 0.25,
+      "frequency": 0.75,
+      "voice": 0.5,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/10/race-justice-and-the-way-forward/",
+    "title": "Race, Justice, and the Way Forward",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-01",
+    "final_score": 2.25,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "race_justice_christian_response",
+    "base_score": 6.0,
+    "importance": 2.25,
+    "depth": 2.0,
+    "base_importance": 6.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://christianitytoday.com/2026/10/race-justice-and-the-way-forward",
+    "boosts": {
+      "recency": 0.25,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/does-evangelicalism-exist/",
+    "title": "Does Evangelicalism Exist?",
+    "source_name": "First Things",
+    "date_shown": "2026-11-01",
+    "final_score": 2.0,
+    "tags": [
+      "church life",
+      "culture"
+    ],
+    "topic_cluster": "elisabet_elliot_controversy",
+    "base_score": 8.0,
+    "importance": 2.0,
+    "depth": 1.0,
+    "base_importance": 8.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://firstthings.com/does-evangelicalism-exist",
+    "boosts": {
+      "recency": -2.0,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.furtherup.net/p/be-not-afraid",
+    "title": "Be Not Afraid",
+    "source_name": "Bethel McGrew",
+    "date_shown": "2026-11-01",
+    "final_score": 2.0,
+    "tags": [
+      "culture",
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 2.0,
+    "depth": 1.0,
+    "base_importance": 4.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://furtherup.net/p/be-not-afraid",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.digitalliturgies.net/p/caleb-flynns-worst-sin-wasnt-lust",
+    "title": "Caleb Flynn’s Worst Sin Wasn’t Lust. It Was Greed.",
+    "source_name": "Samuel James",
+    "date_shown": "2026-11-01",
+    "final_score": 1.75,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "cornell_fraternity_ethics",
+    "base_score": 5.0,
+    "importance": 1.75,
+    "depth": 0.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://digitalliturgies.net/p/caleb-flynns-worst-sin-wasnt-lust",
+    "boosts": {
+      "recency": -6.0,
+      "frequency": 0.25,
+      "previously_shown": 0.75,
+      "stale_source": 0.75,
+      "independent_floor": 1.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://garythomas.com/2026/10/30/seeking-first-the-kingdom-of-god/",
+    "title": "Seeking First the Kingdom of God",
+    "source_name": "Gary Thomas",
+    "date_shown": "2026-11-01",
+    "final_score": 1.5,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 1.5,
+    "depth": 3.0,
+    "base_importance": 4.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://garythomas.com/2026/10/30/seeking-first-the-kingdom-of-god",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.75,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/inside-the-roman-mind/",
+    "title": "Inside the Roman Mind",
+    "source_name": "First Things",
+    "date_shown": "2026-11-01",
+    "final_score": 1.0,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 5.0,
+    "importance": 1.0,
+    "depth": 2.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://firstthings.com/inside-the-roman-mind",
+    "boosts": {
+      "recency": 0.75,
+      "previously_shown": -4.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.russellmoore.com/2026/10/26/how-i-changed-my-mind-kind-of-on-the-death-penalty/",
+    "title": "How I Changed My Mind (Kind of) on the Death Penalty",
+    "source_name": "Russell Moore",
+    "date_shown": "2026-11-01",
+    "final_score": 1.0,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "death_penalty_ethics",
+    "base_score": 6.0,
+    "importance": 1.0,
+    "depth": 2.0,
+    "base_importance": 6.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://russellmoore.com/2026/10/26/how-i-changed-my-mind-kind-of-on-the-death-penalty",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.5,
+      "voice": 0.5,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://feed.desiringgod.org/link/22977/17486240/take-up-the-fight-against-small-sins",
+    "title": "Take Up the Fight Against Small Sins",
+    "source_name": "Desiring God",
+    "date_shown": "2026-11-01",
+    "final_score": 0.5,
+    "tags": [
+      "theology",
+      "church life"
+    ],
+    "topic_cluster": "spiritual_formation_series",
+    "base_score": 5.0,
+    "importance": 0.5,
+    "depth": 0.0,
+    "base_importance": 5.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://feed.desiringgod.org/link/22977/17486240/take-up-the-fight-against-small-sins",
+    "boosts": {
+      "recency": -6.0,
+      "previously_shown": 1.0,
+      "response": 1.25,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://mereorthodoxy.com/the-gospel-in-a-haunted-world/",
+    "title": "The Gospel in a Haunted World",
+    "source_name": "Mere Orthodoxy",
+    "date_shown": "2026-11-01",
+    "final_score": 0.5,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "re_enchantment_gospel",
+    "base_score": 5.0,
+    "importance": 0.5,
+    "depth": 3.0,
+    "base_importance": 5.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://mereorthodoxy.com/the-gospel-in-a-haunted-world",
+    "boosts": {
+      "recency": 0.25,
+      "previously_shown": -4.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.challies.com/articles/is-it-a-sin-to-use-ai-porn/",
+    "title": "Is It a Sin to Use AI Porn?",
+    "source_name": "Tim Challies",
+    "date_shown": "2026-11-01",
+    "final_score": 0.0,
+    "tags": [
+      "theology",
+      "apologetics"
+    ],
+    "topic_cluster": "ai_and_faith",
+    "base_score": 6.0,
+    "importance": 0.0,
+    "depth": 1.0,
+    "base_importance": 6.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://challies.com/articles/is-it-a-sin-to-use-ai-porn",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.5,
+      "voice": 0.5,
+      "previously_shown": -4.0,
+      "trending": 1.0,
+      "duplicate_topic": -2.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.9marks.org/article/why-the-doctrine-of-conversion-matters-for-membership-interviews/?utm_source=rss&utm_medium=rss&utm_campaign=why-the-doctrine-of-conversion-matters-for-membership-interviews",
+    "title": "Why the Doctrine of Conversion Matters for Membership Interviews",
+    "source_name": "9Marks",
+    "date_shown": "2026-11-01",
+    "final_score": 0.0,
+    "tags": [
+      "theology",
+      "church life"
+    ],
+    "topic_cluster": "conversion_doctrine",
+    "base_score": 5.0,
+    "importance": 0.0,
+    "depth": 1.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://9marks.org/article/why-the-doctrine-of-conversion-matters-for-membership-interviews",
+    "boosts": {
+      "recency": -2.0,
+      "voice": 0.5,
+      "previously_shown": -3.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://research.lifeway.com/2026/10/29/an-empty-house-a-full-table-where-do-singles-belong-in-the-family-of-god/",
+    "title": "An Empty House, a Full Table: Where Do Singles Belong in the Family of God?",
+    "source_name": "Lifeway Research",
+    "date_shown": "2026-11-01",
+    "final_score": 0.0,
+    "tags": [
+      "church life",
+      "theology"
+    ],
+    "topic_cluster": "singles_community",
+    "base_score": 5.0,
+    "importance": 0.0,
+    "depth": 2.0,
+    "base_importance": 5.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://research.lifeway.com/2026/10/29/an-empty-house-a-full-table-where-do-singles-belong-in-the-family-of-god",
+    "boosts": {
+      "recency": -2.0,
+      "voice": -1.0,
+      "previously_shown": -2.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.wyattgraham.com/p/how-john-1030-gave-tertullian-words",
+    "title": "How John 10:30 Gave Tertullian Words for the Trinity",
+    "source_name": "Wyatt Graham",
+    "date_shown": "2026-11-01",
+    "final_score": 0.0,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 0.0,
+    "depth": 1.0,
+    "base_importance": 4.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://wyattgraham.com/p/how-john-1030-gave-tertullian-words",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.5,
+      "voice": 0.5,
+      "previously_shown": -3.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.spiritualtheology.net/p/october-book-briefs-29a",
+    "title": "October Book Briefs",
+    "source_name": "J.A. Medders",
+    "date_shown": "2026-11-01",
+    "final_score": 0.0,
+    "tags": [
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 0.0,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://spiritualtheology.net/p/october-book-briefs-29a",
+    "boosts": {
+      "recency": -2.0,
+      "previously_shown": 1.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.crossway.org/articles/church-history-for-everyone-from-the-early-church-to-the-middle-ages/",
+    "title": "Church History for Everyone: From the Early Church to the Middle Ages",
+    "source_name": "Crossway",
+    "date_shown": "2026-11-01",
+    "final_score": -0.25,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "church_history_education",
+    "base_score": 4.0,
+    "importance": -0.25,
+    "depth": 4.0,
+    "base_importance": 4.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://crossway.org/articles/church-history-for-everyone-from-the-early-church-to-the-middle-ages",
+    "boosts": {
+      "recency": -2.0,
+      "diversity_penalty": -2.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://mereorthodoxy.com/against-theological-retrieval-as-resource-gathering/",
+    "title": "Against Theological Retrieval as Resource Gathering",
+    "source_name": "Mere Orthodoxy",
+    "date_shown": "2026-11-01",
+    "final_score": -0.25,
+    "tags": [
+      "theology",
+      "church life"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": -0.25,
+    "depth": 1.0,
+    "base_importance": 4.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://mereorthodoxy.com/against-theological-retrieval-as-resource-gathering",
+    "boosts": {
+      "recency": -4.0,
+      "response": 1.25,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.pewresearch.org/newsletter/weekly-roundup/weekly-10-31-26/",
+    "title": "Young adults and religion in 2026",
+    "source_name": "Pew Research",
+    "date_shown": "2026-11-01",
+    "final_score": 2.75,
+    "tags": [
+      "data",
+      "culture"
+    ],
+    "topic_cluster": "youth_religion_trends",
+    "base_score": 6.0,
+    "importance": 2.75,
+    "depth": 0.0,
+    "base_importance": 6.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://pewresearch.org/newsletter/weekly-roundup/weekly-10-31-26",
+    "boosts": {
+      "recency": 0.75,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://feeds.ligonier.org/~/972099341/0/ligonierministriesblog",
+    "title": "Who Is God? 39% of UK Adults Aren’t Sure",
+    "source_name": "Ligonier Ministries",
+    "date_shown": "2026-11-01",
+    "final_score": 1.0,
+    "tags": [
+      "data",
+      "theology"
+    ],
+    "topic_cluster": "uk_state_of_theology",
+    "base_score": 7.0,
+    "importance": 1.0,
+    "depth": 0.0,
+    "base_importance": 7.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://feeds.ligonier.org/~/972099341/0/ligonierministriesblog",
+    "boosts": {
+      "recency": -2.0,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
   }
 ]
