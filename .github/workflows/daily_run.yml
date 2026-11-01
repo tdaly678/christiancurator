@@ -1,30 +1,106 @@
 name: Daily Curator Run
 
+# Start near 5:00 AM America/New_York, including through DST.
+#
+# GitHub's schedule is best-effort. The docs say it can be delayed under load
+# (especially at the top of the hour) and that a queued run can be dropped
+# with no failed job. Minute 7/17/37 stays off :00. The timezone field has
+# been generally available since March 2026
+# (https://github.blog/changelog/2026-03-19-github-actions-late-march-2026-updates/).
+# On the spring-forward Sunday, a schedule that lands in the skipped hour
+# moves to the next valid time. 5:07 AM is not in that hour.
+#
+# Slots:
+#   5:07 AM ET   primary. Winter this is 10:07 UTC; summer it is 09:07 UTC.
+#   6:17 AM ET   catch-up if the 5:07 run was dropped.
+#   8:37 AM ET   last morning catch-up.
+#   7 10 * * *   UTC, no timezone. 5:07 AM EST / 6:07 AM EDT. If the timezone
+#                field were ignored, the ET slots would fire overnight and the
+#                guard would refuse them (before 4:50 AM ET). This UTC slot
+#                would still publish the morning. When timezone works, the
+#                guard no-ops it if the 5:07 AM run already published.
+#
+# A second arrival the same Eastern morning no-ops (scripts/morning_guard.py).
+# A late delivery still publishes when today's archive is not on origin/main,
+# so a delayed schedule does not drop the day. It does not publish again when
+# the archive is already there, so a late slot cannot send a second email.
+#
+# The punctual ~5:00 AM ping is the Cloudflare Worker in worker/morning/.
+# It is not live until Tom deploys it. See .github/morning-trigger.md.
+
 on:
   schedule:
-    # 10:00 UTC = 6:00 AM Eastern during EDT (Mar-Nov), 5:00 AM Eastern during EST.
-    # GitHub Actions cron is UTC-only (no time zone setting), so the Eastern time
-    # shifts by an hour at each daylight-saving change. Tom asked for ~6 AM ET (2026-10-31).
-    - cron: "0 10 * * *"
+    - cron: "7 5 * * *"
+      timezone: "America/New_York"
+    - cron: "17 6 * * *"
+      timezone: "America/New_York"
+    - cron: "37 8 * * *"
+      timezone: "America/New_York"
+    - cron: "7 10 * * *"
   workflow_dispatch:
     inputs:
       force_email:
-        description: 'Force send email even if pipeline already ran today'
+        description: 'Manual only: send email even if this Eastern day already published. Ignored when morning is true.'
         required: false
-        default: 'false'
+        default: false
         type: boolean
       no_email:
-        description: 'Rebuild and republish the site WITHOUT sending the Brevo email (runs main.py --no-email; overrides force_email)'
+        description: 'Manual only: republish the site without the Brevo email (overrides force_email). Ignored when morning is true.'
+        required: false
+        default: false
+        type: boolean
+      morning:
+        description: 'External 5:00 AM ET ping only. Runs the normal email path and no-ops if this Eastern day already published. Do not set this from the Actions UI.'
         required: false
         default: false
         type: boolean
 
 permissions:
-  contents: write
+  contents: read
+
+# Queue a second arrival behind the one already running. Never cancel it:
+# cancelling would cut off a publish that is already emailing.
+concurrency:
+  group: daily-curator-morning
+  cancel-in-progress: false
 
 jobs:
-  run-pipeline:
+  guard:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      decision: ${{ steps.decide.outputs.decision }}
+      reason: ${{ steps.decide.outputs.reason }}
+      pipeline_args: ${{ steps.decide.outputs.pipeline_args }}
+      eastern_date: ${{ steps.decide.outputs.eastern_date }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+
+      # Stdlib only (zoneinfo). The runner's python3 is enough; no pip install.
+      - name: Decide whether this arrival should publish
+        id: decide
+        env:
+          CC_EVENT_NAME: ${{ github.event_name }}
+          CC_SCHEDULE: ${{ github.event.schedule || '' }}
+          CC_MORNING: ${{ inputs.morning || 'false' }}
+          CC_FORCE_EMAIL: ${{ inputs.force_email || 'false' }}
+          CC_NO_EMAIL: ${{ inputs.no_email || 'false' }}
+        run: python3 scripts/morning_guard.py
+
+  run-pipeline:
+    needs: guard
+    if: needs.guard.outputs.decision == 'run'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    # Archive paths, the email date, and the commit subject follow the Eastern
+    # calendar. At 5:00 AM ET that is the same date as UTC. It matters when a
+    # catch-up is delivered after midnight UTC (8:00 PM EST / 9:00 PM EDT).
+    env:
+      TZ: America/New_York
 
     steps:
       - name: Checkout repository
@@ -47,8 +123,9 @@ jobs:
           X_API_SECRET: ${{ secrets.X_API_SECRET }}
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
-        # no_email wins over force_email: a site-only republish never sends Brevo email.
-        run: python3 main.py ${{ inputs.no_email && '--no-email' || (inputs.force_email && '--force-email' || '') }}
+        # pipeline_args is "" (send email), "--no-email", or "--force-email".
+        # The guard script is the only writer. A morning ping always gets "".
+        run: python3 main.py ${{ needs.guard.outputs.pipeline_args }}
 
       - name: Store outbound headline clicks from GA4
         # Writes docs/click_counts.json and article_history.json `clicks`.
@@ -93,7 +170,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash origin main
           git add docs/index.html docs/topics/ docs/digest/ docs/yesterday.json docs/email_draft.html docs/article_history.json docs/research_articles.json docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-topics.xml docs/sitemap-voices.xml docs/sitemap-daily.xml docs/sitemap-archive.xml docs/archive/ docs/daily/ docs/_pagefind/ docs/voices/ docs/voices_data.json docs/spotlight_topic_log.json docs/feed_health.json docs/click_counts.json docs/discovery_queue.json
-          git diff --staged --quiet || git commit -m "chore: daily curator run $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "chore: daily curator run $(date +%Y-%m-%d)"
           git push origin main
 
       - name: Ping IndexNow with changed URLs
