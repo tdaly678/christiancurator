@@ -152,6 +152,10 @@ Slice 2 (2026-10-31), same module:
 - `display_byline(author, source)` returns "Author, Outlet".
 - Pulse: no em dashes. The `curator/daily_summary.py` prompt bans them and `sanitize_pulse()` (via `strip_dashes()`)
   cleans every generated paragraph. Tests: `tests/test_pulse_sanitizer.py`.
+- Pulse length (2026-11-02): the prompt asks for one paragraph of 3 to 4 complete sentences, never more than 4.
+  `limit_pulse_sentences()` then keeps at most `PULSE_MAX_SENTENCES = 4` whole sentences across all paragraphs
+  (split by `frontend.text.split_sentences`, markdown links masked so a "." in a link never splits). It only cuts
+  at sentence ends, never mid-clause. Applies at generation time; cached summaries are not re-trimmed.
 - Site-only republish: run the Daily Curator Run workflow with `no_email: true` (runs `main.py --no-email`, overrides
   `force_email`).
 

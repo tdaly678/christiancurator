@@ -71,34 +71,28 @@ RELATED_DAYS_SHOWN = 3  # how many related days to surface on each daily page
 
 SUMMARY_PROMPT = """\
 You are a writer for Christian Curator, a daily digest for evangelical Protestant Christians.
-Write a 2-paragraph dispatch (8 to 10 sentences total) about what the church is talking
-about today. Use the articles listed below as your source material.
+Write a one-paragraph dispatch about what the church is talking about today. Use the
+articles listed below as your source material.
+
+LENGTH IS A HARD LIMIT: 3 to 4 complete sentences, never more than 4. No fragments.
+Anything past the fourth sentence is cut before publication.
 {history_section}
 STUDY THIS EXAMPLE CAREFULLY. Write in exactly this style:
 
 ---EXAMPLE START---
-Russell Moore said something last year that keeps coming back to me. He was writing about
-the temptation for Christians to turn every news cycle into a referendum on their identity,
-and he put it plainly: the church is not a political party with better songs.
 [The Gospel Coalition](https://example.com) and [Christianity Today](https://example.com)
-are circling the same problem this week. TGC says the threat is doctrinal: bad theology
-quietly replacing good. CT says the problem is pace. The speed of social media leaves no
-room for the kind of slow discernment faith actually requires. Neither outlet is wrong.
-
-[Mere Orthodoxy](https://example.com) ran a piece for World Down Syndrome Day asking who
-the church counts as a full theological participant. Not a rhetorical question. A real one
-with stakes. A federal judge also ordered an ICE facility in Minneapolis to allow clergy
-access to detainees. [World Magazine](https://example.com) had the item. Small legal
-story. Larger question about who the church shows up for.
+are circling the same problem this week: how the church keeps its head in a fast news cycle.
+TGC says the threat is doctrinal, with bad theology quietly replacing good, while CT says
+the problem is pace. A federal judge also ordered an ICE facility in Minneapolis to allow
+clergy access to detainees, and [World Magazine](https://example.com) had the item.
+Neither outlet is wrong, and both are asking who the church shows up for.
 ---EXAMPLE END---
 
 Notice what this example does:
-- Opens with a person and a specific memory, not "Today's content raises the question of..."
-- Sentences are SHORT. Many are under 12 words. Some are fragments.
-- First person ("keeps coming back to me") but not overdone
-- Paragraph 2 starts mid-thought, not with a transition word
-- No transition words between paragraphs: not "Meanwhile", "Additionally", "On a different
-  note", "Furthermore", "However", "Notably", "Interestingly", or any variant
+- Four sentences, each one complete. Understated, plain, no flourish
+- Sentences are short and declarative
+- No transition words: not "Meanwhile", "Additionally", "On a different note",
+  "Furthermore", "However", "Notably", "Interestingly", or any variant
 - "Neither outlet is wrong" is direct, not "both diagnoses feel true at the same time"
 - Links mid-sentence, not announced
 - No em dashes (—) or en dashes (–) anywhere. Use commas, periods, colons or parentheses
@@ -111,7 +105,7 @@ NEVER WRITE THESE PHRASES (AI tells that detectors flag immediately):
 "it is important to", "the argument is simple", "in today's world"
 
 Now write the actual dispatch using TODAY'S ARTICLES below.
-Use 2 to 4 markdown links [title](url) placed naturally.
+Use 2 or 3 markdown links [title](url) placed naturally.
 Surface the real theological tension, not just what the articles are about.
 Name writers and outlets by name.
 Where they disagree, say so plainly.
@@ -125,7 +119,7 @@ TODAY'S ARTICLES (title | source | url):
 
 Respond with a JSON object in this exact format and nothing else:
 {{
-  "paragraphs": ["paragraph 1 text", "paragraph 2 text"],
+  "paragraphs": ["the whole dispatch, 3 to 4 sentences"],
   "themes": ["theme 1", "theme 2", "theme 3"]
 }}
 
@@ -233,6 +227,38 @@ def sanitize_pulse(text: str) -> str:
     return strip_dashes(text or "")
 
 
+PULSE_MAX_SENTENCES = 4
+_MD_LINK = re.compile(r'\[[^\]]+\]\(https?://[^\)]+\)')
+
+
+def limit_pulse_sentences(paragraphs: list[str], max_sentences: int = PULSE_MAX_SENTENCES) -> list[str]:
+    """Keep at most `max_sentences` whole sentences across all Pulse paragraphs.
+
+    Cuts only at sentence boundaries (frontend.text.split_sentences), never
+    inside a clause. Markdown links are masked first so a "." in a link title
+    or URL is never read as a sentence end. Empty paragraphs are dropped.
+    """
+    from frontend.text import split_sentences
+
+    out, used = [], 0
+    for para in paragraphs:
+        if used >= max_sentences:
+            break
+        links = _MD_LINK.findall(para or "")
+        masked = para or ""
+        for i, link in enumerate(links):
+            masked = masked.replace(link, f"LINKTOKEN{i}X", 1)
+        sentences = split_sentences(masked)[:max_sentences - used]
+        if not sentences:
+            continue
+        used += len(sentences)
+        kept = " ".join(sentences)
+        for i, link in enumerate(links):
+            kept = kept.replace(f"LINKTOKEN{i}X", link, 1)
+        out.append(kept)
+    return out
+
+
 def _strip_markdown_links(text: str) -> str:
     return re.sub(r'\[([^\]]+)\]\(https?://[^\)]+\)', r'\1', text)
 
@@ -266,7 +292,7 @@ def _parse_summary_json(raw: str):
 
 
 def generate_daily_summary(articles: list[dict]) -> dict | None:
-    """Generate a 3-paragraph pastoral daily summary from the top articles."""
+    """Generate the Daily Pulse (at most 4 sentences) from the top articles."""
     today = date.today()
     today_slug = today.strftime("%Y-%m-%d")
     candidates = [a for a in articles if (a.get("final_score") or 0) > 0][:15]
@@ -320,7 +346,8 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
             # The email builds a plain lead + subleads Pulse when this is None.
             record_failure("daily_summary", f"JSON parse error after retry: {json_err}")
             return None
-        paragraphs_raw = [sanitize_pulse(p) for p in data.get("paragraphs", [])]
+        paragraphs_raw = limit_pulse_sentences(
+            [sanitize_pulse(p) for p in data.get("paragraphs", [])])
         themes = data.get("themes", [])
 
         if not paragraphs_raw:
