@@ -57325,5 +57325,1517 @@
     },
     "scored_by": "claude",
     "clicks": 0
+  },
+  {
+    "url": "https://www.christianpost.com/voices/god-must-interrupt-you-to-save-you.html",
+    "title": "God must interrupt you to save you",
+    "source_name": "The Christian Post",
+    "date_shown": "2026-11-02",
+    "final_score": 7.8,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "grace_and_salvation",
+    "base_score": 7.0,
+    "importance": 7.8,
+    "depth": 9.0,
+    "base_importance": 7.0,
+    "base_depth": 9.0,
+    "canonical_url": "https://christianpost.com/voices/god-must-interrupt-you-to-save-you.html",
+    "boosts": {
+      "tier": -0.7,
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/podcasts/watching-while-watched-1793555200",
+    "title": "Watching while watched",
+    "source_name": "World Magazine",
+    "date_shown": "2026-11-02",
+    "final_score": 7.62,
+    "tags": [
+      "news",
+      "politics"
+    ],
+    "topic_cluster": "digital_privacy_law",
+    "base_score": 6.0,
+    "importance": 7.62,
+    "depth": 4.0,
+    "base_importance": 6.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://wng.org/podcasts/watching-while-watched-1793555200",
+    "boosts": {
+      "tier": 0.12,
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.thegospelcoalition.org/article/effective-altruists-spreadsheet-gospel/",
+    "title": "Effective Altruists and the Spreadsheet Gospel",
+    "source_name": "The Gospel Coalition",
+    "date_shown": "2026-11-02",
+    "final_score": 6.5,
+    "tags": [
+      "apologetics",
+      "culture"
+    ],
+    "topic_cluster": "effective_altruism_critique",
+    "base_score": 5.0,
+    "importance": 6.5,
+    "depth": 6.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://thegospelcoalition.org/article/effective-altruists-spreadsheet-gospel",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/11/book-of-common-prayer-evangelicals-liturgy/",
+    "title": "The Book of Common Prayer is Having a Moment",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-02",
+    "final_score": 6.5,
+    "tags": [
+      "culture",
+      "devotional"
+    ],
+    "topic_cluster": "book_of_common_prayer_revival",
+    "base_score": 5.0,
+    "importance": 6.5,
+    "depth": 6.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://christianitytoday.com/2026/11/book-of-common-prayer-evangelicals-liturgy",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianpost.com/voices/midterms-2026-dont-leave-your-faith-at-home-on-nov-3.html",
+    "title": "Midterms 2026: Don’t leave your faith at home on Nov. 3",
+    "source_name": "The Christian Post",
+    "date_shown": "2026-11-02",
+    "final_score": 6.15,
+    "tags": [
+      "politics",
+      "culture"
+    ],
+    "topic_cluster": "faith_and_voting",
+    "base_score": 6.0,
+    "importance": 6.15,
+    "depth": 6.0,
+    "base_importance": 6.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://christianpost.com/voices/midterms-2026-dont-leave-your-faith-at-home-on-nov-3.html",
+    "boosts": {
+      "tier": -0.6,
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.dailywire.com/news/the-danger-of-no-enemies-to-the-right",
+    "title": "The Danger of ‘No Enemies To The Right’",
+    "source_name": "dailywire.com",
+    "date_shown": "2026-11-02",
+    "final_score": 5.75,
+    "tags": [
+      "theology",
+      "politics"
+    ],
+    "topic_cluster": "christian_nationalism_debate",
+    "base_score": 7.0,
+    "importance": 5.75,
+    "depth": 5.0,
+    "base_importance": 7.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://dailywire.com/news/the-danger-of-no-enemies-to-the-right",
+    "boosts": {
+      "recency": -2.0,
+      "stale_source": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://roysreport.com/whistleblower-compassion-international-has-no-off-ramp-for-sponsors-accused-of-grooming/",
+    "title": "Whistleblower: Compassion International has no ‘off ramp’ for sponsors accused of grooming",
+    "source_name": "The Roys Report",
+    "date_shown": "2026-11-02",
+    "final_score": 5.25,
+    "tags": [
+      "news",
+      "church life"
+    ],
+    "topic_cluster": "compassion_international_grooming",
+    "base_score": 9.0,
+    "importance": 5.25,
+    "depth": 0.0,
+    "base_importance": 9.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://roysreport.com/whistleblower-compassion-international-has-no-off-ramp-for-sponsors-accused-of-grooming",
+    "boosts": {
+      "recency": 0.25,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://roysreport.com/michael-wurmbrand-son-of-persecuted-romanian-pastor-and-voice-of-the-martyrs-critic-dies-at-87/",
+    "title": "Michael Wurmbrand, son of persecuted Romanian pastor and Voice of the Martyrs critic, dies at 87",
+    "source_name": "The Roys Report",
+    "date_shown": "2026-11-02",
+    "final_score": 4.5,
+    "tags": [
+      "news",
+      "suffering"
+    ],
+    "topic_cluster": "michael_wurmbrand_death",
+    "base_score": 6.0,
+    "importance": 4.5,
+    "depth": 3.0,
+    "base_importance": 6.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://roysreport.com/michael-wurmbrand-son-of-persecuted-romanian-pastor-and-voice-of-the-martyrs-critic-dies-at-87",
+    "boosts": {
+      "recency": 0.25,
+      "voice": -1.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://religionnews.com/2026/11/01/mainliners-are-having-a-moment-can-they-move-from-protest-to-political-power/",
+    "title": "Mainline Protestants are having a political moment. Can they move from protest to power?",
+    "source_name": "Religion News Service",
+    "date_shown": "2026-11-02",
+    "final_score": 4.5,
+    "tags": [
+      "politics",
+      "culture"
+    ],
+    "topic_cluster": "mainline_protestant_politics",
+    "base_score": 3.0,
+    "importance": 4.5,
+    "depth": 2.0,
+    "base_importance": 3.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://religionnews.com/2026/11/01/mainliners-are-having-a-moment-can-they-move-from-protest-to-political-power",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/justice/this-sunday-the-global-church-will-pray-for-the-388-million-christians-facing-high-levels-of-persecution/",
+    "title": "This Sunday, the Global Church Will Pray for 388 Million Christians Facing High Levels of Persecution",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-11-02",
+    "final_score": 3.25,
+    "tags": [
+      "missions",
+      "prayer"
+    ],
+    "topic_cluster": "persecuted_church",
+    "base_score": 8.0,
+    "importance": 3.25,
+    "depth": 1.0,
+    "base_importance": 8.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://relevantmagazine.com/justice/this-sunday-the-global-church-will-pray-for-the-388-million-christians-facing-high-levels-of-persecution",
+    "boosts": {
+      "recency": 0.25,
+      "voice": -1.0,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://erlc.com/erlc-podcast/wes-fowler-on-promoting-life-on-the-missouri-ballot/",
+    "title": "Wes Fowler on promoting life on the Missouri ballot",
+    "source_name": "ERLC",
+    "date_shown": "2026-11-02",
+    "final_score": 3.0,
+    "tags": [
+      "news",
+      "politics"
+    ],
+    "topic_cluster": "missouri_pro_life_ballot",
+    "base_score": 7.0,
+    "importance": 3.0,
+    "depth": 1.0,
+    "base_importance": 7.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://erlc.com/erlc-podcast/wes-fowler-on-promoting-life-on-the-missouri-ballot",
+    "boosts": {
+      "recency": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.crossway.org/articles/introducing-pilgrims-progress-the-graphic-novel/",
+    "title": "Introducing ‘Pilgrim’s Progress: The Graphic Novel’",
+    "source_name": "Crossway",
+    "date_shown": "2026-11-02",
+    "final_score": 2.75,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "pilgrims_progress_graphic_novel",
+    "base_score": 2.0,
+    "importance": 2.75,
+    "depth": 1.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://crossway.org/articles/introducing-pilgrims-progress-the-graphic-novel",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://albertmohler.com/2026/11/02/briefing-11-2-26/",
+    "title": "Monday, November 2, 2026",
+    "source_name": "Albert Mohler",
+    "date_shown": "2026-11-02",
+    "final_score": 2.5,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 2.5,
+    "depth": 1.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://albertmohler.com/2026/11/02/briefing-11-2-26",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.logos.com/free-book?irclickid=R8szJ8VGfxyZTKP0aJ24IwmSUkr3%3aTxnIVEK2g0&sharedid=&irpid=5601117&irgwc=1&afsrc=1&utm_medium=partner&utm_source=Challies",
+    "title": "This Month's Free Book from Logos Bible Study",
+    "source_name": "logos.com",
+    "date_shown": "2026-11-02",
+    "final_score": 1.75,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 1.75,
+    "depth": 1.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://logos.com/free-book?afsrc=1&irclickid=R8szJ8VGfxyZTKP0aJ24IwmSUkr3%3ATxnIVEK2g0&irgwc=1&irpid=5601117&sharedid=",
+    "boosts": {
+      "stale_source": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://erlc.com/scotus-center/international-partners-for-ethical-care-v-ferguson/",
+    "title": "International Partners for Ethical Care v. Ferguson",
+    "source_name": "ERLC",
+    "date_shown": "2026-11-02",
+    "final_score": 1.25,
+    "tags": [
+      "politics",
+      "church life"
+    ],
+    "topic_cluster": "supreme_court_parental_rights",
+    "base_score": 8.0,
+    "importance": 1.25,
+    "depth": 0.0,
+    "base_importance": 8.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://erlc.com/scotus-center/international-partners-for-ethical-care-v-ferguson",
+    "boosts": {
+      "recency": -2.0,
+      "previously_shown": -4.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://feeds.ligonier.org/~/972099341/0/ligonierministriesblog",
+    "title": "Who Is God? 39% of UK Adults Aren’t Sure",
+    "source_name": "Ligonier Ministries",
+    "date_shown": "2026-11-02",
+    "final_score": 1.0,
+    "tags": [
+      "data",
+      "theology"
+    ],
+    "topic_cluster": "uk_state_of_theology_survey",
+    "base_score": 7.0,
+    "importance": 1.0,
+    "depth": 0.0,
+    "base_importance": 7.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://feeds.ligonier.org/~/972099341/0/ligonierministriesblog",
+    "boosts": {
+      "recency": -2.0,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.pewresearch.org/short-reads/2026/10/30/gas-prices-are-high-now-but-for-many-americans-they-were-even-higher-in-the-past/",
+    "title": "Gas Prices Are High Now, but for Many Americans They Were Even Higher in the Past",
+    "source_name": "Pew Research",
+    "date_shown": "2026-11-02",
+    "final_score": 0.5,
+    "tags": [
+      "politics"
+    ],
+    "topic_cluster": "gas_prices_inflation",
+    "base_score": 2.0,
+    "importance": 0.5,
+    "depth": 1.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://pewresearch.org/short-reads/2026/10/30/gas-prices-are-high-now-but-for-many-americans-they-were-even-higher-in-the-past",
+    "boosts": {
+      "recency": 0.25,
+      "voice": -1.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://research.lifeway.com/2026/10/27/analysis-reveals-factors-most-impactful-to-discipleship/",
+    "title": "Analysis Reveals Most Impactful Keys to Discipleship",
+    "source_name": "Lifeway Research",
+    "date_shown": "2026-11-02",
+    "final_score": 0.25,
+    "tags": [
+      "data",
+      "church life"
+    ],
+    "topic_cluster": "church_community_discipleship",
+    "base_score": 6.0,
+    "importance": 0.25,
+    "depth": 0.0,
+    "base_importance": 6.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://research.lifeway.com/2026/10/27/analysis-reveals-factors-most-impactful-to-discipleship",
+    "boosts": {
+      "recency": -2.0,
+      "voice": 1.0,
+      "previously_shown": -4.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.logos.com/sale?irclickid=R8CQlyVGfxyZTKP0aJ24IwmSUkr3%3aTxnIVEK2g0&sharedid=&irpid=5601117&irgwc=1&afsrc=1&utm_medium=partner&utm_source=Challies",
+    "title": "Top Deals from Logos: Books, Bibles & More",
+    "source_name": "logos.com",
+    "date_shown": "2026-11-02",
+    "final_score": 0.25,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 0.25,
+    "depth": 1.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://logos.com/sale?afsrc=1&irclickid=R8CQlyVGfxyZTKP0aJ24IwmSUkr3%3ATxnIVEK2g0&irgwc=1&irpid=5601117&sharedid=",
+    "boosts": {
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.theguardian.com/us-news/2026/oct/31/lance-wallnau-donald-trump-evangelicals",
+    "title": "This rightwing evangelical was one of Trump’s biggest backers. Why isn’t he talking about the midterms?",
+    "source_name": "The Guardian",
+    "date_shown": "2026-11-02",
+    "final_score": 0.05,
+    "tags": [
+      "news",
+      "politics"
+    ],
+    "topic_cluster": "evangelical_political_engagement",
+    "base_score": 6.0,
+    "importance": 0.05,
+    "depth": 0.0,
+    "base_importance": 6.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://theguardian.com/us-news/2026/oct/31/lance-wallnau-donald-trump-evangelicals",
+    "boosts": {
+      "tier": -1.2,
+      "recency": 0.25,
+      "voice": -1.0,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://careynieuwhof.com/episode-839/",
+    "title": "Philip Anthony Mitchell on Overcoming Jealousy, Surviving a Suicidal Season, How to Lead If Your Church Doesn’t Grow (And If It Explodes), and Answering His Critics",
+    "source_name": "Carey Nieuwhof",
+    "date_shown": "2026-11-02",
+    "final_score": 0.0,
+    "tags": [
+      "church life"
+    ],
+    "topic_cluster": "podcast_episode",
+    "base_score": 2.0,
+    "importance": 0.0,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://careynieuwhof.com/episode-839",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.75,
+      "voice": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.graphsaboutreligion.com/p/you-cant-move-a-church-to-the-suburbs",
+    "title": "You Can’t Move a Church to the Suburbs",
+    "source_name": "Ryan Burge",
+    "date_shown": "2026-11-02",
+    "final_score": 0.0,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "mainline_decline",
+    "base_score": 3.0,
+    "importance": 0.0,
+    "depth": 0.0,
+    "base_importance": 3.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://graphsaboutreligion.com/p/you-cant-move-a-church-to-the-suburbs",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.75,
+      "previously_shown": -1.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://thecommon.place/p/ep204",
+    "title": "An Empty Museum & an Urban Neighborhood",
+    "source_name": "Tsh Oxenreider",
+    "date_shown": "2026-11-02",
+    "final_score": 0.0,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 0.0,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://thecommon.place/p/ep204",
+    "boosts": {
+      "recency": -4.0,
+      "frequency": 0.25,
+      "previously_shown": 2.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://faithfullymagazine.com/fm-newsletter-toddler-euthanized/",
+    "title": "FM Newsletter: 1-Year-Old Euthanized, $4M for ‘Enslaved’ Black Children, and a US Pastor on Trial in Haiti President’s Murder",
+    "source_name": "Faithfully Magazine",
+    "date_shown": "2026-11-02",
+    "final_score": 0.0,
+    "tags": [
+      "news",
+      "culture"
+    ],
+    "topic_cluster": "culture_and_bioethics",
+    "base_score": 6.0,
+    "importance": 0.0,
+    "depth": 0.0,
+    "base_importance": 6.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://faithfullymagazine.com/fm-newsletter-toddler-euthanized",
+    "boosts": {
+      "recency": -6.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.spiritualtheology.net/p/october-book-briefs-29a",
+    "title": "October Book Briefs",
+    "source_name": "J.A. Medders",
+    "date_shown": "2026-11-02",
+    "final_score": 0.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 0.0,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://spiritualtheology.net/p/october-book-briefs-29a",
+    "boosts": {
+      "recency": -2.0,
+      "previously_shown": 1.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://religionnews.com/2026/10/30/rod-dreher-among-prominent-conservatives-focusing-fight-on-groypers-christian-nationalists/",
+    "title": "Rod Dreher among prominent conservatives focusing fight on Groypers, Christian nationalists",
+    "source_name": "Religion News Service",
+    "date_shown": "2026-11-02",
+    "final_score": -0.5,
+    "tags": [
+      "politics",
+      "culture"
+    ],
+    "topic_cluster": "christian_nationalism_debate",
+    "base_score": 7.0,
+    "importance": -0.5,
+    "depth": 1.0,
+    "base_importance": 7.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://religionnews.com/2026/10/30/rod-dreher-among-prominent-conservatives-focusing-fight-on-groypers-christian-nationalists",
+    "boosts": {
+      "recency": 0.25,
+      "previously_shown": -4.0,
+      "duplicate_topic": -3.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/civics-education-is-survival/",
+    "title": "Civics Education Is Survival",
+    "source_name": "First Things",
+    "date_shown": "2026-11-02",
+    "final_score": 5.5,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "civics_education_interview",
+    "base_score": 4.0,
+    "importance": 5.5,
+    "depth": 6.0,
+    "base_importance": 4.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://firstthings.com/civics-education-is-survival",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.americanreformer.org/p/california-dreaming-a-review-of-michael",
+    "title": "California Dreaming: A Review of Michael Anton’s Dispatches from the Late Republic",
+    "source_name": "American Reformer",
+    "date_shown": "2026-11-02",
+    "final_score": 0.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 0.0,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://americanreformer.org/p/california-dreaming-a-review-of-michael",
+    "boosts": {
+      "recency": 0.25,
+      "voice": -2.0,
+      "previously_shown": -0.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.americanreformer.org/p/ethnos-and-the-american-question",
+    "title": "Ethnos and the American Question",
+    "source_name": "American Reformer",
+    "date_shown": "2026-11-02",
+    "final_score": -0.75,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": -0.75,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://americanreformer.org/p/ethnos-and-the-american-question",
+    "boosts": {
+      "recency": -2.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://mereorthodoxy.com/art-without-friction-the-cost-of-generative-ai-to-artists/",
+    "title": "'Art' Without Friction: The Cost of Generative AI to Artists",
+    "source_name": "Mere Orthodoxy",
+    "date_shown": "2026-11-02",
+    "final_score": -1.5,
+    "tags": [
+      "culture",
+      "work"
+    ],
+    "topic_cluster": "ai_and_faith",
+    "base_score": 5.0,
+    "importance": -1.5,
+    "depth": 1.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://mereorthodoxy.com/art-without-friction-the-cost-of-generative-ai-to-artists",
+    "boosts": {
+      "recency": -2.0,
+      "previously_shown": -3.0,
+      "trending": 1.0,
+      "duplicate_topic": -1.0,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://mereorthodoxy.com/to-efficiency-and-beyond-a-warning-for-ai-research-writing-and-the-rest-of-the-world/",
+    "title": "To Efficiency and Beyond: A Warning for AI, Research, Writing, and the Rest of the World",
+    "source_name": "Mere Orthodoxy",
+    "date_shown": "2026-11-02",
+    "final_score": -2.25,
+    "tags": [
+      "culture",
+      "work"
+    ],
+    "topic_cluster": "ai_and_faith",
+    "base_score": 5.0,
+    "importance": -2.25,
+    "depth": 1.0,
+    "base_importance": 5.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://mereorthodoxy.com/to-efficiency-and-beyond-a-warning-for-ai-research-writing-and-the-rest-of-the-world",
+    "boosts": {
+      "recency": -4.0,
+      "voice": -1.0,
+      "trending": 1.0,
+      "duplicate_topic": -1.0,
+      "diversity_penalty": -2.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.americanreformer.org/p/fertility-needs-friendship",
+    "title": "Fertility Needs Friendship",
+    "source_name": "American Reformer",
+    "date_shown": "2026-11-02",
+    "final_score": -2.25,
+    "tags": [
+      "culture",
+      "family"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 5.0,
+    "importance": -2.25,
+    "depth": 0.0,
+    "base_importance": 5.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://americanreformer.org/p/fertility-needs-friendship",
+    "boosts": {
+      "recency": -4.0,
+      "previously_shown": -1.0,
+      "diversity_penalty": -2.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/earnest-lives-new-and-notable-books/",
+    "title": "Earnest Lives: New and Notable Books",
+    "source_name": "First Things",
+    "date_shown": "2026-11-02",
+    "final_score": -2.25,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "book_reviews",
+    "base_score": 2.0,
+    "importance": -2.25,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://firstthings.com/earnest-lives-new-and-notable-books",
+    "boosts": {
+      "recency": -2.0,
+      "diversity_penalty": -2.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/10/sports-betting-kalshi-polymarket-draft-kings/",
+    "title": "A College-Town Bar as Hushed as a Church",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-02",
+    "final_score": -3.0,
+    "tags": [
+      "culture",
+      "work"
+    ],
+    "topic_cluster": "gambling_faith",
+    "base_score": 4.0,
+    "importance": -3.0,
+    "depth": 0.0,
+    "base_importance": 4.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://christianitytoday.com/2026/10/sports-betting-kalshi-polymarket-draft-kings",
+    "boosts": {
+      "recency": -2.0,
+      "previously_shown": -2.0,
+      "diversity_penalty": -3.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/aaron-sorkins-facebook-fumble/",
+    "title": "Aaron Sorkin’s Facebook Fumble",
+    "source_name": "First Things",
+    "date_shown": "2026-11-02",
+    "final_score": -3.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "media_criticism",
+    "base_score": 3.0,
+    "importance": -3.0,
+    "depth": 0.0,
+    "base_importance": 3.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://firstthings.com/aaron-sorkins-facebook-fumble",
+    "boosts": {
+      "recency": -2.0,
+      "previously_shown": -1.0,
+      "diversity_penalty": -3.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://mereorthodoxy.com/scientism-and-the-allure-of-control/",
+    "title": "Scientism and the Allure of Control",
+    "source_name": "Mere Orthodoxy",
+    "date_shown": "2026-11-02",
+    "final_score": 6.5,
+    "tags": [
+      "apologetics",
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 5.0,
+    "importance": 6.5,
+    "depth": 6.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://mereorthodoxy.com/scientism-and-the-allure-of-control",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/11/manifesto-phone-free-church/",
+    "title": "A Manifesto for Phone-Free Church",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-02",
+    "final_score": 5.75,
+    "tags": [
+      "church life",
+      "culture"
+    ],
+    "topic_cluster": "phone_free_worship",
+    "base_score": 5.0,
+    "importance": 5.75,
+    "depth": 7.0,
+    "base_importance": 5.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://christianitytoday.com/2026/11/manifesto-phone-free-church",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://mereorthodoxy.com/mobs-and-friends-encouraging-a-culture-of-reading-in-our-churches/",
+    "title": "Mobs and Friends: Encouraging a Culture of Reading in Our Churches",
+    "source_name": "Mere Orthodoxy",
+    "date_shown": "2026-11-02",
+    "final_score": 5.75,
+    "tags": [
+      "church life",
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 5.0,
+    "importance": 5.75,
+    "depth": 6.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://mereorthodoxy.com/mobs-and-friends-encouraging-a-culture-of-reading-in-our-churches",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.crossway.org/articles/podcast-can-our-prodigal-culture-find-its-way-back-home-andrew-walker/",
+    "title": "Podcast: Can Our Prodigal Culture Find Its Way Back Home? (Andrew Walker)",
+    "source_name": "Crossway",
+    "date_shown": "2026-11-02",
+    "final_score": 5.5,
+    "tags": [
+      "culture",
+      "apologetics"
+    ],
+    "topic_cluster": "cultural_decline_secularism",
+    "base_score": 4.0,
+    "importance": 5.5,
+    "depth": 5.0,
+    "base_importance": 4.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://crossway.org/articles/podcast-can-our-prodigal-culture-find-its-way-back-home-andrew-walker",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.challies.com/articles/tips-for-resolving-conflict-in-marriage/",
+    "title": "Tips for Resolving Conflict in Marriage",
+    "source_name": "Tim Challies",
+    "date_shown": "2026-11-02",
+    "final_score": 5.0,
+    "tags": [
+      "family",
+      "devotional"
+    ],
+    "topic_cluster": "marriage_relationships",
+    "base_score": 3.0,
+    "importance": 5.0,
+    "depth": 5.0,
+    "base_importance": 3.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://challies.com/articles/tips-for-resolving-conflict-in-marriage",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.thegospelcoalition.org/reviews/help-teen-healthy-tech-habits/",
+    "title": "Develop Healthy Tech Habits with Your Teen",
+    "source_name": "The Gospel Coalition",
+    "date_shown": "2026-11-02",
+    "final_score": 4.75,
+    "tags": [
+      "family",
+      "culture"
+    ],
+    "topic_cluster": "tech_and_family",
+    "base_score": 4.0,
+    "importance": 4.75,
+    "depth": 5.0,
+    "base_importance": 4.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://thegospelcoalition.org/reviews/help-teen-healthy-tech-habits",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.epm.org/resources/2026/Oct/28/path-happiness-devote-others/",
+    "title": "The Straightest Path to Happiness Is Devoting Ourselves to the Happiness of Others",
+    "source_name": "Eternal Perspective Ministries",
+    "date_shown": "2026-11-02",
+    "final_score": 3.75,
+    "tags": [
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 3.75,
+    "depth": 5.0,
+    "base_importance": 3.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://epm.org/resources/2026/Oct/28/path-happiness-devote-others",
+    "boosts": {
+      "stale_source": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.aaronrenn.com/p/the-husband-of-his-first-wife",
+    "title": "The Husband of His First Wife",
+    "source_name": "Aaron Renn",
+    "date_shown": "2026-11-02",
+    "final_score": 3.0,
+    "tags": [
+      "culture",
+      "theology"
+    ],
+    "topic_cluster": "biblical_manhood_formation",
+    "base_score": 5.0,
+    "importance": 3.0,
+    "depth": 1.0,
+    "base_importance": 5.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://aaronrenn.com/p/the-husband-of-his-first-wife",
+    "boosts": {
+      "recency": 0.25,
+      "frequency": 0.75,
+      "previously_shown": -4.0,
+      "opposing_views": 1.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.thegospelcoalition.org/article/voice-martyrs-prayers-persecuted/",
+    "title": "The Voice of the Martyrs: Prayers of the Persecuted",
+    "source_name": "The Gospel Coalition",
+    "date_shown": "2026-11-02",
+    "final_score": 2.25,
+    "tags": [
+      "suffering",
+      "prayer",
+      "theology"
+    ],
+    "topic_cluster": "persecution_prayer",
+    "base_score": 7.0,
+    "importance": 2.25,
+    "depth": 3.0,
+    "base_importance": 7.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://thegospelcoalition.org/article/voice-martyrs-prayers-persecuted",
+    "boosts": {
+      "recency": 0.75,
+      "previously_shown": -4.0,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.crossway.org/articles/how-christians-can-overcome-polarization-and-engage-in-culture-with-civility/",
+    "title": "How Christians Can Overcome Polarization and Engage in Culture with Civility",
+    "source_name": "Crossway",
+    "date_shown": "2026-11-02",
+    "final_score": 1.75,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "polarization_civility",
+    "base_score": 6.0,
+    "importance": 1.75,
+    "depth": 3.0,
+    "base_importance": 6.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://crossway.org/articles/how-christians-can-overcome-polarization-and-engage-in-culture-with-civility",
+    "boosts": {
+      "recency": 0.75,
+      "voice": 0.5,
+      "previously_shown": -4.0,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.thebeehive.live/blog/candystorewelcome",
+    "title": "A Candy Shop Owner, a Customs Officer, and a Beloved Family",
+    "source_name": "The Bee Hive",
+    "date_shown": "2026-11-02",
+    "final_score": 1.75,
+    "tags": [
+      "devotional",
+      "church life"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 1.75,
+    "depth": 4.0,
+    "base_importance": 3.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://thebeehive.live/blog/candystorewelcome",
+    "boosts": {
+      "recency": -2.0,
+      "stale_source": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://entrustedtothedirt.com/2026/10/28/your-definition-of-blessing-is-too-small/",
+    "title": "Your Definition of Blessing Is Too Small",
+    "source_name": "Entrusted to the Dirt",
+    "date_shown": "2026-11-02",
+    "final_score": 1.75,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 1.75,
+    "depth": 5.0,
+    "base_importance": 3.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://entrustedtothedirt.com/2026/10/28/your-definition-of-blessing-is-too-small",
+    "boosts": {
+      "recency": -2.0,
+      "stale_source": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.chrismartin.fyi/p/jonathan-haidt-ai-is-the-neutron",
+    "title": "Jonathan Haidt: AI Is the ‘Neutron Bomb for Education’",
+    "source_name": "Chris Martin",
+    "date_shown": "2026-11-02",
+    "final_score": 1.75,
+    "tags": [
+      "culture",
+      "apologetics"
+    ],
+    "topic_cluster": "ai_education",
+    "base_score": 4.0,
+    "importance": 1.75,
+    "depth": 0.0,
+    "base_importance": 4.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://chrismartin.fyi/p/jonathan-haidt-ai-is-the-neutron",
+    "boosts": {
+      "recency": -6.0,
+      "frequency": 0.25,
+      "previously_shown": 1.75,
+      "stale_source": 0.75,
+      "independent_floor": 1.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/does-evangelicalism-exist/",
+    "title": "Does Evangelicalism Exist?",
+    "source_name": "First Things",
+    "date_shown": "2026-11-02",
+    "final_score": 1.25,
+    "tags": [
+      "theology",
+      "church life",
+      "culture"
+    ],
+    "topic_cluster": "evangelicalism_identity_crisis",
+    "base_score": 8.0,
+    "importance": 1.25,
+    "depth": 1.0,
+    "base_importance": 8.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://firstthings.com/does-evangelicalism-exist",
+    "boosts": {
+      "recency": -2.0,
+      "previously_shown": -4.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://feed.desiringgod.org/link/22977/17486240/take-up-the-fight-against-small-sins",
+    "title": "Take Up the Fight Against Small Sins",
+    "source_name": "Desiring God",
+    "date_shown": "2026-11-02",
+    "final_score": 1.25,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "spiritual_formation_series",
+    "base_score": 4.0,
+    "importance": 1.25,
+    "depth": 0.0,
+    "base_importance": 4.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://feed.desiringgod.org/link/22977/17486240/take-up-the-fight-against-small-sins",
+    "boosts": {
+      "recency": -6.0,
+      "previously_shown": 2.0,
+      "response": 1.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.furtherup.net/p/be-not-afraid",
+    "title": "Be Not Afraid",
+    "source_name": "Bethel McGrew",
+    "date_shown": "2026-11-02",
+    "final_score": 1.25,
+    "tags": [
+      "culture",
+      "devotional"
+    ],
+    "topic_cluster": "culture_christian_perspective",
+    "base_score": 4.0,
+    "importance": 1.25,
+    "depth": 1.0,
+    "base_importance": 4.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://furtherup.net/p/be-not-afraid",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.5,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://garythomas.com/2026/10/30/seeking-first-the-kingdom-of-god/",
+    "title": "Seeking First the Kingdom of God",
+    "source_name": "Gary Thomas",
+    "date_shown": "2026-11-02",
+    "final_score": 1.0,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 1.0,
+    "depth": 2.0,
+    "base_importance": 4.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://garythomas.com/2026/10/30/seeking-first-the-kingdom-of-god",
+    "boosts": {
+      "recency": 0.25,
+      "frequency": 0.75,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.wyattgraham.com/p/how-john-1030-gave-tertullian-words",
+    "title": "How John 10:30 Gave Tertullian Words for the Trinity",
+    "source_name": "Wyatt Graham",
+    "date_shown": "2026-11-02",
+    "final_score": 1.0,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "trinitarian_theology",
+    "base_score": 6.0,
+    "importance": 1.0,
+    "depth": 3.0,
+    "base_importance": 6.0,
+    "base_depth": 8.0,
+    "canonical_url": "https://wyattgraham.com/p/how-john-1030-gave-tertullian-words",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.5,
+      "voice": 0.5,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/culture/sports/spurs-rookie-tarris-reed-jr-got-baptized-i-went-from-wanting-nothing-to-do-with-the-lord-to-now-desiring-to-live-for-him/",
+    "title": "Spurs Rookie Tarris Reed Jr. Got Baptized: ‘I Went From Wanting Nothing to do With the Lord to Now Desiring to Live For Him’",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-11-02",
+    "final_score": 0.5,
+    "tags": [
+      "church life",
+      "culture"
+    ],
+    "topic_cluster": "athlete_faith_baptism",
+    "base_score": 5.0,
+    "importance": 0.5,
+    "depth": 4.0,
+    "base_importance": 5.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://relevantmagazine.com/culture/sports/spurs-rookie-tarris-reed-jr-got-baptized-i-went-from-wanting-nothing-to-do-with-the-lord-to-now-desiring-to-live-for-him",
+    "boosts": {
+      "recency": -2.0,
+      "voice": -1.0,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.russellmoore.com/2026/10/28/n-t-wright-on-how-an-ancient-prophet-explains-our-crazy-world/",
+    "title": "N.T. Wright on How an Ancient Prophet Explains Our Crazy World",
+    "source_name": "Russell Moore",
+    "date_shown": "2026-11-02",
+    "final_score": 0.5,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "nt_wright_politics",
+    "base_score": 6.0,
+    "importance": 0.5,
+    "depth": 2.0,
+    "base_importance": 6.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://russellmoore.com/2026/10/28/n-t-wright-on-how-an-ancient-prophet-explains-our-crazy-world",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.5,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://newsletter.oalannoble.com/p/how-ai-brought-a-mathematician-to",
+    "title": "How AI Brought a Mathematician to Ecclesiastes",
+    "source_name": "O. Alan Noble",
+    "date_shown": "2026-11-02",
+    "final_score": 0.25,
+    "tags": [
+      "theology",
+      "work"
+    ],
+    "topic_cluster": "ai_faith_purpose",
+    "base_score": 5.0,
+    "importance": 0.25,
+    "depth": 1.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://newsletter.oalannoble.com/p/how-ai-brought-a-mathematician-to",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.75,
+      "voice": 0.5,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.9marks.org/article/unclear-evangelism-leads-to-unclear-and-false-conversions/?utm_source=rss&utm_medium=rss&utm_campaign=unclear-evangelism-leads-to-unclear-and-false-conversions",
+    "title": "Unclear Evangelism Leads to Unclear (and False) Conversions",
+    "source_name": "9Marks",
+    "date_shown": "2026-11-02",
+    "final_score": 0.25,
+    "tags": [
+      "theology",
+      "church life"
+    ],
+    "topic_cluster": "conversion_doctrine_church_practice",
+    "base_score": 5.0,
+    "importance": 0.25,
+    "depth": 2.0,
+    "base_importance": 5.0,
+    "base_depth": 8.0,
+    "canonical_url": "https://9marks.org/article/unclear-evangelism-leads-to-unclear-and-false-conversions",
+    "boosts": {
+      "recency": -4.0,
+      "previously_shown": -1.0,
+      "opposing_views": 1.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://podcasts.apple.com/us/podcast/you-cannot-see-everything/id1074011166?i=1000799382787",
+    "title": "You Cannot See Everything",
+    "source_name": "The Russell Moore Show",
+    "date_shown": "2026-11-02",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "https://podcasts.apple.com/us/podcast/you-cannot-see-everything/id1074011166?i=1000799382787",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
+  },
+  {
+    "url": "https://podcasts.apple.com/us/podcast/q-r-baptized-by-the-spirit-union-with-jesus-and/id1050832450?i=1000799366028",
+    "title": "Q+R: Baptized by the Spirit, Union with Jesus, and the Spirit’s Help in Reading the Bible",
+    "source_name": "BibleProject Podcast",
+    "date_shown": "2026-11-02",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "https://podcasts.apple.com/us/podcast/q-r-baptized-by-the-spirit-union-with-jesus-and/id1050832450?i=1000799366028",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
+  },
+  {
+    "url": "https://feed.desiringgod.org/link/10715/17513705/peace-for-second-guessers",
+    "title": "Peace for Second-Guessers",
+    "source_name": "Ask Pastor John",
+    "date_shown": "2026-11-02",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "https://feed.desiringgod.org/link/10715/17513705/peace-for-second-guessers",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
+  },
+  {
+    "url": "https://research.lifeway.com/2026/11/02/the-churchs-role-beyond-adoption-day/",
+    "title": "The Church’s Role Beyond Adoption Day",
+    "source_name": "Lifeway Research",
+    "date_shown": "2026-11-02",
+    "final_score": 6.5,
+    "tags": [
+      "church life",
+      "family"
+    ],
+    "topic_cluster": "adoption_church_support",
+    "base_score": 5.0,
+    "importance": 6.5,
+    "depth": 6.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://research.lifeway.com/2026/11/02/the-churchs-role-beyond-adoption-day",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/faith/church/pew-americans-ages-23-to-26-are-among-the-least-religious-adults-in-the-country-while-18-to-22-year-olds-attend-church-at-higher-rates-than-anyone/",
+    "title": "Pew: Americans Ages 23 to 26 Are Among the Least Religious Adults in the Country, While 18-to-22-Year-Olds Attend Church at Higher Rates Than Anyone",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-11-02",
+    "final_score": 2.5,
+    "tags": [
+      "data"
+    ],
+    "topic_cluster": "gen_z_religiosity",
+    "base_score": 8.0,
+    "importance": 2.5,
+    "depth": 0.0,
+    "base_importance": 8.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://relevantmagazine.com/faith/church/pew-americans-ages-23-to-26-are-among-the-least-religious-adults-in-the-country-while-18-to-22-year-olds-attend-church-at-higher-rates-than-anyone",
+    "boosts": {
+      "recency": 0.25,
+      "voice": -1.0,
+      "previously_shown": -4.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.pewresearch.org/newsletter/campaign/quarterly-update-10282026/",
+    "title": "Why 2026 is an unusually tricky year for polls",
+    "source_name": "Pew Research",
+    "date_shown": "2026-11-02",
+    "final_score": 1.5,
+    "tags": [
+      "data",
+      "politics"
+    ],
+    "topic_cluster": "polling_methodology_2026",
+    "base_score": 3.0,
+    "importance": 1.5,
+    "depth": 0.0,
+    "base_importance": 3.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://pewresearch.org/newsletter/campaign/quarterly-update-10282026",
+    "boosts": {
+      "recency": -2.0,
+      "voice": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
   }
 ]
