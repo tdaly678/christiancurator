@@ -120,6 +120,21 @@ CRITICAL: State the main theme in the very first sentence. A lay reader should k
 what the day is about before reading the second sentence. Then show how the individual
 pieces connect to that theme. Don't make the reader figure out the connection themselves.
 
+ONE THEME, EVERY SENTENCE: Every sentence must advance the theme stated in sentence 1.
+Choose your articles AFTER you choose the theme. Use only the pieces that honestly bear
+on it, even if that means you mention just two or three outlets. If an article cannot
+honestly be tied to the theme, leave it out of the Pulse entirely. Never name-drop an
+article mid-paragraph and then invent a bridge back to the theme. Never close with a
+sentence whose only job is to force a link between unrelated pieces. Before you answer,
+check each sentence: if you deleted it, would the reader lose part of the argument about
+the theme? If not, cut it.
+
+Example of the failure to avoid: the theme was election eve and whether the church can
+be trusted, paragraph 2 turned to abuse and pastoral power, and then "First Things is
+running a piece on global Christian martyrs" appeared out of nowhere, followed by a
+closing line straining to connect martyrs to trust. The martyrs piece did not serve the
+theme, so it should have been left out.
+
 TODAY'S ARTICLES (title | source | url):
 {article_list}
 
@@ -142,6 +157,7 @@ e.g. "Earlier this week we were watching [this same tension](https://www.christi
 or "That question hasn't gone away. [On March 19](https://www.christiancurator.com/daily/2026-03-19/) several
 writers approached it from a different angle."
 Only reference previous days when it's genuinely relevant and adds insight. Don't force it.
+A callback to an earlier day must advance today's theme like any other sentence.
 
 """
 
