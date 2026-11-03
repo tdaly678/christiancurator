@@ -17916,5 +17916,77 @@
     "website": "",
     "books": [],
     "initials": "MAK"
+  },
+  {
+    "name": "Liam Adams",
+    "slug": "liam-adams",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LA"
+  },
+  {
+    "name": "Ben Sciacca",
+    "slug": "ben-sciacca",
+    "bio": "Ben Sciacca is a writer and content creator focused on Christian living and biblical perspectives. He contributes to various Christian publications and platforms, helping readers deepen their faith and understanding of Scripture.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BS"
+  },
+  {
+    "name": "Ann Marie Shambaugh",
+    "slug": "ann-marie-shambaugh",
+    "bio": "Ann Marie Shambaugh is a Christian author and speaker dedicated to helping believers navigate faith and personal growth. Her writing encourages readers to deepen their relationship with God through practical wisdom and biblical insight.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AMS"
+  },
+  {
+    "name": "Nicholas Needham",
+    "slug": "nicholas-needham",
+    "bio": "Nicholas Needham is a Scottish church historian and theologian known for his scholarly work on Christian doctrine and church history. His research spans from the early church through the medieval and Reformation periods, offering insights valuable to both academic and pastoral audiences. Needham combines rigorous historical scholarship with a commitment to biblical Christianity.",
+    "affiliation": "Reformation Theological Seminary, FREE Church of Scotland",
+    "role": "Church Historian & Theologian",
+    "education": "University of Aberdeen",
+    "website": "",
+    "books": [
+      {
+        "title": "2000 Years of Christ's Power, Vol. 1: The Age of the Early Church Fathers",
+        "amazon_url": "https://www.amazon.com/s?k=2000+Years+of+Christ%27s+Power+Volume+1+Nicholas+Needham"
+      },
+      {
+        "title": "2000 Years of Christ's Power, Vol. 2: The Middle Ages",
+        "amazon_url": "https://www.amazon.com/s?k=2000+Years+of+Christ%27s+Power+Volume+2+Nicholas+Needham"
+      },
+      {
+        "title": "The Triumph of Grace: Literary Essays on Calvinist Themes",
+        "amazon_url": "https://www.amazon.com/s?k=The+Triumph+of+Grace+Nicholas+Needham"
+      },
+      {
+        "title": "Evangelical Worship: Meeting Jesus in the Midst of Congregational Song",
+        "amazon_url": "https://www.amazon.com/s?k=Evangelical+Worship+Nicholas+Needham"
+      }
+    ],
+    "initials": "NN"
+  },
+  {
+    "name": "Dylan Budd",
+    "slug": "dylan-budd",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DB"
   }
 ]
