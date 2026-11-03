@@ -135,8 +135,9 @@ def test_claimless_and_briefing_kept_out_of_lead():
     assert layout["lead"]["title"] == "An Older Repeat Still Worth the Board"
     sub_titles = [a["title"] for a in layout["subleads"]]
     assert "Tyranny of Preferences" not in sub_titles
-    # The allow-listed briefing may be a sublead, never the lead.
-    assert MOHLER_FRIDAY in sub_titles
+    # The allow-listed briefing never leads, and since 2026-11-03 a bare dated
+    # title is not a sublead either (subleads are email headline slots).
+    assert MOHLER_FRIDAY not in sub_titles
     board = [a["title"] for col in layout["board"] for a in col["articles"]]
     assert "Tyranny of Preferences" in board
 

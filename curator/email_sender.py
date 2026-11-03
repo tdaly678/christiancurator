@@ -234,8 +234,9 @@ def _email_layout(articles: list[dict], research_articles: list[dict] = None,
     from frontend.layout import build_homepage_layout, email_eligible
     if layout is None:
         layout = build_homepage_layout(articles, None, research_articles)
-    # Every email slot skips yesterday's picks and claimless labels; the
-    # layout already keeps both out of the lead and subleads.
+    # Every email slot skips yesterday's picks, claimless labels and bare
+    # dated column titles; the layout already keeps all three out of the lead
+    # and subleads (and dated titles off the board).
     ok = lambda items: [a for a in items or [] if email_eligible(a)]
     return {
         **layout,

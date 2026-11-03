@@ -22,6 +22,12 @@ PREVIOUSLY_SHOWN_PENALTY and may still fill the board. Claimless short labels
 ("Tyranny of Preferences") are board/lane fill only, and allow-listed dated
 briefings (WORLD, Mohler) never take the lead.
 
+Dated column titles (2026-11-03): an item whose shown headline is only a dated
+label ("The World and Everything in It: November 3, 2026") is not a headline.
+Unless rewritten_title states a real claim, it is dropped from every article
+lane (lead block, board, debate, Worth Your Time) and every email slot; only
+the Watch and Listen media lane, fed by media_items, may carry it.
+
 No API clients here, so render-only scripts can import it.
 """
 
@@ -31,7 +37,7 @@ from urllib.parse import urlsplit
 
 from curator.clusters import build_story_clusters
 from curator.dedup import canonical_url
-from curator.headline_voice import is_claimless_short, is_dated_briefing
+from curator.headline_voice import headline_has_claim, is_claimless_short, is_dated_briefing
 from curator.lanes import select_watch_and_listen, select_worth_your_time
 from curator.mission import is_off_mission
 from frontend.text import clean_copy, first_sentence
@@ -121,12 +127,14 @@ def is_claimless(a: dict) -> bool:
 
 def lead_block_eligible(a: dict) -> bool:
     """May sit in the lead or a sublead (and so in the email's Lead section)."""
-    return not a.get("shown_yesterday") and not is_claimless(a)
+    return not a.get("shown_yesterday") and not is_claimless(a) and headline_has_claim(a)
 
 
 def email_eligible(a: dict) -> bool:
-    """May appear anywhere in the email: not shown yesterday, not a claimless label."""
-    return not a.get("shown_yesterday") and not is_claimless(a)
+    """May appear anywhere in the email: not shown yesterday, not a claimless
+    label, and not a bare dated column title (media lane picks excepted)."""
+    return (not a.get("shown_yesterday") and not is_claimless(a)
+            and (a.get("role") == "media" or headline_has_claim(a)))
 
 
 def _pick_lead(pool: list[dict], n: int) -> list[dict]:
@@ -237,7 +245,9 @@ def build_homepage_layout(articles: list[dict], pairings: list[dict] | None = No
     """
     # General world news with no faith hook never reaches any lane, even from
     # cached articles scored before the mission gate existed.
-    articles = [a for a in articles if not is_off_mission(a)]
+    # A bare dated column title ("...: November 3, 2026") is not a headline;
+    # it may only reach the page through the media lane.
+    articles = [a for a in articles if not is_off_mission(a) and headline_has_claim(a)]
     ranked = sorted((a for a in articles if a.get("url") and a.get("role") != "media"),
                     key=_score, reverse=True)
     # Older repeats stay in the pool with the scorer's soft penalty; only

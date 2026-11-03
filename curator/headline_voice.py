@@ -38,7 +38,10 @@ hard_reject(title) returns one of these reason codes, or None:
                             (DATED_ALLOW): World Magazine "The World and
                             Everything in It: <date>" and Albert Mohler's
                             weekday-date Briefing. Those pass, but
-                            is_dated_briefing() bars them from the lead slot
+                            is_dated_briefing() bars them from the lead slot,
+                            and headline_has_claim() keeps them off the
+                            board and out of every email headline slot
+                            unless rewritten_title carries a real claim
   HARD_REJECT_REVIEW_META   review meta copy: "lives up to its title / the hype
                             / its billing / its name / its promise"
 
@@ -215,6 +218,31 @@ def is_dated_briefing(title: str, source: str | None) -> bool:
     t = normalize_title(title)
     src = (source or "").strip()
     return any(src == s and rx.search(t) for s, rx in DATED_ALLOW)
+
+
+def is_dated_column_title(title: str) -> bool:
+    """True when the title is a dated column label, allow-listed or not.
+
+    "The World and Everything in It: November 3, 2026" passes hard_reject() for
+    World Magazine but still makes no news claim, so it is not a headline.
+    """
+    return bool(_DATED_COLUMN_RE.search(normalize_title(title)))
+
+
+def shown_headline(article: dict) -> str:
+    """The title every display path shows: rewritten_title or title."""
+    return article.get("rewritten_title") or article.get("title") or ""
+
+
+def headline_has_claim(article: dict) -> bool:
+    """False when the headline a reader would see is only a dated column label.
+
+    A rewrite (title_rewriter, or a display_title cleanup) that drops the date
+    and states the news counts as a claim; an unchanged dated title does not.
+    Such items are kept out of the lead block, the board and every email
+    headline slot (frontend.layout).
+    """
+    return not is_dated_column_title(shown_headline(article))
 
 
 def normalize_title(title: str) -> str:
