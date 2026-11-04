@@ -381,8 +381,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-3-2026/",
    "found_on": "2026-11-03",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://entrustedtothedirt.com/2026/10/31/the-belly-dancer-grandmas": {
@@ -405,10 +405,101 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-3-2026/",
    "found_on": "2026-11-03",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
+  },
+  "https://yourmomhasablog.com/2026/10/31/harvest-in-fearful-times": {
+   "url": "https://yourmomhasablog.com/2026/10/31/harvest-in-fearful-times/",
+   "canonical_url": "https://yourmomhasablog.com/2026/10/31/harvest-in-fearful-times",
+   "anchor": "Harvest in Fearful Times",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-4-2026/",
+   "found_on": "2026-11-04",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-04",
+   "title": "Harvest in Fearful Times",
+   "source_name": "Your Mom Has A Blog"
+  },
+  "https://biblicalcounselingcoalition.org/2026/11/02/can-i-love-my-enemies-while-addressing-wrongs-and-protecting-myself?__readwiseLocation=": {
+   "url": "https://www.biblicalcounselingcoalition.org/2026/11/02/can-i-love-my-enemies-while-addressing-wrongs-and-protecting-myself/?__readwiseLocation=",
+   "canonical_url": "https://biblicalcounselingcoalition.org/2026/11/02/can-i-love-my-enemies-while-addressing-wrongs-and-protecting-myself?__readwiseLocation=",
+   "anchor": "Can I Love My Enemies While Addressing Wrongs and Protecting Myself?",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-4-2026/",
+   "found_on": "2026-11-04",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-04",
+   "title": "Biblical Counseling Coalition | Can I Love My Enemies While Addressing Wrongs and Protecting Myself?",
+   "source_name": "Biblical Counseling Coalition"
+  },
+  "https://desiringgod.org/articles/is-missions-too-costly-for-kids": {
+   "url": "https://www.desiringgod.org/articles/is-missions-too-costly-for-kids",
+   "canonical_url": "https://desiringgod.org/articles/is-missions-too-costly-for-kids",
+   "anchor": "Is Missions Too Costly for Kids?",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-4-2026/",
+   "found_on": "2026-11-04",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-04",
+   "title": "Is Missions Too Costly for Kids?",
+   "source_name": "Desiring God"
+  },
+  "https://newsletter.oalannoble.com/p/how-ai-brought-a-mathematician-to?_src_ref=read.readwise.io": {
+   "url": "https://newsletter.oalannoble.com/p/how-ai-brought-a-mathematician-to?_src_ref=read.readwise.io",
+   "canonical_url": "https://newsletter.oalannoble.com/p/how-ai-brought-a-mathematician-to?_src_ref=read.readwise.io",
+   "anchor": "How AI Brought a Mathematician to Ecclesiastes",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-4-2026/",
+   "found_on": "2026-11-04",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-04",
+   "title": "How AI Brought a Mathematician to Ecclesiastes",
+   "source_name": "O. Alan Noble"
+  },
+  "https://dashhouse.com/dont-stock-the-pantry-with-temptation": {
+   "url": "https://www.dashhouse.com/dont-stock-the-pantry-with-temptation/",
+   "canonical_url": "https://dashhouse.com/dont-stock-the-pantry-with-temptation",
+   "anchor": "Don’t Stock the Pantry With Temptation",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-4-2026/",
+   "found_on": "2026-11-04",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-04",
+   "title": "Don’t Stock the Pantry with Temptation",
+   "source_name": "DashHouse.com"
+  },
+  "https://christianitytoday.com/2026/11/worship-leader-shortage-churches-training-megachurch": {
+   "url": "https://www.christianitytoday.com/2026/11/worship-leader-shortage-churches-training-megachurch/?utm_medium=widgetsocial",
+   "canonical_url": "https://christianitytoday.com/2026/11/worship-leader-shortage-churches-training-megachurch",
+   "anchor": "Churches Face a Shortage of Worship Leaders",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-4-2026/",
+   "found_on": "2026-11-04",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-04",
+   "title": "Churches Face a Shortage of Worship Leaders",
+   "source_name": "Christianity Today"
+  },
+  "https://evangelical-times.org/secular-press-wakes-up-to-the-danger-of-labours-plan-to-criminalise-conversion": {
+   "url": "https://www.evangelical-times.org/secular-press-wakes-up-to-the-danger-of-labours-plan-to-criminalise-conversion/",
+   "canonical_url": "https://evangelical-times.org/secular-press-wakes-up-to-the-danger-of-labours-plan-to-criminalise-conversion",
+   "anchor": "Secular Press Wakes Up to the Danger of Labour’s Plan to Criminalise Conversion",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-4-2026/",
+   "found_on": "2026-11-04",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-04",
+   "title": "Secular press wakes up to the danger of Labour’s plan to criminalise conversion",
+   "source_name": "Evangelical Times"
   }
  },
- "updated": "2026-11-03T10:01:09+00:00"
+ "updated": "2026-11-04T10:01:22+00:00"
 }
