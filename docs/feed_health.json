@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-04T10:01:20+00:00",
+  "run_at": "2026-11-04T10:44:04+00:00",
   "sources": [
     {
       "source": "The Gospel Coalition",
@@ -187,7 +187,7 @@
       "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 71,
+      "n_entries": 72,
       "newest_date": "2026-11-04",
       "bozo": false,
       "stale": false
@@ -717,8 +717,8 @@
       "url": "https://rss.buzzsprout.com/2612792.rss",
       "role": "media",
       "http_status": 200,
-      "n_entries": 324,
-      "newest_date": "2026-10-28",
+      "n_entries": 325,
+      "newest_date": "2026-11-04",
       "bozo": false,
       "apple_episode_urls": 50,
       "stale": false
@@ -728,8 +728,8 @@
       "url": "https://feeds.megaphone.fm/CHRTDY1120709803",
       "role": "media",
       "http_status": 200,
-      "n_entries": 504,
-      "newest_date": "2026-11-02",
+      "n_entries": 505,
+      "newest_date": "2026-11-04",
       "bozo": false,
       "apple_episode_urls": 50,
       "stale": false

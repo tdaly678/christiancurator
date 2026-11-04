@@ -1,20 +1,6 @@
 [
   {
-    "title": "The Middle East is losing its Christians: We can’t look away",
-    "url": "https://religionnews.com/2026/11/03/the-middle-east-is-losing-its-christians-we-cant-look-away/",
-    "source_name": "Religion News Service",
-    "author": "Mae Elise Cannon",
-    "final_score": 9.5,
-    "importance": 9.5,
-    "depth": 6.0,
-    "tags": [
-      "missions",
-      "suffering",
-      "theology"
-    ]
-  },
-  {
-    "title": "Whistleblower: Compassion Ignored Years of Warnings About Child Photos and AI Sextortion",
+    "title": "Compassion International Ignored Warnings About Child Photos, Whistleblower Says",
     "url": "https://roysreport.com/whistleblower-compassion-ignored-years-of-warnings-about-child-photos-and-ai-sextortion/",
     "source_name": "The Roys Report",
     "author": "Rebecca Hopkins",
@@ -22,25 +8,38 @@
     "importance": 9.5,
     "depth": 3.0,
     "tags": [
-      "news",
-      "church life"
+      "church life",
+      "news"
     ]
   },
   {
-    "title": "Secular press wakes up to the danger of Labour’s plan to criminalise conversion",
-    "url": "https://www.evangelical-times.org/secular-press-wakes-up-to-the-danger-of-labours-plan-to-criminalise-conversion/",
-    "source_name": "Evangelical Times",
-    "author": "",
-    "final_score": 9.0,
-    "importance": 9.0,
-    "depth": 2.0,
+    "title": "Luther's Discovery of Grace Resolved His Crisis of Guilt",
+    "url": "https://www.christianpost.com/voices/can-guilt-ever-be-silenced-luther-found-a-way.html",
+    "source_name": "The Christian Post",
+    "author": "R. C. Sproul",
+    "final_score": 9.2,
+    "importance": 9.2,
+    "depth": 9.0,
     "tags": [
-      "news",
-      "politics"
+      "theology",
+      "devotional"
     ]
   },
   {
-    "title": "White Martyr Family",
+    "title": "Christian Population Decline in Middle East Alarms Global Church Leaders",
+    "url": "https://religionnews.com/2026/11/03/the-middle-east-is-losing-its-christians-we-cant-look-away/",
+    "source_name": "Religion News Service",
+    "author": "Mae Elise Cannon",
+    "final_score": 8.5,
+    "importance": 8.5,
+    "depth": 5.0,
+    "tags": [
+      "missions",
+      "suffering"
+    ]
+  },
+  {
+    "title": "Christian Persecution in China Leaves Family Imprisoned for Years",
     "url": "https://firstthings.com/white-martyr-family/",
     "source_name": "First Things",
     "author": "Paul Howard",
@@ -53,37 +52,24 @@
     ]
   },
   {
-    "title": "Can guilt ever be silenced? Luther found a way",
-    "url": "https://www.christianpost.com/voices/can-guilt-ever-be-silenced-luther-found-a-way.html",
-    "source_name": "The Christian Post",
-    "author": "R. C. Sproul",
-    "final_score": 8.3,
-    "importance": 8.3,
+    "title": "Christian Anthropology Shapes How Believers Understand Daily Life",
+    "url": "https://www.thegospelcoalition.org/article/twelve-theses-meaning-human/",
+    "source_name": "The Gospel Coalition",
+    "author": "N. Gray Sutanto",
+    "final_score": 8.0,
+    "importance": 8.0,
     "depth": 8.0,
     "tags": [
       "theology"
     ]
   },
   {
-    "title": "Mexican woman sues Missouri mission that ran abusive children’s homes",
-    "url": "https://roysreport.com/mexican-woman-sues-missouri-mission-that-ran-abusive-childrens-homes/",
-    "source_name": "The Roys Report",
-    "author": "Daniel Silliman",
-    "final_score": 7.75,
-    "importance": 7.75,
-    "depth": 2.0,
-    "tags": [
-      "news",
-      "missions"
-    ]
-  },
-  {
-    "title": "Blessing the machine…",
+    "title": "AI Developers Protect Chatbots While Ignoring Human Dignity, Cheaney Argues",
     "url": "https://wng.org/podcasts/blessing-the-machine-1793751283",
     "source_name": "World Magazine",
     "author": "Keegan Martin",
-    "final_score": 7.62,
-    "importance": 7.62,
+    "final_score": 8.0,
+    "importance": 8.0,
     "depth": 6.0,
     "tags": [
       "culture",
@@ -91,7 +77,34 @@
     ]
   },
   {
-    "title": "Churches Face a Shortage of Worship Leaders",
+    "title": "Woman Sues Missouri Mission Over Abuse at Children's Home",
+    "url": "https://roysreport.com/mexican-woman-sues-missouri-mission-that-ran-abusive-childrens-homes/",
+    "source_name": "The Roys Report",
+    "author": "Daniel Silliman",
+    "final_score": 7.75,
+    "importance": 7.75,
+    "depth": 2.0,
+    "tags": [
+      "church life",
+      "news",
+      "missions"
+    ]
+  },
+  {
+    "title": "Federal Judge Orders Iowa to Allow Satanic Temple Capitol Event",
+    "url": "https://www.christianpost.com/news/judge-rules-iowa-must-allow-satanic-event-in-state-capitol.html",
+    "source_name": "The Christian Post",
+    "author": "Jon Brown",
+    "final_score": 7.55,
+    "importance": 7.55,
+    "depth": 2.0,
+    "tags": [
+      "politics",
+      "news"
+    ]
+  },
+  {
+    "title": "Churches Struggle to Fill Worship Leader Positions",
     "url": "https://www.christianitytoday.com/2026/11/worship-leader-shortage-churches-training-megachurch/",
     "source_name": "Christianity Today",
     "author": "Emily Belz",
@@ -104,29 +117,16 @@
     ]
   },
   {
-    "title": "Equipping Your Church With the Language of Lament",
-    "url": "https://research.lifeway.com/2026/11/04/equipping-your-church-with-the-language-of-lament/",
+    "title": "Most Regular Churchgoers Fail Bible Literacy Quiz",
+    "url": "https://research.lifeway.com/2026/11/03/2-in-3-churchgoers-fail-bible-literacy-quiz/",
     "source_name": "Lifeway Research",
-    "author": "Mark Vroegop",
+    "author": "Aaron Earls",
     "final_score": 7.5,
     "importance": 7.5,
-    "depth": 7.0,
+    "depth": 5.0,
     "tags": [
-      "theology",
+      "data",
       "church life"
-    ]
-  },
-  {
-    "title": "Adam Hamilton wins US Senate race in Kansas: 'Let's love our neighbors as we love ourselves'",
-    "url": "https://www.christianpost.com/news/adam-hamilton-wins-senate-race-in-kansas.html",
-    "source_name": "The Christian Post",
-    "author": "Michael Gryboski",
-    "final_score": 7.05,
-    "importance": 7.05,
-    "depth": 2.0,
-    "tags": [
-      "politics",
-      "news"
     ]
   }
 ]

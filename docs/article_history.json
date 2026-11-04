@@ -61880,5 +61880,290 @@
     },
     "scored_by": "claude",
     "clicks": 0
+  },
+  {
+    "url": "https://www.christianpost.com/news/judge-rules-iowa-must-allow-satanic-event-in-state-capitol.html",
+    "title": "Federal Judge Orders Iowa to Allow Satanic Temple Capitol Event",
+    "source_name": "The Christian Post",
+    "date_shown": "2026-11-04",
+    "final_score": 7.55,
+    "tags": [
+      "politics",
+      "news"
+    ],
+    "topic_cluster": "religious_liberty_colorado_lgbtq",
+    "base_score": 7.0,
+    "importance": 7.55,
+    "depth": 2.0,
+    "base_importance": 7.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://christianpost.com/news/judge-rules-iowa-must-allow-satanic-event-in-state-capitol.html",
+    "boosts": {
+      "tier": -0.7,
+      "recency": 1.5,
+      "voice": 0.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/podcasts/the-world-and-everything-in-it-november-4-2026-1793751281",
+    "title": "Democrats Seize Congress and Governors' Seats in Historic Midterm Victories",
+    "source_name": "World Magazine",
+    "date_shown": "2026-11-04",
+    "final_score": 6.87,
+    "tags": [
+      "news",
+      "politics"
+    ],
+    "topic_cluster": "2026_us_elections",
+    "base_score": 6.0,
+    "importance": 6.87,
+    "depth": 1.0,
+    "base_importance": 6.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://wng.org/podcasts/the-world-and-everything-in-it-november-4-2026-1793751281",
+    "boosts": {
+      "tier": 0.12,
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://thecommon.place/p/ep204",
+    "title": "An Empty Museum & an Urban Neighborhood",
+    "source_name": "Tsh Oxenreider",
+    "date_shown": "2026-11-04",
+    "final_score": 0.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "podcast_episodes",
+    "base_score": 1.0,
+    "importance": 0.0,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://thecommon.place/p/ep204",
+    "boosts": {
+      "recency": -4.0,
+      "frequency": 0.25,
+      "previously_shown": 2.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://erlc.com/scotus-center/international-partners-for-ethical-care-v-ferguson/",
+    "title": "Supreme Court Hears Challenge to Washington Gender Transition Law",
+    "source_name": "ERLC",
+    "date_shown": "2026-11-04",
+    "final_score": -0.75,
+    "tags": [
+      "news",
+      "politics"
+    ],
+    "topic_cluster": "scotus_gender_parental_rights",
+    "base_score": 8.0,
+    "importance": -0.75,
+    "depth": 0.0,
+    "base_importance": 8.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://erlc.com/scotus-center/international-partners-for-ethical-care-v-ferguson",
+    "boosts": {
+      "recency": -4.0,
+      "previously_shown": -4.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://careynieuwhof.com/episode-839/",
+    "title": "Philip Anthony Mitchell Opens Up About Depression and Jealousy",
+    "source_name": "Carey Nieuwhof",
+    "date_shown": "2026-11-04",
+    "final_score": -0.75,
+    "tags": [
+      "church life"
+    ],
+    "topic_cluster": "philip_anthony_mitchell_podcast",
+    "base_score": 2.0,
+    "importance": -0.75,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://careynieuwhof.com/episode-839",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.75,
+      "voice": -0.75,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://thecommon.place/p/ep203",
+    "title": "A Bored Kid & a Famous Ceiling",
+    "source_name": "Tsh Oxenreider",
+    "date_shown": "2026-11-04",
+    "final_score": -0.75,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "podcast_episodes",
+    "base_score": 1.0,
+    "importance": -0.75,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://thecommon.place/p/ep203",
+    "boosts": {
+      "recency": -6.0,
+      "frequency": 0.25,
+      "previously_shown": 4.75,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://feed.desiringgod.org/link/22977/17512367/the-tyranny-of-preferences",
+    "title": "Unexamined Personal Preferences Become Tyrannies in Church",
+    "source_name": "Desiring God",
+    "date_shown": "2026-11-04",
+    "final_score": 0.0,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "preferences_and_desires",
+    "base_score": 4.0,
+    "importance": 0.0,
+    "depth": 3.0,
+    "base_importance": 4.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://feed.desiringgod.org/link/22977/17512367/the-tyranny-of-preferences",
+    "boosts": {
+      "recency": 0.25,
+      "voice": -1.5,
+      "previously_shown": -2.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://erlc.com/erlc-podcast/the-importance-of-adoption-and-foster-care/",
+    "title": "ERLC Director Urges Christians to Pursue Foster Care and Adoption",
+    "source_name": "ERLC",
+    "date_shown": "2026-11-04",
+    "final_score": 0.0,
+    "tags": [
+      "church life",
+      "family"
+    ],
+    "topic_cluster": "adoption_foster_care_sbc",
+    "base_score": 5.0,
+    "importance": 0.0,
+    "depth": 1.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://erlc.com/erlc-podcast/the-importance-of-adoption-and-foster-care",
+    "boosts": {
+      "recency": -2.0,
+      "previously_shown": -3.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://garythomas.com/2026/10/30/seeking-first-the-kingdom-of-god/",
+    "title": "Pastor Gary Thomas Urges Believers to Prioritize God Over Comfort",
+    "source_name": "Gary Thomas",
+    "date_shown": "2026-11-04",
+    "final_score": 0.0,
+    "tags": [
+      "devotional",
+      "theology"
+    ],
+    "topic_cluster": "haggai_series",
+    "base_score": 4.0,
+    "importance": 0.0,
+    "depth": 1.0,
+    "base_importance": 4.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://garythomas.com/2026/10/30/seeking-first-the-kingdom-of-god",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.75,
+      "previously_shown": -2.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.chrismartin.fyi/p/jonathan-haidt-ai-is-the-neutron",
+    "title": "Jonathan Haidt: AI Is the ‘Neutron Bomb for Education’",
+    "source_name": "Chris Martin",
+    "date_shown": "2026-11-04",
+    "final_score": 0.0,
+    "tags": [
+      "culture",
+      "apologetics"
+    ],
+    "topic_cluster": "ai_and_education",
+    "base_score": 5.0,
+    "importance": 0.0,
+    "depth": 0.0,
+    "base_importance": 5.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://chrismartin.fyi/p/jonathan-haidt-ai-is-the-neutron",
+    "boosts": {
+      "recency": -6.0,
+      "frequency": 0.25,
+      "previously_shown": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://podcasts.apple.com/us/podcast/replay-christian-politics-with-oliver-odonovan/id885758537?i=1000799786469",
+    "title": "Replay: Christian Politics with Oliver O’Donovan",
+    "source_name": "Mere Fidelity",
+    "date_shown": "2026-11-04",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "https://podcasts.apple.com/us/podcast/replay-christian-politics-with-oliver-odonovan/id885758537?i=1000799786469",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
+  },
+  {
+    "url": "https://podcasts.apple.com/us/podcast/peter-wehner-on-the-christian-political-agenda/id1074011166?i=1000799783168",
+    "title": "Peter Wehner on the Christian Political Agenda",
+    "source_name": "The Russell Moore Show",
+    "date_shown": "2026-11-04",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "https://podcasts.apple.com/us/podcast/peter-wehner-on-the-christian-political-agenda/id1074011166?i=1000799783168",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
   }
 ]
