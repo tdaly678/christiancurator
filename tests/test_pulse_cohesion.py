@@ -66,3 +66,41 @@ def test_history_callbacks_must_serve_theme():
 def test_prompt_still_formats():
     out = PROMPT.format(article_list="- T | S | https://x.example", history_section="")
     assert "{" not in out.split("Respond with a JSON object")[0]
+
+
+# ── Anti redundancy (2026-11-04) ─────────────────────────────────────────────
+
+def test_no_redundancy_rules_present():
+    flat = _flat(PROMPT)
+    assert "NO REDUNDANCY" in flat
+    assert ("Each sentence must advance a distinct facet, fact, or source of the one "
+            "theme.") in flat
+    assert "Never restate the same idea in different words." in flat
+    assert "Do not repeat or paraphrase the theme sentence as a closer" in flat
+    assert "Each source you cite must contribute something new" in flat
+
+
+def test_no_redundancy_follows_cohesion_and_precedes_articles():
+    i_cohesion = PROMPT.index("ONE THEME, EVERY SENTENCE")
+    i_redundancy = PROMPT.index("NO REDUNDANCY")
+    i_articles = PROMPT.index("TODAY'S ARTICLES (title")
+    assert i_cohesion < i_redundancy < i_articles
+
+
+def test_prompt_has_no_dashes_outside_the_ban_itself():
+    body = PROMPT.replace("No em dashes (\u2014) or en dashes (\u2013)", "")
+    assert "\u2014" not in body and "\u2013" not in body
+
+
+def test_drop_repeated_sentences_cuts_exact_repeat_across_paragraphs():
+    paras = [
+        "The church is arguing about trust. [TGC](https://x.example) says pastors lost it.",
+        "CT disagrees on the cause. The church is arguing about trust!",
+    ]
+    out = daily_summary.drop_repeated_sentences(paras)
+    assert out == [paras[0], "CT disagrees on the cause."]
+
+
+def test_drop_repeated_sentences_leaves_distinct_text_unchanged():
+    paras = ["One fact.  Two facts.", "Three facts."]
+    assert daily_summary.drop_repeated_sentences(paras) == paras

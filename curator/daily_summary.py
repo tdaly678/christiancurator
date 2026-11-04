@@ -135,6 +135,15 @@ running a piece on global Christian martyrs" appeared out of nowhere, followed b
 closing line straining to connect martyrs to trust. The martyrs piece did not serve the
 theme, so it should have been left out.
 
+NO REDUNDANCY: One theme does not mean one point made ten times. Each sentence must
+advance a distinct facet, fact, or source of the one theme. Never restate the same idea
+in different words. Do not repeat or paraphrase the theme sentence as a closer; the last
+sentence must add something the reader has not heard yet. Each source you cite must
+contribute something new: a fact, an argument, or a disagreement no other sentence
+already carries. If two sentences say the same thing, keep the sharper one and cut the
+other. If cutting repeats leaves fewer than 8 sentences, add another honest facet of the
+theme from the articles, never a restatement.
+
 TODAY'S ARTICLES (title | source | url):
 {article_list}
 
@@ -249,6 +258,40 @@ def sanitize_pulse(text: str) -> str:
     return strip_dashes(text or "")
 
 
+_SENTENCE_SPLIT_RE = re.compile(r"(?<=[.!?])\s+")
+
+
+def _sentence_key(sentence: str) -> str:
+    plain = _strip_markdown_links(sentence).lower()
+    return " ".join(re.sub(r"[^a-z0-9 ]+", " ", plain).split())
+
+
+def drop_repeated_sentences(paragraphs: list[str]) -> list[str]:
+    """Remove a sentence that repeats an earlier Pulse sentence word for word.
+
+    Backstop for the NO REDUNDANCY prompt rule. Only exact repeats (ignoring
+    case, punctuation and link markup) are cut, so paraphrase is left to the
+    prompt. A paragraph with no repeat is returned unchanged; one emptied by
+    the cut is dropped.
+    """
+    seen: set[str] = set()
+    out = []
+    for para in paragraphs:
+        kept, changed = [], False
+        for sentence in _SENTENCE_SPLIT_RE.split(para.strip()):
+            key = _sentence_key(sentence)
+            if key and key in seen:
+                changed = True
+                continue
+            if key:
+                seen.add(key)
+            kept.append(sentence)
+        text = " ".join(kept) if changed else para
+        if text.strip():
+            out.append(text)
+    return out
+
+
 def _strip_markdown_links(text: str) -> str:
     return re.sub(r'\[([^\]]+)\]\(https?://[^\)]+\)', r'\1', text)
 
@@ -336,7 +379,8 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
             # The email builds a plain lead + subleads Pulse when this is None.
             record_failure("daily_summary", f"JSON parse error after retry: {json_err}")
             return None
-        paragraphs_raw = [sanitize_pulse(p) for p in data.get("paragraphs", [])]
+        paragraphs_raw = drop_repeated_sentences(
+            [sanitize_pulse(p) for p in data.get("paragraphs", [])])
         themes = data.get("themes", [])
 
         if not paragraphs_raw:
