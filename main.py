@@ -8,8 +8,9 @@ Usage:
 
 Steps:
     1. Fetch articles from RSS sources (fetcher layer)
-    2. Score (importance + depth) and tag (curator layer). Publisher headlines
-       are kept; title rewriting is off unless CC_REWRITE_TITLES=1.
+    2. Score (importance + depth) and tag (curator layer). Titles are then
+       rewritten in RealClear voice when CC_REWRITE_TITLES=1 (set by the daily
+       workflow); rewrites that fail the voice gate keep the cleaned original.
     3. Generate point/counterpoint pairs (curator layer)
     4. Write output JSON and regenerate HTML (output layer)
     5. Generate daily summary
@@ -98,7 +99,8 @@ def main():
     boosted = sum(1 for a in articles if a.get("recency_boost", 0) > 0)
     print(f"      Scoring complete. ({boosted} articles received a recency boost)\n")
 
-    # --- Layer 3: Headlines. Original publisher titles by default (P1 policy). ---
+    # --- Layer 3: Headlines. RealClear-voice rewrites when CC_REWRITE_TITLES=1
+    #     (on in .github/workflows/daily_run.yml); otherwise cleaned publisher titles. ---
     if REWRITE_TITLES_ENABLED:
         print("[3/4] Rewriting titles (CC_REWRITE_TITLES=1)...")
         articles = rewrite_titles(articles, enabled=True)

@@ -93,6 +93,14 @@ never invents wording; it only removes or swaps characters:
 
 display_byline(author, source) returns "Author, Outlet" (or whichever exists).
 strip_dashes(text) is the shared no-em-dash sanitizer, also used by the Pulse.
+
+rewrite_rejection(candidate, original) gates Claude title rewrites. Title
+rewriting is on for the daily product (CC_REWRITE_TITLES=1 in
+.github/workflows/daily_run.yml). A rewrite must pass hard_reject() with no
+source allow-list, must not be a dated column (headline_has_claim()), a
+listicle, or a claimless label, must not keep a dated original's column name,
+and must not trigger a caps, "!", meta voice, length or review demotion.
+Otherwise curator.title_rewriter falls back to the cleaned display_title().
 """
 
 import re
@@ -550,8 +558,10 @@ def apply_display_title(article: dict) -> bool:
     """Set article["display_title"] when cleanup changes the title.
 
     Every display path reads `rewritten_title or title`, so the cleaned title is
-    also written to rewritten_title unless a rewrite already exists (Claude
-    rewriting stays off unless CC_REWRITE_TITLES=1). Returns True if changed.
+    also written to rewritten_title unless a rewrite already exists. Claude
+    rewriting (curator.title_rewriter) is on for the daily product via
+    CC_REWRITE_TITLES=1 in .github/workflows/daily_run.yml and runs after this
+    cleanup; rewrite_rejection() gates its output. Returns True if changed.
     """
     original = article.get("title") or ""
     cleaned = display_title(original, article.get("source_name"))
@@ -561,3 +571,66 @@ def apply_display_title(article: dict) -> bool:
     if not article.get("rewritten_title") or article.get("rewritten_title") == original:
         article["rewritten_title"] = cleaned
     return True
+
+
+# ── Rewrite gate: Claude rewrites must pass the same voice rules ─────────────
+
+# Listicle openers ("5 Ways to Pray", "Ten Things Every Pastor Should Know").
+# Used only to gate Claude rewrites; publisher titles are not rejected for it.
+_LISTICLE_RE = re.compile(
+    r"^\s*(?:the\s+)?(?:\d+|three|four|five|six|seven|eight|nine|ten|eleven|twelve"
+    r"|fifteen|twenty)\s+(?:\w+\s+)?(?:ways|things|reasons|tips|lessons|signs|steps"
+    r"|questions|books|habits|truths|keys|mistakes|myths|secrets|facts|rules"
+    r"|takeaways|quotes|prayers|verses)\b",
+    re.IGNORECASE,
+)
+
+# Voice rules a rewrite may not trigger. A publisher title that trips one is
+# only demoted; a rewrite that trips one is discarded.
+REWRITE_FORBIDDEN_RULES = (
+    "DEMOTE_ALL_CAPS", "DEMOTE_EXCLAIM", "DEMOTE_FIRST_PERSON_META",
+    "DEMOTE_LENGTH", "REVIEW_SOFT", "DEMOTE_CLAIMLESS_SHORT",
+)
+
+
+def is_listicle(title: str) -> bool:
+    """True for a numbered list headline ("7 Reasons Churches Fail")."""
+    return bool(_LISTICLE_RE.search(normalize_title(title)))
+
+
+def _column_label(title: str) -> str:
+    """The show or column name before a closing date, or "" when not dated."""
+    t = normalize_title(title)
+    m = _DATED_COLUMN_RE.search(t)
+    if not m:
+        return ""
+    label = t[:m.start()].strip(" (:-,")
+    return label if len(_words(label)) >= 2 else ""
+
+
+def rewrite_rejection(candidate: str, original: str = "") -> str | None:
+    """Return why a Claude rewrite fails the RealClear voice, or None if it passes.
+
+    Reuses the publisher-title machinery: hard_reject() with no source (so the
+    DATED_ALLOW briefing allow-list never covers a rewrite), the dated column
+    check behind headline_has_claim(), the claimless-label rule and the voice
+    demotions. Also bars listicles and a rewrite that keeps the show or column
+    name of a dated original ("The World and Everything in It").
+    """
+    t = normalize_title(candidate)
+    if not t:
+        return "EMPTY"
+    reason = hard_reject(t)
+    if reason:
+        return reason
+    if not headline_has_claim({"title": t}):
+        return HARD_REJECT_DATED_COLUMN
+    if is_listicle(t):
+        return "REWRITE_LISTICLE"
+    label = _column_label(original)
+    if label and label.lower() in t.lower():
+        return "REWRITE_KEEPS_COLUMN_NAME"
+    for rule in voice_adjustments(t):
+        if rule in REWRITE_FORBIDDEN_RULES:
+            return rule
+    return None
