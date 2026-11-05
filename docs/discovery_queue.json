@@ -499,7 +499,68 @@
    "graduated_on": "2026-11-04",
    "title": "Secular press wakes up to the danger of Labour’s plan to criminalise conversion",
    "source_name": "Evangelical Times"
+  },
+  "https://spurgeoncollege.com/scmonth": {
+   "url": "https://spurgeoncollege.com/scmonth?utm_source=SCMonth+-+Challies&utm_medium=SCMonth+-+Challies&utm_campaign=SC+Month+-+Challies&utm_id=SC+Month",
+   "canonical_url": "https://spurgeoncollege.com/scmonth",
+   "anchor": "Free Chick-fil-A For a Year",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-5-2026/",
+   "found_on": "2026-11-05",
+   "status": "pending",
+   "attempts": 1,
+   "error": "HTTP 403"
+  },
+  "https://desiringgod.org/articles/the-pull-of-rome-and-the-promise-of-grace": {
+   "url": "https://www.desiringgod.org/articles/the-pull-of-rome-and-the-promise-of-grace",
+   "canonical_url": "https://desiringgod.org/articles/the-pull-of-rome-and-the-promise-of-grace",
+   "anchor": "The Pull of Rome and the Promise of Grace",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-5-2026/",
+   "found_on": "2026-11-05",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-05",
+   "title": "The Pull of Rome and the Promise of Grace",
+   "source_name": "Desiring God"
+  },
+  "https://forthegospel.org/read/4-misconceptions-about-spiritual-warfare": {
+   "url": "https://www.forthegospel.org/read/4-misconceptions-about-spiritual-warfare",
+   "canonical_url": "https://forthegospel.org/read/4-misconceptions-about-spiritual-warfare",
+   "anchor": "4 Misconceptions About Spiritual Warfare",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-5-2026/",
+   "found_on": "2026-11-05",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-05",
+   "title": "4 Misconceptions About Spiritual Warfare",
+   "source_name": "For the Gospel"
+  },
+  "https://thebardowl.substack.com/p/wading-into-narnia": {
+   "url": "https://thebardowl.substack.com/p/wading-into-narnia",
+   "canonical_url": "https://thebardowl.substack.com/p/wading-into-narnia",
+   "anchor": "Slouching Toward Narnia",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-5-2026/",
+   "found_on": "2026-11-05",
+   "status": "pending",
+   "attempts": 1,
+   "error": "HTTP 403"
+  },
+  "https://gracebc.ca/blog/2026/11/4/four-corrections-to-make-when-you-feel-guity-about-your-giving": {
+   "url": "https://www.gracebc.ca/blog/2026/11/4/four-corrections-to-make-when-you-feel-guity-about-your-giving",
+   "canonical_url": "https://gracebc.ca/blog/2026/11/4/four-corrections-to-make-when-you-feel-guity-about-your-giving",
+   "anchor": "Four Corrections to Make When You Feel Guilty About Your Giving",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-5-2026/",
+   "found_on": "2026-11-05",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-05",
+   "title": "Four Corrections to Make When You Feel Guilty About Your Giving",
+   "source_name": "Grace Baptist Church"
   }
  },
- "updated": "2026-11-04T10:44:04+00:00"
+ "updated": "2026-11-05T10:01:16+00:00"
 }
