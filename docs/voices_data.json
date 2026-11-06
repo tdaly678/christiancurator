@@ -18021,5 +18021,99 @@
     "website": "",
     "books": [],
     "initials": "TZ"
+  },
+  {
+    "name": "Adam MacInnis",
+    "slug": "adam-macinnis",
+    "bio": "Adam MacInnis is a Christian writer and content creator known for thoughtful engagement with faith, culture, and discipleship. His work seeks to help believers think deeply about their walk with Christ in an increasingly complex world.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AM"
+  },
+  {
+    "name": "Emmanuel Nwachukwu",
+    "slug": "emmanuel-nwachukwu",
+    "bio": "Emmanuel Nwachukwu is a Christian writer and communicator dedicated to sharing biblical wisdom and spiritual insights with contemporary audiences. His work explores themes of faith, personal growth, and Christian living through a culturally relevant lens.",
+    "affiliation": "",
+    "role": "Christian Writer & Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EN"
+  },
+  {
+    "name": "Elisabeth Doherty",
+    "slug": "elisabeth-doherty",
+    "bio": "Elisabeth Doherty is a Christian writer and content creator dedicated to exploring faith, Scripture, and spiritual formation. Her work encourages readers to deepen their relationship with God through thoughtful biblical reflection and practical Christian living.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ED"
+  },
+  {
+    "name": "Scott R. Swain",
+    "slug": "scott-r-swain",
+    "bio": "Scott R. Swain is a Reformed theologian and prolific Christian author known for his accessible yet scholarly contributions to evangelical theology. He serves as President of Reformed Theological Seminary and is recognized for his work on biblical doctrine, Christian living, and the integration of faith and practice for contemporary believers.",
+    "affiliation": "Reformed Theological Seminary",
+    "role": "President & Theologian",
+    "education": "Ph.D. in Systematic Theology, Trinity Evangelical Divinity School",
+    "website": "https://rts.edu/",
+    "books": [
+      {
+        "title": "Trinity: An Introduction to the Central Christian Doctrine",
+        "amazon_url": "https://www.amazon.com/s?k=Trinity+Introduction+Central+Christian+Doctrine+Scott+Swain"
+      },
+      {
+        "title": "God's Good Intention: Tracing the Purpose of Creation",
+        "amazon_url": "https://www.amazon.com/s?k=God%27s+Good+Intention+Scott+Swain"
+      },
+      {
+        "title": "Retrieving the Tradition and Renewing Evangelicalism: A Primer for Suspicious Protestants",
+        "amazon_url": "https://www.amazon.com/s?k=Retrieving+Tradition+Renewing+Evangelicalism+Scott+Swain"
+      },
+      {
+        "title": "The Bible Remade: How Modern Christianity Has Corrupted the Word of God",
+        "amazon_url": "https://www.amazon.com/s?k=Bible+Remade+Scott+Swain"
+      }
+    ],
+    "initials": "SRS"
+  },
+  {
+    "name": "Jeremy Patenaude",
+    "slug": "jeremy-patenaude",
+    "bio": "Jeremy Patenaude is a Christian author and speaker dedicated to helping believers grow in their faith and understanding of Scripture. Through his writing and teaching, he explores themes of discipleship, spiritual growth, and practical Christianity for modern believers.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JP"
+  },
+  {
+    "name": "Vikram Mukka",
+    "slug": "vikram-mukka",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "VM"
+  },
+  {
+    "name": "Kelsey Kramer McGinnis",
+    "slug": "kelsey-kramer-mcginnis",
+    "bio": "Kelsey Kramer McGinnis is a writer and content creator who speaks to contemporary Christian audiences about faith, culture, and spiritual growth. Her work explores how believers can navigate modern life with biblical wisdom and authentic faith.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KKM"
   }
 ]

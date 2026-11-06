@@ -507,9 +507,11 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-5-2026/",
    "found_on": "2026-11-05",
-   "status": "pending",
-   "attempts": 1,
-   "error": "HTTP 403"
+   "status": "graduated",
+   "attempts": 2,
+   "graduated_on": "2026-11-06",
+   "title": "Spurgeon College Month",
+   "source_name": "Spurgeon College"
   },
   "https://desiringgod.org/articles/the-pull-of-rome-and-the-promise-of-grace": {
    "url": "https://www.desiringgod.org/articles/the-pull-of-rome-and-the-promise-of-grace",
@@ -544,8 +546,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-5-2026/",
    "found_on": "2026-11-05",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://gracebc.ca/blog/2026/11/4/four-corrections-to-make-when-you-feel-guity-about-your-giving": {
@@ -560,7 +562,68 @@
    "graduated_on": "2026-11-05",
    "title": "Four Corrections to Make When You Feel Guilty About Your Giving",
    "source_name": "Grace Baptist Church"
+  },
+  "https://harvestusa.org/selfies-are-not-the-self-forming-embodied-youth-in-a-disembodied-age": {
+   "url": "https://harvestusa.org/selfies-are-not-the-self-forming-embodied-youth-in-a-disembodied-age/",
+   "canonical_url": "https://harvestusa.org/selfies-are-not-the-self-forming-embodied-youth-in-a-disembodied-age",
+   "anchor": "Selfies Are Not the Self: Forming Embodied Youth in a Disembodied Age",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-6-2026/",
+   "found_on": "2026-11-06",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-06",
+   "title": "Selfies Are Not the Self: Forming Embodied Youth in a Disembodied Age",
+   "source_name": "Harvest USA"
+  },
+  "https://desiringgod.org/articles/cant-you-just-love-everyone": {
+   "url": "https://www.desiringgod.org/articles/cant-you-just-love-everyone",
+   "canonical_url": "https://desiringgod.org/articles/cant-you-just-love-everyone",
+   "anchor": "Can’t You Just Love Everyone?",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-6-2026/",
+   "found_on": "2026-11-06",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-06",
+   "title": "Can’t You Just Love Everyone?",
+   "source_name": "Desiring God"
+  },
+  "https://alexkocman.com/2026/11/03/4-applications-for-the-order-of-love-from-the-home-to-the-ends-of-the-earth": {
+   "url": "https://alexkocman.com/2026/11/03/4-applications-for-the-order-of-love-from-the-home-to-the-ends-of-the-earth/",
+   "canonical_url": "https://alexkocman.com/2026/11/03/4-applications-for-the-order-of-love-from-the-home-to-the-ends-of-the-earth",
+   "anchor": "4 Applications for the Order of Love—From the Home to the Ends of the Earth",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-6-2026/",
+   "found_on": "2026-11-06",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-06",
+   "title": "4 Applications for the Order of Love—From the Home to the Ends of the Earth",
+   "source_name": "Alex Kocman"
+  },
+  "https://zacharyconover.substack.com/p/your-thoughts-are-shaping-your-life": {
+   "url": "https://zacharyconover.substack.com/p/your-thoughts-are-shaping-your-life",
+   "canonical_url": "https://zacharyconover.substack.com/p/your-thoughts-are-shaping-your-life",
+   "anchor": "Your Thoughts Are Shaping Your Life",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-6-2026/",
+   "found_on": "2026-11-06",
+   "status": "pending",
+   "attempts": 1,
+   "error": "HTTP 403"
+  },
+  "https://katielaitkep.substack.com/p/dont-despise-the-red-flags-0ed": {
+   "url": "https://katielaitkep.substack.com/p/dont-despise-the-red-flags-0ed",
+   "canonical_url": "https://katielaitkep.substack.com/p/dont-despise-the-red-flags-0ed",
+   "anchor": "Don’t Despise the Red Flags",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-6-2026/",
+   "found_on": "2026-11-06",
+   "status": "pending",
+   "attempts": 1,
+   "error": "HTTP 403"
   }
  },
- "updated": "2026-11-05T10:01:16+00:00"
+ "updated": "2026-11-06T10:01:21+00:00"
 }
