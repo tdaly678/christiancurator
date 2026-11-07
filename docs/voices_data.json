@@ -18115,5 +18115,67 @@
     "website": "",
     "books": [],
     "initials": "KKM"
+  },
+  {
+    "name": "Kim Miller",
+    "slug": "kim-miller",
+    "bio": "Kim Miller is a Christian writer and content creator dedicated to helping believers navigate faith, family, and personal growth. With a passion for practical spirituality, Kim shares insights on living out biblical principles in everyday life.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KM"
+  },
+  {
+    "name": "David John Seel Jr.",
+    "slug": "david-john-seel",
+    "bio": "David John Seel Jr. is a writer and cultural commentator who explores how Christians can engage thoughtfully with contemporary culture and media. His work examines the intersection of faith, technology, and modern society, helping believers navigate an increasingly complex cultural landscape.",
+    "affiliation": "",
+    "role": "Author & Cultural Analyst",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The New Copernicans: Millennials and the Survival of the Church",
+        "amazon_url": "https://www.amazon.com/s?k=The+New+Copernicans+David+Seel"
+      }
+    ],
+    "initials": "DJS"
+  },
+  {
+    "name": "Grant Wacker",
+    "slug": "grant-wacker",
+    "bio": "Grant Wacker is a leading historian of American evangelicalism and Pentecostalism with decades of scholarly expertise. A professor emeritus at Duke Divinity School, Wacker has devoted his career to understanding the theological and social dimensions of modern Christian movements. His work is essential reading for those seeking to understand how American evangelicals have shaped and been shaped by the broader culture.",
+    "affiliation": "Duke Divinity School",
+    "role": "Professor Emeritus & Historian",
+    "education": "Ph.D., University of Pennsylvania",
+    "website": "",
+    "books": [
+      {
+        "title": "America's Pastor: Billy Graham and the Shaping of a Nation",
+        "amazon_url": "https://www.amazon.com/s?k=America%27s+Pastor+Billy+Graham+Grant+Wacker"
+      },
+      {
+        "title": "Heaven Below: Early Pentecostals and American Culture",
+        "amazon_url": "https://www.amazon.com/s?k=Heaven+Below+Early+Pentecostals+American+Culture+Grant+Wacker"
+      },
+      {
+        "title": "The Evangelical Impulse and American Protestantism",
+        "amazon_url": "https://www.amazon.com/s?k=The+Evangelical+Impulse+American+Protestantism+Grant+Wacker"
+      }
+    ],
+    "initials": "GW"
+  },
+  {
+    "name": "Keith R. Krell",
+    "slug": "keith-r-krell",
+    "bio": "Keith R. Krell is a pastor and Bible teacher known for his expository preaching and commitment to applying Scripture to contemporary Christian living. He has served in pastoral ministry and is dedicated to helping believers understand and live out God's Word with clarity and conviction.",
+    "affiliation": "",
+    "role": "Pastor & Bible Teacher",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KRK"
   }
 ]

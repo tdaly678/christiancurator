@@ -609,8 +609,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-6-2026/",
    "found_on": "2026-11-06",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://katielaitkep.substack.com/p/dont-despise-the-red-flags-0ed": {
@@ -620,10 +620,69 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-6-2026/",
    "found_on": "2026-11-06",
+   "status": "failed",
+   "attempts": 2,
+   "error": "HTTP 403"
+  },
+  "https://macleans.ca/longforms/the-hutterites-guide-to-technology": {
+   "url": "https://macleans.ca/longforms/the-hutterites-guide-to-technology/",
+   "canonical_url": "https://macleans.ca/longforms/the-hutterites-guide-to-technology",
+   "anchor": "The Hutterites’ Guide to Technology",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-7-2026/",
+   "found_on": "2026-11-07",
    "status": "pending",
    "attempts": 1,
    "error": "HTTP 403"
+  },
+  "https://nytimes.com/interactive/2026/10/28/style/gen-z-job-market.html?smid=url-share&unlocked_article_code=1.NlE.hje2.DoNLN1DrETfF": {
+   "url": "https://www.nytimes.com/interactive/2026/10/28/style/gen-z-job-market.html?unlocked_article_code=1.NlE.hje2.DoNLN1DrETfF&smid=url-share",
+   "canonical_url": "https://nytimes.com/interactive/2026/10/28/style/gen-z-job-market.html?smid=url-share&unlocked_article_code=1.NlE.hje2.DoNLN1DrETfF",
+   "anchor": "Searching for Jobs, Gen Z Feels Like It’s Staring Into ‘The Void’",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-7-2026/",
+   "found_on": "2026-11-07",
+   "status": "pending",
+   "attempts": 1,
+   "error": "HTTP 403"
+  },
+  "https://theverge.com/tech/1014252/peter-thiel-antichrist-lectures-analysis?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6Ik1Xd1lLaVRzekEiLCJwIjoiL3RlY2gvMTAxNDI1Mi9wZXRlci10aGllbC1hbnRpY2hyaXN0LWxlY3R1cmVzLWFuYWx5c2lzIiwiZXhwIjoxNzk0MTU3NTUwLCJpYXQiOjE3OTM3MjU1NTB9._MsKEbEZ3ozTOWJ9zSKkVyqt0DP8IV7eHzq6wVGhgTE": {
+   "url": "https://www.theverge.com/tech/1014252/peter-thiel-antichrist-lectures-analysis?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6Ik1Xd1lLaVRzekEiLCJwIjoiL3RlY2gvMTAxNDI1Mi9wZXRlci10aGllbC1hbnRpY2hyaXN0LWxlY3R1cmVzLWFuYWx5c2lzIiwiZXhwIjoxNzk0MTU3NTUwLCJpYXQiOjE3OTM3MjU1NTB9._MsKEbEZ3ozTOWJ9zSKkVyqt0DP8IV7eHzq6wVGhgTE",
+   "canonical_url": "https://theverge.com/tech/1014252/peter-thiel-antichrist-lectures-analysis?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6Ik1Xd1lLaVRzekEiLCJwIjoiL3RlY2gvMTAxNDI1Mi9wZXRlci10aGllbC1hbnRpY2hyaXN0LWxlY3R1cmVzLWFuYWx5c2lzIiwiZXhwIjoxNzk0MTU3NTUwLCJpYXQiOjE3OTM3MjU1NTB9._MsKEbEZ3ozTOWJ9zSKkVyqt0DP8IV7eHzq6wVGhgTE",
+   "anchor": "The Gospel According to Peter (Thiel)",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-7-2026/",
+   "found_on": "2026-11-07",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-07",
+   "title": "The Gospel according to Peter (Thiel)",
+   "source_name": "The Verge"
+  },
+  "https://sacramentality.substack.com/p/can-science-explain-sparkling-rivers": {
+   "url": "https://sacramentality.substack.com/p/can-science-explain-sparkling-rivers",
+   "canonical_url": "https://sacramentality.substack.com/p/can-science-explain-sparkling-rivers",
+   "anchor": "Can Science Explain Sparkling Rivers?",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-7-2026/",
+   "found_on": "2026-11-07",
+   "status": "pending",
+   "attempts": 1,
+   "error": "HTTP 403"
+  },
+  "https://crossway.org/books/esv-symphony-of-scripture-audio-bible-gospel-o-dl": {
+   "url": "https://www.crossway.org/books/esv-symphony-of-scripture-audio-bible-gospel-o-dl/",
+   "canonical_url": "https://crossway.org/books/esv-symphony-of-scripture-audio-bible-gospel-o-dl",
+   "anchor": "ESV Symphony of Scripture Audio Bible, Gospel of John",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-7-2026/",
+   "found_on": "2026-11-07",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-07",
+   "title": "ESV Symphony of Scripture Audio Bible, Gospel of John, Narrated by Jubilant Sykes",
+   "source_name": "Crossway"
   }
  },
- "updated": "2026-11-06T10:01:21+00:00"
+ "updated": "2026-11-07T10:01:11+00:00"
 }

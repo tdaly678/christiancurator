@@ -65028,5 +65028,1517 @@
     },
     "scored_by": "claude",
     "clicks": 0
+  },
+  {
+    "url": "https://roysreport.com/ohio-megachurch-leader-tom-keesee-found-guilty-of-27-child-sex-abuse-charges/",
+    "title": "Tom Keesee Convicted of 27 Child Sex Abuse Counts",
+    "source_name": "The Roys Report",
+    "date_shown": "2026-11-07",
+    "final_score": 10.0,
+    "tags": [
+      "church life",
+      "news"
+    ],
+    "topic_cluster": "tom_keesee_abuse_conviction",
+    "base_score": 9.0,
+    "importance": 10.0,
+    "depth": 2.0,
+    "base_importance": 9.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://roysreport.com/ohio-megachurch-leader-tom-keesee-found-guilty-of-27-child-sex-abuse-charges",
+    "boosts": {
+      "recency": 1.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianpost.com/news/nt-wright-on-large-scale-last-minute-salvation-of-jews.html",
+    "title": "N.T. Wright Says \"All Israel Will Be Saved\" Refers to Gentiles Too",
+    "source_name": "The Christian Post",
+    "date_shown": "2026-11-07",
+    "final_score": 9.2,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "nt_wright_romans_11",
+    "base_score": 8.0,
+    "importance": 9.2,
+    "depth": 8.0,
+    "base_importance": 8.0,
+    "base_depth": 8.0,
+    "canonical_url": "https://christianpost.com/news/nt-wright-on-large-scale-last-minute-salvation-of-jews.html",
+    "boosts": {
+      "tier": -0.8,
+      "recency": 1.5,
+      "voice": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/its-time-for-pro-lifers-to-engage-the-ai-revolution/",
+    "title": "Pro-Life Movement Should Engage Artificial Intelligence, Van Maren Argues",
+    "source_name": "First Things",
+    "date_shown": "2026-11-07",
+    "final_score": 9.0,
+    "tags": [
+      "politics",
+      "culture"
+    ],
+    "topic_cluster": "pro_life_movement_midterms",
+    "base_score": 7.0,
+    "importance": 9.0,
+    "depth": 6.0,
+    "base_importance": 7.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://firstthings.com/its-time-for-pro-lifers-to-engage-the-ai-revolution",
+    "boosts": {
+      "recency": 1.5,
+      "opposing_views": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/roundups/india-continues-tightening-restrictions-on-foreign-funded-nonprofits-1793980794",
+    "title": "India Tightens Rules on Foreign-Funded Christian Nonprofits",
+    "source_name": "World Magazine",
+    "date_shown": "2026-11-07",
+    "final_score": 8.64,
+    "tags": [
+      "missions",
+      "news"
+    ],
+    "topic_cluster": "india_persecution_restrictions",
+    "base_score": 7.0,
+    "importance": 8.64,
+    "depth": 3.0,
+    "base_importance": 7.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://wng.org/roundups/india-continues-tightening-restrictions-on-foreign-funded-nonprofits-1793980794",
+    "boosts": {
+      "tier": 0.14,
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://roysreport.com/philadelphia-pastor-with-obscene-images-on-his-phone-pleads-guilty-to-federal-charges/",
+    "title": "Philadelphia Pentecostal Pastor Pleads Guilty to Child Exploitation Charges",
+    "source_name": "The Roys Report",
+    "date_shown": "2026-11-07",
+    "final_score": 8.75,
+    "tags": [
+      "church life",
+      "news"
+    ],
+    "topic_cluster": "pastor_abuse_convictions",
+    "base_score": 8.0,
+    "importance": 8.75,
+    "depth": 2.0,
+    "base_importance": 8.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://roysreport.com/philadelphia-pastor-with-obscene-images-on-his-phone-pleads-guilty-to-federal-charges",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://erlc.com/press/erlc-state-leaders-respond-to-nov-3-ballot-measure-successes-failures/",
+    "title": "ERLC Applauds Pro-Life Ballot Measure Results Across States",
+    "source_name": "ERLC",
+    "date_shown": "2026-11-07",
+    "final_score": 8.5,
+    "tags": [
+      "politics",
+      "news"
+    ],
+    "topic_cluster": "2024_ballot_measures",
+    "base_score": 7.0,
+    "importance": 8.5,
+    "depth": 2.0,
+    "base_importance": 7.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://erlc.com/press/erlc-state-leaders-respond-to-nov-3-ballot-measure-successes-failures",
+    "boosts": {
+      "recency": 0.75,
+      "response": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cm5yne5984l0o?at_medium=RSS&at_campaign=rss",
+    "title": "Kenyan Cult Leader Paul Mackenzie Sentenced to Life for 191 Deaths",
+    "source_name": "BBC News",
+    "date_shown": "2026-11-07",
+    "final_score": 7.8,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "kenya_cult_murder",
+    "base_score": 7.0,
+    "importance": 7.8,
+    "depth": 3.0,
+    "base_importance": 7.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://bbc.co.uk/news/articles/cm5yne5984l0o?at_campaign=rss&at_medium=RSS",
+    "boosts": {
+      "tier": -0.7,
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianpost.com/news/compassion-international-defends-child-protection-record.html",
+    "title": "Compassion International Defends Child Protection After Grooming Case Allegations",
+    "source_name": "The Christian Post",
+    "date_shown": "2026-11-07",
+    "final_score": 7.55,
+    "tags": [
+      "news",
+      "church life"
+    ],
+    "topic_cluster": "compassion_international_child_protection",
+    "base_score": 7.0,
+    "importance": 7.55,
+    "depth": 3.0,
+    "base_importance": 7.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://christianpost.com/news/compassion-international-defends-child-protection-record.html",
+    "boosts": {
+      "tier": -0.7,
+      "recency": 1.5,
+      "voice": 0.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://religionnews.com/2026/11/06/russell-brand-convicted-of-rape-told-us-who-he-was-why-didnt-christian-leaders-listen/",
+    "title": "Christian Leaders Interviewed Russell Brand Despite Public Rape Accusations",
+    "source_name": "Religion News Service",
+    "date_shown": "2026-11-07",
+    "final_score": 7.5,
+    "tags": [
+      "church life",
+      "culture"
+    ],
+    "topic_cluster": "russell_brand_christian_leaders",
+    "base_score": 7.0,
+    "importance": 7.5,
+    "depth": 5.0,
+    "base_importance": 7.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://religionnews.com/2026/11/06/russell-brand-convicted-of-rape-told-us-who-he-was-why-didnt-christian-leaders-listen",
+    "boosts": {
+      "recency": 1.5,
+      "voice": -1.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/sift/voters-uphold-biological-sex-in-colorado-elsewhere-1794007356",
+    "title": "Voters uphold biological sex in Colorado, elsewhere",
+    "source_name": "World Magazine",
+    "date_shown": "2026-11-07",
+    "final_score": 7.25,
+    "tags": [
+      "politics",
+      "news"
+    ],
+    "topic_cluster": "colorado_sex_vote",
+    "base_score": 6.0,
+    "importance": 7.25,
+    "depth": 1.0,
+    "base_importance": 6.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://wng.org/sift/voters-uphold-biological-sex-in-colorado-elsewhere-1794007356",
+    "boosts": {
+      "tier": 0.12,
+      "recency": 1.5,
+      "voice": 0.38,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.aaronrenn.com/p/2026-midterms",
+    "title": "Christian Left Gains Influence in Democratic Politics",
+    "source_name": "Aaron Renn",
+    "date_shown": "2026-11-07",
+    "final_score": 7.0,
+    "tags": [
+      "culture",
+      "politics"
+    ],
+    "topic_cluster": "election_politics",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 4.0,
+    "base_importance": 5.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://aaronrenn.com/p/2026-midterms",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/11/europe-unrest-moral-spiritual-renewal/",
+    "title": "European Unrest Signals Coming Crisis for American Christians",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-07",
+    "final_score": 6.75,
+    "tags": [
+      "theology",
+      "politics"
+    ],
+    "topic_cluster": "cultural_unrest_christian_response",
+    "base_score": 6.0,
+    "importance": 6.75,
+    "depth": 7.0,
+    "base_importance": 6.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://christianitytoday.com/2026/11/europe-unrest-moral-spiritual-renewal",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://albertmohler.com/2026/11/07/the-rise-and-fall-of-jim-bakker-the-tragic-story-of-jim-and-tammy-faye-bakker-their-ptl-empire-and-the-shocking-scandal-that-rocked-the-world/",
+    "title": "Jim Bakker, PTL Founder and Convicted Fraudster, Dies at 86",
+    "source_name": "Albert Mohler",
+    "date_shown": "2026-11-07",
+    "final_score": 6.5,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "jim_bakker_death",
+    "base_score": 6.0,
+    "importance": 6.5,
+    "depth": 3.0,
+    "base_importance": 6.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://albertmohler.com/2026/11/07/the-rise-and-fall-of-jim-bakker-the-tragic-story-of-jim-and-tammy-faye-bakker-their-ptl-empire-and-the-shocking-scandal-that-rocked-the-world",
+    "boosts": {
+      "recency": 1.5,
+      "voice": -1.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.theguardian.com/culture/2026/nov/06/why-did-russell-brand-convert-to-christianity",
+    "title": "Russell Brand's Christian Conversion Raises Questions About Sincerity",
+    "source_name": "The Guardian",
+    "date_shown": "2026-11-07",
+    "final_score": 6.3,
+    "tags": [
+      "culture",
+      "news"
+    ],
+    "topic_cluster": "russell_brand_conversion",
+    "base_score": 6.0,
+    "importance": 6.3,
+    "depth": 4.0,
+    "base_importance": 6.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://theguardian.com/culture/2026/nov/06/why-did-russell-brand-convert-to-christianity",
+    "boosts": {
+      "tier": -1.2,
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/sift/international-call-for-hong-kong-to-free-democracy-activist-1793997415",
+    "title": "International call for Hong Kong to free democracy activist",
+    "source_name": "World Magazine",
+    "date_shown": "2026-11-07",
+    "final_score": 6.12,
+    "tags": [
+      "news",
+      "missions"
+    ],
+    "topic_cluster": "hong_kong_persecution",
+    "base_score": 6.0,
+    "importance": 6.12,
+    "depth": 1.0,
+    "base_importance": 6.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://wng.org/sift/international-call-for-hong-kong-to-free-democracy-activist-1793997415",
+    "boosts": {
+      "tier": 0.12,
+      "recency": 1.5,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.nytimes.com/2026/11/06/world/africa/kenya-cult-leader-prison-sentence-mass-murder-paul-mackenzie.html",
+    "title": "Kenya Cult Leader Sentenced to 200 Years for Enforced Mass Starvation",
+    "source_name": "The New York Times",
+    "date_shown": "2026-11-07",
+    "final_score": 4.8,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "kenya_cult_murder",
+    "base_score": 7.0,
+    "importance": 4.8,
+    "depth": 3.0,
+    "base_importance": 7.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://nytimes.com/2026/11/06/world/africa/kenya-cult-leader-prison-sentence-mass-murder-paul-mackenzie.html",
+    "boosts": {
+      "tier": -0.7,
+      "recency": 1.5,
+      "duplicate_topic": -3.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.pewresearch.org/short-reads/2026/11/06/majority-of-americans-say-social-media-companies-news-outlets-have-too-much-power-in-politics/",
+    "title": "Americans Say Social Media Companies Wield Too Much Political Power",
+    "source_name": "Pew Research",
+    "date_shown": "2026-11-07",
+    "final_score": 4.75,
+    "tags": [
+      "culture",
+      "politics",
+      "data"
+    ],
+    "topic_cluster": "media_power_trust",
+    "base_score": 5.0,
+    "importance": 4.75,
+    "depth": 2.0,
+    "base_importance": 5.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://pewresearch.org/short-reads/2026/11/06/majority-of-americans-say-social-media-companies-news-outlets-have-too-much-power-in-politics",
+    "boosts": {
+      "recency": 1.5,
+      "voice": -1.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://garythomas.com/2026/11/06/my-sons-on-substack/",
+    "title": "Graham Launches Substack on Faith and Family",
+    "source_name": "Gary Thomas",
+    "date_shown": "2026-11-07",
+    "final_score": 4.0,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 4.0,
+    "depth": 1.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://garythomas.com/2026/11/06/my-sons-on-substack",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/the-pro-life-movements-midterm-reckoning/",
+    "title": "Pro-Life Leaders Say Midterm Results Were a Disaster",
+    "source_name": "First Things",
+    "date_shown": "2026-11-07",
+    "final_score": 4.0,
+    "tags": [
+      "politics",
+      "culture"
+    ],
+    "topic_cluster": "pro_life_movement_midterms",
+    "base_score": 7.0,
+    "importance": 4.0,
+    "depth": 1.0,
+    "base_importance": 7.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://firstthings.com/the-pro-life-movements-midterm-reckoning",
+    "boosts": {
+      "recency": 0.75,
+      "previously_shown": -4.0,
+      "opposing_views": 1.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.russellmoore.com/2026/11/04/peter-wehner-on-the-christian-political-agenda/",
+    "title": "Christians Risk Moral Witness for Political Power, Wehner Argues",
+    "source_name": "Russell Moore",
+    "date_shown": "2026-11-07",
+    "final_score": 3.75,
+    "tags": [
+      "politics",
+      "theology"
+    ],
+    "topic_cluster": "christian_political_witness",
+    "base_score": 7.0,
+    "importance": 3.75,
+    "depth": 3.0,
+    "base_importance": 7.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://russellmoore.com/2026/11/04/peter-wehner-on-the-christian-political-agenda",
+    "boosts": {
+      "recency": 0.25,
+      "frequency": 0.5,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://feeds.ligonier.org/~/972526052/0/ligonierministriesblog",
+    "title": "Southern Ontario Conference Examines Christian Vocation and God's Kingdom",
+    "source_name": "Ligonier Ministries",
+    "date_shown": "2026-11-07",
+    "final_score": 2.75,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "conference_announcement",
+    "base_score": 2.0,
+    "importance": 2.75,
+    "depth": 1.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://feeds.ligonier.org/~/972526052/0/ligonierministriesblog",
+    "boosts": {
+      "recency": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/harvards-quiet-catholic-revival/",
+    "title": "Catholic Conversions Rise Among Harvard Students",
+    "source_name": "First Things",
+    "date_shown": "2026-11-07",
+    "final_score": 1.5,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 1.5,
+    "depth": 2.0,
+    "base_importance": 2.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://firstthings.com/harvards-quiet-catholic-revival",
+    "boosts": {
+      "recency": 0.25,
+      "trending": 0.75,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.graphsaboutreligion.com/p/the-most-religious-congressional",
+    "title": "Evangelical Districts Lean Red, Catholic Districts Blue, Mainline Competitive",
+    "source_name": "Ryan Burge",
+    "date_shown": "2026-11-07",
+    "final_score": 1.0,
+    "tags": [
+      "politics",
+      "data"
+    ],
+    "topic_cluster": "evangelicals_politics_2024",
+    "base_score": 7.0,
+    "importance": 1.0,
+    "depth": 0.0,
+    "base_importance": 7.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://graphsaboutreligion.com/p/the-most-religious-congressional",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.75,
+      "previously_shown": -4.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/11/midterms-abortion-prolife-trump-missouri-nevada-virginia-idaho/",
+    "title": "Pro-Life Movement Faces Setback After Midterm Abortion Ballot Measures",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-07",
+    "final_score": 0.75,
+    "tags": [
+      "politics",
+      "news"
+    ],
+    "topic_cluster": "abortion_midterm_elections",
+    "base_score": 7.0,
+    "importance": 0.75,
+    "depth": 0.0,
+    "base_importance": 7.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://christianitytoday.com/2026/11/midterms-abortion-prolife-trump-missouri-nevada-virginia-idaho",
+    "boosts": {
+      "recency": 0.75,
+      "previously_shown": -4.0,
+      "diversity_penalty": -3.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.furtherup.net/p/the-ordinary-greatness-of-kaylub",
+    "title": "The Ordinary Greatness of Kaylub Giamanco",
+    "source_name": "Bethel McGrew",
+    "date_shown": "2026-11-07",
+    "final_score": 0.75,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 0.75,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://furtherup.net/p/the-ordinary-greatness-of-kaylub",
+    "boosts": {
+      "recency": -4.0,
+      "frequency": 0.5,
+      "previously_shown": 1.5,
+      "trending": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://thecommon.place/p/ep205",
+    "title": "A Boarding School & a Suit of Armor",
+    "source_name": "Tsh Oxenreider",
+    "date_shown": "2026-11-07",
+    "final_score": 0.75,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 0.75,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://thecommon.place/p/ep205",
+    "boosts": {
+      "recency": 0.25,
+      "frequency": 0.5,
+      "previously_shown": -1.75,
+      "trending": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/culture/movies/joel-smallbone-and-the-brother-he-drifted-from-just-made-a-movie-about-brothers-at-war/",
+    "title": "Joel Smallbone Reconciles With Brother Through Film About Family Conflict",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-11-07",
+    "final_score": 4.5,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "joel_smallbone_drummer_boy",
+    "base_score": 4.0,
+    "importance": 4.5,
+    "depth": 4.0,
+    "base_importance": 4.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://relevantmagazine.com/culture/movies/joel-smallbone-and-the-brother-he-drifted-from-just-made-a-movie-about-brothers-at-war",
+    "boosts": {
+      "recency": 1.5,
+      "voice": -1.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/11/hard-soft-and-spiritual-power/",
+    "title": "Hard, Soft, and Spiritual Power",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-07",
+    "final_score": 3.75,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 3.75,
+    "depth": 5.0,
+    "base_importance": 4.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://christianitytoday.com/2026/11/hard-soft-and-spiritual-power",
+    "boosts": {
+      "recency": 1.5,
+      "trending": 0.5,
+      "diversity_penalty": -2.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.aaronrenn.com/p/ai-and-aging",
+    "title": "AI Offers Care for Aging Population, Potentially Winning Over Skeptics",
+    "source_name": "Aaron Renn",
+    "date_shown": "2026-11-07",
+    "final_score": 2.25,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "ai_ethics",
+    "base_score": 6.0,
+    "importance": 2.25,
+    "depth": 1.0,
+    "base_importance": 6.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://aaronrenn.com/p/ai-and-aging",
+    "boosts": {
+      "recency": 0.25,
+      "frequency": 0.75,
+      "previously_shown": -4.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.furtherup.net/p/conference-talk-the-history-mystery",
+    "title": "How Many Ways Can You Tell a True Story?",
+    "source_name": "Bethel McGrew",
+    "date_shown": "2026-11-07",
+    "final_score": 0.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 0.0,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://furtherup.net/p/conference-talk-the-history-mystery",
+    "boosts": {
+      "recency": -6.0,
+      "frequency": 0.5,
+      "previously_shown": 4.5,
+      "trending": 0.75,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.americanreformer.org/p/ohio-is-a-place-not-an-idea",
+    "title": "Ohio Is a Place, Not an Idea",
+    "source_name": "American Reformer",
+    "date_shown": "2026-11-07",
+    "final_score": -0.75,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": -0.75,
+    "depth": 0.0,
+    "base_importance": 4.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://americanreformer.org/p/ohio-is-a-place-not-an-idea",
+    "boosts": {
+      "recency": -6.0,
+      "previously_shown": 2.0,
+      "trending": 0.75,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.theverge.com/tech/1014252/peter-thiel-antichrist-lectures-analysis?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6Ik1Xd1lLaVRzekEiLCJwIjoiL3RlY2gvMTAxNDI1Mi9wZXRlci10aGllbC1hbnRpY2hyaXN0LWxlY3R1cmVzLWFuYWx5c2lzIiwiZXhwIjoxNzk0MTU3NTUwLCJpYXQiOjE3OTM3MjU1NTB9._MsKEbEZ3ozTOWJ9zSKkVyqt0DP8IV7eHzq6wVGhgTE",
+    "title": "Peter Thiel's Secret Lectures on the Antichrist Surface",
+    "source_name": "The Verge",
+    "date_shown": "2026-11-07",
+    "final_score": -1.25,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "peter_thiel_religion",
+    "base_score": 4.0,
+    "importance": -1.25,
+    "depth": 0.0,
+    "base_importance": 4.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://theverge.com/tech/1014252/peter-thiel-antichrist-lectures-analysis?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6Ik1Xd1lLaVRzekEiLCJwIjoiL3RlY2gvMTAxNDI1Mi9wZXRlci10aGllbC1hbnRpY2hyaXN0LWxlY3R1cmVzLWFuYWx5c2lzIiwiZXhwIjoxNzk0MTU3NTUwLCJpYXQiOjE3OTM3MjU1NTB9._MsKEbEZ3ozTOWJ9zSKkVyqt0DP8IV7eHzq6wVGhgTE",
+    "boosts": {
+      "recency": -6.0,
+      "stale_source": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.americanreformer.org/p/having-it-both-ways",
+    "title": "Cornell's Sexual Misconduct Policies Criticized as Hypocritical",
+    "source_name": "American Reformer",
+    "date_shown": "2026-11-07",
+    "final_score": -1.5,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": -1.5,
+    "depth": 0.0,
+    "base_importance": 4.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://americanreformer.org/p/having-it-both-ways",
+    "boosts": {
+      "recency": -6.0,
+      "previously_shown": 2.0,
+      "trending": 0.75,
+      "diversity_penalty": -2.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.americanreformer.org/p/a-culture-worth-its-salt",
+    "title": "Churches Face Generational Loss of Traditional Hymn Singing",
+    "source_name": "American Reformer",
+    "date_shown": "2026-11-07",
+    "final_score": -3.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "christian_culture_witness",
+    "base_score": 5.0,
+    "importance": -3.0,
+    "depth": 1.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://americanreformer.org/p/a-culture-worth-its-salt",
+    "boosts": {
+      "recency": -2.0,
+      "previously_shown": -3.0,
+      "diversity_penalty": -3.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.crossway.org/articles/how-should-christians-think-about-ai/",
+    "title": "Christians Should Ground AI Ethics in Scripture",
+    "source_name": "Crossway",
+    "date_shown": "2026-11-07",
+    "final_score": 8.0,
+    "tags": [
+      "culture",
+      "apologetics"
+    ],
+    "topic_cluster": "ai_and_faith",
+    "base_score": 6.0,
+    "importance": 8.0,
+    "depth": 6.0,
+    "base_importance": 6.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://crossway.org/articles/how-should-christians-think-about-ai",
+    "boosts": {
+      "recency": 1.5,
+      "voice": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/11/tech-formation-social-media-ai-shock-anger-stimulate-numb-faith/",
+    "title": "Christian Thinkers Debate How AI and Algorithms Shape Christian Engagement",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-07",
+    "final_score": 7.5,
+    "tags": [
+      "culture",
+      "apologetics"
+    ],
+    "topic_cluster": "ai_technology_ethics",
+    "base_score": 6.0,
+    "importance": 7.5,
+    "depth": 6.0,
+    "base_importance": 6.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://christianitytoday.com/2026/11/tech-formation-social-media-ai-shock-anger-stimulate-numb-faith",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://mereorthodoxy.com/counterfeit-providence-why-christians-must-reject-the-conspiratorial-mind/",
+    "title": "Christians Should Reject Conspiracy Theories as False Providence, Author Argues",
+    "source_name": "Mere Orthodoxy",
+    "date_shown": "2026-11-07",
+    "final_score": 7.5,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "providence_conspiracy",
+    "base_score": 6.0,
+    "importance": 7.5,
+    "depth": 7.0,
+    "base_importance": 6.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://mereorthodoxy.com/counterfeit-providence-why-christians-must-reject-the-conspiratorial-mind",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.thegospelcoalition.org/article/memorize-sermon-mount-heart/",
+    "title": "Memorizing the Sermon on the Mount Resists Algorithm-Driven Distraction",
+    "source_name": "The Gospel Coalition",
+    "date_shown": "2026-11-07",
+    "final_score": 7.0,
+    "tags": [
+      "devotional",
+      "theology"
+    ],
+    "topic_cluster": "scripture_meditation",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 8.0,
+    "base_importance": 5.0,
+    "base_depth": 8.0,
+    "canonical_url": "https://thegospelcoalition.org/article/memorize-sermon-mount-heart",
+    "boosts": {
+      "recency": 1.5,
+      "voice": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://seanmcdowell.org/blog/the-evidence-that-convinced-a-jewish-skeptic-jesus-is-risen",
+    "title": "Jewish Skeptic Argues Against Naturalistic Explanations for Jesus's Resurrection",
+    "source_name": "Sean McDowell",
+    "date_shown": "2026-11-07",
+    "final_score": 7.0,
+    "tags": [
+      "apologetics",
+      "theology"
+    ],
+    "topic_cluster": "resurrection_apologetics",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 7.0,
+    "base_importance": 5.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://seanmcdowell.org/blog/the-evidence-that-convinced-a-jewish-skeptic-jesus-is-risen",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.wyattgraham.com/p/tamar-was-more-righteous-than-judah",
+    "title": "Judah's Confession in Genesis 38 Reveals the Nature of Repentance",
+    "source_name": "Wyatt Graham",
+    "date_shown": "2026-11-07",
+    "final_score": 7.0,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "genesis_38_tamar",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 8.0,
+    "base_importance": 5.0,
+    "base_depth": 8.0,
+    "canonical_url": "https://wyattgraham.com/p/tamar-was-more-righteous-than-judah",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.9marks.org/article/salvation-makes-you-part-of-a-family-the-corporate-component-of-conversion/?utm_source=rss&utm_medium=rss&utm_campaign=salvation-makes-you-part-of-a-family-the-corporate-component-of-conversion",
+    "title": "Salvation Includes Reconciliation to God's People, Not Just God",
+    "source_name": "9Marks",
+    "date_shown": "2026-11-07",
+    "final_score": 6.5,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "conversion_ecclesiology",
+    "base_score": 5.0,
+    "importance": 6.5,
+    "depth": 8.0,
+    "base_importance": 5.0,
+    "base_depth": 8.0,
+    "canonical_url": "https://9marks.org/article/salvation-makes-you-part-of-a-family-the-corporate-component-of-conversion",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://newsletter.oalannoble.com/p/can-you-keep-your-agency-and-use",
+    "title": "Can You Keep Your Agency and Use AI?",
+    "source_name": "O. Alan Noble",
+    "date_shown": "2026-11-07",
+    "final_score": 5.0,
+    "tags": [
+      "theology",
+      "work"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 5.0,
+    "depth": 5.0,
+    "base_importance": 3.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://newsletter.oalannoble.com/p/can-you-keep-your-agency-and-use",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://reformation21.org/our-advocate-jesus-christ/",
+    "title": "Jesus Christ Advocates for Sinners Before God",
+    "source_name": "Reformation21",
+    "date_shown": "2026-11-07",
+    "final_score": 3.39,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "christ_advocacy_theology",
+    "base_score": 7.0,
+    "importance": 3.39,
+    "depth": 5.0,
+    "base_importance": 7.0,
+    "base_depth": 9.0,
+    "canonical_url": "https://reformation21.org/our-advocate-jesus-christ",
+    "boosts": {
+      "tier": 0.14,
+      "recency": 0.25,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.thegospelcoalition.org/reviews/picture-books-fall-2026/",
+    "title": "God's Goodness Endures Through Change, Children's Books Remind",
+    "source_name": "The Gospel Coalition",
+    "date_shown": "2026-11-07",
+    "final_score": 3.25,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 3.25,
+    "depth": 3.0,
+    "base_importance": 2.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://thegospelcoalition.org/reviews/picture-books-fall-2026",
+    "boosts": {
+      "recency": 1.5,
+      "trending": 0.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/faith/n-t-wright-christians-need-a-much-bigger-god-than-the-one-most-of-us-picture/",
+    "title": "N.T. Wright Says Christians Underestimate God's Character and Power",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-11-07",
+    "final_score": 2.75,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 7.0,
+    "importance": 2.75,
+    "depth": 4.0,
+    "base_importance": 7.0,
+    "base_depth": 8.0,
+    "canonical_url": "https://relevantmagazine.com/faith/n-t-wright-christians-need-a-much-bigger-god-than-the-one-most-of-us-picture",
+    "boosts": {
+      "recency": 0.75,
+      "voice": -1.0,
+      "previously_shown": -4.0,
+      "trending": 0.75,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://mereorthodoxy.com/the-resurrection-of-robin-hood/",
+    "title": "Robin Hood Was Pious Servant of Virgin Mary, Scholar Argues",
+    "source_name": "Mere Orthodoxy",
+    "date_shown": "2026-11-07",
+    "final_score": 2.25,
+    "tags": [
+      "culture",
+      "theology"
+    ],
+    "topic_cluster": "church_history_medieval",
+    "base_score": 3.0,
+    "importance": 2.25,
+    "depth": 4.0,
+    "base_importance": 3.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://mereorthodoxy.com/the-resurrection-of-robin-hood",
+    "boosts": {
+      "recency": 1.5,
+      "voice": -1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://seanmcdowell.org/blog/why-i-am-not-catholic-8-reasons-gavin-ortlund",
+    "title": "Gavin Ortlund Outlines Eight Doctrinal Divides Between Catholics and Protestants",
+    "source_name": "Sean McDowell",
+    "date_shown": "2026-11-07",
+    "final_score": 2.25,
+    "tags": [
+      "theology",
+      "apologetics"
+    ],
+    "topic_cluster": "catholic_protestant_division",
+    "base_score": 6.0,
+    "importance": 2.25,
+    "depth": 3.0,
+    "base_importance": 6.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://seanmcdowell.org/blog/why-i-am-not-catholic-8-reasons-gavin-ortlund",
+    "boosts": {
+      "recency": -4.0,
+      "frequency": 0.5,
+      "voice": 0.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.crossway.org/articles/did-jesus-really-claim-to-be-god/",
+    "title": "Earliest Christians Proclaimed Jesus as God, Scholar Argues",
+    "source_name": "Crossway",
+    "date_shown": "2026-11-07",
+    "final_score": 1.25,
+    "tags": [
+      "theology",
+      "apologetics"
+    ],
+    "topic_cluster": "christology",
+    "base_score": 6.0,
+    "importance": 1.25,
+    "depth": 3.0,
+    "base_importance": 6.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://crossway.org/articles/did-jesus-really-claim-to-be-god",
+    "boosts": {
+      "recency": 0.25,
+      "voice": 0.5,
+      "previously_shown": -4.0,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://mereorthodoxy.com/why-a-theology-of-the-body-matters-for-teen-discipleship/",
+    "title": "Teaching Teens Why Their Bodies Matter Protects Against Cultural Pressures",
+    "source_name": "Mere Orthodoxy",
+    "date_shown": "2026-11-07",
+    "final_score": 1.25,
+    "tags": [
+      "theology",
+      "family"
+    ],
+    "topic_cluster": "teen_discipleship_embodiment",
+    "base_score": 6.0,
+    "importance": 1.25,
+    "depth": 3.0,
+    "base_importance": 6.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://mereorthodoxy.com/why-a-theology-of-the-body-matters-for-teen-discipleship",
+    "boosts": {
+      "recency": 0.25,
+      "voice": 0.5,
+      "previously_shown": -4.0,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://research.lifeway.com/2026/11/05/4-types-of-questions-teenagers-ask-a-guide-for-next-gen-leaders/",
+    "title": "Youth Leaders Should Expect Hard Questions From Teenagers",
+    "source_name": "Lifeway Research",
+    "date_shown": "2026-11-07",
+    "final_score": 1.25,
+    "tags": [
+      "church life"
+    ],
+    "topic_cluster": "youth_ministry_guidance",
+    "base_score": 5.0,
+    "importance": 1.25,
+    "depth": 2.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://research.lifeway.com/2026/11/05/4-types-of-questions-teenagers-ask-a-guide-for-next-gen-leaders",
+    "boosts": {
+      "recency": 0.25,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/justice/unconventional-ways-fight-poverty-0/",
+    "title": "Poverty Fighter Ate Tina Became Sole Household Breadwinner",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-11-07",
+    "final_score": 1.0,
+    "tags": [
+      "work",
+      "theology"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 5.0,
+    "importance": 1.0,
+    "depth": 2.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://relevantmagazine.com/justice/unconventional-ways-fight-poverty-0",
+    "boosts": {
+      "recency": 0.75,
+      "previously_shown": -4.0,
+      "trending": 0.75,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.challies.com/book-reviews/i-regret-to-inform-you-that-heaven-tourism-is-back/",
+    "title": "Heaven Tourism Books Return to Bestseller Lists",
+    "source_name": "Tim Challies",
+    "date_shown": "2026-11-07",
+    "final_score": 1.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "heaven_tourism_critique",
+    "base_score": 3.0,
+    "importance": 1.0,
+    "depth": 0.0,
+    "base_importance": 3.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://challies.com/book-reviews/i-regret-to-inform-you-that-heaven-tourism-is-back",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.5,
+      "voice": 0.75,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.thegospelcoalition.org/article/lords-supper-spiritual-growth/",
+    "title": "Calvin Links the Lord's Supper to Spiritual Growth",
+    "source_name": "The Gospel Coalition",
+    "date_shown": "2026-11-07",
+    "final_score": 0.75,
+    "tags": [
+      "theology",
+      "church life"
+    ],
+    "topic_cluster": "lords_supper",
+    "base_score": 5.0,
+    "importance": 0.75,
+    "depth": 3.0,
+    "base_importance": 5.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://thegospelcoalition.org/article/lords-supper-spiritual-growth",
+    "boosts": {
+      "recency": 0.75,
+      "voice": 0.5,
+      "previously_shown": -4.0,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://feed.desiringgod.org/link/22977/17512367/the-tyranny-of-preferences",
+    "title": "Unexamined Preferences Become Tyrannies in Church and Life",
+    "source_name": "Desiring God",
+    "date_shown": "2026-11-07",
+    "final_score": 0.75,
+    "tags": [
+      "devotional",
+      "theology"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 0.75,
+    "depth": 1.0,
+    "base_importance": 3.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://feed.desiringgod.org/link/22977/17512367/the-tyranny-of-preferences",
+    "boosts": {
+      "recency": -2.0,
+      "voice": -1.0,
+      "trending": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.americanreformer.org/p/blessed-are-those-who-show-up",
+    "title": "Blessed Are Those Who Show Up",
+    "source_name": "American Reformer",
+    "date_shown": "2026-11-07",
+    "final_score": 0.75,
+    "tags": [
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 0.75,
+    "depth": 0.0,
+    "base_importance": 3.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://americanreformer.org/p/blessed-are-those-who-show-up",
+    "boosts": {
+      "recency": 0.75,
+      "previously_shown": -3.75,
+      "trending": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://feeds.ligonier.org/~/972452714/0/ligonierministriesblog",
+    "title": "God's Omniscience Does Not Eliminate Human Free Will",
+    "source_name": "Ligonier Ministries",
+    "date_shown": "2026-11-07",
+    "final_score": 0.5,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "divine_omniscience",
+    "base_score": 4.0,
+    "importance": 0.5,
+    "depth": 3.0,
+    "base_importance": 4.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://feeds.ligonier.org/~/972452714/0/ligonierministriesblog",
+    "boosts": {
+      "recency": 0.75,
+      "voice": 0.5,
+      "previously_shown": -4.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.crossway.org/articles/taking-a-closer-look-at-2-corinthians-1811/",
+    "title": "Paul's Suffering Demonstrates Reliance on God's Power",
+    "source_name": "Crossway",
+    "date_shown": "2026-11-07",
+    "final_score": 4.75,
+    "tags": [
+      "theology",
+      "suffering"
+    ],
+    "topic_cluster": "scripture_exposition",
+    "base_score": 4.0,
+    "importance": 4.75,
+    "depth": 8.0,
+    "base_importance": 4.0,
+    "base_depth": 8.0,
+    "canonical_url": "https://crossway.org/articles/taking-a-closer-look-at-2-corinthians-1811",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://erlc.com/press/the-government-must-let-the-church-fulfill-its-responsibility-to-the-orphan/",
+    "title": "Church Should Lead Orphan Care, Not Government",
+    "source_name": "ERLC",
+    "date_shown": "2026-11-07",
+    "final_score": 6.0,
+    "tags": [
+      "theology",
+      "church life"
+    ],
+    "topic_cluster": "church_orphan_care",
+    "base_score": 6.0,
+    "importance": 6.0,
+    "depth": 6.0,
+    "base_importance": 6.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://erlc.com/press/the-government-must-let-the-church-fulfill-its-responsibility-to-the-orphan",
+    "boosts": {
+      "recency": 0.75,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/11/three-reasons-billy-graham-captured-worlds-attention/",
+    "title": "Billy Graham's Evangelism Drew International Interest, Writer Says",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-07",
+    "final_score": 5.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "billy_graham_legacy",
+    "base_score": 5.0,
+    "importance": 5.0,
+    "depth": 6.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://christianitytoday.com/2026/11/three-reasons-billy-graham-captured-worlds-attention",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://religionnews.com/2026/11/06/secular-voters-are-increasing-can-the-nones-become-a-political-force/",
+    "title": "Nonreligious Voters Increasingly Support Christian Politicians",
+    "source_name": "Religion News Service",
+    "date_shown": "2026-11-07",
+    "final_score": 6.75,
+    "tags": [
+      "data",
+      "politics"
+    ],
+    "topic_cluster": "secular_voters_political_power",
+    "base_score": 6.0,
+    "importance": 6.75,
+    "depth": 4.0,
+    "base_importance": 6.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://religionnews.com/2026/11/06/secular-voters-are-increasing-can-the-nones-become-a-political-force",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.pewresearch.org/short-reads/2026/11/06/about-a-third-of-americans-have-left-an-online-community/",
+    "title": "A Third of Americans Have Left Online Communities",
+    "source_name": "Pew Research",
+    "date_shown": "2026-11-07",
+    "final_score": 5.5,
+    "tags": [
+      "culture",
+      "data"
+    ],
+    "topic_cluster": "online_community_engagement",
+    "base_score": 4.0,
+    "importance": 5.5,
+    "depth": 2.0,
+    "base_importance": 4.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://pewresearch.org/short-reads/2026/11/06/about-a-third-of-americans-have-left-an-online-community",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.graphsaboutreligion.com/p/why-dont-religious-nones-want-kids",
+    "title": "Religious Nones Choose Childlessness More Than Other Adults",
+    "source_name": "Ryan Burge",
+    "date_shown": "2026-11-07",
+    "final_score": 5.0,
+    "tags": [
+      "data",
+      "culture"
+    ],
+    "topic_cluster": "religious_nones_demographics",
+    "base_score": 7.0,
+    "importance": 5.0,
+    "depth": 0.0,
+    "base_importance": 7.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://graphsaboutreligion.com/p/why-dont-religious-nones-want-kids",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.75,
+      "voice": 0.5,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
   }
 ]
