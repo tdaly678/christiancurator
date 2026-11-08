@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-07T10:01:10+00:00",
+  "run_at": "2026-11-08T10:01:09+00:00",
   "sources": [
     {
       "source": "The Gospel Coalition",
@@ -7,7 +7,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 60,
-      "newest_date": "2026-11-07",
+      "newest_date": "2026-11-08",
       "bozo": false,
       "stale": false
     },
@@ -37,7 +37,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-06",
+      "newest_date": "2026-11-07",
       "bozo": false,
       "stale": false
     },
@@ -57,7 +57,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-06",
+      "newest_date": "2026-11-07",
       "bozo": false,
       "stale": false
     },
@@ -77,7 +77,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 30,
-      "newest_date": "2026-11-06",
+      "newest_date": "2026-11-08",
       "bozo": false,
       "stale": false
     },
@@ -96,7 +96,7 @@
       "url": "https://www.ligonier.org/feed/",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 42,
+      "n_entries": 41,
       "newest_date": "2026-11-06",
       "bozo": false,
       "user_agent": "reader",
@@ -118,7 +118,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-06",
+      "newest_date": "2026-11-07",
       "bozo": false,
       "stale": false
     },
@@ -128,7 +128,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-05",
+      "newest_date": "2026-11-08",
       "bozo": false,
       "stale": false
     },
@@ -167,8 +167,8 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 28,
-      "newest_date": "2026-11-07",
+      "n_entries": 25,
+      "newest_date": "2026-11-08",
       "bozo": false,
       "stale": false
     },
@@ -177,8 +177,8 @@
       "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 53,
-      "newest_date": "2026-11-07",
+      "n_entries": 54,
+      "newest_date": "2026-11-08",
       "bozo": false,
       "stale": false
     },
@@ -187,8 +187,8 @@
       "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 71,
-      "newest_date": "2026-11-07",
+      "n_entries": 72,
+      "newest_date": "2026-11-08",
       "bozo": false,
       "stale": false
     },
@@ -198,7 +198,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-06",
+      "newest_date": "2026-11-08",
       "bozo": false,
       "stale": false
     },
@@ -318,7 +318,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 100,
-      "newest_date": "2026-11-06",
+      "newest_date": "2026-11-07",
       "bozo": false,
       "stale": false
     },
@@ -458,7 +458,7 @@
       "role": "discovery",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-07",
+      "newest_date": "2026-11-08",
       "bozo": false,
       "stale": false
     },
@@ -558,7 +558,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-07",
+      "newest_date": "2026-11-08",
       "bozo": false,
       "stale": false
     },
@@ -708,7 +708,7 @@
       "role": "media",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-06",
+      "newest_date": "2026-11-07",
       "bozo": false,
       "stale": false
     },
@@ -780,153 +780,153 @@
   "zero_streaks": {
     "Kyle Worley": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Phylicia Masonheimer": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Laura Wifler": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Karen Swallow Prior": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Scot McKnight": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Matthew Lee Anderson": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Joy Clarkson": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Mike Cosper": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Bonnie Kristian": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Aimee Byrd": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Nadya Williams": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Daniel K. Williams": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Timothy Paul Jones": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Kate Shellnutt": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Jemar Tisby": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Hannah Anderson": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Stephen McAlpine": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Daniel Darling": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Katelyn Beaty": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Tom Sugimura": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Mitchell Chase": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Michael Bird": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Nijay Gupta": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Carmen Joy Imes": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Beth Felker Jones": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Thomas Kidd": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Chris Gehrz": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Emily P. Freeman": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "A.J. Swoboda": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     },
     "Nicholas McDonald": {
       "since": "2026-10-31",
-      "last_date": "2026-11-07",
-      "days": 8
+      "last_date": "2026-11-08",
+      "days": 9
     }
   }
 }
