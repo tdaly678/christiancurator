@@ -83,8 +83,17 @@ Tom's call. Tests: `tests/test_feed_health_check.py`.
 Known runner block (2026-11-09): all 30 `*.substack.com` author feeds return HTTP 403 on GitHub Actions every day since
 the first runner run on 2026-10-31, while the same URL and headers return 200 from a home connection and from other
 datacenters. Headers are not the cause; Substack's Cloudflare refuses GitHub/Azure IP ranges. None of these authors
-uses a custom domain. Pew Research (`/religion/feed/`) 403s from any datacenter IP. Fixing either needs a fetch path
-that does not leave from a GitHub runner IP (for example a Cloudflare Worker proxy), verified on an actual runner.
+uses a custom domain. Pew Research (`/religion/feed/`) 403s from any datacenter IP and is still unfixed.
+
+Substack fix (2026-11-09): the `cc-feed-proxy` Worker (`worker/feed-proxy/`, https://cc-feed-proxy.tdaly678.workers.dev)
+fetches only `https://<name>.substack.com/feed` (allowlist, redirects checked per hop), requires the `X-CC-Proxy-Key`
+header (Worker secret `FEED_PROXY_KEY`), and caches 10 minutes. `fetch_feed()` routes Substack feeds through it when the
+`CC_FEED_PROXY_URL` and `CC_FEED_PROXY_KEY` env vars are set (GitHub secrets, wired into the Run pipeline step), else
+fetches directly; a Worker refusal or outage also falls back to direct. Health rows show `via: "proxy"` or
+`proxy_error`. Runner proof on 2026-11-09: direct 0 of 30, through the Worker 30 of 30. The fetch-only check workflow
+`substack_proxy_check.yml` is disabled; re-enable it to debug. To rotate the key: generate a new value, then
+`npx wrangler secret put FEED_PROXY_KEY` in `worker/feed-proxy/` and `gh secret set CC_FEED_PROXY_KEY` with the same
+value. Tests: `tests/test_feed_proxy.py`, `node --test` in `worker/feed-proxy/`.
 
 Sources can set `role: "discovery"` (fetched and health-logged, never ranked: The Aquila Report) or a
 `discovery_title_pattern` (Tim Challies' A La Carte / Kindle deals / book roundups). `score_articles()` drops discovery
