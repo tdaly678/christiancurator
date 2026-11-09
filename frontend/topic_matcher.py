@@ -150,6 +150,15 @@ TOPICS: list[dict] = [
         ],
     },
     {
+        "slug": "biblical-literacy",
+        "label": "Biblical Literacy",
+        "keywords": [
+            "biblical literacy", "bible literacy", "biblical illiteracy", "bible reading",
+            "read the bible", "reading the bible", "scripture engagement", "bible engagement",
+            "state of the bible", "bible knowledge", "bible quiz", "bible sales",
+        ],
+    },
+    {
         "slug": "spiritual-disciplines",
         "label": "Spiritual Disciplines",
         "keywords": [

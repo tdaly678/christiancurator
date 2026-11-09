@@ -69,7 +69,8 @@ Runs automatically around **5:00 AM America/New_York** all year (the workflow `t
 What it commits: `docs/index.html`, `docs/topics/`, `docs/digest/`, `docs/yesterday.json`, `docs/email_draft.html`,
 `docs/article_history.json`, `docs/research_articles.json`, all five sitemaps (`sitemap.xml`, `sitemap-core.xml`,
 `sitemap-topics.xml`, `sitemap-voices.xml`, `sitemap-archive.xml`, `sitemap-daily.xml`), `docs/archive/`, `docs/daily/`,
-`docs/_pagefind/`, `docs/voices/`, `docs/voices_data.json`, `docs/spotlight_topic_log.json`, `docs/feed_health.json`.
+`docs/_pagefind/`, `docs/voices/`, `docs/voices_data.json`, `docs/spotlight_topic_log.json`, `docs/feed_health.json`,
+`docs/data_watch.json`, `data/` (topic data files updated by the data watch).
 
 ### Feed health and source roles (added 2026-10-30)
 `fetcher/rss_fetcher.py` fetches feeds with `requests` (15s timeout, browser UA with a feed-reader UA retry, 8 threads)
@@ -107,7 +108,7 @@ mechanism), and `scored_by` (`claude` / `fallback`). Rows from 2026-09-06 to 202
 marked `scored_by: "fallback"`, `scored_by_backfilled: true` by `scripts/backfill_scored_by.py`; exclude them when tuning.
 
 Steps after the pipeline itself: backfill orphan voice pages, rebuild the `/topics/` hub index, rebuild the `/voices/`
-category hubs, refresh recent-articles sections, inject the Featured deep dives block, regenerate the sitemaps,
+category hubs, run the topic data watch, refresh recent-articles sections, inject the Featured deep dives block, regenerate the sitemaps,
 build the Pagefind index, commit, then ping IndexNow.
 
 ### Editorial scoring: two axes (P1 Wave 1, 2026-10-30)
@@ -340,14 +341,57 @@ byline.
 `docs/topics/biblical-literacy/` carries three data pieces (reverence gap chart, "By the Numbers" quiz, survey tracker)
 rendered by `scripts/build_biblical_literacy_viz.py` from `data/biblical-literacy/surveys.json` into the
 `CC-BL-VIZ-GAP`, `CC-BL-VIZ-QUIZ` and `CC-BL-VIZ-TRACKER` marker blocks (styles in `CC-BL-VIZ-CSS` in the head). Run it
-by hand after editing the data; it is not in the daily pipeline. It bumps "Last updated" and `dateModified` only when
+by hand after editing the data; the daily data watch (below) also reruns it after adding a `watch` row. It bumps "Last updated" and `dateModified` only when
 the data hash changes, fails on any row without a URL or license status, and refuses to chart rows that are not
 `reuse` / `permission-granted` (Barna and ABS are `ask-first`, cited as text). Add a `changelog` entry with each data
 change. Spec: `.christian-orchestrator/biblical-literacy-page-visuals.md`. Tests: `tests/test_biblical_literacy_viz.py`.
 
+### Topic data watch (2026-11-09)
+`scripts/run_data_watch.py` (logic in `curator/data_watch.py`) is a daily workflow step after the pipeline and before
+`build_recent_articles.py`, with `continue-on-error` and exit 0 on any error. It is deterministic (no Claude call) and
+fails closed: anything it cannot verify is linked, not written as a number, and nothing it writes is ever charted.
+- Input: today's scored pool (`output/articles.json`) plus digest rows from the last 3 days (`article_history.json`).
+  Off-mission world news (`is_off_mission()`) is skipped. State lives in `docs/data_watch.json` (`seen`, `fresh`,
+  `figures`, `last_run`), committed daily.
+- Detection (`detect_signals()`): a named research publisher (`PUBLISHERS`: Lifeway, Pew, Gallup, Barna, ABS / State of
+  the Bible, Ryan Burge / Graphs About Religion, YouVersion, Wycliffe, Publishers Weekly, ECPA, Circana, PRRI), a figure
+  ("62%", "2 in 3"), or a strong data word (survey, poll, quiz, statistics). Weak words (study, report, data) need the
+  scorer's `data` tag; "Bible study" never counts. Trend = `final_score` + 1.5 per extra outlet (dedup `also_from`, shared
+  `topic_cluster`) + 1 when on the digest. Digest stories get the fetch budget first (`MAX_FETCH = 8`).
+- Topic matching (`match_topic_slugs()`, max 3, only slugs with a page): `WATCH_TOPICS` keywords, `topic_classifier`,
+  plural-tolerant title hits on every `topics_data` keyword, and `topic_matcher` curated keywords. `NARROW_TOPICS` keeps the
+  `evangelicalism` catch-all to titles that say evangelical / SBC / NAE.
+- Figures (`find_figures()`, `verify_figure()`): only for stories on the digest or with `final_score >= 6`. The story page
+  is fetched once (a 403 or timeout is a `::warning` and "link only"; one retry next run). A figure is a whole sentence
+  found verbatim on the fetched page, 40 to 320 characters, with a number, a topic keyword, a named population (adults,
+  churchgoers, pastors...), no first person, no promo words, no dashes, not opening with a connective or pointing back
+  ("that 42%"), tied to exactly one known publisher, and the story or sentence must pass `has_faith_hook()`. License
+  status comes from `PUBLISHERS`: Pew, Lifeway, Gallup `reuse`; Barna, ABS, Burge `ask-first`; the rest `cite-only`.
+- Writes, in order:
+  1. Digest stories matched to a topic go to `fresh[slug]`; `build_recent_articles.py` merges them into that page's
+     Fresh From the Digest block (any topic page, not only the `topic_matcher` list; `biblical-literacy` was added to it).
+  2. Topics with a `data_file` in `WATCH_TOPICS` (today: biblical-literacy) get a row in the file's `watch` list plus a
+     changelog line, then their builder reruns. The builder shows `watch` rows as a cited text table ("New figures from
+     the data watch") and never charts them. If the builder fails, the data file and page are restored.
+  3. Every other topic page gets a `<!-- CC-LATEST-FIGURES:START --> ... END -->` block (quoted sentence, publisher,
+     source link, max 5, kept 365 days; Pew adds its disclaimer). It is inserted once before `AEO-RELATED-TOPICS:START`
+     (after the synthesis, never inside the curated list) and refreshed in place. "Last updated" and the Article
+     `dateModified` move only when the block's content changes.
+- Job summary: "Topic data to review" lists every data story with source, signals, topics, trend and the action taken
+  (Fresh link, figure verified, fetch failed, no verifiable figure, watching only, already cited). No email is sent.
+- Promoting a `watch` row into a chart is a hand step: confirm question wording, sample, field dates and license, then add
+  it to the data file's `studies` / `rows`.
+- Add a topic to the watch: every topic page is already eligible for Fresh links and Latest Figures. Add a
+  `WATCH_TOPICS[slug]` entry for extra `keywords` (story matching) or `sentence_keywords` (sentence relevance). For charts,
+  create `data/<slug>/...json` and a builder in `scripts/` with `PAGE_PATH`, `main(argv) -> int` (accepting `--date`)
+  and support for a `watch` list, then set `data_file` and `builder` on the entry. Add a publisher to `PUBLISHERS` with
+  its license status before its figures can be quoted.
+- Local dry run (writes nothing): `python scripts/run_data_watch.py --dry-run`. Tests: `tests/test_data_watch.py`.
+
 ### Idempotent injection markers
 Cross-cutting scripts inject content-additive blocks using HTML-comment markers so re-runs replace the block in place instead of duplicating it. When extending any of these, update between the markers rather than editing around them:
 
+- `<!-- CC-LATEST-FIGURES:START --> ... END -->`: "Latest Figures" block on topic pages, written by the data watch (above)
 - `<!-- AEO-RELATED-TOPICS:START --> ... END -->` — "Related Deep-Dive Topics" block on each topic page (inserted by `scripts/add_related_topics.py`, positioned between the synthesis `</section>` and the curated article list)
 - `<!-- AEO-TOPIC-BACKLINKS:START --> ... END -->` — "Featured in Deep-Dive Topics" block on voice pages (inserted by `scripts/update_voice_backlinks.py`, which is also invoked by `main.py` after `render_html` each day)
 - `/* AEO-FAQPAGE-SCHEMA */` — marker comment inside the FAQ JSON-LD script block; `verify_aeo.py` strips this before parsing

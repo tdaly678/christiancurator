@@ -15,7 +15,9 @@ The visible "Last updated" line and the Article `dateModified` move only when th
 file changed (a hash of it is stored in the tracker block). The build fails when any row
 lacks a URL or license status, and rows marked ask-first or cite-only are never charted.
 
-Run by hand after editing the data file. It is not part of the daily pipeline.
+Run by hand after editing the data file. The daily data watch (scripts/run_data_watch.py)
+also runs it after adding a quoted figure to the file's "watch" list; those rows are shown
+as a cited table and never charted.
 
 Usage:
     python scripts/build_biblical_literacy_viz.py            # rewrite the page
@@ -47,6 +49,9 @@ DATA_RAW_URL = "https://raw.githubusercontent.com/tdaly678/christiancurator/main
 BLOCKS = ("GAP", "QUIZ", "TRACKER")
 LICENSE_STATUSES = {"reuse", "cite-only", "ask-first", "permission-granted"}
 CHARTABLE = {"reuse", "permission-granted"}
+# Rows the daily data watch (curator/data_watch.py) adds under "watch": a quoted
+# sentence checked against its source page. Shown as cited text, never charted.
+WATCH_FIELDS = ("id", "quote", "figure", "publisher", "license_status", "url", "verified_date")
 REQUIRED_ROW_FIELDS = (
     "source", "study_title", "url", "field_dates", "publication_date", "sample", "population",
     "question_wording", "measure", "subgroup", "value", "margin_of_error", "license_status",
@@ -141,6 +146,25 @@ def validate(data: dict) -> list[str]:
                     date.fromisoformat(row[field])
                 except ValueError:
                     errors.append(f"{rid}: {field} is not YYYY-MM-DD")
+    for w in data.get("watch", []):
+        wid = w.get("id") or "(watch row without id)"
+        if wid in seen:
+            errors.append(f"{wid}: duplicate id")
+        seen.add(wid)
+        for field in WATCH_FIELDS:
+            if not str(w.get(field) or "").strip():
+                errors.append(f"{wid}: missing {field}")
+        if w.get("url") and not str(w["url"]).startswith("https://"):
+            errors.append(f"{wid}: url must be https: {w['url']}")
+        if w.get("license_status") and w["license_status"] not in LICENSE_STATUSES:
+            errors.append(f"{wid}: license_status {w['license_status']!r} not in {sorted(LICENSE_STATUSES)}")
+        if w.get("figure") and w.get("quote") and w["figure"] not in w["quote"]:
+            errors.append(f"{wid}: figure {w['figure']!r} is not in its quote")
+        if w.get("verified_date"):
+            try:
+                date.fromisoformat(w["verified_date"])
+            except ValueError:
+                errors.append(f"{wid}: verified_date is not YYYY-MM-DD")
     for entry in data.get("changelog", []):
         try:
             date.fromisoformat(entry.get("date", ""))
@@ -629,6 +653,37 @@ def render_cited_table(data: dict) -> str:
     )
 
 
+def render_watch_table(data: dict) -> str:
+    """Figures the data watch found in new stories: quoted text with links, newest first.
+
+    Never charted, whatever the license status. A row joins a chart only after a
+    person adds question wording, sample and field dates to `rows`.
+    """
+    rows = sorted(data.get("watch") or [], key=lambda w: (w["verified_date"], w["id"]), reverse=True)
+    if not rows:
+        return ""
+    body = "".join(
+        "<tr>"
+        f"<td>\u201c{esc(w['quote'])}\u201d</td>"
+        f"<td>{esc(w['publisher'])}</td>"
+        f"<td>{link(w['url'], w.get('title') or w.get('reported_by') or w['publisher'])}"
+        f"{', ' + esc(w['reported_by']) if w.get('reported_by') else ''}</td>"
+        f"<td><time datetime=\"{esc(w['verified_date'])}\">{esc(w['verified_date'])}</time></td>"
+        "</tr>"
+        for w in rows
+    )
+    head = "".join(f'<th scope="col">{h}</th>' for h in ("Figure as reported", "Survey by", "Source", "Checked"))
+    return (
+        '<div class="cc-viz-cited cc-viz-watch" id="data-watch">\n'
+        '<div class="cc-viz-kicker">New figures from the data watch</div>\n'
+        '<p class="cc-viz-note">Figures from recent stories, quoted as published and checked against the '
+        "linked page on the date shown. They are cited, not charted, until we confirm the question, sample "
+        "and field dates.</p>\n"
+        f'<div class="cc-viz-scroll"><table><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>\n'
+        "</div>"
+    )
+
+
 def render_dataset_jsonld(data: dict, page_date: date) -> str:
     studies = data["studies"]
     based_on = [
@@ -681,6 +736,8 @@ def render_tracker(data: dict, page_date: date, digest: str) -> str:
         f"<li><time datetime=\"{esc(e['date'])}\">{esc(e['date'])}</time>: {esc(e['note'])}</li>"
         for e in sorted(data.get("changelog", []), key=lambda e: e["date"], reverse=True)
     )
+    watch = render_watch_table(data)
+    watch = f"{watch}\n" if watch else ""
     cite = (
         f'Cite this page: "{PAGE_TITLE}" Christian Curator, {PAGE_URL}, last updated {long_date(page_date)}. '
         f'Data: {link(DATA_URL, "surveys.json")}.'
@@ -692,6 +749,7 @@ def render_tracker(data: dict, page_date: date, digest: str) -> str:
         '<div class="cc-viz-title">Is Bible Reading Rising or Falling?</div>\n'
         f'<p class="cc-viz-intro">{esc(top)}</p>\n'
         f"{render_pew_panel(data)}\n{render_lifeway_panel(data)}\n{render_gallup_panel(data)}\n{render_cited_table(data)}\n"
+        f"{watch}"
         '<div class="cc-viz-methods">\n'
         '<p><strong>Methods.</strong> We do not merge surveys; each panel is one survey\'s own measure, with its own '
         "question, sample and field dates, and panels do not share an axis. Figures are copied from each publisher's "

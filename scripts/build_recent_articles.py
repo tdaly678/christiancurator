@@ -6,6 +6,10 @@ Voice pages get "Recent articles by <name>" built from archive-page bylines
 "Recent articles on this topic" built from article_history.json matched via
 frontend.topic_matcher keyword lists.
 
+Topic pages also get the stories the daily data watch matched to them
+(`fresh` in docs/data_watch.json, written by scripts/run_data_watch.py), so a
+page outside the keyword list still shows a survey story placed on the digest.
+
 Both sections are wrapped in marker comments and rewritten in place on each
 run, so the daily pipeline keeps them fresh — a recurring freshness signal on
 otherwise-static evergreen pages, plus genuinely useful recent reading for
@@ -31,6 +35,7 @@ ARCHIVE_DIR = DOCS_DIR / "archive"
 VOICES_DIR = DOCS_DIR / "voices"
 TOPICS_DIR = DOCS_DIR / "topics"
 HISTORY = DOCS_DIR / "article_history.json"
+DATA_WATCH = DOCS_DIR / "data_watch.json"
 
 V_START = "<!-- CC-RECENT-ARTICLES:START -->"
 V_END = "<!-- CC-RECENT-ARTICLES:END -->"
@@ -192,15 +197,43 @@ def match_articles_to_topic(topic: dict, history: list[dict]) -> list[dict]:
     return deduped
 
 
+def load_data_watch_fresh(path: Path = DATA_WATCH) -> dict[str, list[dict]]:
+    try:
+        return json.loads(path.read_text(encoding="utf-8")).get("fresh") or {}
+    except (OSError, ValueError):
+        return {}
+
+
+def merge_items(keyword_items: list[dict], watch_items: list[dict]) -> list[dict]:
+    """Keyword matches plus data-watch stories, newest first, one per URL."""
+    seen, out = set(), []
+    for a in sorted(keyword_items + watch_items, key=lambda a: a.get("date", ""), reverse=True):
+        if not a.get("url") or a["url"] in seen:
+            continue
+        seen.add(a["url"])
+        out.append(a)
+    return out[:MAX_ITEMS]
+
+
 def update_topics() -> int:
+    from frontend.topics_data import TOPICS as ALL_TOPICS
+
     history = json.loads(HISTORY.read_text(encoding="utf-8"))
+    fresh = load_data_watch_fresh()
+    names = {t["slug"]: t["name"] for t in ALL_TOPICS}
+    topics = list(TOPICS) + [
+        {"slug": slug, "label": names.get(slug, slug), "keywords": []}
+        for slug in sorted(fresh) if slug not in {t["slug"] for t in TOPICS}
+    ]
     n = 0
-    for topic in TOPICS:
+    for topic in topics:
         page = TOPICS_DIR / topic["slug"] / "index.html"
         if not page.exists():
             continue
-        items = match_articles_to_topic(topic, history)
-        if len(items) < 2:  # don't render a thin section
+        watch_items = fresh.get(topic["slug"], [])
+        items = merge_items(match_articles_to_topic(topic, history) if topic["keywords"] else [], watch_items)
+        # don't render a thin section, unless a data-watch story is in it
+        if len(items) < 2 and not watch_items:
             continue
         section = render_section(
             "Fresh From the Digest", f"Recent Articles on {topic['label']}", items

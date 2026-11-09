@@ -152,6 +152,16 @@ jobs:
       - name: Rebuild /voices/ category hubs
         run: python3 scripts/build_voice_hubs.py
 
+      - name: Topic data watch (survey and data stories into topic pages)
+        # curator/data_watch.py: finds survey/data stories in today's pool,
+        # matches them to topic pages, quotes only figures found verbatim on the
+        # fetched source page (never charted), updates Latest Figures blocks and
+        # topic data files, and writes "Topic data to review" to the job summary.
+        # Must run before build_recent_articles.py, which reads its `fresh` list.
+        # Exits 0 on any error (a 403 is a warning), so it never blocks the run.
+        run: python3 scripts/run_data_watch.py
+        continue-on-error: true
+
       - name: Refresh recent-articles sections on voice + topic pages
         run: python3 scripts/build_recent_articles.py
 
@@ -176,7 +186,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash origin main
-          git add docs/index.html docs/topics/ docs/digest/ docs/yesterday.json docs/email_draft.html docs/article_history.json docs/research_articles.json docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-topics.xml docs/sitemap-voices.xml docs/sitemap-daily.xml docs/sitemap-archive.xml docs/archive/ docs/daily/ docs/_pagefind/ docs/voices/ docs/voices_data.json docs/spotlight_topic_log.json docs/feed_health.json docs/click_counts.json docs/discovery_queue.json
+          git add docs/index.html docs/topics/ docs/digest/ docs/yesterday.json docs/email_draft.html docs/article_history.json docs/research_articles.json docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-topics.xml docs/sitemap-voices.xml docs/sitemap-daily.xml docs/sitemap-archive.xml docs/archive/ docs/daily/ docs/_pagefind/ docs/voices/ docs/voices_data.json docs/spotlight_topic_log.json docs/feed_health.json docs/click_counts.json docs/discovery_queue.json docs/data_watch.json data/
           git diff --staged --quiet || git commit -m "chore: daily curator run $(date +%Y-%m-%d)"
           git push origin main
 
