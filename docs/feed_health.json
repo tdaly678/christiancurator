@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-08T10:01:09+00:00",
+  "run_at": "2026-11-09T10:01:16+00:00",
   "sources": [
     {
       "source": "The Gospel Coalition",
@@ -7,7 +7,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 60,
-      "newest_date": "2026-11-08",
+      "newest_date": "2026-11-09",
       "bozo": false,
       "stale": false
     },
@@ -26,8 +26,8 @@
       "url": "https://feed.desiringgod.org/articles-by-desiring-god.rss",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 641,
-      "newest_date": "2026-11-01",
+      "n_entries": 642,
+      "newest_date": "2026-11-08",
       "bozo": false,
       "stale": false
     },
@@ -37,7 +37,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-07",
+      "newest_date": "2026-11-09",
       "bozo": false,
       "stale": false
     },
@@ -57,7 +57,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-07",
+      "newest_date": "2026-11-09",
       "bozo": false,
       "stale": false
     },
@@ -97,7 +97,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 41,
-      "newest_date": "2026-11-06",
+      "newest_date": "2026-11-09",
       "bozo": false,
       "user_agent": "reader",
       "stale": false
@@ -118,7 +118,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-07",
+      "newest_date": "2026-11-08",
       "bozo": false,
       "stale": false
     },
@@ -138,7 +138,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-06",
+      "newest_date": "2026-11-09",
       "bozo": false,
       "stale": false
     },
@@ -167,8 +167,8 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 25,
-      "newest_date": "2026-11-08",
+      "n_entries": 31,
+      "newest_date": "2026-11-09",
       "bozo": false,
       "stale": false
     },
@@ -177,8 +177,8 @@
       "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 54,
-      "newest_date": "2026-11-08",
+      "n_entries": 55,
+      "newest_date": "2026-11-09",
       "bozo": false,
       "stale": false
     },
@@ -187,8 +187,8 @@
       "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 72,
-      "newest_date": "2026-11-08",
+      "n_entries": 70,
+      "newest_date": "2026-11-09",
       "bozo": false,
       "stale": false
     },
@@ -316,11 +316,11 @@
       "source": "Pew Research",
       "url": "https://www.pewresearch.org/religion/feed/",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 100,
-      "newest_date": "2026-11-07",
+      "http_status": 403,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
-      "stale": false
+      "error": "HTTP 403"
     },
     {
       "source": "Lifeway Research",
@@ -328,7 +328,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-05",
+      "newest_date": "2026-11-09",
       "bozo": false,
       "stale": false
     },
@@ -448,7 +448,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 12,
-      "newest_date": "2026-11-07",
+      "newest_date": "2026-11-09",
       "bozo": false,
       "stale": false
     },
@@ -458,7 +458,7 @@
       "role": "discovery",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-08",
+      "newest_date": "2026-11-09",
       "bozo": false,
       "stale": false
     },
@@ -558,7 +558,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-08",
+      "newest_date": "2026-11-09",
       "bozo": false,
       "stale": false
     },
@@ -739,8 +739,8 @@
       "url": "https://feeds.simplecast.com/3NVmUWZO",
       "role": "media",
       "http_status": 200,
-      "n_entries": 548,
-      "newest_date": "2026-11-02",
+      "n_entries": 549,
+      "newest_date": "2026-11-09",
       "bozo": false,
       "apple_episode_urls": 50,
       "stale": false
@@ -780,153 +780,158 @@
   "zero_streaks": {
     "Kyle Worley": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Phylicia Masonheimer": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Laura Wifler": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Karen Swallow Prior": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Scot McKnight": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Matthew Lee Anderson": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
+    },
+    "Pew Research": {
+      "since": "2026-11-09",
+      "last_date": "2026-11-09",
+      "days": 1
     },
     "Joy Clarkson": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Mike Cosper": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Bonnie Kristian": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Aimee Byrd": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Nadya Williams": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Daniel K. Williams": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Timothy Paul Jones": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Kate Shellnutt": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Jemar Tisby": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Hannah Anderson": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Stephen McAlpine": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Daniel Darling": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Katelyn Beaty": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Tom Sugimura": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Mitchell Chase": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Michael Bird": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Nijay Gupta": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Carmen Joy Imes": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Beth Felker Jones": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Thomas Kidd": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Chris Gehrz": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Emily P. Freeman": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "A.J. Swoboda": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     },
     "Nicholas McDonald": {
       "since": "2026-10-31",
-      "last_date": "2026-11-08",
-      "days": 9
+      "last_date": "2026-11-09",
+      "days": 10
     }
   }
 }
