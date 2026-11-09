@@ -19,6 +19,7 @@ Returns a dict:
 
 from __future__ import annotations
 
+import html
 import os
 import re
 import json
@@ -71,35 +72,53 @@ RELATED_DAYS_SHOWN = 3  # how many related days to surface on each daily page
 
 SUMMARY_PROMPT = """\
 You are a writer for Christian Curator, a daily digest for evangelical Protestant Christians.
-Write a 2-paragraph dispatch (8 to 10 sentences total) about what the church is talking
-about today. Use the articles listed below as your source material.
+Write a 2-paragraph dispatch (8 to 10 sentences total) surveying the live conversations in
+evangelical publishing today. Use the articles listed below as your source material.
 {history_section}
+WHAT THE PULSE IS: a survey of the debates evangelical writers are having, not a news
+roundup. Look for three kinds of conversation: theological questions (doctrine, Scripture,
+the church's teaching), philosophical and cultural arguments (how Christians should think
+about public life, technology, art, ideas), and praxis (church life, ministry, discipleship,
+family, mission). Name the positions being argued and who is arguing them, writer and
+outlet, wherever the articles support it. Never invent a position or a disagreement the
+articles do not support. Lean on essays, opinion, reviews and long-form pieces; each item
+below is marked with its kind, and a news report should appear only when it moves one of
+these conversations forward.
+
+TONE: hopeful and constructive, never alarmist. Write as someone who thinks the church's
+arguments are worth having and that good people are having them well. Scandal, abuse,
+lawsuit, resignation and crisis stories must not lead the Pulse. Mention one only when it is
+clearly the dominant story of the day, and then in one sober clause at most, with no lurid
+detail, before turning to what writers are thinking and building. Understated RealClear
+voice: no hype, no promo language ("must-read", "don't miss", "powerful", "game-changing"),
+no exclamation points.
+
 STUDY THIS EXAMPLE CAREFULLY. Write in exactly this style:
 
 ---EXAMPLE START---
-Russell Moore said something last year that keeps coming back to me. He was writing about
-the temptation for Christians to turn every news cycle into a referendum on their identity,
-and he put it plainly: the church is not a political party with better songs.
-[The Gospel Coalition](https://example.com) and [Christianity Today](https://example.com)
-are circling the same problem this week. TGC says the threat is doctrinal: bad theology
-quietly replacing good. CT says the problem is pace. The speed of social media leaves no
-room for the kind of slow discernment faith actually requires. Neither outlet is wrong.
+Evangelical writers are arguing this week about what the local church owes lonely people,
+and they disagree in useful ways. [Mere Orthodoxy](https://example.com) treats loneliness
+as a formation problem: thin Sunday gatherings form thin people. [Desiring God](https://example.com)
+starts somewhere else. Friendship, it says, grows out of shared joy in God, not programs.
+Two diagnoses. Both take the congregation seriously.
 
-[Mere Orthodoxy](https://example.com) ran a piece for World Down Syndrome Day asking who
-the church counts as a full theological participant. Not a rhetorical question. A real one
-with stakes. A federal judge also ordered an ICE facility in Minneapolis to allow clergy
-access to detainees. [World Magazine](https://example.com) had the item. Small legal
-story. Larger question about who the church shows up for.
+[Christianity Today](https://example.com) brings the question down to Tuesday night, profiling
+churches that rebuilt the midweek meal and watched new members follow. [The Gospel Coalition](https://example.com)
+pushes back gently: a table helps, but preaching that names sin and grace is what turns a
+meal into fellowship. A Barna release puts numbers under the debate, with adults under 30
+reporting the fewest close friends of any age group. The pastors writing about it sound
+less worried than curious about what faithful hospitality could look like next year.
 ---EXAMPLE END---
 
 Notice what this example does:
-- Opens with a person and a specific memory, not "Today's content raises the question of..."
+- Opens by naming the conversation, not "Today's content raises the question of..."
+- Names each position and who holds it, and says plainly where they part ways
+- Covers the theological angle and the praxis angle of the same question
 - Sentences are SHORT. Many are under 12 words. Some are fragments.
-- First person ("keeps coming back to me") but not overdone
 - Paragraph 2 starts mid-thought, not with a transition word
 - No transition words between paragraphs: not "Meanwhile", "Additionally", "On a different
   note", "Furthermore", "However", "Notably", "Interestingly", or any variant
-- "Neither outlet is wrong" is direct, not "both diagnoses feel true at the same time"
+- Hopeful without being sentimental; the last sentence adds a new observation
 - Links mid-sentence, not announced
 - No em dashes (—) or en dashes (–) anywhere. Use commas, periods, colons or parentheses
 
@@ -112,13 +131,15 @@ NEVER WRITE THESE PHRASES (AI tells that detectors flag immediately):
 
 Now write the actual dispatch using TODAY'S ARTICLES below.
 Use 2 to 4 markdown links [title](url) placed naturally.
-Surface the real theological tension, not just what the articles are about.
-Name writers and outlets by name.
-Where they disagree, say so plainly.
+Surface the real theological, philosophical or practical tension, not just what the
+articles are about. Name writers and outlets by name.
+Where they disagree, say so plainly and fairly, giving each side its best form.
 
 CRITICAL: State the main theme in the very first sentence. A lay reader should know
-what the day is about before reading the second sentence. Then show how the individual
-pieces connect to that theme. Don't make the reader figure out the connection themselves.
+what the day is about before reading the second sentence. The theme should be a question
+or debate the church is working through, never a scandal or a crisis. Then show how the
+individual pieces connect to that theme. Don't make the reader figure out the connection
+themselves.
 
 ONE THEME, EVERY SENTENCE: Every sentence must advance the theme stated in sentence 1.
 Choose your articles AFTER you choose the theme. Use only the pieces that honestly bear
@@ -144,7 +165,7 @@ already carries. If two sentences say the same thing, keep the sharper one and c
 other. If cutting repeats leaves fewer than 8 sentences, add another honest facet of the
 theme from the articles, never a restatement.
 
-TODAY'S ARTICLES (title | source | url):
+TODAY'S ARTICLES (title | source and author | kind | url, then a short excerpt):
 {article_list}
 
 Respond with a JSON object in this exact format and nothing else:
@@ -324,21 +345,128 @@ def _parse_summary_json(raw: str):
             return None, json_err
 
 
+# ---------------------------------------------------------------------------
+# Pulse source selection (2026-11-08)
+# ---------------------------------------------------------------------------
+# Tom: the Pulse had skewed negative and scandal heavy because it read the top
+# 15 by importance, which is news value. The Pulse now surveys the debates in
+# evangelical publishing, so it reads essays, opinion, reviews and long-form
+# first, caps straight news, and admits a scandal story only when it is the
+# dominant story of the day.
+
+PULSE_MAX_ITEMS = 15
+PULSE_MAX_NEWS = 4      # straight news reports (scandal items count here too)
+PULSE_MAX_SCANDAL = 1   # and only when dominant (see is_dominant_story)
+PULSE_DOMINANT_OUTLETS = 3
+PULSE_EXCERPT_CHARS = 220
+
+SCANDAL_RE = re.compile(
+    r"\b(abuse[sd]?|abusive|grooming|misconduct|scandals?|lawsuits?|sues|sued|"
+    r"suing|resign(?:s|ed|ation)?|steps? down|stepped down|ousted|fired|"
+    r"crisis|allegations?|alleged(?:ly)?|accus(?:ed|es|ations?)|whistleblower|"
+    r"cover[- ]?up|indict(?:ed|ment)|arrested|pleads? guilty|"
+    r"convicted|sentenced|investigation|molest\w*|assault\w*|"
+    r"embezzl\w*|fraud)\b",
+    re.I,
+)
+
+
+def is_scandal(a: dict) -> bool:
+    """True for scandal, abuse, lawsuit, resignation and crisis stories (title)."""
+    title = a.get("rewritten_title") or a.get("title") or ""
+    return bool(SCANDAL_RE.search(title))
+
+
+def is_news_report(a: dict) -> bool:
+    """Straight news, as opposed to essay, opinion, review or data analysis."""
+    return (a.get("perspective") == "news"
+            or a.get("source_type") == "world_news"
+            or "news" in (a.get("tags") or []))
+
+
+def pulse_kind(a: dict) -> str:
+    """The label the prompt shows for each item."""
+    if is_scandal(a):
+        return "news (scandal)"
+    if is_news_report(a):
+        return "news"
+    if "data" in (a.get("tags") or []):
+        return "data"
+    return "essay"
+
+
+def pulse_rank(a: dict) -> float:
+    """Blend of importance and depth, so formative essays outrank headlines."""
+    importance = a.get("final_score") or 0
+    depth = a.get("depth")
+    if depth is None:
+        depth = importance
+    return 0.5 * importance + 0.5 * depth
+
+
+def is_dominant_story(a: dict, pool: list[dict]) -> bool:
+    """A scandal is dominant when it tops the day or 3+ outlets carry it."""
+    if pool and a is max(pool, key=lambda x: x.get("final_score") or 0):
+        return True
+    cluster = a.get("topic_cluster")
+    if not cluster or cluster == "unique":
+        return False
+    outlets = {x.get("source_name") for x in pool if x.get("topic_cluster") == cluster}
+    outlets.update(a.get("also_from") or [])
+    return len(outlets) >= PULSE_DOMINANT_OUTLETS
+
+
+def select_pulse_candidates(articles: list[dict],
+                            limit: int = PULSE_MAX_ITEMS) -> list[dict]:
+    """Pick the Pulse's source articles: essays first, news capped, scandal rare."""
+    pool = [a for a in articles if (a.get("final_score") or 0) > 0]
+    picked, n_news, n_scandal = [], 0, 0
+    for a in sorted(pool, key=pulse_rank, reverse=True):
+        if len(picked) >= limit:
+            break
+        scandal = is_scandal(a)
+        if scandal and (n_scandal >= PULSE_MAX_SCANDAL
+                        or not is_dominant_story(a, pool)):
+            continue
+        if (scandal or is_news_report(a)) and n_news >= PULSE_MAX_NEWS:
+            continue
+        picked.append(a)
+        n_scandal += scandal
+        n_news += scandal or is_news_report(a)
+    return picked
+
+
+def _excerpt(a: dict) -> str:
+    text = html.unescape(re.sub(r"<[^>]+>", " ", a.get("summary") or ""))
+    text = re.sub(r"\s*The post .*$", "", text)  # WordPress feed footer
+    text = sanitize_pulse(" ".join(text.split()))
+    if len(text) > PULSE_EXCERPT_CHARS:
+        text = text[:PULSE_EXCERPT_CHARS].rsplit(" ", 1)[0] + "..."
+    return text
+
+
+def format_pulse_article(a: dict) -> str:
+    byline = a.get("source_name", "")
+    if a.get("author") and a["author"] != byline:
+        byline = f"{byline}, {a['author']}"
+    line = (f"- {a.get('rewritten_title') or a['title']} | {byline} | "
+            f"{pulse_kind(a)} | {a['url']}")
+    excerpt = _excerpt(a)
+    return f"{line}\n  {excerpt}" if excerpt else line
+
+
 def generate_daily_summary(articles: list[dict]) -> dict | None:
-    """Generate a 3-paragraph pastoral daily summary from the top articles."""
+    """Generate a 2-paragraph Pulse surveying the day's evangelical debates."""
     today = date.today()
     today_slug = today.strftime("%Y-%m-%d")
-    candidates = [a for a in articles if (a.get("final_score") or 0) > 0][:15]
+    candidates = select_pulse_candidates(articles)
 
     if len(candidates) < 5:
         print("  Daily summary: not enough articles, skipping.")
         return None
 
     # Build article list for prompt
-    article_list = "\n".join(
-        f"- {a.get('rewritten_title') or a['title']} | {a.get('source_name', '')} | {a['url']}"
-        for a in candidates
-    )
+    article_list = "\n".join(format_pulse_article(a) for a in candidates)
 
     # Load history and build context section for prompt
     history = load_theme_history()
