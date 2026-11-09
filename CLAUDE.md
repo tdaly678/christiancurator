@@ -404,7 +404,13 @@ Structure mirrors homepage v2 (same `layout` dict):
 
 Every headline links **directly to the article URL**. (Homepage anchors `/#a<hash>` were dropped in October 2026 because
 the next day's re-render removes them; if an article has no URL the link falls back to `/archive/YYYY-MM-DD/`.)
-Subject line: `{lead headline} · + N more stories` (N = other article links in the email), lead truncated at 70 characters (`build_subject()`).
+Subject line (Tom, 2026-11-09): follows the Daily Pulse, never the lead headline. `build_subject(daily_summary)` tries,
+in order: the Pulse's own `subject` (Claude returns it with the paragraphs), the Pulse's first sentence shortened by whole
+clauses with fillers ("today", "this week", "actually") and then the "writers are arguing about" lead-in dropped
+(`subject_candidates()`), "Today's conversation: {first theme}", and with no Pulse "Christian Curator · November 9, 2026".
+Each line must pass `_subject_ok()`: 25 to 80 characters, never cut with an ellipsis, no emoji/promo (`hard_reject`), no
+`!` or dashes, no scandal or crime word (`headline_voice.SCANDAL_RE` plus `_SUBJECT_AVOID_RE`). The preheader is the next
+non-scandal Pulse sentence, else `Leading: {lead} | {sublead}` when there is no Pulse. Tests: `tests/test_email_sender.py`.
 
 ## Topic Pages — Structure (70 topics as of September 2026)
 

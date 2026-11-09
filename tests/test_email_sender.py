@@ -36,35 +36,129 @@ def layout(**kw):
     return base
 
 
-class Subject(unittest.TestCase):
-    def test_lead_only_no_count(self):
-        self.assertEqual(es.build_subject("Short lead"), "Short lead")
+def pulse(first, *rest, **kw):
+    return {"paragraphs_plain": [" ".join((first,) + rest)], **kw}
 
-    def test_cut_on_word_boundary(self):
-        s = es.build_subject("Southern Baptists vote to study women pastors amendment again at "
-                             "next summer's annual meeting in Orlando")
+
+class Subject(unittest.TestCase):
+    """Subject follows the Daily Pulse, never the lead headline (2026-11-09)."""
+
+    def check_voice(self, s):
         self.assertLessEqual(len(s), es.SUBJECT_MAX)
-        self.assertTrue(s.endswith("…"))
-        self.assertNotIn("more stor", s)
+        for bad in ("…", "...", "—", "–", "!"):
+            self.assertNotIn(bad, s)
+        self.assertFalse(s.endswith("."))
+
+    def test_claude_subject_preferred(self):
+        s = es.build_subject(pulse("Writers are arguing about friendship.",
+                                   subject="What the local church owes lonely people."))
+        self.assertEqual(s, "What the local church owes lonely people")
+
+    def test_claude_subject_cleaned(self):
+        s = es.build_subject(pulse("x.", subject="Friendship and the church \u2014 a new look!"))
+        self.assertEqual(s, "Friendship and the church, a new look")
+
+    def test_bad_claude_subject_falls_through_to_pulse(self):
+        for bad in ("Pastor resigns amid abuse allegations at megachurch",
+                    "\U0001F525 What the local church owes lonely people",
+                    "Short one",
+                    "x" * 120):
+            s = es.build_subject(pulse("Evangelical writers are arguing about what the "
+                                       "local church owes lonely people.", subject=bad))
+            self.assertEqual(s, "Evangelical writers are arguing about what the local "
+                                "church owes lonely people")
+
+    def test_long_first_sentence_shortened_by_clause_not_ellipsis(self):
+        s = es.build_subject(pulse(
+            "Evangelical writers are pressing this week on what faithful church membership "
+            "actually requires, and the answers are pulling in different directions.",
+            "David Mathis argues something."))
+        self.assertEqual(s, "Evangelical writers are pressing on what faithful church "
+                            "membership requires")
+        self.check_voice(s)
+
+    def test_lead_in_dropped_when_still_too_long(self):
+        s = es.build_subject(pulse(
+            "Today the church is asking whether its public witness has become "
+            "indistinguishable from political power, and whether that trade has cost "
+            "something it cannot get back."))
+        self.assertEqual(s, "Whether its public witness has become indistinguishable "
+                            "from political power")
+
+    def test_scandal_opening_never_leads(self):
+        s = es.build_subject(pulse(
+            "Today the church is reckoning, again, with what happens when spiritual "
+            "authority becomes a predator's cover.", "A pastor was convicted.",
+            themes=["pastoral accountability", "protecting the vulnerable"]))
+        self.assertEqual(s, "Today's conversation: pastoral accountability")
+        s = es.build_subject(pulse("A megachurch pastor was convicted of fraud and abuse "
+                                   "in a case that shook the denomination."))
+        self.assertTrue(s.startswith("Christian Curator · "))
+
+    def test_missing_pulse_falls_back_to_dated_masthead(self):
+        day = date(2026, 11, 9)
+        self.assertEqual(es.build_subject(None, today=day),
+                         "Christian Curator · November 9, 2026")
+        self.assertEqual(es.build_subject({}, today=day),
+                         "Christian Curator · November 9, 2026")
+        self.assertEqual(es.build_subject(es.fallback_pulse(layout()), today=day),
+                         "Christian Curator · November 9, 2026")
+
+    def test_never_uses_lead_headline(self):
+        lay = layout(lead=art("Colorado Forces Catholic Preschools to Choose Between "
+                              "Faith and Funding in Landmark Ruling"))
+        post = mock.Mock(return_value=mock.Mock(status_code=201, json=lambda: {"id": 1}))
+        with mock.patch.object(es, "BREVO_API_KEY", "k"), \
+             mock.patch.object(es, "BREVO_SENDER_EMAIL", "a@b.c"), \
+             mock.patch.object(es, "build_email_html", return_value="<html></html>"), \
+             mock.patch.object(es, "save_email_html", return_value="x"), \
+             mock.patch.object(es.requests, "post", post):
+            es.send_email([], daily_summary=pulse("The church is asking what prayer "
+                                                  "is for, and writers disagree."),
+                          layout=lay)
+        self.assertEqual(post.call_args_list[0].kwargs["json"]["subject"],
+                         "The church is asking what prayer is for, and writers disagree")
+
+    def test_recent_pulse_openings(self):
+        cases = {
+            "It's election eve, and the church is being asked to account for itself on "
+            "two fronts at once: who it votes for, and whether it can be trusted.":
+                "The church is being asked to account for itself on two fronts at once",
+            "The church is talking today about whether it actually knows what it claims "
+            "to know.":
+                "The church is talking about whether it knows what it claims to know",
+            "The pro-life movement is having a reckoning, and the church doesn't agree "
+            "on what it means.":
+                "The pro-life movement is having a reckoning",
+        }
+        for opening, want in cases.items():
+            s = es.build_subject(pulse(opening))
+            self.assertEqual(s, want)
+            self.check_voice(s)
 
 
 class Preheader(unittest.TestCase):
-    def test_pulse_first_sentence(self):
+    def test_pulse_second_sentence(self):
         summary = {"paragraphs_plain": ["Grief is the thread today. Second sentence here."]}
-        self.assertEqual(es.build_preheader(layout(), summary), "Grief is the thread today.")
+        self.assertEqual(es.build_preheader(layout(), summary), "Second sentence here.")
+
+    def test_skips_scandal_sentence(self):
+        summary = pulse("Grief is the thread.", "A pastor was convicted on 27 counts.",
+                        "Writers are asking how lament heals.")
+        self.assertEqual(es.build_preheader(layout(), summary),
+                         "Writers are asking how lament heals.")
 
     def test_long_pulse_clipped(self):
-        summary = {"paragraphs_plain": ["word " * 60 + "."]}
+        summary = {"paragraphs_plain": ["First. " + "word " * 60 + "."]}
         self.assertLessEqual(len(es.build_preheader(layout(), summary)), es.PREHEADER_MAX)
 
-    def test_sublead_fallback_skips_lead(self):
+    def test_headline_fallback_without_pulse(self):
         p = es.build_preheader(layout(), None)
-        self.assertEqual(p, "Also: Sublead one | Sublead two")
-        self.assertNotIn("lead story", p)
+        self.assertEqual(p, "Leading: The lead story | Sublead one")
 
     def test_fallback_pulse_not_used(self):
         p = es.build_preheader(layout(), es.fallback_pulse(layout()))
-        self.assertTrue(p.startswith("Also: "))
+        self.assertTrue(p.startswith("Leading: "))
 
 
 class Trims(unittest.TestCase):
@@ -123,7 +217,7 @@ class Links(unittest.TestCase):
         self.assertLess(out.index("utm_content=cta"), out.index("Worth Your Time"))
         # Fallback Pulse fills the opener when the Claude summary is missing.
         self.assertIn("Today&rsquo;s lead: The lead story (The Gospel Coalition).", out)
-        self.assertIn("Also: Sublead one | Sublead two", out)
+        self.assertIn("Leading: The lead story | Sublead one", out)
 
     def test_pulse_internal_links_tagged(self):
         summary = {"paragraphs_html": ['See <a href="https://www.christiancurator.com/daily/2026-10-29/">'

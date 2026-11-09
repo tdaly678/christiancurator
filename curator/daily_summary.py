@@ -10,6 +10,7 @@ Returns a dict:
     "paragraphs_html":  ["<p>para with <a href=...> links</a></p>", ...],
     "paragraphs_plain": ["para plain text...", ...],   # for sidebar / meta
     "themes":           ["pastoral authority", "sanctification", ...],
+    "subject":          "What the local church owes lonely people",  # email subject
     "related_days":     [{"slug": "2026-03-19", "date": "March 19, 2026",
                           "excerpt": "...", "shared_themes": ["..."]}],
     "date":  "March 21, 2026",
@@ -30,7 +31,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from curator.ai_health import record_failure
-from curator.headline_voice import strip_dashes
+from curator.headline_voice import SCANDAL_RE, strip_dashes
 
 load_dotenv()
 
@@ -171,11 +172,17 @@ TODAY'S ARTICLES (title | source and author | kind | url, then a short excerpt):
 Respond with a JSON object in this exact format and nothing else:
 {{
   "paragraphs": ["paragraph 1 text", "paragraph 2 text"],
-  "themes": ["theme 1", "theme 2", "theme 3"]
+  "themes": ["theme 1", "theme 2", "theme 3"],
+  "subject": "email subject line"
 }}
 
 Themes should be 3 to 5 short theological/topical labels (e.g. "pastoral authority",
 "church and culture", "sanctification", "suffering and lament").
+
+The subject is the daily email's subject line: one plain sentence or phrase of 40 to 75
+characters that names the theme of sentence 1 (e.g. "What the local church owes lonely
+people"). Understated and hopeful. Never a scandal, crime or crisis. No emoji, no
+exclamation point, no hype, no "today's", no dashes, no closing period.
 """
 
 HISTORY_SECTION_TEMPLATE = """\
@@ -360,15 +367,7 @@ PULSE_MAX_SCANDAL = 1   # and only when dominant (see is_dominant_story)
 PULSE_DOMINANT_OUTLETS = 3
 PULSE_EXCERPT_CHARS = 220
 
-SCANDAL_RE = re.compile(
-    r"\b(abuse[sd]?|abusive|grooming|misconduct|scandals?|lawsuits?|sues|sued|"
-    r"suing|resign(?:s|ed|ation)?|steps? down|stepped down|ousted|fired|"
-    r"crisis|allegations?|alleged(?:ly)?|accus(?:ed|es|ations?)|whistleblower|"
-    r"cover[- ]?up|indict(?:ed|ment)|arrested|pleads? guilty|"
-    r"convicted|sentenced|investigation|molest\w*|assault\w*|"
-    r"embezzl\w*|fraud)\b",
-    re.I,
-)
+# SCANDAL_RE lives in curator/headline_voice.py so the email subject can share it.
 
 
 def is_scandal(a: dict) -> bool:
@@ -510,6 +509,7 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
         paragraphs_raw = drop_repeated_sentences(
             [sanitize_pulse(p) for p in data.get("paragraphs", [])])
         themes = data.get("themes", [])
+        subject = sanitize_pulse(str(data.get("subject") or "")).strip()
 
         if not paragraphs_raw:
             print("  Daily summary: empty paragraphs, skipping.")
@@ -524,6 +524,7 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
             "paragraphs_html":  paragraphs_html,
             "paragraphs_plain": paragraphs_plain,
             "themes":           themes,
+            "subject":          subject,
             "related_days":     related_days,
             "date":             today.strftime("%B %-d, %Y"),
             "slug":             today_slug,

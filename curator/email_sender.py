@@ -3,7 +3,8 @@ email_sender.py: builds and sends the daily email via Brevo API.
 
 Email structure follows homepage v2 (frontend/layout.py, P1 Wave 2), trimmed
 for the inbox:
-  Preheader     (invisible inbox preview: first Pulse sentence, else two subleads)
+  Subject       (from the Daily Pulse's theme or opening line, see build_subject)
+  Preheader     (invisible inbox preview: second Pulse sentence, else lead + sublead)
   Top bar       (date · Forwarded? Subscribe)
   Masthead      (Christian Curator wordmark + tagline)
   The Lead      (lead story + three subleads, by importance)
@@ -144,34 +145,117 @@ def _clip(text: str, limit: int) -> str:
     return text[:limit - 1].rsplit(" ", 1)[0].rstrip(",;:") + "…"
 
 
-SUBJECT_MAX = 60    # mobile inboxes show about 40 to 60 characters
+SUBJECT_MAX = 80    # never cut with an ellipsis; a candidate over this is skipped
+SUBJECT_MIN = 25
 PREHEADER_MAX = 90
 
+# Words a subject line never leads with, on top of headline_voice.SCANDAL_RE.
+_SUBJECT_AVOID_RE = re.compile(
+    r"\b(predators?|exploitation|sex(?:ual)? abuse|convict(?:ed|ion)s?|"
+    r"guilty|charges?|killed|deaths?|disaster|outrage|shocking|slams?)\b", re.I)
+# Time fillers and hedges dropped to save characters ("is talking today about").
+_SUBJECT_FILLER_RE = re.compile(r"\s*\b(?:today|this week|this morning|actually|again)\b", re.I)
+# A later clause that leans on the one before it ("whether that trade ...").
+_DEPENDENT_RE = re.compile(r"^(?:whether|that|this|these|those|it|its|they|who|which|"
+                           r"what|where|when|how|why|so|because|while)\b", re.I)
+# Clause breaks inside the first Pulse sentence.
+_CLAUSE_SPLIT_RE = re.compile(r"\s*(?:[,;:]\s+(?:and|but|or)\s+|[;:]\s+|,\s+)")
+# "Evangelical writers are pressing on ...", "The church is asking whether ..."
+_LEAD_IN_RE = re.compile(
+    r"^(?:(?:evangelical |christian |reformed )?(?:writers|pastors|scholars|thinkers|"
+    r"theologians|voices|evangelicals|christians)|the church|the conversation)\s+"
+    r"(?:is|are)\s+(?:being\s+)?\w+(?:ing|ed)(?:\s+(?:about|on|over|with))?\s+",
+    re.I)
 
-def build_subject(lead_title: str) -> str:
-    """The lead headline alone, cut to 60 characters on a word boundary.
 
-    No story count: it used mobile characters and signalled volume, not value.
+def _subject_text(text: str) -> str:
+    """Plain, dash-free, single-line copy with no closing period or ellipsis."""
+    from frontend.text import clean_copy
+    s = clean_copy(text).replace("!", "")
+    s = re.sub(r"[\s.…]+$", "", s).strip(" ,;:")
+    return s[:1].upper() + s[1:] if s else ""
+
+
+def _subject_ok(s: str) -> bool:
+    """RealClear voice check: fits whole, no emoji or promo, never scandal-led."""
+    from curator.headline_voice import SCANDAL_RE, hard_reject
+    return (SUBJECT_MIN <= len(s) <= SUBJECT_MAX
+            and "…" not in s and "..." not in s
+            and hard_reject(s) is None
+            and not SCANDAL_RE.search(s)
+            and not _SUBJECT_AVOID_RE.search(s))
+
+
+def _defill(s: str) -> str:
+    s = _SUBJECT_FILLER_RE.sub("", s)
+    s = re.sub(r"^\s*[,;:]\s*", "", s)
+    s = re.sub(r",\s*,", ",", s)
+    return re.sub(r"\s+([,;:])", r"\1", " ".join(s.split())).strip(" ,;:")
+
+
+def subject_candidates(sentence: str) -> list[str]:
+    """Subject lines derived from the Pulse's first sentence, best first.
+
+    The whole sentence, then its leading clauses, each with time fillers
+    dropped; then the same with the "writers are arguing about" lead-in
+    removed; last, any later clause that stands on its own. Nothing is ever
+    cut mid-clause.
     """
-    lead = _clip(lead_title, SUBJECT_MAX)
-    if not lead:
-        return f"Christian Curator · {date.today().strftime('%B %-d, %Y')}"
-    return lead
+    sentence = _subject_text(sentence)
+    if not sentence:
+        return []
+    clauses = [c for c in _CLAUSE_SPLIT_RE.split(sentence) if c]
+    plain = [sentence, _defill(sentence)]
+    plain += [_defill(", ".join(clauses[:k])) for k in range(len(clauses) - 1, 0, -1)]
+    later = [_defill(re.sub(r"^(?:and|but|or)\s+", "", c, flags=re.I)) for c in clauses[1:]]
+    later = [c for c in later if not _DEPENDENT_RE.match(c)]
+    out = []
+    for c in plain + [_LEAD_IN_RE.sub("", c) for c in plain] + later:
+        c = _subject_text(c)
+        if c and c not in out:
+            out.append(c)
+    return out
+
+
+def build_subject(daily_summary: dict | None, today: date | None = None) -> str:
+    """Email subject from the Daily Pulse, not the lead headline (Tom, 2026-11-09).
+
+    1. The Pulse's own `subject` (Claude writes it with the paragraphs).
+    2. The Pulse's first sentence, shortened by whole clauses (subject_candidates).
+    3. The day's first Pulse theme: "Today's conversation: church membership".
+    4. "Christian Curator · November 9, 2026" when there is no Pulse.
+    Every line must pass _subject_ok(): 25 to 80 characters with no ellipsis,
+    no emoji, promo or "!", no em dashes, and no scandal or crime word.
+    """
+    from frontend.layout import pulse_line
+    today = today or date.today()
+    fallback = f"Christian Curator · {today.strftime('%B %-d, %Y')}"
+    if not daily_summary or daily_summary.get("fallback"):
+        return fallback
+    candidates = [_subject_text(daily_summary.get("subject") or "")]
+    candidates += subject_candidates(pulse_line(daily_summary))
+    for theme in (daily_summary.get("themes") or [])[:1]:
+        candidates.append(_subject_text(f"Today's conversation: {theme}"))
+    return next((c for c in candidates if c and _subject_ok(c)), fallback)
 
 
 def build_preheader(layout: dict, daily_summary: dict | None) -> str:
-    """Inbox preview line (plain text). The subject already shows the lead,
-    so this is the first Pulse sentence, else 'Also: {sublead 1} | {sublead 2}'.
+    """Inbox preview line (plain text). The subject comes from the Pulse's
+    opening, so this is the Pulse's next sentence that is not scandal-led (or
+    none). With no Pulse it is the lead and first sublead headlines.
     """
-    from frontend.layout import pulse_line
+    from curator.headline_voice import SCANDAL_RE
+    from frontend.text import clean_copy, split_sentences
     if daily_summary and not daily_summary.get("fallback"):
-        sentence = pulse_line(daily_summary)
-        if sentence:
-            return _clip(sentence, PREHEADER_MAX)
-    subs = [_clip(a.get("rewritten_title") or a.get("title") or "", 60)
-            for a in layout.get("subleads", [])[:2]]
-    subs = [t for t in subs if t]
-    return f"Also: {' | '.join(subs)}" if subs else ""
+        plain = (daily_summary.get("paragraphs_plain") or [""])[0] or ""
+        for sentence in split_sentences(clean_copy(plain))[1:]:
+            if not (SCANDAL_RE.search(sentence) or _SUBJECT_AVOID_RE.search(sentence)):
+                return _clip(sentence, PREHEADER_MAX)
+        return ""
+    heads = [_clip(a.get("rewritten_title") or a.get("title") or "", 60)
+             for a in [layout.get("lead") or {}] + layout.get("subleads", [])[:1]]
+    heads = [t for t in heads if t]
+    return f"Leading: {' | '.join(heads)}" if heads else ""
 
 
 def fallback_pulse(layout: dict) -> dict | None:
@@ -643,10 +727,7 @@ def send_email(articles: list[dict], yesterday_articles: list[dict] = None,
         articles = articles.get("articles", [])
 
     today        = date.today().strftime("%B %-d, %Y")
-    email_layout = _email_layout(articles, research_articles, layout)
-    lead_article = email_layout.get("lead") or {}
-    lead         = lead_article.get("rewritten_title") or lead_article.get("title", "")
-    subject      = build_subject(lead)
+    subject      = build_subject(daily_summary)
     html_content = build_email_html(articles, yesterday_articles,
                                     daily_summary=daily_summary,
                                     research_articles=research_articles,

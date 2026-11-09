@@ -474,6 +474,20 @@ _SERVICE_TAIL_RE = re.compile(
 _PIPE_TAIL_RE = re.compile(r"\s+[|·]\s+([^|·]+)$")
 
 
+# Scandal, abuse, lawsuit, resignation and crisis words. The Pulse admits such a
+# story only when it dominates the day (curator/daily_summary.py), and the email
+# subject never leads with one (curator/email_sender.py).
+SCANDAL_RE = re.compile(
+    r"\b(abuse[sd]?|abusive|grooming|misconduct|scandals?|lawsuits?|sues|sued|"
+    r"suing|resign(?:s|ed|ation)?|steps? down|stepped down|ousted|fired|"
+    r"crisis|allegations?|alleged(?:ly)?|accus(?:ed|es|ations?)|whistleblower|"
+    r"cover[- ]?up|indict(?:ed|ment)|arrested|pleads? guilty|"
+    r"convicted|sentenced|investigation|molest\w*|assault\w*|"
+    r"embezzl\w*|fraud)\b",
+    re.I,
+)
+
+
 def strip_dashes(text: str) -> str:
     """Replace em and en dashes so copy never ships with them.
 
