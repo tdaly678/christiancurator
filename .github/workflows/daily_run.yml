@@ -185,10 +185,12 @@ jobs:
         run: python3 scripts/indexnow_ping.py
         continue-on-error: true
 
-      - name: Fail run if a feed has been empty for 7+ days
+      - name: Warn if a feed has been empty for 7+ days
         # docs/feed_health.json carries per-source zero-item streaks across
-        # runs (it is committed above). Like the AI check, this runs after the
-        # commit so the site still publishes.
+        # runs (it is committed above). Long streaks are ::warning annotations
+        # plus a Feed health section in the job summary; they no longer fail
+        # the run (Substack 403s GitHub's runner IPs). Exits 1 only when the
+        # health file is missing. Add --strict to fail on streaks again.
         if: always()
         run: python3 scripts/check_feed_health.py
 

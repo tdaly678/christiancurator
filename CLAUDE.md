@@ -75,8 +75,16 @@ What it commits: `docs/index.html`, `docs/topics/`, `docs/digest/`, `docs/yester
 `fetcher/rss_fetcher.py` fetches feeds with `requests` (15s timeout, browser UA with a feed-reader UA retry, 8 threads)
 and writes `docs/feed_health.json` every run: per-source `http_status`, `n_entries`, `newest_date`, `bozo`, `stale`,
 `error`, plus `zero_streaks` (consecutive run days with 0 items). `scripts/check_feed_health.py` runs after the commit
-and fails the workflow once any configured source hits 7 days at 0 items. Fix the URL in `fetcher/sources.py` or remove
-the source.
+and, since 2026-11-09, only warns: any source at 7+ days with 0 items becomes a `::warning` annotation and is listed in
+the job summary's Feed health section, split into "Blocked on runner" (HTTP 401/403/429) and "Empty". It exits 1 only
+when `docs/feed_health.json` is missing, or with `--strict`. Fix the URL in `fetcher/sources.py`; removing a source is
+Tom's call. Tests: `tests/test_feed_health_check.py`.
+
+Known runner block (2026-11-09): all 30 `*.substack.com` author feeds return HTTP 403 on GitHub Actions every day since
+the first runner run on 2026-10-31, while the same URL and headers return 200 from a home connection and from other
+datacenters. Headers are not the cause; Substack's Cloudflare refuses GitHub/Azure IP ranges. None of these authors
+uses a custom domain. Pew Research (`/religion/feed/`) 403s from any datacenter IP. Fixing either needs a fetch path
+that does not leave from a GitHub runner IP (for example a Cloudflare Worker proxy), verified on an actual runner.
 
 Sources can set `role: "discovery"` (fetched and health-logged, never ranked: The Aquila Report) or a
 `discovery_title_pattern` (Tim Challies' A La Carte / Kindle deals / book roundups). `score_articles()` drops discovery
