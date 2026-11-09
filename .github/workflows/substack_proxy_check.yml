@@ -1,0 +1,61 @@
+name: Substack proxy check
+
+# Fetch-only proof that the cc-feed-proxy Worker gets the Substack feeds onto a
+# GitHub runner. No site build, no email, no commits. Kept disabled after the
+# first proof run; re-enable and dispatch by hand when debugging the proxy.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch every Substack feed (direct, then through the Worker)
+        env:
+          PROXY_URL: ${{ secrets.CC_FEED_PROXY_URL }}
+          PROXY_KEY: ${{ secrets.CC_FEED_PROXY_KEY }}
+        run: |
+          python3 - <<'EOF'
+          import os, sys
+          from fetcher import rss_fetcher
+          from fetcher.sources import SOURCES
+
+          subs = [s for s in SOURCES if rss_fetcher.uses_proxy(s["url"])]
+
+          def run(label):
+              ok = 0
+              rows = []
+              for s in subs:
+                  arts, h = rss_fetcher.fetch_feed(s)
+                  ok += bool(arts)
+                  rows.append(f"  {h['http_status']}  {len(arts):2d}  {h.get('via', 'direct'):6s}  "
+                              f"{h.get('proxy_error', '')}  {s['url']}")
+              print(f"{label}: {ok} of {len(subs)} feeds returned items")
+              print("\n".join(rows))
+              return ok
+
+          os.environ.pop("CC_FEED_PROXY_URL", None)
+          os.environ.pop("CC_FEED_PROXY_KEY", None)
+          direct = run("Direct")
+
+          os.environ["CC_FEED_PROXY_URL"] = os.environ["PROXY_URL"]
+          os.environ["CC_FEED_PROXY_KEY"] = os.environ["PROXY_KEY"]
+          proxied = run("Through Worker")
+
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as f:
+              f.write(f"Direct: {direct} of {len(subs)}. Through Worker: {proxied} of {len(subs)}.\n")
+          sys.exit(0 if proxied == len(subs) else 1)
+          EOF

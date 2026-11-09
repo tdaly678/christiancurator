@@ -123,6 +123,10 @@ jobs:
           X_API_SECRET: ${{ secrets.X_API_SECRET }}
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          # Substack 403s runner IPs; *.substack.com feeds go through the
+          # cc-feed-proxy Worker (worker/feed-proxy/). Unset = direct fetch.
+          CC_FEED_PROXY_URL: ${{ secrets.CC_FEED_PROXY_URL }}
+          CC_FEED_PROXY_KEY: ${{ secrets.CC_FEED_PROXY_KEY }}
           # RealClear-voice title rewrites for the daily product (curator/title_rewriter.py).
           # Rewrites that fail headline_voice.rewrite_rejection() keep the cleaned original.
           CC_REWRITE_TITLES: '1'

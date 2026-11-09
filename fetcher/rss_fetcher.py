@@ -24,6 +24,7 @@ ZERO_STREAK_FAIL_DAYS, after the site has already been published.
 from __future__ import annotations
 
 import json
+import os
 import re
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timezone
@@ -53,6 +54,47 @@ READER_USER_AGENT = "ChristianCurator/1.0 (+https://www.christiancurator.com/) f
 ACCEPT = "application/rss+xml, application/atom+xml, application/xml;q=0.9, */*;q=0.8"
 
 FEED_HEALTH_PATH = Path(__file__).parent.parent / "docs" / "feed_health.json"
+
+# Substack's Cloudflare refuses GitHub runner IPs (HTTP 403). When both env vars
+# are set, *.substack.com feeds go through the cc-feed-proxy Worker
+# (worker/feed-proxy/); otherwise, or if the proxy itself fails, they are
+# fetched directly.
+FEED_PROXY_URL_ENV = "CC_FEED_PROXY_URL"
+FEED_PROXY_KEY_ENV = "CC_FEED_PROXY_KEY"
+FEED_PROXY_HEADER = "X-CC-Proxy-Key"
+_SUBSTACK_FEED_RE = re.compile(r"^https://[a-z0-9-]+\.substack\.com/feed$", re.IGNORECASE)
+
+
+def feed_proxy() -> tuple[str, str] | None:
+    """(proxy URL, key) when both env vars are set, else None."""
+    url = os.environ.get(FEED_PROXY_URL_ENV, "").strip()
+    key = os.environ.get(FEED_PROXY_KEY_ENV, "").strip()
+    return (url, key) if url and key else None
+
+
+def uses_proxy(feed_url: str) -> bool:
+    return bool(_SUBSTACK_FEED_RE.match(feed_url or ""))
+
+
+def _get_feed(feed_url: str, ua: str, health: dict) -> requests.Response:
+    """GET a feed, through the Worker for Substack feeds when it is configured."""
+    headers = {"User-Agent": ua, "Accept": ACCEPT}
+    health.pop("proxy_error", None)
+    proxy =feed_proxy() if uses_proxy(feed_url) else None
+    if proxy:
+        try:
+            resp = requests.get(proxy[0], timeout=FETCH_TIMEOUT, params={"url": feed_url},
+                                headers={**headers, FEED_PROXY_HEADER: proxy[1]})
+            # The Worker's own refusals (auth, allowlist, upstream error) carry
+            # no upstream status header; fall back to a direct fetch for those.
+            if resp.headers.get("X-CC-Upstream-Status"):
+                health["via"] = "proxy"
+                return resp
+            health["proxy_error"] = f"HTTP {resp.status_code}"
+        except Exception as e:
+            health["proxy_error"] = f"{type(e).__name__}: {e}"[:300]
+    health.pop("via", None)
+    return requests.get(feed_url, timeout=FETCH_TIMEOUT, headers=headers)
 
 # Matches an email address (used to normalize RSS bylines like
 # "jakemeador@gmail.com (Jake Meador)" or bare "jpanyard@christianitytoday.com").
@@ -170,8 +212,7 @@ def fetch_feed(source: dict) -> tuple[list[dict], dict]:
     for ua in (USER_AGENT, READER_USER_AGENT):
         health.pop("error", None)
         try:
-            resp = requests.get(source["url"], timeout=FETCH_TIMEOUT,
-                                headers={"User-Agent": ua, "Accept": ACCEPT})
+            resp = _get_feed(source["url"], ua, health)
         except Exception as e:
             health["error"] = f"{type(e).__name__}: {e}"[:300]
             return [], health

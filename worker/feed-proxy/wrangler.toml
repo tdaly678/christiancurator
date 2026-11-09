@@ -1,0 +1,10 @@
+name = "cc-feed-proxy"
+main = "proxy.js"
+compatibility_date = "2026-04-01"
+
+# Proxies https://<name>.substack.com/feed for the daily GitHub Actions run,
+# which Substack blocks by IP. Allowlist and auth are in proxy.js.
+#
+# The shared key is NOT stored here:
+#   npx wrangler secret put FEED_PROXY_KEY
+# and the same value as the GitHub Actions secret CC_FEED_PROXY_KEY.
