@@ -336,6 +336,15 @@ must stay clean. After cleaning a page, run `python scripts/check_topic_quality.
 entry needs a real, verified URL, the real author/outlet, and a summary specific to that piece. Never invent a URL or
 byline.
 
+### Biblical literacy survey visuals (2026-11-09)
+`docs/topics/biblical-literacy/` carries three data pieces (reverence gap chart, "By the Numbers" quiz, survey tracker)
+rendered by `scripts/build_biblical_literacy_viz.py` from `data/biblical-literacy/surveys.json` into the
+`CC-BL-VIZ-GAP`, `CC-BL-VIZ-QUIZ` and `CC-BL-VIZ-TRACKER` marker blocks (styles in `CC-BL-VIZ-CSS` in the head). Run it
+by hand after editing the data; it is not in the daily pipeline. It bumps "Last updated" and `dateModified` only when
+the data hash changes, fails on any row without a URL or license status, and refuses to chart rows that are not
+`reuse` / `permission-granted` (Barna and ABS are `ask-first`, cited as text). Add a `changelog` entry with each data
+change. Spec: `.christian-orchestrator/biblical-literacy-page-visuals.md`. Tests: `tests/test_biblical_literacy_viz.py`.
+
 ### Idempotent injection markers
 Cross-cutting scripts inject content-additive blocks using HTML-comment markers so re-runs replace the block in place instead of duplicating it. When extending any of these, update between the markers rather than editing around them:
 

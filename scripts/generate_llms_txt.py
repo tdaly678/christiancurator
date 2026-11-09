@@ -35,6 +35,15 @@ CATEGORY_ORDER = [
     "Culture & Society",
 ]
 
+# Extra llms.txt lines listed right under a topic (data pieces that live on the topic page).
+TOPIC_EXTRAS = {
+    "biblical-literacy": [
+        f"- [Biblical literacy survey tracker]({SITE_URL}/topics/biblical-literacy/#survey-tracker): "
+        "Is Bible reading rising or falling? Pew, Lifeway and Gallup survey results side by side, one panel per "
+        "survey, each with question wording, sample and field dates (data: surveys.json)",
+    ],
+}
+
 HEADER = f"""# Christian Curator
 
 > Christian Curator is a daily-updated evangelical content curation site. Each morning we publish a digest of the best evangelical writing from across the web, organized around the questions evangelicals are actually asking. Deep-dive topic pages present multiple evangelical perspectives on theological and cultural debates in a fair, biblically-grounded, educational way.
@@ -86,6 +95,7 @@ def build_llms_txt() -> str:
             hook = t["hook"].strip()
             url = f"{SITE_URL}/topics/{slug}/"
             lines.append(f"- [{name}]({url}): {hook}")
+            lines.extend(TOPIC_EXTRAS.get(slug, []))
         lines.append("")
 
     lines.append(DAILY_CONTENT.strip())
