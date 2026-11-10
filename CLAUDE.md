@@ -464,6 +464,9 @@ clauses with fillers ("today", "this week", "actually") and then the "writers ar
 Each line must pass `_subject_ok()`: 25 to 80 characters, never cut with an ellipsis, no emoji/promo (`hard_reject`), no
 `!` or dashes, no scandal or crime word (`headline_voice.SCANDAL_RE` plus `_SUBJECT_AVOID_RE`). The preheader is the next
 non-scandal Pulse sentence, else `Leading: {lead} | {sublead}` when there is no Pulse. Tests: `tests/test_email_sender.py`.
+One-day editor's note: `_render_editor_note()` shows "A note" under the masthead only when `edition_date()` (America/New_York)
+equals `EDITOR_NOTE_DATE` (2026-11-11); that day the preheader is the note's first sentence and Go Deeper is skipped if it
+would feature `EDITOR_NOTE_TOPIC`. Inert on every other date; safe to remove afterward.
 
 ## Topic Pages — Structure (70 topics as of September 2026)
 

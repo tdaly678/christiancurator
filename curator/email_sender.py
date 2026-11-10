@@ -7,6 +7,7 @@ for the inbox:
   Preheader     (invisible inbox preview: second Pulse sentence, else lead + sublead)
   Top bar       (date · Forwarded? Subscribe)
   Masthead      (Christian Curator wordmark + tagline)
+  A note        (one-day editor's note, only on EDITOR_NOTE_DATE in New York)
   The Lead      (lead story + three subleads, by importance)
   Daily Pulse   (plain lead + subleads fallback when the Claude summary failed)
   The Debate    (Claude point/counterpoint pairs only, omitted when none)
@@ -25,9 +26,10 @@ import os
 import json
 import re
 import requests
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from urllib.parse import urlsplit, urlunsplit
 from pathlib import Path
+from zoneinfo import ZoneInfo
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -97,6 +99,16 @@ def _get_spotlight_topic() -> dict | None:
 # ── Helpers ────────────────────────────────────────────────────────────────────
 
 SITE_URL = "https://www.christiancurator.com"
+EDITION_TZ = ZoneInfo("America/New_York")
+
+
+def _now_et() -> datetime:
+    return datetime.now(EDITION_TZ)
+
+
+def edition_date() -> date:
+    """The edition's calendar date in New York, whatever the runner's clock says."""
+    return _now_et().date()
 
 
 def _site_link(url: str, section: str) -> str:
@@ -239,13 +251,17 @@ def build_subject(daily_summary: dict | None, today: date | None = None) -> str:
     return next((c for c in candidates if c and _subject_ok(c)), fallback)
 
 
-def build_preheader(layout: dict, daily_summary: dict | None) -> str:
+def build_preheader(layout: dict, daily_summary: dict | None,
+                    today: date | None = None) -> str:
     """Inbox preview line (plain text). The subject comes from the Pulse's
     opening, so this is the Pulse's next sentence that is not scandal-led (or
-    none). With no Pulse it is the lead and first sublead headlines.
+    none). With no Pulse it is the lead and first sublead headlines. On the
+    editor's note day it is the note's first sentence.
     """
     from curator.headline_voice import SCANDAL_RE
     from frontend.text import clean_copy, split_sentences
+    if (today or edition_date()) == EDITOR_NOTE_DATE:
+        return EDITOR_NOTE_PREHEADER
     if daily_summary and not daily_summary.get("fallback"):
         plain = (daily_summary.get("paragraphs_plain") or [""])[0] or ""
         for sentence in split_sentences(clean_copy(plain))[1:]:
@@ -537,6 +553,65 @@ def _render_cta() -> str:
     </div>"""
 
 
+# One-day editor's note (Tom approved this copy for the Nov 11, 2026 email only).
+EDITOR_NOTE_DATE = date(2026, 11, 11)
+EDITOR_NOTE_TOPIC = "biblical-literacy"   # Go Deeper skips this topic that day
+EDITOR_NOTE_PREHEADER = ("We added charts and a survey tracker to our page on "
+                         "biblical literacy.")
+_NOTE_PAGE = f"{SITE_URL}/topics/biblical-literacy/"
+_NOTE_P1 = (
+    "We added charts and a survey tracker to our page on biblical literacy. It now "
+    "places the latest studies next to each other: how many people say the Bible "
+    "matters, how often they read it, and what churchgoers knew on Lifeway "
+    "Research's recent quiz. Each survey keeps its own question and sample, so a "
+    "rise in one measure is not treated as a contradiction of a decline in another.")
+_NOTE_P2 = (
+    "The daily edition itself has been tightened as well. Stories are ranked and "
+    "titled more carefully, the email subject now follows the day's conversation "
+    "rather than a single headline, and more of the sources we already follow now "
+    "reach the digest each morning. Today's headlines are below, and the rest of "
+    "the board is on the front page.")
+
+
+def _render_editor_note(today: date) -> str:
+    """The one-day note under the masthead, or "" on every other date."""
+    if today != EDITOR_NOTE_DATE:
+        return ""
+    para = ("margin:0 0 10px;font-family:Georgia,'Times New Roman',serif;"
+            "font-size:15px;line-height:1.6;color:#333;")
+    link = "font-size:12px;color:#2C4A2E;font-weight:700;text-decoration:none;"
+    page = _site_link(_NOTE_PAGE, "note")
+    tracker = _site_link(f"{_NOTE_PAGE}#survey-tracker", "note")
+    front = _site_link(f"{SITE_URL}/", "note")
+    cta = _site_link(_NOTE_PAGE, "note_cta")
+    return f"""
+    <div style="padding:24px 28px 0;">
+      <div style="{_LABEL_STYLE}margin-bottom:14px;">A note</div>
+      <div style="font-family:Georgia,'Times New Roman',serif;font-size:21px;
+                  font-weight:600;line-height:1.25;color:#1a1a1a;margin-bottom:10px;">
+        Bible reading surveys, set side by side
+      </div>
+      <p style="{para}">{html.escape(_NOTE_P1, quote=False)}</p>
+      <div style="margin:0 0 16px;">
+        <a href="{page}" style="{link}">Read the biblical literacy page</a>
+        <span style="font-size:12px;color:#bbb;">&nbsp;&middot;&nbsp;</span>
+        <a href="{tracker}" style="{link}">Survey tracker</a>
+      </div>
+      <p style="{para}">{html.escape(_NOTE_P2, quote=False)}</p>
+      <div style="margin:0 0 18px;">
+        <a href="{front}" style="{link}">Front page</a>
+      </div>
+      <div style="text-align:center;padding-bottom:4px;">
+        <a href="{cta}"
+           style="display:inline-block;background:#2C4A2E;color:#fff;
+                  font-size:14px;font-weight:700;padding:13px 32px;
+                  border-radius:4px;text-decoration:none;letter-spacing:0.03em;">
+          Read the biblical literacy page
+        </a>
+      </div>
+    </div>"""
+
+
 def _render_go_deeper(topic: dict) -> str:
     """Rotating topic spotlight card."""
     if not topic:
@@ -599,19 +674,25 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
         articles = articles.get("articles", [])
 
     today_long = date.today().strftime("%A, %B %-d, %Y")
+    edition    = edition_date()
 
     spotlight_topic  = _get_spotlight_topic()
+    # The editor's note already features this page; skip a duplicate Go Deeper.
+    if (edition == EDITOR_NOTE_DATE and spotlight_topic
+            and spotlight_topic.get("slug") == EDITOR_NOTE_TOPIC):
+        spotlight_topic = None
 
     # Same picks as the homepage (frontend/layout.py), trimmed for email.
     layout = _email_layout(articles, research_articles, layout)
 
-    preheader = html.escape(build_preheader(layout, daily_summary), quote=False)
+    preheader = html.escape(build_preheader(layout, daily_summary, edition), quote=False)
 
     # Never open straight into headlines: if the Claude Pulse is missing,
     # use the plain lead + subleads version.
     if not _render_pulse(daily_summary):
         daily_summary = fallback_pulse(layout)
 
+    note_html           = _render_editor_note(edition)
     lead_html           = _render_lead(layout)
     pulse_html          = _render_pulse(daily_summary)
     board_html          = _render_board(layout)
@@ -664,6 +745,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
       </div>
     </div>
 
+    {note_html}
     {lead_html}
     {pulse_html}
     {debate_html}

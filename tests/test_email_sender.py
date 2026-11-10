@@ -5,7 +5,7 @@ Run: python3 -m unittest discover -s tests
 """
 import sys
 import unittest
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 from unittest import mock
 
@@ -38,6 +38,15 @@ def layout(**kw):
 
 def pulse(first, *rest, **kw):
     return {"paragraphs_plain": [" ".join((first,) + rest)], **kw}
+
+
+def at_et(y, m, d, hour=5):
+    """Freeze the edition clock at a New York wall time."""
+    return mock.patch.object(es, "_now_et",
+                             return_value=datetime(y, m, d, hour, tzinfo=es.EDITION_TZ))
+
+
+ORDINARY_DAY = (2026, 11, 9)
 
 
 class Subject(unittest.TestCase):
@@ -138,6 +147,11 @@ class Subject(unittest.TestCase):
 
 
 class Preheader(unittest.TestCase):
+    def setUp(self):
+        frozen = at_et(*ORDINARY_DAY)
+        frozen.start()
+        self.addCleanup(frozen.stop)
+
     def test_pulse_second_sentence(self):
         summary = {"paragraphs_plain": ["Grief is the thread today. Second sentence here."]}
         self.assertEqual(es.build_preheader(layout(), summary), "Second sentence here.")
@@ -206,7 +220,8 @@ class Links(unittest.TestCase):
         self.assertEqual(es._site_link(url, "lead"), url)
 
     def test_rendered_email(self):
-        with mock.patch.object(es, "_get_spotlight_topic", return_value=None):
+        with mock.patch.object(es, "_get_spotlight_topic", return_value=None), \
+             at_et(*ORDINARY_DAY):
             out = es.build_email_html([], layout=layout())
         self.assertIn("utm_content=cta", out)
         self.assertIn("utm_content=masthead", out)
@@ -227,6 +242,103 @@ class Links(unittest.TestCase):
         self.assertIn("/daily/2026-10-29/?utm_source=cc_email", out)
         self.assertIn('href="https://example.com/a"', out)
         self.assertIn("/daily/2026-10-30/?utm_source", out)
+
+
+class EditorNote(unittest.TestCase):
+    """One-day note for the biblical literacy page, Nov 11, 2026 (New York) only."""
+
+    LITERACY = {"slug": "biblical-literacy", "name": "Biblical Literacy",
+                "category": "Spiritual Formation", "hook": "H", "summary": "S"}
+    PRAYER = {"slug": "prayer", "name": "On Prayer", "category": "Spiritual Formation",
+              "hook": "How should we pray?", "summary": "S"}
+
+    def render(self, day, topic=None, hour=5, summary=None):
+        with mock.patch.object(es, "_get_spotlight_topic", return_value=topic), \
+             at_et(*day, hour=hour):
+            return es.build_email_html([], layout=layout(), daily_summary=summary)
+
+    def test_note_present_on_nov_11(self):
+        out = self.render((2026, 11, 11))
+        self.assertIn(">A note</div>", out)
+        self.assertIn("Bible reading surveys, set side by side", out)
+        self.assertIn("We added charts and a survey tracker to our page on biblical "
+                      "literacy. It now places the latest studies", out)
+        self.assertIn("a rise in one measure is not treated as a contradiction of a "
+                      "decline in another.", out)
+        self.assertIn("The daily edition itself has been tightened as well.", out)
+        self.assertIn("the rest of the board is on the front page.", out)
+        self.assertIn('href="https://www.christiancurator.com/topics/biblical-literacy/'
+                      '?utm_source=cc_email', out)
+        self.assertIn("/topics/biblical-literacy/?utm_source=cc_email&utm_medium=email"
+                      "&utm_campaign=daily_", out)
+        self.assertIn("utm_content=note#survey-tracker", out)
+        self.assertIn(">Survey tracker</a>", out)
+        self.assertIn(">Front page</a>", out)
+        self.assertIn("utm_content=note_cta", out)
+        self.assertEqual(out.count("Read the biblical literacy page"), 2)
+        for bad in ("\u2014", "!"):
+            self.assertNotIn(bad, es._NOTE_P1 + es._NOTE_P2)
+
+    def test_note_sits_between_masthead_and_lead(self):
+        out = self.render((2026, 11, 11))
+        self.assertLess(out.index("For curious Christians"), out.index(">A note</div>"))
+        self.assertLess(out.index(">A note</div>"), out.index("The Lead"))
+        self.assertLess(out.index("The Lead"), out.index("The Daily Pulse"))
+
+    def test_note_absent_other_days(self):
+        for day in ((2026, 11, 10), (2026, 11, 12)):
+            out = self.render(day)
+            self.assertNotIn("Bible reading surveys", out)
+            self.assertNotIn("utm_content=note", out)
+
+    def test_gate_uses_new_york_date(self):
+        # 03:30 UTC on Nov 11 is still Nov 10 in New York.
+        utc = datetime(2026, 11, 11, 3, 30, tzinfo=timezone.utc)
+        with mock.patch.object(es, "_now_et", return_value=utc.astimezone(es.EDITION_TZ)):
+            self.assertEqual(es.edition_date(), date(2026, 11, 10))
+        self.assertNotIn("Bible reading surveys", self.render((2026, 11, 10), hour=23))
+
+    def test_subject_still_from_pulse(self):
+        summary = pulse("The church is asking what prayer is for, and writers disagree.")
+        post = mock.Mock(return_value=mock.Mock(status_code=201, json=lambda: {"id": 1}))
+        with mock.patch.object(es, "BREVO_API_KEY", "k"), \
+             mock.patch.object(es, "BREVO_SENDER_EMAIL", "a@b.c"), \
+             mock.patch.object(es, "_get_spotlight_topic", return_value=None), \
+             mock.patch.object(es, "save_email_html", return_value="x"), \
+             mock.patch.object(es.requests, "post", post), \
+             at_et(2026, 11, 11):
+            es.send_email([], daily_summary=summary, layout=layout())
+        payload = post.call_args_list[0].kwargs["json"]
+        self.assertEqual(payload["subject"],
+                         "The church is asking what prayer is for, and writers disagree")
+        self.assertIn("Bible reading surveys, set side by side", payload["htmlContent"])
+
+    def test_preheader_uses_note_on_nov_11_only(self):
+        summary = pulse("Grief is the thread today.", "Second sentence here.")
+        with at_et(2026, 11, 11):
+            self.assertEqual(es.build_preheader(layout(), summary),
+                             "We added charts and a survey tracker to our page on "
+                             "biblical literacy.")
+        with at_et(2026, 11, 12):
+            self.assertEqual(es.build_preheader(layout(), summary), "Second sentence here.")
+            self.assertEqual(es.build_preheader(layout(), None),
+                             "Leading: The lead story | Sublead one")
+        out = self.render((2026, 11, 11))
+        preview = out.split('color:#e8e5e0;">', 1)[1].split("&nbsp;", 1)[0].strip()
+        self.assertEqual(preview, es.EDITOR_NOTE_PREHEADER)
+
+    def test_go_deeper_skipped_for_literacy_on_nov_11(self):
+        out = self.render((2026, 11, 11), topic=self.LITERACY)
+        self.assertNotIn("Go Deeper", out)
+        self.assertNotIn("utm_content=go_deeper", out)
+
+    def test_go_deeper_kept_for_other_topic_or_day(self):
+        out = self.render((2026, 11, 11), topic=self.PRAYER)
+        self.assertIn("Go Deeper", out)
+        self.assertIn("/topics/prayer/?utm_source", out)
+        out = self.render((2026, 11, 12), topic=self.LITERACY)
+        self.assertIn("Go Deeper", out)
+        self.assertIn("/topics/biblical-literacy/?utm_source", out)
 
 
 if __name__ == "__main__":
