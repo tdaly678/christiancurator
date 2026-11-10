@@ -1,5 +1,438 @@
 {
-  "seen": {},
-  "fresh": {},
-  "figures": {}
+  "seen": {
+    "https://pewresearch.org/short-reads/2026/11/06/majority-of-americans-say-social-media-companies-news-outlets-have-too-much-power-in-politics": {
+      "date": "2026-11-10",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
+    },
+    "https://graphsaboutreligion.com/p/the-most-religious-congressional": {
+      "date": "2026-11-10",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
+    },
+    "https://research.lifeway.com/2026/11/09/7-christian-habits-necessary-for-pastoral-longevity": {
+      "date": "2026-11-10",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
+    },
+    "https://graphsaboutreligion.com/p/why-dont-religious-nones-want-kids": {
+      "date": "2026-11-10",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
+    },
+    "https://research.lifeway.com/2026/11/03/2-in-3-churchgoers-fail-bible-literacy-quiz": {
+      "date": "2026-11-10",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
+    },
+    "https://pewresearch.org/short-reads/2026/11/06/a-first-look-at-polling-performance-in-2026": {
+      "date": "2026-11-10",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
+    },
+    "https://feeds.ligonier.org/~/972452714/0/ligonierministriesblog": {
+      "date": "2026-11-10",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
+    },
+    "https://feeds.ligonier.org/~/972439013/0/ligonierministriesblog": {
+      "date": "2026-11-10",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
+    }
+  },
+  "fresh": {
+    "politics-and-the-church": [
+      {
+        "date": "2026-11-07",
+        "title": "Americans Say Social Media Companies Wield Too Much Political Power",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/06/majority-of-americans-say-social-media-companies-news-outlets-have-too-much-power-in-politics/",
+        "source": "Pew Research"
+      },
+      {
+        "date": "2026-11-08",
+        "title": "Preelection Polls Understated Democrats' Advantage in 2026",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/06/a-first-look-at-polling-performance-in-2026/",
+        "source": "Pew Research"
+      }
+    ],
+    "technology": [
+      {
+        "date": "2026-11-07",
+        "title": "Americans Say Social Media Companies Wield Too Much Political Power",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/06/majority-of-americans-say-social-media-companies-news-outlets-have-too-much-power-in-politics/",
+        "source": "Pew Research"
+      }
+    ],
+    "christian-nationalism": [
+      {
+        "date": "2026-11-07",
+        "title": "Americans Say Social Media Companies Wield Too Much Political Power",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/06/majority-of-americans-say-social-media-companies-news-outlets-have-too-much-power-in-politics/",
+        "source": "Pew Research"
+      }
+    ],
+    "evangelicalism": [
+      {
+        "date": "2026-11-09",
+        "title": "Evangelical Districts Lean Red, Catholic Areas Blue, Mainline Competitive",
+        "url": "https://www.graphsaboutreligion.com/p/the-most-religious-congressional",
+        "source": "Ryan Burge"
+      }
+    ],
+    "vocation-and-work": [
+      {
+        "date": "2026-11-09",
+        "title": "Faithful Christian Habits Sustain Long Pastoral Careers",
+        "url": "https://research.lifeway.com/2026/11/09/7-christian-habits-necessary-for-pastoral-longevity/",
+        "source": "Lifeway Research"
+      }
+    ],
+    "christian-parenting": [
+      {
+        "date": "2026-11-09",
+        "title": "Religious Nones Are Less Likely to Want Children",
+        "url": "https://www.graphsaboutreligion.com/p/why-dont-religious-nones-want-kids",
+        "source": "Ryan Burge"
+      }
+    ],
+    "biblical-literacy": [
+      {
+        "date": "2026-11-09",
+        "title": "Most Churchgoers Fail Bible Literacy Quiz, Lifeway Research Finds",
+        "url": "https://research.lifeway.com/2026/11/03/2-in-3-churchgoers-fail-bible-literacy-quiz/",
+        "source": "Lifeway Research"
+      }
+    ],
+    "predestination-free-will": [
+      {
+        "date": "2026-11-09",
+        "title": "God's Omniscience Does Not Eliminate Human Free Will",
+        "url": "https://feeds.ligonier.org/~/972452714/0/ligonierministriesblog",
+        "source": "Ligonier Ministries"
+      }
+    ],
+    "discipleship": [
+      {
+        "date": "2026-11-08",
+        "title": "Discounted Discipleship Books and Bibles Make Affordable Christmas Gifts",
+        "url": "https://feeds.ligonier.org/~/972439013/0/ligonierministriesblog",
+        "source": "Ligonier Ministries"
+      }
+    ]
+  },
+  "figures": {},
+  "updated": "2026-11-10",
+  "last_run": {
+    "date": "2026-11-10",
+    "stories": [
+      {
+        "title": "Four in Ten Non-Religious Teens Have No One to Talk To",
+        "url": "https://www.graphsaboutreligion.com/p/who-do-teenagers-turn-to-when-they",
+        "source": "Ryan Burge",
+        "signals": {
+          "publishers": [
+            "Ryan Burge"
+          ],
+          "figures": [
+            "Four in Ten",
+            "Four in ten"
+          ],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 10.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "A Third of Americans Have Left Online Communities",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/06/about-a-third-of-americans-have-left-an-online-community/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 6.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Flock's License Plate Cameras Spread to Over 100,000 U.S. Locations",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/09/what-we-know-and-dont-know-about-flocks-license-plate-cameras/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [
+            "data shows"
+          ],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 6.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Americans Say Social Media Companies Wield Too Much Political Power",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/06/majority-of-americans-say-social-media-companies-news-outlets-have-too-much-power-in-politics/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [
+          "politics-and-the-church",
+          "technology",
+          "christian-nationalism"
+        ],
+        "trend": 5.75,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
+        ]
+      },
+      {
+        "title": "How Americans feel about G20 countries",
+        "url": "https://www.pewresearch.org/newsletter/global/global-october-2026-newsletter/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 5.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Evangelical Districts Lean Red, Catholic Areas Blue, Mainline Competitive",
+        "url": "https://www.graphsaboutreligion.com/p/the-most-religious-congressional",
+        "source": "Ryan Burge",
+        "signals": {
+          "publishers": [
+            "Ryan Burge"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [
+          "evangelicalism"
+        ],
+        "trend": 4.75,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
+        ]
+      },
+      {
+        "title": "Faithful Christian Habits Sustain Long Pastoral Careers",
+        "url": "https://research.lifeway.com/2026/11/09/7-christian-habits-necessary-for-pastoral-longevity/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [
+          "vocation-and-work"
+        ],
+        "trend": 2.75,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
+        ]
+      },
+      {
+        "title": "Religious Nones Are Less Likely to Want Children",
+        "url": "https://www.graphsaboutreligion.com/p/why-dont-religious-nones-want-kids",
+        "source": "Ryan Burge",
+        "signals": {
+          "publishers": [
+            "Ryan Burge"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [
+          "christian-parenting"
+        ],
+        "trend": 2.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
+        ]
+      },
+      {
+        "title": "Youth Leaders Should Expect Hard Questions From Teenagers",
+        "url": "https://research.lifeway.com/2026/11/05/4-types-of-questions-teenagers-ask-a-guide-for-next-gen-leaders/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 2.25,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Most Churchgoers Fail Bible Literacy Quiz, Lifeway Research Finds",
+        "url": "https://research.lifeway.com/2026/11/03/2-in-3-churchgoers-fail-bible-literacy-quiz/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [
+            "quiz"
+          ],
+          "data_tag": true
+        },
+        "topics": [
+          "biblical-literacy"
+        ],
+        "trend": 1.25,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "source already cited in the biblical-literacy data file"
+        ]
+      },
+      {
+        "title": "Preelection Polls Understated Democrats' Advantage in 2026",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/06/a-first-look-at-polling-performance-in-2026/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [
+            "polls"
+          ],
+          "data_tag": false
+        },
+        "topics": [
+          "politics-and-the-church"
+        ],
+        "trend": 1.25,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
+        ]
+      },
+      {
+        "title": "God's Omniscience Does Not Eliminate Human Free Will",
+        "url": "https://feeds.ligonier.org/~/972452714/0/ligonierministriesblog",
+        "source": "Ligonier Ministries",
+        "signals": {
+          "publishers": [],
+          "figures": [],
+          "words": [
+            "quiz"
+          ],
+          "data_tag": false
+        },
+        "topics": [
+          "predestination-free-will"
+        ],
+        "trend": -0.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
+        ]
+      },
+      {
+        "title": "Discounted Discipleship Books and Bibles Make Affordable Christmas Gifts",
+        "url": "https://feeds.ligonier.org/~/972439013/0/ligonierministriesblog",
+        "source": "Ligonier Ministries",
+        "signals": {
+          "publishers": [],
+          "figures": [
+            "20%",
+            "50%"
+          ],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [
+          "discipleship"
+        ],
+        "trend": -1.25,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
+        ]
+      }
+    ],
+    "pages": [],
+    "fetched": 8,
+    "hits": 13
+  }
 }
