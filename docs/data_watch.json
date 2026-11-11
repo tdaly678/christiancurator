@@ -47,6 +47,30 @@
       "status": "fetched",
       "attempts": 1,
       "note": "0 verified figure(s)"
+    },
+    "https://research.lifeway.com/2026/11/10/most-sbc-churches-confident-about-future-but-issues-loom": {
+      "date": "2026-11-11",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "2 verified figure(s)"
+    },
+    "https://research.lifeway.com/2026/11/11/leaving-well-5-ways-to-prepare-your-church-for-pastoral-transition": {
+      "date": "2026-11-11",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
+    },
+    "https://erlc.com/press/erlc-state-leaders-respond-to-nov-3-ballot-measure-successes-failures": {
+      "date": "2026-11-11",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
+    },
+    "https://reformation21.org/preaching-in-paragraphs": {
+      "date": "2026-11-11",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
     }
   },
   "fresh": {
@@ -86,6 +110,12 @@
         "title": "Evangelical Districts Lean Red, Catholic Areas Blue, Mainline Competitive",
         "url": "https://www.graphsaboutreligion.com/p/the-most-religious-congressional",
         "source": "Ryan Burge"
+      },
+      {
+        "date": "2026-11-11",
+        "title": "SBC Churches Express Confidence Despite Emerging Warning Signs",
+        "url": "https://research.lifeway.com/2026/11/10/most-sbc-churches-confident-about-future-but-issues-loom/",
+        "source": "Lifeway Research"
       }
     ],
     "vocation-and-work": [
@@ -127,15 +157,169 @@
         "url": "https://feeds.ligonier.org/~/972439013/0/ligonierministriesblog",
         "source": "Ligonier Ministries"
       }
+    ],
+    "pastoral-ministry": [
+      {
+        "date": "2026-11-11",
+        "title": "Pastor Should Plan Transition to Protect Church Health",
+        "url": "https://research.lifeway.com/2026/11/11/leaving-well-5-ways-to-prepare-your-church-for-pastoral-transition/",
+        "source": "Lifeway Research"
+      },
+      {
+        "date": "2026-11-09",
+        "title": "Faithful Christian Habits Sustain Pastors Throughout Ministry",
+        "url": "https://research.lifeway.com/2026/11/09/7-christian-habits-necessary-for-pastoral-longevity/",
+        "source": "Lifeway Research"
+      }
+    ],
+    "local-church": [
+      {
+        "date": "2026-11-11",
+        "title": "Pastor Should Plan Transition to Protect Church Health",
+        "url": "https://research.lifeway.com/2026/11/11/leaving-well-5-ways-to-prepare-your-church-for-pastoral-transition/",
+        "source": "Lifeway Research"
+      }
+    ],
+    "religious-liberty": [
+      {
+        "date": "2026-11-09",
+        "title": "ERLC and State Leaders Praise Some Ballot Measures, Condemn Others",
+        "url": "https://erlc.com/press/erlc-state-leaders-respond-to-nov-3-ballot-measure-successes-failures/",
+        "source": "ERLC"
+      }
+    ],
+    "preaching": [
+      {
+        "date": "2026-11-08",
+        "title": "Preachers Struggle With Sermon Writing, Study Finds",
+        "url": "https://reformation21.org/preaching-in-paragraphs/",
+        "source": "Reformation21"
+      }
     ]
   },
-  "figures": {},
-  "updated": "2026-11-10",
+  "figures": {
+    "evangelicalism": [
+      {
+        "quote": "Almost 9 in 10 churches (86%) say their congregation’s future is at least OK, including 27% that say they are thriving and should continue that way.",
+        "figure": "9 in 10",
+        "publisher": "Lifeway Research",
+        "license_status": "reuse",
+        "url": "https://research.lifeway.com/2026/11/10/most-sbc-churches-confident-about-future-but-issues-loom/",
+        "title": "SBC Churches Express Confidence Despite Emerging Warning Signs",
+        "reported_by": "Lifeway Research",
+        "found_on": "2026-11-11",
+        "id": "watch-8a3bafc30276"
+      },
+      {
+        "quote": "One in 50 Southern Baptist congregations (2%) are not sure they’ll survive much longer .",
+        "figure": "One in 50",
+        "publisher": "Lifeway Research",
+        "license_status": "reuse",
+        "url": "https://research.lifeway.com/2026/11/10/most-sbc-churches-confident-about-future-but-issues-loom/",
+        "title": "SBC Churches Express Confidence Despite Emerging Warning Signs",
+        "reported_by": "Lifeway Research",
+        "found_on": "2026-11-11",
+        "id": "watch-d28e1e4c0d32"
+      }
+    ]
+  },
+  "updated": "2026-11-11",
   "last_run": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "stories": [
       {
-        "title": "Four in Ten Non-Religious Teens Have No One to Talk To",
+        "title": "SBC Churches Express Confidence Despite Emerging Warning Signs",
+        "url": "https://research.lifeway.com/2026/11/10/most-sbc-churches-confident-about-future-but-issues-loom/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [
+          "evangelicalism"
+        ],
+        "trend": 9.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "verified 9 in 10 (Lifeway Research, reuse) for evangelicalism",
+          "verified One in 50 (Lifeway Research, reuse) for evangelicalism"
+        ]
+      },
+      {
+        "title": "Pastor Should Plan Transition to Protect Church Health",
+        "url": "https://research.lifeway.com/2026/11/11/leaving-well-5-ways-to-prepare-your-church-for-pastoral-transition/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [
+          "pastoral-ministry",
+          "local-church"
+        ],
+        "trend": 7.75,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
+        ]
+      },
+      {
+        "title": "Faithful Christian Habits Sustain Pastors Throughout Ministry",
+        "url": "https://research.lifeway.com/2026/11/09/7-christian-habits-necessary-for-pastoral-longevity/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [
+          "pastoral-ministry"
+        ],
+        "trend": 6.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-10 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "Flock's License Plate Cameras Spread to Over 100,000 U.S. Locations",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/09/what-we-know-and-dont-know-about-flocks-license-plate-cameras/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 6.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Four in Ten Non-Religious Teens Have No One to Turn To",
         "url": "https://www.graphsaboutreligion.com/p/who-do-teenagers-turn-to-when-they",
         "source": "Ryan Burge",
         "signals": {
@@ -150,94 +334,7 @@
           "data_tag": true
         },
         "topics": [],
-        "trend": 10.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "A Third of Americans Have Left Online Communities",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/06/about-a-third-of-americans-have-left-an-online-community/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 6.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "Flock's License Plate Cameras Spread to Over 100,000 U.S. Locations",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/09/what-we-know-and-dont-know-about-flocks-license-plate-cameras/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [
-            "data shows"
-          ],
-          "data_tag": false
-        },
-        "topics": [],
-        "trend": 6.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "Americans Say Social Media Companies Wield Too Much Political Power",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/06/majority-of-americans-say-social-media-companies-news-outlets-have-too-much-power-in-politics/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [
-          "politics-and-the-church",
-          "technology",
-          "christian-nationalism"
-        ],
-        "trend": 5.75,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
-        ]
-      },
-      {
-        "title": "How Americans feel about G20 countries",
-        "url": "https://www.pewresearch.org/newsletter/global/global-october-2026-newsletter/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 5.0,
+        "trend": 5.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -264,34 +361,11 @@
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
+          "page already checked on 2026-11-10 (0 verified figure(s))"
         ]
       },
       {
-        "title": "Faithful Christian Habits Sustain Long Pastoral Careers",
-        "url": "https://research.lifeway.com/2026/11/09/7-christian-habits-necessary-for-pastoral-longevity/",
-        "source": "Lifeway Research",
-        "signals": {
-          "publishers": [
-            "Lifeway Research"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "vocation-and-work"
-        ],
-        "trend": 2.75,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
-        ]
-      },
-      {
-        "title": "Religious Nones Are Less Likely to Want Children",
+        "title": "Religious Nones Choose Not to Have Children, Study Finds",
         "url": "https://www.graphsaboutreligion.com/p/why-dont-religious-nones-want-kids",
         "source": "Ryan Burge",
         "signals": {
@@ -299,7 +373,9 @@
             "Ryan Burge"
           ],
           "figures": [],
-          "words": [],
+          "words": [
+            "study finds"
+          ],
           "data_tag": true
         },
         "topics": [
@@ -310,23 +386,120 @@
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
+          "page already checked on 2026-11-10 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "Preelection Polls Understated Democrats' Advantage in 2026",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/06/a-first-look-at-polling-performance-in-2026/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [
+            "polls"
+          ],
+          "data_tag": true
+        },
+        "topics": [
+          "politics-and-the-church"
+        ],
+        "trend": 2.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-10 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "ERLC and State Leaders Praise Some Ballot Measures, Condemn Others",
+        "url": "https://erlc.com/press/erlc-state-leaders-respond-to-nov-3-ballot-measure-successes-failures/",
+        "source": "ERLC",
+        "signals": {
+          "publishers": [],
+          "figures": [
+            "56 percent"
+          ],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [
+          "religious-liberty"
+        ],
+        "trend": 2.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
           "no verifiable figure on the page: link only"
         ]
       },
       {
-        "title": "Youth Leaders Should Expect Hard Questions From Teenagers",
-        "url": "https://research.lifeway.com/2026/11/05/4-types-of-questions-teenagers-ask-a-guide-for-next-gen-leaders/",
-        "source": "Lifeway Research",
+        "title": "Preachers Struggle With Sermon Writing, Study Finds",
+        "url": "https://reformation21.org/preaching-in-paragraphs/",
+        "source": "Reformation21",
         "signals": {
-          "publishers": [
-            "Lifeway Research"
-          ],
+          "publishers": [],
           "figures": [],
+          "words": [
+            "study finds"
+          ],
+          "data_tag": false
+        },
+        "topics": [
+          "preaching"
+        ],
+        "trend": 1.75,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
+        ]
+      },
+      {
+        "title": "Christian Discipleship Resources Make Affordable Christmas Gifts",
+        "url": "https://feeds.ligonier.org/~/972439013/0/ligonierministriesblog",
+        "source": "Ligonier Ministries",
+        "signals": {
+          "publishers": [],
+          "figures": [
+            "20%",
+            "50%"
+          ],
           "words": [],
           "data_tag": false
         },
+        "topics": [
+          "discipleship"
+        ],
+        "trend": 1.25,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-10 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "How Americans feel about G20 countries",
+        "url": "https://www.pewresearch.org/newsletter/global/global-october-2026-newsletter/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [
+            "surveys"
+          ],
+          "data_tag": true
+        },
         "topics": [],
-        "trend": 2.25,
+        "trend": 1.25,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -355,84 +528,18 @@
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "source already cited in the biblical-literacy data file"
-        ]
-      },
-      {
-        "title": "Preelection Polls Understated Democrats' Advantage in 2026",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/06/a-first-look-at-polling-performance-in-2026/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [
-            "polls"
-          ],
-          "data_tag": false
-        },
-        "topics": [
-          "politics-and-the-church"
-        ],
-        "trend": 1.25,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
-        ]
-      },
-      {
-        "title": "God's Omniscience Does Not Eliminate Human Free Will",
-        "url": "https://feeds.ligonier.org/~/972452714/0/ligonierministriesblog",
-        "source": "Ligonier Ministries",
-        "signals": {
-          "publishers": [],
-          "figures": [],
-          "words": [
-            "quiz"
-          ],
-          "data_tag": false
-        },
-        "topics": [
-          "predestination-free-will"
-        ],
-        "trend": -0.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
-        ]
-      },
-      {
-        "title": "Discounted Discipleship Books and Bibles Make Affordable Christmas Gifts",
-        "url": "https://feeds.ligonier.org/~/972439013/0/ligonierministriesblog",
-        "source": "Ligonier Ministries",
-        "signals": {
-          "publishers": [],
-          "figures": [
-            "20%",
-            "50%"
-          ],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "discipleship"
-        ],
-        "trend": -1.25,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
+          "page already checked on 2026-11-10 (0 verified figure(s))"
         ]
       }
     ],
-    "pages": [],
-    "fetched": 8,
+    "pages": [
+      {
+        "slug": "evangelicalism",
+        "kind": "latest-figures",
+        "note": "Latest Figures block refreshed (2 figures); dates bumped"
+      }
+    ],
+    "fetched": 4,
     "hits": 13
   }
 }

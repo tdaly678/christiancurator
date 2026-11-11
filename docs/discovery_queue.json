@@ -1,66 +1,5 @@
 {
  "entries": {
-  "https://institutefc.org/may-god-be-gracious-to-us-a-prayer-before-election-day": {
-   "url": "https://institutefc.org/may-god-be-gracious-to-us-a-prayer-before-election-day/",
-   "canonical_url": "https://institutefc.org/may-god-be-gracious-to-us-a-prayer-before-election-day",
-   "anchor": "May God Be Gracious to Us: A Prayer Before Election Day",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-3-2026/",
-   "found_on": "2026-11-03",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-03",
-   "title": "May God Be Gracious to Us: A Prayer Before Election Day - Institute for Faith and Culture",
-   "source_name": "Institute for Faith and Culture - Equipping Christians for this cultural moment"
-  },
-  "https://jacobrcrouch.wordpress.com/2026/11/02/looksmaxxing-the-normalizing-of-vanity": {
-   "url": "https://jacobrcrouch.wordpress.com/2026/11/02/looksmaxxing-the-normalizing-of-vanity/",
-   "canonical_url": "https://jacobrcrouch.wordpress.com/2026/11/02/looksmaxxing-the-normalizing-of-vanity",
-   "anchor": "Looksmaxxing: The Normalizing of Vanity",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-3-2026/",
-   "found_on": "2026-11-03",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-03",
-   "title": "Looksmaxxing: The Normalizing of Vanity",
-   "source_name": "Aliens and Pilgrims"
-  },
-  "https://livingarchivenewsletter.substack.com/p/a-wretch-like-me": {
-   "url": "https://livingarchivenewsletter.substack.com/p/a-wretch-like-me",
-   "canonical_url": "https://livingarchivenewsletter.substack.com/p/a-wretch-like-me",
-   "anchor": "A Wretch Like Me",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-3-2026/",
-   "found_on": "2026-11-03",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
-  "https://entrustedtothedirt.com/2026/10/31/the-belly-dancer-grandmas": {
-   "url": "https://entrustedtothedirt.com/2026/10/31/the-belly-dancer-grandmas/",
-   "canonical_url": "https://entrustedtothedirt.com/2026/10/31/the-belly-dancer-grandmas",
-   "anchor": "The Belly Dancer Grandmas",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-3-2026/",
-   "found_on": "2026-11-03",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-03",
-   "title": "The Belly Dancer Grandmas",
-   "source_name": "Entrusted to the Dirt"
-  },
-  "https://andrewroycroft.substack.com/p/on-the-naming-of-death": {
-   "url": "https://andrewroycroft.substack.com/p/on-the-naming-of-death",
-   "canonical_url": "https://andrewroycroft.substack.com/p/on-the-naming-of-death",
-   "anchor": "On the Naming of Death",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-3-2026/",
-   "found_on": "2026-11-03",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
   "https://yourmomhasablog.com/2026/10/31/harvest-in-fearful-times": {
    "url": "https://yourmomhasablog.com/2026/10/31/harvest-in-fearful-times/",
    "canonical_url": "https://yourmomhasablog.com/2026/10/31/harvest-in-fearful-times",
@@ -381,8 +320,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-10-2026/",
    "found_on": "2026-11-10",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://redeemingproductivity.com/how-to-graciously-say-no": {
@@ -488,7 +427,81 @@
    "graduated_on": "2026-11-10",
    "title": "5 Ways Retirees Can Serve the Church",
    "source_name": "Ligonier Ministries"
+  },
+  "https://desiringgod.org/articles/a-new-serpent-in-the-garden-of-africa": {
+   "url": "https://www.desiringgod.org/articles/a-new-serpent-in-the-garden-of-africa",
+   "canonical_url": "https://desiringgod.org/articles/a-new-serpent-in-the-garden-of-africa",
+   "anchor": "A New Serpent in the Garden of Africa",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-11-2026/",
+   "found_on": "2026-11-11",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-11",
+   "title": "A New Serpent in the Garden of Africa",
+   "source_name": "Desiring God"
+  },
+  "https://andrewroycroft.substack.com/p/on-naming-the-dead": {
+   "url": "https://andrewroycroft.substack.com/p/on-naming-the-dead",
+   "canonical_url": "https://andrewroycroft.substack.com/p/on-naming-the-dead",
+   "anchor": "On Naming the Dead",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-11-2026/",
+   "found_on": "2026-11-11",
+   "status": "pending",
+   "attempts": 1,
+   "error": "HTTP 403"
+  },
+  "https://christianitytoday.com/2026/11/why-your-favorite-worship-songs-grammar-matters": {
+   "url": "https://www.christianitytoday.com/2026/11/why-your-favorite-worship-songs-grammar-matters/?utm_medium=widgetsocial",
+   "canonical_url": "https://christianitytoday.com/2026/11/why-your-favorite-worship-songs-grammar-matters",
+   "anchor": "Why Your Favorite Worship Song’s Grammar Matters",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-11-2026/",
+   "found_on": "2026-11-11",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-11",
+   "title": "Why Your Favorite Worship Song’s Grammar Matters",
+   "source_name": "Christianity Today"
+  },
+  "https://ca.thegospelcoalition.org/article/3-reasons-you-should-not-date-while-watching-porn": {
+   "url": "https://ca.thegospelcoalition.org/article/3-reasons-you-should-not-date-while-watching-porn/",
+   "canonical_url": "https://ca.thegospelcoalition.org/article/3-reasons-you-should-not-date-while-watching-porn",
+   "anchor": "3 Reasons You Should Not Date While Watching Porn",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-11-2026/",
+   "found_on": "2026-11-11",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-11",
+   "title": "3 Reasons You Should Not Date While Watching Porn",
+   "source_name": "The Gospel Coalition"
+  },
+  "https://thebeehive.live/blog/forgivenarcissism": {
+   "url": "https://www.thebeehive.live/blog/forgivenarcissism",
+   "canonical_url": "https://thebeehive.live/blog/forgivenarcissism",
+   "anchor": "Would You Forgive Me of My Narcissism?",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-11-2026/",
+   "found_on": "2026-11-11",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-11",
+   "title": "Would You Forgive Me of My Narcissism?",
+   "source_name": "The Bee Hive"
+  },
+  "https://thebardowl.substack.com/p/christianity-today-and-the-sin-of": {
+   "url": "https://thebardowl.substack.com/p/christianity-today-and-the-sin-of",
+   "canonical_url": "https://thebardowl.substack.com/p/christianity-today-and-the-sin-of",
+   "anchor": "Christianity Today and the Sin of Centrism",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-11-2026/",
+   "found_on": "2026-11-11",
+   "status": "pending",
+   "attempts": 1,
+   "error": "HTTP 403"
   }
  },
- "updated": "2026-11-10T10:01:16+00:00"
+ "updated": "2026-11-11T10:01:17+00:00"
 }
