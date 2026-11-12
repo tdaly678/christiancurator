@@ -201,10 +201,11 @@ def test_topic_block_needs_anchor():
 
 # ── Pilot data file ──────────────────────────────────────────────────────────
 
-def test_pilot_data_has_the_six_and_none_reviewed():
-    assert set(WRITERS) == {"abby-silva", "dawn-sherillporter", "alex-harris", "brandon-corley",
+def test_pilot_data_has_the_five_all_reviewed():
+    # Tom approved all five on 2026-11-12; abby-silva was retired (posting account).
+    assert set(WRITERS) == {"dawn-sherillporter", "alex-harris", "brandon-corley",
                             "chandler-vannoy", "david-powlison"}
-    assert all(w["reviewed"] is False for w in WRITERS.values())
+    assert all(w["reviewed"] is True for w in WRITERS.values())
 
 
 def test_pilot_data_never_uses_em_dashes():
@@ -226,17 +227,28 @@ def test_start_here_counts():
         assert len(WRITERS[slug]["start_here"]) == 3
 
 
-def test_unverified_identity_page_is_noindexed_and_out_of_sitemap():
-    assert vp.needs_noindex(WRITERS["abby-silva"])
+def test_reviewed_pilot_pages_are_indexable_and_in_sitemap():
+    noindex = set(json.loads((ROOT / "frontend" / "voices_noindex.json").read_text()))
+    sitemap = (ROOT / "docs" / "sitemap-voices.xml").read_text()
+    for slug, w in WRITERS.items():
+        assert not vp.needs_noindex(w), slug
+        assert slug not in noindex, slug
+        assert f"/voices/{slug}/<" in sitemap, slug
+        assert "noindex" not in (ROOT / "docs" / "voices" / slug / "index.html").read_text()
+
+
+def test_retired_posting_account_redirects_to_voices():
     noindex = json.loads((ROOT / "frontend" / "voices_noindex.json").read_text())
     assert "abby-silva" in noindex
     assert "/voices/abby-silva/<" not in (ROOT / "docs" / "sitemap-voices.xml").read_text()
+    stub = (ROOT / "docs" / "voices" / "abby-silva" / "index.html").read_text()
+    assert 'url=/voices/"' in stub and 'rel="canonical" href="https://www.christiancurator.com/voices/"' in stub
 
 
 @pytest.mark.parametrize("slug", sorted(WRITERS))
 def test_built_pilot_pages_are_static_and_dash_free(slug):
     page = (ROOT / "docs" / "voices" / slug / "index.html").read_text(encoding="utf-8")
     assert "—" not in page
-    assert 'data-cc-voice-pilot="draft"' in page
-    if slug in ("abby-silva", "dawn-sherillporter", "brandon-corley", "chandler-vannoy"):
+    assert 'data-cc-voice-pilot="reviewed"' in page
+    if slug in ("dawn-sherillporter", "brandon-corley", "chandler-vannoy"):
         assert page.count('class="cc-recent-item"') >= 1

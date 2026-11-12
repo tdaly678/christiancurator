@@ -1,11 +1,11 @@
 {
-  "_about": "Voices pilot (Nov 2026). Drafted by Claude from each writer's own published bio or outlet author page; every bio fact has a source in bio_sources. Nothing here is final until Tom sets reviewed: true. Rendered by scripts/build_voice_pilot.py into docs/voices/<slug>/index.html. Never use em dashes in any field.",
+  "_about": "Voices pilot (Nov 2026). Drafted by Claude from each writer's own published bio or outlet author page; every bio fact has a source in bio_sources. Tom approved all five drafts on 2026-11-12 (reviewed: true). Rendered by scripts/build_voice_pilot.py into docs/voices/<slug>/index.html. Never use em dashes in any field.",
   "last_updated": "2026-11-12",
   "writers": [
     {
       "slug": "dawn-sherillporter",
       "name": "Dawn Sherill-Porter",
-      "reviewed": false,
+      "reviewed": true,
       "page_kind": "guide",
       "dek": "Content editor at Lifeway Christian Resources | Writes for Lifeway Research on Bible reading habits and discipleship",
       "bio": "Dawn Sherill-Porter is a content editor for Lifeway Christian Resources and writes for Lifeway Research on personal Bible reading, including why reading plans stall and how busy Christians and pastors keep a daily habit.",
@@ -44,7 +44,7 @@
     {
       "slug": "alex-harris",
       "name": "Alex Harris",
-      "reviewed": false,
+      "reviewed": true,
       "page_kind": "guide",
       "dek": "Attorney and Keller Center fellow | Coauthor of Do Hard Things | Writes for The Gospel Coalition on faith, mortality, and public life",
       "bio": "Alex Harris is an attorney and a fellow at The Keller Center for Cultural Apologetics. As a teenager he coauthored Do Hard Things: A Teenage Rebellion Against Low Expectations with his twin brother, Brett. A graduate of Harvard Law School, he worked as a law clerk for U.S. Supreme Court Justices Neil Gorsuch and Anthony Kennedy.",
@@ -91,7 +91,7 @@
     {
       "slug": "brandon-corley",
       "name": "Brandon Corley",
-      "reviewed": false,
+      "reviewed": true,
       "page_kind": "guide",
       "dek": "MDiv student at Southern Seminary | Writes for American Reformer on Baptist political theology and natural law",
       "bio": "Brandon Corley is a graduate of The Master's University, where he earned a degree in Biblical Studies, and an MDiv student at The Southern Baptist Theological Seminary. He writes for American Reformer on Baptist political theology and natural law.",
@@ -137,7 +137,7 @@
     {
       "slug": "chandler-vannoy",
       "name": "Chandler Vannoy",
-      "reviewed": false,
+      "reviewed": true,
       "page_kind": "guide",
       "dek": "Lifeway Leadership | Co-host of 5 Leadership Questions | Writes for RELEVANT on Bible reading and discerning God's will",
       "bio": "Chandler Vannoy is a graduate of the University of Tennessee and holds a Master of Divinity from The Southern Baptist Theological Seminary. His RELEVANT author bio lists him as brand manager for Lifeway Leadership at Lifeway Christian Resources, and he has co-hosted Lifeway Leadership's 5 Leadership Questions podcast. He has written for RELEVANT since 2019 on Bible reading and decision making.",
@@ -184,7 +184,7 @@
     {
       "slug": "david-powlison",
       "name": "David Powlison",
-      "reviewed": false,
+      "reviewed": true,
       "page_kind": "where_to_start",
       "deceased": true,
       "dek": "Biblical counselor, 1949-2019 | Executive director of CCEF, 2014-2019 | Wrote on idolatry, suffering, and pastoral counsel",
@@ -242,22 +242,6 @@
       "related": ["ed-welch", "paul-tripp", "tim-keller"],
       "same_as": ["https://www.ccef.org/people/david-powlison/"],
       "review_notes": "Deceased (CCEF memorial page). No outreach. No digest bylines in our archive, so the page has no Recent pieces section. The JBC issue dates for picks 1 and 5 are not shown on the CCEF pages; the 2019 for pick 5 is inferred from CCEF's note that the remarks were for the May 2019 Westminster graduation."
-    },
-    {
-      "slug": "abby-silva",
-      "name": "Abby Silva",
-      "reviewed": false,
-      "page_kind": "guide",
-      "identity_status": "unverified",
-      "dek": "",
-      "bio": "",
-      "bio_sources": [],
-      "where_they_write": [],
-      "start_here": [],
-      "topics": [],
-      "related": [],
-      "same_as": [],
-      "review_notes": "Misattribution. All three First Things items credited to Abby Silva on our site are bylined on firstthings.com to other people: 'The Trust Spiral' (How the Press Lost Public Trust) is a Mark Bauerlein podcast interview, 'A Dreadful Humility' is by Ephraim Radner, and 'The Truth About Christian Hospitality' is by Sebastian Milbank. 'Abby Silva' appears only as the WordPress posting account (pagePostAuthor) in the First Things feed metadata. No published bio for an Abby Silva at First Things was found (masthead checked). Page is noindexed and kept out of the sitemap until Tom decides: delete, redirect, or fix the byline source."
     }
   ]
 }

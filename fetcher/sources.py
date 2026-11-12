@@ -117,6 +117,9 @@ SOURCES = [
         "name": "First Things",
         "url": "https://www.firstthings.com/rss",
         "category": "culture",
+        # dc:creator is the WordPress posting account (Abby Silva, Chloe Hoyle,
+        # Paul Howard ...), not the writer. Read the byline from each article page.
+        "byline_from_page": True,
     },
     {
         "name": "Mere Orthodoxy",

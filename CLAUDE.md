@@ -282,10 +282,10 @@ Voice pages listed in `frontend/voices_noindex.json` are skipped by the sitemap 
 recorded in `frontend/voices_redirects.json` (loser → survivor); the loser's page is a noindex meta-refresh stub, and
 `scripts/merge_duplicate_voices.py` holds the pair list.
 
-### Voices pilot (branch `voices-pilot`, Nov 12 2026, awaiting Tom's review)
+### Voices pilot (live Nov 12 2026; Tom approved all five drafts)
 - Voice page titles are `Name: Articles, Bio, and Where They Write | Christian Curator` (`voice_page_title()` in
   `curator/voice_generator.py`; `scripts/fix_voice_titles.py` applied it to existing pages). No em dashes in Voices templates.
-- Six pilot pages (abby-silva, dawn-sherillporter, alex-harris, brandon-corley, chandler-vannoy, david-powlison) are
+- Five pilot pages (dawn-sherillporter, alex-harris, brandon-corley, chandler-vannoy, david-powlison) are
   rendered from `data/voices/pilot.json` by `scripts/build_voice_pilot.py` (renderer `curator/voice_pilot.py`): dek, sourced
   bio with Last updated, where they write, Start here picks, recent pieces (static `CC-RECENT-ARTICLES` block), topics,
   related voices, ProfilePage + Person schema. Every bio fact needs a source link. Drafts stay `"reviewed": false` until
@@ -293,8 +293,21 @@ recorded in `frontend/voices_redirects.json` (loser → survivor); the loser's p
   `sitemap-voices.xml`. Topic hubs get a `<!-- CC-TOPIC-VOICES:START --> ... END -->` "Writers on this topic" block before
   `AEO-RELATED-TOPICS`. `update_voice_backlinks.py` skips pilot slugs. Rerun the builder after editing the data file.
 - `build_recent_articles.py` replaces its block in place (the old remove-and-reinsert added a blank line per day) and
-  lists up to 10 pieces on voice pages. abby-silva is a First Things posting account, not a writer (see
-  `.christian-orchestrator/voices-pilot-review.md`). Tests: `tests/test_voice_pilot.py`.
+  lists up to 10 pieces on voice pages. Tests: `tests/test_voice_pilot.py`.
+- Bios and FAQs on all voice pages and in `voices_data.json` are em dash free (Nov 12); `generate_bio_data()` tells
+  Claude not to use dashes and runs `strip_dashes()` on bio, role and affiliation.
+
+### First Things bylines and posting accounts (Nov 12 2026)
+First Things' feed `dc:creator` (and the page's `pagePostAuthor`) is the WordPress posting account, not the writer.
+Sources with `byline_from_page: True` (First Things only) get each item's author from the article page
+(`<meta name="author">`, else JSON-LD author) via `apply_page_bylines()` in `fetcher/rss_fetcher.py`; an unreadable
+page or one naming nobody leaves the author empty, never the posting account. Health rows carry `byline_from_page`
+counts. `scripts/retire_posting_accounts.py` (dry run by default, `--apply`) retires a posting-account voice page:
+reattributes archive bylines and `meta.json` from the article pages, re-renders the archive index, writes a noindex stub
+to `/voices/`, and records the slug in `voices_redirects.json` with `"to": ""` (retired: the name is never linked).
+Retired: abby-silva. Audit 2026-11-12 found more posting accounts with voice pages, none retired yet (Tom's call):
+german-saucedo, paul-howard, jillian-parks, stephen-walker, chloe-hoyle. Add a slug to `ACCOUNTS` and rerun to retire.
+Tests: `tests/test_first_things_bylines.py`, `tests/test_voice_redirects.py`.
 
 ## P2: engagement and sourcing (2026-10-30)
 

@@ -16,6 +16,7 @@ import re
 import anthropic
 from pathlib import Path
 from curator.ai_health import record_failure
+from curator.headline_voice import strip_dashes
 from curator.voice_filters import is_voice_worthy, source_creates_voices
 
 DOCS_DIR = Path(__file__).parent.parent / "docs"
@@ -401,6 +402,7 @@ Rules:
 - If this person is not well-known or you are uncertain about details, keep the bio brief and accurate, and omit uncertain fields by using empty strings or [].
 - Do not invent facts. If education is unknown, use "".
 - The bio should be warm and informative, written for a curious evangelical Christian reader.
+- Never use em dashes or en dashes. Use commas, colons, periods, or parentheses.
 """
 
     try:
@@ -426,6 +428,8 @@ Rules:
         data.setdefault("books", [])
         data.setdefault("initials", "".join(p[0].upper() for p in name.split()[:3] if p))
         data["books"] = data["books"][:6]
+        for key in ("bio", "role", "affiliation"):
+            data[key] = strip_dashes(data[key])
         return data
     except Exception as e:
         print(f"    ⚠️  Bio generation failed for {name}: {e}")

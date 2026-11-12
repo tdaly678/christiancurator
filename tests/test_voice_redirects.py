@@ -30,13 +30,17 @@ class VoiceRedirectTests(unittest.TestCase):
 
     def test_survivors_are_live_and_losers_are_stubs(self):
         for loser, r in self.redirects.items():
-            self.assertIn(r["to"], self.data, loser)
-            self.assertNotIn(r["to"], self.redirects, f"{loser} redirects to another redirect")
             self.assertNotIn(loser, self.data, loser)
             self.assertIn(loser, self.noindex, loser)
             stub = (VOICES / loser / "index.html").read_text()
-            self.assertIn(f'url=/voices/{r["to"]}/"', stub)
             self.assertIn("noindex", stub)
+            if not r["to"]:
+                # Retired posting account: points at the Voices index.
+                self.assertIn('url=/voices/"', stub)
+                continue
+            self.assertIn(r["to"], self.data, loser)
+            self.assertNotIn(r["to"], self.redirects, f"{loser} redirects to another redirect")
+            self.assertIn(f'url=/voices/{r["to"]}/"', stub)
 
     def test_noindexed_voices_stay_out_of_sitemap(self):
         for slug in self.noindex:
@@ -45,7 +49,9 @@ class VoiceRedirectTests(unittest.TestCase):
     def test_old_bylines_link_to_survivor(self):
         by_name = load_voices_by_name()
         for r in self.redirects.values():
-            if r.get("name"):
+            if r.get("name") and not r["to"]:
+                self.assertNotIn(r["name"].lower(), by_name)
+            elif r.get("name"):
                 self.assertNotIn(by_name[r["name"].lower()], self.redirects)
 
 

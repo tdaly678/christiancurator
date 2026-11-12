@@ -32,7 +32,11 @@ HUBS = {"apologists", "bible-teachers", "journalists", "ministry-leaders", "past
         "speakers-creators", "theologians-scholars", "writers"}
 
 TITLE_RE = re.compile(r"<title>(.*?)</title>", re.DOTALL)
-OG_TITLE_RE = re.compile(r'<meta property="og:title" content="[^"]*" />')
+# Either attribute order: older pages were written by BeautifulSoup as
+# <meta content="..." property="og:title"/>.
+OG_TITLE_RE = re.compile(
+    r'<meta property="og:title" content="[^"]*" />|<meta content="[^"]*" property="og:title"\s*/>'
+)
 SUFFIX_RE = re.compile(
     r"\s*(?:—\s*Voices\s*—|:\s*Articles, Bio, and Where They Write\s*\||—|\|)\s*Christian Curator\s*$"
 )

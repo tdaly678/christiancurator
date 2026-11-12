@@ -23,6 +23,7 @@ ZERO_STREAK_FAIL_DAYS, after the site has already been published.
 
 from __future__ import annotations
 
+import html
 import json
 import os
 import re
@@ -119,6 +120,73 @@ def clean_author(raw: str) -> str:
     cleaned = re.sub(_EMAIL_RE, "", raw)
     cleaned = re.sub(r"\s{2,}", " ", cleaned).strip(" \t,;:()-")
     return cleaned
+
+
+BYLINE_TIMEOUT = 10   # seconds per article page
+BYLINE_WORKERS = 4
+
+
+def _meta_content(page: str, name: str) -> str:
+    key = rf'(?:property|name)=["\']{re.escape(name)}["\']'
+    value = r'content=(?:"([^"]*)"|\'([^\']*)\')'
+    for pat in (rf'<meta[^>]+{key}[^>]*?{value}', rf'<meta[^>]+{value}[^>]*{key}'):
+        m = re.search(pat, page, re.I)
+        found = m and (m.group(1) if m.group(1) is not None else m.group(2)) or ""
+        if found.strip():
+            return html.unescape(found).strip()
+    return ""
+
+
+def page_byline(page: str) -> str:
+    """The writer named on an article page: <meta name="author">, else the
+    JSON-LD author Person(s). Profile URLs and "staff" placeholders yield ""."""
+    author = _meta_content(page, "author")
+    if not author:
+        names = []
+        for block in re.findall(
+            r'<script[^>]+application/ld\+json[^>]*>(.*?)</script>', page, re.S | re.I
+        ):
+            for m in re.finditer(r'"author"\s*:\s*(\[[^\]]*\]|\{[^}]*\})', block):
+                for n in re.findall(r'"name"\s*:\s*"([^"]+)"', m.group(1)):
+                    if n not in names:
+                        names.append(n)
+            if names:
+                break
+        author = " and ".join(names)
+    author = clean_author(html.unescape(author))
+    if author.lower().startswith(("http://", "https://")) or author.lower() in ("staff", "admin"):
+        return ""
+    return author
+
+
+def fetch_page_byline(url: str) -> str | None:
+    """Byline from the article page, or None when the page cannot be read."""
+    try:
+        resp = requests.get(url, timeout=BYLINE_TIMEOUT, headers={"User-Agent": USER_AGENT})
+    except Exception:
+        return None
+    if resp.status_code >= 400:
+        return None
+    return page_byline(resp.text)
+
+
+def apply_page_bylines(articles: list[dict], health: dict, fetch=fetch_page_byline) -> None:
+    """For sources whose feed author is a posting account: set each article's
+    author from its page. A page that cannot be read, or names no writer,
+    leaves the author empty; the feed's posting account is never used."""
+    urls = [a["url"] for a in articles if a.get("url")]
+    with ThreadPoolExecutor(max_workers=BYLINE_WORKERS) as pool:
+        found = dict(zip(urls, pool.map(fetch, urls)))
+    resolved = failed = 0
+    for a in articles:
+        byline = found.get(a.get("url"))
+        if byline is None:
+            failed += 1
+        elif byline:
+            resolved += 1
+        a["author"] = byline or ""
+    health["byline_from_page"] = {"resolved": resolved, "no_byline": len(articles) - resolved - failed,
+                                  "failed": failed}
 
 
 def _entry_datetime(entry) -> datetime | None:
@@ -298,6 +366,9 @@ def fetch_feed(source: dict) -> tuple[list[dict], dict]:
             "tags": [],
             "rewritten_title": None,
         })
+
+    if source.get("byline_from_page") and articles:
+        apply_page_bylines(articles, health)
 
     if newest:
         health["newest_date"] = newest.date().isoformat()
