@@ -892,6 +892,105 @@
         "https://www.thegospelcoalition.org/profile/david-vandrunen/"
       ],
       "review_notes": "WSC page does not say since when he has held the Strimple chair, only that he began teaching at WSC in 2001. WSC says 'fifteen books', TGC says 'a dozen'; I used WSC. TGC article URL slug is neither-quietism-triumphalism but the page headline is 'How Two-Kingdoms Doctrine Helps Political Discourse' (WSC lists it as 'Neither Quietism nor Triumphalism'). New Horizons dates are issue months (June 2015, October 2017), not days. The TGC essay 'The Forgiveness of Sin' shows no date. Pick 2 headline uses a curly apostrophe as on the page. Related: J. V. Fesko (WSC colleague) left out because the voice list has two Fesko slugs (j-v-fesko, john-v-fesko)."
+    },
+    {
+      "slug": "doug-wilson",
+      "name": "Doug Wilson",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Senior minister of Christ Church, Moscow, Idaho | Blog and Mablog at dougwils.com | Writes on covenant theology, worship, classical Christian education and the Christian life",
+      "bio": "Douglas Wilson is senior minister of Christ Church in Moscow, Idaho, where he has served as a pastor since 1977, and he blogs at Blog and Mablog (dougwils.com). After serving in the U.S. Navy submarine service, he earned two bachelor's degrees, in philosophy and classical studies, and a master's in philosophy from the University of Idaho. New Saint Andrews College lists him among the founders of the college, Canon Press and the Communion of Reformed Evangelical Churches; he was a founding board member of Logos School and is a senior fellow at New Saint Andrews. His books include Recovering the Lost Tools of Learning (Crossway, 1991) and the novel Evangellyfish.",
+      "bio_sources": [
+        {
+          "label": "About page, dougwils.com",
+          "url": "https://dougwils.com/about"
+        },
+        {
+          "label": "Contributor page, New Saint Andrews College",
+          "url": "https://nsa.edu/contributors/doug-wilson"
+        },
+        {
+          "label": "Leadership and staff, Christ Church",
+          "url": "https://christkirk.com/our-church/leadership-staff/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "Blog and Mablog (dougwils.com)",
+          "url": "https://dougwils.com/about"
+        },
+        {
+          "outlet": "New Saint Andrews College",
+          "url": "https://nsa.edu/contributors/doug-wilson"
+        },
+        {
+          "outlet": "Tabletalk",
+          "url": "https://tabletalkmagazine.com/contributor/douglas-wilson"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "Objections to Election",
+          "url": "https://tabletalkmagazine.com/article/2001/03/objections-to-election/",
+          "outlet": "Tabletalk",
+          "date": "2001-03",
+          "note": "Argues that the objection in Romans 9:19 applies to any orthodox view of God, not only to Reformed theology, and that its answer lies in God's authority as Creator."
+        },
+        {
+          "title": "Humility Properly Defined",
+          "url": "https://tabletalkmagazine.com/article/2001/02/humility-properly-defined/",
+          "outlet": "Tabletalk",
+          "date": "2001-02",
+          "note": "Reads the Beatitudes to argue that humility begins with recognizing one's spiritual need before a sovereign and gracious God and accepting salvation on his terms."
+        },
+        {
+          "title": "Worship Is Warfare",
+          "url": "https://tabletalkmagazine.com/article/2001/01/worship-is-warfare/",
+          "outlet": "Tabletalk",
+          "date": "2001-01",
+          "note": "Argues that the church advances Christ's rule chiefly through its weekly worship, preaching and sacraments, rather than through political lobbying or a purely private faith."
+        },
+        {
+          "title": "Christ the Lord of Covenantal Partaking",
+          "url": "https://dougwils.com/the-church/s16-theology/covenantal-partaking.html",
+          "outlet": "Blog and Mablog",
+          "date": "2008-02-22",
+          "note": "Sets out a case from 1 Corinthians 10 and 11 for weekly communion and for Christ's covenantal presence in the Supper for those who partake in faith, in conversation with Calvin and the Westminster Confession."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "predestination-free-will",
+          "angle": "A Reformed defense of election from Romans 9."
+        },
+        {
+          "slug": "worship-and-liturgy",
+          "angle": "Weekly worship and sacraments as the church's main work."
+        },
+        {
+          "slug": "lords-supper",
+          "angle": "Weekly communion and Christ's covenantal presence at the table."
+        },
+        {
+          "slug": "covenant-theology",
+          "angle": "Covenant blessings and judgments as the frame for the sacraments."
+        },
+        {
+          "slug": "christian-education",
+          "angle": "Classical Christian schooling, from Recovering the Lost Tools of Learning and Logos School."
+        }
+      ],
+      "related": [
+        "joseph-rigney",
+        "carl-trueman",
+        "kevin-deyoung"
+      ],
+      "same_as": [
+        "https://dougwils.com/about",
+        "https://nsa.edu/contributors/doug-wilson",
+        "https://tabletalkmagazine.com/contributor/douglas-wilson"
+      ],
+      "review_notes": "Identity confirmed: Christ Church, Moscow, Idaho, blog at dougwils.com (matches the existing page). The bio uses only his own About page, the New Saint Andrews contributor page and the Christ Church staff list. NSA's page says both that he founded NSA and that he was a 'founding board member'; the bio attributes the founder list to NSA. Christ Church's staff page lists him as Senior Pastor; his own page says senior minister. No Canon Press author page opened (429 and 404), so Canon Press is not listed in where_they_write. dougwils.com and tabletalkmagazine.com return 403 to curl but opened in WebFetch. The Tabletalk picks are from 2001 and show only a month. Picks were chosen as representative theological and pastoral writing; none attacks named people. The covenantal partaking post criticizes Roman Catholic, Lutheran and memorialist views in sharp terms; the page also shows a second unlabeled date, 2020-12-30. Related voices are an approximate match (Reformed writers on worship and doctrine), and the reviewer should check them; I did not verify Joe Rigney's current NSA role. Wilson is a polarizing figure; the bio is kept to sourced facts only. Merge (Nov 12 2026): Joe Rigney kept in Related; nsa.edu/contributors/joe-rigney (HTTP 200) lists him as Fellow of Theology and MDiv Program Director at New Saint Andrews."
     }
   ]
 }
