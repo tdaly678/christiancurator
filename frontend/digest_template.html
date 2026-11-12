@@ -543,8 +543,8 @@
         <div class="cc-featured-article">
           <a class="cc-featured-article-title"
              href="{{ article.url }}" target="_blank"
-             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}','link_url':'{{ article.url }}'});">
-            {{ article.rewritten_title or article.title }}
+             onclick="gtag('event','article_click',{'article_title':'{{ (article|pub_title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}','link_url':'{{ article.url }}'});">
+            {{ article|pub_title }}
           </a>
           <span class="cc-featured-article-source">
             {%- set auth = article.author | default('') | trim -%}
@@ -578,8 +578,8 @@
     {% set lead = articles[0] %}
     <article class="cc-headline-lead">
       <a href="{{ lead.url }}" class="cc-headline-lead-title" target="_blank" rel="noopener"
-         onclick="gtag('event','article_click',{'article_title':'{{ (lead.rewritten_title or lead.title)|replace("'","") }}','article_source':'{{ lead.source_name }}','article_url':'{{ lead.url }}','link_url':'{{ lead.url }}'});">
-        {{ lead.rewritten_title or lead.title }}
+         onclick="gtag('event','article_click',{'article_title':'{{ (lead|pub_title)|replace("'","") }}','article_source':'{{ lead.source_name }}','article_url':'{{ lead.url }}','link_url':'{{ lead.url }}'});">
+        {{ lead|pub_title }}
       </a>
       <div class="cc-headline-lead-meta">
         {%- set auth = lead.author | default('') | trim -%}
@@ -601,8 +601,8 @@
         <div class="cc-headline-num">{{ loop.index + 1 }}</div>
         <div class="cc-headline-content">
           <a href="{{ article.url }}" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}','link_url':'{{ article.url }}'});">
-            {{ article.rewritten_title or article.title }}
+             onclick="gtag('event','article_click',{'article_title':'{{ (article|pub_title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}','link_url':'{{ article.url }}'});">
+            {{ article|pub_title }}
           </a>
           <div class="cc-headline-meta">
             {%- set auth = article.author | default('') | trim -%}
@@ -636,8 +636,8 @@
         <div class="cc-world-news-num">{{ loop.index }}</div>
         <div class="cc-world-news-content">
           <a href="{{ article.url }}" class="cc-world-news-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}','link_url':'{{ article.url }}'});">
-            {{ article.rewritten_title or article.title }}
+             onclick="gtag('event','article_click',{'article_title':'{{ (article|pub_title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}','link_url':'{{ article.url }}'});">
+            {{ article|pub_title }}
           </a>
           <div class="cc-world-news-meta">
             {%- set auth = article.author | default('') | trim -%}
@@ -669,8 +669,8 @@
     {% set ylead = yesterday_articles[0] %}
     <article class="cc-headline-lead">
       <a href="{{ ylead.url }}" class="cc-headline-lead-title" target="_blank" rel="noopener"
-         onclick="gtag('event','article_click',{'article_title':'{{ (ylead.rewritten_title or ylead.title)|replace("'","") }}','article_source':'{{ ylead.source_name }}','article_url':'{{ ylead.url }}','link_url':'{{ ylead.url }}'});">
-        {{ ylead.rewritten_title or ylead.title }}
+         onclick="gtag('event','article_click',{'article_title':'{{ (ylead|pub_title)|replace("'","") }}','article_source':'{{ ylead.source_name }}','article_url':'{{ ylead.url }}','link_url':'{{ ylead.url }}'});">
+        {{ ylead|pub_title }}
       </a>
       <div class="cc-headline-lead-meta">
         {%- set auth = ylead.author | default('') | trim -%}
@@ -692,8 +692,8 @@
         <div class="cc-headline-num">{{ loop.index + 1 }}</div>
         <div class="cc-headline-content">
           <a href="{{ article.url }}" class="cc-headline-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}','link_url':'{{ article.url }}'});">
-            {{ article.rewritten_title or article.title }}
+             onclick="gtag('event','article_click',{'article_title':'{{ (article|pub_title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}','link_url':'{{ article.url }}'});">
+            {{ article|pub_title }}
           </a>
           <div class="cc-headline-meta">
             {%- set auth = article.author | default('') | trim -%}

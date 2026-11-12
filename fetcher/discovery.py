@@ -271,6 +271,7 @@ def article_from_page(entry: dict, page: str, final_url: str) -> dict | None:
         "role": "primary",
         "author": _author(page),
         "title": title,
+        "original_title": title,
         "url": final_url,
         "summary": description,
         "full_content": "",

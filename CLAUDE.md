@@ -171,7 +171,7 @@ Slice 2 (2026-10-31), same module:
   breaks, hyphen for ranges), ` | Outlet` tails, ` - Outlet` when it matches the source, and service tails ("here's why",
   "what you need to know", "read more"); Title Cases only an ALL CAPS shout. `apply_display_title()` runs on every
   article that passes the hard rejects (and on media items in `main.py`); when it changes something it sets
-  `display_title` and fills `rewritten_title`, which every display path already reads. Claude rewriting stays off.
+  `display_title` and fills `rewritten_title`. Claude rewriting is ON for the daily run (see Headlines under Homepage v2).
 - `display_byline(author, source)` returns "Author, Outlet".
 - Pulse: no em dashes. The `curator/daily_summary.py` prompt bans them and `sanitize_pulse()` (via `strip_dashes()`)
   cleans every generated paragraph. Tests: `tests/test_pulse_sanitizer.py`.
@@ -187,7 +187,7 @@ Slice 3 (Nov 1, Jarvis-greenlit), same module:
 - `voice_adjustments()` adds `REVIEW_SOFT` -20 (`^review:`, "a review of", "new and notable") and
   `DEMOTE_CLAIMLESS_SHORT` -15 (`is_claimless_short()`: 2 to 5 words, no `:`/`?`, no verb, no `CLAIM_NOUNS`, starts
   with "The" or "Noun of Noun"; "tyranny" is deliberately not a claim noun). Claimless titles are board/lane fill only:
-  never lead, sublead or any email slot. Title rewriting stays off.
+  never lead, sublead or any email slot.
 
 ### Cross-day repeats (Nov 1)
 - `output.load_yesterday_shown()` returns the latest `date_shown` before today and its URLs (url + canonical_url).
@@ -229,7 +229,15 @@ lanes, research) is logged to history with url + canonical_url, one row per arti
 - `curator/dedup.py` collapses cross-feed duplicates before ranking: canonical URL (https, no www, no tracking params,
   no trailing slash), then normalized title (25+ chars). Survivor preference: primary over discovery, the source whose
   domain matches the link, christian over world_news, then sources.py order. Losers are listed in `also_from`.
-- Headlines: original publisher titles everywhere. `curator/title_rewriter.py` is off unless `CC_REWRITE_TITLES=1`.
+- Headlines: `curator/title_rewriter.py` rewrites titles in RealClear voice whenever `CC_REWRITE_TITLES=1`, and the
+  daily workflow sets it (`.github/workflows/daily_run.yml`, since commit b329bb936, Nov 4 2026). The rewrite is for
+  the front page and the email only (Tom). Anywhere a headline sits under a writer's byline (voice pages, Recent
+  Articles blocks on voice and topic pages, archive and digest pages, topic curated entries) shows the publisher's
+  own headline: `original_title` is set at ingest and stored in archive `meta.json`, `article_history.json` and
+  `yesterday.json`; templates use the `pub_title` filter (`curator/original_titles.py` `byline_title()`), which only
+  trims a site tail, whitespace and dashes. Rows saved before Nov 12 2026 use headlines recovered from the article
+  pages into `data/original_titles.json` by `scripts/backfill_original_titles.py`; an item with no known publisher
+  headline is left off voice and topic Recent Articles. Tests: `tests/test_original_titles.py`.
 - `article_history.json` rows now also carry `importance`, `depth`, `base_importance`, `base_depth`, `canonical_url`.
   Rows before 2026-10-31 are single-axis; do not mix them with two-axis rows when tuning.
 

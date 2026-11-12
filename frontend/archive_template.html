@@ -376,8 +376,8 @@
     {% set lead = articles[0] %}
     <article class="cc-lead">
       <a href="{{ lead.url }}" class="cc-lead-title" target="_blank" rel="noopener"
-         onclick="gtag('event','article_click',{'article_title':'{{ (lead.rewritten_title or lead.title)|replace("'","") }}','article_source':'{{ lead.source_name }}','article_url':'{{ lead.url }}','link_url':'{{ lead.url }}'});">
-        {{ lead.rewritten_title or lead.title }}
+         onclick="gtag('event','article_click',{'article_title':'{{ (lead|pub_title)|replace("'","") }}','article_source':'{{ lead.source_name }}','article_url':'{{ lead.url }}','link_url':'{{ lead.url }}'});">
+        {{ lead|pub_title }}
       </a>
       <div class="cc-lead-meta">
         {% set auth = lead.author | default('') | trim %}
@@ -404,8 +404,8 @@
         <div class="cc-article-num">{{ loop.index + 1 }}</div>
         <div class="cc-article-content">
           <a href="{{ article.url }}" class="cc-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}','link_url':'{{ article.url }}'});">
-            {{ article.rewritten_title or article.title }}
+             onclick="gtag('event','article_click',{'article_title':'{{ (article|pub_title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}','link_url':'{{ article.url }}'});">
+            {{ article|pub_title }}
           </a>
           <div class="cc-article-meta">{{ byline(article, voices_by_name) }}</div>
         </div>
@@ -428,8 +428,8 @@
         <div class="cc-article-num">{{ loop.index }}</div>
         <div class="cc-article-content">
           <a href="{{ article.url }}" class="cc-article-title" target="_blank" rel="noopener"
-             onclick="gtag('event','article_click',{'article_title':'{{ (article.rewritten_title or article.title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}','link_url':'{{ article.url }}'});">
-            {{ article.rewritten_title or article.title }}
+             onclick="gtag('event','article_click',{'article_title':'{{ (article|pub_title)|replace("'","") }}','article_source':'{{ article.source_name }}','article_url':'{{ article.url }}','link_url':'{{ article.url }}'});">
+            {{ article|pub_title }}
           </a>
           <div class="cc-article-meta">{{ byline(article, voices_by_name) }}</div>
         </div>

@@ -5,6 +5,8 @@ frontend package — renders the HTML digest from the Jinja2 template.
 from pathlib import Path
 from datetime import date
 from jinja2 import Environment, FileSystemLoader
+
+from curator.original_titles import article_original_title, byline_title
 import hashlib
 import json
 import re
@@ -175,6 +177,7 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
     env.filters['strip_html'] = strip_html
     env.filters['article_anchor'] = article_anchor
     env.filters['format_author_links'] = format_author_links
+    env.filters['pub_title'] = byline_title
     template = env.get_template("template.html")
 
     # Build simplified pairings for the template
@@ -603,6 +606,7 @@ def _write_archive_meta(page_dir: Path, articles: list[dict]):
         auth_str = _author(a)
         article_data.append({
             "title":   a.get("rewritten_title") or a.get("title", ""),
+            "original_title": article_original_title(a),
             "url":     a.get("url", ""),
             "author":  auth_str,
             "authors": _split_author_names(auth_str),

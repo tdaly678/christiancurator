@@ -10,6 +10,12 @@ Topic pages also get the stories the daily data watch matched to them
 (`fresh` in docs/data_watch.json, written by scripts/run_data_watch.py), so a
 page outside the keyword list still shows a survey story placed on the digest.
 
+Headlines are the publisher's own (Nov 12 2026): a writer is never credited
+with a front-page rewrite. Archive pages from Nov 12 on store `original_title`
+in meta.json; older rows use the headline recovered by
+scripts/backfill_original_titles.py (data/original_titles.json). An item whose
+publisher headline is unknown is left off the page.
+
 Both sections are wrapped in marker comments and rewritten in place on each
 run, so the daily pipeline keeps them fresh — a recurring freshness signal on
 otherwise-static evergreen pages, plus genuinely useful recent reading for
@@ -29,6 +35,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
 from curator.headline_voice import strip_dashes  # noqa: E402
+from curator.original_titles import lookup, publisher_title  # noqa: E402
 from frontend.topic_matcher import TOPICS, _normalise  # noqa: E402
 
 DOCS_DIR = REPO_ROOT / "docs"
@@ -84,7 +91,25 @@ VOICE_RE = re.compile(r'href="/voices/([a-z0-9-]+)/"')
 SOURCE_RE = re.compile(r"'article_source':'([^']*)'")
 
 
-def collect_by_voice() -> dict[str, list[dict]]:
+def _meta_original_titles(day_dir: Path) -> dict[str, str]:
+    try:
+        meta = json.loads((day_dir / "meta.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return {a["url"]: a["original_title"] for a in meta.get("articles", [])
+            if a.get("url") and a.get("original_title")}
+
+
+def original_title_for(url: str, meta_titles: dict[str, str]) -> str | None:
+    """Publisher headline for a saved article, or None when unknown."""
+    return meta_titles.get(url) or lookup(url)
+
+
+def collect_by_voice(*, dropped: list | None = None) -> dict[str, list[dict]]:
+    """Archive pieces per voice slug, newest first, with publisher headlines.
+
+    Pieces whose publisher headline is unknown are skipped (and appended to
+    `dropped` when given)."""
     by_voice: dict[str, dict[str, dict]] = {}
     if not ARCHIVE_DIR.exists():
         return {}
@@ -93,6 +118,7 @@ def collect_by_voice() -> dict[str, list[dict]]:
         if not day_dir.is_dir() or not idx.exists():
             continue
         date_iso = day_dir.name
+        meta_titles = _meta_original_titles(day_dir)
         h = idx.read_text(encoding="utf-8", errors="replace")
         for block in ARTICLE_RE.finditer(h):
             b = block.group(0)
@@ -100,9 +126,15 @@ def collect_by_voice() -> dict[str, list[dict]]:
             if not t:
                 continue
             url = t.group(1)
-            title = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", t.group(2))).strip()
             src = SOURCE_RE.search(b)
             source = src.group(1) if src else ""
+            original = original_title_for(url, meta_titles)
+            if not original:
+                if dropped is not None and VOICE_RE.search(b):
+                    dropped.append({"date": date_iso, "url": url,
+                                    "slugs": sorted(set(VOICE_RE.findall(b)))})
+                continue
+            title = publisher_title(original, source, url)
             for slug in set(VOICE_RE.findall(b)):
                 entry = {"date": date_iso, "title": title, "url": url, "source": source}
                 cur = by_voice.setdefault(slug, {})
@@ -154,11 +186,28 @@ def inject(html: str, section: str) -> str | None:
     return None
 
 
+def remove_block(html: str) -> str:
+    """Drop the Recent Articles block (and the newline before it)."""
+    return re.sub(r"\n?" + re.escape(V_START) + r".*?" + re.escape(V_END) + r"\n?", "\n",
+                  html, count=1, flags=re.DOTALL)
+
+
 def update_voices() -> int:
     by_voice = collect_by_voice()
     voices_data = json.loads((DOCS_DIR / "voices_data.json").read_text(encoding="utf-8"))
     names = {v["slug"]: v["name"] for v in voices_data}
     n = 0
+    # A voice left with no credited piece (reattributed byline, unknown
+    # publisher headline) loses its stale block rather than keep old credits.
+    for slug in names:
+        if slug in by_voice:
+            continue
+        page = VOICES_DIR / slug / "index.html"
+        if page.exists():
+            html = page.read_text(encoding="utf-8")
+            if V_START in html:
+                page.write_text(remove_block(html), encoding="utf-8")
+                n += 1
     for slug, items in by_voice.items():
         page = VOICES_DIR / slug / "index.html"
         if not page.exists() or slug not in names:
@@ -179,12 +228,15 @@ def match_articles_to_topic(topic: dict, history: list[dict]) -> list[dict]:
     kws = [k.lower() for k in topic["keywords"]]
     out = []
     for a in reversed(history):  # newest last in file -> iterate newest first
-        text = _normalise(a.get("title", "") + " " + " ".join(a.get("tags", [])))
+        original = a.get("original_title") or lookup(a.get("url", ""))
+        if not original:
+            continue
+        text = _normalise(original + " " + " ".join(a.get("tags", [])))
         if any(k in text for k in kws):
             out.append(
                 {
                     "date": a.get("date_shown", ""),
-                    "title": a.get("title", ""),
+                    "title": publisher_title(original, a.get("source_name", ""), a.get("url", "")),
                     "url": a.get("url", ""),
                     "source": a.get("source_name", ""),
                 }

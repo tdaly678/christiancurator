@@ -49,6 +49,8 @@ import re
 from datetime import date, timedelta
 from pathlib import Path
 
+from curator.original_titles import article_original_title
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TOPICS_DIR = REPO_ROOT / "docs" / "topics"
 
@@ -712,7 +714,8 @@ def run_watch(pool: list[dict], history: list[dict], state: dict, today: date,
     hits.sort(key=lambda h: (not h[2]["_on_digest"], -h[0], h[2].get("title") or ""))
 
     for trend, outlets, a, sig, slugs in hits:
-        title = a.get("rewritten_title") or a.get("title") or ""
+        # Publisher headline: fresh items are listed on topic pages.
+        title = article_original_title(a) or a.get("title") or ""
         item = {"title": title, "url": a["url"], "source": a.get("source_name", ""),
                 "signals": sig, "topics": slugs, "trend": trend, "outlets": outlets,
                 "on_digest": a["_on_digest"], "actions": []}

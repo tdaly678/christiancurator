@@ -8,6 +8,7 @@ from pathlib import Path
 from datetime import date
 
 from curator.dedup import canonical_url
+from curator.original_titles import article_original_title
 
 OUTPUT_DIR = Path(__file__).parent
 OUTPUT_JSON_PATH = OUTPUT_DIR / "articles.json"
@@ -20,6 +21,8 @@ def save_yesterday(articles: list[dict]):
     top10 = [
         {
             "title": a.get("rewritten_title") or a.get("title", ""),
+            # Publisher headline: the digest's Yesterday list shows this one.
+            "original_title": article_original_title(a),
             "url": a.get("url", ""),
             "source_name": a.get("source_name", ""),
             "author": a.get("author", ""),
@@ -95,6 +98,9 @@ def history_row(a: dict, day: str) -> dict:
     return {
         "url": a.get("url", ""),
         "title": a.get("rewritten_title") or a.get("title", ""),
+        # Publisher headline (Nov 12 2026). `title` is what the front page
+        # showed; anything under a byline uses this one.
+        "original_title": article_original_title(a),
         "source_name": a.get("source_name", ""),
         "date_shown": day,
         "final_score": a.get("final_score", 0),

@@ -363,6 +363,9 @@ def fetch_feed(source: dict) -> tuple[list[dict], dict]:
             "role": _article_role(source, title),
             "author": author,
             "title": title,
+            # Publisher headline, kept apart from any rewrite: shown wherever a
+            # headline sits under a byline (curator/original_titles.py).
+            "original_title": title,
             "url": url,
             "summary": entry.get("summary", ""),
             "full_content": full_content,
