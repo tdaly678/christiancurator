@@ -324,7 +324,7 @@ def _email_debate(debates: list[dict]) -> list[dict]:
 
 
 def _email_layout(articles: list[dict], research_articles: list[dict] = None,
-                  layout: dict = None) -> dict:
+                  layout: dict = None, daily_summary: dict = None) -> dict:
     """The homepage v2 layout, trimmed for email.
 
     main.py passes the layout render_html() returned so the email matches the
@@ -333,7 +333,8 @@ def _email_layout(articles: list[dict], research_articles: list[dict] = None,
     """
     from frontend.layout import build_homepage_layout, email_eligible
     if layout is None:
-        layout = build_homepage_layout(articles, None, research_articles)
+        layout = build_homepage_layout(articles, None, research_articles,
+                                       daily_summary=daily_summary)
     # Every email slot skips yesterday's picks, claimless labels and bare
     # dated column titles; the layout already keeps all three out of the lead
     # and subleads (and dated titles off the board).
@@ -407,7 +408,7 @@ def _render_lead(layout: dict) -> str:
 
 
 def _render_board(layout: dict) -> str:
-    """The three board columns, stacked: News, Commentary & Debate, Church & Theology."""
+    """The three board columns, stacked: Church & Theology, Commentary & Debate, News."""
     sections = ""
     for col in layout.get("board", []):
         arts = col["articles"]
@@ -683,7 +684,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
         spotlight_topic = None
 
     # Same picks as the homepage (frontend/layout.py), trimmed for email.
-    layout = _email_layout(articles, research_articles, layout)
+    layout = _email_layout(articles, research_articles, layout, daily_summary)
 
     preheader = html.escape(build_preheader(layout, daily_summary, edition), quote=False)
 

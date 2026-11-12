@@ -52,7 +52,7 @@ def main():
     ]
     media_items = data.get("media", []) if isinstance(data, dict) else []
     layout = build_homepage_layout(articles, pairings, research_articles,
-                                   media_items=media_items)
+                                   media_items=media_items, daily_summary=daily_summary)
 
     send_email(articles, yesterday_articles, daily_summary=daily_summary,
                research_articles=research_articles, layout=layout)

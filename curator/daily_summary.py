@@ -11,6 +11,8 @@ Returns a dict:
     "paragraphs_plain": ["para plain text...", ...],   # for sidebar / meta
     "themes":           ["pastoral authority", "sanctification", ...],
     "subject":          "What the local church owes lonely people",  # email subject
+    "source_urls":      ["https://...", ...],  # articles the Pulse drew on, in mention order
+    "candidate_urls":   ["https://...", ...],  # every article the Pulse was shown
     "related_days":     [{"slug": "2026-03-19", "date": "March 19, 2026",
                           "excerpt": "...", "shared_themes": ["..."]}],
     "date":  "March 21, 2026",
@@ -173,7 +175,8 @@ Respond with a JSON object in this exact format and nothing else:
 {{
   "paragraphs": ["paragraph 1 text", "paragraph 2 text"],
   "themes": ["theme 1", "theme 2", "theme 3"],
-  "subject": "email subject line"
+  "subject": "email subject line",
+  "sources": ["url of each article you drew on, in the order you first mention it"]
 }}
 
 Themes should be 3 to 5 short theological/topical labels (e.g. "pastoral authority",
@@ -183,6 +186,10 @@ The subject is the daily email's subject line: one plain sentence or phrase of 4
 characters that names the theme of sentence 1 (e.g. "What the local church owes lonely
 people"). Understated and hopeful. Never a scandal, crime or crisis. No emoji, no
 exclamation point, no hype, no "today's", no dashes, no closing period.
+
+Sources lists the url of every article from the list above that the paragraphs draw on,
+linked or only named, in the order the paragraphs first mention it. The site's lead
+stories follow this list, so include only articles that serve the theme.
 """
 
 HISTORY_SECTION_TEMPLATE = """\
@@ -492,7 +499,7 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
             def _call():
                 return client.messages.create(
                     model="claude-sonnet-4-6",
-                    max_tokens=800,
+                    max_tokens=1000,
                     messages=[{"role": "user", "content": content}],
                 )
             message = _api_call_with_retry(_call, "Daily summary")
@@ -519,12 +526,18 @@ def generate_daily_summary(articles: list[dict]) -> dict | None:
         paragraphs_plain = [_strip_markdown_links(p) for p in paragraphs_raw]
 
         related_days = find_related_days(themes, history, today_slug)
+        # The homepage and email lead block follow these (curator/editorial.py).
+        candidate_urls = [a["url"] for a in candidates]
+        shown = set(candidate_urls)
+        source_urls = [u for u in data.get("sources") or [] if isinstance(u, str) and u in shown]
 
         return {
             "paragraphs_html":  paragraphs_html,
             "paragraphs_plain": paragraphs_plain,
             "themes":           themes,
             "subject":          subject,
+            "source_urls":      source_urls,
+            "candidate_urls":   candidate_urls,
             "related_days":     related_days,
             "date":             today.strftime("%B %-d, %Y"),
             "slug":             today_slug,

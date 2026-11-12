@@ -201,8 +201,10 @@ Slice 3 (Nov 1, Jarvis-greenlit), same module:
 `frontend/layout.py` `build_homepage_layout()` decides every homepage placement; `render_html()` renders it, returns
 it, and `main.py` passes it to `send_email()` so page and email agree. Each URL appears once. Order on the page:
 1. Masthead strip: date, `Updated H:MM AM ET` (actual render time), one-line Pulse (first sentence, max 20 words)
-2. Lead + 3 subleads: top 4 by importance, one per source, not previously shown
-3. Board: three columns (News / Commentary & Debate / Church & Theology), 22 each, max 3 per source per column.
+2. Lead + 3 subleads: 4 picks, one per source, not previously shown, ordered by the Pulse and content kind
+   (see Ideas over scandal, below)
+3. Board: three columns (Church & Theology / Commentary & Debate / News, in that order since 2026-11-12), 22 each,
+   max 3 per source per column; a non-dominant scandal story sinks to the bottom of its column.
    `board_column()` routes by world_news source, perspective `news`, or tags news/data/politics, then
    theology/church life/missions/devotional/prayer/apologetics tags or a theology/devotional source; else commentary
 4. The Debate: Claude point/counterpoint pairings, else scorer `opposing_pair` supportive vs. critical; omitted when none
@@ -225,6 +227,26 @@ lanes, research) is logged to history with url + canonical_url, one row per arti
 - Headlines: original publisher titles everywhere. `curator/title_rewriter.py` is off unless `CC_REWRITE_TITLES=1`.
 - `article_history.json` rows now also carry `importance`, `depth`, `base_importance`, `base_depth`, `canonical_url`.
   Rows before 2026-10-31 are single-axis; do not mix them with two-axis rows when tuning.
+
+### Ideas over scandal: the lead block follows the Pulse (Tom, 2026-11-12)
+Thinking, philosophy, theology and praxis lead; news is second; scandal is last. `curator/editorial.py`
+(no API client) decides the lead block order and `build_homepage_layout(..., daily_summary=...)` applies it, so page
+and email agree.
+- `content_kind(a)`: `scandal` (any `SCANDAL_RE` word in the title; "crisis" / "investigation" alone only on a news
+  report; plagiarism was added to `SCANDAL_RE`), `news` (`is_news_report()`), `ideas` (a theology, apologetics, church
+  life, missions, devotional, prayer, family, suffering or work tag), else `commentary`.
+- Tiers, one per source: 0 Pulse-cited (any kind but scandal, `final_score >= 3`, in the Pulse's mention order);
+  1 ideas on a Pulse theme; 2 other ideas; 3 commentary (tiers 1 to 3 need `final_score >= 5`); 4 news, filler only.
+  Scandal never fills. Tiers 1 to 4 sort by 0.5 importance + 0.5 depth.
+- Pulse-cited (`pulse_cited_urls()`): the Pulse's own `sources` list (Claude returns it; stored as `source_urls`,
+  validated against `candidate_urls`), then links and named writers / outlets by position. A named author beats an
+  outlet of the same name; outlet names inside a link's anchor text belong to that link.
+- Dominant story (the high bar): news or scandal with `final_score >= 8.5` carried by 4+ distinct outlets (cluster
+  plus dedup `also_from`). It gets one reserved slot, the first sublead, and takes the Lead only when nothing else
+  qualifies.
+- Replay: `.venv/bin/python scripts/replay_lead_block.py 2026-11-12 2026-11-11` prints before/after Lead and email top
+  8 from `article_history.json` rows (writes nothing). Tests: `tests/test_ideas_over_scandal.py`. Report:
+  `.christian-orchestrator/ideas-over-scandal-report.md`.
 
 ### Watch and Listen media lane (P1 Wave 3, 2026-10-30)
 A compact homepage and email section of 3 to 5 videos and podcast episodes from trusted evangelical voices.
@@ -450,7 +472,7 @@ Structure mirrors homepage v2 (same `layout` dict):
 2. Masthead + byline: *"For curious Christians seeking clarity on the questions that matter most"*
 3. **The Lead**: lead + 3 subleads
 4. **The Daily Pulse**: `daily_summary["paragraphs_html"]` plus a link to `/daily/YYYY-MM-DD/`; omitted when the summary is missing or empty
-5. **Board**: News, Commentary & Debate, Church & Theology, 6 headlines each
+5. **Board**: Church & Theology, Commentary & Debate, News, 3 headlines each
 6. **The Debate** (when pairs exist), **Worth Your Time**, **Watch and Listen** (when it has picks)
 7. CTA to the homepage, then the **Go Deeper** spotlight topic (rotation logged in `docs/spotlight_topic_log.json`, no repeats for 70 days)
 8. Forward nudge + footer

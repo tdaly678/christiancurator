@@ -216,7 +216,7 @@ def render_html(articles: list[dict], pairings: list[dict], yesterday_articles: 
     from frontend.layout import build_homepage_layout, outbound_urls, pulse_line, updated_label
     from frontend.site_stats import site_stats
     layout = build_homepage_layout(articles, pairings, research_articles or load_research_articles(),
-                                   media_items=media_items)
+                                   media_items=media_items, daily_summary=daily_summary)
     if layout["lead"]:
         print(f"  Lead: {layout['lead'].get('source_name')}; board columns: "
               f"{ {c['key']: len(c['articles']) for c in layout['board']} }; "

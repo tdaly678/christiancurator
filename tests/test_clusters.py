@@ -53,9 +53,9 @@ def test_max_siblings_cap():
 
 
 def test_layout_shows_story_once_with_siblings():
-    arts = [_a("https://a.com/1", "CT", "sbc_vote", 9, tags=["news"]),
-            _a("https://b.com/1", "World", "sbc_vote", 8, tags=["news"]),
-            _a("https://c.com/1", "RNS", "sbc_vote", 7, tags=["news"])]
+    arts = [_a("https://a.com/1", "CT", "sbc_vote", 9, tags=["church life"]),
+            _a("https://b.com/1", "World", "sbc_vote", 8, tags=["church life"]),
+            _a("https://c.com/1", "RNS", "sbc_vote", 7, tags=["church life"])]
     arts += [_a(f"https://z.com/{i}", f"Src{i}", "", 5 - i * 0.1) for i in range(10)]
     layout = build_homepage_layout(arts)
     urls = outbound_urls(layout)

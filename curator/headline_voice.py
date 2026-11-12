@@ -483,7 +483,7 @@ SCANDAL_RE = re.compile(
     r"crisis|allegations?|alleged(?:ly)?|accus(?:ed|es|ations?)|whistleblower|"
     r"cover[- ]?up|indict(?:ed|ment)|arrested|pleads? guilty|"
     r"convicted|sentenced|investigation|molest\w*|assault\w*|"
-    r"embezzl\w*|fraud)\b",
+    r"embezzl\w*|fraud|plagiari\w*)\b",
     re.I,
 )
 

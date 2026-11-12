@@ -5,12 +5,17 @@ One function, build_homepage_layout(), decides which article goes where on the
 front page so render_html(), the daily email and main.py (history logging) all
 see the same picks:
 
-  lead + subleads   top 4 by importance (final_score), one per source
+  lead + subleads   4 picks, one per source, ordered by the Pulse and by
+                    content kind (curator/editorial.py, 2026-11-12): what the
+                    Pulse drew on first, then ideas, commentary, news filler;
+                    scandal never, unless it is the dominant story
   debate            point/counterpoint pairs, else scorer opposing pairs
   worth_your_time   depth lane, via curator.lanes.select_worth_your_time
   watch_listen      video/podcast lane from the media feeds, via
                     curator.lanes.select_watch_and_listen (Wave 3)
-  board             three columns of headlines by importance
+  board             three columns of headlines by importance, Church &
+                    Theology first and News last; non-dominant scandal stories
+                    sink to the bottom of their column
   research          Research & Data strip (docs/research_articles.json)
   siblings          multi-outlet stories (P2.2): representative URL ->
                     "also:" links; the other outlets' copies are not placed
@@ -37,6 +42,7 @@ from urllib.parse import urlsplit
 
 from curator.clusters import build_story_clusters
 from curator.dedup import canonical_url
+from curator.editorial import board_sort_key, rank_lead_pool
 from curator.headline_voice import headline_has_claim, is_claimless_short, is_dated_briefing
 from curator.lanes import select_watch_and_listen, select_worth_your_time
 from curator.mission import is_off_mission
@@ -53,10 +59,11 @@ MAIN_LANE_MAX_AUDIO_VIDEO = 2
 VIDEO_HOSTS = ("youtube.com", "youtu.be", "vimeo.com")
 
 # Column keys, labels and the tags that route an article to each column.
+# Display order (Tom, 2026-11-12): ideas first, news second.
 BOARD_COLUMNS = [
-    ("news", "News"),
-    ("commentary", "Commentary & Debate"),
     ("church", "Church & Theology"),
+    ("commentary", "Commentary & Debate"),
+    ("news", "News"),
 ]
 NEWS_TAGS = {"news", "data", "politics"}
 CHURCH_TAGS = {"theology", "church life", "missions", "devotional", "prayer", "apologetics"}
@@ -138,8 +145,8 @@ def email_eligible(a: dict) -> bool:
 
 
 def _pick_lead(pool: list[dict], n: int) -> list[dict]:
-    """Top `n` by importance, one per source. The first pick (the lead) is
-    never an allow-listed dated briefing; those can still be subleads."""
+    """The first `n` of an ordered pool, one per source. The first pick (the
+    lead) is never an allow-listed dated briefing; those can still be subleads."""
     lead = next((a for a in pool
                  if not is_dated_briefing(a.get("title") or "", a.get("source_name", ""))), None)
     if lead is None:
@@ -237,11 +244,14 @@ def updated_label(now: datetime | None = None) -> str:
 def build_homepage_layout(articles: list[dict], pairings: list[dict] | None = None,
                           research_articles: list[dict] | None = None,
                           per_column: int = BOARD_PER_COLUMN,
-                          media_items: list[dict] | None = None) -> dict:
+                          media_items: list[dict] | None = None,
+                          daily_summary: dict | None = None) -> dict:
     """Assign articles to homepage v2 sections. Each URL appears at most once.
 
     `media_items` are the role "media" feed items (main.py splits them off
     before scoring); they only ever reach the Watch and Listen lane.
+    `daily_summary` is the Daily Pulse; the lead block follows the stories it
+    draws on (curator.editorial.rank_lead_pool).
     """
     # General world news with no faith hook never reaches any lane, even from
     # cached articles scored before the mission gate existed.
@@ -257,10 +267,17 @@ def build_homepage_layout(articles: list[dict], pairings: list[dict] | None = No
     # One story, one slot: same-story copies from other outlets collapse into
     # an "also:" line under the best-ranked one.
     siblings, clustered_away = build_story_clusters(fresh)
+    unclustered = fresh  # outlet counts for the dominant-story bar need every copy
     fresh = [a for a in fresh if a["url"] not in clustered_away]
 
     lead_pool = [a for a in fresh if a.get("source_type") != "world_news" and lead_block_eligible(a)]
-    top = _pick_lead(lead_pool, 1 + SUBLEAD_COUNT)
+    ordered, dominant = rank_lead_pool(lead_pool, daily_summary, unclustered)
+    top = _pick_lead(ordered, 1 + SUBLEAD_COUNT - (1 if dominant else 0))
+    if dominant:
+        # The dominant story's one reserved slot is the first sublead; it
+        # takes the Lead only when nothing else qualifies.
+        top = [a for a in top if a.get("source_name") != dominant.get("source_name")]
+        top.insert(1 if top else 0, dominant)
     lead, subleads = (top[0] if top else None), top[1:]
     placed = {a["url"] for a in top}
 
@@ -296,7 +313,7 @@ def build_homepage_layout(articles: list[dict], pairings: list[dict] | None = No
 
     columns = {key: [] for key, _ in BOARD_COLUMNS}
     per_source: dict = {}
-    for a in fresh:
+    for a in sorted(fresh, key=lambda a: board_sort_key(a, unclustered)):
         if a["url"] in placed or canonical_url(a["url"]) in media_canon:
             continue
         key = board_column(a)
