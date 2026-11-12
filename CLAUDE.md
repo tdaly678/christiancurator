@@ -325,6 +325,18 @@ bylines stay as plain text. The script also rewrites the homepage and digest, re
 `scripts/fix_voice_titles.py` never touches pilot pages (`data-cc-voice-pilot`); their titles come from `page_title()`.
 Tests: `tests/test_first_things_bylines.py`, `tests/test_voice_redirects.py`.
 
+### More posting accounts: CT, 9Marks, WORLD, Pew (voices cleanup, Nov 12 2026)
+`byline_from_page` is also set on Christianity Today, 9Marks, World Magazine and Pew Research. On CT pages
+`page_byline()` reads the visible byline (`ga4ArticleContext.byline`, cleaned by `clean_visible_byline()` of "Interview
+by", "in <Place>" and "- Outlet" decorations), never Yoast's JSON-LD author, which is the editing account
+(`point_editor`). A source's `media_url_pattern` turns matching items into media with no byline (WORLD
+`/podcasts/`); `drop_url_pattern` drops items at ingest (Pew `/newsletter/` and `?prc_newsletter=`), logged as
+`url_dropped` in the health row. `scripts/reattribute_bylines.py` (dry run by default, `--apply`, `--no-fetch` to use
+only the page cache) re-read every archived piece on those four domains and rewrote 1,206 archive bylines (CT editors
+credited with pieces they only edited, posting accounts); an unreadable page keeps its byline unless it is a known
+posting account. Retired with stubs (ACCOUNTS in `retire_posting_accounts.py`): jeri-choi, keegan-martin,
+arla-eicher, anna-jackson, beshay-sakla, reem-nadeem, sara-atske. Tests: `tests/test_posting_accounts.py`.
+
 ## P2: engagement and sourcing (2026-10-30)
 
 ### P2.1 Click tracking (GA4, no second analytics stack)

@@ -138,10 +138,40 @@ def _meta_content(page: str, name: str) -> str:
     return ""
 
 
+_GA4_BYLINE_RE = re.compile(r'ga4ArticleContext\s*=\s*\{[^}]*?"byline"\s*:\s*"((?:[^"\\]|\\.)*)"')
+
+
+_BYLINE_PREFIX_RE = re.compile(
+    r"^(?:(?:interview|interviewed|compiled|edited|reported|written|story|text|words)\s+by|by)\s*:?\s+",
+    re.IGNORECASE)
+
+
+def clean_visible_byline(raw: str) -> str:
+    """Names only, from a visible byline such as "Interview by Cody Benjamin",
+    "Cody Benjamin in Falcon Heights, Minnesota" or "Kathryn Post - Religion
+    News Service" (an outlet credit after a dash)."""
+    s = " ".join(html.unescape(raw or "").split())
+    s = _BYLINE_PREFIX_RE.sub("", s)
+    s = re.sub(r"\s*[–—]\s*.*$|\s+[-|]\s+.*$", "", s)
+    s = re.sub(r"\s+in\s+[A-Z][^,]*(?:,\s*[A-Z][\w .]*)?$", "", s)
+    return s.strip(" ,;")
+
+
 def page_byline(page: str) -> str:
-    """The writer named on an article page: <meta name="author">, else the
-    JSON-LD author Person(s). Profile URLs and "staff" placeholders yield ""."""
-    author = _meta_content(page, "author")
+    """The writer named on an article page: Christianity Today's visible
+    byline (`ga4ArticleContext.byline`), else <meta name="author">, else the
+    JSON-LD author Person(s). CT's Yoast JSON-LD author is the editing
+    account (`point_editor`), so on CT pages it is never reached. Profile
+    URLs and "staff" placeholders yield ""."""
+    m = _GA4_BYLINE_RE.search(page)
+    author = ""
+    if m:
+        try:
+            author = json.loads(f'"{m.group(1)}"')
+        except ValueError:
+            author = m.group(1)
+        author = clean_visible_byline(author)
+    author = author or _meta_content(page, "author")
     if not author:
         names = []
         for block in re.findall(
@@ -347,8 +377,18 @@ def fetch_feed(source: dict) -> tuple[list[dict], dict]:
         url = entry.get("link", "")
         if url in generic:
             url = apple.get(entry.get("id", ""), "")
+        # Feed items that are not articles at all (Pew newsletters).
+        if source.get("drop_url_pattern") and re.search(source["drop_url_pattern"], url):
+            health.setdefault("url_dropped", []).append(title[:120])
+            continue
+        # Podcast episodes inside an article feed (WORLD): media, not bylines.
+        # The feed's creator on them is a posting account, never the host.
+        item_media = is_media or bool(
+            source.get("media_url_pattern") and re.search(source["media_url_pattern"], url))
+        if item_media and not is_media:
+            author = ""
         media_fields = {}
-        if is_media:
+        if item_media:
             media_fields = {
                 "media_format": source.get("media_format", "podcast"),
                 "duration_seconds": parse_duration(entry.get("itunes_duration")),
@@ -360,7 +400,7 @@ def fetch_feed(source: dict) -> tuple[list[dict], dict]:
             "source_type": source.get("source_type", "christian"),
             "independent": source.get("independent", False),
             "creates_voices": source.get("creates_voices", True),
-            "role": _article_role(source, title),
+            "role": "media" if item_media else _article_role(source, title),
             "author": author,
             "title": title,
             # Publisher headline, kept apart from any rewrite: shown wherever a
@@ -377,8 +417,9 @@ def fetch_feed(source: dict) -> tuple[list[dict], dict]:
             "rewritten_title": None,
         })
 
-    if source.get("byline_from_page") and articles:
-        apply_page_bylines(articles, health)
+    written = [a for a in articles if a["role"] != "media"]
+    if source.get("byline_from_page") and written:
+        apply_page_bylines(written, health)
 
     if newest:
         health["newest_date"] = newest.date().isoformat()

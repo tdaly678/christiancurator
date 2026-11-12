@@ -56,6 +56,16 @@ ACCOUNTS = {
     "jillian-parks": ("Jillian Parks", "firstthings.com"),
     "stephen-walker": ("Stephen Walker", "firstthings.com"),
     "chloe-hoyle": ("Chloe Hoyle", "firstthings.com"),
+    # 2026-11-12, voices cleanup step 2 (voices audit): posting accounts at
+    # 9Marks, WORLD and Pew. Bylines were first reattributed from the article
+    # pages by scripts/reattribute_bylines.py.
+    "jeri-choi": ("Jeri Choi", "9marks.org"),
+    "keegan-martin": ("Keegan Martin", "wng.org"),
+    "arla-eicher": ("Arla Eicher", "wng.org"),
+    "anna-jackson": ("Anna Jackson", "pewresearch.org"),
+    "beshay-sakla": ("Beshay Sakla", "pewresearch.org"),
+    "reem-nadeem": ("Reem Nadeem", "pewresearch.org"),
+    "sara-atske": ("Sara Atske", "pewresearch.org"),
 }
 
 STUB = """<!DOCTYPE html>

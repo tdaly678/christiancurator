@@ -129,17 +129,6 @@
     "initials": "TA"
   },
   {
-    "name": "Sara Atske",
-    "slug": "sara-atske",
-    "bio": "Sara Atske is a researcher and writer focused on faith, culture, and social trends. Her work explores how Christian perspectives intersect with contemporary issues and cultural conversations.",
-    "affiliation": "",
-    "role": "Researcher & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SA"
-  },
-  {
     "name": "Michelle Ayres",
     "slug": "michelle-ayres",
     "bio": "Unable to find definitive information on a prominent Christian writer by this exact name. Search results suggest possible confusion with Dr. Michelle Ami Reyes, an Indian American Christian writer whose work appears in Christianity Today, or with Michelle Ayres LMFT, a therapist and co-author of The Decider Skills.",
@@ -960,17 +949,6 @@
     "website": "https://fightoffaithblog.com/",
     "books": [],
     "initials": "DE"
-  },
-  {
-    "name": "Arla Eicher",
-    "slug": "arla-eicher",
-    "bio": "Wife of Nick Eicher, Arla is part of a household known for biblical journalism and Christian media work. The couple lives in St. Louis with five children and two granddaughters, and Arla supports evangelical journalism through her partnership with her husband's work at WORLD magazine.",
-    "affiliation": "WORLD Magazine (through family connection)",
-    "role": "Christian household partner and supporter of evangelical journalism",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AE"
   },
   {
     "name": "Annie Eisner",
@@ -2228,22 +2206,6 @@
     "initials": "GM"
   },
   {
-    "name": "Keegan Martin",
-    "slug": "keegan-martin",
-    "bio": "Keegan M.M. (also known as John Keegan) is an author and Christian film theologian who explores how cinema dialogues with Christian scriptural stories. His work represents an extension of incarnational theology into the visual narrative worlds of contemporary film.",
-    "affiliation": "Independent scholar",
-    "role": "Christian film theologian and author",
-    "education": "",
-    "website": "",
-    "books": [
-      {
-        "title": "Cinematic Theology: A Christian at Some Twenty-First-Century Films",
-        "amazon_url": "https://www.amazon.com/s?k=Cinematic+Theology+Keegan+Martin"
-      }
-    ],
-    "initials": "KM"
-  },
-  {
     "name": "Timothy W. Martin",
     "slug": "timothy-w-martin",
     "bio": "Timothy W. Martin is a Christian author and speaker known for his thoughtful engagement with biblical theology and contemporary faith issues. His work seeks to help believers deepen their understanding of Scripture and apply biblical principles to modern life.",
@@ -2640,34 +2602,6 @@
     "website": "https://www.ligonier.org/learn/teachers/meredith-myers/",
     "books": [],
     "initials": "MLM"
-  },
-  {
-    "name": "Reem Nadeem",
-    "slug": "reem-nadeem",
-    "bio": "Reem Nadeem is a digital producer and journalist at Pew Research Center and contributing writer to RealClearReligion on religious topics. A former news editor at George Mason University's student paper and journalism intern at CNN and Quartz Media, she discovered her passion for journalism while discovering faith.",
-    "affiliation": "Pew Research Center",
-    "role": "Digital producer and religion journalist",
-    "education": "Graduate, Columbia University/Craig Newmark School of Journalism",
-    "website": "https://www.pewresearch.org/staff/reem-nadeem/",
-    "books": [],
-    "initials": "RN",
-    "known_for": "Producing digital publications for Pew Research Center, including reports from its religion research team.",
-    "current_role": "Associate Digital Producer, Pew Research Center",
-    "deceased": false,
-    "faqs": [
-      {
-        "q": "Who is Reem Nadeem?",
-        "a": "Reem Nadeem is an associate digital producer at Pew Research Center in Washington, DC. She prepares and produces the center's online reports, including major studies from its religion team such as the Religious Landscape Study and projections on the future of religion in America."
-      },
-      {
-        "q": "Is Reem Nadeem a religion writer?",
-        "a": "She is a digital producer rather than a researcher or opinion writer; her byline appears on Pew Research Center report pages she helps produce. Pew Research Center is a nonpartisan 'fact tank' and does not take policy or theological positions."
-      },
-      {
-        "q": "What is Pew Research Center's religion research?",
-        "a": "Pew Research Center's religion team conducts widely cited surveys on American and global religious life, including the Religious Landscape Study. Its findings on evangelical identity, church attendance, and religious switching are frequently discussed in Christian media."
-      }
-    ]
   },
   {
     "slug": "trillia-newbell",
@@ -12165,17 +12099,6 @@
     "initials": "TA"
   },
   {
-    "name": "Jeri Choi",
-    "slug": "jeri-choi",
-    "bio": "Jeri Choi is community manager at 9Marks, the Washington, DC-based ministry devoted to building healthy churches, where she also contributes graphic design. A University of Maryland, Baltimore County graduate with an MA in Christian education, she is married to James, pastor of New Covenant Baptist Church, and they live in Maryland with their three children.",
-    "affiliation": "9Marks",
-    "role": "Community Manager, 9Marks",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JC"
-  },
-  {
     "name": "Jeremy Bell",
     "slug": "jeremy-bell",
     "bio": "Jeremy Bell is a writer and content creator focused on faith, culture, and Christian living. His work explores how believers can engage thoughtfully with contemporary issues while maintaining biblical conviction.",
@@ -14369,17 +14292,6 @@
     "initials": "HS"
   },
   {
-    "name": "Anna Jackson",
-    "slug": "anna-jackson",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AJ"
-  },
-  {
     "name": "Rob Brockman",
     "slug": "rob-brockman",
     "bio": "Rob Brockman is a Christian writer and content creator dedicated to exploring faith, discipleship, and spiritual growth. His work aims to help believers deepen their understanding of Scripture and live out their faith authentically in today's world.",
@@ -14393,7 +14305,7 @@
   {
     "name": "Dan Vander Plaats",
     "slug": "dan-vander-plaats",
-    "bio": "Dan Vander Plaats serves as vice president of development for Acts 29 and worships at Orland Park Christian Reformed Church. He created \u201cThe 5 Stages of Changing Attitudes,\u201d translated into 27 languages, and wrote Changing Attitudes About Disability. He is not Bob Vander Plaats of The Family Leader in Iowa.",
+    "bio": "Dan Vander Plaats serves as vice president of development for Acts 29 and worships at Orland Park Christian Reformed Church. He created “The 5 Stages of Changing Attitudes,” translated into 27 languages, and wrote Changing Attitudes About Disability. He is not Bob Vander Plaats of The Family Leader in Iowa.",
     "affiliation": "Acts 29",
     "role": "Acts 29 Development Leader & Disability Writer",
     "education": "MNA, North Park University",
@@ -15466,17 +15378,6 @@
     "website": "",
     "books": [],
     "initials": "MVW"
-  },
-  {
-    "name": "Beshay Sakla",
-    "slug": "beshay-sakla",
-    "bio": "Beshay Sakla is a Coptic Orthodox Christian author and spiritual writer who contributes to Christian media and publications. His work focuses on Orthodox Christian theology, spirituality, and faith perspectives for contemporary audiences.",
-    "affiliation": "",
-    "role": "Author & Spiritual Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "BS"
   },
   {
     "name": "Katie Peterson",

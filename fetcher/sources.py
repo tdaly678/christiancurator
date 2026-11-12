@@ -43,6 +43,10 @@ SOURCES = [
         "name": "Christianity Today",
         "url": "https://www.christianitytoday.com/feed",
         "category": "culture",
+        # The feed creator (and Yoast's JSON-LD author) is the editing account
+        # (point_editor), not the writer. page_byline() reads the visible
+        # byline (ga4ArticleContext.byline) from each article page.
+        "byline_from_page": True,
     },
     {
         "name": "Desiring God",
@@ -53,6 +57,12 @@ SOURCES = [
         "name": "World Magazine",
         "url": "https://wng.org/feeds/rss/topics.rss",
         "category": "news",
+        # The feed creator is a posting account (Keegan Martin on every podcast
+        # episode, Arla Eicher on roundups). Bylines come from the page;
+        # podcast episodes are media items, never bylines.
+        "byline_from_page": True,
+        "media_url_pattern": r"wng\.org/podcasts/",
+        "media_format": "podcast",
     },
     {
         "name": "Relevant Magazine",
@@ -100,6 +110,8 @@ SOURCES = [
         "name": "9Marks",
         "url": "https://www.9marks.org/feed/",
         "category": "church life",
+        # The feed credits the posting account (Jeri Choi) on every item.
+        "byline_from_page": True,
     },
     {
         "name": "Crossway",
@@ -239,6 +251,10 @@ SOURCES = [
         "category": "culture",
         "independent": False,
         "creates_voices": False,  # research staff bylines, not voices
+        # Feed creators are producer and newsletter accounts.
+        "byline_from_page": True,
+        # Newsletters (/newsletter/ pages and ?prc_newsletter= links) are not research.
+        "drop_url_pattern": r"/newsletter/|[?&]prc_newsletter=",
     },
     {
         "name": "Lifeway Research",
