@@ -1,5 +1,5 @@
 {
-  "_about": "Voices pilot (Nov 2026). Drafted by Claude from each writer's own published bio or outlet author page; every bio fact has a source in bio_sources. Tom approved all five drafts on 2026-11-12 (reviewed: true). Rendered by scripts/build_voice_pilot.py into docs/voices/<slug>/index.html. Never use em dashes in any field. Batch 2 (seven drafts, branch voices-batch2, 2026-11-12) stays \"reviewed\": false until Tom approves.",
+  "_about": "Voices pilot (Nov 2026). Drafted by Claude from each writer's own published bio or outlet author page; every bio fact has a source in bio_sources. Tom approved all five drafts on 2026-11-12 (reviewed: true). Rendered by scripts/build_voice_pilot.py into docs/voices/<slug>/index.html. Never use em dashes in any field. Batch 2 (seven entries) approved by Tom on 2026-11-12 after Meg's spot-check (reviewed: true).",
   "last_updated": "2026-11-12",
   "writers": [
     {
@@ -246,7 +246,7 @@
     {
       "slug": "jeremy-kimble",
       "name": "Jeremy Kimble",
-      "reviewed": false,
+      "reviewed": true,
       "page_kind": "guide",
       "dek": "Professor of systematic and applied theology at Cedarville University | Author of Behold and Become | Writes for The Gospel Coalition and Christ Over All on Scripture, doctrine, and the church",
       "bio": "Jeremy Kimble is professor of systematic and applied theology at Cedarville University and holds a PhD from Southeastern Baptist Theological Seminary. He is the author of Behold and Become: Reading Scripture for Transformation, How Can I Get More Out of My Bible Reading?, and 40 Questions About Church Membership and Discipline, and coauthor with Ched Spellman of Invitation to Biblical Theology. He served in pastoral ministry for eight years and is a member and minister at University Baptist Church.",
@@ -297,7 +297,7 @@
     {
       "slug": "christopher-gehrz",
       "name": "Christopher Gehrz",
-      "reviewed": false,
+      "reviewed": true,
       "page_kind": "guide",
       "dek": "Professor of history at Bethel University | Author of a religious biography of Charles Lindbergh | Writes for Mere Orthodoxy and The Pietist Schoolman on Christianity, history, and education",
       "bio": "Christopher Gehrz is professor of history at Bethel University in St. Paul, Minnesota, where he has taught since 2003, and holds a PhD in history from Yale University. He is the author of Charles Lindbergh: A Religious Biography of America's Most Infamous Pilot (2021) and coauthor of The Pietist Option: Hope for the Renewal of Christianity (2017). He writes about Christianity, history, and education in his Substack newsletter, The Pietist Schoolman.",
@@ -342,12 +342,12 @@
       ],
       "related": ["thomas-s-kidd", "daniel-k-williams", "jake-meador"],
       "same_as": ["https://mereorthodoxy.com/tag/author-christopher-gehrz/", "https://chrisgehrz.substack.com/about", "https://currentpub.com/author/patreon_4709580", "https://www.bethel.edu/academics/faculty/gehrz-christopher"],
-      "review_notes": "A duplicate voice page, chris-gehrz, exists for the same person; candidate for merge_duplicate_voices.py. Old bio wrongly called him author of The Pietist Vision of Christian Higher Education (Bethel lists him as editor). Substack posts are mostly paywalled, so picks come from Mere Orthodoxy and Current."
+      "review_notes": "The duplicate page chris-gehrz was merged into this one on 2026-11-12 (merge_duplicate_voices.py: noindex redirect stub, removed from sitemap and index). Old bio wrongly called him author of The Pietist Vision of Christian Higher Education (Bethel lists him as editor). Substack posts are mostly paywalled, so picks come from Mere Orthodoxy and Current."
     },
     {
       "slug": "glenn-a-moots",
       "name": "Glenn A. Moots",
-      "reviewed": false,
+      "reviewed": true,
       "page_kind": "guide",
       "dek": "Professor of political science and philosophy at Northwood University | Author of Politics Reformed | Writes for American Reformer on Protestant political thought and the American founding",
       "bio": "Glenn A. Moots is Professor and Department Chair of Political Science and Philosophy at Northwood University, where he has taught since 1993. He is the author of Politics Reformed: The Anglo-American Legacy of Covenant Theology (2010) and coeditor, with Phillip Hamilton, of Justifying Revolution: Law, Virtue, and Violence in the American War of Independence (2018). He holds a PhD from Louisiana State University and a BA from the University of Michigan. He writes for American Reformer and Law & Liberty on Protestant political thought, religious liberty, and the American founding.",
@@ -404,7 +404,7 @@
     {
       "slug": "james-abernathy",
       "name": "James Abernathy",
-      "reviewed": false,
+      "reviewed": true,
       "page_kind": "guide",
       "dek": "Attorney in First Amendment litigation | Writes for The Gospel Coalition and on Substack on disability, the body, and the dignity of dependence",
       "bio": "James Abernathy is an attorney who specializes in litigation defending First Amendment rights. He holds an MA from Fuller Theological Seminary and a JD from Regent University School of Law. A quadriplegic since a spinal cord injury in high school, he writes and speaks to advocate for the body and the dignity of dependence.",
@@ -459,14 +459,15 @@
     {
       "slug": "derek-rishmawy",
       "name": "Derek Rishmawy",
-      "reviewed": false,
+      "reviewed": true,
       "page_kind": "guide",
       "dek": "RUF campus minister at UC Irvine | Cohost of the Mere Fidelity podcast | Writes for The Gospel Coalition and Mere Orthodoxy on Christian hope, doctrine, and ministry to young adults",
       "bio": "Derek Rishmawy (PhD, Trinity Evangelical Divinity School) is the Reformed University Fellowship (RUF) campus minister at the University of California, Irvine. He contributes to Mere Orthodoxy, Christianity Today, and The Gospel Coalition, and writes at his own blog, Reformedish. He cohosts the Mere Fidelity podcast and hosts the What Christians Believe podcast at byFaith.",
       "bio_sources": [
         {"label": "Profile, The Gospel Coalition", "url": "https://www.thegospelcoalition.org/profile/derek-rishmawy/"},
         {"label": "Author note, The Gospel Coalition", "url": "https://www.thegospelcoalition.org/article/doomers-find-hope/"},
-        {"label": "Author note, Mere Orthodoxy", "url": "https://mereorthodoxy.com/ministry-after-the-boomer-apocalypse/"}
+        {"label": "Author note, Mere Orthodoxy", "url": "https://mereorthodoxy.com/ministry-after-the-boomer-apocalypse/"},
+        {"label": "Author note, Christianity Today", "url": "https://www.christianitytoday.com/2020/11/idols-worshiping-false-god/"}
       ],
       "where_they_write": [
         {"outlet": "The Gospel Coalition", "url": "https://www.thegospelcoalition.org/profile/derek-rishmawy/"},
@@ -509,12 +510,12 @@
       ],
       "related": ["matthew-lee-anderson", "andrew-wilson", "rachel-gilson", "alex-harris"],
       "same_as": ["https://www.thegospelcoalition.org/profile/derek-rishmawy/", "https://mereorthodoxy.com/tag/author-derek-rishmawy/", "https://derekzrishmawy.com/"],
-      "review_notes": "TGC panel page dates Gospel Hope for Gen-Z Ministry Oct 23, 2026; the approved alex-harris entry cites the YouTube video as Oct 22. Forthcoming IVP book and PCA ordination not verified (IVP returned 403). Christianity Today author page returned 404, so CT is named only in the bio."
+      "review_notes": "TGC panel page dates Gospel Hope for Gen-Z Ministry Oct 23, 2026; the approved alex-harris entry cites the YouTube video as Oct 22. Forthcoming IVP book and PCA ordination not verified (IVP returned 403). Christianity Today author page returns 404, but CT articles bylined by him were verified on 2026-11-12 (HTTP 200, meta author Derek Rishmawy, RUF UC Irvine author note): You're Probably Worshiping a False God (Nov 2020), cited in bio_sources, and When It Comes to Sacrifice, God Doesn't Play Fair (Sep 2020)."
     },
     {
       "slug": "j-a-medders",
       "name": "J. A. Medders",
-      "reviewed": false,
+      "reviewed": true,
       "page_kind": "guide",
       "dek": "Director of theology and content, Send Network | Author of Humble Calvinism and Gospel Formed | Writes at Spiritual Theology on Spurgeon, the Puritans, and the Christian life",
       "bio": "J. A. Medders is the director of theology and content for Send Network and the general editor for New Churches. He is also a fellow of The Spurgeon Library and visiting professor of Christian studies at Midwestern Baptist Theological Seminary. He earned a PhD in biblical spirituality at The Southern Baptist Theological Seminary under Donald S. Whitney. He is the author of Gospel Formed and Humble Calvinism, coauthor of The Soul-Winning Church, and writes the Spiritual Theology newsletter.",
@@ -565,10 +566,10 @@
     {
       "slug": "joshua-budimlic",
       "name": "Joshua Budimlic",
-      "reviewed": false,
+      "reviewed": true,
       "page_kind": "guide",
       "dek": "Teacher and writer | Blogs at Iotas in Eternity | Writes for The Gospel Coalition Canada and SOLA Network on conversion, grief, and the hope of heaven",
-      "bio": "Joshua Budimlic is a teacher and writer who, in his own words, hopes to bring together his passion for theology, education, and literature in serving the next generation. He and his wife worship at Grandview Church in Kitchener, Ontario. He blogs at Iotas in Eternity, where he often writes about C.S. Lewis, heaven, and the life and death of his father, and his essays have also appeared at The Gospel Coalition Canada and SOLA Network.",
+      "bio": "Joshua Budimlic is a teacher and writer who, in his own words, hopes to bring together his passion for theology, education, and literature in serving the next generation. He blogs at Iotas in Eternity, where he often writes about C.S. Lewis, heaven, and the life and death of his father, and his essays have also appeared at The Gospel Coalition Canada and SOLA Network.",
       "bio_sources": [
         {"label": "Profile, The Gospel Coalition Canada", "url": "https://ca.thegospelcoalition.org/profile/joshua-budimlic/"},
         {"label": "Author page, SOLA Network", "url": "https://sola.network/article/author/joshuabudimlic/"},

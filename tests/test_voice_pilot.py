@@ -237,12 +237,39 @@ BATCH2 = {"jeremy-kimble", "christopher-gehrz", "glenn-a-moots", "james-abernath
           "derek-rishmawy", "j-a-medders", "joshua-budimlic"}
 
 
-def test_pilot_data_has_the_five_reviewed_and_batch2_drafts():
+def test_pilot_data_has_twelve_reviewed_and_no_drafts():
     # Tom approved five on 2026-11-12; abby-silva was retired (posting account).
-    # Batch 2 drafts stay unreviewed until Tom signs off.
+    # Batch 2 (seven) was approved the same day after Meg's spot-check.
     assert set(WRITERS) == APPROVED | BATCH2
-    assert all(WRITERS[s]["reviewed"] is True for s in APPROVED)
-    assert all(WRITERS[s]["reviewed"] is False for s in BATCH2)
+    reviewed = [s for s, w in WRITERS.items() if w["reviewed"] is True]
+    drafts = [s for s, w in WRITERS.items() if w["reviewed"] is not True]
+    assert len(reviewed) == 12
+    assert drafts == []
+
+
+def test_batch2_golive_edits():
+    rishmawy = WRITERS["derek-rishmawy"]
+    assert any("christianitytoday.com/" in s["url"] for s in rishmawy["bio_sources"])
+    panel = [p for p in rishmawy["start_here"] if "gospel-hope-gen-z" in p["url"]]
+    assert panel and panel[0]["date"] == "2026-10-23"
+    # alex-harris's panel pick links the YouTube video, which is dated Oct 22.
+    harris = [p for p in WRITERS["alex-harris"]["start_here"] if "youtube.com" in p["url"]]
+    assert harris and harris[0]["date"] == "2026-10-22"
+    assert "Grandview" not in WRITERS["joshua-budimlic"]["bio"]
+    moots = {p["date"] for p in WRITERS["glenn-a-moots"]["start_here"]}
+    assert {"2026-05-19", "2026-07-09"} <= moots
+
+
+def test_chris_gehrz_redirects_to_christopher_gehrz():
+    redirects = json.loads((ROOT / "frontend" / "voices_redirects.json").read_text())
+    assert redirects["chris-gehrz"]["to"] == "christopher-gehrz"
+    assert "chris-gehrz" in json.loads((ROOT / "frontend" / "voices_noindex.json").read_text())
+    assert "/voices/chris-gehrz/<" not in (ROOT / "docs" / "sitemap-voices.xml").read_text()
+    assert 'href="/voices/chris-gehrz/"' not in (ROOT / "docs" / "voices" / "index.html").read_text()
+    stub = (ROOT / "docs" / "voices" / "chris-gehrz" / "index.html").read_text()
+    assert "url=/voices/christopher-gehrz/" in stub
+    assert 'rel="canonical" href="https://www.christiancurator.com/voices/christopher-gehrz/"' in stub
+    assert "—" not in stub
 
 
 def test_pilot_data_never_uses_em_dashes():

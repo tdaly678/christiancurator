@@ -56,13 +56,15 @@ PAIRS = {
     "kevin-j-vanhoozer": "kevin-vanhoozer",
     "pastor-rich-bitterman": "rich-bitterman",
     "samuel-james": "samuel-d-james",
+    # 2026-11-12, voices batch 2 go-live: the pilot page is christopher-gehrz.
+    "chris-gehrz": "christopher-gehrz",
 }
 
 STUB = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>{name} — Christian Curator</title>
+  <title>{name} | Christian Curator</title>
   <meta name="robots" content="noindex, follow" />
   <link rel="canonical" href="{site}/voices/{to}/" />
   <meta http-equiv="refresh" content="0; url=/voices/{to}/" />
