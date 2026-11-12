@@ -6081,7 +6081,7 @@
     "affiliation": "Western Theological Seminary",
     "role": "New Testament Scholar & Author",
     "education": "PhD in New Testament, Durham University",
-    "website": "https://wesleyhill.substack.com",
+    "website": "https://weshill.substack.com",
     "books": [
       {
         "title": "Washed and Waiting",
@@ -7681,11 +7681,10 @@
   {
     "name": "Joe Carter",
     "slug": "joe-carter",
-    "bio": "Joe Carter is a senior editor at The Gospel Coalition and a prolific Christian writer and editor known for making complex theological and cultural topics accessible to evangelical audiences. With a background in journalism and ministry, he brings both analytical rigor and pastoral concern to issues at the intersection of faith, culture, and public life.",
+    "bio": "Joe Carter is a contributing editor for The Gospel Coalition and an associate pastor at McLean Bible Church in Arlington, Virginia. He holds an MDiv from Midwestern Baptist Theological Seminary. He is the author of The Life and Faith Field Guide for Parents, editor of the NIV Spiritual Habits Bible and coauthor of How to Argue Like Jesus: Learning Persuasion from History's Greatest Communicator.",
     "affiliation": "The Gospel Coalition",
-    "role": "Senior Editor & Writer",
-    "education": "Master of Arts in Theological Studies, Southern Baptist Theological Seminary",
-    "website": "https://www.joecarter.me",
+    "role": "Contributing Editor & Writer",
+    "education": "MDiv, Midwestern Baptist Theological Seminary",
     "books": [
       {
         "title": "How to Argue Like Jesus: Learning Persuasion from History's Greatest Communicator",
@@ -7696,7 +7695,12 @@
         "amazon_url": "https://www.amazon.com/s?k=The+Unspoken+Rules+of+Evangelical+Christianity+Joe+Carter"
       }
     ],
-    "initials": "JC"
+    "initials": "JC",
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/joe-carter/",
+      "https://www.thegospelcoalition.org/article/kids-faith-simpler/",
+      "https://www.crossway.org/authors/joe-carter/"
+    ]
   },
   {
     "name": "Paul Vieira",
