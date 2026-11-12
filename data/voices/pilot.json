@@ -1507,6 +1507,97 @@
         "https://learn.ligonier.org/teachers/rc-sproul"
       ],
       "review_notes": "Deceased; birth and death years from Ligonier's teacher page (1939 to 2017); date, place and age at death from Ligonier's December 14, 2017 post. Ligonier pages give no degrees, so none are listed. rcsproul.com redirects to the Ligonier teacher page. Tabletalk author pages return 403, so Tabletalk is folded into the single Ligonier where-they-write entry. Ligonier republishes Sproul's book excerpts with new dates: picks 1 to 3 carry the page's 2026 or 2025 date though they come from his books (What Is Predestination?, Can I Trust the Bible?, The Holiness of God); a reviewer may prefer blank dates. Pick 5 page shows June 12, 2026 with an editor's note that it first ran April 1, 1992 in Tabletalk; the original date is used. Pick 4 is dated October 1, 2010, originally in Tabletalk. Merge (Nov 12 2026): dates on picks 1 to 3 blanked per Meg; picks 4 and 5 keep their original Tabletalk dates."
+    },
+    {
+      "slug": "joe-carter",
+      "name": "Joe Carter",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Contributing editor at The Gospel Coalition and associate pastor at McLean Bible Church | Author of The Life and Faith Field Guide for Parents | Writes on parenting, church life, work and public life",
+      "bio": "Joe Carter is a contributing editor for The Gospel Coalition and an associate pastor at McLean Bible Church in Arlington, Virginia. He holds an MDiv from Midwestern Baptist Theological Seminary. He is the author of The Life and Faith Field Guide for Parents, editor of the NIV Spiritual Habits Bible and coauthor of How to Argue Like Jesus: Learning Persuasion from History's Greatest Communicator.",
+      "bio_sources": [
+        {
+          "label": "Profile, The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/joe-carter/"
+        },
+        {
+          "label": "Author bio, The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/article/kids-faith-simpler/"
+        },
+        {
+          "label": "Author page, Crossway",
+          "url": "https://www.crossway.org/authors/joe-carter/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/joe-carter/"
+        },
+        {
+          "outlet": "Crossway (books)",
+          "url": "https://www.crossway.org/authors/joe-carter/"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "Raising Kids in the Faith Is Simpler Than You May Think",
+          "url": "https://www.thegospelcoalition.org/article/kids-faith-simpler/",
+          "outlet": "The Gospel Coalition",
+          "date": "2026-06-21",
+          "note": "Draws on a June 2026 report to argue that parents are the strongest influence on whether children keep the faith and that talking about faith at home matters more than passive modeling."
+        },
+        {
+          "title": "Why Hot Takes Are the Enemy of Conviction",
+          "url": "https://www.thegospelcoalition.org/article/forgotten-how-stay-convicted/",
+          "outlet": "The Gospel Coalition",
+          "date": "2026-06-11",
+          "note": "Argues that instant opinions on fast-moving news rarely become lived convictions and links the habit to the spiritual boredom the early church called acedia."
+        },
+        {
+          "title": "Why Being Late to Church Matters",
+          "url": "https://www.thegospelcoalition.org/article/late-church-matters/",
+          "outlet": "The Gospel Coalition",
+          "date": "2025-08-07",
+          "note": "Argues that habitual lateness treats corporate worship as passive attendance and calls believers to punctuality as a way of honoring God and one another."
+        },
+        {
+          "title": "When the Paychecks Stop: Spiritual Care for the Unemployed",
+          "url": "https://www.thegospelcoalition.org/article/spiritual-care-unemployed/",
+          "outlet": "The Gospel Coalition",
+          "date": "2025-03-26",
+          "note": "Sets out how churches can care for people who lose their jobs, grounding identity and dignity in God rather than productivity and offering practical support."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "christian-parenting",
+          "angle": "How parents pass on the faith at home."
+        },
+        {
+          "slug": "worship-and-liturgy",
+          "angle": "What our habits around Sunday gathering say about worship."
+        },
+        {
+          "slug": "vocation-and-work",
+          "angle": "Work, worth and pastoral care for the unemployed."
+        },
+        {
+          "slug": "technology-and-discipleship",
+          "angle": "How the hot take cycle crowds out conviction."
+        }
+      ],
+      "related": [
+        "collin-hansen",
+        "brett-mccracken",
+        "trevin-wax",
+        "andrew-t-walker"
+      ],
+      "same_as": [
+        "https://www.thegospelcoalition.org/profile/joe-carter/",
+        "https://www.crossway.org/authors/joe-carter/"
+      ],
+      "review_notes": "Identity: same Joe Carter as our existing page (TGC editor; the page links the same TGC articles). The existing page links https://www.joecarter.me, which no longer resolves (DNS lookup fails for both www and bare domain); remove that link. Titles differ by source: TGC profile and current article bio say contributing editor; Crossway says senior writer; Acton's staff page says Acton senior editor and also lists ERLC communications specialist and Patrick Henry College adjunct roles that look out of date, so only the Acton senior editor title is used and it should be confirmed. MDiv comes from Crossway only. Crossway does not show the date of its bio. The old page's meta description calls him a senior editor at TGC and 'prolific'; both should go. Merge (Nov 12 2026): Acton senior editor sentence dropped per Meg, and the Acton staff page with it (bio source, where they write, sameAs). joecarter.me and the old senior editor and prolific wording removed from voices_data.json and the /voices/ cards."
     }
   ]
 }
