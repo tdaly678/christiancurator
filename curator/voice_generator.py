@@ -145,6 +145,11 @@ _QF_ROWS = [
 ]
 
 
+def voice_page_title(name: str) -> str:
+    """<title> for a voice page. Pronoun-free and dash-free (Voices pilot, Nov 2026)."""
+    return f"{name}: Articles, Bio, and Where They Write | Christian Curator"
+
+
 def _esc(text: str) -> str:
     """Minimal HTML escaping for text nodes."""
     return (
@@ -490,12 +495,12 @@ def render_bio_page(author: dict, index: int) -> str:
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{name} — Voices — Christian Curator</title>
+  <title>{voice_page_title(name)}</title>
   <meta name="description" content="{bio[:160]}" />
   <link rel="canonical" href="https://www.christiancurator.com/voices/{slug}/" />
   <meta property="og:type" content="profile" />
   <meta property="og:site_name" content="Christian Curator" />
-  <meta property="og:title" content="{name} — Voices — Christian Curator" />
+  <meta property="og:title" content="{voice_page_title(name)}" />
   <meta property="og:description" content="{bio[:200]}" />
   <meta property="og:url" content="https://www.christiancurator.com/voices/{slug}/" />
   <meta property="og:image" content="https://www.christiancurator.com/og-image.png" />
@@ -622,8 +627,8 @@ def render_voices_index(authors: list) -> str:
         current = index_path.read_text(encoding="utf-8")
         # Update the count line
         current = re.sub(
-            r'— \d+ voices worth following\.',
-            f'— {len(authors_sorted)} voices worth following.',
+            r'(?:—|:) \d+ voices worth following\.',
+            f': {len(authors_sorted)} voices worth following.',
             current
         )
         # Replace the grid contents
@@ -645,8 +650,8 @@ def _build_index_from_scratch(authors_sorted: list, cards: str) -> str:
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Voices — Christian Curator</title>
-  <meta name="description" content="Meet the writers, pastors, and thinkers whose work we curate most often — the voices shaping evangelical Christianity." />
+  <title>Voices | Christian Curator</title>
+  <meta name="description" content="Meet the writers, pastors, and thinkers whose work we curate most often: the voices shaping evangelical Christianity." />
   <link rel="canonical" href="https://www.christiancurator.com/voices/" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NJ5DSPFXL"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-3NJ5DSPFXL");</script>
@@ -690,7 +695,7 @@ def _build_index_from_scratch(authors_sorted: list, cards: str) -> str:
       <div class="cc-page-label">Resources</div>
       <h1 class="cc-page-title">Voices</h1>
     </div>
-    <p class="cc-page-desc">The writers, pastors, scholars, and thinkers whose work we curate most often — {len(authors_sorted)} voices worth following.</p>
+    <p class="cc-page-desc">The writers, pastors, scholars, and thinkers whose work we curate most often: {len(authors_sorted)} voices worth following.</p>
     <div class="cc-voices-grid">
       {cards}
     </div>

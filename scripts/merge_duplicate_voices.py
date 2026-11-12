@@ -122,7 +122,7 @@ def main() -> int:
     for loser in PAIRS:
         index_html, n = card_re(loser).subn("", index_html)
         cards += n
-    index_html = re.sub(r"— \d+ voices worth following\.", f"— {len(kept)} voices worth following.", index_html)
+    index_html = re.sub(r"(?:—|:) \d+ voices worth following\.", f": {len(kept)} voices worth following.", index_html)
 
     # 3-4. Stubs, redirect map, noindex list, sitemap.
     noindex = set(json.loads(NOINDEX_LIST_PATH.read_text())) if NOINDEX_LIST_PATH.exists() else set()

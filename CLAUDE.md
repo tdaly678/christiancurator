@@ -282,6 +282,20 @@ Voice pages listed in `frontend/voices_noindex.json` are skipped by the sitemap 
 recorded in `frontend/voices_redirects.json` (loser → survivor); the loser's page is a noindex meta-refresh stub, and
 `scripts/merge_duplicate_voices.py` holds the pair list.
 
+### Voices pilot (branch `voices-pilot`, Nov 12 2026, awaiting Tom's review)
+- Voice page titles are `Name: Articles, Bio, and Where They Write | Christian Curator` (`voice_page_title()` in
+  `curator/voice_generator.py`; `scripts/fix_voice_titles.py` applied it to existing pages). No em dashes in Voices templates.
+- Six pilot pages (abby-silva, dawn-sherillporter, alex-harris, brandon-corley, chandler-vannoy, david-powlison) are
+  rendered from `data/voices/pilot.json` by `scripts/build_voice_pilot.py` (renderer `curator/voice_pilot.py`): dek, sourced
+  bio with Last updated, where they write, Start here picks, recent pieces (static `CC-RECENT-ARTICLES` block), topics,
+  related voices, ProfilePage + Person schema. Every bio fact needs a source link. Drafts stay `"reviewed": false` until
+  Tom approves; an unreviewed page with no bio and no picks is noindexed, added to `voices_noindex.json` and dropped from
+  `sitemap-voices.xml`. Topic hubs get a `<!-- CC-TOPIC-VOICES:START --> ... END -->` "Writers on this topic" block before
+  `AEO-RELATED-TOPICS`. `update_voice_backlinks.py` skips pilot slugs. Rerun the builder after editing the data file.
+- `build_recent_articles.py` replaces its block in place (the old remove-and-reinsert added a blank line per day) and
+  lists up to 10 pieces on voice pages. abby-silva is a First Things posting account, not a writer (see
+  `.christian-orchestrator/voices-pilot-review.md`). Tests: `tests/test_voice_pilot.py`.
+
 ## P2: engagement and sourcing (2026-10-30)
 
 ### P2.1 Click tracking (GA4, no second analytics stack)

@@ -199,8 +199,17 @@ def main():
         print("  (nothing to do)")
         return
 
+    # Voices pilot pages render their own "Topics they return to" section
+    # from data/voices/pilot.json (scripts/build_voice_pilot.py).
+    sys.path.insert(0, str(REPO_ROOT))
+    from curator.voice_pilot import pilot_slugs
+    skip = pilot_slugs()
+
     updated = 0
     for slug in sorted(mapping.keys()):
+        if slug in skip:
+            print(f"  {slug}: skipped (voices pilot page)")
+            continue
         status = process_voice(slug, mapping[slug], topic_names)
         print(f"  {status}")
         if "section" in status or "css" in status:

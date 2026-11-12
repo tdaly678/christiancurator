@@ -28,6 +28,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
+from curator.headline_voice import strip_dashes  # noqa: E402
 from frontend.topic_matcher import TOPICS, _normalise  # noqa: E402
 
 DOCS_DIR = REPO_ROOT / "docs"
@@ -41,6 +42,8 @@ V_START = "<!-- CC-RECENT-ARTICLES:START -->"
 V_END = "<!-- CC-RECENT-ARTICLES:END -->"
 
 MAX_ITEMS = 5
+# Voice pages list up to 10 recent pieces (Voices pilot, Nov 2026).
+VOICE_MAX_ITEMS = 10
 
 STYLE = (
     "<style>"
@@ -112,13 +115,14 @@ def collect_by_voice() -> dict[str, list[dict]]:
     }
 
 
-def render_section(heading_label: str, heading: str, items: list[dict]) -> str:
+def render_section(heading_label: str, heading: str, items: list[dict],
+                   limit: int = MAX_ITEMS) -> str:
     rows = []
-    for a in items[:MAX_ITEMS]:
+    for a in items[:limit]:
         meta_bits = [b for b in (a["source"], _fmt_date(a["date"])) if b]
         rows.append(
             f'\n  <div class="cc-recent-item">'
-            f'\n    <a class="cc-recent-link" href="{_esc(a["url"])}" target="_blank" rel="noopener">{_esc(a["title"])}</a>'
+            f'\n    <a class="cc-recent-link" href="{_esc(a["url"])}" target="_blank" rel="noopener">{_esc(strip_dashes(a["title"]))}</a>'
             f'\n    <div class="cc-recent-meta">{_esc(" · ".join(meta_bits))}</div>'
             f'\n  </div>'
         )
@@ -133,12 +137,11 @@ def render_section(heading_label: str, heading: str, items: list[dict]) -> str:
 
 
 def inject(html: str, section: str) -> str | None:
-    html = re.sub(
-        re.escape(V_START) + r".*?" + re.escape(V_END) + r"\s*",
-        "",
-        html,
-        flags=re.DOTALL,
-    )
+    # Replace an existing block where it sits. Removing it and re-inserting at
+    # an anchor left one extra blank line on the page every daily run.
+    block_re = re.compile(re.escape(V_START) + r".*?" + re.escape(V_END), re.DOTALL)
+    if block_re.search(html):
+        return block_re.sub(lambda _: section.strip("\n"), html, count=1)
     for anchor in (
         "<!-- AEO-TOPIC-BACKLINKS:START -->",
         '<section class="cc-faq"',
@@ -161,7 +164,8 @@ def update_voices() -> int:
         if not page.exists() or slug not in names:
             continue
         section = render_section(
-            "From Our Daily Digest", f"Recent Articles by {names[slug]}", items
+            "From Our Daily Digest", f"Recent Articles by {names[slug]}", items,
+            limit=VOICE_MAX_ITEMS,
         )
         html = page.read_text(encoding="utf-8")
         out = inject(html, section)

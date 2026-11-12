@@ -45,7 +45,7 @@ CATEGORIES = [
         "name": "Pastors & Church Leaders",
         "short": "Pastors",
         "title": "Evangelical Pastors & Church Leaders Worth Following",
-        "desc": "Profiles of evangelical pastors, preachers, and church leaders whose sermons and writing we curate most often — bios, books, and where to read them.",
+        "desc": "Profiles of evangelical pastors, preachers, and church leaders whose sermons and writing we curate most often: bios, books, and where to read them.",
         "intro": "The pastors and church leaders below shepherd congregations and shape evangelical preaching today. Each profile includes a biography, notable books, and links to their recent writing.",
         "keywords": ["pastor", "preacher", "bishop", "elder", "church planter", "chaplain", "rector", "vicar", "priest", "minister"],
     },
@@ -54,7 +54,7 @@ CATEGORIES = [
         "name": "Theologians & Scholars",
         "short": "Theologians",
         "title": "Evangelical Theologians & Biblical Scholars",
-        "desc": "Profiles of evangelical theologians, seminary professors, and biblical scholars — their traditions, key works, and where to read their latest writing.",
+        "desc": "Profiles of evangelical theologians, seminary professors, and biblical scholars: their traditions, key works, and where to read their latest writing.",
         "intro": "These theologians, professors, and biblical scholars do the deep academic work behind evangelical faith and practice. Each profile covers their tradition, education, and most influential books.",
         "keywords": ["theolog", "professor", "scholar", "seminary", "academic", "historian", "philosopher", "ethicist"],
     },
@@ -63,7 +63,7 @@ CATEGORIES = [
         "name": "Apologists",
         "short": "Apologists",
         "title": "Christian Apologists Worth Following",
-        "desc": "Profiles of Christian apologists defending the faith in the public square — their arguments, books, and where to read their latest work.",
+        "desc": "Profiles of Christian apologists defending the faith in the public square: their arguments, books, and where to read their latest work.",
         "intro": "Christian apologists make the intellectual case for the faith. The voices below engage skeptics, answer hard questions, and equip believers to give a reason for their hope.",
         "keywords": ["apolog"],
     },
@@ -72,7 +72,7 @@ CATEGORIES = [
         "name": "Bible Teachers",
         "short": "Bible Teachers",
         "title": "Bible Teachers & Study Leaders",
-        "desc": "Profiles of gifted Bible teachers and study leaders — their teaching ministries, books, and where to find their latest studies.",
+        "desc": "Profiles of gifted Bible teachers and study leaders: their teaching ministries, books, and where to find their latest studies.",
         "intro": "The Bible teachers below open Scripture for churches, conferences, and small groups around the world. Each profile includes their teaching ministry and best-known studies.",
         "keywords": ["bible teacher", "bible study"],
     },
@@ -81,7 +81,7 @@ CATEGORIES = [
         "name": "Journalists & Reporters",
         "short": "Journalists",
         "title": "Journalists Covering Faith & Culture",
-        "desc": "Profiles of journalists and reporters covering religion, faith, and culture — their beats, publications, and recent reporting.",
+        "desc": "Profiles of journalists and reporters covering religion, faith, and culture: their beats, publications, and recent reporting.",
         "intro": "The journalists and reporters below cover religion, faith, and the places where church meets culture. Each profile notes their publication, beat, and notable reporting.",
         "keywords": ["journalist", "reporter", "correspondent", "news", "columnist", "analyst", "fellow"],
     },
@@ -90,8 +90,8 @@ CATEGORIES = [
         "name": "Ministry Leaders",
         "short": "Ministry Leaders",
         "title": "Evangelical Ministry Leaders & Counselors",
-        "desc": "Profiles of ministry leaders, missionaries, counselors, and nonprofit heads serving the evangelical church — their organizations and writing.",
-        "intro": "These ministry leaders, missionaries, and counselors serve the church beyond the pulpit — leading organizations, counseling the hurting, and taking the gospel to hard places.",
+        "desc": "Profiles of ministry leaders, missionaries, counselors, and nonprofit heads serving the evangelical church: their organizations and writing.",
+        "intro": "These ministry leaders, missionaries, and counselors serve the church beyond the pulpit, leading organizations, counseling the hurting, and taking the gospel to hard places.",
         "keywords": ["ministry", "missionar", "evangelist", "director", "president", "founder", "counsel", "psycholog", "nonprofit", "leader", "researcher"],
     },
     {
@@ -99,7 +99,7 @@ CATEGORIES = [
         "name": "Writers & Authors",
         "short": "Writers",
         "title": "Christian Writers & Authors Worth Reading",
-        "desc": "Profiles of Christian writers and authors we curate most often — their books, essays, and where to read their latest work.",
+        "desc": "Profiles of Christian writers and authors we curate most often: their books, essays, and where to read their latest work.",
         "intro": "The writers and authors below craft the books, essays, and articles that shape evangelical conversation. Each profile includes a biography and notable books.",
         "keywords": ["writer", "author", "novelist", "poet", "editor", "blogger", "essayist", "commentator", "contributor"],
     },
@@ -108,7 +108,7 @@ CATEGORIES = [
         "name": "Speakers & Content Creators",
         "short": "Speakers",
         "title": "Christian Speakers, Podcasters & Content Creators",
-        "desc": "Profiles of Christian speakers, podcasters, and content creators — their platforms, shows, and where to follow their work.",
+        "desc": "Profiles of Christian speakers, podcasters, and content creators: their platforms, shows, and where to follow their work.",
         "intro": "The speakers, podcasters, and creators below reach audiences through conferences, shows, and digital platforms. Each profile covers their platform and best-known work.",
         "keywords": ["speaker", "podcast", "content creator", "communicator", "musician", "artist", "broadcaster", "host"],
     },
@@ -229,12 +229,12 @@ def render_hub(cat: dict, members: list[dict], groups: dict[str, list[dict]]) ->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{_esc(cat['title'])} — Christian Curator</title>
+  <title>{_esc(cat['title'])} | Christian Curator</title>
   <meta name="description" content="{_esc(cat['desc'])}" />
   <link rel="canonical" href="{BASE}/voices/{cat['slug']}/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Christian Curator" />
-  <meta property="og:title" content="{_esc(cat['title'])} — Christian Curator" />
+  <meta property="og:title" content="{_esc(cat['title'])} | Christian Curator" />
   <meta property="og:description" content="{_esc(cat['desc'])}" />
   <meta property="og:url" content="{BASE}/voices/{cat['slug']}/" />
   <meta property="og:image" content="{BASE}/og-image.png" />

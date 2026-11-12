@@ -1,0 +1,263 @@
+{
+  "_about": "Voices pilot (Nov 2026). Drafted by Claude from each writer's own published bio or outlet author page; every bio fact has a source in bio_sources. Nothing here is final until Tom sets reviewed: true. Rendered by scripts/build_voice_pilot.py into docs/voices/<slug>/index.html. Never use em dashes in any field.",
+  "last_updated": "2026-11-12",
+  "writers": [
+    {
+      "slug": "dawn-sherillporter",
+      "name": "Dawn Sherill-Porter",
+      "reviewed": false,
+      "page_kind": "guide",
+      "dek": "Content editor at Lifeway Christian Resources | Writes for Lifeway Research on Bible reading habits and discipleship",
+      "bio": "Dawn Sherill-Porter is a content editor for Lifeway Christian Resources and writes for Lifeway Research on personal Bible reading, including why reading plans stall and how busy Christians and pastors keep a daily habit.",
+      "bio_sources": [
+        {"label": "Author note, Lifeway Research", "url": "https://research.lifeway.com/2026/05/14/how-to-stay-in-the-word-even-when-youre-busy/"},
+        {"label": "Author page, Lifeway Research", "url": "https://research.lifeway.com/author/dawn-sherill-porter/"}
+      ],
+      "where_they_write": [
+        {"outlet": "Lifeway Research", "url": "https://research.lifeway.com/author/dawn-sherill-porter/"}
+      ],
+      "start_here": [
+        {
+          "title": "How to Stay in the Word, Even When You're Busy",
+          "url": "https://research.lifeway.com/2026/05/14/how-to-stay-in-the-word-even-when-youre-busy/",
+          "outlet": "Lifeway Research",
+          "date": "2026-05-14",
+          "note": "Argues that a daily Bible habit survives a full calendar when it is treated as the foundation of the day rather than one more task, and applies that to pastors' own reading."
+        },
+        {
+          "title": "Why Bible Reading Plans Fail (and What We Can Do About It)",
+          "url": "https://research.lifeway.com/2026/01/22/why-bible-reading-plans-fail-and-what-we-can-do-about-it/",
+          "outlet": "Lifeway Research",
+          "date": "2026-01-22",
+          "note": "Looks at why church members start a reading plan with enthusiasm and drift into obligation or apathy, and asks what leaders can do to help a plan last."
+        }
+      ],
+      "topics": [
+        {"slug": "biblical-literacy", "angle": "Why daily Bible reading stalls and how to keep it going."},
+        {"slug": "spiritual-disciplines", "angle": "Building a Bible reading habit into a full calendar."},
+        {"slug": "discipleship", "angle": "Helping church members finish a reading plan."}
+      ],
+      "related": ["chandler-vannoy", "jen-wilkin", "aaron-earls"],
+      "same_as": ["https://research.lifeway.com/author/dawn-sherill-porter/"],
+      "review_notes": "Lifeway Research lists only two pieces by her, so Start here has two picks, not three. No other outlet found."
+    },
+    {
+      "slug": "alex-harris",
+      "name": "Alex Harris",
+      "reviewed": false,
+      "page_kind": "guide",
+      "dek": "Attorney and Keller Center fellow | Coauthor of Do Hard Things | Writes for The Gospel Coalition on faith, mortality, and public life",
+      "bio": "Alex Harris is an attorney and a fellow at The Keller Center for Cultural Apologetics. As a teenager he coauthored Do Hard Things: A Teenage Rebellion Against Low Expectations with his twin brother, Brett. A graduate of Harvard Law School, he worked as a law clerk for U.S. Supreme Court Justices Neil Gorsuch and Anthony Kennedy.",
+      "bio_sources": [
+        {"label": "Profile, The Gospel Coalition", "url": "https://www.thegospelcoalition.org/profile/alex-harris/"},
+        {"label": "Fellows, The Keller Center", "url": "https://www.thegospelcoalition.org/thekellercenter/bios/"}
+      ],
+      "where_they_write": [
+        {"outlet": "The Gospel Coalition", "url": "https://www.thegospelcoalition.org/profile/alex-harris/"},
+        {"outlet": "The Keller Center for Cultural Apologetics", "url": "https://www.thegospelcoalition.org/thekellercenter/bios/"}
+      ],
+      "start_here": [
+        {
+          "title": "Redeem the Time: What Ben Sasse Teaches Us About Life, Death, and Politics",
+          "url": "https://www.thegospelcoalition.org/article/sasse-life-death-politics/",
+          "outlet": "The Gospel Coalition",
+          "date": "2026-04-29",
+          "note": "Draws on Ben Sasse's public reflections after a terminal cancer diagnosis to set out a framework for what matters most in life, death, and politics."
+        },
+        {
+          "title": "Alex Harris: How to Do Hard Things",
+          "url": "https://www.thegospelcoalition.org/podcasts/tgc-podcast/alex-harris-do-hard-things/",
+          "outlet": "The Gospel Coalition (podcast interview)",
+          "date": "2021-05-06",
+          "note": "Interview with Sarah Eekhoff Zylstra about clerking for two U.S. Supreme Court justices and about his brother Joshua Harris's public deconstruction of his faith."
+        },
+        {
+          "title": "Gospel Hope for Gen Z Ministry",
+          "url": "https://www.youtube.com/watch?v=fU3IKLRWuNE",
+          "outlet": "The Gospel Coalition (TGC25 panel video)",
+          "date": "2026-10-22",
+          "note": "Panel with Rachel Gilson, Kori Porter, and Derek Rishmawy on signs of renewal among Gen Z; Harris speaks on faithful presence."
+        }
+      ],
+      "topics": [
+        {"slug": "death-and-dying", "angle": "What Ben Sasse's terminal diagnosis teaches about facing death."},
+        {"slug": "politics-and-the-church", "angle": "Lessons for political life from a former senator's last chapter."},
+        {"slug": "missions-and-evangelism", "angle": "Ministry to Gen Z and the practice of faithful presence."}
+      ],
+      "related": ["rachel-gilson", "derek-rishmawy", "collin-hansen", "brett-mccracken"],
+      "same_as": ["https://www.thegospelcoalition.org/profile/alex-harris/"],
+      "review_notes": "Identity confirmed: the Alex Harris on our site is the byline on the TGC Ben Sasse piece (homepage and digest, 2026-04-29), and TGC's profile for that byline is the attorney and Do Hard Things coauthor. Only one written article by him was verified; picks 2 and 3 are an interview and a panel where he speaks. The TGC description of pick 2 names his brother; Tom may prefer to drop that clause."
+    },
+    {
+      "slug": "brandon-corley",
+      "name": "Brandon Corley",
+      "reviewed": false,
+      "page_kind": "guide",
+      "dek": "MDiv student at Southern Seminary | Writes for American Reformer on Baptist political theology and natural law",
+      "bio": "Brandon Corley is a graduate of The Master's University, where he earned a degree in Biblical Studies, and an MDiv student at The Southern Baptist Theological Seminary. He writes for American Reformer on Baptist political theology and natural law.",
+      "bio_sources": [
+        {"label": "Author page, American Reformer", "url": "https://archive.americanreformer.org/author/brandon-corley/"}
+      ],
+      "where_they_write": [
+        {"outlet": "American Reformer", "url": "https://archive.americanreformer.org/author/brandon-corley/"}
+      ],
+      "start_here": [
+        {
+          "title": "In Defense of the Baptist State",
+          "url": "https://archive.americanreformer.org/2024/06/in-defense-of-the-baptist-state/",
+          "outlet": "American Reformer",
+          "date": "2024-06-19",
+          "note": "Argues that Baptists have no principled reason to reject an established Baptist religion, drawing on a 1659 declaration by Baptistic Congregationalists in London."
+        },
+        {
+          "title": "On Baptist Establishment, Again",
+          "url": "https://archive.americanreformer.org/2025/06/on-baptist-establishment-again/",
+          "outlet": "American Reformer",
+          "date": "2025-06-30",
+          "note": "A follow-up that sets out the political principles behind the earlier essay and sketches what a Christian establishment could look like in America today."
+        },
+        {
+          "title": "The Natural End of Man",
+          "url": "https://archive.americanreformer.org/2026/04/the-natural-end-of-man/",
+          "outlet": "American Reformer",
+          "date": "2026-04-09",
+          "note": "Argues from the classical idea of natural ends that human nature is ordered to knowing and loving God, and considers natural virtue in that light."
+        }
+      ],
+      "topics": [
+        {"slug": "politics-and-the-church", "angle": "The case for a Baptist establishment."},
+        {"slug": "christian-nationalism", "angle": "Establishment arguments within the Reformed political tradition."},
+        {"slug": "religious-liberty", "angle": "Toleration and its limits in early Baptist confessions."},
+        {"slug": "church-history", "angle": "Seventeenth-century Baptist declarations on toleration."}
+      ],
+      "related": ["stephen-wolfe", "jonathan-leeman", "aaron-m-renn"],
+      "same_as": ["https://archive.americanreformer.org/author/brandon-corley/"],
+      "review_notes": "americanreformer.org/author/brandon-corley/ now redirects to archive.americanreformer.org; links use the archive host. The author page does not date the 'MDiv student' line, so it may be out of date. The old site bio's claim about 'Reformed theology and Christian scholarship' was not repeated."
+    },
+    {
+      "slug": "chandler-vannoy",
+      "name": "Chandler Vannoy",
+      "reviewed": false,
+      "page_kind": "guide",
+      "dek": "Lifeway Leadership | Co-host of 5 Leadership Questions | Writes for RELEVANT on Bible reading and discerning God's will",
+      "bio": "Chandler Vannoy is a graduate of the University of Tennessee and holds a Master of Divinity from The Southern Baptist Theological Seminary. His RELEVANT author bio lists him as brand manager for Lifeway Leadership at Lifeway Christian Resources, and he has co-hosted Lifeway Leadership's 5 Leadership Questions podcast. He has written for RELEVANT since 2019 on Bible reading and decision making.",
+      "bio_sources": [
+        {"label": "Author page, RELEVANT", "url": "https://relevantmagazine.com/author/chandlervannoy/"},
+        {"label": "Author page, Lifeway Leadership", "url": "https://leadership.lifeway.com/author/chandler/"}
+      ],
+      "where_they_write": [
+        {"outlet": "RELEVANT", "url": "https://relevantmagazine.com/author/chandlervannoy/"},
+        {"outlet": "Lifeway Leadership", "url": "https://leadership.lifeway.com/author/chandler/"}
+      ],
+      "start_here": [
+        {
+          "title": "What We Get Wrong About 'Finding God's Will'",
+          "url": "https://relevantmagazine.com/faith/what-we-get-wrong-about-finding-gods-will/",
+          "outlet": "RELEVANT",
+          "date": "2026-05-06",
+          "note": "Argues that anxiety about finding God's will comes from treating it as a hidden path to uncover, and points readers to a God bigger than any single decision."
+        },
+        {
+          "title": "How to Move Beyond Instagrammable Bible Reading",
+          "url": "https://relevantmagazine.com/faith/growth/why-you-need-move-beyond-tweetable-bible-reading/",
+          "outlet": "RELEVANT",
+          "date": "2021-10-20",
+          "note": "Argues that a diet of short, shareable verses trains short attention spans, and calls for slower, sustained reading of Scripture."
+        },
+        {
+          "title": "Habits, Bible Reading and New Year's Resolutions",
+          "url": "https://relevantmagazine.com/faith/habits-bible-reading-and-new-years-resolutions/",
+          "outlet": "RELEVANT",
+          "date": "2019-12-27",
+          "note": "Argues that resolutions to read the Bible more usually fail for lack of a place on the calendar, and that a scheduled habit does better than good intentions."
+        }
+      ],
+      "topics": [
+        {"slug": "biblical-literacy", "angle": "Moving past verse snippets to sustained reading."},
+        {"slug": "spiritual-disciplines", "angle": "Putting Bible reading on the calendar."},
+        {"slug": "anxiety-and-fear", "angle": "Anxiety about finding God's will."}
+      ],
+      "related": ["dawn-sherillporter", "kevin-deyoung", "jen-wilkin", "trevin-wax"],
+      "same_as": ["https://relevantmagazine.com/author/chandlervannoy/", "https://leadership.lifeway.com/author/chandler/"],
+      "review_notes": "Identity confirmed: RELEVANT author id 18972 wrote our curated piece (2026-05-07). The brand manager role comes from an undated RELEVANT bio and may be out of date. chandlervannoy.com (named in that bio) returned HTTP 500 on 2026-11-12, so it is not linked. The old site bio's 'Unseen Leadership Podcast' claim could not be confirmed from a primary page and was dropped; the 5 Leadership Questions co-host credit is on leadership.lifeway.com."
+    },
+    {
+      "slug": "david-powlison",
+      "name": "David Powlison",
+      "reviewed": false,
+      "page_kind": "where_to_start",
+      "deceased": true,
+      "dek": "Biblical counselor, 1949-2019 | Executive director of CCEF, 2014-2019 | Wrote on idolatry, suffering, and pastoral counsel",
+      "bio": "David Powlison (1949-2019) served as executive director of the Christian Counseling & Educational Foundation (CCEF) from 2014 to 2019, as a faculty member, and as senior editor of the Journal of Biblical Counseling. He held a PhD from the University of Pennsylvania and an MDiv from Westminster Theological Seminary. He wrote extensively on biblical counseling and on the relationship between faith and psychology, including the books Seeing with New Eyes and Speaking Truth in Love.",
+      "bio_sources": [
+        {"label": "Faculty page, CCEF", "url": "https://www.ccef.org/people/david-powlison/"},
+        {"label": "In Loving Memory of David Powlison, CCEF", "url": "https://www.ccef.org/in-loving-memory-of-david-powlison/"}
+      ],
+      "where_they_write": [
+        {"outlet": "CCEF and the Journal of Biblical Counseling", "url": "https://www.ccef.org/people/david-powlison/"}
+      ],
+      "start_here": [
+        {
+          "title": "Idols of the Heart and \"Vanity Fair\"",
+          "url": "https://www.ccef.org/jbc-article/idols-of-the-heart-and-vanity-fair",
+          "outlet": "Journal of Biblical Counseling",
+          "date": "",
+          "note": "Argues that idolatry is the category that explains both a person's inner motivations and the pull of cultural values, worked through two counseling case studies."
+        },
+        {
+          "title": "An Open Letter to the Suffering Christian",
+          "url": "https://www.ccef.org/open-letter-suffering-christian/",
+          "outlet": "CCEF",
+          "date": "2018-03-21",
+          "note": "A pastoral letter that begins with listening and points a hurting believer to Jesus as a sympathetic friend, fellow sufferer, and Savior."
+        },
+        {
+          "title": "Why Pastors Have a Unique Responsibility to Counsel",
+          "url": "https://www.ccef.org/why-pastors-have-a-unique-responsibility-to-counsel/",
+          "outlet": "CCEF",
+          "date": "2021-06-30",
+          "note": "Argues that counseling is part of every pastor's calling rather than an optional specialty, and sets out how pastoral counsel differs from the counseling professions."
+        },
+        {
+          "title": "An Open Letter to Those Debilitated by Their Sexual Sin",
+          "url": "https://www.ccef.org/open-letter-debilitated-sexual-sin/",
+          "outlet": "CCEF",
+          "date": "2017-08-23",
+          "note": "Written to Christians weighed down by repeated failure, guilt, and shame, starting from a friend's slow change after conversion."
+        },
+        {
+          "title": "The Right Kind of Weakness",
+          "url": "https://www.ccef.org/jbc-article/the-right-kind-of-weakness/",
+          "outlet": "Journal of Biblical Counseling",
+          "date": "2019",
+          "note": "Remarks prepared for Westminster Theological Seminary graduates shortly before his death, reading the Sermon on the Mount as a call to the weakness that receives God's strength."
+        }
+      ],
+      "topics": [
+        {"slug": "mental-health", "angle": "Biblical counseling and the relationship of faith and psychology."},
+        {"slug": "suffering-and-providence", "angle": "Pastoral letters to Christians who are suffering."},
+        {"slug": "pastoral-ministry", "angle": "Why counseling belongs to every pastor."},
+        {"slug": "pornography", "angle": "Help for Christians caught in repeated sexual sin."}
+      ],
+      "related": ["ed-welch", "paul-tripp", "tim-keller"],
+      "same_as": ["https://www.ccef.org/people/david-powlison/"],
+      "review_notes": "Deceased (CCEF memorial page). No outreach. No digest bylines in our archive, so the page has no Recent pieces section. The JBC issue dates for picks 1 and 5 are not shown on the CCEF pages; the 2019 for pick 5 is inferred from CCEF's note that the remarks were for the May 2019 Westminster graduation."
+    },
+    {
+      "slug": "abby-silva",
+      "name": "Abby Silva",
+      "reviewed": false,
+      "page_kind": "guide",
+      "identity_status": "unverified",
+      "dek": "",
+      "bio": "",
+      "bio_sources": [],
+      "where_they_write": [],
+      "start_here": [],
+      "topics": [],
+      "related": [],
+      "same_as": [],
+      "review_notes": "Misattribution. All three First Things items credited to Abby Silva on our site are bylined on firstthings.com to other people: 'The Trust Spiral' (How the Press Lost Public Trust) is a Mark Bauerlein podcast interview, 'A Dreadful Humility' is by Ephraim Radner, and 'The Truth About Christian Hospitality' is by Sebastian Milbank. 'Abby Silva' appears only as the WordPress posting account (pagePostAuthor) in the First Things feed metadata. No published bio for an Abby Silva at First Things was found (masthead checked). Page is noindexed and kept out of the sitemap until Tom decides: delete, redirect, or fix the byline source."
+    }
+  ]
+}
