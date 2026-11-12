@@ -100,6 +100,11 @@ Sources can set `role: "discovery"` (fetched and health-logged, never ranked: Th
 `discovery_title_pattern` (Tim Challies' A La Carte / Kindle deals / book roundups). `score_articles()` drops discovery
 items before Claude scoring.
 
+Sponsored posts (Nov 12 2026): `fetcher/sponsored.py` drops, at ingest in `fetch_feed()`, any item whose body opens
+with a paid disclosure ("This post is in partnership with ...", "sponsored by", "This is a sponsored post") or a vendor
+guest post ("This is a guest post by X, Founder/CEO of Y" with no pastor/chaplain/minister role). Health rows list
+`sponsored_dropped`. Carey Nieuwhof is the main case. Tests: `tests/test_sponsored_posts.py`.
+
 Sources can also set `role: "media"` (video and podcast feeds for the Watch and Listen lane, below). Media items are
 health-logged like any feed but never scored, never deduped against articles, and never placed on the board.
 
@@ -384,8 +389,12 @@ Blocks placeholder entries in the "Evangelical Conversation, Curated" lists: `hr
 template titles that paste the topic name in ("The Biblical Basis for On X", "Rethinking On X for a New Generation"), and
 boilerplate annotations ("A pastoral reflection on how X connects…"). It runs in `daily_run.yml` **before** the commit
 step and in `topic_quality.yml` on every push to `docs/topics/`. It is ratcheted against `scripts/topic_quality_baseline.json`.
-As of 2026-10-29 the baseline is empty: every topic page is clean, so any new filler fails the check. A page may not get worse, and a page not in the baseline
-must stay clean. After cleaning a page, run `python scripts/check_topic_quality.py --update-baseline`. Every new curated
+A page may not get worse, and a page not in the baseline must stay clean.
+Credit checks (Nov 12 2026): `outlet-mismatch` (a known outlet credited on another domain, offline), `author-mismatch`
+and `title-mismatch` (against `data/topic_link_metadata.json`, page metadata cached by the opt-in
+`--fetch-metadata`, which falls back to `article_history.json` bylines for unreadable pages). The gate reads only the
+committed cache. The first full fetch found 48 flags on 23 pages; they are baselined and listed for review in
+`.christian-orchestrator/integrity-fixes-report.md`. Tests: `tests/test_topic_credit_check.py`. After cleaning a page, run `python scripts/check_topic_quality.py --update-baseline`. Every new curated
 entry needs a real, verified URL, the real author/outlet, and a summary specific to that piece. Never invent a URL or
 byline.
 

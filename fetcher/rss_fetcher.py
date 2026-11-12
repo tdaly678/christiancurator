@@ -36,6 +36,7 @@ import feedparser
 import requests
 
 from .sources import SOURCES
+from .sponsored import sponsored_disclosure
 
 MAX_ARTICLES_PER_SOURCE = 20  # only take the most recent articles per feed
 FETCH_TIMEOUT = 15            # seconds per feed
@@ -336,6 +337,12 @@ def fetch_feed(source: dict) -> tuple[list[dict], dict]:
         content_list = entry.get("content", [])
         full_content = content_list[0].get("value", "") if content_list else ""
         title = entry.get("title", "").strip()
+        # Paid partner and vendor guest posts never enter the pool.
+        disclosure = sponsored_disclosure(full_content, entry.get("summary", ""))
+        if disclosure:
+            health.setdefault("sponsored_dropped", []).append(title[:120])
+            print(f"  Sponsored post dropped ({source['name']}): {title[:80]} [{disclosure[:80]}]")
+            continue
 
         url = entry.get("link", "")
         if url in generic:

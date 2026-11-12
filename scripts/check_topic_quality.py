@@ -22,8 +22,32 @@ What it flags (inside each <article class="cc-article-entry">)
   filler-annotation  annotation matches a known boilerplate sentence
   dup-annotation     identical annotation text on 3+ different topic pages
 
+  outlet-mismatch    the credited outlet is a known publisher whose domain is
+                     not the link's domain (Christianity Today credited on a
+                     thegospelcoalition.org link)
+  author-mismatch    the credited author is not among the authors the linked
+                     page names (needs cached page metadata, below)
+  title-mismatch     the credited title shares no significant word with the
+                     linked page's title (needs cached page metadata)
+
 A byline with only an outlet and no author is allowed; many hand-curated pages
 use that format on purpose.
+
+Credit checks and the metadata cache
+------------------------------------
+The author and title checks compare each entry with what the linked page says
+about itself. They run offline from data/topic_link_metadata.json, which `--fetch-metadata`
+fills by fetching every curated URL not yet cached (title from og:title /
+JSON-LD headline / <title>, authors from <meta name="author"> / JSON-LD). When a
+page cannot be read, the byline the pipeline stored in docs/article_history.json
+is cached instead (its titles may be display rewrites, so they are not used).
+Only the committed cache is read by the gate, so a daily run never changes
+verdict on its own. Network is used only with that flag; an entry
+with no cached metadata, or a page that names no author, is not judged. A
+paraphrased title passes as long as it shares one significant word with the
+page title, so only a wholly different title is flagged. Added Nov 12 2026
+after a curated entry on /topics/predestination-free-will/ credited "Darrell
+Cole, Christianity Today" for a TGC article he did not write.
 
 Ratchet, not a cliff
 --------------------
@@ -45,6 +69,7 @@ Usage
     python scripts/check_topic_quality.py                  # gate (exit 1 on regression)
     python scripts/check_topic_quality.py --report         # list every violation
     python scripts/check_topic_quality.py --update-baseline
+    python scripts/check_topic_quality.py --fetch-metadata   # refresh the cache (network)
 
 The script never modifies topic pages.
 """
@@ -55,12 +80,15 @@ import html
 import json
 import re
 import sys
+import unicodedata
 from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 TOPICS_DIR = ROOT / "docs" / "topics"
 BASELINE = Path(__file__).resolve().parent / "topic_quality_baseline.json"
+METADATA_CACHE = ROOT / "data" / "topic_link_metadata.json"
+HISTORY = ROOT / "docs" / "article_history.json"
 
 sys.path.insert(0, str(ROOT))
 try:
@@ -74,6 +102,36 @@ TITLE_RE = re.compile(r'<(div|h[2-4]) class="cc-article-title">\s*(?:<a\b([^>]*)
 HREF_RE = re.compile(r'\bhref="([^"]*)"')
 ANNOT_RE = re.compile(r'<(div|p) class="cc-article-annotation">(.*?)</\1>', re.S)
 H1_RE = re.compile(r'<h1 class="cc-topic-title">(.*?)</h1>', re.S)
+BYLINE_RE = re.compile(r'<(div|p) class="cc-article-byline">(.*?)</\1>', re.S)
+SOURCE_SPAN_RE = re.compile(r'<span class="source">(.*?)</span>', re.S)
+
+# Credited outlet -> domains its articles live on. An outlet not listed here
+# is never judged; only a listed outlet on an unlisted domain is flagged.
+OUTLET_DOMAINS = {
+    "the gospel coalition": ("thegospelcoalition.org",),
+    "desiring god": ("desiringgod.org",),
+    "christianity today": ("christianitytoday.com",),
+    "crossway": ("crossway.org",),
+    "9marks": ("9marks.org",),
+    "ligonier": ("ligonier.org",),
+    "ligonier ministries": ("ligonier.org",),
+    "tabletalk": ("ligonier.org", "tabletalkmagazine.com"),
+    "tabletalk magazine": ("ligonier.org", "tabletalkmagazine.com"),
+    "first things": ("firstthings.com",),
+    "mere orthodoxy": ("mereorthodoxy.com",),
+    "erlc": ("erlc.com",),
+    "ethics & religious liberty commission": ("erlc.com",),
+    "ccef": ("ccef.org",),
+    "biologos": ("biologos.org",),
+    "acts 29": ("acts29.com",),
+    "albertmohler.com": ("albertmohler.com",),
+    "albert mohler": ("albertmohler.com",),
+    "lifeway research": ("lifewayresearch.com", "research.lifeway.com"),
+}
+
+STOPWORDS = set("""a an and the of in on for to with from by at as is are was be it its how why what
+when who whom whose which that this these those your our their his her my we you i not no or but
+do does did can should would will about into over than then them they he she us vs""".split())
 
 # Stock title stems from the original bulk template. "{t}" is the topic name.
 TEMPLATE_TITLE_STEMS = [
@@ -121,8 +179,73 @@ def _topic_names(slug: str, page: str) -> list[str]:
     return [n for n in dict.fromkeys(names) if n]
 
 
-def scan_page(slug: str, page: str) -> tuple[list[tuple[str, str]], list[str]]:
-    """Return (violations, annotations). Each violation is (code, detail)."""
+def _domain(url: str) -> str:
+    m = re.match(r"https?://([^/:?#]+)", url or "")
+    host = (m.group(1).lower() if m else "")
+    return host[4:] if host.startswith("www.") else host
+
+
+def _canon(url: str) -> str:
+    url = re.sub(r"[?#].*$", "", (url or "").strip())
+    url = re.sub(r"^https?://(www\.)?", "", url, flags=re.I)
+    return url.rstrip("/").lower()
+
+
+def _fold(text: str) -> str:
+    text = unicodedata.normalize("NFKD", text or "")
+    return "".join(c for c in text if not unicodedata.combining(c)).lower()
+
+
+def _words(text: str) -> set[str]:
+    return {w for w in re.findall(r"[a-z0-9']+", _fold(text)) if len(w) > 2 and w not in STOPWORDS}
+
+
+def _credited_authors(byline_html: str) -> tuple[list[str], str]:
+    """(author names, outlet) from a curated byline like 'A · <span class=source>X</span>'."""
+    src = SOURCE_SPAN_RE.search(byline_html)
+    outlet = _text(src.group(1)) if src else ""
+    people = _text(SOURCE_SPAN_RE.sub(" ", byline_html)).strip(" ·|,")
+    people = re.sub(r"^by\b\s*", "", people, flags=re.I)
+    names = [n.strip() for n in re.split(r"\s*(?:·|\||,|&|\band\b)\s*", people) if n.strip()]
+    return [n for n in names if re.search(r"[A-Za-z]{2}", n) and not _is_org(n, outlet)], outlet
+
+
+ORG_WORDS_RE = re.compile(
+    r"\b(?:coalition|ministries|ministry|institute|magazine|journal|press|publishing|staff|editors|"
+    r"research|commission|seminary|church|network|foundation|domain|orthodoxy|god|crossway|9marks|"
+    r"today|things|ligonier|tabletalk|erlc|ccef|biologos)\b|\.(?:com|org|net)\b",
+    re.I,
+)
+
+
+def _is_org(name: str, outlet: str = "") -> bool:
+    """An outlet or organisation standing where a person's name should be."""
+    folded = _fold(name).strip()
+    return folded == _fold(outlet).strip() or folded in OUTLET_DOMAINS or bool(ORG_WORDS_RE.search(folded))
+
+
+def _surname(name: str) -> str:
+    parts = [p for p in re.findall(r"[a-z']+", _fold(name)) if p not in ("jr", "sr", "ii", "iii", "dr", "rev")]
+    return parts[-1] if parts else ""
+
+
+def author_matches(credited: list[str], page_authors: list[str]) -> bool:
+    """True when any credited author's surname appears among the page's authors."""
+    blob = " ".join(_fold(a) for a in page_authors)
+    return any(_surname(c) and re.search(rf"\b{re.escape(_surname(c))}\b", blob) for c in credited)
+
+
+def title_matches(credited: str, page_title: str) -> bool:
+    a, b = _words(credited), _words(page_title)
+    return not a or not b or bool(a & b)
+
+
+def scan_page(slug: str, page: str, metadata: dict | None = None) -> tuple[list[tuple[str, str]], list[str]]:
+    """Return (violations, annotations). Each violation is (code, detail).
+
+    `metadata` maps a canonical URL (see _canon) to {"title", "authors"} for
+    the credit checks; without it only the outlet check runs."""
+    metadata = metadata or {}
     out: list[tuple[str, str]] = []
     annotations: list[str] = []
     names = _topic_names(slug, page)
@@ -142,6 +265,26 @@ def scan_page(slug: str, page: str) -> tuple[list[tuple[str, str]], list[str]]:
         elif any(f"On {n}" in title and title != f"On {n}" for n in names) or any(r.search(title) for r in STEM_RES):
             out.append(("template-title", label))
 
+        b = BYLINE_RE.search(body)
+        credited, outlet = _credited_authors(b.group(2)) if b else ([], "")
+        domains = OUTLET_DOMAINS.get(_fold(outlet).strip())
+        host = _domain(href)
+        if domains and host and not any(host == d or host.endswith("." + d) for d in domains):
+            out.append(("outlet-mismatch", f"{label}: credited {outlet!r}, links to {host}"))
+        meta = metadata.get(_canon(href)) if href else None
+        # A link that now redirects somewhere else (an archive or home page) is
+        # a dead link, not a miscredit; book listings carry store titles.
+        if meta and meta.get("final_url") and _canon(meta["final_url"]) != _canon(href):
+            meta = None
+        if meta and host in ("amazon.com", "books.google.com"):
+            meta = None
+        if meta:
+            page_authors = [a for a in meta.get("authors") or [] if a and not _is_org(a)]
+            if credited and page_authors and not author_matches(credited, page_authors):
+                out.append(("author-mismatch", f"{label}: credited {', '.join(credited)!r}, page names {', '.join(page_authors)!r}"))
+            if meta.get("title") and not title_matches(title, meta["title"]):
+                out.append(("title-mismatch", f"{label}: page title {meta['title'][:70]!r}"))
+
         a = ANNOT_RE.search(body)
         ann = _text(a.group(2)) if a else ""
         if ann:
@@ -151,14 +294,110 @@ def scan_page(slug: str, page: str) -> tuple[list[tuple[str, str]], list[str]]:
     return out, annotations
 
 
+def history_bylines() -> dict:
+    """Bylines the pipeline stored in article_history.json, keyed by canonical URL.
+    Its titles may be display rewrites, so only the byline is used."""
+    if not HISTORY.exists():
+        return {}
+    try:
+        rows = json.loads(HISTORY.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    rows = rows if isinstance(rows, list) else rows.get("articles", [])
+    out: dict = {}
+    for r in rows:
+        if r.get("author") and r.get("scored_by") != "backfill":
+            for u in (r.get("url"), r.get("canonical_url")):
+                if u:
+                    out.setdefault(_canon(u), r["author"])
+    return out
+
+
+def load_metadata() -> dict:
+    """Cached page metadata keyed by canonical URL. Only the committed cache is
+    read, so the daily gate never changes verdict because history grew."""
+    meta: dict = {}
+    if METADATA_CACHE.exists():
+        for url, m in json.loads(METADATA_CACHE.read_text(encoding="utf-8")).get("urls", {}).items():
+            if m.get("status") == 200 or m.get("authors"):
+                meta[_canon(url)] = m
+    return meta
+
+
+def page_metadata(page: str) -> dict:
+    """Title and authors an article page gives for itself."""
+    from fetcher.rss_fetcher import _meta_content, page_byline  # lazy: only with --fetch-metadata
+
+    title = _meta_content(page, "og:title")
+    if not title:
+        m = re.search(r'"headline"\s*:\s*"([^"]+)"', page)
+        title = html.unescape(m.group(1)) if m else ""
+    if not title:
+        m = re.search(r"<title[^>]*>(.*?)</title>", page, re.S | re.I)
+        title = _text(m.group(1)) if m else ""
+    byline = page_byline(page)
+    authors = [a.strip() for a in re.split(r"\s+and\s+|,\s*", byline) if a.strip()] if byline else []
+    return {"title": title.strip(), "authors": authors}
+
+
+def curated_urls() -> list[str]:
+    urls = []
+    for path in sorted(TOPICS_DIR.glob("*/index.html")):
+        for m in ENTRY_RE.finditer(path.read_text(encoding="utf-8")):
+            t = TITLE_RE.search(m.group(1))
+            h = HREF_RE.search((t.group(2) if t else "") or "")
+            if h and re.match(r"https?://", h.group(1)):
+                urls.append(h.group(1).strip())
+    return list(dict.fromkeys(urls))
+
+
+def fetch_metadata(refresh: bool = False, workers: int = 8) -> dict:
+    """Fetch every curated URL not yet cached (all of them with refresh) and
+    write data/topic_link_metadata.json. Network; opt-in only."""
+    import datetime
+    from concurrent.futures import ThreadPoolExecutor
+
+    import requests
+
+    cache = json.loads(METADATA_CACHE.read_text(encoding="utf-8")) if METADATA_CACHE.exists() else {"urls": {}}
+    todo = [u for u in curated_urls() if refresh or cache["urls"].get(u, {}).get("status") != 200]
+    ua = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+          "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
+    today = datetime.date.today().isoformat()
+
+    def one(url: str) -> tuple[str, dict]:
+        try:
+            r = requests.get(url, headers={"User-Agent": ua}, timeout=20)
+        except Exception as e:
+            return url, {"status": None, "error": type(e).__name__, "fetched_on": today}
+        if r.status_code >= 400:
+            return url, {"status": r.status_code, "fetched_on": today}
+        return url, {"status": 200, "final_url": r.url, "fetched_on": today, **page_metadata(r.text)}
+
+    bylines = history_bylines()
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        for url, m in ex.map(one, todo):
+            # An unreadable page falls back to the byline the pipeline stored.
+            if m.get("status") != 200 and bylines.get(_canon(url)):
+                m.update(authors=[bylines[_canon(url)]], authors_from="article_history")
+            cache["urls"][url] = m
+    cache["urls"] = dict(sorted(cache["urls"].items()))
+    METADATA_CACHE.parent.mkdir(parents=True, exist_ok=True)
+    METADATA_CACHE.write_text(json.dumps(cache, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    ok = sum(1 for u in todo if cache["urls"][u].get("status") == 200)
+    print(f"Fetched {len(todo)} curated URL(s): {ok} readable, {len(todo) - ok} failed. Cache: {METADATA_CACHE}")
+    return cache
+
+
 def scan_all() -> dict[str, list[tuple[str, str]]]:
+    metadata = load_metadata()
     results: dict[str, list[tuple[str, str]]] = {}
     ann_pages: dict[str, set[str]] = defaultdict(set)
     ann_by_slug: dict[str, list[str]] = {}
     for path in sorted(TOPICS_DIR.glob("*/index.html")):
         slug = path.parent.name
         page = path.read_text(encoding="utf-8")
-        v, anns = scan_page(slug, page)
+        v, anns = scan_page(slug, page, metadata)
         results[slug] = v
         ann_by_slug[slug] = anns
         for a in anns:
@@ -174,7 +413,13 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--report", action="store_true", help="print every violation, not just regressions")
     ap.add_argument("--update-baseline", action="store_true", help="rewrite the baseline to current counts")
+    ap.add_argument("--fetch-metadata", action="store_true",
+                    help="fetch uncached curated URLs into data/topic_link_metadata.json first (network)")
+    ap.add_argument("--refresh", action="store_true", help="with --fetch-metadata, refetch every URL")
     args = ap.parse_args()
+
+    if args.fetch_metadata:
+        fetch_metadata(refresh=args.refresh)
 
     results = scan_all()
     counts = {s: len(v) for s, v in results.items() if v}

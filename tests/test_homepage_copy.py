@@ -103,3 +103,13 @@ def test_site_stats_live_counts_are_positive():
     assert stats["source_count"] > 0
     assert stats["edition_count"] > 0
     assert stats["voices_count"] > 0
+
+
+# ── masthead claim (Tom, 2026-11-12) ─────────────────────────────────────
+
+def test_masthead_claim_names_no_source_count():
+    root = Path(__file__).resolve().parent.parent
+    for path in (root / "frontend" / "template.html", root / "docs" / "index.html"):
+        html = path.read_text(encoding="utf-8")
+        assert '<p class="cc-masthead-claim">A daily ranked front page from across the evangelical web.</p>' in html
+        assert "evangelical sources.</p>" not in html
