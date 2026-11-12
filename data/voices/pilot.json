@@ -1,5 +1,5 @@
 {
-  "_about": "Voices pilot (Nov 2026). Drafted by Claude from each writer's own published bio or outlet author page; every bio fact has a source in bio_sources. Tom approved all five drafts on 2026-11-12 (reviewed: true). Rendered by scripts/build_voice_pilot.py into docs/voices/<slug>/index.html. Never use em dashes in any field. Batch 2 (seven entries) approved by Tom on 2026-11-12 after Meg's spot-check (reviewed: true). Batch 3: ten entries (Dallas Willard to Joe Carter) merged 2026-11-12 from branch voices-batch3 after Meg's spot-check and Tom's approval (reviewed: true). Tony Reinke followed the same day after his Desiring God picks were checked in a browser (reviewed: true); John Piper is held on that branch until his picks are checked.",
+  "_about": "Voices pilot (Nov 2026). Drafted by Claude from each writer's own published bio or outlet author page; every bio fact has a source in bio_sources. Tom approved all five drafts on 2026-11-12 (reviewed: true). Rendered by scripts/build_voice_pilot.py into docs/voices/<slug>/index.html. Never use em dashes in any field. Batch 2 (seven entries) approved by Tom on 2026-11-12 after Meg's spot-check (reviewed: true). Batch 3: ten entries (Dallas Willard to Joe Carter) merged 2026-11-12 from branch voices-batch3 after Meg's spot-check and Tom's approval (reviewed: true). Tony Reinke and John Piper followed the same day, one at a time, after their Desiring God picks were checked in a browser (reviewed: true).",
   "last_updated": "2026-11-12",
   "writers": [
     {
@@ -1520,6 +1520,110 @@
         "https://www.thegospelcoalition.org/blogs/kevin-deyoung/"
       ],
       "review_notes": "Christ Covenant Church's staff page opened in WebFetch but returns HTTP 403 to curl (bot block); the same facts are on the RTS and Clearly Reformed pages. WebFetch could not read the TGC profile page (curl returns 200), so the TGC blog archive is used for where_they_write instead. Book list is from the bio pages; the sanctification and inerrancy topic angles rest on book titles, not on a start_here pick. The TGC blog (DeYoung, Restless, and Reformed) shows no newer posts on its archive page; his current writing is at Clearly Reformed, whose article pages carry dates but the index does not."
+    },
+    {
+      "slug": "john-piper",
+      "name": "John Piper",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Founder and lead teacher of Desiring God | Author of Desiring God: Meditations of a Christian Hedonist | Writes on Christian Hedonism, God's sovereignty and suffering",
+      "bio": "John Piper is the founder and lead teacher of Desiring God and chancellor of Bethlehem College and Seminary. He became senior pastor of Bethlehem Baptist Church in Minneapolis in 1980 and served there nearly 33 years, and since 2013 he has served full time with Desiring God. He studied English literature at Wheaton College, earned a Bachelor of Divinity at Fuller Theological Seminary and a doctorate from the University of Munich, and taught biblical studies at Bethel College in Saint Paul for six years. His books include Desiring God: Meditations of a Christian Hedonist (1987), The Pleasures of God, Future Grace and Don't Waste Your Life.",
+      "bio_sources": [
+        {
+          "label": "Teacher profile, Desiring God",
+          "url": "https://www.desiringgod.org/about/teachers/john-piper"
+        },
+        {
+          "label": "Author page, Crossway",
+          "url": "https://www.crossway.org/authors/john-piper/"
+        },
+        {
+          "label": "Profile, The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/john-piper/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "Desiring God",
+          "url": "https://www.desiringgod.org/authors/john-piper"
+        },
+        {
+          "outlet": "The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/john-piper/"
+        },
+        {
+          "outlet": "Crossway (books)",
+          "url": "https://www.crossway.org/authors/john-piper/"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "We Want You to Be a Christian Hedonist!",
+          "url": "https://www.desiringgod.org/articles/we-want-you-to-be-a-christian-hedonist",
+          "outlet": "Desiring God",
+          "date": "2006-08-31",
+          "note": "Sets out Christian Hedonism in short form: God is most glorified in us when we are most satisfied in him."
+        },
+        {
+          "title": "What We Believe About the Five Points of Calvinism",
+          "url": "https://www.desiringgod.org/articles/what-we-believe-about-the-five-points-of-calvinism",
+          "outlet": "Desiring God",
+          "date": "1985-03-01",
+          "note": "Explains the historical roots and biblical case for total depravity, irresistible grace, limited atonement, unconditional election and perseverance."
+        },
+        {
+          "title": "Don’t Waste Your Cancer",
+          "url": "https://www.desiringgod.org/articles/dont-waste-your-cancer",
+          "outlet": "Desiring God",
+          "date": "2006-02-15",
+          "note": "Written on the eve of his prostate surgery, argues that God designs suffering for his people's good and lists ways a believer can waste or redeem it."
+        },
+        {
+          "title": "What Does It Mean to Seek the Lord?",
+          "url": "https://www.desiringgod.org/articles/what-does-it-mean-to-seek-the-lord",
+          "outlet": "Desiring God",
+          "date": "2009-08-19",
+          "note": "Explains seeking the Lord as seeking his manifest presence, and distinguishes that from God's constant omnipresence and covenant faithfulness."
+        },
+        {
+          "title": "We Know They Are Killing Children, All of Us Know",
+          "url": "https://www.desiringgod.org/articles/we-know-they-are-killing-children-all-of-us-know",
+          "outlet": "Desiring God",
+          "date": "2013-01-22",
+          "note": "Argues that the nation's guilt over abortion is heightened because pro-choice and pro-life Americans alike know abortion takes a child's life."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "predestination-free-will",
+          "angle": "The five points of Calvinism and God's sovereign grace."
+        },
+        {
+          "slug": "suffering-and-providence",
+          "angle": "God's design in suffering, including his own cancer."
+        },
+        {
+          "slug": "spiritual-disciplines",
+          "angle": "Seeking God's presence and finding satisfaction in him."
+        },
+        {
+          "slug": "abortion",
+          "angle": "The moral knowledge and guilt behind abortion in America."
+        }
+      ],
+      "related": [
+        "tony-reinke",
+        "david-mathis",
+        "mark-dever",
+        "tim-keller"
+      ],
+      "same_as": [
+        "https://www.desiringgod.org/authors/john-piper",
+        "https://www.desiringgod.org/about/teachers/john-piper",
+        "https://www.crossway.org/authors/john-piper/",
+        "https://www.thegospelcoalition.org/profile/john-piper/"
+      ],
+      "review_notes": "desiringgod.org returns HTTP 403 to WebFetch and to curl from this machine, so the DG teacher profile, author page and all five picks were read through the r.jina.ai reader proxy, which returned the full page text; a reviewer should open them in a browser. TGC and Crossway pages opened directly (200). Pick 5 headline on the page has an em dash between 'Killing Children' and 'All of Us Know', converted to a comma. Pick 3 keeps the page's curly apostrophe. Pick 2 is dated 1985-03-01 on DG and is also published as the book Five Points. The DG profile renders the 1987 subtitle as 'Meditations of Christian Hedonist'; the DG book listing reads 'Meditations of a Christian Hedonist', used here. Bethel College is named as on the DG page (now Bethel University). The TGC profile shows no article list (it loads dynamically); he is listed there as a Council member. Merge (Nov 12 2026): all five Desiring God picks checked in a real browser; title, byline and date match the draft. Pick 5's page headline is 'We Know They Are Killing Children' and 'All of Us Know' joined by a dash; the comma version is kept."
     },
     {
       "slug": "rc-sproul",
