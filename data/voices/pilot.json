@@ -1,5 +1,5 @@
 {
-  "_about": "Voices pilot (Nov 2026). Drafted by Claude from each writer's own published bio or outlet author page; every bio fact has a source in bio_sources. Tom approved all five drafts on 2026-11-12 (reviewed: true). Rendered by scripts/build_voice_pilot.py into docs/voices/<slug>/index.html. Never use em dashes in any field.",
+  "_about": "Voices pilot (Nov 2026). Drafted by Claude from each writer's own published bio or outlet author page; every bio fact has a source in bio_sources. Tom approved all five drafts on 2026-11-12 (reviewed: true). Rendered by scripts/build_voice_pilot.py into docs/voices/<slug>/index.html. Never use em dashes in any field. Batch 2 (seven entries) approved by Tom on 2026-11-12 after Meg's spot-check (reviewed: true).",
   "last_updated": "2026-11-12",
   "writers": [
     {
@@ -242,6 +242,390 @@
       "related": ["ed-welch", "paul-tripp", "tim-keller"],
       "same_as": ["https://www.ccef.org/people/david-powlison/"],
       "review_notes": "Deceased (CCEF memorial page). No outreach. No digest bylines in our archive, so the page has no Recent pieces section. The JBC issue dates for picks 1 and 5 are not shown on the CCEF pages; the 2019 for pick 5 is inferred from CCEF's note that the remarks were for the May 2019 Westminster graduation."
+    },
+    {
+      "slug": "jeremy-kimble",
+      "name": "Jeremy Kimble",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Professor of systematic and applied theology at Cedarville University | Author of Behold and Become | Writes for The Gospel Coalition and Christ Over All on Scripture, doctrine, and the church",
+      "bio": "Jeremy Kimble is professor of systematic and applied theology at Cedarville University and holds a PhD from Southeastern Baptist Theological Seminary. He is the author of Behold and Become: Reading Scripture for Transformation, How Can I Get More Out of My Bible Reading?, and 40 Questions About Church Membership and Discipline, and coauthor with Ched Spellman of Invitation to Biblical Theology. He served in pastoral ministry for eight years and is a member and minister at University Baptist Church.",
+      "bio_sources": [
+        {"label": "Author bio, The Gospel Coalition", "url": "https://www.thegospelcoalition.org/article/lies-lion-kings/"},
+        {"label": "Profile, The Gospel Coalition", "url": "https://www.thegospelcoalition.org/profile/jeremy-kimble/"},
+        {"label": "Faculty page, Cedarville University", "url": "https://cedarville.edu/academics/schools/biblical-and-theological-studies/faculty-staff/kimble-jeremy"},
+        {"label": "Author page, Christ Over All", "url": "https://christoverall.com/author/jeremy-m-kimble/"}
+      ],
+      "where_they_write": [
+        {"outlet": "The Gospel Coalition", "url": "https://www.thegospelcoalition.org/profile/jeremy-kimble/"},
+        {"outlet": "Christ Over All", "url": "https://christoverall.com/author/jeremy-m-kimble/"},
+        {"outlet": "Themelios", "url": "https://www.thegospelcoalition.org/themelios/author/jeremy-kimble/"}
+      ],
+      "start_here": [
+        {
+          "title": "Lies and a Lion: Making Sense of 1 Kings 13",
+          "url": "https://www.thegospelcoalition.org/article/lies-lion-kings/",
+          "outlet": "The Gospel Coalition",
+          "date": "2026-04-15",
+          "note": "Reads the strange story of the man of God and the old prophet within the structure of 1 and 2 Kings and argues it calls God's people to receive and fully obey his word rather than follow religious leaders astray."
+        },
+        {
+          "title": "The Sovereignty of God",
+          "url": "https://christoverall.com/article/concise/the-sovereignty-of-god/",
+          "outlet": "Christ Over All",
+          "date": "2026-02-06",
+          "note": "Sets out God's sovereignty as final authority over creation, human decisions, and salvation, links it to providence and concurrence, and argues against process and open theism."
+        },
+        {
+          "title": "How Should One Understand One, Holy, Catholic, and Apostolic?",
+          "url": "https://christoverall.com/article/concise/how-should-one-understand-one-holy-catholic-and-apostolic/",
+          "outlet": "Christ Over All",
+          "date": "2025-07-16",
+          "note": "Explains the four marks of the church in the Nicene Creed and argues that Protestants can affirm each one without accepting Roman Catholic claims."
+        }
+      ],
+      "topics": [
+        {"slug": "biblical-literacy", "angle": "Reading Scripture for transformation and getting more from Bible reading."},
+        {"slug": "church-discipline", "angle": "The biblical and historical case for church discipline, from 1 Corinthians 5 to Jonathan Edwards."},
+        {"slug": "membership", "angle": "What church membership is and why it matters."},
+        {"slug": "predestination-free-will", "angle": "God's sovereignty over human decisions and salvation."}
+      ],
+      "related": ["jonathan-leeman", "jen-wilkin", "mark-dever"],
+      "same_as": ["https://www.thegospelcoalition.org/profile/jeremy-kimble/", "https://christoverall.com/author/jeremy-m-kimble/", "https://cedarville.edu/academics/schools/biblical-and-theological-studies/faculty-staff/kimble-jeremy"],
+      "review_notes": "Old page called him an author and apologist; he is a Cedarville theology professor. TGC dates the curated piece Apr 15, 2026 (we curated it Apr 19). Themelios pieces left out because their pages show no date."
+    },
+    {
+      "slug": "christopher-gehrz",
+      "name": "Christopher Gehrz",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Professor of history at Bethel University | Author of a religious biography of Charles Lindbergh | Writes for Mere Orthodoxy and The Pietist Schoolman on Christianity, history, and education",
+      "bio": "Christopher Gehrz is professor of history at Bethel University in St. Paul, Minnesota, where he has taught since 2003, and holds a PhD in history from Yale University. He is the author of Charles Lindbergh: A Religious Biography of America's Most Infamous Pilot (2021) and coauthor of The Pietist Option: Hope for the Renewal of Christianity (2017). He writes about Christianity, history, and education in his Substack newsletter, The Pietist Schoolman.",
+      "bio_sources": [
+        {"label": "Author bio, Mere Orthodoxy", "url": "https://mereorthodoxy.com/tag/author-christopher-gehrz/"},
+        {"label": "Faculty page, Bethel University", "url": "https://www.bethel.edu/academics/faculty/gehrz-christopher"},
+        {"label": "About page, The Pietist Schoolman", "url": "https://chrisgehrz.substack.com/about"}
+      ],
+      "where_they_write": [
+        {"outlet": "Mere Orthodoxy", "url": "https://mereorthodoxy.com/tag/author-christopher-gehrz/"},
+        {"outlet": "The Pietist Schoolman (Substack)", "url": "https://chrisgehrz.substack.com/about"},
+        {"outlet": "Current", "url": "https://currentpub.com/author/patreon_4709580"}
+      ],
+      "start_here": [
+        {
+          "title": "Christians in the Age of Hitler",
+          "url": "https://mereorthodoxy.com/christians-in-the-age-of-hitler/",
+          "outlet": "Mere Orthodoxy",
+          "date": "2026-03-25",
+          "note": "Reviews Alec Ryrie's The Age of Hitler and How We Will Survive It, which holds that the Western moral consensus built on opposing Nazism is weakening, and asks what role Christians might play in what follows."
+        },
+        {
+          "title": "The Moral Vision of American Leaders",
+          "url": "https://currentpub.com/2024/07/30/review-the-moral-vision-of-american-leaders/",
+          "outlet": "Current",
+          "date": "2024-07-30",
+          "note": "Reviews Marvin Olasky's Moral Vision, which uses short biographies of presidents to argue that character should guide voters, and questions both its omissions and its likely effect on committed voters."
+        },
+        {
+          "title": "The Challenge of Graven Images",
+          "url": "https://currentpub.com/2021/07/08/the-challenge-of-graven-images/",
+          "outlet": "Current",
+          "date": "2021-07-08",
+          "note": "Looks at the Charles Lindbergh statue at the Minnesota State Capitol and argues that historians should portray his full record, including his eugenics and antisemitism, while honoring the image of God in the people he dismissed."
+        }
+      ],
+      "topics": [
+        {"slug": "church-history", "angle": "Pietism and its place in the history of evangelicalism."},
+        {"slug": "evangelicalism", "angle": "A historian's reading of evangelical identity and renewal."},
+        {"slug": "christian-education", "angle": "The purpose and future of Christian higher education."},
+        {"slug": "politics-and-the-church", "angle": "Character, democracy, and the moral consensus of the postwar West."}
+      ],
+      "related": ["thomas-s-kidd", "daniel-k-williams", "jake-meador"],
+      "same_as": ["https://mereorthodoxy.com/tag/author-christopher-gehrz/", "https://chrisgehrz.substack.com/about", "https://currentpub.com/author/patreon_4709580", "https://www.bethel.edu/academics/faculty/gehrz-christopher"],
+      "review_notes": "The duplicate page chris-gehrz was merged into this one on 2026-11-12 (merge_duplicate_voices.py: noindex redirect stub, removed from sitemap and index). Old bio wrongly called him author of The Pietist Vision of Christian Higher Education (Bethel lists him as editor). Substack posts are mostly paywalled, so picks come from Mere Orthodoxy and Current."
+    },
+    {
+      "slug": "glenn-a-moots",
+      "name": "Glenn A. Moots",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Professor of political science and philosophy at Northwood University | Author of Politics Reformed | Writes for American Reformer on Protestant political thought and the American founding",
+      "bio": "Glenn A. Moots is Professor and Department Chair of Political Science and Philosophy at Northwood University, where he has taught since 1993. He is the author of Politics Reformed: The Anglo-American Legacy of Covenant Theology (2010) and coeditor, with Phillip Hamilton, of Justifying Revolution: Law, Virtue, and Violence in the American War of Independence (2018). He holds a PhD from Louisiana State University and a BA from the University of Michigan. He writes for American Reformer and Law & Liberty on Protestant political thought, religious liberty, and the American founding.",
+      "bio_sources": [
+        {"label": "Faculty directory, Northwood University", "url": "https://www.northwood.edu/directory/faculty/glenn-moots/"},
+        {"label": "Author note, American Reformer", "url": "https://archive.americanreformer.org/2026/05/how-radical-was-the-american-revolution/"},
+        {"label": "Author page, American Reformer", "url": "https://archive.americanreformer.org/author/glenn-moots/"},
+        {"label": "Author page, Law & Liberty", "url": "https://lawliberty.org/author/glenn-moots/"}
+      ],
+      "where_they_write": [
+        {"outlet": "American Reformer", "url": "https://archive.americanreformer.org/author/glenn-moots/"},
+        {"outlet": "Law & Liberty", "url": "https://lawliberty.org/author/glenn-moots/"}
+      ],
+      "start_here": [
+        {
+          "title": "How Radical Was the American Revolution?",
+          "url": "https://archive.americanreformer.org/2026/05/how-radical-was-the-american-revolution/",
+          "outlet": "American Reformer",
+          "date": "2026-05-19",
+          "note": "Adapted from a Hillsdale College lecture, it questions Bernard Bailyn's radical reading of the Revolution and argues that the convictions of colonial Christians, including Jonathan Mayhew's 1750 sermon on resisting tyrants, were an essential cause of independence."
+        },
+        {
+          "title": "Protestant Constitutionalism and American Independence",
+          "url": "https://archive.americanreformer.org/2026/07/protestant-constitutionalism-and-american-independence/",
+          "outlet": "American Reformer",
+          "date": "2026-07-09",
+          "note": "Argues that the Declaration of Independence drew on an older Protestant tradition of resistance, including readings of Romans 13 and the duty of lesser magistrates to restrain a tyrant, rather than on new principles original to Jefferson."
+        },
+        {
+          "title": "Why Does America Have Religious Liberty?",
+          "url": "https://archive.americanreformer.org/2024/04/why-does-america-have-religious-liberty/",
+          "outlet": "American Reformer",
+          "date": "2024-04-23",
+          "note": "Reviews Vincent Phillip Muñoz's Religious Liberty and the American Founding and argues that its natural rights reading credits Jefferson too heavily and leaves out the wider Protestant thinking on church and civil magistrate."
+        },
+        {
+          "title": "Was the Protestant Reformation a Radical Revolution?",
+          "url": "https://archive.americanreformer.org/2021/11/was-the-protestant-reformation-a-radical-revolution/",
+          "outlet": "American Reformer",
+          "date": "2021-11-05",
+          "note": "Responds to critics such as Patrick Deneen and Brad Gregory by arguing that the Magisterial Reformation preserved social order and classical virtue rather than seeding individualism and liberalism."
+        }
+      ],
+      "topics": [
+        {"slug": "politics-and-the-church", "angle": "Protestant resistance theory and the case for American independence."},
+        {"slug": "religious-liberty", "angle": "How religious liberty emerged at the American founding."},
+        {"slug": "church-history", "angle": "Whether the Reformation was a radical break with Christian social order."},
+        {"slug": "covenant-theology", "angle": "Covenant theology's legacy in Anglo-American politics."}
+      ],
+      "related": ["joseph-rigney", "stephen-wolfe", "brandon-corley", "aaron-m-renn"],
+      "same_as": ["https://archive.americanreformer.org/author/glenn-moots/", "https://lawliberty.org/author/glenn-moots/", "https://www.northwood.edu/directory/faculty/glenn-moots/"],
+      "review_notes": "Old page said Grove City College; every source says Northwood University. Three book titles in the old data were not found anywhere and were dropped. Publisher dates (May 19, Jul 9) differ from our curated dates (May 28, Jul 20)."
+    },
+    {
+      "slug": "james-abernathy",
+      "name": "James Abernathy",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Attorney in First Amendment litigation | Writes for The Gospel Coalition and on Substack on disability, the body, and the dignity of dependence",
+      "bio": "James Abernathy is an attorney who specializes in litigation defending First Amendment rights. He holds an MA from Fuller Theological Seminary and a JD from Regent University School of Law. A quadriplegic since a spinal cord injury in high school, he writes and speaks to advocate for the body and the dignity of dependence.",
+      "bio_sources": [
+        {"label": "Profile, The Gospel Coalition", "url": "https://www.thegospelcoalition.org/profile/james-abernathy/"},
+        {"label": "Author note, The Gospel Coalition", "url": "https://www.thegospelcoalition.org/article/why-disabled-person/"},
+        {"label": "About page, James Abernathy (Substack)", "url": "https://jamesabernathy.substack.com/about"}
+      ],
+      "where_they_write": [
+        {"outlet": "The Gospel Coalition", "url": "https://www.thegospelcoalition.org/profile/james-abernathy/"},
+        {"outlet": "Substack", "url": "https://jamesabernathy.substack.com/"}
+      ],
+      "start_here": [
+        {
+          "title": "Why I'm a Disabled Person, Not a Person with a Disability",
+          "url": "https://www.thegospelcoalition.org/article/why-disabled-person/",
+          "outlet": "The Gospel Coalition",
+          "date": "2026-03-31",
+          "note": "Argues that the body is part of a person's identity as God's image bearer, and so rejects the person-first language that separates dignity from disability."
+        },
+        {
+          "title": "Broken Bodies Make Beautiful Temples",
+          "url": "https://www.thegospelcoalition.org/article/broken-bodies-beautiful-temples/",
+          "outlet": "The Gospel Coalition",
+          "date": "2026-10-25",
+          "note": "Argues from the body as a temple of the Holy Spirit that bodies marked by disability or illness belong to God and should be trusted to his purposes, not remade by the self."
+        },
+        {
+          "title": "My Disabled Body is My Forever Body (Being God's Image, Part V)",
+          "url": "https://jamesabernathy.substack.com/p/being-gods-image-part-v-my-disabled",
+          "outlet": "Substack",
+          "date": "2026-06-15",
+          "note": "Argues that God will raise and glorify the same bodies believers have now, so the present body, including its disability, should be honored rather than despised."
+        },
+        {
+          "title": "Will There Be Disability at the Resurrection? Part 1: Six Guiding Principles",
+          "url": "https://jamesabernathy.substack.com/p/will-there-be-disability-at-the-resurrection",
+          "outlet": "Substack",
+          "date": "2026-08-06",
+          "note": "Sets out six scriptural principles for asking whether disability remains after the resurrection, beginning with competing definitions of disability."
+        }
+      ],
+      "topics": [
+        {"slug": "suffering-and-providence", "angle": "Disability, dependence, and God's purposes in the body."},
+        {"slug": "gender-and-biblical-anthropology", "angle": "The body as part of what it means to bear God's image."},
+        {"slug": "heaven-hell-eternity", "angle": "Whether disability remains in the resurrection body."}
+      ],
+      "related": ["joni-eareckson-tada", "vaneetha-rendall-risner"],
+      "same_as": ["https://www.thegospelcoalition.org/profile/james-abernathy/", "https://jamesabernathy.substack.com/"],
+      "review_notes": "The quadriplegia line comes from his own Substack About page. Family details (husband, father of two) are on the TGC profile but left out. Employer not named in any source."
+    },
+    {
+      "slug": "derek-rishmawy",
+      "name": "Derek Rishmawy",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "RUF campus minister at UC Irvine | Cohost of the Mere Fidelity podcast | Writes for The Gospel Coalition and Mere Orthodoxy on Christian hope, doctrine, and ministry to young adults",
+      "bio": "Derek Rishmawy (PhD, Trinity Evangelical Divinity School) is the Reformed University Fellowship (RUF) campus minister at the University of California, Irvine. He contributes to Mere Orthodoxy, Christianity Today, and The Gospel Coalition, and writes at his own blog, Reformedish. He cohosts the Mere Fidelity podcast and hosts the What Christians Believe podcast at byFaith.",
+      "bio_sources": [
+        {"label": "Profile, The Gospel Coalition", "url": "https://www.thegospelcoalition.org/profile/derek-rishmawy/"},
+        {"label": "Author note, The Gospel Coalition", "url": "https://www.thegospelcoalition.org/article/doomers-find-hope/"},
+        {"label": "Author note, Mere Orthodoxy", "url": "https://mereorthodoxy.com/ministry-after-the-boomer-apocalypse/"},
+        {"label": "Author note, Christianity Today", "url": "https://www.christianitytoday.com/2020/11/idols-worshiping-false-god/"}
+      ],
+      "where_they_write": [
+        {"outlet": "The Gospel Coalition", "url": "https://www.thegospelcoalition.org/profile/derek-rishmawy/"},
+        {"outlet": "Mere Orthodoxy", "url": "https://mereorthodoxy.com/tag/author-derek-rishmawy/"}
+      ],
+      "start_here": [
+        {
+          "title": "Where Doomers Can Find Hope",
+          "url": "https://www.thegospelcoalition.org/article/doomers-find-hope/",
+          "outlet": "The Gospel Coalition",
+          "date": "2026-07-22",
+          "note": "Argues that Christian hope begins with honesty about how often history has brought disaster and rests on God's restraint, renewal in Christ, and allegiance to his kingdom over earthly institutions."
+        },
+        {
+          "title": "Ministry After the Boomer Apocalypse",
+          "url": "https://mereorthodoxy.com/ministry-after-the-boomer-apocalypse/",
+          "outlet": "Mere Orthodoxy",
+          "date": "2026-07-06",
+          "note": "Remarks to the PCA Next Generation Forum arguing that the coming generational turnover and wider dechurching call for exegetical, catechetical, and apologetic preaching, hospitality, and deliberate pastor training."
+        },
+        {
+          "title": "In Praise of My Youth Pastor",
+          "url": "https://mereorthodoxy.com/in-praise-of-my-youth-pastor/",
+          "outlet": "Mere Orthodoxy",
+          "date": "2026-08-19",
+          "note": "A memorial essay on the youth pastor who let him preach as a teenager and later mentored him, presented as a model of investing in young people."
+        },
+        {
+          "title": "Gospel Hope for Gen-Z Ministry",
+          "url": "https://www.thegospelcoalition.org/podcasts/tgc-podcast/gospel-hope-gen-z-ministry/",
+          "outlet": "The Gospel Coalition (TGC25 panel)",
+          "date": "2026-10-23",
+          "note": "Panel with Rachel Gilson, Alex Harris, and Kori Porter on openness to the gospel among Gen Z and the challenges of discipling new believers into the local church."
+        }
+      ],
+      "topics": [
+        {"slug": "eschatology", "angle": "Christian hope against cultural doomerism."},
+        {"slug": "missions-and-evangelism", "angle": "Campus ministry and reaching Gen Z."},
+        {"slug": "pastoral-ministry", "angle": "Preaching and pastor training as the church changes generations."}
+      ],
+      "related": ["matthew-lee-anderson", "andrew-wilson", "rachel-gilson", "alex-harris"],
+      "same_as": ["https://www.thegospelcoalition.org/profile/derek-rishmawy/", "https://mereorthodoxy.com/tag/author-derek-rishmawy/", "https://derekzrishmawy.com/"],
+      "review_notes": "TGC panel page dates Gospel Hope for Gen-Z Ministry Oct 23, 2026; the approved alex-harris entry cites the YouTube video as Oct 22. Forthcoming IVP book and PCA ordination not verified (IVP returned 403). Christianity Today author page returns 404, but CT articles bylined by him were verified on 2026-11-12 (HTTP 200, meta author Derek Rishmawy, RUF UC Irvine author note): You're Probably Worshiping a False God (Nov 2020), cited in bio_sources, and When It Comes to Sacrifice, God Doesn't Play Fair (Sep 2020)."
+    },
+    {
+      "slug": "j-a-medders",
+      "name": "J. A. Medders",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Director of theology and content, Send Network | Author of Humble Calvinism and Gospel Formed | Writes at Spiritual Theology on Spurgeon, the Puritans, and the Christian life",
+      "bio": "J. A. Medders is the director of theology and content for Send Network and the general editor for New Churches. He is also a fellow of The Spurgeon Library and visiting professor of Christian studies at Midwestern Baptist Theological Seminary. He earned a PhD in biblical spirituality at The Southern Baptist Theological Seminary under Donald S. Whitney. He is the author of Gospel Formed and Humble Calvinism, coauthor of The Soul-Winning Church, and writes the Spiritual Theology newsletter.",
+      "bio_sources": [
+        {"label": "About page, Spiritual Theology (Substack)", "url": "https://www.spiritualtheology.net/about"},
+        {"label": "Author page, The Good Book Company", "url": "https://www.thegoodbook.com/authors/ja-medders"},
+        {"label": "Contributor page, New Churches", "url": "https://www.newchurches.com/contributor/jeff-medders/"},
+        {"label": "Profile, The Gospel Coalition", "url": "https://www.thegospelcoalition.org/profile/j-a-medders/"}
+      ],
+      "where_they_write": [
+        {"outlet": "Spiritual Theology (Substack)", "url": "https://www.spiritualtheology.net/"},
+        {"outlet": "New Churches", "url": "https://www.newchurches.com/contributor/jeff-medders/"},
+        {"outlet": "The Gospel Coalition", "url": "https://www.thegospelcoalition.org/profile/j-a-medders/"}
+      ],
+      "start_here": [
+        {
+          "title": "It is Finished!",
+          "url": "https://www.spiritualtheology.net/p/it-is-finished",
+          "outlet": "Spiritual Theology",
+          "date": "2026-04-03",
+          "note": "A Good Friday meditation on John 19:30 arguing that every Old Testament sacrifice, symbol, and promise is fulfilled in Christ's dying cry."
+        },
+        {
+          "title": "How the Puritans Helped J. I. Packer",
+          "url": "https://www.spiritualtheology.net/p/how-the-puritans-helped-j-i-packer",
+          "outlet": "Spiritual Theology",
+          "date": "2026-07-15",
+          "note": "Draws on J. I. Packer's account of seven ways the Puritans shaped him and recommends seven Puritan books as starting points."
+        },
+        {
+          "title": "His Name Stands Above Them All",
+          "url": "https://www.spiritualtheology.net/p/his-name-stands-above-them-all",
+          "outlet": "Spiritual Theology",
+          "date": "2026-07-06",
+          "note": "Walks through the biblical names of God and sets them against the rulers and ideas they outlast, ending with Psalm 148:13."
+        }
+      ],
+      "topics": [
+        {"slug": "atonement", "angle": "The finished work of Christ on the cross."},
+        {"slug": "church-history", "angle": "Spurgeon and the Puritans as guides for the Christian life."},
+        {"slug": "spiritual-disciplines", "angle": "Biblical spirituality drawn from older Reformed writers."},
+        {"slug": "church-planting", "angle": "Theological training for church planters through Send Network."}
+      ],
+      "related": ["don-whitney", "brandon-d-smith"],
+      "same_as": ["https://www.spiritualtheology.net/", "https://www.thegospelcoalition.org/profile/j-a-medders/", "https://www.newchurches.com/contributor/jeff-medders/", "https://jamedders.com/"],
+      "review_notes": "Old affiliation (Send Network, MBTS visiting professor) is confirmed. The old book list (Sola Scriptura..., The Expository Preacher) was not found and was dropped. It is Finished! is dated Apr 3, 2026 on Substack. Picks are his own essays, not the Spurgeon Saturday quote posts."
+    },
+    {
+      "slug": "joshua-budimlic",
+      "name": "Joshua Budimlic",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Teacher and writer | Blogs at Iotas in Eternity | Writes for The Gospel Coalition Canada and SOLA Network on conversion, grief, and the hope of heaven",
+      "bio": "Joshua Budimlic is a teacher and writer who, in his own words, hopes to bring together his passion for theology, education, and literature in serving the next generation. He blogs at Iotas in Eternity, where he often writes about C.S. Lewis, heaven, and the life and death of his father, and his essays have also appeared at The Gospel Coalition Canada and SOLA Network.",
+      "bio_sources": [
+        {"label": "Profile, The Gospel Coalition Canada", "url": "https://ca.thegospelcoalition.org/profile/joshua-budimlic/"},
+        {"label": "Author page, SOLA Network", "url": "https://sola.network/article/author/joshuabudimlic/"},
+        {"label": "Author page, Iotas in Eternity", "url": "https://www.joshuabudimlic.com/author"}
+      ],
+      "where_they_write": [
+        {"outlet": "Iotas in Eternity", "url": "https://www.joshuabudimlic.com/"},
+        {"outlet": "The Gospel Coalition Canada", "url": "https://ca.thegospelcoalition.org/profile/joshua-budimlic/"},
+        {"outlet": "SOLA Network", "url": "https://sola.network/article/author/joshuabudimlic/"}
+      ],
+      "start_here": [
+        {
+          "title": "The Watchmaker's Wager",
+          "url": "https://www.joshuabudimlic.com/post/the-watchmaker-s-wager",
+          "outlet": "Iotas in Eternity",
+          "date": "2026-04-14",
+          "note": "Sets Pascal's Wager beside his late father's habit, as a watchmaker, of asking elderly customers whether they had been born again, and tells how one of those conversations came back to him years later."
+        },
+        {
+          "title": "Great Expectations",
+          "url": "https://www.joshuabudimlic.com/post/great-expectations",
+          "outlet": "Iotas in Eternity",
+          "date": "2026-07-14",
+          "note": "Reads the healed man of Mark 5, whom Jesus sent home rather than letting him follow, as a word to Christians whose lives stay in one ordinary place."
+        },
+        {
+          "title": "How Pleasantly the Lines Have Fallen",
+          "url": "https://www.joshuabudimlic.com/post/how-pleasantly-the-lines-have-fallen",
+          "outlet": "Iotas in Eternity",
+          "date": "2026-07-22",
+          "note": "Works from Psalm 16 to argue that God himself, not a person's circumstances, is the believer's portion, so every Christian's lot has fallen in pleasant places."
+        },
+        {
+          "title": "Thoroughly Converted: Enslaving the Inner Man for the Glory of Christ",
+          "url": "https://ca.thegospelcoalition.org/article/thoroughly-converted-enslaving-the-inner-man-for-the-glory-of-christ/",
+          "outlet": "The Gospel Coalition Canada",
+          "date": "2025-10-21",
+          "note": "Starts from Walter Hooper's description of C.S. Lewis as the most thoroughly converted man he knew and argues that this is a matter of sanctification, not of being more or less justified."
+        },
+        {
+          "title": "The Land of Many Meetings",
+          "url": "https://sola.network/article/the-land-of-many-meetings/",
+          "outlet": "SOLA Network",
+          "date": "2024-11-25",
+          "note": "Recalls his father falling ill on Thanksgiving Day and looks ahead to the reunion of believers with Christ and with those who have died before them."
+        }
+      ],
+      "topics": [
+        {"slug": "sanctification", "angle": "What it means to be thoroughly converted, after C.S. Lewis."},
+        {"slug": "grief-and-lament", "angle": "Writing through his father's illness and death."},
+        {"slug": "heaven-hell-eternity", "angle": "Heaven as the reunion that earthly longing points to."},
+        {"slug": "missions-and-evangelism", "angle": "Everyday witness in his father's work as a watchmaker."}
+      ],
+      "related": ["randy-alcorn", "matt-mccullough", "scott-hubbard"],
+      "same_as": ["https://ca.thegospelcoalition.org/profile/joshua-budimlic/", "https://sola.network/article/author/joshuabudimlic/", "https://www.joshuabudimlic.com/author"],
+      "review_notes": "Curated via The Aquila Report, whose pages return 403. Identity matched by the same titles on his own blog, posted 6 to 7 days earlier. Picks link to the original publications, never Aquila. Where he teaches is not stated in any source. Church name per TGC Canada (SOLA says Grandview Baptist Church)."
     }
   ]
 }
