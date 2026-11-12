@@ -232,11 +232,17 @@ def test_topic_block_needs_anchor():
 
 # ── Pilot data file ──────────────────────────────────────────────────────────
 
-def test_pilot_data_has_the_five_all_reviewed():
-    # Tom approved all five on 2026-11-12; abby-silva was retired (posting account).
-    assert set(WRITERS) == {"dawn-sherillporter", "alex-harris", "brandon-corley",
-                            "chandler-vannoy", "david-powlison"}
-    assert all(w["reviewed"] is True for w in WRITERS.values())
+APPROVED = {"dawn-sherillporter", "alex-harris", "brandon-corley", "chandler-vannoy", "david-powlison"}
+BATCH2 = {"jeremy-kimble", "christopher-gehrz", "glenn-a-moots", "james-abernathy",
+          "derek-rishmawy", "j-a-medders", "joshua-budimlic"}
+
+
+def test_pilot_data_has_the_five_reviewed_and_batch2_drafts():
+    # Tom approved five on 2026-11-12; abby-silva was retired (posting account).
+    # Batch 2 drafts stay unreviewed until Tom signs off.
+    assert set(WRITERS) == APPROVED | BATCH2
+    assert all(WRITERS[s]["reviewed"] is True for s in APPROVED)
+    assert all(WRITERS[s]["reviewed"] is False for s in BATCH2)
 
 
 def test_pilot_data_never_uses_em_dashes():
@@ -280,6 +286,7 @@ def test_retired_posting_account_redirects_to_voices():
 def test_built_pilot_pages_are_static_and_dash_free(slug):
     page = (ROOT / "docs" / "voices" / slug / "index.html").read_text(encoding="utf-8")
     assert "—" not in page
-    assert 'data-cc-voice-pilot="reviewed"' in page
+    state = "reviewed" if WRITERS[slug]["reviewed"] else "draft"
+    assert f'data-cc-voice-pilot="{state}"' in page
     if slug in ("dawn-sherillporter", "brandon-corley", "chandler-vannoy"):
         assert page.count('class="cc-recent-item"') >= 1
