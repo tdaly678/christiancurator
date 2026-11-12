@@ -143,7 +143,7 @@
     "slug": "john-baker",
     "name": "John Baker",
     "initials": "JB",
-    "role": "Founder of Celebrate Recovery (1949–2021)",
+    "role": "Founder of Celebrate Recovery (1949 to 2021)",
     "affiliation": "Saddleback Church; Celebrate Recovery",
     "bio": "John Baker (1948-2021) was the founder of Celebrate Recovery, a revolutionary Christ-centered 12-step program that destigmatized addiction and recovery in evangelical churches. After struggling with his own alcoholism and finding that secular AA meetings offered no space for faith while church small groups offered no safe place for discussing addiction, Baker created a biblical alternative at Saddleback Church in 1991 that bridged both worlds.\n\nCombining Christian principles with the proven 12-step structure, Celebrate Recovery grew to impact over 7 million people across 35,000 churches worldwide, fundamentally changing how evangelicals address recovery and brokenness. Baker's legacy redefined evangelical compassion and vulnerability, opening church doors to those struggling with addiction, codependency, and other life-controlling issues. He died unexpectedly in February 2021 at age 72, leaving behind a movement that continues to demonstrate Christ's healing power.",
     "education": "Fuller Theological Seminary",
@@ -157,7 +157,8 @@
         "title": "Life's Healing Choices",
         "amazon_url": "https://www.amazon.com/s?k=Life%27s+Healing+Choices+John+Baker"
       }
-    ]
+    ],
+    "bio_sources": []
   },
   {
     "name": "Nick Batzig",
@@ -376,13 +377,19 @@
   {
     "name": "Emily Brown",
     "slug": "emily-brown",
-    "bio": "Emily M. Brown is an ordained pastor and preacher who earned her Master of Divinity from Union Theological Seminary in 2010, receiving the David H. C. Read Memorial Preacher/Scholar Award for excellence in preaching and biblical scholarship. She has served as Pastoral Associate at Broadway United Church of Christ and as Community Minister at Judson Memorial Church in New York City.",
-    "affiliation": "Broadway United Church of Christ, Judson Memorial Church",
-    "role": "Ordained pastor and preacher",
-    "education": "Master of Divinity, Union Theological Seminary (2010)",
-    "website": "https://www.emilybrownwriter.com/",
+    "bio": "Emily Brown writes for RELEVANT magazine, covering culture, music and justice stories.",
+    "affiliation": "RELEVANT",
+    "role": "Writer",
+    "education": "",
+    "website": "https://relevantmagazine.com/author/relevantemily/",
     "books": [],
-    "initials": "EB"
+    "initials": "EB",
+    "faqs": [],
+    "bio_sources": [
+      "https://relevantmagazine.com/author/relevantemily/",
+      "https://relevantmagazine.com/culture/why-hopeful-skepticism-is-the-antidote-to-cynicism/",
+      "https://relevantmagazine.com/culture/music/1k-phew-thinks-christian-hip-hop-is-on-the-verge-of-something-big/"
+    ]
   },
   {
     "slug": "michael-brown",
@@ -1430,13 +1437,14 @@
   {
     "name": "Shelby Holliday",
     "slug": "shelby-holliday",
-    "bio": "Shelby Holliday is a journalist and on-air correspondent known for her work covering international news and faith-related stories with depth and integrity. Her reporting has taken her across the globe to document stories of resilience, hope, and human dignity from a perspective informed by Christian values.",
+    "bio": "Shelby Holliday is a journalist whose reporting has appeared in Wall Street Journal.",
     "affiliation": "Wall Street Journal",
-    "role": "Journalist & Correspondent",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "SH"
+    "initials": "SH",
+    "faqs": []
   },
   {
     "name": "Jason Horowitz",
@@ -1474,30 +1482,17 @@
   {
     "name": "Ben Hubbard",
     "slug": "ben-hubbard",
-    "bio": "Istanbul Bureau Chief at The New York Times and Middle East correspondent with over a decade of experience. Finalist for 2013 Pulitzer Prize in International Reporting for Syria coverage.",
+    "bio": "Ben Hubbard is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Bureau Chief & Correspondent",
-    "education": "University of California, Berkeley (MA); Northwestern University (BA); American University in Cairo (Arabic Language & Literature)",
+    "role": "Journalist",
+    "education": "",
     "website": "https://twitter.com/NYTBen",
     "books": [],
     "initials": "BH",
-    "known_for": "Leading New York Times coverage of Turkey and more than a decade of Middle East reporting.",
-    "current_role": "Istanbul Bureau Chief, The New York Times",
+    "known_for": "",
+    "current_role": "",
     "deceased": false,
-    "faqs": [
-      {
-        "q": "Who is Ben Hubbard?",
-        "a": "Ben Hubbard is the Istanbul bureau chief of The New York Times, leading coverage of Turkey. A veteran Middle East correspondent, he has reported from Lebanon, Syria, Iraq, Saudi Arabia, Egypt, and Yemen, and was a finalist for the Pulitzer Prize for his Syria coverage."
-      },
-      {
-        "q": "Is Ben Hubbard a Christian author?",
-        "a": "No. Hubbard is a mainstream news journalist, and his public work does not indicate an evangelical affiliation. His Middle East reporting, including coverage of religious minorities and conflict in the region, is sometimes shared in Christian news digests."
-      },
-      {
-        "q": "What does Ben Hubbard cover?",
-        "a": "He covers Turkey and the broader Middle East for The New York Times, with earlier postings as Beirut bureau chief. He is also the author of MBS, a book on Saudi Crown Prince Mohammed bin Salman."
-      }
-    ]
+    "faqs": []
   },
   {
     "name": "Reuben Hunter",
@@ -1529,30 +1524,33 @@
   {
     "name": "Scott James",
     "slug": "scott-james",
-    "bio": "Scott James is a pediatric infectious disease physician at University of Alabama at Birmingham and an author of children's books exploring Christian faith and illness. He serves as an elder at The Church at Brook Hills in Birmingham, Alabama.",
-    "affiliation": "University of Alabama at Birmingham",
-    "role": "Pediatric infectious disease physician and author",
-    "education": "University of South Florida Morsani College of Medicine",
+    "bio": "Scott James is a pediatric infectious diseases physician in Birmingham, Alabama, and an elder at The Church at Brook Hills. He has written several books for families and children, including God Cares for Me: Helping Children Trust God When They're Sick, Mission Accomplished: A Two-Week Family Easter Devotional, Where Is Wisdom? and The Littlest Watchman.",
+    "affiliation": "The Church at Brook Hills",
+    "role": "Physician & Author",
+    "education": "",
     "website": "https://www.thegospelcoalition.org/profile/scott-james/",
     "books": [
       {
-        "title": "The Expected One: Anticipating All of Jesus in the Advent",
-        "amazon_url": "https://www.amazon.com/s?k=The+Expected+One+Anticipating+Jesus+Advent+James"
+        "title": "God Cares for Me",
+        "amazon_url": "https://www.amazon.com/s?k=God+Cares+for+Me+Scott+James"
       },
       {
-        "title": "Mission Accomplished: A Two-Week Family Easter Devotional",
-        "amazon_url": "https://www.amazon.com/s?k=Mission+Accomplished+Easter+Devotional+James"
+        "title": "Mission Accomplished Easter Devotional",
+        "amazon_url": "https://www.amazon.com/s?k=Mission+Accomplished+Easter+Devotional+Scott+James"
       },
       {
-        "title": "God Cares for Me: Helping Children Trust God When They're Sick",
-        "amazon_url": "https://www.amazon.com/s?k=God+Cares+for+Me+Children+Trust+God+James"
+        "title": "Where Is Wisdom",
+        "amazon_url": "https://www.amazon.com/s?k=Where+Is+Wisdom+Scott+James"
       },
       {
         "title": "The Littlest Watchman",
-        "amazon_url": "https://www.amazon.com/s?k=The+Littlest+Watchman+James"
+        "amazon_url": "https://www.amazon.com/s?k=The+Littlest+Watchman+Scott+James"
       }
     ],
-    "initials": "SJ"
+    "initials": "SJ",
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/scott-james/"
+    ]
   },
   {
     "name": "Michael Jensen",
@@ -1740,9 +1738,9 @@
     "slug": "tim-keller",
     "name": "Tim Keller",
     "initials": "TK",
-    "role": "Pastor, Author & Theologian (1950–2023)",
+    "role": "Pastor, Author & Theologian (1950 to 2023)",
     "affiliation": "Redeemer Presbyterian Church; The Gospel Coalition",
-    "bio": "Timothy Keller (May 23, 1950 – May 19, 2023) was the founding pastor of Redeemer Presbyterian Church in Manhattan and co-founder of The Gospel Coalition, becoming one of evangelicalism's most influential voices in the late twentieth and early twenty-first centuries. A pastor, apologist, theologian, and author, Keller modeled \"winsome witness\": engaging contemporary culture with intellectual rigor and pastoral compassion while maintaining biblical conviction.\n\nHis New York Times bestselling books, The Prodigal God (2008) and The Reason for God (2008), shaped evangelical thinking about grace, apologetics, and faith in a skeptical age. Through Redeemer's ministry, Redeemer City to City (training pastors globally), and his prolific writing, Keller demonstrated how Reformed theology addresses contemporary urban life and cultural challenges. His death on May 19, 2023, at age 72 from pancreatic cancer marked the end of a remarkable ministry that continues to influence evangelicals worldwide.",
+    "bio": "Timothy Keller (May 23, 1950 to May 19, 2023) was the founding pastor of Redeemer Presbyterian Church in Manhattan and co-founder of The Gospel Coalition, becoming one of evangelicalism's most influential voices in the late twentieth and early twenty-first centuries. A pastor, apologist, theologian, and author, Keller modeled \"winsome witness\": engaging contemporary culture with intellectual rigor and pastoral compassion while maintaining biblical conviction.\n\nHis New York Times bestselling books, The Prodigal God (2008) and The Reason for God (2008), shaped evangelical thinking about grace, apologetics, and faith in a skeptical age. Through Redeemer's ministry, Redeemer City to City (training pastors globally), and his prolific writing, Keller demonstrated how Reformed theology addresses contemporary urban life and cultural challenges. His death on May 19, 2023, at age 72 from pancreatic cancer marked the end of a remarkable ministry that continues to influence evangelicals worldwide.",
     "education": "Bucknell University (BA); Gordon-Conwell (MDiv); Westminster Theological Seminary (DMin)",
     "website": "https://www.thegospelcoalition.org/profile/tim-keller/",
     "books": [
@@ -1758,7 +1756,8 @@
         "title": "The Prodigal God",
         "amazon_url": "https://www.amazon.com/s?k=The+Prodigal+God+Tim+Keller"
       }
-    ]
+    ],
+    "bio_sources": []
   },
   {
     "slug": "r-t-kendall",
@@ -2053,26 +2052,32 @@
   {
     "name": "Kristen LaValley",
     "slug": "kristen-lavalley",
-    "bio": "Kristen LaValley is a Christian writer and storyteller whose work offers nuanced exploration of faith and suffering. Having survived life-altering trials including a devastating diagnosis, she writes with authenticity about the tension between faith and pain, offering resources for those navigating questions of belief and healing.",
-    "affiliation": "Tyndale Momentum",
-    "role": "Christian author and speaker",
+    "bio": "Kristen LaValley is an author, teacher and facilitator. Her memoir Growing Up Saved: When Loving God Feels Like Losing Yourself (Tyndale Momentum, 2026) describes how the faith she grew up with held up through depression, spiritual exhaustion and a late ADHD diagnosis. Her earlier books include Even If He Doesn't (2024) and No Fruitless Words (2020).",
+    "affiliation": "",
+    "role": "Author",
     "education": "",
     "website": "https://www.kristenlavalley.com/",
     "books": [
-      {
-        "title": "Even If He Doesn't: What We Believe about God When Life Doesn't Make Sense",
-        "amazon_url": "https://www.amazon.com/s?k=Even+If+He+Doesnt+Kristen+LaValley"
-      },
       {
         "title": "Growing Up Saved",
         "amazon_url": "https://www.amazon.com/s?k=Growing+Up+Saved+Kristen+LaValley"
       },
       {
-        "title": "Silent Nights",
-        "amazon_url": "https://www.amazon.com/s?k=Silent+Nights+Kristen+LaValley"
+        "title": "Even If He Doesn't",
+        "amazon_url": "https://www.amazon.com/s?k=Even+If+He+Doesnt+Kristen+LaValley"
+      },
+      {
+        "title": "No Fruitless Words",
+        "amazon_url": "https://www.amazon.com/s?k=No+Fruitless+Words+Kristen+LaValley"
       }
     ],
-    "initials": "KL"
+    "initials": "KL",
+    "faqs": [],
+    "bio_sources": [
+      "https://www.kristenlavalley.com/",
+      "https://books.apple.com/us/book/growing-up-saved/id6747304453",
+      "https://relevantmagazine.com/faith/i-thought-i-was-a-bad-christian-i-was-just-spiritually-exhausted/"
+    ]
   },
   {
     "name": "Brett Lee-Price",
@@ -2104,13 +2109,14 @@
   {
     "name": "Matthew Luxmoore",
     "slug": "matthew-luxmoore",
-    "bio": "Matthew Luxmoore is a journalist and writer who has covered religious affairs, Eastern European politics, and faith-based issues for major international publications. His reporting combines rigorous journalism with an interest in how Christian communities navigate contemporary social and political challenges.",
-    "affiliation": "The Economist, The Telegraph, Religion News Service",
-    "role": "Journalist & Religion Correspondent",
+    "bio": "Matthew Luxmoore is a journalist whose reporting has appeared in The Economist, The Telegraph.",
+    "affiliation": "The Economist, The Telegraph",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "ML"
+    "initials": "ML",
+    "faqs": []
   },
   {
     "name": "Liz Lykins",
@@ -2707,7 +2713,7 @@
     "initials": "JP",
     "role": "Theologian & Evangelical Leader",
     "affiliation": "Regent College",
-    "bio": "James Innell Packer (22 July 1926 – 17 July 2020) was an English-born Canadian evangelical theologian and one of the most influential voices in twentieth-century Christianity. Trained in the low-church Anglican and Calvinist traditions, Packer spent the first half of his life in England and the second in Canada, joining the faculty of Regent College in Vancouver in 1979 where he remained through his academic career.\n\nPacker is best known for his spiritual classic Knowing God (1973), which has sold over one million copies in North America alone and remains foundational reading for evangelicals seeking to understand God's character and our relationship with Him. His prolific theological output, ecumenical engagement, and role as a key architect of evangelical identity made him a towering figure recognized by Time magazine in 2005 as one of the 25 most influential evangelicals, though macular degeneration concluded his public ministry in 2016.",
+    "bio": "James Innell Packer (22 July 1926 to 17 July 2020) was an English-born Canadian evangelical theologian and one of the most influential voices in twentieth-century Christianity. Trained in the low-church Anglican and Calvinist traditions, Packer spent the first half of his life in England and the second in Canada, joining the faculty of Regent College in Vancouver in 1979 where he remained through his academic career.\n\nPacker is best known for his spiritual classic Knowing God (1973), which has sold over one million copies in North America alone and remains foundational reading for evangelicals seeking to understand God's character and our relationship with Him. His prolific theological output, ecumenical engagement, and role as a key architect of evangelical identity made him a towering figure recognized by Time magazine in 2005 as one of the 25 most influential evangelicals, though macular degeneration concluded his public ministry in 2016.",
     "education": "Oxford University (DPhil); Wycliffe Hall",
     "website": "https://www.regent-college.edu/academics/faculty/james-innell-packer",
     "books": [
@@ -2719,7 +2725,8 @@
         "title": "Concise Theology",
         "amazon_url": "https://www.amazon.com/s?k=Concise+Theology+J.I.+Packer"
       }
-    ]
+    ],
+    "bio_sources": []
   },
   {
     "slug": "kevin-palau",
@@ -2911,9 +2918,9 @@
     "slug": "david-powlison",
     "name": "David Powlison",
     "initials": "DP",
-    "role": "Counselor & Theologian (1949–2019)",
+    "role": "Counselor & Theologian (1949 to 2019)",
     "affiliation": "Christian Counseling & Educational Foundation (CCEF)",
-    "bio": "David Arthur Powlison (December 14, 1949 – June 7, 2019) was a transformative figure in biblical counseling who served as executive director of the Christian Counseling and Educational Foundation (CCEF) from 2014-2019 and taught at Westminster Theological Seminary. A theologian and Christian counselor, Powlison shifted biblical counseling from a polemical stance toward a more compassionate, nuanced approach that integrated theological depth with psychological insight.\n\nAs CCEF's senior editor of the Journal of Biblical Counseling and author of numerous groundbreaking works on biblical counseling and the faith-psychology intersection, Powlison helped evangelicals understand how Scripture addresses the deepest human struggles with compassion and wisdom. His legacy continues through CCEF's ministry and his published works, which established him as one of the most influential voices in evangelical counseling. He died on June 7, 2019, following a battle with stage IV pancreatic cancer.",
+    "bio": "David Arthur Powlison (December 14, 1949 to June 7, 2019) was a transformative figure in biblical counseling who served as executive director of the Christian Counseling and Educational Foundation (CCEF) from 2014 to 2019 and taught at Westminster Theological Seminary. A theologian and Christian counselor, Powlison shifted biblical counseling from a polemical stance toward a more compassionate, nuanced approach that integrated theological depth with psychological insight.\n\nAs CCEF's senior editor of the Journal of Biblical Counseling and author of numerous groundbreaking works on biblical counseling and the faith-psychology intersection, Powlison helped evangelicals understand how Scripture addresses the deepest human struggles with compassion and wisdom. His legacy continues through CCEF's ministry and his published works, which established him as one of the most influential voices in evangelical counseling. He died on June 7, 2019, following a battle with stage IV pancreatic cancer.",
     "education": "University of Pennsylvania (PhD); Westminster Theological Seminary (MDiv)",
     "website": "https://www.ccef.org/author/david-powlison/",
     "books": [
@@ -2929,7 +2936,8 @@
         "title": "Speaking Truth in Love: Counsel in Community",
         "amazon_url": "https://www.amazon.com/s?k=Speaking+Truth+in+Love+Powlison"
       }
-    ]
+    ],
+    "bio_sources": []
   },
   {
     "name": "Justin N. Poythress",
@@ -3025,30 +3033,17 @@
   {
     "name": "Motoko Rich",
     "slug": "motoko-rich",
-    "bio": "Motoko Rich is a New York Times reporter and journalist who has covered education, publishing, and cultural trends for major American publications. While not primarily known as a Christian author, her investigative journalism has explored topics relevant to faith communities, including the role of libraries, literacy, and cultural institutions in American life.",
+    "bio": "Motoko Rich is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Journalist & Reporter",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
     "initials": "MR",
-    "known_for": "Leading New York Times coverage of Italy and the Vatican after eight years as Tokyo bureau chief.",
-    "current_role": "Rome Bureau Chief, The New York Times (since 2025), covering Italy, the Vatican, and Greece",
+    "known_for": "",
+    "current_role": "",
     "deceased": false,
-    "faqs": [
-      {
-        "q": "Who is Motoko Rich?",
-        "a": "Motoko Rich is a veteran New York Times journalist who became the paper's Rome bureau chief in 2025, leading coverage of Italy, the Vatican, and Greece. She previously served as Tokyo bureau chief from 2016 to 2024 and has covered education, publishing, and the economy."
-      },
-      {
-        "q": "Is Motoko Rich a Christian author?",
-        "a": "No. Rich is a mainstream news journalist, and her public work does not indicate a religious affiliation. Her reporting appears in Christian news digests primarily because her Rome post includes coverage of the Vatican and global religious affairs."
-      },
-      {
-        "q": "What does Motoko Rich cover?",
-        "a": "As Rome bureau chief she covers Italian politics and society, the papacy and the Catholic Church, and Greece. Earlier in her career she covered Japan and the Korean peninsula, American education, and the book publishing industry."
-      }
-    ]
+    "faqs": []
   },
   {
     "name": "Joseph Rigney",
@@ -3077,8 +3072,8 @@
   {
     "name": "Vaneetha Rendall Risner",
     "slug": "vaneetha-rendall-risner",
-    "bio": "Vaneetha Rendall Risner is an author and speaker who writes about faith, suffering, and God's grace from her own experience navigating chronic illness and disability. Her transparent and vulnerable approach to Christian living has resonated with readers seeking honest conversations about pain and God's faithfulness. She contributes to various Christian publications and speaks at conferences about finding hope and purpose in difficult circumstances.",
-    "affiliation": "Desiring God; Eternal Perspective Ministries",
+    "bio": "Vaneetha Rendall Risner is an author based in Raleigh, North Carolina, who writes regularly for Desiring God. Her About page says she contracted polio as an infant and later developed post-polio syndrome, lost an infant son, and went through a divorce she did not want. Her books include The Scars That Have Shaped Me, Walking Through Fire, This Was Never the Plan, and the Bible study Desperate for Hope, and she hosts the Desperate for Hope podcast.",
+    "affiliation": "Desiring God",
     "role": "Writer and speaker",
     "education": "",
     "website": "https://www.vaneetha.com/",
@@ -3096,7 +3091,11 @@
         "amazon_url": "https://www.amazon.com/s?k=This+Was+Never+Plan+Walking+God+Heartache+Divorce+Risner"
       }
     ],
-    "initials": "VRR"
+    "initials": "VRR",
+    "bio_sources": [
+      "https://www.vaneetha.com/about",
+      "https://www.vaneetha.com/"
+    ]
   },
   {
     "name": "Tim Rosenberger",
@@ -3328,34 +3327,28 @@
   },
   {
     "slug": "christy-smith",
-    "name": "Christy Nockels Smith",
+    "name": "Christy Smith",
     "initials": "CNS",
-    "role": "Worship Leader & Discipleship Coach",
-    "affiliation": "Watermark Church",
-    "bio": "Christy Lynette Nockels (born November 17, 1973) is an accomplished worship artist, singer-songwriter, and worship leader raised in Oklahoma by a pastor father. After meeting her husband Nathan Nockels at a Christian artists' seminar in 1993, she became a worship leader at Metro Bible Study in Houston alongside Louie Giglio's Passion Conference, where they released five albums as the duo Watermark under Rocketown Records.\n\nFollowing Watermark's retirement in 2006, Christy launched a solo career with sixstepsrecords, releasing albums including Life Light Up and Into the Glorious, while also hosting The Glorious in the Mundane podcast since 2016 and authoring The Life You Long For. As co-owner of Keeper's Branch Records with her husband Nathan, she continues to influence contemporary Christian worship and spirituality through music and digital media.",
-    "education": "Oklahoma State University (BA)",
-    "website": "https://www.christynockels.com",
-    "books": [
-      {
-        "title": "The Broken Way",
-        "amazon_url": "https://www.amazon.com/s?k=The+Broken+Way+Christy+Nockels"
-      },
-      {
-        "title": "Captivating",
-        "amazon_url": "https://www.amazon.com/s?k=Captivating+Christy+Nockels"
-      }
-    ]
+    "role": "",
+    "affiliation": "",
+    "bio": "Christy Smith has no verified biography or credited articles on Christian Curator yet.",
+    "education": "",
+    "website": "",
+    "books": [],
+    "faqs": [],
+    "bio_sources": []
   },
   {
     "name": "Paul Sonne",
     "slug": "paul-sonne",
-    "bio": "Paul Sonne is a journalist and writer who has contributed to major Christian and secular publications, bringing thoughtful analysis to contemporary faith issues. His work often explores the intersection of Christianity, culture, and current events with nuance and depth.",
-    "affiliation": "The Wall Street Journal, Religion News Service",
-    "role": "Journalist & Writer",
+    "bio": "Paul Sonne is a journalist whose reporting has appeared in The Wall Street Journal.",
+    "affiliation": "The Wall Street Journal",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "PS"
+    "initials": "PS",
+    "faqs": []
   },
   {
     "name": "Matthew Spear",
@@ -3570,13 +3563,14 @@
   {
     "name": "Margaret Sullivan",
     "slug": "margaret-sullivan",
-    "bio": "Margaret Sullivan is a media columnist and journalist known for her sharp cultural commentary and analysis of faith-related topics in contemporary media. Her work examines how Christian values intersect with journalism, public discourse, and institutional accountability.",
+    "bio": "Margaret Sullivan is a journalist whose reporting has appeared in The Washington Post.",
     "affiliation": "The Washington Post",
-    "role": "Media Columnist & Journalist",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "MS"
+    "initials": "MS",
+    "faqs": []
   },
   {
     "name": "A. J. Swoboda",
@@ -3949,7 +3943,7 @@
     "initials": "DW",
     "role": "Philosopher & Spiritual Director",
     "affiliation": "Fuller Seminary",
-    "bio": "Dallas Albert Willard (September 4, 1935 – May 8, 2013) was a prolific Christian philosopher and spiritual formation pioneer who taught in USC Dornsife's School of Philosophy for 47 years (1965-2013). A scholar of phenomenology and medieval philosophy with deep expertise in Edmund Husserl, Willard became one of evangelicalism's most important voices on Christian discipleship and spiritual transformation through his writing and ministry with the Renovare movement.\n\nWillard's signature works, The Divine Conspiracy (Christianity Today \"Book of the Year\" 1999) and Renovation of the Heart (Christianity Today Book Award 2003), fundamentally reshaped evangelical thinking about spiritual formation and the ordinary life of discipleship. His death on May 8, 2013, after a brief battle with cancer, marked the end of a legacy that continues to influence how evangelicals understand the transformation of the soul and the kingdom of God in everyday life.",
+    "bio": "Dallas Albert Willard (September 4, 1935 to May 8, 2013) was a prolific Christian philosopher and spiritual formation pioneer who taught in USC Dornsife's School of Philosophy for 47 years (1965 to 2013). A scholar of phenomenology and medieval philosophy with deep expertise in Edmund Husserl, Willard became one of evangelicalism's most important voices on Christian discipleship and spiritual transformation through his writing and ministry with the Renovare movement.\n\nWillard's signature works, The Divine Conspiracy (Christianity Today \"Book of the Year\" 1999) and Renovation of the Heart (Christianity Today Book Award 2003), fundamentally reshaped evangelical thinking about spiritual formation and the ordinary life of discipleship. His death on May 8, 2013, after a brief battle with cancer, marked the end of a legacy that continues to influence how evangelicals understand the transformation of the soul and the kingdom of God in everyday life.",
     "education": "University of Oklahoma (BA); Southern Baptist Seminary (BD); University of Wisconsin (MA, PhD)",
     "website": "https://www.dwillard.org",
     "books": [
@@ -3961,7 +3955,8 @@
         "title": "Renovation of the Heart",
         "amazon_url": "https://www.amazon.com/s?k=Renovation+of+the+Heart+Dallas+Willard"
       }
-    ]
+    ],
+    "bio_sources": []
   },
   {
     "name": "Daniel K. Williams",
@@ -4409,30 +4404,17 @@
   {
     "name": "David M. Halbfinger",
     "slug": "david-m-halbfinger",
-    "bio": "David M. Halbfinger is a veteran journalist and media analyst who has served as executive editor and chief political correspondent for major American news organizations. With decades of experience covering politics, culture, and faith-related issues, he brings thoughtful analysis to contemporary issues of interest to Christian readers and faith communities.",
+    "bio": "David M. Halbfinger is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Journalist & Editor",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
     "initials": "DMH",
-    "known_for": "Serving as New York Times politics editor after posts including Jerusalem bureau chief.",
-    "current_role": "Politics Editor, The New York Times",
+    "known_for": "",
+    "current_role": "",
     "deceased": false,
-    "faqs": [
-      {
-        "q": "Who is David M. Halbfinger?",
-        "a": "David M. Halbfinger is the politics editor of The New York Times. He previously served as the paper's Jerusalem bureau chief, deputy national editor, and 2016 presidential campaign editor, and reported on politics, the South, and the movie business."
-      },
-      {
-        "q": "Is David Halbfinger a Christian author?",
-        "a": "No. Halbfinger is a mainstream news editor, and his public work does not indicate an evangelical affiliation. His byline appears in Christian news digests mainly through his earlier coverage of Israel as Jerusalem bureau chief."
-      },
-      {
-        "q": "What does David Halbfinger do at The New York Times?",
-        "a": "As politics editor he oversees the paper's political coverage. During his years in Jerusalem he led coverage of Israel and the Palestinian territories, a beat closely followed by many Christian readers."
-      }
-    ]
+    "faqs": []
   },
   {
     "name": "Natalie Andrews",
@@ -4592,13 +4574,14 @@
   {
     "name": "Erika Solomon",
     "slug": "erika-solomon",
-    "bio": "Erika Solomon is a Reuters correspondent and journalist known for her investigative reporting on Middle Eastern affairs, international politics, and religious dynamics in global contexts. Her work frequently examines complex geopolitical issues with nuance and depth.",
+    "bio": "Erika Solomon is a journalist whose reporting has appeared in Reuters.",
     "affiliation": "Reuters",
-    "role": "Journalist & Correspondent",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "ES"
+    "initials": "ES",
+    "faqs": []
   },
   {
     "name": "Ashley Ahn",
@@ -4725,44 +4708,38 @@
   {
     "name": "Emma Brockes",
     "slug": "emma-brockes",
-    "bio": "Emma Brockes is a British-American journalist and author known for her thoughtful reporting and personal essays exploring faith, culture, and human experience. Her work has appeared in major publications where she combines keen observation with emotional insight, often touching on themes relevant to Christian readers seeking depth and authenticity.",
+    "bio": "Emma Brockes is a journalist whose reporting has appeared in The Guardian, Granta.",
     "affiliation": "The Guardian, Granta",
-    "role": "Journalist & Author",
-    "education": "University of Cambridge",
+    "role": "Journalist",
+    "education": "",
     "website": "",
-    "books": [
-      {
-        "title": "An Unsafe Haven: A Woman's Story of Escape from War",
-        "amazon_url": "https://www.amazon.com/s?k=An+Unsafe+Haven+Emma+Brockes"
-      },
-      {
-        "title": "She Left Me the Gun: A True Story of Youth, Madness, and Guns",
-        "amazon_url": "https://www.amazon.com/s?k=She+Left+Me+the+Gun+Emma+Brockes"
-      }
-    ],
-    "initials": "EB"
+    "books": [],
+    "initials": "EB",
+    "faqs": []
   },
   {
     "name": "Chun Han Wong",
     "slug": "chun-han-wong",
-    "bio": "Chun Han Wong is a journalist and author known for his insightful reporting on Christianity, faith communities, and religious dynamics in Asia and beyond. His work combines rigorous journalism with thoughtful analysis of how Christian faith intersects with culture, politics, and society.",
-    "affiliation": "Religion News Service, The Wall Street Journal",
-    "role": "Journalist & Author",
+    "bio": "Chun Han Wong is a journalist whose reporting has appeared in The Wall Street Journal.",
+    "affiliation": "The Wall Street Journal",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "CHW"
+    "initials": "CHW",
+    "faqs": []
   },
   {
     "name": "Stephen Castle",
     "slug": "stephen-castle",
-    "bio": "Stephen Castle is a journalist and author known for his reporting on international affairs and social issues. While primarily known for secular journalism, his work often explores themes relevant to faith communities, including religious freedom, humanitarian concerns, and cultural commentary.",
+    "bio": "Stephen Castle is a journalist.",
     "affiliation": "",
-    "role": "Journalist & Author",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "SC"
+    "initials": "SC",
+    "faqs": []
   },
   {
     "name": "Rich Bitterman",
@@ -4852,24 +4829,26 @@
   {
     "name": "Alice Speri",
     "slug": "alice-speri",
-    "bio": "Alice Speri is an investigative journalist known for her work covering immigration, labor, and human rights issues. While not primarily a Christian content creator, her reporting often intersects with faith-based perspectives on justice, dignity, and compassion for vulnerable populations.",
+    "bio": "Alice Speri is a journalist whose reporting has appeared in The Intercept.",
     "affiliation": "The Intercept",
-    "role": "Investigative Journalist",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "AS"
+    "initials": "AS",
+    "faqs": []
   },
   {
     "name": "Laurence Norman",
     "slug": "laurence-norman",
-    "bio": "Laurence Norman is a journalist and religious correspondent known for his reporting on faith, politics, and cultural issues. His work has appeared in major publications covering the intersection of Christianity and contemporary society.",
+    "bio": "Laurence Norman is a journalist.",
     "affiliation": "",
-    "role": "Journalist & Religious Correspondent",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "LN"
+    "initials": "LN",
+    "faqs": []
   },
   {
     "name": "Sharonda Cooper",
@@ -4923,24 +4902,31 @@
   {
     "name": "Elizabeth Russell",
     "slug": "elizabeth-russell",
-    "bio": "Elizabeth Russell is a Christian author and speaker known for her work in faith-based content and spiritual development. Her writing encourages believers to deepen their relationship with Christ through practical wisdom and biblical insight.",
-    "affiliation": "",
-    "role": "Author & Speaker",
+    "bio": "Elizabeth Russell writes news for WORLD, including briefs for The Sift.",
+    "affiliation": "WORLD",
+    "role": "News Writer",
     "education": "",
-    "website": "",
+    "website": "https://wng.org/authors/elizabeth-russell",
     "books": [],
-    "initials": "ER"
+    "initials": "ER",
+    "faqs": [],
+    "bio_sources": [
+      "https://wng.org/authors/elizabeth-russell",
+      "https://wng.org/sift/pca-advances-report-denying-christian-nationalism-1782417754",
+      "https://wng.org/sift/doj-charges-18-in-n-c-with-voting-illegally-in-u-s-elections-1793374090"
+    ]
   },
   {
     "name": "Sam Wollaston",
     "slug": "words-by-sam-wollaston",
-    "bio": "Sam Wollaston is a writer and journalist known for his thoughtful commentary and cultural criticism. His work explores contemporary issues with insight and clarity, often engaging with topics relevant to faith and values.",
+    "bio": "Sam Wollaston is a journalist.",
     "affiliation": "",
-    "role": "Writer & Journalist",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "SW"
+    "initials": "SW",
+    "faqs": []
   },
   {
     "name": "Christopher Thomond",
@@ -4956,13 +4942,14 @@
   {
     "name": "Steven Erlanger",
     "slug": "steven-erlanger",
-    "bio": "Steven Erlanger is an accomplished journalist and foreign correspondent with extensive experience covering international affairs, conflict zones, and geopolitical developments. While his work spans secular media outlets, his reporting often explores themes relevant to global Christian communities and international religious concerns.",
+    "bio": "Steven Erlanger is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Foreign Correspondent & Journalist",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "SE"
+    "initials": "SE",
+    "faqs": []
   },
   {
     "name": "Glen Scrivener",
@@ -5057,24 +5044,26 @@
   {
     "name": "Ruth Maclean",
     "slug": "ruth-maclean",
-    "bio": "Ruth Maclean is a journalist and author known for her reporting on West African affairs and religious topics. Her work explores themes of faith, culture, and social change across the African continent, offering insights that resonate with Christian readers seeking to understand global perspectives on faith and community.",
+    "bio": "Ruth Maclean is a journalist whose reporting has appeared in The Guardian.",
     "affiliation": "The Guardian",
-    "role": "Journalist & Author",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "RM"
+    "initials": "RM",
+    "faqs": []
   },
   {
     "name": "Kejal Vyas",
     "slug": "kejal-vyas",
-    "bio": "Kejal Vyas is a journalist and writer who covers faith, culture, and social issues for leading Christian and mainstream publications. Her work explores the intersection of belief and contemporary life, offering thoughtful perspectives on how Christians engage with the modern world.",
-    "affiliation": "Christianity Today, The Gospel Coalition",
-    "role": "Journalist & Writer",
+    "bio": "Kejal Vyas is a journalist.",
+    "affiliation": "",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "KV"
+    "initials": "KV",
+    "faqs": []
   },
   {
     "name": "Andy Shurson",
@@ -5210,24 +5199,26 @@
   {
     "name": "Choe Sang-Hun",
     "slug": "choe-sanghun",
-    "bio": "Choe Sang-Hun is a respected journalist and foreign correspondent known for his reporting on East Asian affairs, particularly North Korea and South Korea. His work has provided Western audiences with critical insights into religious persecution and human rights issues in the region from a perspective informed by Christian values and concern for faith communities.",
+    "bio": "Choe Sang-Hun is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Foreign Correspondent & Journalist",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "CSH"
+    "initials": "CSH",
+    "faqs": []
   },
   {
     "name": "Ephrat Livni",
     "slug": "ephrat-livni",
-    "bio": "Ephrat Livni is a journalist and writer known for her work exploring culture, psychology, and human behavior through a thoughtful lens. She has contributed to various publications examining contemporary issues and their intersection with faith and values.",
+    "bio": "Ephrat Livni is a journalist whose reporting has appeared in Quartz.",
     "affiliation": "Quartz",
-    "role": "Journalist & Writer",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "EL"
+    "initials": "EL",
+    "faqs": []
   },
   {
     "name": "Chris Larson",
@@ -5243,24 +5234,28 @@
   {
     "name": "Michael Keller",
     "slug": "michael-keller",
-    "bio": "Michael Keller (PhD, Vrije Universiteit Amsterdam) is the founding and senior pastor of Redeemer Presbyterian Church–Lincoln Square in New York City, a Council member of The Gospel Coalition, and a fellow of the Keller Center for Cultural Apologetics. The son of Tim and Kathy Keller, he holds an MDiv and ThM from Gordon-Conwell Theological Seminary and is the author of The Stories We Live By: How Jesus Critiques and Completes What Our Culture Tells Us.",
-    "affiliation": "Redeemer Presbyterian Church–Lincoln Square",
+    "bio": "Michael Keller (PhD, Vrije Universiteit Amsterdam) is the founding and senior pastor of Redeemer Presbyterian Church Lincoln Square in New York City, a Council member of The Gospel Coalition, and a fellow of the Keller Center for Cultural Apologetics. The son of Tim and Kathy Keller, he holds an MDiv and ThM from Gordon-Conwell Theological Seminary and is the author of The Stories We Live By: How Jesus Critiques and Completes What Our Culture Tells Us.",
+    "affiliation": "Redeemer Presbyterian Church Lincoln Square",
     "role": "Founding & Senior Pastor",
     "education": "",
     "website": "https://redeemerlsq.com",
     "books": [],
-    "initials": "MK"
+    "initials": "MK",
+    "bio_sources": []
   },
   {
     "name": "Aaron Garriott",
     "slug": "aaron-garriott",
-    "bio": "Aaron L. Garriott is managing editor of Tabletalk, the monthly discipleship magazine of Ligonier Ministries, resident adjunct professor at Reformation Bible College in Sanford, Florida, and a teaching elder in the Presbyterian Church in America. A graduate of Wheaton College and Reformed Theological Seminary in Orlando, he is the author of A Word Fitly Spoken and Thy Deepest Distress: Anxiety and Depression in the Christian Life.",
+    "bio": "Aaron L. Garriott is managing editor of Tabletalk magazine, resident adjunct professor at Reformation Bible College in Sanford, Florida, and associate pastor of Spruce Creek Presbyterian Church in Port Orange, Florida, according to his Tabletalk contributor page. He is the author of A Word Fitly Spoken: A Theology of Communication and Thy Deepest Distress: Anxiety and Depression in the Christian Life.",
     "affiliation": "Ligonier Ministries (Tabletalk)",
     "role": "Managing Editor, Tabletalk",
     "education": "",
     "website": "https://tabletalkmagazine.com/contributor/aaron-l-garriott/",
     "books": [],
-    "initials": "AG"
+    "initials": "AG",
+    "bio_sources": [
+      "https://tabletalkmagazine.com/contributor/aaron-l-garriott/"
+    ]
   },
   {
     "name": "Cliff McManis",
@@ -5292,13 +5287,14 @@
   {
     "name": "Alaina Demopoulos",
     "slug": "alaina-demopoulos",
-    "bio": "Alaina Demopoulos is a writer and content creator focused on faith, culture, and Christian living. She contributes to various Christian publications and platforms, bringing thoughtful perspectives on contemporary issues through a biblical lens.",
+    "bio": "Alaina Demopoulos is a journalist.",
     "affiliation": "",
-    "role": "Writer & Content Creator",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "AD"
+    "initials": "AD",
+    "faqs": []
   },
   {
     "name": "Alex Harris",
@@ -5377,11 +5373,18 @@
   {
     "name": "John MacArthur",
     "slug": "john-macarthur",
-    "bio": "John Fullerton MacArthur Jr. (born June 19, 1939) is the longtime pastor-teacher of Grace Community Church in Sun Valley, California (since 1969), chancellor of The Master's University and The Master's Seminary, and the featured Bible teacher of the syndicated radio and online ministry Grace to You. The son of a pastor, MacArthur has spent more than five decades preaching expositionally through the New Testament and has produced a verse-by-verse commentary set covering the entire NT. MacArthur is one of the most prominent voices in contemporary fundamentalist-leaning evangelicalism, known for his uncompromising stance on the inerrancy and sufficiency of Scripture, cessationist doctrine of the Holy Spirit, and dispensational eschatology. He has authored or edited more than 150 books, and his MacArthur Study Bible has become one of the bestselling study Bibles of the modern era.",
+    "bio": "John MacArthur (June 19, 1939 to July 14, 2025) was pastor-teacher of Grace Community Church in Sun Valley, California. He preached his first sermon there in 1969, and the church described his tenure as more than fifty-six years of ministry. In 1985 he became president of what is now The Master's University, later serving as its chancellor, and in 1986 he founded The Master's Seminary, where he served as chancellor. Grace to You, the ministry that grew out of his recorded sermons, broadcast his preaching on Christian radio. He published the MacArthur Study Bible in 1997, and Moody Publishers issued his New Testament commentary series in 34 volumes. He died on July 14, 2025, at age 86, after being hospitalized with pneumonia.",
     "affiliation": "Grace Community Church / The Master's Seminary",
-    "role": "Pastor & Bible Teacher",
-    "education": "Bob Jones University; Los Angeles Pacific College; Talbot Theological Seminary (MDiv, DD)",
-    "website": "https://www.gty.org"
+    "role": "Pastor & Bible Teacher (1939 to 2025)",
+    "education": "",
+    "website": "https://www.gty.org",
+    "deceased": true,
+    "bio_sources": [
+      "https://www.gty.org/memorial",
+      "https://www.christianitytoday.com/?p=352291",
+      "https://ministrywatch.com/amp/john-macarthur-megachurch-pastor-and-voice-of-grace-to-you-has-died/",
+      "https://www.nbcnews.com/news/rcna218943"
+    ]
   },
   {
     "name": "Michael Horton",
@@ -5500,7 +5503,7 @@
     "role": "Theologian & Editorial Director",
     "education": "University of Virginia (BA); Wales Evangelical School of Theology (PhD); Southern Baptist Theological Seminary (MDiv)",
     "website": "https://www.9marks.org",
-    "denomination": "Baptist (Southern Baptist–aligned)",
+    "denomination": "Baptist (aligned with the Southern Baptist Convention)",
     "tradition": "Reformed Baptist",
     "known_for": "Shaping the 9Marks movement's teaching on church membership, church discipline, and congregational polity, and writing on Christianity and politics.",
     "current_role": "President and editorial director of 9Marks; elder at Cheverly Baptist Church (Washington, DC area)",
@@ -5522,7 +5525,8 @@
         "q": "What is Jonathan Leeman known for?",
         "a": "Leeman is known for foundational 9Marks books on church membership and discipline, and for works on faith and politics such as How the Nations Rage and Political Church. He argues that the local church is a public, political community whose primary allegiance is to King Jesus."
       }
-    ]
+    ],
+    "bio_sources": []
   },
   {
     "name": "Thomas Schreiner",
@@ -5595,11 +5599,15 @@
   {
     "name": "Christopher Yuan",
     "slug": "christopher-yuan",
-    "bio": "Christopher Yuan is an American speaker, author, and faculty member at Moody Bible Institute, where he has taught since 2008. A former dentist whose life unraveled into drug dealing, prison, and an HIV-positive diagnosis, he came to Christ in prison and has since devoted his ministry to teaching the church a biblical theology of sexuality. Yuan and his mother Angela co-wrote Out of a Far Country, the memoir of his journey and her parallel conversion. His later book Holy Sexuality and the Gospel and the accompanying Holy Sexuality Project have become widely used resources for parents, pastors, and same-sex-attracted Christians who want to think about sexuality through a biblical rather than identity-driven framework.",
+    "bio": "Christopher Yuan is a speaker and author who has taught as an adjunct instructor of the Bible at Moody Bible Institute. He co-wrote Out of a Far Country: A Gay Son's Journey to God (WaterBrook, 2011) with his mother, and wrote Holy Sexuality and the Gospel: Sex, Desire, and Relationships Shaped by God's Grand Story (Multnomah, 2018), which Outreach Magazine named its 2020 Book of the Year for Social Issues. He also produced The Holy Sexuality Project, a video series for parents and grandparents of teens.",
     "affiliation": "Moody Bible Institute",
     "role": "Speaker & Author",
-    "education": "University of Louisville (DMD); Moody Bible Institute (MA); Wheaton College Graduate School (DMin)",
-    "website": "https://www.christopheryuan.com"
+    "education": "Moody Bible Institute; Wheaton College Graduate School (MA, biblical exegesis); Bethel Seminary (DMin)",
+    "website": "https://www.christopheryuan.com",
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/christopher-yuan/",
+      "https://www.christopheryuan.com"
+    ]
   },
   {
     "name": "Andy Stanley",
@@ -5663,11 +5671,15 @@
   {
     "name": "Tish Harrison Warren",
     "slug": "tish-harrison-warren",
-    "bio": "Tish Harrison Warren is an Anglican priest in the Anglican Church in North America (ACNA) and a writer whose work appears in The New York Times, Christianity Today, The Atlantic, and other outlets. She has served as a campus minister with InterVarsity at the University of Texas and Vanderbilt and as writer-in-residence at Resurrection South Austin. Warren writes from within the liturgical Christian tradition about the spiritual significance of ordinary embodied life: how making the bed, brushing teeth, drinking coffee, and eating leftovers can be sites of Christian formation. Her book Liturgy of the Ordinary won Christianity Today's 2018 Book of the Year, and her later Prayer in the Night reflects on the Compline prayer through her own experience of grief and miscarriage.",
-    "affiliation": "Anglican Church in North America",
+    "bio": "Tish Harrison Warren is an Anglican priest and writer. Her site lists her as an assisting priest at Immanuel Anglican Church, C. S. Lewis Theological Writer-in-Residence at Baylor's George W. Truett Theological Seminary, a columnist and contributing editor at Holy Post Media, and a senior fellow with The Trinity Forum. She formerly wrote a weekly newsletter for The New York Times and was a columnist for Christianity Today. Liturgy of the Ordinary was Christianity Today's 2018 Book of the Year, and Prayer in the Night was its 2022 Book of the Year and the 2022 ECPA Christian Book of the Year. Her most recent book is What Grows in Weary Lands: On Christian Resilience.",
+    "affiliation": "Anglican",
     "role": "Anglican Priest & Author",
-    "education": "University of Texas at Austin (BA); Fuller Theological Seminary (MDiv)",
-    "website": "https://tishharrisonwarren.com"
+    "education": "",
+    "website": "https://tishharrisonwarren.com",
+    "bio_sources": [
+      "https://tishharrisonwarren.com/about-me",
+      "https://tishharrisonwarren.com"
+    ]
   },
   {
     "name": "Miroslav Volf",
@@ -5821,11 +5833,15 @@
   {
     "name": "Tim Challies",
     "slug": "tim-challies",
-    "bio": "Tim Challies is a Canadian Reformed Baptist pastor, author, and blogger who has written daily at Challies.com since 2003, making him one of the longest-running and most-read evangelical bloggers in the English-speaking world. He serves as a pastor at Grace Fellowship Church in Toronto and is a co-founder of Cruciform Press. Challies's books span topics from biblical discernment and pornography to visual theology and family devotions, and his Visual Theology project translates complex doctrinal categories into accessible infographic-style charts and books. After the unexpected death of his twenty-year-old son Nick in 2020, Challies published Seasons of Sorrow, a year-long journal of grief that has become a widely-read companion for bereaved Christians.",
+    "bio": "Tim Challies has written daily at Challies.com since 2003 and serves as an elder at Grace Fellowship Church in Toronto, Ontario. His books include Visual Theology, Epic, Pilgrim Prayers and God's Great Big Global Church. His son Nick died suddenly on November 3, 2020, at age 20, and Challies wrote about the year that followed in Seasons of Sorrow: The Pain of Loss and the Comfort of God.",
     "affiliation": "Grace Fellowship Church, Toronto",
-    "role": "Pastor, Author & Blogger",
-    "education": "McMaster University (BA)",
-    "website": "https://www.challies.com"
+    "role": "Author, Blogger & Elder",
+    "education": "",
+    "website": "https://www.challies.com",
+    "bio_sources": [
+      "https://www.challies.com/about/",
+      "https://www.challies.com/articles/nick-challies-obituary/"
+    ]
   },
   {
     "name": "James K.A. Smith",
@@ -5879,42 +5895,45 @@
   {
     "name": "Matthew Stanford",
     "slug": "matthew-stanford",
-    "bio": "Matthew S. Stanford is the chief executive officer of the Hope and Healing Center & Institute in Houston and adjunct professor of psychiatry at Baylor College of Medicine and Houston Methodist Hospital's Institute for Academic Medicine. He earned his doctorate in behavioral neuroscience at Baylor University and completed a post-doctoral fellowship at the University of Texas Medical Branch at Galveston. Stanford has worked clinically with patients struggling with aggression, personality disorders, post-traumatic stress disorder, substance dependence, bipolar disorder, and schizophrenia, and his research on the interplay between psychology and faith has been featured in The New York Times, USA Today, and Christianity Today. His writing equips pastors and churches to support those with serious mental illness without abandoning either clinical realism or biblical hope.",
+    "bio": "Matthew S. Stanford, PhD, is chief executive officer of the Hope and Healing Center & Institute in Houston, according to its team page. A neuroscientist by training, he serves as adjunct faculty at Baylor College of Medicine, UTHealth Houston and Houston Methodist's Institute for Academic Medicine. He is the author of five books, including Grace for the Afflicted and Madness and Grace, and writes on serious mental illness and the church.",
     "affiliation": "Hope and Healing Center & Institute, Houston",
     "role": "Neuroscientist & CEO",
-    "education": "Baylor University (PhD); University of Texas Medical Branch (postdoc)",
-    "website": "https://hopeandhealingcenter.org"
+    "education": "PhD",
+    "website": "https://hopeandhealingcenter.org",
+    "bio_sources": [
+      "https://hopeandhealingcenter.org/about-us/meet-our-team/"
+    ]
   },
   {
     "name": "Kay Warren",
     "slug": "kay-warren",
-    "bio": "Kay Warren is the co-founder of Saddleback Church in Lake Forest, California (with her husband Rick), an international speaker, Bible teacher, and one of the most prominent evangelical advocates for people living with mental illness. After her son Matthew took his life in 2013, she founded the Hope for Mental Health Initiative at Saddleback in 2014 and the BREATHE ministry in 2019 to support parents of children with serious mental illness. Warren writes and speaks on mental health, suffering, joy, and the privilege of pastoral life. Her work has helped shift evangelical conversation about mental illness away from stigma and toward a posture that combines biblical hope, clinical care, and church community.",
-    "affiliation": "Hope for Brighter Tomorrows / Saddleback Church",
+    "bio": "Kay Warren co-founded Saddleback Church in Lake Forest, California, with her husband, Rick, in 1980. She is an author, speaker and mental health advocate. After her son Matthew, who lived with serious mental illness for most of his life, died by suicide on April 5, 2013, she founded Saddleback's Hope for Mental Health Initiative, and in 2019 she started BREATHE, a ministry for parents of children with serious mental illness. Her books include Sacred Privilege, Choose Joy: Because Happiness Isn't Enough and Say Yes to God.",
+    "affiliation": "Saddleback Church",
     "role": "Author, Speaker & Mental Health Advocate",
-    "education": "California Baptist University (honorary)",
+    "education": "",
     "website": "https://kaywarren.com",
-    "denomination": "Evangelical (Saddleback Church, a Baptist-rooted congregation that was part of the Southern Baptist Convention until 2023)",
+    "denomination": "",
     "tradition": "Mainstream evangelical",
-    "known_for": "Co-founding Saddleback Church with Rick Warren and becoming one of evangelicalism's leading mental health advocates after her son Matthew's suicide in 2013.",
-    "current_role": "President of Hope for Brighter Tomorrows (since 2024); co-founder of Saddleback Church",
+    "known_for": "Co-founding Saddleback Church with Rick Warren and her mental health advocacy after her son Matthew's death in 2013.",
+    "current_role": "",
     "deceased": false,
     "faqs": [
       {
         "q": "Who is Kay Warren?",
-        "a": "Kay Warren co-founded Saddleback Church in Lake Forest, California, with her husband Rick Warren in 1980 and served there until his retirement from senior leadership in 2022. She is an author, international speaker, and advocate on mental health and HIV/AIDS."
+        "a": "Kay Warren co-founded Saddleback Church in Lake Forest, California, with her husband, Rick, in 1980. She is an author, speaker and advocate for people living with mental illness and their families."
       },
       {
-        "q": "What happened to Kay Warren's son?",
-        "a": "Her youngest son, Matthew, died by suicide in April 2013 at age 27 after a lifelong struggle with mental illness. That loss led Kay to found Saddleback's Hope for Mental Health Initiative in 2014 and the BREATHE ministry for parents of children with serious mental illness in 2019."
+        "q": "What led Kay Warren to mental health ministry?",
+        "a": "Her son Matthew lived with serious mental illness for most of his life and died by suicide on April 5, 2013, at age 27. After his death she founded Saddleback's Hope for Mental Health Initiative, and in 2019 she started BREATHE for parents of children with serious mental illness."
       },
       {
-        "q": "What does Kay Warren do now?",
-        "a": "In 2024 she became president of Hope for Brighter Tomorrows, a nonprofit equipping families and churches to address mental health challenges. She continues to speak and write on mental illness, grief, suicide prevention, and finding joy amid suffering."
-      },
-      {
-        "q": "What is Kay Warren known for writing?",
-        "a": "Her books include Choose Joy: Because Happiness Isn't Enough, Dangerous Surrender, and Say Yes to God. Her writing draws on her experiences with global HIV/AIDS advocacy, her son's mental illness and death, and decades of pastoral ministry at Saddleback."
+        "q": "What has Kay Warren written?",
+        "a": "Her books include Sacred Privilege: Your Life and Ministry as a Pastor's Wife, Choose Joy: Because Happiness Isn't Enough and Say Yes to God: A Call to Courageous Surrender."
       }
+    ],
+    "bio_sources": [
+      "https://kaywarren.com/biography/",
+      "https://kaywarren.com/article/warrens-help-others-one-year-after-sons-suicide"
     ]
   },
   {
@@ -6155,44 +6174,38 @@
   {
     "name": "Lizzie Dearden",
     "slug": "lizzie-dearden",
-    "bio": "Lizzie Dearden is a journalist and foreign correspondent known for her reporting on international security, terrorism, and religious extremism. Her investigative work has informed global conversations on complex geopolitical issues with careful attention to factual detail and human impact.",
+    "bio": "Lizzie Dearden is a journalist whose reporting has appeared in The Independent.",
     "affiliation": "The Independent",
-    "role": "Journalist & Foreign Correspondent",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "LD"
+    "initials": "LD",
+    "faqs": []
   },
   {
     "name": "Nesrine Malik",
     "slug": "nesrine-malik",
-    "bio": "Nesrine Malik is a Sudanese-British journalist and commentator known for her incisive writing on politics, religion, and social issues. Her work often explores the intersection of faith, identity, and contemporary culture from a thoughtful, critical perspective.",
+    "bio": "Nesrine Malik is a journalist whose reporting has appeared in The Guardian.",
     "affiliation": "The Guardian",
-    "role": "Journalist & Columnist",
-    "education": "University of Khartoum",
+    "role": "Journalist",
+    "education": "",
     "website": "",
-    "books": [
-      {
-        "title": "The Politically Incorrect Mom",
-        "amazon_url": "https://www.amazon.com/s?k=The+Politically+Incorrect+Mom+Nesrine+Malik"
-      },
-      {
-        "title": "We Need New Stories: Challenging the Toxic Myths Behind Our Age",
-        "amazon_url": "https://www.amazon.com/s?k=We+Need+New+Stories+Challenging+Toxic+Myths+Nesrine+Malik"
-      }
-    ],
-    "initials": "NM"
+    "books": [],
+    "initials": "NM",
+    "faqs": []
   },
   {
     "name": "Annie Linskey",
     "slug": "annie-linskey",
-    "bio": "Annie Linskey is an investigative journalist known for her in-depth reporting on politics and social issues. While not primarily known as a Christian author, her work often explores themes relevant to faith communities, including issues of justice, accountability, and leadership.",
+    "bio": "Annie Linskey is a journalist whose reporting has appeared in The Washington Post.",
     "affiliation": "The Washington Post",
-    "role": "Investigative Journalist",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "AL"
+    "initials": "AL",
+    "faqs": []
   },
   {
     "name": "Brett McCracken",
@@ -6500,7 +6513,7 @@
   {
     "name": "Joel C. Rosenberg",
     "slug": "joel-c-rosenberg",
-    "bio": "Joel C. Rosenberg is an evangelical author, geopolitical analyst, and founder of The Joshua Fund, a ministry that mobilizes prayer and humanitarian aid for Israel and her neighbors. A messianic believer, he has written more than twenty New York Times bestselling political thrillers and non-fiction works on Bible prophecy, the modern Middle East, and U.S.–Israel relations, and he interviews regional heads of state through his All Israel News and All Arab News platforms.",
+    "bio": "Joel C. Rosenberg is an evangelical author, geopolitical analyst, and founder of The Joshua Fund, a ministry that mobilizes prayer and humanitarian aid for Israel and her neighbors. A messianic believer, he has written more than twenty New York Times bestselling political thrillers and non-fiction works on Bible prophecy, the modern Middle East, and relations between the U.S. and Israel, and he interviews regional heads of state through his All Israel News and All Arab News platforms.",
     "affiliation": "The Joshua Fund / All Israel News",
     "role": "Author & Middle East Analyst",
     "education": "BFA, Syracuse University",
@@ -6531,7 +6544,8 @@
         "amazon_url": "https://www.amazon.com/s?k=The+Last+Jihad+Joel+C.+Rosenberg"
       }
     ],
-    "initials": "JCR"
+    "initials": "JCR",
+    "bio_sources": []
   },
   {
     "name": "Paul Helm",
@@ -7196,13 +7210,14 @@
   {
     "name": "John Eligon",
     "slug": "john-eligon",
-    "bio": "John Eligon is an award-winning journalist and author known for his thoughtful coverage of race, religion, and American culture. His work has appeared in major publications and explores the intersection of faith, identity, and contemporary social issues with nuance and compassion.",
+    "bio": "John Eligon is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Journalist & Author",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "JE"
+    "initials": "JE",
+    "faqs": []
   },
   {
     "name": "E. J. Hutchinson",
@@ -7275,13 +7290,17 @@
   {
     "name": "Alyson Punzi",
     "slug": "alyson-punzi",
-    "bio": "Alyson Punzi (BA, Cedarville University) is the author of He Always Hears: A Story of Loss and the Hope of Things Made New, a picture book that teaches children to lament and rest on God's promises. Widowed when her pastor husband died suddenly of leukemia, she writes on grief, lament, and single motherhood for The Gospel Coalition and Risen Motherhood. She and her daughter live in small-town Ohio and belong to Grace Baptist Church.",
-    "affiliation": "Grace Baptist Church (Ohio)",
-    "role": "Author & Writer",
-    "education": "",
+    "bio": "Alyson Punzi (BA, Cedarville University) is the author of He Always Hears: A Story of Loss and the Hope of Things Made New (Crossway), a picture book that teaches children biblical lament. Her Crossway author page says she became a pastor's widow when her husband, Frank, died of leukemia, and that she writes on mourning, sorrow and parenting alone.",
+    "affiliation": "",
+    "role": "Author",
+    "education": "BA, Cedarville University",
     "website": "",
     "books": [],
-    "initials": "AP"
+    "initials": "AP",
+    "bio_sources": [
+      "https://crossway.org/authors/alyson-punzi",
+      "https://www.crossway.org/press-room/he-always-hears-hccase/"
+    ]
   },
   {
     "name": "Bekah McCallum",
@@ -7308,24 +7327,26 @@
   {
     "name": "Jim Tankersley",
     "slug": "jim-tankersley",
-    "bio": "Jim Tankersley is an economics reporter and columnist who brings thoughtful analysis to complex policy issues affecting American families. His work explores how economic decisions impact faith communities and everyday life, offering readers a Christian perspective on financial stewardship and social responsibility.",
+    "bio": "Jim Tankersley is a journalist whose reporting has appeared in New York Times.",
     "affiliation": "New York Times",
-    "role": "Economics Columnist & Reporter",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "JT"
+    "initials": "JT",
+    "faqs": []
   },
   {
     "name": "David Luhnow",
     "slug": "david-luhnow",
-    "bio": "David Luhnow is a journalist and author known for his investigative reporting on Latin America and international affairs. While not primarily a Christian content creator, his work often explores themes of faith, culture, and social justice that resonate with thoughtful Christian readers.",
+    "bio": "David Luhnow is a journalist whose reporting has appeared in The Wall Street Journal, The New Yorker.",
     "affiliation": "The Wall Street Journal, The New Yorker",
-    "role": "Journalist & Author",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "DL"
+    "initials": "DL",
+    "faqs": []
   },
   {
     "name": "Adam Gabbatt",
@@ -7382,13 +7403,18 @@
   {
     "name": "Brittany Allen",
     "slug": "brittany-allen",
-    "bio": "Brittany Allen is a writer and contributor to The Gospel Coalition who reflects candidly on grief, suffering, chronic illness, and motherhood in light of the gospel. Having written on miscarriage and loss, she seeks to offer biblical hope and comfort to those walking through hardship.",
+    "bio": "Brittany Allen is the author of Lost Gifts: Miscarriage, Grief, and the God of All Comfort and Free to Weep: Finding the Courage to Grieve and Embracing the God Who Heals. She writes and podcasts on grief and faith, including her own experience of miscarriage, and contributes to The Gospel Coalition.",
     "affiliation": "The Gospel Coalition",
-    "role": "Writer",
+    "role": "Author",
     "education": "",
     "website": "https://brittleeallen.com",
     "books": [],
-    "initials": "BA"
+    "initials": "BA",
+    "faqs": [],
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/article/difference-sadness-discontent/",
+      "https://brittleeallen.com"
+    ]
   },
   {
     "name": "Jacob Crouch",
@@ -7590,13 +7616,14 @@
   {
     "name": "Adrienne Matei",
     "slug": "adrienne-matei",
-    "bio": "Adrienne Matei is a writer and journalist who explores themes of faith, culture, and identity. Her work has appeared in various publications where she examines contemporary issues through thoughtful, nuanced perspectives.",
+    "bio": "Adrienne Matei is a journalist.",
     "affiliation": "",
-    "role": "Writer & Journalist",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "AM"
+    "initials": "AM",
+    "faqs": []
   },
   {
     "name": "Pragati K.B.",
@@ -7709,41 +7736,29 @@
   {
     "name": "Elisabetta Povoledo",
     "slug": "elisabetta-povoledo",
-    "bio": "Elisabetta Povoledo is a journalist and Rome correspondent known for her coverage of Vatican affairs and religious news for major international publications. Her reporting offers insights into the Catholic Church's activities, papal developments, and the intersection of faith and culture in contemporary society.",
+    "bio": "Elisabetta Povoledo is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Journalist & Vatican Correspondent",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
     "initials": "EP",
-    "known_for": "Decades of reporting on Italy, the Vatican, and the Catholic Church for The New York Times.",
-    "current_role": "Reporter, The New York Times, based in Rome, covering Italy and the Vatican",
+    "known_for": "",
+    "current_role": "",
     "deceased": false,
-    "faqs": [
-      {
-        "q": "Who is Elisabetta Povoledo?",
-        "a": "Elisabetta Povoledo is a Rome-based reporter for The New York Times who has covered Italy and the Vatican for decades, including papal transitions, Vatican documents, and Italian culture."
-      },
-      {
-        "q": "Is Elisabetta Povoledo a Christian author?",
-        "a": "No. Povoledo is a mainstream news journalist covering the Vatican as a beat, and her public work does not indicate a personal religious affiliation. Her byline appears in Christian news digests because of her coverage of the Catholic Church."
-      },
-      {
-        "q": "What does Elisabetta Povoledo cover?",
-        "a": "She covers the Vatican, the papacy, and Italian news and culture from Rome, reporting on events such as papal elections and major decisions of the Catholic Church."
-      }
-    ]
+    "faqs": []
   },
   {
     "name": "Lara Seligman",
     "slug": "lara-seligman",
-    "bio": "Lara Seligman is a national security correspondent and journalist who covers defense, military affairs, and foreign policy. While not primarily known as a Christian content creator, her reporting often touches on faith-based perspectives in global affairs and humanitarian contexts.",
+    "bio": "Lara Seligman is a journalist whose reporting has appeared in POLITICO.",
     "affiliation": "POLITICO",
-    "role": "National Security Correspondent & Journalist",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "LS"
+    "initials": "LS",
+    "faqs": []
   },
   {
     "name": "Mia Staub",
@@ -7858,13 +7873,14 @@
   {
     "name": "Robbie Gramer",
     "slug": "robbie-gramer",
-    "bio": "Robbie Gramer is a journalist and foreign policy correspondent known for his reporting on international affairs and geopolitical issues. While his primary work focuses on secular news outlets, his analytical approach to global events and ethical journalism reflects values that resonate with thoughtful Christian readers interested in understanding world events through a principled lens.",
+    "bio": "Robbie Gramer is a journalist whose reporting has appeared in Foreign Policy Magazine.",
     "affiliation": "Foreign Policy Magazine",
-    "role": "Journalist & Foreign Policy Correspondent",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "RG"
+    "initials": "RG",
+    "faqs": []
   },
   {
     "name": "David E. Sanger",
@@ -7947,13 +7963,17 @@
   {
     "name": "Jackie Gibson",
     "slug": "jackie-gibson",
-    "bio": "Jackie Gibson is an author who serves alongside her husband, Jonathan Gibson, at Westminster Theological Seminary in Philadelphia. A mother of four, she wrote 'You Are Still a Mother: Hope for Women Grieving a Stillbirth or Miscarriage' out of her own experience of loss, offering comfort rooted in the gospel.",
-    "affiliation": "Westminster Theological Seminary",
+    "bio": "Jackie Gibson is the author of You Are Still a Mother: Hope for Women Grieving a Stillbirth or Miscarriage. According to her Ligonier teacher page, she serves with her husband, Jonny, at Tenth Presbyterian Church in Philadelphia. In a Ligonier article she has written about the stillbirth of her daughter.",
+    "affiliation": "Tenth Presbyterian Church, Philadelphia",
     "role": "Author",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "JG"
+    "initials": "JG",
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/jackie-gibson",
+      "https://learn.ligonier.org/articles/gods-comfort-in-the-loss-of-a-child"
+    ]
   },
   {
     "name": "Scott Yenor",
@@ -7994,13 +8014,14 @@
   {
     "name": "James T. Areddy",
     "slug": "james-t-areddy",
-    "bio": "James T. Areddy is a journalist and writer known for his reporting on economics, business, and cultural trends. His work appears in major publications where he brings thoughtful analysis to contemporary issues affecting society and faith communities.",
+    "bio": "James T. Areddy is a journalist whose reporting has appeared in The Wall Street Journal.",
     "affiliation": "The Wall Street Journal",
-    "role": "Journalist & Writer",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "JTA"
+    "initials": "JTA",
+    "faqs": []
   },
   {
     "name": "Scott McClellan",
@@ -8109,22 +8130,14 @@
   {
     "name": "Stephen Bates",
     "slug": "stephen-bates",
-    "bio": "Stephen Bates is a British author and journalist who has written extensively on religion, culture, and social issues from a thoughtful Christian perspective. His work examines the intersection of faith and contemporary society with both critical insight and pastoral sensitivity.",
+    "bio": "Stephen Bates is a journalist.",
     "affiliation": "",
-    "role": "Author & Journalist",
+    "role": "Journalist",
     "education": "",
     "website": "",
-    "books": [
-      {
-        "title": "A Church at War: Anglicans and Homosexuality",
-        "amazon_url": "https://www.amazon.com/s?k=A+Church+at+War+Anglicans+and+Homosexuality+Stephen+Bates"
-      },
-      {
-        "title": "Battleground Britain: The New Political Conflict",
-        "amazon_url": "https://www.amazon.com/s?k=Battleground+Britain+The+New+Political+Conflict+Stephen+Bates"
-      }
-    ],
-    "initials": "SB"
+    "books": [],
+    "initials": "SB",
+    "faqs": []
   },
   {
     "name": "Julie Smyth",
@@ -8351,40 +8364,38 @@
   {
     "name": "Ramon Antonio Vargas",
     "slug": "ramon-antonio-vargas",
-    "bio": "Ramon Antonio Vargas is a religion reporter and journalist who covers faith communities and Christian perspectives for major publications. His reporting focuses on how religious traditions engage with contemporary social and cultural issues.",
-    "affiliation": "Religion journalist; contributions to major news outlets",
-    "role": "Religion Journalist & Reporter",
+    "bio": "Ramon Antonio Vargas is a journalist.",
+    "affiliation": "",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "RAV"
+    "initials": "RAV",
+    "faqs": []
   },
   {
     "name": "Lily Kuo",
     "slug": "lily-kuo",
-    "bio": "Lily Kuo is a journalist and reporter known for her international coverage and investigative work. While primarily known for secular journalism, her reporting often touches on themes of faith, culture, and human rights that resonate with Christian audiences seeking thoughtful, fact-based news analysis.",
+    "bio": "Lily Kuo is a journalist whose reporting has appeared in The Guardian.",
     "affiliation": "The Guardian",
-    "role": "Journalist & Reporter",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "LK"
+    "initials": "LK",
+    "faqs": []
   },
   {
     "name": "Sune Engel Rasmussen",
     "slug": "sune-engel-rasmussen",
-    "bio": "Sune Engel Rasmussen is a Danish-Icelandic journalist and author known for his investigative reporting on conflict, religion, and geopolitics, particularly in Afghanistan and the Middle East. His work explores the intersection of faith, politics, and human resilience in regions marked by religious complexity. Through his journalism and writing, Rasmussen brings nuanced Christian perspectives to understanding global conflict and cultural identity.",
+    "bio": "Sune Engel Rasmussen is a journalist whose reporting has appeared in The Guardian, The New York Times.",
     "affiliation": "The Guardian, The New York Times",
-    "role": "Journalist & Author",
+    "role": "Journalist",
     "education": "",
     "website": "",
-    "books": [
-      {
-        "title": "The Faithful Spy: Dietrich Bonhoeffer and the Plot to Kill Hitler",
-        "amazon_url": "https://www.amazon.com/s?k=Sune+Engel+Rasmussen+Faithful+Spy"
-      }
-    ],
-    "initials": "SER"
+    "books": [],
+    "initials": "SER",
+    "faqs": []
   },
   {
     "name": "Walter Shaw",
@@ -8461,13 +8472,14 @@
   {
     "name": "Erica L. Green",
     "slug": "erica-l-green",
-    "bio": "Erica L. Green is an education reporter and journalist who covers policy, equity, and systemic issues in American schools. Her investigative work explores how faith communities and Christian institutions navigate educational challenges and social change.",
+    "bio": "Erica L. Green is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Education Correspondent & Journalist",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "ELG"
+    "initials": "ELG",
+    "faqs": []
   },
   {
     "name": "D.V. Rider",
@@ -8583,13 +8595,14 @@
   {
     "name": "Sui-Lee Wee",
     "slug": "suilee-wee",
-    "bio": "Sui-Lee Wee is a journalist and correspondent known for reporting on religious and cultural issues. With a focus on faith communities and their intersection with society, Wee brings thoughtful analysis to stories affecting Christians and other religious groups around the world.",
+    "bio": "Sui-Lee Wee is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Journalist & Correspondent",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "SLW"
+    "initials": "SLW",
+    "faqs": []
   },
   {
     "name": "Cath Clarke",
@@ -8605,13 +8618,14 @@
   {
     "name": "Jared Malsin",
     "slug": "jared-malsin",
-    "bio": "Jared Malsin is an international correspondent and journalist who has reported extensively from the Middle East and North Africa, covering stories of faith, conflict, and human resilience. His work has appeared in major publications and brings thoughtful Christian perspective to global events affecting believers in volatile regions.",
+    "bio": "Jared Malsin is a journalist whose reporting has appeared in TIME Magazine.",
     "affiliation": "TIME Magazine",
-    "role": "International Correspondent & Journalist",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "JM"
+    "initials": "JM",
+    "faqs": []
   },
   {
     "name": "Pete Nicholas",
@@ -8783,18 +8797,14 @@
   {
     "name": "Damian Paletta",
     "slug": "damian-paletta",
-    "bio": "Damian Paletta is a Pulitzer Prize-winning journalist known for his investigative reporting on economic policy and government spending. While not primarily known as a Christian author, his work often explores ethical dimensions of public policy and financial stewardship that resonate with faith-based readers interested in how biblical principles apply to economics and governance.",
+    "bio": "Damian Paletta is a journalist whose reporting has appeared in The Washington Post.",
     "affiliation": "The Washington Post",
-    "role": "Investigative Journalist & Author",
+    "role": "Journalist",
     "education": "",
     "website": "",
-    "books": [
-      {
-        "title": "The Wager: Reagan, Thatcher, and the First Great Clash of the Conservative Revolution",
-        "amazon_url": "https://www.amazon.com/s?k=The+Wager+Reagan+Thatcher+Damian+Paletta"
-      }
-    ],
-    "initials": "DP"
+    "books": [],
+    "initials": "DP",
+    "faqs": []
   },
   {
     "name": "Brian Spegele",
@@ -8936,13 +8946,14 @@
   {
     "name": "Justine Coleman",
     "slug": "justine-coleman",
-    "bio": "Justine Coleman is a journalist and political correspondent who brings thoughtful, fact-based reporting to contemporary issues. While not primarily known as a Christian author, her work often intersects with values-based coverage relevant to faith communities.",
+    "bio": "Justine Coleman is a journalist.",
     "affiliation": "",
-    "role": "Journalist & Political Correspondent",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "JC"
+    "initials": "JC",
+    "faqs": []
   },
   {
     "name": "Carl Peetz",
@@ -8969,13 +8980,14 @@
   {
     "name": "Luke Broadwater",
     "slug": "luke-broadwater",
-    "bio": "Luke Broadwater is an investigative journalist who has covered politics, government accountability, and significant national events for major publications. While primarily known for his political reporting, his work often intersects with issues of ethics, integrity, and leadership that resonate with Christian audiences interested in cultural and civic matters.",
+    "bio": "Luke Broadwater is a journalist whose reporting has appeared in The Washington Post.",
     "affiliation": "The Washington Post",
-    "role": "Investigative Journalist",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "LB"
+    "initials": "LB",
+    "faqs": []
   },
   {
     "name": "Todd Johnson",
@@ -9283,30 +9295,17 @@
   {
     "name": "Aaron Boxerman",
     "slug": "aaron-boxerman",
-    "bio": "Aaron Boxerman is a journalist and writer who covers religious and cultural topics with thoughtful analysis. His work explores the intersection of faith, politics, and contemporary issues from a balanced perspective.",
+    "bio": "Aaron Boxerman is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Journalist & Writer",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
     "initials": "AB",
-    "known_for": "Breaking-news coverage of the Israel-Hamas war for The New York Times.",
-    "current_role": "Reporter, The New York Times, covering Israel and Gaza (based in Jerusalem)",
+    "known_for": "",
+    "current_role": "",
     "deceased": false,
-    "faqs": [
-      {
-        "q": "Who is Aaron Boxerman?",
-        "a": "Aaron Boxerman is a Jerusalem-based reporter for The New York Times covering Israel and Gaza, largely on the paper's live breaking-news team. He previously covered Palestinian affairs and the Arab world for The Times of Israel from 2020 to 2022."
-      },
-      {
-        "q": "What does Aaron Boxerman cover?",
-        "a": "He covers the Israel-Hamas war and broader Israeli and Palestinian affairs. His reporting from the region is frequently cited in coverage of events affecting the Holy Land, a subject of enduring interest to Christian readers."
-      },
-      {
-        "q": "Is Aaron Boxerman a Christian author?",
-        "a": "No. Boxerman is a mainstream news journalist, and his work does not indicate an evangelical affiliation. His byline appears in Christian news digests because of his coverage of Israel and the Middle East."
-      }
-    ]
+    "faqs": []
   },
   {
     "name": "Allen C. Guelzo",
@@ -9556,13 +9555,14 @@
   {
     "name": "Christopher F. Schuetze",
     "slug": "christopher-f-schuetze",
-    "bio": "Christopher F. Schuetze is a religion correspondent and journalist known for his thoughtful reporting on faith communities and religious life. His work has explored topics ranging from church governance to denominational movements, bringing nuanced perspective to contemporary Christian issues.",
+    "bio": "Christopher F. Schuetze is a journalist whose reporting has appeared in New York Times.",
     "affiliation": "New York Times",
-    "role": "Religion Correspondent & Journalist",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "CFS"
+    "initials": "CFS",
+    "faqs": []
   },
   {
     "name": "Joyu Wang",
@@ -9624,13 +9624,16 @@
   {
     "name": "Jane Story",
     "slug": "jane-story",
-    "bio": "Jane Story serves on campus staff with Cru, the collegiate ministry formerly known as Campus Crusade for Christ. Drawing on her own experience as an adult child of divorce, she writes for The Gospel Coalition on family and gray divorce, including guidance for churches caring for the growing number of people whose parents separate later in life.",
+    "bio": "Jane Story is on campus staff with Cru. She has written for The Gospel Coalition about her parents' divorce, which came when she was an adult, and about what adult children of divorce face.",
     "affiliation": "Cru",
-    "role": "Campus Minister & Writer",
+    "role": "Campus Staff & Writer",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "JS"
+    "initials": "JS",
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/article/adult-children-divorce/"
+    ]
   },
   {
     "name": "Joey Sherrard",
@@ -9657,30 +9660,17 @@
   {
     "name": "Catie Edmondson",
     "slug": "catie-edmondson",
-    "bio": "Catie Edmondson is a congressional correspondent and political reporter known for her coverage of Capitol Hill and legislative matters. While not primarily known as a Christian author, her journalism has provided insightful analysis of policy issues affecting faith communities and religious liberty.",
+    "bio": "Catie Edmondson is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Congressional Correspondent & Political Reporter",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
     "initials": "CE",
-    "known_for": "Covering Congress, federal spending fights, and major legislation for The New York Times.",
-    "current_role": "Congressional Correspondent, The New York Times (Washington, DC)",
+    "known_for": "",
+    "current_role": "",
     "deceased": false,
-    "faqs": [
-      {
-        "q": "Who is Catie Edmondson?",
-        "a": "Catie Edmondson is a congressional correspondent for The New York Times based in Washington, DC. She covers Capitol Hill, including government funding battles, major legislation, and congressional leadership."
-      },
-      {
-        "q": "Is Catie Edmondson a Christian author?",
-        "a": "No. Edmondson is a mainstream political journalist, and her public work does not indicate a religious affiliation. Her reporting is sometimes referenced in Christian media when legislation touches religious liberty or issues of concern to faith communities."
-      },
-      {
-        "q": "What does Catie Edmondson cover?",
-        "a": "She covers the United States Congress, reporting on legislative negotiations, spending bills, and the politics of the House and Senate for The New York Times."
-      }
-    ]
+    "faqs": []
   },
   {
     "name": "Courtney Reissig",
@@ -10142,24 +10132,30 @@
   {
     "name": "Cody Benjamin",
     "slug": "cody-benjamin",
-    "bio": "Cody Benjamin is a sports writer and analyst known for his work covering the intersection of faith and athletics. He has contributed to various Christian and mainstream sports media outlets, bringing a thoughtful perspective to sports commentary.",
-    "affiliation": "",
-    "role": "Sports Writer & Analyst",
+    "bio": "Cody Benjamin was a senior news writer at Christianity Today, according to his CT author page (checked November 2026). He previously was a staff writer for CBS Sports, covering mainly the NFL, and is an author of fiction and nonfiction. His work has also appeared at The Gospel Coalition and RogerEbert.com.",
+    "affiliation": "Christianity Today",
+    "role": "Journalist",
     "education": "",
-    "website": "",
+    "website": "https://www.christianitytoday.com/writers/cody-benjamin/",
     "books": [],
-    "initials": "CB"
+    "initials": "CB",
+    "faqs": [],
+    "bio_sources": [
+      "https://www.christianitytoday.com/writers/cody-benjamin/",
+      "https://www.christianitytoday.com/2026/08/the-christian-colleges-welcoming-socratic-bots-artificial-intelligence/"
+    ]
   },
   {
     "name": "Philip Wegmann",
     "slug": "philip-wegmann",
-    "bio": "Philip Wegmann is a political correspondent and opinion writer known for his commentary on faith, politics, and culture from a conservative Christian perspective. He brings thoughtful analysis to contemporary issues affecting the American church and society.",
+    "bio": "Philip Wegmann is a journalist whose reporting has appeared in RealClearPolitics.",
     "affiliation": "RealClearPolitics",
-    "role": "Political Correspondent & Commentator",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "PW"
+    "initials": "PW",
+    "faqs": []
   },
   {
     "name": "Brian Cosby",
@@ -10243,13 +10239,14 @@
   {
     "name": "Amelia Nierenberg",
     "slug": "amelia-nierenberg",
-    "bio": "Amelia Nierenberg is a journalist and writer who has contributed to major publications covering stories of faith, culture, and social issues. Her reporting often explores the intersection of Christian values and contemporary life, bringing thoughtful analysis to complex topics facing modern believers.",
+    "bio": "Amelia Nierenberg is a journalist whose reporting has appeared in New York Times.",
     "affiliation": "New York Times",
-    "role": "Journalist & Writer",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "AN"
+    "initials": "AN",
+    "faqs": []
   },
   {
     "name": "Sanya Mansoor",
@@ -10475,18 +10472,14 @@
   {
     "name": "Farnaz Fassihi",
     "slug": "farnaz-fassihi",
-    "bio": "Farnaz Fassihi is an award-winning international journalist and foreign correspondent known for her courageous reporting from the Middle East and conflict zones. With decades of experience covering faith communities, political upheaval, and human rights issues, she brings nuanced perspective to complex global stories that matter to Christians seeking to understand our world.",
+    "bio": "Farnaz Fassihi is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Journalist & Foreign Correspondent",
-    "education": "University of Illinois",
+    "role": "Journalist",
+    "education": "",
     "website": "",
-    "books": [
-      {
-        "title": "Waiting for an Ordinary Day: The Unraveling of Life in Iraq",
-        "amazon_url": "https://www.amazon.com/s?k=Waiting+for+an+Ordinary+Day+Farnaz+Fassihi"
-      }
-    ],
-    "initials": "FF"
+    "books": [],
+    "initials": "FF",
+    "faqs": []
   },
   {
     "name": "W. Robert Godfrey",
@@ -11066,13 +11059,14 @@
   {
     "name": "Kim Barker",
     "slug": "kim-barker",
-    "bio": "Kim Barker is a journalist and author known for her investigative reporting and personal narratives that explore faith, resilience, and human experience. Her work has appeared in major publications and reflects a thoughtful engagement with contemporary issues from a faith-informed perspective.",
+    "bio": "Kim Barker is a journalist.",
     "affiliation": "",
-    "role": "Journalist & Author",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "KB"
+    "initials": "KB",
+    "faqs": []
   },
   {
     "name": "Michael Anthony Adams",
@@ -11163,13 +11157,14 @@
   {
     "name": "Marc Santora",
     "slug": "marc-santora",
-    "bio": "Marc Santora is a seasoned journalist and author who has covered major news stories for prominent publications including The New York Times. Drawing on his extensive reporting experience, he brings investigative insight and storytelling depth to his work, often exploring themes relevant to faith, culture, and human experience.",
+    "bio": "Marc Santora is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Journalist & Author",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "MS"
+    "initials": "MS",
+    "faqs": []
   },
   {
     "name": "Thomas Brand",
@@ -11229,18 +11224,14 @@
   {
     "name": "James Marson",
     "slug": "james-marson",
-    "bio": "James Marson is a journalist and author known for his investigative work on religious persecution and faith-based issues. His reporting has focused on the experiences of Christians facing persecution in various parts of the world, bringing attention to underreported stories of faith and resilience.",
+    "bio": "James Marson is a journalist.",
     "affiliation": "",
-    "role": "Journalist & Author",
+    "role": "Journalist",
     "education": "",
     "website": "",
-    "books": [
-      {
-        "title": "The Cost of Living Out Your Faith",
-        "amazon_url": "https://www.amazon.com/s?k=The+Cost+of+Living+Out+Your+Faith+James+Marson"
-      }
-    ],
-    "initials": "JM"
+    "books": [],
+    "initials": "JM",
+    "faqs": []
   },
   {
     "name": "R. Kent Hughes",
@@ -11310,18 +11301,19 @@
   {
     "name": "Josh Dawsey",
     "slug": "josh-dawsey",
-    "bio": "Josh Dawsey is a political reporter and journalist known for his investigative work covering national politics and the Trump administration. While not primarily a Christian content creator, his reporting has been widely followed by evangelical audiences interested in political news and analysis from a major news perspective.",
+    "bio": "Josh Dawsey is a journalist whose reporting has appeared in The Washington Post.",
     "affiliation": "The Washington Post",
-    "role": "Political Reporter & Journalist",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "JD"
+    "initials": "JD",
+    "faqs": []
   },
   {
     "name": "John Owen",
     "slug": "john-owen",
-    "bio": "John Owen (1616–1683) was an English Congregationalist theologian and pastor whose works profoundly shaped Reformed theology and Christian spirituality. Known for his deep biblical scholarship and pastoral sensitivity, Owen served as Vice-Chancellor of Oxford University and ministered through both preaching and prolific theological writing. His treatises on sin, the Holy Spirit, and biblical interpretation remain influential among evangelicals seeking robust theological foundations.",
+    "bio": "John Owen (1616 to 1683) was an English Congregationalist theologian and pastor whose works profoundly shaped Reformed theology and Christian spirituality. Known for his deep biblical scholarship and pastoral sensitivity, Owen served as Vice-Chancellor of Oxford University and ministered through both preaching and prolific theological writing. His treatises on sin, the Holy Spirit, and biblical interpretation remain influential among evangelicals seeking robust theological foundations.",
     "affiliation": "Oxford University; Independent/Congregationalist Churches",
     "role": "Theologian, Pastor & Scholar",
     "education": "Oxford University",
@@ -11352,7 +11344,8 @@
         "amazon_url": "https://www.amazon.com/s?k=John+Owen+Biblical+Theology"
       }
     ],
-    "initials": "JO"
+    "initials": "JO",
+    "bio_sources": []
   },
   {
     "name": "Chrys Jones",
@@ -11691,13 +11684,14 @@
   {
     "name": "Yeganeh Torbati",
     "slug": "yeganeh-torbati",
-    "bio": "Yeganeh Torbati is a journalist and writer known for her reporting on religious freedom, faith communities, and social issues. Her work has appeared in major publications covering stories that intersect faith, culture, and current events.",
+    "bio": "Yeganeh Torbati is a journalist.",
     "affiliation": "",
-    "role": "Journalist & Writer",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "YT"
+    "initials": "YT",
+    "faqs": []
   },
   {
     "name": "Joshua Torrey",
@@ -11836,13 +11830,14 @@
   {
     "name": "Siobhán O'Grady",
     "slug": "siobhn-ogrady",
-    "bio": "Siobhán O'Grady is a journalist and foreign correspondent known for her reporting on international affairs and humanitarian issues. Her work often explores themes of faith, resilience, and human dignity in challenging global contexts.",
+    "bio": "Siobhán O'Grady is a journalist whose reporting has appeared in The Washington Post.",
     "affiliation": "The Washington Post",
-    "role": "Journalist & Foreign Correspondent",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "SO"
+    "initials": "SO",
+    "faqs": []
   },
   {
     "name": "Niharika Mandhana",
@@ -11858,13 +11853,14 @@
   {
     "name": "Mark Landler",
     "slug": "mark-landler",
-    "bio": "Mark Landler is a seasoned foreign policy journalist and correspondent who has covered major global events and diplomatic developments for leading publications. His reporting often explores the intersection of international relations, politics, and ethics: topics relevant to Christians seeking to understand complex world affairs.",
+    "bio": "Mark Landler is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Foreign Affairs Correspondent & Journalist",
-    "education": "Harvard University",
+    "role": "Journalist",
+    "education": "",
     "website": "",
     "books": [],
-    "initials": "ML"
+    "initials": "ML",
+    "faqs": []
   },
   {
     "name": "Vanessa Doughty",
@@ -11935,18 +11931,14 @@
   {
     "name": "Keith Bradsher",
     "slug": "keith-bradsher",
-    "bio": "Keith Bradsher is an award-winning international correspondent and economics reporter known for his investigative journalism on global trade, manufacturing, and economic policy. While not primarily a Christian content creator, his work examining economic justice issues and global inequality aligns with Christian values of stewardship and concern for workers worldwide.",
+    "bio": "Keith Bradsher is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "International Correspondent & Economics Reporter",
-    "education": "Harvard University",
+    "role": "Journalist",
+    "education": "",
     "website": "",
-    "books": [
-      {
-        "title": "High and Mighty: SUVs - The World's Most Dangerous Vehicles and How They Got That Way",
-        "amazon_url": "https://www.amazon.com/s?k=High+and+Mighty+Keith+Bradsher"
-      }
-    ],
-    "initials": "KB"
+    "books": [],
+    "initials": "KB",
+    "faqs": []
   },
   {
     "name": "Kevin Burrell",
@@ -12043,13 +12035,14 @@
   {
     "name": "Marianne LeVine",
     "slug": "marianne-levine",
-    "bio": "Marianne LeVine is a journalist and author known for her investigative reporting on religious movements and institutional accountability. Her work has appeared in major publications where she examines faith communities with both critical insight and respect for believers seeking truth.",
+    "bio": "Marianne LeVine is a journalist.",
     "affiliation": "",
-    "role": "Investigative Journalist & Author",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "ML"
+    "initials": "ML",
+    "faqs": []
   },
   {
     "name": "Rachel Gilson",
@@ -12376,13 +12369,14 @@
   {
     "name": "Adam Goldman",
     "slug": "adam-goldman",
-    "bio": "Adam Goldman is a journalist and reporter known for his investigative work covering national security, law enforcement, and intelligence matters. While not primarily known as a Christian author, his reporting has touched on issues of faith, ethics, and institutional accountability that resonate with thoughtful Christian readers.",
+    "bio": "Adam Goldman is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Investigative Journalist & Reporter",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "AG"
+    "initials": "AG",
+    "faqs": []
   },
   {
     "name": "Scott W. Kay",
@@ -12458,22 +12452,33 @@
   {
     "name": "Peter Rosenberger",
     "slug": "peter-rosenberger",
-    "bio": "Peter Rosenberger is a Christian author, radio host, and caregiver advocate who has devoted his ministry to supporting those navigating the complexities of chronic illness and caregiving. Through his writing, broadcasting, and speaking engagements, he encourages believers to find hope and purpose amid life's most difficult circumstances.",
+    "bio": "Peter Rosenberger hosts the radio program Hope for the Caregiver, heard on Truth Network and American Family Radio. His site describes him as a caregiver to his wife, Gracie, who lives with severe disabilities, and says he has cared for her for forty years. With Gracie he co-founded Standing With Hope, which provides prosthetic limbs to amputees. His books include Hope for the Caregiver, A Minute for Caregivers, 7 Caregiver Landmines and A Caregiver's Companion.",
     "affiliation": "Hope for the Caregiver",
-    "role": "Author, Radio Host & Caregiver Advocate",
+    "role": "Radio Host & Author",
     "education": "",
-    "website": "https://www.hopeforthcaregiver.com",
+    "website": "https://peterrosenberger.com/",
     "books": [
       {
-        "title": "A Place Called Home: Finding Hope When Chronic Illness Strikes",
-        "amazon_url": "https://www.amazon.com/s?k=A+Place+Called+Home+Peter+Rosenberger"
+        "title": "Hope for the Caregiver",
+        "amazon_url": "https://www.amazon.com/s?k=Hope+for+the+Caregiver+Peter+Rosenberger"
       },
       {
-        "title": "The Christian Caregiver's Manual",
-        "amazon_url": "https://www.amazon.com/s?k=The+Christian+Caregiver+Manual+Peter+Rosenberger"
+        "title": "A Minute for Caregivers",
+        "amazon_url": "https://www.amazon.com/s?k=A+Minute+for+Caregivers+Peter+Rosenberger"
+      },
+      {
+        "title": "7 Caregiver Landmines",
+        "amazon_url": "https://www.amazon.com/s?k=7+Caregiver+Landmines+Peter+Rosenberger"
+      },
+      {
+        "title": "A Caregiver's Companion",
+        "amazon_url": "https://www.amazon.com/s?k=A+Caregivers+Companion+Peter+Rosenberger"
       }
     ],
-    "initials": "PR"
+    "initials": "PR",
+    "bio_sources": [
+      "https://peterrosenberger.com/"
+    ]
   },
   {
     "name": "Erin Ford",
@@ -12577,13 +12582,14 @@
   {
     "name": "Emma Bubola",
     "slug": "emma-bubola",
-    "bio": "Emma Bubola is a journalist and writer who has contributed to major publications covering faith, culture, and human interest stories. Her reporting often explores the intersection of spirituality, community, and contemporary life with thoughtful, narrative-driven journalism.",
+    "bio": "Emma Bubola is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Journalist & Writer",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "EB"
+    "initials": "EB",
+    "faqs": []
   },
   {
     "name": "Jacob Leeming",
@@ -12686,13 +12692,14 @@
   {
     "name": "Dalya Alberge",
     "slug": "dalya-alberge",
-    "bio": "Dalya Alberge is a distinguished arts and cultural correspondent known for her insightful reporting on faith, heritage, and the arts. Her work bridges Christian perspectives with cultural commentary, exploring how faith intersects with society, tradition, and creative expression.",
+    "bio": "Dalya Alberge is a journalist whose reporting has appeared in The Times, The Sunday Times.",
     "affiliation": "The Times, The Sunday Times",
-    "role": "Arts & Cultural Correspondent",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "DA"
+    "initials": "DA",
+    "faqs": []
   },
   {
     "name": "Tibisay Romero",
@@ -12741,13 +12748,14 @@
   {
     "name": "Lara Jakes",
     "slug": "lara-jakes",
-    "bio": "Lara Jakes is an accomplished journalist and foreign affairs correspondent known for her incisive reporting on international politics and global issues. Her work has appeared in major publications where she provides thoughtful analysis on complex world events from a perspective informed by Christian values and ethics.",
+    "bio": "Lara Jakes is a journalist whose reporting has appeared in Associated Press.",
     "affiliation": "Associated Press",
-    "role": "Journalist & Foreign Affairs Correspondent",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "LJ"
+    "initials": "LJ",
+    "faqs": []
   },
   {
     "name": "Dan White Jr.",
@@ -12785,18 +12793,14 @@
   {
     "name": "Abdi Latif Dahir",
     "slug": "abdi-latif-dahir",
-    "bio": "Abdi Latif Dahir is an award-winning journalist and author known for his investigative reporting on East Africa, human rights, and social justice issues. His work explores themes of faith, identity, and community resilience across the African continent and diaspora.",
+    "bio": "Abdi Latif Dahir is a journalist whose reporting has appeared in The New York Times, National Geographic, The Guardian.",
     "affiliation": "The New York Times, National Geographic, The Guardian",
-    "role": "Journalist & Author",
+    "role": "Journalist",
     "education": "",
     "website": "",
-    "books": [
-      {
-        "title": "The Year of the Pupil",
-        "amazon_url": "https://www.amazon.com/s?k=The+Year+of+the+Pupil+Abdi+Latif+Dahir"
-      }
-    ],
-    "initials": "ALD"
+    "books": [],
+    "initials": "ALD",
+    "faqs": []
   },
   {
     "name": "Veronica Clarke",
@@ -12834,13 +12838,14 @@
   {
     "name": "Simon Tisdall",
     "slug": "simon-tisdall",
-    "bio": "Simon Tisdall is a seasoned international affairs columnist and editor known for his incisive analysis of global politics, diplomacy, and conflict. Writing primarily for The Guardian, he brings decades of experience covering major world events and their implications for peace, justice, and human rights, values central to Christian engagement with the world.",
+    "bio": "Simon Tisdall is a journalist whose reporting has appeared in The Guardian.",
     "affiliation": "The Guardian",
-    "role": "Columnist & International Affairs Editor",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "ST"
+    "initials": "ST",
+    "faqs": []
   },
   {
     "name": "Nik Schatz",
@@ -12996,18 +13001,14 @@
   {
     "name": "Carlotta Gall",
     "slug": "carlotta-gall",
-    "bio": "Carlotta Gall is an award-winning international journalist and foreign correspondent known for her extensive reporting from Afghanistan, Pakistan, and the Middle East. Her work combines rigorous investigative journalism with compelling human narratives, offering readers deep insight into complex geopolitical issues affecting the Christian community and broader global stability.",
+    "bio": "Carlotta Gall is a journalist whose reporting has appeared in The New York Times, The Guardian.",
     "affiliation": "The New York Times, The Guardian",
-    "role": "Journalist & Author",
-    "education": "University of Cambridge",
+    "role": "Journalist",
+    "education": "",
     "website": "",
-    "books": [
-      {
-        "title": "The Wrong Enemy: America in Afghanistan 2001-2014",
-        "amazon_url": "https://www.amazon.com/s?k=The+Wrong+Enemy+Carlotta+Gall"
-      }
-    ],
-    "initials": "CG"
+    "books": [],
+    "initials": "CG",
+    "faqs": []
   },
   {
     "name": "Sara Hagerty",
@@ -13120,24 +13121,26 @@
   {
     "name": "Julie Turkewitz",
     "slug": "julie-turkewitz",
-    "bio": "Julie Turkewitz is an award-winning journalist and author known for her in-depth reporting on Latin America, faith communities, and social issues. Her work has appeared in major publications including The New York Times, where she has covered stories of resilience, spirituality, and cultural transformation across the region.",
+    "bio": "Julie Turkewitz is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Journalist & Author",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "JT"
+    "initials": "JT",
+    "faqs": []
   },
   {
     "name": "Austin Ramzy",
     "slug": "austin-ramzy",
-    "bio": "Austin Ramzy is a journalist and writer known for his reporting on religious freedom, persecution, and faith-related issues from a global perspective. His work has brought important stories of Christian communities and religious minorities to international audiences.",
+    "bio": "Austin Ramzy is a journalist whose reporting has appeared in The New York Times.",
     "affiliation": "The New York Times",
-    "role": "Journalist & Reporter",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "AR"
+    "initials": "AR",
+    "faqs": []
   },
   {
     "name": "Sarah Ivill",
@@ -13241,13 +13244,14 @@
   {
     "name": "Tory Shepherd",
     "slug": "tory-shepherd",
-    "bio": "Tory Shepherd is an Australian journalist and columnist known for her sharp commentary on faith, politics, and culture. Her work frequently engages with Christian perspectives on contemporary social issues and public discourse.",
+    "bio": "Tory Shepherd is a journalist whose reporting has appeared in The Advertiser, News Corp Australia.",
     "affiliation": "The Advertiser, News Corp Australia",
-    "role": "Journalist & Columnist",
+    "role": "Journalist",
     "education": "",
     "website": "",
     "books": [],
-    "initials": "TS"
+    "initials": "TS",
+    "faqs": []
   },
   {
     "name": "Colton Taylor",
@@ -13529,40 +13533,29 @@
     "initials": "JC"
   },
   {
-    "name": "William Barclay",
+    "name": "William Barcley",
     "slug": "william-barcley",
-    "bio": "William Barclay was a renowned Scottish biblical scholar and theologian whose accessible commentaries have helped millions understand Scripture. His prolific writing and teaching ministry at the University of Glasgow made complex theological concepts available to everyday Christians. Barclay's warm pastoral approach and commitment to making the Bible relevant earned him deep respect across denominational lines.",
-    "affiliation": "University of Glasgow, Church of Scotland",
-    "role": "Biblical Scholar, Professor & Author",
-    "education": "D.D., University of Glasgow",
-    "website": "",
+    "bio": "William B. Barcley is senior pastor emeritus of Sovereign Grace Presbyterian Church in Charlotte, North Carolina, and teaches New Testament as an adjunct professor at Reformed Theological Seminary Charlotte, according to his Ligonier Ministries teacher page. His books include The Secret of Contentment and Gospel Clarity. He writes for Ligonier Ministries.",
+    "affiliation": "Reformed Theological Seminary Charlotte; Sovereign Grace Presbyterian Church",
+    "role": "Pastor & New Testament Teacher",
+    "education": "",
+    "website": "https://learn.ligonier.org/teachers/william-barcley",
     "books": [
       {
-        "title": "The Daily Study Bible Series",
-        "amazon_url": "https://www.amazon.com/s?k=Daily+Study+Bible+William+Barclay"
+        "title": "The Secret of Contentment",
+        "amazon_url": "https://www.amazon.com/s?k=The+Secret+of+Contentment+William+Barcley"
       },
       {
-        "title": "A New Testament Wordbook",
-        "amazon_url": "https://www.amazon.com/s?k=New+Testament+Wordbook+William+Barclay"
-      },
-      {
-        "title": "The Gospel of Matthew",
-        "amazon_url": "https://www.amazon.com/s?k=Gospel+of+Matthew+William+Barclay"
-      },
-      {
-        "title": "The Gospel of Mark",
-        "amazon_url": "https://www.amazon.com/s?k=Gospel+of+Mark+William+Barclay"
-      },
-      {
-        "title": "The Letter to the Romans",
-        "amazon_url": "https://www.amazon.com/s?k=Letter+to+the+Romans+William+Barclay"
-      },
-      {
-        "title": "Ethics in a Permissive Society",
-        "amazon_url": "https://www.amazon.com/s?k=Ethics+Permissive+Society+William+Barclay"
+        "title": "Gospel Clarity",
+        "amazon_url": "https://www.amazon.com/s?k=Gospel+Clarity+William+Barcley"
       }
     ],
-    "initials": "WB"
+    "initials": "WB",
+    "faqs": [],
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/william-barcley",
+      "https://feeds.ligonier.org/~/960659651/0/ligonierministriesblog"
+    ]
   },
   {
     "name": "Scott Aniol",
@@ -14990,30 +14983,28 @@
   {
     "name": "Michael G. Brown",
     "slug": "michael-g-brown",
-    "bio": "Michael G. Brown is a respected Christian author and apologist known for his accessible writing on biblical topics and cultural issues facing the Church today. His work combines scholarly insight with pastoral sensitivity, helping readers deepen their faith and engage thoughtfully with contemporary challenges.",
-    "affiliation": "AskDrBrown.org",
-    "role": "Author & Christian Apologist",
-    "education": "Ph.D., New York University",
-    "website": "https://www.askdrbrown.org",
+    "bio": "Michael G. Brown is pastor of Chiesa Riformata Filadelfia in Milan, Italy, and a missionary of the United Reformed Churches in North America (URCNA), according to his Ligonier Ministries teacher page. He contributed to Sacred Bond: Covenant Theology Explored and Christ and the Condition, and wrote the commentary on 2 Timothy in the Lectio Continua series. He writes for Ligonier Ministries and Tabletalk magazine.",
+    "affiliation": "Chiesa Riformata Filadelfia (Milan); URCNA",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "https://learn.ligonier.org/teachers/michael-g-brown",
     "books": [
       {
-        "title": "Answering Jewish Objections to Jesus",
-        "amazon_url": "https://www.amazon.com/s?k=Answering+Jewish+Objections+to+Jesus+Michael+Brown"
+        "title": "Sacred Bond: Covenant Theology Explored",
+        "amazon_url": "https://www.amazon.com/s?k=Sacred+Bond+Covenant+Theology+Explored+Michael+G.+Brown"
       },
       {
-        "title": "The End of the American Gospel Custom",
-        "amazon_url": "https://www.amazon.com/s?k=The+End+of+the+American+Gospel+Custom+Michael+Brown"
-      },
-      {
-        "title": "Israel and the Church",
-        "amazon_url": "https://www.amazon.com/s?k=Israel+and+the+Church+Michael+Brown"
-      },
-      {
-        "title": "Has God Really Said?",
-        "amazon_url": "https://www.amazon.com/s?k=Has+God+Really+Said+Michael+Brown"
+        "title": "Christ and the Condition",
+        "amazon_url": "https://www.amazon.com/s?k=Christ+and+the+Condition+Michael+G.+Brown"
       }
     ],
-    "initials": "MGB"
+    "initials": "MGB",
+    "faqs": [],
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/michael-g-brown",
+      "https://tabletalkmagazine.com/contributor/michael-g-brown/",
+      "https://feeds.ligonier.org/~/968008700/0/ligonierministriesblog"
+    ]
   },
   {
     "name": "Dwayne Ewers",

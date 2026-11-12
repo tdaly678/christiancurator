@@ -307,6 +307,12 @@ recorded in `frontend/voices_redirects.json` (loser → survivor); the loser's p
   `AEO-RELATED-TOPICS`. `update_voice_backlinks.py` skips pilot slugs. Rerun the builder after editing the data file.
 - `build_recent_articles.py` replaces its block in place (the old remove-and-reinsert added a blank line per day) and
   lists up to 10 pieces on voice pages. Tests: `tests/test_voice_pilot.py`.
+- Voices cleanup step 3 (Nov 12): sourced corrections in `voices_data.json` (each corrected record carries
+  `bio_sources`): John MacArthur in the past tense (died July 14, 2025; gty.org/memorial, CT), the identity mixes
+  (michael-g-brown, william-barcley, christy-smith, cody-benjamin, emily-brown, elizabeth-russell), unsourced health
+  and family details removed, and secular reporters reduced to a neutral line with no faith claims. Pages were
+  refreshed with `scripts/apply_voice_enrichment.py <slugs>` (needs `beautifulsoup4`) plus the meta box, book list and
+  /voices/ card. Tests: `tests/test_voice_facts.py`.
 - Bios and FAQs on all voice pages and in `voices_data.json` are em dash free (Nov 12); `generate_bio_data()` tells
   Claude not to use dashes and runs `strip_dashes()` on bio, role and affiliation.
 
