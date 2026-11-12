@@ -1097,6 +1097,112 @@
         "https://www.christianitytoday.com/writers/russell-moore/"
       ],
       "review_notes": "Identity matches the existing page (Christianity Today). Current role per his own About page and the CT writer page: editor at large and columnist; editor in chief 2022 to 2025 (russellmoore.com). Penguin Random House and the April 2025 Lipscomb release still call him editor in chief, so they predate the change. ERLC dates 2013 to 2021 are from the Lipscomb release; Southern Seminary dates and his degrees are not given on any page I opened, so they are left out. Becket board membership and Trinity Forum senior fellowship are sourced but not in the bio. CT articles may hit CT's metered paywall. russellmoore.com and tabletalkmagazine.com return 403 to curl but opened in WebFetch. Tabletalk piece shows only a month (2014-08). 'Why I Am Still a Christian' and the death penalty column are adapted from his newsletter (CT labels them columns). The CT piece 'How to Hold On, and Let Go' (headline has an em dash) was considered and not used."
+    },
+    {
+      "slug": "karen-swallow-prior",
+      "name": "Karen Swallow Prior",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Writer, former English professor and Religion News Service columnist | Author of The Evangelical Imagination and On Reading Well | Writes on reading, vocation, the evangelical imagination and Christian ethics",
+      "bio": "Karen Swallow Prior is a writer and speaker who spent decades as an English professor; she is a monthly columnist for Religion News Service, a contributing writer at The Dispatch, a senior fellow at the Trinity Forum and a research fellow at Comment. She holds a PhD from the State University of New York at Buffalo and a bachelor's degree from Daemen College, and her academic work centers on eighteenth century British literature. Her books include You Have a Calling (Brazos, 2025), The Evangelical Imagination (Brazos, 2023), On Reading Well (Brazos, 2018), Fierce Convictions (Thomas Nelson, 2014) and Booked (2012). She writes the newsletter The Priory on Substack and was named the 2025 to 2026 Karlson Scholar at Bethel Seminary.",
+      "bio_sources": [
+        {
+          "label": "About page, karenswallowprior.com",
+          "url": "https://karenswallowprior.com/about/"
+        },
+        {
+          "label": "Author page, The Dispatch",
+          "url": "https://thedispatch.com/author/karen-swallow-prior/"
+        },
+        {
+          "label": "Writer page, Christianity Today",
+          "url": "https://www.christianitytoday.com/writers/karen-swallow-prior/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "karenswallowprior.com",
+          "url": "https://karenswallowprior.com/"
+        },
+        {
+          "outlet": "The Priory (Substack)",
+          "url": "https://karenswallowprior.substack.com/"
+        },
+        {
+          "outlet": "The Dispatch",
+          "url": "https://thedispatch.com/author/karen-swallow-prior/"
+        },
+        {
+          "outlet": "Christianity Today",
+          "url": "https://www.christianitytoday.com/writers/karen-swallow-prior/"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "Only One Platform Will Last",
+          "url": "https://www.thegospelcoalition.org/article/only-one-platform-will-last/",
+          "outlet": "The Gospel Coalition",
+          "date": "2017-04-20",
+          "note": "Argues that the pursuit of blogs, branding and book deals seeks an affirmation only God can give, and that the platform that lasts is faithful work in one's calling within the church."
+        },
+        {
+          "title": "The Birds and the Bees, Babies and Me",
+          "url": "https://www.christianitytoday.com/2026/03/karen-swallow-prior-infertility-childlessness-womanhood/",
+          "outlet": "Christianity Today",
+          "date": "2026-03-05",
+          "note": "Reflects on her own infertility, presents childlessness as a calling with biblical and historical examples, and argues that childless people should be more fully included in church life."
+        },
+        {
+          "title": "What My Old Prayer Journal Taught Me",
+          "url": "https://www.christianitytoday.com/2026/10/what-my-old-prayer-journal-taught-me/",
+          "outlet": "Christianity Today",
+          "date": "2026-10-29",
+          "note": "Rereads a prayer journal kept 25 years earlier and traces how its record of answered prayers testifies to God's continuing faithfulness."
+        },
+        {
+          "title": "Lessons from Loving and Losing a Pet",
+          "url": "https://www.christianitytoday.com/2014/08/lessons-from-loving-and-losing-pet/",
+          "outlet": "Christianity Today",
+          "date": "2014-08-28",
+          "note": "Describes grieving her dog without the condolences given for a human death and argues that love and loss for animals reveal human frailty and God's love."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "vocation-and-work",
+          "angle": "Calling as faithful work, the subject of You Have a Calling."
+        },
+        {
+          "slug": "evangelicalism",
+          "angle": "How stories and metaphors shaped evangelical culture in The Evangelical Imagination."
+        },
+        {
+          "slug": "christian-ethics",
+          "angle": "Columns on justice, mercy, the death penalty and the dignity of life."
+        },
+        {
+          "slug": "prayer",
+          "angle": "Personal reflection on keeping and rereading a prayer journal."
+        },
+        {
+          "slug": "grief-and-lament",
+          "angle": "Grief over losses the church rarely names, from infertility to the death of a pet."
+        }
+      ],
+      "related": [
+        "russell-moore",
+        "tish-harrison-warren",
+        "jake-meador",
+        "katelyn-beaty"
+      ],
+      "same_as": [
+        "https://karenswallowprior.com/",
+        "https://karenswallowprior.com/about/",
+        "https://karenswallowprior.substack.com/",
+        "https://thedispatch.com/author/karen-swallow-prior/",
+        "https://www.christianitytoday.com/writers/karen-swallow-prior/"
+      ],
+      "review_notes": "Identity matches the existing page (karenswallowprior.com). Her own site calls her an 'Erstwhile Professor' but the About page I opened does not name the institutions where she taught (Liberty University, Southeastern Seminary are commonly cited), so they are left out. The About page gives the Karlson Scholar role as '2025 to 26'; I wrote 2025 to 2026, so check whether it has ended. No church is named on her pages. The RNS author page returned 403 to both curl and WebFetch, so RNS is not listed in where_they_write, and her RNS column on executions was not used. Her Dispatch essays are paywalled and co-bylined with Michael Reneau, so none is a pick. Her CT writer page mostly lists an advice column; the picks are essays. TGC does not list her articles on its profile page. Merge (Nov 12 2026): Karlson line put in past framing per Meg."
     }
   ]
 }
