@@ -1,5 +1,5 @@
 {
-  "_about": "Voices pilot (Nov 2026). Drafted by Claude from each writer's own published bio or outlet author page; every bio fact has a source in bio_sources. Tom approved all five drafts on 2026-11-12 (reviewed: true). Rendered by scripts/build_voice_pilot.py into docs/voices/<slug>/index.html. Never use em dashes in any field. Batch 2 (seven entries) approved by Tom on 2026-11-12 after Meg's spot-check (reviewed: true). Batch 3: ten entries (Dallas Willard to Joe Carter) merged 2026-11-12 from branch voices-batch3 after Meg's spot-check and Tom's approval (reviewed: true); Tony Reinke and John Piper are held on that branch until their Desiring God picks are checked in a browser.",
+  "_about": "Voices pilot (Nov 2026). Drafted by Claude from each writer's own published bio or outlet author page; every bio fact has a source in bio_sources. Tom approved all five drafts on 2026-11-12 (reviewed: true). Rendered by scripts/build_voice_pilot.py into docs/voices/<slug>/index.html. Never use em dashes in any field. Batch 2 (seven entries) approved by Tom on 2026-11-12 after Meg's spot-check (reviewed: true). Batch 3: ten entries (Dallas Willard to Joe Carter) merged 2026-11-12 from branch voices-batch3 after Meg's spot-check and Tom's approval (reviewed: true). Tony Reinke followed the same day after his Desiring God picks were checked in a browser (reviewed: true); John Piper is held on that branch until his picks are checked.",
   "last_updated": "2026-11-12",
   "writers": [
     {
@@ -798,6 +798,117 @@
         "https://www.patheos.com/blogs/rogereolson/"
       ],
       "review_notes": "Status: retired (2021) per Truett's 2024 'Good and Faithful Servants' page, which says 'retired' and does not use 'emeritus'; IVP's author page (403 to WebFetch, seen only in search snippets) calls him Emeritus Professor of Christian Theology, so I wrote 'retired' and dated the dek 1999 to 2021. Chair date conflict: Truett lists Foy Valentine Professor 2012 to 2021, Baylor's January 2013 release announces it as newly named and calls it 'Professorship of Christian Ethics'; I left the year out of the bio. Patheos blocks both WebFetch and curl (403) for every page except the RSS feed (200); the blog is linked from the existing page and the feed confirms it is live (latest post Nov 10, 2026), but no Patheos post could be opened for start_here, so picks 3 and 4 use the Society of Evangelical Arminians reprints (pick 4 reproduces a 2014 Patheos post in full). Both Baylor bio pages return 403 to curl but opened in WebFetch. The CT 1999 article shows full text but CT promotes subscriptions; may be metered. Pick 2 is a book chapter hosted free by BYU's Religious Studies Center (a Latter-day Saint institution), worth a reviewer check for fit. Topic 'progressive-christianity' rests on his book Against Liberal Theology, which I saw only in search results, so it is not in the bio. Headline for pick 4 contains an ellipsis character exactly as shown. Merge (Nov 12 2026): pick 2, the BYU Religious Studies Center chapter, replaced per Meg with the Society of Evangelical Arminians reprint Calvinism and Arminianism Compared (page headline gives his name and the title, dated November 13, 2018, links his Patheos post of November 2018; opened directly, HTTP 200)."
+    },
+    {
+      "slug": "tony-reinke",
+      "name": "Tony Reinke",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Senior teacher at Desiring God and host of Ask Pastor John | Author of 12 Ways Your Phone Is Changing You | Writes on technology, joy and the Christian life",
+      "bio": "Tony Reinke is senior teacher and lead curator for Desiring God, which he joined in 2012, and the creator, producer and host of the Ask Pastor John podcast with John Piper. Before that he was editorial and research assistant to C.J. Mahaney at Sovereign Grace Ministries from 2008 to 2011. He has written seven books: Lit! A Christian Guide to Reading Books (2011), Newton on the Christian Life (2015), 12 Ways Your Phone Is Changing You (2017), The Joy Project (2018), Competing Spectacles (2019), God, Technology, and the Christian Life (2022) and Ask Pastor John (2024). He lives in Phoenix, Arizona, with his wife and family.",
+      "bio_sources": [
+        {
+          "label": "About page, tonyreinke.com",
+          "url": "https://tonyreinke.com/about/"
+        },
+        {
+          "label": "Teacher profile, Desiring God",
+          "url": "https://www.desiringgod.org/about/teachers/tony-reinke"
+        },
+        {
+          "label": "Author page, Desiring God",
+          "url": "https://www.desiringgod.org/authors/tony-reinke"
+        },
+        {
+          "label": "Profile, The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/tony-reinke"
+        },
+        {
+          "label": "Author page, Crossway",
+          "url": "https://www.crossway.org/authors/tony-reinke/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "Desiring God",
+          "url": "https://www.desiringgod.org/authors/tony-reinke"
+        },
+        {
+          "outlet": "tonyreinke.com",
+          "url": "https://tonyreinke.com/"
+        },
+        {
+          "outlet": "The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/tony-reinke"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "Six Wrong Reasons to Check Your Phone in the Morning",
+          "url": "https://www.desiringgod.org/articles/six-wrong-reasons-to-check-your-phone-in-the-morning",
+          "outlet": "Desiring God",
+          "date": "2015-06-06",
+          "note": "Uses a Desiring God reader survey to name six habits behind reaching for the phone before God each morning and argues that what we first focus on shapes the whole day."
+        },
+        {
+          "title": "Thirty Seconds Alone with God",
+          "url": "https://www.desiringgod.org/articles/thirty-seconds-alone-with-god",
+          "outlet": "Desiring God",
+          "date": "2017-01-30",
+          "note": "Argues that attention is a gift from God that the attention economy competes for, and that the fight for prayer is fought in the short gaps of the day."
+        },
+        {
+          "title": "Twelve Tips for Parenting in the Digital Age",
+          "url": "https://www.desiringgod.org/articles/twelve-tips-for-parenting-in-the-digital-age",
+          "outlet": "Desiring God",
+          "date": "2018-05-21",
+          "note": "Summarizes Jean Twenge's research on the iGen generation and offers parents practical counsel, including delaying smartphones and controlling home wifi."
+        },
+        {
+          "title": "How Calvinists Miss the Key to Happiness",
+          "url": "https://www.desiringgod.org/articles/how-calvinists-miss-the-key-to-happiness",
+          "outlet": "Desiring God",
+          "date": "2017-04-03",
+          "note": "Argues that the five points of Calvinism should be connected to joy, and that the joy of Calvinism comes from experiencing God's sovereignty, not only knowing about it."
+        },
+        {
+          "title": "Can Technology Delete Death?",
+          "url": "https://www.desiringgod.org/articles/can-technology-delete-death",
+          "outlet": "Desiring God",
+          "date": "2017-07-24",
+          "note": "Responds to Ray Kurzweil's transhumanist hope of overcoming death through technology and contrasts it with the Christian hope of immortality through trusting God."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "technology",
+          "angle": "How smartphones and digital media shape attention, habits and desires."
+        },
+        {
+          "slug": "technology-and-discipleship",
+          "angle": "Prayer, Bible reading and spiritual health in the digital age."
+        },
+        {
+          "slug": "christian-parenting",
+          "angle": "Stewarding teens and screens in a smartphone generation."
+        },
+        {
+          "slug": "predestination-free-will",
+          "angle": "Connecting the doctrines of grace to joy in God."
+        }
+      ],
+      "related": [
+        "john-piper",
+        "david-mathis",
+        "tim-challies"
+      ],
+      "same_as": [
+        "https://tonyreinke.com/",
+        "https://www.desiringgod.org/authors/tony-reinke",
+        "https://www.thegospelcoalition.org/profile/tony-reinke",
+        "https://www.crossway.org/authors/tony-reinke/"
+      ],
+      "review_notes": "Identity confirmed: tonyreinke.com (linked from the existing page) and Desiring God describe the same person. desiringgod.org returns HTTP 403 to WebFetch and to curl from this machine, so every Desiring God page (author page, teacher profile, all five picks) was read through the r.jina.ai reader proxy, which returned the full page text; titles, dates (Published Time) and bylines (author listing) come from that text. A reviewer should open the five DG links in a browser to confirm. Sources differ on title: DG teacher page says Senior Teacher and Lead Curator, DG author page and Crossway say senior teacher, TGC says Desiring God staffer; the dek uses senior teacher. Phoenix is from the TGC and DG author pages; his own site says the Sonoran Desert. All picks are 2015 to 2018; his newer DG items (2022 to 2025) are messages or interviews, not articles, so they were left out. Merge (Nov 12 2026): all five Desiring God picks checked in a real browser; title, byline and date match the draft."
     },
     {
       "slug": "david-vandrunen",
