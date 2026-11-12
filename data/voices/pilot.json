@@ -1203,6 +1203,115 @@
         "https://www.christianitytoday.com/writers/karen-swallow-prior/"
       ],
       "review_notes": "Identity matches the existing page (karenswallowprior.com). Her own site calls her an 'Erstwhile Professor' but the About page I opened does not name the institutions where she taught (Liberty University, Southeastern Seminary are commonly cited), so they are left out. The About page gives the Karlson Scholar role as '2025 to 26'; I wrote 2025 to 2026, so check whether it has ended. No church is named on her pages. The RNS author page returned 403 to both curl and WebFetch, so RNS is not listed in where_they_write, and her RNS column on executions was not used. Her Dispatch essays are paywalled and co-bylined with Michael Reneau, so none is a pick. Her CT writer page mostly lists an advice column; the picks are essays. TGC does not list her articles on its profile page. Merge (Nov 12 2026): Karlson line put in past framing per Meg."
+    },
+    {
+      "slug": "mark-dever",
+      "name": "Mark Dever",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Senior pastor of Capitol Hill Baptist Church since 1994, founder of 9Marks | Author of Nine Marks of a Healthy Church | Writes on church health, membership and pastoral ministry",
+      "bio": "Mark Dever has served as senior pastor of Capitol Hill Baptist Church in Washington, DC, since 1994. He founded 9Marks, a ministry to churches and church leaders, in 1998 and served as its president; his church's staff page now lists him as president emeritus of 9Marks. He holds a PhD from Cambridge University and degrees from Gordon-Conwell Theological Seminary and The Southern Baptist Theological Seminary, which named him its inaugural Duke K. McCall Professor of Pastoral Leadership in 2019. His books include Nine Marks of a Healthy Church, The Gospel and Personal Evangelism, Discipling and The Compelling Community.",
+      "bio_sources": [
+        {
+          "label": "Staff page, Capitol Hill Baptist Church",
+          "url": "https://www.capitolhillbaptist.org/about-us/leadership-staff/member/1267131/"
+        },
+        {
+          "label": "Author page, 9Marks",
+          "url": "https://www.9marks.org/bio/mark-dever/"
+        },
+        {
+          "label": "Author page, Crossway",
+          "url": "https://www.crossway.org/authors/mark-dever/"
+        },
+        {
+          "label": "Profile, The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/mark-dever/"
+        },
+        {
+          "label": "News release, The Southern Baptist Theological Seminary (2019)",
+          "url": "https://sbts.edu/news/mark-dever-announced-inaugural-duke-k-mccall-professor-pastoral-leadership"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "9Marks",
+          "url": "https://www.9marks.org/bio/mark-dever/"
+        },
+        {
+          "outlet": "The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/mark-dever/"
+        },
+        {
+          "outlet": "Crossway (books)",
+          "url": "https://www.crossway.org/authors/mark-dever/"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "If You’re Thinking about Leaving a Church . . .",
+          "url": "https://www.9marks.org/article/if-youre-thinking-about-leaving-a-church/",
+          "outlet": "9Marks",
+          "date": "2014-09-30",
+          "note": "Advises members thinking of leaving a church to pray, talk with their pastor and test whether their reasons are personal or doctrinal, and if they go, to leave without dividing the congregation."
+        },
+        {
+          "title": "Where’d All These Calvinists Come From?",
+          "url": "https://www.9marks.org/article/whered-all-these-calvinists-come-from/",
+          "outlet": "9Marks",
+          "date": "2014-06-18",
+          "note": "Traces the growth of Reformed theology among young American evangelicals to influences from Spurgeon and Lloyd-Jones to the Banner of Truth reprints, the inerrancy debates, Packer, Sproul, MacArthur and Piper."
+        },
+        {
+          "title": "Twelve Questions to Ask Yourself Before Posting Something Online",
+          "url": "https://www.9marks.org/article/12-questions-to-ask-yourself-before-posting-something-online/",
+          "outlet": "9Marks",
+          "date": "2016-08-29",
+          "note": "Sets out a checklist of questions about edification, tone, motive, audience and counsel to work through before publishing online."
+        },
+        {
+          "title": "Neither a Republican Nor a Democratic Church",
+          "url": "https://www.9marks.org/article/neither-a-republican-nor-a-democratic-church/",
+          "outlet": "9Marks",
+          "date": "2016-11-14",
+          "note": "A sermon introduction from the Sunday after the 2016 election that urges a congregation to love members who voted differently and not to tie the church to either party."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "local-church",
+          "angle": "What makes a healthy local church, the theme of Nine Marks of a Healthy Church."
+        },
+        {
+          "slug": "membership",
+          "angle": "Church membership and how to think about leaving a church."
+        },
+        {
+          "slug": "politics-and-the-church",
+          "angle": "Keeping a congregation united across party lines."
+        },
+        {
+          "slug": "church-history",
+          "angle": "The historical roots of the Reformed resurgence among evangelicals."
+        },
+        {
+          "slug": "missions-and-evangelism",
+          "angle": "Personal evangelism, the subject of The Gospel and Personal Evangelism."
+        }
+      ],
+      "related": [
+        "jonathan-leeman",
+        "thabiti-anyabwile",
+        "bobby-jamieson",
+        "r-albert-mohler-jr"
+      ],
+      "same_as": [
+        "https://www.9marks.org/bio/mark-dever/",
+        "https://www.capitolhillbaptist.org/about-us/leadership-staff/member/1267131/",
+        "https://www.crossway.org/authors/mark-dever/",
+        "https://www.thegospelcoalition.org/profile/mark-dever/"
+      ],
+      "review_notes": "Role check: Capitol Hill Baptist's own staff page (opened Nov 12 2026) still lists him as Senior Pastor and calls him President Emeritus of 9Marks. The 9Marks bio and the Crossway and TGC bios still say president, so they are likely older; I could not find who succeeded him at 9Marks or when, so the bio says he founded 9Marks in 1998 and that the church page now lists him as president emeritus. No source I opened mentions a pastoral transition at CHBC. A podcast search result claimed a cardiac event in May 2026; unverified and left out. The SBTS McCall chair is from a 2019 news release; I did not confirm he still holds it, so the bio dates it to 2019. All four picks are 9Marks pieces from 2014 to 2016 (the 9Marks author page shows no dates and no newer standalone articles surfaced); the 9Marks list labels one pick \"Neither a Republican Nor a Democrat Church\" but the article headline says \"Democratic\", which is what is used. The TGC profile lists no articles."
     }
   ]
 }
