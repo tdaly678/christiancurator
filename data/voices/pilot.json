@@ -1312,6 +1312,103 @@
         "https://www.thegospelcoalition.org/profile/mark-dever/"
       ],
       "review_notes": "Role check: Capitol Hill Baptist's own staff page (opened Nov 12 2026) still lists him as Senior Pastor and calls him President Emeritus of 9Marks. The 9Marks bio and the Crossway and TGC bios still say president, so they are likely older; I could not find who succeeded him at 9Marks or when, so the bio says he founded 9Marks in 1998 and that the church page now lists him as president emeritus. No source I opened mentions a pastoral transition at CHBC. A podcast search result claimed a cardiac event in May 2026; unverified and left out. The SBTS McCall chair is from a 2019 news release; I did not confirm he still holds it, so the bio dates it to 2019. All four picks are 9Marks pieces from 2014 to 2016 (the 9Marks author page shows no dates and no newer standalone articles surfaced); the 9Marks list labels one pick \"Neither a Republican Nor a Democrat Church\" but the article headline says \"Democratic\", which is what is used. The TGC profile lists no articles."
+    },
+    {
+      "slug": "kevin-deyoung",
+      "name": "Kevin DeYoung",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Senior pastor of Christ Covenant Church since 2017 and associate professor at Reformed Theological Seminary | Author of The Hole in Our Holiness and Taking God at His Word | Writes at Clearly Reformed and The Gospel Coalition on doctrine, the church and politics",
+      "bio": "Kevin DeYoung has been senior pastor of Christ Covenant Church in Matthews, North Carolina, since 2017 and is associate professor of systematic theology at Reformed Theological Seminary in Charlotte. He was previously senior pastor of University Reformed Church in East Lansing, Michigan, and was elected moderator of the PCA's 52nd General Assembly in 2025. He holds a BA from Hope College, an MDiv from Gordon-Conwell Theological Seminary and a PhD in early modern history from the University of Leicester. His books include Just Do Something, The Hole in Our Holiness, Taking God at His Word, Daily Doctrine and The Biggest Story.",
+      "bio_sources": [
+        {
+          "label": "About Kevin DeYoung, Clearly Reformed",
+          "url": "https://clearlyreformed.org/about-kevin-deyoung/"
+        },
+        {
+          "label": "Faculty page, Reformed Theological Seminary",
+          "url": "https://rts.edu/people/dr-kevin-l-deyoung/"
+        },
+        {
+          "label": "Staff page, Christ Covenant Church",
+          "url": "https://christcovenant.org/staff/kevin-deyoung/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "Clearly Reformed",
+          "url": "https://clearlyreformed.org/about-kevin-deyoung/"
+        },
+        {
+          "outlet": "The Gospel Coalition (DeYoung, Restless, and Reformed)",
+          "url": "https://www.thegospelcoalition.org/blogs/kevin-deyoung/"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "Why Reformed Evangelicalism Has Splintered: Four Approaches to Race, Politics, and Gender",
+          "url": "https://www.thegospelcoalition.org/blogs/kevin-deyoung/why-reformed-evangelicalism-has-splintered-four-approaches-to-race-politics-and-gender/",
+          "outlet": "The Gospel Coalition",
+          "date": "2021-03-09",
+          "note": "Argues that the Reformed evangelical movement fractured over race, politics and gender and sorts its postures into four groups he labels Contrite, Compassionate, Careful and Courageous."
+        },
+        {
+          "title": "Brothers, We Are Not Political Pundits",
+          "url": "https://clearlyreformed.org/brothers-we-are-not-political-pundits/",
+          "outlet": "Clearly Reformed",
+          "date": "2025-03-04",
+          "note": "Argues that pastors should give themselves to Scripture, preaching and their churches and speak on public issues sparingly rather than offer running commentary on the news."
+        },
+        {
+          "title": "6 Questions for Christian Nationalists",
+          "url": "https://clearlyreformed.org/6-questions-for-christian-nationalists/",
+          "outlet": "Clearly Reformed",
+          "date": "2025-12-01",
+          "note": "Explains why he declines the Christian Nationalist label and poses six questions on race, the nature of nations, the magistrate's role in religion and the First Amendment."
+        },
+        {
+          "title": "Is Sola Scriptura Biblical? Exploring the Fundamental Divide Between Protestants and Catholics",
+          "url": "https://clearlyreformed.org/is-sola-scriptura-biblical-exploring-the-fundamental-divide-between-protestants-and-catholics/",
+          "outlet": "Clearly Reformed",
+          "date": "2025-11-24",
+          "note": "Defends Scripture as the church's final authority against the Catholic pairing of Scripture and Tradition, drawing on biblical examples and early church writers."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "christian-nationalism",
+          "angle": "Questions for Christian Nationalists about civil government and religion."
+        },
+        {
+          "slug": "politics-and-the-church",
+          "angle": "Why pastors should not act as political pundits."
+        },
+        {
+          "slug": "evangelicalism",
+          "angle": "Why Reformed evangelicalism splintered after the mid 2010s."
+        },
+        {
+          "slug": "biblical-inerrancy",
+          "angle": "The authority of Scripture and sola scriptura, the theme of Taking God at His Word."
+        },
+        {
+          "slug": "sanctification",
+          "angle": "Pursuing holiness, the subject of The Hole in Our Holiness."
+        }
+      ],
+      "related": [
+        "ligon-duncan",
+        "collin-hansen",
+        "carl-trueman",
+        "jonathan-leeman"
+      ],
+      "same_as": [
+        "https://clearlyreformed.org/about-kevin-deyoung/",
+        "https://rts.edu/people/dr-kevin-l-deyoung/",
+        "https://christcovenant.org/staff/kevin-deyoung/",
+        "https://www.thegospelcoalition.org/blogs/kevin-deyoung/"
+      ],
+      "review_notes": "Christ Covenant Church's staff page opened in WebFetch but returns HTTP 403 to curl (bot block); the same facts are on the RTS and Clearly Reformed pages. WebFetch could not read the TGC profile page (curl returns 200), so the TGC blog archive is used for where_they_write instead. Book list is from the bio pages; the sanctification and inerrancy topic angles rest on book titles, not on a start_here pick. The TGC blog (DeYoung, Restless, and Reformed) shows no newer posts on its archive page; his current writing is at Clearly Reformed, whose article pages carry dates but the index does not."
     }
   ]
 }
