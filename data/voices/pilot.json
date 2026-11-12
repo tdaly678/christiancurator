@@ -1,5 +1,5 @@
 {
-  "_about": "Voices pilot (Nov 2026). Drafted by Claude from each writer's own published bio or outlet author page; every bio fact has a source in bio_sources. Tom approved all five drafts on 2026-11-12 (reviewed: true). Rendered by scripts/build_voice_pilot.py into docs/voices/<slug>/index.html. Never use em dashes in any field. Batch 2 (seven entries) approved by Tom on 2026-11-12 after Meg's spot-check (reviewed: true).",
+  "_about": "Voices pilot (Nov 2026). Drafted by Claude from each writer's own published bio or outlet author page; every bio fact has a source in bio_sources. Tom approved all five drafts on 2026-11-12 (reviewed: true). Rendered by scripts/build_voice_pilot.py into docs/voices/<slug>/index.html. Never use em dashes in any field. Batch 2 (seven entries) approved by Tom on 2026-11-12 after Meg's spot-check (reviewed: true). Batch 3: ten entries (Dallas Willard to Joe Carter) merged 2026-11-12 from branch voices-batch3 after Meg's spot-check and Tom's approval (reviewed: true); Tony Reinke and John Piper are held on that branch until their Desiring God picks are checked in a browser.",
   "last_updated": "2026-11-12",
   "writers": [
     {

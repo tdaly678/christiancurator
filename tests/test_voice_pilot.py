@@ -257,9 +257,36 @@ def test_pilot_data_is_all_reviewed():
     # Tom approved five on 2026-11-12; abby-silva was retired (posting account).
     # Batch 2 (seven) was approved the same day after Meg's spot-check.
     # Batch 3 went live writer by writer after Meg's spot-check; Reinke and Piper are held.
-    assert set(WRITERS) - APPROVED - BATCH2 <= BATCH3_LIVE
+    assert set(WRITERS) == APPROVED | BATCH2 | BATCH3_LIVE
     assert not set(WRITERS) & BATCH3_HELD
     assert all(w["reviewed"] is True for w in WRITERS.values())
+
+
+def test_batch3_merge_edits():
+    olson = [p["url"] for p in WRITERS["roger-olson"]["start_here"]]
+    assert not [u for u in olson if "byu.edu" in u]
+    assert "https://evangelicalarminians.org/roger-olson-calvinism-and-arminianism-compared/" in olson
+    sproul = WRITERS["rc-sproul"]["start_here"]
+    assert [p["date"] for p in sproul[:3]] == ["", "", ""]
+    assert [p["date"] for p in sproul[3:5]] == ["2010-10-01", "1992-04-01"]
+    assert "was named the 2025 to 2026 Karlson Scholar" in WRITERS["karen-swallow-prior"]["bio"]
+    carter = WRITERS["joe-carter"]
+    assert "Acton" not in carter["bio"]
+    assert not [s for s in carter["bio_sources"] if "acton.org" in s["url"]]
+    page = (ROOT / "docs" / "voices" / "joe-carter" / "index.html").read_text()
+    assert "joecarter.me" not in page and "prolific" not in page
+    tgc = [p for p in WRITERS["david-vandrunen"]["start_here"] if "thegospelcoalition.org/article/" in p["url"]]
+    assert tgc[0]["title"] == "How Two-Kingdoms Doctrine Helps Political Discourse"
+    assert "cardiac" not in (ROOT / "docs" / "voices" / "mark-dever" / "index.html").read_text().lower()
+    assert "cardiac" not in WRITERS["mark-dever"]["bio"].lower()
+
+
+def test_live_pilot_related_voices_are_indexed():
+    noindex = set(json.loads((ROOT / "frontend" / "voices_noindex.json").read_text()))
+    for slug in APPROVED | BATCH2:
+        for rel in WRITERS[slug]["related"]:
+            assert rel not in noindex, (slug, rel)
+            assert (ROOT / "docs" / "voices" / rel / "index.html").exists(), (slug, rel)
 
 
 def test_batch2_golive_edits():
