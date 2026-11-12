@@ -74,14 +74,10 @@ def needs_noindex(entry: dict) -> bool:
 
 
 def page_title(entry: dict) -> str:
-    if entry.get("page_kind") == "where_to_start":
-        return f"Where to Start with {entry['name']}: Articles and Bio | Christian Curator"
     return voice_page_title(entry["name"])
 
 
 def page_heading(entry: dict) -> str:
-    if entry.get("page_kind") == "where_to_start":
-        return f"Where to start with {entry['name']}"
     return entry["name"]
 
 

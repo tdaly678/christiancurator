@@ -88,9 +88,9 @@ def test_fix_voice_titles_stub_gets_short_title():
 
 
 def test_fix_voice_titles_leaves_pilot_titles_alone():
-    """Rewrapping a where-to-start title doubled it on /voices/david-powlison/ (Nov 12)."""
-    page = _render(_entry(page_kind="where_to_start", name="David Powlison"))
-    title = "Where to Start with David Powlison: Articles and Bio | Christian Curator"
+    """Rewrapping a pilot title doubled it on /voices/david-powlison/ (Nov 12)."""
+    page = _render(_entry(name="David Powlison"))
+    title = "David Powlison: Articles, Bio, and Where They Write | Christian Curator"
     assert f"<title>{title}</title>" in page
     out = fix_voice_titles.fix_page(page)
     assert f"<title>{title}</title>" in out
@@ -174,9 +174,10 @@ def test_schema_is_profile_page_with_person_same_as():
     assert data["mainEntity"]["sameAs"] == ["https://example.com/author/test/"]
 
 
-def test_where_to_start_page_heading_and_label():
-    page = _render(_entry(page_kind="where_to_start", deceased=True))
-    assert '<h1 class="cc-vp-name">Where to start with Test Writer</h1>' in page
+def test_deceased_page_uses_name_heading_and_read_label():
+    page = _render(_entry(deceased=True))
+    assert '<h1 class="cc-vp-name">Test Writer</h1>' in page
+    assert "Where to start with" not in page
     assert ">Where to read<" in page
 
 
@@ -252,7 +253,7 @@ def test_every_bio_has_a_source_link():
 
 def test_start_here_counts():
     assert len(WRITERS["david-powlison"]["start_here"]) == 5
-    assert WRITERS["david-powlison"]["page_kind"] == "where_to_start"
+    assert WRITERS["david-powlison"]["page_kind"] == "guide"
     for slug in ("alex-harris", "brandon-corley", "chandler-vannoy"):
         assert len(WRITERS[slug]["start_here"]) == 3
 
