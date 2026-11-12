@@ -798,6 +798,100 @@
         "https://www.patheos.com/blogs/rogereolson/"
       ],
       "review_notes": "Status: retired (2021) per Truett's 2024 'Good and Faithful Servants' page, which says 'retired' and does not use 'emeritus'; IVP's author page (403 to WebFetch, seen only in search snippets) calls him Emeritus Professor of Christian Theology, so I wrote 'retired' and dated the dek 1999 to 2021. Chair date conflict: Truett lists Foy Valentine Professor 2012 to 2021, Baylor's January 2013 release announces it as newly named and calls it 'Professorship of Christian Ethics'; I left the year out of the bio. Patheos blocks both WebFetch and curl (403) for every page except the RSS feed (200); the blog is linked from the existing page and the feed confirms it is live (latest post Nov 10, 2026), but no Patheos post could be opened for start_here, so picks 3 and 4 use the Society of Evangelical Arminians reprints (pick 4 reproduces a 2014 Patheos post in full). Both Baylor bio pages return 403 to curl but opened in WebFetch. The CT 1999 article shows full text but CT promotes subscriptions; may be metered. Pick 2 is a book chapter hosted free by BYU's Religious Studies Center (a Latter-day Saint institution), worth a reviewer check for fit. Topic 'progressive-christianity' rests on his book Against Liberal Theology, which I saw only in search results, so it is not in the bio. Headline for pick 4 contains an ellipsis character exactly as shown. Merge (Nov 12 2026): pick 2, the BYU Religious Studies Center chapter, replaced per Meg with the Society of Evangelical Arminians reprint Calvinism and Arminianism Compared (page headline gives his name and the title, dated November 13, 2018, links his Patheos post of November 2018; opened directly, HTTP 200)."
+    },
+    {
+      "slug": "david-vandrunen",
+      "name": "David VanDrunen",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Robert B. Strimple Professor of Systematic Theology and Christian Ethics at Westminster Seminary California | Author of Politics after Christendom | Writes on natural law, the two kingdoms and Christian ethics",
+      "bio": "David VanDrunen is the Robert B. Strimple Professor of Systematic Theology and Christian Ethics at Westminster Seminary California, where he has taught since 2001, and a minister of the Orthodox Presbyterian Church who formerly pastored Grace Orthodox Presbyterian Church in Hanover Park, Illinois. He holds a BA from Calvin College, an MDiv from Westminster Seminary California, a ThM from Trinity Evangelical Divinity School, a JD from Northwestern University School of Law and a PhD from Loyola University Chicago. He is the author or editor of fifteen books, including Politics after Christendom, Divine Covenants and Moral Order, Living in God's Two Kingdoms and Natural Law: A Short Companion.",
+      "bio_sources": [
+        {
+          "label": "Faculty page, Westminster Seminary California",
+          "url": "https://www.wscal.edu/faculty/david-vandrunen"
+        },
+        {
+          "label": "Profile, The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/david-vandrunen/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "Westminster Seminary California",
+          "url": "https://www.wscal.edu/multi_author/david-m-vandrunen/?_resource_types=article"
+        },
+        {
+          "outlet": "The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/david-vandrunen/"
+        },
+        {
+          "outlet": "New Horizons (Orthodox Presbyterian Church)",
+          "url": "https://www.opc.org/nh.html?article_id=930"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "How Two-Kingdoms Doctrine Helps Political Discourse",
+          "url": "https://www.thegospelcoalition.org/article/neither-quietism-triumphalism/",
+          "outlet": "The Gospel Coalition",
+          "date": "2022-03-30",
+          "note": "Argues that the Reformed two-kingdoms doctrine steers Christians between political quietism and triumphalism, treating public life as legitimate but temporary."
+        },
+        {
+          "title": "The Christian’s Place in Society",
+          "url": "https://opc.org/nh.html?article_id=854",
+          "outlet": "New Horizons",
+          "date": "2015-06",
+          "note": "Reads Abraham and the Babylonian exiles to argue that Christians are temporary residents who should engage their communities without treating them as home."
+        },
+        {
+          "title": "The Reformation of Civil Government",
+          "url": "https://www.opc.org/nh.html?article_id=930",
+          "outlet": "New Horizons",
+          "date": "2017-10",
+          "note": "Traces Reformed teaching on civil government from the Christendom model toward religious liberty and asks how believers should think about resistance as the culture grows more hostile."
+        },
+        {
+          "title": "The Forgiveness of Sin",
+          "url": "https://www.thegospelcoalition.org/essay/the-forgiveness-of-sin/",
+          "outlet": "The Gospel Coalition",
+          "date": "",
+          "note": "Explains how God's justice and mercy meet in Christ's substitutionary atonement so that sinners are forgiven by faith without compromise to God's justice."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "politics-and-the-church",
+          "angle": "Two-kingdoms political theology between quietism and triumphalism."
+        },
+        {
+          "slug": "christian-ethics",
+          "angle": "Natural law and Reformed Christian ethics, including bioethics."
+        },
+        {
+          "slug": "religious-liberty",
+          "angle": "How Reformed thought came to affirm religious liberty and civil government's independence from the church."
+        },
+        {
+          "slug": "covenant-theology",
+          "angle": "Natural law read through the biblical covenants."
+        },
+        {
+          "slug": "forgiveness",
+          "angle": "Forgiveness of sin grounded in substitutionary atonement."
+        }
+      ],
+      "related": [
+        "michael-horton",
+        "r-scott-clark",
+        "w-robert-godfrey"
+      ],
+      "same_as": [
+        "https://www.wscal.edu/faculty/david-vandrunen",
+        "https://www.thegospelcoalition.org/profile/david-vandrunen/"
+      ],
+      "review_notes": "WSC page does not say since when he has held the Strimple chair, only that he began teaching at WSC in 2001. WSC says 'fifteen books', TGC says 'a dozen'; I used WSC. TGC article URL slug is neither-quietism-triumphalism but the page headline is 'How Two-Kingdoms Doctrine Helps Political Discourse' (WSC lists it as 'Neither Quietism nor Triumphalism'). New Horizons dates are issue months (June 2015, October 2017), not days. The TGC essay 'The Forgiveness of Sin' shows no date. Pick 2 headline uses a curly apostrophe as on the page. Related: J. V. Fesko (WSC colleague) left out because the voice list has two Fesko slugs (j-v-fesko, john-v-fesko)."
     }
   ]
 }
