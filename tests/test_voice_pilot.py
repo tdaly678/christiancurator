@@ -87,6 +87,36 @@ def test_fix_voice_titles_stub_gets_short_title():
     assert "<title>Andrew Spencer | Christian Curator</title>" in fix_voice_titles.fix_page(html)
 
 
+def test_fix_voice_titles_leaves_pilot_titles_alone():
+    """Rewrapping a where-to-start title doubled it on /voices/david-powlison/ (Nov 12)."""
+    page = _render(_entry(page_kind="where_to_start", name="David Powlison"))
+    title = "Where to Start with David Powlison: Articles and Bio | Christian Curator"
+    assert f"<title>{title}</title>" in page
+    out = fix_voice_titles.fix_page(page)
+    assert f"<title>{title}</title>" in out
+    assert f'property="og:title" content="{title}"' in out
+
+
+@pytest.mark.parametrize("slug", sorted(WRITERS))
+def test_built_pilot_page_title_matches_data(slug):
+    path = ROOT / "docs" / "voices" / slug / "index.html"
+    if not path.exists():
+        pytest.skip("page not built")
+    html = path.read_text(encoding="utf-8")
+    title = vp.page_title(WRITERS[slug])
+    assert f"<title>{title}</title>" in html
+    assert f'property="og:title" content="{title}"' in html
+
+
+def test_no_voice_page_has_a_doubled_title():
+    doubled = []
+    for path in (ROOT / "docs" / "voices").glob("*/index.html"):
+        m = re.search(r"<title>(.*?)</title>", path.read_text(encoding="utf-8"), re.DOTALL)
+        if m and (m.group(1).count("Christian Curator") > 1 or m.group(1).count("Articles") > 1):
+            doubled.append(path.parent.name)
+    assert doubled == []
+
+
 # ── Noindex rule ─────────────────────────────────────────────────────────────
 
 def test_unreviewed_auto_list_is_noindexed():

@@ -54,6 +54,56 @@ class VoiceRedirectTests(unittest.TestCase):
             elif r.get("name"):
                 self.assertNotIn(by_name[r["name"].lower()], self.redirects)
 
+    def test_no_page_links_a_retired_voice(self):
+        retired = [slug for slug, r in self.redirects.items() if not r["to"]]
+        pages = [ROOT / "docs" / "index.html", ROOT / "docs" / "digest" / "index.html",
+                 *sorted((ROOT / "docs" / "archive").glob("*/index.html")),
+                 *sorted((ROOT / "docs" / "topics").glob("*/index.html"))]
+        for page in pages:
+            html = page.read_text(encoding="utf-8", errors="replace")
+            for slug in retired:
+                self.assertNotIn(f"/voices/{slug}/", html, f"{page.relative_to(ROOT)} links {slug}")
+
+
+class RetireBylineFormatTests(unittest.TestCase):
+    """retire_posting_accounts.py rewrites every byline format the site has used."""
+
+    def setUp(self):
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import retire_posting_accounts as rpa
+        self.rpa = rpa
+
+    def _sub(self, html, author):
+        by_name = {"joshua mitchell": "joshua-mitchell"}
+        return self.rpa.anchor_re("chloe-hoyle").sub(lambda m: self.rpa.replace_byline(m, author, by_name), html)
+
+    def test_homepage_byline_with_middot(self):
+        html = ('<div class="cc-src"><a href="/voices/chloe-hoyle/" class="cc-author-link">'
+                '<strong>Chloe Hoyle</strong></a> &middot; First Things</div>')
+        self.assertEqual(self._sub(html, "Joshua Mitchell"),
+                         '<div class="cc-src"><a href="/voices/joshua-mitchell/" class="cc-author-link">'
+                         '<strong>Joshua Mitchell</strong></a> &middot; First Things</div>')
+        self.assertEqual(self._sub(html, ""), '<div class="cc-src"> First Things</div>')
+
+    def test_april_archive_byline_without_strong(self):
+        html = '<a href="/voices/chloe-hoyle/" class="cc-author-link cc-article-author">Chloe Hoyle</a>'
+        self.assertEqual(self._sub(html, "Ephraim Radner"),
+                         '<span class="cc-author-link cc-article-author">Ephraim Radner</span>')
+
+    def test_unreadable_pages_are_retried(self):
+        calls = []
+
+        def fake(url):
+            calls.append(url)
+            return "R. R. Reno" if len(calls) > 1 else None
+
+        orig, self.rpa.fetch_page_byline = self.rpa.fetch_page_byline, fake
+        try:
+            out = self.rpa.retry_unreadable(["https://firstthings.com/x/"], pause=0)
+        finally:
+            self.rpa.fetch_page_byline = orig
+        self.assertEqual(out, {"https://firstthings.com/x/": "R. R. Reno"})
+
 
 if __name__ == "__main__":
     unittest.main()

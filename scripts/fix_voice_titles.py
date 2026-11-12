@@ -11,7 +11,10 @@ Per page it rewrites <title> and og:title. Merged-duplicate stubs (meta refresh
 to the survivor) become "Name | Christian Curator". It also collapses runs of
 blank lines left behind by the old recent-articles injector, and fixes the
 /voices/ index title, description and count line. Category hubs are rebuilt by
-scripts/build_voice_hubs.py and are skipped here.
+scripts/build_voice_hubs.py and are skipped here. Voices pilot pages
+(data-cc-voice-pilot) own their titles via curator.voice_pilot.page_title(), so
+their titles are left alone: rewrapping "Where to Start with X: Articles and Bio"
+doubled the suffix on /voices/david-powlison/ (Nov 12 2026).
 
 Idempotent. Default is a dry run; pass --apply to write.
 """
@@ -40,6 +43,7 @@ OG_TITLE_RE = re.compile(
 SUFFIX_RE = re.compile(
     r"\s*(?:—\s*Voices\s*—|:\s*Articles, Bio, and Where They Write\s*\||—|\|)\s*Christian Curator\s*$"
 )
+PILOT_MARK = "data-cc-voice-pilot="
 BLANK_RUN_RE = re.compile(r"\n(?:[ \t]*\n){2,}")
 
 
@@ -52,7 +56,7 @@ def page_name(html: str) -> str | None:
 
 
 def fix_page(html: str) -> str:
-    name = page_name(html)
+    name = None if PILOT_MARK in html else page_name(html)
     if name:
         is_stub = 'http-equiv="refresh"' in html
         title = f"{name} | Christian Curator" if is_stub else voice_page_title(name)

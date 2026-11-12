@@ -32,6 +32,7 @@ import html as html_mod
 import json
 import re
 import sys
+import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -49,6 +50,12 @@ REDIRECTS_PATH = REPO_ROOT / "frontend" / "voices_redirects.json"
 # slug -> (name, outlet domain). Retired on Tom's call only.
 ACCOUNTS = {
     "abby-silva": ("Abby Silva", "firstthings.com"),  # 2026-11-12, voices pilot go-live
+    # 2026-11-12, voices batch 2 brief: the rest of the go-live audit.
+    "german-saucedo": ("German Saucedo", "firstthings.com"),
+    "paul-howard": ("Paul Howard", "firstthings.com"),
+    "jillian-parks": ("Jillian Parks", "firstthings.com"),
+    "stephen-walker": ("Stephen Walker", "firstthings.com"),
+    "chloe-hoyle": ("Chloe Hoyle", "firstthings.com"),
 }
 
 STUB = """<!DOCTYPE html>
@@ -74,40 +81,74 @@ def split_names(author: str) -> list[str]:
     return [p.strip(" \t\n\r.") for p in parts if p.strip(" \t\n\r.")]
 
 
-def byline_html(author: str, by_name: dict, css: str) -> str:
+def byline_html(author: str, by_name: dict, css: str, strong: bool = True) -> str:
     out = []
     for name in split_names(author):
         slug = by_name.get(name.lower(), "")
         esc = html_mod.escape(name)
-        out.append(f'<a href="/voices/{slug}/" class="{css}"><strong>{esc}</strong></a>' if slug
-                   else f'<span class="{css}"><strong>{esc}</strong></span>')
+        text = f"<strong>{esc}</strong>" if strong else esc
+        out.append(f'<a href="/voices/{slug}/" class="{css}">{text}</a>' if slug
+                   else f'<span class="{css}">{text}</span>')
     return ", ".join(out)
 
 
 def anchor_re(slug: str) -> re.Pattern:
     # The byline link, plus the "·" separator after it (dropped with an empty byline).
+    # April 2026 archive pages have no <strong>; the homepage and digest use &middot;.
     return re.compile(
         r'<a href="(?:' + re.escape(SITE) + r')?/voices/' + re.escape(slug)
-        + r'/" class="([^"]*)"><strong>[^<]*</strong></a>(\s*<span class="cc-meta-dot">·</span>)?'
+        + r'/" class="([^"]*)">(<strong>)?[^<]*(?:</strong>)?</a>'
+        + r'(\s*(?:<span class="cc-meta-dot">·</span>|&middot;))?'
     )
+
+
+def replace_byline(m: re.Match, author: str, by_name: dict) -> str:
+    """Replacement for an anchor_re match: the real byline, or nothing (separator included)."""
+    if not author:
+        return ""
+    return byline_html(author, by_name, m.group(1), strong=bool(m.group(2))) + (m.group(3) or "")
+
+
+def byline_pages() -> list[Path]:
+    """Archive day pages, plus the live homepage and digest (re-rendered daily,
+    but they carry today's bylines until the next run)."""
+    days = [d / "index.html" for d in sorted(ARCHIVE_DIR.iterdir()) if (d / "index.html").exists()]
+    return days + [p for p in (DOCS_DIR / "index.html", DOCS_DIR / "digest" / "index.html") if p.exists()]
 
 
 def credited_urls(slug: str, name: str, domain: str) -> set[str]:
     urls = set()
+    for idx in byline_pages():
+        page = idx.read_text(encoding="utf-8", errors="replace")
+        for m in anchor_re(slug).finditer(page):
+            prev = [u for u in URL_RE.findall(page[max(0, m.start() - 4000):m.start()]) if domain in u]
+            if prev:
+                urls.add(prev[-1])
     for day in sorted(ARCHIVE_DIR.iterdir()):
-        idx = day / "index.html"
-        if idx.exists():
-            page = idx.read_text(encoding="utf-8", errors="replace")
-            for m in anchor_re(slug).finditer(page):
-                prev = [u for u in URL_RE.findall(page[max(0, m.start() - 4000):m.start()]) if domain in u]
-                if prev:
-                    urls.add(prev[-1])
         meta = day / "meta.json"
         if meta.exists():
             for a in json.loads(meta.read_text(encoding="utf-8")).get("articles", []):
                 if name in (a.get("authors") or []) or a.get("author") == name:
                     urls.add(a["url"])
     return urls
+
+
+def retry_unreadable(urls: list[str], rounds: int = 3, pause: float = 1.5) -> dict[str, str | None]:
+    """Refetch pages that failed in the parallel pass, one at a time.
+
+    A large retirement (hundreds of pages) trips the publisher's rate limit, and
+    an unreadable page would otherwise lose its byline entirely."""
+    out: dict[str, str | None] = {}
+    for attempt in range(rounds):
+        todo = [u for u in urls if out.get(u) is None]
+        if not todo:
+            break
+        if attempt:
+            time.sleep(pause * 10)
+        for u in todo:
+            time.sleep(pause)
+            out[u] = fetch_page_byline(u)
+    return out
 
 
 def main() -> int:
@@ -131,6 +172,7 @@ def main() -> int:
         urls = sorted(credited_urls(slug, name, domain))
         with ThreadPoolExecutor(max_workers=4) as pool:
             found = dict(zip(urls, pool.map(fetch_page_byline, urls)))
+        found.update(retry_unreadable([u for u in urls if found[u] is None]))
         print(f"\n{slug} ({name}): {len(urls)} article(s)")
         for u in urls:
             real[u] = found[u] or ""
@@ -140,19 +182,13 @@ def main() -> int:
 
     # 2. Archive day pages.
     day_pages = 0
-    for day in sorted(ARCHIVE_DIR.iterdir()):
-        idx = day / "index.html"
-        if not idx.exists():
-            continue
+    for idx in byline_pages():
         page = idx.read_text(encoding="utf-8", errors="replace")
         new = page
         for slug, (name, domain) in ACCOUNTS.items():
             def repl(m: re.Match) -> str:
                 prev = [u for u in URL_RE.findall(new[max(0, m.start() - 4000):m.start()]) if domain in u]
-                author = real.get(prev[-1], "") if prev else ""
-                if not author:
-                    return ""
-                return byline_html(author, by_name, m.group(1)) + (m.group(2) or "")
+                return replace_byline(m, real.get(prev[-1], "") if prev else "", by_name)
             new = anchor_re(slug).sub(repl, new)
         if new != page:
             day_pages += 1
@@ -167,9 +203,10 @@ def main() -> int:
         changed = False
         for a in d.get("articles", []):
             if a.get("author") in names or names & set(a.get("authors") or []):
-                a["author"] = real.get(a["url"], "")
-                a["authors"] = split_names(a["author"])
-                changed = True
+                author = real.get(a["url"], "")
+                if (a.get("author"), a.get("authors")) != (author, split_names(author)):
+                    a["author"], a["authors"] = author, split_names(author)
+                    changed = True
         if changed:
             d["authors"] = sorted({n for a in d.get("articles", []) for n in a.get("authors", [])})
             metas += 1

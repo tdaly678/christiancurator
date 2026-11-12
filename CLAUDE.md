@@ -305,8 +305,11 @@ page or one naming nobody leaves the author empty, never the posting account. He
 counts. `scripts/retire_posting_accounts.py` (dry run by default, `--apply`) retires a posting-account voice page:
 reattributes archive bylines and `meta.json` from the article pages, re-renders the archive index, writes a noindex stub
 to `/voices/`, and records the slug in `voices_redirects.json` with `"to": ""` (retired: the name is never linked).
-Retired: abby-silva. Audit 2026-11-12 found more posting accounts with voice pages, none retired yet (Tom's call):
-german-saucedo, paul-howard, jillian-parks, stephen-walker, chloe-hoyle. Add a slug to `ACCOUNTS` and rerun to retire.
+Retired: abby-silva, german-saucedo, paul-howard, jillian-parks, stephen-walker, chloe-hoyle (all Nov 12). Four of them
+are staff who also byline a few real First Things pieces (German Saucedo writes as "Germán S. Díaz del Castillo"); those
+bylines stay as plain text. The script also rewrites the homepage and digest, retries unreadable pages one at a time
+(the site rate-limits a big run), and handles the April 2026 byline format. Add a slug to `ACCOUNTS` and rerun to retire.
+`scripts/fix_voice_titles.py` never touches pilot pages (`data-cc-voice-pilot`); their titles come from `page_title()`.
 Tests: `tests/test_first_things_bylines.py`, `tests/test_voice_redirects.py`.
 
 ## P2: engagement and sourcing (2026-10-30)
