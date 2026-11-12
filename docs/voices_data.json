@@ -18276,5 +18276,96 @@
     "website": "",
     "books": [],
     "initials": "PCT"
+  },
+  {
+    "name": "Daniel Kunkel",
+    "slug": "daniel-kunkel",
+    "bio": "Daniel Kunkel is a Christian writer and content creator focused on biblical teaching and spiritual growth. He engages with contemporary issues through a thoughtful, Scripture-centered perspective.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DK"
+  },
+  {
+    "name": "Matthew Peterson",
+    "slug": "matthew-peterson",
+    "bio": "Matthew Peterson is a thoughtful Christian writer and content creator dedicated to exploring faith, theology, and spiritual formation. Through his writing and speaking, he helps believers deepen their understanding of Scripture and apply Christian truth to everyday life.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MP"
+  },
+  {
+    "name": "Griffin Gulledge",
+    "slug": "griffin-gulledge",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "GG"
+  },
+  {
+    "name": "Darrell Bock",
+    "slug": "darrell-bock",
+    "bio": "Darrell Bock is a senior research professor of New Testament at Dallas Theological Seminary and a leading evangelical scholar in biblical studies. He specializes in the Gospels, Jesus studies, and Luke-Acts, bringing deep exegetical insight to contemporary Christian understanding of Scripture. Through his teaching, writing, and speaking, Bock helps Christians engage thoughtfully with the New Testament and its historical context.",
+    "affiliation": "Dallas Theological Seminary",
+    "role": "Senior Research Professor & Author",
+    "education": "Ph.D. in New Testament, University of Aberdeen",
+    "website": "https://www.darrelcole.com",
+    "books": [
+      {
+        "title": "Jesus According to Scripture",
+        "amazon_url": "https://www.amazon.com/s?k=Jesus+According+to+Scripture+Darrell+Bock"
+      },
+      {
+        "title": "Who is Jesus?",
+        "amazon_url": "https://www.amazon.com/s?k=Who+is+Jesus+Darrell+Bock"
+      },
+      {
+        "title": "Recovering the Real Lost Gospel",
+        "amazon_url": "https://www.amazon.com/s?k=Recovering+the+Real+Lost+Gospel+Darrell+Bock"
+      },
+      {
+        "title": "The Missing Gospels",
+        "amazon_url": "https://www.amazon.com/s?k=The+Missing+Gospels+Darrell+Bock"
+      },
+      {
+        "title": "Luke Volume 1: Luke 1:1-9:50",
+        "amazon_url": "https://www.amazon.com/s?k=Luke+Volume+1+Darrell+Bock"
+      },
+      {
+        "title": "Acts",
+        "amazon_url": "https://www.amazon.com/s?k=Acts+Darrell+Bock"
+      }
+    ],
+    "initials": "DB"
+  },
+  {
+    "name": "Benjamin Bae",
+    "slug": "benjamin-bae",
+    "bio": "Benjamin Bae is a writer and content creator focused on Christian faith and cultural engagement. He contributes thoughtful perspectives on how believers can navigate contemporary issues through a biblical worldview.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BB"
+  },
+  {
+    "name": "Daniel Bennett",
+    "slug": "daniel-bennett",
+    "bio": "Daniel Bennett is a thoughtful Christian writer and content creator dedicated to exploring faith, culture, and biblical wisdom for contemporary audiences. His work seeks to bridge the gap between timeless Christian truth and modern life challenges.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DB"
   }
 ]

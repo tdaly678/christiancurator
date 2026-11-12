@@ -71,6 +71,30 @@
       "status": "fetched",
       "attempts": 1,
       "note": "0 verified figure(s)"
+    },
+    "https://erlc.com/resource/pastoring-after-the-midterm-elections": {
+      "date": "2026-11-12",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
+    },
+    "https://pewresearch.org/short-reads/2026/11/11/key-facts-about-us-data-centers": {
+      "date": "2026-11-12",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
+    },
+    "https://graphsaboutreligion.com/p/who-do-teenagers-turn-to-when-they": {
+      "date": "2026-11-12",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
+    },
+    "https://pewresearch.org/2026/11/11/expert-brief-public-opinion-on-ai-in-healthcare": {
+      "date": "2026-11-12",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
     }
   },
   "fresh": {
@@ -86,6 +110,12 @@
         "title": "Preelection Polls Understated Democrats' Advantage in 2026",
         "url": "https://www.pewresearch.org/short-reads/2026/11/06/a-first-look-at-polling-performance-in-2026/",
         "source": "Pew Research"
+      },
+      {
+        "date": "2026-11-12",
+        "title": "Pastors Must Prioritize Christian Identity Over Political Affiliation",
+        "url": "https://erlc.com/resource/pastoring-after-the-midterm-elections/",
+        "source": "ERLC"
       }
     ],
     "technology": [
@@ -132,6 +162,12 @@
         "title": "Religious Nones Are Less Likely to Want Children",
         "url": "https://www.graphsaboutreligion.com/p/why-dont-religious-nones-want-kids",
         "source": "Ryan Burge"
+      },
+      {
+        "date": "2026-11-12",
+        "title": "Gen Alpha Doubters Turn to Parents and Pastors, While Non-Religious Teens Have No One",
+        "url": "https://www.graphsaboutreligion.com/p/who-do-teenagers-turn-to-when-they",
+        "source": "Ryan Burge"
       }
     ],
     "biblical-literacy": [
@@ -170,6 +206,18 @@
         "title": "Faithful Christian Habits Sustain Pastors Throughout Ministry",
         "url": "https://research.lifeway.com/2026/11/09/7-christian-habits-necessary-for-pastoral-longevity/",
         "source": "Lifeway Research"
+      },
+      {
+        "date": "2026-11-12",
+        "title": "Pastors Must Prioritize Christian Identity Over Political Affiliation",
+        "url": "https://erlc.com/resource/pastoring-after-the-midterm-elections/",
+        "source": "ERLC"
+      },
+      {
+        "date": "2026-11-12",
+        "title": "Gen Alpha Doubters Turn to Parents and Pastors, While Non-Religious Teens Have No One",
+        "url": "https://www.graphsaboutreligion.com/p/who-do-teenagers-turn-to-when-they",
+        "source": "Ryan Burge"
       }
     ],
     "local-church": [
@@ -194,6 +242,34 @@
         "title": "Preachers Struggle With Sermon Writing, Study Finds",
         "url": "https://reformation21.org/preaching-in-paragraphs/",
         "source": "Reformation21"
+      }
+    ],
+    "technology-and-discipleship": [
+      {
+        "date": "2026-11-12",
+        "title": "Data Centers Expand for AI as Public Backlash Grows",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/11/key-facts-about-us-data-centers/",
+        "source": "Pew Research"
+      },
+      {
+        "date": "2026-11-12",
+        "title": "Americans Show Mixed Comfort With AI in Healthcare",
+        "url": "https://www.pewresearch.org/2026/11/11/expert-brief-public-opinion-on-ai-in-healthcare/",
+        "source": "Pew Research"
+      }
+    ],
+    "ai-and-the-church": [
+      {
+        "date": "2026-11-12",
+        "title": "Data Centers Expand for AI as Public Backlash Grows",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/11/key-facts-about-us-data-centers/",
+        "source": "Pew Research"
+      },
+      {
+        "date": "2026-11-12",
+        "title": "Americans Show Mixed Comfort With AI in Healthcare",
+        "url": "https://www.pewresearch.org/2026/11/11/expert-brief-public-opinion-on-ai-in-healthcare/",
+        "source": "Pew Research"
       }
     ]
   },
@@ -223,32 +299,52 @@
       }
     ]
   },
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "last_run": {
-    "date": "2026-11-11",
+    "date": "2026-11-12",
     "stories": [
       {
-        "title": "SBC Churches Express Confidence Despite Emerging Warning Signs",
-        "url": "https://research.lifeway.com/2026/11/10/most-sbc-churches-confident-about-future-but-issues-loom/",
-        "source": "Lifeway Research",
+        "title": "Journalist Andy Ngo Links Fringe Group to Border Patrol Agent Killing",
+        "url": "https://wng.org/podcasts/the-world-and-everything-in-it-november-12-2026-1794436796",
+        "source": "World Magazine",
         "signals": {
-          "publishers": [
-            "Lifeway Research"
+          "publishers": [],
+          "figures": [
+            "eight in 10"
           ],
-          "figures": [],
           "words": [],
-          "data_tag": true
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 8.62,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Pastors Must Prioritize Christian Identity Over Political Affiliation",
+        "url": "https://erlc.com/resource/pastoring-after-the-midterm-elections/",
+        "source": "ERLC",
+        "signals": {
+          "publishers": [],
+          "figures": [],
+          "words": [
+            "polls"
+          ],
+          "data_tag": false
         },
         "topics": [
-          "evangelicalism"
+          "politics-and-the-church",
+          "pastoral-ministry"
         ],
-        "trend": 9.5,
+        "trend": 8.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "verified 9 in 10 (Lifeway Research, reuse) for evangelicalism",
-          "verified One in 50 (Lifeway Research, reuse) for evangelicalism"
+          "no verifiable figure on the page: link only"
         ]
       },
       {
@@ -272,7 +368,27 @@
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
+          "page already checked on 2026-11-11 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "Pride in Leadership Invites God's Opposition, Author Warns",
+        "url": "https://research.lifeway.com/2026/11/12/4-warnings-about-pride-in-leadership/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 6.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
         ]
       },
       {
@@ -319,7 +435,33 @@
         ]
       },
       {
-        "title": "Four in Ten Non-Religious Teens Have No One to Turn To",
+        "title": "Data Centers Expand for AI as Public Backlash Grows",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/11/key-facts-about-us-data-centers/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [
+            "data"
+          ],
+          "data_tag": true
+        },
+        "topics": [
+          "technology-and-discipleship",
+          "ai-and-the-church"
+        ],
+        "trend": 6.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
+        ]
+      },
+      {
+        "title": "Gen Alpha Doubters Turn to Parents and Pastors, While Non-Religious Teens Have No One",
         "url": "https://www.graphsaboutreligion.com/p/who-do-teenagers-turn-to-when-they",
         "source": "Ryan Burge",
         "signals": {
@@ -327,18 +469,21 @@
             "Ryan Burge"
           ],
           "figures": [
-            "Four in Ten",
             "Four in ten"
           ],
           "words": [],
           "data_tag": true
         },
-        "topics": [],
-        "trend": 5.5,
+        "topics": [
+          "pastoral-ministry",
+          "christian-parenting"
+        ],
+        "trend": 5.0,
         "outlets": 1,
         "on_digest": true,
         "actions": [
-          "no topic page matched"
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
         ]
       },
       {
@@ -365,7 +510,60 @@
         ]
       },
       {
-        "title": "Religious Nones Choose Not to Have Children, Study Finds",
+        "title": "Americans Show Mixed Comfort With AI in Healthcare",
+        "url": "https://www.pewresearch.org/2026/11/11/expert-brief-public-opinion-on-ai-in-healthcare/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [
+            "findings",
+            "report",
+            "study"
+          ],
+          "data_tag": true
+        },
+        "topics": [
+          "technology-and-discipleship",
+          "ai-and-the-church"
+        ],
+        "trend": 4.25,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
+        ]
+      },
+      {
+        "title": "Most Southern Baptist Churches Report Stability Despite Emerging Concerns",
+        "url": "https://research.lifeway.com/2026/11/10/most-sbc-churches-confident-about-future-but-issues-loom/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [
+            "report"
+          ],
+          "data_tag": true
+        },
+        "topics": [
+          "evangelicalism"
+        ],
+        "trend": 4.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-11 (2 verified figure(s))"
+        ]
+      },
+      {
+        "title": "Religious Nones Choose Childlessness More Than Other Adults",
         "url": "https://www.graphsaboutreligion.com/p/why-dont-religious-nones-want-kids",
         "source": "Ryan Burge",
         "signals": {
@@ -373,133 +571,11 @@
             "Ryan Burge"
           ],
           "figures": [],
-          "words": [
-            "study finds"
-          ],
-          "data_tag": true
-        },
-        "topics": [
-          "christian-parenting"
-        ],
-        "trend": 2.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-10 (0 verified figure(s))"
-        ]
-      },
-      {
-        "title": "Preelection Polls Understated Democrats' Advantage in 2026",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/06/a-first-look-at-polling-performance-in-2026/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [
-            "polls"
-          ],
-          "data_tag": true
-        },
-        "topics": [
-          "politics-and-the-church"
-        ],
-        "trend": 2.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-10 (0 verified figure(s))"
-        ]
-      },
-      {
-        "title": "ERLC and State Leaders Praise Some Ballot Measures, Condemn Others",
-        "url": "https://erlc.com/press/erlc-state-leaders-respond-to-nov-3-ballot-measure-successes-failures/",
-        "source": "ERLC",
-        "signals": {
-          "publishers": [],
-          "figures": [
-            "56 percent"
-          ],
           "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "religious-liberty"
-        ],
-        "trend": 2.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
-        ]
-      },
-      {
-        "title": "Preachers Struggle With Sermon Writing, Study Finds",
-        "url": "https://reformation21.org/preaching-in-paragraphs/",
-        "source": "Reformation21",
-        "signals": {
-          "publishers": [],
-          "figures": [],
-          "words": [
-            "study finds"
-          ],
-          "data_tag": false
-        },
-        "topics": [
-          "preaching"
-        ],
-        "trend": 1.75,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
-        ]
-      },
-      {
-        "title": "Christian Discipleship Resources Make Affordable Christmas Gifts",
-        "url": "https://feeds.ligonier.org/~/972439013/0/ligonierministriesblog",
-        "source": "Ligonier Ministries",
-        "signals": {
-          "publishers": [],
-          "figures": [
-            "20%",
-            "50%"
-          ],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "discipleship"
-        ],
-        "trend": 1.25,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-10 (0 verified figure(s))"
-        ]
-      },
-      {
-        "title": "How Americans feel about G20 countries",
-        "url": "https://www.pewresearch.org/newsletter/global/global-october-2026-newsletter/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [
-            "surveys"
-          ],
           "data_tag": true
         },
         "topics": [],
-        "trend": 1.25,
+        "trend": 2.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -530,16 +606,31 @@
           "linked in Fresh From the Digest",
           "page already checked on 2026-11-10 (0 verified figure(s))"
         ]
-      }
-    ],
-    "pages": [
+      },
       {
-        "slug": "evangelicalism",
-        "kind": "latest-figures",
-        "note": "Latest Figures block refreshed (2 figures); dates bumped"
+        "title": "Christian Resources Make Affordable Christmas Gifts for Believers",
+        "url": "https://feeds.ligonier.org/~/972439013/0/ligonierministriesblog",
+        "source": "Ligonier Ministries",
+        "signals": {
+          "publishers": [],
+          "figures": [
+            "20%",
+            "50%"
+          ],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 0.25,
+        "outlets": 1,
+        "on_digest": false,
+        "actions": [
+          "no topic page matched"
+        ]
       }
     ],
+    "pages": [],
     "fetched": 4,
-    "hits": 13
+    "hits": 14
   }
 }

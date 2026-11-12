@@ -6,32 +6,33 @@
     "independent": false,
     "creates_voices": false,
     "role": "primary",
-    "author": "Aaron Earls",
-    "title": "Most SBC Churches Confident About Future, but Issues Loom",
-    "url": "https://research.lifeway.com/2026/11/10/most-sbc-churches-confident-about-future-but-issues-loom/",
-    "summary": "<p>Most Southern Baptist (SBC) churches are stable and confident about their future. However, warning signs exist. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/11/10/most-sbc-churches-confident-about-future-but-issues-loom/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/11/10/most-sbc-churches-confident-about-future-but-issues-loom/\">Most SBC Churches Confident About Future, but Issues Loom</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "author": "Ryan Blackwell",
+    "title": "4 Warnings About Pride in Leadership",
+    "url": "https://research.lifeway.com/2026/11/12/4-warnings-about-pride-in-leadership/",
+    "summary": "<p>God opposes the proud, meaning He sets Himself against pride wherever it exists in our lives — personal life, business, ministry, family. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/11/12/4-warnings-about-pride-in-leadership/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/11/12/4-warnings-about-pride-in-leadership/\">4 Warnings About Pride in Leadership</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
     "full_content": "",
-    "published": "Tue, 10 Nov 2026 15:45:00 +0000",
-    "fetched_at": "2026-11-11T10:01:03.312897",
-    "score": 7,
+    "published": "Thu, 12 Nov 2026 07:21:00 +0000",
+    "fetched_at": "2026-11-12T10:01:01.223043",
+    "score": 4,
     "tags": [
-      "data",
-      "church life"
+      "theology",
+      "devotional"
     ],
-    "rewritten_title": "SBC Churches Express Confidence Despite Emerging Warning Signs",
-    "canonical_url": "https://research.lifeway.com/2026/11/10/most-sbc-churches-confident-about-future-but-issues-loom",
-    "importance": 8.5,
-    "depth": 4.0,
+    "rewritten_title": "Pride in Leadership Invites God's Opposition, Author Warns",
+    "canonical_url": "https://research.lifeway.com/2026/11/12/4-warnings-about-pride-in-leadership",
+    "importance": 5.5,
+    "depth": 6.0,
     "personas": [
-      "pastor"
+      "pastor",
+      "professional"
     ],
-    "topic_cluster": "sbc_health",
+    "topic_cluster": "leadership_theology",
     "perspective": "neutral",
     "scored_by": "claude",
-    "base_score": 7.0,
-    "base_importance": 7.0,
-    "base_depth": 4.0,
-    "final_score": 8.5,
+    "base_score": 4.0,
+    "base_importance": 4.0,
+    "base_depth": 6.0,
+    "final_score": 5.5,
     "boosts": {
       "recency": 1.5
     },
@@ -39,43 +40,44 @@
     "recency_boost": 1.5
   },
   {
-    "source_name": "Lifeway Research",
+    "source_name": "Pew Research",
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
     "creates_voices": false,
     "role": "primary",
-    "author": "Aaron Summers",
-    "title": "Leaving Well: 5 Ways to Prepare Your Church for Pastoral Transition",
-    "url": "https://research.lifeway.com/2026/11/11/leaving-well-5-ways-to-prepare-your-church-for-pastoral-transition/",
-    "summary": "<p>A pastor can make the pastoral transition healthier by thinking carefully about these key issues when preparing to leave. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/11/11/leaving-well-5-ways-to-prepare-your-church-for-pastoral-transition/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/11/11/leaving-well-5-ways-to-prepare-your-church-for-pastoral-transition/\">Leaving Well: 5 Ways to Prepare Your Church for Pastoral Transition</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "author": "Beshay Sakla",
+    "title": "Key Facts About U.S. Data Centers",
+    "url": "https://www.pewresearch.org/short-reads/2026/11/11/key-facts-about-us-data-centers/",
+    "summary": "Data centers are expanding fast to power AI, and public backlash is growing. Here are some key facts on their locations, energy use and Americans' views.",
     "full_content": "",
-    "published": "Wed, 11 Nov 2026 07:58:00 +0000",
-    "fetched_at": "2026-11-11T10:01:03.312897",
-    "score": 6,
+    "published": "Wed, 11 Nov 2026 14:59:24 +0000",
+    "fetched_at": "2026-11-12T10:01:01.505097",
+    "score": 3,
     "tags": [
-      "church life"
+      "data"
     ],
-    "rewritten_title": "Pastor Should Plan Transition to Protect Church Health",
-    "canonical_url": "https://research.lifeway.com/2026/11/11/leaving-well-5-ways-to-prepare-your-church-for-pastoral-transition",
-    "importance": 6.75,
-    "depth": 5.0,
+    "rewritten_title": "Data Centers Expand for AI as Public Backlash Grows",
+    "canonical_url": "https://pewresearch.org/short-reads/2026/11/11/key-facts-about-us-data-centers",
+    "importance": 5.0,
+    "depth": 2.0,
     "personas": [
-      "pastor"
+      "professional"
     ],
-    "topic_cluster": "pastoral_transitions",
-    "perspective": "neutral",
+    "topic_cluster": "unique",
+    "perspective": "news",
     "scored_by": "claude",
-    "base_score": 6.0,
-    "base_importance": 6.0,
-    "base_depth": 5.0,
-    "final_score": 6.75,
+    "base_score": 3.0,
+    "base_importance": 3.0,
+    "base_depth": 2.0,
+    "final_score": 5.0,
     "boosts": {
       "recency": 1.5,
-      "diversity_penalty": -0.75
+      "trending": 0.5
     },
-    "boost_total": 1.5,
-    "recency_boost": 1.5
+    "boost_total": 2.0,
+    "recency_boost": 1.5,
+    "trending_boost": 1.0
   },
   {
     "source_name": "Ryan Burge",
@@ -90,37 +92,37 @@
     "summary": "Gen Alpha Christians have parents, grandparents, and pastors. Four in ten non-religious teens have no one.",
     "full_content": "<p><strong>What does the future of faith look like?</strong></p><p>That&#8217;s a question I get asked all the time by folks who are interested in what&#8217;s just over the horizon when it comes to American religion. Often that&#8217;s motivated by a desire to see if there&#8217;s a religious revival right around the corner or maybe the idea that faith is just changing in its conception and expression for the next generation.</p><p>It&#8217;s actually not an easy question to answer for a very practical reason &#8211; <strong>it&#8217;s very difficult to actually do a survey of teenagers in the United States.</strong> For lots of ethical and legal reasons almost every survey of American religion deals only with adults, that is, only those who are at least 18 years old. Which certainly gives us a glimpse of the future but just a partial one.</p><p>But now I have an opportunity (thanks to the <a href=\"https://fulleryouthinstitute.org/\">Fuller Youth Institute</a>) to do a deep dive into the spiritual and religious lives of Generation Alpha. They conducted a survey of nearly 3,000 13-17 year olds in the middle of 2025 that asked all kinds of nuanced questions about their faith, their doubts and their relationships. The folks at Fuller have written a lengthy research report about this that you can access <a href=\"https://fulleryouthinstitute.org/gen-alpha\">from this link</a>, but then I partnered with them to do my own exploration into the data and present some of the results to readers of this newsletter.</p><p>I wanted to focus on just a small handful of questions that I think offer a bit of unique insight into <strong>how teenagers are dealing with their doubts about the existential questions in life and how relationships play a really interesting role in helping Gen Alpha navigate some of their struggles.</strong></p><p>Let me just start by showing you the share of 13 to 17 year olds who said that they experienced doubt &#8220;most of the time&#8221; or &#8220;almost always&#8221; in six different areas.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!eubx!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff93e4a9e-d5d2-45a6-bbf2-3d34292e2221_2048x1560.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1109\" src=\"https://substackcdn.com/image/fetch/$s_!eubx!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff93e4a9e-d5d2-45a6-bbf2-3d34292e2221_2048x1560.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p>The group that said that they experienced the least amount of doubt across nearly all items was Christian teenagers. <strong>Among Christians, only 15% said that they &#8220;felt unsure whether God or a higher power is real&#8221; most of the time or always.</strong> That was 9 points lower than those of non-Christian faiths, and 20 points lower than teenagers who said that they were spiritual but not religious. Christian teens were also half as likely to say that they &#8220;felt frustrated or upset with God&#8221; compared to their peers.</p><p>There were several areas in which Christian and non-religious teens had similar responses, though. For instance, 16-18% of each group said that they &#8220;questioned my religious or spiritual beliefs&#8221; frequently. <strong>One potential reason for that is that lots of nones just weren&#8217;t thinking about their religious beliefs at all.</strong> The same explanation could be used for the question about feeling confused about faith or spirituality, too.</p><p>I do need to point out that the SBNR (spiritual but not religious) teenagers always scored near the top of the doubting scale for each of these six statements, though. They seem to be stuck in the middle of the faith spectrum while their church and non-religious peers are at the two ends of the spectrum.</p><p>I wanted to zoom in a bit on those Christian members of Gen Alpha, though, in order to show you which of these statements seemed to elicit the most doubts and which ones were not really a struggle for 13-17 year old Christians.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!Wuwk!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6205614a-0cae-46c6-8ad1-407171f1e746_2048x1024.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"728\" src=\"https://substackcdn.com/image/fetch/$s_!Wuwk!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6205614a-0cae-46c6-8ad1-407171f1e746_2048x1024.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong>The area in which Gen Alpha Christians clearly struggle the most is answering that age-old question, &#8220;Why do bad things happen?&#8221;</strong> About a third of these Christians said that this was something that they pondered most of the time or almost always. That was followed by feeling disconnected from God or their own faith. However, I do need to point out that just 8% of Gen Alpha Christians said that they struggled with this thought on a near-constant basis.</p><p>The bottom of the list was interesting to me, too. <strong>The idea that Gen Alpha Christians aren&#8217;t sure of God&#8217;s existence is refuted strongly by this data</strong>. In this group, 43% said that this was never a doubt that they had and another 24% said it only popped up in their mind every once in a while. That means that two-thirds of young Christians are not struggling with the question of God&#8217;s existence in any real way. I also need to flag the fact that only about 10% of Gen Alpha Christians said that they were upset with God most of the time.</p><p><strong>In general, I don&#8217;t get the sense from this data that 13-17 year old Christians are really struggling on a regular basis with some of the biggest questions about faith.</strong> Just the opposite, in fact. There was no statement that rose above 15% in the &#8220;almost always&#8221; category, and most were in the single digits.</p><p>But that got me wondering if these young Christians struggled more with doubts the more often they attended religious services.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!Wk7g!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc88ac3c2-5b31-4373-ad8c-bd948141427d_2048x1365.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"970\" src=\"https://substackcdn.com/image/fetch/$s_!Wk7g!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc88ac3c2-5b31-4373-ad8c-bd948141427d_2048x1365.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p>And the answer to that question is pretty clear from the data &#8211; not really. <strong>I mean, if you trace each of the bar graphs for each of these six statements, what you find is that oftentimes the confidence intervals overlap in such a way that there&#8217;s no statistical difference between those Christians who never attend religious services compared to those who are at church multiple times per week.</strong></p><p>It&#8217;s interesting to note that a never-attending Christian is just as likely to say that they feel confused about their faith or spirituality compared to a weekly attender. The same is true for feeling unsure about the existence of God, too. Which is worth some reflection around the question of why a teenage Christian who never attends church has the same certainty around God&#8217;s existence as their peer who is in church all of the time.</p><p><strong>The one area in which there is a clear difference across attendance levels, however, is the question of why bad things happen</strong>. For those young Christians who attend never, seldom, or monthly, this is a constant thought for them. In fact, these are the highest percentages in the entire graph (around 37% say this is something on their minds most of the time or always). But as attendance hits that weekly mark, these concerns drop dramatically. Among Christian teens who attend church multiple times per week, it&#8217;s just 20%. So this is one area in which we can say attendance has a really clear and large impact on doubts.</p><p>So, we&#8217;ve established that lots of members of Gen Alpha do struggle with some spiritual and religious beliefs from time to time, but who do they speak to when they are trying to work through some of those issues? There was a question on the survey that asked exactly that and allowed the teenagers to select from a long list of potential conversation partners.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!qHTU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb33c8f27-97f8-470c-a179-6a32f9ec33a4_2048x1434.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1019\" src=\"https://substackcdn.com/image/fetch/$s_!qHTU!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb33c8f27-97f8-470c-a179-6a32f9ec33a4_2048x1434.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong>The one selection that was easily the most popular of all was &#8220;parents/caregivers.&#8221;</strong> In the full sample of Gen Alpha, about half of all respondents chose this one. No other group was even close. &#8220;Friends&#8221; came in second place, but it was only selected by 29% of respondents. Also, a surprising share of Gen Alpha indicated that they spoke with their grandparents on a regular basis about their doubts (19%).</p><p>What doesn&#8217;t show up on this list a whole lot? Well, very few teenagers are turning to podcasts or books to help them wrestle with their doubts (just 5%). <strong>And a vanishingly small number say that they talk to a therapist, a teacher, or a coach when they are going through a difficult time (4% each).</strong></p><p>I get the clear impression from this list that family is incredibly important in the lives of Gen Alpha, but I wanted to take this analysis one step further by breaking the sample into Christians vs all others. The graph below is the share of each group that chose any of these options in their top three.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!zK-b!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F49e8ff1c-de3d-492f-92d7-de546ca9c674_2048x1434.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1019\" src=\"https://substackcdn.com/image/fetch/$s_!zK-b!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F49e8ff1c-de3d-492f-92d7-de546ca9c674_2048x1434.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong>This may be the most interesting graph in this entire article because it paints an entirely different picture of how Christian young people talk through their doubts compared to their non-Christian peers</strong>. For instance, a Christian member of Gen Alpha was eight points more likely to put parents/caregivers in their top three compared to the rest of the sample (54% vs 46%). However, when it comes to listing friends, the rest of the sample was eight points more likely to include this group compared to Christians (34% vs 26%).</p><p><strong>I don&#8217;t want to speculate too much, but I wonder if this discrepancy is due, at least in part, to the fact that Christian teenagers have a more supportive family life</strong>. This gains support when looking at the line for grandparents. Among Christian teens, 22% chose this one in their top three compared to just 15% of the rest of the sample.</p><p>I did want to direct your attention to the bottom of the graph, too. I see very little evidence that non-Christians are much more likely to seek out support in online spaces or that they will turn to a counselor, a teacher, or a coach compared to Christians.</p><p>But there&#8217;s one finding that I&#8217;ve been intentionally ignoring in the last two graphs that is worth returning to now. <strong>It&#8217;s the share of Gen Alpha who indicated that they had no one to talk to about their doubts. In the full sample, about one in five teenagers indicated that this was the situation that they were facing in their lives</strong>. In the prior graph, you can clearly see a huge divergence on this question, too. Among Christian teenagers, just 11% chose this option. It was 30% among the rest of the sample.</p><p>Look what happens when I calculate the response to that question across the five religious traditions in the survey.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!arUb!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F29face8e-711c-498f-b237-90fa5f09d00c_2048x1755.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1248\" src=\"https://substackcdn.com/image/fetch/$s_!arUb!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F29face8e-711c-498f-b237-90fa5f09d00c_2048x1755.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong>Christian members of Gen Alpha are much less likely to say that they have no one to talk to about their doubts compared to the rest of their peers</strong>. The gaps between these two groups are incredibly stark. For the SBNRs, 28% said that they had no one to converse with about their doubts. However, it&#8217;s the non-religious teenagers who score the highest on this question at 40%.</p><p>Now, why would this be the case? One potential explanation is that their parents are non-religious and the teen wouldn&#8217;t feel comfortable talking about such matters with them. Another hypothesis is that they just don&#8217;t have a strong relationship with their parents, generally speaking.</p><p>The faith of a teenager is more than just their personal orientation toward God or the Church. <strong>It&#8217;s also deeply intertwined with the relationships that they have and the connections that they form.</strong> This was certainly true for me as I grew up in the Millennial generation, and it doesn&#8217;t seem like much has changed for Gen Alpha, either.</p><p>Having doubts is certainly a part of being a teenager. Having someone to discuss those issues with seems important to faith formation. Unfortunately, it seems Christian youth have a huge advantage in this area. In my opinion, that leaves a deficit for everyone else that needs to be reflected on by those who work with young people.</p><p>Code for this post can be <a href=\"https://gist.github.com/ryanburge/ff737b2d27728a3c890092f8030de7f8\">found here</a>.</p><div><hr /></div><p><em>Ryan P. Burge is a professor of practice at the <a href=\"https://rap.wustl.edu/\">Danforth Center on Religion and Politics</a> at Washington University.</em></p><div class=\"captioned-image-container\"><figure><div class=\"image-link image2\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"182\" src=\"https://substackcdn.com/image/fetch/$s_!t08C!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5740b624-c21f-415b-9b7a-36b50b32d87a_848x182.webp\" width=\"848\" /><div></div></div></div></figure></div><p></p>",
     "published": "Mon, 09 Nov 2026 12:30:57 +0000",
-    "fetched_at": "2026-11-11T10:01:03.302856",
+    "fetched_at": "2026-11-12T10:01:01.469666",
     "score": 7,
     "tags": [
       "data",
       "church life"
     ],
-    "rewritten_title": "Four in Ten Non-Religious Teens Have No One to Turn To",
+    "rewritten_title": "Gen Alpha Doubters Turn to Parents and Pastors, While Non-Religious Teens Have No One",
     "canonical_url": "https://graphsaboutreligion.com/p/who-do-teenagers-turn-to-when-they",
-    "importance": 4.5,
-    "depth": 0.0,
+    "importance": 4.0,
+    "depth": 1.0,
     "personas": [
       "pastor",
       "parent"
     ],
-    "topic_cluster": "youth_faith_retention",
+    "topic_cluster": "gen_alpha_faith_formation",
     "perspective": "news",
     "scored_by": "claude",
     "base_score": 7.0,
     "base_importance": 7.0,
-    "base_depth": 4.0,
-    "final_score": 4.5,
+    "base_depth": 5.0,
+    "final_score": 4.0,
     "boosts": {
-      "recency": 0.75,
+      "recency": 0.25,
       "frequency": 0.75,
       "previously_shown": -4.0
     },
-    "boost_total": 1.5,
+    "boost_total": 1.0,
     "frequency_boost": 0.75,
-    "source_posts_30d": 9,
+    "source_posts_30d": 8,
     "shown_yesterday": true,
     "previously_shown": true,
-    "recency_boost": 0.75
+    "recency_boost": 0.25
   }
 ]
