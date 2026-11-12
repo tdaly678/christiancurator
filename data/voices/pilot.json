@@ -130,7 +130,7 @@
         {"slug": "religious-liberty", "angle": "Toleration and its limits in early Baptist confessions."},
         {"slug": "church-history", "angle": "Seventeenth-century Baptist declarations on toleration."}
       ],
-      "related": ["stephen-wolfe", "jonathan-leeman", "aaron-m-renn"],
+      "related": ["glenn-a-moots", "mike-sabo", "aaron-m-renn"],
       "same_as": ["https://archive.americanreformer.org/author/brandon-corley/"],
       "review_notes": "americanreformer.org/author/brandon-corley/ now redirects to archive.americanreformer.org; links use the archive host. The author page does not date the 'MDiv student' line, so it may be out of date. The old site bio's claim about 'Reformed theology and Christian scholarship' was not repeated."
     },
@@ -177,7 +177,7 @@
         {"slug": "spiritual-disciplines", "angle": "Putting Bible reading on the calendar."},
         {"slug": "anxiety-and-fear", "angle": "Anxiety about finding God's will."}
       ],
-      "related": ["dawn-sherillporter", "kevin-deyoung", "jen-wilkin", "trevin-wax"],
+      "related": ["dawn-sherillporter", "kevin-deyoung", "jen-wilkin", "michael-kelley"],
       "same_as": ["https://relevantmagazine.com/author/chandlervannoy/", "https://leadership.lifeway.com/author/chandler/"],
       "review_notes": "Identity confirmed: RELEVANT author id 18972 wrote our curated piece (2026-05-07). The brand manager role comes from an undated RELEVANT bio and may be out of date. chandlervannoy.com (named in that bio) returned HTTP 500 on 2026-11-12, so it is not linked. The old site bio's 'Unseen Leadership Podcast' claim could not be confirmed from a primary page and was dropped; the 5 Leadership Questions co-host credit is on leadership.lifeway.com."
     },
@@ -239,7 +239,7 @@
         {"slug": "pastoral-ministry", "angle": "Why counseling belongs to every pastor."},
         {"slug": "pornography", "angle": "Help for Christians caught in repeated sexual sin."}
       ],
-      "related": ["ed-welch", "paul-tripp", "tim-keller"],
+      "related": ["michael-mock", "mark-vroegop", "tim-keller"],
       "same_as": ["https://www.ccef.org/people/david-powlison/"],
       "review_notes": "Deceased (CCEF memorial page). No outreach. No digest bylines in our archive, so the page has no Recent pieces section. The JBC issue dates for picks 1 and 5 are not shown on the CCEF pages; the 2019 for pick 5 is inferred from CCEF's note that the remarks were for the May 2019 Westminster graduation."
     },
@@ -290,7 +290,7 @@
         {"slug": "membership", "angle": "What church membership is and why it matters."},
         {"slug": "predestination-free-will", "angle": "God's sovereignty over human decisions and salvation."}
       ],
-      "related": ["jonathan-leeman", "jen-wilkin", "mark-dever"],
+      "related": ["kevin-deyoung", "jen-wilkin", "mark-dever"],
       "same_as": ["https://www.thegospelcoalition.org/profile/jeremy-kimble/", "https://christoverall.com/author/jeremy-m-kimble/", "https://cedarville.edu/academics/schools/biblical-and-theological-studies/faculty-staff/kimble-jeremy"],
       "review_notes": "Old page called him an author and apologist; he is a Cedarville theology professor. TGC dates the curated piece Apr 15, 2026 (we curated it Apr 19). Themelios pieces left out because their pages show no date."
     },
@@ -340,7 +340,7 @@
         {"slug": "christian-education", "angle": "The purpose and future of Christian higher education."},
         {"slug": "politics-and-the-church", "angle": "Character, democracy, and the moral consensus of the postwar West."}
       ],
-      "related": ["thomas-s-kidd", "daniel-k-williams", "jake-meador"],
+      "related": ["nadya-williams", "carl-trueman", "jake-meador"],
       "same_as": ["https://mereorthodoxy.com/tag/author-christopher-gehrz/", "https://chrisgehrz.substack.com/about", "https://currentpub.com/author/patreon_4709580", "https://www.bethel.edu/academics/faculty/gehrz-christopher"],
       "review_notes": "The duplicate page chris-gehrz was merged into this one on 2026-11-12 (merge_duplicate_voices.py: noindex redirect stub, removed from sitemap and index). Old bio wrongly called him author of The Pietist Vision of Christian Higher Education (Bethel lists him as editor). Substack posts are mostly paywalled, so picks come from Mere Orthodoxy and Current."
     },
@@ -397,7 +397,7 @@
         {"slug": "church-history", "angle": "Whether the Reformation was a radical break with Christian social order."},
         {"slug": "covenant-theology", "angle": "Covenant theology's legacy in Anglo-American politics."}
       ],
-      "related": ["joseph-rigney", "stephen-wolfe", "brandon-corley", "aaron-m-renn"],
+      "related": ["scott-yenor", "mike-sabo", "brandon-corley", "aaron-m-renn"],
       "same_as": ["https://archive.americanreformer.org/author/glenn-moots/", "https://lawliberty.org/author/glenn-moots/", "https://www.northwood.edu/directory/faculty/glenn-moots/"],
       "review_notes": "Old page said Grove City College; every source says Northwood University. Three book titles in the old data were not found anywhere and were dropped. Publisher dates (May 19, Jul 9) differ from our curated dates (May 28, Jul 20)."
     },
@@ -452,7 +452,7 @@
         {"slug": "gender-and-biblical-anthropology", "angle": "The body as part of what it means to bear God's image."},
         {"slug": "heaven-hell-eternity", "angle": "Whether disability remains in the resurrection body."}
       ],
-      "related": ["joni-eareckson-tada", "vaneetha-rendall-risner"],
+      "related": ["peter-rosenberger", "vaneetha-rendall-risner"],
       "same_as": ["https://www.thegospelcoalition.org/profile/james-abernathy/", "https://jamesabernathy.substack.com/"],
       "review_notes": "The quadriplegia line comes from his own Substack About page. Family details (husband, father of two) are on the TGC profile but left out. Employer not named in any source."
     },
@@ -508,7 +508,7 @@
         {"slug": "missions-and-evangelism", "angle": "Campus ministry and reaching Gen Z."},
         {"slug": "pastoral-ministry", "angle": "Preaching and pastor training as the church changes generations."}
       ],
-      "related": ["matthew-lee-anderson", "andrew-wilson", "rachel-gilson", "alex-harris"],
+      "related": ["jake-meador", "brett-mccracken", "rachel-gilson", "alex-harris"],
       "same_as": ["https://www.thegospelcoalition.org/profile/derek-rishmawy/", "https://mereorthodoxy.com/tag/author-derek-rishmawy/", "https://derekzrishmawy.com/"],
       "review_notes": "TGC panel page dates Gospel Hope for Gen-Z Ministry Oct 23, 2026; the approved alex-harris entry cites the YouTube video as Oct 22. Forthcoming IVP book and PCA ordination not verified (IVP returned 403). Christianity Today author page returns 404, but CT articles bylined by him were verified on 2026-11-12 (HTTP 200, meta author Derek Rishmawy, RUF UC Irvine author note): You're Probably Worshiping a False God (Nov 2020), cited in bio_sources, and When It Comes to Sacrifice, God Doesn't Play Fair (Sep 2020)."
     },
@@ -559,7 +559,7 @@
         {"slug": "spiritual-disciplines", "angle": "Biblical spirituality drawn from older Reformed writers."},
         {"slug": "church-planting", "angle": "Theological training for church planters through Send Network."}
       ],
-      "related": ["don-whitney", "brandon-d-smith"],
+      "related": ["alex-diprima", "john-owen"],
       "same_as": ["https://www.spiritualtheology.net/", "https://www.thegospelcoalition.org/profile/j-a-medders/", "https://www.newchurches.com/contributor/jeff-medders/", "https://jamedders.com/"],
       "review_notes": "Old affiliation (Send Network, MBTS visiting professor) is confirmed. The old book list (Sola Scriptura..., The Expository Preacher) was not found and was dropped. It is Finished! is dated Apr 3, 2026 on Substack. Picks are his own essays, not the Spurgeon Saturday quote posts."
     },
@@ -623,7 +623,7 @@
         {"slug": "heaven-hell-eternity", "angle": "Heaven as the reunion that earthly longing points to."},
         {"slug": "missions-and-evangelism", "angle": "Everyday witness in his father's work as a watchmaker."}
       ],
-      "related": ["randy-alcorn", "matt-mccullough", "scott-hubbard"],
+      "related": ["randy-alcorn", "mark-vroegop", "scott-hubbard"],
       "same_as": ["https://ca.thegospelcoalition.org/profile/joshua-budimlic/", "https://sola.network/article/author/joshuabudimlic/", "https://www.joshuabudimlic.com/author"],
       "review_notes": "Curated via The Aquila Report, whose pages return 403. Identity matched by the same titles on his own blog, posted 6 to 7 days earlier. Picks link to the original publications, never Aquila. Where he teaches is not stated in any source. Church name per TGC Canada (SOLA says Grandview Baptist Church)."
     }
