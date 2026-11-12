@@ -7,9 +7,10 @@ digest (static HTML), topics they return to, related voices, and a
 "Compiled from public sources" line. Person + ProfilePage JSON-LD carries
 sameAs links to the writer's outlets.
 
-Drafts carry "reviewed": false until Tom signs off. needs_noindex() keeps an
-unreviewed page out of the index when it is only an auto list (no bio and no
-Start here picks).
+Drafts carry "reviewed": false until Tom signs off. needs_noindex() is the
+site-wide indexing rule for every voice page (voices cleanup, Nov 12 2026): a
+page is indexable only when reviewed is true, or when it has 2 or more of the
+writer's own verified pieces plus a sourced bio (bio text and bio_sources).
 
 Topic hubs link back through a marker block (render_topic_voices_block /
 inject_topic_voices) placed before AEO-RELATED-TOPICS.
@@ -68,9 +69,30 @@ def has_curated_content(entry: dict) -> bool:
     return bool((entry.get("bio") or "").strip() or entry.get("start_here"))
 
 
-def needs_noindex(entry: dict) -> bool:
-    """Unreviewed pages that are only an auto list stay out of the index."""
-    return not entry.get("reviewed") and not has_curated_content(entry)
+MIN_INDEXABLE_PIECES = 2
+
+
+def own_piece_count(entry: dict, credited_urls: set[str] | frozenset = frozenset()) -> int:
+    """Distinct verified pieces by the writer: Start here picks (checked by
+    hand) plus archive pieces credited to them under the publisher's own
+    headline (scripts/build_recent_articles.collect_by_voice)."""
+    return len({p["url"] for p in entry.get("start_here") or [] if p.get("url")} | set(credited_urls))
+
+
+def has_sourced_bio(entry: dict) -> bool:
+    return bool((entry.get("bio") or "").strip() and entry.get("bio_sources"))
+
+
+def needs_noindex(entry: dict, credited_urls: set[str] | frozenset = frozenset()) -> bool:
+    """True unless the page has earned the index.
+
+    Indexable: "reviewed": true, or MIN_INDEXABLE_PIECES or more of the
+    writer's own verified pieces plus a sourced bio. Works for pilot entries
+    (data/voices/pilot.json) and legacy voices_data.json records alike."""
+    if entry.get("reviewed"):
+        return False
+    return not (own_piece_count(entry, credited_urls) >= MIN_INDEXABLE_PIECES
+                and has_sourced_bio(entry))
 
 
 def page_title(entry: dict) -> str:

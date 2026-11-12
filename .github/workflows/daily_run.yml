@@ -181,6 +181,12 @@ jobs:
         # boilerplate annotations).
         run: python3 scripts/check_topic_quality.py
 
+      - name: Gate voice pages (indexing bar, dashes, posting accounts, headlines)
+        # Runs BEFORE the commit. Ratcheted against scripts/voices_check_baseline.json
+        # (pages below the indexing bar that await a sourced bio); see the script
+        # docstring. New voice pages are generated noindex, so they never trip it.
+        run: python3 scripts/check_voices.py
+
       - name: Commit output files
         run: |
           git config --global user.name "github-actions[bot]"

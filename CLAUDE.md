@@ -287,10 +287,20 @@ A compact homepage and email section of 3 to 5 videos and podcast episodes from 
 
 ### Sitemaps — there are six files, not one
 `docs/sitemap.xml` is an **index** that points at three children: `sitemap-core.xml` (6 URLs), `sitemap-topics.xml` (70),
-`sitemap-voices.xml` (1,158). `sitemap-daily.xml` and `sitemap-archive.xml` are still written by `regenerate_sitemap()` but,
+`sitemap-voices.xml` (204 since the Nov 12 2026 voices cleanup). `sitemap-daily.xml` and `sitemap-archive.xml` are still written by `regenerate_sitemap()` but,
 since 2026-10-26, are deliberately **not listed** in the index (crawl budget goes to topics and voices). Anything that
 suppresses a page must also remove it from the relevant child sitemap, or the signals conflict.
 
+**Voice indexing rule (Nov 12 2026).** `curator/voice_pilot.py` `needs_noindex(entry, credited_urls)` is the rule for
+every voice page: indexable only when `"reviewed": true`, or with 2+ of the writer's own verified pieces (Start here
+picks plus archive pieces under the publisher headline) and a sourced bio (`bio_sources`). New pages from
+`voice_generator.generate_new_voice_pages()` are written noindex and added to `voices_noindex.json`. The 994 pages
+the voices audit marked noindex (`data/voices/noindex-2026-11-12.txt`) were noindexed and dropped from the sitemap by
+`scripts/apply_voice_noindex.py`; the pages and links stay. `scripts/check_voices.py` (daily workflow, before the
+commit) fails on an indexable page below the bar (ratchet: `scripts/voices_check_baseline.json`, 178 pages awaiting a
+sourced bio), a noindex mismatch, any em or en dash on a voice page or in `voices_data.json`, a retired slug that is
+linked or has data, or a Recent Articles headline that is not the publisher's. `--report` lists all,
+`--update-baseline` locks in improvements. Tests: `tests/test_check_voices.py`.
 Voice pages listed in `frontend/voices_noindex.json` are skipped by the sitemap generator. Voices cleanup step 4 (Nov 12 2026): 13 more
 duplicates merged (`PAIRS` in `scripts/merge_duplicate_voices.py`; andy-davis and mary-hannah were confirmed from the
 publishers' pages first) and seven non-person pages retired through `retire_posting_accounts.py` (outlets Lifeway

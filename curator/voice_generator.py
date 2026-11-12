@@ -455,6 +455,29 @@ def _stub_bio(name: str) -> dict:
 
 # ── HTML rendering ─────────────────────────────────────────────────────────────
 
+NOINDEX_LIST_PATH = Path(__file__).resolve().parent.parent / "frontend" / "voices_noindex.json"
+ROBOTS_NOINDEX_TAG = '<meta name="robots" content="noindex, follow" />'
+
+
+def noindex_page(page_html: str) -> str:
+    """Add the robots noindex tag after <title> (or replace an existing robots tag)."""
+    robots = re.compile(r'<meta\b[^>]*\bname="robots"[^>]*>', re.I)
+    if robots.search(page_html):
+        return robots.sub(ROBOTS_NOINDEX_TAG, page_html, count=1)
+    out, n = re.subn(r"(</title>)", r"\1\n  " + ROBOTS_NOINDEX_TAG, page_html, count=1)
+    return out if n else page_html.replace("<head>", "<head>\n  " + ROBOTS_NOINDEX_TAG, 1)
+
+
+def mark_noindex(slug: str, path: Path = NOINDEX_LIST_PATH) -> None:
+    """Record a slug in frontend/voices_noindex.json (kept out of sitemap-voices.xml)."""
+    try:
+        slugs = set(json.loads(path.read_text(encoding="utf-8")))
+    except (OSError, ValueError):
+        slugs = set()
+    if slug not in slugs:
+        path.write_text(json.dumps(sorted(slugs | {slug}), indent=2) + "\n", encoding="utf-8")
+
+
 def render_bio_page(author: dict, index: int) -> str:
     name = author["name"]
     slug = author["slug"]
@@ -748,7 +771,10 @@ def generate_new_voice_pages(articles: list) -> int:
         author_dir = VOICES_DIR / slug
         author_dir.mkdir(parents=True, exist_ok=True)
         page_html = render_bio_page(bio_data, total_existing + len(voices_data))
-        (author_dir / "index.html").write_text(page_html, encoding="utf-8")
+        # New pages start out of the index: an auto bio with one piece does not
+        # meet curator.voice_pilot.needs_noindex() (voices cleanup, Nov 12 2026).
+        (author_dir / "index.html").write_text(noindex_page(page_html), encoding="utf-8")
+        mark_noindex(slug)
         created += 1
 
         # Add to data store

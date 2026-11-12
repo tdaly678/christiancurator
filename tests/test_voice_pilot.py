@@ -125,9 +125,19 @@ def test_unreviewed_auto_list_is_noindexed():
     assert 'name="robots" content="noindex' in _render(entry)
 
 
-def test_unreviewed_page_with_curated_content_is_indexable():
-    assert not vp.needs_noindex(_entry())
-    assert "noindex" not in _render(_entry())
+def test_unreviewed_page_needs_two_pieces_and_a_sourced_bio():
+    # One Start here pick is not enough (voices cleanup rule, Nov 12 2026).
+    assert vp.needs_noindex(_entry())
+    assert not vp.needs_noindex(_entry(), {"https://example.com/b"})
+    assert not vp.needs_noindex(_entry(start_here=_entry()["start_here"] * 1
+                                       + [dict(_entry()["start_here"][0], url="https://example.com/c")]))
+    assert "noindex" not in _render(_entry(start_here=_entry()["start_here"]
+                                           + [dict(_entry()["start_here"][0], url="https://example.com/c")]))
+
+
+def test_two_pieces_without_sourced_bio_stay_noindexed():
+    entry = _entry(bio_sources=[], start_here=[])
+    assert vp.needs_noindex(entry, {"https://example.com/a", "https://example.com/b"})
 
 
 def test_reviewed_auto_list_is_indexable():
@@ -135,7 +145,7 @@ def test_reviewed_auto_list_is_indexable():
 
 
 def test_noindexed_writers_get_no_topic_backlinks():
-    writers = [_entry(), _entry(slug="auto-only", name="Auto Only", bio="", start_here=[])]
+    writers = [_entry(reviewed=True), _entry(slug="auto-only", name="Auto Only", bio="", start_here=[])]
     mapping = vp.topic_voice_map(writers)
     slugs = {w["slug"] for pairs in mapping.values() for w, _ in pairs}
     assert slugs == {"test-writer"}
