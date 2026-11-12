@@ -86,6 +86,30 @@ def junk_reason(slug: str) -> str | None:
     return None
 
 
+# Credit lines that are not a writer's byline ("Photography by X", "Presented by
+# X with Y. Produced by Z"). "Words by X" is a writer and is stripped at ingest
+# (fetcher.rss_fetcher.clean_author); here any leftover prefix is junk.
+_CREDIT_PREFIX_RE = re.compile(
+    r"^\s*(?:words|photography|photographs|photos?|illustrations?|presented|produced|hosted|video)\s+by\b",
+    re.IGNORECASE)
+# Machine bylines: "FM AI", "ChatGPT", "News Bot".
+_MACHINE_RE = re.compile(r"(?:^|\s)(?:AI|A\.I\.|GPT|(?i:chatgpt|bot|robot))(?:\s|$)")
+
+
+# Sources named after one writer that are not marked independent.
+_PERSON_SOURCES = frozenset({"Albert Mohler"})
+
+
+def _source_names() -> set[str]:
+    """Outlet names from fetcher/sources.py (independent sources are writers)."""
+    try:
+        from fetcher.sources import SOURCES
+    except Exception:  # noqa: BLE001
+        return set()
+    return {re.sub(r"[^a-z0-9]", "", s["name"].lower()) for s in SOURCES
+            if s.get("name") and not s.get("independent") and s["name"] not in _PERSON_SOURCES}
+
+
 def name_junk_reason(name: str) -> str | None:
     """Return why a raw byline (before slugging) is not one person, or None.
 
@@ -101,6 +125,12 @@ def name_junk_reason(name: str) -> str | None:
         return "URL or domain"
     if "@" in name:
         return "social handle (@)"
+    if _CREDIT_PREFIX_RE.search(name):
+        return "credit line, not a byline"
+    if _MACHINE_RE.search(name):
+        return "machine byline (AI or bot)"
+    if re.sub(r"[^a-z0-9]", "", name.lower()) in _source_names():
+        return "outlet name, not a person"
     if _COBYLINE_RE.search(_SUFFIX_RE.sub("", name)):
         return "multiple authors in one byline"
     letters = [c for c in name if c.isalpha()]

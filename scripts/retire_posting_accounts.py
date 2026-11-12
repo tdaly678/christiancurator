@@ -47,7 +47,7 @@ from fetcher.rss_fetcher import fetch_page_byline  # noqa: E402  (path set by ju
 ARCHIVE_DIR = DOCS_DIR / "archive"
 REDIRECTS_PATH = REPO_ROOT / "frontend" / "voices_redirects.json"
 
-# slug -> (name, outlet domain). Retired on Tom's call only.
+# slug -> (name, outlet domain[, reason]). Retired on Tom's call only.
 ACCOUNTS = {
     "abby-silva": ("Abby Silva", "firstthings.com"),  # 2026-11-12, voices pilot go-live
     # 2026-11-12, voices batch 2 brief: the rest of the go-live audit.
@@ -66,6 +66,18 @@ ACCOUNTS = {
     "beshay-sakla": ("Beshay Sakla", "pewresearch.org"),
     "reem-nadeem": ("Reem Nadeem", "pewresearch.org"),
     "sara-atske": ("Sara Atske", "pewresearch.org"),
+    # 2026-11-12, voices cleanup step 4: pages that are not a person at all.
+    "lifeway-research": ("Lifeway Research", "lifeway", "an outlet, not a person"),
+    "mere-orthodoxy": ("Mere Orthodoxy", "mereorthodoxy.com", "an outlet, not a person"),
+    "fm-ai": ("FM AI", "faithfullymagazine.com", "a machine byline, not a person"),
+    "dkinglewishouseorg-derek-king": ("dkinglewishouseorg Derek King", "lewishouse",
+                                      "slug built from an email address"),
+    "photography-by-christopher-thomond": ("Photography by Christopher Thomond", "theguardian.com",
+                                           "a photo credit, not a writer"),
+    "presented-by-annie-kelly-with-alaina-demopoulos-produced-by-hanna-adan": (
+        "Presented by Annie Kelly with Alaina Demopoulos. Produced by Hanna Adan", "theguardian.com",
+        "a podcast credit line, not a person"),
+    "words-by-sam-wollaston": ("Words by Sam Wollaston", "theguardian.com", "a credit string, not a voice"),
 }
 
 STUB = """<!DOCTYPE html>
@@ -178,7 +190,7 @@ def main() -> int:
     by_name = {n: s for n, s in by_name.items() if s not in noindex and s not in ACCOUNTS}
 
     real: dict[str, str] = {}
-    for slug, (name, domain) in ACCOUNTS.items():
+    for slug, (name, domain, *_) in ACCOUNTS.items():
         urls = sorted(credited_urls(slug, name, domain))
         with ThreadPoolExecutor(max_workers=4) as pool:
             found = dict(zip(urls, pool.map(fetch_page_byline, urls)))
@@ -195,7 +207,7 @@ def main() -> int:
     for idx in byline_pages():
         page = idx.read_text(encoding="utf-8", errors="replace")
         new = page
-        for slug, (name, domain) in ACCOUNTS.items():
+        for slug, (name, domain, *_) in ACCOUNTS.items():
             def repl(m: re.Match) -> str:
                 prev = [u for u in URL_RE.findall(new[max(0, m.start() - 4000):m.start()]) if domain in u]
                 return replace_byline(m, real.get(prev[-1], "") if prev else "", by_name)
@@ -207,7 +219,7 @@ def main() -> int:
 
     # 3. meta.json per day.
     metas = 0
-    names = {name for name, _ in ACCOUNTS.values()}
+    names = {a[0] for a in ACCOUNTS.values()}
     for meta in sorted(ARCHIVE_DIR.glob("*/meta.json")):
         d = json.loads(meta.read_text(encoding="utf-8"))
         changed = False
@@ -232,10 +244,11 @@ def main() -> int:
     index_html = re.sub(r"(?:—|:) \d+ voices worth following\.", f": {len(kept)} voices worth following.", index_html)
     sitemap_removed = remove_from_sitemap(set(ACCOUNTS), args.apply)
     if args.apply:
-        for slug, (name, _) in ACCOUNTS.items():
+        for slug, (name, _, *why) in ACCOUNTS.items():
             (VOICES_DIR / slug).mkdir(exist_ok=True)
             (VOICES_DIR / slug / "index.html").write_text(STUB.format(site=SITE), encoding="utf-8")
-            redirects[slug] = {"to": "", "name": name, "retired": "posting account, not a writer"}
+            redirects[slug] = {"to": "", "name": name,
+                               "retired": why[0] if why else "posting account, not a writer"}
         VOICES_DATA_PATH.write_text(json.dumps(kept, ensure_ascii=False, indent=2), encoding="utf-8")
         INDEX_PATH.write_text(index_html, encoding="utf-8")
         REDIRECTS_PATH.write_text(json.dumps(dict(sorted(redirects.items())), indent=2) + "\n", encoding="utf-8")

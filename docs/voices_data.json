@@ -1,37 +1,5 @@
 [
   {
-    "name": "R. Albert Mohler Jr.",
-    "slug": "r-albert-mohler-jr",
-    "bio": "R. Albert Mohler Jr. is the ninth president of The Southern Baptist Theological Seminary and one of the leading intellectuals of the evangelical movement in America. A prolific author and podcaster, he addresses Christian worldview issues and theological controversies facing the contemporary church.",
-    "affiliation": "Southern Baptist Theological Seminary",
-    "role": "Seminary President & Theologian",
-    "education": "PhD in Systematic & Historical Theology, Southern Baptist Theological Seminary",
-    "website": "https://albertmohler.com",
-    "books": [
-      {
-        "title": "The Conviction to Lead",
-        "amazon_url": "https://www.amazon.com/s?k=The+Conviction+to+Lead+Albert+Mohler"
-      },
-      {
-        "title": "The Apostles' Creed",
-        "amazon_url": "https://www.amazon.com/s?k=The+Apostles+Creed+Albert+Mohler"
-      },
-      {
-        "title": "The Gathering Storm",
-        "amazon_url": "https://www.amazon.com/s?k=The+Gathering+Storm+Albert+Mohler"
-      },
-      {
-        "title": "We Cannot Be Silent",
-        "amazon_url": "https://www.amazon.com/s?k=We+Cannot+Be+Silent+Albert+Mohler"
-      },
-      {
-        "title": "He Is Not Silent",
-        "amazon_url": "https://www.amazon.com/s?k=He+Is+Not+Silent+Albert+Mohler"
-      }
-    ],
-    "initials": "RAM"
-  },
-  {
     "slug": "everett-worthington",
     "name": "Everett L. Worthington Jr.",
     "initials": "EW",
@@ -3382,49 +3350,6 @@
     "initials": "AS"
   },
   {
-    "slug": "r-c-sproul",
-    "name": "R.C. Sproul",
-    "initials": "RCS",
-    "role": "Theologian & Teacher",
-    "affiliation": "Ligonier Ministries",
-    "bio": "Robert Charles Sproul (1939-2017) was an American Reformed theologian, Christian apologist, and Presbyterian pastor who profoundly shaped evangelical theology and practice. Founder and first chairman of Ligonier Ministries, Sproul established a platform for expository teaching and theological education that reached millions through his daily Renewing Your Mind radio broadcast and extensive published work.\n\nDescribed as \"the greatest and most influential proponent of the recovery of Reformed theology in the last century,\" Sproul authored more than one hundred books including The Holiness of God, which exemplifies his gift for making profound theological concepts accessible to popular audiences. His death on December 14, 2017, at age 78, marked the end of a legacy that continues to influence evangelical understandings of God's sovereignty, holiness, and redemptive work.",
-    "education": "Westminster College (BA); Free University of Amsterdam (postgraduate)",
-    "website": "https://www.ligonier.org",
-    "books": [
-      {
-        "title": "The Holiness of God",
-        "amazon_url": "https://www.amazon.com/s?k=The+Holiness+of+God+R.C.+Sproul"
-      },
-      {
-        "title": "Essential Truths of the Christian Faith",
-        "amazon_url": "https://www.amazon.com/s?k=Essential+Truths+of+Christian+Faith"
-      }
-    ],
-    "denomination": "Presbyterian Church in America (PCA)",
-    "tradition": "Reformed/Calvinist; classical apologetics",
-    "known_for": "The Holiness of God, the Renewing Your Mind broadcast, and leading the twentieth-century recovery of Reformed theology for lay audiences through Ligonier Ministries.",
-    "current_role": "Deceased (died December 14, 2017). Was founder and chairman of Ligonier Ministries and co-pastor of Saint Andrew's Chapel, Sanford, Florida",
-    "deceased": true,
-    "faqs": [
-      {
-        "q": "When did R.C. Sproul die?",
-        "a": "R.C. Sproul died on December 14, 2017, at age 78, from complications of emphysema. Ligonier Ministries, which he founded in 1971 as the Ligonier Valley Study Center in western Pennsylvania, continues his teaching ministry today."
-      },
-      {
-        "q": "What denomination was R.C. Sproul?",
-        "a": "Sproul was a Presbyterian. Originally ordained in the mainline United Presbyterian Church, he transferred his credentials to the conservative Presbyterian Church in America (PCA) and served as co-pastor of Saint Andrew's Chapel in Sanford, Florida, from 1997 until his death."
-      },
-      {
-        "q": "Was R.C. Sproul a Calvinist?",
-        "a": "Yes. Sproul was arguably the most influential popularizer of Reformed (Calvinist) theology in the last century, teaching doctrines like God's sovereignty, predestination, and justification by faith alone to mass audiences. His book Chosen by God remains a standard introduction to Reformed soteriology."
-      },
-      {
-        "q": "What is R.C. Sproul best known for?",
-        "a": "Sproul is best known for The Holiness of God (1985), his daily radio program Renewing Your Mind, and founding Ligonier Ministries. He authored more than one hundred books and served as general editor of the Reformation Study Bible."
-      }
-    ]
-  },
-  {
     "name": "Daniel Stegeman",
     "slug": "daniel-stegeman",
     "bio": "Daniel Stegeman (DMin, Gordon-Conwell) has pastored churches in Ohio, New York, and Pennsylvania and serves as director of pastoral care with Fruitful Vine Ministry. He is the author of 'Help! I Want to Be a Loving Husband' (Shepherd Press), blogs at pastoral-theology.com, and contributes to The Gospel Coalition.",
@@ -3685,49 +3610,6 @@
       }
     ],
     "initials": "JT"
-  },
-  {
-    "slug": "paul-david-tripp",
-    "name": "Paul David Tripp",
-    "initials": "PDT",
-    "role": "Counselor & Author",
-    "affiliation": "Paul Tripp Ministries",
-    "bio": "Paul David Tripp (born November 12, 1950) is an American pastor, author, biblical counselor, and international conference speaker who has dedicated his career to connecting the transforming power of Jesus Christ to everyday life. After receiving his Master of Divinity from the Reformed Episcopal Seminary and Doctor of Ministry in Biblical Counseling from Westminster Theological Seminary, Tripp served as faculty at the Christian Counseling and Educational Foundation (CCEF) for many years.\n\nFounder and president of Paul Tripp Ministries, a nonprofit organization producing gospel-centered resources, Tripp has authored more than 30 books including \"What Did You Expect?: Redeeming the Realities of Marriage,\" \"New Morning Mercies: A Daily Gospel Devotional,\" and \"Do You Believe?: 12 Historic Doctrines to Change Your Everyday Life.\" His work exemplifies biblical counseling's maturation, combining theological depth with psychological insight to help Christians understand how grace transforms the ordinary struggles of daily life.",
-    "education": "Covenant College (BA); Westminster Seminary (MDiv)",
-    "website": "https://www.paultripp.com",
-    "books": [
-      {
-        "title": "Awe",
-        "amazon_url": "https://www.amazon.com/s?k=Awe+Paul+David+Tripp"
-      },
-      {
-        "title": "Instruments in the Redeemer's Hands",
-        "amazon_url": "https://www.amazon.com/s?k=Instruments+in+the+Redeemers+Hands"
-      }
-    ],
-    "denomination": "Presbyterian (longtime association with Tenth Presbyterian Church, Philadelphia)",
-    "tradition": "Reformed evangelical; biblical counseling movement",
-    "known_for": "Gospel-centered books on marriage, parenting, and everyday sanctification, including New Morning Mercies and What Did You Expect?, drawn from decades in the biblical counseling movement.",
-    "current_role": "Founder and president of Paul Tripp Ministries",
-    "deceased": false,
-    "faqs": [
-      {
-        "q": "What denomination is Paul David Tripp?",
-        "a": "Paul David Tripp comes from a Reformed and Presbyterian background. He trained at Reformed Episcopal Seminary and Westminster Theological Seminary and served for years on the pastoral staff of Tenth Presbyterian Church in Philadelphia. Today he ministers interdenominationally through Paul Tripp Ministries."
-      },
-      {
-        "q": "What is Paul David Tripp known for?",
-        "a": "Tripp is best known as a biblical counselor and author of more than 30 books, including the bestselling daily devotional New Morning Mercies and the marriage book What Did You Expect?. His signature theme is connecting the transforming grace of Jesus Christ to the ordinary struggles of everyday life."
-      },
-      {
-        "q": "What is biblical counseling, and what is Tripp's role in it?",
-        "a": "Biblical counseling is a movement that treats Scripture as the primary lens for understanding and addressing personal and relational problems. Tripp served on the faculty of the Christian Counseling and Educational Foundation (CCEF) for many years and is one of the movement's most widely read popularizers."
-      },
-      {
-        "q": "Is Paul David Tripp still in ministry?",
-        "a": "Yes. Tripp, born in 1950, continues to lead Paul Tripp Ministries, a nonprofit that produces gospel-centered books, devotionals, and conference teaching for individuals, families, and pastors."
-      }
-    ]
   },
   {
     "name": "Kyle Tucker",
@@ -4917,29 +4799,6 @@
     ]
   },
   {
-    "name": "Sam Wollaston",
-    "slug": "words-by-sam-wollaston",
-    "bio": "Sam Wollaston is a journalist.",
-    "affiliation": "",
-    "role": "Journalist",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SW",
-    "faqs": []
-  },
-  {
-    "name": "Christopher Thomond",
-    "slug": "photography-by-christopher-thomond",
-    "bio": "Christopher Thomond is an accomplished photographer known for his compelling visual storytelling and documentary work. His lens captures authentic human moments and significant cultural narratives with artistic sensitivity and clarity.",
-    "affiliation": "",
-    "role": "Photographer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CT"
-  },
-  {
     "name": "Steven Erlanger",
     "slug": "steven-erlanger",
     "bio": "Steven Erlanger is a journalist whose reporting has appeared in The New York Times.",
@@ -5741,15 +5600,6 @@
     ]
   },
   {
-    "name": "Andrew Walker",
-    "slug": "andrew-walker",
-    "bio": "Andrew T. Walker is associate professor of Christian ethics at The Southern Baptist Theological Seminary, fellow with the Ethics and Religious Liberty Commission of the SBC, and managing editor of WORLD Opinions. He previously served as director of policy studies at the ERLC. Walker writes at the intersection of Christian ethics, public theology, religious liberty, and political philosophy. His book God and the Transgender Debate has become a widely-used pastoral resource on biblical anthropology and gender, and his Liberty for All argues for religious liberty as a Christian principle that protects all people, not merely Christians.",
-    "affiliation": "The Southern Baptist Theological Seminary",
-    "role": "Christian Ethicist",
-    "education": "Southern Baptist Theological Seminary (PhD)",
-    "website": "https://andrewtwalker.com"
-  },
-  {
     "name": "David VanDrunen",
     "slug": "david-vandrunen",
     "bio": "David VanDrunen is the Robert B. Strimple Professor of Systematic Theology and Christian Ethics at Westminster Seminary California, where he has taught since 2001. He is an ordained minister in the Orthodox Presbyterian Church and holds both a PhD in religious ethics from Northwestern and a JD from Loyola University Chicago. VanDrunen is the leading contemporary advocate of a Reformed two-kingdoms theology: the view that the redemptive kingdom of Christ (the church) and the common kingdom of God's providential rule over creation operate by distinct norms and ends. His work has reshaped Reformed conversations about politics, vocation, natural law, and the role of the church in public life.",
@@ -6126,17 +5976,6 @@
       }
     ],
     "initials": "WA"
-  },
-  {
-    "name": "Derek King",
-    "slug": "dkinglewishouseorg-derek-king",
-    "bio": "Derek King is a thoughtful Christian writer and content curator with a passion for helping believers deepen their faith through quality resources. Based at Lewis House, Derek works to bring together meaningful Christian perspectives and biblical wisdom for contemporary audiences.",
-    "affiliation": "Lewis House",
-    "role": "Content Curator & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "DK"
   },
   {
     "name": "Luke Stamps",
@@ -8219,17 +8058,6 @@
     "initials": "CKE"
   },
   {
-    "name": "FM AI",
-    "slug": "fm-ai",
-    "bio": "FM AI is an artificial intelligence assistant designed to help Christian content creators, researchers, and readers engage with Scripture and faith-based material. While not a human author, FM AI serves as a helpful tool for those seeking to deepen their understanding of Christian theology, biblical study, and spiritual growth.",
-    "affiliation": "",
-    "role": "AI Assistant",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "FM"
-  },
-  {
     "name": "Al Gooderham",
     "slug": "al-gooderham",
     "bio": "Al Gooderham is a pastor at Grace Church in Doncaster, England, where he preaches and writes on discipleship, church planting, and living wholeheartedly for Jesus. He blogs regularly on ministry and Bible exposition and contributes resources to 20schemes Equip.",
@@ -8827,34 +8655,6 @@
     "website": "",
     "books": [],
     "initials": "JBW"
-  },
-  {
-    "name": "Guy Waters",
-    "slug": "guy-waters",
-    "bio": "Guy Waters is a Reformed theologian and pastor known for his scholarly yet accessible writing on biblical interpretation, systematic theology, and Christian living. He has served in pastoral ministry and academic settings, contributing significantly to evangelical understanding of Scripture and doctrine.",
-    "affiliation": "Reformed Presbyterian Church of North America; Academic theology and pastoral ministry",
-    "role": "Pastor, Theologian & Author",
-    "education": "Ph.D. in New Testament, Duke University",
-    "website": "",
-    "books": [
-      {
-        "title": "The End Times Made Simple",
-        "amazon_url": "https://www.amazon.com/s?k=The+End+Times+Made+Simple+Guy+Waters"
-      },
-      {
-        "title": "How Jesus Runs the Church",
-        "amazon_url": "https://www.amazon.com/s?k=How+Jesus+Runs+the+Church+Guy+Waters"
-      },
-      {
-        "title": "Justification and the New Perspectives on Paul",
-        "amazon_url": "https://www.amazon.com/s?k=Justification+and+the+New+Perspectives+on+Paul+Guy+Waters"
-      },
-      {
-        "title": "The Federal Vision and Covenant Theology",
-        "amazon_url": "https://www.amazon.com/s?k=The+Federal+Vision+and+Covenant+Theology+Guy+Waters"
-      }
-    ],
-    "initials": "GW"
   },
   {
     "name": "Vika Pechersky",
@@ -9781,35 +9581,6 @@
     "initials": "JC"
   },
   {
-    "name": "Mere Orthodoxy",
-    "slug": "mere-orthodoxy",
-    "bio": "Mere Orthodoxy is a Christian journal and online publication dedicated to exploring classical Christian thought and its application to contemporary culture. The platform features a diverse community of writers committed to defending traditional Christian orthodoxy while engaging thoughtfully with modern intellectual discourse. Through essays, reviews, and cultural commentary, Mere Orthodoxy seeks to articulate a winsome vision of Christian faith rooted in Scripture and the historic creeds.",
-    "affiliation": "Independent publication; edited by Jake Meador",
-    "role": "Christian Journal & Publication Platform",
-    "education": "",
-    "website": "https://mereorthodoxy.com",
-    "books": [],
-    "initials": "MO",
-    "tradition": "Reformed evangelical (Protestant)",
-    "known_for": "Long-form essays on faith, politics, and culture from a theologically serious Reformed evangelical perspective.",
-    "current_role": "Online magazine and quarterly print journal of Protestant theology, culture, and ethics",
-    "deceased": false,
-    "faqs": [
-      {
-        "q": "What is Mere Orthodoxy?",
-        "a": "Mere Orthodoxy is a Reformed evangelical magazine of theology, culture, and ethics founded in 2005 by Matthew Lee Anderson, originally as a group blog started from a Biola University dorm room. It publishes long-form essays online and a quarterly print journal for members."
-      },
-      {
-        "q": "Who runs Mere Orthodoxy?",
-        "a": "Jake Meador, a writer based in Lincoln, Nebraska, serves as editor-in-chief. His work has also appeared in The Atlantic, First Things, Commonweal, and Christianity Today."
-      },
-      {
-        "q": "What perspective does Mere Orthodoxy write from?",
-        "a": "The magazine writes from a broadly Reformed, confessional Protestant perspective and aims to form Christians for faithful participation in public life. Its essays on evangelical fracturing, family, work, and political theology are widely discussed across the evangelical world."
-      }
-    ]
-  },
-  {
     "name": "Matthew Harmon",
     "slug": "matthew-harmon",
     "bio": "Matthew Harmon is a biblical scholar and author known for his work in New Testament studies and biblical theology. He has contributed significantly to evangelical Christian understanding of Scripture through his writing and teaching ministry.",
@@ -10300,17 +10071,6 @@
     "website": "",
     "books": [],
     "initials": "BR"
-  },
-  {
-    "name": "Annie Kelly and Alaina Demopoulos",
-    "slug": "presented-by-annie-kelly-with-alaina-demopoulos-produced-by-hanna-adan",
-    "bio": "Annie Kelly and Alaina Demopoulos collaborate on content curation and production, with Hanna Adan providing production support. Together they work to present meaningful stories and insights for Christian audiences.",
-    "affiliation": "",
-    "role": "Content Presenters & Producers",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AK"
   },
   {
     "name": "Tedd Tripp",
@@ -10851,17 +10611,6 @@
     "website": "",
     "books": [],
     "initials": "SL"
-  },
-  {
-    "name": "Lifeway Research",
-    "slug": "lifeway-research",
-    "bio": "Lifeway Research is the research arm of Lifeway Christian Resources, one of the largest Christian resource providers in the world and an entity of the Southern Baptist Convention. Based in Nashville, it conducts surveys and studies on church health, faith, and culture, and publishes data-driven insights and practical ministry articles to equip pastors and church leaders.",
-    "affiliation": "Lifeway Christian Resources",
-    "role": "Research Organization",
-    "education": "",
-    "website": "https://research.lifeway.com",
-    "books": [],
-    "initials": "LR"
   },
   {
     "name": "Dov Lieber",
@@ -12898,17 +12647,6 @@
     "initials": "HG"
   },
   {
-    "name": "Robert Ventura",
-    "slug": "robert-ventura",
-    "bio": "Rob Ventura is a Reformed Baptist pastor at Grace Community Baptist Church in North Providence, Rhode Island. He is the author and general editor of several books, including 'A Portrait of Paul,' 'Spiritual Warfare,' 'A New Exposition of the London Baptist Confession of Faith of 1689,' and 'Expository Outlines and Observations on Romans.'",
-    "affiliation": "Grace Community Baptist Church, North Providence, RI",
-    "role": "Pastor & Author",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RV"
-  },
-  {
     "name": "Arie Van Weelden",
     "slug": "arie-van-weelden",
     "bio": "Arie Van Weelden is Assistant Pastor of Families and Youth at Skyview Presbyterian Church (PCA) in Centennial, Colorado. A graduate of Westminster Seminary California, he has contributed writing and book reviews to Core Christianity and Modern Reformation.",
@@ -14709,17 +14447,6 @@
     "initials": "JS"
   },
   {
-    "name": "Andy Davis",
-    "slug": "andy-davis",
-    "bio": "Andy Davis is a pastor and Bible teacher known for his expository preaching and commitment to helping Christians understand Scripture deeply. He has served in pastoral ministry and is recognized for his work in discipleship and biblical teaching within evangelical churches.",
-    "affiliation": "",
-    "role": "Pastor & Bible Teacher",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AD"
-  },
-  {
     "name": "Sharon James",
     "slug": "sharon-james",
     "bio": "Sharon James is a British author and speaker known for her thoughtful writing on Christian living, particularly regarding women's roles in the church and biblical womanhood. She has contributed significantly to reformed evangelical discourse through her books and articles, encouraging believers to think deeply about Scripture's teachings on identity and purpose.",
@@ -14821,42 +14548,6 @@
     "website": "",
     "books": [],
     "initials": "KE"
-  },
-  {
-    "name": "J.I. Packer",
-    "slug": "ji-packer",
-    "bio": "J.I. Packer was a renowned British-born theologian and Anglican clergyman whose scholarly yet accessible writings shaped evangelical Christianity for over six decades. Best known for his classic work *Knowing God*, Packer combined rigorous theological thinking with pastoral warmth, making deep biblical truths available to ordinary believers. His influence extended across denominations as a trusted guide to Christian doctrine, spirituality, and the recovery of biblical wisdom.",
-    "affiliation": "Regent College; Christianity Today",
-    "role": "Theologian, Author & Professor",
-    "education": "DPhil, University of Oxford",
-    "website": "",
-    "books": [
-      {
-        "title": "Knowing God",
-        "amazon_url": "https://www.amazon.com/s?k=Knowing+God+J.I.+Packer"
-      },
-      {
-        "title": "Concise Theology",
-        "amazon_url": "https://www.amazon.com/s?k=Concise+Theology+J.I.+Packer"
-      },
-      {
-        "title": "God's Words",
-        "amazon_url": "https://www.amazon.com/s?k=God's+Words+J.I.+Packer"
-      },
-      {
-        "title": "Evangelism and the Sovereignty of God",
-        "amazon_url": "https://www.amazon.com/s?k=Evangelism+and+the+Sovereignty+of+God+Packer"
-      },
-      {
-        "title": "The Problem of Eternally Functional Subordination of the Son",
-        "amazon_url": "https://www.amazon.com/s?k=Problem+Eternally+Functional+Subordination+Son+Packer"
-      },
-      {
-        "title": "Keep in Step with the Spirit",
-        "amazon_url": "https://www.amazon.com/s?k=Keep+in+Step+with+the+Spirit+Packer"
-      }
-    ],
-    "initials": "JIP"
   },
   {
     "name": "Keith Evans",
@@ -15578,17 +15269,6 @@
     "initials": "RR"
   },
   {
-    "name": "Mary Hannah",
-    "slug": "mary-hannah",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MH"
-  },
-  {
     "name": "Casey Harper",
     "slug": "casey-harper",
     "bio": "Casey Harper is a journalist and political correspondent known for reporting on faith, culture, and policy issues affecting Christians. His work has focused on documenting stories at the intersection of faith and public life.",
@@ -15801,17 +15481,6 @@
     "initials": "DP"
   },
   {
-    "name": "Walter R. Strickland II",
-    "slug": "walter-r-strickland-ii",
-    "bio": "Walter R. Strickland II is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "WRS"
-  },
-  {
     "name": "Cornelis P. Venema",
     "slug": "cornelis-p-venema",
     "bio": "Cornelis P. Venema is a writer whose work appears in evangelical publications curated by Christian Curator.",
@@ -15865,17 +15534,6 @@
     "website": "",
     "books": [],
     "initials": "TF"
-  },
-  {
-    "name": "Stanley D. Gale",
-    "slug": "stanley-d-gale",
-    "bio": "Stanley D. Gale is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SDG"
   },
   {
     "name": "Michael Gryboski",
@@ -16206,17 +15864,6 @@
     "website": "",
     "books": [],
     "initials": "MM"
-  },
-  {
-    "name": "Jeffrey Diamant",
-    "slug": "jeffrey-diamant",
-    "bio": "Jeffrey Diamant is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JD"
   },
   {
     "name": "Ryan Biese",
@@ -17355,34 +17002,6 @@
       }
     ],
     "initials": "CJI"
-  },
-  {
-    "name": "A.J. Swoboda",
-    "slug": "aj-swoboda",
-    "bio": "A.J. Swoboda is a pastor, author, and thoughtful voice in contemporary Christian thought who explores themes of faith, culture, and spiritual formation. He has written extensively on topics including mysticism, church history, and living out authentic Christian discipleship in modern times.",
-    "affiliation": "Bushnell University; Various Christian publications",
-    "role": "Author, Pastor & Educator",
-    "education": "M.A. in Theological Studies",
-    "website": "",
-    "books": [
-      {
-        "title": "Subversive Spirituality",
-        "amazon_url": "https://www.amazon.com/s?k=Subversive+Spirituality+A.J.+Swoboda"
-      },
-      {
-        "title": "The Dusty Ones",
-        "amazon_url": "https://www.amazon.com/s?k=The+Dusty+Ones+A.J.+Swoboda"
-      },
-      {
-        "title": "Mystical Theology",
-        "amazon_url": "https://www.amazon.com/s?k=Mystical+Theology+A.J.+Swoboda"
-      },
-      {
-        "title": "A Glorious Dark",
-        "amazon_url": "https://www.amazon.com/s?k=A+Glorious+Dark+A.J.+Swoboda"
-      }
-    ],
-    "initials": "AJS"
   },
   {
     "name": "Gary Thomas",

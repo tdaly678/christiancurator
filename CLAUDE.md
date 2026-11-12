@@ -291,7 +291,13 @@ A compact homepage and email section of 3 to 5 videos and podcast episodes from 
 since 2026-10-26, are deliberately **not listed** in the index (crawl budget goes to topics and voices). Anything that
 suppresses a page must also remove it from the relevant child sitemap, or the signals conflict.
 
-Voice pages listed in `frontend/voices_noindex.json` are skipped by the sitemap generator. Merged duplicate voices are
+Voice pages listed in `frontend/voices_noindex.json` are skipped by the sitemap generator. Voices cleanup step 4 (Nov 12 2026): 13 more
+duplicates merged (`PAIRS` in `scripts/merge_duplicate_voices.py`; andy-davis and mary-hannah were confirmed from the
+publishers' pages first) and seven non-person pages retired through `retire_posting_accounts.py` (outlets Lifeway
+Research and Mere Orthodoxy, the FM AI byline, credit strings, an email slug). Ingest guards: `clean_author()` keeps
+the name from "Words by X", returns "" for photo, presenter, producer and machine ("FM AI") credits, and strips email
+and domain tokens; `name_junk_reason()` rejects credit lines, machine bylines and outlet names (non-independent
+sources). Merged duplicate voices are
 recorded in `frontend/voices_redirects.json` (loser → survivor); the loser's page is a noindex meta-refresh stub, and
 `scripts/merge_duplicate_voices.py` holds the pair list.
 

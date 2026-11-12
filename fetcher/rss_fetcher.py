@@ -119,7 +119,17 @@ def clean_author(raw: str) -> str:
         return m.group(1).strip()
     # Strip any embedded email addresses; a bare email becomes "".
     cleaned = re.sub(_EMAIL_RE, "", raw)
+    # Domain or handle tokens ("dking@lewishouse.org", "lewishouse.org") are never a name.
+    cleaned = re.sub(r"\S*@\S*|\b[\w-]+(?:\.[\w-]+)*\.(?:com|org|net|io|co|uk|edu)\b\S*", "", cleaned)
     cleaned = re.sub(r"\s{2,}", " ", cleaned).strip(" \t,;:()-")
+    # "Words by X" credits X; photo, presenter and producer credits name no writer.
+    cleaned = re.sub(r"^words\s+by\s+", "", cleaned, flags=re.IGNORECASE)
+    if re.match(r"(?:photography|photographs|photos?|illustrations?|presented|produced|video)\s+by\b",
+                cleaned, re.IGNORECASE):
+        return ""
+    # Machine bylines ("FM AI", "ChatGPT") are not writers.
+    if re.search(r"(?:^|\s)(?:AI|A\.I\.|GPT|(?i:chatgpt|bot))$", cleaned):
+        return ""
     return cleaned
 
 

@@ -58,6 +58,23 @@ PAIRS = {
     "samuel-james": "samuel-d-james",
     # 2026-11-12, voices batch 2 go-live: the pilot page is christopher-gehrz.
     "chris-gehrz": "christopher-gehrz",
+    # 2026-11-12, voices cleanup step 4 (voices audit "Redirect or merge").
+    "aj-swoboda": "a-j-swoboda",
+    "andrew-walker": "andrew-t-walker",
+    # Confirmed: TGC's "Andy Davis" bio and Ligonier's andrew-davis teacher page
+    # both name Andrew M. Davis, senior pastor of First Baptist Church, Durham.
+    "andy-davis": "andrew-davis",
+    "guy-waters": "guy-prentiss-waters",
+    "jeffrey-diamant": "jeff-diamant",
+    "ji-packer": "j-i-packer",
+    # Confirmed: the TGC Podcast episode introduces its co-host as Mary Willson Hannah.
+    "mary-hannah": "mary-willson-hannah",
+    "paul-david-tripp": "paul-tripp",
+    "r-albert-mohler-jr": "r-albert-mohler",
+    "r-c-sproul": "rc-sproul",
+    "robert-ventura": "rob-ventura",
+    "stanley-d-gale": "stan-gale",
+    "walter-r-strickland-ii": "walter-strickland",
 }
 
 STUB = """<!DOCTYPE html>

@@ -4,9 +4,21 @@
     "name": "Abby Silva",
     "retired": "posting account, not a writer"
   },
+  "aj-swoboda": {
+    "to": "a-j-swoboda",
+    "name": "A.J. Swoboda"
+  },
   "andrew-j-spencer": {
     "to": "andrew-spencer",
     "name": "Andrew J. Spencer"
+  },
+  "andrew-walker": {
+    "to": "andrew-t-walker",
+    "name": "Andrew Walker"
+  },
+  "andy-davis": {
+    "to": "andrew-davis",
+    "name": "Andy Davis"
   },
   "anna-jackson": {
     "to": "",
@@ -48,14 +60,32 @@
     "to": "daniel-r-hyde",
     "name": "Daniel Hyde"
   },
+  "dkinglewishouseorg-derek-king": {
+    "to": "",
+    "name": "dkinglewishouseorg Derek King",
+    "retired": "slug built from an email address"
+  },
   "dr-owen-anderson": {
     "to": "owen-anderson",
     "name": "Dr. Owen Anderson"
+  },
+  "fm-ai": {
+    "to": "",
+    "name": "FM AI",
+    "retired": "a machine byline, not a person"
   },
   "german-saucedo": {
     "to": "",
     "name": "German Saucedo",
     "retired": "posting account, not a writer"
+  },
+  "guy-waters": {
+    "to": "guy-prentiss-waters",
+    "name": "Guy Waters"
+  },
+  "jeffrey-diamant": {
+    "to": "jeff-diamant",
+    "name": "Jeffrey Diamant"
   },
   "jeffrey-stivason": {
     "to": "jeffrey-a-stivason",
@@ -65,6 +95,10 @@
     "to": "",
     "name": "Jeri Choi",
     "retired": "posting account, not a writer"
+  },
+  "ji-packer": {
+    "to": "j-i-packer",
+    "name": "J.I. Packer"
   },
   "jillian-parks": {
     "to": "",
@@ -84,6 +118,20 @@
     "to": "kevin-vanhoozer",
     "name": "Kevin J. Vanhoozer"
   },
+  "lifeway-research": {
+    "to": "",
+    "name": "Lifeway Research",
+    "retired": "an outlet, not a person"
+  },
+  "mary-hannah": {
+    "to": "mary-willson-hannah",
+    "name": "Mary Hannah"
+  },
+  "mere-orthodoxy": {
+    "to": "",
+    "name": "Mere Orthodoxy",
+    "retired": "an outlet, not a person"
+  },
   "o-alan-noble": {
     "to": "alan-noble",
     "name": "O. Alan Noble"
@@ -92,15 +140,41 @@
     "to": "rich-bitterman",
     "name": "Pastor Rich Bitterman"
   },
+  "paul-david-tripp": {
+    "to": "paul-tripp",
+    "name": "Paul David Tripp"
+  },
   "paul-howard": {
     "to": "",
     "name": "Paul Howard",
     "retired": "posting account, not a writer"
   },
+  "photography-by-christopher-thomond": {
+    "to": "",
+    "name": "Photography by Christopher Thomond",
+    "retired": "a photo credit, not a writer"
+  },
+  "presented-by-annie-kelly-with-alaina-demopoulos-produced-by-hanna-adan": {
+    "to": "",
+    "name": "Presented by Annie Kelly with Alaina Demopoulos. Produced by Hanna Adan",
+    "retired": "a podcast credit line, not a person"
+  },
+  "r-albert-mohler-jr": {
+    "to": "r-albert-mohler",
+    "name": "R. Albert Mohler Jr."
+  },
+  "r-c-sproul": {
+    "to": "rc-sproul",
+    "name": "R.C. Sproul"
+  },
   "reem-nadeem": {
     "to": "",
     "name": "Reem Nadeem",
     "retired": "posting account, not a writer"
+  },
+  "robert-ventura": {
+    "to": "rob-ventura",
+    "name": "Robert Ventura"
   },
   "samuel-james": {
     "to": "samuel-d-james",
@@ -111,9 +185,22 @@
     "name": "Sara Atske",
     "retired": "posting account, not a writer"
   },
+  "stanley-d-gale": {
+    "to": "stan-gale",
+    "name": "Stanley D. Gale"
+  },
   "stephen-walker": {
     "to": "",
     "name": "Stephen Walker",
     "retired": "posting account, not a writer"
+  },
+  "walter-r-strickland-ii": {
+    "to": "walter-strickland",
+    "name": "Walter R. Strickland II"
+  },
+  "words-by-sam-wollaston": {
+    "to": "",
+    "name": "Words by Sam Wollaston",
+    "retired": "a credit string, not a voice"
   }
 }

@@ -76,3 +76,20 @@ class SourceGateTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+def test_ingest_guards_voices_cleanup_step4():
+    """Credit strings, machine bylines, outlets and domains never become voices."""
+    from curator.voice_filters import name_junk_reason
+    from fetcher.rss_fetcher import clean_author
+
+    assert clean_author("Words by Sam Wollaston") == "Sam Wollaston"
+    assert clean_author("Photography by Christopher Thomond") == ""
+    assert clean_author("Presented by Annie Kelly with Alaina Demopoulos. Produced by Hanna Adan") == ""
+    assert clean_author("FM AI") == ""
+    assert clean_author("dking@lewishouse.org Derek King") == "Derek King"
+    assert clean_author("lewishouse.org") == ""
+    for junk in ("FM AI", "Mere Orthodoxy", "Lifeway Research", "Photography by Jo Bloggs"):
+        assert name_junk_reason(junk), junk
+    for person in ("Ai Weiwei", "Kristen LaValley", "Jake Meador"):
+        assert name_junk_reason(person) is None, person
