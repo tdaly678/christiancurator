@@ -991,6 +991,112 @@
         "https://tabletalkmagazine.com/contributor/douglas-wilson"
       ],
       "review_notes": "Identity confirmed: Christ Church, Moscow, Idaho, blog at dougwils.com (matches the existing page). The bio uses only his own About page, the New Saint Andrews contributor page and the Christ Church staff list. NSA's page says both that he founded NSA and that he was a 'founding board member'; the bio attributes the founder list to NSA. Christ Church's staff page lists him as Senior Pastor; his own page says senior minister. No Canon Press author page opened (429 and 404), so Canon Press is not listed in where_they_write. dougwils.com and tabletalkmagazine.com return 403 to curl but opened in WebFetch. The Tabletalk picks are from 2001 and show only a month. Picks were chosen as representative theological and pastoral writing; none attacks named people. The covenantal partaking post criticizes Roman Catholic, Lutheran and memorialist views in sharp terms; the page also shows a second unlabeled date, 2020-12-30. Related voices are an approximate match (Reformed writers on worship and doctrine), and the reviewer should check them; I did not verify Joe Rigney's current NSA role. Wilson is a polarizing figure; the bio is kept to sourced facts only. Merge (Nov 12 2026): Joe Rigney kept in Related; nsa.edu/contributors/joe-rigney (HTTP 200) lists him as Fellow of Theology and MDiv Program Director at New Saint Andrews."
+    },
+    {
+      "slug": "russell-moore",
+      "name": "Russell Moore",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Editor at large and columnist at Christianity Today | Author of Losing Our Religion | Writes on faith and politics, Christian ethics and the evangelical church",
+      "bio": "Russell Moore is editor at large and a columnist at Christianity Today, where he was editor in chief from 2022 to 2025; he hosts The Russell Moore Show and co-hosts The Bulletin, CT's weekly news podcast. He was president of the Ethics & Religious Liberty Commission of the Southern Baptist Convention from 2013 to 2021, and before that served as provost and dean of the Southern Baptist Theological Seminary, where he taught theology and ethics. An ordained Baptist minister, he teaches the Bible at Immanuel Church in Nashville, and in April 2025 Lipscomb University named him its inaugural Bill and Crissy Haslam Endowed Distinguished Visiting Professor of Faith and Reason. His books include Losing Our Religion: An Altar Call for Evangelical America.",
+      "bio_sources": [
+        {
+          "label": "About page, russellmoore.com",
+          "url": "https://www.russellmoore.com/about/"
+        },
+        {
+          "label": "News release, Lipscomb University (April 29, 2025)",
+          "url": "https://lipscomb.edu/news/christianity-today-editor-russell-moore-appointed-inaugural-bill-and-crissy-haslam-endowed"
+        },
+        {
+          "label": "Writer page, Christianity Today",
+          "url": "https://www.christianitytoday.com/writers/russell-moore/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "Christianity Today",
+          "url": "https://www.christianitytoday.com/writers/russell-moore/"
+        },
+        {
+          "outlet": "russellmoore.com",
+          "url": "https://www.russellmoore.com/about/"
+        },
+        {
+          "outlet": "Tabletalk",
+          "url": "https://tabletalkmagazine.com/contributor/russell-moore"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "Political Homelessness Is a Good Start",
+          "url": "https://www.christianitytoday.com/2024/02/political-homelessness-russell-moore-polarization/",
+          "outlet": "Christianity Today",
+          "date": "2024-02-19",
+          "note": "Argues that feeling estranged from one's political camp can prompt Christians to reexamine their loyalties and see themselves as pilgrims rather than partisans, following Jesus' refusal to join the factions of his day."
+        },
+        {
+          "title": "How a Dark Sense of Humor Can Save You from Cynicism",
+          "url": "https://www.christianitytoday.com/2024/11/dark-sense-humor-save-cynicism-russell-moore/",
+          "outlet": "Christianity Today",
+          "date": "2024-11-20",
+          "note": "Distinguishes cynical dark humor from laughter that resists numbness in grief, and draws on Peter Berger and Frederick Buechner to argue that darkness is real but not final."
+        },
+        {
+          "title": "How I Changed My Mind (Kind Of) on the Death Penalty",
+          "url": "https://www.christianitytoday.com/2026/10/how-i-changed-my-mind-kind-of-on-the-death-penalty/",
+          "outlet": "Christianity Today",
+          "date": "2026-10-21",
+          "note": "Affirms the state's role in public justice but argues that capital punishment as practiced in the United States does not deliver justice and that Scripture does not require it."
+        },
+        {
+          "title": "Why I Am Still a Christian",
+          "url": "https://www.christianitytoday.com/2026/11/why-i-am-still-a-christian/",
+          "outlet": "Christianity Today",
+          "date": "2026-11-04",
+          "note": "Explains that after seeing the failures of religious institutions, his faith rests as much on hearing and loving Jesus as on the arguments he once relied on."
+        },
+        {
+          "title": "Cultural Engagement",
+          "url": "https://tabletalkmagazine.com/article/2014/08/cultural-engagement/",
+          "outlet": "Tabletalk",
+          "date": "2014-08",
+          "note": "Reads Paul's speech in Acts 17 as a model of engagement that challenges a culture's assumptions, and argues that the gospel's strangeness rather than its relevance gets people's attention."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "politics-and-the-church",
+          "angle": "Christian witness ahead of partisan loyalty and tribalism."
+        },
+        {
+          "slug": "christian-ethics",
+          "angle": "Columns on public justice, the death penalty and moral courage."
+        },
+        {
+          "slug": "evangelicalism",
+          "angle": "Diagnosis of evangelical America in Losing Our Religion."
+        },
+        {
+          "slug": "religious-liberty",
+          "angle": "Former president of the SBC's Ethics & Religious Liberty Commission and board member of Becket."
+        },
+        {
+          "slug": "faith-deconstruction",
+          "angle": "Why he remains a Christian after institutional disillusionment."
+        }
+      ],
+      "related": [
+        "karen-swallow-prior",
+        "trevin-wax",
+        "tish-harrison-warren",
+        "katelyn-beaty"
+      ],
+      "same_as": [
+        "https://www.russellmoore.com/about/",
+        "https://www.christianitytoday.com/writers/russell-moore/"
+      ],
+      "review_notes": "Identity matches the existing page (Christianity Today). Current role per his own About page and the CT writer page: editor at large and columnist; editor in chief 2022 to 2025 (russellmoore.com). Penguin Random House and the April 2025 Lipscomb release still call him editor in chief, so they predate the change. ERLC dates 2013 to 2021 are from the Lipscomb release; Southern Seminary dates and his degrees are not given on any page I opened, so they are left out. Becket board membership and Trinity Forum senior fellowship are sourced but not in the bio. CT articles may hit CT's metered paywall. russellmoore.com and tabletalkmagazine.com return 403 to curl but opened in WebFetch. Tabletalk piece shows only a month (2014-08). 'Why I Am Still a Christian' and the death penalty column are adapted from his newsletter (CT labels them columns). The CT piece 'How to Hold On, and Let Go' (headline has an em dash) was considered and not used."
     }
   ]
 }
