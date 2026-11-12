@@ -713,6 +713,91 @@
         "https://dwillard.org/about-dallas"
       ],
       "review_notes": "Deceased (birth September 4, 1935 and death May 8, 2013 per the Dallas Willard Ministries biography). The existing page links www.dwillard.org; the live site is dwillard.org (www and /biography paths: /biography returns 404, /about-dallas is the bio). Book titles are from the DWM books page, which gives no years. The bio page says he finished his BA at Baylor and worked on his PhD at Wisconsin but does not state the PhD year; I wrote 'did his PhD work' to stay within the source. DWM article pages show no publication dates; the 2006 dates come from the pages' own notes (European Leadership Forum, Eger, Hungary, May 2006), and 2001 from the reprint note (Winter 2001 Cutting Edge). Pick 1 has no date on the page. USC end year 2012 is from 'retirement from teaching at USC at the end of 2012'."
+    },
+    {
+      "slug": "roger-olson",
+      "name": "Roger Olson",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Professor of Christian theology at Truett Seminary, Baylor, 1999 to 2021 | Author of The Story of Christian Theology | Writes on Arminian theology, evangelicalism and historical theology",
+      "bio": "Roger E. Olson taught Christian theology for 40 years at three Christian universities and retired in 2021 from Baylor University's George W. Truett Theological Seminary, where he was professor of Christian theology from 1999 and Foy Valentine Professor of Christian Theology and Ethics. Before Truett he taught for 15 years at Bethel University in Minnesota. He is a graduate of North American Baptist Seminary and earned a PhD at Rice University in 1984, with research under Wolfhart Pannenberg at the University of Munich. He is the author of more than twenty books, including The Story of Christian Theology and The Journey of Modern Theology, and writes the blog Roger E. Olson at Patheos.",
+      "bio_sources": [
+        {
+          "label": "Good and Faithful Servants (retired faculty), Truett Seminary, Baylor University, 2024",
+          "url": "https://cord.truettseminary.baylor.edu/news/story/2024/good-and-faithful-servants"
+        },
+        {
+          "label": "Endowed professorship announcement, Baylor University news, 2013",
+          "url": "https://news.web.baylor.edu/news/story/2013/baylor-university-theology-professor-roger-e-olson-phd-named-newly-endowed"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "Roger E. Olson (Patheos blog)",
+          "url": "https://www.patheos.com/blogs/rogereolson/"
+        },
+        {
+          "outlet": "Christianity Today",
+          "url": "https://www.christianitytoday.com/1999/09/dont-hate-me-because-im-arminian/"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "Don't Hate Me Because I'm Arminian",
+          "url": "https://www.christianitytoday.com/1999/09/dont-hate-me-because-im-arminian/",
+          "outlet": "Christianity Today",
+          "date": "1999-09-06",
+          "note": "Argues that Reformed theologians who deny that Arminians are authentically evangelical are fracturing the evangelical coalition, and calls both camps to mutual respect."
+        },
+        {
+          "title": "Calvinism and Arminianism Compared",
+          "url": "https://evangelicalarminians.org/roger-olson-calvinism-and-arminianism-compared/",
+          "outlet": "Society of Evangelical Arminians (from his Patheos blog)",
+          "date": "2018-11-13",
+          "note": "A teaching handout for Sunday school and small groups that defines classical Calvinism and Arminianism side by side and argues that the real dividing line is not free will but the character of God."
+        },
+        {
+          "title": "Arminianism is God-Centered Theology",
+          "url": "https://evangelicalarminians.org/roger-olson-arminianism-is-god-centered-theology/",
+          "outlet": "Society of Evangelical Arminians",
+          "date": "2010-11-29",
+          "note": "Argues that classical Arminianism affirms human depravity and total dependence on grace, and that it rejects Calvinist determinism chiefly because it would make God the author of sin."
+        },
+        {
+          "title": "Arminianism FAQ 1 (Everything You Always Wanted to Know…)",
+          "url": "https://evangelicalarminians.org/roger-olson-arminianism-faq-1-everything-you-always-wanted-to-know/",
+          "outlet": "Society of Evangelical Arminians (from his Patheos blog)",
+          "date": "2014-07-08",
+          "note": "Explains classical Arminianism in question and answer form, covering prevenient grace, resistible grace, conditional election and where it sits between Calvinism and semi-Pelagianism."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "predestination-free-will",
+          "angle": "The case for classical Arminianism against Calvinist determinism."
+        },
+        {
+          "slug": "evangelicalism",
+          "angle": "Whether Arminians belong in the evangelical coalition, and evangelical identity more broadly."
+        },
+        {
+          "slug": "church-history",
+          "angle": "The story of Christian theology from the early church to modern theology."
+        },
+        {
+          "slug": "progressive-christianity",
+          "angle": "Liberal and progressive theology, written from outside conservative evangelicalism."
+        }
+      ],
+      "related": [
+        "clark-pinnock",
+        "scot-mcknight",
+        "greg-boyd"
+      ],
+      "same_as": [
+        "https://www.patheos.com/blogs/rogereolson/"
+      ],
+      "review_notes": "Status: retired (2021) per Truett's 2024 'Good and Faithful Servants' page, which says 'retired' and does not use 'emeritus'; IVP's author page (403 to WebFetch, seen only in search snippets) calls him Emeritus Professor of Christian Theology, so I wrote 'retired' and dated the dek 1999 to 2021. Chair date conflict: Truett lists Foy Valentine Professor 2012 to 2021, Baylor's January 2013 release announces it as newly named and calls it 'Professorship of Christian Ethics'; I left the year out of the bio. Patheos blocks both WebFetch and curl (403) for every page except the RSS feed (200); the blog is linked from the existing page and the feed confirms it is live (latest post Nov 10, 2026), but no Patheos post could be opened for start_here, so picks 3 and 4 use the Society of Evangelical Arminians reprints (pick 4 reproduces a 2014 Patheos post in full). Both Baylor bio pages return 403 to curl but opened in WebFetch. The CT 1999 article shows full text but CT promotes subscriptions; may be metered. Pick 2 is a book chapter hosted free by BYU's Religious Studies Center (a Latter-day Saint institution), worth a reviewer check for fit. Topic 'progressive-christianity' rests on his book Against Liberal Theology, which I saw only in search results, so it is not in the bio. Headline for pick 4 contains an ellipsis character exactly as shown. Merge (Nov 12 2026): pick 2, the BYU Religious Studies Center chapter, replaced per Meg with the Society of Evangelical Arminians reprint Calvinism and Arminianism Compared (page headline gives his name and the title, dated November 13, 2018, links his Patheos post of November 2018; opened directly, HTTP 200)."
     }
   ]
 }
