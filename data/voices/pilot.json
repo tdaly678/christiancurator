@@ -626,6 +626,93 @@
       "related": ["randy-alcorn", "mark-vroegop", "scott-hubbard"],
       "same_as": ["https://ca.thegospelcoalition.org/profile/joshua-budimlic/", "https://sola.network/article/author/joshuabudimlic/", "https://www.joshuabudimlic.com/author"],
       "review_notes": "Curated via The Aquila Report, whose pages return 403. Identity matched by the same titles on his own blog, posted 6 to 7 days earlier. Picks link to the original publications, never Aquila. Where he teaches is not stated in any source. Church name per TGC Canada (SOLA says Grandview Baptist Church)."
+    },
+    {
+      "slug": "dallas-willard",
+      "name": "Dallas Willard",
+      "reviewed": true,
+      "page_kind": "guide",
+      "deceased": true,
+      "dek": "Philosopher at USC, 1965 to 2012 | Author of The Divine Conspiracy | Wrote on discipleship, spiritual formation and the kingdom of God",
+      "bio": "Dallas Willard (1935 to 2013) was born in Buffalo, Missouri, and taught philosophy at the University of Southern California from 1965 until his retirement at the end of 2012, directing its School of Philosophy from 1982 to 1985. He finished his BA at Baylor University, did his PhD work at the University of Wisconsin, and was ordained as a Baptist minister. His books include The Divine Conspiracy, The Spirit of the Disciplines, Renovation of the Heart and Hearing God, along with translations of and a book on the philosopher Edmund Husserl. He taught in Fuller's DMin program and worked with Gary W. Moon to develop the Renovaré Institute for Spiritual Formation.",
+      "bio_sources": [
+        {
+          "label": "About Dallas, Dallas Willard Ministries",
+          "url": "https://dwillard.org/about-dallas"
+        },
+        {
+          "label": "Books, Dallas Willard Ministries",
+          "url": "https://dwillard.org/resources/books"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "Dallas Willard Ministries (articles archive)",
+          "url": "https://dwillard.org/resources/articles"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "Spiritual Formation: What it is, and How it is Done",
+          "url": "https://dwillard.org/resources/articles/spiritual-formation-what-it-is-and-how-it-is-done",
+          "outlet": "Dallas Willard Ministries",
+          "date": "",
+          "note": "Defines spiritual formation as the transformation of the heart or will so that Christlike action flows from the whole person, and sets out its progression as vision, intention and method."
+        },
+        {
+          "title": "The Need, Vision and Strategy of Growing in Christlikeness",
+          "url": "https://dwillard.org/resources/articles/need-vision-and-strategy-of-growing-in-christlikeness",
+          "outlet": "Dallas Willard Ministries",
+          "date": "2006",
+          "note": "Argues that everyone is being formed in some direction and proposes a repeatable path for dropping patterns such as anger, contempt and lust through understanding, intention and practical disciplines."
+        },
+        {
+          "title": "Rethinking Evangelism",
+          "url": "https://dwillard.org/resources/articles/rethinking-evangelism",
+          "outlet": "Dallas Willard Ministries (first published in Cutting Edge, Vineyard USA)",
+          "date": "2001",
+          "note": "Argues that evangelism which reduces salvation to forgiveness of guilt leaves life unchanged, and calls for evangelism that grows out of a community of disciples living under God's reign."
+        },
+        {
+          "title": "Jesus as Logician and Apologist",
+          "url": "https://dwillard.org/resources/articles/jesus-as-logician-and-apologist",
+          "outlet": "Dallas Willard Ministries",
+          "date": "2006",
+          "note": "Argues that apologetics should be a helping ministry modeled on Jesus, listening to real questions and using simple logic to aid understanding rather than to win arguments."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "discipleship",
+          "angle": "Discipleship to Jesus as the heart of the Christian life and of evangelism."
+        },
+        {
+          "slug": "spiritual-disciplines",
+          "angle": "The disciplines as practical means of character change."
+        },
+        {
+          "slug": "sanctification",
+          "angle": "Spiritual formation as the transformation of the will toward Christlikeness."
+        },
+        {
+          "slug": "apologetics",
+          "angle": "Apologetics as a helping ministry modeled on Jesus."
+        },
+        {
+          "slug": "missions-and-evangelism",
+          "angle": "Evangelism that invites people into life under God's reign, not only forgiveness."
+        }
+      ],
+      "related": [
+        "richard-foster",
+        "john-ortberg",
+        "eugene-peterson",
+        "john-mark-comer"
+      ],
+      "same_as": [
+        "https://dwillard.org/about-dallas"
+      ],
+      "review_notes": "Deceased (birth September 4, 1935 and death May 8, 2013 per the Dallas Willard Ministries biography). The existing page links www.dwillard.org; the live site is dwillard.org (www and /biography paths: /biography returns 404, /about-dallas is the bio). Book titles are from the DWM books page, which gives no years. The bio page says he finished his BA at Baylor and worked on his PhD at Wisconsin but does not state the PhD year; I wrote 'did his PhD work' to stay within the source. DWM article pages show no publication dates; the 2006 dates come from the pages' own notes (European Leadership Forum, Eger, Hungary, May 2006), and 2001 from the reprint note (Winter 2001 Cutting Edge). Pick 1 has no date on the page. USC end year 2012 is from 'retirement from teaching at USC at the end of 2012'."
     }
   ]
 }

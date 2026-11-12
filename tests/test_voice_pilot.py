@@ -247,14 +247,19 @@ BATCH2 = {"jeremy-kimble", "christopher-gehrz", "glenn-a-moots", "james-abernath
           "derek-rishmawy", "j-a-medders", "joshua-budimlic"}
 
 
-def test_pilot_data_has_twelve_reviewed_and_no_drafts():
+BATCH3_LIVE = {"dallas-willard", "roger-olson", "david-vandrunen", "doug-wilson", "russell-moore",
+               "karen-swallow-prior", "mark-dever", "kevin-deyoung", "rc-sproul", "joe-carter"}
+# Held on branch voices-batch3: desiringgod.org refused direct reads of their picks.
+BATCH3_HELD = {"tony-reinke", "john-piper"}
+
+
+def test_pilot_data_is_all_reviewed():
     # Tom approved five on 2026-11-12; abby-silva was retired (posting account).
     # Batch 2 (seven) was approved the same day after Meg's spot-check.
-    assert set(WRITERS) == APPROVED | BATCH2
-    reviewed = [s for s, w in WRITERS.items() if w["reviewed"] is True]
-    drafts = [s for s, w in WRITERS.items() if w["reviewed"] is not True]
-    assert len(reviewed) == 12
-    assert drafts == []
+    # Batch 3 went live writer by writer after Meg's spot-check; Reinke and Piper are held.
+    assert set(WRITERS) - APPROVED - BATCH2 <= BATCH3_LIVE
+    assert not set(WRITERS) & BATCH3_HELD
+    assert all(w["reviewed"] is True for w in WRITERS.values())
 
 
 def test_batch2_golive_edits():
