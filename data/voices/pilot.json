@@ -1409,6 +1409,104 @@
         "https://www.thegospelcoalition.org/blogs/kevin-deyoung/"
       ],
       "review_notes": "Christ Covenant Church's staff page opened in WebFetch but returns HTTP 403 to curl (bot block); the same facts are on the RTS and Clearly Reformed pages. WebFetch could not read the TGC profile page (curl returns 200), so the TGC blog archive is used for where_they_write instead. Book list is from the bio pages; the sanctification and inerrancy topic angles rest on book titles, not on a start_here pick. The TGC blog (DeYoung, Restless, and Reformed) shows no newer posts on its archive page; his current writing is at Clearly Reformed, whose article pages carry dates but the index does not."
+    },
+    {
+      "slug": "rc-sproul",
+      "name": "R.C. Sproul",
+      "reviewed": true,
+      "page_kind": "guide",
+      "deceased": true,
+      "dek": "Theologian and founder of Ligonier Ministries, 1939 to 2017 | Author of The Holiness of God and Chosen by God | Wrote on God's holiness, justification and the authority of Scripture",
+      "bio": "R.C. Sproul (1939 to 2017) founded Ligonier Ministries, which began in the 1970s as the Ligonier Valley Study Center in Ligonier, Pennsylvania, and moved to Orlando, Florida, in 1984. He was the first minister of preaching and teaching at Saint Andrew's Chapel in Sanford, Florida, the first president of Reformation Bible College and executive editor of Tabletalk magazine, and his Renewing Your Mind radio program still airs daily. He wrote more than one hundred books, including The Holiness of God, Chosen by God and Everyone's a Theologian, and edited the Reformation Study Bible (2015). He died on December 14, 2017, in Altamonte Springs, Florida, at age 78.",
+      "bio_sources": [
+        {
+          "label": "Teacher page, Ligonier Ministries",
+          "url": "https://learn.ligonier.org/teachers/rc-sproul"
+        },
+        {
+          "label": "Dr. R.C. Sproul, Called Home to the Lord, Ligonier Ministries",
+          "url": "https://www.ligonier.org/posts/rc-sproul-called-home-lord"
+        },
+        {
+          "label": "Who We Are, Ligonier Ministries",
+          "url": "https://about.ligonier.org/who-we-are"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "Ligonier Ministries and Tabletalk",
+          "url": "https://learn.ligonier.org/teachers/rc-sproul"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "What Is Predestination?",
+          "url": "https://learn.ligonier.org/articles/what-is-predestination",
+          "outlet": "Ligonier Ministries",
+          "date": "",
+          "note": "Defines predestination and contrasts the prescient view, in which God elects on foreseen faith, with the Augustinian view, in which God's grace produces that faith."
+        },
+        {
+          "title": "Is Scripture the Ultimate Authority?",
+          "url": "https://learn.ligonier.org/articles/is-scripture-the-ultimate-authority",
+          "outlet": "Ligonier Ministries",
+          "date": "",
+          "note": "Contrasts the Reformation principle of Scripture alone with Rome's view of tradition as a second source of revelation and argues the church recognized the canon rather than granting its authority."
+        },
+        {
+          "title": "War and Peace with a Holy God",
+          "url": "https://learn.ligonier.org/articles/war-and-peace-holy-god",
+          "outlet": "Ligonier Ministries",
+          "date": "",
+          "note": "Argues from a childhood memory of VJ Day that justification by faith ends the sinner's hostility toward God and establishes a lasting peace kept by Christ the mediator."
+        },
+        {
+          "title": "Justification by Death?",
+          "url": "https://learn.ligonier.org/articles/justification-death",
+          "outlet": "Tabletalk",
+          "date": "2010-10-01",
+          "note": "Argues that justification by faith alone is essential to the gospel and challenges the popular assumption that everyone goes to heaven at death."
+        },
+        {
+          "title": "A Letter to a Discouraged Pastor",
+          "url": "https://learn.ligonier.org/articles/letter-to-a-discouraged-pastor",
+          "outlet": "Tabletalk",
+          "date": "1992-04-01",
+          "note": "Answers a discouraged pastor from his own early struggles and urges faithful perseverance in loving the church Christ will present without spot or wrinkle."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "predestination-free-will",
+          "angle": "The Reformed doctrine of election set out in Chosen by God."
+        },
+        {
+          "slug": "justification-by-faith",
+          "angle": "Sola fide as the material cause of the Reformation."
+        },
+        {
+          "slug": "biblical-inerrancy",
+          "angle": "The authority and inerrancy of Scripture."
+        },
+        {
+          "slug": "pastoral-ministry",
+          "angle": "Counsel to pastors facing discouragement."
+        },
+        {
+          "slug": "church-history",
+          "angle": "Luther, Calvin and the causes of the Reformation."
+        }
+      ],
+      "related": [
+        "sinclair-ferguson",
+        "w-robert-godfrey",
+        "keith-mathison",
+        "michael-horton"
+      ],
+      "same_as": [
+        "https://learn.ligonier.org/teachers/rc-sproul"
+      ],
+      "review_notes": "Deceased; birth and death years from Ligonier's teacher page (1939 to 2017); date, place and age at death from Ligonier's December 14, 2017 post. Ligonier pages give no degrees, so none are listed. rcsproul.com redirects to the Ligonier teacher page. Tabletalk author pages return 403, so Tabletalk is folded into the single Ligonier where-they-write entry. Ligonier republishes Sproul's book excerpts with new dates: picks 1 to 3 carry the page's 2026 or 2025 date though they come from his books (What Is Predestination?, Can I Trust the Bible?, The Holiness of God); a reviewer may prefer blank dates. Pick 5 page shows June 12, 2026 with an editor's note that it first ran April 1, 1992 in Tabletalk; the original date is used. Pick 4 is dated October 1, 2010, originally in Tabletalk. Merge (Nov 12 2026): dates on picks 1 to 3 blanked per Meg; picks 4 and 5 keep their original Tabletalk dates."
     }
   ]
 }
