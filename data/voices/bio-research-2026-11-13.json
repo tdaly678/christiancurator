@@ -1,0 +1,739 @@
+[
+ {
+  "slug": "aaron-earls",
+  "decision": "bio",
+  "name": "Aaron Earls",
+  "bio": "Aaron Earls is senior writer at Lifeway Research, where he writes up the organization's survey findings on churches and churchgoers. He lives outside Nashville, Tennessee, where he serves as a deacon and small group teacher at his church. He blogs at Wardrobe Door.",
+  "role": "Senior Writer",
+  "affiliation": "Lifeway Research",
+  "website": "https://research.lifeway.com/author/aaronearls/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://research.lifeway.com/2026/11/03/2-in-3-churchgoers-fail-bible-literacy-quiz/",
+   "https://www.thegospelcoalition.org/profile/aaron-earls"
+  ],
+  "identity_check": "The Lifeway Research article credited to him (Nov 3, 2026) carries the byline 'By Aaron Earls' and an author box: 'Aaron is the senior writer at Lifeway Research.' The TGC profile gives the same role.",
+  "notes": "Personal detail (deacon, small group teacher, Nashville) is from his TGC profile, which also mentions his wife and four children; family left out. The Lifeway author page itself has no bio text."
+ },
+ {
+  "slug": "adam-niess",
+  "decision": "bio",
+  "name": "Adam Niess",
+  "bio": "Adam Niess is senior pastor of the Reformed Presbyterian Church of Lafayette, Indiana. In a May 2026 essay he wrote that he studied at Indiana University's Jacobs School of Music before entering the ministry, and that he had spent 14 years in pastoral ministry in the Reformed Presbyterian Church of North America. His author bio on Gentle Reformation notes that he is ACBC certified.",
+  "role": "Pastor",
+  "affiliation": "Reformed Presbyterian Church of Lafayette (IN)",
+  "website": "https://gentlereformation.com/2026/05/13/from-music-school-to-the-ministry/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://gentlereformation.com/2026/08/12/the-firstborn-over-all-creation/",
+   "https://gentlereformation.com/2026/05/13/from-music-school-to-the-ministry/"
+  ],
+  "identity_check": "Gentle Reformation (Aug 12 2026) carries 'The Firstborn Over All Creation' by Adam Niess, the same title the site credits via The Aquila Report.",
+  "notes": "The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read. Search snippets of reformedpresbyterian.org congregation page also list him as pastor (not opened)."
+ },
+ {
+  "slug": "andrew-spencer",
+  "decision": "bio",
+  "name": "Andrew Spencer",
+  "bio": "Andrew Spencer serves as associate editor for books at The Gospel Coalition and holds a PhD from Southeastern Baptist Theological Seminary. He is the author of Hope for God's Creation: Stewardship in an Age of Futility and Doctrine in Shades of Green: Theological Perspective for Environmental Ethics, and the editor of The Christian Mind of C. S. Lewis: Essays in Honor of Michael Travers. He is an elder at CrossPointe Church and lives in southeast Michigan.",
+  "role": "Associate Editor for Books",
+  "affiliation": "The Gospel Coalition",
+  "website": "https://www.thegospelcoalition.org/profile/andrew-spencer/",
+  "books": [
+   "Hope for God's Creation: Stewardship in an Age of Futility",
+   "Doctrine in Shades of Green: Theological Perspective for Environmental Ethics",
+   "The Christian Mind of C. S. Lewis: Essays in Honor of Michael Travers"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/andrew-spencer/",
+   "https://www.thegospelcoalition.org/reviews/religious-left-wuthnow/"
+  ],
+  "identity_check": "The TGC review 'What the Religious Left Gets Wrong' (July 23, 2026) is bylined Andrew Spencer and carries the same author bio as his TGC profile.",
+  "notes": "Third book is as editor. He is also a contributor to Baptist Political Theology (not listed as his book). Family details omitted."
+ },
+ {
+  "slug": "annie-eisner",
+  "decision": "noindex",
+  "name": "Annie Eisner",
+  "bio": "",
+  "role": "Writer",
+  "affiliation": "RELEVANT",
+  "website": "https://relevantmagazine.com/author/annieisle/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://relevantmagazine.com/author/annieisle/"
+  ],
+  "identity_check": "RELEVANT author page lists the credited pieces under Annie Eisner (172 articles), but it has no bio.",
+  "notes": "No bio on the RELEVANT author page or on the articles (checked HTML and JSON-LD); web search found no other source describing her. Nothing to source a bio from."
+ },
+ {
+  "slug": "brad-edwards",
+  "decision": "bio",
+  "name": "Brad Edwards",
+  "bio": "Brad Edwards is the planter and lead pastor of The Table Church in Boulder County, Colorado. He cohosts the PostEverything podcast and has written for Mere Orthodoxy. He is the author of The Reason for Church.",
+  "role": "Pastor",
+  "affiliation": "The Table Church",
+  "website": "https://www.thegospelcoalition.org/profile/brad-edwards/",
+  "books": [
+   "The Reason for Church"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/reviews/all-in-your-head/",
+   "https://www.thegospelcoalition.org/profile/brad-edwards/"
+  ],
+  "identity_check": "The TGC review of Frederik deBoer's All in Your Head is bylined Brad Edwards and its author box matches his TGC profile.",
+  "notes": "Book title confirmed only via the TGC author bio, not a publisher page."
+ },
+ {
+  "slug": "brian-croft",
+  "decision": "bio",
+  "name": "Brian Croft",
+  "bio": "Brian Croft is founder and executive director of Practical Shepherding and a senior fellow for the Mathena Center for Church Revitalization, according to his Ligonier Ministries teacher page. He is the author of several books, including The Pastor's Ministry.",
+  "role": "Pastor and Author",
+  "affiliation": "Practical Shepherding",
+  "website": "https://learn.ligonier.org/teachers/brian-croft",
+  "books": [
+   "The Pastor's Ministry"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://learn.ligonier.org/teachers/brian-croft",
+   "https://learn.ligonier.org/articles/the-bible-and-friendship"
+  ],
+  "identity_check": "The credited Ligonier feed link resolves to learn.ligonier.org/articles/the-bible-and-friendship, whose author box is this same Brian Croft bio.",
+  "notes": "Current site affiliation 'Treasuring Christ Together' was not confirmed by any source opened and is dropped. Book title is from the Ligonier bio only, not a publisher page."
+ },
+ {
+  "slug": "cameron-shaffer",
+  "decision": "bio",
+  "name": "Cameron Shaffer",
+  "bio": "Cameron Shaffer is the senior pastor of Langhorne Presbyterian Church in Langhorne, Pennsylvania, and a PhD candidate at Vrije Universiteit Amsterdam. He serves on the board of directors of the World Reformed Fellowship. He is the author of Keeping Kids Christian: Recovering a Biblical Vision for Lifelong Discipleship and writes for Mere Orthodoxy and Reformation21.",
+  "role": "Pastor",
+  "affiliation": "Langhorne Presbyterian Church",
+  "website": "https://cameronshaffer.com/",
+  "books": [
+   "Keeping Kids Christian: Recovering a Biblical Vision for Lifelong Discipleship"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://mereorthodoxy.com/author/cameron-shaffer",
+   "https://cameronshaffer.com/about/",
+   "https://www.langhornepres.org/",
+   "https://reformation21.org/measured-by-the-sowing-church-health-amidst-decline/"
+  ],
+  "identity_check": "Reformation21 piece 'Measured by the Sowing' (May 14, 2026) is bylined Cameron Shaffer; the Mere Orthodoxy author page (articles through Oct 2026) and the church homepage (his sermon dated Nov 8, 2026) confirm the current role.",
+  "notes": "Book title from his own website. The Aquila Report copy is a republication of the Ref21 piece."
+ },
+ {
+  "slug": "campbell-markham",
+  "decision": "bio",
+  "name": "Campbell Markham",
+  "bio": "Campbell Markham is the minister of Scots' Church Fremantle in Western Australia, according to his Australian Presbyterian author page. His Substack profile describes him as a Presbyterian pastor in Perth with a PhD in French church history. According to his Gospel Coalition Australia profile, his doctoral research at the University of Western Australia translated and analysed the letters of Marie Durand, who was imprisoned for 38 years for her faith under Louis XV.",
+  "role": "Minister",
+  "affiliation": "Scots' Church Fremantle",
+  "website": "https://ap.org.au/author/campbell-markham/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://ap.org.au/author/campbell-markham/",
+   "https://substack.com/@campbellmarkham",
+   "https://au.thegospelcoalition.org/profile/campbell-markham/"
+  ],
+  "identity_check": "Australian Presbyterian author page lists 'I am Burning, I am not Consumed (Exodus 3)' (July 31 2026), a title the site also credits to him via The Aquila Report.",
+  "notes": "The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read. The TGC Australia profile (Cornerstone, Hobart) is undated and older; the input affiliation 'Presbyterian Church of Tasmania' is outdated. Scots' Church's own site was not opened."
+ },
+ {
+  "slug": "clinton-manley",
+  "decision": "bio",
+  "name": "Clinton Manley",
+  "bio": "Clinton Manley is an editor for Desiring God and an adjunct instructor for Bethlehem College and Seminary. He lives in Saint Paul and writes articles for Desiring God.",
+  "role": "Editor",
+  "affiliation": "Desiring God",
+  "website": "https://www.desiringgod.org/authors/clinton-manley",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.desiringgod.org/authors/clinton-manley"
+  ],
+  "identity_check": "The pieces credited to him are Desiring God articles (feed links resolve to desiringgod.org/articles/...), and the Desiring God author page for Clinton Manley lists his articles with this bio.",
+  "notes": "desiringgod.org returns a Cloudflare challenge to direct fetches; the author page was read from the Wayback Machine capture of Aug 4, 2025 (web.archive.org/web/20250804004706/https://www.desiringgod.org/authors/clinton-manley). Family details omitted. The Aquila Report copy is a republication of a DG article."
+ },
+ {
+  "slug": "costi-hinn",
+  "decision": "bio",
+  "name": "Costi Hinn",
+  "bio": "Costi Hinn is teaching pastor of Shepherd's House Bible Church in Chandler, Arizona, and the founder and president of For The Gospel. He graduated from Midwestern Baptist Theological Seminary, and For The Gospel describes him as a doctoral candidate at The Master's Seminary. His books include God, Greed, and the (Prosperity) Gospel, More Than a Healer and Knowing the Spirit.",
+  "role": "Pastor and Author",
+  "affiliation": "Shepherd's House Bible Church; For The Gospel",
+  "website": "https://www.forthegospel.org/team",
+  "books": [
+   "God, Greed, and the (Prosperity) Gospel",
+   "More Than a Healer",
+   "Knowing the Spirit"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.shepherdsaz.org/costi-hinn",
+   "https://www.forthegospel.org/team",
+   "https://www.forthegospel.org/read/8-signs-youre-spiritually-drifting"
+  ],
+  "identity_check": "For The Gospel publishes '8 Signs You're Spiritually Drifting' by Costi Hinn, a piece the site credits via The Aquila Report; the site also credits him with forthegospel.org pieces directly.",
+  "notes": "Input affiliation 'Renewal Chapel' is wrong; no source supports it. The church page and For The Gospel page give different numbers of children, so family details are left out. Books are from his church's bio page."
+ },
+ {
+  "slug": "daniel-silliman",
+  "decision": "bio",
+  "name": "Daniel Silliman",
+  "bio": "Daniel Silliman is senior reporter and editor at The Roys Report. He began his journalism career covering crime in Atlanta and has since led investigations into abuse and misconduct in Christian contexts. He lives in Johnson City, Tennessee.",
+  "role": "Senior Reporter and Editor",
+  "affiliation": "The Roys Report",
+  "website": "https://roysreport.com/ohio-megachurch-pastor-lonnie-snell-fired-for-sexual-misconduct/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://roysreport.com/ohio-megachurch-pastor-lonnie-snell-fired-for-sexual-misconduct/"
+  ],
+  "identity_check": "Author box on his own Roys Report article (one of the credited pieces).",
+  "notes": "The site's current affiliation 'Religion News Service, The Christian Century' is not supported by this source; the Roys Report author box names Roys Report. He was previously at Christianity Today per general knowledge, but not stated in the opened source, so left out. 'Two decades in journalism' paraphrased as 'began his journalism career'."
+ },
+ {
+  "slug": "danson-ottawa",
+  "decision": "bio",
+  "name": "Danson Ottawa",
+  "bio": "Danson Ottawa is the National Coordinator of the Africa Center for Apologetics Research (ACFAR) in Kenya and lectures in apologetics and theology at Africa International University, where he earned a Master of Divinity in biblical studies. He is a member of Emmanuel Baptist Church in Nairobi. His Substack about page says he writes for The Gospel Coalition Africa and Christian Daily International.",
+  "role": "Apologist and Lecturer",
+  "affiliation": "Africa Center for Apologetics Research; Africa International University",
+  "website": "https://dansonottawa.substack.com/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://acfar.org/about/our-leadership/member-detail/1789879",
+   "https://africa.thegospelcoalition.org/profile/danson-ottawa/",
+   "https://dansonottawa.substack.com/about"
+  ],
+  "identity_check": "His Substack archive lists 'Before We Rebuild: What Nehemiah 2:17 Really Means' and 'When You Are Afraid of Being Seen...', titles the site credits via The Aquila Report.",
+  "notes": "The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read. Substack about page also mentions an MA in Systematic Theology at Wheaton in progress (left out)."
+ },
+ {
+  "slug": "don-carson",
+  "decision": "bio",
+  "name": "Don Carson",
+  "bio": "Don Carson is emeritus professor of New Testament at Trinity Evangelical Divinity School in Deerfield, Illinois, and a cofounder of The Gospel Coalition, from which he has retired. He studied at McGill University, Central Baptist Seminary in Toronto, and the University of Cambridge, where he earned his PhD. He has written and edited numerous books, and classic recordings of his discussions are republished on The Gospel Coalition's podcasts.",
+  "role": "Professor Emeritus of New Testament",
+  "affiliation": "Trinity Evangelical Divinity School",
+  "website": "https://www.thegospelcoalition.org/profile/don-carson/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/don-carson/",
+   "https://www.thegospelcoalition.org/podcasts/tgc-podcast/understand-holy-trinity/"
+  ],
+  "identity_check": "The credited pieces are TGC Podcast 'classic' episodes; the July 17, 2026 episode page credits Don Carson as a speaker, and his TGC profile gives this bio.",
+  "notes": "Also known as D. A. Carson; name kept as the site and TGC give it. No specific book titles listed because none were confirmed on a page I read. The site's affiliation should now read TEDS (emeritus) and TGC cofounder (retired), not current TGC staff."
+ },
+ {
+  "slug": "dv-rider",
+  "decision": "noindex",
+  "name": "D.V. Rider",
+  "bio": "",
+  "role": "",
+  "affiliation": "",
+  "website": "",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [],
+  "identity_check": "Could not identify the writer. 'The Pharisees Knew More Than You' appears on the Everyday Theology Substack (everydaytheology.substack.com), which names no individual author.",
+  "notes": "The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read. Searches for 'D.V. Rider' found no person, site or profile. No source for any bio fact."
+ },
+ {
+  "slug": "grant-dutro",
+  "decision": "bio",
+  "name": "Grant Dutro",
+  "bio": "Grant Dutro is editorial project coordinator at Christianity Today. He lives in Nashville, Tennessee, and is pursuing a Master of Theological Studies at Vanderbilt Divinity School.",
+  "role": "Editorial Project Coordinator",
+  "affiliation": "Christianity Today",
+  "website": "https://www.christianitytoday.com/writers/grant-dutro/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.christianitytoday.com/writers/grant-dutro/",
+   "https://www.christianitytoday.com/2026/10/mark-the-monk-orthodox-evangelical/"
+  ],
+  "identity_check": "His CT essay 'This Orthodox Ascetic Made Me More Evangelical' (Oct 6, 2026), a credited piece, ends with 'Grant Dutro is editorial project coordinator at CT'; the CT writer page (CT Staff) gives the fuller bio.",
+  "notes": "Only two sentences are supportable; no other sources found."
+ },
+ {
+  "slug": "haleluya-hadero",
+  "decision": "bio",
+  "name": "Haleluya Hadero",
+  "bio": "Haleluya Hadero is the Black church editor at Christianity Today. She was previously a business reporter at The Associated Press, where she covered online retail and technology. She holds a B.A. in political science and a master's degree in journalism.",
+  "role": "Editor",
+  "affiliation": "Christianity Today",
+  "website": "https://www.christianitytoday.com/writers/haleluya-hadero/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.christianitytoday.com/writers/haleluya-hadero/"
+  ],
+  "identity_check": "CT writer page lists the credited pieces ('Shock, Anger, Stimulate, Numb', 'Latino Evangelicals Remain Vital Swing Votes in Midterm Election').",
+  "notes": "Location and spouse on the CT page left out."
+ },
+ {
+  "slug": "jared-moore",
+  "decision": "bio",
+  "name": "Jared Moore",
+  "bio": "Jared Moore has served as senior pastor of Cumberland Homesteads Baptist Church in Crossville, Tennessee, since January 2016, and has been in pastoral ministry since 2000. He holds an MDiv and a PhD in systematic theology from The Southern Baptist Theological Seminary. He is the author of The Lust of the Flesh: Thinking Biblically About \"Sexual Orientation,\" Attraction, and Temptation and 33 Days to Freedom From Lust: A Hope-Filled Devotional. He served as SBC second vice president in 2014.",
+  "role": "Pastor",
+  "affiliation": "Cumberland Homesteads Baptist Church",
+  "website": "https://drjaredmoore.com",
+  "books": [
+   "The Lust of the Flesh: Thinking Biblically About \"Sexual Orientation,\" Attraction, and Temptation",
+   "33 Days to Freedom From Lust: A Hope-Filled Devotional"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://reformation21.org/annihilationism-celibate-gay-theology-2-0/",
+   "https://drjaredmoore.com/about/",
+   "https://www.baptistpress.com/resource-library/news/tennessee-pastor-jared-moore-to-be-nominated-for-sbc-president/"
+  ],
+  "identity_check": "Reformation21 essay 'Annihilationism: Celibate Gay Theology 2.0' (May 11, 2026), one of the credited pieces, carries his author bio naming Cumberland Homesteads Baptist Church and the two books; his own site lists the same books and SBTS degrees.",
+  "notes": "Baptist Press (Feb 28, 2024) read through a Wayback capture (direct fetch blocked) for the SBC second vice president fact. The Pop Culture Parent is listed on his own site (co-authored, per general knowledge; not stated on the page)."
+ },
+ {
+  "slug": "jen-oshman",
+  "decision": "bio",
+  "name": "Jen Oshman",
+  "bio": "Jen Oshman has worked in women's ministry for more than two decades on three continents and is director of women's ministry at her church. Her family lives in Colorado, where they planted Redemption Parker. She is the author of Very Good: What the Bible Says About Being a Woman, Enough About Me, Cultural Counterfeits, It's Good to Be a Girl and Welcome.",
+  "role": "Author",
+  "affiliation": "",
+  "website": "https://www.thegospelcoalition.org/profile/jen-oshman/",
+  "books": [
+   "Very Good: What the Bible Says About Being a Woman",
+   "Enough About Me",
+   "Cultural Counterfeits",
+   "It's Good to Be a Girl",
+   "Welcome"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/jen-oshman/",
+   "https://www.thegospelcoalition.org/article/women-leaving-church-reverse/"
+  ],
+  "identity_check": "Author box on the credited TGC article (June 1 2026) carries this bio.",
+  "notes": "jenoshman.com/about returned 404. Book titles are from the TGC bio, not a publisher page. 'Redemption Parker' as affiliation is the church her family planted; the bio does not explicitly say it is the church where she directs women's ministry."
+ },
+ {
+  "slug": "john-seel",
+  "decision": "bio",
+  "name": "John Seel",
+  "bio": "John Seel is a writer and strategist. He is a principal at The Reframe and academic dean at St. Andrew's College, and lives in Wilmington, North Carolina. He is the author of Liminal Leadership: Tools for Navigating a Change of Age, and has written guest essays for Aaron Renn's newsletter.",
+  "role": "Writer and Strategist",
+  "affiliation": "The Reframe; St. Andrew's College",
+  "website": "https://www.aaronrenn.com/p/nihilism-with-a-business-model",
+  "books": [
+   "Liminal Leadership: Tools for Navigating a Change of Age"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.aaronrenn.com/p/nihilism-with-a-business-model",
+   "https://www.aaronrenn.com/p/put-the-destination-in-the-frame"
+  ],
+  "identity_check": "Both credited pieces are guest essays on aaronrenn.com bylined 'John Seel, Ph.D.'; the May 26, 2026 essay ends with his author bio.",
+  "notes": "Book title confirmed only via that author bio, not a publisher page. Wife's name omitted. No own website opened; website field points at the guest essay with the bio."
+ },
+ {
+  "slug": "jon-coombs",
+  "decision": "bio",
+  "name": "Jon Coombs",
+  "bio": "Jon Coombs is lead pastor of Mooroolbark Baptist Church in Melbourne, Australia, a role he took up in April 2022. He has worked in ministry for more than 15 years across churches, schools, mission agencies and nonprofits, and holds a Master of Divinity from Melbourne School of Theology. He writes about life and faith on his blog.",
+  "role": "Pastor",
+  "affiliation": "Mooroolbark Baptist Church",
+  "website": "https://joncoombs.com",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://joncoombs.com/about",
+   "https://au.thegospelcoalition.org/profile/jon-coombs/",
+   "https://joncoombs.com"
+  ],
+  "identity_check": "His blog joncoombs.com lists 'King Jesus: Restoration From Chaos' as part 11 of his 'King Jesus' series in Mark, a title the site credits via The Aquila Report.",
+  "notes": "The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read. 'More Than A Second Chance' was not found on his homepage. Family details on his about page left out."
+ },
+ {
+  "slug": "keith-evans",
+  "decision": "bio",
+  "name": "Keith A. Evans",
+  "bio": "Keith A. Evans is associate professor of Christian counseling at Reformed Theological Seminary in Charlotte, North Carolina, where he joined the faculty in January 2024 and teaches in the Master of Arts in Christian Counseling program. Before RTS he served at Reformed Presbyterian Theological Seminary as professor of biblical counseling, director of the Biblical Counseling Institute, and academic dean. He writes for Ligonier Ministries.",
+  "role": "Professor of Christian Counseling",
+  "affiliation": "Reformed Theological Seminary, Charlotte",
+  "website": "https://rts.edu/people/the-rev-keith-a-evans",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://feeds.ligonier.org/~/967921745/0/ligonierministriesblog",
+   "https://rts.edu/news/news-charlotte/dr-keith-evans-promoted-to-associate-professor-of-christian-counseling/",
+   "https://rts.edu/news/news-charlotte/rev-keith-evans-appointed-as-assistant-professor-of-christian-counseling/"
+  ],
+  "identity_check": "The credited Ligonier article 'Christian Optimism in Dark Days' (republished by The Aquila Report) carries the bio 'Dr. Keith A. Evans is associate professor of biblical counseling at Reformed Theological Seminary in Charlotte'; RTS news pages describe the same person.",
+  "notes": "Ligonier calls the title 'biblical counseling'; RTS's own promotion notice (effective June 6, 2024) says 'Christian Counseling', used here. Ligonier calls him a PCA teaching elder, while a search summary says RTS describes him as an RPCNA minister; denomination omitted because of the conflict. RPTS background confirmed on the RTS appointment page."
+ },
+ {
+  "slug": "kendall-lankford",
+  "decision": "bio",
+  "name": "Kendall Lankford",
+  "bio": "Kendall Lankford is a pastor of The Shepherd's Church in Chelmsford, Massachusetts, where he has served since 2019, according to a bio published by Christ the King Reformed Church in Groton. The Shepherd's Church lists him as teaching pastor on its session.",
+  "role": "Pastor",
+  "affiliation": "The Shepherd's Church (Chelmsford, MA)",
+  "website": "https://www.theshepherds.church/leadership",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.theshepherds.church/leadership",
+   "https://ctkreformed.com/people/kendall-lankford",
+   "https://www.theshepherds.church/blog"
+  ],
+  "identity_check": "The Shepherd's Church blog lists 'Disordered Wantings', 'Pompey Didn't Find A god' and 'The Goal Is Not Obedient Children' by Kendall Lankford, titles the site credits via The Aquila Report.",
+  "notes": "The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read. The CTK Reformed page also lists him as Pro Tem Elder there (left out). Other people share the name (a NC detention officer, a seminary student listing on Thirdmill); not used."
+ },
+ {
+  "slug": "ligon-duncan",
+  "decision": "bio",
+  "name": "Ligon Duncan",
+  "bio": "Ligon Duncan is chancellor and CEO of Reformed Theological Seminary and the John E. Richards Professor of Systematic and Historical Theology. He studied at Furman University and Covenant Theological Seminary and earned his PhD at the University of Edinburgh. His pastoral ministry included almost 18 years at First Presbyterian Church in Jackson, Mississippi, and he is a board member of The Gospel Coalition and appears with Matt Smethurst on its podcast The Everyday Pastor.",
+  "role": "Seminary Chancellor",
+  "affiliation": "Reformed Theological Seminary",
+  "website": "https://ligonduncan.com",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://ligonduncan.com/about-ligon-duncan/",
+   "https://www.thegospelcoalition.org/profile/ligon-duncan/",
+   "https://www.thegospelcoalition.org/podcasts/everyday-pastor/pastor-discouragement/"
+  ],
+  "identity_check": "The credited pieces are TGC Everyday Pastor episodes; the Sept 28, 2026 episode page lists Matt Smethurst and Ligon Duncan, and his TGC profile and own site give the RTS role.",
+  "notes": "The site's affiliation 'Christ Church Jackson' was not confirmed by any source; dropped. Neither page is dated, but ligonduncan.com is his own current site and TGC profile is a live author page."
+ },
+ {
+  "slug": "mark-a-kellner",
+  "decision": "bio",
+  "name": "Mark A. Kellner",
+  "bio": "Mark A. Kellner is a reporter based in Mesquite, Nevada, according to his author note at The Roys Report. He has covered statewide elections for the New York Post and was for three years the Faith and Family reporter for The Washington Times. He is a graduate of the University of the Cumberlands and attended Boston University's College of Communication.",
+  "role": "Reporter",
+  "affiliation": "The Roys Report",
+  "website": "https://roysreport.com/judge-rejects-david-e-taylors-bid-to-dismiss-forced-labor-charges/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://roysreport.com/judge-rejects-david-e-taylors-bid-to-dismiss-forced-labor-charges/"
+  ],
+  "identity_check": "Author box on the credited Roys Report article.",
+  "notes": "Roys Report author archive URL guessed (/author/mark-a-kellner/) returned 404. Input affiliation 'Religion News Service' not confirmed and dropped."
+ },
+ {
+  "slug": "matthew-harmon",
+  "decision": "bio",
+  "name": "Matthew Harmon",
+  "bio": "Matthew Harmon is professor of New Testament studies at Grace College and Theological Seminary in Winona Lake, Indiana, and holds a PhD from Wheaton College. He has written commentaries on Galatians, Philippians, 2 Peter, and Jude, and books on biblical theology including Rebels and Exiles: A Biblical Theology of Sin and Restoration and The Servant of the Lord and His Servant People: Tracing a Biblical Theme through the Canon. He writes for The Gospel Coalition's Carson Center.",
+  "role": "Professor of New Testament",
+  "affiliation": "Grace College and Theological Seminary",
+  "website": "https://www.thegospelcoalition.org/profile/matthew-harmon/",
+  "books": [
+   "Rebels and Exiles: A Biblical Theology of Sin and Restoration",
+   "The Servant of the Lord and His Servant People: Tracing a Biblical Theme through the Canon"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/article/enoch-why-jude-quote/",
+   "https://www.thegospelcoalition.org/profile/matthew-harmon/"
+  ],
+  "identity_check": "The credited Carson Center article 'What Is 1 Enoch and Why Does Jude Quote It?' (July 1, 2026) ends with this author bio, identical to his TGC profile.",
+  "notes": "Family details omitted."
+ },
+ {
+  "slug": "melissa-kruger",
+  "decision": "bio",
+  "name": "Melissa Kruger",
+  "bio": "Melissa Kruger is vice president of discipleship programming for The Gospel Coalition. Her own site describes her as an author and Bible teacher. Her books include The Envy of Eve, Walking with God in the Season of Motherhood, Growing Together, Wherever You Go, I Want You to Know and Parenting with Hope.",
+  "role": "Author and Bible Teacher",
+  "affiliation": "The Gospel Coalition",
+  "website": "https://melissabkruger.com",
+  "books": [
+   "The Envy of Eve: Finding Contentment in a Covetous World",
+   "Walking with God in the Season of Motherhood",
+   "Growing Together: Taking Mentoring Beyond Small Talk and Prayer Requests",
+   "Wherever You Go, I Want You to Know",
+   "Parenting with Hope"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/melissa-kruger/",
+   "https://melissabkruger.com"
+  ],
+  "identity_check": "The credited pieces are TGC Deep Dish podcast episodes; her TGC profile identifies her as TGC staff.",
+  "notes": "Book titles from her TGC profile; Parenting with Hope subtitle differs between her site and TGC so the subtitle is omitted. Family details left out. Her hosting of Deep Dish was not confirmed on a page opened, so not stated."
+ },
+ {
+  "slug": "michael-keller",
+  "decision": "bio",
+  "name": "Michael Keller",
+  "bio": "Michael Keller is the founding and senior pastor of Redeemer Presbyterian Church Lincoln Square and a Council member of The Gospel Coalition. He studied at Gordon-Conwell Seminary and earned a PhD at Vrije Universiteit Amsterdam in computational linguistics applied to historical theology. He is the author of books including The Stories We Live By: Seven Cultural Myths That Fail Us and the Story That Never Will and Talking to Kids About Hard Things.",
+  "role": "Pastor",
+  "affiliation": "Redeemer Presbyterian Church Lincoln Square",
+  "website": "https://redeemerlsq.com",
+  "books": [
+   "The Stories We Live By: Seven Cultural Myths That Fail Us and the Story That Never Will",
+   "Talking to Kids About Hard Things"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/article/algorithm-self-ai/",
+   "https://www.thegospelcoalition.org/profile/michael-keller/"
+  ],
+  "identity_check": "The credited Keller Center article 'Hope for the Algorithm-Shaped Self' (April 29, 2026) ends with this author bio, identical to his TGC profile.",
+  "notes": "The source writes the church name with an en dash (Redeemer Presbyterian Church, Lincoln Square); rendered without it. Did not state he is Tim Keller's son since no opened page says so."
+ },
+ {
+  "slug": "michael-mock",
+  "decision": "bio",
+  "name": "Michael Mock",
+  "bio": "Michael Mock is pastor of Grace Presbyterian Church (PCA) in Fresno, California, according to his SermonAudio speaker profile. The same profile says he was pastor of Cross Creek Presbyterian Church in Fayetteville, North Carolina, from 2018 to 2024, and that he was a teacher for many years.",
+  "role": "Pastor",
+  "affiliation": "Grace Presbyterian Church (PCA), Fresno",
+  "website": "https://gracefresno.com/author/michael-mock/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://web.sermonaudio.com/speakers/23617/",
+   "https://gracefresno.com/author/michael-mock/",
+   "https://gracefresno.com/?s=Grace+Stings"
+  ],
+  "identity_check": "Grace Presbyterian's site shows him preaching a Leviticus series in Oct and Nov 2026, consistent with the credited 'Learning the Logic of Leviticus' pieces; the Aquila author box itself could not be read.",
+  "notes": "The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read. Identity link is circumstantial (same church as the input affiliation, matching Leviticus series), not a direct byline match on the original site. Identity: \"Grace Stings\" (one of the credited Aquila pieces) is published on gracefresno.com (checked by the overnight run)."
+ },
+ {
+  "slug": "nancy-guthrie",
+  "decision": "bio",
+  "name": "Nancy Guthrie",
+  "bio": "Nancy Guthrie teaches the Bible at Cornerstone Presbyterian Church in Franklin, Tennessee, and at biblical theology workshops around the world. She hosts the Help Me Teach the Bible podcast. She is the author of Beholding Christ: A Daily Guide to Seeing Jesus in All of Scripture, and writes for Christianity Today and Crossway.",
+  "role": "Bible Teacher",
+  "affiliation": "Cornerstone Presbyterian Church, Franklin, Tennessee",
+  "website": "https://www.nancyguthrie.com",
+  "books": [
+   "Beholding Christ: A Daily Guide to Seeing Jesus in All of Scripture"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.christianitytoday.com/2026/10/beholding-christ-nancy-guthrie/",
+   "https://www.crossway.org/articles/how-the-book-of-ruth-points-us-to-christ/"
+  ],
+  "identity_check": "Her CT essay 'We Can Only Imagine. But Do We?' (Oct 14, 2026), a credited piece, ends with this author bio; the Crossway article (Oct 31, 2026) is bylined Nancy Guthrie and promotes Beholding Christ.",
+  "notes": "The site's affiliation 'Bible.com' is unsupported; replaced. The podcast launch date will need a tense update after January 1, 2027 (or drop the date). nancyguthrie.com/about returned a not found page. She has many earlier books; only the one confirmed on the pages opened is listed."
+ },
+ {
+  "slug": "paul-levy",
+  "decision": "bio",
+  "name": "Paul Levy",
+  "bio": "Paul Levy is minister of International Presbyterian Church Ealing in West London, according to his Ligonier Ministries author page.",
+  "role": "Minister",
+  "affiliation": "International Presbyterian Church Ealing",
+  "website": "https://learn.ligonier.org/teachers/paul-levy",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://learn.ligonier.org/teachers/paul-levy",
+   "https://learn.ligonier.org/articles/why-should-i-go-to-church"
+  ],
+  "identity_check": "The credited Ligonier feed link resolves to learn.ligonier.org/articles/why-should-i-go-to-church, whose author box carries this bio.",
+  "notes": "Only one fact sourced; bio is a single sentence."
+ },
+ {
+  "slug": "pj-dunn",
+  "decision": "bio",
+  "name": "PJ Dunn",
+  "bio": "PJ Dunn works to reach and equip single adults through discipleship. He travels nationally speaking, coaching, and creating content for singles and the local church, and writes for Lifeway Research on ministry to young adults.",
+  "role": "Speaker and Writer",
+  "affiliation": "",
+  "website": "https://research.lifeway.com/2026/08/06/connecting-young-adults-to-mentors-in-your-church/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://research.lifeway.com/2026/08/06/connecting-young-adults-to-mentors-in-your-church/"
+  ],
+  "identity_check": "Author box on his own Lifeway Research article (Aug 6, 2026), one of the credited pieces, bylined 'By PJ Dunn'.",
+  "notes": "Thin: only the Lifeway author box was confirmable. The site's affiliation 'Table for One Ministries' was not found on any source; dropped. Search snippets suggest he goes by 'Dr. PJ Dunn' and wrote a singles small group guide (Embrace the Table), but I did not open a page confirming either, so both are left out. Lifeway's site served Cloudflare challenges to curl; read through WebFetch."
+ },
+ {
+  "slug": "r-andrew-compton",
+  "decision": "bio",
+  "name": "R. Andrew Compton",
+  "bio": "R. Andrew Compton is professor of Old Testament studies, director of the master of theological studies program and registrar at Mid-America Reformed Seminary in Dyer, Indiana. He is a minister in the United Reformed Churches in North America and an associate pastor at Redeemer United Reformed Church. He holds degrees from Dordt College, Westminster Seminary California, the University of California, Los Angeles, and a Ph.D. from the University of Pretoria.",
+  "role": "Professor of Old Testament",
+  "affiliation": "Mid-America Reformed Seminary",
+  "website": "https://www.midamerica.edu/faculty/andrew-compton",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.midamerica.edu/faculty/andrew-compton",
+   "https://learn.ligonier.org/articles/how-did-noah-point-to-christ"
+  ],
+  "identity_check": "The credited Ligonier piece 'How Did Noah Point to Christ?' (same title as the Aquila credit) carries the Mid-America Reformed Seminary author bio.",
+  "notes": "Ligonier teacher URL learn.ligonier.org/teachers/r-andrew-compton returned 404; the article page bio was used."
+ },
+ {
+  "slug": "rebecca-hopkins",
+  "decision": "bio",
+  "name": "Rebecca Hopkins",
+  "bio": "Rebecca Hopkins is a journalist based in Colorado. Her reporting for The Roys Report has covered Compassion International, missions organizations, and abuse cases involving churches and ministries.",
+  "role": "Journalist",
+  "affiliation": "The Roys Report",
+  "website": "https://roysreport.com/compassion-international-sues-whistleblower-claiming-reputational-harm/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://roysreport.com/compassion-international-sues-whistleblower-claiming-reputational-harm/",
+   "https://roysreport.com/after-missions-conference-pulls-workshop-rapha-international-quits-in-protest/",
+   "https://roysreport.com/ohio-megachurch-leader-tom-keesee-found-guilty-of-27-child-sex-abuse-charges/"
+  ],
+  "identity_check": "Three credited Roys Report articles (Nov 6 to Nov 10, 2026) are bylined 'By Rebecca Hopkins' and end with 'Rebecca Hopkins is a journalist based in Colorado.'",
+  "notes": "Thin: the Roys Report author line is the only biographical source found. Second sentence describes her bylined Roys Report stories, not a bio claim. Christian outlet, so a normal bio rather than the secular journalist line."
+ },
+ {
+  "slug": "rebecca-woods",
+  "decision": "noindex",
+  "name": "Rebecca Woods",
+  "bio": "",
+  "role": "Writer",
+  "affiliation": "RELEVANT",
+  "website": "https://relevantmagazine.com/author/rebeccawoods/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://relevantmagazine.com/author/rebeccawoods/"
+  ],
+  "identity_check": "RELEVANT author page lists three articles under her name, including both credited pieces; no bio.",
+  "notes": "No bio on the author page or articles; no other source found. Do not confuse with Rebekah Woods (Canadian writer, different person)."
+ },
+ {
+  "slug": "rosaria-butterfield",
+  "decision": "bio",
+  "name": "Rosaria Butterfield",
+  "bio": "Rosaria Butterfield is an author and speaker and a former professor of English and women's studies at Syracuse University. She holds a PhD from Ohio State University. Her memoir The Secret Thoughts of an Unlikely Convert: An English Professor's Journey into Christian Faith describes her conversion, and her other books include Openness Unhindered, The Gospel Comes with a House Key, and Five Lies of Our Anti-Christian Age. She writes for Reformation21.",
+  "role": "Author",
+  "affiliation": "",
+  "website": "https://www.crossway.org/authors/rosaria-butterfield/",
+  "books": [
+   "The Secret Thoughts of an Unlikely Convert: An English Professor's Journey into Christian Faith",
+   "Openness Unhindered",
+   "The Gospel Comes with a House Key",
+   "Five Lies of Our Anti-Christian Age"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://reformation21.org/annihilationism-celibate-gay-theology-2-0/",
+   "https://www.crossway.org/authors/rosaria-butterfield/"
+  ],
+  "identity_check": "Reformation21 essay 'Annihilationism: Celibate Gay Theology 2.0' (May 11, 2026), a credited piece, carries her author bio (former Syracuse professor, memoir); Crossway's author page matches.",
+  "notes": "Her own site rosariabutterfield.com returned 401 to automated fetches. Ref21 bio mentions she is married to a Reformed Presbyterian pastor in North Carolina; family detail omitted. The site's affiliation 'Christianity Today, The Gospel Coalition' is not supported; left empty."
+ },
+ {
+  "slug": "ryan-swale",
+  "decision": "bio",
+  "name": "Ryan Swale",
+  "bio": "Ryan Swale is pastor of Immanuel United Reformed Church in Jordan Station, Ontario, according to his author note at The Gospel Coalition. He holds a DMin from Reformed Presbyterian Theological Seminary and is the author of Cries of a Conquering King: A Practical Theology of the Imprecatory Psalms.",
+  "role": "Pastor",
+  "affiliation": "Immanuel United Reformed Church",
+  "website": "https://www.thegospelcoalition.org/article/voice-martyrs-prayers-persecuted/",
+  "books": [
+   "Cries of a Conquering King: A Practical Theology of the Imprecatory Psalms"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/article/voice-martyrs-prayers-persecuted/"
+  ],
+  "identity_check": "Author box on the credited TGC article.",
+  "notes": "Book title from the TGC author note only. The Aquila piece 'Let Children Hear the Mighty Deeds' could not be opened. The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read."
+ },
+ {
+  "slug": "scott-yenor",
+  "decision": "bio",
+  "name": "Scott Yenor",
+  "bio": "Scott Yenor is chairman of the American Citizenship Initiative at the Heritage Foundation, and has taught political science at Boise State University. He is the author of Family Politics: The Idea of Marriage in Modern Political Thought, Hume's Humanity, and The Recovery of Family Life: Exposing the Limits of Modern Ideologies. He writes for American Reformer and other conservative publications.",
+  "role": "Political Scientist",
+  "affiliation": "The Heritage Foundation",
+  "website": "https://americanreformer.org/2026/06/against-caesars-cost-of-glory/",
+  "books": [
+   "Family Politics: The Idea of Marriage in Modern Political Thought",
+   "Hume's Humanity",
+   "The Recovery of Family Life: Exposing the Limits of Modern Ideologies"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://americanreformer.org/2026/06/against-caesars-cost-of-glory/",
+   "https://americanreformer.org/2026/05/fixing-the-failures-of-the-pro-life-movement/",
+   "https://jamesgmartin.center/author/syenor/",
+   "https://www.accsedu.org/dr-scott-yenor/"
+  ],
+  "identity_check": "Both credited American Reformer pieces (May and June 2026) end with 'Scott Yenor is Chairman of the American Citizenship Initiative at the Heritage Foundation.' The Martin Center and ACCS pages describe the same political scientist and list his books.",
+  "notes": "Boise State: Martin Center page (read via Wayback capture of May 12, 2026) says he is a professor there; I used 'has taught' since no 2026 Boise State page was opened. Heritage's own profile returned 403. The ACCS page lists older roles (former Heritage fellow, Claremont) that conflict with newer ones, so ignored. 'Other conservative publications' rests on the ACCS list (City Journal, The American Mind, The American Conservative). Site's 'Public Discourse' affiliation not checked."
+ },
+ {
+  "slug": "simon-van-bruchem",
+  "decision": "bio",
+  "name": "Simon van Bruchem",
+  "bio": "Simon van Bruchem is a pastor of All Nations Presbyterian Church in Perth, Western Australia, where he has served since 2007. He completed a Master of Divinity at Trinity Theological College after a previous career as an industrial chemist. He is the author of Distinctively Christian Retirement and writes the blog Written For Our Instruction.",
+  "role": "Pastor",
+  "affiliation": "All Nations Presbyterian Church, Perth",
+  "website": "https://www.writtenforourinstruction.com/",
+  "books": [
+   "Distinctively Christian Retirement"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://au.thegospelcoalition.org/profile/simon-van-bruchem/",
+   "https://au.thegospelcoalition.org/article/the-value-of-older-models",
+   "https://www.writtenforourinstruction.com/"
+  ],
+  "identity_check": "His blog writtenforourinstruction.com lists 'Young Christians, you need older Christians in your life!', a title the site credits via The Aquila Report.",
+  "notes": "The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read. TGC Australia profile is undated; the 'since 2007' tenure is from it. Book title from TGC Australia, full subtitle there reads 'A Biblical Call to Serve Jesus well in Older Age' (not confirmed on a publisher page, so short title used). Family details left out."
+ },
+ {
+  "slug": "thomas-west",
+  "decision": "bio",
+  "name": "Thomas West",
+  "bio": "Thomas West is the senior pastor of Nashville First Baptist Church and an adjunct professor of theology at Belmont University and Southeastern Seminary, where he earned his PhD. Before coming to Nashville he spent five years planting a church in London. He is the coauthor, with Trevin Wax, of The Gospel Way Catechism.",
+  "role": "Pastor",
+  "affiliation": "Nashville First Baptist Church",
+  "website": "https://www.thegospelcoalition.org/article/bible-belt-mission-field/",
+  "books": [
+   "The Gospel Way Catechism"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/article/bible-belt-mission-field/"
+  ],
+  "identity_check": "Author bio at the end of his own TGC article (one of the credited pieces), which also describes his London church plant in the first person.",
+  "notes": "The London detail is from his own first-person text in that article. 'Coauthor ... of The Gospel Way Catechism for Kids' : the bio lists it after the Wax coauthorship; whether Wax coauthored the kids edition too is not explicit. Family details omitted."
+ },
+ {
+  "slug": "todd-pruitt",
+  "decision": "bio",
+  "name": "Todd Pruitt",
+  "bio": "Todd Pruitt is lead pastor of Covenant Presbyterian Church in Harrisonburg, Virginia, and a cohost of The Mortification of Spin podcast and blog, according to his Ligonier Ministries author note.",
+  "role": "Pastor",
+  "affiliation": "Covenant Presbyterian Church, Harrisonburg, VA",
+  "website": "https://learn.ligonier.org/teachers/todd-pruitt",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://learn.ligonier.org/teachers/todd-pruitt",
+   "https://learn.ligonier.org/articles/virtues-vices-lust"
+  ],
+  "identity_check": "The credited Ligonier feed link resolves to learn.ligonier.org/articles/virtues-vices-lust ('What Is Lust?'), whose author box carries this bio; the Aquila credit is the same title.",
+  "notes": "Reformation21 bios (seen in search snippets only, not opened) add an MDiv from Midwestern Baptist Theological Seminary and a 2013 call; left out."
+ }
+]

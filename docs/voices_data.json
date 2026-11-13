@@ -847,30 +847,19 @@
   {
     "name": "Ligon Duncan",
     "slug": "ligon-duncan",
-    "bio": "Ligon Duncan is a Reformed theologian, pastor, and author deeply committed to expository preaching and biblical scholarship. He has served as senior pastor of Christ Church in Jackson, Mississippi, and is known for his work in promoting confessional Reformed theology and historical Christian thought. Through teaching, writing, and pastoral ministry, Duncan seeks to help believers understand and apply Scripture with doctrinal depth and practical wisdom.",
-    "affiliation": "Christ Church Jackson; Reformed Theological Seminary",
-    "role": "Senior Pastor, Author & Theologian",
-    "education": "M.A.R., Westminster Theological Seminary; Ph.D., University of Edinburgh",
+    "bio": "Ligon Duncan is chancellor and CEO of Reformed Theological Seminary and the John E. Richards Professor of Systematic and Historical Theology. He studied at Furman University and Covenant Theological Seminary and earned his PhD at the University of Edinburgh. His pastoral ministry included almost 18 years at First Presbyterian Church in Jackson, Mississippi, and he is a board member of The Gospel Coalition and appears with Matt Smethurst on its podcast The Everyday Pastor.",
+    "affiliation": "Reformed Theological Seminary",
+    "role": "Seminary Chancellor",
     "website": "https://ligonduncan.com",
-    "books": [
-      {
-        "title": "Recovering the Reformed Confession",
-        "amazon_url": "https://www.amazon.com/s?k=Recovering+the+Reformed+Confession+Ligon+Duncan"
-      },
-      {
-        "title": "The Whole Counsel of God",
-        "amazon_url": "https://www.amazon.com/s?k=The+Whole+Counsel+of+God+Ligon+Duncan"
-      },
-      {
-        "title": "Does the Bible Really Say That?",
-        "amazon_url": "https://www.amazon.com/s?k=Does+the+Bible+Really+Say+That+Ligon+Duncan"
-      },
-      {
-        "title": "Sermon on the Mount",
-        "amazon_url": "https://www.amazon.com/s?k=Sermon+on+the+Mount+Ligon+Duncan"
-      }
+    "books": [],
+    "initials": "LD",
+    "deceased": false,
+    "bio_sources": [
+      "https://ligonduncan.com/about-ligon-duncan/",
+      "https://www.thegospelcoalition.org/profile/ligon-duncan/",
+      "https://www.thegospelcoalition.org/podcasts/everyday-pastor/pastor-discouragement/"
     ],
-    "initials": "LD"
+    "education": ""
   },
   {
     "slug": "kent-dunnington",
@@ -906,13 +895,18 @@
   {
     "name": "Aaron Earls",
     "slug": "aaron-earls",
-    "bio": "Senior writer at LifeWay Christian Resources covering church trends, pastoral issues, and American Christianity. His work appears in Baptist Press, The Gospel Coalition, ChurchLeaders, and other Christian media.",
-    "affiliation": "LifeWay Christian Resources",
+    "bio": "Aaron Earls is senior writer at Lifeway Research, where he writes up the organization's survey findings on churches and churchgoers. He lives outside Nashville, Tennessee, where he serves as a deacon and small group teacher at his church. He blogs at Wardrobe Door.",
+    "affiliation": "Lifeway Research",
     "role": "Senior Writer",
-    "education": "Southeastern Baptist Theological Seminary",
     "website": "https://research.lifeway.com/author/aaronearls/",
     "books": [],
-    "initials": "AE"
+    "initials": "AE",
+    "deceased": false,
+    "bio_sources": [
+      "https://research.lifeway.com/2026/11/03/2-in-3-churchgoers-fail-bible-literacy-quiz/",
+      "https://www.thegospelcoalition.org/profile/aaron-earls"
+    ],
+    "education": ""
   },
   {
     "name": "Doug Eaton",
@@ -1298,32 +1292,37 @@
     "slug": "nancy-guthrie",
     "name": "Nancy Guthrie",
     "initials": "NG",
-    "role": "Bible Teacher & Author",
-    "affiliation": "Bible.com",
-    "bio": "Nancy Guthrie is a Bible teacher, author, and podcast host from Franklin, Tennessee, who has devoted her ministry to helping Christians engage Scripture with both intellectual rigor and spiritual devotion. As host of the Help Me Teach the Bible podcast since 2015, Guthrie interviews excellent Bible teachers about how to teach specific biblical books and improve their approach to handling God's Word, making her a curator of evangelical biblical pedagogy.\n\nBeyond the podcast, Guthrie teaches at Cornerstone Presbyterian Church and at conferences nationwide, including her signature Biblical Theology Workshop for Women. Her books and resources model careful biblical exposition combined with pastoral sensitivity, making her an influential voice among evangelical women especially, but valued across denominational and gender lines for her commitment to sound biblical teaching and effective communication.",
-    "education": "Baylor University (BA)",
+    "role": "Bible Teacher",
+    "affiliation": "Cornerstone Presbyterian Church, Franklin, Tennessee",
+    "bio": "Nancy Guthrie teaches the Bible at Cornerstone Presbyterian Church in Franklin, Tennessee, and at biblical theology workshops around the world. She hosts the Help Me Teach the Bible podcast. She is the author of Beholding Christ: A Daily Guide to Seeing Jesus in All of Scripture, and writes for Christianity Today and Crossway.",
     "website": "https://www.nancyguthrie.com",
     "books": [
       {
-        "title": "Holding On to Hope",
-        "amazon_url": "https://www.amazon.com/s?k=Holding+On+to+Hope+Nancy+Guthrie"
-      },
-      {
-        "title": "Even Better Than Eden",
-        "amazon_url": "https://www.amazon.com/s?k=Even+Better+Than+Eden+Nancy+Guthrie"
+        "title": "Beholding Christ: A Daily Guide to Seeing Jesus in All of Scripture",
+        "amazon_url": "https://www.amazon.com/s?k=Beholding+Christ%3A+A+Daily+Guide+to+Seeing+Jesus+in+All+of+Scripture+Nancy+Guthrie"
       }
-    ]
+    ],
+    "deceased": false,
+    "bio_sources": [
+      "https://www.christianitytoday.com/2026/10/beholding-christ-nancy-guthrie/",
+      "https://www.crossway.org/articles/how-the-book-of-ruth-points-us-to-christ/"
+    ],
+    "education": ""
   },
   {
     "name": "Haleluya Hadero",
     "slug": "haleluya-hadero",
-    "bio": "Haleluya Hadero is the Black Church Editor at Christianity Today, with a background in business and philanthropy reporting. Previously at The Associated Press, she investigated retail, technology, fossil fuel divestment, and racial equity giving, holding a degree from Columbia University's Graduate School of Journalism.",
-    "affiliation": "Christianity Today, The Associated Press",
-    "role": "Religion editor and journalist",
-    "education": "Graduate degree, Columbia University Graduate School of Journalism",
+    "bio": "Haleluya Hadero is the Black church editor at Christianity Today. She was previously a business reporter at The Associated Press, where she covered online retail and technology. She holds a B.A. in political science and a master's degree in journalism.",
+    "affiliation": "Christianity Today",
+    "role": "Editor",
     "website": "https://www.christianitytoday.com/writers/haleluya-hadero/",
     "books": [],
-    "initials": "HH"
+    "initials": "HH",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.christianitytoday.com/writers/haleluya-hadero/"
+    ],
+    "education": ""
   },
   {
     "name": "Ashley Hales",
@@ -1910,49 +1909,39 @@
   {
     "name": "Melissa Kruger",
     "slug": "melissa-kruger",
-    "bio": "Melissa Kruger serves as director of women's initiatives at The Gospel Coalition and is the author of several books including The Envy of Eve, Walking with God in the Season of Motherhood, and In All Things. A graduate of Reformed Theological Seminary, she writes with warmth and theological depth on discipleship, community, and the Christian life.",
+    "bio": "Melissa Kruger is vice president of discipleship programming for The Gospel Coalition. Her own site describes her as an author and Bible teacher. Her books include The Envy of Eve, Walking with God in the Season of Motherhood, Growing Together, Wherever You Go, I Want You to Know and Parenting with Hope.",
     "affiliation": "The Gospel Coalition",
-    "role": "Author & Director of Women's Initiatives",
-    "education": "MA in Biblical Studies, Reformed Theological Seminary",
+    "role": "Author and Bible Teacher",
     "website": "https://melissabkruger.com",
     "books": [
       {
-        "title": "The Envy of Eve",
-        "amazon_url": "https://www.amazon.com/s?k=The+Envy+of+Eve+Melissa+Kruger"
+        "title": "The Envy of Eve: Finding Contentment in a Covetous World",
+        "amazon_url": "https://www.amazon.com/s?k=The+Envy+of+Eve%3A+Finding+Contentment+in+a+Covetous+World+Melissa+Kruger"
       },
       {
         "title": "Walking with God in the Season of Motherhood",
-        "amazon_url": "https://www.amazon.com/s?k=Walking+with+God+Season+Motherhood+Melissa+Kruger"
+        "amazon_url": "https://www.amazon.com/s?k=Walking+with+God+in+the+Season+of+Motherhood+Melissa+Kruger"
       },
       {
-        "title": "In All Things",
-        "amazon_url": "https://www.amazon.com/s?k=In+All+Things+Melissa+Kruger"
+        "title": "Growing Together: Taking Mentoring Beyond Small Talk and Prayer Requests",
+        "amazon_url": "https://www.amazon.com/s?k=Growing+Together%3A+Taking+Mentoring+Beyond+Small+Talk+and+Prayer+Requests+Melissa+Kruger"
+      },
+      {
+        "title": "Wherever You Go, I Want You to Know",
+        "amazon_url": "https://www.amazon.com/s?k=Wherever+You+Go%2C+I+Want+You+to+Know+Melissa+Kruger"
+      },
+      {
+        "title": "Parenting with Hope",
+        "amazon_url": "https://www.amazon.com/s?k=Parenting+with+Hope+Melissa+Kruger"
       }
     ],
     "initials": "MK",
-    "denomination": "Presbyterian (Reformed evangelical)",
-    "tradition": "Reformed evangelical",
-    "known_for": "Books and Gospel Coalition ministry on women's discipleship, mentoring, contentment, and motherhood, including The Envy of Eve and Parenting with Hope.",
-    "current_role": "Vice President of Discipleship Programming at The Gospel Coalition",
     "deceased": false,
-    "faqs": [
-      {
-        "q": "Who is Melissa Kruger?",
-        "a": "Melissa Kruger is vice president of discipleship programming at The Gospel Coalition, where she previously served as director of women's initiatives. Before joining TGC she served in women's ministry at churches including Uptown Church in Charlotte, North Carolina."
-      },
-      {
-        "q": "What books has Melissa Kruger written?",
-        "a": "Her books include The Envy of Eve: Finding Contentment in a Covetous World, Walking with God in the Season of Motherhood, Growing Together (on mentoring), the children's book Wherever You Go, I Want You to Know, and Parenting with Hope: Raising Teens for Christ in a Secular Age."
-      },
-      {
-        "q": "Who is Melissa Kruger married to?",
-        "a": "She is married to Michael J. Kruger, a New Testament scholar and president of Reformed Theological Seminary's Charlotte campus, known for his work on the New Testament canon. They live in Charlotte and have three children."
-      },
-      {
-        "q": "What tradition does Melissa Kruger write from?",
-        "a": "Kruger writes from a Reformed evangelical perspective consistent with The Gospel Coalition's confessional stance. Her emphasis is practical discipleship: contentment, mentoring, motherhood, and Bible study shaped by God's Word."
-      }
-    ]
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/melissa-kruger/",
+      "https://melissabkruger.com"
+    ],
+    "education": ""
   },
   {
     "name": "Brianna Lambert",
@@ -2133,29 +2122,34 @@
   {
     "name": "Clinton Manley",
     "slug": "clinton-manley",
-    "bio": "Clinton Manley is an editor for Desiring God and an adjunct instructor at Bethlehem College and Seminary. His articles on Christian living, Scripture, and the beauty of Christ appear regularly at desiringgod.org, and his writing has also been featured at Christ Over All. He and his wife, Mackenzie, have three children and live in Saint Paul, Minnesota.",
+    "bio": "Clinton Manley is an editor for Desiring God and an adjunct instructor for Bethlehem College and Seminary. He lives in Saint Paul and writes articles for Desiring God.",
     "affiliation": "Desiring God",
-    "role": "Editor, Desiring God",
-    "education": "",
+    "role": "Editor",
     "website": "https://www.desiringgod.org/authors/clinton-manley",
     "books": [],
-    "initials": "CM"
+    "initials": "CM",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.desiringgod.org/authors/clinton-manley"
+    ],
+    "education": ""
   },
   {
     "name": "Campbell Markham",
     "slug": "campbell-markham",
-    "bio": "Presbyterian pastor in Tasmania for nearly 20 years and current Moderator of the Presbyterian Church of Tasmania. New Testament teacher and author of Christ Lives in Me commentary on Galatians.",
-    "affiliation": "Presbyterian Church of Tasmania",
-    "role": "Pastor & Moderator",
-    "education": "",
-    "website": "https://au.thegospelcoalition.org/profile/campbell-markham/",
-    "books": [
-      {
-        "title": "Christ Lives in Me",
-        "amazon_url": "https://www.amazon.com/s?k=Christ+Lives+in+Me+Markham"
-      }
+    "bio": "Campbell Markham is the minister of Scots' Church Fremantle in Western Australia, according to his Australian Presbyterian author page. His Substack profile describes him as a Presbyterian pastor in Perth with a PhD in French church history. According to his Gospel Coalition Australia profile, his doctoral research at the University of Western Australia translated and analysed the letters of Marie Durand, who was imprisoned for 38 years for her faith under Louis XV.",
+    "affiliation": "Scots' Church Fremantle",
+    "role": "Minister",
+    "website": "https://ap.org.au/author/campbell-markham/",
+    "books": [],
+    "initials": "CM",
+    "deceased": false,
+    "bio_sources": [
+      "https://ap.org.au/author/campbell-markham/",
+      "https://substack.com/@campbellmarkham",
+      "https://au.thegospelcoalition.org/profile/campbell-markham/"
     ],
-    "initials": "CM"
+    "education": ""
   },
   {
     "name": "Nathaniel Marshall",
@@ -2420,26 +2414,19 @@
   {
     "name": "Michael Mock",
     "slug": "michael-mock",
-    "bio": "Pastor of Grace Presbyterian Church (PCA) in Fresno, California, and ACBC-certified biblical counselor. Former teacher of Spanish, Greek, and theology; earned D.Min in Biblical Counseling from Reformed Presbyterian Theological Seminary.",
-    "affiliation": "Grace Presbyterian Church (PCA)",
-    "role": "Pastor and Biblical Counselor",
-    "education": "M.Div from Phoenix Seminary; D.Min in Biblical Counseling from Reformed Presbyterian Theological Seminary",
-    "website": "https://gracefresno.com",
-    "books": [
-      {
-        "title": "Old Testament Introduction and Workbook",
-        "amazon_url": "https://www.amazon.com/s?k=Old+Testament+Introduction+Workbook+Mock"
-      },
-      {
-        "title": "New Testament Introduction and Workbook",
-        "amazon_url": "https://www.amazon.com/s?k=New+Testament+Introduction+Workbook+Mock"
-      },
-      {
-        "title": "Hey, Dad, Why Do We...?: Kids Ask the Greatest Questions",
-        "amazon_url": "https://www.amazon.com/s?k=Hey+Dad+Why+Do+We+Mock"
-      }
+    "bio": "Michael Mock is pastor of Grace Presbyterian Church (PCA) in Fresno, California, according to his SermonAudio speaker profile. The same profile says he was pastor of Cross Creek Presbyterian Church in Fayetteville, North Carolina, from 2018 to 2024, and that he was a teacher for many years.",
+    "affiliation": "Grace Presbyterian Church (PCA), Fresno",
+    "role": "Pastor",
+    "website": "https://gracefresno.com/author/michael-mock/",
+    "books": [],
+    "initials": "MM",
+    "deceased": false,
+    "bio_sources": [
+      "https://web.sermonaudio.com/speakers/23617/",
+      "https://gracefresno.com/author/michael-mock/",
+      "https://gracefresno.com/?s=Grace+Stings"
     ],
-    "initials": "MM"
+    "education": ""
   },
   {
     "name": "R. Albert Mohler",
@@ -2523,13 +2510,28 @@
   {
     "name": "Jared Moore",
     "slug": "jared-moore",
-    "bio": "Jared Moore (PhD, Southern Baptist Theological Seminary) is pastor of Cumberland Homesteads Baptist Church in Crossville, Tennessee, and has served in Southern Baptist pastoral ministry since 2000, including a term as second vice president of the Southern Baptist Convention. He is the author of The Lust of the Flesh: Thinking Biblically About \"Sexual Orientation,\" Attraction, and Temptation and coauthor of The Pop Culture Parent, and his writing appears in outlets such as Reformation21 and the Aquila Report.",
+    "bio": "Jared Moore has served as senior pastor of Cumberland Homesteads Baptist Church in Crossville, Tennessee, since January 2016, and has been in pastoral ministry since 2000. He holds an MDiv and a PhD in systematic theology from The Southern Baptist Theological Seminary. He is the author of The Lust of the Flesh: Thinking Biblically About \"Sexual Orientation,\" Attraction, and Temptation and 33 Days to Freedom From Lust: A Hope-Filled Devotional. He served as SBC second vice president in 2014.",
     "affiliation": "Cumberland Homesteads Baptist Church",
-    "role": "Pastor & Author",
-    "education": "",
+    "role": "Pastor",
     "website": "https://drjaredmoore.com",
-    "books": [],
-    "initials": "JM"
+    "books": [
+      {
+        "title": "The Lust of the Flesh: Thinking Biblically About \"Sexual Orientation,\" Attraction, and Temptation",
+        "amazon_url": "https://www.amazon.com/s?k=The+Lust+of+the+Flesh%3A+Thinking+Biblically+About+%22Sexual+Orientation%2C%22+Attraction%2C+and+Temptation+Jared+Moore"
+      },
+      {
+        "title": "33 Days to Freedom From Lust: A Hope-Filled Devotional",
+        "amazon_url": "https://www.amazon.com/s?k=33+Days+to+Freedom+From+Lust%3A+A+Hope-Filled+Devotional+Jared+Moore"
+      }
+    ],
+    "initials": "JM",
+    "deceased": false,
+    "bio_sources": [
+      "https://reformation21.org/annihilationism-celibate-gay-theology-2-0/",
+      "https://drjaredmoore.com/about/",
+      "https://www.baptistpress.com/resource-library/news/tennessee-pastor-jared-moore-to-be-nominated-for-sbc-president/"
+    ],
+    "education": ""
   },
   {
     "slug": "russell-moore",
@@ -3207,18 +3209,25 @@
   {
     "name": "Cameron Shaffer",
     "slug": "cameron-shaffer",
-    "bio": "Senior pastor of Langhorne Presbyterian Church and PhD candidate at Vrije Universiteit Amsterdam. Author of Keeping Kids Christian on discipleship and faith retention.",
+    "bio": "Cameron Shaffer is the senior pastor of Langhorne Presbyterian Church in Langhorne, Pennsylvania, and a PhD candidate at Vrije Universiteit Amsterdam. He serves on the board of directors of the World Reformed Fellowship. He is the author of Keeping Kids Christian: Recovering a Biblical Vision for Lifelong Discipleship and writes for Mere Orthodoxy and Reformation21.",
     "affiliation": "Langhorne Presbyterian Church",
-    "role": "Pastor & Author",
-    "education": "Redeemer Seminary (Master of Divinity); University of Glasgow (Master of Theology); Vrije Universiteit Amsterdam (PhD candidate)",
+    "role": "Pastor",
     "website": "https://cameronshaffer.com/",
     "books": [
       {
         "title": "Keeping Kids Christian: Recovering a Biblical Vision for Lifelong Discipleship",
-        "amazon_url": "https://www.amazon.com/s?k=Keeping+Kids+Christian+Shaffer"
+        "amazon_url": "https://www.amazon.com/s?k=Keeping+Kids+Christian%3A+Recovering+a+Biblical+Vision+for+Lifelong+Discipleship+Cameron+Shaffer"
       }
     ],
-    "initials": "CS"
+    "initials": "CS",
+    "deceased": false,
+    "bio_sources": [
+      "https://mereorthodoxy.com/author/cameron-shaffer",
+      "https://cameronshaffer.com/about/",
+      "https://www.langhornepres.org/",
+      "https://reformation21.org/measured-by-the-sowing-church-health-amidst-decline/"
+    ],
+    "education": ""
   },
   {
     "slug": "mark-shaw",
@@ -3332,22 +3341,31 @@
   {
     "name": "Andrew Spencer",
     "slug": "andrew-spencer",
-    "bio": "PhD-holding theologian and associate editor for books at The Gospel Coalition. Elder at CrossPointe Church with expertise in biblical theology and creation care.",
+    "bio": "Andrew Spencer serves as associate editor for books at The Gospel Coalition and holds a PhD from Southeastern Baptist Theological Seminary. He is the author of Hope for God's Creation: Stewardship in an Age of Futility and Doctrine in Shades of Green: Theological Perspective for Environmental Ethics, and the editor of The Christian Mind of C. S. Lewis: Essays in Honor of Michael Travers. He is an elder at CrossPointe Church and lives in southeast Michigan.",
     "affiliation": "The Gospel Coalition",
-    "role": "Associate Editor & Theologian",
-    "education": "Southeastern Baptist Theological Seminary (PhD)",
+    "role": "Associate Editor for Books",
     "website": "https://www.thegospelcoalition.org/profile/andrew-spencer/",
     "books": [
       {
         "title": "Hope for God's Creation: Stewardship in an Age of Futility",
-        "amazon_url": "https://www.amazon.com/s?k=Hope+for+God+Creation+Spencer"
+        "amazon_url": "https://www.amazon.com/s?k=Hope+for+God%27s+Creation%3A+Stewardship+in+an+Age+of+Futility+Andrew+Spencer"
       },
       {
-        "title": "Doctrine in Shades of Green",
-        "amazon_url": "https://www.amazon.com/s?k=Doctrine+Shades+Green+Spencer"
+        "title": "Doctrine in Shades of Green: Theological Perspective for Environmental Ethics",
+        "amazon_url": "https://www.amazon.com/s?k=Doctrine+in+Shades+of+Green%3A+Theological+Perspective+for+Environmental+Ethics+Andrew+Spencer"
+      },
+      {
+        "title": "The Christian Mind of C. S. Lewis: Essays in Honor of Michael Travers",
+        "amazon_url": "https://www.amazon.com/s?k=The+Christian+Mind+of+C.+S.+Lewis%3A+Essays+in+Honor+of+Michael+Travers+Andrew+Spencer"
       }
     ],
-    "initials": "AS"
+    "initials": "AS",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/andrew-spencer/",
+      "https://www.thegospelcoalition.org/reviews/religious-left-wuthnow/"
+    ],
+    "education": ""
   },
   {
     "name": "Daniel Stegeman",
@@ -4423,13 +4441,18 @@
   {
     "name": "Grant Dutro",
     "slug": "grant-dutro",
-    "bio": "Grant Dutro is an editorial project coordinator and Young Storytellers Fellow at Christianity Today, based in Nashville, Tennessee. He is pursuing a Master of Theological Studies at Vanderbilt Divinity School, and his writing explores modern culture through a theological lens.",
+    "bio": "Grant Dutro is editorial project coordinator at Christianity Today. He lives in Nashville, Tennessee, and is pursuing a Master of Theological Studies at Vanderbilt Divinity School.",
     "affiliation": "Christianity Today",
-    "role": "Journalist & Editor",
-    "education": "",
-    "website": "",
+    "role": "Editorial Project Coordinator",
+    "website": "https://www.christianitytoday.com/writers/grant-dutro/",
     "books": [],
-    "initials": "GD"
+    "initials": "GD",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.christianitytoday.com/writers/grant-dutro/",
+      "https://www.christianitytoday.com/2026/10/mark-the-monk-orthodox-evangelical/"
+    ],
+    "education": ""
   },
   {
     "name": "David Kent",
@@ -5093,14 +5116,27 @@
   {
     "name": "Michael Keller",
     "slug": "michael-keller",
-    "bio": "Michael Keller (PhD, Vrije Universiteit Amsterdam) is the founding and senior pastor of Redeemer Presbyterian Church Lincoln Square in New York City, a Council member of The Gospel Coalition, and a fellow of the Keller Center for Cultural Apologetics. The son of Tim and Kathy Keller, he holds an MDiv and ThM from Gordon-Conwell Theological Seminary and is the author of The Stories We Live By: How Jesus Critiques and Completes What Our Culture Tells Us.",
+    "bio": "Michael Keller is the founding and senior pastor of Redeemer Presbyterian Church Lincoln Square and a Council member of The Gospel Coalition. He studied at Gordon-Conwell Seminary and earned a PhD at Vrije Universiteit Amsterdam in computational linguistics applied to historical theology. He is the author of books including The Stories We Live By: Seven Cultural Myths That Fail Us and the Story That Never Will and Talking to Kids About Hard Things.",
     "affiliation": "Redeemer Presbyterian Church Lincoln Square",
-    "role": "Founding & Senior Pastor",
-    "education": "",
+    "role": "Pastor",
     "website": "https://redeemerlsq.com",
-    "books": [],
+    "books": [
+      {
+        "title": "The Stories We Live By: Seven Cultural Myths That Fail Us and the Story That Never Will",
+        "amazon_url": "https://www.amazon.com/s?k=The+Stories+We+Live+By%3A+Seven+Cultural+Myths+That+Fail+Us+and+the+Story+That+Never+Will+Michael+Keller"
+      },
+      {
+        "title": "Talking to Kids About Hard Things",
+        "amazon_url": "https://www.amazon.com/s?k=Talking+to+Kids+About+Hard+Things+Michael+Keller"
+      }
+    ],
     "initials": "MK",
-    "bio_sources": []
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/article/algorithm-self-ai/",
+      "https://www.thegospelcoalition.org/profile/michael-keller/"
+    ],
+    "deceased": false,
+    "education": ""
   },
   {
     "name": "Aaron Garriott",
@@ -7309,13 +7345,18 @@
   {
     "name": "Paul Levy",
     "slug": "paul-levy",
-    "bio": "Paul Levy is a thoughtful Christian writer and curator focused on biblical wisdom and spiritual formation. His work emphasizes the integration of faith with eve",
-    "affiliation": "",
-    "role": "Contributor",
-    "education": "",
-    "website": "",
+    "bio": "Paul Levy is minister of International Presbyterian Church Ealing in West London, according to his Ligonier Ministries author page.",
+    "affiliation": "International Presbyterian Church Ealing",
+    "role": "Minister",
+    "website": "https://learn.ligonier.org/teachers/paul-levy",
     "books": [],
-    "initials": "PL"
+    "initials": "PL",
+    "deceased": false,
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/paul-levy",
+      "https://learn.ligonier.org/articles/why-should-i-go-to-church"
+    ],
+    "education": ""
   },
   {
     "name": "Robert Mackey",
@@ -7511,13 +7552,23 @@
   {
     "name": "Brad Edwards",
     "slug": "brad-edwards",
-    "bio": "Brad Edwards is a Christian author and speaker known for his work on biblical leadership and spiritual formation. He has contributed to various Christian publications and speaks at churches and conferences on topics related to faith, discipleship, and Christian living.",
-    "affiliation": "",
-    "role": "Author & Speaker",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "BE"
+    "bio": "Brad Edwards is the planter and lead pastor of The Table Church in Boulder County, Colorado. He cohosts the PostEverything podcast and has written for Mere Orthodoxy. He is the author of The Reason for Church.",
+    "affiliation": "The Table Church",
+    "role": "Pastor",
+    "website": "https://www.thegospelcoalition.org/profile/brad-edwards/",
+    "books": [
+      {
+        "title": "The Reason for Church",
+        "amazon_url": "https://www.amazon.com/s?k=The+Reason+for+Church+Brad+Edwards"
+      }
+    ],
+    "initials": "BE",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/reviews/all-in-your-head/",
+      "https://www.thegospelcoalition.org/profile/brad-edwards/"
+    ],
+    "education": ""
   },
   {
     "name": "Caleb Cangelosi",
@@ -7613,13 +7664,19 @@
   {
     "name": "Kendall Lankford",
     "slug": "kendall-lankford",
-    "bio": "Kendall Lankford is a Reformed pastor and church planter who serves as lead pastor of The Shepherd's Church in Massachusetts. A biblical counselor, he hosts The PRODCAST and writes and speaks on theology, discipleship, and cultural engagement from a confessionally Reformed perspective.",
-    "affiliation": "The Shepherd's Church",
-    "role": "Pastor & Writer",
-    "education": "",
-    "website": "https://www.theshepherds.church/",
+    "bio": "Kendall Lankford is a pastor of The Shepherd's Church in Chelmsford, Massachusetts, where he has served since 2019, according to a bio published by Christ the King Reformed Church in Groton. The Shepherd's Church lists him as teaching pastor on its session.",
+    "affiliation": "The Shepherd's Church (Chelmsford, MA)",
+    "role": "Pastor",
+    "website": "https://www.theshepherds.church/leadership",
     "books": [],
-    "initials": "KL"
+    "initials": "KL",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.theshepherds.church/leadership",
+      "https://ctkreformed.com/people/kendall-lankford",
+      "https://www.theshepherds.church/blog"
+    ],
+    "education": ""
   },
   {
     "name": "Chandler Vannoy",
@@ -7821,18 +7878,33 @@
   {
     "name": "Scott Yenor",
     "slug": "scott-yenor",
-    "bio": "Scott Yenor is a political philosopher and professor who writes thoughtfully about family, culture, and political order from a Christian perspective. His work examines how faith and traditional values intersect with contemporary social and political challenges.",
-    "affiliation": "Boise State University; The American Conservative; Public Discourse",
-    "role": "Professor of Political Science & Writer",
-    "education": "Ph.D. in Government, Claremont Graduate University",
-    "website": "",
+    "bio": "Scott Yenor is chairman of the American Citizenship Initiative at the Heritage Foundation, and has taught political science at Boise State University. He is the author of Family Politics: The Idea of Marriage in Modern Political Thought, Hume's Humanity, and The Recovery of Family Life: Exposing the Limits of Modern Ideologies. He writes for American Reformer and other conservative publications.",
+    "affiliation": "The Heritage Foundation",
+    "role": "Political Scientist",
+    "website": "https://americanreformer.org/2026/06/against-caesars-cost-of-glory/",
     "books": [
       {
-        "title": "Family and the Politics of Modernity",
-        "amazon_url": "https://www.amazon.com/s?k=Family+Politics+Modernity+Scott+Yenor"
+        "title": "Family Politics: The Idea of Marriage in Modern Political Thought",
+        "amazon_url": "https://www.amazon.com/s?k=Family+Politics%3A+The+Idea+of+Marriage+in+Modern+Political+Thought+Scott+Yenor"
+      },
+      {
+        "title": "Hume's Humanity",
+        "amazon_url": "https://www.amazon.com/s?k=Hume%27s+Humanity+Scott+Yenor"
+      },
+      {
+        "title": "The Recovery of Family Life: Exposing the Limits of Modern Ideologies",
+        "amazon_url": "https://www.amazon.com/s?k=The+Recovery+of+Family+Life%3A+Exposing+the+Limits+of+Modern+Ideologies+Scott+Yenor"
       }
     ],
-    "initials": "SY"
+    "initials": "SY",
+    "deceased": false,
+    "bio_sources": [
+      "https://americanreformer.org/2026/06/against-caesars-cost-of-glory/",
+      "https://americanreformer.org/2026/05/fixing-the-failures-of-the-pro-life-movement/",
+      "https://jamesgmartin.center/author/syenor/",
+      "https://www.accsedu.org/dr-scott-yenor/"
+    ],
+    "education": ""
   },
   {
     "name": "Ramon Presson",
@@ -8254,30 +8326,23 @@
   {
     "name": "Brian Croft",
     "slug": "brian-croft",
-    "bio": "Brian Croft is a pastor and author dedicated to equipping church leaders and churches with biblical wisdom for ministry. He has spent years helping pastors navigate the challenges of leadership while maintaining spiritual health and family priorities. Through his writing and speaking, Croft encourages believers to pursue authentic Christian community and Christ-centered pastoral ministry.",
-    "affiliation": "Treasuring Christ Together; The Practical Shepherd",
-    "role": "Pastor & Author",
-    "education": "Southern Baptist Theological Seminary",
-    "website": "https://www.treasuringchristtogether.com",
+    "bio": "Brian Croft is founder and executive director of Practical Shepherding and a senior fellow for the Mathena Center for Church Revitalization, according to his Ligonier Ministries teacher page. He is the author of several books, including The Pastor's Ministry.",
+    "affiliation": "Practical Shepherding",
+    "role": "Pastor and Author",
+    "website": "https://learn.ligonier.org/teachers/brian-croft",
     "books": [
       {
-        "title": "The Practical Shepherd: A Reformed Approach to Pastoral Ministry",
-        "amazon_url": "https://www.amazon.com/s?k=The+Practical+Shepherd+Brian+Croft"
-      },
-      {
-        "title": "Visit the Sick: Ministering God's Love in Times of Illness",
-        "amazon_url": "https://www.amazon.com/s?k=Visit+the+Sick+Brian+Croft"
-      },
-      {
-        "title": "Prayer: The Timeless Secret of High-Impact Leaders",
-        "amazon_url": "https://www.amazon.com/s?k=Prayer+Timeless+Secret+High+Impact+Leaders+Brian+Croft"
-      },
-      {
-        "title": "Encourage the Fainthearted: Ministering God's Love in Times of Weakness",
-        "amazon_url": "https://www.amazon.com/s?k=Encourage+the+Fainthearted+Brian+Croft"
+        "title": "The Pastor's Ministry",
+        "amazon_url": "https://www.amazon.com/s?k=The+Pastor%27s+Ministry+Brian+Croft"
       }
     ],
-    "initials": "BC"
+    "initials": "BC",
+    "deceased": false,
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/brian-croft",
+      "https://learn.ligonier.org/articles/the-bible-and-friendship"
+    ],
+    "education": ""
   },
   {
     "name": "J.T. Reeves",
@@ -8338,34 +8403,35 @@
   {
     "name": "Rosaria Butterfield",
     "slug": "rosaria-butterfield",
-    "bio": "Rosaria Butterfield is a former tenured English professor and LGBTQ+ activist who became a committed Christian, documenting her transformation in her widely-read memoir. She writes thoughtfully about faith, sexuality, hospitality, and the power of the gospel to change lives, speaking from personal experience and deep theological conviction.",
-    "affiliation": "Christianity Today, The Gospel Coalition",
-    "role": "Author & Speaker",
-    "education": "PhD, Syracuse University",
-    "website": "",
+    "bio": "Rosaria Butterfield is an author and speaker and a former professor of English and women's studies at Syracuse University. She holds a PhD from Ohio State University. Her memoir The Secret Thoughts of an Unlikely Convert: An English Professor's Journey into Christian Faith describes her conversion, and her other books include Openness Unhindered, The Gospel Comes with a House Key, and Five Lies of Our Anti-Christian Age. She writes for Reformation21.",
+    "affiliation": "",
+    "role": "Author",
+    "website": "https://www.crossway.org/authors/rosaria-butterfield/",
     "books": [
       {
-        "title": "The Secret Thoughts of an Unlikely Convert",
-        "amazon_url": "https://www.amazon.com/s?k=The+Secret+Thoughts+of+an+Unlikely+Convert+Rosaria+Butterfield"
+        "title": "The Secret Thoughts of an Unlikely Convert: An English Professor's Journey into Christian Faith",
+        "amazon_url": "https://www.amazon.com/s?k=The+Secret+Thoughts+of+an+Unlikely+Convert%3A+An+English+Professor%27s+Journey+into+Christian+Faith+Rosaria+Butterfield"
       },
       {
-        "title": "Openness Unhindered: Further Thoughts of an Unlikely Convert on Sexual Identity and Union with Christ",
+        "title": "Openness Unhindered",
         "amazon_url": "https://www.amazon.com/s?k=Openness+Unhindered+Rosaria+Butterfield"
       },
       {
-        "title": "The Gospel Comes with a House Key: Practicing Radically Ordinary Hospitality in Our Post-Christian World",
+        "title": "The Gospel Comes with a House Key",
         "amazon_url": "https://www.amazon.com/s?k=The+Gospel+Comes+with+a+House+Key+Rosaria+Butterfield"
       },
       {
-        "title": "Repenting of Religion",
-        "amazon_url": "https://www.amazon.com/s?k=Repenting+of+Religion+Rosaria+Butterfield"
-      },
-      {
-        "title": "The Single Woman and the Will of God",
-        "amazon_url": "https://www.amazon.com/s?k=The+Single+Woman+and+the+Will+of+God+Rosaria+Butterfield"
+        "title": "Five Lies of Our Anti-Christian Age",
+        "amazon_url": "https://www.amazon.com/s?k=Five+Lies+of+Our+Anti-Christian+Age+Rosaria+Butterfield"
       }
     ],
-    "initials": "RB"
+    "initials": "RB",
+    "deceased": false,
+    "bio_sources": [
+      "https://reformation21.org/annihilationism-celibate-gay-theology-2-0/",
+      "https://www.crossway.org/authors/rosaria-butterfield/"
+    ],
+    "education": ""
   },
   {
     "name": "Cassie Achermann",
@@ -9587,29 +9653,48 @@
   {
     "name": "Matthew Harmon",
     "slug": "matthew-harmon",
-    "bio": "Matthew Harmon is a biblical scholar and author known for his work in New Testament studies and biblical theology. He has contributed significantly to evangelical Christian understanding of Scripture through his writing and teaching ministry.",
-    "affiliation": "",
-    "role": "Biblical Scholar & Author",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MH"
+    "bio": "Matthew Harmon is professor of New Testament studies at Grace College and Theological Seminary in Winona Lake, Indiana, and holds a PhD from Wheaton College. He has written commentaries on Galatians, Philippians, 2 Peter, and Jude, and books on biblical theology including Rebels and Exiles: A Biblical Theology of Sin and Restoration and The Servant of the Lord and His Servant People: Tracing a Biblical Theme through the Canon. He writes for The Gospel Coalition's Carson Center.",
+    "affiliation": "Grace College and Theological Seminary",
+    "role": "Professor of New Testament",
+    "website": "https://www.thegospelcoalition.org/profile/matthew-harmon/",
+    "books": [
+      {
+        "title": "Rebels and Exiles: A Biblical Theology of Sin and Restoration",
+        "amazon_url": "https://www.amazon.com/s?k=Rebels+and+Exiles%3A+A+Biblical+Theology+of+Sin+and+Restoration+Matthew+Harmon"
+      },
+      {
+        "title": "The Servant of the Lord and His Servant People: Tracing a Biblical Theme through the Canon",
+        "amazon_url": "https://www.amazon.com/s?k=The+Servant+of+the+Lord+and+His+Servant+People%3A+Tracing+a+Biblical+Theme+through+the+Canon+Matthew+Harmon"
+      }
+    ],
+    "initials": "MH",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/article/enoch-why-jude-quote/",
+      "https://www.thegospelcoalition.org/profile/matthew-harmon/"
+    ],
+    "education": ""
   },
   {
     "name": "John Seel",
     "slug": "john-seel",
-    "bio": "John Seel is a writer and cultural commentator who explores the intersection of Christian faith and contemporary culture. He engages thoughtfully with how believers can navigate modern life while maintaining biblical convictions.",
-    "affiliation": "",
-    "role": "Writer & Cultural Commentator",
-    "education": "",
-    "website": "",
+    "bio": "John Seel is a writer and strategist. He is a principal at The Reframe and academic dean at St. Andrew's College, and lives in Wilmington, North Carolina. He is the author of Liminal Leadership: Tools for Navigating a Change of Age, and has written guest essays for Aaron Renn's newsletter.",
+    "affiliation": "The Reframe; St. Andrew's College",
+    "role": "Writer and Strategist",
+    "website": "https://www.aaronrenn.com/p/nihilism-with-a-business-model",
     "books": [
       {
-        "title": "The New Evangelicalism",
-        "amazon_url": "https://www.amazon.com/s?k=The+New+Evangelicalism+John+Seel"
+        "title": "Liminal Leadership: Tools for Navigating a Change of Age",
+        "amazon_url": "https://www.amazon.com/s?k=Liminal+Leadership%3A+Tools+for+Navigating+a+Change+of+Age+John+Seel"
       }
     ],
-    "initials": "JS"
+    "initials": "JS",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.aaronrenn.com/p/nihilism-with-a-business-model",
+      "https://www.aaronrenn.com/p/put-the-destination-in-the-frame"
+    ],
+    "education": ""
   },
   {
     "name": "Susan Bennett",
@@ -10048,22 +10133,39 @@
   {
     "name": "Jen Oshman",
     "slug": "jen-oshman",
-    "bio": "Jen Oshman is an author and speaker who writes about faith, womanhood, and Christian living for modern women. Her work encourages believers to integrate their faith into everyday life with authenticity and biblical grounding. She is known for her accessible, conversational approach to spiritual topics that resonate with contemporary Christian women.",
-    "affiliation": "Various Christian publications and speaking platforms",
-    "role": "Author & Speaker",
-    "education": "",
-    "website": "",
+    "bio": "Jen Oshman has worked in women's ministry for more than two decades on three continents and is director of women's ministry at her church. Her family lives in Colorado, where they planted Redemption Parker. She is the author of Very Good: What the Bible Says About Being a Woman, Enough About Me, Cultural Counterfeits, It's Good to Be a Girl and Welcome.",
+    "affiliation": "",
+    "role": "Author",
+    "website": "https://www.thegospelcoalition.org/profile/jen-oshman/",
     "books": [
       {
-        "title": "Toward Home: God's Call to Community",
-        "amazon_url": "https://www.amazon.com/s?k=Toward+Home+God%27s+Call+to+Community+Jen+Oshman"
+        "title": "Very Good: What the Bible Says About Being a Woman",
+        "amazon_url": "https://www.amazon.com/s?k=Very+Good%3A+What+the+Bible+Says+About+Being+a+Woman+Jen+Oshman"
       },
       {
-        "title": "Awake: A Practical Guide to Confidently Living Out Your Faith",
-        "amazon_url": "https://www.amazon.com/s?k=Awake+Practical+Guide+Confidently+Living+Out+Your+Faith+Jen+Oshman"
+        "title": "Enough About Me",
+        "amazon_url": "https://www.amazon.com/s?k=Enough+About+Me+Jen+Oshman"
+      },
+      {
+        "title": "Cultural Counterfeits",
+        "amazon_url": "https://www.amazon.com/s?k=Cultural+Counterfeits+Jen+Oshman"
+      },
+      {
+        "title": "It's Good to Be a Girl",
+        "amazon_url": "https://www.amazon.com/s?k=It%27s+Good+to+Be+a+Girl+Jen+Oshman"
+      },
+      {
+        "title": "Welcome",
+        "amazon_url": "https://www.amazon.com/s?k=Welcome+Jen+Oshman"
       }
     ],
-    "initials": "JO"
+    "initials": "JO",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/jen-oshman/",
+      "https://www.thegospelcoalition.org/article/women-leaving-church-reverse/"
+    ],
+    "education": ""
   },
   {
     "name": "Bryan Rose",
@@ -10877,13 +10979,17 @@
   {
     "name": "PJ Dunn",
     "slug": "pj-dunn",
-    "bio": "PJ Dunn is founder and president of Table for One Ministries, launched in 2013 to disciple single adults, and serves in church revitalization with the Georgia Baptist Mission Board. An adjunct professor at New Orleans Baptist Theological Seminary and a Lifeway author, he travels nationally speaking and coaching on singles ministry and young-adult discipleship, including how churches can help young adults engage AI with biblical wisdom.",
-    "affiliation": "Table for One Ministries",
-    "role": "Ministry Founder & Author",
-    "education": "",
-    "website": "",
+    "bio": "PJ Dunn works to reach and equip single adults through discipleship. He travels nationally speaking, coaching, and creating content for singles and the local church, and writes for Lifeway Research on ministry to young adults.",
+    "affiliation": "",
+    "role": "Speaker and Writer",
+    "website": "https://research.lifeway.com/2026/08/06/connecting-young-adults-to-mentors-in-your-church/",
     "books": [],
-    "initials": "PJD"
+    "initials": "PJD",
+    "deceased": false,
+    "bio_sources": [
+      "https://research.lifeway.com/2026/08/06/connecting-young-adults-to-mentors-in-your-church/"
+    ],
+    "education": ""
   },
   {
     "name": "Zak Mellgren",
@@ -11284,13 +11390,19 @@
   {
     "name": "Danson Ottawa",
     "slug": "danson-ottawa",
-    "bio": "Danson Ottawa (BTh, MDiv, Africa International University) is a Kenyan theologian and the national coordinator of the Africa Center for Apologetics Research (ACFAR), Kenya, equipping African believers in apologetics, discernment, and cult evangelism. He teaches theology and apologetics at Africa International University and is a regular contributor to The Gospel Coalition Africa and Langham's ASET Series.",
-    "affiliation": "Africa Center for Apologetics Research (Kenya) / Africa International University",
-    "role": "Theologian & Apologist",
-    "education": "",
+    "bio": "Danson Ottawa is the National Coordinator of the Africa Center for Apologetics Research (ACFAR) in Kenya and lectures in apologetics and theology at Africa International University, where he earned a Master of Divinity in biblical studies. He is a member of Emmanuel Baptist Church in Nairobi. His Substack about page says he writes for The Gospel Coalition Africa and Christian Daily International.",
+    "affiliation": "Africa Center for Apologetics Research; Africa International University",
+    "role": "Apologist and Lecturer",
     "website": "https://dansonottawa.substack.com/",
     "books": [],
-    "initials": "DO"
+    "initials": "DO",
+    "deceased": false,
+    "bio_sources": [
+      "https://acfar.org/about/our-leadership/member-detail/1789879",
+      "https://africa.thegospelcoalition.org/profile/danson-ottawa/",
+      "https://dansonottawa.substack.com/about"
+    ],
+    "education": ""
   },
   {
     "name": "Preston Sprinkle",
@@ -11460,38 +11572,18 @@
   {
     "name": "Don Carson",
     "slug": "don-carson",
-    "bio": "D.A. Carson is a renowned biblical scholar and theologian who has shaped evangelical Christianity through decades of rigorous Scripture study and teaching. As co-founder of The Gospel Coalition and professor emeritus at Trinity Evangelical Divinity School, he has written extensively on New Testament theology, biblical interpretation, and Christian apologetics. His work emphasizes careful exegesis, doctrinal clarity, and the practical application of God's Word to contemporary faith.",
-    "affiliation": "The Gospel Coalition, Trinity Evangelical Divinity School",
-    "role": "Biblical Scholar, Theologian & Author",
-    "education": "Ph.D. in New Testament, University of Cambridge",
-    "website": "https://www.thegospelcoalition.org/",
-    "books": [
-      {
-        "title": "The Intrepid Gospel",
-        "amazon_url": "https://www.amazon.com/s?k=The+Intrepid+Gospel+Don+Carson"
-      },
-      {
-        "title": "The Difficult Doctrine of the Love of God",
-        "amazon_url": "https://www.amazon.com/s?k=The+Difficult+Doctrine+of+the+Love+of+God+Don+Carson"
-      },
-      {
-        "title": "Exegetical Fallacies",
-        "amazon_url": "https://www.amazon.com/s?k=Exegetical+Fallacies+Don+Carson"
-      },
-      {
-        "title": "How Long, O Lord?",
-        "amazon_url": "https://www.amazon.com/s?k=How+Long+O+Lord+Don+Carson"
-      },
-      {
-        "title": "The God Who Is There",
-        "amazon_url": "https://www.amazon.com/s?k=The+God+Who+Is+There+Don+Carson"
-      },
-      {
-        "title": "Scandalous: The Cross and Resurrection of Jesus",
-        "amazon_url": "https://www.amazon.com/s?k=Scandalous+The+Cross+and+Resurrection+of+Jesus+Don+Carson"
-      }
+    "bio": "Don Carson is emeritus professor of New Testament at Trinity Evangelical Divinity School in Deerfield, Illinois, and a cofounder of The Gospel Coalition, from which he has retired. He studied at McGill University, Central Baptist Seminary in Toronto, and the University of Cambridge, where he earned his PhD. He has written and edited numerous books, and classic recordings of his discussions are republished on The Gospel Coalition's podcasts.",
+    "affiliation": "Trinity Evangelical Divinity School",
+    "role": "Professor Emeritus of New Testament",
+    "website": "https://www.thegospelcoalition.org/profile/don-carson/",
+    "books": [],
+    "initials": "DAC",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/don-carson/",
+      "https://www.thegospelcoalition.org/podcasts/tgc-podcast/understand-holy-trinity/"
     ],
-    "initials": "DAC"
+    "education": ""
   },
   {
     "name": "Kathleen Nielson",
@@ -11979,13 +12071,18 @@
   {
     "name": "R. Andrew Compton",
     "slug": "r-andrew-compton",
-    "bio": "R. Andrew Compton is a pastor and Christian author devoted to expository preaching and biblical teaching. He writes thoughtfully about Scripture and pastoral ministry for a Protestant evangelical audience. Compton is known for his commitment to helping churches understand and apply God's Word.",
-    "affiliation": "",
-    "role": "Pastor & Author",
-    "education": "",
-    "website": "",
+    "bio": "R. Andrew Compton is professor of Old Testament studies, director of the master of theological studies program and registrar at Mid-America Reformed Seminary in Dyer, Indiana. He is a minister in the United Reformed Churches in North America and an associate pastor at Redeemer United Reformed Church. He holds degrees from Dordt College, Westminster Seminary California, the University of California, Los Angeles, and a Ph.D. from the University of Pretoria.",
+    "affiliation": "Mid-America Reformed Seminary",
+    "role": "Professor of Old Testament",
+    "website": "https://www.midamerica.edu/faculty/andrew-compton",
     "books": [],
-    "initials": "RAC"
+    "initials": "RAC",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.midamerica.edu/faculty/andrew-compton",
+      "https://learn.ligonier.org/articles/how-did-noah-point-to-christ"
+    ],
+    "education": ""
   },
   {
     "name": "Justin Dillehay",
@@ -12034,24 +12131,41 @@
   {
     "name": "Jon Coombs",
     "slug": "jon-coombs",
-    "bio": "Jon Coombs is lead pastor of Mooroolbark Baptist Church in Melbourne, Australia, and has served in ministry for two decades across churches, schools, and mission agencies, including years as a youth and associate pastor. He holds an MDiv from the Melbourne School of Theology and writes regularly on discipleship, pastoral care, and everyday faith at joncoombs.com, The Gospel Coalition Australia, and Rooted Ministry.",
+    "bio": "Jon Coombs is lead pastor of Mooroolbark Baptist Church in Melbourne, Australia, a role he took up in April 2022. He has worked in ministry for more than 15 years across churches, schools, mission agencies and nonprofits, and holds a Master of Divinity from Melbourne School of Theology. He writes about life and faith on his blog.",
     "affiliation": "Mooroolbark Baptist Church",
     "role": "Pastor",
-    "education": "",
     "website": "https://joncoombs.com",
     "books": [],
-    "initials": "JC"
+    "initials": "JC",
+    "deceased": false,
+    "bio_sources": [
+      "https://joncoombs.com/about",
+      "https://au.thegospelcoalition.org/profile/jon-coombs/",
+      "https://joncoombs.com"
+    ],
+    "education": ""
   },
   {
     "name": "Simon van Bruchem",
     "slug": "simon-van-bruchem",
-    "bio": "Simon van Bruchem is a Christian author and speaker known for his contributions to faith-based content and theological reflection. His work engages contemporary Christian audiences with thoughtful perspectives on spiritual growth and biblical understanding.",
-    "affiliation": "",
-    "role": "Author & Speaker",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SVB"
+    "bio": "Simon van Bruchem is a pastor of All Nations Presbyterian Church in Perth, Western Australia, where he has served since 2007. He completed a Master of Divinity at Trinity Theological College after a previous career as an industrial chemist. He is the author of Distinctively Christian Retirement and writes the blog Written For Our Instruction.",
+    "affiliation": "All Nations Presbyterian Church, Perth",
+    "role": "Pastor",
+    "website": "https://www.writtenforourinstruction.com/",
+    "books": [
+      {
+        "title": "Distinctively Christian Retirement",
+        "amazon_url": "https://www.amazon.com/s?k=Distinctively+Christian+Retirement+Simon+van+Bruchem"
+      }
+    ],
+    "initials": "SVB",
+    "deceased": false,
+    "bio_sources": [
+      "https://au.thegospelcoalition.org/profile/simon-van-bruchem/",
+      "https://au.thegospelcoalition.org/article/the-value-of-older-models",
+      "https://www.writtenforourinstruction.com/"
+    ],
+    "education": ""
   },
   {
     "name": "Jacob Percy",
@@ -12535,13 +12649,22 @@
   {
     "name": "Thomas West",
     "slug": "thomas-west",
-    "bio": "Thomas West is a Christian author and thinker known for his work exploring the intersection of faith, culture, and classical Christian education. His writings engage evangelical audiences with thoughtful analysis of how Christian worldview shapes contemporary life and learning.",
-    "affiliation": "",
-    "role": "Author & Christian Educator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "TW"
+    "bio": "Thomas West is the senior pastor of Nashville First Baptist Church and an adjunct professor of theology at Belmont University and Southeastern Seminary, where he earned his PhD. Before coming to Nashville he spent five years planting a church in London. He is the coauthor, with Trevin Wax, of The Gospel Way Catechism.",
+    "affiliation": "Nashville First Baptist Church",
+    "role": "Pastor",
+    "website": "https://www.thegospelcoalition.org/article/bible-belt-mission-field/",
+    "books": [
+      {
+        "title": "The Gospel Way Catechism",
+        "amazon_url": "https://www.amazon.com/s?k=The+Gospel+Way+Catechism+Thomas+West"
+      }
+    ],
+    "initials": "TW",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/article/bible-belt-mission-field/"
+    ],
+    "education": ""
   },
   {
     "name": "Abdi Latif Dahir",
@@ -13483,22 +13606,32 @@
   {
     "name": "Costi Hinn",
     "slug": "costi-hinn",
-    "bio": "Costi Hinn is a pastor, author, and speaker known for his biblical teaching and commitment to expository preaching. He has been involved in Christian ministry and has written on topics related to faith, discipleship, and church leadership. Costi is dedicated to helping believers grow deeper in their understanding of Scripture and its practical application to daily life.",
-    "affiliation": "Renewal Chapel",
-    "role": "Pastor & Author",
-    "education": "",
-    "website": "",
+    "bio": "Costi Hinn is teaching pastor of Shepherd's House Bible Church in Chandler, Arizona, and the founder and president of For The Gospel. He graduated from Midwestern Baptist Theological Seminary, and For The Gospel describes him as a doctoral candidate at The Master's Seminary. His books include God, Greed, and the (Prosperity) Gospel, More Than a Healer and Knowing the Spirit.",
+    "affiliation": "Shepherd's House Bible Church; For The Gospel",
+    "role": "Pastor and Author",
+    "website": "https://www.forthegospel.org/team",
     "books": [
       {
-        "title": "Knowing Jesus Through the Old Testament",
-        "amazon_url": "https://www.amazon.com/s?k=Knowing+Jesus+Through+the+Old+Testament+Costi+Hinn"
+        "title": "God, Greed, and the (Prosperity) Gospel",
+        "amazon_url": "https://www.amazon.com/s?k=God%2C+Greed%2C+and+the+%28Prosperity%29+Gospel+Costi+Hinn"
       },
       {
-        "title": "The Messiah Conspiracy",
-        "amazon_url": "https://www.amazon.com/s?k=The+Messiah+Conspiracy+Costi+Hinn"
+        "title": "More Than a Healer",
+        "amazon_url": "https://www.amazon.com/s?k=More+Than+a+Healer+Costi+Hinn"
+      },
+      {
+        "title": "Knowing the Spirit",
+        "amazon_url": "https://www.amazon.com/s?k=Knowing+the+Spirit+Costi+Hinn"
       }
     ],
-    "initials": "CH"
+    "initials": "CH",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.shepherdsaz.org/costi-hinn",
+      "https://www.forthegospel.org/team",
+      "https://www.forthegospel.org/read/8-signs-youre-spiritually-drifting"
+    ],
+    "education": ""
   },
   {
     "name": "Carter Moore",
@@ -13582,13 +13715,18 @@
   {
     "name": "Adam Niess",
     "slug": "adam-niess",
-    "bio": "Adam Niess is a Christian author and content creator dedicated to helping believers deepen their faith and understanding of Scripture. Through his writing and teaching, he explores practical applications of biblical truth for contemporary Christian living.",
-    "affiliation": "",
-    "role": "Author & Content Creator",
-    "education": "",
-    "website": "",
+    "bio": "Adam Niess is senior pastor of the Reformed Presbyterian Church of Lafayette, Indiana. In a May 2026 essay he wrote that he studied at Indiana University's Jacobs School of Music before entering the ministry, and that he had spent 14 years in pastoral ministry in the Reformed Presbyterian Church of North America. His author bio on Gentle Reformation notes that he is ACBC certified.",
+    "affiliation": "Reformed Presbyterian Church of Lafayette (IN)",
+    "role": "Pastor",
+    "website": "https://gentlereformation.com/2026/05/13/from-music-school-to-the-ministry/",
     "books": [],
-    "initials": "AN"
+    "initials": "AN",
+    "deceased": false,
+    "bio_sources": [
+      "https://gentlereformation.com/2026/08/12/the-firstborn-over-all-creation/",
+      "https://gentlereformation.com/2026/05/13/from-music-school-to-the-ministry/"
+    ],
+    "education": ""
   },
   {
     "name": "Jackie Hill Perry",
@@ -13857,13 +13995,22 @@
   {
     "name": "Ryan Swale",
     "slug": "ryan-swale",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RS"
+    "bio": "Ryan Swale is pastor of Immanuel United Reformed Church in Jordan Station, Ontario, according to his author note at The Gospel Coalition. He holds a DMin from Reformed Presbyterian Theological Seminary and is the author of Cries of a Conquering King: A Practical Theology of the Imprecatory Psalms.",
+    "affiliation": "Immanuel United Reformed Church",
+    "role": "Pastor",
+    "website": "https://www.thegospelcoalition.org/article/voice-martyrs-prayers-persecuted/",
+    "books": [
+      {
+        "title": "Cries of a Conquering King: A Practical Theology of the Imprecatory Psalms",
+        "amazon_url": "https://www.amazon.com/s?k=Cries+of+a+Conquering+King%3A+A+Practical+Theology+of+the+Imprecatory+Psalms+Ryan+Swale"
+      }
+    ],
+    "initials": "RS",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/article/voice-martyrs-prayers-persecuted/"
+    ],
+    "education": ""
   },
   {
     "name": "Jonathan Edwards",
@@ -14556,13 +14703,19 @@
   {
     "name": "Keith Evans",
     "slug": "keith-evans",
-    "bio": "Keith Evans is a Christian writer and content creator focused on biblical teaching and discipleship. He contributes to various Christian publications and platforms, helping believers deepen their understanding of Scripture and faith.",
-    "affiliation": "",
-    "role": "Writer & Content Creator",
-    "education": "",
-    "website": "",
+    "bio": "Keith A. Evans is associate professor of Christian counseling at Reformed Theological Seminary in Charlotte, North Carolina, where he joined the faculty in January 2024 and teaches in the Master of Arts in Christian Counseling program. Before RTS he served at Reformed Presbyterian Theological Seminary as professor of biblical counseling, director of the Biblical Counseling Institute, and academic dean. He writes for Ligonier Ministries.",
+    "affiliation": "Reformed Theological Seminary, Charlotte",
+    "role": "Professor of Christian Counseling",
+    "website": "https://rts.edu/people/the-rev-keith-a-evans",
     "books": [],
-    "initials": "KE"
+    "initials": "KE",
+    "deceased": false,
+    "bio_sources": [
+      "https://feeds.ligonier.org/~/967921745/0/ligonierministriesblog",
+      "https://rts.edu/news/news-charlotte/dr-keith-evans-promoted-to-associate-professor-of-christian-counseling/",
+      "https://rts.edu/news/news-charlotte/rev-keith-evans-appointed-as-assistant-professor-of-christian-counseling/"
+    ],
+    "education": ""
   },
   {
     "name": "Kristen Wetherell",
@@ -14634,13 +14787,18 @@
   {
     "name": "Todd Pruitt",
     "slug": "todd-pruitt",
-    "bio": "Todd Pruitt is a pastor and Christian writer known for his thoughtful engagement with contemporary issues facing the church. He has contributed to various Christian publications and speaks on topics related to faith, culture, and pastoral ministry.",
-    "affiliation": "",
-    "role": "Pastor & Writer",
-    "education": "",
-    "website": "",
+    "bio": "Todd Pruitt is lead pastor of Covenant Presbyterian Church in Harrisonburg, Virginia, and a cohost of The Mortification of Spin podcast and blog, according to his Ligonier Ministries author note.",
+    "affiliation": "Covenant Presbyterian Church, Harrisonburg, VA",
+    "role": "Pastor",
+    "website": "https://learn.ligonier.org/teachers/todd-pruitt",
     "books": [],
-    "initials": "TP"
+    "initials": "TP",
+    "deceased": false,
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/todd-pruitt",
+      "https://learn.ligonier.org/articles/virtues-vices-lust"
+    ],
+    "education": ""
   },
   {
     "name": "Matt Ecton",
@@ -16908,13 +17066,19 @@
   {
     "name": "Rebecca Hopkins",
     "slug": "rebecca-hopkins",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
+    "bio": "Rebecca Hopkins is a journalist based in Colorado. Her reporting for The Roys Report has covered Compassion International, missions organizations, and abuse cases involving churches and ministries.",
+    "affiliation": "The Roys Report",
+    "role": "Journalist",
+    "website": "https://roysreport.com/compassion-international-sues-whistleblower-claiming-reputational-harm/",
     "books": [],
-    "initials": "RH"
+    "initials": "RH",
+    "deceased": false,
+    "bio_sources": [
+      "https://roysreport.com/compassion-international-sues-whistleblower-claiming-reputational-harm/",
+      "https://roysreport.com/after-missions-conference-pulls-workshop-rapha-international-quits-in-protest/",
+      "https://roysreport.com/ohio-megachurch-leader-tom-keesee-found-guilty-of-27-child-sex-abuse-charges/"
+    ],
+    "education": ""
   },
   {
     "name": "Amanda Hays",
@@ -17263,13 +17427,17 @@
   {
     "name": "Daniel Silliman",
     "slug": "daniel-silliman",
-    "bio": "Daniel Silliman is a religion reporter and journalist who covers faith, culture, and spirituality for major Christian and secular publications. His reporting explores the intersection of Christianity with contemporary issues, offering thoughtful analysis of how faith communities engage with modern challenges.",
-    "affiliation": "Religion News Service, The Christian Century",
-    "role": "Religion Reporter & Journalist",
-    "education": "",
-    "website": "",
+    "bio": "Daniel Silliman is senior reporter and editor at The Roys Report. He began his journalism career covering crime in Atlanta and has since led investigations into abuse and misconduct in Christian contexts. He lives in Johnson City, Tennessee.",
+    "affiliation": "The Roys Report",
+    "role": "Senior Reporter and Editor",
+    "website": "https://roysreport.com/ohio-megachurch-pastor-lonnie-snell-fired-for-sexual-misconduct/",
     "books": [],
-    "initials": "DS"
+    "initials": "DS",
+    "deceased": false,
+    "bio_sources": [
+      "https://roysreport.com/ohio-megachurch-pastor-lonnie-snell-fired-for-sexual-misconduct/"
+    ],
+    "education": ""
   },
   {
     "name": "Matthew Boswell",
@@ -17347,13 +17515,17 @@
   {
     "name": "Mark A. Kellner",
     "slug": "mark-a-kellner",
-    "bio": "Mark A. Kellner is a veteran religion and technology journalist who has covered faith, media, and culture for major Christian and secular publications. His work explores the intersection of faith and technology, helping Christians navigate digital culture with wisdom and discernment.",
-    "affiliation": "Religion News Service, Christian media outlets",
-    "role": "Religion & Technology Journalist",
-    "education": "",
-    "website": "",
+    "bio": "Mark A. Kellner is a reporter based in Mesquite, Nevada, according to his author note at The Roys Report. He has covered statewide elections for the New York Post and was for three years the Faith and Family reporter for The Washington Times. He is a graduate of the University of the Cumberlands and attended Boston University's College of Communication.",
+    "affiliation": "The Roys Report",
+    "role": "Reporter",
+    "website": "https://roysreport.com/judge-rejects-david-e-taylors-bid-to-dismiss-forced-labor-charges/",
     "books": [],
-    "initials": "MAK"
+    "initials": "MAK",
+    "deceased": false,
+    "bio_sources": [
+      "https://roysreport.com/judge-rejects-david-e-taylors-bid-to-dismiss-forced-labor-charges/"
+    ],
+    "education": ""
   },
   {
     "name": "Liam Adams",
