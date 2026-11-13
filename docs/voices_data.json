@@ -1495,13 +1495,17 @@
   {
     "name": "Scott Hubbard",
     "slug": "scott-hubbard",
-    "bio": "Scott Hubbard is a managing editor at Desiring God and pastor at All Peoples Church in Minneapolis. The author of over two hundred articles, he writes to deepen joy in God through Jesus, particularly for those navigating doubt and spiritual darkness.",
-    "affiliation": "Desiring God, All Peoples Church",
-    "role": "Editor & Pastor",
-    "education": "MDiv, Bethlehem College and Seminary",
+    "bio": "Scott Hubbard is a teacher and the managing editor for Desiring God. He is a pastor at All Peoples Church and a graduate of Bethlehem College and Seminary.",
+    "affiliation": "Desiring God; All Peoples Church",
+    "role": "Managing Editor",
     "website": "https://www.desiringgod.org/authors/scott-hubbard",
     "books": [],
-    "initials": "SH"
+    "initials": "SH",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.desiringgod.org/authors/scott-hubbard"
+    ],
+    "education": ""
   },
   {
     "name": "Ben Hubbard",
@@ -3277,17 +3281,21 @@
     "slug": "marshall-segal",
     "name": "Marshall Segal",
     "initials": "MS",
-    "role": "Writer & Managing Editor at Desiring God",
+    "role": "President and CEO",
     "affiliation": "Desiring God",
-    "bio": "Marshall Segal serves as President and CEO of Desiring God, guiding the ministry's vision of spreading passion for the supremacy of God in all things for the joy of all peoples. After graduating from Wake Forest University and earning his Master of Divinity from Bethlehem College and Seminary in Minneapolis, Segal became known for his writing and speaking particularly to younger evangelicals, addressing issues of singleness, dating, and faithful living.\n\nHis books, including Not Yet Married: The Pursuit of Joy in Singleness & Dating and contributions to anthologies like Designed for Joy and Happily Ever After, demonstrate his gift for making theological truth accessible and attractive to a young evangelical audience. As an elder at Cities Church, Segal combines pastoral concern with intellectual depth, representing a new generation of evangelical leaders committed to both doctrinal rigor and compassionate engagement with contemporary culture.",
-    "education": "Bethlehem College & Seminary",
+    "bio": "According to his Desiring God author page (checked November 2026), Marshall Segal is president and CEO of Desiring God. He is the author of Not Yet Married: The Pursuit of Joy in Singleness and Dating. He graduated from Bethlehem College and Seminary and serves as an elder at Cities Church.",
     "website": "https://www.desiringgod.org/authors/marshall-segal",
     "books": [
       {
-        "title": "Not Yet Married",
-        "amazon_url": "https://www.amazon.com/s?k=Not+Yet+Married+Marshall+Segal"
+        "title": "Not Yet Married: The Pursuit of Joy in Singleness & Dating",
+        "amazon_url": "https://www.amazon.com/s?k=Not+Yet+Married%3A+The+Pursuit+of+Joy+in+Singleness+%26+Dating+Marshall+Segal"
       }
-    ]
+    ],
+    "deceased": false,
+    "bio_sources": [
+      "https://www.desiringgod.org/authors/marshall-segal"
+    ],
+    "education": ""
   },
   {
     "name": "Noah Senthil",
@@ -3904,26 +3912,18 @@
   {
     "name": "Laura Wifler",
     "slug": "laura-wifler",
-    "bio": "Laura Wifler is a bestselling author of children's and adult books exploring the intersection of faith and everyday life. Co-founder of Risen Motherhood and founder of The KidLit Lab, she is a beloved voice for Christian mothers and aspiring writers.",
-    "affiliation": "Risen Motherhood, The Gospel Coalition",
-    "role": "Author & Writing Coach",
-    "education": "",
+    "bio": "Laura Wifler is cofounder and executive director of Risen Motherhood. She cohosts the Risen Motherhood podcast and is coauthor of the book of the same name.",
+    "affiliation": "Risen Motherhood",
+    "role": "Executive Director",
     "website": "https://laurawifler.com",
-    "books": [
-      {
-        "title": "Risen Motherhood",
-        "amazon_url": "https://www.amazon.com/s?k=Risen+Motherhood+Laura+Wifler"
-      },
-      {
-        "title": "Gospel Mom",
-        "amazon_url": "https://www.amazon.com/s?k=Gospel+Mom+Laura+Wifler"
-      },
-      {
-        "title": "Any Time, Any Place, Any Prayer",
-        "amazon_url": "https://www.amazon.com/s?k=Any+Time+Any+Place+Any+Prayer+Laura+Wifler"
-      }
+    "books": [],
+    "initials": "LW",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/podcasts/tgc-podcast/impact-influencers-church/",
+      "https://laurawifler.com"
     ],
-    "initials": "LW"
+    "education": ""
   },
   {
     "slug": "jen-wilkin",
@@ -4064,13 +4064,18 @@
   {
     "name": "Roland Barnes",
     "slug": "roland-barnes",
-    "bio": "Rev. Roland S. Barnes is a PCA minister who served as the organizing and senior pastor of Trinity Presbyterian Church in Statesboro, Georgia, from 1981 until his retirement in 2023. Over more than four decades he led the congregation's growth and its overseas mission work, and he is now pastor emeritus and an honorably retired minister.",
-    "affiliation": "Trinity Presbyterian Church (PCA), Statesboro, GA",
-    "role": "Pastor (Emeritus)",
-    "education": "",
-    "website": "",
+    "bio": "Roland S. Barnes was called in 1981 as the organizing pastor of Trinity Presbyterian Church in Statesboro, Georgia, and retired as its senior pastor in 2023. He has written for Ligonier Ministries.",
+    "affiliation": "Trinity Presbyterian Church, Statesboro, Georgia",
+    "role": "Pastor (Retired)",
+    "website": "https://learn.ligonier.org/teachers/roland-barnes",
     "books": [],
-    "initials": "RB"
+    "initials": "RB",
+    "deceased": false,
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/roland-barnes",
+      "https://learn.ligonier.org/articles/cursed-tree"
+    ],
+    "education": ""
   },
   {
     "name": "Paul Christopher",
@@ -4259,13 +4264,19 @@
   {
     "name": "Wyatt Graham",
     "slug": "wyatt-graham",
-    "bio": "Wyatt Graham (PhD, The Southern Baptist Theological Seminary) is executive director of The Davenant Institute and editor in chief of The Gospel Coalition Canada, having previously served as TGC Canada's executive director. His scholarship focuses on biblical theology, patristics, and moral formation, and he is the author of 'The Promised Davidic King.'",
-    "affiliation": "The Davenant Institute / TGC Canada",
-    "role": "Editor & Theologian",
-    "education": "",
-    "website": "https://wyattgraham.com/",
+    "bio": "Wyatt Graham holds a PhD from The Southern Baptist Theological Seminary. He writes on philosophy, religion and culture in his newsletter at wyattgraham.com, with an emphasis on reading historical and ancient sources directly. His Gospel Coalition author profile (checked November 2026) lists him as editor in chief of The Gospel Coalition Canada.",
+    "affiliation": "The Gospel Coalition Canada",
+    "role": "Writer and Editor",
+    "website": "https://www.wyattgraham.com/",
     "books": [],
-    "initials": "WG"
+    "initials": "WG",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/wyatt-graham/",
+      "https://www.wyattgraham.com/about",
+      "https://www.wyattgraham.com/p/why-yhwh-revealed-himself-as-el-to"
+    ],
+    "education": ""
   },
   {
     "name": "Stephen Kalin",
@@ -7691,18 +7702,22 @@
   {
     "name": "Betsy Childs Howard",
     "slug": "betsy-childs-howard",
-    "bio": "Betsy Childs Howard is a writer and editor who contributes regularly to The Gospel Coalition and other Christian publications. She explores themes of faith, family, and Christian living with thoughtfulness and grace, helping readers navigate their spiritual journeys with biblical wisdom.",
+    "bio": "Betsy Childs Howard is an editor for The Gospel Coalition. She is the author of Seasons of Waiting and several children's books.",
     "affiliation": "The Gospel Coalition",
-    "role": "Writer & Editor",
-    "education": "",
-    "website": "",
+    "role": "Editor",
+    "website": "https://www.thegospelcoalition.org/profile/betsy-childs-howard/",
     "books": [
       {
-        "title": "Modesty: A Tim Challies Series",
-        "amazon_url": "https://www.amazon.com/s?k=Betsy+Childs+Howard+Modesty"
+        "title": "Seasons of Waiting",
+        "amazon_url": "https://www.amazon.com/s?k=Seasons+of+Waiting+Betsy+Childs+Howard"
       }
     ],
-    "initials": "BCH"
+    "initials": "BCH",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/article/reality-respecters/"
+    ],
+    "education": ""
   },
   {
     "name": "Adrienne Matei",
@@ -8063,13 +8078,18 @@
   {
     "name": "Bruce Henning",
     "slug": "bruce-henning",
-    "bio": "Bruce Henning is a Christian author and speaker dedicated to helping believers deepen their faith and understanding of Scripture. His work focuses on practical Christian living and spiritual growth for contemporary audiences.",
-    "affiliation": "",
-    "role": "Author & Speaker",
-    "education": "",
-    "website": "",
+    "bio": "Bruce Henning is associate professor of New Testament at Cornerstone Theological Seminary. He holds a PhD from Trinity College, Bristol, with the University of Aberdeen, and an MDiv from Moody Theological Seminary. He also serves as an elder at a church in Grand Rapids where he preaches.",
+    "affiliation": "Cornerstone Theological Seminary",
+    "role": "Professor of New Testament",
+    "website": "https://www.cornerstone.edu/faculty/bruce-henning/",
     "books": [],
-    "initials": "BH"
+    "initials": "BH",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.cornerstone.edu/faculty/bruce-henning/",
+      "https://www.thegospelcoalition.org/article/lordly-supper-antidote/"
+    ],
+    "education": ""
   },
   {
     "name": "Jackie Gibson",
@@ -10324,13 +10344,19 @@
   {
     "name": "Philip Hunt",
     "slug": "philip-hunt",
-    "bio": "Philip Hunt is a Christian author and thought leader who contributes to conversations on faith, culture, and spiritual growth. His work engages evangelical audiences with insights on living out Christian convictions in contemporary society.",
-    "affiliation": "",
-    "role": "Author & Christian Writer",
-    "education": "",
-    "website": "",
+    "bio": "Philip Hunt has been a church-planting missionary in Zambia since the early 1990s. According to his ministry website (checked November 2026), he serves as pastor for preaching and vision at Kitwe Church in Kitwe, Zambia, and has been president of Central Africa Baptist University since it was founded in 2006.",
+    "affiliation": "Kitwe Church; Central Africa Baptist University",
+    "role": "Pastor and Missionary",
+    "website": "https://zambiahunt.com/about/",
     "books": [],
-    "initials": "PH"
+    "initials": "PH",
+    "deceased": false,
+    "bio_sources": [
+      "https://zambiahunt.com/about/",
+      "https://web.sermonaudio.com/speakers/10238",
+      "https://theaquilareport.com/because-he-reigns/"
+    ],
+    "education": ""
   },
   {
     "name": "Amanda Conquers",
@@ -10540,13 +10566,24 @@
   {
     "name": "Karrie Hahn",
     "slug": "karrie-hahn",
-    "bio": "Karrie Hahn is a Christian author and speaker who writes about faith, family, and biblical living. Her work encourages readers to deepen their relationship with Christ through practical wisdom and spiritual reflection.",
-    "affiliation": "",
-    "role": "Author & Speaker",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "KH"
+    "bio": "Karrie Hahn, now credited by Ligonier as Karrie Hahn Devlin, is associate editor for Ligonier Ministries and Tabletalk magazine and a certified biblical counselor. She holds an MA in biblical counseling and previously served as associate dean of students at a Christian college in California. She is the author of Limping Heavenward: Living by Faith in Comprehensive and Chronic Suffering.",
+    "affiliation": "Ligonier Ministries",
+    "role": "Associate Editor",
+    "website": "https://learn.ligonier.org/teachers/karrie-hahn",
+    "books": [
+      {
+        "title": "Limping Heavenward: Living by Faith in Comprehensive and Chronic Suffering",
+        "amazon_url": "https://www.amazon.com/s?k=Limping+Heavenward%3A+Living+by+Faith+in+Comprehensive+and+Chronic+Suffering+Karrie+Hahn"
+      }
+    ],
+    "initials": "KH",
+    "deceased": false,
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/karrie-hahn",
+      "https://www.thegospelcoalition.org/profile/karrie-hahn/",
+      "https://learn.ligonier.org/articles/how-should-i-deal-with-loneliness"
+    ],
+    "education": ""
   },
   {
     "name": "Chuck Peters",
@@ -10753,13 +10790,18 @@
   {
     "name": "Joel Morris",
     "slug": "joel-morris",
-    "bio": "Joel Morris is executive director at Union School of Theology in Wales, a Reformed theological college in the tradition of Martyn Lloyd-Jones. He writes on Christian living for Ligonier Ministries and Tabletalk magazine, including contributions to Ligonier's Fruit of the Spirit collection on joy and articles on generosity and the Christian life.",
+    "bio": "Joel Morris is executive director at Union School of Theology in Wales, according to his Ligonier Ministries teacher page (checked November 2026). He has written for Ligonier Ministries on the fruit of the Spirit.",
     "affiliation": "Union School of Theology",
     "role": "Executive Director",
-    "education": "",
-    "website": "",
+    "website": "https://learn.ligonier.org/teachers/joel-morris",
     "books": [],
-    "initials": "JM"
+    "initials": "JM",
+    "deceased": false,
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/joel-morris",
+      "https://learn.ligonier.org/articles/what-is-the-fruit-of-joy"
+    ],
+    "education": ""
   },
   {
     "name": "Darin White",
@@ -12396,13 +12438,31 @@
   {
     "name": "Davy Ellison",
     "slug": "davy-ellison",
-    "bio": "Davy Ellison is Director of Training at the Irish Baptist College in Northern Ireland, where he teaches Biblical Hebrew and Old Testament, and serves as an elder at Antrim Baptist Church. He holds BD, MTh, and PhD degrees and is the author of several books; his writing appears at The Gospel Coalition, For The Church, and 9Marks.",
+    "bio": "Davy Ellison is director of training and lecturer in biblical studies (Old Testament) at the Irish Baptist College, a role he took up in 2019 after serving with Baptist Youth and in several pastoral roles. He holds BD, MTh and PhD degrees from the college and a BSc from Queen's University. He serves as an elder at Antrim Baptist Church and is the author of The Holy One of Israel: Exploring Isaiah, Five: The Solas of the Reformation, and Meekness and Majesty.",
     "affiliation": "Irish Baptist College",
-    "role": "Director of Training & Author",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "DE"
+    "role": "Director of Training",
+    "website": "https://www.irishbaptistcollege.org/faculty-staff",
+    "books": [
+      {
+        "title": "The Holy One of Israel: Exploring Isaiah",
+        "amazon_url": "https://www.amazon.com/s?k=The+Holy+One+of+Israel%3A+Exploring+Isaiah+Davy+Ellison"
+      },
+      {
+        "title": "Five: The Solas of the Reformation",
+        "amazon_url": "https://www.amazon.com/s?k=Five%3A+The+Solas+of+the+Reformation+Davy+Ellison"
+      },
+      {
+        "title": "Meekness and Majesty",
+        "amazon_url": "https://www.amazon.com/s?k=Meekness+and+Majesty+Davy+Ellison"
+      }
+    ],
+    "initials": "DE",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.irishbaptistcollege.org/faculty-staff",
+      "https://www.thegospelcoalition.org/article/admitted-lords-supper/"
+    ],
+    "education": ""
   },
   {
     "name": "CaReese Rials",
@@ -12594,13 +12654,18 @@
   {
     "name": "Dan Olinger",
     "slug": "dan-olinger",
-    "bio": "Dan Olinger is a writer and editor known for his work in Christian publishing and content creation. He has contributed to various evangelical publications and is recognized for his thoughtful approach to contemporary Christian issues.",
+    "bio": "Dan Olinger taught theology, New Testament and Old Testament at Bob Jones University for more than two decades before retiring in 2025, after 19 years as a writer, editor and supervisor at BJU Press. His teaching interests include ecclesiology and the Pauline Epistles. He writes series on Scripture and ministry at danolinger.com.",
     "affiliation": "",
-    "role": "Writer & Editor",
-    "education": "",
-    "website": "",
+    "role": "Retired Professor of Bible",
+    "website": "https://danolinger.com/",
     "books": [],
-    "initials": "DO"
+    "initials": "DO",
+    "deceased": false,
+    "bio_sources": [
+      "https://sharperiron.org/node/47210",
+      "https://theaquilareport.com/on-ministry-part-9-endurance/"
+    ],
+    "education": ""
   },
   {
     "name": "Josh Irby",
@@ -13293,18 +13358,23 @@
   {
     "name": "Chris Watkin",
     "slug": "chris-watkin",
-    "bio": "Chris Watkin is a writer and editor known for thoughtful cultural commentary from a Christian perspective. He explores how faith intersects with literature, media, and contemporary ideas, helping readers navigate culture with biblical wisdom.",
-    "affiliation": "Mere Orthodoxy",
-    "role": "Writer & Cultural Commentator",
-    "education": "",
-    "website": "",
+    "bio": "Chris Watkin (PhD, University of Cambridge) is an Australian Research Council Future Fellow and associate professor in European languages at Monash University in Melbourne, Australia. He has written several books, including Biblical Critical Theory: How the Bible's Unfolding Story Makes Sense of Modern Life and Culture.",
+    "affiliation": "Monash University",
+    "role": "Associate Professor",
+    "website": "https://www.thegospelcoalition.org/profile/chris-watkin/",
     "books": [
       {
-        "title": "The Gospel of Ruth: Rethinking Hospitality",
-        "amazon_url": "https://www.amazon.com/s?k=Gospel+of+Ruth+Rethinking+Hospitality+Chris+Watkin"
+        "title": "Biblical Critical Theory: How the Bible's Unfolding Story Makes Sense of Modern Life and Culture",
+        "amazon_url": "https://www.amazon.com/s?k=Biblical+Critical+Theory%3A+How+the+Bible%27s+Unfolding+Story+Makes+Sense+of+Modern+Life+and+Culture+Chris+Watkin"
       }
     ],
-    "initials": "CW"
+    "initials": "CW",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/article/ai-sovereignty-slavery/",
+      "https://www.thegospelcoalition.org/profile/chris-watkin/"
+    ],
+    "education": ""
   },
   {
     "name": "Ben R. Crenshaw",
@@ -13837,13 +13907,32 @@
   {
     "name": "Randy Booth",
     "slug": "randy-booth",
-    "bio": "Randy Booth is a Christian author and speaker dedicated to exploring biblical truth and its application to contemporary faith. His work encourages readers to deepen their understanding of Scripture and live out their convictions with integrity.",
-    "affiliation": "",
-    "role": "Author & Speaker",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RB"
+    "bio": "Randy Booth is pastor of Grace Covenant Presbyterian Church in Nacogdoches, Texas, a congregation of the Communion of Reformed Evangelical Churches (CREC), and has served in pastoral ministry for more than four decades. He previously served as presiding minister of the CREC council. He wrote Children of the Promise and coauthored The Church Friendly Family and A Justice Primer, and he writes the Substack newsletter The Feast of Booths.",
+    "affiliation": "Grace Covenant Presbyterian Church, Nacogdoches, Texas",
+    "role": "Pastor",
+    "website": "https://randybooth.substack.com/",
+    "books": [
+      {
+        "title": "Children of the Promise",
+        "amazon_url": "https://www.amazon.com/s?k=Children+of+the+Promise+Randy+Booth"
+      },
+      {
+        "title": "The Church Friendly Family",
+        "amazon_url": "https://www.amazon.com/s?k=The+Church+Friendly+Family+Randy+Booth"
+      },
+      {
+        "title": "A Justice Primer",
+        "amazon_url": "https://www.amazon.com/s?k=A+Justice+Primer+Randy+Booth"
+      }
+    ],
+    "initials": "RB",
+    "deceased": false,
+    "bio_sources": [
+      "https://randybooth.substack.com/about",
+      "https://substack.com/@randybooth",
+      "https://theaquilareport.com/covenant-protection/"
+    ],
+    "education": ""
   },
   {
     "name": "Curtis Solomon",
@@ -15592,26 +15681,31 @@
   {
     "name": "Gavin Ortlund",
     "slug": "gavin-ortlund",
-    "bio": "Gavin Ortlund is a pastor, author, and theologian known for making biblical scholarship accessible to everyday Christians. He serves as senior pastor at Immanuel Church in Virginia and is the founder of The Evangelical Instance, a resource dedicated to exploring Christian theology and practice. His work emphasizes the unity of the church while addressing contemporary theological and pastoral concerns.",
-    "affiliation": "Immanuel Church; The Evangelical Instance",
-    "role": "Pastor, Author & Theologian",
-    "education": "M.Div., Reformed Theological Seminary",
-    "website": "https://www.gavinortlund.com",
+    "bio": "Gavin Ortlund (PhD, Fuller Theological Seminary) is a pastor, author and apologist. He is president of Truth Unites, visiting professor of historical theology at Phoenix Seminary, and theologian in residence at Immanuel Nashville. His books include Why God Makes Sense in a World That Doesn't and What It Means to Be Protestant.",
+    "affiliation": "Truth Unites; Immanuel Nashville",
+    "role": "Pastor and Apologist",
+    "website": "https://truthunites.org/",
     "books": [
       {
-        "title": "Themelios: The Newsroom of the Gospel",
-        "amazon_url": "https://www.amazon.com/s?k=Gavin+Ortlund+Themelios"
+        "title": "Why God Makes Sense in a World That Doesn't",
+        "amazon_url": "https://www.amazon.com/s?k=Why+God+Makes+Sense+in+a+World+That+Doesn%27t+Gavin+Ortlund"
       },
       {
-        "title": "Finding the Right Hills to Die On: Why and How to Distinguish between Core Christian Convictions and Non-Essentials",
-        "amazon_url": "https://www.amazon.com/s?k=Finding+the+Right+Hills+to+Die+On+Gavin+Ortlund"
+        "title": "What It Means to Be Protestant",
+        "amazon_url": "https://www.amazon.com/s?k=What+It+Means+to+Be+Protestant+Gavin+Ortlund"
       },
       {
-        "title": "Gentle Reformation: Resisting the Extremes of a Polarized Age",
-        "amazon_url": "https://www.amazon.com/s?k=Gentle+Reformation+Gavin+Ortlund"
+        "title": "Why Christianity Makes Sense",
+        "amazon_url": "https://www.amazon.com/s?k=Why+Christianity+Makes+Sense+Gavin+Ortlund"
       }
     ],
-    "initials": "GO"
+    "initials": "GO",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/article/overlooked-argument-christianity/",
+      "https://truthunites.org/"
+    ],
+    "education": ""
   },
   {
     "name": "Bob Bunn",
@@ -16139,13 +16233,17 @@
   {
     "name": "Michael Gryboski",
     "slug": "michael-gryboski",
-    "bio": "Michael Gryboski is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
+    "bio": "Michael Gryboski has been a reporter with The Christian Post since 2011, covering politics, church and ministry news, and court cases. He writes a regular column, This Week in Christian History. He earned bachelor's and master's degrees in history at George Mason University.",
+    "affiliation": "The Christian Post",
+    "role": "Reporter",
+    "website": "https://www.christianpost.com/by/michael-gryboski",
     "books": [],
-    "initials": "MG"
+    "initials": "MG",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.christianpost.com/by/michael-gryboski"
+    ],
+    "education": ""
   },
   {
     "name": "Justine Bathurst",
@@ -17186,13 +17284,39 @@
   {
     "name": "N. Gray Sutanto",
     "slug": "n-gray-sutanto",
-    "bio": "N. Gray Sutanto is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "NGS"
+    "bio": "N. Gray Sutanto is associate professor of systematic theology at Reformed Theological Seminary in Washington, DC. He holds a BA from Biola University, an MAR from Westminster Theological Seminary and a PhD from the University of Edinburgh, and he is an ordained minister in the International Presbyterian Church. His books include God and Knowledge: Herman Bavinck's Theological Epistemology and A Sense of the Divine, and he coauthored Neo-Calvinism: A Theological Introduction.",
+    "affiliation": "Reformed Theological Seminary",
+    "role": "Professor of Systematic Theology",
+    "website": "https://rts.edu/people/dr-n-gray-sutanto/",
+    "books": [
+      {
+        "title": "God and Knowledge: Herman Bavinck's Theological Epistemology",
+        "amazon_url": "https://www.amazon.com/s?k=God+and+Knowledge%3A+Herman+Bavinck%27s+Theological+Epistemology+N.+Gray+Sutanto"
+      },
+      {
+        "title": "God and Humanity: Herman Bavinck and Theological Anthropology",
+        "amazon_url": "https://www.amazon.com/s?k=God+and+Humanity%3A+Herman+Bavinck+and+Theological+Anthropology+N.+Gray+Sutanto"
+      },
+      {
+        "title": "A Sense of the Divine: An Affective Model of General Revelation from the Reformed Tradition",
+        "amazon_url": "https://www.amazon.com/s?k=A+Sense+of+the+Divine%3A+An+Affective+Model+of+General+Revelation+from+the+Reformed+Tradition+N.+Gray+Sutanto"
+      },
+      {
+        "title": "Neo-Calvinism: A Theological Introduction",
+        "amazon_url": "https://www.amazon.com/s?k=Neo-Calvinism%3A+A+Theological+Introduction+N.+Gray+Sutanto"
+      },
+      {
+        "title": "The Essential Herman Bavinck: A Reader and Commentary",
+        "amazon_url": "https://www.amazon.com/s?k=The+Essential+Herman+Bavinck%3A+A+Reader+and+Commentary+N.+Gray+Sutanto"
+      }
+    ],
+    "initials": "NGS",
+    "deceased": false,
+    "bio_sources": [
+      "https://rts.edu/people/dr-n-gray-sutanto/",
+      "https://www.thegospelcoalition.org/article/twelve-theses-meaning-human/"
+    ],
+    "education": ""
   },
   {
     "name": "Scott Hildreth",
