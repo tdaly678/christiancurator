@@ -34,21 +34,33 @@
     "slug": "randy-alcorn",
     "name": "Randy Alcorn",
     "initials": "RA",
-    "role": "Pastor & Author",
+    "role": "Author",
     "affiliation": "Eternal Perspective Ministries",
-    "bio": "Randy Alcorn is a prolific Christian author, speaker, and founder of Eternal Perspective Ministries (founded 1990), a nonprofit dedicated to teaching biblical truth and helping the needy. After serving as co-pastor of Good Shepherd Community Church in Oregon for fourteen years, Alcorn transitioned to focus on writing and speaking, his primary calling. With more than 60 books translated into over 70 languages and articles distributed in 34 languages beyond English, Alcorn has become one of evangelicalism's most widely-read authors.\n\nHis major works include Heaven and If God Is Good: Faith in the Midst of Suffering and Evil, which have sold widely and shaped evangelical thinking about eternal hope and theodicy. A popular conference speaker and part-time faculty member at Western Seminary and Multnomah University, Alcorn combines pastoral warmth with intellectual rigor, addressing both spiritual encouragement and deep theological questions for a broad evangelical readership.",
-    "education": "Multnomah University (BA)",
-    "website": "https://www.eternalperspective.org",
+    "bio": "Randy Alcorn is the founder and director of Eternal Perspective Ministries, which he started in 1990. Before that he was a pastor for fourteen years at Good Shepherd Community Church near Gresham, Oregon. He has written more than sixty books, including Heaven, The Treasure Principle, Safely Home, and Courageous.",
+    "website": "https://www.epm.org/about/staff-board/randy-alcorn/",
     "books": [
       {
         "title": "Heaven",
         "amazon_url": "https://www.amazon.com/s?k=Heaven+Randy+Alcorn"
       },
       {
-        "title": "In Light of Eternity",
-        "amazon_url": "https://www.amazon.com/s?k=In+Light+of+Eternity+Randy+Alcorn"
+        "title": "The Treasure Principle",
+        "amazon_url": "https://www.amazon.com/s?k=The+Treasure+Principle+Randy+Alcorn"
+      },
+      {
+        "title": "Safely Home",
+        "amazon_url": "https://www.amazon.com/s?k=Safely+Home+Randy+Alcorn"
+      },
+      {
+        "title": "Courageous",
+        "amazon_url": "https://www.amazon.com/s?k=Courageous+Randy+Alcorn"
       }
-    ]
+    ],
+    "deceased": false,
+    "bio_sources": [
+      "https://www.epm.org/about/staff-board/randy-alcorn/"
+    ],
+    "education": ""
   },
   {
     "name": "Chris Allen",
@@ -681,13 +693,18 @@
   {
     "name": "William Conley",
     "slug": "william-conley",
-    "bio": "William Henry Conley (1840-1897) was a Pittsburgh philanthropist and industrialist who provided organizational and financial support to religious institutions. He was the first president of Zion's Watch Tower Tract Society, a member of the Christian and Missionary Alliance board, and instrumental in funding religious missions and organizations internationally.",
-    "affiliation": "Christian and Missionary Alliance, Zion's Watch Tower Tract Society",
-    "role": "Religious philanthropist and organizational leader",
-    "education": "Trained in printing business",
-    "website": "",
+    "bio": "William Conley writes on theology and the Christian life at his Substack. In his Substack profile he describes himself as a part-time pastor at a Spanish Reformed Baptist church and a full-time Panama Canal pilot. He holds an MA in General Theological Studies from Knox Theological Seminary.",
+    "affiliation": "",
+    "role": "Pastor",
+    "website": "https://williamconley2.substack.com",
     "books": [],
-    "initials": "WC"
+    "initials": "WC",
+    "deceased": false,
+    "bio_sources": [
+      "https://substack.com/@williamconley2",
+      "https://williamconley2.substack.com/p/did-god-hate-esau-f71"
+    ],
+    "education": ""
   },
   {
     "name": "Brandon Corley",
@@ -993,30 +1010,26 @@
   {
     "name": "Gabriel N.E. Fluhrer",
     "slug": "gabriel-ne-fluhrer",
-    "bio": "Gabriel N.E. Fluhrer (PhD, Westminster Theological Seminary) is the senior pastor of First Presbyterian Church in Chattanooga, Tennessee, and a professor with Reformed Theological Seminary. He previously served at First Presbyterian Church in Columbia, South Carolina, and is a longtime contributor to Ligonier Ministries and Tabletalk magazine.",
+    "bio": "Gabriel N.E. Fluhrer is senior pastor of First Presbyterian Church in Chattanooga, Tennessee, and an adjunct professor of systematic theology at Reformed Theological Seminary in Atlanta. He is the featured teacher for the Ligonier teaching series Alive. He is the author of Alive: How the Resurrection Changes Everything and The Beauty of Divine Grace.",
     "affiliation": "First Presbyterian Church (Chattanooga, TN)",
-    "role": "Pastor & Professor",
-    "education": "M.Div., Greenville Presbyterian Theological Seminary; Ph.D., Westminster Theological Seminary",
-    "website": "https://www.1stpresbyterian.com",
+    "role": "Senior Pastor",
+    "website": "https://learn.ligonier.org/teachers/gabriel-fluhrer",
     "books": [
       {
-        "title": "Alive: How the Resurrection of Christ Changes Everything",
-        "amazon_url": "https://www.amazon.com/s?k=Alive+Resurrection+Christ+Fluhrer"
+        "title": "Alive: How the Resurrection Changes Everything",
+        "amazon_url": "https://www.amazon.com/s?k=Alive%3A+How+the+Resurrection+Changes+Everything+Gabriel+N.E.+Fluhrer"
       },
       {
         "title": "The Beauty of Divine Grace",
-        "amazon_url": "https://www.amazon.com/s?k=Beauty+Divine+Grace+Fluhrer"
-      },
-      {
-        "title": "These Last Days",
-        "amazon_url": "https://www.amazon.com/s?k=These+Last+Days+Gabriel+Fluhrer"
-      },
-      {
-        "title": "Atonement",
-        "amazon_url": "https://www.amazon.com/s?k=Atonement+Gabriel+Fluhrer"
+        "amazon_url": "https://www.amazon.com/s?k=The+Beauty+of+Divine+Grace+Gabriel+N.E.+Fluhrer"
       }
     ],
-    "initials": "GNF"
+    "initials": "GNF",
+    "deceased": false,
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/gabriel-fluhrer"
+    ],
+    "education": ""
   },
   {
     "name": "Danny Franks",
@@ -1122,22 +1135,30 @@
   {
     "name": "Benjamin L. Gladd",
     "slug": "benjamin-l-gladd",
-    "bio": "Executive director of The Carson Center for Theological Renewal at The Gospel Coalition and former professor of New Testament at Reformed Theological Seminary. PhD from Wheaton College.",
-    "affiliation": "The Gospel Coalition",
-    "role": "Executive Director & Theologian",
-    "education": "Wheaton College (PhD)",
+    "bio": "Benjamin L. Gladd is executive director of The Carson Center for Theological Renewal at The Gospel Coalition. He previously spent 12 years as professor of New Testament at Reformed Theological Seminary in Jackson, Mississippi, and holds a PhD from Wheaton College. He coedits the New Studies in Biblical Theology series and, with D. A. Carson, the Pillar New Testament Commentary series. His books include From Adam and Israel to the Church, Handbook on the Gospels, and The Story Retold, written with G. K. Beale.",
+    "affiliation": "The Gospel Coalition (The Carson Center for Theological Renewal)",
+    "role": "Executive Director",
     "website": "https://www.thegospelcoalition.org/profile/benjamin-l-gladd/",
     "books": [
       {
         "title": "From Adam and Israel to the Church",
-        "amazon_url": "https://www.amazon.com/s?k=From+Adam+and+Israel+to+the+Church+Gladd"
+        "amazon_url": "https://www.amazon.com/s?k=From+Adam+and+Israel+to+the+Church+Benjamin+L.+Gladd"
+      },
+      {
+        "title": "Handbook on the Gospels",
+        "amazon_url": "https://www.amazon.com/s?k=Handbook+on+the+Gospels+Benjamin+L.+Gladd"
       },
       {
         "title": "The Story Retold",
-        "amazon_url": "https://www.amazon.com/s?k=The+Story+Retold+Gladd"
+        "amazon_url": "https://www.amazon.com/s?k=The+Story+Retold+Benjamin+L.+Gladd"
       }
     ],
-    "initials": "BG"
+    "initials": "BG",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/benjamin-l-gladd/"
+    ],
+    "education": ""
   },
   {
     "name": "Thomas Goodwin",
@@ -1977,18 +1998,23 @@
   {
     "name": "Brianna Lambert",
     "slug": "brianna-lambert",
-    "bio": "Staff writer at Gospel-Centered Discipleship with forthcoming book Created to Play published by InterVarsity Press. Articles appear in Christianity Today, The Gospel Coalition, and Revive Our Hearts.",
+    "bio": "Brianna Lambert is an author, speaker, and teacher who works on staff at Gospel-Centered Discipleship. She is the author of Created to Play: How Taking Hobbies Seriously Grows Us Spiritually, published by InterVarsity Press. Her writing has appeared in Christianity Today and Common Good.",
     "affiliation": "Gospel-Centered Discipleship",
-    "role": "Writer & Author",
-    "education": "",
+    "role": "Author",
     "website": "https://briannalambert.com/",
     "books": [
       {
         "title": "Created to Play: How Taking Hobbies Seriously Grows Us Spiritually",
-        "amazon_url": "https://www.amazon.com/s?k=Created+to+Play+Lambert"
+        "amazon_url": "https://www.amazon.com/s?k=Created+to+Play%3A+How+Taking+Hobbies+Seriously+Grows+Us+Spiritually+Brianna+Lambert"
       }
     ],
-    "initials": "BL"
+    "initials": "BL",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/article/play-parents-need/",
+      "https://briannalambert.com/"
+    ],
+    "education": ""
   },
   {
     "slug": "heath-lambert",
@@ -2246,26 +2272,34 @@
   {
     "name": "David Mathis",
     "slug": "david-mathis",
-    "bio": "David Mathis is executive editor at Desiring God and pastor at Cities Church in Saint Paul. An author of numerous books and hundreds of articles, he blends pastoral ministry with theological teaching on joy, grace, and spiritual disciplines.",
-    "affiliation": "Desiring God, Cities Church",
-    "role": "Senior Teacher & Pastor",
-    "education": "BA, Furman University",
-    "website": "https://www.desiringgod.org/authors/david-mathis",
+    "bio": "David Mathis is senior teacher at desiringGod.org, a pastor at Cities Church in Saint Paul, Minnesota, and an adjunct professor at Bethlehem College and Seminary in Minneapolis. His books include Habits of Grace, A Little Theology of Exercise, Workers for Your Joy, and How to Stay Christian in Seminary.",
+    "affiliation": "Desiring God; Cities Church",
+    "role": "Pastor and Writer",
+    "website": "https://www.crossway.org/authors/david-mathis/",
     "books": [
       {
         "title": "Habits of Grace",
         "amazon_url": "https://www.amazon.com/s?k=Habits+of+Grace+David+Mathis"
       },
       {
-        "title": "Workers for Your Joy",
-        "amazon_url": "https://www.amazon.com/s?k=Workers+for+Your+Joy+Mathis"
+        "title": "A Little Theology of Exercise",
+        "amazon_url": "https://www.amazon.com/s?k=A+Little+Theology+of+Exercise+David+Mathis"
       },
       {
-        "title": "A Little Theology of Exercise",
-        "amazon_url": "https://www.amazon.com/s?k=A+Little+Theology+of+Exercise+Mathis"
+        "title": "Workers for Your Joy",
+        "amazon_url": "https://www.amazon.com/s?k=Workers+for+Your+Joy+David+Mathis"
+      },
+      {
+        "title": "How to Stay Christian in Seminary",
+        "amazon_url": "https://www.amazon.com/s?k=How+to+Stay+Christian+in+Seminary+David+Mathis"
       }
     ],
-    "initials": "DM"
+    "initials": "DM",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.crossway.org/authors/david-mathis/"
+    ],
+    "education": ""
   },
   {
     "name": "Sean McDowell",
@@ -2948,32 +2982,24 @@
   {
     "name": "Justin N. Poythress",
     "slug": "justin-n-poythress",
-    "bio": "Justin N. Poythress is a Christian author and scholar known for his work in biblical theology and apologetics. He contributes to Christian content curation and theological discussion, helping readers engage deeply with Scripture and faith questions.",
-    "affiliation": "All Saints Presbyterian Church (PCA)",
-    "role": "Author & Theologian",
-    "education": "",
+    "bio": "Justin N. Poythress is a pastor and writer who writes from Boise, Idaho. He describes his work as seeking to restore rest and wonder to the worn out. He is the author of Who Am I and What Am I Doing with My Life? Finding Stability and Purpose in Jesus.",
+    "affiliation": "",
+    "role": "Pastor and Writer",
     "website": "https://justinpoythress.com",
-    "books": [],
-    "initials": "JNP",
-    "denomination": "Presbyterian Church in America (PCA)",
-    "tradition": "Reformed / Presbyterian",
-    "known_for": "Pastoring and writing on identity, rest, and Christian living for outlets such as The Gospel Coalition.",
-    "current_role": "Lead Pastor, All Saints Presbyterian Church (Boise/Meridian, Idaho)",
-    "deceased": false,
-    "faqs": [
+    "books": [
       {
-        "q": "Who is Justin Poythress?",
-        "a": "Justin N. Poythress is the pastor of All Saints Presbyterian Church, a PCA congregation in the Boise, Idaho area. He earned his MDiv and DMin from Westminster Theological Seminary in Philadelphia and served as an assistant pastor in Indianapolis and Fort Myers before moving to Idaho in 2022."
-      },
-      {
-        "q": "What denomination is Justin Poythress?",
-        "a": "He is a minister in the Presbyterian Church in America (PCA), a conservative Reformed denomination. His church, All Saints Presbyterian, serves the Boise and Meridian area of Idaho."
-      },
-      {
-        "q": "What does Justin Poythress write about?",
-        "a": "Poythress writes on identity, rest, wonder, and everyday discipleship, with articles at The Gospel Coalition and his own site. He is the author of Who Am I and What Am I Doing with My Life?, which grew out of his doctoral work on identity."
+        "title": "Who Am I and What Am I Doing with My Life? Finding Stability and Purpose in Jesus",
+        "amazon_url": "https://www.amazon.com/s?k=Who+Am+I+and+What+Am+I+Doing+with+My+Life%3F+Finding+Stability+and+Purpose+in+Jesus+Justin+N.+Poythress"
       }
-    ]
+    ],
+    "initials": "JNP",
+    "deceased": false,
+    "bio_sources": [
+      "https://mereorthodoxy.com/meditation-and-the-giver-of-things",
+      "https://justinpoythress.com",
+      "https://justinpoythress.com/about"
+    ],
+    "education": ""
   },
   {
     "name": "Karen Swallow Prior",
@@ -3968,26 +3994,31 @@
   {
     "name": "Kyle Worley",
     "slug": "kyle-worley",
-    "bio": "Kyle Worley is the lead pastor of Mosaic Church in Richardson, Texas, and co-host of the Knowing Faith podcast with J. T. English and Jen Wilkin. An author and teacher with over twenty years in ministry, he writes on union with Christ and the theological formation of local churches.",
-    "affiliation": "Mosaic Church, The Gospel Coalition",
-    "role": "Pastor & Author",
-    "education": "ThM, Southern Baptist Theological Seminary",
+    "bio": "Kyle Worley is a pastor, author, teacher, and podcast host. He hosts the Knowing Faith podcast with Jen Wilkin and JT English and is a teaching fellow and partner for Training the Church. He holds degrees in theology and philosophy from Dallas Baptist University, Redeemer Theological Seminary, Southwestern Baptist Theological Seminary, and The Southern Baptist Theological Seminary. His books include Home with God: Our Union with Christ and Formed for Fellowship: Becoming What You Behold.",
+    "affiliation": "Knowing Faith; Training the Church",
+    "role": "Pastor and Podcast Host",
     "website": "https://kyleworley.net",
     "books": [
       {
-        "title": "Home with God",
-        "amazon_url": "https://www.amazon.com/s?k=Home+with+God+Kyle+Worley"
+        "title": "Home with God: Our Union with Christ",
+        "amazon_url": "https://www.amazon.com/s?k=Home+with+God%3A+Our+Union+with+Christ+Kyle+Worley"
       },
       {
-        "title": "Formed for Fellowship",
-        "amazon_url": "https://www.amazon.com/s?k=Formed+for+Fellowship+Kyle+Worley"
+        "title": "Formed for Fellowship: Becoming What You Behold",
+        "amazon_url": "https://www.amazon.com/s?k=Formed+for+Fellowship%3A+Becoming+What+You+Behold+Kyle+Worley"
       },
       {
-        "title": "Pitfalls",
-        "amazon_url": "https://www.amazon.com/s?k=Pitfalls+Young+Reformed+Worley"
+        "title": "The Dragon Slayer and His Super Special Suit",
+        "amazon_url": "https://www.amazon.com/s?k=The+Dragon+Slayer+and+His+Super+Special+Suit+Kyle+Worley"
       }
     ],
-    "initials": "KW"
+    "initials": "KW",
+    "deceased": false,
+    "bio_sources": [
+      "https://mereorthodoxy.com/the-heidelberg-catechisms-lesson-for-foster-parents",
+      "https://kyleworley.net"
+    ],
+    "education": ""
   },
   {
     "name": "Roland Barnes",
@@ -5044,13 +5075,21 @@
   {
     "name": "Alistair Chalmers",
     "slug": "alistair-chalmers",
-    "bio": "Alistair Chalmers is a Scottish pastor serving Ferniehill Evangelical Church in Edinburgh and a member of the FIEC Pastors' Network. An avid reader, he writes weekly book reviews and reflections on Christian living, theology, and pastoral ministry at his blog.",
+    "bio": "Alistair Chalmers is a Scottish pastor who publishes weekly book reviews and articles on his blog. Evangelicals Now reported in January 2024 that Ferniehill Evangelical Church in Edinburgh had employed him as its first pastor, and Evangelical Times lists him as pastor of Ferniehill Evangelical Church. He has written for Evangelical Times and Evangelicals Now.",
     "affiliation": "Ferniehill Evangelical Church",
-    "role": "Pastor & Writer",
-    "education": "",
+    "role": "Pastor",
     "website": "https://achalmersblog.com",
     "books": [],
-    "initials": "AC"
+    "initials": "AC",
+    "deceased": false,
+    "bio_sources": [
+      "https://achalmersblog.com/about/",
+      "https://achalmersblog.com",
+      "https://e-n.org.uk/uk-news/2024-01-first-pastor-for-50-year-old-church",
+      "https://www.evangelical-times.org/dont-substitute-your-pastor-for-a-screen/",
+      "https://www.e-n.org.uk/in-depth/person/alistair-chalmers/"
+    ],
+    "education": ""
   },
   {
     "name": "Amy Tyson",
@@ -6363,66 +6402,71 @@
   {
     "name": "Mark Vroegop",
     "slug": "mark-vroegop",
-    "bio": "Mark Vroegop is the lead pastor of College Park Church in Indianapolis and a frequent writer on the lost Christian practice of lament. His book Dark Clouds, Deep Mercy has helped pastors, counselors, and ordinary believers learn to bring grief honestly to God using the language of the Psalms and Lamentations. He also writes on racial reconciliation and on how lament can rebuild trust in fractured communities.",
-    "affiliation": "College Park Church (Indianapolis)",
-    "role": "Pastor & Author",
-    "education": "DMin, Trinity Evangelical Divinity School",
+    "bio": "Mark Vroegop is president of The Gospel Coalition, elected by its council in January 2025 and in office since March 2025. He spent nearly three decades in pastoral leadership, most recently as lead pastor of College Park Church in Indianapolis, which he led from 2008. He cohosts the TGC podcast Your Corner of the World with Dan Doriani. His books include Dark Clouds, Deep Mercy: Discovering the Grace of Lament and Waiting Isn't a Waste: The Surprising Comfort of Trusting God in the Uncertainties of Life.",
+    "affiliation": "The Gospel Coalition",
+    "role": "President, The Gospel Coalition",
     "website": "https://www.markvroegop.com",
     "books": [
       {
-        "title": "Dark Clouds, Deep Mercy",
-        "amazon_url": "https://www.amazon.com/s?k=Dark+Clouds%2C+Deep+Mercy+Mark+Vroegop"
+        "title": "Dark Clouds, Deep Mercy: Discovering the Grace of Lament",
+        "amazon_url": "https://www.amazon.com/s?k=Dark+Clouds%2C+Deep+Mercy%3A+Discovering+the+Grace+of+Lament+Mark+Vroegop"
       },
       {
-        "title": "Weep with Me",
-        "amazon_url": "https://www.amazon.com/s?k=Weep+with+Me+Mark+Vroegop"
+        "title": "Waiting Isn't a Waste: The Surprising Comfort of Trusting God in the Uncertainties of Life",
+        "amazon_url": "https://www.amazon.com/s?k=Waiting+Isn%27t+a+Waste%3A+The+Surprising+Comfort+of+Trusting+God+in+the+Uncertainties+of+Life+Mark+Vroegop"
       },
       {
-        "title": "Waiting Isn't a Waste",
-        "amazon_url": "https://www.amazon.com/s?k=Waiting+Isn%27t+a+Waste+Mark+Vroegop"
-      },
-      {
-        "title": "When Trouble Comes",
-        "amazon_url": "https://www.amazon.com/s?k=When+Trouble+Comes+Mark+Vroegop"
+        "title": "Weep with Me: How Lament Opens a Door for Racial Reconciliation",
+        "amazon_url": "https://www.amazon.com/s?k=Weep+with+Me%3A+How+Lament+Opens+a+Door+for+Racial+Reconciliation+Mark+Vroegop"
       }
     ],
-    "initials": "MV"
+    "initials": "MV",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/mark-vroegop/",
+      "https://www.thegospelcoalition.org/press-release/mark-vroegop-selected-third-president-the-gospel-coalition/",
+      "https://www.markvroegop.com",
+      "https://www.thegospelcoalition.org/podcasts/your-corner-of-the-world/introducing-your-corner-world/"
+    ],
+    "education": ""
   },
   {
     "name": "Robert Letham",
     "slug": "robert-letham",
-    "bio": "Robert Letham is Professor of Systematic and Historical Theology at Union School of Theology in Wales. A Welsh Presbyterian and one of the most respected Reformed systematicians of his generation, his work on the Trinity, union with Christ, and the Westminster Assembly is widely used in seminary classrooms across the Reformed world. His Systematic Theology is increasingly cited as a major contemporary contribution to evangelical dogmatics.",
-    "affiliation": "Union School of Theology (Wales)",
-    "role": "Reformed Theologian",
-    "education": "PhD, University of Aberdeen",
-    "website": "https://www.uniontheology.org",
+    "bio": "Robert Letham is a minister in the Orthodox Presbyterian Church. He was professor of systematic and historical theology at Union School of Theology in the United Kingdom, where Ligonier lists him as senior research fellow, and he holds a PhD from the University of Aberdeen. A June 2026 Reformation21 note says he has 25 years of pastoral experience and still supervises PhD students. His books include The Holy Trinity, Union with Christ, Systematic Theology, The Holy Spirit, and The Eternal Son.",
+    "affiliation": "Union School of Theology",
+    "role": "Theologian",
+    "website": "https://learn.ligonier.org/teachers/robert-letham",
     "books": [
       {
         "title": "The Holy Trinity",
         "amazon_url": "https://www.amazon.com/s?k=The+Holy+Trinity+Robert+Letham"
       },
       {
-        "title": "Systematic Theology",
-        "amazon_url": "https://www.amazon.com/s?k=Systematic+Theology+Robert+Letham"
-      },
-      {
         "title": "Union with Christ",
         "amazon_url": "https://www.amazon.com/s?k=Union+with+Christ+Robert+Letham"
       },
       {
-        "title": "The Westminster Assembly",
-        "amazon_url": "https://www.amazon.com/s?k=The+Westminster+Assembly+Robert+Letham"
+        "title": "Systematic Theology",
+        "amazon_url": "https://www.amazon.com/s?k=Systematic+Theology+Robert+Letham"
       },
       {
-        "title": "The Lord's Supper",
-        "amazon_url": "https://www.amazon.com/s?k=The+Lord%27s+Supper+Robert+Letham"
+        "title": "The Holy Spirit",
+        "amazon_url": "https://www.amazon.com/s?k=The+Holy+Spirit+Robert+Letham"
       },
       {
-        "title": "Eastern Orthodoxy and Western Theology",
-        "amazon_url": "https://www.amazon.com/s?k=Eastern+Orthodoxy+and+Western+Theology+Robert+Letham"
+        "title": "The Eternal Son",
+        "amazon_url": "https://www.amazon.com/s?k=The+Eternal+Son+Robert+Letham"
       }
     ],
-    "initials": "RL"
+    "initials": "RL",
+    "deceased": false,
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/robert-letham",
+      "https://reformation21.org/is-jesus-christ-the-natural-and-adopted-son-of-god/",
+      "https://www.evangelical-times.org/author/robert-letham/"
+    ],
+    "education": ""
   },
   {
     "name": "Stephen Wolfe",
@@ -9930,13 +9974,22 @@
   {
     "name": "Jake Meador",
     "slug": "jake-meador",
-    "bio": "Jake Meador is a writer and editor known for his thoughtful commentary on faith, culture, and politics from a Christian perspective. He has contributed to various Christian publications and is recognized for his work exploring how Christian conviction intersects with contemporary cultural issues.",
+    "bio": "Jake Meador is a writer, speaker, and editor from Lincoln, Nebraska, and editor in chief of Mere Orthodoxy, an online magazine covering the Christian faith in the public sphere. He is the author of What Are Christians For?: Life Together at the End of the World, published by IVP.",
     "affiliation": "Mere Orthodoxy",
-    "role": "Editor & Writer",
-    "education": "",
+    "role": "Editor in Chief",
     "website": "https://jakemeador.com",
-    "books": [],
-    "initials": "JM"
+    "books": [
+      {
+        "title": "What Are Christians For?: Life Together at the End of the World",
+        "amazon_url": "https://www.amazon.com/s?k=What+Are+Christians+For%3F%3A+Life+Together+at+the+End+of+the+World+Jake+Meador"
+      }
+    ],
+    "initials": "JM",
+    "deceased": false,
+    "bio_sources": [
+      "https://jakemeador.com"
+    ],
+    "education": ""
   },
   {
     "name": "Abigail Geiger",
@@ -9963,13 +10016,18 @@
   {
     "name": "Joel Fick",
     "slug": "joel-fick",
-    "bio": "Joel Fick is a Christian author and speaker focused on helping believers develop a deeper faith and biblical worldview. His work encourages readers to integrate their Christian convictions with everyday life and culture.",
-    "affiliation": "",
-    "role": "Author & Speaker",
-    "education": "",
-    "website": "",
+    "bio": "Joel Fick is pastor of Redemption Orthodox Presbyterian Church in Gainesville, Florida, according to his Ligonier teacher page (checked November 2026). He has written for Ligonier Ministries and Tabletalk magazine.",
+    "affiliation": "Redemption Orthodox Presbyterian Church (Gainesville, FL)",
+    "role": "Pastor",
+    "website": "https://learn.ligonier.org/teachers/joel-fick",
     "books": [],
-    "initials": "JF"
+    "initials": "JF",
+    "deceased": false,
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/joel-fick",
+      "https://learn.ligonier.org/articles/what-should-christians-remember-amid-tragedies"
+    ],
+    "education": ""
   },
   {
     "name": "Noe Garcia",
@@ -10233,13 +10291,25 @@
   {
     "name": "Peter Jones",
     "slug": "peter-jones",
-    "bio": "Peter Jones is a Reformed theologian and author known for his work exploring worldview issues and spiritual apologetics. He has spent decades examining contemporary culture through a Christian lens and defending biblical truth in the modern context.",
-    "affiliation": "",
-    "role": "Theologian & Author",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "PJ"
+    "bio": "Peter Jones founded truthXchange in 2003, a ministry that began as Christian Witness to a Pagan Planet, and served as its director. Before that he taught New Testament at a seminary in France for nearly 18 years and in 1991 became professor of Greek and New Testament at Westminster Seminary California, where he chaired the Biblical Studies Department. He has written many books on paganism, including The Other Worldview: Exposing Christianity's Greatest Threat.",
+    "affiliation": "truthXchange",
+    "role": "Author",
+    "website": "https://truthxchange.com/author/peterjones/",
+    "books": [
+      {
+        "title": "The Other Worldview: Exposing Christianity's Greatest Threat",
+        "amazon_url": "https://www.amazon.com/s?k=The+Other+Worldview%3A+Exposing+Christianity%27s+Greatest+Threat+Peter+Jones"
+      }
+    ],
+    "initials": "PJ",
+    "deceased": false,
+    "bio_sources": [
+      "https://truthxchange.com/about/history/",
+      "https://truthxchange.com/about/",
+      "https://learn.ligonier.org/teachers/peter-jones",
+      "https://truthxchange.com/how-i-met-the-biblical-jesus-and-lost-the-shallow-one/"
+    ],
+    "education": ""
   },
   {
     "name": "Jen Oshman",
@@ -10539,13 +10609,22 @@
   {
     "name": "Miranda Carls",
     "slug": "miranda-carls",
-    "bio": "Miranda Carls is a Christian author, speaker, and leadership coach specializing in faith-and-work integration, leadership transitions, and emotional intelligence. She is the author of 'The Word at Work: Ten Biblical Principles for Christian Professionals' and has written for The Gospel Coalition and Biblical Leadership. She lives outside St. Louis, Missouri, with her husband and three sons.",
-    "affiliation": "Independent (leadership coaching)",
-    "role": "Author & Leadership Coach",
-    "education": "",
+    "bio": "Miranda Carls is an author, facilitator, and leadership and executive coach who has worked with start-ups, nonprofits, churches, midsize organizations, and Fortune 500 companies. She is the author of The Word at Work, which covers 10 biblical principles for Christian professionals. She lives near St. Louis, Missouri.",
+    "affiliation": "",
+    "role": "Leadership Coach and Author",
     "website": "https://www.mirandacarls.com/",
-    "books": [],
-    "initials": "MC"
+    "books": [
+      {
+        "title": "The Word at Work",
+        "amazon_url": "https://www.amazon.com/s?k=The+Word+at+Work+Miranda+Carls"
+      }
+    ],
+    "initials": "MC",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/article/rest-each-day/"
+    ],
+    "education": ""
   },
   {
     "name": "Joel Morris",
@@ -13547,26 +13626,23 @@
   {
     "name": "Scott Aniol",
     "slug": "scott-aniol",
-    "bio": "Scott Aniol is a Christian author, musician, and cultural commentator who writes extensively on worship, aesthetics, and discernment in the modern church. He is known for his thoughtful analysis of contemporary Christian culture and his advocacy for biblical standards in worship and the arts. Through his writing and speaking, Aniol encourages believers to think critically about how faith intersects with culture.",
-    "affiliation": "Religious Affections Ministries; G3 Ministries",
-    "role": "Author, Musician & Cultural Commentator",
-    "education": "",
+    "bio": "Scott Aniol became president of G3 Ministries in July 2025, after serving there since 2021 as executive vice president and editor in chief. He is an elder at Pray's Mill Baptist Church in Douglasville, Georgia, and professor of pastoral theology at Grace Bible Theological Seminary, and he holds a PhD in worship ministry from Southwestern Baptist Theological Seminary. He contributed to the Religious Affections Ministries website from 2004 to 2021 and is the author of Worship in Song: A Biblical Approach to Music and Worship.",
+    "affiliation": "G3 Ministries",
+    "role": "President, G3 Ministries",
     "website": "https://religiousaffections.org",
     "books": [
       {
-        "title": "Worship in the Melting Pot",
-        "amazon_url": "https://www.amazon.com/s?k=Worship+in+the+Melting+Pot+Scott+Aniol"
-      },
-      {
-        "title": "Thought Life",
-        "amazon_url": "https://www.amazon.com/s?k=Thought+Life+Scott+Aniol"
-      },
-      {
-        "title": "For Love of the Church",
-        "amazon_url": "https://www.amazon.com/s?k=For+Love+of+the+Church+Scott+Aniol"
+        "title": "Worship in Song: A Biblical Approach to Music and Worship",
+        "amazon_url": "https://www.amazon.com/s?k=Worship+in+Song%3A+A+Biblical+Approach+to+Music+and+Worship+Scott+Aniol"
       }
     ],
-    "initials": "SA"
+    "initials": "SA",
+    "deceased": false,
+    "bio_sources": [
+      "https://churchleaders.com/news/514876-scott-aniol-president-g3-ministries-exit-josh-buice.html",
+      "https://religiousaffections.org"
+    ],
+    "education": ""
   },
   {
     "name": "Robert Ordway",
@@ -16351,13 +16427,26 @@
   {
     "name": "Dan Doriani",
     "slug": "dan-doriani",
-    "bio": "Dan Doriani is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "DD"
+    "bio": "Dan Doriani is professor of theology at Covenant Theological Seminary and a board member of The Gospel Coalition. He founded and leads the Center for Faith and Work in St. Louis, and he cohosts the TGC podcast Your Corner of the World with Mark Vroegop. He holds an MDiv and PhD from Westminster Theological Seminary and an STM from Yale Divinity School. His books include the Romans and Matthew volumes in the Reformed Expository Commentary series, Getting the Message, and Work That Makes a Difference.",
+    "affiliation": "Covenant Theological Seminary",
+    "role": "Professor of Theology",
+    "website": "https://www.thegospelcoalition.org/podcasts/your-corner-of-the-world/introducing-your-corner-world/",
+    "books": [
+      {
+        "title": "Getting the Message",
+        "amazon_url": "https://www.amazon.com/s?k=Getting+the+Message+Dan+Doriani"
+      },
+      {
+        "title": "Work That Makes a Difference",
+        "amazon_url": "https://www.amazon.com/s?k=Work+That+Makes+a+Difference+Dan+Doriani"
+      }
+    ],
+    "initials": "DD",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/podcasts/your-corner-of-the-world/introducing-your-corner-world/"
+    ],
+    "education": ""
   },
   {
     "name": "Kathryn Butler",
@@ -17250,34 +17339,27 @@
   {
     "name": "Michael F. Bird",
     "slug": "michael-f-bird",
-    "bio": "Michael F. Bird is an Australian New Testament scholar and theologian known for his work on biblical interpretation and Christian doctrine. His accessible yet scholarly approach has made him a respected voice in evangelical theology and biblical studies.",
-    "affiliation": "Ridley College Melbourne; Christianity Today; Evangelical Theological Society",
-    "role": "New Testament Scholar, Theologian & Author",
-    "education": "Ph.D. in Theology, University of Melbourne",
-    "website": "https://www.michaelfbird.com/",
+    "bio": "Michael F. Bird is Deputy Principal: Academic and Senior Lecturer in New Testament and Theology at Ridley College in Melbourne, Australia. He joined Ridley in 2013 after teaching at Highland Theological College in Scotland and Brisbane School of Theology, and served as Academic Dean before becoming Deputy Principal in July 2023. Before entering ministry he served in the Australian Army. He has written more than 30 books, including Evangelical Theology and The New Testament in Its World with N. T. Wright.",
+    "affiliation": "Ridley College (Melbourne)",
+    "role": "Deputy Principal and Lecturer",
+    "website": "https://www.ridley.edu.au/team/mike-bird/",
     "books": [
       {
-        "title": "The Gospel of the Lord: How the Early Church Wrote the Story of Jesus",
-        "amazon_url": "https://www.amazon.com/s?k=The+Gospel+of+the+Lord+Michael+Bird"
+        "title": "Evangelical Theology",
+        "amazon_url": "https://www.amazon.com/s?k=Evangelical+Theology+Michael+F.+Bird"
       },
       {
-        "title": "Evangelical Theology: A Biblical and Systematic Introduction",
-        "amazon_url": "https://www.amazon.com/s?k=Evangelical+Theology+Michael+Bird"
-      },
-      {
-        "title": "Jesus and the God of Israel: God Crucified and Other Studies on the New Testament's Christology of Divine Identity",
-        "amazon_url": "https://www.amazon.com/s?k=Jesus+and+the+God+of+Israel+Michael+Bird"
-      },
-      {
-        "title": "Colossians and Philemon: A Pentecostal Commentary",
-        "amazon_url": "https://www.amazon.com/s?k=Colossians+and+Philemon+Michael+Bird"
-      },
-      {
-        "title": "A Bird's Eye View of Paul: The Apostle's Life and Letters",
-        "amazon_url": "https://www.amazon.com/s?k=A+Bird%27s+Eye+View+of+Paul+Michael+Bird"
+        "title": "The New Testament in Its World",
+        "amazon_url": "https://www.amazon.com/s?k=The+New+Testament+in+Its+World+Michael+F.+Bird"
       }
     ],
-    "initials": "MFB"
+    "initials": "MFB",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.ridley.edu.au/team/mike-bird/",
+      "https://michaelfbird.substack.com/about"
+    ],
+    "education": ""
   },
   {
     "name": "Dane Ortlund",

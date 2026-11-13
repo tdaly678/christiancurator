@@ -340,7 +340,7 @@
         {"slug": "christian-education", "angle": "The purpose and future of Christian higher education."},
         {"slug": "politics-and-the-church", "angle": "Character, democracy, and the moral consensus of the postwar West."}
       ],
-      "related": ["nadya-williams", "carl-trueman", "jake-meador"],
+      "related": ["nadya-williams", "carl-trueman"],
       "same_as": ["https://mereorthodoxy.com/tag/author-christopher-gehrz/", "https://chrisgehrz.substack.com/about", "https://currentpub.com/author/patreon_4709580", "https://www.bethel.edu/academics/faculty/gehrz-christopher"],
       "review_notes": "The duplicate page chris-gehrz was merged into this one on 2026-11-12 (merge_duplicate_voices.py: noindex redirect stub, removed from sitemap and index). Old bio wrongly called him author of The Pietist Vision of Christian Higher Education (Bethel lists him as editor). Substack posts are mostly paywalled, so picks come from Mere Orthodoxy and Current."
     },
@@ -508,7 +508,7 @@
         {"slug": "missions-and-evangelism", "angle": "Campus ministry and reaching Gen Z."},
         {"slug": "pastoral-ministry", "angle": "Preaching and pastor training as the church changes generations."}
       ],
-      "related": ["jake-meador", "brett-mccracken", "rachel-gilson", "alex-harris"],
+      "related": ["brett-mccracken", "rachel-gilson", "alex-harris"],
       "same_as": ["https://www.thegospelcoalition.org/profile/derek-rishmawy/", "https://mereorthodoxy.com/tag/author-derek-rishmawy/", "https://derekzrishmawy.com/"],
       "review_notes": "TGC panel page dates Gospel Hope for Gen-Z Ministry Oct 23, 2026; the approved alex-harris entry cites the YouTube video as Oct 22. Forthcoming IVP book and PCA ordination not verified (IVP returned 403). Christianity Today author page returns 404, but CT articles bylined by him were verified on 2026-11-12 (HTTP 200, meta author Derek Rishmawy, RUF UC Irvine author note): You're Probably Worshiping a False God (Nov 2020), cited in bio_sources, and When It Comes to Sacrifice, God Doesn't Play Fair (Sep 2020)."
     },

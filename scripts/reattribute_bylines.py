@@ -9,7 +9,8 @@ the feed creator is not the writer:
   - WORLD: posting accounts (Keegan Martin on podcasts, Arla Eicher on
     roundups). Podcast episodes are media and carry no byline at all.
   - Pew Research: producer and newsletter accounts.
-Plus single pieces the voices audit found miscredited elsewhere (EXTRA_URLS).
+Plus single pieces the voices audit found miscredited elsewhere (EXTRA_URLS)
+and pieces whose visible byline was checked by hand (BYLINE_OVERRIDES).
 
 For every archived article on those domains the byline is read from the page
 (fetcher.rss_fetcher.page_byline). When it differs from the archive byline,
@@ -57,6 +58,15 @@ EXTRA_URLS = {
     "https://www.thegospelcoalition.org/article/teens-whole-bible/",
     "https://www.thegospelcoalition.org/article/10-resolutions-ai/",
 }
+# Pieces checked by hand against the visible byline, where the page metadata
+# names a posting account: Mere Orthodoxy's meta author is "Jake Meador" (or
+# "Mere Orthodoxy") on essays by other writers (overnight run, Nov 12 2026).
+BYLINE_OVERRIDES = {
+    "https://mereorthodoxy.com/russell-kirks-understanding-of-a-christian-america/": "E. Wesley Reynolds III",
+    "https://mereorthodoxy.com/hospitality-desecration-politics-a-review-of-carl-truemans-the-desecration-of-man/":
+        "Charles Carman",
+    "https://mereorthodoxy.com/that-hideous-narcissism/": "Eddie LaRow",
+}
 POSTING_ACCOUNTS = {
     "Jeri Choi", "Keegan Martin", "Arla Eicher",
     "Anna Jackson", "Beshay Sakla", "Reem Nadeem", "Sara Atske",
@@ -80,7 +90,7 @@ def same_byline(a: str, b: str) -> bool:
 
 def in_scope(url: str) -> bool:
     host = urlparse(url).netloc.lower()
-    return url in EXTRA_URLS or any(host == d or host.endswith("." + d) for d in DOMAINS)
+    return url in EXTRA_URLS or url in BYLINE_OVERRIDES or any(host == d or host.endswith("." + d) for d in DOMAINS)
 
 
 def read_page(url: str, cache_dir: Path, fetch: bool) -> str | None:
@@ -106,6 +116,8 @@ def read_page(url: str, cache_dir: Path, fetch: bool) -> str | None:
 
 def real_byline(url: str, current: str, cache_dir: Path, fetch: bool) -> tuple[str | None, str]:
     """(new byline or None to keep, reason)."""
+    if url in BYLINE_OVERRIDES:
+        return BYLINE_OVERRIDES[url], "visible byline, checked by hand"
     if PODCAST_RE.search(url):
         return "", "podcast episode: media, no byline"
     page = read_page(url, cache_dir, fetch)
@@ -176,6 +188,8 @@ def main(argv=None) -> int:
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--no-fetch", action="store_true", help="use only cached pages")
     ap.add_argument("--page-cache", default="/tmp/cc_pages")
+    ap.add_argument("--overrides-only", action="store_true",
+                    help="only the hand-checked BYLINE_OVERRIDES pieces")
     args = ap.parse_args(argv)
     cache_dir = Path(args.page_cache)
     by_name = load_voices_by_name()
@@ -187,7 +201,8 @@ def main(argv=None) -> int:
     sources: dict[str, str] = {}
     for meta in sorted(ARCHIVE.glob("*/meta.json")):
         for a in json.loads(meta.read_text(encoding="utf-8")).get("articles", []):
-            if a.get("url") and in_scope(a["url"]):
+            if a.get("url") and in_scope(a["url"]) and (
+                    not args.overrides_only or a["url"] in BYLINE_OVERRIDES):
                 current.setdefault(a["url"], a.get("author", ""))
                 sources.setdefault(a["url"], a.get("source", ""))
     changes: dict[str, dict] = {}
@@ -252,7 +267,8 @@ def main(argv=None) -> int:
             y += 1
     if args.apply:
         YESTERDAY.write_text(json.dumps(rows, indent=2, ensure_ascii=False), encoding="utf-8")
-        REPORT.write_text(json.dumps(changes, indent=1, ensure_ascii=False), encoding="utf-8")
+        report = REPORT.with_name(REPORT.stem + "-overrides.json") if args.overrides_only else REPORT
+        report.write_text(json.dumps(changes, indent=1, ensure_ascii=False), encoding="utf-8")
     print(f"{metas} meta.json files, {y} yesterday.json rows")
 
     by_from: dict[str, int] = {}

@@ -51,6 +51,26 @@
   "notes": "The Aquila pieces could not be opened (403) and the three titles were not on the first page of his blog, so the link between blog and pieces is inferred from the uncommon name. 20schemes page is undated; the blog tagline is 'Ministry, discipleship, church planting, living for Jesus' and has posts through Nov 2026. Charity Commission lists an Alastair Roy Gooderham as trustee of Grace Church Doncaster (not used)."
  },
  {
+  "slug": "alistair-chalmers",
+  "decision": "bio",
+  "name": "Alistair Chalmers",
+  "bio": "Alistair Chalmers is a Scottish pastor who publishes weekly book reviews and articles on his blog. Evangelicals Now reported in January 2024 that Ferniehill Evangelical Church in Edinburgh had employed him as its first pastor, and Evangelical Times lists him as pastor of Ferniehill Evangelical Church. He has written for Evangelical Times and Evangelicals Now.",
+  "role": "Pastor",
+  "affiliation": "Ferniehill Evangelical Church",
+  "website": "https://achalmersblog.com",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://achalmersblog.com/about/",
+   "https://achalmersblog.com",
+   "https://e-n.org.uk/uk-news/2024-01-first-pastor-for-50-year-old-church",
+   "https://www.evangelical-times.org/dont-substitute-your-pastor-for-a-screen/",
+   "https://www.e-n.org.uk/in-depth/person/alistair-chalmers/"
+  ],
+  "identity_check": "Archived Aquila Report copy of 'Heaven, Earth Made New...' links to the original on achalmersblog.com, and the blog's search lists 'Will Christians Really Judge the World?' (Aug 20, 2026); the blog's About page says its author is a Scottish pastor named Alistair, and Evangelical Times names Alistair Chalmers as pastor of Ferniehill, Edinburgh.",
+  "notes": "Aquila Report pages return 403; read through web.archive.org. The blog's About page does not name the church, so the link to Ferniehill rests on the same name plus 'Scottish pastor'; ET (2021) and e-n (Jan 2024) both tie the name to Ferniehill. Small tension: ET 2021 already calls him pastor, while e-n says he was employed as first pastor in 2023."
+ },
+ {
   "slug": "andrew-spencer",
   "decision": "bio",
   "name": "Andrew Spencer",
@@ -100,6 +120,26 @@
   "bio_sources": [],
   "identity_check": "Could not confirm. Aquila Report pages return 403 and no original of either title could be found.",
   "notes": "Search returned a Fellowship Church (fellowshipchurch.co/armando) administration pastor of this name, but the page now returns 404 and nothing ties him to 'Counting It Joy When Nothing Makes Sense' or 'Good and Gracious King'. Not guessing."
+ },
+ {
+  "slug": "benjamin-l-gladd",
+  "decision": "bio",
+  "name": "Benjamin L. Gladd",
+  "bio": "Benjamin L. Gladd is executive director of The Carson Center for Theological Renewal at The Gospel Coalition. He previously spent 12 years as professor of New Testament at Reformed Theological Seminary in Jackson, Mississippi, and holds a PhD from Wheaton College. He coedits the New Studies in Biblical Theology series and, with D. A. Carson, the Pillar New Testament Commentary series. His books include From Adam and Israel to the Church, Handbook on the Gospels, and The Story Retold, written with G. K. Beale.",
+  "role": "Executive Director",
+  "affiliation": "The Gospel Coalition (The Carson Center for Theological Renewal)",
+  "website": "https://www.thegospelcoalition.org/profile/benjamin-l-gladd/",
+  "books": [
+   "From Adam and Israel to the Church",
+   "Handbook on the Gospels",
+   "The Story Retold"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/benjamin-l-gladd/"
+  ],
+  "identity_check": "The pieces are on TGC and the Carson Center podcast; the TGC profile is the author page linked from them.",
+  "notes": ""
  },
  {
   "slug": "brad-edwards",
@@ -154,6 +194,25 @@
   ],
   "identity_check": "Uncommon full name; search results index the Reformation21 IVF piece among Brian G. Najapfour's regular Reformation21 contributions, and Reformation21 is a Reformed outlet consistent with his ministry.",
   "notes": "Could not read the byline on the Reformation21 page itself (the fetch returned only site navigation), and Aquila is 403. Books such as 'Every Christian Is an Evangelist' appeared only in a search summary, so none are listed. The 2013 Dutton URC installation is older history and was left out."
+ },
+ {
+  "slug": "brianna-lambert",
+  "decision": "bio",
+  "name": "Brianna Lambert",
+  "bio": "Brianna Lambert is an author, speaker, and teacher who works on staff at Gospel-Centered Discipleship. She is the author of Created to Play: How Taking Hobbies Seriously Grows Us Spiritually, published by InterVarsity Press. Her writing has appeared in Christianity Today and Common Good.",
+  "role": "Author",
+  "affiliation": "Gospel-Centered Discipleship",
+  "website": "https://briannalambert.com/",
+  "books": [
+   "Created to Play: How Taking Hobbies Seriously Grows Us Spiritually"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/article/play-parents-need/",
+   "https://briannalambert.com/"
+  ],
+  "identity_check": "Author box on her TGC piece 'Parents Need Play Too' (one of the credited pieces) gives the GCD role and the book, matching her own site.",
+  "notes": "Family and church details in the TGC box left out. Did not open the CT or Mere Orthodoxy pieces."
  },
  {
   "slug": "cameron-shaffer",
@@ -219,6 +278,23 @@
   "notes": "The GCC URL in the current data is a generic department page with no bio. Display name could stay 'Carl Trueman'; his publishers use 'Carl R. Trueman'."
  },
  {
+  "slug": "chris-allen",
+  "decision": "noindex",
+  "name": "Chris Allen",
+  "bio": "",
+  "role": "",
+  "affiliation": "",
+  "website": "https://relevantmagazine.com/author/chrisallen/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://relevantmagazine.com/author/chrisallen/",
+   "https://relevantmagazine.com/justice/the-truth-about-short-term-missions/"
+  ],
+  "identity_check": "RELEVANT author page confirms Chris Allen wrote the credited pieces (53 articles), but it carries no bio or title.",
+  "notes": "No source found for who this Chris Allen is. The current affiliation (Southeastern Baptist Theological Seminary) is unsupported and likely a different person with a common name. Searches for his RELEVANT role returned nothing."
+ },
+ {
   "slug": "clinton-manley",
   "decision": "bio",
   "name": "Clinton Manley",
@@ -279,6 +355,25 @@
   "notes": "Books are as named in the TGC bio, not checked on a publisher page. Her own site courtneydoctor.org was not opened."
  },
  {
+  "slug": "dan-doriani",
+  "decision": "bio",
+  "name": "Dan Doriani",
+  "bio": "Dan Doriani is professor of theology at Covenant Theological Seminary and a board member of The Gospel Coalition. He founded and leads the Center for Faith and Work in St. Louis, and he cohosts the TGC podcast Your Corner of the World with Mark Vroegop. He holds an MDiv and PhD from Westminster Theological Seminary and an STM from Yale Divinity School. His books include the Romans and Matthew volumes in the Reformed Expository Commentary series, Getting the Message, and Work That Makes a Difference.",
+  "role": "Professor of Theology",
+  "affiliation": "Covenant Theological Seminary",
+  "website": "https://www.thegospelcoalition.org/podcasts/your-corner-of-the-world/introducing-your-corner-world/",
+  "books": [
+   "Getting the Message",
+   "Work That Makes a Difference"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/podcasts/your-corner-of-the-world/introducing-your-corner-world/"
+  ],
+  "identity_check": "Bio comes from the TGC page for 'Introducing Your Corner of the World' (Sept 30, 2026), one of the credited pieces, which names him as host.",
+  "notes": "Commentary volumes kept in prose only (exact titles not confirmed). Did not open a separate TGC profile."
+ },
+ {
   "slug": "daniel-silliman",
   "decision": "bio",
   "name": "Daniel Silliman",
@@ -330,6 +425,27 @@
   "notes": "darryldash.com redirects to dashhouse.com. The current data's 'Tap Unstuck' affiliation is not on his About page and was dropped. About page says 'I've written a few books' without titles here, so no books listed. 'Cofounder of Gospel for Life' is quoted as the about page states it."
  },
  {
+  "slug": "david-mathis",
+  "decision": "bio",
+  "name": "David Mathis",
+  "bio": "David Mathis is senior teacher at desiringGod.org, a pastor at Cities Church in Saint Paul, Minnesota, and an adjunct professor at Bethlehem College and Seminary in Minneapolis. His books include Habits of Grace, A Little Theology of Exercise, Workers for Your Joy, and How to Stay Christian in Seminary.",
+  "role": "Pastor and Writer",
+  "affiliation": "Desiring God; Cities Church",
+  "website": "https://www.crossway.org/authors/david-mathis/",
+  "books": [
+   "Habits of Grace",
+   "A Little Theology of Exercise",
+   "Workers for Your Joy",
+   "How to Stay Christian in Seminary"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.crossway.org/authors/david-mathis/"
+  ],
+  "identity_check": "Pieces are Desiring God feed items; the Crossway author page describes the same David Mathis of desiringGod.org.",
+  "notes": "desiringgod.org returned 403, so the DG teacher page (a search snippet says it calls him Senior Teacher and Executive Editor) was not opened; executive editor title left out. Crossway page is undated."
+ },
+ {
   "slug": "don-carson",
   "decision": "bio",
   "name": "Don Carson",
@@ -375,6 +491,25 @@
   ],
   "identity_check": "All three credited RELEVANT pieces appear in the article list on her RELEVANT author page.",
   "notes": "Author page says 'a recent Biola graduate'; worded as 'a Biola University graduate'. RELEVANT is a Christian outlet, so a normal bio rather than the journalist line."
+ },
+ {
+  "slug": "gabriel-ne-fluhrer",
+  "decision": "bio",
+  "name": "Gabriel N.E. Fluhrer",
+  "bio": "Gabriel N.E. Fluhrer is senior pastor of First Presbyterian Church in Chattanooga, Tennessee, and an adjunct professor of systematic theology at Reformed Theological Seminary in Atlanta. He is the featured teacher for the Ligonier teaching series Alive. He is the author of Alive: How the Resurrection Changes Everything and The Beauty of Divine Grace.",
+  "role": "Senior Pastor",
+  "affiliation": "First Presbyterian Church (Chattanooga, TN)",
+  "website": "https://learn.ligonier.org/teachers/gabriel-fluhrer",
+  "books": [
+   "Alive: How the Resurrection Changes Everything",
+   "The Beauty of Divine Grace"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://learn.ligonier.org/teachers/gabriel-fluhrer"
+  ],
+  "identity_check": "Pieces are Ligonier blog items; the Ligonier teacher page is his author page there.",
+  "notes": ""
  },
  {
   "slug": "grant-dutro",
@@ -425,6 +560,24 @@
   ],
   "identity_check": "Credited CT piece (Sept 15, 2026) is bylined Harvest Prude and links to the CT writer page used for the bio.",
   "notes": "The CT page uses the past tense ('was national political correspondent'), so her current CT status is unclear; the bio keeps it past tense. Current data said 'The Dispatch (formerly WORLD)', which is outdated."
+ },
+ {
+  "slug": "jake-meador",
+  "decision": "bio",
+  "name": "Jake Meador",
+  "bio": "Jake Meador is a writer, speaker, and editor from Lincoln, Nebraska, and editor in chief of Mere Orthodoxy, an online magazine covering the Christian faith in the public sphere. He is the author of What Are Christians For?: Life Together at the End of the World, published by IVP.",
+  "role": "Editor in Chief",
+  "affiliation": "Mere Orthodoxy",
+  "website": "https://jakemeador.com",
+  "books": [
+   "What Are Christians For?: Life Together at the End of the World"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://jakemeador.com"
+  ],
+  "identity_check": "His own site names him editor in chief of Mere Orthodoxy, where the credited pieces ran; the Desecration of Man review carries his byline (June 5, 2026).",
+  "notes": "Attribution issue: the credited piece 'Russell Kirk's Understanding of a Christian America' shows a bio for E. Wesley Reynolds III, not Meador; Meador only appears in a related card. The Trueman review page also lists Charles Carman in the author area. Check those credits. 'In Search of the Common Good' appears in his site nav but authorship not stated on the page, so omitted."
  },
  {
   "slug": "jared-moore",
@@ -495,6 +648,23 @@
   "notes": "Current affiliation 'The Village Church' is not stated on her site, Crossway or TGC pages and was dropped. The Aquila piece on aging could not be opened (403)."
  },
  {
+  "slug": "joel-fick",
+  "decision": "bio",
+  "name": "Joel Fick",
+  "bio": "Joel Fick is pastor of Redemption Orthodox Presbyterian Church in Gainesville, Florida, according to his Ligonier teacher page (checked November 2026). He has written for Ligonier Ministries and Tabletalk magazine.",
+  "role": "Pastor",
+  "affiliation": "Redemption Orthodox Presbyterian Church (Gainesville, FL)",
+  "website": "https://learn.ligonier.org/teachers/joel-fick",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://learn.ligonier.org/teachers/joel-fick",
+   "https://learn.ligonier.org/articles/what-should-christians-remember-amid-tragedies"
+  ],
+  "identity_check": "The credited Ligonier article (May 28, 2026) links its byline to this teacher page.",
+  "notes": "Aquila copy is a republication of the Ligonier article."
+ },
+ {
   "slug": "john-seel",
   "decision": "bio",
   "name": "John Seel",
@@ -556,6 +726,26 @@
   "notes": "His TGC profile still lists Spring Valley Presbyterian Church, Roselle; the Ligonier and Crossway pages list Christ Presbyterian, Wheaton, and were used. Aquila piece not opened (403)."
  },
  {
+  "slug": "justin-n-poythress",
+  "decision": "bio",
+  "name": "Justin N. Poythress",
+  "bio": "Justin N. Poythress is a pastor and writer who writes from Boise, Idaho. He describes his work as seeking to restore rest and wonder to the worn out. He is the author of Who Am I and What Am I Doing with My Life? Finding Stability and Purpose in Jesus.",
+  "role": "Pastor and Writer",
+  "affiliation": "",
+  "website": "https://justinpoythress.com",
+  "books": [
+   "Who Am I and What Am I Doing with My Life? Finding Stability and Purpose in Jesus"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://mereorthodoxy.com/meditation-and-the-giver-of-things",
+   "https://justinpoythress.com",
+   "https://justinpoythress.com/about"
+  ],
+  "identity_check": "Author box on the credited Mere Orthodoxy piece (Apr 13, 2026) matches the tagline on justinpoythress.com.",
+  "notes": "Current affiliation 'All Saints Presbyterian Church (PCA)' not confirmed on any page opened; left empty. Aquila piece not opened (403)."
+ },
+ {
   "slug": "keith-evans",
   "decision": "bio",
   "name": "Keith A. Evans",
@@ -609,6 +799,27 @@
   "notes": "The FBFI president page is dated 2017 (used only for founding date and education). The author page with recent posts (Nov 2026) supports the present-tense roles."
  },
  {
+  "slug": "kyle-worley",
+  "decision": "bio",
+  "name": "Kyle Worley",
+  "bio": "Kyle Worley is a pastor, author, teacher, and podcast host. He hosts the Knowing Faith podcast with Jen Wilkin and JT English and is a teaching fellow and partner for Training the Church. He holds degrees in theology and philosophy from Dallas Baptist University, Redeemer Theological Seminary, Southwestern Baptist Theological Seminary, and The Southern Baptist Theological Seminary. His books include Home with God: Our Union with Christ and Formed for Fellowship: Becoming What You Behold.",
+  "role": "Pastor and Podcast Host",
+  "affiliation": "Knowing Faith; Training the Church",
+  "website": "https://kyleworley.net",
+  "books": [
+   "Home with God: Our Union with Christ",
+   "Formed for Fellowship: Becoming What You Behold",
+   "The Dragon Slayer and His Super Special Suit"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://mereorthodoxy.com/the-heidelberg-catechisms-lesson-for-foster-parents",
+   "https://kyleworley.net"
+  ],
+  "identity_check": "Author box on the credited Mere Orthodoxy piece (Apr 20, 2026) matches his own site (Knowing Faith cohost).",
+  "notes": "Neither page names his church; current affiliation 'Mosaic Church, The Gospel Coalition' not confirmed and dropped."
+ },
+ {
   "slug": "ligon-duncan",
   "decision": "bio",
   "name": "Ligon Duncan",
@@ -655,6 +866,29 @@
   "bio_sources": [],
   "identity_check": "Could not confirm. Aquila pages return 403 and neither title could be found anywhere else.",
   "notes": "SermonAudio lists a Mark Henninger, retired PCA minister who pastored Redeemer Presbyterian Church in Peoria, which is plausible for an Aquila contributor, but nothing ties that profile to these pieces or to the middle initial J. Not guessing."
+ },
+ {
+  "slug": "mark-vroegop",
+  "decision": "bio",
+  "name": "Mark Vroegop",
+  "bio": "Mark Vroegop is president of The Gospel Coalition, elected by its council in January 2025 and in office since March 2025. He spent nearly three decades in pastoral leadership, most recently as lead pastor of College Park Church in Indianapolis, which he led from 2008. He cohosts the TGC podcast Your Corner of the World with Dan Doriani. His books include Dark Clouds, Deep Mercy: Discovering the Grace of Lament and Waiting Isn't a Waste: The Surprising Comfort of Trusting God in the Uncertainties of Life.",
+  "role": "President, The Gospel Coalition",
+  "affiliation": "The Gospel Coalition",
+  "website": "https://www.markvroegop.com",
+  "books": [
+   "Dark Clouds, Deep Mercy: Discovering the Grace of Lament",
+   "Waiting Isn't a Waste: The Surprising Comfort of Trusting God in the Uncertainties of Life",
+   "Weep with Me: How Lament Opens a Door for Racial Reconciliation"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/mark-vroegop/",
+   "https://www.thegospelcoalition.org/press-release/mark-vroegop-selected-third-president-the-gospel-coalition/",
+   "https://www.markvroegop.com",
+   "https://www.thegospelcoalition.org/podcasts/your-corner-of-the-world/introducing-your-corner-world/"
+  ],
+  "identity_check": "TGC profile and podcast pages are the credited pieces' own author pages; Lifeway piece on lament fits his books.",
+  "notes": "Current affiliation in data says College Park Church; TGC profile says that was 'most recently', i.e. past. Update affiliation to TGC."
  },
  {
   "slug": "matthew-harmon",
@@ -717,6 +951,26 @@
   "notes": "The two credited feed URLs were not opened individually. The Tabletalk About page was seen only through a search summary listing 'Meredith L. Myers, Web Editor'."
  },
  {
+  "slug": "michael-f-bird",
+  "decision": "bio",
+  "name": "Michael F. Bird",
+  "bio": "Michael F. Bird is Deputy Principal: Academic and Senior Lecturer in New Testament and Theology at Ridley College in Melbourne, Australia. He joined Ridley in 2013 after teaching at Highland Theological College in Scotland and Brisbane School of Theology, and served as Academic Dean before becoming Deputy Principal in July 2023. Before entering ministry he served in the Australian Army. He has written more than 30 books, including Evangelical Theology and The New Testament in Its World with N. T. Wright.",
+  "role": "Deputy Principal and Lecturer",
+  "affiliation": "Ridley College (Melbourne)",
+  "website": "https://www.ridley.edu.au/team/mike-bird/",
+  "books": [
+   "Evangelical Theology",
+   "The New Testament in Its World"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.ridley.edu.au/team/mike-bird/",
+   "https://michaelfbird.substack.com/about"
+  ],
+  "identity_check": "The credited pieces are on michaelfbird.substack.com, whose About page names Mike Bird, Deputy Principal at Ridley College, matching the Ridley team page.",
+  "notes": "michaelfbird.com did not resolve (DNS error); website set to the Ridley page. Fetch summary gave 'The Gospel of Lord'; actual title is The Gospel of the Lord, so only the two certain titles are in books. Family details omitted."
+ },
+ {
   "slug": "michael-keller",
   "decision": "bio",
   "name": "Michael Keller",
@@ -770,6 +1024,24 @@
   ],
   "identity_check": "The credited American Reformer piece 'America at 250' (July 2026) carries his byline and this author bio.",
   "notes": "americanreformer.org/2026/... redirects to archive.americanreformer.org."
+ },
+ {
+  "slug": "miranda-carls",
+  "decision": "bio",
+  "name": "Miranda Carls",
+  "bio": "Miranda Carls is an author, facilitator, and leadership and executive coach who has worked with start-ups, nonprofits, churches, midsize organizations, and Fortune 500 companies. She is the author of The Word at Work, which covers 10 biblical principles for Christian professionals. She lives near St. Louis, Missouri.",
+  "role": "Leadership Coach and Author",
+  "affiliation": "",
+  "website": "https://www.mirandacarls.com/",
+  "books": [
+   "The Word at Work"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/article/rest-each-day/"
+  ],
+  "identity_check": "Author box on the credited TGC article 'What's the Right Amount of Rest?' (Oct 3, 2026).",
+  "notes": "Did not open mirandacarls.com; book subtitle not confirmed so only the main title is listed. Family details omitted."
  },
  {
   "slug": "nancy-guthrie",
@@ -827,6 +1099,27 @@
   "notes": "Possible misattribution: the credited 'God's Grace to Complainers (Numbers 20:1-13)' uses Darryl Dash's title format ('Title (Book ch:vv)') and was not found on Ritchie's blog; worth checking whether it belongs to darryl-dash. His Christian Focus page mentions his own OCD and anxiety; left out as a health detail."
  },
  {
+  "slug": "peter-jones",
+  "decision": "bio",
+  "name": "Peter Jones",
+  "bio": "Peter Jones founded truthXchange in 2003, a ministry that began as Christian Witness to a Pagan Planet, and served as its director. Before that he taught New Testament at a seminary in France for nearly 18 years and in 1991 became professor of Greek and New Testament at Westminster Seminary California, where he chaired the Biblical Studies Department. He has written many books on paganism, including The Other Worldview: Exposing Christianity's Greatest Threat.",
+  "role": "Author",
+  "affiliation": "truthXchange",
+  "website": "https://truthxchange.com/author/peterjones/",
+  "books": [
+   "The Other Worldview: Exposing Christianity's Greatest Threat"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://truthxchange.com/about/history/",
+   "https://truthxchange.com/about/",
+   "https://learn.ligonier.org/teachers/peter-jones",
+   "https://truthxchange.com/how-i-met-the-biblical-jesus-and-lost-the-shallow-one/"
+  ],
+  "identity_check": "Archived Aquila copy of 'How I Met the Biblical Jesus' links to the truthXchange original, bylined 'Dr. Peter Jones' (Apr 3, 2026); truthXchange's About page signs as Dr. Peter Jones, Director.",
+  "notes": "A 2024 truthXchange podcast listing (search result only) said he would step down as executive director at the end of 2024, and his truthXchange author page shows an excerpt 'At the end of 2024, I retired, but I am...'. Bio avoids a present-tense title. The religionlink and Ligonier pages are undated. Aquila read through web.archive.org."
+ },
+ {
   "slug": "pj-dunn",
   "decision": "bio",
   "name": "PJ Dunn",
@@ -874,6 +1167,27 @@
   ],
   "identity_check": "Both credited pieces are TGC reviews, and the bio comes from her TGC author profile.",
   "notes": "Profile resource list did not load, so the two reviews were not seen listed on it. Grace Church of the Valley is her church membership, not an employer, so affiliation is left empty."
+ },
+ {
+  "slug": "randy-alcorn",
+  "decision": "bio",
+  "name": "Randy Alcorn",
+  "bio": "Randy Alcorn is the founder and director of Eternal Perspective Ministries, which he started in 1990. Before that he was a pastor for fourteen years at Good Shepherd Community Church near Gresham, Oregon. He has written more than sixty books, including Heaven, The Treasure Principle, Safely Home, and Courageous.",
+  "role": "Author",
+  "affiliation": "Eternal Perspective Ministries",
+  "website": "https://www.epm.org/about/staff-board/randy-alcorn/",
+  "books": [
+   "Heaven",
+   "The Treasure Principle",
+   "Safely Home",
+   "Courageous"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.epm.org/about/staff-board/randy-alcorn/"
+  ],
+  "identity_check": "Credited pieces are on heaven and forgiveness, his signature subjects, and the TGC Deep Dish episode is titled 'with Randy Alcorn'; EPM is his own ministry page.",
+  "notes": "Current website eternalperspective.org does not resolve (DNS error); use epm.org. Aquila pieces not opened (403); they are presumably EPM blog reposts. Family details omitted."
  },
  {
   "slug": "rebecca-hopkins",
@@ -926,6 +1240,30 @@
   ],
   "identity_check": "'Jesus Never Knew You', one of the credited pieces, is listed on richbitterman.com, which calls him 'Pastor Rich Bitterman'.",
   "notes": "His Substack says he came to faith at 42 (left out as a personal detail). richbitterman.com/about returned 404; Baptist Press author page returned 403. Unverified search hints of other roles (First Baptist Springfield, Meadow Heights) were ignored."
+ },
+ {
+  "slug": "robert-letham",
+  "decision": "bio",
+  "name": "Robert Letham",
+  "bio": "Robert Letham is a minister in the Orthodox Presbyterian Church. He was professor of systematic and historical theology at Union School of Theology in the United Kingdom, where Ligonier lists him as senior research fellow, and he holds a PhD from the University of Aberdeen. A June 2026 Reformation21 note says he has 25 years of pastoral experience and still supervises PhD students. His books include The Holy Trinity, Union with Christ, Systematic Theology, The Holy Spirit, and The Eternal Son.",
+  "role": "Theologian",
+  "affiliation": "Union School of Theology",
+  "website": "https://learn.ligonier.org/teachers/robert-letham",
+  "books": [
+   "The Holy Trinity",
+   "Union with Christ",
+   "Systematic Theology",
+   "The Holy Spirit",
+   "The Eternal Son"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://learn.ligonier.org/teachers/robert-letham",
+   "https://reformation21.org/is-jesus-christ-the-natural-and-adopted-son-of-god/",
+   "https://www.evangelical-times.org/author/robert-letham/"
+  ],
+  "identity_check": "The credited Reformation21 essay (June 1, 2026) carries his own author note; credited Ligonier pieces are linked to the Ligonier teacher page.",
+  "notes": "Reformation21 page read with curl (WebFetch saw only nav). 'Senior research fellow' is from the undated Ligonier page."
  },
  {
   "slug": "rosaria-butterfield",
@@ -987,6 +1325,25 @@
   ],
   "identity_check": "The credited Crossway article (Nov 6, 2026) is bylined Samuel D. James with the 'associate acquisitions editor at Crossway' bio; his Digital Liturgies Substack carries the same book's name.",
   "notes": "Current affiliation listed TGC as well; not supported by the pages opened, so dropped. The digitalliturgies.net posts were not opened."
+ },
+ {
+  "slug": "scott-aniol",
+  "decision": "bio",
+  "name": "Scott Aniol",
+  "bio": "Scott Aniol became president of G3 Ministries in July 2025, after serving there since 2021 as executive vice president and editor in chief. He is an elder at Pray's Mill Baptist Church in Douglasville, Georgia, and professor of pastoral theology at Grace Bible Theological Seminary, and he holds a PhD in worship ministry from Southwestern Baptist Theological Seminary. He contributed to the Religious Affections Ministries website from 2004 to 2021 and is the author of Worship in Song: A Biblical Approach to Music and Worship.",
+  "role": "President, G3 Ministries",
+  "affiliation": "G3 Ministries",
+  "website": "https://religiousaffections.org",
+  "books": [
+   "Worship in Song: A Biblical Approach to Music and Worship"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://churchleaders.com/news/514876-scott-aniol-president-g3-ministries-exit-josh-buice.html",
+   "https://religiousaffections.org"
+  ],
+  "identity_check": "Distinctive name; the credited Aquila pieces are devotional reposts typical of his G3 writing, but the Aquila pages (403, not archived) could not be opened to confirm the original link.",
+  "notes": "Roles come from a July 15, 2025 ChurchLeaders report; g3min.org returned 503 and the Pray's Mill staff page 404, so no 2026 confirmation. Could not open the two Aquila pieces."
  },
  {
   "slug": "scott-yenor",
@@ -1054,6 +1411,23 @@
   "notes": "Name kept as he writes it in his own bio, Stanley D. Gale; the byline on the column is 'Stan Gale', so either is fine. The column name and AILBE's full name were left out because the column page did not state them. Books come from the AILBE and Ligonier bios, not publisher pages."
  },
  {
+  "slug": "stephen-unthank",
+  "decision": "noindex",
+  "name": "Stephen Unthank",
+  "bio": "",
+  "role": "",
+  "affiliation": "",
+  "website": "https://reformation21.org/posts/Stephen%20Unthank",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://reformation21.org/shepherding-saints-toward-death-pt-3/",
+   "https://reformation21.org/?p=37790"
+  ],
+  "identity_check": "Reformation21 bylines (Jan 27 and May 8, 2026) and archived Aquila reposts confirm he wrote the pieces, but no page opened gives any biographical fact.",
+  "notes": "A search summary claimed a Reformation21 bio placing him at Greenbelt Baptist Church (Greenbelt, MD) with an MDiv from Capital Bible Seminary, but that text was not found on any Reformation21 or Aquila page I opened (curl and archive.org), and no church page confirms it. Not used."
+ },
+ {
   "slug": "thomas-west",
   "decision": "bio",
   "name": "Thomas West",
@@ -1105,5 +1479,22 @@
   ],
   "identity_check": "Distinctive name; the site's existing affiliation (New Life Church, Woodland Hills) matches the directory and BCM profile, and the church site carries 'Resources by Pastor Tom' with blog posts and sermons by Tom Sugimura. The Aquila pieces themselves could not be opened (403).",
   "notes": "Neither 'Praying for Defeat (Psalm 70)' nor 'Facets of Gospel Grace' was found on the open web, so the piece-to-person link rests on the name and church. The church site lists a Psalms sermon series, which fits. Directory page is undated."
+ },
+ {
+  "slug": "william-conley",
+  "decision": "bio",
+  "name": "William Conley",
+  "bio": "William Conley writes on theology and the Christian life at his Substack. In his Substack profile he describes himself as a part-time pastor at a Spanish Reformed Baptist church and a full-time Panama Canal pilot. He holds an MA in General Theological Studies from Knox Theological Seminary.",
+  "role": "Pastor",
+  "affiliation": "",
+  "website": "https://williamconley2.substack.com",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://substack.com/@williamconley2",
+   "https://williamconley2.substack.com/p/did-god-hate-esau-f71"
+  ],
+  "identity_check": "Archived Aquila copy of 'Did God Hate Esau?' (Apr 13, 2026, 'Written by William Conley') links to williamconley2.substack.com, whose author profile carries this bio.",
+  "notes": "Current affiliation 'Christian and Missionary Alliance, Zion's Watch Tower Tract Society' is a mixup with other people and must be removed. Bio read from the Substack profile JSON via curl. The profile does not name the church."
  }
 ]
