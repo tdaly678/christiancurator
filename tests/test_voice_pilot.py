@@ -253,7 +253,7 @@ BATCH3_LIVE = {"dallas-willard", "roger-olson", "david-vandrunen", "doug-wilson"
 # Nothing from batch 3 is still held on branch voices-batch3.
 BATCH3_HELD: set[str] = set()
 # Batch 4 went live writer by writer on Nov 13 2026 after Meg's spot-check.
-BATCH4_LIVE = {"aaron-m-renn", "wesley-hill", "paul-tripp", "john-mark-comer", "carl-trueman", "tim-keller", "alister-mcgrath"}
+BATCH4_LIVE = {"aaron-m-renn", "wesley-hill", "paul-tripp", "john-mark-comer", "carl-trueman", "tim-keller", "alister-mcgrath", "andrew-wilson"}
 # Held on branch voices-batch4 until Meg re-checks their fixes; never indexed on main.
 BATCH4_HELD = {"preston-sprinkle", "sinclair-ferguson", "brian-mclaren"}
 

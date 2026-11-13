@@ -2504,6 +2504,109 @@
       ],
       "review_notes": "Identity: Alister McGrath, Oxford theologian and C. S. Lewis biographer, same person as our existing page; all four picks carry his byline and CT bio lines that match the Oxford record. All pages opened directly with WebFetch, none through a proxy. The website our data lists (alistermcgrath.com) does not resolve (DNS failure); remove it. An older site at alistermcgrath.weebly.com opened but is out of date (it calls him current Idreos Professor and lists 2019 releases), so it is not cited. The Oxford faculty page is undated but states the September 2022 retirement; it spells the chair 'Andreos Idreos', a typo; the weebly site and CT bios spell it 'Andreas', which is used here. TGC profile (undated) supplies the book titles; it writes 'C. S. Lewis' followed by an em dash and 'A Life', changed to a colon. The King's College London role is undated on Oxford's page beyond 'before returning to Oxford', so no years are given. The web search budget ran out, so picks were found through Christianity Today's own WordPress search API (christianitytoday.com/wp-json), not a third-party engine, then each article page was opened. CT has no working author page for him (/writers/alister-mcgrath/ and /writers/alister-e-mcgrath/ return 404), so CT is not listed under where they write. The CT pages show only the print issue month (May 2009, June 2012, Jan/Feb 2015); the day given is the WordPress post date from the API. All picks are old (2009 to 2019); the 2012 piece carries CT's archive note that 'some things we would say differently today'. BioLogos author page returned HTTP 429 and IVP's author page HTTP 403; neither was read. Our existing voices_data.json bio uses praise ('world-renowned', 'helping countless Christians'), says 'over 80 books' and lists an MD from Aberdeen; none of that was verified and the MD claim looks wrong (Oxford says molecular biophysics doctorate), so it should go. Merge (Nov 13 2026): Oxford faculty page removed from Where they write (kept in Sources). alistermcgrath.com, the MD claim and '80 books' were removed from voices_data.json.",
       "last_updated": "2026-11-13"
+    },
+    {
+      "slug": "andrew-wilson",
+      "name": "Andrew Wilson",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Teaching pastor at King's Church London and Christianity Today columnist | Author of Remaking the World | Writes on doctrine, Scripture and the church",
+      "bio": "Andrew Wilson is teaching pastor at King's Church London and a columnist for Christianity Today. He holds a PhD from King's College London. He is the author of several books, including Remaking the World: How 1776 Created the Post-Christian West, God of All Things and Happiness.",
+      "bio_sources": [
+        {
+          "label": "Author page, Crossway",
+          "url": "https://www.crossway.org/authors/andrew-wilson/"
+        },
+        {
+          "label": "Writer page, Christianity Today",
+          "url": "https://www.christianitytoday.com/writers/andrew-wilson/"
+        },
+        {
+          "label": "Profile, The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/andrew-wilson/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "Christianity Today",
+          "url": "https://www.christianitytoday.com/writers/andrew-wilson/"
+        },
+        {
+          "outlet": "Substack",
+          "url": "https://ajwtheology.substack.com/"
+        },
+        {
+          "outlet": "The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/andrew-wilson/"
+        },
+        {
+          "outlet": "Think Theology",
+          "url": "https://thinktheology.co.uk/authors/21"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "We Need the Doctrine of Hell",
+          "url": "https://www.christianitytoday.com/2026/04/we-need-the-doctrine-of-hell/",
+          "outlet": "Christianity Today",
+          "date": "2026-04-30",
+          "note": "Drawing on a novel, a book on Dante and a Stalin biography, argues that self-deception, self-justification and accusation show why Scripture's teaching on hell still matters."
+        },
+        {
+          "title": "Did God Command Genocide in Deuteronomy 7?",
+          "url": "https://www.thegospelcoalition.org/article/did-god-command-genocide/",
+          "outlet": "The Gospel Coalition",
+          "date": "2026-06-18",
+          "note": "Argues that the commands in Deuteronomy 7 targeted idolatry rather than ethnicity, used hyperbolic language and cannot be used to justify modern wars."
+        },
+        {
+          "title": "A New Way to Think About Women's Roles",
+          "url": "https://www.christianitytoday.com/2026/07/new-way-women-church-complementarianism-review/",
+          "outlet": "Christianity Today",
+          "date": "2026-07-10",
+          "note": "Reviews Julia Higgins's Christ and His Bride, which frames men and women as ruling together under Christ, and weighs its theological and pastoral case."
+        },
+        {
+          "title": "Our God Hosts Parties and Tells Jokes",
+          "url": "https://www.christianitytoday.com/2026/08/our-god-hosts-parties-tells-jokes-happiness/",
+          "outlet": "Christianity Today",
+          "date": "2026-08-25",
+          "note": "An excerpt from his book Happiness arguing from Jesus's parables and table fellowship that God is a joyful Trinity who delights in his people and his creation."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "heaven-hell-eternity",
+          "angle": "Why the church still needs the doctrine of hell."
+        },
+        {
+          "slug": "apologetics",
+          "angle": "Reading the hardest Old Testament commands."
+        },
+        {
+          "slug": "complementarianism-egalitarianism",
+          "angle": "Weighing new books on men and women in the church."
+        },
+        {
+          "slug": "the-trinity",
+          "angle": "The joy and delight of the triune God."
+        }
+      ],
+      "related": [
+        "michael-f-bird",
+        "gavin-ortlund",
+        "rebecca-mclaughlin"
+      ],
+      "same_as": [
+        "https://www.christianitytoday.com/writers/andrew-wilson/",
+        "https://ajwtheology.substack.com/",
+        "https://www.thegospelcoalition.org/profile/andrew-wilson/",
+        "https://thinktheology.co.uk/authors/21",
+        "https://www.crossway.org/authors/andrew-wilson/"
+      ],
+      "review_notes": "Identity: Andrew Wilson of King's Church London (Substack ajwtheology, X @AJWTheology), the same person our existing page covers (it links the same CT columns and TGC article). All pages opened directly with WebFetch, none through a proxy. ROLE CHANGE AHEAD: his Think Theology post of 16 September 2026 (https://thinktheology.co.uk/blog/article/two_think_conferences_and_some_personal_news) says that 'a few weeks' after the July 2027 THINK conference he and his family plan to move to Southampton to join King's Community Church, with the aim of becoming senior pastor the following year. The CT bio on an October 9 2026 article and his Substack still say teaching pastor at King's Church London, so the bio uses that; the page will need updating in mid 2027. The post also says he now writes mainly on Substack. PhD (King's College London), 'columnist for Christianity Today' and God of All Things come from Crossway (undated) and TGC (undated); Remaking the World and its subtitle from the dated CT bio; Happiness is listed on Crossway and named in the CT excerpt note. Remove from our data: andrew-wilson.com (DNS lookup fails), the education line 'University of Cambridge' (sources say PhD King's College London; Cambridge not verified), the 'Reformed evangelical' label and the books 'Unbreakable' and 'Incomparable', which were not checked. The CT women's roles review shows subscription and gift prompts and may be gated for some readers; the other picks were fully readable. The Substack homepage showed no post dates. No dashes changed in titles. Family details on Crossway (wife and children) left out by rule. Merge (Nov 13 2026): REVIEW BY JULY 2027. He plans to move to King's Community Church, Southampton after the July 2027 THINK conference (Think Theology, Sept 16 2026). Recheck his role, the dek and the bio then.",
+      "review_by": "2027-07",
+      "last_updated": "2026-11-13"
     }
   ]
 }

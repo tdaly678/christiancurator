@@ -11828,57 +11828,32 @@
   {
     "name": "Andrew Wilson",
     "slug": "andrew-wilson",
-    "bio": "Andrew Wilson is a British pastor and author known for his thoughtful biblical teaching and cultural commentary from a Reformed evangelical perspective. He serves as Teaching Pastor at King's Church London and is a regular contributor to leading Christian publications, helping Christians think carefully about faith, culture, and Scripture.",
+    "bio": "Andrew Wilson is teaching pastor at King's Church London and a columnist for Christianity Today. He holds a PhD from King's College London. He is the author of several books, including Remaking the World: How 1776 Created the Post-Christian West, God of All Things and Happiness.",
     "affiliation": "King's Church London",
-    "role": "Pastor & Author",
-    "education": "University of Cambridge",
-    "website": "https://www.andrew-wilson.com",
+    "role": "Teaching Pastor, King's Church London",
+    "website": "https://ajwtheology.substack.com/",
     "books": [
       {
-        "title": "Unbreakable: What the Bible Teaches About Divorce and Remarriage",
-        "amazon_url": "https://www.amazon.com/s?k=Unbreakable+Andrew+Wilson"
+        "title": "Remaking the World: How 1776 Created the Post-Christian West",
+        "amazon_url": "https://www.amazon.com/s?k=Remaking+the+World%3A+How+1776+Created+the+Post-Christian+West+Andrew+Wilson"
       },
       {
-        "title": "Incomparable: Jesus Christ in the Old Testament",
-        "amazon_url": "https://www.amazon.com/s?k=Incomparable+Andrew+Wilson"
+        "title": "God of All Things",
+        "amazon_url": "https://www.amazon.com/s?k=God+of+All+Things+Andrew+Wilson"
       },
       {
-        "title": "Remaking the World: Vocation, Work, and the Glory of God",
-        "amazon_url": "https://www.amazon.com/s?k=Remaking+the+World+Andrew+Wilson"
-      },
-      {
-        "title": "Spirit: God's Holy and Subversive Gift",
-        "amazon_url": "https://www.amazon.com/s?k=Spirit+Andrew+Wilson"
-      },
-      {
-        "title": "Echoes of Exodus: Tracing Themes of Liberation, Deliverance, and Salvation Throughout the Bible",
-        "amazon_url": "https://www.amazon.com/s?k=Echoes+of+Exodus+Andrew+Wilson"
+        "title": "Happiness",
+        "amazon_url": "https://www.amazon.com/s?k=Happiness+Andrew+Wilson"
       }
     ],
     "initials": "AW",
-    "denomination": "Newfrontiers family of churches (charismatic evangelical)",
-    "tradition": "Reformed charismatic",
-    "known_for": "Combining Reformed theology with charismatic practice and writing Remaking the World, an account of how 1776 created the post-Christian West.",
-    "current_role": "Teaching Pastor, King's Church London; columnist for Christianity Today",
     "deceased": false,
-    "faqs": [
-      {
-        "q": "Who is Andrew Wilson?",
-        "a": "Andrew Wilson is an English pastor and author who serves as teaching pastor at King's Church London, part of the Newfrontiers family of charismatic evangelical churches. He holds degrees in history and theology from Cambridge and King's College London and writes a regular column for Christianity Today."
-      },
-      {
-        "q": "Is Andrew Wilson a charismatic?",
-        "a": "Yes. Wilson describes his ideal as 'eucharismatic' worship, combining historic liturgical and sacramental practice with charismatic gifts of the Spirit, a vision he laid out in Spirit and Sacrament. He is theologically Reformed while affirming the continuation of the gifts."
-      },
-      {
-        "q": "What is Andrew Wilson known for?",
-        "a": "Wilson is known for Remaking the World: How 1776 Created the Post-Christian West, which won a Gospel Coalition book award, as well as books like God of All Things and Incomparable. He is also a prominent voice at the Think Theology blog and in British evangelicalism."
-      },
-      {
-        "q": "Where does Andrew Wilson pastor?",
-        "a": "He is teaching pastor at King's Church London, a large charismatic evangelical church in southeast London. Earlier in his ministry he served at churches within the Newfrontiers movement, and he remains associated with that network."
-      }
-    ]
+    "bio_sources": [
+      "https://www.crossway.org/authors/andrew-wilson/",
+      "https://www.christianitytoday.com/writers/andrew-wilson/",
+      "https://www.thegospelcoalition.org/profile/andrew-wilson/"
+    ],
+    "education": ""
   },
   {
     "name": "Danson Ottawa",
