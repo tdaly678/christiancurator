@@ -6168,11 +6168,31 @@
   {
     "name": "Paul Tripp",
     "slug": "paul-tripp",
-    "bio": "Paul David Tripp is a pastor, author, and international conference speaker who is the founder and president of Paul Tripp Ministries. He has been a faculty member at the Christian Counseling and Educational Foundation (CCEF) and Westminster Theological Seminary, served as executive director of the Center for Pastoral Life and Care in Fort Worth, Texas, and is a current pastor at Tenth Presbyterian Church in Philadelphia. Tripp's ministry brings the daily relevance of the gospel into the routine of human life through writing, teaching, and speaking. His books on parenting (Age of Opportunity), marriage (What Did You Expect?), pastoral life (Dangerous Calling, Lead), and the Christian life (New Morning Mercies) have become widely-used resources for both individual readers and small groups within evangelical and Reformed congregations.",
+    "bio": "Paul David Tripp is a pastor, author and conference speaker and the president of Paul Tripp Ministries, which he cofounded with Steve Sarkisian in 2006. He holds a DMin from Westminster Theological Seminary, where he taught as a professor, and he was a faculty member and biblical counselor at the Christian Counseling and Educational Foundation (CCEF). He is the author of more than 30 books, including New Morning Mercies, Parenting and Lead.",
     "affiliation": "Paul Tripp Ministries",
-    "role": "Pastor, Author & Biblical Counselor",
-    "education": "Columbia Bible College (BA); Reformed Episcopal Seminary (MDiv); Westminster Theological Seminary (DMin)",
-    "website": "https://www.paultripp.com"
+    "role": "President, Paul Tripp Ministries",
+    "website": "https://www.paultripp.com",
+    "books": [
+      {
+        "title": "New Morning Mercies",
+        "amazon_url": "https://www.amazon.com/s?k=New+Morning+Mercies+Paul+Tripp"
+      },
+      {
+        "title": "Parenting",
+        "amazon_url": "https://www.amazon.com/s?k=Parenting+Paul+Tripp"
+      },
+      {
+        "title": "Lead",
+        "amazon_url": "https://www.amazon.com/s?k=Lead+Paul+Tripp"
+      }
+    ],
+    "deceased": false,
+    "bio_sources": [
+      "https://www.paultripp.com/about",
+      "https://www.crossway.org/authors/paul-tripp/",
+      "https://www.thegospelcoalition.org/profile/paul-tripp/"
+    ],
+    "education": ""
   },
   {
     "name": "Rebecca Woods",

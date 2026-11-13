@@ -2031,6 +2031,106 @@
       ],
       "review_notes": "Drafted for batch 3 (voices-batch3-review.md) and carried into batch 4 unchanged except Related. His newsletter is Writing in the Dust at weshill.substack.com (confirmed via his Substack profile); the old wesleyhill.substack.com link was fixed on main in 4486a7544. Current role: Wycliffe's faculty page and his March 31 2026 post 'Some personal news' say associate professor of New Testament at Wycliffe College, University of Toronto; neither gives a start date. Western Theological Seminary is his previous post (Wycliffe page). Priesthood: Wycliffe calls him an Episcopal priest; his Substack profile says 'Priest in The Episcopal Church'. No current parish is named on any page opened. Trinity School for Ministry is from the First Things bio lines (2015 to 2018 pieces). Related: preston-sprinkle (in this batch), rebecca-mclaughlin and rachel-gilson (indexed); tish-harrison-warren and matthew-lee-anderson are noindexed.",
       "last_updated": "2026-11-13"
+    },
+    {
+      "slug": "paul-tripp",
+      "name": "Paul David Tripp",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "President of Paul Tripp Ministries | Author of New Morning Mercies | Writes on pastoral ministry, parenting, marriage and suffering",
+      "bio": "Paul David Tripp is a pastor, author and conference speaker and the president of Paul Tripp Ministries, which he cofounded with Steve Sarkisian in 2006. He holds a DMin from Westminster Theological Seminary, where he taught as a professor, and he was a faculty member and biblical counselor at the Christian Counseling and Educational Foundation (CCEF). He is the author of more than 30 books, including New Morning Mercies, Parenting and Lead.",
+      "bio_sources": [
+        {
+          "label": "About Paul, Paul Tripp Ministries",
+          "url": "https://www.paultripp.com/about"
+        },
+        {
+          "label": "Author page, Crossway",
+          "url": "https://www.crossway.org/authors/paul-tripp/"
+        },
+        {
+          "label": "Profile, The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/paul-tripp/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "Paul Tripp Ministries",
+          "url": "https://www.paultripp.com/articles"
+        },
+        {
+          "outlet": "Crossway",
+          "url": "https://www.crossway.org/articles/author/paul-tripp/"
+        },
+        {
+          "outlet": "The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/paul-tripp/"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "2 Reasons Bully Pastors Rise Up in the Church",
+          "url": "https://www.crossway.org/articles/2-reasons-bully-pastors-rise-up-in-the-church/",
+          "outlet": "Crossway",
+          "date": "2020-09-15",
+          "note": "Argues that the church traded the New Testament picture of the humble, servant leader for a forceful, charismatic ideal and neglected the community that should watch over and correct its leaders."
+        },
+        {
+          "title": "4 Reasons for Hope in Suffering",
+          "url": "https://www.crossway.org/articles/4-reasons-for-hope-in-suffering/",
+          "outlet": "Crossway",
+          "date": "2020-08-15",
+          "note": "Argues that suffering has a purpose in God's plan, refining believers, equipping them to comfort others and pointing them to their final home."
+        },
+        {
+          "title": "7 Commitments to Make before Using Social Media",
+          "url": "https://www.crossway.org/articles/7-commitments-to-make-before-using-social-media/",
+          "outlet": "Crossway",
+          "date": "2022-10-07",
+          "note": "Argues that social media often feeds contempt and calls Christians to commit to treating every person online as an image bearer of God."
+        },
+        {
+          "title": "The Ultimate Goal of Parenting",
+          "url": "https://www.crossway.org/articles/the-ultimate-goal-of-parenting/",
+          "outlet": "Crossway",
+          "date": "2025-01-25",
+          "note": "Argues that parenting should aim at a child's heart rather than behavior alone, while depending on God's grace because parents cannot change that heart themselves."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "pastoral-ministry",
+          "angle": "The character and accountability of pastors."
+        },
+        {
+          "slug": "christian-parenting",
+          "angle": "Parenting aimed at the heart, not only behavior."
+        },
+        {
+          "slug": "suffering-and-providence",
+          "angle": "Finding God's purpose in hardship."
+        },
+        {
+          "slug": "marriage-and-family",
+          "angle": "Everyday grace in marriage."
+        },
+        {
+          "slug": "technology-and-discipleship",
+          "angle": "Reactivity and contempt on social media."
+        }
+      ],
+      "related": [
+        "david-powlison",
+        "mark-vroegop",
+        "keith-evans"
+      ],
+      "same_as": [
+        "https://www.paultripp.com",
+        "https://www.crossway.org/authors/paul-tripp/",
+        "https://www.thegospelcoalition.org/profile/paul-tripp/"
+      ],
+      "review_notes": "Identity: Paul David Tripp of Paul Tripp Ministries, the same person as our existing page (which links paultripp.com). All pages were opened directly with WebFetch; none through a proxy. The paultripp.com About page (undated) gives the 2006 cofounding with Steve Sarkisian, the WTS professorship, the CCEF faculty and counselor role and 'more than 30 books'; it does not itself say he is president. The president title comes from the TGC profile, which is undated. The DMin and the three book titles come from the Crossway author page (undated). The Crossway URL https://www.crossway.org/authors/paul-david-tripp/ returns 404; /authors/paul-tripp/ works. Our existing voices_data.json bio says he 'is a current pastor at Tenth Presbyterian Church' and directed a Center for Pastoral Life and Care in Fort Worth; secondary sources say he left Tenth in 2011, so that line looks out of date and should be removed (not verified on a primary page). Three of the four Start here picks are marked by Crossway as adapted from his books (Suffering, Reactivity, Everyday Gospel); the bully pastors piece shows no adaptation note. No titles needed dash changes. Family details on the sources (wife, children, birth date) were left out by rule. 'Award-winning' on Crossway was left out as praise. Merge (Nov 13 2026): the Tenth Presbyterian line stays out of the guide and was removed from the voices_data.json record.",
+      "last_updated": "2026-11-13"
     }
   ]
 }
