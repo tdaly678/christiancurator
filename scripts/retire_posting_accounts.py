@@ -78,6 +78,9 @@ ACCOUNTS = {
         "Presented by Annie Kelly with Alaina Demopoulos. Produced by Hanna Adan", "theguardian.com",
         "a podcast credit line, not a person"),
     "words-by-sam-wollaston": ("Words by Sam Wollaston", "theguardian.com", "a credit string, not a voice"),
+    # Overnight Nov 12 2026: no Christy Smith byline exists anywhere on the site; the page
+    # began as an identity mix with the singer Christy Nockels (voices cleanup step 3).
+    "christy-smith": ("Christy Smith", "", "no byline on the site; began as an identity mix with Christy Nockels"),
 }
 
 STUB = """<!DOCTYPE html>

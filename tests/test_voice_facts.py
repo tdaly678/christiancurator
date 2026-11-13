@@ -25,7 +25,9 @@ def test_identity_mixes_fixed():
     assert DATA["william-barcley"]["name"] == "William Barcley"
     assert "Barclay" not in page("william-barcley")
     assert "AskDrBrown" not in json.dumps(DATA["michael-g-brown"])
-    assert "Nockels" not in json.dumps(DATA["christy-smith"]) + page("christy-smith")
+    # christy-smith was retired overnight Nov 12 2026: no record, a stub page.
+    assert "christy-smith" not in DATA
+    assert "Nockels" not in page("christy-smith")
     assert "CBS Sports" in DATA["cody-benjamin"]["bio"]
 
 
