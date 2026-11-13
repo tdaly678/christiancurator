@@ -1,68 +1,5 @@
 {
  "entries": {
-  "https://spurgeoncollege.com/scmonth": {
-   "url": "https://spurgeoncollege.com/scmonth?utm_source=SCMonth+-+Challies&utm_medium=SCMonth+-+Challies&utm_campaign=SC+Month+-+Challies&utm_id=SC+Month",
-   "canonical_url": "https://spurgeoncollege.com/scmonth",
-   "anchor": "Free Chick-fil-A For a Year",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-5-2026/",
-   "found_on": "2026-11-05",
-   "status": "graduated",
-   "attempts": 2,
-   "graduated_on": "2026-11-06",
-   "title": "Spurgeon College Month",
-   "source_name": "Spurgeon College"
-  },
-  "https://desiringgod.org/articles/the-pull-of-rome-and-the-promise-of-grace": {
-   "url": "https://www.desiringgod.org/articles/the-pull-of-rome-and-the-promise-of-grace",
-   "canonical_url": "https://desiringgod.org/articles/the-pull-of-rome-and-the-promise-of-grace",
-   "anchor": "The Pull of Rome and the Promise of Grace",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-5-2026/",
-   "found_on": "2026-11-05",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-05",
-   "title": "The Pull of Rome and the Promise of Grace",
-   "source_name": "Desiring God"
-  },
-  "https://forthegospel.org/read/4-misconceptions-about-spiritual-warfare": {
-   "url": "https://www.forthegospel.org/read/4-misconceptions-about-spiritual-warfare",
-   "canonical_url": "https://forthegospel.org/read/4-misconceptions-about-spiritual-warfare",
-   "anchor": "4 Misconceptions About Spiritual Warfare",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-5-2026/",
-   "found_on": "2026-11-05",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-05",
-   "title": "4 Misconceptions About Spiritual Warfare",
-   "source_name": "For the Gospel"
-  },
-  "https://thebardowl.substack.com/p/wading-into-narnia": {
-   "url": "https://thebardowl.substack.com/p/wading-into-narnia",
-   "canonical_url": "https://thebardowl.substack.com/p/wading-into-narnia",
-   "anchor": "Slouching Toward Narnia",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-5-2026/",
-   "found_on": "2026-11-05",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
-  "https://gracebc.ca/blog/2026/11/4/four-corrections-to-make-when-you-feel-guity-about-your-giving": {
-   "url": "https://www.gracebc.ca/blog/2026/11/4/four-corrections-to-make-when-you-feel-guity-about-your-giving",
-   "canonical_url": "https://gracebc.ca/blog/2026/11/4/four-corrections-to-make-when-you-feel-guity-about-your-giving",
-   "anchor": "Four Corrections to Make When You Feel Guilty About Your Giving",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-5-2026/",
-   "found_on": "2026-11-05",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-05",
-   "title": "Four Corrections to Make When You Feel Guilty About Your Giving",
-   "source_name": "Grace Baptist Church"
-  },
   "https://harvestusa.org/selfies-are-not-the-self-forming-embodied-youth-in-a-disembodied-age": {
    "url": "https://harvestusa.org/selfies-are-not-the-self-forming-embodied-youth-in-a-disembodied-age/",
    "canonical_url": "https://harvestusa.org/selfies-are-not-the-self-forming-embodied-youth-in-a-disembodied-age",
@@ -418,8 +355,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-12-2026/",
    "found_on": "2026-11-12",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://desiringgod.org/articles/cant-you-just-be-like-me": {
@@ -468,8 +405,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-12-2026/",
    "found_on": "2026-11-12",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://epm.org/resources/2026/Nov/11/be-perfect-heaven": {
@@ -484,7 +421,83 @@
    "graduated_on": "2026-11-12",
    "title": "Will We Really Be Perfect in Heaven?",
    "source_name": "Eternal Perspective Ministries"
+  },
+  "https://christianitytoday.com/2026/11/hillsong-bethel-elevation-worship-bans": {
+   "url": "https://www.christianitytoday.com/2026/11/hillsong-bethel-elevation-worship-bans/?utm_medium=widgetsocial",
+   "canonical_url": "https://christianitytoday.com/2026/11/hillsong-bethel-elevation-worship-bans",
+   "anchor": "Churches Shouldn’t Just Ban Hillsong, Bethel, and Elevation",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-13-2026/",
+   "found_on": "2026-11-13",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-13",
+   "title": "Churches Shouldn’t Just Ban Hillsong, Bethel, and Elevation",
+   "source_name": "Christianity Today"
+  },
+  "https://firstthings.com/the-new-benefit-of-clergy": {
+   "url": "https://firstthings.com/the-new-benefit-of-clergy/",
+   "canonical_url": "https://firstthings.com/the-new-benefit-of-clergy",
+   "anchor": "The New Benefit of Clergy",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-13-2026/",
+   "found_on": "2026-11-13",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-13",
+   "title": "The New Benefit of Clergy",
+   "source_name": "First Things"
+  },
+  "https://jacobrcrouch.wordpress.com/2026/11/11/everything-sad-coming-untrue": {
+   "url": "https://jacobrcrouch.wordpress.com/2026/11/11/everything-sad-coming-untrue/",
+   "canonical_url": "https://jacobrcrouch.wordpress.com/2026/11/11/everything-sad-coming-untrue",
+   "anchor": "Everything Sad Coming Untrue",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-13-2026/",
+   "found_on": "2026-11-13",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-13",
+   "title": "Everything Sad Coming Untrue",
+   "source_name": "Aliens and Pilgrims"
+  },
+  "https://wordfirst.org/articles/what-do-we-do-with-new-testament-books-not-written-by-apostles": {
+   "url": "https://wordfirst.org/articles/what-do-we-do-with-new-testament-books-not-written-by-apostles/",
+   "canonical_url": "https://wordfirst.org/articles/what-do-we-do-with-new-testament-books-not-written-by-apostles",
+   "anchor": "What Do We Do With New Testament Books Not Written by Apostles?",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-13-2026/",
+   "found_on": "2026-11-13",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-13",
+   "title": "What Do We Do With New Testament Books Not Written by Apostles?",
+   "source_name": "Word First"
+  },
+  "https://rethinkingfertility.substack.com/p/the-million-dollar-gene-editing-question": {
+   "url": "https://rethinkingfertility.substack.com/p/the-million-dollar-gene-editing-question",
+   "canonical_url": "https://rethinkingfertility.substack.com/p/the-million-dollar-gene-editing-question",
+   "anchor": "The Million Dollar Gene Editing Question",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-13-2026/",
+   "found_on": "2026-11-13",
+   "status": "pending",
+   "attempts": 1,
+   "error": "HTTP 403"
+  },
+  "https://desiringgod.org/interviews/scrolling-the-soul-shallow": {
+   "url": "https://www.desiringgod.org/interviews/scrolling-the-soul-shallow",
+   "canonical_url": "https://desiringgod.org/interviews/scrolling-the-soul-shallow",
+   "anchor": "Scrolling the Soul Shallow",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-13-2026/",
+   "found_on": "2026-11-13",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-13",
+   "title": "Scrolling the Soul Shallow",
+   "source_name": "Desiring God"
   }
  },
- "updated": "2026-11-12T10:01:14+00:00"
+ "updated": "2026-11-13T10:01:12+00:00"
 }

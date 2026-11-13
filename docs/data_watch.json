@@ -299,80 +299,12 @@
       }
     ]
   },
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "last_run": {
-    "date": "2026-11-12",
+    "date": "2026-11-13",
     "stories": [
       {
-        "title": "Journalist Andy Ngo Links Fringe Group to Border Patrol Agent Killing",
-        "url": "https://wng.org/podcasts/the-world-and-everything-in-it-november-12-2026-1794436796",
-        "source": "World Magazine",
-        "signals": {
-          "publishers": [],
-          "figures": [
-            "eight in 10"
-          ],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [],
-        "trend": 8.62,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "Pastors Must Prioritize Christian Identity Over Political Affiliation",
-        "url": "https://erlc.com/resource/pastoring-after-the-midterm-elections/",
-        "source": "ERLC",
-        "signals": {
-          "publishers": [],
-          "figures": [],
-          "words": [
-            "polls"
-          ],
-          "data_tag": false
-        },
-        "topics": [
-          "politics-and-the-church",
-          "pastoral-ministry"
-        ],
-        "trend": 8.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
-        ]
-      },
-      {
-        "title": "Pastor Should Plan Transition to Protect Church Health",
-        "url": "https://research.lifeway.com/2026/11/11/leaving-well-5-ways-to-prepare-your-church-for-pastoral-transition/",
-        "source": "Lifeway Research",
-        "signals": {
-          "publishers": [
-            "Lifeway Research"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "pastoral-ministry",
-          "local-church"
-        ],
-        "trend": 7.75,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-11 (0 verified figure(s))"
-        ]
-      },
-      {
-        "title": "Pride in Leadership Invites God's Opposition, Author Warns",
+        "title": "4 Warnings About Pride in Leadership",
         "url": "https://research.lifeway.com/2026/11/12/4-warnings-about-pride-in-leadership/",
         "source": "Lifeway Research",
         "signals": {
@@ -392,42 +324,21 @@
         ]
       },
       {
-        "title": "Faithful Christian Habits Sustain Pastors Throughout Ministry",
-        "url": "https://research.lifeway.com/2026/11/09/7-christian-habits-necessary-for-pastoral-longevity/",
-        "source": "Lifeway Research",
-        "signals": {
-          "publishers": [
-            "Lifeway Research"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "pastoral-ministry"
-        ],
-        "trend": 6.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-10 (0 verified figure(s))"
-        ]
-      },
-      {
-        "title": "Flock's License Plate Cameras Spread to Over 100,000 U.S. Locations",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/09/what-we-know-and-dont-know-about-flocks-license-plate-cameras/",
+        "title": "‘Download My Free Guide’: What Products and Services Do Health and Wellness Influencers Promote?",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/12/download-my-free-guide-what-products-and-services-do-health-and-wellness-influencers-promote/",
         "source": "Pew Research",
         "signals": {
           "publishers": [
             "Pew Research Center"
           ],
-          "figures": [],
+          "figures": [
+            "38%"
+          ],
           "words": [],
           "data_tag": false
         },
         "topics": [],
-        "trend": 6.0,
+        "trend": 6.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -435,7 +346,7 @@
         ]
       },
       {
-        "title": "Data Centers Expand for AI as Public Backlash Grows",
+        "title": "Key Facts About U.S. Data Centers",
         "url": "https://www.pewresearch.org/short-reads/2026/11/11/key-facts-about-us-data-centers/",
         "source": "Pew Research",
         "signals": {
@@ -457,38 +368,32 @@
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
+          "page already checked on 2026-11-12 (0 verified figure(s))"
         ]
       },
       {
-        "title": "Gen Alpha Doubters Turn to Parents and Pastors, While Non-Religious Teens Have No One",
-        "url": "https://www.graphsaboutreligion.com/p/who-do-teenagers-turn-to-when-they",
-        "source": "Ryan Burge",
+        "title": "What We Know, and Don’t Know, About Flock’s License Plate Cameras",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/09/what-we-know-and-dont-know-about-flocks-license-plate-cameras/",
+        "source": "Pew Research",
         "signals": {
           "publishers": [
-            "Ryan Burge"
+            "Pew Research Center"
           ],
-          "figures": [
-            "Four in ten"
-          ],
+          "figures": [],
           "words": [],
-          "data_tag": true
+          "data_tag": false
         },
-        "topics": [
-          "pastoral-ministry",
-          "christian-parenting"
-        ],
-        "trend": 5.0,
+        "topics": [],
+        "trend": 6.0,
         "outlets": 1,
         "on_digest": true,
         "actions": [
-          "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
+          "no topic page matched"
         ]
       },
       {
-        "title": "Evangelical Districts Lean Red, Catholic Areas Blue, Mainline Competitive",
-        "url": "https://www.graphsaboutreligion.com/p/the-most-religious-congressional",
+        "title": "The Presbyterian Church (USA) Is About to Cross a Historic Threshold",
+        "url": "https://www.graphsaboutreligion.com/p/the-presbyterian-church-usa-is-about",
         "source": "Ryan Burge",
         "signals": {
           "publishers": [
@@ -498,19 +403,36 @@
           "words": [],
           "data_tag": true
         },
-        "topics": [
-          "evangelicalism"
-        ],
-        "trend": 4.75,
+        "topics": [],
+        "trend": 6.0,
         "outlets": 1,
         "on_digest": true,
         "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-10 (0 verified figure(s))"
+          "no topic page matched"
         ]
       },
       {
-        "title": "Americans Show Mixed Comfort With AI in Healthcare",
+        "title": "The Dating Attitudes of Single Black Adults",
+        "url": "https://www.pewresearch.org/race-and-ethnicity/2026/11/12/the-dating-attitudes-of-single-black-adults/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 5.75,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Expert Brief: Public Opinion on AI in Healthcare",
         "url": "https://www.pewresearch.org/2026/11/11/expert-brief-public-opinion-on-ai-in-healthcare/",
         "source": "Pew Research",
         "signals": {
@@ -518,11 +440,7 @@
             "Pew Research Center"
           ],
           "figures": [],
-          "words": [
-            "findings",
-            "report",
-            "study"
-          ],
+          "words": [],
           "data_tag": true
         },
         "topics": [
@@ -534,11 +452,11 @@
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
+          "page already checked on 2026-11-12 (0 verified figure(s))"
         ]
       },
       {
-        "title": "Most Southern Baptist Churches Report Stability Despite Emerging Concerns",
+        "title": "Most SBC Churches Confident About Future, but Issues Loom",
         "url": "https://research.lifeway.com/2026/11/10/most-sbc-churches-confident-about-future-but-issues-loom/",
         "source": "Lifeway Research",
         "signals": {
@@ -554,7 +472,7 @@
         "topics": [
           "evangelicalism"
         ],
-        "trend": 4.0,
+        "trend": 4.25,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -563,7 +481,31 @@
         ]
       },
       {
-        "title": "Religious Nones Choose Childlessness More Than Other Adults",
+        "title": "Pastoring after the midterm elections",
+        "url": "https://erlc.com/resource/pastoring-after-the-midterm-elections/",
+        "source": "ERLC",
+        "signals": {
+          "publishers": [],
+          "figures": [],
+          "words": [
+            "polls"
+          ],
+          "data_tag": false
+        },
+        "topics": [
+          "politics-and-the-church",
+          "pastoral-ministry"
+        ],
+        "trend": 3.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-12 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "Why Don’t Religious Nones Want Kids?",
         "url": "https://www.graphsaboutreligion.com/p/why-dont-religious-nones-want-kids",
         "source": "Ryan Burge",
         "signals": {
@@ -583,32 +525,54 @@
         ]
       },
       {
-        "title": "Most Churchgoers Fail Bible Literacy Quiz, Lifeway Research Finds",
-        "url": "https://research.lifeway.com/2026/11/03/2-in-3-churchgoers-fail-bible-literacy-quiz/",
+        "title": "Who Do Teenagers Turn To When They Doubt Their Religion?",
+        "url": "https://www.graphsaboutreligion.com/p/who-do-teenagers-turn-to-when-they",
+        "source": "Ryan Burge",
+        "signals": {
+          "publishers": [
+            "Ryan Burge"
+          ],
+          "figures": [
+            "Four in Ten",
+            "Four in ten"
+          ],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 2.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Leaving Well: 5 Ways to Prepare Your Church for Pastoral Transition",
+        "url": "https://research.lifeway.com/2026/11/11/leaving-well-5-ways-to-prepare-your-church-for-pastoral-transition/",
         "source": "Lifeway Research",
         "signals": {
           "publishers": [
             "Lifeway Research"
           ],
           "figures": [],
-          "words": [
-            "quiz"
-          ],
-          "data_tag": true
+          "words": [],
+          "data_tag": false
         },
         "topics": [
-          "biblical-literacy"
+          "local-church",
+          "pastoral-ministry"
         ],
-        "trend": 1.25,
+        "trend": 1.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "page already checked on 2026-11-10 (0 verified figure(s))"
+          "page already checked on 2026-11-11 (0 verified figure(s))"
         ]
       },
       {
-        "title": "Christian Resources Make Affordable Christmas Gifts for Believers",
+        "title": "2026 Christmas Gift Guide: Save on Resources for Everyone",
         "url": "https://feeds.ligonier.org/~/972439013/0/ligonierministriesblog",
         "source": "Ligonier Ministries",
         "signals": {
@@ -620,17 +584,19 @@
           "words": [],
           "data_tag": false
         },
-        "topics": [],
+        "topics": [
+          "discipleship"
+        ],
         "trend": 0.25,
         "outlets": 1,
         "on_digest": false,
         "actions": [
-          "no topic page matched"
+          "page already checked on 2026-11-10 (0 verified figure(s))"
         ]
       }
     ],
     "pages": [],
-    "fetched": 4,
-    "hits": 14
+    "fetched": 0,
+    "hits": 13
   }
 }

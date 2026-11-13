@@ -1,141 +1,142 @@
 [
   {
-    "title": "Pastor Edward Cui Arrested in Beijing on Fraud Charges",
-    "url": "https://religionnews.com/2026/11/11/a-pastor-at-a-beijing-underground-church-has-been-arrested-his-wife-says/",
+    "title": "Anti-Muslim Rhetoric Failed Republican Candidates in Texas",
+    "original_title": "Anti-Muslim attacks didn’t help Republican candidates. In Texas, they may have hurt.",
+    "url": "https://religionnews.com/2026/11/12/anti-muslim-attacks-didnt-help-republican-candidates-in-texas-they-may-have-hurt/",
     "source_name": "Religion News Service",
-    "author": "Simina Mistreanu, Didi Tang",
-    "final_score": 9.5,
-    "importance": 9.5,
+    "author": "Ron Ribiat",
+    "final_score": 9.0,
+    "importance": 9.0,
     "depth": 4.0,
     "tags": [
-      "news",
-      "suffering"
-    ],
-    "original_title": "A pastor at a Beijing underground church has been arrested, his wife says"
+      "politics",
+      "culture"
+    ]
   },
   {
-    "title": "Russell Moore: Faith Doesn't Erase Trauma for Believers",
-    "url": "https://www.christianitytoday.com/2026/11/rethinking-grace-staircase-russell-moore/",
-    "source_name": "Christianity Today",
-    "author": "Russell Moore",
+    "title": "Baptist Leaders Warn Against Christian Nationalism",
+    "original_title": "Seek First the Kingdom of God: A Baptist Perspective on Christian Nationalism",
+    "url": "https://erlc.com/research/seek-first-the-kingdom-of-god-a-baptist-perspective-on-christian-nationalism/",
+    "source_name": "ERLC",
+    "author": "Amanda Hays",
+    "final_score": 9.0,
+    "importance": 9.0,
+    "depth": 6.0,
+    "tags": [
+      "theology",
+      "politics"
+    ]
+  },
+  {
+    "title": "New Testament Books by Non-Apostles Lack Apostolic Authority, Scholar Argues",
+    "original_title": "What Do We Do With New Testament Books Not Written by Apostles?",
+    "url": "https://wordfirst.org/articles/what-do-we-do-with-new-testament-books-not-written-by-apostles/",
+    "source_name": "Word First",
+    "author": "Michael Kruger",
+    "final_score": 9.0,
+    "importance": 9.0,
+    "depth": 8.0,
+    "tags": [
+      "theology"
+    ]
+  },
+  {
+    "title": "Stephens Valley Church Silent on Restoring Disgraced Preacher Steven Lawson",
+    "original_title": "Nashville church stays silent on unannounced move to restore Steven Lawson to ministry",
+    "url": "https://roysreport.com/nashville-church-stays-silent-on-unannounced-move-to-restore-steven-lawson-to-ministry/",
+    "source_name": "The Roys Report",
+    "author": "Mark A. Kellner",
+    "final_score": 8.5,
+    "importance": 8.5,
+    "depth": 2.0,
+    "tags": [
+      "news",
+      "church life"
+    ]
+  },
+  {
+    "title": "Early Christians Affirmed Jesus's Full Divinity, Historical Sources Suggest",
+    "original_title": "Is Jesus the God of the Bible?",
+    "url": "https://www.thegospelcoalition.org/podcasts/tgc-podcast/is-jesus-god-bible/",
+    "source_name": "The Gospel Coalition",
+    "author": "Michael J. Kruger",
     "final_score": 8.0,
     "importance": 8.0,
     "depth": 7.0,
     "tags": [
       "theology",
-      "devotional"
-    ],
-    "original_title": "How a Conversation This Week Made Me Rethink How Grace Works"
-  },
-  {
-    "title": "AI Companions Should Be Banned, First Things Argues",
-    "url": "https://firstthings.com/time-to-ban-ai-companions/",
-    "source_name": "First Things",
-    "author": "Stephen Walker",
-    "final_score": 8.0,
-    "importance": 8.0,
-    "depth": 6.0,
-    "tags": [
-      "culture",
-      "theology"
-    ],
-    "original_title": "Time to Ban AI Companions"
-  },
-  {
-    "title": "Scholars Debate Whether 2 Peter Was Written by the Apostle",
-    "url": "https://michaelfbird.substack.com/p/forgery-in-the-new-testament-part",
-    "source_name": "Michael Bird",
-    "author": "Michael F. Bird",
-    "final_score": 8.0,
-    "importance": 8.0,
-    "depth": 7.0,
-    "tags": [
-      "theology"
-    ],
-    "original_title": "Forgery in the New Testament - Part 2"
-  },
-  {
-    "title": "Religious Right Fractures Over Midterm Losses and Trump",
-    "url": "https://religionnews.com/2026/11/11/after-midterm-losses-the-religious-right-blames-trump-voters-and-each-other/",
-    "source_name": "Religion News Service",
-    "author": "Kathryn Post, Bob Smietana",
-    "final_score": 7.75,
-    "importance": 7.75,
-    "depth": 4.0,
-    "tags": [
-      "news",
-      "politics"
-    ],
-    "original_title": "After midterm losses, the religious right blames Trump, voters and each other"
-  },
-  {
-    "title": "Journalist Andy Ngo Links Fringe Group to Border Patrol Agent Killing",
-    "url": "https://wng.org/podcasts/the-world-and-everything-in-it-november-12-2026-1794436796",
-    "source_name": "World Magazine",
-    "author": "",
-    "final_score": 7.62,
-    "importance": 7.62,
-    "depth": 3.0,
-    "tags": [
-      "news",
-      "culture"
-    ],
-    "original_title": "The World and Everything in It: November 12, 2026"
-  },
-  {
-    "title": "Wesley Huff Admits to Plagiarism in Seminary Paper, Accuses Critic of Agenda",
-    "url": "https://roysreport.com/christian-apologist-wesley-huff-addresses-plagiarism-accusation/",
-    "source_name": "The Roys Report",
-    "author": "Rebecca Hopkins",
-    "final_score": 7.5,
-    "importance": 7.5,
-    "depth": 2.0,
-    "tags": [
-      "news",
       "apologetics"
-    ],
-    "original_title": "Christian apologist Wesley Huff addresses plagiarism accusation"
+    ]
   },
   {
-    "title": "Pastors Must Prioritize Christian Identity Over Political Affiliation",
-    "url": "https://erlc.com/resource/pastoring-after-the-midterm-elections/",
-    "source_name": "ERLC",
-    "author": "Amanda Hays",
-    "final_score": 7.5,
-    "importance": 7.5,
-    "depth": 6.0,
-    "tags": [
-      "politics",
-      "church life"
-    ],
-    "original_title": "Pastoring after the midterm elections"
-  },
-  {
-    "title": "Pastor John Gray Says America Is Not a Christian Nation",
-    "url": "https://www.christianpost.com/news/pastor-john-gray-declares-america-is-not-a-christian-nation.html",
-    "source_name": "The Christian Post",
-    "author": "Leonardo Blair",
-    "final_score": 7.4,
-    "importance": 7.4,
-    "depth": 4.0,
-    "tags": [
-      "politics",
-      "culture"
-    ],
-    "original_title": "Pastor John Gray declares America is 'not a Christian nation' in midterm postmortem"
-  },
-  {
-    "title": "Fukuyama: Democracy Faces Threat When Citizens Grow Bored",
-    "url": "https://www.russellmoore.com/2026/11/11/francis-fukuyama-on-what-happens-when-freedom-gets-boring/",
-    "source_name": "Russell Moore",
-    "author": "Russell Moore",
-    "final_score": 7.0,
-    "importance": 7.0,
+    "title": "Gen Z Representatives Affirm Lausanne Covenant at Global Conference",
+    "original_title": "What the Lausanne Covenant Means to Gen Z",
+    "url": "https://www.christianitytoday.com/2026/11/what-the-lausanne-covenant-means-to-gen-z/",
+    "source_name": "Christianity Today",
+    "author": "Rome Williams",
+    "final_score": 8.0,
+    "importance": 8.0,
     "depth": 5.0,
     "tags": [
+      "church life",
+      "culture"
+    ]
+  },
+  {
+    "title": "AI Development Embeds Values of Power and Domination, Writer Argues",
+    "original_title": "Does Artificial Intelligence Need to be Saved?",
+    "url": "https://mereorthodoxy.com/does-artificial-intelligence-need-to-be-saved/",
+    "source_name": "Mere Orthodoxy",
+    "author": "Mere Orthodoxy",
+    "final_score": 8.0,
+    "importance": 8.0,
+    "depth": 6.0,
+    "tags": [
       "culture",
-      "politics"
-    ],
-    "original_title": "Francis Fukuyama on What Happens When Freedom Gets Boring"
+      "apologetics"
+    ]
+  },
+  {
+    "title": "Nigerian Christian Widow Delivers Million-Signature Petition on African Persecution",
+    "original_title": "Nigerian Christian widow joins million-signature campaign urging action on persecution in Africa",
+    "url": "https://www.christianpost.com/news/nigerian-widow-takes-christian-persecution-plea-to-downing-street.html",
+    "source_name": "The Christian Post",
+    "author": "Christian Today",
+    "final_score": 7.8,
+    "importance": 7.8,
+    "depth": 5.0,
+    "tags": [
+      "missions",
+      "suffering",
+      "news"
+    ]
+  },
+  {
+    "title": "Gathered Church Remains Essential to Christian Discipleship",
+    "original_title": "The Importance of the Gathering for Our Discipleship",
+    "url": "https://www.9marks.org/article/the-importance-of-the-gathering-for-our-discipleship/?utm_source=rss&utm_medium=rss&utm_campaign=the-importance-of-the-gathering-for-our-discipleship",
+    "source_name": "9Marks",
+    "author": "Joshua George",
+    "final_score": 7.0,
+    "importance": 7.0,
+    "depth": 7.0,
+    "tags": [
+      "theology",
+      "church life"
+    ]
+  },
+  {
+    "title": "Biblical Prayer for the Soul Teaches How God Acts",
+    "original_title": "How to Pray for the Soul (Yours or Another’s)",
+    "url": "https://www.crossway.org/articles/how-to-pray-for-the-soul-yours-or-anothers/",
+    "source_name": "Crossway",
+    "author": "John Piper",
+    "final_score": 7.0,
+    "importance": 7.0,
+    "depth": 7.0,
+    "tags": [
+      "prayer",
+      "devotional"
+    ]
   }
 ]

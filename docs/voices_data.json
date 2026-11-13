@@ -18666,5 +18666,183 @@
     "website": "",
     "books": [],
     "initials": "DB"
+  },
+  {
+    "name": "Rome Williams",
+    "slug": "rome-williams",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RW"
+  },
+  {
+    "name": "Joshua George",
+    "slug": "joshua-george",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JG"
+  },
+  {
+    "name": "Kenny Klinglesmith",
+    "slug": "kenny-klinglesmith",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KK"
+  },
+  {
+    "name": "Peter J. Leithart",
+    "slug": "peter-j-leithart",
+    "bio": "Peter J. Leithart is a prolific Christian author and theologian known for his creative biblical scholarship and cultural commentary. He has written extensively on theology, biblical interpretation, and the intersection of faith and culture, offering Reformed perspectives with creative insight. His work explores themes of biblical typology, liturgy, and the redemptive narrative woven throughout Scripture.",
+    "affiliation": "Theopolis Institute",
+    "role": "Author, Theologian & Scholar",
+    "education": "M.A. in Religion, Westminster Theological Seminary",
+    "website": "https://www.leithart.com",
+    "books": [
+      {
+        "title": "Defending Constantine: The Twilight of an Empire and the Dawn of Christendom",
+        "amazon_url": "https://www.amazon.com/s?k=Defending+Constantine+Peter+Leithart"
+      },
+      {
+        "title": "The Promise of His Appearing",
+        "amazon_url": "https://www.amazon.com/s?k=The+Promise+of+His+Appearing+Peter+Leithart"
+      },
+      {
+        "title": "Covenant and Kingship: Regnum Christi in the Old and New Testaments",
+        "amazon_url": "https://www.amazon.com/s?k=Covenant+and+Kingship+Peter+Leithart"
+      },
+      {
+        "title": "Sacrilege: Religion and the Soul of America",
+        "amazon_url": "https://www.amazon.com/s?k=Sacrilege+Peter+Leithart"
+      },
+      {
+        "title": "Against Christianity",
+        "amazon_url": "https://www.amazon.com/s?k=Against+Christianity+Peter+Leithart"
+      },
+      {
+        "title": "The Kingdom and the Power",
+        "amazon_url": "https://www.amazon.com/s?k=The+Kingdom+and+the+Power+Peter+Leithart"
+      }
+    ],
+    "initials": "PJL"
+  },
+  {
+    "name": "Lee Gatiss",
+    "slug": "lee-gatiss",
+    "bio": "Lee Gatiss is a British Christian author and speaker known for his thoughtful contributions to evangelical theology and church leadership. His writing engages contemporary Christian issues with biblical insight and practical wisdom for modern believers.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LG"
+  },
+  {
+    "name": "Nicole Massie Martin",
+    "slug": "nicole-massie-martin",
+    "bio": "Nicole Massie Martin is a writer and speaker who addresses faith, culture, and personal growth for Christian audiences. Her work explores how believers can navigate contemporary issues with biblical wisdom and practical insight.",
+    "affiliation": "",
+    "role": "Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "NMM"
+  },
+  {
+    "name": "Max Rogland",
+    "slug": "max-rogland",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MR"
+  },
+  {
+    "name": "Carlos Eire",
+    "slug": "carlos-eire",
+    "bio": "Carlos Eire is a distinguished historian and author who brings scholarly rigor to exploring Christianity, history, and faith. His works examine the intersections of religious experience, historical events, and spiritual transformation with nuance and deep research. Eire's writing invites Christian readers to think deeply about their faith's historical roots and contemporary relevance.",
+    "affiliation": "Yale University",
+    "role": "Historian & Author",
+    "education": "Ph.D. in History, University of California, Santa Barbara",
+    "website": "",
+    "books": [
+      {
+        "title": "A Very Brief History of Eternity",
+        "amazon_url": "https://www.amazon.com/s?k=A+Very+Brief+History+of+Eternity+Carlos+Eire"
+      },
+      {
+        "title": "Waiting for Snow in Havana",
+        "amazon_url": "https://www.amazon.com/s?k=Waiting+for+Snow+in+Havana+Carlos+Eire"
+      },
+      {
+        "title": "Reformations",
+        "amazon_url": "https://www.amazon.com/s?k=Reformations+Carlos+Eire"
+      },
+      {
+        "title": "How to Worry Less About God",
+        "amazon_url": "https://www.amazon.com/s?k=How+to+Worry+Less+About+God+Carlos+Eire"
+      },
+      {
+        "title": "The Age of Reformation and Religious Wars, 1378-1648",
+        "amazon_url": "https://www.amazon.com/s?k=The+Age+of+Reformation+and+Religious+Wars+Carlos+Eire"
+      }
+    ],
+    "initials": "CE"
+  },
+  {
+    "name": "Algis Valiunas",
+    "slug": "algis-valiunas",
+    "bio": "Algis Valiunas is a writer and cultural critic who explores literature, philosophy, and the human condition through a thoughtful lens. His work frequently engages with classic texts and contemporary culture, offering insights relevant to Christian readers interested in wisdom, virtue, and the deeper questions of life. He has contributed to major publications and brings erudition and moral seriousness to cultural commentary.",
+    "affiliation": "The New Criterion, National Review",
+    "role": "Writer & Cultural Critic",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AV"
+  },
+  {
+    "name": "Nick Gardner",
+    "slug": "nick-gardner",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "NG"
+  },
+  {
+    "name": "Jeremy Meeks",
+    "slug": "jeremy-meeks",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JM"
+  },
+  {
+    "name": "Sam Crites",
+    "slug": "sam-crites",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SC"
   }
 ]

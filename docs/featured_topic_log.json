@@ -66,5 +66,73 @@
         }
       ]
     }
+  ],
+  "2026-11-13": [
+    {
+      "slug": "evangelicalism",
+      "name": "The Future of Evangelicalism",
+      "hook": "Is the evangelical movement fracturing — and if so, what should come next?",
+      "category": "Culture & Society",
+      "articles": [
+        {
+          "title": "Baptist Leaders Warn Against Christian Nationalism",
+          "url": "https://erlc.com/research/seek-first-the-kingdom-of-god-a-baptist-perspective-on-christian-nationalism/",
+          "source_name": "ERLC",
+          "author": "Amanda Hays",
+          "summary": ""
+        },
+        {
+          "title": "Stephens Valley Church Silent on Restoring Disgraced Preacher Steven Lawson",
+          "url": "https://roysreport.com/nashville-church-stays-silent-on-unannounced-move-to-restore-steven-lawson-to-ministry/",
+          "source_name": "The Roys Report",
+          "author": "Mark A. Kellner",
+          "summary": ""
+        }
+      ]
+    },
+    {
+      "slug": "politics-and-the-church",
+      "name": "Politics & the Church",
+      "hook": "Should evangelical Christians seek political power, or hold it at arm's length?",
+      "category": "Culture & Society",
+      "articles": [
+        {
+          "title": "Anti-Muslim Rhetoric Failed Republican Candidates in Texas",
+          "url": "https://religionnews.com/2026/11/12/anti-muslim-attacks-didnt-help-republican-candidates-in-texas-they-may-have-hurt/",
+          "source_name": "Religion News Service",
+          "author": "Ron Ribiat",
+          "summary": ""
+        },
+        {
+          "title": "Christian Critique Argues Libertarian Economics Encourages Vice",
+          "url": "https://mereorthodoxy.com/a-christian-critique-of-fusionism-as-a-political-philosophy/",
+          "source_name": "Mere Orthodoxy",
+          "author": "Mere Orthodoxy",
+          "summary": ""
+        }
+      ]
+    },
+    {
+      "slug": "technology-and-discipleship",
+      "name": "Technology & Discipleship",
+      "hook": "How do smartphones and social media form us spiritually — and what should Christians do about it?",
+      "category": "Culture & Society",
+      "articles": [
+        {
+          "title": "AI Development Embeds Values of Power and Domination, Writer Argues",
+          "url": "https://mereorthodoxy.com/does-artificial-intelligence-need-to-be-saved/",
+          "source_name": "Mere Orthodoxy",
+          "author": "Mere Orthodoxy",
+          "summary": ""
+        },
+        {
+          "title": "AI Could Be the Anti-Christ, Some Evangelicals Argue",
+          "url": "https://michaelfbird.substack.com/p/is-ai-the-anti-christ",
+          "source_name": "Michael Bird",
+          "author": "Michael F. Bird",
+          "summary": ""
+        }
+      ]
+    }
   ]
 }
