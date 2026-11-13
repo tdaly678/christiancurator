@@ -548,6 +548,15 @@
     "Derek Thomas"
    ]
   },
+  "https://learn.ligonier.org/articles/the-bible-and-friendship": {
+   "status": 200,
+   "final_url": "https://learn.ligonier.org/articles/the-bible-and-friendship",
+   "fetched_on": "2026-11-12",
+   "title": "What Does the Bible Say About Friendship?",
+   "authors": [
+    "Brian Croft"
+   ]
+  },
   "https://learn.ligonier.org/articles/what-are-justification-and-sanctification": {
    "status": 200,
    "final_url": "https://learn.ligonier.org/articles/what-are-justification-and-sanctification",
@@ -790,6 +799,15 @@
    "final_url": "https://mereorthodoxy.com/introduction-reformed-doctrine-two-kingdoms/",
    "fetched_on": "2026-11-12",
    "title": "An Introduction to the Reformed Doctrine of the Two Kingdoms",
+   "authors": [
+    "Mere Orthodoxy"
+   ]
+  },
+  "https://mereorthodoxy.com/material-dimensions-spiritual-friendship/": {
+   "status": 200,
+   "final_url": "https://mereorthodoxy.com/material-dimensions-spiritual-friendship/",
+   "fetched_on": "2026-11-12",
+   "title": "Material Dimensions of Spiritual Friendship",
    "authors": [
     "Mere Orthodoxy"
    ]
@@ -1372,6 +1390,15 @@
    "title": "The Sins Behind the Sin of Pornography - 9Marks",
    "authors": [
     "John Henderson"
+   ]
+  },
+  "https://www.9marks.org/article/the-surprising-importance-of-shallow-christian-friendships/": {
+   "status": 200,
+   "final_url": "https://www.9marks.org/article/the-surprising-importance-of-shallow-christian-friendships/",
+   "fetched_on": "2026-11-12",
+   "title": "The Surprising Importance of “Shallow” Christian Friendships - 9Marks",
+   "authors": [
+    "Danny D’Acquisto"
    ]
   },
   "https://www.9marks.org/article/the-sword-and-the-shepherds-staff-reporting-sexual-abuse-to-the-authorities/": {
@@ -2881,16 +2908,22 @@
    "authors": []
   },
   "https://www.desiringgod.org/articles/a-grief-misunderstood": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/a-grief-misunderstood",
+   "fetched_on": "2026-11-12",
+   "title": "A Grief Misunderstood",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/a-summary-theology-of-prayer": {
    "status": 429,
    "fetched_on": "2026-11-12"
   },
   "https://www.desiringgod.org/articles/all-of-us-sinners-none-of-us-freaks": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/all-of-us-sinners-none-of-us-freaks",
+   "fetched_on": "2026-11-12",
+   "title": "All of Us Sinners, None of Us Freaks: Christian Convictions for the Transgender Age",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/are-you-becoming-a-post-millennialist": {
    "status": 200,
@@ -2951,8 +2984,11 @@
    "authors": []
   },
   "https://www.desiringgod.org/articles/dispensational-or-covenantal": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/dispensational-or-covenantal",
+   "fetched_on": "2026-11-12",
+   "title": "Dispensational or Covenantal? The Promise and Progress of Salvation in Christ",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/does-god-really-save-us-by-faith-alone": {
    "status": 200,
@@ -2995,8 +3031,11 @@
    "authors": []
   },
   "https://www.desiringgod.org/articles/he-made-them-male-and-female": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/he-made-them-male-and-female",
+   "fetched_on": "2026-11-12",
+   "title": "He Made Them Male and Female: Sex, Gender, and the Image of God",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/hell-is-for-real": {
    "status": 200,
@@ -3020,8 +3059,11 @@
    "authors": []
   },
   "https://www.desiringgod.org/articles/how-did-jesus-make-disciples": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/how-did-jesus-make-disciples",
+   "fetched_on": "2026-11-12",
+   "title": "How Did Jesus ‘Make Disciples’?",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/how-is-the-bible-without-error": {
    "status": 200,
@@ -3060,8 +3102,11 @@
    "fetched_on": "2026-11-12"
   },
   "https://www.desiringgod.org/articles/lord-where-is-your-faithfulness": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/lord-where-is-your-faithfulness",
+   "fetched_on": "2026-11-12",
+   "title": "Lord, Where Is Your Faithfulness? How the Faithful Sing in Crisis",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/marriage-as-submission": {
    "status": 429,
@@ -3219,8 +3264,11 @@
    "fetched_on": "2026-11-12"
   },
   "https://www.desiringgod.org/articles/will-membership-make-a-difference": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/will-membership-make-a-difference",
+   "fetched_on": "2026-11-12",
+   "title": "Will Membership Make a Difference? The Vital Joys of Joining a Church",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/your-gospel-keeps-people-from-god": {
    "status": 200,
@@ -3230,8 +3278,11 @@
    "authors": []
   },
   "https://www.desiringgod.org/interviews/an-evening-of-eschatology": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/interviews/an-evening-of-eschatology",
+   "fetched_on": "2026-11-12",
+   "title": "An Evening of Eschatology",
+   "authors": []
   },
   "https://www.desiringgod.org/interviews/anxiety-sin-disorder-or-both": {
    "status": 429,
@@ -3319,12 +3370,18 @@
    "authors": []
   },
   "https://www.desiringgod.org/interviews/what-causes-gender-dysphoria": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/interviews/what-causes-gender-dysphoria",
+   "fetched_on": "2026-11-12",
+   "title": "What Causes Gender Dysphoria?",
+   "authors": []
   },
   "https://www.desiringgod.org/interviews/what-is-discipleship-and-how-is-it-done": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/interviews/what-is-discipleship-and-how-is-it-done",
+   "fetched_on": "2026-11-12",
+   "title": "What Is Discipleship and How Is It Done?",
+   "authors": []
   },
   "https://www.desiringgod.org/interviews/what-is-inerrancy": {
    "status": 200,
@@ -3345,8 +3402,11 @@
    "fetched_on": "2026-11-12"
   },
   "https://www.desiringgod.org/interviews/why-do-we-see-so-few-miracles-today": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/interviews/why-do-we-see-so-few-miracles-today",
+   "fetched_on": "2026-11-12",
+   "title": "Why Do We See So Few Miracles Today?",
+   "authors": []
   },
   "https://www.desiringgod.org/interviews/why-i-abominate-the-prosperity-gospel--2": {
    "status": 200,
@@ -3371,8 +3431,11 @@
    "fetched_on": "2026-11-12"
   },
   "https://www.desiringgod.org/messages/israel-palestine-and-the-middle-east": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/messages/israel-palestine-and-the-middle-east",
+   "fetched_on": "2026-11-12",
+   "title": "Israel, Palestine, and the Middle East",
+   "authors": []
   },
   "https://www.desiringgod.org/messages/marriage-gods-showcase-of-covenant-keeping-grace": {
    "status": 429,
@@ -3390,8 +3453,11 @@
    "fetched_on": "2026-11-12"
   },
   "https://www.desiringgod.org/messages/the-doctrine-of-justification-by-faith": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/messages/the-doctrine-of-justification-by-faith",
+   "fetched_on": "2026-11-12",
+   "title": "The Doctrine of Justification by Faith",
+   "authors": []
   },
   "https://www.desiringgod.org/messages/the-lords-supper-as-worship": {
    "status": 200,
