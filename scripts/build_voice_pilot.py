@@ -59,7 +59,8 @@ def voice_names() -> dict[str, str]:
 
 
 def recent_html(entry: dict, by_voice: dict[str, list[dict]]) -> str:
-    items = by_voice.get(entry["slug"]) or []
+    items = recent.before_death(by_voice.get(entry["slug"]) or [],
+                                recent.death_dates().get(entry["slug"]))
     if not items:
         return ""
     return recent.render_section(

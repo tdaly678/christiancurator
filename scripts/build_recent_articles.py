@@ -43,6 +43,7 @@ ARCHIVE_DIR = DOCS_DIR / "archive"
 VOICES_DIR = DOCS_DIR / "voices"
 TOPICS_DIR = DOCS_DIR / "topics"
 HISTORY = DOCS_DIR / "article_history.json"
+PILOT = REPO_ROOT / "data" / "voices" / "pilot.json"
 DATA_WATCH = DOCS_DIR / "data_watch.json"
 
 V_START = "<!-- CC-RECENT-ARTICLES:START -->"
@@ -147,6 +148,34 @@ def collect_by_voice(*, dropped: list | None = None) -> dict[str, list[dict]]:
     }
 
 
+def death_dates() -> dict[str, str]:
+    """Slug -> death date for every writer marked deceased, from voices_data.json
+    and data/voices/pilot.json (pilot wins). The date is ISO ("2017-12-14") or a
+    year ("1683"); "" when the writer is deceased but no date is recorded."""
+    out: dict[str, str] = {}
+    for path, key in ((DOCS_DIR / "voices_data.json", None), (PILOT, "writers")):
+        try:
+            rows = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        for v in (rows.get(key, []) if key else rows):
+            if v.get("deceased") or v.get("died"):
+                out[v["slug"]] = str(v.get("died") or out.get(v["slug"], ""))
+    return out
+
+
+def before_death(items: list[dict], died: str | None) -> list[dict]:
+    """Recent Articles for a deceased writer (overnight Nov 12 2026): a piece we
+    curated after the writer's death is a republication, so only pieces dated on
+    or before the death are listed. With no recorded date, none are (our archive
+    starts in 2026). Living writers (died None) keep every piece."""
+    if died is None:
+        return items
+    if not died:
+        return []
+    return [i for i in items if i["date"][:len(died)] <= died]
+
+
 def render_section(heading_label: str, heading: str, items: list[dict],
                    limit: int = MAX_ITEMS) -> str:
     rows = []
@@ -193,7 +222,10 @@ def remove_block(html: str) -> str:
 
 
 def update_voices() -> int:
-    by_voice = collect_by_voice()
+    deaths = death_dates()
+    by_voice = {slug: before_death(items, deaths.get(slug))
+                for slug, items in collect_by_voice().items()}
+    by_voice = {slug: items for slug, items in by_voice.items() if items}
     voices_data = json.loads((DOCS_DIR / "voices_data.json").read_text(encoding="utf-8"))
     names = {v["slug"]: v["name"] for v in voices_data}
     n = 0

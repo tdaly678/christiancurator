@@ -15,6 +15,8 @@ Checks every page under docs/voices/ and docs/voices_data.json:
                    voices_data.json record, and is linked from no page under docs/.
   title            every Recent Articles headline on a voice page equals the publisher's
                    headline (archive meta.json original_title or data/original_titles.json).
+  deceased         a deceased writer's Recent Articles list nothing curated after the death
+                   (build_recent_articles.before_death).
 
 Exit 1 on any violation outside the baseline.
 
@@ -71,7 +73,8 @@ def load_json(path: Path, default):
 
 def run_checks() -> dict[str, list[tuple[str, str]]]:
     out: dict[str, list[tuple[str, str]]] = {k: [] for k in
-                                              ("bar", "noindex", "dash", "posting-account", "title")}
+                                              ("bar", "noindex", "dash", "posting-account", "title",
+                                               "deceased")}
     data = load_json(DATA, [])
     by_slug = {v["slug"]: v for v in data}
     pilot = {w["slug"]: w for w in vp.load_pilot()["writers"]}
@@ -84,6 +87,9 @@ def run_checks() -> dict[str, list[tuple[str, str]]]:
     # Expected Recent Articles headlines, keyed (slug, url).
     by_voice = recent.collect_by_voice()
     expected = {(s, i["url"]): recent.strip_dashes(i["title"]) for s, items in by_voice.items() for i in items}
+    deaths = recent.death_dates()
+    allowed = {(s, i["url"]) for s, items in by_voice.items()
+               for i in recent.before_death(items, deaths.get(s))}
 
     for d in sorted(p for p in VOICES.iterdir() if p.is_dir()):
         slug = d.name
@@ -114,6 +120,8 @@ def run_checks() -> dict[str, list[tuple[str, str]]]:
             shown = " ".join(html_mod.unescape(re.sub(r"<[^>]+>", "", raw)).split())
             url = html_mod.unescape(url)
             want = expected.get((slug, url))
+            if slug in deaths and (slug, url) not in allowed:
+                out["deceased"].append((slug, f"{url} was curated after the writer's death"))
             if want is None:
                 out["title"].append((slug, f"no publisher headline known for {url}"))
             elif shown != " ".join(want.split()):

@@ -1195,7 +1195,9 @@
         "amazon_url": "https://www.amazon.com/s?k=Heart+Christ+Heaven+Sinners+Earth+Goodwin"
       }
     ],
-    "initials": "TG"
+    "initials": "TG",
+    "deceased": true,
+    "died": "1680"
   },
   {
     "slug": "michael-gorman",
@@ -2798,7 +2800,9 @@
         "amazon_url": "https://www.amazon.com/s?k=Concise+Theology+J.I.+Packer"
       }
     ],
-    "bio_sources": []
+    "bio_sources": [],
+    "deceased": true,
+    "died": "2020-07-17"
   },
   {
     "slug": "kevin-palau",
@@ -5509,7 +5513,8 @@
       "https://www.christianitytoday.com/?p=352291",
       "https://ministrywatch.com/amp/john-macarthur-megachurch-pastor-and-voice-of-grace-to-you-has-died/",
       "https://www.nbcnews.com/news/rcna218943"
-    ]
+    ],
+    "died": "2025-07-14"
   },
   {
     "name": "Michael Horton",
@@ -5871,7 +5876,8 @@
         "q": "How was Clark Pinnock viewed by mainstream evangelicals?",
         "a": "Pinnock remained a self-identified evangelical, but his open theism was sharply contested; the Evangelical Theological Society debated his membership in the early 2000s, ultimately retaining him. Many Reformed evangelicals regard open theism as outside the bounds of orthodoxy, while others credit Pinnock with raising honest questions about divine providence."
       }
-    ]
+    ],
+    "died": "2010"
   },
   {
     "name": "David VanDrunen",
@@ -9050,7 +9056,9 @@
     "education": "",
     "website": "",
     "books": [],
-    "initials": "JBW"
+    "initials": "JBW",
+    "deceased": true,
+    "died": "1679"
   },
   {
     "name": "Vika Pechersky",
@@ -11711,7 +11719,9 @@
       }
     ],
     "initials": "JO",
-    "bio_sources": []
+    "bio_sources": [],
+    "deceased": true,
+    "died": "1683"
   },
   {
     "name": "Chrys Jones",
@@ -14537,7 +14547,9 @@
         "amazon_url": "https://www.amazon.com/s?k=Christian+Directory+Richard+Baxter"
       }
     ],
-    "initials": "RB"
+    "initials": "RB",
+    "deceased": true,
+    "died": "1691"
   },
   {
     "name": "Barbara Harper",
