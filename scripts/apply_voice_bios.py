@@ -4,7 +4,8 @@
 Input: one or more JSON files, each a list of research rows:
 
     {"slug", "decision": "bio" | "journalist" | "noindex", "name", "bio", "role",
-     "affiliation", "website", "books": [title, ...], "deceased", "bio_sources": [url, ...]}
+     "affiliation", "website", "books": [title, ...], "deceased", "died": "YYYY-MM-DD",
+     "bio_sources": [url, ...]}
 
 For "bio" and "journalist" rows the docs/voices_data.json record is rewritten:
 bio, role, affiliation, website, deceased and bio_sources come from the row;
@@ -92,6 +93,8 @@ def update_record(entry: dict, row: dict) -> dict:
     entry["books"] = [{"title": t, "amazon_url": "https://www.amazon.com/s?k=" + quote_plus(f"{t} {name}")}
                       for t in row.get("books") or []]
     entry["deceased"] = bool(row.get("deceased"))
+    if row.get("died"):
+        entry["died"] = row["died"]
     entry["bio_sources"] = list(dict.fromkeys(row["bio_sources"]))
     for key in UNSOURCED_FIELDS:
         entry.pop(key, None)

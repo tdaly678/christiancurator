@@ -17,6 +17,24 @@
   "notes": "Personal detail (deacon, small group teacher, Nashville) is from his TGC profile, which also mentions his wife and four children; family left out. The Lifeway author page itself has no bio text."
  },
  {
+  "slug": "aaron-m-renn",
+  "decision": "bio",
+  "name": "Aaron M. Renn",
+  "bio": "Aaron M. Renn is a writer based in Indianapolis and a senior fellow at American Reformer, according to his website. He is the author of Life in the Negative World: Confronting Challenges in an Anti-Christian Culture (Zondervan, 2024). He was previously a senior fellow in urban policy at the Manhattan Institute and a managing director at Accenture. His writing has appeared in The New York Times, The Wall Street Journal, First Things and American Affairs, among others.",
+  "role": "Writer",
+  "affiliation": "American Reformer",
+  "website": "https://www.aaronrenn.com/",
+  "books": [
+   "Life in the Negative World: Confronting Challenges in an Anti-Christian Culture"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.aaronrenn.com/about"
+  ],
+  "identity_check": "All credited pieces are on aaronrenn.com, his own newsletter; the About page on the same site supplies the bio.",
+  "notes": "Site's previous affiliation (First Things, The American Conservative) replaced with the sourced American Reformer fellowship; First Things kept only as a place his writing has appeared. About page read with WebFetch."
+ },
+ {
   "slug": "adam-niess",
   "decision": "bio",
   "name": "Adam Niess",
@@ -129,6 +147,22 @@
   "notes": "Third book is as editor. He is also a contributor to Baptist Political Theology (not listed as his book). Family details omitted."
  },
  {
+  "slug": "ann-marie-shambaugh",
+  "decision": "bio",
+  "name": "Ann Marie Shambaugh",
+  "bio": "Ann Marie Shambaugh has reported as a print journalist in multiple states and is currently based in Carmel, Indiana, according to her author note at The Roys Report. She reports for The Roys Report on abuse allegations involving church leaders.",
+  "role": "Journalist",
+  "affiliation": "The Roys Report",
+  "website": "https://roysreport.com/former-arizona-pastor-accused-of-sexually-abusing-8-year-old/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://roysreport.com/former-arizona-pastor-accused-of-sexually-abusing-8-year-old/"
+  ],
+  "identity_check": "Author note appears on her own credited Roys Report article (byline 'By Ann Marie Shambaugh', Nov 9 2026).",
+  "notes": "Only source is the article author note; no standalone author page found. Second bio sentence describes the credited articles themselves. Thin; could be noindex if two sources are required."
+ },
+ {
   "slug": "annie-eisner",
   "decision": "noindex",
   "name": "Annie Eisner",
@@ -234,6 +268,26 @@
   ],
   "identity_check": "The TGC review of Frederik deBoer's All in Your Head is bylined Brad Edwards and its author box matches his TGC profile.",
   "notes": "Book title confirmed only via the TGC author bio, not a publisher page."
+ },
+ {
+  "slug": "brett-mccracken",
+  "decision": "bio",
+  "name": "Brett McCracken",
+  "bio": "Brett McCracken is a senior editor and director of communications at The Gospel Coalition, according to his TGC profile. He has written several books on topics including rest, digital life and Christian community, among them The Wisdom Pyramid and The Wisdom of Sleep.",
+  "role": "Senior Editor",
+  "affiliation": "The Gospel Coalition",
+  "website": "https://www.brettmccracken.com",
+  "books": [
+   "The Wisdom Pyramid",
+   "The Wisdom of Sleep"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/brett-mccracken/",
+   "https://www.brettmccracken.com"
+  ],
+  "identity_check": "Credited pieces are TGC articles; TGC profile is the author page for that byline, and his own site names the same TGC role.",
+  "notes": "Book titles given as short titles shown on his site; subtitles not confirmed. Family details on the TGC profile deliberately omitted."
  },
  {
   "slug": "brian-croft",
@@ -350,6 +404,22 @@
   "notes": "Book title from his own website. The Aquila Report copy is a republication of the Ref21 piece."
  },
  {
+  "slug": "cameron-strang",
+  "decision": "bio",
+  "name": "Cameron Strang",
+  "bio": "Cameron Strang is the founder and publisher of RELEVANT Media Group, which covers faith, culture and life, according to his RELEVANT author page. He has led RELEVANT as its editorial and creative director for more than two decades and co-hosts The RELEVANT Podcast. He also leads Kingdom Commons, a nonprofit media ministry.",
+  "role": "Founder and Publisher",
+  "affiliation": "RELEVANT Media Group",
+  "website": "https://relevantmagazine.com/author/relevantcameron/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://relevantmagazine.com/author/relevantcameron/"
+  ],
+  "identity_check": "Byline on credited RELEVANT piece links to relevantmagazine.com/author/relevantcameron/, which carries this bio.",
+  "notes": "Author page read via the r.jina.ai reader (direct fetch blocked or used for speed). Founding year omitted: author page says 2000, Wikipedia (search result only) says 2001. Not the music executive Cameron Strang (Warner/New West Records)."
+ },
+ {
   "slug": "campbell-markham",
   "decision": "bio",
   "name": "Campbell Markham",
@@ -461,6 +531,25 @@
   ],
   "identity_check": "The pieces credited to him are Desiring God articles (feed links resolve to desiringgod.org/articles/...), and the Desiring God author page for Clinton Manley lists his articles with this bio.",
   "notes": "desiringgod.org returns a Cloudflare challenge to direct fetches; the author page was read from the Wayback Machine capture of Aug 4, 2025 (web.archive.org/web/20250804004706/https://www.desiringgod.org/authors/clinton-manley). Family details omitted. The Aquila Report copy is a republication of a DG article."
+ },
+ {
+  "slug": "collin-hansen",
+  "decision": "bio",
+  "name": "Collin Hansen",
+  "bio": "Collin Hansen is vice president for content and editor in chief of The Gospel Coalition and executive director of The Keller Center for Cultural Apologetics, according to his TGC profile. He hosts the Gospelbound podcast and writes the weekly Unseen Things newsletter. His books include Timothy Keller: His Spiritual and Intellectual Formation and Rediscover Church: Why the Body of Christ Is Essential. He is an adjunct professor at Beeson Divinity School.",
+  "role": "Editor in Chief",
+  "affiliation": "The Gospel Coalition",
+  "website": "https://collin-hansen.com/",
+  "books": [
+   "Timothy Keller: His Spiritual and Intellectual Formation",
+   "Rediscover Church: Why the Body of Christ Is Essential"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/collin-hansen/"
+  ],
+  "identity_check": "Credited pieces are Gospelbound and TGC podcast episodes; his TGC profile names him as Gospelbound host.",
+  "notes": "Rediscover Church is co-authored (with Jonathan Leeman); profile lists it among books he has 'written and contributed to'."
  },
  {
   "slug": "costi-hinn",
@@ -581,6 +670,22 @@
   "notes": "The site's current affiliation 'Religion News Service, The Christian Century' is not supported by this source; the Roys Report author box names Roys Report. He was previously at Christianity Today per general knowledge, but not stated in the opened source, so left out. 'Two decades in journalism' paraphrased as 'began his journalism career'."
  },
  {
+  "slug": "daniel-strand",
+  "decision": "bio",
+  "name": "Daniel Strand",
+  "bio": "According to his American Reformer author page, Daniel Strand is Assistant Professor of Ethics at the Air War College and Ethics Chair for Air University. The same page describes his forthcoming book Gods of the Nations (Cambridge University Press) as a study of Augustine's political theology in City of God, and notes that his views are his own and do not represent those of the US Government.",
+  "role": "Professor of Ethics",
+  "affiliation": "Air War College",
+  "website": "https://archive.americanreformer.org/author/daniel-strand",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://archive.americanreformer.org/author/daniel-strand"
+  ],
+  "identity_check": "Credited pieces are American Reformer articles with byline Daniel Strand; the American Reformer author page for that byline gives the bio.",
+  "notes": "Author page undated, so roles attributed. A June 2026 Air University news story (maxwell.af.mil) seen only in search results returned 403; it reportedly calls him ethics chair and professor of ethics, so the exact rank may be out of date. Book is forthcoming, so left out of books."
+ },
+ {
   "slug": "danson-ottawa",
   "decision": "bio",
   "name": "Danson Ottawa",
@@ -693,6 +798,27 @@
   "notes": "Also known as D. A. Carson; name kept as the site and TGC give it. No specific book titles listed because none were confirmed on a page I read. The site's affiliation should now read TEDS (emeritus) and TGC cofounder (retired), not current TGC staff."
  },
  {
+  "slug": "dorothy-greco",
+  "decision": "bio",
+  "name": "Dorothy Greco",
+  "bio": "Dorothy Littell Greco is a writer and professional photographer who lives near Boston, according to her InterVarsity Press author page. She is the author of Making Marriage Beautiful (David C Cook, 2017), Marriage in the Middle (InterVarsity Press, 2020) and For the Love of Women: Uprooting and Healing Misogyny in America (HarperCollins, 2025). Her writing has appeared in Christianity Today, Sojourners and Relevant Magazine, according to her website.",
+  "role": "Author",
+  "affiliation": "",
+  "website": "https://www.dorothygreco.com/",
+  "books": [
+   "Making Marriage Beautiful",
+   "Marriage in the Middle",
+   "For the Love of Women: Uprooting and Healing Misogyny in America"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://ivpress.com/dorothy-littell-greco",
+   "https://www.dorothygreco.com/author-writer-and-photographer/"
+  ],
+  "identity_check": "Credited pieces are RELEVANT articles on marriage and spiritual practice (no author box); her own site lists Relevant Magazine among outlets she writes for, and her books are on marriage.",
+  "notes": "Both pages read via the r.jina.ai reader (direct fetch blocked or used for speed) (IVP returned 403 directly). Writes as Dorothy Littell Greco on books; RELEVANT byline is Dorothy Greco. Husband detail omitted."
+ },
+ {
   "slug": "dv-rider",
   "decision": "noindex",
   "name": "D.V. Rider",
@@ -801,6 +927,22 @@
   "notes": "Only two sentences are supportable; no other sources found."
  },
  {
+  "slug": "greg-morse",
+  "decision": "bio",
+  "name": "Greg Morse",
+  "bio": "Greg Morse is a staff writer for Desiring God and a graduate of Bethlehem College and Seminary, according to his Desiring God author page.",
+  "role": "Staff Writer",
+  "affiliation": "Desiring God",
+  "website": "https://www.desiringgod.org/authors/greg-morse",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.desiringgod.org/authors/greg-morse"
+  ],
+  "identity_check": "Author page lists the exact credited pieces (Fruitlessness and the Fear of God, Life on the Seas of Death, Thou Shalt Not Hide from Neighbors, Confess and Forsake).",
+  "notes": "desiringgod.org returned 403 directly; author page read via the r.jina.ai reader (direct fetch blocked or used for speed). The DG teacher page (desiringgod.org/about/teachers/greg-morse) also 403; search snippets call him Teacher and Editor there, not used. No book confirmed. Family details omitted."
+ },
+ {
   "slug": "haleluya-hadero",
   "decision": "bio",
   "name": "Haleluya Hadero",
@@ -902,6 +1044,22 @@
   ],
   "identity_check": "Reformation21 essay 'Annihilationism: Celibate Gay Theology 2.0' (May 11, 2026), one of the credited pieces, carries his author bio naming Cumberland Homesteads Baptist Church and the two books; his own site lists the same books and SBTS degrees.",
   "notes": "Baptist Press (Feb 28, 2024) read through a Wayback capture (direct fetch blocked) for the SBC second vice president fact. The Pop Culture Parent is listed on his own site (co-authored, per general knowledge; not stated on the page)."
+ },
+ {
+  "slug": "jeffrey-a-stivason",
+  "decision": "bio",
+  "name": "Jeffrey A. Stivason",
+  "bio": "According to his Reformation21 author page, Jeffrey A. Stivason (PhD, Westminster Theological Seminary) is pastor of Grace Reformed Presbyterian Church in Gibsonia, Pennsylvania, and Professor of New Testament Studies at the Reformed Presbyterian Theological Seminary in Pittsburgh. The same page describes him as editorial director of Reformation21 and Place for Truth, online magazines of the Alliance of Confessing Evangelicals.",
+  "role": "Pastor and Professor",
+  "affiliation": "Reformed Presbyterian Theological Seminary",
+  "website": "https://reformation21.org/author/jeffrey-stivason/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://reformation21.org/author/jeffrey-stivason/"
+  ],
+  "identity_check": "Credited piece 'A Word to Kinists' is on Reformation21 and discusses the RPCNA, his denomination; Ref21 author page for the byline gives the bio.",
+  "notes": "Author page undated, so roles attributed. Read via the r.jina.ai reader (direct fetch blocked or used for speed). Previous affiliation 'Ligonier Ministries; The Aquila Report' not supported and dropped. Aquila Report piece origin not traced."
  },
  {
   "slug": "jen-oshman",
@@ -1024,6 +1182,22 @@
   ],
   "identity_check": "Both credited pieces are guest essays on aaronrenn.com bylined 'John Seel, Ph.D.'; the May 26, 2026 essay ends with his author bio.",
   "notes": "Book title confirmed only via that author bio, not a publisher page. Wife's name omitted. No own website opened; website field points at the guest essay with the bio."
+ },
+ {
+  "slug": "john-taylor",
+  "decision": "noindex",
+  "name": "John Taylor",
+  "bio": "",
+  "role": "",
+  "affiliation": "",
+  "website": "",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://relevantmagazine.com/author/taylorberry/"
+  ],
+  "identity_check": "Not confirmed. The RELEVANT byline 'John Taylor' links to an author page with slug 'taylorberry' and no bio.",
+  "notes": "Common name, no author bio on RELEVANT, slug mismatch suggests a staff or shared account; web search found no bio. Leave noindex."
  },
  {
   "slug": "jon-coombs",
@@ -1152,6 +1326,22 @@
   "notes": "Ligonier calls the title 'biblical counseling'; RTS's own promotion notice (effective June 6, 2024) says 'Christian Counseling', used here. Ligonier calls him a PCA teaching elder, while a search summary says RTS describes him as an RPCNA minister; denomination omitted because of the conflict. RPTS background confirmed on the RTS appointment page."
  },
  {
+  "slug": "ken-braddy",
+  "decision": "bio",
+  "name": "Ken Braddy",
+  "bio": "Ken Braddy is Lifeway's director of Sunday School, according to the author note on his September 2026 Lifeway Research article. He blogs at kenbraddy.com, hosts the group ministry podcast Disciple-making in Community, and is the author of 11 books on group ministry.",
+  "role": "Director of Sunday School",
+  "affiliation": "Lifeway Christian Resources",
+  "website": "https://kenbraddy.com/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://research.lifeway.com/2026/09/14/8-signs-your-churchgoers-are-seeking-god/"
+  ],
+  "identity_check": "Author note is on his own credited Lifeway Research article (byline 'By Ken Braddy').",
+  "notes": "Page read via the r.jina.ai reader (direct fetch blocked or used for speed). Note names the booklet Welcome Aboard! as his latest; left out of books since it is a booklet."
+ },
+ {
   "slug": "kendall-lankford",
   "decision": "bio",
   "name": "Kendall Lankford",
@@ -1264,6 +1454,26 @@
   ],
   "identity_check": "The credited pieces are TGC Everyday Pastor episodes; the Sept 28, 2026 episode page lists Matt Smethurst and Ligon Duncan, and his TGC profile and own site give the RTS role.",
   "notes": "The site's affiliation 'Christ Church Jackson' was not confirmed by any source; dropped. Neither page is dated, but ligonduncan.com is his own current site and TGC profile is a live author page."
+ },
+ {
+  "slug": "louis-markos",
+  "decision": "bio",
+  "name": "Louis Markos",
+  "bio": "Louis Markos is professor in English and scholar in residence at Houston Christian University, where he holds the Robert H. Ray chair in humanities, according to his TGC profile. He has written 25 books, including On the Shoulders of Hobbits: The Road to Virtue with Tolkien and Lewis, Passing the Torch: An Apology for Classical Christian Education, and From Aristotle to Christ: How Aristotelian Thought Clarified the Christian Faith.",
+  "role": "Professor of English",
+  "affiliation": "Houston Christian University",
+  "website": "https://www.thegospelcoalition.org/profile/louis-markos/",
+  "books": [
+   "On the Shoulders of Hobbits: The Road to Virtue with Tolkien and Lewis",
+   "Passing the Torch: An Apology for Classical Christian Education",
+   "From Aristotle to Christ: How Aristotelian Thought Clarified the Christian Faith"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/louis-markos/"
+  ],
+  "identity_check": "The credited TGC review 'Why Francis Schaeffer Still Matters' (May 2026) carries the Louis Markos byline linked to this profile.",
+  "notes": "Old affiliation 'Houston Baptist University' replaced by the profile's Houston Christian University (the school's current name). Profile read via the r.jina.ai reader (direct fetch blocked or used for speed). hc.edu faculty page returned no text. Ref21 review byline not visible in fetched text."
  },
  {
   "slug": "mark-a-kellner",
@@ -1383,6 +1593,26 @@
   "notes": "Family details omitted."
  },
  {
+  "slug": "megan-hill",
+  "decision": "bio",
+  "name": "Megan Hill",
+  "bio": "Megan Hill is managing editor for The Gospel Coalition, according to her TGC profile. Her recent books are Sabbath Rest, Ephesians: Life Together in Christ, and Partners in the Gospel: Mentoring Edition, and she has written several others. She is a member of West Springfield Covenant Community Church (PCA) in Massachusetts.",
+  "role": "Managing Editor",
+  "affiliation": "The Gospel Coalition",
+  "website": "https://www.thegospelcoalition.org/profile/megan-hill/",
+  "books": [
+   "Sabbath Rest",
+   "Ephesians: Life Together in Christ",
+   "Partners in the Gospel: Mentoring Edition: An 8-Session Study for Pastors' and Elders' Wives"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/megan-hill/"
+  ],
+  "identity_check": "Credited TGC article 'Sabbath Is More than Self-Care' matches her TGC byline and her book Sabbath Rest.",
+  "notes": "Profile read via the r.jina.ai reader (direct fetch blocked or used for speed). Previous affiliation Christianity Today not supported; dropped. Aquila Report pieces not traced to originals. Family details omitted."
+ },
+ {
   "slug": "melissa-kruger",
   "decision": "bio",
   "name": "Melissa Kruger",
@@ -1498,6 +1728,28 @@
   "notes": "The source writes the church name with an en dash (Redeemer Presbyterian Church, Lincoln Square); rendered without it. Did not state he is Tim Keller's son since no opened page says so."
  },
  {
+  "slug": "michael-kelley",
+  "decision": "bio",
+  "name": "Michael Kelley",
+  "bio": "Michael Kelley is an author and church leader who holds a Master of Divinity from Beeson Divinity School and spent 15 years in various roles with Lifeway Christian Resources, according to his website. He later served as executive director of the Nashville Baptist Association; in January 2024 the Baptist and Reflector reported that he was resigning that post to become director of The Rooted Network. His books include Growing Down: Unlearning the Patterns of Adulthood that Keep Us from Jesus and Boring: Finding an Extraordinary God in an Ordinary Life.",
+  "role": "Author",
+  "affiliation": "",
+  "website": "https://michaelkelley.co/",
+  "books": [
+   "Growing Down: Unlearning the Patterns of Adulthood that Keep Us from Jesus",
+   "Boring: Finding an Extraordinary God in an Ordinary Life",
+   "Wednesdays Were Pretty Normal: A Boy, Cancer, and God"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://michaelkelley.co/about-2/",
+   "https://baptistandreflector.org/tennescene-jan-10",
+   "https://ftc.co/multi_author/michael-kelley/"
+  ],
+  "identity_check": "Aquila Report pieces link to a republication on thinke.org; the same titles ('Be Killing Sin, or It Will Be Killing You', '3 Ways to Shake Off \"Gospel Numbness\"') are posts on his own blog michaelkelley.co (Forward Progress), found via the site's own search feed.",
+  "notes": "Old affiliation 'Lifeway Christian Resources' is out of date; current role after The Rooted Network is not confirmed, so none is stated. About page (read via the r.jina.ai reader (direct fetch blocked or used for speed)) still says he is executive director of the Nashville Baptist Association; that is older than the Jan 2024 report, so not used. Family details omitted. Wednesdays Were Pretty Normal confirmed on the FTC page."
+ },
+ {
   "slug": "michael-mock",
   "decision": "bio",
   "name": "Michael Mock",
@@ -1610,6 +1862,23 @@
   "notes": "The site's affiliation 'Bible.com' is unsupported; replaced. The podcast launch date will need a tense update after January 1, 2027 (or drop the date). nancyguthrie.com/about returned a not found page. She has many earlier books; only the one confirmed on the pages opened is listed."
  },
  {
+  "slug": "noah-senthil",
+  "decision": "bio",
+  "name": "Noah Senthil",
+  "bio": "Noah Senthil (BA, Wheaton College; MA, Talbot School of Theology) is an MAR candidate in ethics at Yale Divinity School, according to his TGC profile. He has served as an adjunct professor at Biola University, an editorial intern at The Gospel Coalition and a youth pastor in Cleveland, Ohio. His own website also describes him as a contributing editor at Credo Magazine.",
+  "role": "Writer",
+  "affiliation": "Yale Divinity School",
+  "website": "https://noahsenthil.com/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/noah-senthil/",
+   "https://noahsenthil.com/about-noah-senthil/"
+  ],
+  "identity_check": "Credited TGC articles carry his byline; his own site names TGC and Biola roles that match the TGC profile.",
+  "notes": "His site (older) says he currently teaches at Biola; the TGC profile is newer and puts Biola in the past, so the TGC wording is used. Both read via the r.jina.ai reader (direct fetch blocked or used for speed)."
+ },
+ {
   "slug": "paul-levy",
   "decision": "bio",
   "name": "Paul Levy",
@@ -1716,6 +1985,28 @@
   ],
   "identity_check": "Author box on his own Lifeway Research article (Aug 6, 2026), one of the credited pieces, bylined 'By PJ Dunn'.",
   "notes": "Thin: only the Lifeway author box was confirmable. The site's affiliation 'Table for One Ministries' was not found on any source; dropped. Search snippets suggest he goes by 'Dr. PJ Dunn' and wrote a singles small group guide (Embrace the Table), but I did not open a page confirming either, so both are left out. Lifeway's site served Cloudflare challenges to curl; read through WebFetch."
+ },
+ {
+  "slug": "r-albert-mohler",
+  "decision": "bio",
+  "name": "R. Albert Mohler Jr.",
+  "bio": "R. Albert Mohler Jr. is president of The Southern Baptist Theological Seminary and its Centennial Professor of Christian Theology, according to his website (checked November 2026). He hosts The Briefing, a daily podcast of news analysis, and Thinking in Public, a series of conversations, and serves as editor of WORLD Opinions. His books include The Gathering Storm: Secularism, Culture, and the Church and The Apostles' Creed: Discovering Christianity in an Age of Counterfeits.",
+  "role": "Seminary President",
+  "affiliation": "The Southern Baptist Theological Seminary",
+  "website": "https://albertmohler.com",
+  "books": [
+   "The Gathering Storm: Secularism, Culture, and the Church",
+   "The Apostles' Creed: Discovering Christianity in an Age of Counterfeits",
+   "Tell Me the Stories of Jesus: The Explosive Power of Jesus' Parables",
+   "We Cannot Be Silent: Speaking Truth to a Culture Redefining Sex, Marriage, & the Very Meaning of Right & Wrong",
+   "The Conviction to Lead: 25 Principles for Leadership That Matters"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://albertmohler.com/about/"
+  ],
+  "identity_check": "All credited pieces are on albertmohler.com (The Briefing episodes and essays); the bio is that site's About page.",
+  "notes": "About page read via the r.jina.ai reader (direct fetch blocked or used for speed); it is undated. A planned check for any 2026 change in the SBTS presidency could not run (web search budget exhausted), so the role is attributed to his site."
  },
  {
   "slug": "r-andrew-compton",
@@ -1830,6 +2121,27 @@
   ],
   "identity_check": "Three credited Roys Report articles (Nov 6 to Nov 10, 2026) are bylined 'By Rebecca Hopkins' and end with 'Rebecca Hopkins is a journalist based in Colorado.'",
   "notes": "Thin: the Roys Report author line is the only biographical source found. Second sentence describes her bylined Roys Report stories, not a bio claim. Christian outlet, so a normal bio rather than the secular journalist line."
+ },
+ {
+  "slug": "rebecca-mclaughlin",
+  "decision": "bio",
+  "name": "Rebecca McLaughlin",
+  "bio": "Rebecca McLaughlin holds a PhD from Cambridge University and a theology degree from Oak Hill Seminary in London, according to her TGC profile. She is the author of several books, including Confronting Christianity, The Secular Creed, Jesus Through the Eyes of Women, and Does the Bible Affirm Same-Sex Relationships?",
+  "role": "Author",
+  "affiliation": "",
+  "website": "https://www.rebeccamclaughlin.org/",
+  "books": [
+   "Confronting Christianity",
+   "The Secular Creed",
+   "Jesus Through the Eyes of Women",
+   "Does the Bible Affirm Same-Sex Relationships?"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/rebecca-mclaughlin/"
+  ],
+  "identity_check": "Credited TGC podcast episode is hers at TGC; the TGC profile links her own site rebeccamclaughlin.org.",
+  "notes": "IMPORTANT: the current website value https://www.rebeccamclaughlin.com belongs to a different Rebecca McLaughlin, a young adult novelist (Nameless Queen). Replaced with rebeccamclaughlin.org, the site linked from her TGC profile. Profile read via the r.jina.ai reader (direct fetch blocked or used for speed). Old affiliation (TGC, CT) dropped."
  },
  {
   "slug": "rebecca-woods",
@@ -1952,6 +2264,24 @@
   "notes": "Her own site rosariabutterfield.com returned 401 to automated fetches. Ref21 bio mentions she is married to a Reformed Presbyterian pastor in North Carolina; family detail omitted. The site's affiliation 'Christianity Today, The Gospel Coalition' is not supported; left empty."
  },
  {
+  "slug": "ryan-currie",
+  "decision": "bio",
+  "name": "Ryan Currie",
+  "bio": "Ryan Currie (PhD, South African Theological Seminary) is a global partner with Training Leaders International and associate professor of Bible and theology and dean of students at Gulf Theological Seminary in the U.A.E., according to his TGC profile. He has taught overseas since 2015 and is the author of Evangelical Theological Aesthetics.",
+  "role": "Professor of Bible and Theology",
+  "affiliation": "Gulf Theological Seminary",
+  "website": "https://www.thegospelcoalition.org/profile/ryan-currie/",
+  "books": [
+   "Evangelical Theological Aesthetics"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/ryan-currie/"
+  ],
+  "identity_check": "Credited TGC articles carry his byline linked to this profile; affiliation matches the site's prior Gulf Theological Seminary entry.",
+  "notes": "Profile read via the r.jina.ai reader (direct fetch blocked or used for speed). 9Marks review byline not separately checked."
+ },
+ {
   "slug": "ryan-swale",
   "decision": "bio",
   "name": "Ryan Swale",
@@ -2069,6 +2399,25 @@
   "notes": "Boise State: Martin Center page (read via Wayback capture of May 12, 2026) says he is a professor there; I used 'has taught' since no 2026 Boise State page was opened. Heritage's own profile returned 403. The ACCS page lists older roles (former Heritage fellow, Claremont) that conflict with newer ones, so ignored. 'Other conservative publications' rests on the ACCS list (City Journal, The American Mind, The American Conservative). Site's 'Public Discourse' affiliation not checked."
  },
  {
+  "slug": "shane-pruitt",
+  "decision": "bio",
+  "name": "Shane Pruitt",
+  "bio": "According to his Lifeway contributor page (checked November 2026), Shane Pruitt serves as National Next Gen Director for the North American Mission Board. The page says he has been in ministry for more than 20 years as a denominational leader, church planter, lead pastor and student pastor, and that he is one of the hosts of The GenSend Podcast. He is the author of 9 Common Lies Christians Believe: And Why God's Truth Is Infinitely Better and Calling Out the Called: Discipling Those Called to Ministry Leadership.",
+  "role": "Next Gen Director",
+  "affiliation": "North American Mission Board",
+  "website": "https://www.lifeway.com/en/contributors/shane-pruitt",
+  "books": [
+   "9 Common Lies Christians Believe: And Why God's Truth Is Infinitely Better",
+   "Calling Out the Called: Discipling Those Called to Ministry Leadership"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.lifeway.com/en/contributors/shane-pruitt"
+  ],
+  "identity_check": "Credited Lifeway Research piece on doubting a calling to ministry leadership (byline 'By Shane Pruitt', tweets attributed to @shane_pruitt78) matches his Lifeway contributor page and his book Calling Out the Called; RELEVANT byline links to /author/shanepruitt/.",
+  "notes": "Old affiliation 'The Crossing Church' not supported by any source; dropped. Contributor page read via the r.jina.ai reader (direct fetch blocked or used for speed) and undated, so attributed. Family details omitted."
+ },
+ {
   "slug": "simon-van-bruchem",
   "decision": "bio",
   "name": "Simon van Bruchem",
@@ -2183,6 +2532,26 @@
   ],
   "identity_check": "Author bio at the end of his own TGC article (one of the credited pieces), which also describes his London church plant in the first person.",
   "notes": "The London detail is from his own first-person text in that article. 'Coauthor ... of The Gospel Way Catechism for Kids' : the bio lists it after the Wax coauthorship; whether Wax coauthored the kids edition too is not explicit. Family details omitted."
+ },
+ {
+  "slug": "tim-keller",
+  "decision": "bio",
+  "name": "Tim Keller",
+  "bio": "Tim Keller was the founder of Redeemer Presbyterian Church (PCA) in Manhattan, chairman of Redeemer City to City, and a co-founder of The Gospel Coalition, according to his TGC profile. He held an MDiv from Gordon-Conwell Theological Seminary and a DMin from Westminster Theological Seminary, and wrote numerous books, including The Reason for God. He died on May 19, 2023.",
+  "role": "Pastor and Author",
+  "affiliation": "Redeemer Presbyterian Church",
+  "website": "https://www.thegospelcoalition.org/profile/tim-keller/",
+  "books": [
+   "The Reason for God"
+  ],
+  "deceased": true,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/tim-keller/",
+   "https://thebaptistpaper.org/influential-author-pastor-tim-keller-dies-at-72/"
+  ],
+  "identity_check": "Credited pieces are TGC Classic podcast episodes by Tim Keller; the TGC profile is his.",
+  "notes": "TGC profile read via the r.jina.ai reader (direct fetch blocked or used for speed). Death date confirmed on The Baptist Paper (WebFetch: 'died May 19 at the age of 72', 2023 article). NPR obituary timed out.",
+  "died": "2023-05-19"
  },
  {
   "slug": "todd-pruitt",

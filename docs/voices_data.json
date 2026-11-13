@@ -1774,26 +1774,23 @@
     "slug": "tim-keller",
     "name": "Tim Keller",
     "initials": "TK",
-    "role": "Pastor, Author & Theologian (1950 to 2023)",
-    "affiliation": "Redeemer Presbyterian Church; The Gospel Coalition",
-    "bio": "Timothy Keller (May 23, 1950 to May 19, 2023) was the founding pastor of Redeemer Presbyterian Church in Manhattan and co-founder of The Gospel Coalition, becoming one of evangelicalism's most influential voices in the late twentieth and early twenty-first centuries. A pastor, apologist, theologian, and author, Keller modeled \"winsome witness\": engaging contemporary culture with intellectual rigor and pastoral compassion while maintaining biblical conviction.\n\nHis New York Times bestselling books, The Prodigal God (2008) and The Reason for God (2008), shaped evangelical thinking about grace, apologetics, and faith in a skeptical age. Through Redeemer's ministry, Redeemer City to City (training pastors globally), and his prolific writing, Keller demonstrated how Reformed theology addresses contemporary urban life and cultural challenges. His death on May 19, 2023, at age 72 from pancreatic cancer marked the end of a remarkable ministry that continues to influence evangelicals worldwide.",
-    "education": "Bucknell University (BA); Gordon-Conwell (MDiv); Westminster Theological Seminary (DMin)",
+    "role": "Pastor and Author",
+    "affiliation": "Redeemer Presbyterian Church",
+    "bio": "Tim Keller was the founder of Redeemer Presbyterian Church (PCA) in Manhattan, chairman of Redeemer City to City, and a co-founder of The Gospel Coalition, according to his TGC profile. He held an MDiv from Gordon-Conwell Theological Seminary and a DMin from Westminster Theological Seminary, and wrote numerous books, including The Reason for God. He died on May 19, 2023.",
     "website": "https://www.thegospelcoalition.org/profile/tim-keller/",
     "books": [
       {
-        "title": "Forgive: Why Should I and How Can I?",
-        "amazon_url": "https://www.amazon.com/s?k=Forgive+Tim+Keller"
-      },
-      {
         "title": "The Reason for God",
         "amazon_url": "https://www.amazon.com/s?k=The+Reason+for+God+Tim+Keller"
-      },
-      {
-        "title": "The Prodigal God",
-        "amazon_url": "https://www.amazon.com/s?k=The+Prodigal+God+Tim+Keller"
       }
     ],
-    "bio_sources": []
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/tim-keller/",
+      "https://thebaptistpaper.org/influential-author-pastor-tim-keller-dies-at-72/"
+    ],
+    "deceased": true,
+    "died": "2023-05-19",
+    "education": ""
   },
   {
     "slug": "r-t-kendall",
@@ -2527,61 +2524,38 @@
   {
     "name": "R. Albert Mohler",
     "slug": "r-albert-mohler",
-    "bio": "R. Albert Mohler Jr. is the president of The Southern Baptist Theological Seminary and one of the most influential evangelical leaders in America. A prolific writer and speaker, he is known for applying biblical theology to contemporary cultural and political issues facing Christians today.",
+    "bio": "R. Albert Mohler Jr. is president of The Southern Baptist Theological Seminary and its Centennial Professor of Christian Theology, according to his website (checked November 2026). He hosts The Briefing, a daily podcast of news analysis, and Thinking in Public, a series of conversations, and serves as editor of WORLD Opinions. His books include The Gathering Storm: Secularism, Culture, and the Church and The Apostles' Creed: Discovering Christianity in an Age of Counterfeits.",
     "affiliation": "The Southern Baptist Theological Seminary",
-    "role": "Seminary President, Author & Theologian",
-    "education": "Ph.D., Southern Baptist Theological Seminary",
+    "role": "Seminary President",
     "website": "https://albertmohler.com",
     "books": [
       {
         "title": "The Gathering Storm: Secularism, Culture, and the Church",
-        "amazon_url": "https://www.amazon.com/s?k=The+Gathering+Storm+Albert+Mohler"
+        "amazon_url": "https://www.amazon.com/s?k=The+Gathering+Storm%3A+Secularism%2C+Culture%2C+and+the+Church+R.+Albert+Mohler"
       },
       {
-        "title": "We Cannot Be Silent: Speaking Truth to a Culture Redefining Sex, Marriage, and the Very Meaning of Right and Wrong",
-        "amazon_url": "https://www.amazon.com/s?k=We+Cannot+Be+Silent+Albert+Mohler"
+        "title": "The Apostles' Creed: Discovering Christianity in an Age of Counterfeits",
+        "amazon_url": "https://www.amazon.com/s?k=The+Apostles%27+Creed%3A+Discovering+Christianity+in+an+Age+of+Counterfeits+R.+Albert+Mohler"
       },
       {
-        "title": "The Prayer That Turns the World Upside Down: The Lord's Prayer as a Manifesto for Revolution",
-        "amazon_url": "https://www.amazon.com/s?k=The+Prayer+That+Turns+the+World+Upside+Down+Mohler"
+        "title": "Tell Me the Stories of Jesus: The Explosive Power of Jesus' Parables",
+        "amazon_url": "https://www.amazon.com/s?k=Tell+Me+the+Stories+of+Jesus%3A+The+Explosive+Power+of+Jesus%27+Parables+R.+Albert+Mohler"
       },
       {
-        "title": "Atheism Remix: A Christian Confrontation of Contemporary Atheism",
-        "amazon_url": "https://www.amazon.com/s?k=Atheism+Remix+Albert+Mohler"
+        "title": "We Cannot Be Silent: Speaking Truth to a Culture Redefining Sex, Marriage, & the Very Meaning of Right & Wrong",
+        "amazon_url": "https://www.amazon.com/s?k=We+Cannot+Be+Silent%3A+Speaking+Truth+to+a+Culture+Redefining+Sex%2C+Marriage%2C+%26+the+Very+Meaning+of+Right+%26+Wrong+R.+Albert+Mohler"
       },
       {
-        "title": "The Disappearance of God: Dangerous Beliefs in the New Spiritual Darkness",
-        "amazon_url": "https://www.amazon.com/s?k=The+Disappearance+of+God+Albert+Mohler"
+        "title": "The Conviction to Lead: 25 Principles for Leadership That Matters",
+        "amazon_url": "https://www.amazon.com/s?k=The+Conviction+to+Lead%3A+25+Principles+for+Leadership+That+Matters+R.+Albert+Mohler"
       }
     ],
     "initials": "RAM",
-    "denomination": "Southern Baptist",
-    "tradition": "Reformed Baptist / conservative evangelical",
-    "known_for": "Leading the conservative resurgence at Southern Seminary and providing daily Christian worldview analysis of news and culture through The Briefing.",
-    "current_role": "President, The Southern Baptist Theological Seminary (since 1993); host of The Briefing podcast",
     "deceased": false,
-    "faqs": [
-      {
-        "q": "What denomination is Albert Mohler?",
-        "a": "Albert Mohler is Southern Baptist. He has served as the ninth president of The Southern Baptist Theological Seminary in Louisville, Kentucky, the flagship seminary of the Southern Baptist Convention, since 1993, and he remains one of the SBC's most influential voices."
-      },
-      {
-        "q": "Is Albert Mohler a Calvinist?",
-        "a": "Mohler identifies with Reformed soteriology within Baptist convictions and has been a key figure in the resurgence of Calvinism in the Southern Baptist Convention. Under his leadership, Southern Seminary returned to its founding confession, the Abstract of Principles, which reflects a Reformed Baptist theology."
-      },
-      {
-        "q": "What is The Briefing by Albert Mohler?",
-        "a": "The Briefing is Mohler's daily podcast and program offering analysis of news and events from a Christian worldview. It is one of the most widely followed evangelical commentary programs on culture, politics, and theology."
-      },
-      {
-        "q": "What is Albert Mohler's view on women pastors?",
-        "a": "Mohler is a complementarian who holds that the office and title of pastor are reserved for qualified men. At the 2026 SBC annual meeting he proposed a 'Truth and Unity Amendment' to the SBC constitution intended to clarify the Baptist Faith and Message 2000's position that women should not carry the title of pastor."
-      },
-      {
-        "q": "What is Albert Mohler known for?",
-        "a": "Mohler is known for leading Southern Seminary's return to confessional orthodoxy after becoming its president at age 33, for his prolific cultural commentary, and for his role as a leading intellectual voice of conservative evangelicalism in America."
-      }
-    ]
+    "bio_sources": [
+      "https://albertmohler.com/about/"
+    ],
+    "education": ""
   },
   {
     "name": "Clarissa Moll",
@@ -2656,13 +2630,17 @@
   {
     "name": "Greg Morse",
     "slug": "greg-morse",
-    "bio": "Greg Morse is a staff writer at Desiring God and a graduate of Bethlehem College and Seminary. A prolific author of essays on biblical theology and Christian living, his writing covers topics including biblical manhood, the new birth, and spiritual formation.",
+    "bio": "Greg Morse is a staff writer for Desiring God and a graduate of Bethlehem College and Seminary, according to his Desiring God author page.",
     "affiliation": "Desiring God",
     "role": "Staff Writer",
-    "education": "Graduate, Bethlehem College and Seminary",
     "website": "https://www.desiringgod.org/authors/greg-morse",
     "books": [],
-    "initials": "GM"
+    "initials": "GM",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.desiringgod.org/authors/greg-morse"
+    ],
+    "education": ""
   },
   {
     "name": "Meredith Lee Myers",
@@ -3300,13 +3278,18 @@
   {
     "name": "Noah Senthil",
     "slug": "noah-senthil",
-    "bio": "Noah Senthil is an adjunct professor of English at Biola University and editorial intern at The Gospel Coalition, focusing on Protestant moral theology and Christian virtue. With degrees from Wheaton College and Talbot School of Theology, he previously served as youth pastor and writes on theology, ethics, and culture.",
-    "affiliation": "Biola University, The Gospel Coalition, Credo Magazine",
-    "role": "Adjunct professor, theologian, and editorial contributor",
-    "education": "BA, Wheaton College; MA, Talbot School of Theology",
+    "bio": "Noah Senthil (BA, Wheaton College; MA, Talbot School of Theology) is an MAR candidate in ethics at Yale Divinity School, according to his TGC profile. He has served as an adjunct professor at Biola University, an editorial intern at The Gospel Coalition and a youth pastor in Cleveland, Ohio. His own website also describes him as a contributing editor at Credo Magazine.",
+    "affiliation": "Yale Divinity School",
+    "role": "Writer",
     "website": "https://noahsenthil.com/",
     "books": [],
-    "initials": "NS"
+    "initials": "NS",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/noah-senthil/",
+      "https://noahsenthil.com/about-noah-senthil/"
+    ],
+    "education": ""
   },
   {
     "name": "Cameron Shaffer",
@@ -4131,50 +4114,46 @@
   {
     "name": "Aaron M. Renn",
     "slug": "aaron-m-renn",
-    "bio": "Aaron M. Renn is a writer and analyst focused on Christianity's cultural and institutional place in American public life. He explores how Christian faith engages with broader cultural trends, offering thoughtful commentary on secularization, religious liberty, and the future of Christian witness in contemporary society.",
-    "affiliation": "First Things, The American Conservative",
-    "role": "Writer & Cultural Analyst",
-    "education": "",
+    "bio": "Aaron M. Renn is a writer based in Indianapolis and a senior fellow at American Reformer, according to his website. He is the author of Life in the Negative World: Confronting Challenges in an Anti-Christian Culture (Zondervan, 2024). He was previously a senior fellow in urban policy at the Manhattan Institute and a managing director at Accenture. His writing has appeared in The New York Times, The Wall Street Journal, First Things and American Affairs, among others.",
+    "affiliation": "American Reformer",
+    "role": "Writer",
     "website": "https://www.aaronrenn.com/",
     "books": [
       {
-        "title": "The Masculinity Crisis: Why the Modern Male is Struggling, Why It Matters, and What to Do About It",
-        "amazon_url": "https://www.amazon.com/s?k=Masculinity+Crisis+Aaron+Renn"
+        "title": "Life in the Negative World: Confronting Challenges in an Anti-Christian Culture",
+        "amazon_url": "https://www.amazon.com/s?k=Life+in+the+Negative+World%3A+Confronting+Challenges+in+an+Anti-Christian+Culture+Aaron+M.+Renn"
       }
     ],
-    "initials": "AMR"
+    "initials": "AMR",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.aaronrenn.com/about"
+    ],
+    "education": ""
   },
   {
     "name": "Collin Hansen",
     "slug": "collin-hansen",
-    "bio": "Collin Hansen is a respected evangelical author and editor known for his work on church history, theology, and contemporary Christian issues. As editorial director for The Gospel Coalition, he has helped shape conversations among Reformed and evangelical leaders worldwide. His writing combines scholarly insight with pastoral concern for the local church.",
+    "bio": "Collin Hansen is vice president for content and editor in chief of The Gospel Coalition and executive director of The Keller Center for Cultural Apologetics, according to his TGC profile. He hosts the Gospelbound podcast and writes the weekly Unseen Things newsletter. His books include Timothy Keller: His Spiritual and Intellectual Formation and Rediscover Church: Why the Body of Christ Is Essential. He is an adjunct professor at Beeson Divinity School.",
     "affiliation": "The Gospel Coalition",
-    "role": "Author, Editor & Ministry Leader",
-    "education": "M.A., Wheaton College",
+    "role": "Editor in Chief",
     "website": "https://collin-hansen.com/",
     "books": [
       {
-        "title": "Young, Restless, Reformed: A Journalist's Journey with the New Calvinism",
-        "amazon_url": "https://www.amazon.com/s?k=Young+Restless+Reformed+Collin+Hansen"
+        "title": "Timothy Keller: His Spiritual and Intellectual Formation",
+        "amazon_url": "https://www.amazon.com/s?k=Timothy+Keller%3A+His+Spiritual+and+Intellectual+Formation+Collin+Hansen"
       },
       {
-        "title": "Blind Spots: Becoming a Courageous, Compassionate, and Commissioned Church",
-        "amazon_url": "https://www.amazon.com/s?k=Blind+Spots+Collin+Hansen"
-      },
-      {
-        "title": "That's Not What I Meant: Finding Grace When Words Backfire",
-        "amazon_url": "https://www.amazon.com/s?k=That's+Not+What+I+Meant+Collin+Hansen"
-      },
-      {
-        "title": "Redeeming Sex: Naked Conversations About Sexuality and Following Jesus",
-        "amazon_url": "https://www.amazon.com/s?k=Redeeming+Sex+Collin+Hansen"
-      },
-      {
-        "title": "Our Secular Age: Ten Years of Reading and Applying Charles Taylor",
-        "amazon_url": "https://www.amazon.com/s?k=Our+Secular+Age+Collin+Hansen"
+        "title": "Rediscover Church: Why the Body of Christ Is Essential",
+        "amazon_url": "https://www.amazon.com/s?k=Rediscover+Church%3A+Why+the+Body+of+Christ+Is+Essential+Collin+Hansen"
       }
     ],
-    "initials": "CH"
+    "initials": "CH",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/collin-hansen/"
+    ],
+    "education": ""
   },
   {
     "name": "Kathy Keller",
@@ -4718,13 +4697,22 @@
   {
     "name": "Ryan Currie",
     "slug": "ryan-currie",
-    "bio": "Ryan Currie (PhD, South African Theological Seminary) is associate professor of Bible and theology and dean of students at Gulf Theological Seminary in the United Arab Emirates, where he has served since 2015 as a global partner with Training Leaders International. He is the author of Evangelical Theological Aesthetics, and his writing appears in The Gospel Coalition and Credo Magazine.",
+    "bio": "Ryan Currie (PhD, South African Theological Seminary) is a global partner with Training Leaders International and associate professor of Bible and theology and dean of students at Gulf Theological Seminary in the U.A.E., according to his TGC profile. He has taught overseas since 2015 and is the author of Evangelical Theological Aesthetics.",
     "affiliation": "Gulf Theological Seminary",
-    "role": "Professor of Bible & Theology",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "RC"
+    "role": "Professor of Bible and Theology",
+    "website": "https://www.thegospelcoalition.org/profile/ryan-currie/",
+    "books": [
+      {
+        "title": "Evangelical Theological Aesthetics",
+        "amazon_url": "https://www.amazon.com/s?k=Evangelical+Theological+Aesthetics+Ryan+Currie"
+      }
+    ],
+    "initials": "RC",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/ryan-currie/"
+    ],
+    "education": ""
   },
   {
     "name": "Hunter Beaumont",
@@ -4857,34 +4845,30 @@
   {
     "name": "Louis Markos",
     "slug": "louis-markos",
-    "bio": "Louis Markos is a professor of literature and apologetics at Houston Baptist University who specializes in classical Christian thought and its integration with contemporary culture. He is a prolific author and speaker who helps Christians understand and defend their faith through the lens of classical literature, philosophy, and theology. His work bridges ancient wisdom with modern apologetic needs, making him a valued resource for thoughtful believers.",
-    "affiliation": "Houston Baptist University",
-    "role": "Professor of Literature & Apologetics, Author",
-    "education": "Ph.D. in Medieval and Renaissance Literature, University of Michigan",
-    "website": "https://www.hbu.edu",
+    "bio": "Louis Markos is professor in English and scholar in residence at Houston Christian University, where he holds the Robert H. Ray chair in humanities, according to his TGC profile. He has written 25 books, including On the Shoulders of Hobbits: The Road to Virtue with Tolkien and Lewis, Passing the Torch: An Apology for Classical Christian Education, and From Aristotle to Christ: How Aristotelian Thought Clarified the Christian Faith.",
+    "affiliation": "Houston Christian University",
+    "role": "Professor of English",
+    "website": "https://www.thegospelcoalition.org/profile/louis-markos/",
     "books": [
       {
-        "title": "Apologetics for the 21st Century",
-        "amazon_url": "https://www.amazon.com/s?k=Apologetics+for+the+21st+Century+Louis+Markos"
-      },
-      {
-        "title": "From Achilles to Christ: Why Christians Should Read the Pagan Classics",
-        "amazon_url": "https://www.amazon.com/s?k=From+Achilles+to+Christ+Louis+Markos"
-      },
-      {
-        "title": "Heaven and Hell: Visions of the Afterlife in the Western Poetic Tradition",
-        "amazon_url": "https://www.amazon.com/s?k=Heaven+and+Hell+Louis+Markos"
-      },
-      {
-        "title": "The Myth of the Closed Mind: Seizing a Better Vision for the Next Generation",
-        "amazon_url": "https://www.amazon.com/s?k=The+Myth+of+the+Closed+Mind+Louis+Markos"
-      },
-      {
         "title": "On the Shoulders of Hobbits: The Road to Virtue with Tolkien and Lewis",
-        "amazon_url": "https://www.amazon.com/s?k=On+the+Shoulders+of+Hobbits+Louis+Markos"
+        "amazon_url": "https://www.amazon.com/s?k=On+the+Shoulders+of+Hobbits%3A+The+Road+to+Virtue+with+Tolkien+and+Lewis+Louis+Markos"
+      },
+      {
+        "title": "Passing the Torch: An Apology for Classical Christian Education",
+        "amazon_url": "https://www.amazon.com/s?k=Passing+the+Torch%3A+An+Apology+for+Classical+Christian+Education+Louis+Markos"
+      },
+      {
+        "title": "From Aristotle to Christ: How Aristotelian Thought Clarified the Christian Faith",
+        "amazon_url": "https://www.amazon.com/s?k=From+Aristotle+to+Christ%3A+How+Aristotelian+Thought+Clarified+the+Christian+Faith+Louis+Markos"
       }
     ],
-    "initials": "LM"
+    "initials": "LM",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/louis-markos/"
+    ],
+    "education": ""
   },
   {
     "name": "Pranav Baskar",
@@ -6288,30 +6272,27 @@
   {
     "name": "Brett McCracken",
     "slug": "brett-mccracken",
-    "bio": "Brett McCracken is a writer and editor known for thoughtfully engaging contemporary culture from a Christian perspective. He explores how faith intersects with entertainment, technology, and modern life, helping Christians navigate cultural decisions with wisdom and discernment.",
+    "bio": "Brett McCracken is a senior editor and director of communications at The Gospel Coalition, according to his TGC profile. He has written several books on topics including rest, digital life and Christian community, among them The Wisdom Pyramid and The Wisdom of Sleep.",
     "affiliation": "The Gospel Coalition",
-    "role": "Writer & Cultural Commentator",
-    "education": "University of Oregon",
+    "role": "Senior Editor",
     "website": "https://www.brettmccracken.com",
     "books": [
       {
-        "title": "Uncomfortable: The Life and Times of William F. Buckley Jr.",
-        "amazon_url": "https://www.amazon.com/s?k=Uncomfortable+William+Buckley+Brett+McCracken"
+        "title": "The Wisdom Pyramid",
+        "amazon_url": "https://www.amazon.com/s?k=The+Wisdom+Pyramid+Brett+McCracken"
       },
       {
-        "title": "Gray Matters: Navigating the Space Between Legalism and Liberty",
-        "amazon_url": "https://www.amazon.com/s?k=Gray+Matters+Brett+McCracken"
-      },
-      {
-        "title": "Entertaining Ourselves to Death: How Television and Entertainment Values Are Reshaping Our Faith",
-        "amazon_url": "https://www.amazon.com/s?k=Entertaining+Ourselves+to+Death+Brett+McCracken"
-      },
-      {
-        "title": "The Revolt of the Elites: And the Betrayal of Democracy",
-        "amazon_url": "https://www.amazon.com/s?k=Revolt+Elites+Betrayal+Democracy+Brett+McCracken"
+        "title": "The Wisdom of Sleep",
+        "amazon_url": "https://www.amazon.com/s?k=The+Wisdom+of+Sleep+Brett+McCracken"
       }
     ],
-    "initials": "BM"
+    "initials": "BM",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/brett-mccracken/",
+      "https://www.brettmccracken.com"
+    ],
+    "education": ""
   },
   {
     "name": "Wesley Hill",
@@ -8811,30 +8792,34 @@
   {
     "name": "Rebecca McLaughlin",
     "slug": "rebecca-mclaughlin",
-    "bio": "Rebecca McLaughlin is an author and cultural commentator who writes at the intersection of faith, science, sexuality, and social issues for evangelical audiences. Her work encourages Christians to engage thoughtfully with contemporary culture while maintaining biblical conviction. She is known for her accessible yet intellectually rigorous approach to apologetics and cultural engagement.",
-    "affiliation": "The Gospel Coalition, Christianity Today",
-    "role": "Author & Cultural Commentator",
-    "education": "University of Cambridge",
-    "website": "https://www.rebeccamclaughlin.com",
+    "bio": "Rebecca McLaughlin holds a PhD from Cambridge University and a theology degree from Oak Hill Seminary in London, according to her TGC profile. She is the author of several books, including Confronting Christianity, The Secular Creed, Jesus Through the Eyes of Women, and Does the Bible Affirm Same-Sex Relationships?",
+    "affiliation": "",
+    "role": "Author",
+    "website": "https://www.rebeccamclaughlin.org/",
     "books": [
       {
-        "title": "Confronting Christianity: 12 Hard Questions for the World's Largest Religion",
+        "title": "Confronting Christianity",
         "amazon_url": "https://www.amazon.com/s?k=Confronting+Christianity+Rebecca+McLaughlin"
       },
       {
-        "title": "The Secular Creed: Engaging Five Contemporary Claims",
+        "title": "The Secular Creed",
         "amazon_url": "https://www.amazon.com/s?k=The+Secular+Creed+Rebecca+McLaughlin"
       },
       {
-        "title": "Do More to Be More: The Myth of Self-Improvement and the Truth of Transformation",
-        "amazon_url": "https://www.amazon.com/s?k=Do+More+to+Be+More+Rebecca+McLaughlin"
+        "title": "Jesus Through the Eyes of Women",
+        "amazon_url": "https://www.amazon.com/s?k=Jesus+Through+the+Eyes+of+Women+Rebecca+McLaughlin"
       },
       {
-        "title": "Christ and the Kingdoms of Men: Rediscovering the Tradition, Renewing the Church",
-        "amazon_url": "https://www.amazon.com/s?k=Christ+and+the+Kingdoms+of+Men+Rebecca+McLaughlin"
+        "title": "Does the Bible Affirm Same-Sex Relationships?",
+        "amazon_url": "https://www.amazon.com/s?k=Does+the+Bible+Affirm+Same-Sex+Relationships%3F+Rebecca+McLaughlin"
       }
     ],
-    "initials": "RM"
+    "initials": "RM",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/rebecca-mclaughlin/"
+    ],
+    "education": ""
   },
   {
     "name": "Jake Dell",
@@ -9286,41 +9271,45 @@
   {
     "name": "Megan Hill",
     "slug": "megan-hill",
-    "bio": "Megan Hill is a writer and editor known for her thoughtful exploration of Christian faith, motherhood, and women's discipleship. She contributes regularly to Christianity Today and other evangelical publications, offering biblically grounded perspectives on contemporary issues facing Christian women.",
-    "affiliation": "Christianity Today",
-    "role": "Writer & Editor",
-    "education": "",
-    "website": "",
+    "bio": "Megan Hill is managing editor for The Gospel Coalition, according to her TGC profile. Her recent books are Sabbath Rest, Ephesians: Life Together in Christ, and Partners in the Gospel: Mentoring Edition, and she has written several others. She is a member of West Springfield Covenant Community Church (PCA) in Massachusetts.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Managing Editor",
+    "website": "https://www.thegospelcoalition.org/profile/megan-hill/",
     "books": [
       {
-        "title": "Contentment: Seeing God's Provision in All of Life",
-        "amazon_url": "https://www.amazon.com/s?k=Contentment+Megan+Hill"
+        "title": "Sabbath Rest",
+        "amazon_url": "https://www.amazon.com/s?k=Sabbath+Rest+Megan+Hill"
       },
       {
-        "title": "A Place to Belong: Learning Community Through Church",
-        "amazon_url": "https://www.amazon.com/s?k=A+Place+to+Belong+Megan+Hill"
+        "title": "Ephesians: Life Together in Christ",
+        "amazon_url": "https://www.amazon.com/s?k=Ephesians%3A+Life+Together+in+Christ+Megan+Hill"
       },
       {
-        "title": "Praying Together: The Priority and Privilege of Prayer",
-        "amazon_url": "https://www.amazon.com/s?k=Praying+Together+Megan+Hill"
-      },
-      {
-        "title": "The Glorious in the Ordinary: Devotions for Finding God's Glory in Daily Life",
-        "amazon_url": "https://www.amazon.com/s?k=The+Glorious+in+the+Ordinary+Megan+Hill"
+        "title": "Partners in the Gospel: Mentoring Edition: An 8-Session Study for Pastors' and Elders' Wives",
+        "amazon_url": "https://www.amazon.com/s?k=Partners+in+the+Gospel%3A+Mentoring+Edition%3A+An+8-Session+Study+for+Pastors%27+and+Elders%27+Wives+Megan+Hill"
       }
     ],
-    "initials": "MH"
+    "initials": "MH",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/megan-hill/"
+    ],
+    "education": ""
   },
   {
     "name": "Ken Braddy",
     "slug": "ken-braddy",
-    "bio": "Ken Braddy is a pastor and Christian communicator who has served in ministry leadership roles focused on discipleship and spiritual formation. His work emphasizes practical faith and helping believers grow deeper in their relationship with Christ.",
-    "affiliation": "",
-    "role": "Pastor & Christian Writer",
-    "education": "",
-    "website": "",
+    "bio": "Ken Braddy is Lifeway's director of Sunday School, according to the author note on his September 2026 Lifeway Research article. He blogs at kenbraddy.com, hosts the group ministry podcast Disciple-making in Community, and is the author of 11 books on group ministry.",
+    "affiliation": "Lifeway Christian Resources",
+    "role": "Director of Sunday School",
+    "website": "https://kenbraddy.com/",
     "books": [],
-    "initials": "KB"
+    "initials": "KB",
+    "deceased": false,
+    "bio_sources": [
+      "https://research.lifeway.com/2026/09/14/8-signs-your-churchgoers-are-seeking-god/"
+    ],
+    "education": ""
   },
   {
     "name": "Noah Payne-Frank",
@@ -9429,13 +9418,17 @@
   {
     "name": "Daniel Strand",
     "slug": "daniel-strand",
-    "bio": "Daniel Strand is assistant professor of ethics at the US Air Force Air War College and a contributing editor at Providence, the journal of Christianity and American foreign policy. He holds a PhD in religion and ethics from the University of Chicago and an MDiv from Gordon-Conwell Theological Seminary, and he writes on Augustine, the just war tradition, and political theology for outlets including American Reformer and WORLD.",
+    "bio": "According to his American Reformer author page, Daniel Strand is Assistant Professor of Ethics at the Air War College and Ethics Chair for Air University. The same page describes his forthcoming book Gods of the Nations (Cambridge University Press) as a study of Augustine's political theology in City of God, and notes that his views are his own and do not represent those of the US Government.",
     "affiliation": "Air War College",
     "role": "Professor of Ethics",
-    "education": "",
-    "website": "",
+    "website": "https://archive.americanreformer.org/author/daniel-strand",
     "books": [],
-    "initials": "DS"
+    "initials": "DS",
+    "deceased": false,
+    "bio_sources": [
+      "https://archive.americanreformer.org/author/daniel-strand"
+    ],
+    "education": ""
   },
   {
     "name": "Aaron Boxerman",
@@ -9487,26 +9480,32 @@
   {
     "name": "Michael Kelley",
     "slug": "michael-kelley",
-    "bio": "Michael Kelley is a pastor and author known for his work in Christian discipleship and spiritual formation. He has served in pastoral ministry and is committed to helping believers develop a deeper relationship with Christ through practical, biblical teaching.",
-    "affiliation": "Lifeway Christian Resources",
-    "role": "Pastor & Author",
-    "education": "",
-    "website": "",
+    "bio": "Michael Kelley is an author and church leader who holds a Master of Divinity from Beeson Divinity School and spent 15 years in various roles with Lifeway Christian Resources, according to his website. He later served as executive director of the Nashville Baptist Association; in January 2024 the Baptist and Reflector reported that he was resigning that post to become director of The Rooted Network. His books include Growing Down: Unlearning the Patterns of Adulthood that Keep Us from Jesus and Boring: Finding an Extraordinary God in an Ordinary Life.",
+    "affiliation": "",
+    "role": "Author",
+    "website": "https://michaelkelley.co/",
     "books": [
       {
-        "title": "Wednesdays Were Pretty Normal",
-        "amazon_url": "https://www.amazon.com/s?k=Wednesdays+Were+Pretty+Normal+Michael+Kelley"
+        "title": "Growing Down: Unlearning the Patterns of Adulthood that Keep Us from Jesus",
+        "amazon_url": "https://www.amazon.com/s?k=Growing+Down%3A+Unlearning+the+Patterns+of+Adulthood+that+Keep+Us+from+Jesus+Michael+Kelley"
       },
       {
         "title": "Boring: Finding an Extraordinary God in an Ordinary Life",
-        "amazon_url": "https://www.amazon.com/s?k=Boring+Finding+an+Extraordinary+God+in+an+Ordinary+Life+Michael+Kelley"
+        "amazon_url": "https://www.amazon.com/s?k=Boring%3A+Finding+an+Extraordinary+God+in+an+Ordinary+Life+Michael+Kelley"
       },
       {
-        "title": "God Hides in Plain Sight: How to See the Sacred in a Skeptical World",
-        "amazon_url": "https://www.amazon.com/s?k=God+Hides+in+Plain+Sight+Michael+Kelley"
+        "title": "Wednesdays Were Pretty Normal: A Boy, Cancer, and God",
+        "amazon_url": "https://www.amazon.com/s?k=Wednesdays+Were+Pretty+Normal%3A+A+Boy%2C+Cancer%2C+and+God+Michael+Kelley"
       }
     ],
-    "initials": "MK"
+    "initials": "MK",
+    "deceased": false,
+    "bio_sources": [
+      "https://michaelkelley.co/about-2/",
+      "https://baptistandreflector.org/tennescene-jan-10",
+      "https://ftc.co/multi_author/michael-kelley/"
+    ],
+    "education": ""
   },
   {
     "name": "Clayton Chancey",
@@ -10863,13 +10862,31 @@
   {
     "name": "Dorothy Greco",
     "slug": "dorothy-greco",
-    "bio": "Dorothy Greco is a writer and speaker who addresses faith, parenting, and spiritual growth with honesty and biblical insight. She has contributed to various Christian publications and speaks at conferences on topics related to family, faith, and discipleship.",
+    "bio": "Dorothy Littell Greco is a writer and professional photographer who lives near Boston, according to her InterVarsity Press author page. She is the author of Making Marriage Beautiful (David C Cook, 2017), Marriage in the Middle (InterVarsity Press, 2020) and For the Love of Women: Uprooting and Healing Misogyny in America (HarperCollins, 2025). Her writing has appeared in Christianity Today, Sojourners and Relevant Magazine, according to her website.",
     "affiliation": "",
-    "role": "Writer & Speaker",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "DG"
+    "role": "Author",
+    "website": "https://www.dorothygreco.com/",
+    "books": [
+      {
+        "title": "Making Marriage Beautiful",
+        "amazon_url": "https://www.amazon.com/s?k=Making+Marriage+Beautiful+Dorothy+Greco"
+      },
+      {
+        "title": "Marriage in the Middle",
+        "amazon_url": "https://www.amazon.com/s?k=Marriage+in+the+Middle+Dorothy+Greco"
+      },
+      {
+        "title": "For the Love of Women: Uprooting and Healing Misogyny in America",
+        "amazon_url": "https://www.amazon.com/s?k=For+the+Love+of+Women%3A+Uprooting+and+Healing+Misogyny+in+America+Dorothy+Greco"
+      }
+    ],
+    "initials": "DG",
+    "deceased": false,
+    "bio_sources": [
+      "https://ivpress.com/dorothy-littell-greco",
+      "https://www.dorothygreco.com/author-writer-and-photographer/"
+    ],
+    "education": ""
   },
   {
     "name": "Andrew Davis",
@@ -13757,18 +13774,26 @@
   {
     "name": "Shane Pruitt",
     "slug": "shane-pruitt",
-    "bio": "Shane Pruitt is a pastor, author, and speaker who focuses on helping Christians navigate faith in the modern world. He is known for his practical teaching on biblical topics and his work in discipleship and ministry leadership.",
-    "affiliation": "The Crossing Church",
-    "role": "Pastor & Author",
-    "education": "",
-    "website": "",
+    "bio": "According to his Lifeway contributor page (checked November 2026), Shane Pruitt serves as National Next Gen Director for the North American Mission Board. The page says he has been in ministry for more than 20 years as a denominational leader, church planter, lead pastor and student pastor, and that he is one of the hosts of The GenSend Podcast. He is the author of 9 Common Lies Christians Believe: And Why God's Truth Is Infinitely Better and Calling Out the Called: Discipling Those Called to Ministry Leadership.",
+    "affiliation": "North American Mission Board",
+    "role": "Next Gen Director",
+    "website": "https://www.lifeway.com/en/contributors/shane-pruitt",
     "books": [
       {
-        "title": "The God of All Comfort",
-        "amazon_url": "https://www.amazon.com/s?k=The+God+of+All+Comfort+Shane+Pruitt"
+        "title": "9 Common Lies Christians Believe: And Why God's Truth Is Infinitely Better",
+        "amazon_url": "https://www.amazon.com/s?k=9+Common+Lies+Christians+Believe%3A+And+Why+God%27s+Truth+Is+Infinitely+Better+Shane+Pruitt"
+      },
+      {
+        "title": "Calling Out the Called: Discipling Those Called to Ministry Leadership",
+        "amazon_url": "https://www.amazon.com/s?k=Calling+Out+the+Called%3A+Discipling+Those+Called+to+Ministry+Leadership+Shane+Pruitt"
       }
     ],
-    "initials": "SP"
+    "initials": "SP",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.lifeway.com/en/contributors/shane-pruitt"
+    ],
+    "education": ""
   },
   {
     "name": "Travis Mitchell",
@@ -14604,13 +14629,17 @@
   {
     "name": "Jeffrey A. Stivason",
     "slug": "jeffrey-a-stivason",
-    "bio": "Jeffrey A. Stivason is a pastor and theological writer who contributes regularly to Christian publications and platforms. He is known for his thoughtful engagement with Reformed theology and practical Christian living. Stivason brings a pastoral heart to equipping believers in their faith and understanding of Scripture.",
-    "affiliation": "Ligonier Ministries; The Aquila Report",
-    "role": "Pastor & Writer",
-    "education": "",
-    "website": "",
+    "bio": "According to his Reformation21 author page, Jeffrey A. Stivason (PhD, Westminster Theological Seminary) is pastor of Grace Reformed Presbyterian Church in Gibsonia, Pennsylvania, and Professor of New Testament Studies at the Reformed Presbyterian Theological Seminary in Pittsburgh. The same page describes him as editorial director of Reformation21 and Place for Truth, online magazines of the Alliance of Confessing Evangelicals.",
+    "affiliation": "Reformed Presbyterian Theological Seminary",
+    "role": "Pastor and Professor",
+    "website": "https://reformation21.org/author/jeffrey-stivason/",
     "books": [],
-    "initials": "JAS"
+    "initials": "JAS",
+    "deceased": false,
+    "bio_sources": [
+      "https://reformation21.org/author/jeffrey-stivason/"
+    ],
+    "education": ""
   },
   {
     "name": "Landry Holmes",
@@ -16501,13 +16530,17 @@
   {
     "name": "Cameron Strang",
     "slug": "cameron-strang",
-    "bio": "Cameron Strang is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
+    "bio": "Cameron Strang is the founder and publisher of RELEVANT Media Group, which covers faith, culture and life, according to his RELEVANT author page. He has led RELEVANT as its editorial and creative director for more than two decades and co-hosts The RELEVANT Podcast. He also leads Kingdom Commons, a nonprofit media ministry.",
+    "affiliation": "RELEVANT Media Group",
+    "role": "Founder and Publisher",
+    "website": "https://relevantmagazine.com/author/relevantcameron/",
     "books": [],
-    "initials": "CS"
+    "initials": "CS",
+    "deceased": false,
+    "bio_sources": [
+      "https://relevantmagazine.com/author/relevantcameron/"
+    ],
+    "education": ""
   },
   {
     "name": "Paul Sadler",
@@ -18121,13 +18154,17 @@
   {
     "name": "Ann Marie Shambaugh",
     "slug": "ann-marie-shambaugh",
-    "bio": "Ann Marie Shambaugh is a Christian author and speaker dedicated to helping believers navigate faith and personal growth. Her writing encourages readers to deepen their relationship with God through practical wisdom and biblical insight.",
-    "affiliation": "",
-    "role": "Author & Speaker",
-    "education": "",
-    "website": "",
+    "bio": "Ann Marie Shambaugh has reported as a print journalist in multiple states and is currently based in Carmel, Indiana, according to her author note at The Roys Report. She reports for The Roys Report on abuse allegations involving church leaders.",
+    "affiliation": "The Roys Report",
+    "role": "Journalist",
+    "website": "https://roysreport.com/former-arizona-pastor-accused-of-sexually-abusing-8-year-old/",
     "books": [],
-    "initials": "AMS"
+    "initials": "AMS",
+    "deceased": false,
+    "bio_sources": [
+      "https://roysreport.com/former-arizona-pastor-accused-of-sexually-abusing-8-year-old/"
+    ],
+    "education": ""
   },
   {
     "name": "Nicholas Needham",
