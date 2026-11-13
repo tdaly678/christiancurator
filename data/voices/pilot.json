@@ -2312,6 +2312,114 @@
       ],
       "review_notes": "Identity: Carl R. Trueman of Grove City College and First Things, same person as our existing page (which links the same First Things pieces and Crossway page). All pages opened directly with WebFetch, none through a proxy. The Grove City College faculty page our data links (EmployeeId 2436) returned a page with no bio text when fetched, so it could not be used as a source. The professor title and the EPPC fellowship are confirmed by the dated First Things author line (May 7 2026) as well as Crossway; the PhD, 'contributing editor at First Things', 'more than a dozen books', the three book titles and OPC membership come from the Crossway page, which is undated. 'Church historian' is from Crossway, which says 'an esteemed church historian'; 'esteemed' was dropped. The First Things author archive (https://firstthings.com/archive/?_author=carl-trueman) shows titles but no dates; dates were taken from each article page. First Things uses a membership paywall plugin; all four picks were fully readable when fetched, but access may vary. No dash changes in titles. Our existing voices_data.json says born 1967 and lists Cambridge MA and an ordained OPC minister claim and a 'loan' note on his GCC role; none of those were verified here and the bio avoids them.",
       "last_updated": "2026-11-13"
+    },
+    {
+      "slug": "tim-keller",
+      "name": "Tim Keller",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Founding pastor of Redeemer Presbyterian Church, New York, 1989 to 2017 | Author of The Reason for God and The Prodigal God | Wrote on justice, the decline of evangelicalism, doubt and sexuality",
+      "bio": "Timothy Keller was ordained in the Presbyterian Church in America in 1975 and pastored West Hopewell Presbyterian Church from 1975 to 1984. He and Kathy Keller planted Redeemer Presbyterian Church in New York City in 1989, and he was its senior pastor until he stepped down in July 2017, after which he served full time with Redeemer City to City. He cofounded The Gospel Coalition and wrote 31 books, including The Reason for God, The Prodigal God and The Meaning of Marriage, written with Kathy Keller. He died on May 19, 2023, at age 72.",
+      "bio_sources": [
+        {
+          "label": "In memoriam, timothykeller.com",
+          "url": "https://timothykeller.com/memoriam"
+        },
+        {
+          "label": "About, Gospel in Life",
+          "url": "https://gospelinlife.com/about/"
+        },
+        {
+          "label": "Profile, The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/tim-keller/"
+        },
+        {
+          "label": "Obituary, Christianity Today (May 19, 2023)",
+          "url": "https://www.christianitytoday.com/2023/05/tim-keller-dead-redeemer-new-york-pastor-cancer/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "Gospel in Life",
+          "url": "https://gospelinlife.com/speaker/tim-keller/"
+        },
+        {
+          "outlet": "Life in the Gospel (Gospel in Life quarterly)",
+          "url": "https://quarterly.gospelinlife.com/author/authortimkeller/"
+        },
+        {
+          "outlet": "The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/tim-keller/"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "A Biblical Critique of Secular Justice and Critical Theory",
+          "url": "https://quarterly.gospelinlife.com/a-biblical-critique-of-secular-justice-and-critical-theory/",
+          "outlet": "Life in the Gospel",
+          "date": "2020-07-31",
+          "note": "Sets libertarian, liberal, utilitarian and postmodern critical theories of justice against a biblical account grounded in God's character and argues each secular theory rests on unsupported assumptions about human nature."
+        },
+        {
+          "title": "The Decline and Renewal of the American Church: Part 2: The Decline of Evangelicalism",
+          "url": "https://quarterly.gospelinlife.com/the-decline-of-evangelicalism/",
+          "outlet": "Life in the Gospel",
+          "date": "2022-01-25",
+          "note": "Traces the shrinking of American evangelicalism to secularization, political polarization, abuse scandals, its record on race and separatist habits, and names grounds he sees for renewal."
+        },
+        {
+          "title": "Reconstructing Faith: Christianity in a New World",
+          "url": "https://quarterly.gospelinlife.com/reconstructing-faith/",
+          "outlet": "Life in the Gospel",
+          "date": "2022-10-14",
+          "note": "Argues that deconstructing an inherited faith can lead to a stronger reconstruction rather than unbelief, and urges doubters to scrutinize secular alternatives as closely as their own beliefs."
+        },
+        {
+          "title": "The Bible and same sex relationships: A review article",
+          "url": "https://www.redeemer.com/redeemer-report/article/the_bible_and_same_sex_relationships_a_review_article",
+          "outlet": "Redeemer Report",
+          "date": "2015",
+          "note": "Reviews books by Matthew Vines and Ken Wilson that argue Scripture permits same-sex relationships, answers their main arguments in turn and holds the traditional reading."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "biblical-justice",
+          "angle": "Biblical justice set against secular theories, including critical theory."
+        },
+        {
+          "slug": "evangelicalism",
+          "angle": "Why American evangelicalism is shrinking and what renewal could look like."
+        },
+        {
+          "slug": "faith-deconstruction",
+          "angle": "Deconstruction as a path to rebuilt faith rather than unbelief."
+        },
+        {
+          "slug": "biblical-sexuality",
+          "angle": "A pastor's reply to revisionist readings of the sexuality texts."
+        },
+        {
+          "slug": "apologetics",
+          "angle": "The case for belief he set out in The Reason for God."
+        }
+      ],
+      "related": [
+        "collin-hansen",
+        "michael-keller",
+        "john-piper",
+        "mark-dever"
+      ],
+      "same_as": [
+        "https://timothykeller.com/memoriam",
+        "https://gospelinlife.com/speaker/tim-keller/",
+        "https://quarterly.gospelinlife.com/author/authortimkeller/",
+        "https://www.thegospelcoalition.org/profile/tim-keller/"
+      ],
+      "review_notes": "Identity: the Redeemer Presbyterian (New York) pastor, same person as our existing tim-keller page. Sources read directly: timothykeller.com/memoriam (no page date; ordination 1975, West Hopewell 1975 to 1984, Redeemer planted 1989, senior pastor 1989 to 2017, stepped down July 2017, 31 books), gospelinlife.com/about (same facts plus full time at Redeemer City to City after 2017; undated), TGC profile (cofounder of The Gospel Coalition, chairman of Redeemer City to City), Christianity Today obituary by Daniel Silliman dated May 19, 2023. Death date: CT is dated May 19, 2023 and says he died 'on Friday at age 72'; May 19, 2023 was a Friday, so the date is inferred from CT's dateline plus weekday, not stated as a calendar date on any page I opened. The memoriam page does not give a death date. timothykeller.com/about returns 404. The Keller Center was not used: I could not open a page for it before my web search budget ran out, so it is left out of the bio and dek. The 'Wrote on' themes in the dek are drawn from the Start here picks. The TGC profile article list did not load (JavaScript), so no TGC piece is in Start here. Start here dates: the three Life in the Gospel pieces show no visible date; dates are the datePublished values in page metadata (the critique piece also has dateModified 2024-03-22; a later piece in the series calls it August 2020). The quarterly site's home page now redirects to gospelinlife.com/quarterly, but these article URLs loaded directly; the critique piece is also at https://gospelinlife.com/article/a-biblical-critique-of-secular-justice-and-critical-theory/ (no date shown there). The decline piece's headline has an en dash between 'Part 2' and 'The Decline of Evangelicalism'; replaced with a colon. The Redeemer Report review shows only '2015' (a ByFaith repost reportedly dates it June 2015; I did not open ByFaith). The existing voices_data bio uses praise wording ('most influential voices', 'winsome witness') and should be replaced. No family or health details beyond the coauthor credit for Kathy Keller. Overnight review: name set to Tim Keller to match his bylines and existing page (the bio opens with Timothy Keller); deceased with died 2023-05-19 (CT obituary dated Friday May 19, 2023).",
+      "deceased": true,
+      "died": "2023-05-19",
+      "last_updated": "2026-11-13"
     }
   ]
 }
