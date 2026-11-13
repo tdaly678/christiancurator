@@ -253,7 +253,8 @@ BATCH3_LIVE = {"dallas-willard", "roger-olson", "david-vandrunen", "doug-wilson"
 # Nothing from batch 3 is still held on branch voices-batch3.
 BATCH3_HELD: set[str] = set()
 # Batch 4 went live writer by writer on Nov 13 2026 after Meg's spot-check.
-BATCH4_LIVE = {"aaron-m-renn", "wesley-hill", "paul-tripp", "john-mark-comer", "carl-trueman", "tim-keller", "alister-mcgrath", "andrew-wilson", "andy-crouch"}
+BATCH4_LIVE = {"aaron-m-renn", "wesley-hill", "paul-tripp", "john-mark-comer", "carl-trueman",
+               "tim-keller", "alister-mcgrath", "andrew-wilson", "andy-crouch"}
 # Held on branch voices-batch4 until Meg re-checks their fixes; never indexed on main.
 BATCH4_HELD = {"preston-sprinkle", "sinclair-ferguson", "brian-mclaren"}
 
@@ -376,3 +377,36 @@ def test_batch3_related_voices_are_three_or_four_indexed_writers():
         for rel in related:
             assert rel not in noindex and rel not in redirects, (slug, rel)
             assert (ROOT / "docs" / "voices" / rel / "index.html").exists(), (slug, rel)
+
+
+def test_batch4_merge_edits():
+    # Meg's verdicts on branch voices-batch4, applied at merge (Nov 13 2026).
+    data = {v["slug"]: v for v in json.loads((ROOT / "docs" / "voices_data.json").read_text())}
+    page = lambda slug: (ROOT / "docs" / "voices" / slug / "index.html").read_text(encoding="utf-8")
+    for slug in BATCH4_LIVE:
+        assert WRITERS[slug]["reviewed"] is True, slug
+        assert not re.search("[\u2013\u2014]", json.dumps(WRITERS[slug], ensure_ascii=False)), slug
+    comer = WRITERS["john-mark-comer"]["start_here"]
+    assert [p["outlet"] for p in comer] == [
+        "Excerpt from Practicing the Way (2024), republished by RELEVANT",
+        "Excerpt from Garden City (2015), republished by RELEVANT",
+        "Excerpt adapted from Loveology (2014), republished by RELEVANT",
+    ]
+    comer_rec = json.dumps(data["john-mark-comer"])
+    assert "Liturgists" not in comer_rec and "All Seasons" not in comer_rec and "Multnomah" not in comer_rec
+    assert not data["john-mark-comer"].get("education")
+    assert not [o for o in WRITERS["alister-mcgrath"]["where_they_write"] if "ox.ac.uk" in o["url"]]
+    assert [s for s in WRITERS["alister-mcgrath"]["bio_sources"] if "ox.ac.uk" in s["url"]]
+    mcgrath_rec = json.dumps(data["alister-mcgrath"]).lower()
+    assert "alistermcgrath.com" not in mcgrath_rec and "medicine" not in mcgrath_rec and "80 books" not in mcgrath_rec
+    crouch = WRITERS["andy-crouch"]["where_they_write"]
+    assert not [o for o in crouch if "praxis.co" in o["url"]]
+    assert [o["outlet"] for o in crouch if "christianitytoday.com" in o["url"]] == ["Christianity Today (past outlet)"]
+    assert "1968" not in json.dumps(data["andy-crouch"]) and "1968" not in page("andy-crouch")
+    assert "Tenth" not in json.dumps(data["paul-tripp"]) and "Tenth" not in page("paul-tripp")
+    assert WRITERS["andrew-wilson"]["review_by"] == "2027-07"
+    assert "/the-problem-with-the-evangelical-elite/" in json.dumps(WRITERS["aaron-m-renn"]["start_here"])
+    assert "firstthings.com/the-problem-with-the-evangelical-elite/" in page("aaron-m-renn")
+    # Keller died May 19, 2023: nothing we curated afterward is listed as his recent work.
+    assert WRITERS["tim-keller"]["deceased"] and WRITERS["tim-keller"]["died"] == "2023-05-19"
+    assert 'class="cc-recent-item"' not in page("tim-keller")
