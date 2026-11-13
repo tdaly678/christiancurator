@@ -100,13 +100,18 @@
   {
     "name": "Tony Arsenal",
     "slug": "tony-arsenal",
-    "bio": "Tony Arsenal is a co-host of the Reformed Brotherhood Podcast and maintains the Reformed Arsenal blog exploring Reformed theology and biblical studies. He holds Master of Arts degrees in Church History and Theology.",
-    "affiliation": "Reformed Brotherhood; Orthodox Presbyterian Church",
-    "role": "Theological writer and podcast host",
-    "education": "Gordon-Conwell Theological Seminary (MA Church History and Theology)",
+    "bio": "Tony Arsenal writes The Reformed Arsenal, a theological blog on Reformed doctrine and biblical exposition. According to the blog's About page, he is a seminary trained layperson with master's degrees in church history and theology, a member of an Orthodox Presbyterian Church, and occasionally provides pulpit supply at local churches.",
+    "affiliation": "The Reformed Arsenal",
+    "role": "Writer",
     "website": "https://reformedarsenal.com/",
     "books": [],
-    "initials": "TA"
+    "initials": "TA",
+    "deceased": false,
+    "bio_sources": [
+      "https://reformedarsenal.com/about/",
+      "https://reformedarsenal.com/"
+    ],
+    "education": ""
   },
   {
     "name": "Michelle Ayres",
@@ -1689,34 +1694,42 @@
   {
     "name": "Mark Jones",
     "slug": "mark-jones",
-    "bio": "Mark Jones is a Reformed theologian and pastor known for making classical Christian doctrine accessible to contemporary audiences. His work emphasizes the practical application of theology to the Christian life, drawing from both Scripture and the rich heritage of Reformed thought.",
-    "affiliation": "謏Coral Ridge Presbyterian Church; Knowing Faith podcast",
-    "role": "Pastor & Author",
-    "education": "M.A.R., Westminster Theological Seminary",
-    "website": "https://www.markjonesministries.com",
+    "bio": "Mark Jones is minister of Faith Vancouver Presbyterian Church (PCA) in British Columbia, Canada, where he has served since 2007, according to his Crossway and Banner of Truth author pages and his Reformation21 author notes. He holds a PhD from Leiden University. His books include Knowing Christ, God Is, Antinomianism: Reformed Theology's Unwelcome Guest?, and A Puritan Theology: Doctrine for Life.",
+    "affiliation": "Faith Vancouver Presbyterian Church (PCA)",
+    "role": "Pastor",
+    "website": "https://www.crossway.org/authors/mark-jones/",
     "books": [
       {
         "title": "Knowing Christ",
         "amazon_url": "https://www.amazon.com/s?k=Knowing+Christ+Mark+Jones"
       },
       {
+        "title": "God Is",
+        "amazon_url": "https://www.amazon.com/s?k=God+Is+Mark+Jones"
+      },
+      {
+        "title": "The Prayers of Jesus",
+        "amazon_url": "https://www.amazon.com/s?k=The+Prayers+of+Jesus+Mark+Jones"
+      },
+      {
         "title": "Antinomianism: Reformed Theology's Unwelcome Guest?",
-        "amazon_url": "https://www.amazon.com/s?k=Antinomianism+Mark+Jones"
+        "amazon_url": "https://www.amazon.com/s?k=Antinomianism%3A+Reformed+Theology%27s+Unwelcome+Guest%3F+Mark+Jones"
       },
       {
-        "title": "Belief and the Christian Life",
-        "amazon_url": "https://www.amazon.com/s?k=Belief+Christian+Life+Mark+Jones"
-      },
-      {
-        "title": "Picturing God",
-        "amazon_url": "https://www.amazon.com/s?k=Picturing+God+Mark+Jones"
-      },
-      {
-        "title": "Precious Blood",
-        "amazon_url": "https://www.amazon.com/s?k=Precious+Blood+Mark+Jones"
+        "title": "A Puritan Theology: Doctrine for Life",
+        "amazon_url": "https://www.amazon.com/s?k=A+Puritan+Theology%3A+Doctrine+for+Life+Mark+Jones"
       }
     ],
-    "initials": "MJ"
+    "initials": "MJ",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.crossway.org/authors/mark-jones/",
+      "https://banneroftruth.org/us/about/banner-authors/mark-jones/",
+      "https://reformation21.org/are-you-a-cheap-pastor-on-social-media/",
+      "https://reformation21.org/part-3-raising-children-well-covenant-friendships/",
+      "https://reformation21.org/author/mark-jones/"
+    ],
+    "education": ""
   },
   {
     "name": "Kelly M. Kapic",
@@ -1910,22 +1923,36 @@
   {
     "name": "Stephen Kneale",
     "slug": "stephen-kneale",
-    "bio": "Stephen Kneale is a pastor and Christian writer known for thoughtful biblical teaching and cultural commentary from a Reformed evangelical perspective. He has contributed to various Christian publications and is recognized for his pastoral ministry and theological insight on contemporary issues facing the church.",
-    "affiliation": "Oldham Bethel Church",
-    "role": "Pastor and theologian",
-    "education": "University of Liverpool (BA History & Politics); Edge Hill University (PGCE Religious Studies & Philosophy); University of Wales (MA Theology)",
+    "bio": "Stephen Kneale is Director of Partnerships and Mobilisations for Medhurst Ministries, according to the About page of his blog, Building Jerusalem. He previously spent more than twelve years as pastor of Oldham Bethel Church in Oldham, Greater Manchester. His books include The Pastor With a Thorn In His Side: Stories of Ministering With Depression And What The Church Can Do To Help, Being a Christian: The Basics of Christian Living, and Independent Eldership.",
+    "affiliation": "Medhurst Ministries",
+    "role": "Ministry Director",
     "website": "https://buildingjerusalem.blog/",
     "books": [
       {
-        "title": "The Pastor with a Thorn in His Side",
-        "amazon_url": "https://www.amazon.com/s?k=The+Pastor+with+Thorn+His+Side+Kneale"
+        "title": "The Pastor With a Thorn In His Side: Stories of Ministering With Depression And What The Church Can Do To Help",
+        "amazon_url": "https://www.amazon.com/s?k=The+Pastor+With+a+Thorn+In+His+Side%3A+Stories+of+Ministering+With+Depression+And+What+The+Church+Can+Do+To+Help+Stephen+Kneale"
       },
       {
         "title": "Being a Christian: The Basics of Christian Living",
-        "amazon_url": "https://www.amazon.com/s?k=Being+a+Christian+Basics+Christian+Living+Kneale"
+        "amazon_url": "https://www.amazon.com/s?k=Being+a+Christian%3A+The+Basics+of+Christian+Living+Stephen+Kneale"
+      },
+      {
+        "title": "The Teeth of Our Exertions: Recovering a Gospel Vision for the Poor & Deprived",
+        "amazon_url": "https://www.amazon.com/s?k=The+Teeth+of+Our+Exertions%3A+Recovering+a+Gospel+Vision+for+the+Poor+%26+Deprived+Stephen+Kneale"
+      },
+      {
+        "title": "Independent Eldership",
+        "amazon_url": "https://www.amazon.com/s?k=Independent+Eldership+Stephen+Kneale"
       }
     ],
-    "initials": "SK"
+    "initials": "SK",
+    "deceased": false,
+    "bio_sources": [
+      "https://buildingjerusalem.blog/about/",
+      "https://buildingjerusalem.blog/publications/",
+      "https://buildingjerusalem.blog/?s=thorny+ground"
+    ],
+    "education": ""
   },
   {
     "name": "Alex Kneen",
@@ -3756,22 +3783,36 @@
   {
     "name": "Rob Ventura",
     "slug": "rob-ventura",
-    "bio": "Rob Ventura (MDiv, Reformed Baptist Seminary) is one of the pastors of Grace Community Baptist Church in North Providence, Rhode Island. A former Hip Hop promoter turned preacher, he brings unconventional background to evangelical ministry and has contributed to Reformation 21 magazine and biblical scholarship works.",
-    "affiliation": "Grace Community Baptist Church, Reformation 21",
-    "role": "Pastor and reformed evangelical teacher",
-    "education": "Master of Divinity, Reformed Baptist Seminary",
-    "website": "https://www.reformation21.org/",
+    "bio": "Rob Ventura is a pastor of Grace Community Baptist Church in North Providence, Rhode Island, according to his Christian Focus author page. He holds an MDiv from Reformed Baptist Seminary. He was general editor of A New Exposition of the London Baptist Confession of Faith of 1689 and co-authored A Portrait of Paul and, with Bill Boekestein, God Is Our Refuge and Strength: 150 Devotionals Through the Psalms (Banner of Truth, 2026).",
+    "affiliation": "Grace Community Baptist Church, North Providence, Rhode Island",
+    "role": "Pastor",
+    "website": "https://www.christianfocus.com/row/about/our-authors/2102/rob-ventura",
     "books": [
       {
-        "title": "Equipped to Evangelize: A Biblical Foundation",
-        "amazon_url": "https://www.amazon.com/s?k=Equipped+to+Evangelize+Rob+Ventura"
+        "title": "A New Exposition of the London Baptist Confession of Faith of 1689",
+        "amazon_url": "https://www.amazon.com/s?k=A+New+Exposition+of+the+London+Baptist+Confession+of+Faith+of+1689+Rob+Ventura"
+      },
+      {
+        "title": "A Portrait of Paul",
+        "amazon_url": "https://www.amazon.com/s?k=A+Portrait+of+Paul+Rob+Ventura"
       },
       {
         "title": "Expository Outlines and Observations on Romans",
-        "amazon_url": "https://www.amazon.com/s?k=Expository+Outlines+Observations+Romans+Ventura"
+        "amazon_url": "https://www.amazon.com/s?k=Expository+Outlines+and+Observations+on+Romans+Rob+Ventura"
+      },
+      {
+        "title": "God Is Our Refuge and Strength: 150 Devotionals Through the Psalms",
+        "amazon_url": "https://www.amazon.com/s?k=God+Is+Our+Refuge+and+Strength%3A+150+Devotionals+Through+the+Psalms+Rob+Ventura"
       }
     ],
-    "initials": "RV"
+    "initials": "RV",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.christianfocus.com/row/about/our-authors/2102/rob-ventura",
+      "https://reformation21.org/author/robventura/",
+      "https://reformation21.org/psalm-3-sleep-well-god-will-protect-you/"
+    ],
+    "education": ""
   },
   {
     "name": "Guy Prentiss Waters",
@@ -5127,22 +5168,32 @@
   {
     "name": "Brian Tabb",
     "slug": "brian-tabb",
-    "bio": "Brian Tabb is a pastor, author, and teacher known for helping Christians understand Scripture with theological depth and practical wisdom. He has written extensively on biblical theology and the Gospel, with a passion for connecting God's Word to everyday Christian life.",
-    "affiliation": "Evangelical Free Church",
-    "role": "Pastor & Author",
-    "education": "M.Div., Trinity Evangelical Divinity School",
-    "website": "",
+    "bio": "Brian J. Tabb is president and professor of biblical studies at Bethlehem College and Seminary in Minneapolis and general editor of Themelios. He holds a PhD from London School of Theology. His books include After Emmaus: How the Church Fulfills the Mission of Christ and All Things New: Revelation as Canonical Capstone.",
+    "affiliation": "Bethlehem College and Seminary",
+    "role": "Seminary President",
+    "website": "https://bcsmn.edu/profile/brian-tabb/",
     "books": [
       {
-        "title": "The God Who Justifies: Justification in the Theology of John Calvin",
-        "amazon_url": "https://www.amazon.com/s?k=The+God+Who+Justifies+Brian+Tabb"
+        "title": "After Emmaus: How the Church Fulfills the Mission of Christ",
+        "amazon_url": "https://www.amazon.com/s?k=After+Emmaus%3A+How+the+Church+Fulfills+the+Mission+of+Christ+Brian+Tabb"
       },
       {
-        "title": "Justification and the New Perspective on Paul",
-        "amazon_url": "https://www.amazon.com/s?k=Justification+and+the+New+Perspective+on+Paul+Brian+Tabb"
+        "title": "All Things New: Revelation as Canonical Capstone",
+        "amazon_url": "https://www.amazon.com/s?k=All+Things+New%3A+Revelation+as+Canonical+Capstone+Brian+Tabb"
+      },
+      {
+        "title": "Suffering in Ancient Worldview: Luke, Seneca, and 4 Maccabees in Dialogue",
+        "amazon_url": "https://www.amazon.com/s?k=Suffering+in+Ancient+Worldview%3A+Luke%2C+Seneca%2C+and+4+Maccabees+in+Dialogue+Brian+Tabb"
       }
     ],
-    "initials": "BT"
+    "initials": "BT",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/reviews/reflections-loser-theology/",
+      "https://www.thegospelcoalition.org/profile/brian-tabb/",
+      "https://bcsmn.edu/profile/brian-tabb/"
+    ],
+    "education": ""
   },
   {
     "name": "J. V. Fesko",
@@ -6087,13 +6138,24 @@
   {
     "name": "Barry York",
     "slug": "barry-york",
-    "bio": "Barry York is a pastor and theological writer who has contributed to Reformed Christian publications and communities. He is known for his thoughtful engagement with Scripture and Reformed theology, offering insights for contemporary Christian living.",
-    "affiliation": "Ligonier Ministries",
-    "role": "Pastor & Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "BY"
+    "bio": "Barry York is president and professor of pastoral theology and homiletics at Reformed Presbyterian Theological Seminary in Pittsburgh. According to his Ligonier teacher page (checked November 2026), he is also pastor of River Valley Reformed Church in Monaca, Pennsylvania, and general editor of the Reformed Presbyterian Theological Journal. He is the author of Hitting the Marks.",
+    "affiliation": "Reformed Presbyterian Theological Seminary",
+    "role": "Seminary President",
+    "website": "https://learn.ligonier.org/teachers/barry-york",
+    "books": [
+      {
+        "title": "Hitting the Marks",
+        "amazon_url": "https://www.amazon.com/s?k=Hitting+the+Marks+Barry+York"
+      }
+    ],
+    "initials": "BY",
+    "deceased": false,
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/barry-york",
+      "https://rpts.edu/meet-our-professors/",
+      "https://learn.ligonier.org/articles/what-is-the-fruit-of-gentleness"
+    ],
+    "education": ""
   },
   {
     "name": "Kevin Bauder",
@@ -7507,13 +7569,27 @@
   {
     "name": "Sarah Eekhoff Zylstra",
     "slug": "sarah-eekhoff-zylstra",
-    "bio": "Sarah Eekhoff Zylstra is a senior writer at The Gospel Coalition, where she covers faith, culture, and the global church. She brings thoughtful analysis and rep",
-    "affiliation": "",
-    "role": "Contributor",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SEZ"
+    "bio": "Sarah Eekhoff Zylstra is senior writer and faith and work editor for The Gospel Coalition, according to her TGC author profile (checked November 2026). She holds a BA from Dordt University and an MSJ from Northwestern University, and she previously wrote for Christianity Today and taught at Trinity Christian College. She is coauthor of Gospelbound: Living with Resolute Hope in an Anxious Age and editor of Social Sanity in an Insta World.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Senior Writer",
+    "website": "https://www.thegospelcoalition.org/profile/sarah-eekhoff-zylstra/",
+    "books": [
+      {
+        "title": "Gospelbound: Living with Resolute Hope in an Anxious Age",
+        "amazon_url": "https://www.amazon.com/s?k=Gospelbound%3A+Living+with+Resolute+Hope+in+an+Anxious+Age+Sarah+Eekhoff+Zylstra"
+      },
+      {
+        "title": "Social Sanity in an Insta World",
+        "amazon_url": "https://www.amazon.com/s?k=Social+Sanity+in+an+Insta+World+Sarah+Eekhoff+Zylstra"
+      }
+    ],
+    "initials": "SEZ",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/sarah-eekhoff-zylstra/",
+      "https://www.thegospelcoalition.org/article/best-practices-evangelism/"
+    ],
+    "education": ""
   },
   {
     "name": "Mike McGarry",
@@ -8147,13 +8223,18 @@
   {
     "name": "Pete Hurst",
     "slug": "pete-hurst",
-    "bio": "Kerry W. 'Pete' Hurst is a Reformed pastor and a graduate of King College and Reformed Theological Seminary. He served as senior pastor of Calvary Reformed Presbyterian Church in Hampton, Virginia, for 28 years and ministered in the PCA for over four decades before transferring to the OPC; he writes at his blog 'God's Fool.'",
-    "affiliation": "Peninsula Reformed Presbyterian Church (OPC)",
-    "role": "Pastor & Writer",
-    "education": "",
-    "website": "",
+    "bio": "Kerry W. \"Pete\" Hurst served for 28 years as senior pastor of Calvary Reformed Presbyterian Church in Hampton, Virginia, according to his SermonAudio speaker profile. He is a graduate of King College and Reformed Theological Seminary and has pastored churches in Virginia, Tennessee, and Alabama.",
+    "affiliation": "",
+    "role": "Pastor",
+    "website": "https://vault-www.sermonaudio.com/speakers/11537/",
     "books": [],
-    "initials": "PH"
+    "initials": "PH",
+    "deceased": false,
+    "bio_sources": [
+      "https://vault-www.sermonaudio.com/speakers/11537/",
+      "https://web.archive.org/web/20260502050535/https://theaquilareport.com/the-backstory-maxim-monday/"
+    ],
+    "education": ""
   },
   {
     "name": "Bill Peacock",
@@ -8586,13 +8667,23 @@
   {
     "name": "Cassie Achermann",
     "slug": "cassie-achermann",
-    "bio": "Cassie Achermann is a writer and content creator focused on helping Christians navigate faith, family, and modern life. Through her writing and online presence, she shares biblical insights and practical wisdom with a warm, relatable approach.",
-    "affiliation": "",
-    "role": "Writer & Content Creator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CA"
+    "bio": "Cassie Achermann is copy editor and editorial project manager for The Gospel Coalition, according to her TGC author profile (checked November 2026). She lives in Sydney, Australia. She is the author of Fasting and a contributor to Strong in the Lord: A 30-Day Devotional on the Armor of God and Unto Us: 25 Advent Devotions About the Messiah.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Editor",
+    "website": "https://www.thegospelcoalition.org/profile/cassie-achermann/",
+    "books": [
+      {
+        "title": "Fasting",
+        "amazon_url": "https://www.amazon.com/s?k=Fasting+Cassie+Achermann"
+      }
+    ],
+    "initials": "CA",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/article/how-not-fast/",
+      "https://www.thegospelcoalition.org/profile/cassie-achermann/"
+    ],
+    "education": ""
   },
   {
     "name": "Stephen Williams",
@@ -9050,13 +9141,26 @@
   {
     "name": "Jim McCarthy",
     "slug": "jim-mccarthy",
-    "bio": "Jim (James G.) McCarthy is an evangelical author and evangelist who came to faith out of a Roman Catholic background and founded Good News for Catholics. He is best known for 'The Gospel According to Rome,' which compares Catholic tradition with Scripture, along with the video 'Catholicism: Crisis of Faith.' A former missionary to Ireland, he writes on the gospel and evangelism.",
-    "affiliation": "Good News for Catholics",
-    "role": "Author & Evangelist",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JM"
+    "bio": "Jim McCarthy is senior pastor of Trinity Presbyterian Church (PCA) in Statesboro, Georgia, according to his Ligonier teacher page and his Reformation21 author notes. He was previously senior pastor of First Presbyterian Church in Hattiesburg, Mississippi. He is the author of The Two Prophets to Nineveh and hosts the Fathers & Brothers podcast.",
+    "affiliation": "Trinity Presbyterian Church, Statesboro, Georgia",
+    "role": "Pastor",
+    "website": "https://learn.ligonier.org/teachers/jim-mccarthy",
+    "books": [
+      {
+        "title": "The Two Prophets to Nineveh",
+        "amazon_url": "https://www.amazon.com/s?k=The+Two+Prophets+to+Nineveh+Jim+McCarthy"
+      }
+    ],
+    "initials": "JM",
+    "deceased": false,
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/jim-mccarthy",
+      "https://reformation21.org/author/jim-mccarthy/",
+      "https://reformation21.org/is-roman-catholic-baptism-valid/",
+      "https://reformation21.org/the-gift-of-a-pious-mother/",
+      "https://reformation21.org/dont-throw-the-baby-out-with-the-baptismal-water/"
+    ],
+    "education": ""
   },
   {
     "name": "Paul Worcester",
@@ -9700,18 +9804,32 @@
   {
     "name": "Courtney Reissig",
     "slug": "courtney-reissig",
-    "bio": "Courtney Reissig is a writer and speaker known for addressing topics related to Christian womanhood, marriage, and faith. She contributes to various Christian publications and is passionate about helping women navigate their roles and identities through a biblical lens.",
-    "affiliation": "The Gospel Coalition, ERLC",
-    "role": "Writer & Speaker",
-    "education": "",
-    "website": "",
+    "bio": "Courtney Reissig is a writer and Bible teacher who lives in Little Rock, Arkansas. She is the author of Teach Me to Feel: Worshiping Through the Psalms in Every Season of Life and Promises Kept, a Bible study on the Old Testament covenants, and of Someone to Believe In.",
+    "affiliation": "",
+    "role": "Author and Bible Teacher",
+    "website": "https://www.thegospelcoalition.org/profile/courtney-reissig/",
     "books": [
       {
-        "title": "The Surprising Unhappiness of Women and Why It Matters",
-        "amazon_url": "https://www.amazon.com/s?k=The+Surprising+Unhappiness+of+Women+and+Why+It+Matters+Courtney+Reissig"
+        "title": "Teach Me to Feel: Worshiping Through the Psalms in Every Season of Life",
+        "amazon_url": "https://www.amazon.com/s?k=Teach+Me+to+Feel%3A+Worshiping+Through+the+Psalms+in+Every+Season+of+Life+Courtney+Reissig"
+      },
+      {
+        "title": "Promises Kept",
+        "amazon_url": "https://www.amazon.com/s?k=Promises+Kept+Courtney+Reissig"
+      },
+      {
+        "title": "Someone to Believe In",
+        "amazon_url": "https://www.amazon.com/s?k=Someone+to+Believe+In+Courtney+Reissig"
       }
     ],
-    "initials": "CR"
+    "initials": "CR",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/courtney-reissig/",
+      "https://www.thegospelcoalition.org/article/god-wait-prayer-answered/",
+      "https://research.lifeway.com/2026/08/17/what-happens-when-easy-christianity-fails/"
+    ],
+    "education": ""
   },
   {
     "name": "Matt Fraser",
@@ -10087,30 +10205,36 @@
   {
     "name": "Kim Riddlebarger",
     "slug": "kim-riddlebarger",
-    "bio": "Kim Riddlebarger is a Reformed pastor and theologian known for his work in biblical eschatology and church history. He has served as a pastor in Southern California and is a frequent contributor to Christian media, offering thoughtful biblical perspectives on contemporary issues and end-times theology.",
-    "affiliation": "Christ Church of the Valley; White Horse Inn",
-    "role": "Pastor & Theologian",
-    "education": "Westminster Theological Seminary",
+    "bio": "Kim Riddlebarger is pastor emeritus of Christ Reformed Church (URCNA) in Anaheim, where he was senior pastor from 1995 until he retired in December 2020. He was a longtime co-host of the White Horse Inn radio and internet program. He holds a PhD from Fuller Theological Seminary and an MAR from Westminster Seminary California. His books include A Case for Amillennialism, The Man of Sin: Uncovering the Truth About Antichrist, and The Lion of Princeton: B. B. Warfield as Apologist and Theologian.",
+    "affiliation": "Christ Reformed Church, Anaheim",
+    "role": "Pastor Emeritus",
     "website": "https://kimriddlebarger.com",
     "books": [
       {
-        "title": "A Case for Amillennialism: Understanding the End Times",
-        "amazon_url": "https://www.amazon.com/s?k=Case+for+Amillennialism+Kim+Riddlebarger"
+        "title": "A Case for Amillennialism",
+        "amazon_url": "https://www.amazon.com/s?k=A+Case+for+Amillennialism+Kim+Riddlebarger"
       },
       {
-        "title": "The Man of Sin: Toward an Identification of the Antichrist",
-        "amazon_url": "https://www.amazon.com/s?k=Man+of+Sin+Kim+Riddlebarger"
+        "title": "The Man of Sin: Uncovering the Truth About Antichrist",
+        "amazon_url": "https://www.amazon.com/s?k=The+Man+of+Sin%3A+Uncovering+the+Truth+About+Antichrist+Kim+Riddlebarger"
       },
       {
-        "title": "When Shall These Things Be? A Reformed Response to the Doctrine of Preterism",
-        "amazon_url": "https://www.amazon.com/s?k=When+Shall+These+Things+Be+Riddlebarger"
+        "title": "The Lion of Princeton: B. B. Warfield as Apologist and Theologian",
+        "amazon_url": "https://www.amazon.com/s?k=The+Lion+of+Princeton%3A+B.+B.+Warfield+as+Apologist+and+Theologian+Kim+Riddlebarger"
       },
       {
-        "title": "From Main Street to Mainline: Tracing Evangelical Roots of the Inerrancy Debate",
-        "amazon_url": "https://www.amazon.com/s?k=From+Main+Street+to+Mainline+Riddlebarger"
+        "title": "First Corinthians: Lectio Continua",
+        "amazon_url": "https://www.amazon.com/s?k=First+Corinthians%3A+Lectio+Continua+Kim+Riddlebarger"
       }
     ],
-    "initials": "KR"
+    "initials": "KR",
+    "deceased": false,
+    "bio_sources": [
+      "https://kimriddlebarger.com/about-the-author/",
+      "https://kimriddlebarger.com",
+      "https://learn.ligonier.org/articles/who-was-peter"
+    ],
+    "education": ""
   },
   {
     "name": "Brian Rosner",
@@ -10719,13 +10843,19 @@
   {
     "name": "David Huffstutler",
     "slug": "david-huffstutler",
-    "bio": "David Huffstutler is senior pastor of First Baptist Church in Troy, Michigan, after serving as lead pastor of First Baptist Church of Rockford, Illinois, from 2013 to 2025, where he was also a police chaplain. He holds a PhD in applied theology from Southeastern Baptist Theological Seminary and writes on Scripture, sanctification, and church leadership for G3 Ministries and Religious Affections Ministries.",
+    "bio": "David Huffstutler became senior pastor of First Baptist Church in Troy, Michigan, in 2025, after serving as lead pastor of First Baptist Church in Rockford, Illinois, from 2013 to 2025, according to his website. He holds a BA in Bible from Bob Jones University, an MDiv and ThM from Detroit Baptist Theological Seminary, and a PhD in applied theology from Southeastern Baptist Theological Seminary. He writes short articles drawn from his preaching and teaching at davidhuffstutler.com.",
     "affiliation": "First Baptist Church, Troy, Michigan",
     "role": "Pastor",
-    "education": "",
     "website": "https://davidhuffstutler.com",
     "books": [],
-    "initials": "DH"
+    "initials": "DH",
+    "deceased": false,
+    "bio_sources": [
+      "https://davidhuffstutler.com/about/",
+      "https://davidhuffstutler.com",
+      "https://proclaimanddefend.org/?p=24974"
+    ],
+    "education": ""
   },
   {
     "name": "Eric Demeter",
@@ -11025,22 +11155,48 @@
   {
     "name": "Jonathan Malm",
     "slug": "jonathan-malm",
-    "bio": "Jonathan Malm is a creative strategist and author who helps churches and Christian organizations communicate their message more effectively. He has worked with numerous faith-based organizations to develop innovative strategies for reaching people in today's digital culture.",
-    "affiliation": "ChurchCommunications.com",
-    "role": "Author & Creative Strategist",
-    "education": "",
+    "bio": "Jonathan Malm is a writer and entrepreneur based in San Antonio, Texas. According to his website, he worked as a creative director at a church before building tools for churches, and he runs companies including SundaySocial.tv, Sunday Echoes, ChurchStaffBookClub, and Church Keys. His books include Unwelcome, The Come Back Effect, Love Your Volunteers, and The Hidden Option.",
+    "affiliation": "",
+    "role": "Author",
     "website": "https://www.jonathanmalm.com",
     "books": [
       {
-        "title": "The Unwelcome Guests: How to Welcome People into God's Kingdom",
-        "amazon_url": "https://www.amazon.com/s?k=The+Unwelcome+Guests+Jonathan+Malm"
+        "title": "Unwelcome",
+        "amazon_url": "https://www.amazon.com/s?k=Unwelcome+Jonathan+Malm"
       },
       {
-        "title": "Loud Families: Creating and Sustaining a Family Culture Filled with Laughter, Intentionality and Faith",
-        "amazon_url": "https://www.amazon.com/s?k=Loud+Families+Jonathan+Malm"
+        "title": "The Come Back Effect",
+        "amazon_url": "https://www.amazon.com/s?k=The+Come+Back+Effect+Jonathan+Malm"
+      },
+      {
+        "title": "Love Your Volunteers",
+        "amazon_url": "https://www.amazon.com/s?k=Love+Your+Volunteers+Jonathan+Malm"
+      },
+      {
+        "title": "Likable Leader",
+        "amazon_url": "https://www.amazon.com/s?k=Likable+Leader+Jonathan+Malm"
+      },
+      {
+        "title": "The Volunteer Effect",
+        "amazon_url": "https://www.amazon.com/s?k=The+Volunteer+Effect+Jonathan+Malm"
+      },
+      {
+        "title": "Post Like an Influencer, Not a Brand",
+        "amazon_url": "https://www.amazon.com/s?k=Post+Like+an+Influencer%2C+Not+a+Brand+Jonathan+Malm"
+      },
+      {
+        "title": "The Hidden Option",
+        "amazon_url": "https://www.amazon.com/s?k=The+Hidden+Option+Jonathan+Malm"
       }
     ],
-    "initials": "JM"
+    "initials": "JM",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.jonathanmalm.com",
+      "https://relevantmagazine.com/life5/you-shouldnt-have-an-opinion-on-everything/",
+      "https://relevantmagazine.com/life5/3-ways-know-your-ambition-god/"
+    ],
+    "education": ""
   },
   {
     "name": "Daniel Hames",
@@ -11427,13 +11583,27 @@
   {
     "name": "Alex DiPrima",
     "slug": "alex-diprima",
-    "bio": "Alex DiPrima is senior pastor of Emmanuel Church in Winston-Salem, North Carolina, which he helped plant in 2017. He holds a PhD in historical theology from Southeastern Baptist Theological Seminary with a focus on Charles Spurgeon, and he is the author of Spurgeon: A Life and Spurgeon and the Poor. His writing appears with 9Marks, the Spurgeon Center, Ligonier, and The Gospel Coalition.",
-    "affiliation": "Emmanuel Church, Winston-Salem",
-    "role": "Pastor & Spurgeon Scholar",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AD"
+    "bio": "Alex DiPrima is pastor of Church of the Good Shepherd in Winston-Salem, North Carolina, according to his Gospel Coalition author profile (checked November 2026). He holds a PhD from Southeastern Baptist Theological Seminary. He is the author of Spurgeon: A Life and Spurgeon and the Poor: How the Gospel Compels Christian Social Concern.",
+    "affiliation": "Church of the Good Shepherd, Winston-Salem",
+    "role": "Pastor",
+    "website": "https://www.thegospelcoalition.org/profile/alex-diprima/",
+    "books": [
+      {
+        "title": "Spurgeon: A Life",
+        "amazon_url": "https://www.amazon.com/s?k=Spurgeon%3A+A+Life+Alex+DiPrima"
+      },
+      {
+        "title": "Spurgeon and the Poor: How the Gospel Compels Christian Social Concern",
+        "amazon_url": "https://www.amazon.com/s?k=Spurgeon+and+the+Poor%3A+How+the+Gospel+Compels+Christian+Social+Concern+Alex+DiPrima"
+      }
+    ],
+    "initials": "AD",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/reviews/start-here-charles-spurgeon/",
+      "https://www.thegospelcoalition.org/profile/alex-diprima/"
+    ],
+    "education": ""
   },
   {
     "name": "Tilly Dillehay",
@@ -12088,18 +12258,27 @@
   {
     "name": "Rachel Gilson",
     "slug": "rachel-gilson",
-    "bio": "Rachel Gilson is a writer and speaker who addresses faith, identity, and sexuality from a biblical perspective. Her work explores how Christian conviction intersects with cultural conversations, particularly around LGBTQ+ issues and discipleship. She is known for her thoughtful, compassionate approach to difficult theological topics.",
-    "affiliation": "The Gospel Coalition",
-    "role": "Author & Speaker",
-    "education": "",
-    "website": "https://www.rachelgilson.com",
+    "bio": "Rachel Gilson serves on the leadership team of theological development and culture with Cru, according to her Gospel Coalition author profile (checked November 2026). She holds a PhD from Southeastern Baptist Theological Seminary, and her writing has appeared in Christianity Today, Desiring God, and The Gospel Coalition. She is the author of Born Again This Way and Parenting Without Panic in an LGBT-Affirming World.",
+    "affiliation": "Cru",
+    "role": "Author",
+    "website": "https://www.thegospelcoalition.org/profile/rachel-gilson/",
     "books": [
       {
         "title": "Born Again This Way: Coming Out, Coming to Faith, and What Comes Next",
-        "amazon_url": "https://www.amazon.com/s?k=Born+Again+This+Way+Rachel+Gilson"
+        "amazon_url": "https://www.amazon.com/s?k=Born+Again+This+Way%3A+Coming+Out%2C+Coming+to+Faith%2C+and+What+Comes+Next+Rachel+Gilson"
+      },
+      {
+        "title": "Parenting Without Panic in an LGBT-Affirming World: Discipling Your Kids with Jesus' Truth and Love",
+        "amazon_url": "https://www.amazon.com/s?k=Parenting+Without+Panic+in+an+LGBT-Affirming+World%3A+Discipling+Your+Kids+with+Jesus%27+Truth+and+Love+Rachel+Gilson"
       }
     ],
-    "initials": "RG"
+    "initials": "RG",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/article/jesus-meant-judge-not/",
+      "https://www.rachelgilson.com"
+    ],
+    "education": ""
   },
   {
     "name": "Kevin Schaal",
@@ -13744,13 +13923,26 @@
   {
     "name": "Michael Clary",
     "slug": "michael-clary",
-    "bio": "Michael Clary is a Christian author and speaker known for his work in faith-based content creation and spiritual encouragement. His writings focus on helping believers deepen their relationship with Christ and navigate modern challenges through a biblical lens.",
-    "affiliation": "",
-    "role": "Author & Speaker",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "MC"
+    "bio": "Michael Clary is pastor of Christ the King Church (SBC) in Fort Thomas, Kentucky, near Cincinnati, according to his American Reformer author note (October 2026). He has written for outlets including American Reformer and The Federalist. He is the author of God's Good Design: A Biblical, Theological, and Practical Guide to Human Sexuality and Loser Theology: Why the Weak Will Not Inherit the Earth.",
+    "affiliation": "Christ the King Church, Fort Thomas, Kentucky",
+    "role": "Pastor",
+    "website": "https://www.americanreformer.org/p/aiming-too-low",
+    "books": [
+      {
+        "title": "God's Good Design: A Biblical, Theological, and Practical Guide to Human Sexuality",
+        "amazon_url": "https://www.amazon.com/s?k=God%27s+Good+Design%3A+A+Biblical%2C+Theological%2C+and+Practical+Guide+to+Human+Sexuality+Michael+Clary"
+      },
+      {
+        "title": "Loser Theology: Why the Weak Will Not Inherit the Earth",
+        "amazon_url": "https://www.amazon.com/s?k=Loser+Theology%3A+Why+the+Weak+Will+Not+Inherit+the+Earth+Michael+Clary"
+      }
+    ],
+    "initials": "MC",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.americanreformer.org/p/aiming-too-low"
+    ],
+    "education": ""
   },
   {
     "name": "Mark Croston",
@@ -13766,18 +13958,28 @@
   {
     "name": "Erik Raymond",
     "slug": "erik-raymond",
-    "bio": "Erik Raymond is a pastor, author, and thoughtful voice in contemporary Christian discourse who has contributed to various evangelical publications and platforms. He is known for his work exploring biblical theology, church leadership, and practical Christian living with a focus on Reformed evangelical perspectives.",
-    "affiliation": "The Gospel Coalition, Desiring God",
-    "role": "Pastor & Author",
-    "education": "",
-    "website": "",
+    "bio": "Erik Raymond is senior pastor of Redeemer Fellowship Church in Watertown, Massachusetts, according to his Ligonier and Crossway author pages (checked November 2026). He blogs at Ordinary Pastor, hosted by The Gospel Coalition. He is the author of Chasing Contentment: Trusting God in a Discontented Age and He Is Not Ashamed.",
+    "affiliation": "Redeemer Fellowship Church, Watertown, Massachusetts",
+    "role": "Pastor",
+    "website": "https://crossway.org/authors/erik-raymond",
     "books": [
       {
-        "title": "Inthirst: Living in the Overflow of God's Provision",
-        "amazon_url": "https://www.amazon.com/s?k=Inthirst+Living+Overflow+Gods+Provision+Erik+Raymond"
+        "title": "Chasing Contentment: Trusting God in a Discontented Age",
+        "amazon_url": "https://www.amazon.com/s?k=Chasing+Contentment%3A+Trusting+God+in+a+Discontented+Age+Erik+Raymond"
+      },
+      {
+        "title": "He Is Not Ashamed",
+        "amazon_url": "https://www.amazon.com/s?k=He+Is+Not+Ashamed+Erik+Raymond"
       }
     ],
-    "initials": "ER"
+    "initials": "ER",
+    "deceased": false,
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/erik-raymond",
+      "https://crossway.org/authors/erik-raymond",
+      "https://learn.ligonier.org/articles/surprising-boquets-grace"
+    ],
+    "education": ""
   },
   {
     "name": "William B. Fullilove",
@@ -15723,13 +15925,18 @@
   {
     "name": "Mike Slay",
     "slug": "mike-slay",
-    "bio": "Mike Slay is a writer whose work appears in evangelical publications curated by Christian Curator.",
-    "affiliation": "",
-    "role": "Author & Writer",
-    "education": "",
-    "website": "",
+    "bio": "Mike Slay writes for The DEEP, a daily Bible study column published by The Fellowship of Ailbe. His Ailbe author note describes him as a mathematician, inventor, and ruling elder in the Presbyterian Church in America.",
+    "affiliation": "The Fellowship of Ailbe",
+    "role": "Ruling Elder",
+    "website": "https://www.ailbe.org/columns/the-deep/the-highest-priority/",
     "books": [],
-    "initials": "MS"
+    "initials": "MS",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.ailbe.org/columns/the-deep/the-highest-priority/",
+      "https://web.archive.org/web/20261011103830/https://theaquilareport.com/the-highest-priority/"
+    ],
+    "education": ""
   },
   {
     "name": "T. Desmond Alexander",

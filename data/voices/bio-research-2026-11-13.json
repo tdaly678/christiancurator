@@ -51,6 +51,26 @@
   "notes": "The Aquila pieces could not be opened (403) and the three titles were not on the first page of his blog, so the link between blog and pieces is inferred from the uncommon name. 20schemes page is undated; the blog tagline is 'Ministry, discipleship, church planting, living for Jesus' and has posts through Nov 2026. Charity Commission lists an Alastair Roy Gooderham as trustee of Grace Church Doncaster (not used)."
  },
  {
+  "slug": "alex-diprima",
+  "decision": "bio",
+  "name": "Alex DiPrima",
+  "bio": "Alex DiPrima is pastor of Church of the Good Shepherd in Winston-Salem, North Carolina, according to his Gospel Coalition author profile (checked November 2026). He holds a PhD from Southeastern Baptist Theological Seminary. He is the author of Spurgeon: A Life and Spurgeon and the Poor: How the Gospel Compels Christian Social Concern.",
+  "role": "Pastor",
+  "affiliation": "Church of the Good Shepherd, Winston-Salem",
+  "website": "https://www.thegospelcoalition.org/profile/alex-diprima/",
+  "books": [
+   "Spurgeon: A Life",
+   "Spurgeon and the Poor: How the Gospel Compels Christian Social Concern"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/reviews/start-here-charles-spurgeon/",
+   "https://www.thegospelcoalition.org/profile/alex-diprima/"
+  ],
+  "identity_check": "Author box on the credited TGC piece 'Start Here: Charles Spurgeon' links to this profile; Spurgeon focus matches.",
+  "notes": "Site's current affiliation 'Emmanuel Church, Winston-Salem' is not supported by the TGC bio, which names Church of the Good Shepherd. Ligonier piece not opened."
+ },
+ {
   "slug": "alistair-chalmers",
   "decision": "bio",
   "name": "Alistair Chalmers",
@@ -120,6 +140,26 @@
   "bio_sources": [],
   "identity_check": "Could not confirm. Aquila Report pages return 403 and no original of either title could be found.",
   "notes": "Search returned a Fellowship Church (fellowshipchurch.co/armando) administration pastor of this name, but the page now returns 404 and nothing ties him to 'Counting It Joy When Nothing Makes Sense' or 'Good and Gracious King'. Not guessing."
+ },
+ {
+  "slug": "barry-york",
+  "decision": "bio",
+  "name": "Barry York",
+  "bio": "Barry York is president and professor of pastoral theology and homiletics at Reformed Presbyterian Theological Seminary in Pittsburgh. According to his Ligonier teacher page (checked November 2026), he is also pastor of River Valley Reformed Church in Monaca, Pennsylvania, and general editor of the Reformed Presbyterian Theological Journal. He is the author of Hitting the Marks.",
+  "role": "Seminary President",
+  "affiliation": "Reformed Presbyterian Theological Seminary",
+  "website": "https://learn.ligonier.org/teachers/barry-york",
+  "books": [
+   "Hitting the Marks"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://learn.ligonier.org/teachers/barry-york",
+   "https://rpts.edu/meet-our-professors/",
+   "https://learn.ligonier.org/articles/what-is-the-fruit-of-gentleness"
+  ],
+  "identity_check": "Credited Ligonier feed link resolves to 'What Is the Fruit of Gentleness?' bylined Barry York and linked to the Ligonier teacher page used here.",
+  "notes": "Pastorate at River Valley Reformed Church is from the Ligonier page only; attributed accordingly."
  },
  {
   "slug": "benjamin-l-gladd",
@@ -194,6 +234,28 @@
   ],
   "identity_check": "Uncommon full name; search results index the Reformation21 IVF piece among Brian G. Najapfour's regular Reformation21 contributions, and Reformation21 is a Reformed outlet consistent with his ministry.",
   "notes": "Could not read the byline on the Reformation21 page itself (the fetch returned only site navigation), and Aquila is 403. Books such as 'Every Christian Is an Evangelist' appeared only in a search summary, so none are listed. The 2013 Dutton URC installation is older history and was left out."
+ },
+ {
+  "slug": "brian-tabb",
+  "decision": "bio",
+  "name": "Brian J. Tabb",
+  "bio": "Brian J. Tabb is president and professor of biblical studies at Bethlehem College and Seminary in Minneapolis and general editor of Themelios. He holds a PhD from London School of Theology. His books include After Emmaus: How the Church Fulfills the Mission of Christ and All Things New: Revelation as Canonical Capstone.",
+  "role": "Seminary President",
+  "affiliation": "Bethlehem College and Seminary",
+  "website": "https://bcsmn.edu/profile/brian-tabb/",
+  "books": [
+   "After Emmaus: How the Church Fulfills the Mission of Christ",
+   "All Things New: Revelation as Canonical Capstone",
+   "Suffering in Ancient Worldview: Luke, Seneca, and 4 Maccabees in Dialogue"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/reviews/reflections-loser-theology/",
+   "https://www.thegospelcoalition.org/profile/brian-tabb/",
+   "https://bcsmn.edu/profile/brian-tabb/"
+  ],
+  "identity_check": "Author box on the credited TGC review 'Reflections on Loser Theology' names Brian J. Tabb of Themelios and Bethlehem College and Seminary, matching the school's profile.",
+  "notes": "Site's affiliation 'Evangelical Free Church' is unsupported; replaced. Desiring God piece returned 403."
  },
  {
   "slug": "brianna-lambert",
@@ -278,6 +340,25 @@
   "notes": "The GCC URL in the current data is a generic department page with no bio. Display name could stay 'Carl Trueman'; his publishers use 'Carl R. Trueman'."
  },
  {
+  "slug": "cassie-achermann",
+  "decision": "bio",
+  "name": "Cassie Achermann",
+  "bio": "Cassie Achermann is copy editor and editorial project manager for The Gospel Coalition, according to her TGC author profile (checked November 2026). She lives in Sydney, Australia. She is the author of Fasting and a contributor to Strong in the Lord: A 30-Day Devotional on the Armor of God and Unto Us: 25 Advent Devotions About the Messiah.",
+  "role": "Editor",
+  "affiliation": "The Gospel Coalition",
+  "website": "https://www.thegospelcoalition.org/profile/cassie-achermann/",
+  "books": [
+   "Fasting"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/article/how-not-fast/",
+   "https://www.thegospelcoalition.org/profile/cassie-achermann/"
+  ],
+  "identity_check": "Author box on the credited TGC article 'How Not to Fast' links to her TGC profile; her book Fasting matches the piece.",
+  "notes": "Profile also names her blog cassieachermann.com (not opened). Book title 'Fasting' as given in the TGC bio; publisher page not checked."
+ },
+ {
   "slug": "chris-allen",
   "decision": "noindex",
   "name": "Chris Allen",
@@ -355,6 +436,28 @@
   "notes": "Books are as named in the TGC bio, not checked on a publisher page. Her own site courtneydoctor.org was not opened."
  },
  {
+  "slug": "courtney-reissig",
+  "decision": "bio",
+  "name": "Courtney Reissig",
+  "bio": "Courtney Reissig is a writer and Bible teacher who lives in Little Rock, Arkansas. She is the author of Teach Me to Feel: Worshiping Through the Psalms in Every Season of Life and Promises Kept, a Bible study on the Old Testament covenants, and of Someone to Believe In.",
+  "role": "Author and Bible Teacher",
+  "affiliation": "",
+  "website": "https://www.thegospelcoalition.org/profile/courtney-reissig/",
+  "books": [
+   "Teach Me to Feel: Worshiping Through the Psalms in Every Season of Life",
+   "Promises Kept",
+   "Someone to Believe In"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/courtney-reissig/",
+   "https://www.thegospelcoalition.org/article/god-wait-prayer-answered/",
+   "https://research.lifeway.com/2026/08/17/what-happens-when-easy-christianity-fails/"
+  ],
+  "identity_check": "Author boxes on both credited pieces (TGC and Lifeway Research, Aug 2026) describe the same Little Rock writer and Bible teacher.",
+  "notes": "Site affiliation 'The Gospel Coalition, ERLC' is a list of outlets, not an employer; left affiliation empty."
+ },
+ {
   "slug": "dan-doriani",
   "decision": "bio",
   "name": "Dan Doriani",
@@ -425,6 +528,24 @@
   "notes": "darryldash.com redirects to dashhouse.com. The current data's 'Tap Unstuck' affiliation is not on his About page and was dropped. About page says 'I've written a few books' without titles here, so no books listed. 'Cofounder of Gospel for Life' is quoted as the about page states it."
  },
  {
+  "slug": "david-huffstutler",
+  "decision": "bio",
+  "name": "David Huffstutler",
+  "bio": "David Huffstutler became senior pastor of First Baptist Church in Troy, Michigan, in 2025, after serving as lead pastor of First Baptist Church in Rockford, Illinois, from 2013 to 2025, according to his website. He holds a BA in Bible from Bob Jones University, an MDiv and ThM from Detroit Baptist Theological Seminary, and a PhD in applied theology from Southeastern Baptist Theological Seminary. He writes short articles drawn from his preaching and teaching at davidhuffstutler.com.",
+  "role": "Pastor",
+  "affiliation": "First Baptist Church, Troy, Michigan",
+  "website": "https://davidhuffstutler.com",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://davidhuffstutler.com/about/",
+   "https://davidhuffstutler.com",
+   "https://proclaimanddefend.org/?p=24974"
+  ],
+  "identity_check": "'The Spirit as Seal and Pledge' (credited via The Aquila Report) is republished at Proclaim & Defend with a note naming David Huffstutler, senior pastor of First Baptist Church in Troy, MI, who blogs at the site where it first appeared; his site's About page matches.",
+  "notes": "The Aquila Report pages return 403 (Cloudflare), so the Aquila copies were not opened. About page summarized by the fetch tool."
+ },
+ {
   "slug": "david-mathis",
   "decision": "bio",
   "name": "David Mathis",
@@ -491,6 +612,27 @@
   ],
   "identity_check": "All three credited RELEVANT pieces appear in the article list on her RELEVANT author page.",
   "notes": "Author page says 'a recent Biola graduate'; worded as 'a Biola University graduate'. RELEVANT is a Christian outlet, so a normal bio rather than the journalist line."
+ },
+ {
+  "slug": "erik-raymond",
+  "decision": "bio",
+  "name": "Erik Raymond",
+  "bio": "Erik Raymond is senior pastor of Redeemer Fellowship Church in Watertown, Massachusetts, according to his Ligonier and Crossway author pages (checked November 2026). He blogs at Ordinary Pastor, hosted by The Gospel Coalition. He is the author of Chasing Contentment: Trusting God in a Discontented Age and He Is Not Ashamed.",
+  "role": "Pastor",
+  "affiliation": "Redeemer Fellowship Church, Watertown, Massachusetts",
+  "website": "https://crossway.org/authors/erik-raymond",
+  "books": [
+   "Chasing Contentment: Trusting God in a Discontented Age",
+   "He Is Not Ashamed"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://learn.ligonier.org/teachers/erik-raymond",
+   "https://crossway.org/authors/erik-raymond",
+   "https://learn.ligonier.org/articles/surprising-boquets-grace"
+  ],
+  "identity_check": "Credited Ligonier feed link resolves to 'Surprising Bouquets of Grace' bylined Erik Raymond and linked to the Ligonier teacher page used here.",
+  "notes": "Site affiliation 'The Gospel Coalition, Desiring God' is a list of outlets, replaced with his church."
  },
  {
   "slug": "gabriel-ne-fluhrer",
@@ -560,6 +702,20 @@
   ],
   "identity_check": "Credited CT piece (Sept 15, 2026) is bylined Harvest Prude and links to the CT writer page used for the bio.",
   "notes": "The CT page uses the past tense ('was national political correspondent'), so her current CT status is unclear; the bio keeps it past tense. Current data said 'The Dispatch (formerly WORLD)', which is outdated."
+ },
+ {
+  "slug": "jacob-crouch",
+  "decision": "noindex",
+  "name": "Jacob Crouch",
+  "bio": "",
+  "role": "",
+  "affiliation": "",
+  "website": "",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [],
+  "identity_check": "Not confirmed. All four credited pieces are Aquila Report reposts; the live pages return 403 and none has a Wayback copy, so the original outlet and author note could not be read.",
+  "notes": "Web searches for the name with the piece titles and with 'The Bee Hive' (the site's current affiliation) found nothing. The session's web search budget ran out before further searches. Leave noindex; retry by opening an Aquila page from a home connection to find the 'originally appeared at' link."
  },
  {
   "slug": "jake-meador",
@@ -648,6 +804,28 @@
   "notes": "Current affiliation 'The Village Church' is not stated on her site, Crossway or TGC pages and was dropped. The Aquila piece on aging could not be opened (403)."
  },
  {
+  "slug": "jim-mccarthy",
+  "decision": "bio",
+  "name": "Jim McCarthy",
+  "bio": "Jim McCarthy is senior pastor of Trinity Presbyterian Church (PCA) in Statesboro, Georgia, according to his Ligonier teacher page and his Reformation21 author notes. He was previously senior pastor of First Presbyterian Church in Hattiesburg, Mississippi. He is the author of The Two Prophets to Nineveh and hosts the Fathers & Brothers podcast.",
+  "role": "Pastor",
+  "affiliation": "Trinity Presbyterian Church, Statesboro, Georgia",
+  "website": "https://learn.ligonier.org/teachers/jim-mccarthy",
+  "books": [
+   "The Two Prophets to Nineveh"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://learn.ligonier.org/teachers/jim-mccarthy",
+   "https://reformation21.org/author/jim-mccarthy/",
+   "https://reformation21.org/is-roman-catholic-baptism-valid/",
+   "https://reformation21.org/the-gift-of-a-pious-mother/",
+   "https://reformation21.org/dont-throw-the-baby-out-with-the-baptismal-water/"
+  ],
+  "identity_check": "Both credited pieces sit on the Reformation21 author page for Jim McCarthy; his other R21 pieces on that page end 'Jim McCarthy is the Senior Pastor of Trinity PCA in Statesboro, GA' (earlier ones: First Presbyterian Church in Hattiesburg, MS), matching Ligonier.",
+  "notes": "IDENTITY FIX: the site's current affiliation 'Good News for Catholics' belongs to a different Jim McCarthy (a California ex-Catholic ministry founder). The R21 writer is the PCA pastor. Book title is from the Ligonier bio only; publisher page not checked."
+ },
+ {
   "slug": "joel-fick",
   "decision": "bio",
   "name": "Joel Fick",
@@ -726,6 +904,32 @@
   "notes": "His TGC profile still lists Spring Valley Presbyterian Church, Roselle; the Ligonier and Crossway pages list Christ Presbyterian, Wheaton, and were used. Aquila piece not opened (403)."
  },
  {
+  "slug": "jonathan-malm",
+  "decision": "bio",
+  "name": "Jonathan Malm",
+  "bio": "Jonathan Malm is a writer and entrepreneur based in San Antonio, Texas. According to his website, he worked as a creative director at a church before building tools for churches, and he runs companies including SundaySocial.tv, Sunday Echoes, ChurchStaffBookClub, and Church Keys. His books include Unwelcome, The Come Back Effect, Love Your Volunteers, and The Hidden Option.",
+  "role": "Author",
+  "affiliation": "",
+  "website": "https://www.jonathanmalm.com",
+  "books": [
+   "Unwelcome",
+   "The Come Back Effect",
+   "Love Your Volunteers",
+   "Likable Leader",
+   "The Volunteer Effect",
+   "Post Like an Influencer, Not a Brand",
+   "The Hidden Option"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.jonathanmalm.com",
+   "https://relevantmagazine.com/life5/you-shouldnt-have-an-opinion-on-everything/",
+   "https://relevantmagazine.com/life5/3-ways-know-your-ambition-god/"
+  ],
+  "identity_check": "Both credited Relevant pieces carry author schema for Jonathan Malm (relevantmagazine.com/author/jonathanmalm/) describing a San Antonio creative entrepreneur and author of The Hidden Option; his own site also places him in San Antonio and lists his church-focused books.",
+  "notes": "Site affiliation 'ChurchCommunications.com' was not mentioned on his site; dropped. Book list is from his site (titles shown without subtitles) plus The Hidden Option from Relevant's author schema."
+ },
+ {
   "slug": "justin-n-poythress",
   "decision": "bio",
   "name": "Justin N. Poythress",
@@ -799,6 +1003,29 @@
   "notes": "The FBFI president page is dated 2017 (used only for founding date and education). The author page with recent posts (Nov 2026) supports the present-tense roles."
  },
  {
+  "slug": "kim-riddlebarger",
+  "decision": "bio",
+  "name": "Kim Riddlebarger",
+  "bio": "Kim Riddlebarger is pastor emeritus of Christ Reformed Church (URCNA) in Anaheim, where he was senior pastor from 1995 until he retired in December 2020. He was a longtime co-host of the White Horse Inn radio and internet program. He holds a PhD from Fuller Theological Seminary and an MAR from Westminster Seminary California. His books include A Case for Amillennialism, The Man of Sin: Uncovering the Truth About Antichrist, and The Lion of Princeton: B. B. Warfield as Apologist and Theologian.",
+  "role": "Pastor Emeritus",
+  "affiliation": "Christ Reformed Church, Anaheim",
+  "website": "https://kimriddlebarger.com",
+  "books": [
+   "A Case for Amillennialism",
+   "The Man of Sin: Uncovering the Truth About Antichrist",
+   "The Lion of Princeton: B. B. Warfield as Apologist and Theologian",
+   "First Corinthians: Lectio Continua"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://kimriddlebarger.com/about-the-author/",
+   "https://kimriddlebarger.com",
+   "https://learn.ligonier.org/articles/who-was-peter"
+  ],
+  "identity_check": "Credited Ligonier feed link resolves to 'Who Was Peter?' bylined Kim Riddlebarger; distinctive name, and his own site is the one already on file.",
+  "notes": "Site affiliation 'Christ Church of the Valley' is wrong; his church was Christ Reformed Church in Anaheim, and he is retired (pastor emeritus). Aquila copy 403."
+ },
+ {
   "slug": "kyle-worley",
   "decision": "bio",
   "name": "Kyle Worley",
@@ -866,6 +1093,32 @@
   "bio_sources": [],
   "identity_check": "Could not confirm. Aquila pages return 403 and neither title could be found anywhere else.",
   "notes": "SermonAudio lists a Mark Henninger, retired PCA minister who pastored Redeemer Presbyterian Church in Peoria, which is plausible for an Aquila contributor, but nothing ties that profile to these pieces or to the middle initial J. Not guessing."
+ },
+ {
+  "slug": "mark-jones",
+  "decision": "bio",
+  "name": "Mark Jones",
+  "bio": "Mark Jones is minister of Faith Vancouver Presbyterian Church (PCA) in British Columbia, Canada, where he has served since 2007, according to his Crossway and Banner of Truth author pages and his Reformation21 author notes. He holds a PhD from Leiden University. His books include Knowing Christ, God Is, Antinomianism: Reformed Theology's Unwelcome Guest?, and A Puritan Theology: Doctrine for Life.",
+  "role": "Pastor",
+  "affiliation": "Faith Vancouver Presbyterian Church (PCA)",
+  "website": "https://www.crossway.org/authors/mark-jones/",
+  "books": [
+   "Knowing Christ",
+   "God Is",
+   "The Prayers of Jesus",
+   "Antinomianism: Reformed Theology's Unwelcome Guest?",
+   "A Puritan Theology: Doctrine for Life"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.crossway.org/authors/mark-jones/",
+   "https://banneroftruth.org/us/about/banner-authors/mark-jones/",
+   "https://reformation21.org/are-you-a-cheap-pastor-on-social-media/",
+   "https://reformation21.org/part-3-raising-children-well-covenant-friendships/",
+   "https://reformation21.org/author/mark-jones/"
+  ],
+  "identity_check": "Credited pieces sit on the Reformation21 author page for Mark Jones; other pieces on that page end 'Mark Jones (Ph.D., Leiden) has been the minister at Faith Vancouver Presbyterian Church (PCA), Canada since 2007', matching Crossway and Banner of Truth.",
+  "notes": "IDENTITY FIX: site affiliation 'Coral Ridge Presbyterian Church; Knowing Faith podcast' and website markjonesministries.com do not belong to this writer (markjonesministries.com returned no content)."
  },
  {
   "slug": "mark-vroegop",
@@ -951,6 +1204,25 @@
   "notes": "The two credited feed URLs were not opened individually. The Tabletalk About page was seen only through a search summary listing 'Meredith L. Myers, Web Editor'."
  },
  {
+  "slug": "michael-clary",
+  "decision": "bio",
+  "name": "Michael Clary",
+  "bio": "Michael Clary is pastor of Christ the King Church (SBC) in Fort Thomas, Kentucky, near Cincinnati, according to his American Reformer author note (October 2026). He has written for outlets including American Reformer and The Federalist. He is the author of God's Good Design: A Biblical, Theological, and Practical Guide to Human Sexuality and Loser Theology: Why the Weak Will Not Inherit the Earth.",
+  "role": "Pastor",
+  "affiliation": "Christ the King Church, Fort Thomas, Kentucky",
+  "website": "https://www.americanreformer.org/p/aiming-too-low",
+  "books": [
+   "God's Good Design: A Biblical, Theological, and Practical Guide to Human Sexuality",
+   "Loser Theology: Why the Weak Will Not Inherit the Earth"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.americanreformer.org/p/aiming-too-low"
+  ],
+  "identity_check": "Author note on the credited American Reformer piece 'Aiming Too Low?' (Oct 15, 2026, byline D. Michael Clary) supplies every fact.",
+  "notes": "The Aquila Report copy of 'The Mother of All Heresies' could not be opened (403, no Wayback copy), so I could not confirm it is by the same Michael Clary or find its original outlet. An EPM author page (not opened) reportedly places his church in Cincinnati; the American Reformer note says Fort Thomas, Kentucky, just outside Cincinnati."
+ },
+ {
   "slug": "michael-f-bird",
   "decision": "bio",
   "name": "Michael F. Bird",
@@ -1026,6 +1298,23 @@
   "notes": "americanreformer.org/2026/... redirects to archive.americanreformer.org."
  },
  {
+  "slug": "mike-slay",
+  "decision": "bio",
+  "name": "Mike Slay",
+  "bio": "Mike Slay writes for The DEEP, a daily Bible study column published by The Fellowship of Ailbe. His Ailbe author note describes him as a mathematician, inventor, and ruling elder in the Presbyterian Church in America.",
+  "role": "Ruling Elder",
+  "affiliation": "The Fellowship of Ailbe",
+  "website": "https://www.ailbe.org/columns/the-deep/the-highest-priority/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.ailbe.org/columns/the-deep/the-highest-priority/",
+   "https://web.archive.org/web/20261011103830/https://theaquilareport.com/the-highest-priority/"
+  ],
+  "identity_check": "Wayback copy of the credited Aquila Report piece 'The Highest Priority' (Written by Mike Slay, Oct 11, 2026) links to the original at ailbe.org, where the same piece carries his author note.",
+  "notes": "Aquila Report live pages return 403; read the Aquila copy through the Wayback Machine. Only one biographical source found; no church named."
+ },
+ {
   "slug": "miranda-carls",
   "decision": "bio",
   "name": "Miranda Carls",
@@ -1099,6 +1388,23 @@
   "notes": "Possible misattribution: the credited 'God's Grace to Complainers (Numbers 20:1-13)' uses Darryl Dash's title format ('Title (Book ch:vv)') and was not found on Ritchie's blog; worth checking whether it belongs to darryl-dash. His Christian Focus page mentions his own OCD and anxiety; left out as a health detail."
  },
  {
+  "slug": "pete-hurst",
+  "decision": "bio",
+  "name": "Pete Hurst",
+  "bio": "Kerry W. \"Pete\" Hurst served for 28 years as senior pastor of Calvary Reformed Presbyterian Church in Hampton, Virginia, according to his SermonAudio speaker profile. He is a graduate of King College and Reformed Theological Seminary and has pastored churches in Virginia, Tennessee, and Alabama.",
+  "role": "Pastor",
+  "affiliation": "",
+  "website": "https://vault-www.sermonaudio.com/speakers/11537/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://vault-www.sermonaudio.com/speakers/11537/",
+   "https://web.archive.org/web/20260502050535/https://theaquilareport.com/the-backstory-maxim-monday/"
+  ],
+  "identity_check": "Credited pieces include his Aquila 'Maxim #57'; his Aquila 'The Backstory: Maxim Monday' (Wayback) says he was a senior pastor for over 40 years, the last 28 at one church, matching SermonAudio's 28 years at Calvary RPC in Hampton.",
+  "notes": "Site affiliation 'Peninsula Reformed Presbyterian Church (OPC)' is not supported: SermonAudio lists recent sermons at Peninsula Reformed Presbyterian but does not state his role there; dropped. Aquila live pages 403; his own site petehurst.com is down (503, Wayback shows only 'Coming Soon'). Ligonier teacher page 404s. Consider trimming the real estate clause if preferred; it is from his own published account."
+ },
+ {
   "slug": "peter-jones",
   "decision": "bio",
   "name": "Peter Jones",
@@ -1167,6 +1473,26 @@
   ],
   "identity_check": "Both credited pieces are TGC reviews, and the bio comes from her TGC author profile.",
   "notes": "Profile resource list did not load, so the two reviews were not seen listed on it. Grace Church of the Valley is her church membership, not an employer, so affiliation is left empty."
+ },
+ {
+  "slug": "rachel-gilson",
+  "decision": "bio",
+  "name": "Rachel Gilson",
+  "bio": "Rachel Gilson serves on the leadership team of theological development and culture with Cru, according to her Gospel Coalition author profile (checked November 2026). She holds a PhD from Southeastern Baptist Theological Seminary, and her writing has appeared in Christianity Today, Desiring God, and The Gospel Coalition. She is the author of Born Again This Way and Parenting Without Panic in an LGBT-Affirming World.",
+  "role": "Author",
+  "affiliation": "Cru",
+  "website": "https://www.thegospelcoalition.org/profile/rachel-gilson/",
+  "books": [
+   "Born Again This Way: Coming Out, Coming to Faith, and What Comes Next",
+   "Parenting Without Panic in an LGBT-Affirming World: Discipling Your Kids with Jesus' Truth and Love"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/article/jesus-meant-judge-not/",
+   "https://www.rachelgilson.com"
+  ],
+  "identity_check": "Author box on the credited TGC article 'What Jesus Meant by Judge Not' links to her TGC profile; her own site lists the same two books.",
+  "notes": "rachelgilson.com shows a tagline 'Interdisciplinary Designer & Marketing Strategist' alongside her books; the site may be in transition, so the TGC profile is used as the website. Full book subtitles are from rachelgilson.com."
  },
  {
   "slug": "randy-alcorn",
@@ -1240,6 +1566,29 @@
   ],
   "identity_check": "'Jesus Never Knew You', one of the credited pieces, is listed on richbitterman.com, which calls him 'Pastor Rich Bitterman'.",
   "notes": "His Substack says he came to faith at 42 (left out as a personal detail). richbitterman.com/about returned 404; Baptist Press author page returned 403. Unverified search hints of other roles (First Baptist Springfield, Meadow Heights) were ignored."
+ },
+ {
+  "slug": "rob-ventura",
+  "decision": "bio",
+  "name": "Rob Ventura",
+  "bio": "Rob Ventura is a pastor of Grace Community Baptist Church in North Providence, Rhode Island, according to his Christian Focus author page. He holds an MDiv from Reformed Baptist Seminary. He was general editor of A New Exposition of the London Baptist Confession of Faith of 1689 and co-authored A Portrait of Paul and, with Bill Boekestein, God Is Our Refuge and Strength: 150 Devotionals Through the Psalms (Banner of Truth, 2026).",
+  "role": "Pastor",
+  "affiliation": "Grace Community Baptist Church, North Providence, Rhode Island",
+  "website": "https://www.christianfocus.com/row/about/our-authors/2102/rob-ventura",
+  "books": [
+   "A New Exposition of the London Baptist Confession of Faith of 1689",
+   "A Portrait of Paul",
+   "Expository Outlines and Observations on Romans",
+   "God Is Our Refuge and Strength: 150 Devotionals Through the Psalms"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.christianfocus.com/row/about/our-authors/2102/rob-ventura",
+   "https://reformation21.org/author/robventura/",
+   "https://reformation21.org/psalm-3-sleep-well-god-will-protect-you/"
+  ],
+  "identity_check": "Credited R21 Psalms pieces are excerpts from God Is Our Refuge and Strength by Bill Boekestein and Rob Ventura (Banner of Truth, October 2026), per the R21 pages; the Christian Focus page describes the Reformed Baptist pastor and author of the same name.",
+  "notes": "The Christian Focus page is undated; no dated staff page was opened, so the church role is attributed. Site's website value (reformation21.org) replaced with the publisher page."
  },
  {
   "slug": "robert-letham",
@@ -1327,6 +1676,26 @@
   "notes": "Current affiliation listed TGC as well; not supported by the pages opened, so dropped. The digitalliturgies.net posts were not opened."
  },
  {
+  "slug": "sarah-eekhoff-zylstra",
+  "decision": "bio",
+  "name": "Sarah Eekhoff Zylstra",
+  "bio": "Sarah Eekhoff Zylstra is senior writer and faith and work editor for The Gospel Coalition, according to her TGC author profile (checked November 2026). She holds a BA from Dordt University and an MSJ from Northwestern University, and she previously wrote for Christianity Today and taught at Trinity Christian College. She is coauthor of Gospelbound: Living with Resolute Hope in an Anxious Age and editor of Social Sanity in an Insta World.",
+  "role": "Senior Writer",
+  "affiliation": "The Gospel Coalition",
+  "website": "https://www.thegospelcoalition.org/profile/sarah-eekhoff-zylstra/",
+  "books": [
+   "Gospelbound: Living with Resolute Hope in an Anxious Age",
+   "Social Sanity in an Insta World"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/sarah-eekhoff-zylstra/",
+   "https://www.thegospelcoalition.org/article/best-practices-evangelism/"
+  ],
+  "identity_check": "Author box on the credited TGC article on evangelism best practices links to her TGC profile.",
+  "notes": "Christian outlet staff journalist; given a normal sourced bio per instructions."
+ },
+ {
   "slug": "scott-aniol",
   "decision": "bio",
   "name": "Scott Aniol",
@@ -1411,6 +1780,29 @@
   "notes": "Name kept as he writes it in his own bio, Stanley D. Gale; the byline on the column is 'Stan Gale', so either is fine. The column name and AILBE's full name were left out because the column page did not state them. Books come from the AILBE and Ligonier bios, not publisher pages."
  },
  {
+  "slug": "stephen-kneale",
+  "decision": "bio",
+  "name": "Stephen Kneale",
+  "bio": "Stephen Kneale is Director of Partnerships and Mobilisations for Medhurst Ministries, according to the About page of his blog, Building Jerusalem. He previously spent more than twelve years as pastor of Oldham Bethel Church in Oldham, Greater Manchester. His books include The Pastor With a Thorn In His Side: Stories of Ministering With Depression And What The Church Can Do To Help, Being a Christian: The Basics of Christian Living, and Independent Eldership.",
+  "role": "Ministry Director",
+  "affiliation": "Medhurst Ministries",
+  "website": "https://buildingjerusalem.blog/",
+  "books": [
+   "The Pastor With a Thorn In His Side: Stories of Ministering With Depression And What The Church Can Do To Help",
+   "Being a Christian: The Basics of Christian Living",
+   "The Teeth of Our Exertions: Recovering a Gospel Vision for the Poor & Deprived",
+   "Independent Eldership"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://buildingjerusalem.blog/about/",
+   "https://buildingjerusalem.blog/publications/",
+   "https://buildingjerusalem.blog/?s=thorny+ground"
+  ],
+  "identity_check": "The credited piece 'Who Is the Thorny Ground in the Parable of the Sower?' appears on his blog Building Jerusalem (Apr 9, 2026, author smkneale), whose About page names Stephen Kneale.",
+  "notes": "Site affiliation 'Oldham Bethel Church' is out of date per his About page (now Medhurst Ministries). About page is undated but written in present tense and the blog is active in November 2026. Aquila copies 403."
+ },
+ {
   "slug": "stephen-unthank",
   "decision": "noindex",
   "name": "Stephen Unthank",
@@ -1479,6 +1871,23 @@
   ],
   "identity_check": "Distinctive name; the site's existing affiliation (New Life Church, Woodland Hills) matches the directory and BCM profile, and the church site carries 'Resources by Pastor Tom' with blog posts and sermons by Tom Sugimura. The Aquila pieces themselves could not be opened (403).",
   "notes": "Neither 'Praying for Defeat (Psalm 70)' nor 'Facets of Gospel Grace' was found on the open web, so the piece-to-person link rests on the name and church. The church site lists a Psalms sermon series, which fits. Directory page is undated."
+ },
+ {
+  "slug": "tony-arsenal",
+  "decision": "bio",
+  "name": "Tony Arsenal",
+  "bio": "Tony Arsenal writes The Reformed Arsenal, a theological blog on Reformed doctrine and biblical exposition. According to the blog's About page, he is a seminary trained layperson with master's degrees in church history and theology, a member of an Orthodox Presbyterian Church, and occasionally provides pulpit supply at local churches.",
+  "role": "Writer",
+  "affiliation": "The Reformed Arsenal",
+  "website": "https://reformedarsenal.com/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://reformedarsenal.com/about/",
+   "https://reformedarsenal.com/"
+  ],
+  "identity_check": "Credited Aquila titles appear on his blog: 'The Infinite Gulf: The Creator-Creature Distinction and the Limits of Human Knowledge' and 'A Ladder to Heaven: The Covenant Confirmed at Bethel (Gen. 28:1-22)' (found via the blog's own search).",
+  "notes": "Site affiliation 'Reformed Brotherhood' was not confirmed; dropped. He is not ordained, so role is Writer rather than Pastor. Aquila copies 403."
  },
  {
   "slug": "william-conley",
