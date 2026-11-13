@@ -9,6 +9,9 @@ the feed creator is not the writer:
   - WORLD: posting accounts (Keegan Martin on podcasts, Arla Eicher on
     roundups). Podcast episodes are media and carry no byline at all.
   - Pew Research: producer and newsletter accounts.
+  - Mere Orthodoxy (Nov 13 2026): the page metadata names "Mere Orthodoxy"
+    or Jake Meador (the editor) on essays by others; page_byline() reads the
+    visible Ghost byline (the post's author-* tags).
 Plus single pieces the voices audit found miscredited elsewhere (EXTRA_URLS)
 and pieces whose visible byline was checked by hand (BYLINE_OVERRIDES).
 
@@ -19,7 +22,9 @@ digest), in meta.json and in yesterday.json. A page that cannot be read keeps
 its byline unless the byline is a known posting account (POSTING_ACCOUNTS),
 which is then removed: a posting account is never credited.
 
-DRY RUN BY DEFAULT. --apply writes. Pages are read from the backfill page
+DRY RUN BY DEFAULT. --apply writes. --domain limits the run to some of
+DOMAINS, --since to pieces archived on or after a date; --report sets the
+JSON change log. Pages are read from the backfill page
 cache (/tmp/cc_pages, see backfill_original_titles.py) before fetching.
 Afterwards: retire_posting_accounts.py --apply, build_voice_hubs.py,
 build_recent_articles.py.
@@ -51,7 +56,7 @@ ARCHIVE = DOCS / "archive"
 YESTERDAY = DOCS / "yesterday.json"
 REPORT = REPO_ROOT / ".christian-orchestrator" / "reattribution-2026-11-12.json"
 
-DOMAINS = ("christianitytoday.com", "9marks.org", "wng.org", "pewresearch.org")
+DOMAINS = ("christianitytoday.com", "9marks.org", "wng.org", "pewresearch.org", "mereorthodoxy.com")
 PODCAST_RE = re.compile(r"wng\.org/podcasts/")
 # Pieces the audit found credited to someone the page does not name.
 EXTRA_URLS = {
@@ -88,9 +93,9 @@ def same_byline(a: str, b: str) -> bool:
     return norm(a) == norm(b)
 
 
-def in_scope(url: str) -> bool:
+def in_scope(url: str, domains=DOMAINS) -> bool:
     host = urlparse(url).netloc.lower()
-    return url in EXTRA_URLS or url in BYLINE_OVERRIDES or any(host == d or host.endswith("." + d) for d in DOMAINS)
+    return url in EXTRA_URLS or url in BYLINE_OVERRIDES or any(host == d or host.endswith("." + d) for d in domains)
 
 
 def read_page(url: str, cache_dir: Path, fetch: bool) -> str | None:
@@ -178,7 +183,7 @@ def fix_home(m: re.Match, changes: dict, sources: dict, by_name: dict) -> str:
         slug = by_name.get(name.lower(), "")
         esc = html_mod.escape(name)
         names.append(f'<a href="/voices/{slug}/" class="cc-author-link"><strong>{esc}</strong></a>'
-                     if slug else f"<strong>{esc}</strong>")
+                     if slug else f'<span class="cc-author-link"><strong>{esc}</strong></span>')
     inner = f"{', '.join(names)} &middot; {src}" if names else f"<strong>{src}</strong>"
     return m.group(1) + inner + m.group(4)
 
@@ -190,7 +195,20 @@ def main(argv=None) -> int:
     ap.add_argument("--page-cache", default="/tmp/cc_pages")
     ap.add_argument("--overrides-only", action="store_true",
                     help="only the hand-checked BYLINE_OVERRIDES pieces")
+    ap.add_argument("--domain", action="append", choices=DOMAINS,
+                    help="only these domains (repeatable; default all DOMAINS, plus EXTRA_URLS and overrides)")
+    ap.add_argument("--since", default="", help="only pieces archived on or after YYYY-MM-DD")
+    ap.add_argument("--report", default="", help="JSON change log path (default: REPORT)")
     args = ap.parse_args(argv)
+    domains = tuple(args.domain or DOMAINS)
+
+    def wanted(url: str) -> bool:
+        if args.overrides_only:
+            return url in BYLINE_OVERRIDES
+        if args.domain:
+            host = urlparse(url).netloc.lower()
+            return any(host == d or host.endswith("." + d) for d in domains)
+        return in_scope(url)
     cache_dir = Path(args.page_cache)
     by_name = load_voices_by_name()
     for name in POSTING_ACCOUNTS:
@@ -200,9 +218,10 @@ def main(argv=None) -> int:
     current: dict[str, str] = {}
     sources: dict[str, str] = {}
     for meta in sorted(ARCHIVE.glob("*/meta.json")):
+        if args.since and meta.parent.name < args.since:
+            continue
         for a in json.loads(meta.read_text(encoding="utf-8")).get("articles", []):
-            if a.get("url") and in_scope(a["url"]) and (
-                    not args.overrides_only or a["url"] in BYLINE_OVERRIDES):
+            if a.get("url") and wanted(a["url"]):
                 current.setdefault(a["url"], a.get("author", ""))
                 sources.setdefault(a["url"], a.get("source", ""))
     changes: dict[str, dict] = {}
@@ -210,7 +229,7 @@ def main(argv=None) -> int:
         new, why = real_byline(url, current[url], cache_dir, fetch=not args.no_fetch)
         if new is not None and not same_byline(new, current[url]):
             changes[url] = {"from": current[url], "to": new, "why": why}
-    print(f"{len(current)} archived pieces on {', '.join(DOMAINS)} (+{len(EXTRA_URLS)} extra); "
+    print(f"{len(current)} archived pieces on {', '.join(domains)}{' since ' + args.since if args.since else ''}; "
           f"{len(changes)} bylines change")
 
     # 2. Archive day pages, homepage and digest.
@@ -267,7 +286,8 @@ def main(argv=None) -> int:
             y += 1
     if args.apply:
         YESTERDAY.write_text(json.dumps(rows, indent=2, ensure_ascii=False), encoding="utf-8")
-        report = REPORT.with_name(REPORT.stem + "-overrides.json") if args.overrides_only else REPORT
+        report = (Path(args.report) if args.report else
+                  REPORT.with_name(REPORT.stem + "-overrides.json") if args.overrides_only else REPORT)
         report.write_text(json.dumps(changes, indent=1, ensure_ascii=False), encoding="utf-8")
     print(f"{metas} meta.json files, {y} yesterday.json rows")
 

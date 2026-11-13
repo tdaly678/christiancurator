@@ -137,6 +137,10 @@ SOURCES = [
         "name": "Mere Orthodoxy",
         "url": "https://mereorthodoxy.com/feed/",
         "category": "culture",
+        # dc:creator is "Mere Orthodoxy" and the page metadata names a posting
+        # account (often Jake Meador, the editor). page_byline() reads the
+        # visible byline: the post's author-* tags in the Ghost byline block.
+        "byline_from_page": True,
     },
     {
         "name": "Reformation21",

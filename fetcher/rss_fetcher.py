@@ -167,20 +167,74 @@ def clean_visible_byline(raw: str) -> str:
     return s.strip(" ,;")
 
 
-def page_byline(page: str) -> str:
-    """The writer named on an article page: Christianity Today's visible
-    byline (`ga4ArticleContext.byline`), else <meta name="author">, else the
-    JSON-LD author Person(s). CT's Yoast JSON-LD author is the editing
-    account (`point_editor`), so on CT pages it is never reached. Profile
-    URLs and "staff" placeholders yield ""."""
+def ct_visible_byline(page: str) -> str | None:
+    """Christianity Today: `ga4ArticleContext.byline`. None when absent."""
     m = _GA4_BYLINE_RE.search(page)
+    if not m:
+        return None
+    try:
+        author = json.loads(f'"{m.group(1)}"')
+    except ValueError:
+        author = m.group(1)
+    return clean_visible_byline(author)
+
+
+_GHOST_BYLINE_START = re.compile(r'<span class="meta-authors"\s+data-byline\s*>')
+_GHOST_AUTHOR_TAG_RE = re.compile(
+    r'<a\b[^>]*\bdata-tag-slug="author-[^"]*"[^>]*>.*?'
+    r'class="meta-author-name"[^>]*>\s*(?:<em>)?\s*([^<]+?)\s*(?:</em>)?\s*</div>', re.S)
+
+
+def ghost_visible_byline(page: str) -> str | None:
+    """Mere Orthodoxy (Ghost theme): the byline block (`data-byline`) lists the
+    post's tags as candidates and shows only the `author-*` tags. The page's
+    meta author, JSON-LD author and `data-post-author` are the posting account
+    ("Mere Orthodoxy", or "Jake Meador" on essays by others), so when the block
+    is present it is the only source: "" when it names no author tag. None when
+    the page has no such block."""
+    start = _GHOST_BYLINE_START.search(page)
+    if not start:
+        return None
+    end = page.find("meta-authors-fallback", start.end())
+    block = page[start.end():end if end != -1 else start.end() + 20000]
+    names = []
+    for n in _GHOST_AUTHOR_TAG_RE.findall(block):
+        n = " ".join(html.unescape(n).split())
+        # "E. Wesley Reynolds, III": the comma would split one writer in two.
+        n = re.sub(r",\s*(Jr\.?|Sr\.?|II|III|IV)$", r" \1", n)
+        # One tag for a couple, "John and Jena Starke": two writers, one surname.
+        couple = re.fullmatch(r"([A-Z][\w.]*) (?:and|&) ([A-Z][\w.]*) (\S.*)", n)
+        if couple:
+            n = f"{couple[1]} {couple[3]} and {couple[2]} {couple[3]}"
+        if n not in names:
+            names.append(n)
+    return " and ".join(names)
+
+
+# Outlet themes whose visible byline beats the page metadata: (reader, strict).
+# A reader returns None when the page is not its theme. Strict: an empty
+# visible byline means the page names no writer (the metadata is a posting
+# account); otherwise an empty one falls back to the metadata.
+VISIBLE_BYLINE_READERS = ((ct_visible_byline, False), (ghost_visible_byline, True))
+
+
+def page_byline(page: str) -> str:
+    """The writer named on an article page: the visible byline when an outlet
+    reader in VISIBLE_BYLINE_READERS recognizes the page (Christianity Today,
+    Mere Orthodoxy), else <meta name="author">, else the JSON-LD author
+    Person(s). CT's Yoast JSON-LD author is the editing account
+    (`point_editor`) and Mere Orthodoxy's metadata names a posting account, so
+    on those pages the metadata is never reached. Profile URLs and "staff"
+    placeholders yield ""."""
     author = ""
-    if m:
-        try:
-            author = json.loads(f'"{m.group(1)}"')
-        except ValueError:
-            author = m.group(1)
-        author = clean_visible_byline(author)
+    for reader, strict in VISIBLE_BYLINE_READERS:
+        visible = reader(page)
+        if visible is None:
+            continue
+        if strict:
+            return clean_author(visible)
+        author = visible
+        break
     author = author or _meta_content(page, "author")
     if not author:
         names = []
