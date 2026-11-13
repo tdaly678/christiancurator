@@ -254,9 +254,10 @@ BATCH3_LIVE = {"dallas-willard", "roger-olson", "david-vandrunen", "doug-wilson"
 BATCH3_HELD: set[str] = set()
 # Batch 4 went live writer by writer on Nov 13 2026 after Meg's spot-check.
 BATCH4_LIVE = {"aaron-m-renn", "wesley-hill", "paul-tripp", "john-mark-comer", "carl-trueman",
-               "tim-keller", "alister-mcgrath", "andrew-wilson", "andy-crouch"}
+               "tim-keller", "alister-mcgrath", "andrew-wilson", "andy-crouch",
+               "preston-sprinkle"}
 # Held on branch voices-batch4 until Meg re-checks their fixes; never indexed on main.
-BATCH4_HELD = {"preston-sprinkle", "sinclair-ferguson", "brian-mclaren"}
+BATCH4_HELD = {"sinclair-ferguson", "brian-mclaren"}
 
 
 def test_pilot_data_is_all_reviewed():
@@ -410,3 +411,17 @@ def test_batch4_merge_edits():
     # Keller died May 19, 2023: nothing we curated afterward is listed as his recent work.
     assert WRITERS["tim-keller"]["deceased"] and WRITERS["tim-keller"]["died"] == "2023-05-19"
     assert 'class="cc-recent-item"' not in page("tim-keller")
+
+
+def test_batch4_held_writers_went_live():
+    # Meg re-checked the three held writers on Nov 13 2026 and passed them.
+    data = {v["slug"]: v for v in json.loads((ROOT / "docs" / "voices_data.json").read_text())}
+    sprinkle = WRITERS["preston-sprinkle"]
+    assert "hold" not in sprinkle
+    urls = [p["url"] for p in sprinkle["start_here"]]
+    assert "https://theologyintheraw.com/is-same-sex-attraction-sinful/" in urls
+    assert "https://relevantmagazine.com/life5/what-does-bible-really-say-about-alcohol/" in urls
+    assert [o["url"] for o in sprinkle["where_they_write"] if o["outlet"] == "RELEVANT"] == [
+        "https://relevantmagazine.com/author/prestonsprinkle/"]
+    assert data["preston-sprinkle"]["role"] == "President, Theology in the Raw"
+    assert "Calvary" not in json.dumps(data["preston-sprinkle"])

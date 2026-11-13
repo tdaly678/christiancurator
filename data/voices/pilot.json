@@ -2699,6 +2699,105 @@
       ],
       "review_notes": "Identity: the Praxis partner and Culture Making author, same as our existing andy-crouch page. Sources read directly: andy-crouch.com/about (current roles: partner for theology and culture at Praxis, teaching fellow for Practicing the Way; CT executive editor 2012 to 2016; InterVarsity campus minister at Harvard; Cornell classics; BU MDiv; footer '© 2026', no other page date) and praxis.co/people/andy-crouch (title 'Partner, Theology & Culture'; says previously Executive Editor of CT; gives book years used in the bio; undated). praxislabs.org/team now redirects to praxis.co. Conflict: the Christianity Today writer page bio says 'an editor at large for Christianity Today'; his own site and Praxis say CT is a past role, so the CT title is left out and should be confirmed or ignored. The existing voices_data bio gives a birth year (1968) and praise wording ('standard reference'); neither is used here. Start here: all four read on andy-crouch.com, byline Andy Crouch. Celebrity power page says it originally appeared 24 March 2018 at The Gospel Coalition (I did not open the TGC original). 'It's Time to Talk About Power' shows only 'October 2013' (CT) and 'Stop Engaging the Culture' only 'July/August 2016, p. 33' (CT print), so those dates are given as years; I did not open the CT originals. Small Screens says it originally appeared on andy-crouch.com on 8 April 2015. The Tech-Wise Family topic angle (christian-parenting) rests on the book title and the site's Tech-Wise section, not on a Start here piece. My web search budget ran out during this batch, so no further outlets were checked. Merge (Nov 13 2026): Praxis people page removed from Where they write (it is a profile, kept in Sources). Christianity Today is labelled a past outlet with no title. The 1968 birth year and the praise wording were removed from voices_data.json.",
       "last_updated": "2026-11-13"
+    },
+    {
+      "slug": "preston-sprinkle",
+      "name": "Preston Sprinkle",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "President of The Center for Faith, Sexuality & Gender and of Theology in the Raw | Author of Does the Bible Support Same-Sex Marriage? and From Genesis to Junia | Writes on sexuality, gender, women in ministry and Christian ethics",
+      "bio": "Preston Sprinkle is the cofounder and president of The Center for Faith, Sexuality & Gender and the president of Theology in the Raw, which produces the Theology in the Raw podcast. He earned a PhD in New Testament from the University of Aberdeen in 2007 and has taught theology at Cedarville University, Nottingham University and Eternity Bible College. His books include Does the Bible Support Same-Sex Marriage?, Exiles: The Church in the Shadow of Empire and From Genesis to Junia.",
+      "bio_sources": [
+        {
+          "label": "About, Theology in the Raw",
+          "url": "https://theologyintheraw.com/about/"
+        },
+        {
+          "label": "About, prestonsprinkle.com",
+          "url": "https://www.prestonsprinkle.com/about"
+        },
+        {
+          "label": "Books menu, prestonsprinkle.com",
+          "url": "https://www.prestonsprinkle.com/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "Theology in the Raw (blog and podcast)",
+          "url": "https://www.theologyintheraw.com/blog"
+        },
+        {
+          "outlet": "prestonsprinkle.com",
+          "url": "https://www.prestonsprinkle.com/"
+        },
+        {
+          "outlet": "RELEVANT",
+          "url": "https://relevantmagazine.com/author/prestonsprinkle/"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "A Response to Tom Schreiner's Review of From Genesis to Junia",
+          "url": "https://theologyintheraw.com/a-response-to-tom-schreiners-review-of-from-genesis-to-junia/",
+          "outlet": "Theology in the Raw",
+          "date": "2026-03-03",
+          "note": "Answers Tom Schreiner's review of his book on Genesis 1 to 3, the word 'helper' and 1 Timothy 2, and argues that women may teach and lead in the church."
+        },
+        {
+          "title": "What is \"Biblical\" Masculinity and Femininity?",
+          "url": "https://theologyintheraw.com/what-is-biblical-masculinity-and-femininity/",
+          "outlet": "Theology in the Raw",
+          "date": "2024-06-11",
+          "note": "Argues that many common ideas of manhood and womanhood come from culture rather than Scripture, that most virtues apply to both sexes and that average sex differences are real but not absolute."
+        },
+        {
+          "title": "Is Same-Sex Attraction Sinful?",
+          "url": "https://theologyintheraw.com/is-same-sex-attraction-sinful/",
+          "outlet": "Theology in the Raw",
+          "date": "2014-12-01",
+          "note": "His paper for an Evangelical Theological Society seminar, arguing that ancient writers did have a concept of same-sex orientation and that, read with Romans 1 and James 1, attraction that is not acted on is not itself condemned as sin."
+        },
+        {
+          "title": "What Does the Bible Really Say About Drinking?",
+          "url": "https://relevantmagazine.com/life5/what-does-bible-really-say-about-alcohol/",
+          "outlet": "RELEVANT",
+          "date": "2026-06-17",
+          "note": "Argues that Scripture condemns drunkenness rather than moderate drinking, never requires abstinence and treats wine as a gift that calls for discipline."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "complementarianism-egalitarianism",
+          "angle": "The case for women teaching and leading, and replies to his critics."
+        },
+        {
+          "slug": "gender-and-biblical-anthropology",
+          "angle": "Separating biblical manhood and womanhood from cultural stereotypes."
+        },
+        {
+          "slug": "biblical-sexuality",
+          "angle": "Same-sex marriage and the biblical texts, the subject of his recent book."
+        },
+        {
+          "slug": "christian-ethics",
+          "angle": "Questions such as drinking, read from the biblical text."
+        },
+        {
+          "slug": "politics-and-the-church",
+          "angle": "How Christians weigh civilian deaths in the Gaza war."
+        }
+      ],
+      "related": [
+        "rachel-gilson",
+        "rebecca-mclaughlin",
+        "wesley-hill"
+      ],
+      "same_as": [
+        "https://www.prestonsprinkle.com/",
+        "https://theologyintheraw.com/about/"
+      ],
+      "review_notes": "Identity: the Theology in the Raw podcaster and Center for Faith, Sexuality & Gender president, same as our existing page (which links prestonsprinkle.com). Sources read directly: theologyintheraw.com/about (cofounder and president of the Center; president of Theology in the Raw; PhD New Testament, 'Aberdeen University in Scotland (2007)'; taught at Cedarville, Nottingham, Eternity Bible College; Exiles called his most recent book; footer 'Copyright 2026', bio itself undated) and prestonsprinkle.com/about (same roles and PhD; footer '© Preston Sprinkle 2018', yet it names the 2023 and 2024 books, so the footer is stale). From Genesis to Junia is listed only in his site's Books menu and in the Schreiner response; I did not open a publisher page for it, so no year is given. Could not open: centerforfaith.com returns HTTP 403 to both WebFetch and a direct curl with a browser user agent, so the Center's staff page and articles were not read; the Center is not linked in where_they_write for that reason (add its staff page if a reviewer can open it). The CT writer URL christianitytoday.com/writers/preston-sprinkle/ returns 404. The existing voices_data record lists an MA from Calvary Chapel Bible College that I did not see on any source; drop or verify it, and drop its praise wording. Start here: all four bylines confirmed as Preston Sprinkle (two other recent Theology in the Raw posts I checked are by Julia Sadusky and A.J. Swoboda and were excluded). The RELEVANT piece shows June 17, 2026 and says a version first appeared in 2014. The Gaza piece was used because my web search budget ran out and I could not find more of his own sexuality essays; a reviewer may prefer to swap it for a Center for Faith article. No en or em dashes were in the chosen titles. Overnight review: the Gaza casualty-figures pick was dropped as off the page's themes, leaving 3 picks. Fix for Meg's re-check (Nov 13 2026): added 'Is Same-Sex Attraction Sinful?' (Theology in the Raw, 2014-12-01), opened directly: HTTP 200, meta author, JSON-LD author and visible byline all 'Preston Sprinkle', datePublished 2014-12-01; WordPress author id 2, the same id as the Schreiner response and the masculinity piece. It is his 2014 ETS seminar paper on sexual orientation, posted in full. The drinking piece stays as the fourth pick. RELEVANT in Where they write now points at his author page relevantmagazine.com/author/prestonsprinkle/ (HTTP 200, title 'Preston Sprinkle, Author at RELEVANT'; the drinking article links it). The Calvary Chapel MA was removed from voices_data.json.",
+      "last_updated": "2026-11-13"
     }
   ]
 }
