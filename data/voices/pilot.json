@@ -2220,6 +2220,98 @@
       ],
       "review_notes": "Identity: the John Mark Comer of Practicing the Way and formerly Bridgetown Church; our existing page already links johnmarkcomer.com and the same RELEVANT excerpt. All pages were opened directly with WebFetch, none through a proxy. ONLY 3 START HERE PICKS, NOT 4: Comer publishes almost no standalone articles. His site has no blog, the Practicing the Way journal and practice pages carry other bylines or none, Christianity Today's author URL 404s and its site search returned nothing, and the HarperCollins Christian author page returned HTTP 403. The web search budget for this session ran out before a fourth piece could be found; a CT excerpt of one of his books is reportedly online but its URL was not confirmed. All three picks are RELEVANT republications of book excerpts (Practicing the Way 2024, Garden City 2015, Loveology), so the dates are RELEVANT's page dates, not first publication; the RELEVANT author bio itself is out of date (calls him lead pastor of Bridgetown and lists only two books) and was not used. Titles are RELEVANT's exact headlines, which begin with 'John Mark Comer:'; no dash changes. Sources undated: johnmarkcomer.com (only a 2015 copyright line), the Practicing the Way About page and the PRH author page. 'Eight books' comes from PRH; 'founding pastor for nearly two decades' from Practicing the Way About. Left out: 'New York Times bestselling' and 'sold more than a million copies' (promo), his Santa Monica Mountains home and church planting line (personal or unclear). Our existing voices_data.json lists books 'The Liturgists' and 'Lovefor All Seasons' which look wrong (not on his own site or PRH) and should be removed; its education line (Portland State, Multnomah) is unsourced, and a search snippet instead mentioned a Western Seminary master's, so leave education out. Merge (Nov 13 2026): picks labelled as book excerpts. Years checked on pages opened Nov 13: Practicing the Way, the RELEVANT page's own note ('Copyright 2024 ... Published by WaterBrook ... January 16, 2024'); Garden City, the RELEVANT page's note ('Copyright 2015 by John Mark Comer. Used by permission of Zondervan'); Loveology, the RELEVANT page says only 'adapted with permission from Loveology', so the year comes from the Open Library ISBN records 9780310337263 (HarperCollins, 2014) and 9780310337270 (Zondervan, 2014). The Liturgists, Love for All Seasons and the unsourced education line were removed from voices_data.json.",
       "last_updated": "2026-11-13"
+    },
+    {
+      "slug": "carl-trueman",
+      "name": "Carl R. Trueman",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Professor of biblical and religious studies at Grove City College | Author of The Rise and Triumph of the Modern Self | Writes on the modern self, the church and evangelical identity",
+      "bio": "Carl R. Trueman is professor of biblical and religious studies at Grove City College and a fellow at the Ethics and Public Policy Center. He holds a PhD from the University of Aberdeen, is a church historian and is a contributing editor at First Things. He has authored or edited more than a dozen books, including The Rise and Triumph of the Modern Self, Strange New World and Histories and Fallacies, and is a member of the Orthodox Presbyterian Church.",
+      "bio_sources": [
+        {
+          "label": "Author page, Crossway",
+          "url": "https://www.crossway.org/authors/carl-r-trueman/"
+        },
+        {
+          "label": "Author bio, First Things (May 2026)",
+          "url": "https://firstthings.com/the-cult-of-pastoral-vulnerability/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "First Things",
+          "url": "https://firstthings.com/archive/?_author=carl-trueman"
+        },
+        {
+          "outlet": "Crossway (books)",
+          "url": "https://www.crossway.org/authors/carl-r-trueman/"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "Does Evangelicalism Exist?",
+          "url": "https://firstthings.com/does-evangelicalism-exist/",
+          "outlet": "First Things",
+          "date": "2026-10-29",
+          "note": "Argues that evangelicalism has no formal leadership or theological consensus and should be used as a descriptive adjective rather than treated as a fixed identity."
+        },
+        {
+          "title": "The Cult of Pastoral Vulnerability",
+          "url": "https://firstthings.com/the-cult-of-pastoral-vulnerability/",
+          "outlet": "First Things",
+          "date": "2026-05-07",
+          "note": "Argues that pressure on ministers to perform vulnerability in public reflects therapeutic culture and that pastoral authority rests on word and sacrament, not personal experience."
+        },
+        {
+          "title": "The Trans War Is Not Over",
+          "url": "https://firstthings.com/the-trans-war-is-not-over/",
+          "outlet": "First Things",
+          "date": "2026-04-23",
+          "note": "Argues that the political shift on transgender issues is no time for a victory lap because transhumanism poses the deeper challenge."
+        },
+        {
+          "title": "Ordinary Means, Extraordinary Ends",
+          "url": "https://firstthings.com/ordinary-means-extraordinary-ends/",
+          "outlet": "First Things",
+          "date": "2026-05-21",
+          "note": "Reflecting on a Grove City College commencement, argues that the challenge AI poses to education requires first understanding what it means to be human."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "evangelicalism",
+          "angle": "Whether evangelicalism is an identity or a description."
+        },
+        {
+          "slug": "gender-and-biblical-anthropology",
+          "angle": "Expressive individualism, the transgender debate and transhumanism."
+        },
+        {
+          "slug": "pastoral-ministry",
+          "angle": "Pastoral authority in a therapeutic culture."
+        },
+        {
+          "slug": "ai-and-the-church",
+          "angle": "AI, education and what it means to be human."
+        },
+        {
+          "slug": "church-history",
+          "angle": "A historian's reading of the modern self and the Reformation."
+        }
+      ],
+      "related": [
+        "aaron-m-renn",
+        "doug-wilson",
+        "kevin-deyoung",
+        "samuel-d-james"
+      ],
+      "same_as": [
+        "https://firstthings.com/archive/?_author=carl-trueman",
+        "https://www.crossway.org/authors/carl-r-trueman/"
+      ],
+      "review_notes": "Identity: Carl R. Trueman of Grove City College and First Things, same person as our existing page (which links the same First Things pieces and Crossway page). All pages opened directly with WebFetch, none through a proxy. The Grove City College faculty page our data links (EmployeeId 2436) returned a page with no bio text when fetched, so it could not be used as a source. The professor title and the EPPC fellowship are confirmed by the dated First Things author line (May 7 2026) as well as Crossway; the PhD, 'contributing editor at First Things', 'more than a dozen books', the three book titles and OPC membership come from the Crossway page, which is undated. 'Church historian' is from Crossway, which says 'an esteemed church historian'; 'esteemed' was dropped. The First Things author archive (https://firstthings.com/archive/?_author=carl-trueman) shows titles but no dates; dates were taken from each article page. First Things uses a membership paywall plugin; all four picks were fully readable when fetched, but access may vary. No dash changes in titles. Our existing voices_data.json says born 1967 and lists Cambridge MA and an ordained OPC minister claim and a 'loan' note on his GCC role; none of those were verified here and the bio avoids them.",
+      "last_updated": "2026-11-13"
     }
   ]
 }
