@@ -5436,34 +5436,35 @@
   {
     "name": "Sinclair Ferguson",
     "slug": "sinclair-ferguson",
-    "bio": "Sinclair B. Ferguson (born February 21, 1948) is a Scottish Reformed theologian and Presbyterian minister who serves as Chancellor's Professor of Systematic Theology at Reformed Theological Seminary and as a teaching fellow at Ligonier Ministries. He has pastored congregations on both sides of the Atlantic, including First Presbyterian Church (Columbia, SC) and St George's-Tron in Glasgow, and previously served as professor of systematic theology at Westminster Theological Seminary in Philadelphia. Ferguson is known for warm, accessible preaching of historic Reformed orthodoxy with a strong pastoral and Christ-centered emphasis. His book The Whole Christ revived twenty-first century interest in the Marrow Controversy and the relationship between law and gospel; his works on the Holy Spirit and the Christian life have become standard texts in Reformed seminaries.",
+    "bio": "Sinclair B. Ferguson is a teaching fellow and vice-chairman of Ligonier Ministries, Chancellor's Professor of Systematic Theology at Reformed Theological Seminary and host of the podcast Things Unseen. He received his PhD from the University of Aberdeen in 1971. He served Church of Scotland congregations in Unst, Shetland, and at St George's Tron in Glasgow, held the Charles Krahe chair of systematic theology at Westminster Theological Seminary, and retired in 2013 as senior minister of First Presbyterian Church in Columbia, South Carolina. His books include The Whole Christ, Maturity, Devoted to God's Church and By Grace Alone.",
     "affiliation": "Reformed Theological Seminary / Ligonier Ministries",
-    "role": "Reformed Theologian & Pastor",
-    "education": "University of Aberdeen (MA, BD, PhD)",
-    "website": "https://www.ligonier.org/teachers/sinclair-b-ferguson",
-    "denomination": "Presbyterian",
-    "tradition": "Confessional Reformed; Scottish Presbyterian",
-    "known_for": "Warm, Christ-centered exposition of Reformed theology, especially The Whole Christ on law, gospel, and the Marrow Controversy.",
-    "current_role": "Chancellor's Professor of Systematic Theology at Reformed Theological Seminary; teaching fellow and vice-chairman of Ligonier Ministries; preaching associate at Trinity Church, Aberdeen",
+    "role": "Chancellor's Professor of Systematic Theology, Reformed Theological Seminary",
+    "website": "https://learn.ligonier.org/teachers/sinclair-ferguson",
     "deceased": false,
-    "faqs": [
+    "books": [
       {
-        "q": "What denomination is Sinclair Ferguson?",
-        "a": "Ferguson is a Scottish Presbyterian minister. He has pastored on both sides of the Atlantic, including St George's-Tron in Glasgow and First Presbyterian Church in Columbia, South Carolina, and now serves as a preaching associate at Trinity Church in Aberdeen, Scotland."
+        "title": "The Whole Christ",
+        "amazon_url": "https://www.amazon.com/s?k=The+Whole+Christ+Sinclair+Ferguson"
       },
       {
-        "q": "What is Sinclair Ferguson known for?",
-        "a": "Ferguson is known for combining rigorous Reformed theology with warm, pastoral preaching. His book The Whole Christ (2016), on the eighteenth-century Marrow Controversy and the relationship between law and gospel, has become a modern classic, and his works on the Holy Spirit and the Christian life are standard seminary texts."
+        "title": "Maturity",
+        "amazon_url": "https://www.amazon.com/s?k=Maturity+Sinclair+Ferguson"
       },
       {
-        "q": "Is Sinclair Ferguson still teaching?",
-        "a": "Yes. Born in 1948, Ferguson serves as Chancellor's Professor of Systematic Theology at Reformed Theological Seminary, is a teaching fellow and vice-chairman at Ligonier Ministries, and continues to speak at conferences such as Ligonier's national conference. He previously held the systematic theology chair at Westminster Theological Seminary in Philadelphia."
+        "title": "Devoted to God's Church",
+        "amazon_url": "https://www.amazon.com/s?k=Devoted+to+God%27s+Church+Sinclair+Ferguson"
       },
       {
-        "q": "Is Sinclair Ferguson a Calvinist?",
-        "a": "Yes. Ferguson stands squarely in the historic Reformed and Calvinist tradition, subscribing to the Westminster Confession of Faith. His theology emphasizes union with Christ, the ministry of the Holy Spirit, and grace-centered pastoral application."
+        "title": "By Grace Alone",
+        "amazon_url": "https://www.amazon.com/s?k=By+Grace+Alone+Sinclair+Ferguson"
       }
-    ]
+    ],
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/sinclair-ferguson",
+      "https://www.crossway.org/authors/sinclair-b-ferguson/",
+      "https://banneroftruth.org/us/about/banner-authors/sinclair-b-ferguson/"
+    ],
+    "education": ""
   },
   {
     "name": "John MacArthur",

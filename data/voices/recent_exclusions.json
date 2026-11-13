@@ -1,0 +1,11 @@
+{
+  "_about": "Per-writer items kept out of a voice page's automatic Recent Articles block (scripts/build_recent_articles.py). Each rule names one piece by url and/or publisher headline; a match on either drops it for that writer only. The rest of the block is unaffected. Add a reason and the date.",
+  "sinclair-ferguson": [
+    {
+      "url": "https://feeds.ligonier.org/~/926268260/0/ligonierministriesblog",
+      "title": "What Were the Ninety-Five Theses?",
+      "reason": "Ligonier's page for this headline sits at a mismatched slug (when-god-gave-his-holy-spirit-simple-men-great-abundance) and no reliable URL for it exists; dropped from his Start here picks for the same reason. Meg, Nov 13 2026.",
+      "added": "2026-11-13"
+    }
+  ]
+}

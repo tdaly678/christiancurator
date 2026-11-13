@@ -351,6 +351,10 @@ recorded in `frontend/voices_redirects.json` (loser → survivor); the loser's p
   `AEO-RELATED-TOPICS`. `update_voice_backlinks.py` skips pilot slugs. Rerun the builder after editing the data file.
 - `build_recent_articles.py` replaces its block in place (the old remove-and-reinsert added a blank line per day) and
   lists up to 10 pieces on voice pages. Tests: `tests/test_voice_pilot.py`.
+- One bad item can be kept off a writer's Recent Articles block without dropping the block:
+  `data/voices/recent_exclusions.json` (slug -> rules naming a piece by `url` or publisher `title`, with a reason).
+  `collect_by_voice()` applies it, so the daily refresh, the pilot builder and `check_voices.py` agree. First rule
+  (Nov 13 2026): Ferguson's "What Were the Ninety-Five Theses?" (`feeds.ligonier.org`). Tests: `tests/test_recent_exclusions.py`.
 - Voices cleanup step 3 (Nov 12): sourced corrections in `voices_data.json` (each corrected record carries
   `bio_sources`): John MacArthur in the past tense (died July 14, 2025; gty.org/memorial, CT), the identity mixes
   (michael-g-brown, william-barcley, christy-smith, cody-benjamin, emily-brown, elizabeth-russell), unsourced health

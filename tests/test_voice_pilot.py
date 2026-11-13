@@ -255,9 +255,9 @@ BATCH3_HELD: set[str] = set()
 # Batch 4 went live writer by writer on Nov 13 2026 after Meg's spot-check.
 BATCH4_LIVE = {"aaron-m-renn", "wesley-hill", "paul-tripp", "john-mark-comer", "carl-trueman",
                "tim-keller", "alister-mcgrath", "andrew-wilson", "andy-crouch",
-               "preston-sprinkle"}
+               "preston-sprinkle", "sinclair-ferguson"}
 # Held on branch voices-batch4 until Meg re-checks their fixes; never indexed on main.
-BATCH4_HELD = {"sinclair-ferguson", "brian-mclaren"}
+BATCH4_HELD = {"brian-mclaren"}
 
 
 def test_pilot_data_is_all_reviewed():
@@ -425,3 +425,14 @@ def test_batch4_held_writers_went_live():
         "https://relevantmagazine.com/author/prestonsprinkle/"]
     assert data["preston-sprinkle"]["role"] == "President, Theology in the Raw"
     assert "Calvary" not in json.dumps(data["preston-sprinkle"])
+    ferguson = WRITERS["sinclair-ferguson"]
+    assert "hold" not in ferguson
+    assert not [p for p in ferguson["start_here"] if "when-god-gave-his-holy-spirit" in p["url"]]
+    assert "https://learn.ligonier.org/articles/john-knox" in [p["url"] for p in ferguson["start_here"]]
+    assert [o["url"] for o in ferguson["where_they_write"] if o["outlet"] == "Tabletalk"] == [
+        "https://tabletalkmagazine.com/contributor/sinclair-ferguson/"]
+    assert "Ninety-Five" not in json.dumps(ferguson["topics"])
+    rec = json.dumps(data["sinclair-ferguson"])
+    assert "1948" not in rec and "Redeemer Seminary" not in rec
+    page = (ROOT / "docs" / "voices" / "sinclair-ferguson" / "index.html").read_text(encoding="utf-8")
+    assert "Ninety-Five Theses" not in page and "feeds.ligonier.org" not in page

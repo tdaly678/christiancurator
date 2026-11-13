@@ -2798,6 +2798,107 @@
       ],
       "review_notes": "Identity: the Theology in the Raw podcaster and Center for Faith, Sexuality & Gender president, same as our existing page (which links prestonsprinkle.com). Sources read directly: theologyintheraw.com/about (cofounder and president of the Center; president of Theology in the Raw; PhD New Testament, 'Aberdeen University in Scotland (2007)'; taught at Cedarville, Nottingham, Eternity Bible College; Exiles called his most recent book; footer 'Copyright 2026', bio itself undated) and prestonsprinkle.com/about (same roles and PhD; footer '© Preston Sprinkle 2018', yet it names the 2023 and 2024 books, so the footer is stale). From Genesis to Junia is listed only in his site's Books menu and in the Schreiner response; I did not open a publisher page for it, so no year is given. Could not open: centerforfaith.com returns HTTP 403 to both WebFetch and a direct curl with a browser user agent, so the Center's staff page and articles were not read; the Center is not linked in where_they_write for that reason (add its staff page if a reviewer can open it). The CT writer URL christianitytoday.com/writers/preston-sprinkle/ returns 404. The existing voices_data record lists an MA from Calvary Chapel Bible College that I did not see on any source; drop or verify it, and drop its praise wording. Start here: all four bylines confirmed as Preston Sprinkle (two other recent Theology in the Raw posts I checked are by Julia Sadusky and A.J. Swoboda and were excluded). The RELEVANT piece shows June 17, 2026 and says a version first appeared in 2014. The Gaza piece was used because my web search budget ran out and I could not find more of his own sexuality essays; a reviewer may prefer to swap it for a Center for Faith article. No en or em dashes were in the chosen titles. Overnight review: the Gaza casualty-figures pick was dropped as off the page's themes, leaving 3 picks. Fix for Meg's re-check (Nov 13 2026): added 'Is Same-Sex Attraction Sinful?' (Theology in the Raw, 2014-12-01), opened directly: HTTP 200, meta author, JSON-LD author and visible byline all 'Preston Sprinkle', datePublished 2014-12-01; WordPress author id 2, the same id as the Schreiner response and the masculinity piece. It is his 2014 ETS seminar paper on sexual orientation, posted in full. The drinking piece stays as the fourth pick. RELEVANT in Where they write now points at his author page relevantmagazine.com/author/prestonsprinkle/ (HTTP 200, title 'Preston Sprinkle, Author at RELEVANT'; the drinking article links it). The Calvary Chapel MA was removed from voices_data.json.",
       "last_updated": "2026-11-13"
+    },
+    {
+      "slug": "sinclair-ferguson",
+      "name": "Sinclair B. Ferguson",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Ligonier teaching fellow and Chancellor's Professor of Systematic Theology at Reformed Theological Seminary | Author of The Whole Christ | Writes on sanctification, law and grace, suffering and the Reformation",
+      "bio": "Sinclair B. Ferguson is a teaching fellow and vice-chairman of Ligonier Ministries, Chancellor's Professor of Systematic Theology at Reformed Theological Seminary and host of the podcast Things Unseen. He received his PhD from the University of Aberdeen in 1971. He served Church of Scotland congregations in Unst, Shetland, and at St George's Tron in Glasgow, held the Charles Krahe chair of systematic theology at Westminster Theological Seminary, and retired in 2013 as senior minister of First Presbyterian Church in Columbia, South Carolina. His books include The Whole Christ, Maturity, Devoted to God's Church and By Grace Alone.",
+      "bio_sources": [
+        {
+          "label": "Teacher profile, Ligonier Ministries",
+          "url": "https://learn.ligonier.org/teachers/sinclair-ferguson"
+        },
+        {
+          "label": "Author page, Crossway",
+          "url": "https://www.crossway.org/authors/sinclair-b-ferguson/"
+        },
+        {
+          "label": "Author page, Banner of Truth",
+          "url": "https://banneroftruth.org/us/about/banner-authors/sinclair-b-ferguson/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "Ligonier Ministries",
+          "url": "https://learn.ligonier.org/teachers/sinclair-ferguson"
+        },
+        {
+          "outlet": "Tabletalk",
+          "url": "https://tabletalkmagazine.com/contributor/sinclair-ferguson/"
+        },
+        {
+          "outlet": "Crossway (books)",
+          "url": "https://www.crossway.org/authors/sinclair-b-ferguson/"
+        },
+        {
+          "outlet": "Banner of Truth (books)",
+          "url": "https://banneroftruth.org/us/about/banner-authors/sinclair-b-ferguson/"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "Learning Contentment",
+          "url": "https://learn.ligonier.org/articles/learning-contentment",
+          "outlet": "Ligonier Ministries",
+          "date": "2023-01-13",
+          "note": "Argues that contentment cannot be reached by steps or willpower and is a Christlike character God forms through teaching and experience, especially adversity."
+        },
+        {
+          "title": "Who Was John Knox?",
+          "url": "https://learn.ligonier.org/articles/john-knox",
+          "outlet": "Ligonier Ministries",
+          "date": "2014-02-25",
+          "note": "Traces Knox from galley slave and royal chaplain in England through exile in Geneva to his return to lead the Reformation in Scotland, and argues that his sufferings, experience and sense of call fitted him for that work."
+        },
+        {
+          "title": "The Surprising Truth about Legalism",
+          "url": "https://www.crossway.org/articles/the-surprising-truth-about-legalism/",
+          "outlet": "Crossway",
+          "date": "2016-01-19",
+          "note": "Traces legalism to a distorted view of God as withholding, going back to Eden, and argues that antinomianism grows from the same root and that only the gospel answers both."
+        },
+        {
+          "title": "How God Uses Friction to Shape Us",
+          "url": "https://www.crossway.org/articles/how-god-uses-friction-to-shape-us/",
+          "outlet": "Crossway",
+          "date": "2023-05-10",
+          "note": "Reads Romans 5 to argue that God uses sustained hardship to produce endurance, tested character and hope in believers."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "sanctification",
+          "angle": "How God forms Christian character through hardship and teaching."
+        },
+        {
+          "slug": "justification-by-faith",
+          "angle": "Grace, law, legalism and antinomianism, the themes of The Whole Christ."
+        },
+        {
+          "slug": "suffering-and-providence",
+          "angle": "Suffering as the means of endurance and hope in Romans 5."
+        },
+        {
+          "slug": "church-history",
+          "angle": "John Knox and the Reformation in Scotland."
+        }
+      ],
+      "related": [
+        "rc-sproul",
+        "ligon-duncan",
+        "robert-letham"
+      ],
+      "same_as": [
+        "https://learn.ligonier.org/teachers/sinclair-ferguson",
+        "https://www.crossway.org/authors/sinclair-b-ferguson/",
+        "https://banneroftruth.org/us/about/banner-authors/sinclair-b-ferguson/",
+        "https://www.thegospelcoalition.org/profile/sinclair-ferguson/"
+      ],
+      "review_notes": "Identity: the Scottish Reformed theologian and Ligonier teaching fellow, same as our existing page. Sources read directly: Ligonier teacher page (teaching fellow, vice-chairman of Ligonier, Chancellor's Professor of Systematic Theology at RTS, host of Things Unseen; books The Whole Christ, Maturity, Devoted to God's Church; undated), Crossway author page (PhD Aberdeen, RTS Chancellor's Professor, former senior minister of First Presbyterian Columbia SC, By Grace Alone; undated), Banner of Truth author page (PhD Aberdeen 1971, Unst and St George's Tron, Charles Krahe chair at Westminster, retired 2013 from First Presbyterian Columbia; undated and partly out of date). Conflicts: TGC profile calls him 'distinguished visiting professor of systematic theology' and 'preaching associate at Trinity Church of Aberdeen' (not used; confirm whether the Trinity Church Aberdeen role is current). The Ligonier teacher URL in our current page (ligonier.org/teachers/sinclair-b-ferguson) returns 404; the live page is learn.ligonier.org/teachers/sinclair-ferguson. Banner of Truth loaded through WebFetch but returned 403 to a direct curl. Desiring God author page returned 403 and was not used. Start here dates: both Ligonier pages show a recent republish date (Nov 10, 2026 and Oct 29, 2026) with an editor's note giving the original dates used here (Jan 13, 2023 and Oct 15, 2025); the Ninety-Five Theses article URL slug does not match its title but the page loads that article with Ferguson's byline. The two Crossway pieces are book excerpts (The Whole Christ, and Worthy: Living in Light of the Gospel) with Ferguson as sole byline. I skipped The Passionate Plea of Preaching because it is cobylined with Alistair Begg. The Things Unseen podcast has no where_they_write link because I could not search for its URL after my web search budget ran out. Fix for Meg's re-check (Nov 13 2026): the Ninety-Five Theses pick was dropped. Its page's canonical link is the mismatched slug itself (when-god-gave-his-holy-spirit-simple-men-great-abundance) and slugs built from the title return 404, so no reliable URL exists. Replaced with 'Who Was John Knox?' at learn.ligonier.org/articles/john-knox: HTTP 200, canonical matches the URL, byline Sinclair Ferguson, dated February 25, 2014 (datePublished 2014-02-25); the same article is in Tabletalk, March 2014, whose page names Ferguson and gives this Ligonier URL as canonical. The Tabletalk link in Where they write now uses /contributor/sinclair-ferguson/ (HTTP 200, title 'Sinclair Ferguson | Tabletalk'; the /contributors/ URL served a generic page). The birth date and the Redeemer Seminary line were removed from the data. Go-live (Nov 13 2026, Meg passed with tweak): the church-history topic angle now names Knox rather than the dropped Ninety-Five Theses pick, and the automatic Recent Articles block skips the archived 'What Were the Ninety-Five Theses?' item (feeds.ligonier.org) through data/voices/recent_exclusions.json.",
+      "last_updated": "2026-11-13"
     }
   ]
 }

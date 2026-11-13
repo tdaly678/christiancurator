@@ -45,6 +45,7 @@ TOPICS_DIR = DOCS_DIR / "topics"
 HISTORY = DOCS_DIR / "article_history.json"
 PILOT = REPO_ROOT / "data" / "voices" / "pilot.json"
 DATA_WATCH = DOCS_DIR / "data_watch.json"
+EXCLUSIONS = REPO_ROOT / "data" / "voices" / "recent_exclusions.json"
 
 V_START = "<!-- CC-RECENT-ARTICLES:START -->"
 V_END = "<!-- CC-RECENT-ARTICLES:END -->"
@@ -142,10 +143,34 @@ def collect_by_voice(*, dropped: list | None = None) -> dict[str, list[dict]]:
                 prev = cur.get(url)
                 if not prev or date_iso > prev["date"]:
                     cur[url] = entry
-    return {
-        slug: sorted(items.values(), key=lambda a: a["date"], reverse=True)
+    rules = load_exclusions()
+    out = {
+        slug: [a for a in sorted(items.values(), key=lambda a: a["date"], reverse=True)
+               if not is_excluded(a, rules.get(slug, []))]
         for slug, items in by_voice.items()
     }
+    return {slug: items for slug, items in out.items() if items}
+
+
+def load_exclusions(path: Path | None = None) -> dict[str, list[dict]]:
+    """Slug -> rules from data/voices/recent_exclusions.json ("_about" skipped)."""
+    try:
+        data = json.loads((path or EXCLUSIONS).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return {k: v for k, v in data.items() if not k.startswith("_") and isinstance(v, list)}
+
+
+def is_excluded(item: dict, rules: list[dict]) -> bool:
+    """True when a rule names this piece by url or by publisher headline (Nov 13
+    2026: a single bad item comes off one writer's block, not the whole block)."""
+    title = " ".join((item.get("title") or "").split()).lower()
+    for r in rules:
+        if r.get("url") and r["url"] == item.get("url"):
+            return True
+        if r.get("title") and " ".join(r["title"].split()).lower() == title:
+            return True
+    return False
 
 
 def death_dates() -> dict[str, str]:
