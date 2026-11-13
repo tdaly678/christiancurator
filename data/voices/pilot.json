@@ -1924,6 +1924,113 @@
       ],
       "review_notes": "Drafted for batch 3 (voices-batch3-review.md) and carried into batch 4 unchanged except Related. Identity: the existing voice page links aaronrenn.com, the same Substack used here. The American Reformer author page (americanreformer.org/author/arenn/ redirects to archive.americanreformer.org) names him 'Aaron Renn' without the middle initial; its bio matches (Manhattan Institute, aaronrenn substack). The aaronrenn.com About page gives his American Reformer title as Senior Fellow; the American Reformer page gives Cofounder and Senior Fellow, used in the dek and bio. No degrees, church or denomination are stated on any page opened. First Things listing pages show no dates; dates come from each article page. The First Things elite essay may be metered; the same essay is free at aaronrenn.com/p/the-problem-with-the-evangelical-elite (2025-12-16). Many aaronrenn.com posts are paid-only; all picks from it were checked as free. Related: stephen-wolfe (noindexed) replaced by mike-sabo (American Reformer). Merge (Nov 13 2026): Meg kept the First Things original for the elite essay; the free copy at aaronrenn.com/p/the-problem-with-the-evangelical-elite is only a fallback if First Things gates it.",
       "last_updated": "2026-11-13"
+    },
+    {
+      "slug": "wesley-hill",
+      "name": "Wesley Hill",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Associate professor of New Testament at Wycliffe College, University of Toronto | Author of Washed and Waiting and Spiritual Friendship | Writes on Scripture, friendship, celibacy and the church",
+      "bio": "Wesley Hill is associate professor of New Testament at Wycliffe College at the University of Toronto and a priest in The Episcopal Church; he came to Wycliffe from Western Theological Seminary in Holland, Michigan, and earlier taught biblical studies at Trinity School for Ministry in Ambridge, Pennsylvania. He holds a BA from Wheaton College and an MA and PhD from Durham University. His books include Washed and Waiting: Reflections on Christian Faithfulness and Homosexuality, Spiritual Friendship: Finding Love in the Church as a Celibate Gay Christian, Paul and the Trinity, The Lord's Prayer and Easter: The Season of the Resurrection of Jesus (2025). He writes the newsletter Writing in the Dust.",
+      "bio_sources": [
+        {
+          "label": "Faculty page, Wycliffe College",
+          "url": "https://www.wycliffecollege.ca/users/wesleyhill"
+        },
+        {
+          "label": "Some personal news, Writing in the Dust",
+          "url": "https://weshill.substack.com/p/some-personal-news"
+        },
+        {
+          "label": "Substack profile",
+          "url": "https://substack.com/@weshill"
+        },
+        {
+          "label": "Author bio, First Things",
+          "url": "https://firstthings.com/andy-stanleys-modern-marcionism/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "Writing in the Dust (Substack)",
+          "url": "https://weshill.substack.com/"
+        },
+        {
+          "outlet": "First Things",
+          "url": "https://www.firstthings.com/author/wesley-hill"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "Imperfect Goodbyes and the Hope of Resurrection",
+          "url": "https://firstthings.com/imperfect-goodbyes-and-the-hope-of-resurrection/",
+          "outlet": "First Things",
+          "date": "2015-08-27",
+          "note": "Reflects on his mother's distress at her own mother's death and argues that Christian hope rests on God's power to raise the dead rather than on dying well."
+        },
+        {
+          "title": "If the Church Were a Haven",
+          "url": "https://firstthings.com/if-the-church-were-a-haven/",
+          "outlet": "First Things",
+          "date": "2016-06-26",
+          "note": "Argues, after the Orlando shooting, that churches should be places of welcome and solidarity for gay and lesbian people, drawing on Christian tradition."
+        },
+        {
+          "title": "Andy Stanley's Modern Marcionism",
+          "url": "https://firstthings.com/andy-stanleys-modern-marcionism/",
+          "outlet": "First Things",
+          "date": "2018-05-11",
+          "note": "Argues that a sermon by Andy Stanley downplaying the Old Testament amounts to a modern Marcionism and contests his reading of Acts 15."
+        },
+        {
+          "title": "Revoice and a Vocation of “Yes”",
+          "url": "https://firstthings.com/revoice-and-a-vocation-of-yes/",
+          "outlet": "First Things",
+          "date": "2018-08-07",
+          "note": "Reflects on the first Revoice conference and on his own move from seeking a cure for same-sex attraction toward a celibate vocation within traditional teaching."
+        },
+        {
+          "title": "Who is Jesus Christ for us today?",
+          "url": "https://weshill.substack.com/p/who-is-jesus-christ-for-us-today",
+          "outlet": "Writing in the Dust",
+          "date": "2026-06-04",
+          "note": "Critiques a Museum of the Bible film for centering the Emmaus road on a disciple's personal struggles and links that reading to Bultmann's existential interpretation."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "singleness",
+          "angle": "Celibacy as a Christian vocation."
+        },
+        {
+          "slug": "christian-friendship",
+          "angle": "Recovering spiritual friendship in the church."
+        },
+        {
+          "slug": "biblical-sexuality",
+          "angle": "Traditional teaching held by a celibate gay Christian."
+        },
+        {
+          "slug": "christology",
+          "angle": "Reading the Gospels about who Jesus is."
+        },
+        {
+          "slug": "the-trinity",
+          "angle": "Paul's letters and the doctrine of the Trinity."
+        }
+      ],
+      "related": [
+        "preston-sprinkle",
+        "rebecca-mclaughlin",
+        "rachel-gilson"
+      ],
+      "same_as": [
+        "https://weshill.substack.com/",
+        "https://www.wycliffecollege.ca/users/wesleyhill",
+        "https://www.firstthings.com/author/wesley-hill"
+      ],
+      "review_notes": "Drafted for batch 3 (voices-batch3-review.md) and carried into batch 4 unchanged except Related. His newsletter is Writing in the Dust at weshill.substack.com (confirmed via his Substack profile); the old wesleyhill.substack.com link was fixed on main in 4486a7544. Current role: Wycliffe's faculty page and his March 31 2026 post 'Some personal news' say associate professor of New Testament at Wycliffe College, University of Toronto; neither gives a start date. Western Theological Seminary is his previous post (Wycliffe page). Priesthood: Wycliffe calls him an Episcopal priest; his Substack profile says 'Priest in The Episcopal Church'. No current parish is named on any page opened. Trinity School for Ministry is from the First Things bio lines (2015 to 2018 pieces). Related: preston-sprinkle (in this batch), rebecca-mclaughlin and rachel-gilson (indexed); tish-harrison-warren and matthew-lee-anderson are noindexed.",
+      "last_updated": "2026-11-13"
     }
   ]
 }

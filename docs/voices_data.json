@@ -6352,10 +6352,9 @@
   {
     "name": "Wesley Hill",
     "slug": "wesley-hill",
-    "bio": "Wesley Hill is Associate Professor of New Testament at Western Theological Seminary and a leading evangelical voice on celibate gay Christian life. A founding contributor to the Spiritual Friendship project, he has written candidly about holding to a traditional Christian sexual ethic while also calling the church to richer practices of friendship, kinship, and belonging. His scholarly work centers on Pauline theology, particularly Trinitarian readings of Paul.",
-    "affiliation": "Western Theological Seminary",
-    "role": "New Testament Scholar & Author",
-    "education": "PhD in New Testament, Durham University",
+    "bio": "Wesley Hill is associate professor of New Testament at Wycliffe College at the University of Toronto and a priest in The Episcopal Church; he came to Wycliffe from Western Theological Seminary in Holland, Michigan, and earlier taught biblical studies at Trinity School for Ministry in Ambridge, Pennsylvania. He holds a BA from Wheaton College and an MA and PhD from Durham University. His books include Washed and Waiting: Reflections on Christian Faithfulness and Homosexuality, Spiritual Friendship: Finding Love in the Church as a Celibate Gay Christian, Paul and the Trinity, The Lord's Prayer and Easter: The Season of the Resurrection of Jesus (2025). He writes the newsletter Writing in the Dust.",
+    "affiliation": "Wycliffe College, University of Toronto",
+    "role": "Associate Professor of New Testament, Wycliffe College",
     "website": "https://weshill.substack.com",
     "books": [
       {
@@ -6373,9 +6372,21 @@
       {
         "title": "The Lord's Prayer",
         "amazon_url": "https://www.amazon.com/s?k=The+Lord%27s+Prayer+Wesley+Hill"
+      },
+      {
+        "title": "Easter: The Season of the Resurrection of Jesus",
+        "amazon_url": "https://www.amazon.com/s?k=Easter%3A+The+Season+of+the+Resurrection+of+Jesus+Wesley+Hill"
       }
     ],
-    "initials": "WH"
+    "initials": "WH",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.wycliffecollege.ca/users/wesleyhill",
+      "https://weshill.substack.com/p/some-personal-news",
+      "https://substack.com/@weshill",
+      "https://firstthings.com/andy-stanleys-modern-marcionism/"
+    ],
+    "education": ""
   },
   {
     "name": "J.D. Greear",
