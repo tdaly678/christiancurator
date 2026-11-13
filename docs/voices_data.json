@@ -668,48 +668,27 @@
     "slug": "john-mark-comer",
     "name": "John Mark Comer",
     "initials": "JMC",
-    "role": "Pastor, Author & Spiritual Director",
+    "role": "Founder, Practicing the Way",
     "affiliation": "Practicing the Way",
-    "bio": "John Mark Comer is a pastor, teacher, New York Times bestselling author, and founder of Practicing the Way, a nonprofit ministry dedicated to forming lifelong apprentices of Jesus. After serving as founding pastor of Bridgetown Church in Portland, Oregon for nearly two decades, during which he pioneered a church-wide emphasis on spiritual formation, Comer stepped away in 2021 to expand his teaching through Practicing the Way, which creates free formation resources for churches worldwide.\n\nHis books, including the bestselling Practicing the Way and The Ruthless Elimination of Hurry, articulate a vision of spiritual life centered on three goals: be with Jesus, become like Jesus, and do what he did. Through his teaching, writing, and ministry platform, Comer has become one of evangelicalism's most important voices calling believers back to contemplative spirituality and intentional discipleship, particularly resonating with younger Christians seeking depth over busyness.",
-    "education": "Portland State University; Multnomah University",
+    "bio": "John Mark Comer is a writer, pastor and the founder of Practicing the Way, an organization working toward the renewal of apprenticeship to Jesus. For nearly two decades he was the founding pastor of Bridgetown Church in Portland, Oregon. He is the author of eight books, including Practicing the Way and The Ruthless Elimination of Hurry.",
     "website": "https://www.practicingtheway.org",
     "books": [
       {
-        "title": "The Liturgists",
-        "amazon_url": "https://www.amazon.com/s?k=The+Liturgists+John+Mark+Comer"
+        "title": "Practicing the Way",
+        "amazon_url": "https://www.amazon.com/s?k=Practicing+the+Way+John+Mark+Comer"
       },
       {
-        "title": "Lovefor All Seasons",
-        "amazon_url": "https://www.amazon.com/s?k=Love+for+All+Seasons+John+Mark+Comer"
+        "title": "The Ruthless Elimination of Hurry",
+        "amazon_url": "https://www.amazon.com/s?k=The+Ruthless+Elimination+of+Hurry+John+Mark+Comer"
       }
     ],
-    "denomination": "Non-denominational",
-    "tradition": "Evangelical; spiritual formation / contemplative stream (influenced by Dallas Willard and the Renovaré tradition)",
-    "known_for": "The bestselling book The Ruthless Elimination of Hurry and the Practicing the Way ministry, which calls Christians to spiritual formation through the practices of Jesus.",
-    "current_role": "Founder and teacher at Practicing the Way",
     "deceased": false,
-    "faqs": [
-      {
-        "q": "What denomination is John Mark Comer?",
-        "a": "Comer is non-denominational. He was founding pastor of Bridgetown Church in Portland, Oregon, a non-denominational congregation, and his Practicing the Way ministry deliberately serves churches across traditions. He draws freely on Protestant, Catholic, and Orthodox spiritual writers rather than planting himself in one historic tradition."
-      },
-      {
-        "q": "What is John Mark Comer known for?",
-        "a": "Comer is best known for The Ruthless Elimination of Hurry (2019) and Practicing the Way (2024), which was named ECPA Christian Book of the Year in 2025. His teaching centers on three goals: be with Jesus, become like Jesus, and do as Jesus did."
-      },
-      {
-        "q": "Why did John Mark Comer leave Bridgetown Church?",
-        "a": "Comer stepped away from Bridgetown Church in 2021 after nearly two decades to found Practicing the Way, a nonprofit that creates free spiritual formation resources for churches worldwide. The move let him focus on teaching, writing, and building formation curriculum rather than leading a single congregation."
-      },
-      {
-        "q": "What is Practicing the Way?",
-        "a": "Practicing the Way is a nonprofit Comer founded to help churches recover discipleship as apprenticeship to Jesus. It produces free courses and practice guides on habits such as sabbath, prayer, fasting, and solitude, drawing heavily on Dallas Willard and the spiritual formation tradition."
-      },
-      {
-        "q": "Is John Mark Comer's teaching controversial among evangelicals?",
-        "a": "Comer is broadly popular, especially with younger evangelicals, but some Reformed reviewers (including writers at The Gospel Coalition and Kevin DeYoung) have criticized his eclectic use of Catholic, Orthodox, and mystical sources and what they see as underdeveloped doctrines of grace and justification. Supporters counter that he is calling the church back to serious discipleship and historic spiritual practices."
-      }
-    ]
+    "bio_sources": [
+      "https://www.johnmarkcomer.com",
+      "https://www.practicingtheway.org/about",
+      "https://www.penguinrandomhouse.com/authors/2189858"
+    ],
+    "education": ""
   },
   {
     "name": "William Conley",

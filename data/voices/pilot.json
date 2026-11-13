@@ -2131,6 +2131,95 @@
       ],
       "review_notes": "Identity: Paul David Tripp of Paul Tripp Ministries, the same person as our existing page (which links paultripp.com). All pages were opened directly with WebFetch; none through a proxy. The paultripp.com About page (undated) gives the 2006 cofounding with Steve Sarkisian, the WTS professorship, the CCEF faculty and counselor role and 'more than 30 books'; it does not itself say he is president. The president title comes from the TGC profile, which is undated. The DMin and the three book titles come from the Crossway author page (undated). The Crossway URL https://www.crossway.org/authors/paul-david-tripp/ returns 404; /authors/paul-tripp/ works. Our existing voices_data.json bio says he 'is a current pastor at Tenth Presbyterian Church' and directed a Center for Pastoral Life and Care in Fort Worth; secondary sources say he left Tenth in 2011, so that line looks out of date and should be removed (not verified on a primary page). Three of the four Start here picks are marked by Crossway as adapted from his books (Suffering, Reactivity, Everyday Gospel); the bully pastors piece shows no adaptation note. No titles needed dash changes. Family details on the sources (wife, children, birth date) were left out by rule. 'Award-winning' on Crossway was left out as praise. Merge (Nov 13 2026): the Tenth Presbyterian line stays out of the guide and was removed from the voices_data.json record.",
       "last_updated": "2026-11-13"
+    },
+    {
+      "slug": "john-mark-comer",
+      "name": "John Mark Comer",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Founder of Practicing the Way | Author of The Ruthless Elimination of Hurry | Writes on spiritual formation, prayer and the practices of following Jesus",
+      "bio": "John Mark Comer is a writer, pastor and the founder of Practicing the Way, an organization working toward the renewal of apprenticeship to Jesus. For nearly two decades he was the founding pastor of Bridgetown Church in Portland, Oregon. He is the author of eight books, including Practicing the Way and The Ruthless Elimination of Hurry.",
+      "bio_sources": [
+        {
+          "label": "About, John Mark Comer",
+          "url": "https://www.johnmarkcomer.com"
+        },
+        {
+          "label": "About, Practicing the Way",
+          "url": "https://www.practicingtheway.org/about"
+        },
+        {
+          "label": "Author page, Penguin Random House",
+          "url": "https://www.penguinrandomhouse.com/authors/2189858"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "Practicing the Way",
+          "url": "https://www.practicingtheway.org"
+        },
+        {
+          "outlet": "RELEVANT (book excerpts)",
+          "url": "https://relevantmagazine.com/author/johnmarkcomer/"
+        },
+        {
+          "outlet": "Penguin Random House (books)",
+          "url": "https://www.penguinrandomhouse.com/authors/2189858"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "John Mark Comer: You Can't 'Feel' Your Way Into Faith",
+          "url": "https://relevantmagazine.com/faith/john-mark-comer-turning-god-into-a-habit/",
+          "outlet": "Excerpt from Practicing the Way (2024), republished by RELEVANT",
+          "date": "2026-01-06",
+          "note": "Argues that staying oriented toward God comes from practice and habit rather than from waiting on feelings."
+        },
+        {
+          "title": "John Mark Comer: There's No Difference Between 'Spiritual' and 'Secular'",
+          "url": "https://relevantmagazine.com/faith/theres-no-difference-between-spiritual-and-secular/",
+          "outlet": "Excerpt from Garden City (2015), republished by RELEVANT",
+          "date": "2026-07-02",
+          "note": "Argues that dividing life into sacred and secular treats most of daily life as unimportant to God."
+        },
+        {
+          "title": "John Mark Comer: 4 Questions to Ask Before You Even Think About Getting Married",
+          "url": "https://relevantmagazine.com/life5/career-money/4-questions-ask-you-even-think-about-getting-married/",
+          "outlet": "Excerpt adapted from Loveology (2014), republished by RELEVANT",
+          "date": "2025-05-21",
+          "note": "Argues that singleness can be a calling in its own right and sets out four questions to settle before pursuing marriage."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "spiritual-disciplines",
+          "angle": "Practices that form people into the way of Jesus."
+        },
+        {
+          "slug": "discipleship",
+          "angle": "Apprenticeship to Jesus as the shape of the Christian life."
+        },
+        {
+          "slug": "vocation-and-work",
+          "angle": "Why ordinary work is not secular."
+        },
+        {
+          "slug": "singleness",
+          "angle": "Singleness as a calling, and questions to ask before marriage."
+        }
+      ],
+      "related": [
+        "dallas-willard",
+        "david-mathis",
+        "kyle-worley"
+      ],
+      "same_as": [
+        "https://www.johnmarkcomer.com",
+        "https://www.practicingtheway.org",
+        "https://relevantmagazine.com/author/johnmarkcomer/"
+      ],
+      "review_notes": "Identity: the John Mark Comer of Practicing the Way and formerly Bridgetown Church; our existing page already links johnmarkcomer.com and the same RELEVANT excerpt. All pages were opened directly with WebFetch, none through a proxy. ONLY 3 START HERE PICKS, NOT 4: Comer publishes almost no standalone articles. His site has no blog, the Practicing the Way journal and practice pages carry other bylines or none, Christianity Today's author URL 404s and its site search returned nothing, and the HarperCollins Christian author page returned HTTP 403. The web search budget for this session ran out before a fourth piece could be found; a CT excerpt of one of his books is reportedly online but its URL was not confirmed. All three picks are RELEVANT republications of book excerpts (Practicing the Way 2024, Garden City 2015, Loveology), so the dates are RELEVANT's page dates, not first publication; the RELEVANT author bio itself is out of date (calls him lead pastor of Bridgetown and lists only two books) and was not used. Titles are RELEVANT's exact headlines, which begin with 'John Mark Comer:'; no dash changes. Sources undated: johnmarkcomer.com (only a 2015 copyright line), the Practicing the Way About page and the PRH author page. 'Eight books' comes from PRH; 'founding pastor for nearly two decades' from Practicing the Way About. Left out: 'New York Times bestselling' and 'sold more than a million copies' (promo), his Santa Monica Mountains home and church planting line (personal or unclear). Our existing voices_data.json lists books 'The Liturgists' and 'Lovefor All Seasons' which look wrong (not on his own site or PRH) and should be removed; its education line (Portland State, Multnomah) is unsourced, and a search snippet instead mentioned a Western Seminary master's, so leave education out. Merge (Nov 13 2026): picks labelled as book excerpts. Years checked on pages opened Nov 13: Practicing the Way, the RELEVANT page's own note ('Copyright 2024 ... Published by WaterBrook ... January 16, 2024'); Garden City, the RELEVANT page's note ('Copyright 2015 by John Mark Comer. Used by permission of Zondervan'); Loveology, the RELEVANT page says only 'adapted with permission from Loveology', so the year comes from the Open Library ISBN records 9780310337263 (HarperCollins, 2014) and 9780310337270 (Zondervan, 2014). The Liturgists, Love for All Seasons and the unsourced education line were removed from voices_data.json.",
+      "last_updated": "2026-11-13"
     }
   ]
 }
