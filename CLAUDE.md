@@ -297,10 +297,20 @@ picks plus archive pieces under the publisher headline) and a sourced bio (`bio_
 `voice_generator.generate_new_voice_pages()` are written noindex and added to `voices_noindex.json`. The 994 pages
 the voices audit marked noindex (`data/voices/noindex-2026-11-12.txt`) were noindexed and dropped from the sitemap by
 `scripts/apply_voice_noindex.py`; the pages and links stay. `scripts/check_voices.py` (daily workflow, before the
-commit) fails on an indexable page below the bar (ratchet: `scripts/voices_check_baseline.json`, 178 pages awaiting a
-sourced bio), a noindex mismatch, any em or en dash on a voice page or in `voices_data.json`, a retired slug that is
-linked or has data, or a Recent Articles headline that is not the publisher's. `--report` lists all,
-`--update-baseline` locks in improvements. Tests: `tests/test_check_voices.py`.
+commit) fails on an indexable page below the bar (ratchet: `scripts/voices_check_baseline.json`, empty since the
+Nov 12 overnight run), a noindex mismatch, any em or en dash on a voice page or in `voices_data.json`, a retired slug
+that is linked or has data, a Recent Articles headline that is not the publisher's, or a deceased writer's Recent
+Articles listing a piece curated after the death. `--report` lists all, `--update-baseline` locks in improvements.
+Tests: `tests/test_check_voices.py`.
+Sourced bios for legacy pages (overnight Nov 12 2026): `scripts/apply_voice_bios.py` (dry run by default, `--apply`)
+takes research rows (`decision` bio / journalist / noindex, `bio`, `role`, `affiliation`, `website`, verified `books`,
+`deceased`, `died`, `bio_sources`), rewrites the `voices_data.json` record, removes unsourced education, FAQs and quick
+facts, refreshes the page in place and its /voices/ card, and noindexes the noindex rows. It never changes a display
+name. The 160 rows used (identity check and notes per writer) are in `data/voices/bio-research-2026-11-13.json`.
+Tests: `tests/test_apply_voice_bios.py`.
+Deceased writers: `deceased: true` plus `died` (ISO date or year) in `voices_data.json` or `pilot.json`.
+`build_recent_articles.before_death()` keeps only pieces curated on or before the death (none when no date is
+recorded), on the daily refresh and in `build_voice_pilot.py`. Tests: `tests/test_deceased_recent.py`.
 Voice pages listed in `frontend/voices_noindex.json` are skipped by the sitemap generator. Voices cleanup step 4 (Nov 12 2026): 13 more
 duplicates merged (`PAIRS` in `scripts/merge_duplicate_voices.py`; andy-davis and mary-hannah were confirmed from the
 publishers' pages first) and seven non-person pages retired through `retire_posting_accounts.py` (outlets Lifeway
@@ -344,6 +354,10 @@ Retired: abby-silva, german-saucedo, paul-howard, jillian-parks, stephen-walker,
 are staff who also byline a few real First Things pieces (German Saucedo writes as "Germán S. Díaz del Castillo"); those
 bylines stay as plain text. The script also rewrites the homepage and digest, retries unreadable pages one at a time
 (the site rate-limits a big run), and handles the April 2026 byline format. Add a slug to `ACCOUNTS` and rerun to retire.
+Mere Orthodoxy's page metadata names Jake Meador (the editor) on essays by others, so `page_byline()` is wrong there;
+`scripts/reattribute_bylines.py` has `BYLINE_OVERRIDES` (visible bylines checked by hand) and `--overrides-only`.
+Rerunning `retire_posting_accounts.py --apply` strips the plain-text "FM AI" bylines kept in step 4 from archive
+`meta.json`; revert `docs/archive/` after a rerun.
 `scripts/fix_voice_titles.py` never touches pilot pages (`data-cc-voice-pilot`); their titles come from `page_title()`.
 Tests: `tests/test_first_things_bylines.py`, `tests/test_voice_redirects.py`.
 
