@@ -2420,6 +2420,90 @@
       "deceased": true,
       "died": "2023-05-19",
       "last_updated": "2026-11-13"
+    },
+    {
+      "slug": "alister-mcgrath",
+      "name": "Alister McGrath",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Emeritus Andreas Idreos Professor of Science and Religion at Oxford | Author of C. S. Lewis: A Life | Writes on science and faith, apologetics and church history",
+      "bio": "Alister McGrath is Emeritus Andreas Idreos Professor of Science and Religion at the University of Oxford, a chair he held from 2014 until he retired in September 2022. He took a doctorate in molecular biophysics at Oxford before turning to theology, and he was Oxford's Professor of Historical Theology from 1999 to 2008, a professor at King's College London and Gresham Professor of Divinity from 2015 to 2018. His books include C. S. Lewis: A Life and Mere Apologetics.",
+      "bio_sources": [
+        {
+          "label": "Profile, Faculty of Theology and Religion, University of Oxford",
+          "url": "https://www.theology.ox.ac.uk/people/professor-alister-mcgrath"
+        },
+        {
+          "label": "Profile, The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/alister-mcgrath/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "The Gospel Coalition",
+          "url": "https://www.thegospelcoalition.org/profile/alister-mcgrath/"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "Augustine's Origin of Species",
+          "url": "https://www.christianitytoday.com/2009/05/augustines-origin-of-species/",
+          "outlet": "Christianity Today",
+          "date": "2009-05-08",
+          "note": "Argues that Augustine's reading of Genesis, in which God created all things with the capacity to develop under providence, offers a model for the Darwin debate that turns on interpretation rather than biblical authority."
+        },
+        {
+          "title": "The Resurrection: A Bridge Between Two Worlds",
+          "url": "https://www.christianitytoday.com/2012/07/resurrection-bridge-between-two-worlds/",
+          "outlet": "Christianity Today",
+          "date": "2012-07-11",
+          "note": "Recounts his move from atheism to faith and argues that the resurrection gives Christians a hope that shapes how they live, suffer and worship."
+        },
+        {
+          "title": "Why Knowing About Jesus Is Not Enough",
+          "url": "https://www.christianitytoday.com/2015/02/why-knowing-about-jesus-is-not-enough/",
+          "outlet": "Christianity Today",
+          "date": "2015-02-09",
+          "note": "Describes how reading Philippians 3 showed him that his faith had engaged his mind but not his heart or imagination."
+        },
+        {
+          "title": "Alister McGrath: Michael Green Taught Me the Importance of Evangelism",
+          "url": "https://www.christianitytoday.com/2019/02/alister-mcgrath-michael-green-tribute-evangelism/",
+          "outlet": "Christianity Today",
+          "date": "2019-02-12",
+          "note": "A tribute to Michael Green arguing that his lasting legacy was the people he mentored and his commitment to evangelism through the local church."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "creation-evolution",
+          "angle": "Science and faith, read through Augustine and modern biology."
+        },
+        {
+          "slug": "apologetics",
+          "angle": "Making the case for faith to skeptics and former atheists."
+        },
+        {
+          "slug": "missions-and-evangelism",
+          "angle": "Evangelism rooted in the local church."
+        },
+        {
+          "slug": "church-history",
+          "angle": "Historical theology from Augustine to the Reformation."
+        }
+      ],
+      "related": [
+        "gavin-ortlund",
+        "rebecca-mclaughlin",
+        "chris-watkin",
+        "louis-markos"
+      ],
+      "same_as": [
+        "https://www.theology.ox.ac.uk/people/professor-alister-mcgrath",
+        "https://www.thegospelcoalition.org/profile/alister-mcgrath/"
+      ],
+      "review_notes": "Identity: Alister McGrath, Oxford theologian and C. S. Lewis biographer, same person as our existing page; all four picks carry his byline and CT bio lines that match the Oxford record. All pages opened directly with WebFetch, none through a proxy. The website our data lists (alistermcgrath.com) does not resolve (DNS failure); remove it. An older site at alistermcgrath.weebly.com opened but is out of date (it calls him current Idreos Professor and lists 2019 releases), so it is not cited. The Oxford faculty page is undated but states the September 2022 retirement; it spells the chair 'Andreos Idreos', a typo; the weebly site and CT bios spell it 'Andreas', which is used here. TGC profile (undated) supplies the book titles; it writes 'C. S. Lewis' followed by an em dash and 'A Life', changed to a colon. The King's College London role is undated on Oxford's page beyond 'before returning to Oxford', so no years are given. The web search budget ran out, so picks were found through Christianity Today's own WordPress search API (christianitytoday.com/wp-json), not a third-party engine, then each article page was opened. CT has no working author page for him (/writers/alister-mcgrath/ and /writers/alister-e-mcgrath/ return 404), so CT is not listed under where they write. The CT pages show only the print issue month (May 2009, June 2012, Jan/Feb 2015); the day given is the WordPress post date from the API. All picks are old (2009 to 2019); the 2012 piece carries CT's archive note that 'some things we would say differently today'. BioLogos author page returned HTTP 429 and IVP's author page HTTP 403; neither was read. Our existing voices_data.json bio uses praise ('world-renowned', 'helping countless Christians'), says 'over 80 books' and lists an MD from Aberdeen; none of that was verified and the MD claim looks wrong (Oxford says molecular biophysics doctorate), so it should go. Merge (Nov 13 2026): Oxford faculty page removed from Where they write (kept in Sources). alistermcgrath.com, the MD claim and '80 books' were removed from voices_data.json.",
+      "last_updated": "2026-11-13"
     }
   ]
 }

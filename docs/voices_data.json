@@ -10678,61 +10678,26 @@
   {
     "name": "Alister McGrath",
     "slug": "alister-mcgrath",
-    "bio": "Alister McGrath is a world-renowned theologian, scientist, and Christian apologist who has devoted his career to bridging faith and reason. With expertise in historical theology and the intersection of science and religion, he has written over 80 books exploring topics from the Reformation to atheism, helping countless Christians understand and defend their faith with intellectual rigor and pastoral sensitivity.",
+    "bio": "Alister McGrath is Emeritus Andreas Idreos Professor of Science and Religion at the University of Oxford, a chair he held from 2014 until he retired in September 2022. He took a doctorate in molecular biophysics at Oxford before turning to theology, and he was Oxford's Professor of Historical Theology from 1999 to 2008, a professor at King's College London and Gresham Professor of Divinity from 2015 to 2018. His books include C. S. Lewis: A Life and Mere Apologetics.",
     "affiliation": "University of Oxford (Emeritus)",
-    "role": "Professor of Theology, Author & Apologist",
-    "education": "Doctor of Philosophy (DPhil), University of Oxford; Doctor of Medicine (MD), University of Aberdeen",
-    "website": "https://www.alisterMcGrath.com",
+    "role": "Emeritus Professor of Science and Religion, University of Oxford",
     "books": [
       {
-        "title": "The Twilight of Atheism",
-        "amazon_url": "https://www.amazon.com/s?k=The+Twilight+of+Atheism+Alister+McGrath"
-      },
-      {
-        "title": "Surprised by Meaning",
-        "amazon_url": "https://www.amazon.com/s?k=Surprised+by+Meaning+Alister+McGrath"
-      },
-      {
-        "title": "Christian Theology: An Introduction",
-        "amazon_url": "https://www.amazon.com/s?k=Christian+Theology+An+Introduction+Alister+McGrath"
-      },
-      {
-        "title": "The Intellectual Origins of the European Reformation",
-        "amazon_url": "https://www.amazon.com/s?k=The+Intellectual+Origins+of+the+European+Reformation+McGrath"
+        "title": "C. S. Lewis: A Life",
+        "amazon_url": "https://www.amazon.com/s?k=C.+S.+Lewis%3A+A+Life+Alister+McGrath"
       },
       {
         "title": "Mere Apologetics",
         "amazon_url": "https://www.amazon.com/s?k=Mere+Apologetics+Alister+McGrath"
-      },
-      {
-        "title": "The Art of Theology",
-        "amazon_url": "https://www.amazon.com/s?k=The+Art+of+Theology+Alister+McGrath"
       }
     ],
     "initials": "AMcG",
-    "denomination": "Anglican (ordained Church of England priest)",
-    "tradition": "Anglican evangelical; science-and-religion scholarship",
-    "known_for": "Bridging science and Christian faith as an Oxford theologian with a doctorate in molecular biophysics, and answering the New Atheism in books like The Dawkins Delusion.",
-    "current_role": "Emeritus Andreas Idreos Professor of Science and Religion, University of Oxford; associate priest in Church of England parishes in the Cotswolds",
     "deceased": false,
-    "faqs": [
-      {
-        "q": "What denomination is Alister McGrath?",
-        "a": "McGrath is an Anglican and an ordained priest in the Church of England. Alongside his academic career he serves as an associate priest in a group of village parishes in the English Cotswolds."
-      },
-      {
-        "q": "Was Alister McGrath an atheist?",
-        "a": "Yes. McGrath was an atheist as a young man in Northern Ireland and converted to Christianity while studying at Oxford. He went on to earn Oxford doctorates in both molecular biophysics and theology, which shaped his lifelong focus on the relationship between science and faith."
-      },
-      {
-        "q": "What is Alister McGrath known for?",
-        "a": "McGrath has written over 80 books, including the widely used textbook Christian Theology: An Introduction, a major biography of C.S. Lewis, and The Dawkins Delusion, a response to Richard Dawkins's The God Delusion. He held the Andreas Idreos Professorship of Science and Religion at Oxford until retiring in 2022."
-      },
-      {
-        "q": "Is Alister McGrath still teaching?",
-        "a": "McGrath retired from his Oxford chair in 2022 and is now Professor Emeritus of Science and Religion and an emeritus fellow of Harris Manchester College. He remains active as a writer and speaker; his recent book Why We Believe explores the rationality of belief in uncertain times."
-      }
-    ]
+    "bio_sources": [
+      "https://www.theology.ox.ac.uk/people/professor-alister-mcgrath",
+      "https://www.thegospelcoalition.org/profile/alister-mcgrath/"
+    ],
+    "education": ""
   },
   {
     "name": "Changwon Shu",
