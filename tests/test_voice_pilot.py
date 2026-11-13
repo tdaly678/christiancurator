@@ -255,9 +255,9 @@ BATCH3_HELD: set[str] = set()
 # Batch 4 went live writer by writer on Nov 13 2026 after Meg's spot-check.
 BATCH4_LIVE = {"aaron-m-renn", "wesley-hill", "paul-tripp", "john-mark-comer", "carl-trueman",
                "tim-keller", "alister-mcgrath", "andrew-wilson", "andy-crouch",
-               "preston-sprinkle", "sinclair-ferguson"}
-# Held on branch voices-batch4 until Meg re-checks their fixes; never indexed on main.
-BATCH4_HELD = {"brian-mclaren"}
+               "preston-sprinkle", "sinclair-ferguson", "brian-mclaren"}
+# Sprinkle, Ferguson and McLaren were held on branch voices-batch4 and went live after Meg's re-check.
+BATCH4_HELD: set[str] = set()
 
 
 def test_pilot_data_is_all_reviewed():
@@ -436,3 +436,13 @@ def test_batch4_held_writers_went_live():
     assert "1948" not in rec and "Redeemer Seminary" not in rec
     page = (ROOT / "docs" / "voices" / "sinclair-ferguson" / "index.html").read_text(encoding="utf-8")
     assert "Ninety-Five Theses" not in page and "feeds.ligonier.org" not in page
+    mclaren = WRITERS["brian-mclaren"]
+    assert "hold" not in mclaren and mclaren["related"] == []
+    # "describes himself as" quotes the About section of www.brianmclaren.net.
+    assert mclaren["bio"].startswith("Brian D. McLaren describes himself as an author, speaker, activist and public theologian")
+    mclaren_page = (ROOT / "docs" / "voices" / "brian-mclaren" / "index.html").read_text(encoding="utf-8")
+    rendered = {k: v for k, v in mclaren.items() if k != "review_notes"}  # the notes name what was cut
+    for text in (json.dumps(data["brian-mclaren"]), json.dumps(rendered), mclaren_page):
+        for gone in ("1956", "Cedar Ridge", "Dean of Faculty", "Maryland", "Post-Evangelical Voice"):
+            assert gone not in text, gone
+    assert not data["brian-mclaren"].get("faqs") and not data["brian-mclaren"].get("education")

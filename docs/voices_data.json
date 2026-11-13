@@ -6935,15 +6935,14 @@
   {
     "name": "Brian McLaren",
     "slug": "brian-mclaren",
-    "bio": "Brian McLaren is an author, speaker, and former pastor who became one of the central public faces of the early-2000s emergent church movement. Once identified as evangelical, he has since moved toward a self-described progressive and post-evangelical theology, calling for what he frames as a more generous, justice-oriented Christianity. His work continues to be cited as a touchstone in evangelical conversations about deconstruction, doctrinal boundaries, and the future of the faith.",
+    "bio": "Brian D. McLaren describes himself as an author, speaker, activist and public theologian and is a former college English teacher and pastor. He is a faculty member with the Center for Action and Contemplation and cohosts its podcast Learning How to See. His books include A New Kind of Christian (2001), A Generous Orthodoxy, Faith After Doubt (2021), Do I Stay Christian? (2022) and Life After Doom (2024), and he has also written the novels The Last Voyage (2025) and The Great Rift (2026).",
     "affiliation": "Center for Action and Contemplation",
-    "role": "Author & Post-Evangelical Voice",
-    "education": "MA in English, University of Maryland",
-    "website": "https://brianmclaren.net",
+    "role": "Author and Public Theologian",
+    "website": "https://www.brianmclaren.net",
     "books": [
       {
-        "title": "A New Kind of Christianity",
-        "amazon_url": "https://www.amazon.com/s?k=A+New+Kind+of+Christianity+Brian+McLaren"
+        "title": "A New Kind of Christian",
+        "amazon_url": "https://www.amazon.com/s?k=A+New+Kind+of+Christian+Brian+McLaren"
       },
       {
         "title": "A Generous Orthodoxy",
@@ -6958,6 +6957,10 @@
         "amazon_url": "https://www.amazon.com/s?k=Do+I+Stay+Christian%3F+Brian+McLaren"
       },
       {
+        "title": "Life After Doom",
+        "amazon_url": "https://www.amazon.com/s?k=Life+After+Doom+Brian+McLaren"
+      },
+      {
         "title": "The Great Spiritual Migration",
         "amazon_url": "https://www.amazon.com/s?k=The+Great+Spiritual+Migration+Brian+McLaren"
       },
@@ -6967,29 +6970,13 @@
       }
     ],
     "initials": "BM",
-    "denomination": "Formerly non-denominational evangelical; now identifies with progressive/post-evangelical Christianity",
-    "tradition": "Progressive/post-evangelical; emergent church movement",
-    "known_for": "Being the leading voice of the early-2000s emergent church movement and, through books like A New Kind of Christian and A Generous Orthodoxy, of the shift toward progressive, post-evangelical Christianity.",
-    "current_role": "Dean of Faculty at the Center for Action and Contemplation; author and speaker",
     "deceased": false,
-    "faqs": [
-      {
-        "q": "Who is Brian McLaren?",
-        "a": "Brian McLaren (born 1956) is an author, speaker, and former pastor of Cedar Ridge Community Church in Maryland. He became the central public face of the emergent church movement in the early 2000s and now serves as Dean of Faculty at Richard Rohr's Center for Action and Contemplation."
-      },
-      {
-        "q": "Is Brian McLaren still an evangelical?",
-        "a": "No, not in the conventional sense. McLaren was once identified as evangelical but has moved to a self-described progressive, post-evangelical position, affirming same-sex relationships and questioning traditional teachings on hell, atonement, and biblical authority. Most mainstream evangelical leaders regard his later views as outside evangelical orthodoxy, and his books are frequently cited in evangelical discussions of 'deconstruction.'"
-      },
-      {
-        "q": "What is Brian McLaren known for?",
-        "a": "McLaren is best known for A New Kind of Christian (2001) and A Generous Orthodoxy (2004), which framed the emergent church conversation, and later works like The Great Spiritual Migration and Faith After Doubt. He has written more than 20 books on the future of Christianity."
-      },
-      {
-        "q": "What does Brian McLaren do at the Center for Action and Contemplation?",
-        "a": "McLaren serves as Dean of Faculty at the Center for Action and Contemplation, the contemplative organization founded by Franciscan priest Richard Rohr in Albuquerque. He is core faculty of its Living School, writes for its Daily Meditations, and hosts the podcast Learning How to See."
-      }
-    ]
+    "bio_sources": [
+      "https://www.brianmclaren.net/",
+      "https://www.brianmclaren.net/books",
+      "https://www.penguinrandomhouse.com/books/250879/the-great-spiritual-migration-by-brian-d-mclaren/"
+    ],
+    "education": ""
   },
   {
     "name": "Michael Frost",

@@ -2899,6 +2899,92 @@
       ],
       "review_notes": "Identity: the Scottish Reformed theologian and Ligonier teaching fellow, same as our existing page. Sources read directly: Ligonier teacher page (teaching fellow, vice-chairman of Ligonier, Chancellor's Professor of Systematic Theology at RTS, host of Things Unseen; books The Whole Christ, Maturity, Devoted to God's Church; undated), Crossway author page (PhD Aberdeen, RTS Chancellor's Professor, former senior minister of First Presbyterian Columbia SC, By Grace Alone; undated), Banner of Truth author page (PhD Aberdeen 1971, Unst and St George's Tron, Charles Krahe chair at Westminster, retired 2013 from First Presbyterian Columbia; undated and partly out of date). Conflicts: TGC profile calls him 'distinguished visiting professor of systematic theology' and 'preaching associate at Trinity Church of Aberdeen' (not used; confirm whether the Trinity Church Aberdeen role is current). The Ligonier teacher URL in our current page (ligonier.org/teachers/sinclair-b-ferguson) returns 404; the live page is learn.ligonier.org/teachers/sinclair-ferguson. Banner of Truth loaded through WebFetch but returned 403 to a direct curl. Desiring God author page returned 403 and was not used. Start here dates: both Ligonier pages show a recent republish date (Nov 10, 2026 and Oct 29, 2026) with an editor's note giving the original dates used here (Jan 13, 2023 and Oct 15, 2025); the Ninety-Five Theses article URL slug does not match its title but the page loads that article with Ferguson's byline. The two Crossway pieces are book excerpts (The Whole Christ, and Worthy: Living in Light of the Gospel) with Ferguson as sole byline. I skipped The Passionate Plea of Preaching because it is cobylined with Alistair Begg. The Things Unseen podcast has no where_they_write link because I could not search for its URL after my web search budget ran out. Fix for Meg's re-check (Nov 13 2026): the Ninety-Five Theses pick was dropped. Its page's canonical link is the mismatched slug itself (when-god-gave-his-holy-spirit-simple-men-great-abundance) and slugs built from the title return 404, so no reliable URL exists. Replaced with 'Who Was John Knox?' at learn.ligonier.org/articles/john-knox: HTTP 200, canonical matches the URL, byline Sinclair Ferguson, dated February 25, 2014 (datePublished 2014-02-25); the same article is in Tabletalk, March 2014, whose page names Ferguson and gives this Ligonier URL as canonical. The Tabletalk link in Where they write now uses /contributor/sinclair-ferguson/ (HTTP 200, title 'Sinclair Ferguson | Tabletalk'; the /contributors/ URL served a generic page). The birth date and the Redeemer Seminary line were removed from the data. Go-live (Nov 13 2026, Meg passed with tweak): the church-history topic angle now names Knox rather than the dropped Ninety-Five Theses pick, and the automatic Recent Articles block skips the archived 'What Were the Ninety-Five Theses?' item (feeds.ligonier.org) through data/voices/recent_exclusions.json.",
       "last_updated": "2026-11-13"
+    },
+    {
+      "slug": "brian-mclaren",
+      "name": "Brian D. McLaren",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Author, speaker and faculty member with the Center for Action and Contemplation | Author of A New Kind of Christian and Faith After Doubt | Writes on doubt, leaving evangelicalism, nationalism and the church",
+      "bio": "Brian D. McLaren describes himself as an author, speaker, activist and public theologian and is a former college English teacher and pastor. He is a faculty member with the Center for Action and Contemplation and cohosts its podcast Learning How to See. His books include A New Kind of Christian (2001), A Generous Orthodoxy, Faith After Doubt (2021), Do I Stay Christian? (2022) and Life After Doom (2024), and he has also written the novels The Last Voyage (2025) and The Great Rift (2026).",
+      "bio_sources": [
+        {
+          "label": "About, brianmclaren.net",
+          "url": "https://www.brianmclaren.net/"
+        },
+        {
+          "label": "Books, brianmclaren.net",
+          "url": "https://www.brianmclaren.net/books"
+        },
+        {
+          "label": "Author bio, Penguin Random House",
+          "url": "https://www.penguinrandomhouse.com/books/250879/the-great-spiritual-migration-by-brian-d-mclaren/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "brianmclaren.net (blog)",
+          "url": "https://www.brianmclaren.net/blog"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "Q & R: How did you transition out of Evangelicalism?",
+          "url": "https://www.brianmclaren.net/archive/q-r-how-did-you-transition-out-of-evangelicalism",
+          "outlet": "brianmclaren.net",
+          "date": "2017-08-02",
+          "note": "Describes how he came to be seen as outside evangelicalism over LGBTQ inclusion, hell and penal substitution, and lists the practices he used for answering critics."
+        },
+        {
+          "title": "Is Nationalism the Same as Patriotism?",
+          "url": "https://www.brianmclaren.net/archive/is-nationalism-the-same-as-patriotism",
+          "outlet": "brianmclaren.net",
+          "date": "2017-07-03",
+          "note": "Distinguishes patriotism, a love for what is good in a country joined to a desire to improve it, from nationalism, which he argues seeks ultimate meaning in the nation and is therefore idolatrous."
+        },
+        {
+          "title": "Q & R: A Young Person with Doubts?",
+          "url": "https://www.brianmclaren.net/archive/q-r-a-young-person-with-doubts",
+          "outlet": "brianmclaren.net",
+          "date": "2018-08-21",
+          "note": "Answers a young believer by arguing that doubt is a sign of faith and a doorway to deeper questions, and points to several of his books for people leaving a conservative background."
+        },
+        {
+          "title": "Why Pastors are Leaving the Church (Part 1)",
+          "url": "https://www.brianmclaren.net/archive/why-pastors-are-leaving-the-church-part-1",
+          "outlet": "brianmclaren.net",
+          "date": "2017-04-18",
+          "note": "Draws on a pastor's letter to argue that clergy leave when congregations focus on internal religious matters and ask leaders to stay silent on moral and political questions."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "faith-deconstruction",
+          "angle": "Doubt as a stage of faith, the subject of Faith After Doubt."
+        },
+        {
+          "slug": "progressive-christianity",
+          "angle": "His own move away from inerrancy, hell and penal substitution."
+        },
+        {
+          "slug": "evangelicalism",
+          "angle": "An account of leaving evangelicalism and how its gatekeepers responded."
+        },
+        {
+          "slug": "christian-nationalism",
+          "angle": "Nationalism set against patriotism as a question of idolatry."
+        },
+        {
+          "slug": "pastoral-ministry",
+          "angle": "Why disillusioned clergy leave congregational ministry."
+        }
+      ],
+      "related": [],
+      "same_as": [
+        "https://www.brianmclaren.net/"
+      ],
+      "review_notes": "Identity: the author of A New Kind of Christian and Faith After Doubt, same as our existing page, which links brianmclaren.net (now redirects to www.brianmclaren.net). Sources read directly: brianmclaren.net home page About section (author, speaker, activist and public theologian; former college English teacher and pastor; faculty member with the Center for Action and Contemplation; cohost of the CAC podcast Learning How to See; says he is taking 2026 away from public speaking; current as of the Great Rift release, Nov 2026), brianmclaren.net/books (book years), and the Penguin Random House page for The Great Spiritual Migration (former pastor with a background in literature; Auburn Senior Fellow; board chair of Convergence; undated, so those two roles are not used). The /about URL returns 404. A Generous Orthodoxy has no year in the bio because the books page listing I read was cut off before it; his own archive note on the book says it was released in late August 2004. The church he pastored is not named on any page I opened, so it is left out; the existing voices_data record also lists an MA in English from the University of Maryland and the dek 'Post-Evangelical Voice', neither of which I verified. Could not open: cac.org teacher pages return HTTP 403 to WebFetch and to a direct curl, so CAC is not linked in where_they_write. brianmclaren.substack.com exists (feed title 'Brian McLaren') but the feed has no posts, so it is not listed. Start here: the post pages at www.brianmclaren.net/archive/<slug> render client-side; WebFetch saw only 'Loading entry...'. I read each post's title, date and full text from the site's own data files (www.brianmclaren.net/archive/index.json and /archive/content/<id>.json), which the page loads in the browser; no proxy or reader service was used. Bylines: the site is single-author and these posts are written in his first person; there is no per-post byline field. Several higher-ranked archive posts were link-only or book notes and were skipped. Dates are the publishedAt values from the site data. No family, health or private details used. Fix for Meg's re-check (Nov 13 2026): Related is empty (no indexed writer is explicitly progressive or post-evangelical). The 'describes himself as' framing is kept. The four /archive/<slug> picks render client-side and need a browser check. Go-live (Nov 13 2026, Meg passed with tweak): the four picks were browser-checked by Meg (each loads with matching title and date). 'Describes himself as' is kept: www.brianmclaren.net (home page About section, fetched Nov 13 2026; /about returns 404) reads 'Brian D. McLaren is an author, speaker, activist, and public theologian. A former college English teacher and pastor, ...', and lists him as 'Faculty member with the Center for Action and Contemplation' and 'Co-host of the CAC podcast Learning How to See'. Book years checked on www.brianmclaren.net/books the same day. His voices_data.json record was cut to these sourced facts: born 1956, Cedar Ridge, 'Dean of Faculty', the University of Maryland MA, the 'Post-Evangelical Voice' role and the unsourced FAQs are gone, none re-added.",
+      "last_updated": "2026-11-13"
     }
   ]
 }
