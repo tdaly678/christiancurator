@@ -354,10 +354,18 @@ Retired: abby-silva, german-saucedo, paul-howard, jillian-parks, stephen-walker,
 are staff who also byline a few real First Things pieces (German Saucedo writes as "Germán S. Díaz del Castillo"); those
 bylines stay as plain text. The script also rewrites the homepage and digest, retries unreadable pages one at a time
 (the site rate-limits a big run), and handles the April 2026 byline format. Add a slug to `ACCOUNTS` and rerun to retire.
-Mere Orthodoxy's page metadata names Jake Meador (the editor) on essays by others, so `page_byline()` is wrong there;
-`scripts/reattribute_bylines.py` has `BYLINE_OVERRIDES` (visible bylines checked by hand) and `--overrides-only`.
-Rerunning `retire_posting_accounts.py --apply` strips the plain-text "FM AI" bylines kept in step 4 from archive
-`meta.json`; revert `docs/archive/` after a rerun.
+Mere Orthodoxy (Ghost) bylines (Nov 13 2026): the page metadata (JSON-LD author, `data-post-author`) names "Mere
+Orthodoxy" or Jake Meador (the editor) on essays by others. `byline_from_page` is set on the source, and
+`page_byline()` runs the outlet readers in `VISIBLE_BYLINE_READERS` before any metadata: CT's `ga4ArticleContext` and
+`ghost_visible_byline()` (the post's `author-*` tags in the `data-byline` block; strict, so a block with no author tag
+names nobody; "Name, III" keeps one writer; a couple tag "John and Jena Starke" becomes two). Add a reader there for
+another outlet. `scripts/reattribute_bylines.py` covers `mereorthodoxy.com` and takes `--domain`, `--since` and
+`--report`; the Nov 13 sweep (127 bylines since Aug 15, every page opened) is in
+`.christian-orchestrator/reattribution-2026-11-13-mere-orthodoxy.json`. `BYLINE_OVERRIDES` still holds hand checks.
+Tests: `tests/test_mere_orthodoxy_bylines.py` (trimmed live pages in `tests/fixtures/mere_orthodoxy/`).
+`retire_posting_accounts.py` reruns are idempotent (Nov 13 2026): an account already retired (redirect `"to": ""`)
+keeps its archive bylines unless `--recheck`, and `KEEP_BYLINE` ("fm-ai") always keeps the publisher's own byline as
+plain text. Tests: `tests/test_retire_posting_accounts.py`.
 `scripts/fix_voice_titles.py` never touches pilot pages (`data-cc-voice-pilot`); their titles come from `page_title()`.
 Tests: `tests/test_first_things_bylines.py`, `tests/test_voice_redirects.py`.
 
