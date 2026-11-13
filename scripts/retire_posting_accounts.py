@@ -19,8 +19,16 @@ fetcher/sources.py). For each slug in ACCOUNTS this script:
      sitemap-voices.xml, and removes it from voices_data.json and the /voices/
      index.
 
-DRY RUN BY DEFAULT. Pass --apply to write. Idempotent. Afterwards run
-scripts/build_voice_hubs.py and scripts/build_recent_articles.py.
+Accounts in KEEP_BYLINE are the publisher's own visible byline ("FM AI" at
+Faithfully Magazine): the voice page is retired but the byline stays as plain
+text in meta.json and on the pages; it is never reattributed.
+
+DRY RUN BY DEFAULT. Pass --apply to write. Idempotent: an account already
+retired (its redirects entry has "to": "") keeps its archive bylines on a
+rerun; only the stub, redirect, noindex, sitemap and index steps are
+reasserted. --recheck rereads the article pages for those accounts too
+(KEEP_BYLINE still holds). Afterwards run scripts/build_voice_hubs.py and
+scripts/build_recent_articles.py.
 
     python3 scripts/retire_posting_accounts.py
     python3 scripts/retire_posting_accounts.py --apply
@@ -82,6 +90,10 @@ ACCOUNTS = {
     # began as an identity mix with the singer Christy Nockels (voices cleanup step 3).
     "christy-smith": ("Christy Smith", "", "no byline on the site; began as an identity mix with Christy Nockels"),
 }
+
+# Retired as voices, but the name is the publisher's own byline: kept as plain
+# text, never reattributed (voices cleanup step 4, Nov 12 2026).
+KEEP_BYLINE = {"fm-ai"}
 
 STUB = """<!DOCTYPE html>
 <html lang="en">
@@ -176,10 +188,19 @@ def retry_unreadable(urls: list[str], rounds: int = 3, pause: float = 1.5) -> di
     return out
 
 
-def main() -> int:
+def rerender_archive_index() -> None:
+    sys.path.insert(0, str(REPO_ROOT))
+    from jinja2 import Environment, FileSystemLoader
+    from frontend import TEMPLATE_DIR, render_archive_index
+    render_archive_index(Environment(loader=FileSystemLoader(str(TEMPLATE_DIR))))
+
+
+def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--apply", action="store_true", help="actually change files (default is a dry run)")
-    args = ap.parse_args()
+    ap.add_argument("--recheck", action="store_true",
+                    help="reread article pages for accounts already retired (KEEP_BYLINE still kept)")
+    args = ap.parse_args(argv)
     print(f"retire_posting_accounts: {'APPLY' if args.apply else 'DRY RUN (no files changed)'}")
 
     data = json.loads(VOICES_DATA_PATH.read_text(encoding="utf-8"))
@@ -192,9 +213,20 @@ def main() -> int:
             by_name.setdefault(r["name"].lower(), r["to"])
     by_name = {n: s for n, s in by_name.items() if s not in noindex and s not in ACCOUNTS}
 
+    # Bylines are reattributed only for accounts not yet retired; on a rerun the
+    # archive already holds the result, and refetching would change it.
+    active = {slug: acct for slug, acct in ACCOUNTS.items()
+              if args.recheck or redirects.get(slug, {}).get("to", None) != ""}
+    skipped = [s for s in ACCOUNTS if s not in active]
+    if skipped:
+        print(f"Already retired, bylines left as they are: {', '.join(skipped)}")
     real: dict[str, str] = {}
-    for slug, (name, domain, *_) in ACCOUNTS.items():
+    for slug, (name, domain, *_) in active.items():
         urls = sorted(credited_urls(slug, name, domain))
+        if slug in KEEP_BYLINE:
+            real.update({u: name for u in urls})
+            print(f"\n{slug} ({name}): {len(urls)} article(s), byline kept as plain text")
+            continue
         with ThreadPoolExecutor(max_workers=4) as pool:
             found = dict(zip(urls, pool.map(fetch_page_byline, urls)))
         found.update(retry_unreadable([u for u in urls if found[u] is None]))
@@ -210,9 +242,11 @@ def main() -> int:
     for idx in byline_pages():
         page = idx.read_text(encoding="utf-8", errors="replace")
         new = page
-        for slug, (name, domain, *_) in ACCOUNTS.items():
+        for slug, (name, domain, *_) in active.items():
             def repl(m: re.Match) -> str:
                 prev = [u for u in URL_RE.findall(new[max(0, m.start() - 4000):m.start()]) if domain in u]
+                if slug in KEEP_BYLINE:
+                    return replace_byline(m, name, by_name)
                 return replace_byline(m, real.get(prev[-1], "") if prev else "", by_name)
             new = anchor_re(slug).sub(repl, new)
         if new != page:
@@ -222,7 +256,7 @@ def main() -> int:
 
     # 3. meta.json per day.
     metas = 0
-    names = {a[0] for a in ACCOUNTS.values()}
+    names = {a[0] for a in active.values()}
     for meta in sorted(ARCHIVE_DIR.glob("*/meta.json")):
         d = json.loads(meta.read_text(encoding="utf-8"))
         changed = False
@@ -257,10 +291,7 @@ def main() -> int:
         REDIRECTS_PATH.write_text(json.dumps(dict(sorted(redirects.items())), indent=2) + "\n", encoding="utf-8")
         NOINDEX_LIST_PATH.write_text(json.dumps(sorted(noindex | set(ACCOUNTS)), indent=2) + "\n", encoding="utf-8")
 
-        sys.path.insert(0, str(REPO_ROOT))
-        from jinja2 import Environment, FileSystemLoader
-        from frontend import TEMPLATE_DIR, render_archive_index
-        render_archive_index(Environment(loader=FileSystemLoader(str(TEMPLATE_DIR))))
+        rerender_archive_index()
 
     verb = "" if args.apply else "would be "
     print(f"\n{day_pages} archive day page(s) and {metas} meta.json file(s) {verb}rewritten.")
