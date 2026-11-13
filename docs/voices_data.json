@@ -5517,34 +5517,38 @@
   {
     "name": "Andy Crouch",
     "slug": "andy-crouch",
-    "bio": "Andy Crouch (born 1968) is partner for theology and culture at Praxis, a venture-building organization that supports faith-driven entrepreneurs and innovators. He served for more than a decade as an editor at Christianity Today, where he was executive editor and senior editor for theology and culture, and was previously a campus minister with InterVarsity Christian Fellowship at Harvard University. Crouch's writing focuses on culture-making, technology, family life, and the formation of human persons in an age of distraction and disembodiment. His book Culture Making has become a standard reference for evangelical engagement with culture, and his more recent work (The Tech-Wise Family, The Life We're Looking For) has shaped the conversation about Christian discipleship in a digital age.",
+    "bio": "Andy Crouch is partner for theology and culture at Praxis and a teaching fellow for Practicing the Way. He was an editor at Christianity Today for more than ten years, serving as executive editor from 2012 to 2016, and earlier was a campus minister with InterVarsity Christian Fellowship at Harvard University. He studied classics at Cornell University and holds an MDiv from Boston University School of Theology. His books include Culture Making (2008), Playing God (2013), Strong and Weak (2016), The Tech-Wise Family (2017) and The Life We're Looking For (2022).",
     "affiliation": "Praxis",
-    "role": "Author & Cultural Commentator",
-    "education": "Cornell University (BA); Boston University School of Theology (MDiv)",
+    "role": "Partner for Theology and Culture, Praxis",
     "website": "https://andy-crouch.com",
-    "denomination": "Evangelical (interdenominational; formerly editor at Christianity Today)",
-    "tradition": "Mainstream evangelical; culture-and-technology commentary",
-    "known_for": "The book Culture Making, which reframed evangelical cultural engagement around creating culture rather than condemning it, and The Tech-Wise Family on technology and household formation.",
-    "current_role": "Partner for Theology and Culture at Praxis",
     "deceased": false,
-    "faqs": [
+    "books": [
       {
-        "q": "Who is Andy Crouch?",
-        "a": "Andy Crouch (born 1968) is an author and partner for theology and culture at Praxis, a venture-building organization for faith-driven entrepreneurs. He previously spent more than a decade at Christianity Today, including as executive editor, and served ten years with InterVarsity Christian Fellowship at Harvard."
+        "title": "Culture Making",
+        "amazon_url": "https://www.amazon.com/s?k=Culture+Making+Andy+Crouch"
       },
       {
-        "q": "What is Andy Crouch known for?",
-        "a": "Crouch is best known for Culture Making (2008), which argued Christians should create culture rather than merely critique it, and The Tech-Wise Family (2017) on putting technology in its proper place at home. His recent book The Life We're Looking For addresses personhood in a technological age."
+        "title": "Playing God",
+        "amazon_url": "https://www.amazon.com/s?k=Playing+God+Andy+Crouch"
       },
       {
-        "q": "What is Praxis, where Andy Crouch works?",
-        "a": "Praxis is a venture-building ecosystem that supports founders and organizations pursuing 'redemptive entrepreneurship': business and nonprofit ventures shaped by Christian faith. Crouch serves as its partner for theology and culture, acting as a teacher and framework-builder for its fellows and community."
+        "title": "Strong and Weak",
+        "amazon_url": "https://www.amazon.com/s?k=Strong+and+Weak+Andy+Crouch"
       },
       {
-        "q": "What is Andy Crouch's view on technology?",
-        "a": "Crouch argues that technology is not neutral: it promises 'easy everywhere' abundance while eroding embodied relationships and the formation of persons. He advocates practical household disciplines (like putting devices in their place and prioritizing shared meals and rest) over wholesale rejection of technology."
+        "title": "The Tech-Wise Family",
+        "amazon_url": "https://www.amazon.com/s?k=The+Tech-Wise+Family+Andy+Crouch"
+      },
+      {
+        "title": "The Life We're Looking For",
+        "amazon_url": "https://www.amazon.com/s?k=The+Life+We%27re+Looking+For+Andy+Crouch"
       }
-    ]
+    ],
+    "bio_sources": [
+      "https://andy-crouch.com/about",
+      "https://www.praxis.co/people/andy-crouch"
+    ],
+    "education": ""
   },
   {
     "name": "N.T. Wright",

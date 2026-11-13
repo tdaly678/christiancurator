@@ -2607,6 +2607,98 @@
       "review_notes": "Identity: Andrew Wilson of King's Church London (Substack ajwtheology, X @AJWTheology), the same person our existing page covers (it links the same CT columns and TGC article). All pages opened directly with WebFetch, none through a proxy. ROLE CHANGE AHEAD: his Think Theology post of 16 September 2026 (https://thinktheology.co.uk/blog/article/two_think_conferences_and_some_personal_news) says that 'a few weeks' after the July 2027 THINK conference he and his family plan to move to Southampton to join King's Community Church, with the aim of becoming senior pastor the following year. The CT bio on an October 9 2026 article and his Substack still say teaching pastor at King's Church London, so the bio uses that; the page will need updating in mid 2027. The post also says he now writes mainly on Substack. PhD (King's College London), 'columnist for Christianity Today' and God of All Things come from Crossway (undated) and TGC (undated); Remaking the World and its subtitle from the dated CT bio; Happiness is listed on Crossway and named in the CT excerpt note. Remove from our data: andrew-wilson.com (DNS lookup fails), the education line 'University of Cambridge' (sources say PhD King's College London; Cambridge not verified), the 'Reformed evangelical' label and the books 'Unbreakable' and 'Incomparable', which were not checked. The CT women's roles review shows subscription and gift prompts and may be gated for some readers; the other picks were fully readable. The Substack homepage showed no post dates. No dashes changed in titles. Family details on Crossway (wife and children) left out by rule. Merge (Nov 13 2026): REVIEW BY JULY 2027. He plans to move to King's Community Church, Southampton after the July 2027 THINK conference (Think Theology, Sept 16 2026). Recheck his role, the dek and the bio then.",
       "review_by": "2027-07",
       "last_updated": "2026-11-13"
+    },
+    {
+      "slug": "andy-crouch",
+      "name": "Andy Crouch",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Partner for theology and culture at Praxis | Author of Culture Making and The Tech-Wise Family | Writes on power, technology, culture and institutions",
+      "bio": "Andy Crouch is partner for theology and culture at Praxis and a teaching fellow for Practicing the Way. He was an editor at Christianity Today for more than ten years, serving as executive editor from 2012 to 2016, and earlier was a campus minister with InterVarsity Christian Fellowship at Harvard University. He studied classics at Cornell University and holds an MDiv from Boston University School of Theology. His books include Culture Making (2008), Playing God (2013), Strong and Weak (2016), The Tech-Wise Family (2017) and The Life We're Looking For (2022).",
+      "bio_sources": [
+        {
+          "label": "Bio, andy-crouch.com",
+          "url": "https://andy-crouch.com/about"
+        },
+        {
+          "label": "Team profile, Praxis",
+          "url": "https://www.praxis.co/people/andy-crouch"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "andy-crouch.com",
+          "url": "https://andy-crouch.com/"
+        },
+        {
+          "outlet": "Christianity Today (past outlet)",
+          "url": "https://www.christianitytoday.com/writers/andy-crouch/"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "It's Time to Reckon with Celebrity Power",
+          "url": "https://andy-crouch.com/articles/its_time_to_reckon_with_celebrity_power",
+          "outlet": "andy-crouch.com (first published by The Gospel Coalition)",
+          "date": "2018-03-24",
+          "note": "Argues that celebrity pairs the distance of power with a false sense of intimacy that lets leaders escape accountability, and calls churches to strengthen institutions and limit personal power."
+        },
+        {
+          "title": "It's Time to Talk About Power",
+          "url": "https://andy-crouch.com/articles/its_time_to_talk_about_power",
+          "outlet": "andy-crouch.com (first published in Christianity Today)",
+          "date": "2013",
+          "note": "Argues that power is a gift meant for the flourishing of others, that it is harder to hold accountable when it goes unacknowledged, and that Scripture joins power and servanthood."
+        },
+        {
+          "title": "Stop Engaging 'The Culture'",
+          "url": "https://andy-crouch.com/articles/stop_engaging_the_culture",
+          "outlet": "andy-crouch.com (first published in Christianity Today)",
+          "date": "2016",
+          "note": "Argues that 'the culture' is too vague to engage and that Christian influence comes from loving particular neighbors in particular places and building alternatives, as the early church did."
+        },
+        {
+          "title": "Small Screens, Big World",
+          "url": "https://andy-crouch.com/articles/small_screens_big_world",
+          "outlet": "andy-crouch.com",
+          "date": "2015-04-08",
+          "note": "Reflects on giving up screens for Lent and argues that devices make people less attentive to the world, which embodied experience reveals in ways a screen cannot."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "technology-and-discipleship",
+          "angle": "Screens, attention and setting limits on devices at home."
+        },
+        {
+          "slug": "christian-parenting",
+          "angle": "Household rules for technology in The Tech-Wise Family."
+        },
+        {
+          "slug": "church-accountability",
+          "angle": "Celebrity, power and the institutions that keep leaders accountable."
+        },
+        {
+          "slug": "vocation-and-work",
+          "angle": "Culture making as ordinary work done for neighbors."
+        },
+        {
+          "slug": "politics-and-the-church",
+          "angle": "Why Christians should stop talking about engaging 'the culture'."
+        }
+      ],
+      "related": [
+        "samuel-d-james",
+        "tony-reinke",
+        "brett-mccracken"
+      ],
+      "same_as": [
+        "https://andy-crouch.com/",
+        "https://www.praxis.co/people/andy-crouch",
+        "https://www.christianitytoday.com/writers/andy-crouch/"
+      ],
+      "review_notes": "Identity: the Praxis partner and Culture Making author, same as our existing andy-crouch page. Sources read directly: andy-crouch.com/about (current roles: partner for theology and culture at Praxis, teaching fellow for Practicing the Way; CT executive editor 2012 to 2016; InterVarsity campus minister at Harvard; Cornell classics; BU MDiv; footer '© 2026', no other page date) and praxis.co/people/andy-crouch (title 'Partner, Theology & Culture'; says previously Executive Editor of CT; gives book years used in the bio; undated). praxislabs.org/team now redirects to praxis.co. Conflict: the Christianity Today writer page bio says 'an editor at large for Christianity Today'; his own site and Praxis say CT is a past role, so the CT title is left out and should be confirmed or ignored. The existing voices_data bio gives a birth year (1968) and praise wording ('standard reference'); neither is used here. Start here: all four read on andy-crouch.com, byline Andy Crouch. Celebrity power page says it originally appeared 24 March 2018 at The Gospel Coalition (I did not open the TGC original). 'It's Time to Talk About Power' shows only 'October 2013' (CT) and 'Stop Engaging the Culture' only 'July/August 2016, p. 33' (CT print), so those dates are given as years; I did not open the CT originals. Small Screens says it originally appeared on andy-crouch.com on 8 April 2015. The Tech-Wise Family topic angle (christian-parenting) rests on the book title and the site's Tech-Wise section, not on a Start here piece. My web search budget ran out during this batch, so no further outlets were checked. Merge (Nov 13 2026): Praxis people page removed from Where they write (it is a profile, kept in Sources). Christianity Today is labelled a past outlet with no title. The 1968 birth year and the praise wording were removed from voices_data.json.",
+      "last_updated": "2026-11-13"
     }
   ]
 }
