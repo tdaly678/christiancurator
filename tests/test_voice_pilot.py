@@ -252,14 +252,18 @@ BATCH3_LIVE = {"dallas-willard", "roger-olson", "david-vandrunen", "doug-wilson"
                "tony-reinke", "john-piper"}
 # Nothing from batch 3 is still held on branch voices-batch3.
 BATCH3_HELD: set[str] = set()
+# Batch 4 went live writer by writer on Nov 13 2026 after Meg's spot-check.
+BATCH4_LIVE = {"aaron-m-renn"}
+# Held on branch voices-batch4 until Meg re-checks their fixes; never indexed on main.
+BATCH4_HELD = {"preston-sprinkle", "sinclair-ferguson", "brian-mclaren"}
 
 
 def test_pilot_data_is_all_reviewed():
     # Tom approved five on 2026-11-12; abby-silva was retired (posting account).
     # Batch 2 (seven) was approved the same day after Meg's spot-check.
     # Batch 3 went live writer by writer after Meg's spot-check; Reinke and Piper followed once their picks were checked.
-    assert set(WRITERS) == APPROVED | BATCH2 | BATCH3_LIVE
-    assert not set(WRITERS) & BATCH3_HELD
+    assert set(WRITERS) == APPROVED | BATCH2 | BATCH3_LIVE | BATCH4_LIVE
+    assert not set(WRITERS) & (BATCH3_HELD | BATCH4_HELD)
     assert all(w["reviewed"] is True for w in WRITERS.values())
 
 

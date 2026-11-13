@@ -1816,6 +1816,114 @@
         "https://www.crossway.org/authors/joe-carter/"
       ],
       "review_notes": "Identity: same Joe Carter as our existing page (TGC editor; the page links the same TGC articles). The existing page links https://www.joecarter.me, which no longer resolves (DNS lookup fails for both www and bare domain); remove that link. Titles differ by source: TGC profile and current article bio say contributing editor; Crossway says senior writer; Acton's staff page says Acton senior editor and also lists ERLC communications specialist and Patrick Henry College adjunct roles that look out of date, so only the Acton senior editor title is used and it should be confirmed. MDiv comes from Crossway only. Crossway does not show the date of its bio. The old page's meta description calls him a senior editor at TGC and 'prolific'; both should go. Merge (Nov 12 2026): Acton senior editor sentence dropped per Meg, and the Acton staff page with it (bio source, where they write, sameAs). joecarter.me and the old senior editor and prolific wording removed from voices_data.json and the /voices/ cards."
+    },
+    {
+      "slug": "aaron-m-renn",
+      "name": "Aaron M. Renn",
+      "reviewed": true,
+      "page_kind": "guide",
+      "dek": "Cofounder and senior fellow at American Reformer | Author of Life in the Negative World | Writes on evangelicalism, the negative world, men and leadership",
+      "bio": "Aaron M. Renn is cofounder and senior fellow at American Reformer and writes a newsletter at aaronrenn.com on religion, family, leadership, urbanism and technology. He is the author of Life in the Negative World: Confronting Challenges in an Anti-Christian Culture (Zondervan, 2024), which develops his \"three worlds\" model of Christianity's changing place in American life. He was previously a senior fellow in urban policy at the Manhattan Institute and a managing director at Accenture, and he lives in Indianapolis.",
+      "bio_sources": [
+        {
+          "label": "About page, aaronrenn.com",
+          "url": "https://www.aaronrenn.com/about"
+        },
+        {
+          "label": "Author page, American Reformer",
+          "url": "https://archive.americanreformer.org/author/arenn/"
+        },
+        {
+          "label": "Author bio, First Things",
+          "url": "https://firstthings.com/the-three-worlds-of-evangelicalism/"
+        }
+      ],
+      "where_they_write": [
+        {
+          "outlet": "Aaron Renn (Substack newsletter)",
+          "url": "https://www.aaronrenn.com/"
+        },
+        {
+          "outlet": "First Things",
+          "url": "https://firstthings.com/archive/?_author=aaron-m-renn"
+        },
+        {
+          "outlet": "American Reformer",
+          "url": "https://archive.americanreformer.org/author/arenn/"
+        }
+      ],
+      "start_here": [
+        {
+          "title": "The Three Worlds of Evangelicalism",
+          "url": "https://firstthings.com/the-three-worlds-of-evangelicalism/",
+          "outlet": "First Things",
+          "date": "2022-02-01",
+          "note": "Sets out a positive, neutral and negative world sequence for Christianity's public standing in America and argues that evangelicals need new strategies for the negative world."
+        },
+        {
+          "title": "Pastoral Burnout and Pauline Strength",
+          "url": "https://firstthings.com/pastoral-burnout-and-pauline-strength/",
+          "outlet": "First Things",
+          "date": "2022-02-22",
+          "note": "Argues that rising hostility to Christianity has added pressure on pastors and suggests toughness, peer support and bivocational work as ways to endure."
+        },
+        {
+          "title": "Evolving Evangelical Gender Theology",
+          "url": "https://www.aaronrenn.com/p/evolving-evangelical-gender-theology",
+          "outlet": "Aaron Renn (Substack)",
+          "date": "2023-02-16",
+          "note": "Argues that evangelical complementarianism is fragmenting as its founding generation ages, using a Russell Moore column to sketch a possible realignment."
+        },
+        {
+          "title": "The Problem with the Evangelical Elite",
+          "url": "https://firstthings.com/the-problem-with-the-evangelical-elite/",
+          "outlet": "First Things",
+          "date": "2025-12-15",
+          "note": "Argues that evangelicals are underrepresented in top roles in media, academia, law and finance and calls for lay leadership and a theology that values influential professional work."
+        },
+        {
+          "title": "Evangelical Cultural Cringe",
+          "url": "https://www.aaronrenn.com/p/cultural-cringe",
+          "outlet": "Aaron Renn (Substack)",
+          "date": "2026-02-19",
+          "note": "Argues that evangelical cultural engagement lacks critical distance from elite secular culture and urges a more confident, non-combative posture."
+        }
+      ],
+      "topics": [
+        {
+          "slug": "evangelicalism",
+          "angle": "The positive, neutral and negative worlds of American evangelicalism."
+        },
+        {
+          "slug": "politics-and-the-church",
+          "angle": "How Christians engage a culture that has turned against them."
+        },
+        {
+          "slug": "christian-masculinity",
+          "angle": "Men, leadership and the decline of male participation in church."
+        },
+        {
+          "slug": "complementarianism-egalitarianism",
+          "angle": "Where evangelical gender theology is heading."
+        },
+        {
+          "slug": "pastoral-ministry",
+          "angle": "Pastoral burnout and resilience in a hostile culture."
+        }
+      ],
+      "related": [
+        "carl-trueman",
+        "russell-moore",
+        "samuel-d-james",
+        "mike-sabo"
+      ],
+      "same_as": [
+        "https://www.aaronrenn.com/",
+        "https://archive.americanreformer.org/author/arenn/",
+        "https://firstthings.com/archive/?_author=aaron-m-renn"
+      ],
+      "review_notes": "Drafted for batch 3 (voices-batch3-review.md) and carried into batch 4 unchanged except Related. Identity: the existing voice page links aaronrenn.com, the same Substack used here. The American Reformer author page (americanreformer.org/author/arenn/ redirects to archive.americanreformer.org) names him 'Aaron Renn' without the middle initial; its bio matches (Manhattan Institute, aaronrenn substack). The aaronrenn.com About page gives his American Reformer title as Senior Fellow; the American Reformer page gives Cofounder and Senior Fellow, used in the dek and bio. No degrees, church or denomination are stated on any page opened. First Things listing pages show no dates; dates come from each article page. The First Things elite essay may be metered; the same essay is free at aaronrenn.com/p/the-problem-with-the-evangelical-elite (2025-12-16). Many aaronrenn.com posts are paid-only; all picks from it were checked as free. Related: stephen-wolfe (noindexed) replaced by mike-sabo (American Reformer). Merge (Nov 13 2026): Meg kept the First Things original for the elite essay; the free copy at aaronrenn.com/p/the-problem-with-the-evangelical-elite is only a fallback if First Things gates it.",
+      "last_updated": "2026-11-13"
     }
   ]
 }
