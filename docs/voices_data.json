@@ -205,13 +205,23 @@
   {
     "name": "Ginger Blomberg",
     "slug": "ginger-blomberg",
-    "bio": "Ginger Blomberg is a writer for The Gospel Coalition who covers international Christianity, church growth, and mission. Her reporting brings attention to the global body of Christ, particularly stories of faith flourishing in places where the gospel is spreading rapidly.",
+    "bio": "Ginger Blomberg is a writer for The Gospel Coalition and the author of Charlie and the Preschool Prodigal. According to her Gospel Coalition profile, she lives in South Carolina's Lowcountry.",
     "affiliation": "The Gospel Coalition",
     "role": "Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "GB"
+    "website": "https://www.thegospelcoalition.org/profile/ginger-blomberg/",
+    "books": [
+      {
+        "title": "Charlie and the Preschool Prodigal",
+        "amazon_url": "https://www.amazon.com/s?k=Charlie+and+the+Preschool+Prodigal+Ginger+Blomberg"
+      }
+    ],
+    "initials": "GB",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/ginger-blomberg/",
+      "https://www.thegospelcoalition.org/reviews/will-hope-him-job/"
+    ],
+    "education": ""
   },
   {
     "name": "Todd Boone",
@@ -311,13 +321,19 @@
   {
     "name": "Thomas Brewer",
     "slug": "thomas-brewer",
-    "bio": "Thomas Brewer is resident adjunct professor at Reformation Bible College and vice president of publishing at Ligonier Ministries. He is a teaching elder in the Presbyterian Church in America.",
-    "affiliation": "Reformation Bible College, Ligonier Ministries",
-    "role": "Professor and publishing executive",
-    "education": "",
-    "website": "https://reformationbiblecollege.org/faculty/thomas-brewer",
+    "bio": "Thomas Brewer is vice president of editorial for Ligonier Ministries, editor of Tabletalk magazine, and a teaching elder in the Presbyterian Church in America, according to his Ligonier teacher page (checked November 2026). Reformation Bible College lists him as a resident adjunct professor and says he holds a BA in letters and classical languages from the University of Oklahoma and an MDiv from Reformed Theological Seminary in Orlando.",
+    "affiliation": "Ligonier Ministries; Reformation Bible College",
+    "role": "Editor",
+    "website": "https://learn.ligonier.org/teachers/thomas-brewer",
     "books": [],
-    "initials": "TB"
+    "initials": "TB",
+    "deceased": false,
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/thomas-brewer",
+      "https://reformationbiblecollege.org/faculty/thomas-brewer",
+      "https://learn.ligonier.org/articles/where-did-christianity-come-from"
+    ],
+    "education": ""
   },
   {
     "name": "Cory Brock",
@@ -1541,13 +1557,18 @@
   {
     "name": "Scott Hurst",
     "slug": "scott-hurst",
-    "bio": "Pastor at Northminster Baptist Church in Toronto; maintains writing platform Write to Understand focusing on Christian theology and Canadian church history. Contributes to The Gospel Coalition, Servants of Grace, and For the Church.",
-    "affiliation": "Northminster Baptist Church (Toronto)",
-    "role": "Pastor and Writer",
-    "education": "Diploma from Antioch School of Church Planting and Leadership Development",
+    "bio": "Scott Hurst is the pastor of Northminster Baptist Church, just north of Toronto. He writes regularly on his Substack, Write to Understand.",
+    "affiliation": "Northminster Baptist Church",
+    "role": "Pastor",
     "website": "https://writetounderstand.substack.com/",
     "books": [],
-    "initials": "SH"
+    "initials": "SH",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/article/joanthan-edwards-heaven-equips/",
+      "https://writetounderstand.substack.com/about"
+    ],
+    "education": ""
   },
   {
     "name": "Scott James",
@@ -1831,26 +1852,28 @@
   {
     "name": "Jared Kennedy",
     "slug": "jared-kennedy",
-    "bio": "Jared Kennedy is a pastor, author, and speaker who focuses on helping families and churches navigate faith formation in a secular culture. He writes about parenting, discipleship, and how Christians can raise spiritually resilient children in the modern world. His work emphasizes the integration of faith into everyday family life.",
-    "affiliation": "The Grapevine Faith",
-    "role": "Pastor & Author",
-    "education": "Southern Seminary",
+    "bio": "Jared Kennedy is managing editor for books and curriculum at The Gospel Coalition and series editor of TGC's Hard Questions series. He holds a ThM from The Southern Baptist Theological Seminary, cofounded the Gospel-Centered Family website and ministry, and spent about 15 years as a children's minister and family pastor. His books include Big Thoughts for Tiny Tots and The Story of Martin Luther.",
+    "affiliation": "The Gospel Coalition",
+    "role": "Editor",
     "website": "https://www.jaredkennedy.com",
     "books": [
       {
-        "title": "Raising Your Kids on Purpose for Their Calling",
-        "amazon_url": "https://www.amazon.com/s?k=Raising+Your+Kids+on+Purpose+for+Their+Calling+Jared+Kennedy"
+        "title": "Big Thoughts for Tiny Tots",
+        "amazon_url": "https://www.amazon.com/s?k=Big+Thoughts+for+Tiny+Tots+Jared+Kennedy"
       },
       {
-        "title": "The Fate of the Faithful: Christianity in the Middle East",
-        "amazon_url": "https://www.amazon.com/s?k=The+Fate+of+the+Faithful+Christianity+in+the+Middle+East+Jared+Kennedy"
-      },
-      {
-        "title": "Unashamed: Dropping the Baggage, Pulling the Mask, and Finding Freedom to Be Yourself",
-        "amazon_url": "https://www.amazon.com/s?k=Unashamed+Dropping+the+Baggage+Pulling+the+Mask+Finding+Freedom+Jared+Kennedy"
+        "title": "The Story of Martin Luther",
+        "amazon_url": "https://www.amazon.com/s?k=The+Story+of+Martin+Luther+Jared+Kennedy"
       }
     ],
-    "initials": "JK"
+    "initials": "JK",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/jared-kennedy/",
+      "https://www.thegospelcoalition.org/article/every-psalm-belongs-jesus/",
+      "https://mereorthodoxy.com/keep-the-christian-calendar-but-keep-it-under-the-word"
+    ],
+    "education": ""
   },
   {
     "slug": "andrew-kern",
@@ -3359,22 +3382,38 @@
   {
     "name": "Matt Smethurst",
     "slug": "matt-smethurst",
-    "bio": "Matt Smethurst is an editor and writer for The Gospel Coalition, where he helps curate and create Christian content for a global audience. Known for his clear, accessible writing on Scripture, theology, and Christian living, Smethurst has become a trusted voice for evangelical readers seeking to deepen their faith and understanding of God's Word.",
-    "affiliation": "The Gospel Coalition",
-    "role": "Editor & Writer",
-    "education": "",
-    "website": "",
+    "bio": "Matt Smethurst is lead pastor of River City Baptist Church in Richmond, Virginia, and co-hosts and edits The Gospel Coalition's Everyday Pastor podcast. His books include Tim Keller on the Christian Life (Crossway, 2025), Before You Share Your Faith (10Publishing, 2022), Deacons: How They Serve and Strengthen the Church (Crossway, 2021), Before You Open Your Bible (10Publishing, 2019), and 1 to 2 Thessalonians: A 12-Week Study (Crossway, 2017).",
+    "affiliation": "River City Baptist Church, Richmond, Virginia",
+    "role": "Pastor",
+    "website": "https://www.thegospelcoalition.org/profile/matt-smethurst/",
     "books": [
       {
-        "title": "Practically Speaking: A Toolkit for Practically Applying God's Word",
-        "amazon_url": "https://www.amazon.com/s?k=Practically+Speaking+Matt+Smethurst"
+        "title": "Tim Keller on the Christian Life: The Transforming Power of the Gospel",
+        "amazon_url": "https://www.amazon.com/s?k=Tim+Keller+on+the+Christian+Life%3A+The+Transforming+Power+of+the+Gospel+Matt+Smethurst"
       },
       {
-        "title": "Before You Open Your Bible: Nine Ways to Approach Scripture",
-        "amazon_url": "https://www.amazon.com/s?k=Before+You+Open+Your+Bible+Matt+Smethurst"
+        "title": "Before You Share Your Faith: Five Ways to Be Evangelism Ready",
+        "amazon_url": "https://www.amazon.com/s?k=Before+You+Share+Your+Faith%3A+Five+Ways+to+Be+Evangelism+Ready+Matt+Smethurst"
+      },
+      {
+        "title": "Deacons: How They Serve and Strengthen the Church",
+        "amazon_url": "https://www.amazon.com/s?k=Deacons%3A+How+They+Serve+and+Strengthen+the+Church+Matt+Smethurst"
+      },
+      {
+        "title": "Before You Open Your Bible: Nine Heart Postures for Approaching God's Word",
+        "amazon_url": "https://www.amazon.com/s?k=Before+You+Open+Your+Bible%3A+Nine+Heart+Postures+for+Approaching+God%27s+Word+Matt+Smethurst"
+      },
+      {
+        "title": "1-2 Thessalonians: A 12-Week Study",
+        "amazon_url": "https://www.amazon.com/s?k=1-2+Thessalonians%3A+A+12-Week+Study+Matt+Smethurst"
       }
     ],
-    "initials": "MS"
+    "initials": "MS",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/matt-smethurst/"
+    ],
+    "education": ""
   },
   {
     "name": "Ryan Smith",
@@ -3994,26 +4033,32 @@
   {
     "name": "Nadya Williams",
     "slug": "nadya-williams",
-    "bio": "Nadya Williams is a classicist and historian who left academia to write about ancient Christianity and classical literature from a Christian perspective. Books Editor at Mere Orthodoxy, she is the author of Cultural Christians in the Early Church and other works on the ancient world.",
-    "affiliation": "Mere Orthodoxy, Providence Magazine",
-    "role": "Author & Educator",
-    "education": "PhD in Classics, Princeton University",
+    "bio": "Nadya Williams holds a PhD in Classics from Princeton University and is managing editor at Mere Orthodoxy, where she hosts the Christians Reading Classics podcast. She is a contributing editor at Providence Magazine and Front Porch Republic, a senior fellow at the Ashbrook Center, and interim director of the MFA in Creative Writing at Ashland University. Her books include Cultural Christians in the Early Church (Zondervan Academic, 2023), Mothers, Children, and the Body Politic (IVP Academic, 2024), and Christians Reading Classics (Zondervan Academic, 2025).",
+    "affiliation": "Mere Orthodoxy",
+    "role": "Editor and Author",
     "website": "https://www.nadyawilliams.com",
     "books": [
       {
         "title": "Cultural Christians in the Early Church",
-        "amazon_url": "https://www.amazon.com/s?k=Cultural+Christians+Early+Church+Nadya+Williams"
+        "amazon_url": "https://www.amazon.com/s?k=Cultural+Christians+in+the+Early+Church+Nadya+Williams"
       },
       {
-        "title": "Mothers, Children, and the Body Politic",
-        "amazon_url": "https://www.amazon.com/s?k=Mothers+Children+Body+Politic+Nadya+Williams"
+        "title": "Mothers, Children, and the Body Politic: Ancient Christianity and the Recovery of Human Dignity",
+        "amazon_url": "https://www.amazon.com/s?k=Mothers%2C+Children%2C+and+the+Body+Politic%3A+Ancient+Christianity+and+the+Recovery+of+Human+Dignity+Nadya+Williams"
       },
       {
         "title": "Christians Reading Classics",
         "amazon_url": "https://www.amazon.com/s?k=Christians+Reading+Classics+Nadya+Williams"
       }
     ],
-    "initials": "NW"
+    "initials": "NW",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.nadyawilliams.com",
+      "https://www.thegospelcoalition.org/profile/nadya-williams/",
+      "https://www.thegospelcoalition.org/reviews/mere-complementarianism/"
+    ],
+    "education": ""
   },
   {
     "name": "Kyle Worley",
@@ -4665,34 +4710,23 @@
   {
     "name": "Daniel R. Hyde",
     "slug": "daniel-r-hyde",
-    "bio": "Daniel R. Hyde is a Reformed pastor and prolific Christian author known for his accessible theological writings. He has dedicated his ministry to helping believers understand biblical doctrine and church history through clear, engaging scholarship.",
-    "affiliation": "Oceanside Christian Fellowship; Ligonier Ministries",
-    "role": "Pastor & Author",
-    "education": "M.A. in Theological Studies, Westminster Seminary California",
-    "website": "https://oceanside.church/",
+    "bio": "Daniel R. Hyde is pastor of Oceanside United Reformed Church in Carlsbad, California. According to his Ligonier Ministries teacher page (checked November 2026), he is the featured teacher of the Ligonier teaching series God in Our Midst and the author of many books, including Welcome to a Reformed Church.",
+    "affiliation": "Oceanside United Reformed Church",
+    "role": "Pastor",
+    "website": "https://learn.ligonier.org/teachers/daniel-hyde",
     "books": [
       {
-        "title": "Jesus Loves the Church: Female Ministry and the Office of Deacon",
-        "amazon_url": "https://www.amazon.com/s?k=Jesus+Loves+Church+Female+Ministry+Deacon+Daniel+Hyde"
-      },
-      {
-        "title": "The Ten Commandments: Living as God's Covenant People",
-        "amazon_url": "https://www.amazon.com/s?k=Ten+Commandments+Living+Covenant+People+Daniel+Hyde"
-      },
-      {
-        "title": "With Heart and Mind: A Guide to Loving God",
-        "amazon_url": "https://www.amazon.com/s?k=With+Heart+and+Mind+Guide+Loving+God+Daniel+Hyde"
-      },
-      {
-        "title": "The Serpent's Seed: A Reformation Understanding of Genesis 3:15",
-        "amazon_url": "https://www.amazon.com/s?k=Serpent+Seed+Reformation+Genesis+Daniel+Hyde"
-      },
-      {
-        "title": "What Can I Find in the Psalms? A Study of the Psalms",
-        "amazon_url": "https://www.amazon.com/s?k=What+Can+I+Find+Psalms+Daniel+Hyde"
+        "title": "Welcome to a Reformed Church",
+        "amazon_url": "https://www.amazon.com/s?k=Welcome+to+a+Reformed+Church+Daniel+R.+Hyde"
       }
     ],
-    "initials": "DRH"
+    "initials": "DRH",
+    "deceased": false,
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/daniel-hyde",
+      "https://learn.ligonier.org/articles/how-did-we-get-canons-dort"
+    ],
+    "education": ""
   },
   {
     "name": "Ryan Currie",
@@ -4834,13 +4868,27 @@
   {
     "name": "Reagan Rose",
     "slug": "reagan-rose",
-    "bio": "Reagan Rose (MDiv, The Master's Seminary) is the founder of Redeeming Productivity, a media ministry devoted to a gospel-centered approach to personal productivity. He is the author of 'Redeeming Productivity: Getting More Done for the Glory of God' and previously served as director of digital platforms for Grace to You.",
+    "bio": "Reagan Rose is the founder of Redeeming Productivity, a media ministry that helps Christians develop a biblically grounded understanding of personal productivity. According to the ministry's about page, he holds an MDiv, teaches in his local church, and is the author of four books, including Redeeming Productivity: Getting More Done for the Glory of God and Well Done: A Strategy for Life Stewardship.",
     "affiliation": "Redeeming Productivity",
-    "role": "Author & Founder",
-    "education": "",
+    "role": "Author",
     "website": "https://redeemingproductivity.com",
-    "books": [],
-    "initials": "RR"
+    "books": [
+      {
+        "title": "Redeeming Productivity: Getting More Done for the Glory of God",
+        "amazon_url": "https://www.amazon.com/s?k=Redeeming+Productivity%3A+Getting+More+Done+for+the+Glory+of+God+Reagan+Rose"
+      },
+      {
+        "title": "Well Done: A Strategy for Life Stewardship",
+        "amazon_url": "https://www.amazon.com/s?k=Well+Done%3A+A+Strategy+for+Life+Stewardship+Reagan+Rose"
+      }
+    ],
+    "initials": "RR",
+    "deceased": false,
+    "bio_sources": [
+      "https://redeemingproductivity.com/about/",
+      "https://www.christianfocus.com/row/about/our-authors/1998/reagan-rose"
+    ],
+    "education": ""
   },
   {
     "name": "Louis Markos",
@@ -4919,13 +4967,27 @@
   {
     "name": "John Beeson",
     "slug": "john-beeson",
-    "bio": "John Beeson is co-lead pastor of New Life Bible Fellowship in Tucson, Arizona. A graduate of Gordon College and Princeton Theological Seminary (MDiv), he pastored in New Jersey before returning to Arizona in 2015. He is coauthor of Trading Faces: Removing the Masks That Hide Your God-Given Identity (with his wife, Angel) and Blogging for God's Glory in a Click-Bait World, and he writes regularly at The Bee Hive and for The Gospel Coalition.",
-    "affiliation": "New Life Bible Fellowship (Tucson, AZ)",
-    "role": "Co-Lead Pastor & Author",
-    "education": "",
+    "bio": "John Beeson serves as co-lead pastor at New Life Bible Fellowship in Tucson, Arizona. He attended Gordon College and Princeton Theological Seminary and blogs at The Bee Hive. He coauthored Blogging for God's Glory in a Clickbait World and, with Angel Beeson, Trading Faces.",
+    "affiliation": "New Life Bible Fellowship, Tucson, Arizona",
+    "role": "Pastor",
     "website": "https://www.thebeehive.live",
-    "books": [],
-    "initials": "JB"
+    "books": [
+      {
+        "title": "Trading Faces",
+        "amazon_url": "https://www.amazon.com/s?k=Trading+Faces+John+Beeson"
+      },
+      {
+        "title": "Blogging for God's Glory in a Clickbait World",
+        "amazon_url": "https://www.amazon.com/s?k=Blogging+for+God%27s+Glory+in+a+Clickbait+World+John+Beeson"
+      }
+    ],
+    "initials": "JB",
+    "deceased": false,
+    "bio_sources": [
+      "https://gcdiscipleship.com/article-feed/dont-give-yourself-grace",
+      "https://www.thebeehive.live"
+    ],
+    "education": ""
   },
   {
     "name": "Joanna Kimbrel",
@@ -7330,26 +7392,28 @@
   {
     "name": "Michael Hidalgo",
     "slug": "michael-hidalgo",
-    "bio": "Michael Hidalgo is a pastor, author, and spiritual director who has dedicated his ministry to helping Christians integrate their faith into everyday life. He has served as a lead pastor and has written extensively on discipleship, spiritual formation, and living out biblical values in a secular culture. His work encourages believers toward deeper commitment to Christ and authentic Christian community.",
-    "affiliation": "Denver Bible Church",
-    "role": "Pastor & Author",
-    "education": "",
-    "website": "",
+    "bio": "Michael Hidalgo was lead pastor of Denver Community Church in Denver, Colorado, preaching his final sermon in that role in May 2025. He is the author of Unlost: Being Found by the One We Are Looking For and Changing Faith: Questions, Doubts and Choices About an Unchanging God, both published by InterVarsity Press.",
+    "affiliation": "",
+    "role": "Pastor and Author",
+    "website": "https://relevantmagazine.com/author/michaelhidalgo/",
     "books": [
       {
-        "title": "Practicing the Way of Jesus",
-        "amazon_url": "https://www.amazon.com/s?k=Practicing+the+Way+of+Jesus+Michael+Hidalgo"
+        "title": "Unlost: Being Found by the One We Are Looking For",
+        "amazon_url": "https://www.amazon.com/s?k=Unlost%3A+Being+Found+by+the+One+We+Are+Looking+For+Michael+Hidalgo"
       },
       {
-        "title": "Redeeming Sex",
-        "amazon_url": "https://www.amazon.com/s?k=Redeeming+Sex+Michael+Hidalgo"
-      },
-      {
-        "title": "Spiritual Friendship",
-        "amazon_url": "https://www.amazon.com/s?k=Spiritual+Friendship+Michael+Hidalgo"
+        "title": "Changing Faith: Questions, Doubts and Choices About an Unchanging God",
+        "amazon_url": "https://www.amazon.com/s?k=Changing+Faith%3A+Questions%2C+Doubts+and+Choices+About+an+Unchanging+God+Michael+Hidalgo"
       }
     ],
-    "initials": "MH"
+    "initials": "MH",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.christiantoday.com/news/large-church-in-colorado-goes-lgbt-inclusive",
+      "https://publishersweekly.com/978-0830836956",
+      "https://denverchurch.podbean.com/e/may-18-2025-luke-let-us-begin-again%e2%80%a6"
+    ],
+    "education": ""
   },
   {
     "name": "Alyson Punzi",
@@ -8048,13 +8112,24 @@
   {
     "name": "Christopher Cook",
     "slug": "christopher-cook",
-    "bio": "Christopher Cook is a writer and Christian thought leader who contributes to various faith-based publications and platforms. His work engages contemporary issues through a biblical lens, offering thoughtful perspective for modern Christian audiences.",
-    "affiliation": "",
-    "role": "Writer & Content Creator",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "CC"
+    "bio": "Christopher Cook is the author of Healing What You Can't Erase: Transform Your Mental, Emotional, and Spiritual Health from the Inside Out; his publisher describes him as a pastor and leadership coach. He hosts Win Today: Your Roadmap to Wholeness and writes a Substack newsletter of the same name.",
+    "affiliation": "Win Today",
+    "role": "Author",
+    "website": "https://wintodaychris.substack.com/",
+    "books": [
+      {
+        "title": "Healing What You Can't Erase: Transform Your Mental, Emotional, and Spiritual Health from the Inside Out",
+        "amazon_url": "https://www.amazon.com/s?k=Healing+What+You+Can%27t+Erase%3A+Transform+Your+Mental%2C+Emotional%2C+and+Spiritual+Health+from+the+Inside+Out+Christopher+Cook"
+      }
+    ],
+    "initials": "CC",
+    "deceased": false,
+    "bio_sources": [
+      "https://wintodaychris.substack.com/about",
+      "https://wintodaychris.substack.com/archive",
+      "https://www.penguin.com.au/books/healing-what-you-cant-erase-9780593445303"
+    ],
+    "education": ""
   },
   {
     "name": "Bruce Henning",
@@ -10736,13 +10811,18 @@
   {
     "name": "Katie Deckert",
     "slug": "katie-deckert",
-    "bio": "Katie Deckert is a pastor's wife and mother of three in northern Virginia, where she is a member of Emmanuel Baptist Church in Alexandria. Drawing on fifteen years alongside her husband in ministry, she writes to encourage pastors' wives with the truths of Scripture and honest reflection on the hidden costs and quiet graces of life in ministry, including for 9Marks.",
-    "affiliation": "Emmanuel Baptist Church, Alexandria",
+    "bio": "Katie Deckert is a pastor's wife and mother in northern Virginia and a member of Emmanuel Baptist Church. She writes a monthly newsletter called Dependable Comfort, according to her Gospel Coalition profile.",
+    "affiliation": "Emmanuel Baptist Church",
     "role": "Writer",
-    "education": "",
-    "website": "",
+    "website": "https://katiedeckert.com/",
     "books": [],
-    "initials": "KD"
+    "initials": "KD",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/katie-deckert/",
+      "https://www.thegospelcoalition.org/article/ai-parenting-advice/"
+    ],
+    "education": ""
   },
   {
     "name": "Reid Patton",
@@ -10891,13 +10971,32 @@
   {
     "name": "Andrew Davis",
     "slug": "andrew-davis",
-    "bio": "Andrew Davis is a pastor and Bible teacher known for his expository preaching and commitment to helping Christians understand Scripture deeply. He has ministered in pastoral roles and is recognized for his work in discipleship and biblical exposition within evangelical churches.",
-    "affiliation": "",
-    "role": "Pastor & Bible Teacher",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "AD"
+    "bio": "Andrew M. Davis, known as Andy Davis, is senior pastor of First Baptist Church of Durham, North Carolina, and founder of Two Journeys Ministry. According to his Gospel Coalition profile (checked November 2026), he chairs The Gospel Coalition's board, is a visiting professor of church history at Southeastern Baptist Theological Seminary, and holds a PhD from The Southern Baptist Theological Seminary. His books include How to Memorize Scripture for Life, Exalting Jesus in Isaiah, and The Glory Now Revealed.",
+    "affiliation": "First Baptist Church of Durham",
+    "role": "Pastor",
+    "website": "https://www.thegospelcoalition.org/profile/andy-davis/",
+    "books": [
+      {
+        "title": "How to Memorize Scripture for Life",
+        "amazon_url": "https://www.amazon.com/s?k=How+to+Memorize+Scripture+for+Life+Andrew+Davis"
+      },
+      {
+        "title": "Exalting Jesus in Isaiah",
+        "amazon_url": "https://www.amazon.com/s?k=Exalting+Jesus+in+Isaiah+Andrew+Davis"
+      },
+      {
+        "title": "The Glory Now Revealed",
+        "amazon_url": "https://www.amazon.com/s?k=The+Glory+Now+Revealed+Andrew+Davis"
+      }
+    ],
+    "initials": "AD",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/andy-davis/",
+      "https://learn.ligonier.org/teachers/andrew-davis",
+      "https://www.thegospelcoalition.org/article/scripture-memorization-helps-pastor-well/"
+    ],
+    "education": ""
   },
   {
     "name": "David Huffstutler",
@@ -11370,22 +11469,19 @@
   {
     "name": "Bill Elliff",
     "slug": "bill-elliff",
-    "bio": "Bill Elliff is a pastor, author, and conference speaker known for his ministry in revival and spiritual leadership. He has served as senior pastor of the Summit Church in Arkansas and is deeply committed to equipping believers for authentic Christian living and biblical discipleship.",
-    "affiliation": "The Summit Church",
-    "role": "Pastor & Author",
-    "education": "",
-    "website": "",
-    "books": [
-      {
-        "title": "Prayed On: How to Pray for Your Pastor and Leaders",
-        "amazon_url": "https://www.amazon.com/s?k=Prayed+On+Bill+Elliff"
-      },
-      {
-        "title": "Believing God",
-        "amazon_url": "https://www.amazon.com/s?k=Believing+God+Bill+Elliff"
-      }
+    "bio": "Bill Elliff is the founding and national engage pastor of The Summit Church in North Little Rock, Arkansas. According to his website (checked November 2026), he serves on the national leadership teams of OneCry, a call for spiritual awakening, and the 6:4 Fellowship, and he has written 20 books and booklets along with hundreds of articles. He writes the Graceful Truth blog.",
+    "affiliation": "The Summit Church, North Little Rock, Arkansas",
+    "role": "Pastor",
+    "website": "https://www.billelliff.org/",
+    "books": [],
+    "initials": "BE",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.billelliff.org/about",
+      "https://www.billelliff.org/",
+      "https://www.premierchristianity.com/bill-eliff/2171.bio"
     ],
-    "initials": "BE"
+    "education": ""
   },
   {
     "name": "PJ Dunn",
@@ -12157,13 +12253,18 @@
   {
     "name": "Ronald William DiGiacomo",
     "slug": "ronald-william-digiacomo",
-    "bio": "Ronald William DiGiacomo is a Reformed writer and ruling elder in the Presbyterian tradition who holds to the Westminster Standards. He blogs at Philosophical Theology on topics such as revelational epistemology, presuppositional apologetics, and Reformed metaphysics.",
-    "affiliation": "Philosophical Theology (blog)",
-    "role": "Reformed Writer & Ruling Elder",
-    "education": "",
+    "bio": "Ronald William DiGiacomo writes the Philosophical Theology blog, which covers Reformed metaphysics, revelational epistemology, and presuppositional apologetics. According to the blog's about page, he is a member of the Orthodox Presbyterian Church and a ruling elder in the Reformed tradition.",
+    "affiliation": "Orthodox Presbyterian Church",
+    "role": "Ruling Elder",
     "website": "https://philosophical-theology.com",
     "books": [],
-    "initials": "RWD"
+    "initials": "RWD",
+    "deceased": false,
+    "bio_sources": [
+      "https://philosophical-theology.com/about/",
+      "https://philosophical-theology.com"
+    ],
+    "education": ""
   },
   {
     "name": "Kenneth Wingate",
@@ -12235,13 +12336,24 @@
   {
     "name": "Caleb Davis",
     "slug": "caleb-davis",
-    "bio": "Caleb Davis is the founding and lead pastor of True Life Church in Arvada, Colorado. A regular contributor to The Gospel Coalition, 9Marks, and For The Church, he writes on the Christian life and cultural apologetics and is the author of the minibook 'When Faith Feels Dry.'",
-    "affiliation": "True Life Church (Arvada, CO)",
-    "role": "Pastor & Author",
-    "education": "",
+    "bio": "Caleb Davis is the founding and lead pastor of True Life Church in Arvada, Colorado. According to his Gospel Coalition profile, he holds a DMin from Covenant Seminary and an MA from Westminster Seminary. His own site says he has spent over two decades in ministry, has coached and assessed church planters, and is the author of When Faith Feels Dry: Rediscovering Joy in God (New Growth Press). His writing has appeared in The Gospel Coalition, 9Marks, and For the Church.",
+    "affiliation": "True Life Church, Arvada, Colorado",
+    "role": "Pastor",
     "website": "https://www.pastorcaleb.org/",
-    "books": [],
-    "initials": "CD"
+    "books": [
+      {
+        "title": "When Faith Feels Dry: Rediscovering Joy in God",
+        "amazon_url": "https://www.amazon.com/s?k=When+Faith+Feels+Dry%3A+Rediscovering+Joy+in+God+Caleb+Davis"
+      }
+    ],
+    "initials": "CD",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/article/what-christian-means-matters/",
+      "https://www.thegospelcoalition.org/profile/caleb-davis/",
+      "https://www.pastorcaleb.org/"
+    ],
+    "education": ""
   },
   {
     "name": "Sarah Hahn",
@@ -13407,13 +13519,31 @@
   {
     "name": "Pierce Taylor Hibbs",
     "slug": "pierce-taylor-hibbs",
-    "bio": "Pierce Taylor Hibbs is a Christian author and thinker who writes on faith, theology, and cultural engagement. His work reflects a commitment to helping believers thoughtfully navigate contemporary issues through a biblical worldview.",
-    "affiliation": "",
-    "role": "Author & Christian Writer",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "PTH"
+    "bio": "Pierce Taylor Hibbs is senior writer and communication specialist at Westminster Theological Seminary, where he earned an MAR and a ThM. He has written or edited more than twenty books, including Struck Down but Not Destroyed, The Book of Giving, and Our Hope Is In Help, and he writes regularly for Westminster Media.",
+    "affiliation": "Westminster Theological Seminary",
+    "role": "Writer",
+    "website": "https://www.thegospelcoalition.org/profile/pierce-taylor-hibbs",
+    "books": [
+      {
+        "title": "Our Hope Is In Help",
+        "amazon_url": "https://www.amazon.com/s?k=Our+Hope+Is+In+Help+Pierce+Taylor+Hibbs"
+      },
+      {
+        "title": "Struck Down but Not Destroyed",
+        "amazon_url": "https://www.amazon.com/s?k=Struck+Down+but+Not+Destroyed+Pierce+Taylor+Hibbs"
+      },
+      {
+        "title": "The Book of Giving",
+        "amazon_url": "https://www.amazon.com/s?k=The+Book+of+Giving+Pierce+Taylor+Hibbs"
+      }
+    ],
+    "initials": "PTH",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/pierce-taylor-hibbs",
+      "https://www.christianfocus.com/row/about/our-authors/2450/pierce-taylor-hibbs"
+    ],
+    "education": ""
   },
   {
     "name": "Bonnie Gray",

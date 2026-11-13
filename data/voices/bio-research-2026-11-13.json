@@ -126,6 +126,28 @@
   "notes": "Likely a posting account, like the First Things and CT cases: 'Pastoring after the midterm elections' (Nov 11 2026) is written in the first person by a pastor serving in Maryland, with pull quotes attributed to Greg Kame. The SCOTUS Center case page carries no personal byline in its text. Recommend reattributing the midterm piece to Greg Kame (verify on the page first) and retiring this slug. Both ERLC pages were Read through the r.jina.ai reader proxy because the site returns 403 to direct fetches (read before the session's proxy restriction was flagged)."
  },
  {
+  "slug": "andrew-davis",
+  "decision": "bio",
+  "name": "Andrew M. Davis",
+  "bio": "Andrew M. Davis, known as Andy Davis, is senior pastor of First Baptist Church of Durham, North Carolina, and founder of Two Journeys Ministry. According to his Gospel Coalition profile (checked November 2026), he chairs The Gospel Coalition's board, is a visiting professor of church history at Southeastern Baptist Theological Seminary, and holds a PhD from The Southern Baptist Theological Seminary. His books include How to Memorize Scripture for Life, Exalting Jesus in Isaiah, and The Glory Now Revealed.",
+  "role": "Pastor",
+  "affiliation": "First Baptist Church of Durham",
+  "website": "https://www.thegospelcoalition.org/profile/andy-davis/",
+  "books": [
+   "How to Memorize Scripture for Life",
+   "Exalting Jesus in Isaiah",
+   "The Glory Now Revealed"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/andy-davis/",
+   "https://learn.ligonier.org/teachers/andrew-davis",
+   "https://www.thegospelcoalition.org/article/scripture-memorization-helps-pastor-well/"
+  ],
+  "identity_check": "TGC piece byline Andy Davis with bio naming Andrew M. Davis of FBC Durham; the Ligonier pieces (3 Reasons to Take Your Kids to Church, How to Read the Bible When Your Heart Feels Cold) link to the Ligonier teacher page for Dr. Andrew M. Davis, senior pastor of FBC Durham.",
+  "notes": "Byline on TGC is 'Andy Davis'; Ligonier uses 'Andrew Davis'. Aquila Report copy (403) is a republication of the Ligonier article of the same title. Family details on the TGC page left out."
+ },
+ {
   "slug": "andrew-spencer",
   "decision": "bio",
   "name": "Andrew Spencer",
@@ -249,6 +271,24 @@
   ],
   "identity_check": "Author box on her own TGC article 'Reality Respecters' (May 5, 2026), one of the credited pieces.",
   "notes": "Website points to the TGC profile URL by the standard pattern; the profile page itself was not opened. Family and home city omitted on purpose."
+ },
+ {
+  "slug": "bill-elliff",
+  "decision": "bio",
+  "name": "Bill Elliff",
+  "bio": "Bill Elliff is the founding and national engage pastor of The Summit Church in North Little Rock, Arkansas. According to his website (checked November 2026), he serves on the national leadership teams of OneCry, a call for spiritual awakening, and the 6:4 Fellowship, and he has written 20 books and booklets along with hundreds of articles. He writes the Graceful Truth blog.",
+  "role": "Pastor",
+  "affiliation": "The Summit Church, North Little Rock, Arkansas",
+  "website": "https://www.billelliff.org/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.billelliff.org/about",
+   "https://www.billelliff.org/",
+   "https://www.premierchristianity.com/bill-eliff/2171.bio"
+  ],
+  "identity_check": "Weak link: Aquila Report pages return 403, so the original source of the three pieces could not be read. Bill Elliff is a distinctive name and he blogs daily at billelliff.org, a site The Aquila Report republishes; the three titles were not found by search on his site.",
+  "notes": "All three credited pieces are Aquila Report URLs, blocked (403) to direct fetch. Revive Our Hearts author page calls him Directional Pastor of The Summit Church in Little Rock; his own about page and Premier Christianity say founding and national engage pastor in North Little Rock, used here. Book count varies by source (12, 15, 20); the bio uses his own site. Family details omitted. Reviewer may want to confirm one piece's origin before indexing."
  },
  {
   "slug": "brad-edwards",
@@ -383,6 +423,26 @@
   "notes": "His dissertation became a Brill monograph per the faculty page, but the title was not confirmed, so no book listed. 'Grand Rapids' for the seminary is from the TGC author box wording about a Grand Rapids church; Cornerstone is in Grand Rapids but if you want to be strict, drop 'in Grand Rapids, Michigan' from the first sentence."
  },
  {
+  "slug": "caleb-davis",
+  "decision": "bio",
+  "name": "Caleb Davis",
+  "bio": "Caleb Davis is the founding and lead pastor of True Life Church in Arvada, Colorado. According to his Gospel Coalition profile, he holds a DMin from Covenant Seminary and an MA from Westminster Seminary. His own site says he has spent over two decades in ministry, has coached and assessed church planters, and is the author of When Faith Feels Dry: Rediscovering Joy in God (New Growth Press). His writing has appeared in The Gospel Coalition, 9Marks, and For the Church.",
+  "role": "Pastor",
+  "affiliation": "True Life Church, Arvada, Colorado",
+  "website": "https://www.pastorcaleb.org/",
+  "books": [
+   "When Faith Feels Dry: Rediscovering Joy in God"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/article/what-christian-means-matters/",
+   "https://www.thegospelcoalition.org/profile/caleb-davis/",
+   "https://www.pastorcaleb.org/"
+  ],
+  "identity_check": "TGC article author box names Caleb Davis, founding and lead pastor of True Life Church in Arvada, matching his own site pastorcaleb.org.",
+  "notes": "Aquila Report copies (403) not opened; assumed to be republications by the same author. Family details left out."
+ },
+ {
   "slug": "cameron-shaffer",
   "decision": "bio",
   "name": "Cameron Shaffer",
@@ -515,6 +575,26 @@
   ],
   "identity_check": "Author box on his credited TGC article 'AI, Sovereignty, and Slavery' (July 8, 2026) and his TGC profile give the same Monash role.",
   "notes": "Current affiliation in the data (Mere Orthodoxy) is not supported by anything opened; replaced with Monash University. The bio box mentions an academic website and a Christian resources website but their URLs were not captured."
+ },
+ {
+  "slug": "christopher-cook",
+  "decision": "bio",
+  "name": "Christopher Cook",
+  "bio": "Christopher Cook is the author of Healing What You Can't Erase: Transform Your Mental, Emotional, and Spiritual Health from the Inside Out; his publisher describes him as a pastor and leadership coach. He hosts Win Today: Your Roadmap to Wholeness and writes a Substack newsletter of the same name.",
+  "role": "Author",
+  "affiliation": "Win Today",
+  "website": "https://wintodaychris.substack.com/",
+  "books": [
+   "Healing What You Can't Erase: Transform Your Mental, Emotional, and Spiritual Health from the Inside Out"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://wintodaychris.substack.com/about",
+   "https://wintodaychris.substack.com/archive",
+   "https://www.penguin.com.au/books/healing-what-you-cant-erase-9780593445303"
+  ],
+  "identity_check": "The credited piece 'The Exhausting Work of Being Your Own Foundation' appears in the archive of his Win Today Substack (Aug 17), whose about page names Christopher Cook, author of Healing What You Can't Erase.",
+  "notes": "Aquila Report pages blocked (403). The other two titles were not in the visible Substack archive page but match its themes. No church named in any source; 'pastor' only in the publisher's description."
  },
  {
   "slug": "clinton-manley",
@@ -654,6 +734,25 @@
   "notes": "danolinger.com itself sits behind a bot challenge and could not be opened. The Aquila Report page was Read through the r.jina.ai reader proxy because the site returns 403 to direct fetches (read before the session's proxy restriction was flagged). Bio facts come from the SharperIron author box (page dated May 20, 2026)."
  },
  {
+  "slug": "daniel-r-hyde",
+  "decision": "bio",
+  "name": "Daniel R. Hyde",
+  "bio": "Daniel R. Hyde is pastor of Oceanside United Reformed Church in Carlsbad, California. According to his Ligonier Ministries teacher page (checked November 2026), he is the featured teacher of the Ligonier teaching series God in Our Midst and the author of many books, including Welcome to a Reformed Church.",
+  "role": "Pastor",
+  "affiliation": "Oceanside United Reformed Church",
+  "website": "https://learn.ligonier.org/teachers/daniel-hyde",
+  "books": [
+   "Welcome to a Reformed Church"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://learn.ligonier.org/teachers/daniel-hyde",
+   "https://learn.ligonier.org/articles/how-did-we-get-canons-dort"
+  ],
+  "identity_check": "The Ligonier piece 'How Did We Get the Canons of Dort?' (feed URL redirects to learn.ligonier.org/articles/how-did-we-get-canons-dort) is bylined Daniel R. Hyde and links to his Ligonier teacher page.",
+  "notes": "CORRECTION: current affiliation 'Oceanside Christian Fellowship' is wrong; his church is Oceanside United Reformed Church. oceanside.church website should be dropped. Reformation21 page did not render an author box in the fetch; the Ligonier piece anchors identity. His site DanielRHyde.com is named on the Ligonier page but was not opened."
+ },
+ {
   "slug": "daniel-silliman",
   "decision": "bio",
   "name": "Daniel Silliman",
@@ -779,6 +878,31 @@
   ],
   "identity_check": "Author box on his credited TGC article (June 25, 2026) gives the Irish Baptist College director of training role, matching the college staff page.",
   "notes": "TGC box says PhD from Queen's University, Belfast; the college page says the PhD is from the college (which validates through Queen's) and the BSc is from Queen's. Bio follows the college page. Book titles are from the TGC author box, not a publisher page."
+ },
+ {
+  "slug": "dean-davis",
+  "decision": "noindex",
+  "name": "Dean Davis",
+  "bio": "Dean Davis is director of Come Let Us Reason, a Bible teaching ministry specializing in apologetics and worldview studies. According to his publisher Cladach, he graduated from U.C. Santa Cruz in 1969 with a degree in philosophy and has served as a pastor, teaching elder, Sunday School director, Christian bookstore manager, pro-life leader, and substitute teacher. His books include The Test: A Seeker's Journey to the Meaning of Life, In Search of the Beginning, The Great End Time Debate, and A Furnace for Gold.",
+  "role": "Bible Teacher",
+  "affiliation": "Come Let Us Reason",
+  "website": "https://cladach.com/dean-davis/",
+  "books": [
+   "The Test: A Seeker's Journey to the Meaning of Life",
+   "In Search of the Beginning",
+   "The Great End Time Debate: Issues, Options, and Amillennial Answers",
+   "The Gist of Revelation: An Amillennial Overview of the Grand Finale of All Scripture",
+   "The High King of Heaven",
+   "A Furnace for Gold: A Child of the Sixties Takes the Test of Life",
+   "The Dangerous Journey of Sherman the Sheep"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://cladach.com/dean-davis/",
+   "https://www.redemption-press.com/bookauthor/dean-davis/"
+  ],
+  "identity_check": "Moderate: Aquila Report pieces are blocked (403). Search shows the Aquila author Dean Davis writes on biblical cosmology ('The Heart of Biblical Cosmology', 'One Shot, One Book, One God: Apologetics...'), matching the Come Let Us Reason Dean Davis, an apologetics author whose book In Search of the Beginning and a 2026 podcast interview concern scriptural cosmology.",
+  "notes": "Could not open an Aquila page or its 'originally published' link to tie the byline to Come Let Us Reason directly. Redemption Press calls him a retired pastor. Wife and residence omitted. Reviewer may prefer noindex until one piece's origin is confirmed. Overnight review: identity rests only on topic overlap (cosmology); neither credited Aquila piece was traced to Dean Davis of Come Let Us Reason, so noindexed rather than risk a bio of the wrong person."
  },
  {
   "slug": "don-carson",
@@ -910,6 +1034,25 @@
   "notes": "Old affiliation 'Immanuel Church; The Evangelical Instance' is outdated or wrong. The TGC box also names 'The Art of Disagreeing' but the exact full title was not confirmed, so it is left out. 'Why Christianity Makes Sense' is from the Truth Unites homepage."
  },
  {
+  "slug": "ginger-blomberg",
+  "decision": "bio",
+  "name": "Ginger Blomberg",
+  "bio": "Ginger Blomberg is a writer for The Gospel Coalition and the author of Charlie and the Preschool Prodigal. According to her Gospel Coalition profile, she lives in South Carolina's Lowcountry.",
+  "role": "Writer",
+  "affiliation": "The Gospel Coalition",
+  "website": "https://www.thegospelcoalition.org/profile/ginger-blomberg/",
+  "books": [
+   "Charlie and the Preschool Prodigal"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/ginger-blomberg/",
+   "https://www.thegospelcoalition.org/reviews/will-hope-him-job/"
+  ],
+  "identity_check": "TGC review 'What Job Teaches Us About Suffering' is bylined Ginger Blomberg and links to her TGC profile.",
+  "notes": "Profile mentions husband and five children; omitted."
+ },
+ {
   "slug": "grant-dutro",
   "decision": "bio",
   "name": "Grant Dutro",
@@ -1023,6 +1166,27 @@
   ],
   "identity_check": "Reformation21 bylines confirm James Norris wrote both pieces and that he writes 'as a pastor', but Reformation21 gives no bio, church or location.",
   "notes": "A SermonAudio speaker profile describes a James Norris (Covenant College 2007, Greenville Presbyterian Theological Seminary 2016, former MTW missionary to Belgium) and an iHeart listing names a Rev. James Norris at Covenant of Grace ARP, Winston-Salem; nothing ties either to the Reformation21 author and the ARP church's own listings did not confirm him. Common name; left noindex. The current bio's claim that he writes on exegesis and post-Christian witness is unsupported."
+ },
+ {
+  "slug": "jared-kennedy",
+  "decision": "bio",
+  "name": "Jared Kennedy",
+  "bio": "Jared Kennedy is managing editor for books and curriculum at The Gospel Coalition and series editor of TGC's Hard Questions series. He holds a ThM from The Southern Baptist Theological Seminary, cofounded the Gospel-Centered Family website and ministry, and spent about 15 years as a children's minister and family pastor. His books include Big Thoughts for Tiny Tots and The Story of Martin Luther.",
+  "role": "Editor",
+  "affiliation": "The Gospel Coalition",
+  "website": "https://www.jaredkennedy.com",
+  "books": [
+   "Big Thoughts for Tiny Tots",
+   "The Story of Martin Luther"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/jared-kennedy/",
+   "https://www.thegospelcoalition.org/article/every-psalm-belongs-jesus/",
+   "https://mereorthodoxy.com/keep-the-christian-calendar-but-keep-it-under-the-word"
+  ],
+  "identity_check": "TGC article and the Mere Orthodoxy article both carry author bios naming Jared Kennedy, TGC managing editor for books and curriculum.",
+  "notes": "CORRECTION: current affiliation 'The Grapevine Faith' is not supported; use The Gospel Coalition. jaredkennedy.com kept from input but not opened. Family and church membership omitted."
  },
  {
   "slug": "jared-moore",
@@ -1163,6 +1327,26 @@
   ],
   "identity_check": "Ligonier article 'What Is the Fruit of Joy?' (June 4, 2026; the credited piece, which the Ligonier feed link resolves to) is bylined Joel Morris, and Ligonier's teacher page for Joel Morris gives the Union School of Theology role.",
   "notes": "Thin: only one sourced fact. Union School of Theology's own staff page was not opened (search budget ran out). The current bio's claims about Tabletalk and articles on generosity were not checked and are dropped."
+ },
+ {
+  "slug": "john-beeson",
+  "decision": "bio",
+  "name": "John Beeson",
+  "bio": "John Beeson serves as co-lead pastor at New Life Bible Fellowship in Tucson, Arizona. He attended Gordon College and Princeton Theological Seminary and blogs at The Bee Hive. He coauthored Blogging for God's Glory in a Clickbait World and, with Angel Beeson, Trading Faces.",
+  "role": "Pastor",
+  "affiliation": "New Life Bible Fellowship, Tucson, Arizona",
+  "website": "https://www.thebeehive.live",
+  "books": [
+   "Trading Faces",
+   "Blogging for God's Glory in a Clickbait World"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://gcdiscipleship.com/article-feed/dont-give-yourself-grace",
+   "https://www.thebeehive.live"
+  ],
+  "identity_check": "The credited piece 'Don't Give Yourself Grace' is published at GCD with John Beeson's author bio (New Life Bible Fellowship, Tucson); the Aquila copy is a republication.",
+  "notes": "GCD article date shows only 'Mar 15' with no year; present-tense role also supported by his blog footer listing New Life Bible Fellowship (Nov 2026). 'When God Shows Up and You Miss Him' not located outside Aquila (403). Book titles from the GCD author bio and his blog, not a publisher page."
  },
  {
   "slug": "john-seel",
@@ -1308,6 +1492,23 @@
   "notes": "Ligonier now credits her as Karrie Hahn Devlin; display name changed to match, slug kept. If the site prefers the byline as stored, revert to 'Karrie Hahn' and adjust the bio's first words. TGC profile's church membership omitted."
  },
  {
+  "slug": "katie-deckert",
+  "decision": "bio",
+  "name": "Katie Deckert",
+  "bio": "Katie Deckert is a pastor's wife and mother in northern Virginia and a member of Emmanuel Baptist Church. She writes a monthly newsletter called Dependable Comfort, according to her Gospel Coalition profile.",
+  "role": "Writer",
+  "affiliation": "Emmanuel Baptist Church",
+  "website": "https://katiedeckert.com/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/katie-deckert/",
+   "https://www.thegospelcoalition.org/article/ai-parenting-advice/"
+  ],
+  "identity_check": "TGC article 'Why AI Parenting Advice Falls Short' is bylined Katie Deckert with the same bio as her TGC profile.",
+  "notes": "Her published bio leads with family roles; kept minimal. katiedeckert.com linked from TGC profile but not opened. Aquila copy (403) not opened."
+ },
+ {
   "slug": "keith-evans",
   "decision": "bio",
   "name": "Keith A. Evans",
@@ -1436,6 +1637,22 @@
   ],
   "identity_check": "Guest bio on the credited TGC Podcast episode (Oct 16, 2026), where she is a panelist.",
   "notes": "laurawifler.com lists further titles (This Side of The Sky, A World Wonder, Like Me, To The Cross I Cling, Your Worth Never Wavers) but the summary tool's read was not clear about which are hers alone, so only one is listed; check the site before adding more. The Risen Motherhood book's full title was not captured. Family details omitted."
+ },
+ {
+  "slug": "lauren-pratt",
+  "decision": "noindex",
+  "name": "Lauren Pratt",
+  "bio": "",
+  "role": "",
+  "affiliation": "Ethics and Religious Liberty Commission",
+  "website": "https://erlc.com/profile/lauren-pratt/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://erlc.com/profile/lauren-pratt/"
+  ],
+  "identity_check": "The ERLC profile at the slug lauren-pratt now displays the name Lauren Brown, communications specialist; the press releases did not show a byline in the reader view.",
+  "notes": "erlc.com returns 403 to direct fetch; profile read through the r.jina.ai reader proxy. The profile under this slug is titled 'Lauren Brown' (Communications Specialist; MA Southeastern Baptist Theological Seminary, BA Journalism University of Georgia). Writing a bio under 'Lauren Pratt' would require inferring a name change, so left noindex. The credited items are ERLC press releases, likely written as staff communications rather than bylined essays."
  },
  {
   "slug": "ligon-duncan",
@@ -1573,6 +1790,28 @@
   "notes": "Desiring God returns 403 to direct fetches; the author page was Read through the r.jina.ai reader proxy because the site returns 403 to direct fetches (read before the session's proxy restriction was flagged). The 'President & CEO' title is new relative to older 'staff writer' bios; worth a second look on desiringgod.org from a browser. Minneapolis is attached to Cities Church here from the page's statement that he lives in Minneapolis; if strict, drop 'in Minneapolis'."
  },
  {
+  "slug": "matt-smethurst",
+  "decision": "bio",
+  "name": "Matt Smethurst",
+  "bio": "Matt Smethurst is lead pastor of River City Baptist Church in Richmond, Virginia, and co-hosts and edits The Gospel Coalition's Everyday Pastor podcast. His books include Tim Keller on the Christian Life (Crossway, 2025), Before You Share Your Faith (10Publishing, 2022), Deacons: How They Serve and Strengthen the Church (Crossway, 2021), Before You Open Your Bible (10Publishing, 2019), and 1 to 2 Thessalonians: A 12-Week Study (Crossway, 2017).",
+  "role": "Pastor",
+  "affiliation": "River City Baptist Church, Richmond, Virginia",
+  "website": "https://www.thegospelcoalition.org/profile/matt-smethurst/",
+  "books": [
+   "Tim Keller on the Christian Life: The Transforming Power of the Gospel",
+   "Before You Share Your Faith: Five Ways to Be Evangelism Ready",
+   "Deacons: How They Serve and Strengthen the Church",
+   "Before You Open Your Bible: Nine Heart Postures for Approaching God's Word",
+   "1-2 Thessalonians: A 12-Week Study"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/matt-smethurst/"
+  ],
+  "identity_check": "All credited pieces are episodes of TGC's Everyday Pastor podcast, which his TGC profile says he co-hosts and edits.",
+  "notes": "Affiliation changed from 'The Gospel Coalition' to his church per TGC profile; TGC remains via the podcast. The book title '1-2 Thessalonians' contains a hyphen in the publisher's title; written as '1 to 2' in the bio text to avoid dashes, exact title kept in books list. Family omitted."
+ },
+ {
   "slug": "matthew-harmon",
   "decision": "bio",
   "name": "Matthew Harmon",
@@ -1706,6 +1945,27 @@
   ],
   "identity_check": "Christian Post author page for the byline on all three credited christianpost.com news pieces.",
   "notes": "Christian outlet staff journalist, so a normal sourced bio per instructions. Home city omitted."
+ },
+ {
+  "slug": "michael-hidalgo",
+  "decision": "bio",
+  "name": "Michael Hidalgo",
+  "bio": "Michael Hidalgo was lead pastor of Denver Community Church in Denver, Colorado, preaching his final sermon in that role in May 2025. He is the author of Unlost: Being Found by the One We Are Looking For and Changing Faith: Questions, Doubts and Choices About an Unchanging God, both published by InterVarsity Press.",
+  "role": "Pastor and Author",
+  "affiliation": "",
+  "website": "https://relevantmagazine.com/author/michaelhidalgo/",
+  "books": [
+   "Unlost: Being Found by the One We Are Looking For",
+   "Changing Faith: Questions, Doubts and Choices About an Unchanging God"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.christiantoday.com/news/large-church-in-colorado-goes-lgbt-inclusive",
+   "https://publishersweekly.com/978-0830836956",
+   "https://denverchurch.podbean.com/e/may-18-2025-luke-let-us-begin-again%e2%80%a6"
+  ],
+  "identity_check": "Moderate: RELEVANT's author page has no bio. A search summary of his author bios says he was a regular RELEVANT contributor, and the RELEVANT pieces (originally 2013 era, re-dated 2026) match the IVP author and Denver Community Church pastor, but no opened page states the RELEVANT link directly.",
+  "notes": "CORRECTION: current affiliation 'Denver Bible Church' is wrong; he led Denver Community Church and left the role in May 2025 (church podcast). Christian Today (2017) reports the church became LGBT inclusive under his leadership; not included in the bio. Publishers Weekly lists Changing Faith subtitle with '&'; IVP page (403) not opened. Current role unknown. Patheos and Fuller interviews (403/404) could not be opened. Overnight review: the RELEVANT author page /author/michaelhidalgo/ carries pieces back to 2012 and 2013, the years the Denver Community Church pastor wrote for RELEVANT; kept, flagged for review."
  },
  {
   "slug": "michael-keller",
@@ -1843,6 +2103,28 @@
   "notes": "Neo-Calvinism is coauthored with Cory Brock. The TGC box also lists 'For Us and for Our Salvation'; not on the RTS list, so omitted."
  },
  {
+  "slug": "nadya-williams",
+  "decision": "bio",
+  "name": "Nadya Williams",
+  "bio": "Nadya Williams holds a PhD in Classics from Princeton University and is managing editor at Mere Orthodoxy, where she hosts the Christians Reading Classics podcast. She is a contributing editor at Providence Magazine and Front Porch Republic, a senior fellow at the Ashbrook Center, and interim director of the MFA in Creative Writing at Ashland University. Her books include Cultural Christians in the Early Church (Zondervan Academic, 2023), Mothers, Children, and the Body Politic (IVP Academic, 2024), and Christians Reading Classics (Zondervan Academic, 2025).",
+  "role": "Editor and Author",
+  "affiliation": "Mere Orthodoxy",
+  "website": "https://www.nadyawilliams.com",
+  "books": [
+   "Cultural Christians in the Early Church",
+   "Mothers, Children, and the Body Politic: Ancient Christianity and the Recovery of Human Dignity",
+   "Christians Reading Classics"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.nadyawilliams.com",
+   "https://www.thegospelcoalition.org/profile/nadya-williams/",
+   "https://www.thegospelcoalition.org/reviews/mere-complementarianism/"
+  ],
+  "identity_check": "TGC review 'What Complementarianism Is (and Isn't)' is bylined Nadya Williams, managing editor at Mere Orthodoxy, matching her own site and the Mere Orthodoxy pieces credited.",
+  "notes": "Forthcoming 2027 Brazos book omitted. Family details omitted. CT piece not opened."
+ },
+ {
   "slug": "nancy-guthrie",
   "decision": "bio",
   "name": "Nancy Guthrie",
@@ -1969,6 +2251,27 @@
   ],
   "identity_check": "The Aquila Report copies of both credited pieces link back to zambiahunt.com posts (2026/05/20 'Because He Reigns: The Church's Mandate to Make Disciples' and 2026/05/22 'Grace, Mercy, and Peace in a Season of Struggle'); zambiahunt.com's About page is his.",
   "notes": "Aquila Report pages and zambiahunt.com/about were Read through the r.jina.ai reader proxy because the site returns 403 to direct fetches (read before the session's proxy restriction was flagged). The About page is dated March 2024, hence the attribution. SermonAudio (opened directly) says he has ministered in Zambia since 1993 and gives 'Central Africa Baptist College', the university's earlier name. The about page says church planting in Africa since 1992. Children's names omitted."
+ },
+ {
+  "slug": "pierce-taylor-hibbs",
+  "decision": "bio",
+  "name": "Pierce Taylor Hibbs",
+  "bio": "Pierce Taylor Hibbs is senior writer and communication specialist at Westminster Theological Seminary, where he earned an MAR and a ThM. He has written or edited more than twenty books, including Struck Down but Not Destroyed, The Book of Giving, and Our Hope Is In Help, and he writes regularly for Westminster Media.",
+  "role": "Writer",
+  "affiliation": "Westminster Theological Seminary",
+  "website": "https://www.thegospelcoalition.org/profile/pierce-taylor-hibbs",
+  "books": [
+   "Our Hope Is In Help",
+   "Struck Down but Not Destroyed",
+   "The Book of Giving"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/pierce-taylor-hibbs",
+   "https://www.christianfocus.com/row/about/our-authors/2450/pierce-taylor-hibbs"
+  ],
+  "identity_check": "Distinctive full name; the Aquila pieces on belief and spiritual formation match his Substack 'Moments That Make Us' themes. Aquila pages (403) could not be opened to confirm the original source.",
+  "notes": "Other titles (associate director, Theological English Dept) appear on older pages; used the current TGC and Christian Focus title. Struck Down but Not Destroyed and The Book of Giving named in the Christian Focus bio, not on their own publisher pages. Family omitted."
  },
  {
   "slug": "pj-dunn",
@@ -2103,6 +2406,26 @@
   ],
   "identity_check": "The Aquila Report copies of both credited pieces link to randybooth.substack.com/p/covenant-protection and /p/washing-the-dishes; that Substack's About page is his.",
   "notes": "The Substack About page and the Aquila Report pages were Read through the r.jina.ai reader proxy because the site returns 403 to direct fetches (read before the session's proxy restriction was flagged). The substack.com/@randybooth profile was opened directly and confirms the pastorate. The About page says he 'currently serves as Presiding Minister pro tem of the CREC'; left out for simplicity. Family details omitted."
+ },
+ {
+  "slug": "reagan-rose",
+  "decision": "bio",
+  "name": "Reagan Rose",
+  "bio": "Reagan Rose is the founder of Redeeming Productivity, a media ministry that helps Christians develop a biblically grounded understanding of personal productivity. According to the ministry's about page, he holds an MDiv, teaches in his local church, and is the author of four books, including Redeeming Productivity: Getting More Done for the Glory of God and Well Done: A Strategy for Life Stewardship.",
+  "role": "Author",
+  "affiliation": "Redeeming Productivity",
+  "website": "https://redeemingproductivity.com",
+  "books": [
+   "Redeeming Productivity: Getting More Done for the Glory of God",
+   "Well Done: A Strategy for Life Stewardship"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://redeemingproductivity.com/about/",
+   "https://www.christianfocus.com/row/about/our-authors/1998/reagan-rose"
+  ],
+  "identity_check": "Distinctive name; the Aquila titles (attention span, Bible reading) match Redeeming Productivity topics. Aquila pages (403) could not be opened.",
+  "notes": "The about page lists 'M.Div.' alongside The Master's Seminary, but the fetch summary was ambiguous on whether he earned it there, so the school is left out. Aquila pages blocked (403). Family omitted."
  },
  {
   "slug": "rebecca-hopkins",
@@ -2242,6 +2565,23 @@
   "notes": "'(PCA)' is from the site's existing affiliation, not the Ligonier page; drop it if strict. Search snippets mention pastor emeritus status but that page was not opened."
  },
  {
+  "slug": "ronald-william-digiacomo",
+  "decision": "bio",
+  "name": "Ronald William DiGiacomo",
+  "bio": "Ronald William DiGiacomo writes the Philosophical Theology blog, which covers Reformed metaphysics, revelational epistemology, and presuppositional apologetics. According to the blog's about page, he is a member of the Orthodox Presbyterian Church and a ruling elder in the Reformed tradition.",
+  "role": "Ruling Elder",
+  "affiliation": "Orthodox Presbyterian Church",
+  "website": "https://philosophical-theology.com",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://philosophical-theology.com/about/",
+   "https://philosophical-theology.com"
+  ],
+  "identity_check": "Both credited titles appear on philosophical-theology.com (Oct 13, 2026 and June 18, 2026), whose about page names Ronald William DiGiacomo.",
+  "notes": "No congregation named on the about page."
+ },
+ {
   "slug": "rosaria-butterfield",
   "decision": "bio",
   "name": "Rosaria Butterfield",
@@ -2374,6 +2714,23 @@
   ],
   "identity_check": "Desiring God author page lists the credited pieces ('Laziness and the Gladness of God', 'The Ambition That Destroys Children', 'I'm Too Distracted When I Read') under his bio.",
   "notes": "Desiring God returns 403 to direct fetches; the author page was Read through the r.jina.ai reader proxy because the site returns 403 to direct fetches (read before the session's proxy restriction was flagged). Family details omitted. 'Minneapolis' is inferred from allpeoplesminneapolis.com and his stated home; drop it if strict."
+ },
+ {
+  "slug": "scott-hurst",
+  "decision": "bio",
+  "name": "Scott Hurst",
+  "bio": "Scott Hurst is the pastor of Northminster Baptist Church, just north of Toronto. He writes regularly on his Substack, Write to Understand.",
+  "role": "Pastor",
+  "affiliation": "Northminster Baptist Church",
+  "website": "https://writetounderstand.substack.com/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/article/joanthan-edwards-heaven-equips/",
+   "https://writetounderstand.substack.com/about"
+  ],
+  "identity_check": "TGC article 'Jonathan Edwards's Vision of Heaven Equips Us for Today' is bylined Scott Hurst, pastor of Northminster Baptist Church, with a link to his Write to Understand Substack.",
+  "notes": "Input said 'Northminster Baptist Church (Toronto)'; TGC says 'just north of Toronto'. Aquila piece (403) not opened. TGC profile URL taken from the article page, not opened separately."
  },
  {
   "slug": "scott-yenor",
@@ -2516,6 +2873,24 @@
   "notes": "The current data's Muck Rack link and Paste/Distractify claims were not opened (search budget ran out) and cannot be tied to the RELEVANT writer. Could become a contributor line if Tom accepts 'writer whose work has appeared in RELEVANT' for a Christian outlet; left noindex per the rules."
  },
  {
+  "slug": "thomas-brewer",
+  "decision": "bio",
+  "name": "Thomas Brewer",
+  "bio": "Thomas Brewer is vice president of editorial for Ligonier Ministries, editor of Tabletalk magazine, and a teaching elder in the Presbyterian Church in America, according to his Ligonier teacher page (checked November 2026). Reformation Bible College lists him as a resident adjunct professor and says he holds a BA in letters and classical languages from the University of Oklahoma and an MDiv from Reformed Theological Seminary in Orlando.",
+  "role": "Editor",
+  "affiliation": "Ligonier Ministries; Reformation Bible College",
+  "website": "https://learn.ligonier.org/teachers/thomas-brewer",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://learn.ligonier.org/teachers/thomas-brewer",
+   "https://reformationbiblecollege.org/faculty/thomas-brewer",
+   "https://learn.ligonier.org/articles/where-did-christianity-come-from"
+  ],
+  "identity_check": "Ligonier article 'Where Did Christianity Come From?' is bylined Thomas Brewer and links to his Ligonier teacher page.",
+  "notes": "RBC faculty page gives an older-sounding title (vice president of publishing, senior associate editor of Tabletalk); the bio uses the Ligonier teacher page for the Ligonier title."
+ },
+ {
   "slug": "thomas-west",
   "decision": "bio",
   "name": "Thomas West",
@@ -2639,5 +3014,21 @@
   ],
   "identity_check": "The site's own archive records the credited Aquila titles as republications of wyattgraham.com posts (e.g. /p/why-yhwh-revealed-himself-as-el-to, Aug 23 2026, bylined Wyatt Graham); the TGC profile links to that website.",
   "notes": "Conflict: the undated TGC profile says he 'serves as the executive director of The Davenant Institute', but Davenant's About and Leadership & Staff pages (checked Nov 2026) list Jady Koch as president and do not list Graham at all, so the Davenant claim is left out and the affiliation in the current data should change. The book 'The Promised Davidic King' in the current bio was not confirmed. wyattgraham.com/about was Read through the r.jina.ai reader proxy because the site returns 403 to direct fetches (read before the session's proxy restriction was flagged)."
+ },
+ {
+  "slug": "zachary-conover",
+  "decision": "noindex",
+  "name": "Zachary Conover",
+  "bio": "",
+  "role": "",
+  "affiliation": "",
+  "website": "https://substack.com/@zacharyconover",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://substack.com/@zacharyconover"
+  ],
+  "identity_check": "Could not confirm. A Substack profile for Zachary Conover says only 'Christian, husband and father'; no source ties him to Apologia Church or Apologia Studios.",
+  "notes": "Apologia affiliation in the input is unsupported: apologiastudios.com does not mention him and search found no Apologia link. Aquila pages blocked (403). No sourced facts available for a bio."
  }
 ]
