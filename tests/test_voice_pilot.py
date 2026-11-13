@@ -360,3 +360,15 @@ def test_built_pilot_pages_are_static_and_dash_free(slug):
     assert f'data-cc-voice-pilot="{state}"' in page
     if slug in ("dawn-sherillporter", "brandon-corley", "chandler-vannoy"):
         assert page.count('class="cc-recent-item"') >= 1
+
+
+def test_batch3_related_voices_are_three_or_four_indexed_writers():
+    # Overnight Nov 12 2026: empty or thin Related sections filled from indexed writers.
+    noindex = set(json.loads((ROOT / "frontend" / "voices_noindex.json").read_text()))
+    redirects = json.loads((ROOT / "frontend" / "voices_redirects.json").read_text())
+    for slug in BATCH3_LIVE:
+        related = WRITERS[slug]["related"]
+        assert 3 <= len(related) <= 4, (slug, related)
+        for rel in related:
+            assert rel not in noindex and rel not in redirects, (slug, rel)
+            assert (ROOT / "docs" / "voices" / rel / "index.html").exists(), (slug, rel)
