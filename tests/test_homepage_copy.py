@@ -1,5 +1,6 @@
 """Homepage copy quick wins (2026-11-01): Pulse line, card blurbs, live counts."""
 
+import re
 import sys
 from datetime import date
 from pathlib import Path
@@ -113,3 +114,15 @@ def test_masthead_claim_names_no_source_count():
         html = path.read_text(encoding="utf-8")
         assert '<p class="cc-masthead-claim">A daily ranked front page from across the evangelical web.</p>' in html
         assert "evangelical sources.</p>" not in html
+
+
+def test_descriptions_name_no_feed_count():
+    # Overnight Nov 12 2026: meta and Open Graph descriptions match the masthead.
+    root = Path(__file__).resolve().parent.parent
+    want = ("A daily ranked front page of news, commentary and theology from across the "
+            "evangelical web, updated every morning.")
+    for path in (root / "frontend" / "template.html", root / "docs" / "index.html"):
+        html = path.read_text(encoding="utf-8")
+        assert f'<meta name="description" content="{want}" />' in html
+        assert f'<meta property="og:description" content="{want}" />' in html
+        assert not re.search(r"\d+ sources", html), path
