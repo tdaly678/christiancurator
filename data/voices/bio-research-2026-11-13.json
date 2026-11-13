@@ -34,6 +34,23 @@
   "notes": "The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read. Search snippets of reformedpresbyterian.org congregation page also list him as pastor (not opened)."
  },
  {
+  "slug": "al-gooderham",
+  "decision": "bio",
+  "name": "Al Gooderham",
+  "bio": "Al Gooderham is pastor of Grace in the Community Church in Doncaster, England, according to his 20schemes Equip author page. He writes on ministry, discipleship and church planting at his blog, and has contributed to 20schemes Equip.",
+  "role": "Pastor",
+  "affiliation": "Grace in the Community Church, Doncaster",
+  "website": "https://algooderham.wordpress.com/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://20schemesequip.com/multi_author/al-gooderham",
+   "https://algooderham.wordpress.com/"
+  ],
+  "identity_check": "Aquila Report pages return 403, so the originals could not be opened; the name is uncommon and the site's existing affiliation (Grace Church Doncaster) matches the 20schemes Equip author page.",
+  "notes": "The Aquila pieces could not be opened (403) and the three titles were not on the first page of his blog, so the link between blog and pieces is inferred from the uncommon name. 20schemes page is undated; the blog tagline is 'Ministry, discipleship, church planting, living for Jesus' and has posts through Nov 2026. Charity Commission lists an Alastair Roy Gooderham as trustee of Grace Church Doncaster (not used)."
+ },
+ {
   "slug": "andrew-spencer",
   "decision": "bio",
   "name": "Andrew Spencer",
@@ -69,6 +86,20 @@
   ],
   "identity_check": "RELEVANT author page lists the credited pieces under Annie Eisner (172 articles), but it has no bio.",
   "notes": "No bio on the RELEVANT author page or on the articles (checked HTML and JSON-LD); web search found no other source describing her. Nothing to source a bio from."
+ },
+ {
+  "slug": "armando-yzaguirre",
+  "decision": "noindex",
+  "name": "Armando Yzaguirre",
+  "bio": "",
+  "role": "",
+  "affiliation": "",
+  "website": "",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [],
+  "identity_check": "Could not confirm. Aquila Report pages return 403 and no original of either title could be found.",
+  "notes": "Search returned a Fellowship Church (fellowshipchurch.co/armando) administration pastor of this name, but the page now returns 404 and nothing ties him to 'Counting It Joy When Nothing Makes Sense' or 'Good and Gracious King'. Not guessing."
  },
  {
   "slug": "brad-edwards",
@@ -107,6 +138,22 @@
   ],
   "identity_check": "The credited Ligonier feed link resolves to learn.ligonier.org/articles/the-bible-and-friendship, whose author box is this same Brian Croft bio.",
   "notes": "Current site affiliation 'Treasuring Christ Together' was not confirmed by any source opened and is dropped. Book title is from the Ligonier bio only, not a publisher page."
+ },
+ {
+  "slug": "brian-g-najapfour",
+  "decision": "bio",
+  "name": "Brian G. Najapfour",
+  "bio": "Brian G. Najapfour pastors the Heritage Reformed Congregation in Jordan, Ontario, according to the congregation's website. He holds a ThM from Puritan Reformed Theological Seminary and a PhD from the Theological University of Apeldoorn, and has been in ministry since 2001, with pastoral experience in the Philippines and the United States. He has written and co-edited a number of books.",
+  "role": "Pastor",
+  "affiliation": "Heritage Reformed Congregation, Jordan, Ontario",
+  "website": "https://heritagereformed.com/pastor/brian-najapfour/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://heritagereformed.com/pastor/brian-najapfour/"
+  ],
+  "identity_check": "Uncommon full name; search results index the Reformation21 IVF piece among Brian G. Najapfour's regular Reformation21 contributions, and Reformation21 is a Reformed outlet consistent with his ministry.",
+  "notes": "Could not read the byline on the Reformation21 page itself (the fetch returned only site navigation), and Aquila is 403. Books such as 'Every Christian Is an Evangelist' appeared only in a search summary, so none are listed. The 2013 Dutton URC installation is older history and was left out."
  },
  {
   "slug": "cameron-shaffer",
@@ -148,6 +195,30 @@
   "notes": "The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read. The TGC Australia profile (Cornerstone, Hobart) is undated and older; the input affiliation 'Presbyterian Church of Tasmania' is outdated. Scots' Church's own site was not opened."
  },
  {
+  "slug": "carl-trueman",
+  "decision": "bio",
+  "name": "Carl R. Trueman",
+  "bio": "Carl R. Trueman is professor of biblical and religious studies at Grove City College and a fellow at the Ethics and Public Policy Center. He holds a PhD from the University of Aberdeen, is a contributing editor at First Things, and is a member of the Orthodox Presbyterian Church. His books include The Rise and Triumph of the Modern Self and Strange New World.",
+  "role": "Professor and Church Historian",
+  "affiliation": "Grove City College",
+  "website": "https://www.crossway.org/authors/carl-r-trueman/",
+  "books": [
+   "The Rise and Triumph of the Modern Self",
+   "Strange New World",
+   "Classical Theology for the Modern Mind",
+   "Crisis of Confidence",
+   "Histories and Fallacies",
+   "Luther on the Christian Life"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://firstthings.com/the-cult-of-pastoral-vulnerability/",
+   "https://www.crossway.org/authors/carl-r-trueman/"
+  ],
+  "identity_check": "First Things piece credited to him (May 7, 2026) carries the byline Carl R. Trueman with the Grove City College / EPPC bio.",
+  "notes": "The GCC URL in the current data is a generic department page with no bio. Display name could stay 'Carl Trueman'; his publishers use 'Carl R. Trueman'."
+ },
+ {
   "slug": "clinton-manley",
   "decision": "bio",
   "name": "Clinton Manley",
@@ -186,6 +257,28 @@
   "notes": "Input affiliation 'Renewal Chapel' is wrong; no source supports it. The church page and For The Gospel page give different numbers of children, so family details are left out. Books are from his church's bio page."
  },
  {
+  "slug": "courtney-doctor",
+  "decision": "bio",
+  "name": "Courtney Doctor",
+  "bio": "Courtney Doctor is director of women's initiatives for The Gospel Coalition and co-hosts TGC's Deep Dish podcast with Melissa Kruger. She holds an MDiv from Covenant Theological Seminary and is the author of From Garden to Glory and several Bible studies, including Titus: Displaying the Gospel of Grace, In View of God's Mercies and Behold and Believe.",
+  "role": "Bible Teacher and Author",
+  "affiliation": "The Gospel Coalition",
+  "website": "https://www.thegospelcoalition.org/profile/courtney-doctor/",
+  "books": [
+   "From Garden to Glory",
+   "Titus: Displaying the Gospel of Grace",
+   "In View of God's Mercies",
+   "Behold and Believe"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/courtney-doctor/",
+   "https://www.thegospelcoalition.org/podcasts/deep-dish/kids-books-matter/"
+  ],
+  "identity_check": "The Deep Dish episode credited to her (Sept 17, 2026) lists her as host with the same TGC role as her profile.",
+  "notes": "Books are as named in the TGC bio, not checked on a publisher page. Her own site courtneydoctor.org was not opened."
+ },
+ {
   "slug": "daniel-silliman",
   "decision": "bio",
   "name": "Daniel Silliman",
@@ -220,6 +313,23 @@
   "notes": "The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read. Substack about page also mentions an MA in Systematic Theology at Wheaton in progress (left out)."
  },
  {
+  "slug": "darryl-dash",
+  "decision": "bio",
+  "name": "Darryl Dash",
+  "bio": "Darryl Dash is senior pastor of Grace Fellowship Church East Toronto and cofounder of Gospel for Life. He is a columnist at The Gospel Coalition Canada and writes Big Idea Bible, and he posts sermons and articles at his site, DashHouse.",
+  "role": "Pastor",
+  "affiliation": "Grace Fellowship Church East Toronto",
+  "website": "https://dashhouse.com/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://dashhouse.com/about/",
+   "https://www.dashhouse.com/the-kingdoms-equal-grace-matthew-201-16/"
+  ],
+  "identity_check": "'The Kingdom's Equal Grace (Matthew 20:1-16)', one of the credited pieces, is on dashhouse.com under his byline (Aug 16, 2026).",
+  "notes": "darryldash.com redirects to dashhouse.com. The current data's 'Tap Unstuck' affiliation is not on his About page and was dropped. About page says 'I've written a few books' without titles here, so no books listed. 'Cofounder of Gospel for Life' is quoted as the about page states it."
+ },
+ {
   "slug": "don-carson",
   "decision": "bio",
   "name": "Don Carson",
@@ -249,6 +359,22 @@
   "bio_sources": [],
   "identity_check": "Could not identify the writer. 'The Pharisees Knew More Than You' appears on the Everyday Theology Substack (everydaytheology.substack.com), which names no individual author.",
   "notes": "The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read. Searches for 'D.V. Rider' found no person, site or profile. No source for any bio fact."
+ },
+ {
+  "slug": "ellen-hayes",
+  "decision": "bio",
+  "name": "Ellen Hayes",
+  "bio": "Ellen Hayes is a freelance music writer based in Chicago and a Biola University graduate, according to her RELEVANT author page. She has written interviews and features for RELEVANT, including conversations with Trillia Newbell, Judah Smith and Stephen Chandler.",
+  "role": "Writer",
+  "affiliation": "RELEVANT (freelance)",
+  "website": "https://relevantmagazine.com/author/ellenhayes/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://relevantmagazine.com/author/ellenhayes/"
+  ],
+  "identity_check": "All three credited RELEVANT pieces appear in the article list on her RELEVANT author page.",
+  "notes": "Author page says 'a recent Biola graduate'; worded as 'a Biola University graduate'. RELEVANT is a Christian outlet, so a normal bio rather than the journalist line."
  },
  {
   "slug": "grant-dutro",
@@ -282,6 +408,23 @@
   ],
   "identity_check": "CT writer page lists the credited pieces ('Shock, Anger, Stimulate, Numb', 'Latino Evangelicals Remain Vital Swing Votes in Midterm Election').",
   "notes": "Location and spouse on the CT page left out."
+ },
+ {
+  "slug": "harvest-prude",
+  "decision": "bio",
+  "name": "Harvest Prude",
+  "bio": "Harvest Prude is a journalist based in Washington, D.C. According to her Christianity Today writer page (checked November 2026), she was national political correspondent for Christianity Today and previously covered politics for The Dispatch and World Magazine. Her feature reporting won the Zenger Prize in 2023, and she is a 2026 fellow at the Center for Christianity and Public Life.",
+  "role": "Journalist",
+  "affiliation": "Christianity Today",
+  "website": "https://www.christianitytoday.com/writers/harvest-prude/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.christianitytoday.com/writers/harvest-prude/",
+   "https://www.christianitytoday.com/2026/09/stay-at-home-proposal-white-house-parents-welfare/"
+  ],
+  "identity_check": "Credited CT piece (Sept 15, 2026) is bylined Harvest Prude and links to the CT writer page used for the bio.",
+  "notes": "The CT page uses the past tense ('was national political correspondent'), so her current CT status is unclear; the bio keeps it past tense. Current data said 'The Dispatch (formerly WORLD)', which is outdated."
  },
  {
   "slug": "jared-moore",
@@ -328,6 +471,30 @@
   "notes": "jenoshman.com/about returned 404. Book titles are from the TGC bio, not a publisher page. 'Redemption Parker' as affiliation is the church her family planted; the bio does not explicitly say it is the church where she directs women's ministry."
  },
  {
+  "slug": "jen-wilkin",
+  "decision": "bio",
+  "name": "Jen Wilkin",
+  "bio": "Jen Wilkin is a Bible teacher and author from Dallas, Texas. An advocate for Bible literacy, she has organized and led studies for women in home, church and parachurch contexts. Her books include Women of the Word, None Like Him, In His Image and Ten Words to Live By.",
+  "role": "Bible Teacher and Author",
+  "affiliation": "",
+  "website": "https://www.jenwilkin.net/",
+  "books": [
+   "Women of the Word",
+   "None Like Him",
+   "In His Image",
+   "Ten Words to Live By",
+   "Dust to Dust"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.crossway.org/authors/jen-wilkin/",
+   "https://www.jenwilkin.net/about",
+   "https://www.thegospelcoalition.org/podcasts/deep-dish/kids-books-matter/"
+  ],
+  "identity_check": "The credited Deep Dish episode (Sept 17, 2026) features her as guest with the same 'author and Bible teacher from Dallas, Texas' bio as her own site.",
+  "notes": "Current affiliation 'The Village Church' is not stated on her site, Crossway or TGC pages and was dropped. The Aquila piece on aging could not be opened (403)."
+ },
+ {
   "slug": "john-seel",
   "decision": "bio",
   "name": "John Seel",
@@ -363,6 +530,30 @@
   ],
   "identity_check": "His blog joncoombs.com lists 'King Jesus: Restoration From Chaos' as part 11 of his 'King Jesus' series in Mark, a title the site credits via The Aquila Report.",
   "notes": "The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read. 'More Than A Second Chance' was not found on his homepage. Family details on his about page left out."
+ },
+ {
+  "slug": "jon-nielson",
+  "decision": "bio",
+  "name": "Jon Nielson",
+  "bio": "Jon Nielson is senior pastor of Christ Presbyterian Church in Wheaton, Illinois, according to his Ligonier and Crossway author pages. He holds a DMin from Trinity Evangelical Divinity School, is the author of the Theology Basics series, including Knowing God's Truth, and coedited Gospel-Centered Youth Ministry.",
+  "role": "Pastor",
+  "affiliation": "Christ Presbyterian Church, Wheaton, Illinois",
+  "website": "https://www.crossway.org/authors/jon-nielson/",
+  "books": [
+   "Knowing God's Truth",
+   "Understanding God's Word",
+   "Tracing God's Story",
+   "God's Great Story",
+   "Men and Work",
+   "Men and Spiritual Disciplines"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://learn.ligonier.org/teachers/jon-nielson",
+   "https://www.crossway.org/authors/jon-nielson/"
+  ],
+  "identity_check": "The credited Ligonier piece ('3 Ways to Teach Young People Theology') matches his Ligonier teacher page and Theology Basics books on teaching doctrine.",
+  "notes": "His TGC profile still lists Spring Valley Presbyterian Church, Roselle; the Ligonier and Crossway pages list Christ Presbyterian, Wheaton, and were used. Aquila piece not opened (403)."
  },
  {
   "slug": "keith-evans",
@@ -401,6 +592,23 @@
   "notes": "The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read. The CTK Reformed page also lists him as Pro Tem Elder there (left out). Other people share the name (a NC detention officer, a seminary student listing on Thirdmill); not used."
  },
  {
+  "slug": "kevin-schaal",
+  "decision": "bio",
+  "name": "Kevin Schaal",
+  "bio": "Kevin Schaal is senior pastor of Northwest Valley Baptist Church in Phoenix, Arizona, and president of Foundations Baptist Fellowship International, according to his Proclaim & Defend author page. He has pastored the church since its founding in 1987 and studied at Bob Jones University, Calvary Baptist Seminary and International Baptist College.",
+  "role": "Pastor",
+  "affiliation": "Northwest Valley Baptist Church, Phoenix",
+  "website": "https://proclaimanddefend.org/author/kevin-schaal/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://proclaimanddefend.org/author/kevin-schaal/",
+   "https://proclaimanddefend.org/president"
+  ],
+  "identity_check": "'What Is Jesus Like, Right Now?' was published under his byline on Proclaim & Defend (Aug 23, 2026), the FBFI blog that carries his author bio; Aquila republished it.",
+  "notes": "The FBFI president page is dated 2017 (used only for founding date and education). The author page with recent posts (Nov 2026) supports the present-tense roles."
+ },
+ {
   "slug": "ligon-duncan",
   "decision": "bio",
   "name": "Ligon Duncan",
@@ -433,6 +641,20 @@
   ],
   "identity_check": "Author box on the credited Roys Report article.",
   "notes": "Roys Report author archive URL guessed (/author/mark-a-kellner/) returned 404. Input affiliation 'Religion News Service' not confirmed and dropped."
+ },
+ {
+  "slug": "mark-j-henninger",
+  "decision": "noindex",
+  "name": "Mark J. Henninger",
+  "bio": "",
+  "role": "",
+  "affiliation": "",
+  "website": "",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [],
+  "identity_check": "Could not confirm. Aquila pages return 403 and neither title could be found anywhere else.",
+  "notes": "SermonAudio lists a Mark Henninger, retired PCA minister who pastored Redeemer Presbyterian Church in Peoria, which is plausible for an Aquila contributor, but nothing ties that profile to these pieces or to the middle initial J. Not guessing."
  },
  {
   "slug": "matthew-harmon",
@@ -478,6 +700,23 @@
   "notes": "Book titles from her TGC profile; Parenting with Hope subtitle differs between her site and TGC so the subtitle is omitted. Family details left out. Her hosting of Deep Dish was not confirmed on a page opened, so not stated."
  },
  {
+  "slug": "meredith-lee-myers",
+  "decision": "bio",
+  "name": "Meredith Lee Myers",
+  "bio": "Meredith Lee Myers is web editor for Ligonier Ministries and Tabletalk magazine, according to her Ligonier author page. She is a graduate of Erskine Theological Seminary in Columbia, South Carolina.",
+  "role": "Web Editor",
+  "affiliation": "Ligonier Ministries",
+  "website": "https://learn.ligonier.org/teachers/meredith-myers",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://learn.ligonier.org/teachers/meredith-myers",
+   "https://tabletalkmagazine.com/about"
+  ],
+  "identity_check": "Both credited pieces are Ligonier blog posts, and Ligonier's own teacher page and the Tabletalk masthead identify her as its web editor.",
+  "notes": "The two credited feed URLs were not opened individually. The Tabletalk About page was seen only through a search summary listing 'Meredith L. Myers, Web Editor'."
+ },
+ {
   "slug": "michael-keller",
   "decision": "bio",
   "name": "Michael Keller",
@@ -516,6 +755,23 @@
   "notes": "The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read. Identity link is circumstantial (same church as the input affiliation, matching Leviticus series), not a direct byline match on the original site. Identity: \"Grace Stings\" (one of the credited Aquila pieces) is published on gracefresno.com (checked by the overnight run)."
  },
  {
+  "slug": "mike-sabo",
+  "decision": "bio",
+  "name": "Mike Sabo",
+  "bio": "Mike Sabo is an associate editor of American Reformer and managing editor of The American Mind, the Claremont Institute's online journal. He is a graduate of Ashland University and Hillsdale College and a Claremont Institute Lincoln Fellow, and his writing has appeared at RealClearPolitics, The Federalist, Public Discourse and American Greatness.",
+  "role": "Editor",
+  "affiliation": "American Reformer",
+  "website": "https://www.claremont.org/alumni/mike-sabo/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://archive.americanreformer.org/2026/07/america-at-250/",
+   "https://www.claremont.org/alumni/mike-sabo/"
+  ],
+  "identity_check": "The credited American Reformer piece 'America at 250' (July 2026) carries his byline and this author bio.",
+  "notes": "americanreformer.org/2026/... redirects to archive.americanreformer.org."
+ },
+ {
   "slug": "nancy-guthrie",
   "decision": "bio",
   "name": "Nancy Guthrie",
@@ -552,6 +808,25 @@
   "notes": "Only one fact sourced; bio is a single sentence."
  },
  {
+  "slug": "paul-ritchie",
+  "decision": "bio",
+  "name": "Paul Ritchie",
+  "bio": "Paul Ritchie serves as pastor of Limerick Baptist Church, according to his Christian Focus author page and his blog. He is the author of Is It Unspiritual to Be Depressed?, published by Christian Focus, and posts sermon-based reflections on his blog.",
+  "role": "Pastor",
+  "affiliation": "Limerick Baptist Church",
+  "website": "https://paulritchieblog.blogspot.com/",
+  "books": [
+   "Is It Unspiritual to Be Depressed?"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.christianfocus.com/row/about/our-authors/1993/paul-ritchie",
+   "https://paulritchieblog.blogspot.com/2026/05/we-need-to-move-from-presumption-to.html"
+  ],
+  "identity_check": "'We Need to Move from Presumption to Praise (Numbers 17)', one of the credited pieces, is on his blog (May 5, 2026), whose About Me reads 'I serve as pastor in Limerick Baptist Church'; Aquila republished it under his name.",
+  "notes": "Possible misattribution: the credited 'God's Grace to Complainers (Numbers 20:1-13)' uses Darryl Dash's title format ('Title (Book ch:vv)') and was not found on Ritchie's blog; worth checking whether it belongs to darryl-dash. His Christian Focus page mentions his own OCD and anxiety; left out as a health detail."
+ },
+ {
   "slug": "pj-dunn",
   "decision": "bio",
   "name": "PJ Dunn",
@@ -583,6 +858,22 @@
   ],
   "identity_check": "The credited Ligonier piece 'How Did Noah Point to Christ?' (same title as the Aquila credit) carries the Mid-America Reformed Seminary author bio.",
   "notes": "Ligonier teacher URL learn.ligonier.org/teachers/r-andrew-compton returned 404; the article page bio was used."
+ },
+ {
+  "slug": "rachel-culver",
+  "decision": "bio",
+  "name": "Rachel Culver",
+  "bio": "Rachel Culver is a member of Grace Church of the Valley in Kingsburg, California, and a political studies graduate of The Master's University, according to her Gospel Coalition author page. She has written book reviews for The Gospel Coalition and writes a newsletter.",
+  "role": "Writer",
+  "affiliation": "",
+  "website": "https://www.thegospelcoalition.org/profile/rachel-culver/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.thegospelcoalition.org/profile/rachel-culver/"
+  ],
+  "identity_check": "Both credited pieces are TGC reviews, and the bio comes from her TGC author profile.",
+  "notes": "Profile resource list did not load, so the two reviews were not seen listed on it. Grace Church of the Valley is her church membership, not an employer, so affiliation is left empty."
  },
  {
   "slug": "rebecca-hopkins",
@@ -617,6 +908,24 @@
   ],
   "identity_check": "RELEVANT author page lists three articles under her name, including both credited pieces; no bio.",
   "notes": "No bio on the author page or articles; no other source found. Do not confuse with Rebekah Woods (Canadian writer, different person)."
+ },
+ {
+  "slug": "rich-bitterman",
+  "decision": "bio",
+  "name": "Rich Bitterman",
+  "bio": "Rich Bitterman is a pastor in the Missouri Ozarks who writes Bible devotions and pastoral encouragement at his website and his newsletter, Old Paths & New Roads. A May 2026 article he wrote for The Alabama Baptist identified him with Cedar Ridge Baptist Church in Galena, Missouri.",
+  "role": "Pastor",
+  "affiliation": "Cedar Ridge Baptist Church, Galena, Missouri",
+  "website": "https://richbitterman.com",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://richbitterman.com",
+   "https://pastorrichbitterman.substack.com/about",
+   "https://thealabamabaptist.org/first-person-finding-grandeur-of-gods-love-in-rural-ministry/"
+  ],
+  "identity_check": "'Jesus Never Knew You', one of the credited pieces, is listed on richbitterman.com, which calls him 'Pastor Rich Bitterman'.",
+  "notes": "His Substack says he came to faith at 42 (left out as a personal detail). richbitterman.com/about returned 404; Baptist Press author page returned 403. Unverified search hints of other roles (First Baptist Springfield, Meadow Heights) were ignored."
  },
  {
   "slug": "rosaria-butterfield",
@@ -657,6 +966,27 @@
   ],
   "identity_check": "Author box on the credited TGC article.",
   "notes": "Book title from the TGC author note only. The Aquila piece 'Let Children Hear the Mighty Deeds' could not be opened. The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read."
+ },
+ {
+  "slug": "samuel-d-james",
+  "decision": "bio",
+  "name": "Samuel D. James",
+  "bio": "Samuel D. James is an associate acquisitions editor at Crossway and lives in Louisville, Kentucky. He is the author of Digital Liturgies: Rediscovering Christian Wisdom in an Online Age, Scroll Less, Live More and Does It Matter What I Believe?",
+  "role": "Editor and Author",
+  "affiliation": "Crossway",
+  "website": "https://crossway.org/authors/samuel-james/",
+  "books": [
+   "Digital Liturgies",
+   "Scroll Less, Live More",
+   "Does It Matter What I Believe?"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://crossway.org/authors/samuel-james/",
+   "https://www.crossway.org/articles/how-should-christians-think-about-ai/"
+  ],
+  "identity_check": "The credited Crossway article (Nov 6, 2026) is bylined Samuel D. James with the 'associate acquisitions editor at Crossway' bio; his Digital Liturgies Substack carries the same book's name.",
+  "notes": "Current affiliation listed TGC as well; not supported by the pages opened, so dropped. The digitalliturgies.net posts were not opened."
  },
  {
   "slug": "scott-yenor",
@@ -702,6 +1032,28 @@
   "notes": "The Aquila Report article pages return HTTP 403 (Cloudflare) to direct fetches and are not in the Wayback Machine, so the Aquila author box could not be read. TGC Australia profile is undated; the 'since 2007' tenure is from it. Book title from TGC Australia, full subtitle there reads 'A Biblical Call to Serve Jesus well in Older Age' (not confirmed on a publisher page, so short title used). Family details left out."
  },
  {
+  "slug": "stan-gale",
+  "decision": "bio",
+  "name": "Stanley D. Gale",
+  "bio": "Stanley D. Gale is a teaching elder in the Presbyterian Church in America who has pastored churches in Maryland and Pennsylvania for over 30 years. He holds an MDiv from Westminster and a DMin from Covenant, writes a column for AILBE, and is the author of books including What Is Spiritual Warfare? and A Vine-Ripened Life.",
+  "role": "Pastor and Author",
+  "affiliation": "",
+  "website": "https://learn.ligonier.org/teachers/stanley-gale",
+  "books": [
+   "What Is Spiritual Warfare?",
+   "A Vine-Ripened Life",
+   "The Christian's Creed",
+   "Finding Forgiveness"
+  ],
+  "deceased": false,
+  "bio_sources": [
+   "https://www.ailbe.org/columns/rooted-in-christ/take-words-with-you/",
+   "https://learn.ligonier.org/teachers/stanley-gale"
+  ],
+  "identity_check": "'Take Words With You', one of the credited pieces, is an AILBE column bylined Stan Gale (April 10, 2026) with the Stanley D. Gale bio; Aquila republished it.",
+  "notes": "Name kept as he writes it in his own bio, Stanley D. Gale; the byline on the column is 'Stan Gale', so either is fine. The column name and AILBE's full name were left out because the column page did not state them. Books come from the AILBE and Ligonier bios, not publisher pages."
+ },
+ {
   "slug": "thomas-west",
   "decision": "bio",
   "name": "Thomas West",
@@ -735,5 +1087,23 @@
   ],
   "identity_check": "The credited Ligonier feed link resolves to learn.ligonier.org/articles/virtues-vices-lust ('What Is Lust?'), whose author box carries this bio; the Aquila credit is the same title.",
   "notes": "Reformation21 bios (seen in search snippets only, not opened) add an MDiv from Midwestern Baptist Theological Seminary and a 2013 call; left out."
+ },
+ {
+  "slug": "tom-sugimura",
+  "decision": "bio",
+  "name": "Tom Sugimura",
+  "bio": "Tom Sugimura is listed as lead pastor of New Life Church in Woodland Hills, California, in The Gospel Coalition's Los Angeles church directory. A 2021 BCM Worldwide profile described him as a team member with that biblical counseling training ministry and said he earned MDiv and ThM degrees from The Master's Seminary.",
+  "role": "Pastor",
+  "affiliation": "New Life Church, Woodland Hills",
+  "website": "https://www.nlcwh.org/",
+  "books": [],
+  "deceased": false,
+  "bio_sources": [
+   "https://la.thegospelcoalition.org/los-angeles-churches/church/6/new-life-church",
+   "https://bcmworldwide.org/?p=1486",
+   "https://www.nlcwh.org/"
+  ],
+  "identity_check": "Distinctive name; the site's existing affiliation (New Life Church, Woodland Hills) matches the directory and BCM profile, and the church site carries 'Resources by Pastor Tom' with blog posts and sermons by Tom Sugimura. The Aquila pieces themselves could not be opened (403).",
+  "notes": "Neither 'Praying for Defeat (Psalm 70)' nor 'Facets of Gospel Grace' was found on the open web, so the piece-to-person link rests on the name and church. The church site lists a Psalms sermon series, which fits. Directory page is undated."
  }
 ]

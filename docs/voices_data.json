@@ -788,30 +788,35 @@
   {
     "name": "Courtney Doctor",
     "slug": "courtney-doctor",
-    "bio": "Courtney Doctor (MDiv, Covenant Theological Seminary) is a Bible teacher, author, and the director of women's initiatives for The Gospel Coalition. She has written several books and Bible studies, including 'From Garden to Glory,' 'Steadfast,' 'In View of God's Mercies,' and 'Behold and Believe.'",
+    "bio": "Courtney Doctor is director of women's initiatives for The Gospel Coalition and co-hosts TGC's Deep Dish podcast with Melissa Kruger. She holds an MDiv from Covenant Theological Seminary and is the author of From Garden to Glory and several Bible studies, including Titus: Displaying the Gospel of Grace, In View of God's Mercies and Behold and Believe.",
     "affiliation": "The Gospel Coalition",
-    "role": "Bible Teacher & Author",
-    "education": "MDiv, Covenant Theological Seminary (2013)",
-    "website": "https://www.courtneydoctor.org/",
+    "role": "Bible Teacher and Author",
+    "website": "https://www.thegospelcoalition.org/profile/courtney-doctor/",
     "books": [
       {
         "title": "From Garden to Glory",
         "amazon_url": "https://www.amazon.com/s?k=From+Garden+to+Glory+Courtney+Doctor"
       },
       {
+        "title": "Titus: Displaying the Gospel of Grace",
+        "amazon_url": "https://www.amazon.com/s?k=Titus%3A+Displaying+the+Gospel+of+Grace+Courtney+Doctor"
+      },
+      {
         "title": "In View of God's Mercies",
-        "amazon_url": "https://www.amazon.com/s?k=In+View+of+Gods+Mercies+Doctor"
+        "amazon_url": "https://www.amazon.com/s?k=In+View+of+God%27s+Mercies+Courtney+Doctor"
       },
       {
         "title": "Behold and Believe",
         "amazon_url": "https://www.amazon.com/s?k=Behold+and+Believe+Courtney+Doctor"
-      },
-      {
-        "title": "Titus: Displaying the Gospel of Grace",
-        "amazon_url": "https://www.amazon.com/s?k=Titus+Displaying+Gospel+Grace+Doctor"
       }
     ],
-    "initials": "CD"
+    "initials": "CD",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/courtney-doctor/",
+      "https://www.thegospelcoalition.org/podcasts/deep-dish/kids-books-matter/"
+    ],
+    "education": ""
   },
   {
     "slug": "jonathan-dodson",
@@ -1048,13 +1053,35 @@
   {
     "name": "Stan Gale",
     "slug": "stan-gale",
-    "bio": "Stan Gale is a pastor and Christian author dedicated to helping believers grow in their faith and understanding of Scripture. His writing and ministry focus on practical discipleship and spiritual formation for modern Christians.",
+    "bio": "Stanley D. Gale is a teaching elder in the Presbyterian Church in America who has pastored churches in Maryland and Pennsylvania for over 30 years. He holds an MDiv from Westminster and a DMin from Covenant, writes a column for AILBE, and is the author of books including What Is Spiritual Warfare? and A Vine-Ripened Life.",
     "affiliation": "",
-    "role": "Pastor & Author",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SG"
+    "role": "Pastor and Author",
+    "website": "https://learn.ligonier.org/teachers/stanley-gale",
+    "books": [
+      {
+        "title": "What Is Spiritual Warfare?",
+        "amazon_url": "https://www.amazon.com/s?k=What+Is+Spiritual+Warfare%3F+Stan+Gale"
+      },
+      {
+        "title": "A Vine-Ripened Life",
+        "amazon_url": "https://www.amazon.com/s?k=A+Vine-Ripened+Life+Stan+Gale"
+      },
+      {
+        "title": "The Christian's Creed",
+        "amazon_url": "https://www.amazon.com/s?k=The+Christian%27s+Creed+Stan+Gale"
+      },
+      {
+        "title": "Finding Forgiveness",
+        "amazon_url": "https://www.amazon.com/s?k=Finding+Forgiveness+Stan+Gale"
+      }
+    ],
+    "initials": "SG",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.ailbe.org/columns/rooted-in-christ/take-words-with-you/",
+      "https://learn.ligonier.org/teachers/stanley-gale"
+    ],
+    "education": ""
   },
   {
     "name": "Christopher Gehrz",
@@ -1382,13 +1409,17 @@
   {
     "name": "Ellen Hayes",
     "slug": "ellen-hayes",
-    "bio": "Ellen Hayes is a Christian author and speaker known for her work in faith-based content creation. She writes with a focus on spiritual encouragement and biblical living for contemporary Christian audiences.",
-    "affiliation": "",
-    "role": "Author & Speaker",
-    "education": "",
-    "website": "",
+    "bio": "Ellen Hayes is a freelance music writer based in Chicago and a Biola University graduate, according to her RELEVANT author page. She has written interviews and features for RELEVANT, including conversations with Trillia Newbell, Judah Smith and Stephen Chandler.",
+    "affiliation": "RELEVANT (freelance)",
+    "role": "Writer",
+    "website": "https://relevantmagazine.com/author/ellenhayes/",
     "books": [],
-    "initials": "EH"
+    "initials": "EH",
+    "deceased": false,
+    "bio_sources": [
+      "https://relevantmagazine.com/author/ellenhayes/"
+    ],
+    "education": ""
   },
   {
     "name": "Chad Higgins",
@@ -2571,13 +2602,18 @@
   {
     "name": "Meredith Lee Myers",
     "slug": "meredith-lee-myers",
-    "bio": "Web editor for Ligonier Ministries and Tabletalk magazine. Christian publishing professional involved in theological education and ministry resource development.",
+    "bio": "Meredith Lee Myers is web editor for Ligonier Ministries and Tabletalk magazine, according to her Ligonier author page. She is a graduate of Erskine Theological Seminary in Columbia, South Carolina.",
     "affiliation": "Ligonier Ministries",
     "role": "Web Editor",
-    "education": "Graduate of Erskine Theological Seminary",
-    "website": "https://www.ligonier.org/learn/teachers/meredith-myers/",
+    "website": "https://learn.ligonier.org/teachers/meredith-myers",
     "books": [],
-    "initials": "MLM"
+    "initials": "MLM",
+    "deceased": false,
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/meredith-myers",
+      "https://tabletalkmagazine.com/about"
+    ],
+    "education": ""
   },
   {
     "slug": "trillia-newbell",
@@ -3109,13 +3145,18 @@
   {
     "name": "Mike Sabo",
     "slug": "mike-sabo",
-    "bio": "Mike Sabo is a writer and editor at American Reformer, where he covers conservative Christian politics, cultural analysis, and the challenges facing the church in American public life. He writes from a Reformed perspective on nationalism, the common good, and Christian civic engagement.",
+    "bio": "Mike Sabo is an associate editor of American Reformer and managing editor of The American Mind, the Claremont Institute's online journal. He is a graduate of Ashland University and Hillsdale College and a Claremont Institute Lincoln Fellow, and his writing has appeared at RealClearPolitics, The Federalist, Public Discourse and American Greatness.",
     "affiliation": "American Reformer",
-    "role": "Writer & Editor",
-    "education": "",
-    "website": "",
+    "role": "Editor",
+    "website": "https://www.claremont.org/alumni/mike-sabo/",
     "books": [],
-    "initials": "MS"
+    "initials": "MS",
+    "deceased": false,
+    "bio_sources": [
+      "https://archive.americanreformer.org/2026/07/america-at-250/",
+      "https://www.claremont.org/alumni/mike-sabo/"
+    ],
+    "education": ""
   },
   {
     "name": "Summer Said",
@@ -3821,10 +3862,9 @@
     "slug": "jen-wilkin",
     "name": "Jen Wilkin",
     "initials": "JW",
-    "role": "Bible Teacher & Author",
-    "affiliation": "The Village Church",
-    "bio": "Jen Wilkin is a Bible teacher and author from Dallas, Texas, who has organized and led Bible studies for women in home, church, and parachurch contexts across the country and internationally. Her book Women of the Word: How to Study the Bible with Both Our Hearts and Minds (2014) has become widely used in evangelical churches as a foundational text for teaching women inductive Bible study methods and hermeneutical skills.\n\nNow serving on staff with The Village Church Institute where she directs adult classes across their five campuses, Wilkin continues to influence evangelical women's ministry through her teaching, writing, and speaking. Her passion is to help believers become articulate, committed followers of Jesus with clear understanding of biblical truth grounded in careful Scripture study, making her a significant voice shaping how evangelicals approach the Bible.",
-    "education": "Baylor University (MA, Biblical Studies); Southwestern Baptist Theological Seminary",
+    "role": "Bible Teacher and Author",
+    "affiliation": "",
+    "bio": "Jen Wilkin is a Bible teacher and author from Dallas, Texas. An advocate for Bible literacy, she has organized and led studies for women in home, church and parachurch contexts. Her books include Women of the Word, None Like Him, In His Image and Ten Words to Live By.",
     "website": "https://www.jenwilkin.net/",
     "books": [
       {
@@ -3832,10 +3872,29 @@
         "amazon_url": "https://www.amazon.com/s?k=Women+of+the+Word+Jen+Wilkin"
       },
       {
+        "title": "None Like Him",
+        "amazon_url": "https://www.amazon.com/s?k=None+Like+Him+Jen+Wilkin"
+      },
+      {
         "title": "In His Image",
         "amazon_url": "https://www.amazon.com/s?k=In+His+Image+Jen+Wilkin"
+      },
+      {
+        "title": "Ten Words to Live By",
+        "amazon_url": "https://www.amazon.com/s?k=Ten+Words+to+Live+By+Jen+Wilkin"
+      },
+      {
+        "title": "Dust to Dust",
+        "amazon_url": "https://www.amazon.com/s?k=Dust+to+Dust+Jen+Wilkin"
       }
-    ]
+    ],
+    "deceased": false,
+    "bio_sources": [
+      "https://www.crossway.org/authors/jen-wilkin/",
+      "https://www.jenwilkin.net/about",
+      "https://www.thegospelcoalition.org/podcasts/deep-dish/kids-books-matter/"
+    ],
+    "education": ""
   },
   {
     "slug": "dallas-willard",
@@ -3966,13 +4025,31 @@
   {
     "name": "Samuel D. James",
     "slug": "samuel-d-james",
-    "bio": "Samuel D. James is a writer and editor known for thoughtful commentary on faith, culture, and technology from a Christian perspective. He has contributed to leading evangelical publications and is recognized for helping Christians think biblically about contemporary cultural issues.",
-    "affiliation": "Crossway; The Gospel Coalition",
-    "role": "Writer & Editor",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "SDJ"
+    "bio": "Samuel D. James is an associate acquisitions editor at Crossway and lives in Louisville, Kentucky. He is the author of Digital Liturgies: Rediscovering Christian Wisdom in an Online Age, Scroll Less, Live More and Does It Matter What I Believe?",
+    "affiliation": "Crossway",
+    "role": "Editor and Author",
+    "website": "https://crossway.org/authors/samuel-james/",
+    "books": [
+      {
+        "title": "Digital Liturgies",
+        "amazon_url": "https://www.amazon.com/s?k=Digital+Liturgies+Samuel+D.+James"
+      },
+      {
+        "title": "Scroll Less, Live More",
+        "amazon_url": "https://www.amazon.com/s?k=Scroll+Less%2C+Live+More+Samuel+D.+James"
+      },
+      {
+        "title": "Does It Matter What I Believe?",
+        "amazon_url": "https://www.amazon.com/s?k=Does+It+Matter+What+I+Believe%3F+Samuel+D.+James"
+      }
+    ],
+    "initials": "SDJ",
+    "deceased": false,
+    "bio_sources": [
+      "https://crossway.org/authors/samuel-james/",
+      "https://www.crossway.org/articles/how-should-christians-think-about-ai/"
+    ],
+    "education": ""
   },
   {
     "name": "Aaron M. Renn",
@@ -4649,13 +4726,19 @@
   {
     "name": "Rich Bitterman",
     "slug": "rich-bitterman",
-    "bio": "Rich Bitterman is the pastor of Cedar Ridge Baptist Church, a small rural Southern Baptist congregation in Missouri. He came to faith at age 42 after nearly two decades running a business in the Kansas City area, and now writes devotions, sermons, and Bible-study resources through his site and his 'Old Paths & New Roads' newsletter.",
-    "affiliation": "Cedar Ridge Baptist Church",
-    "role": "Pastor & Writer",
-    "education": "",
+    "bio": "Rich Bitterman is a pastor in the Missouri Ozarks who writes Bible devotions and pastoral encouragement at his website and his newsletter, Old Paths & New Roads. A May 2026 article he wrote for The Alabama Baptist identified him with Cedar Ridge Baptist Church in Galena, Missouri.",
+    "affiliation": "Cedar Ridge Baptist Church, Galena, Missouri",
+    "role": "Pastor",
     "website": "https://richbitterman.com",
     "books": [],
-    "initials": "RB"
+    "initials": "RB",
+    "deceased": false,
+    "bio_sources": [
+      "https://richbitterman.com",
+      "https://pastorrichbitterman.substack.com/about",
+      "https://thealabamabaptist.org/first-person-finding-grandeur-of-gods-love-in-rural-ministry/"
+    ],
+    "education": ""
   },
   {
     "name": "Stephen Witmer",
@@ -5444,34 +5527,42 @@
   {
     "name": "Carl Trueman",
     "slug": "carl-trueman",
-    "bio": "Carl R. Trueman (born 1967) is a British-born historian and theologian who serves as professor of biblical and religious studies at Grove City College in Pennsylvania. He previously taught for nearly two decades at Westminster Theological Seminary, including as Paul Woolley Professor of Church History, and is a fellow at the Ethics and Public Policy Center. Trueman is best known for his cultural-historical analysis of modern selfhood and identity. His book The Rise and Triumph of the Modern Self traces the philosophical genealogy from Rousseau through the Romantics to today's expressive individualism and gender ideology, and has become one of the most widely cited evangelical books of the 2020s. His earlier work covers Reformation history, theology, and confessional Reformed identity.",
+    "bio": "Carl R. Trueman is professor of biblical and religious studies at Grove City College and a fellow at the Ethics and Public Policy Center. He holds a PhD from the University of Aberdeen, is a contributing editor at First Things, and is a member of the Orthodox Presbyterian Church. His books include The Rise and Triumph of the Modern Self and Strange New World.",
     "affiliation": "Grove City College",
-    "role": "Church Historian",
-    "education": "University of Cambridge (MA); University of Aberdeen (PhD)",
-    "website": "https://www.gcc.edu/Home/Academics/Majors-Departments/Department-Detail/biblical-religious-studies/Faculty-Detail/EmployeeId/2436",
-    "denomination": "Orthodox Presbyterian Church (ordained minister)",
-    "tradition": "Confessional Reformed/Presbyterian",
-    "known_for": "The Rise and Triumph of the Modern Self, a widely cited genealogy of expressive individualism and the modern identity revolution.",
-    "current_role": "Professor of Biblical and Religious Studies at Grove City College (on loan to the University of Notre Dame as Busch Family Visiting Research Fellow for 2025-26); fellow at the Ethics and Public Policy Center",
+    "role": "Professor and Church Historian",
+    "website": "https://www.crossway.org/authors/carl-r-trueman/",
     "deceased": false,
-    "faqs": [
+    "books": [
       {
-        "q": "What denomination is Carl Trueman?",
-        "a": "Trueman is an ordained minister in the Orthodox Presbyterian Church (OPC), a conservative confessional Presbyterian denomination. He is British-born and taught for nearly two decades at Westminster Theological Seminary before joining Grove City College in 2018."
+        "title": "The Rise and Triumph of the Modern Self",
+        "amazon_url": "https://www.amazon.com/s?k=The+Rise+and+Triumph+of+the+Modern+Self+Carl+Trueman"
       },
       {
-        "q": "What is Carl Trueman known for?",
-        "a": "Trueman is best known for The Rise and Triumph of the Modern Self (2020), which traces how Western culture came to define identity by inner psychological feelings, particularly around sexuality and gender. Its shorter companion, Strange New World, has made the argument accessible to lay readers and become standard reading in evangelical circles."
+        "title": "Strange New World",
+        "amazon_url": "https://www.amazon.com/s?k=Strange+New+World+Carl+Trueman"
       },
       {
-        "q": "Where does Carl Trueman teach?",
-        "a": "Trueman is professor of biblical and religious studies at Grove City College in Pennsylvania. For the 2025-26 academic year he is serving as the Busch Family Visiting Research Fellow at the University of Notre Dame's Center for Citizenship and Constitutional Government."
+        "title": "Classical Theology for the Modern Mind",
+        "amazon_url": "https://www.amazon.com/s?k=Classical+Theology+for+the+Modern+Mind+Carl+Trueman"
       },
       {
-        "q": "Is Carl Trueman a historian or a theologian?",
-        "a": "Both, though his training is as a church historian. He earned his PhD at Aberdeen, specialized in Reformation and post-Reformation studies (including work on John Owen), and applies that historical method to contemporary cultural analysis. He also writes regularly for First Things and World Opinions."
+        "title": "Crisis of Confidence",
+        "amazon_url": "https://www.amazon.com/s?k=Crisis+of+Confidence+Carl+Trueman"
+      },
+      {
+        "title": "Histories and Fallacies",
+        "amazon_url": "https://www.amazon.com/s?k=Histories+and+Fallacies+Carl+Trueman"
+      },
+      {
+        "title": "Luther on the Christian Life",
+        "amazon_url": "https://www.amazon.com/s?k=Luther+on+the+Christian+Life+Carl+Trueman"
       }
-    ]
+    ],
+    "bio_sources": [
+      "https://firstthings.com/the-cult-of-pastoral-vulnerability/",
+      "https://www.crossway.org/authors/carl-r-trueman/"
+    ],
+    "education": ""
   },
   {
     "name": "Jay Adams",
@@ -8136,13 +8227,18 @@
   {
     "name": "Al Gooderham",
     "slug": "al-gooderham",
-    "bio": "Al Gooderham is a pastor at Grace Church in Doncaster, England, where he preaches and writes on discipleship, church planting, and living wholeheartedly for Jesus. He blogs regularly on ministry and Bible exposition and contributes resources to 20schemes Equip.",
-    "affiliation": "Grace Church, Doncaster, England",
-    "role": "Pastor & Writer",
-    "education": "",
+    "bio": "Al Gooderham is pastor of Grace in the Community Church in Doncaster, England, according to his 20schemes Equip author page. He writes on ministry, discipleship and church planting at his blog, and has contributed to 20schemes Equip.",
+    "affiliation": "Grace in the Community Church, Doncaster",
+    "role": "Pastor",
     "website": "https://algooderham.wordpress.com/",
     "books": [],
-    "initials": "AG"
+    "initials": "AG",
+    "deceased": false,
+    "bio_sources": [
+      "https://20schemesequip.com/multi_author/al-gooderham",
+      "https://algooderham.wordpress.com/"
+    ],
+    "education": ""
   },
   {
     "name": "Stephen Unthank",
@@ -8226,13 +8322,23 @@
   {
     "name": "Paul Ritchie",
     "slug": "paul-ritchie",
-    "bio": "Paul Ritchie is pastor of Limerick Baptist Church in Ireland. Originally from Dublin, he is a Christian Focus author whose preaching and writing, including expositions through books such as Numbers, are shaped by his own experience of OCD and anxiety, giving his ministry a particular tenderness toward strugglers. His sermons and articles are regularly shared through The Aquila Report.",
+    "bio": "Paul Ritchie serves as pastor of Limerick Baptist Church, according to his Christian Focus author page and his blog. He is the author of Is It Unspiritual to Be Depressed?, published by Christian Focus, and posts sermon-based reflections on his blog.",
     "affiliation": "Limerick Baptist Church",
-    "role": "Pastor & Author",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "PR"
+    "role": "Pastor",
+    "website": "https://paulritchieblog.blogspot.com/",
+    "books": [
+      {
+        "title": "Is It Unspiritual to Be Depressed?",
+        "amazon_url": "https://www.amazon.com/s?k=Is+It+Unspiritual+to+Be+Depressed%3F+Paul+Ritchie"
+      }
+    ],
+    "initials": "PR",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.christianfocus.com/row/about/our-authors/1993/paul-ritchie",
+      "https://paulritchieblog.blogspot.com/2026/05/we-need-to-move-from-presumption-to.html"
+    ],
+    "education": ""
   },
   {
     "name": "Scott Klusendorf",
@@ -8600,13 +8706,18 @@
   {
     "name": "Harvest Prude",
     "slug": "harvest-prude",
-    "bio": "Harvest Prude is a political journalist and a graduate of Patrick Henry College and the World Journalism Institute. She served as a national political reporter in WORLD magazine's Washington bureau, covering Capitol Hill, before joining The Dispatch as a reporter and Poynter-Koch fellow.",
-    "affiliation": "The Dispatch (formerly WORLD)",
+    "bio": "Harvest Prude is a journalist based in Washington, D.C. According to her Christianity Today writer page (checked November 2026), she was national political correspondent for Christianity Today and previously covered politics for The Dispatch and World Magazine. Her feature reporting won the Zenger Prize in 2023, and she is a 2026 fellow at the Center for Christianity and Public Life.",
+    "affiliation": "Christianity Today",
     "role": "Journalist",
-    "education": "",
-    "website": "",
+    "website": "https://www.christianitytoday.com/writers/harvest-prude/",
     "books": [],
-    "initials": "HP"
+    "initials": "HP",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.christianitytoday.com/writers/harvest-prude/",
+      "https://www.christianitytoday.com/2026/09/stay-at-home-proposal-white-house-parents-welfare/"
+    ],
+    "education": ""
   },
   {
     "name": "Edward Song",
@@ -9101,22 +9212,18 @@
   {
     "name": "Darryl Dash",
     "slug": "darryl-dash",
-    "bio": "Darryl Dash is a pastor, author, and speaker known for helping churches and Christian leaders navigate practical ministry challenges with biblical wisdom. He has served in pastoral ministry for decades and shares insights on leadership, faith, and Christian living through various platforms. His work encourages believers to think deeply about their faith and its application to everyday life.",
-    "affiliation": "Tap Unstuck",
-    "role": "Pastor & Author",
-    "education": "",
-    "website": "https://www.darryldash.com",
-    "books": [
-      {
-        "title": "Do Better: A Guide to Growing as a Leader",
-        "amazon_url": "https://www.amazon.com/s?k=Do+Better+Darryl+Dash"
-      },
-      {
-        "title": "Laughing at the Devil: Exposing the Enemy's Lies",
-        "amazon_url": "https://www.amazon.com/s?k=Laughing+at+the+Devil+Darryl+Dash"
-      }
+    "bio": "Darryl Dash is senior pastor of Grace Fellowship Church East Toronto and cofounder of Gospel for Life. He is a columnist at The Gospel Coalition Canada and writes Big Idea Bible, and he posts sermons and articles at his site, DashHouse.",
+    "affiliation": "Grace Fellowship Church East Toronto",
+    "role": "Pastor",
+    "website": "https://dashhouse.com/",
+    "books": [],
+    "initials": "DD",
+    "deceased": false,
+    "bio_sources": [
+      "https://dashhouse.com/about/",
+      "https://www.dashhouse.com/the-kingdoms-equal-grace-matthew-201-16/"
     ],
-    "initials": "DD"
+    "education": ""
   },
   {
     "name": "Erik Coonce",
@@ -9337,13 +9444,17 @@
   {
     "name": "Rachel Culver",
     "slug": "rachel-culver",
-    "bio": "Rachel Culver is a writer and book reviewer whose work appears at The Gospel Coalition, including reviews on grief, lament, and Christian suffering, such as her review of Brittany Lee Allen's Free to Weep. A political studies graduate of The Master's University, she belongs to Grace Church of the Valley in Kingsburg, California, and writes to help Christians recover the biblical language of lament.",
-    "affiliation": "Grace Church of the Valley",
+    "bio": "Rachel Culver is a member of Grace Church of the Valley in Kingsburg, California, and a political studies graduate of The Master's University, according to her Gospel Coalition author page. She has written book reviews for The Gospel Coalition and writes a newsletter.",
+    "affiliation": "",
     "role": "Writer",
-    "education": "",
-    "website": "",
+    "website": "https://www.thegospelcoalition.org/profile/rachel-culver/",
     "books": [],
-    "initials": "RC"
+    "initials": "RC",
+    "deceased": false,
+    "bio_sources": [
+      "https://www.thegospelcoalition.org/profile/rachel-culver/"
+    ],
+    "education": ""
   },
   {
     "name": "Steven Willing",
@@ -10378,13 +10489,19 @@
   {
     "name": "Tom Sugimura",
     "slug": "tom-sugimura",
-    "bio": "Tom Sugimura is a pastor at New Life Church in Woodland Hills, California, a church-planting coach, and a professor of biblical counseling. A former engineer, he graduated from The Master's Seminary and earned a doctorate in biblical counseling from The Southern Baptist Theological Seminary. His books include Grace, Race, and the Church and The Church Behind Barbed Wire, and he hosts the Every Peoples Podcast.",
+    "bio": "Tom Sugimura is listed as lead pastor of New Life Church in Woodland Hills, California, in The Gospel Coalition's Los Angeles church directory. A 2021 BCM Worldwide profile described him as a team member with that biblical counseling training ministry and said he earned MDiv and ThM degrees from The Master's Seminary.",
     "affiliation": "New Life Church, Woodland Hills",
-    "role": "Pastor & Author",
-    "education": "",
-    "website": "",
+    "role": "Pastor",
+    "website": "https://www.nlcwh.org/",
     "books": [],
-    "initials": "TS"
+    "initials": "TS",
+    "deceased": false,
+    "bio_sources": [
+      "https://la.thegospelcoalition.org/los-angeles-churches/church/6/new-life-church",
+      "https://bcmworldwide.org/?p=1486",
+      "https://www.nlcwh.org/"
+    ],
+    "education": ""
   },
   {
     "name": "Katie Deckert",
@@ -11908,13 +12025,18 @@
   {
     "name": "Kevin Schaal",
     "slug": "kevin-schaal",
-    "bio": "Kevin Schaal has served as pastor of Northwest Valley Baptist Church in Glendale, Arizona, since founding it in 1987, and the church has since planted five congregations in Arizona and Mexico. A Bob Jones University graduate with an MDiv from Calvary Baptist Seminary and a DMin from International Baptist College, he has been president of the Foundations Baptist Fellowship International since 2017 and writes at Proclaim & Defend.",
-    "affiliation": "Northwest Valley Baptist Church",
+    "bio": "Kevin Schaal is senior pastor of Northwest Valley Baptist Church in Phoenix, Arizona, and president of Foundations Baptist Fellowship International, according to his Proclaim & Defend author page. He has pastored the church since its founding in 1987 and studied at Bob Jones University, Calvary Baptist Seminary and International Baptist College.",
+    "affiliation": "Northwest Valley Baptist Church, Phoenix",
     "role": "Pastor",
-    "education": "",
-    "website": "",
+    "website": "https://proclaimanddefend.org/author/kevin-schaal/",
     "books": [],
-    "initials": "KS"
+    "initials": "KS",
+    "deceased": false,
+    "bio_sources": [
+      "https://proclaimanddefend.org/author/kevin-schaal/",
+      "https://proclaimanddefend.org/president"
+    ],
+    "education": ""
   },
   {
     "name": "Tom Ascol",
@@ -14231,13 +14353,43 @@
   {
     "name": "Jon Nielson",
     "slug": "jon-nielson",
-    "bio": "Jon Nielson is a pastor and writer devoted to helping Christians live out their faith with integrity and purpose. He has served in pastoral ministry and is known for his thoughtful approach to discipleship and spiritual formation. His writing encourages believers to grow deeper in their relationship with Christ and engage thoughtfully with contemporary culture.",
-    "affiliation": "",
-    "role": "Pastor & Author",
-    "education": "",
-    "website": "",
-    "books": [],
-    "initials": "JN"
+    "bio": "Jon Nielson is senior pastor of Christ Presbyterian Church in Wheaton, Illinois, according to his Ligonier and Crossway author pages. He holds a DMin from Trinity Evangelical Divinity School, is the author of the Theology Basics series, including Knowing God's Truth, and coedited Gospel-Centered Youth Ministry.",
+    "affiliation": "Christ Presbyterian Church, Wheaton, Illinois",
+    "role": "Pastor",
+    "website": "https://www.crossway.org/authors/jon-nielson/",
+    "books": [
+      {
+        "title": "Knowing God's Truth",
+        "amazon_url": "https://www.amazon.com/s?k=Knowing+God%27s+Truth+Jon+Nielson"
+      },
+      {
+        "title": "Understanding God's Word",
+        "amazon_url": "https://www.amazon.com/s?k=Understanding+God%27s+Word+Jon+Nielson"
+      },
+      {
+        "title": "Tracing God's Story",
+        "amazon_url": "https://www.amazon.com/s?k=Tracing+God%27s+Story+Jon+Nielson"
+      },
+      {
+        "title": "God's Great Story",
+        "amazon_url": "https://www.amazon.com/s?k=God%27s+Great+Story+Jon+Nielson"
+      },
+      {
+        "title": "Men and Work",
+        "amazon_url": "https://www.amazon.com/s?k=Men+and+Work+Jon+Nielson"
+      },
+      {
+        "title": "Men and Spiritual Disciplines",
+        "amazon_url": "https://www.amazon.com/s?k=Men+and+Spiritual+Disciplines+Jon+Nielson"
+      }
+    ],
+    "initials": "JN",
+    "deceased": false,
+    "bio_sources": [
+      "https://learn.ligonier.org/teachers/jon-nielson",
+      "https://www.crossway.org/authors/jon-nielson/"
+    ],
+    "education": ""
   },
   {
     "name": "Jonathan Master",
@@ -14648,13 +14800,17 @@
   {
     "name": "Brian G. Najapfour",
     "slug": "brian-g-najapfour",
-    "bio": "",
-    "affiliation": "",
-    "role": "",
-    "education": "",
-    "website": "",
+    "bio": "Brian G. Najapfour pastors the Heritage Reformed Congregation in Jordan, Ontario, according to the congregation's website. He holds a ThM from Puritan Reformed Theological Seminary and a PhD from the Theological University of Apeldoorn, and has been in ministry since 2001, with pastoral experience in the Philippines and the United States. He has written and co-edited a number of books.",
+    "affiliation": "Heritage Reformed Congregation, Jordan, Ontario",
+    "role": "Pastor",
+    "website": "https://heritagereformed.com/pastor/brian-najapfour/",
     "books": [],
-    "initials": "BGN"
+    "initials": "BGN",
+    "deceased": false,
+    "bio_sources": [
+      "https://heritagereformed.com/pastor/brian-najapfour/"
+    ],
+    "education": ""
   },
   {
     "name": "Shelly Harris",
