@@ -188,13 +188,15 @@ jobs:
         run: python3 scripts/check_voices.py
 
       - name: Commit output files
+        # Commits first, then rebases onto main with no autostash (a conflicted
+        # autostash pop pushed conflict markers to the homepage on 2026-11-13).
+        # Fails and pushes nothing if any tracked file has conflict markers.
+        # See scripts/commit_daily_run.sh.
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase --autostash origin main
-          git add docs/index.html docs/topics/ docs/digest/ docs/yesterday.json docs/email_draft.html docs/article_history.json docs/research_articles.json docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-topics.xml docs/sitemap-voices.xml docs/sitemap-daily.xml docs/sitemap-archive.xml docs/archive/ docs/daily/ docs/_pagefind/ docs/voices/ docs/voices_data.json docs/spotlight_topic_log.json docs/feed_health.json docs/click_counts.json docs/discovery_queue.json docs/data_watch.json data/
-          git diff --staged --quiet || git commit -m "chore: daily curator run $(date +%Y-%m-%d)"
-          git push origin main
+          bash scripts/commit_daily_run.sh "chore: daily curator run $(date +%Y-%m-%d)" \
+            docs/index.html docs/topics/ docs/digest/ docs/yesterday.json docs/email_draft.html docs/article_history.json docs/research_articles.json docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-topics.xml docs/sitemap-voices.xml docs/sitemap-daily.xml docs/sitemap-archive.xml docs/archive/ docs/daily/ docs/_pagefind/ docs/voices/ docs/voices_data.json docs/spotlight_topic_log.json docs/feed_health.json docs/click_counts.json docs/discovery_queue.json docs/data_watch.json data/
 
       - name: Ping IndexNow with changed URLs
         # IndexNow notifies Bing / Yandex / Seznam / DuckDuckGo of changed pages.

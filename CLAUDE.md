@@ -62,6 +62,24 @@ git pull --no-rebase origin main
 git add <files> && git commit -m "..." && git push origin main
 ```
 
+**Pre-push checks** (run all of them, with `set -o pipefail` so a piped failure is not hidden; never push a red one):
+
+```bash
+set -o pipefail
+.venv/bin/python -m pytest -q
+python scripts/check_conflict_markers.py    # no <<<<<<< / ======= / >>>>>>> in any tracked file
+python scripts/check_topic_quality.py
+python scripts/check_nav_consistency.py
+python scripts/check_voices.py
+```
+
+Conflict markers (Nov 13 2026): the daily run's `git pull --rebase --autostash` hit a conflicted stash pop when our
+overnight commit landed mid-run, and pushed `<<<<<<< Updated upstream` into the live homepage News column. The commit
+step is now `scripts/commit_daily_run.sh`: it commits first, rebases with no autostash, falls back to a merge where
+the run's generated output wins the conflicting hunks (with a `::warning` naming the files), leaves uncommitted
+leftovers in a stash, runs `check_conflict_markers.py` before every push, and pushes nothing when it fails. Tests:
+`tests/test_commit_daily_run.py`. Report: `.christian-orchestrator/conflict-marker-fix-report.md`.
+
 
 ## Daily Pipeline (GitHub Actions)
 Runs automatically around **5:00 AM America/New_York** all year (the workflow `timezone` field follows DST; catch-up slots and a same-morning no-op guard are in `.github/workflows/daily_run.yml`). A punctual 5:00 AM Cloudflare ping lives in `worker/morning/` and is not live until it is deployed. Operator notes: `.github/morning-trigger.md`.
