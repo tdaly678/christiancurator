@@ -1,0 +1,108 @@
+{
+  "id": "created-being",
+  "type": "column",
+  "kicker": "Begotten, not made",
+  "title": "Is Jesus \"the first and greatest being created by God\"? Most evangelicals said yes.",
+  "subtitle": "U.S. adults with evangelical beliefs and all U.S. adults, 2016 to 2022",
+  "caption": "In four surveys from 2016 to 2022, between 65% and 78% of Americans with evangelical beliefs agreed that Jesus is the first and greatest being created by God, more than among Americans overall. The Nicene Creed confesses the Son as \"begotten, not made\".",
+  "note": "Statement: \"Jesus is the first and greatest being created by God\" (share who agree). \"Evangelical beliefs\" is the NAE and Lifeway Research definition: respondents who strongly agree with four statements on the Bible's authority, sharing their faith, Christ's death as the only sacrifice for sin, and salvation through trust in Christ alone. It is a belief measure, not church membership. The statement was not in the 2025 survey. The 2016 figures are as reported in the 2018 white paper; the 2020 paper repeats the 2016 and 2018 evangelical figures.",
+  "unit": "%",
+  "max": 100,
+  "series": [
+    {
+      "id": "evb",
+      "label": "Evangelical beliefs",
+      "color": "green"
+    },
+    {
+      "id": "all",
+      "label": "All U.S. adults",
+      "color": "grey"
+    }
+  ],
+  "rows": [
+    {
+      "label": "2016",
+      "values": {
+        "evb": 71,
+        "all": 52
+      },
+      "as_published": {
+        "evb": "71%",
+        "all": "52%"
+      },
+      "source": "sot2018"
+    },
+    {
+      "label": "2018",
+      "values": {
+        "evb": 78,
+        "all": 57
+      },
+      "as_published": {
+        "evb": "78%",
+        "all": "57%"
+      },
+      "source": "sot2018"
+    },
+    {
+      "label": "2020",
+      "values": {
+        "evb": 65,
+        "all": 55
+      },
+      "as_published": {
+        "evb": "65%",
+        "all": "55%"
+      },
+      "source": "sot2020"
+    },
+    {
+      "label": "2022",
+      "values": {
+        "evb": 73,
+        "all": 55
+      },
+      "as_published": {
+        "evb": "73%",
+        "all": "55%"
+      },
+      "source": "sot2022"
+    }
+  ],
+  "sources": [
+    {
+      "id": "sot2018",
+      "publisher": "Ligonier Ministries and Lifeway Research",
+      "study": "Ligonier State of Theology 2018 White Paper",
+      "year": 2018,
+      "url": "https://research.lifeway.com/wp-content/uploads/2018/10/Ligonier-State-of-Theology-2018-White-Paper.pdf",
+      "fetched": "2026-11-14",
+      "license": "credit",
+      "field_dates": "April 24 to May 4, 2018",
+      "sample": "3,002 U.S. adults, demographically balanced online panel; margin of error plus or minus 1.9 points, higher in subgroups"
+    },
+    {
+      "id": "sot2020",
+      "publisher": "Ligonier Ministries and Lifeway Research",
+      "study": "Ligonier State of Theology 2020 White Paper",
+      "year": 2020,
+      "url": "https://research.lifeway.com/wp-content/uploads/2020/09/Ligonier-State-of-Theology-2020-White-Paper.pdf",
+      "fetched": "2026-11-14",
+      "license": "credit",
+      "field_dates": "March 10 to 18, 2020",
+      "sample": "3,002 U.S. adults, demographically balanced online panel; margin of error plus or minus 2.0 points, higher in subgroups"
+    },
+    {
+      "id": "sot2022",
+      "publisher": "Ligonier Ministries and Lifeway Research",
+      "study": "Ligonier State of Theology 2022 White Paper",
+      "year": 2022,
+      "url": "https://research.lifeway.com/wp-content/uploads/2022/09/Ligonier-State-of-Theology-2022-White-Paper.pdf",
+      "fetched": "2026-11-14",
+      "license": "credit",
+      "field_dates": "January 5 to 23, 2022",
+      "sample": "3,011 U.S. adults, demographically balanced online panel; margin of error plus or minus 1.9 points, higher in subgroups"
+    }
+  ]
+}

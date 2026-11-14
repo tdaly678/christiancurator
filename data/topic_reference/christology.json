@@ -1,0 +1,81 @@
+{
+  "slug": "christology",
+  "date_modified": "2026-11-14",
+  "definition": {
+    "question": "What is Christology?",
+    "html": "<p>Christology is the doctrine of the person of Jesus Christ: who he is, and how he can be both God and man. The <a href=\"https://www.crcna.org/welcome/beliefs/creeds/nicene-creed\" target=\"_blank\" rel=\"noopener\">Nicene Creed</a> confesses him as \"true God from true God, begotten, not made; of the same essence as the Father,\" who \"became incarnate by the Holy Spirit and the virgin Mary, and was made human.\"</p><p>The Council of Chalcedon (451) defined how the two belong together. As Ligonier summarizes <a href=\"https://learn.ligonier.org/devotionals/chalcedonian-solution\" target=\"_blank\" rel=\"noopener\">the Definition of Chalcedon</a>, \"in the one person of Christ are perfectly united the divine nature and a human nature,\" and the union is \"without confusion, mixture, separation, or division, each nature retaining its own attributes.\" This is called the hypostatic union. See <a href=\"#by-the-numbers\">what Americans say about Jesus</a> and <a href=\"#faq\">short answers to common questions</a>.</p>",
+    "also_known_as": [
+      "the person of Christ",
+      "the hypostatic union",
+      "the two natures of Christ",
+      "the incarnation"
+    ]
+  },
+  "faq": {
+    "label": "Frequently Asked Questions",
+    "title": "Christology, Briefly Answered",
+    "place": {
+      "before": "<!-- CC-TOPIC-VOICES:START -->"
+    },
+    "items": [
+      {
+        "q": "What is the hypostatic union?",
+        "a": "It is the teaching that Christ is one person with two natures, one divine and one human. Ligonier's summary of <a href=\"https://learn.ligonier.org/devotionals/chalcedonian-solution\" target=\"_blank\" rel=\"noopener\">the Definition of Chalcedon</a> puts it plainly: \"Christ is one person with two natures.\" Because the natures are not mixed, \"He is not a third kind of being\"; because they are not separated, \"the same Christ acts\" whether he is exercising divine or human attributes."
+      },
+      {
+        "q": "Is Jesus a created being?",
+        "a": "Historic Christian teaching says no. The <a href=\"https://www.crcna.org/welcome/beliefs/creeds/nicene-creed\" target=\"_blank\" rel=\"noopener\">Nicene Creed</a> calls the Son \"begotten from the Father before all ages\" and \"begotten, not made,\" against Arius, who taught that the Son was created. Yet in the <a href=\"https://research.lifeway.com/wp-content/uploads/2022/09/Ligonier-State-of-Theology-2022-White-Paper.pdf\" target=\"_blank\" rel=\"noopener\">2022 State of Theology survey</a>, 73% of Americans with evangelical beliefs agreed that \"Jesus is the first and greatest being created by God.\" See <a href=\"#created-being\">the chart</a>."
+      },
+      {
+        "q": "What is kenotic Christology?",
+        "a": "It takes its name from Philippians 2:7, where Christ \"emptied himself\" (Greek <em>kenosis</em>). Kenotic theologians hold that in the incarnation the Son limited the use of his divine attributes. Classical Reformed teachers read the verse differently. Ligonier's answer to <a href=\"https://learn.ligonier.org/qas/what-does-it-mean-that-christ-emptied-himself-in-phil-2-6-7\" target=\"_blank\" rel=\"noopener\">What does it mean that Christ \"emptied Himself\"?</a> says it \"does not mean that Christ became anything less than He was. It does not mean that He ceased to be God,\" but that he submitted himself \"to the power of the Holy Spirit and the will of the Father.\""
+      },
+      {
+        "q": "Can we say that God died on the cross?",
+        "a": "Classical Christology says the attributes of each nature belong to the one person, so we may say what the person did through either nature. Ligonier's summary of <a href=\"https://learn.ligonier.org/devotionals/chalcedonian-solution\" target=\"_blank\" rel=\"noopener\">Chalcedon</a> gives the example: \"Christ's divine nature, for example, does not have blood, but the person of Christ does,\" citing Acts 20:28, where the church is the one God \"obtained with his own blood.\" This is the communication of attributes (<em>communicatio idiomatum</em>). Lutheran and Reformed theologians have long disagreed over how far it reaches."
+      },
+      {
+        "q": "Do evangelicals believe Jesus is God?",
+        "a": "Most do, but not all who hold evangelical beliefs say so on a survey. In the 2025 State of Theology survey, 68% of Americans with evangelical beliefs disagreed that \"Jesus was a great teacher, but he was not God\"; among all U.S. adults, 49% agreed (<a href=\"https://news.lifeway.com/2025/09/22/state-of-theology-finds-stable-theology-among-americans/\" target=\"_blank\" rel=\"noopener\">Lifeway Research</a>). See <a href=\"#great-teacher\">the chart</a>."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "nicene",
+      "publisher": "Christian Reformed Church in North America",
+      "title": "Nicene Creed (1988 translation)",
+      "url": "https://www.crcna.org/welcome/beliefs/creeds/nicene-creed",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "chalcedon",
+      "publisher": "Ligonier Ministries",
+      "title": "The Chalcedonian Solution",
+      "url": "https://learn.ligonier.org/devotionals/chalcedonian-solution",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "kenosis",
+      "publisher": "Ligonier Ministries",
+      "title": "What does it mean that Christ \"emptied Himself\" in Phil. 2:6-7?",
+      "url": "https://learn.ligonier.org/qas/what-does-it-mean-that-christ-emptied-himself-in-phil-2-6-7",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "sot2022",
+      "publisher": "Ligonier Ministries and Lifeway Research",
+      "title": "Ligonier State of Theology 2022 White Paper",
+      "url": "https://research.lifeway.com/wp-content/uploads/2022/09/Ligonier-State-of-Theology-2022-White-Paper.pdf",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "lw2025",
+      "publisher": "Lifeway Research",
+      "title": "State of Theology Finds Stable Theology Among Americans",
+      "url": "https://news.lifeway.com/2025/09/22/state-of-theology-finds-stable-theology-among-americans/",
+      "fetched": "2026-11-14"
+    }
+  ],
+  "notes": "Arius taught the Son was created: standard history; the CRC page says the creed was framed 'in opposition to certain heresies, especially Arianism'. 'Lutheran and Reformed theologians have long disagreed over how far it reaches' is general knowledge, not quoted; Tom may cut it."
+}

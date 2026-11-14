@@ -1,0 +1,81 @@
+{
+  "id": "great-teacher",
+  "type": "hbar",
+  "kicker": "Teacher or Lord",
+  "title": "Who rejects \"Jesus was a great teacher, but he was not God\"?",
+  "subtitle": "U.S. adults, January 2025",
+  "caption": "Most evangelicals disagreed in 2025: 68% of those with evangelical beliefs and 62% of those in evangelical Protestant traditions. The rest agreed or were not sure. Among evangelicals by belief the share who disagreed was 66% in 2020, 54% in 2022 and 68% in 2025. Among all Americans, 49% agreed and 40% disagreed.",
+  "note": "Statement: \"Jesus was a great teacher, but he was not God\" (share who disagree). Evangelicals by religious tradition are respondents Lifeway classifies as evangelical Protestant by religious tradition; the release does not print the classification. \"Evangelical beliefs\" is the NAE and Lifeway Research definition: respondents who strongly agree with four statements on the Bible's authority, sharing their faith, Christ's death as the only sacrifice for sin, and salvation through trust in Christ alone. It is a belief measure, not church membership. The 2020 and 2022 figures are from those years' white papers.",
+  "unit": "%",
+  "max": 100,
+  "categories": [
+    {
+      "id": "all",
+      "label": "All adults",
+      "color": "grey"
+    },
+    {
+      "id": "ev",
+      "label": "Evangelicals",
+      "color": "green"
+    }
+  ],
+  "rows": [
+    {
+      "label": "All U.S. adults",
+      "value": 40,
+      "as_published": "40%",
+      "source": "lw2025",
+      "category": "all"
+    },
+    {
+      "label": "Evangelicals by religious tradition",
+      "value": 62,
+      "as_published": "62%",
+      "source": "lw2025",
+      "category": "ev"
+    },
+    {
+      "label": "Evangelicals by belief",
+      "value": 68,
+      "as_published": "68%",
+      "source": "lw2025",
+      "category": "ev"
+    }
+  ],
+  "sources": [
+    {
+      "id": "lw2025",
+      "publisher": "Lifeway Research",
+      "study": "State of Theology Finds Stable Theology Among Americans (release for Ligonier Ministries)",
+      "year": 2025,
+      "url": "https://news.lifeway.com/2025/09/22/state-of-theology-finds-stable-theology-among-americans/",
+      "fetched": "2026-11-14",
+      "license": "credit",
+      "field_dates": "January 6 to 15, 2025",
+      "sample": "3,001 U.S. adults, online panel"
+    },
+    {
+      "id": "sot2020",
+      "publisher": "Ligonier Ministries and Lifeway Research",
+      "study": "Ligonier State of Theology 2020 White Paper",
+      "year": 2020,
+      "url": "https://research.lifeway.com/wp-content/uploads/2020/09/Ligonier-State-of-Theology-2020-White-Paper.pdf",
+      "fetched": "2026-11-14",
+      "license": "credit",
+      "field_dates": "March 10 to 18, 2020",
+      "sample": "3,002 U.S. adults, demographically balanced online panel; margin of error plus or minus 2.0 points, higher in subgroups"
+    },
+    {
+      "id": "sot2022",
+      "publisher": "Ligonier Ministries and Lifeway Research",
+      "study": "Ligonier State of Theology 2022 White Paper",
+      "year": 2022,
+      "url": "https://research.lifeway.com/wp-content/uploads/2022/09/Ligonier-State-of-Theology-2022-White-Paper.pdf",
+      "fetched": "2026-11-14",
+      "license": "credit",
+      "field_dates": "January 5 to 23, 2022",
+      "sample": "3,011 U.S. adults, demographically balanced online panel; margin of error plus or minus 1.9 points, higher in subgroups"
+    }
+  ]
+}

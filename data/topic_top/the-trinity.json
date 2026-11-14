@@ -1,0 +1,89 @@
+{
+  "slug": "the-trinity",
+  "glance": {
+    "question": "How should evangelicals describe the relations of Father, Son and Spirit?",
+    "positions": [
+      {
+        "name": "Classical Trinitarianism",
+        "claim": "One God in three equal persons; the Son's submission belongs to his incarnation, not eternity.",
+        "anchor": "position-1"
+      },
+      {
+        "name": "Eternal Submission of the Son",
+        "claim": "The Son is equal in being but eternally submits to the Father's authority.",
+        "anchor": "position-2",
+        "voices": [
+          {
+            "name": "Wayne Grudem",
+            "slug": "wayne-grudem"
+          }
+        ]
+      },
+      {
+        "name": "Social Trinitarianism",
+        "claim": "The three persons form an eternal communion that models human community.",
+        "anchor": "position-3"
+      }
+    ]
+  },
+  "start_here": [
+    {
+      "kind": "Primer",
+      "url": "https://www.crossway.org/articles/10-things-you-should-know-about-the-trinity/",
+      "title": "10 Things You Should Know about the Trinity",
+      "author": "Fred Sanders",
+      "outlet": "Crossway",
+      "why": "Ten short points on what the doctrine says and why it belongs to the gospel."
+    },
+    {
+      "kind": "The 2016 debate",
+      "url": "https://credomag.com/2024/12/how-efs-muddles-christology-and-the-gospel/",
+      "title": "How EFS Muddles Christology and the Gospel",
+      "author": "Samuel G. Parkison",
+      "outlet": "Credo Magazine",
+      "why": "A classical theologian's case that eternal functional subordination confuses the Son's two natures."
+    },
+    {
+      "kind": "Trinity and gender",
+      "url": "https://cbmw.org/2023/06/22/does-complementarianism-depend-on-eras-a-response-to-kevin-giles-the-trinity-argument-for-womens-subordination/",
+      "title": "Does Complementarianism Depend on ERAS?",
+      "author": "Stephen J. Wellum",
+      "outlet": "CBMW",
+      "why": "A complementarian who rejects eternal authority relations explains why the two questions can be separated."
+    }
+  ],
+  "key_number": {
+    "figure": "41%",
+    "text": "In 2025, 97% of Americans with evangelical beliefs agreed there is one true God in three persons, but only 41% disagreed that the Holy Spirit is a force and not a personal being.",
+    "publisher": "Ligonier Ministries and Lifeway Research",
+    "study": "Ligonier State of Theology 2025 White Paper",
+    "year": 2025,
+    "source_url": "https://research.lifeway.com/wp-content/uploads/2025/09/Ligonier-State-of-Theology-2025-White-Paper.pdf",
+    "fetched": "2026-11-14",
+    "license": "credit",
+    "link": "#spirit-gap"
+  },
+  "related": [
+    {
+      "slug": "christology",
+      "question": "How is Jesus fully God and fully human?"
+    },
+    {
+      "slug": "complementarianism-egalitarianism",
+      "question": "Can women be pastors?"
+    },
+    {
+      "slug": "holy-spirit-spiritual-gifts",
+      "question": "Who is the Holy Spirit, and what gifts does he give?"
+    }
+  ],
+  "changes": [
+    {
+      "date": "2026-11-14",
+      "text": "added a definition, short answers, and survey charts on belief in the Trinity and the Holy Spirit."
+    }
+  ],
+  "latest": true,
+  "signup": true,
+  "notes": "Position 2's card title reads 'Evangelical Tritheism / Soft Subordinationism'; its holders reject both labels, so the strip uses a neutral name (report, editorial item for Tom). Grudem verified in his own words: ETS Nov 15 2016 handout, 'The names Father and Son indicate an eternal relationship of authority and submission.' https://www.waynegrudem.com/wp-content/uploads/2016/11/ETS-Presentation-on-Trinity-11-15-16.pdf. His voice page is noindex, so the name prints as plain text. Other card names not verified this session; none added. 97% is Lifeway's printed figure (white paper p.7 and report p.43)."
+}

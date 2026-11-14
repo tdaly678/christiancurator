@@ -1,0 +1,119 @@
+{
+  "id": "spirit-gap",
+  "type": "line",
+  "kicker": "The Spirit gap",
+  "title": "Evangelicals affirm the Trinity. Fewer than half reject calling the Spirit a force.",
+  "subtitle": "U.S. adults with evangelical beliefs, 2018 to 2025",
+  "caption": "In every State of Theology survey since 2018, nearly all Americans with evangelical beliefs agreed that there is one true God in three persons. In none of them did a majority disagree that the Holy Spirit is a force and not a personal being. In 2025, 97% affirmed the Trinity and 41% rejected the force statement.",
+  "note": "Statements: \"There is one true God in three persons: God the Father, God the Son, and God the Holy Spirit\" (share who agree) and \"The Holy Spirit is a force but is not a personal being\" (share who disagree; the rest agreed or were not sure). \"Evangelical beliefs\" is the NAE and Lifeway Research definition: respondents who strongly agree with four statements on the Bible's authority, sharing their faith, Christ's death as the only sacrifice for sin, and salvation through trust in Christ alone. It is a belief measure, not church membership. Each figure is from that year's white paper.",
+  "unit": "%",
+  "max": 100,
+  "series": [
+    {
+      "id": "trinity",
+      "label": "Agree: one God in three persons",
+      "color": "green"
+    },
+    {
+      "id": "reject",
+      "label": "Disagree: the Spirit is a force, not a person",
+      "color": "brown"
+    }
+  ],
+  "rows": [
+    {
+      "label": "2018",
+      "values": {
+        "trinity": 97,
+        "reject": 37
+      },
+      "as_published": {
+        "trinity": "97%",
+        "reject": "37%"
+      },
+      "source": "sot2018"
+    },
+    {
+      "label": "2020",
+      "values": {
+        "trinity": 96,
+        "reject": 43
+      },
+      "as_published": {
+        "trinity": "96%",
+        "reject": "43%"
+      },
+      "source": "sot2020"
+    },
+    {
+      "label": "2022",
+      "values": {
+        "trinity": 97,
+        "reject": 33
+      },
+      "as_published": {
+        "trinity": "97%",
+        "reject": "33%"
+      },
+      "source": "sot2022"
+    },
+    {
+      "label": "2025",
+      "values": {
+        "trinity": 97,
+        "reject": 41
+      },
+      "as_published": {
+        "trinity": "97%",
+        "reject": "41%"
+      },
+      "source": "sot2025"
+    }
+  ],
+  "sources": [
+    {
+      "id": "sot2018",
+      "publisher": "Ligonier Ministries and Lifeway Research",
+      "study": "Ligonier State of Theology 2018 White Paper",
+      "year": 2018,
+      "url": "https://research.lifeway.com/wp-content/uploads/2018/10/Ligonier-State-of-Theology-2018-White-Paper.pdf",
+      "fetched": "2026-11-14",
+      "license": "credit",
+      "field_dates": "April 24 to May 4, 2018",
+      "sample": "3,002 U.S. adults, demographically balanced online panel; margin of error plus or minus 1.9 points, higher in subgroups"
+    },
+    {
+      "id": "sot2020",
+      "publisher": "Ligonier Ministries and Lifeway Research",
+      "study": "Ligonier State of Theology 2020 White Paper",
+      "year": 2020,
+      "url": "https://research.lifeway.com/wp-content/uploads/2020/09/Ligonier-State-of-Theology-2020-White-Paper.pdf",
+      "fetched": "2026-11-14",
+      "license": "credit",
+      "field_dates": "March 10 to 18, 2020",
+      "sample": "3,002 U.S. adults, demographically balanced online panel; margin of error plus or minus 2.0 points, higher in subgroups"
+    },
+    {
+      "id": "sot2022",
+      "publisher": "Ligonier Ministries and Lifeway Research",
+      "study": "Ligonier State of Theology 2022 White Paper",
+      "year": 2022,
+      "url": "https://research.lifeway.com/wp-content/uploads/2022/09/Ligonier-State-of-Theology-2022-White-Paper.pdf",
+      "fetched": "2026-11-14",
+      "license": "credit",
+      "field_dates": "January 5 to 23, 2022",
+      "sample": "3,011 U.S. adults, demographically balanced online panel; margin of error plus or minus 1.9 points, higher in subgroups"
+    },
+    {
+      "id": "sot2025",
+      "publisher": "Ligonier Ministries and Lifeway Research",
+      "study": "Ligonier State of Theology 2025 White Paper",
+      "year": 2025,
+      "url": "https://research.lifeway.com/wp-content/uploads/2025/09/Ligonier-State-of-Theology-2025-White-Paper.pdf",
+      "fetched": "2026-11-14",
+      "license": "credit",
+      "field_dates": "January 6 to 15, 2025",
+      "sample": "3,001 U.S. adults, demographically balanced online panel; margin of error plus or minus 1.9 points, higher in subgroups"
+    }
+  ]
+}
