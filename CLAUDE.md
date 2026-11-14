@@ -606,6 +606,11 @@ schemas: `.christian-orchestrator/team/A-foundation-report.md`.
   URL, `fetched` date and a quote found on the page; voices link only when linkable. `--check` fails on a stale
   page; `--png` writes the share image to `docs/og/charts/<slug>-<id>.png` (needs Chrome). First use: eschatology
   (`#timelines`, added to the jump nav in `build_topic_top.py`). Run `build_topic_top.py --slug <slug>` after it.
+  Two more types in the same builder (`"type"` in the data file): `spectrum` (one axis with numbered dots
+  and cards, or two axes with `axis_y` as a plot) and `matrix` (views across, questions down, optional
+  yes / in part / no marks; each question becomes a block on phones). A view with `"outside": true` is drawn
+  dashed and labelled "Shown for contrast". Several data files may target one page, each with its own id;
+  the jump nav knows the ids `spectrum`, `matrix` and `translations`. Schema in the script docstring.
   Tests: `tests/test_build_topic_timeline.py`.
 - **Definition box and FAQ** (with matching FAQPage schema): `data/topic_reference/<slug>.json` +
   `scripts/build_topic_reference.py`; run before `build_topic_top.py`. It owns that page's `AEO-FAQPAGE-SCHEMA` block,

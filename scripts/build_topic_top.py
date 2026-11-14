@@ -367,6 +367,9 @@ def page_summary(page_html: str) -> str:
 JUMP_ITEMS = [
     ("Where evangelicals disagree", ("debate",)),
     ("Timelines side by side", ("timelines",)),
+    ("Where the views sit", ("spectrum",)),
+    ("Views compared", ("matrix",)),
+    ("Bible translations compared", ("translations",)),
     ("By the numbers", ("by-the-numbers",)),
     ("Key documents", ("key-documents",)),
     ("Questions answered", ("faq", "key-questions")),

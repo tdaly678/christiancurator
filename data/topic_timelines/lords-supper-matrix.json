@@ -1,0 +1,249 @@
+{
+  "id": "matrix",
+  "slug": "lords-supper",
+  "type": "matrix",
+  "label": "Views Compared",
+  "title": "Four views of the Lord's Supper, question by question",
+  "intro": "Three Protestant confessions, with Roman Catholic teaching shown for contrast. Every answer is drawn from the confession named below it.",
+  "image_title": "The Lord's Supper: four views, five questions",
+  "image_subtitle": "Each answer from that tradition's own confession. Roman Catholic teaching shown for contrast.",
+  "image_subtitle_narrow": "Each answer from that tradition's own confession.",
+  "caption": "Rome, Augsburg, Westminster and the Baptist Faith and Message on the same five questions. The dashed column is outside evangelical bounds and is shown so the Protestant answers can be read against it.",
+  "table_view_label": "Question",
+  "columns": [
+    {
+      "id": "catholic",
+      "name": "Transubstantiation",
+      "short": "Roman Catholic",
+      "color": "grey",
+      "outside": true,
+      "outside_label": "Roman Catholic, for contrast",
+      "proponent": {
+        "name": "Catechism of the Catholic Church",
+        "image_name": "Catechism of the Catholic Church",
+        "work": "The Sacrament of the Eucharist",
+        "source": "ccc",
+        "also": [
+          "ccc-communion"
+        ]
+      }
+    },
+    {
+      "id": "lutheran",
+      "name": "Lutheran sacramental union",
+      "short": "Lutheran",
+      "color": "blue",
+      "proponent": {
+        "name": "The Augsburg Confession",
+        "image_name": "Augsburg Confession",
+        "work": "Article X",
+        "source": "augsburg",
+        "also": [
+          "augsburg-mass",
+          "formula"
+        ]
+      }
+    },
+    {
+      "id": "reformed",
+      "name": "Reformed spiritual presence",
+      "short": "Reformed",
+      "color": "brown",
+      "proponent": {
+        "name": "The Westminster Confession",
+        "image_name": "Westminster Confession",
+        "work": "Chapter 29",
+        "source": "wcf"
+      }
+    },
+    {
+      "id": "memorial",
+      "name": "Memorial",
+      "short": "Memorial",
+      "color": "green",
+      "proponent": {
+        "name": "The Baptist Faith and Message",
+        "image_name": "Baptist Faith and Message",
+        "work": "Article VII",
+        "source": "bfm"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "present",
+      "label": "Is Christ present?",
+      "cells": [
+        {
+          "text": "Yes: body, blood, soul and divinity, truly, really and substantially"
+        },
+        {
+          "text": "Yes: his body and blood are truly present and given out"
+        },
+        {
+          "text": "Yes, really but spiritually, to the faith of believers"
+        },
+        {
+          "text": "The Supper remembers his death and looks for his return"
+        }
+      ]
+    },
+    {
+      "id": "elements",
+      "label": "What are the bread and wine?",
+      "cells": [
+        {
+          "text": "Their whole substance becomes his body and blood"
+        },
+        {
+          "text": "Still bread and wine; his body and blood are received with them"
+        },
+        {
+          "text": "Truly and only bread and wine, set apart for holy use"
+        },
+        {
+          "text": "Bread and the fruit of the vine, in a symbolic act"
+        }
+      ]
+    },
+    {
+      "id": "unworthy",
+      "label": "What does an unbeliever receive?",
+      "cells": [
+        {
+          "text": "The Catechism warns that eating unworthily brings judgment",
+          "short": "Warns that eating unworthily brings judgment"
+        },
+        {
+          "text": "The true body and blood, to judgment"
+        },
+        {
+          "text": "Only the outward elements, to judgment"
+        },
+        {
+          "text": "The Faith and Message does not say; the Supper is for church members",
+          "short": "Not addressed; the Supper is for members"
+        }
+      ]
+    },
+    {
+      "id": "who",
+      "label": "Who comes to the table?",
+      "cells": [
+        {
+          "text": "Anyone conscious of grave sin goes to confession first"
+        },
+        {
+          "text": "None are admitted unless first examined"
+        },
+        {
+          "text": "Not the ignorant and ungodly"
+        },
+        {
+          "text": "Baptized members of the church"
+        }
+      ]
+    },
+    {
+      "id": "often",
+      "label": "How often?",
+      "cells": [
+        {
+          "text": "At least once a year; Sundays, even daily, encouraged"
+        },
+        {
+          "text": "Every holy day, and other days for any who ask"
+        },
+        {
+          "text": "The Confession sets no schedule"
+        },
+        {
+          "text": "The Faith and Message sets no schedule"
+        }
+      ]
+    }
+  ],
+  "differ": [
+    "Presence: bodily for Rome and the Lutherans, real but spiritual for the Reformed, and for the memorial view a remembrance of his death.",
+    "The elements: only Rome teaches that the bread ceases to be bread. All three Protestant confessions say it remains bread.",
+    "The unbeliever: Lutherans confess he receives Christ's body and blood to judgment; Westminster says he receives only the outward elements.",
+    "Frequency: Rome and Augsburg set a pattern; Westminster and the Baptist Faith and Message set none."
+  ],
+  "voices_label": "Each view in its own confession",
+  "sources": [
+    {
+      "id": "ccc",
+      "publisher": "The Holy See",
+      "title": "Catechism of the Catholic Church, The Sacrament of the Eucharist",
+      "year": 1997,
+      "url": "https://www.vatican.va/archive/ENG0015/__P41.HTM",
+      "fetched": "2026-11-14",
+      "quote": "This change the holy Catholic Church has fittingly and properly called transubstantiation.",
+      "notes": "Paragraph 1376 (quoting Trent): 'a change of the whole substance of the bread into the substance of the body of Christ'. 1374: 'the body and blood, together with the soul and divinity, of our Lord Jesus Christ and, therefore, the whole Christ is truly, really, and substantially contained.'"
+    },
+    {
+      "id": "ccc-communion",
+      "publisher": "The Holy See",
+      "title": "Catechism of the Catholic Church, Holy Communion",
+      "year": 1997,
+      "url": "https://www.vatican.va/archive/ENG0015/__P42.HTM",
+      "fetched": "2026-11-14",
+      "quote": "Anyone conscious of a grave sin must receive the sacrament of Reconciliation before coming to communion.",
+      "notes": "Paragraph 1385. Paragraph 1389: the faithful must receive 'at least once a year', and the Church 'strongly encourages the faithful to receive the holy Eucharist on Sundays and feast days, or more often still, even daily.'"
+    },
+    {
+      "id": "augsburg",
+      "publisher": "BookOfConcord.org",
+      "title": "Augsburg Confession, Article X: Of the Lord's Supper",
+      "year": 1530,
+      "url": "https://bookofconcord.org/augsburg-confession/of-the-lords-supper/",
+      "fetched": "2026-11-14",
+      "quote": "the Body and Blood of Christ are truly present, and are distributed to those who eat the Supper of the Lord",
+      "notes": "Triglot translation. The old /augsburg-confession/article-x/ URL redirects here."
+    },
+    {
+      "id": "augsburg-mass",
+      "publisher": "BookOfConcord.org",
+      "title": "Augsburg Confession, Article XXIV: Of the Mass",
+      "year": 1530,
+      "url": "https://bookofconcord.org/augsburg-confession/of-the-mass/",
+      "fetched": "2026-11-14",
+      "quote": "we hold one communion every holy-day, and, if any desire the Sacrament, also on other days",
+      "notes": "Also: 'For none are admitted except they be first examined.'"
+    },
+    {
+      "id": "formula",
+      "publisher": "BookOfConcord.org",
+      "title": "Formula of Concord, Epitome, Article VII: Of the Holy Supper",
+      "year": 1577,
+      "url": "https://bookofconcord.org/epitome/the-lords-supper/",
+      "fetched": "2026-11-14",
+      "quote": "not only the true believers [in Christ] and the worthy, but also the unworthy and unbelievers, receive the true body and blood of Christ",
+      "notes": "Also: the body and blood 'are truly distributed and received with the bread and wine'; 'because of the sacramental union'; rejects 'The papistic transubstantiation'."
+    },
+    {
+      "id": "wcf",
+      "publisher": "Orthodox Presbyterian Church",
+      "title": "Westminster Confession of Faith, Chapter 29: Of the Lord's Supper",
+      "year": 1646,
+      "url": "https://opc.org/wcf.html",
+      "fetched": "2026-11-14",
+      "quote": "as really, but spiritually, present to the faith of believers in that ordinance, as the elements themselves are to their outward senses",
+      "notes": "29.5: 'in substance and nature, they still remain truly and only bread and wine'. 29.3: the elements are set apart 'from a common to an holy use'. 29.8: the ignorant and wicked 'receive the outward elements ... yet, they receive not the thing signified thereby' and are 'unworthy of the Lord's table'. The Confession sets no frequency."
+    },
+    {
+      "id": "bfm",
+      "publisher": "Southern Baptist Convention",
+      "title": "The Baptist Faith and Message 2000, Article VII",
+      "year": 2000,
+      "url": "https://bfm.sbc.net/bfm2000/",
+      "fetched": "2026-11-14",
+      "quote": "The Lord's Supper is a symbolic act of obedience whereby members of the church, through partaking of the bread and the fruit of the vine, memorialize the death of the Redeemer and anticipate His second coming.",
+      "notes": "Same article, on baptism: 'it is prerequisite to the privileges of church membership and to the Lord's Supper.' The page uses a curly apostrophe in Lord's. No frequency is set."
+    }
+  ],
+  "place": {
+    "before": "<section class=\"cc-synthesis\""
+  },
+  "image_source": "Sources: Catechism of the Catholic Church; Augsburg Confession and Formula of Concord; Westminster Confession; Baptist Faith and Message 2000"
+}
