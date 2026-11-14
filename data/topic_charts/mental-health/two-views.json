@@ -4,8 +4,8 @@
   "kicker": "Two views of the same church",
   "title": "Pastors see more mental health care in their churches than churchgoers do",
   "subtitle": "U.S. Protestant senior pastors and monthly churchgoers, 2017",
-  "caption": "46% of pastors say their church regularly addresses mental illness; 12% of churchgoers say the same. On every measure pastors describe more help than the pews see.",
-  "note": "Each group was asked whether its own church does each thing. The two samples are different churches, so the gap shows a difference in perception, not a check on any one congregation.",
+  "caption": "46% of pastors say their church regularly speaks about mental health issues; 12% of churchgoers say theirs does. On all five items, more pastors than churchgoers say their church has it in place.",
+  "note": "Both groups were asked the same question, \"Does your church have any of the following in place to help prevent suicide?\" (select all that apply). Churchgoers could also answer not sure, and 20% did. The two samples are different churches, so the gap shows a difference in perception, not a check on any one congregation.",
   "unit": "%",
   "max": 100,
   "series": [
@@ -22,7 +22,7 @@
   ],
   "rows": [
     {
-      "label": "Referral list for people considering suicide",
+      "label": "List of trained mental health professionals",
       "values": {
         "pastors": 51,
         "churchgoers": 16
@@ -34,7 +34,7 @@
       "source": "lifeway2017"
     },
     {
-      "label": "Regularly addresses mental illness",
+      "label": "Regularly speaks about mental health issues to remove stigma",
       "values": {
         "pastors": 46,
         "churchgoers": 12
