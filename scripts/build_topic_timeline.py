@@ -30,7 +30,8 @@ File schema:
              "segments": [{"span": ["church", "trib"], "kind": "period" | "event" | "shared",
                            "text": "wide label", "short": "phone label"}],
              "proponent": {"name": "...", "slug": "optional voice slug", "image_name": "...",
-                           "work": "title of the piece", "source": "<source id>"}}],
+                           "work": "title of the piece", "source": "<source id>",
+                           "also": ["optional further source ids, linked after the work"]}}],
   "differ": ["3 to 5 bullets"],
   "method": "...", "method_source": "<source id>",
   "sources": [{"id": "...", "publisher": "...", "title": "...", "year": 2013, "url": "https://...",
@@ -98,6 +99,7 @@ FONT = "'Source Sans 3', sans-serif"
 SERIF = "'Lora', Georgia, serif"
 BRAND = "christiancurator.com"
 W_WIDE, W_NARROW, PAD = 740, 360, 14
+MIN_SHARE_H = 630
 KINDS = {"period", "event", "shared"}
 TYPES = ("timeline", "spectrum", "matrix")
 TYPE_KEYS = {"timeline": ("stations", "common", "lanes"), "spectrum": ("axis", "positions"),
@@ -141,7 +143,14 @@ def outside_label(view: dict) -> str:
 # ---------------------------------------------------------------- loading and validation
 
 def data_files(data_dir: Path = DATA_DIR) -> list[Path]:
-    return sorted(data_dir.glob("*.json"))
+    """Every data file; a file placed next to another visual's block comes after it."""
+    def key(path: Path):
+        try:
+            place = json.dumps(load(path).get("place") or {})
+        except (OSError, ValueError):
+            place = ""
+        return ("CC-TIMELINE:" in place, path.name)
+    return sorted(data_dir.glob("*.json"), key=key)
 
 
 def load(path: Path) -> dict:
@@ -242,6 +251,9 @@ def validate(d: dict, page_html: str | None = None) -> list[str]:
             errs.append(f"view {vid}: proponent needs name and work")
         if prop.get("source") not in sources:
             errs.append(f"view {vid}: proponent source {prop.get('source')!r} is not in sources")
+        for extra in prop.get("also") or []:
+            if extra not in sources:
+                errs.append(f"view {vid}: also source {extra!r} is not in sources")
 
     for key in ("common_source", "method_source"):
         if d.get(key) and d[key] not in sources:
@@ -1013,9 +1025,10 @@ def render_block(d: dict, voices: VoiceIndex | None = None) -> str:
         who = voice_html(p, voices)
         pub = "" if s["publisher"] == p["name"] else f'{esc(s["publisher"])}, '
         tag = f" ({esc(outside_label(view))})" if view.get("outside") else ""
+        more = "".join(f"; {link(src[x])}{year(src[x])}" for x in p.get("also") or [])
         voices_li.append(
             f'<li><span class="cc-timeline-swatch" style="background:{color(view.get("color"))}"></span>'
-            f'<strong>{esc(view["name"])}{tag}:</strong> {who}, {pub}{link(s, p["work"])}{year(s)}</li>')
+            f'<strong>{esc(view["name"])}{tag}:</strong> {who}, {pub}{link(s, p["work"])}{year(s)}{more}</li>')
     method = ""
     if d.get("method"):
         method = esc(d["method"]) + " "
@@ -1061,12 +1074,14 @@ def share_html(d: dict, width: int = 1200) -> tuple[str, int]:
     vb = re.search(r'viewBox="0 0 (\d+) (\d+)"', svg)
     vw, vh = int(vb.group(1)), int(vb.group(2))
     pad = 36
-    height = int(round((width - 2 * pad) * vh / vw)) + 2 * pad
+    inner = int(round((width - 2 * pad) * vh / vw))
+    height = max(inner + 2 * pad, MIN_SHARE_H)   # X crops a short card; keep it near 1200 x 630 or taller
+    top = (height - inner) // 2
     fonts = (f"@font-face{{font-family:'Source Sans 3';src:url('{(FONTS / 'SourceSans3-Variable.ttf').as_uri()}');"
              f"font-weight:200 900;}}@font-face{{font-family:'Lora';src:url('{(FONTS / 'Lora-Variable.ttf').as_uri()}');"
              f"font-weight:400 700;}}")
     page = (f"<!doctype html><html><head><meta charset='utf-8'><style>{fonts}html,body{{margin:0;background:#fff;}}"
-            f"svg{{display:block;width:{width - 2 * pad}px;height:auto;margin:{pad}px;}}</style></head>"
+            f"svg{{display:block;width:{width - 2 * pad}px;height:auto;margin:{top}px {pad}px;}}</style></head>"
             f"<body>{svg}</body></html>")
     return page, height
 
