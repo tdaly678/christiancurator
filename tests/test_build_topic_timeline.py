@@ -335,3 +335,73 @@ def test_orgchart_and_chronology_refuse(make, mutate, expect):
     mutate(d)
     errs = btl.validate(d, "<!-- ANCHOR -->")
     assert any(expect in e for e in errs), errs
+# ---------------------------------------------------------------- tree type, shared visuals, team4 V3 pages
+
+def _tree():
+    return {
+        "id": "family-tree", "slug": "demo", "type": "tree", "label": "Tree", "title": "Families",
+        "image_title": "A family tree", "caption": "What it shows.", "span": [1500, 2000],
+        "differ": ["First difference.", "Second difference.", "Third difference."],
+        "families": [
+            {"id": "a", "name": "Family A", "color": "green",
+             "nodes": [{"year": 1517, "label": "Start A", "source": "s1"},
+                       {"year": 1900, "label": "Later A", "source": "s1"}],
+             "proponent": _prop("Writer A")},
+            {"id": "b", "name": "Family B", "color": "blue", "parent": "a", "parent_text": "Grew out of A",
+             "nodes": [{"year": 1600, "label": "Start B", "source": "s1"}],
+             "proponent": _prop("Writer B")},
+        ],
+        "sources": _src(), "place": {"before": "<section class=\"cc-synthesis\""},
+    }
+
+
+def test_tree_valid_renders_wide_phone_and_table():
+    d = _tree()
+    assert btl.validate(d) == []
+    wide, narrow = btl.render_wide(d), btl.render_narrow(d)
+    assert "1517 Start A" in wide and "Later A" in wide
+    assert "Grew out of A" in narrow
+    block = btl.render_block(d, NoVoices())
+    assert "Grew out of A" in block and "1600 Start B" in block
+
+
+@pytest.mark.parametrize("mutate, expect", [
+    (lambda d: d["families"][1].update(parent="zzz"), "is not another family"),
+    (lambda d: d["families"][1].pop("parent_text"), "parent_text"),
+    (lambda d: d["families"][0]["nodes"].reverse(), "year order"),
+    (lambda d: d["families"][0]["nodes"][0].update(source="nope"), "unknown source"),
+    (lambda d: d.update(span=[2000, 1500]), "span"),
+])
+def test_tree_refuses(mutate, expect):
+    d = _tree()
+    mutate(d)
+    assert any(expect in e for e in btl.validate(d))
+
+
+def test_also_repeats_a_visual_on_another_page():
+    path = REPO / "data" / "topic_timelines" / "covenant-theology-continuity.json"
+    got = [(slug, primary) for _, slug, _, primary in btl.targets([path])]
+    assert got == [("covenant-theology", True), ("israel-and-prophecy", False)]
+
+
+@pytest.mark.parametrize("name, slug, anchor", [
+    ("church-history", "church-history", "family-tree"),
+    ("covenant-theology-continuity", "covenant-theology", "continuity"),
+    ("covenant-theology-continuity", "israel-and-prophecy", "continuity"),
+    ("heaven-hell-eternity", "heaven-hell-eternity", "views-of-hell"),
+    ("worship-and-liturgy", "worship-and-liturgy", "worship-spectrum"),
+])
+def test_v3_pages_current_and_in_jump_nav(name, slug, anchor):
+    path = REPO / "data" / "topic_timelines" / f"{name}.json"
+    d = next(d for _, s, d, _ in btl.targets([path]) if s == slug)
+    html = (REPO / "docs" / "topics" / slug / "index.html").read_text(encoding="utf-8")
+    assert btl.validate(d, html) == []
+    assert btl.build_page(html, d) == html, f"run scripts/build_topic_timeline.py --slug {slug}"
+    assert f'href="#{anchor}" data-pos="topic-jump"' in html
+    assert "—" not in json.dumps(d, ensure_ascii=False) and "–" not in json.dumps(d, ensure_ascii=False)
+
+
+def test_universalism_is_marked_outside_bounds():
+    d = json.loads((REPO / "data" / "topic_timelines" / "heaven-hell-eternity.json").read_text(encoding="utf-8"))
+    outside = [c["id"] for c in d["columns"] if c.get("outside")]
+    assert outside == ["universalism"]

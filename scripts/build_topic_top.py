@@ -367,8 +367,9 @@ def page_summary(page_html: str) -> str:
 JUMP_ITEMS = [
     ("Where evangelicals disagree", ("debate",)),
     ("Timelines side by side", ("timelines",)),
-    ("Where the views sit", ("spectrum",)),
-    ("Views compared", ("matrix", "baptism-matrix", "five-points-matrix")),
+    ("Family tree", ("family-tree",)),
+    ("Where the views sit", ("spectrum", "worship-spectrum")),
+    ("Views compared", ("matrix", "baptism-matrix", "five-points-matrix", "continuity", "views-of-hell")),
     ("How churches are governed", ("governance-diagrams",)),
     ("Models through history", ("atonement-models",)),
     ("Bible translations compared", ("translations",)),
