@@ -1,0 +1,127 @@
+{
+  "id": "official-religion",
+  "type": "column",
+  "kicker": "What believers want from government",
+  "title": "Official religion, Christian values, or neither?",
+  "subtitle": "U.S. adults, by religious group, April 2026",
+  "caption": "Most white evangelicals (57%) want the federal government to promote Christian moral values without declaring an official religion. About three in ten (31%) want Christianity declared the official religion, and one in ten want neither.",
+  "note": "Question: should the federal government declare Christianity the official religion of the U.S., promote Christian moral values without declaring an official religion, or do neither. Rows may not add to 100% because of rounding and no answer. Across all U.S. adults the share choosing an official religion rose from 13% in February 2024 to 17% in April 2026. Pew figures, drawn by Christian Curator from the published report.",
+  "unit": "%",
+  "max": 100,
+  "series": [
+    {
+      "id": "official",
+      "label": "Declare an official religion",
+      "color": "red"
+    },
+    {
+      "id": "values",
+      "label": "Promote Christian values only",
+      "color": "gold"
+    },
+    {
+      "id": "neither",
+      "label": "Neither",
+      "color": "grey"
+    }
+  ],
+  "rows": [
+    {
+      "label": "White evangelical",
+      "values": {
+        "official": 31,
+        "values": 57,
+        "neither": 10
+      },
+      "as_published": {
+        "official": "31%",
+        "values": "57%",
+        "neither": "10%"
+      },
+      "source": "pew2026"
+    },
+    {
+      "label": "Black Protestant",
+      "values": {
+        "official": 21,
+        "values": 49,
+        "neither": 24
+      },
+      "as_published": {
+        "official": "21%",
+        "values": "49%",
+        "neither": "24%"
+      },
+      "source": "pew2026"
+    },
+    {
+      "label": "White nonevangelical Protestant",
+      "values": {
+        "official": 20,
+        "values": 51,
+        "neither": 29
+      },
+      "as_published": {
+        "official": "20%",
+        "values": "51%",
+        "neither": "29%"
+      },
+      "source": "pew2026"
+    },
+    {
+      "label": "Catholic",
+      "values": {
+        "official": 15,
+        "values": 52,
+        "neither": 32
+      },
+      "as_published": {
+        "official": "15%",
+        "values": "52%",
+        "neither": "32%"
+      },
+      "source": "pew2026"
+    },
+    {
+      "label": "Religiously unaffiliated",
+      "values": {
+        "official": 6,
+        "values": 27,
+        "neither": 65
+      },
+      "as_published": {
+        "official": "6%",
+        "values": "27%",
+        "neither": "65%"
+      },
+      "source": "pew2026"
+    },
+    {
+      "label": "All U.S. adults",
+      "values": {
+        "official": 17,
+        "values": 43,
+        "neither": 38
+      },
+      "as_published": {
+        "official": "17%",
+        "values": "43%",
+        "neither": "38%"
+      },
+      "source": "pew2026"
+    }
+  ],
+  "sources": [
+    {
+      "id": "pew2026",
+      "publisher": "Pew Research Center",
+      "study": "How Americans Feel About Religion's Influence in Government and Public Life",
+      "year": 2026,
+      "url": "https://www.pewresearch.org/religion/2026/05/14/how-americans-feel-about-religions-influence-in-government-and-public-life/",
+      "fetched": "2026-11-14",
+      "license": "reuse",
+      "field_dates": "April 6 to 12, 2026, online (American Trends Panel)",
+      "sample": "3,592 U.S. adults; margin of error plus or minus 1.9 percentage points for the full sample"
+    }
+  ]
+}
