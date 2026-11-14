@@ -37,10 +37,29 @@ File schema:
                "fetched": "YYYY-MM-DD", "quote": "words found verbatim on the page", "notes": "..."}],
   "place": {"before": "literal string on the page"}   # first insert only
 }
+Other types ("type", default "timeline"); both share every key above except
+stations / common / lanes:
+  "spectrum": "axis": {"left": "...", "right": "...", "label": "optional"},
+              "axis_y": {"label": "...", "bottom": "...", "top": "..."}   # optional: two axes
+              "bands": [{"from": 0, "to": 35, "label": "..."}]           # optional, one axis only
+              "positions": [{"id", "name", "short", "color", "at": 0..100, "y": 0..100 (two axes),
+                             "text", "short_text", "placement": "optional words",
+                             "outside": true, "outside_label": "...", "proponent": {...}}]
+              One axis: a line with numbered dots and a row of cards (stacked on phones).
+              Two axes: a plot with numbered dots beside the cards.
+  "matrix":   "columns": [{"id", "name", "short", "color", "outside", "outside_label", "proponent"}],
+              "rows": [{"id", "label", "short", "cells": [{"text", "short", "mark": "yes|partly|no"}]}]
+              Views across, questions down; on phones each question becomes a block.
+  "outside": a view beyond evangelical bounds, drawn dashed and labelled "Shown for contrast".
+  Optional on any type: "voices_label", "note" (footer sentence), "image_source" (footer line on the
+  image), "table_view_label", "png_name" (share image file name, default the id).
 Rules (validate()): 2 to 5 lanes; every lane covers every station exactly once, in
 order, with contiguous spans; "shared" segments sit only on common stations;
 every proponent and the common/method sources resolve, with URL, fetched date
 and a quote; no em or en dashes, tracking parameters or Quiet Revival.
+Spectrum: 2 to 7 positions, at (and y with axis_y) from 0 to 100. Matrix: 2 to 5
+columns, 2 to 8 rows, one cell with text per column. Every view needs a proponent.
+Several data files may target one page (each with its own id).
 Voice links render only for linkable /voices/ pages (build_topic_top.VoiceIndex).
 
 Usage:
@@ -80,6 +99,12 @@ SERIF = "'Lora', Georgia, serif"
 BRAND = "christiancurator.com"
 W_WIDE, W_NARROW, PAD = 740, 360, 14
 KINDS = {"period", "event", "shared"}
+TYPES = ("timeline", "spectrum", "matrix")
+TYPE_KEYS = {"timeline": ("stations", "common", "lanes"), "spectrum": ("axis", "positions"),
+             "matrix": ("columns", "rows")}
+MARKS = ("yes", "partly", "no")
+MARK_LABELS = {"yes": "Yes", "partly": "In part", "no": "No"}
+OUTSIDE_LABEL = "Shown for contrast"
 
 DASH_RE = re.compile("[–—]")
 BANNED_RE = re.compile(r"quiet revival", re.I)
@@ -98,6 +123,19 @@ def markers(tid: str) -> tuple[str, str]:
 
 def color(name: str | None) -> str:
     return COLORS.get(name or "green", COLORS["green"])
+
+
+def vtype(d: dict) -> str:
+    return d.get("type") or "timeline"
+
+
+def views(d: dict) -> list[dict]:
+    """The views a visual compares: timeline lanes, spectrum positions or matrix columns."""
+    return d.get({"timeline": "lanes", "spectrum": "positions", "matrix": "columns"}.get(vtype(d), "lanes")) or []
+
+
+def outside_label(view: dict) -> str:
+    return view.get("outside_label") or OUTSIDE_LABEL if view.get("outside") else ""
 
 
 # ---------------------------------------------------------------- loading and validation
@@ -123,8 +161,10 @@ def _strings(obj):
 
 def validate(d: dict, page_html: str | None = None) -> list[str]:
     errs: list[str] = []
-    for key in ("id", "slug", "label", "title", "image_title", "caption", "stations", "common",
-                "lanes", "differ", "sources"):
+    kind = vtype(d)
+    if kind not in TYPES:
+        return [f"type must be one of {sorted(TYPES)}"]
+    for key in ("id", "slug", "label", "title", "image_title", "caption", "differ", "sources") + TYPE_KEYS[kind]:
         if not d.get(key):
             errs.append(f"missing {key}")
     if errs:
@@ -151,50 +191,57 @@ def validate(d: dict, page_html: str | None = None) -> list[str]:
             errs.append(f"source {sid}: fetched must be YYYY-MM-DD")
         sources[sid] = s
 
-    station_ids = [st.get("id") for st in d["stations"]]
-    if len(set(station_ids)) != len(station_ids) or not all(station_ids):
-        errs.append("station ids must be unique and present")
-    for st in d["stations"]:
-        if not st.get("label"):
-            errs.append(f"station {st.get('id')}: missing label")
-    common = set(d["common"])
-    if not common <= set(station_ids):
-        errs.append(f"common lists unknown stations: {sorted(common - set(station_ids))}")
+    if kind == "timeline":
+        station_ids = [st.get("id") for st in d["stations"]]
+        if len(set(station_ids)) != len(station_ids) or not all(station_ids):
+            errs.append("station ids must be unique and present")
+        for st in d["stations"]:
+            if not st.get("label"):
+                errs.append(f"station {st.get('id')}: missing label")
+        common = set(d["common"])
+        if not common <= set(station_ids):
+            errs.append(f"common lists unknown stations: {sorted(common - set(station_ids))}")
 
-    if not 2 <= len(d["lanes"]) <= 5:
-        errs.append("2 to 5 lanes")
-    for lane in d["lanes"]:
-        lid = lane.get("id", "?")
-        if not lane.get("name"):
-            errs.append(f"lane {lid}: missing name")
-        if lane.get("color") and lane["color"] not in COLORS:
-            errs.append(f"lane {lid}: unknown color {lane['color']}")
-        pos = 0
-        for seg in lane.get("segments") or []:
-            span = seg.get("span") or []
-            if seg.get("kind") not in KINDS:
-                errs.append(f"lane {lid}: kind must be one of {sorted(KINDS)}")
-            if not 1 <= len(span) <= 2 or any(x not in station_ids for x in span):
-                errs.append(f"lane {lid}: bad span {span}")
-                break
-            a, b = station_ids.index(span[0]), station_ids.index(span[-1])
-            if a != pos or b < a:
-                errs.append(f"lane {lid}: span {span} is out of order or leaves a gap")
-                break
-            if seg["kind"] == "shared":
-                if a != b or span[0] not in common:
-                    errs.append(f"lane {lid}: a shared mark sits on one common station")
-            elif not seg.get("text"):
-                errs.append(f"lane {lid}: segment {span} needs text")
-            pos = b + 1
-        else:
-            if pos != len(station_ids):
-                errs.append(f"lane {lid}: segments must cover every station")
-        prop = lane.get("proponent") or {}
+        if not 2 <= len(d["lanes"]) <= 5:
+            errs.append("2 to 5 lanes")
+        for lane in d["lanes"]:
+            lid = lane.get("id", "?")
+            pos = 0
+            for seg in lane.get("segments") or []:
+                span = seg.get("span") or []
+                if seg.get("kind") not in KINDS:
+                    errs.append(f"lane {lid}: kind must be one of {sorted(KINDS)}")
+                if not 1 <= len(span) <= 2 or any(x not in station_ids for x in span):
+                    errs.append(f"lane {lid}: bad span {span}")
+                    break
+                a, b = station_ids.index(span[0]), station_ids.index(span[-1])
+                if a != pos or b < a:
+                    errs.append(f"lane {lid}: span {span} is out of order or leaves a gap")
+                    break
+                if seg["kind"] == "shared":
+                    if a != b or span[0] not in common:
+                        errs.append(f"lane {lid}: a shared mark sits on one common station")
+                elif not seg.get("text"):
+                    errs.append(f"lane {lid}: segment {span} needs text")
+                pos = b + 1
+            else:
+                if pos != len(station_ids):
+                    errs.append(f"lane {lid}: segments must cover every station")
+    elif kind == "spectrum":
+        errs += validate_spectrum(d)
+    else:
+        errs += validate_matrix(d)
+    for view in views(d):
+        vid = view.get("id", "?")
+        if not view.get("name"):
+            errs.append(f"view {vid}: missing name")
+        if view.get("color") and view["color"] not in COLORS:
+            errs.append(f"view {vid}: unknown color {view['color']}")
+        prop = view.get("proponent") or {}
         if not prop.get("name") or not prop.get("work"):
-            errs.append(f"lane {lid}: proponent needs name and work")
+            errs.append(f"view {vid}: proponent needs name and work")
         if prop.get("source") not in sources:
-            errs.append(f"lane {lid}: proponent source {prop.get('source')!r} is not in sources")
+            errs.append(f"view {vid}: proponent source {prop.get('source')!r} is not in sources")
 
     for key in ("common_source", "method_source"):
         if d.get(key) and d[key] not in sources:
@@ -207,6 +254,67 @@ def validate(d: dict, page_html: str | None = None) -> list[str]:
         anchor = (d.get("place") or {}).get("before") or (d.get("place") or {}).get("after")
         if start not in page_html and (not anchor or anchor not in page_html):
             errs.append("place anchor is not on the page")
+    return errs
+
+
+def _unique_ids(items: list[dict], what: str) -> list[str]:
+    ids = [x.get("id") for x in items]
+    if not all(ids) or len(set(ids)) != len(ids):
+        return [f"{what} ids must be unique and present"]
+    return [f"{what} id {i!r} must be kebab case" for i in ids if not ID_RE.match(str(i))]
+
+
+def _num(v) -> bool:
+    return isinstance(v, (int, float)) and not isinstance(v, bool) and 0 <= v <= 100
+
+
+def validate_spectrum(d: dict) -> list[str]:
+    errs: list[str] = []
+    axis, axis_y = d["axis"], d.get("axis_y")
+    if not axis.get("left") or not axis.get("right"):
+        errs.append("axis needs left and right")
+    if axis_y is not None and (not axis_y.get("bottom") or not axis_y.get("top") or not axis_y.get("label")):
+        errs.append("axis_y needs label, bottom and top")
+    if not 2 <= len(d["positions"]) <= 7:
+        errs.append("2 to 7 positions")
+    errs += _unique_ids(d["positions"], "position")
+    for pos in d["positions"]:
+        pid = pos.get("id", "?")
+        if not _num(pos.get("at")):
+            errs.append(f"position {pid}: at must be a number from 0 to 100")
+        if axis_y is not None and not _num(pos.get("y")):
+            errs.append(f"position {pid}: y must be a number from 0 to 100 on a two-axis spectrum")
+        if axis_y is None and "y" in pos:
+            errs.append(f"position {pid}: y needs axis_y")
+        if not pos.get("text"):
+            errs.append(f"position {pid}: missing text")
+    for band in d.get("bands") or []:
+        if not (_num(band.get("from")) and _num(band.get("to")) and band["from"] < band["to"] and band.get("label")):
+            errs.append(f"band {band.get('label')!r}: needs label and from < to, 0 to 100")
+    return errs
+
+
+def validate_matrix(d: dict) -> list[str]:
+    errs: list[str] = []
+    cols, rows = d["columns"], d["rows"]
+    if not 2 <= len(cols) <= 5:
+        errs.append("2 to 5 columns")
+    if not 2 <= len(rows) <= 8:
+        errs.append("2 to 8 rows")
+    errs += _unique_ids(cols, "column") + _unique_ids(rows, "row")
+    for row in rows:
+        rid = row.get("id", "?")
+        if not row.get("label"):
+            errs.append(f"row {rid}: missing label")
+        cells = row.get("cells") or []
+        if len(cells) != len(cols):
+            errs.append(f"row {rid}: needs one cell per column ({len(cols)})")
+            continue
+        for k, cell in enumerate(cells):
+            if not cell.get("text"):
+                errs.append(f"row {rid}: cell {k + 1} needs text")
+            if cell.get("mark") not in (None, "") + MARKS:
+                errs.append(f"row {rid}: mark must be one of {MARKS}")
     return errs
 
 
@@ -292,12 +400,12 @@ def lane_desc(d: dict) -> str:
 
 def footer(d: dict, y: float, w: float, size: float) -> tuple[str, float]:
     pubs = []
-    for lane in d["lanes"]:
-        p = lane["proponent"].get("image_name") or lane["proponent"]["name"]
+    for view in views(d):
+        p = view["proponent"].get("image_name") or view["proponent"]["name"]
         if p not in pubs:
             pubs.append(p)
     src = {s["id"]: s for s in d["sources"]}
-    line = "Voices: " + "; ".join(pubs)
+    line = d.get("image_source") or "Voices: " + "; ".join(pubs)
     if d.get("method_source"):
         m = src[d["method_source"]]
         line += ". Sequences after " + ", ".join(str(x) for x in (m["title"], m["publisher"], m.get("year")) if x) + "."
@@ -319,7 +427,7 @@ def svg_open(d: dict, w: float, h: float, narrow: bool) -> str:
     cls = "cc-chart-svg cc-timeline-svg " + ("cc-chart-narrow" if narrow else "cc-chart-wide")
     return (f'<svg class="{cls}" viewBox="0 0 {w} {h:.0f}" role="img" aria-labelledby="{tid}-t {tid}-d" '
             f'font-family="{FONT}"><title id="{tid}-t">{esc(d["image_title"])}</title>'
-            f'<desc id="{tid}-d">{esc(lane_desc(d))}</desc><rect width="{w}" height="{h:.0f}" fill="#fff"/>')
+            f'<desc id="{tid}-d">{esc(describe(d))}</desc><rect width="{w}" height="{h:.0f}" fill="#fff"/>')
 
 
 def header(d: dict, w: float, subtitle: str) -> tuple[list[str], float]:
@@ -335,6 +443,10 @@ def header(d: dict, w: float, subtitle: str) -> tuple[list[str], float]:
 
 
 def render_wide(d: dict) -> str:
+    if vtype(d) == "spectrum":
+        return render_spectrum(d, False)
+    if vtype(d) == "matrix":
+        return render_matrix(d, False)
     w = W_WIDE
     parts, y = header(d, w, d.get("image_subtitle", ""))
     label_w = 136
@@ -380,6 +492,10 @@ def render_wide(d: dict) -> str:
 
 
 def render_narrow(d: dict) -> str:
+    if vtype(d) == "spectrum":
+        return render_spectrum(d, True)
+    if vtype(d) == "matrix":
+        return render_matrix(d, True)
     w = W_NARROW
     parts, y = header(d, w, d.get("image_subtitle_narrow") or d.get("image_subtitle", ""))
     label_w = 70
@@ -432,6 +548,364 @@ def render_narrow(d: dict) -> str:
     return svg_open(d, w, yy, True) + "".join(parts) + foot + "</svg>"
 
 
+# ---------------------------------------------------------------- spectrum and matrix
+
+def describe(d: dict) -> str:
+    """The whole visual in words, for the SVG <desc>."""
+    kind = vtype(d)
+    if kind == "timeline":
+        return lane_desc(d)
+    if kind == "spectrum":
+        axis, axis_y = d["axis"], d.get("axis_y")
+        out = [f"{axis.get('label') or 'Axis'}: from {axis['left']} to {axis['right']}."]
+        if axis_y:
+            out.append(f"{axis_y['label']}: from {axis_y['bottom']} to {axis_y['top']}.")
+        for n, pos in enumerate(ordered(d), 1):
+            where = placement(d, pos)
+            tag = f" ({outside_label(pos)})" if pos.get("outside") else ""
+            out.append(f"{n}. {pos['name']}{tag}: {where}. {pos['text']}")
+        return " ".join(out)
+    out = []
+    for k, col in enumerate(d["columns"]):
+        tag = f" ({outside_label(col)})" if col.get("outside") else ""
+        bits = [f"{row['label']}: {row['cells'][k]['text']}" for row in d["rows"]]
+        out.append(f"{col['name']}{tag}. " + "; ".join(bits) + ".")
+    return " ".join(out)
+
+
+def ordered(d: dict) -> list[dict]:
+    """Spectrum positions left to right (then top to bottom), which is also their number order."""
+    return sorted(d["positions"], key=lambda p: (p["at"], -p.get("y", 0)))
+
+
+def _toward(label: str) -> str:
+    return label[:1].lower() + label[1:]
+
+
+def _where(at: float, low: str, high: str) -> str:
+    if at <= 15:
+        return f"at the {_toward(low)} end"
+    if at < 40:
+        return f"toward {_toward(low)}"
+    if at <= 60:
+        return "near the middle"
+    if at < 85:
+        return f"toward {_toward(high)}"
+    return f"at the {_toward(high)} end"
+
+
+def placement(d: dict, pos: dict) -> str:
+    if pos.get("placement"):
+        return pos["placement"]
+    where = _where(pos["at"], d["axis"]["left"], d["axis"]["right"])
+    if d.get("axis_y"):
+        ay = d["axis_y"]
+        where += f"; {_toward(ay['label'])}: " + _where(pos["y"], ay["bottom"], ay["top"]).replace("the ", "", 1)
+    return where[:1].upper() + where[1:]
+
+
+def mark_svg(mark: str | None, cx: float, cy: float, r: float, col: str) -> str:
+    if mark == "yes":
+        return f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r}" fill="{col}"/>'
+    if mark == "partly":
+        return (f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r}" fill="#fff" stroke="{col}" stroke-width="1.5"/>'
+                f'<path d="M{cx:.1f},{cy - r:.1f} A{r},{r} 0 0 1 {cx:.1f},{cy + r:.1f} Z" fill="{col}"/>')
+    if mark == "no":
+        return f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r}" fill="#fff" stroke="{col}" stroke-width="1.5"/>'
+    return ""
+
+
+def badge(n: int, cx: float, cy: float, col: str, outside: bool, r: float = 10) -> str:
+    if outside:
+        return (f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r}" fill="#fff" stroke="{col}" stroke-width="1.6" '
+                f'stroke-dasharray="3 2"/>' + tx(cx, cy + 4, str(n), 11.5, col, "700", "middle"))
+    return (f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r}" fill="{col}"/>'
+            + tx(cx, cy + 4, str(n), 11.5, "#fff", "700", "middle"))
+
+
+def card(pos: dict, n: int, x: float, y: float, w: float, h: float | None = None,
+         size: float = 11.5, short: bool = False) -> tuple[str, float]:
+    """A numbered card for one position; returns (svg, height). Pass h to stretch it."""
+    col = color(pos.get("color"))
+    inner = w - 34
+    name_lines, ns = fit(pos.get("short") if short and pos.get("short") else pos["name"], inner, 13, True,
+                         max_lines=2, floor=10.5)
+    text = pos.get("short_text") if short and pos.get("short_text") else pos["text"]
+    body = wrap(text, w - 18, size)
+    prop = pos["proponent"].get("image_name") or pos["proponent"]["name"]
+    eg = wrap(f"e.g. {prop}", w - 18, 10.5)
+    tag = outside_label(pos)
+    need = 12 + len(name_lines) * 15 + (13 if tag else 0) + 4 + len(body) * size * 1.25 + len(eg) * 13 + 8
+    hh = h or need
+    dash = ' stroke-dasharray="4 3"' if pos.get("outside") else ""
+    parts = [f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{hh:.1f}" rx="6" fill="#fff" '
+             f'stroke="{col if pos.get("outside") else GRID}" stroke-width="1.2"{dash}/>',
+             f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="4" rx="2" fill="{col}"/>',
+             badge(n, x + 15, y + 20, col, bool(pos.get("outside")), 9)]
+    ty = y + 24
+    for ln in name_lines:
+        parts.append(tx(x + 29, ty, ln, ns, col, "700"))
+        ty += 15
+    if tag:
+        parts.append(tx(x + 29, ty - 1, tag, 10.5, GREY, "600"))
+        ty += 13
+    ty += 4
+    for ln in body:
+        parts.append(tx(x + 9, ty, ln, size, INK))
+        ty += size * 1.25
+    for ln in eg:
+        parts.append(tx(x + 9, ty, ln, 10.5, GREY))
+        ty += 13
+    return "".join(parts), need
+
+
+def axis_strip(d: dict, x0: float, x1: float, y: float, narrow: bool) -> tuple[list[str], float]:
+    """The one-axis line with bands, end labels and numbered dots; returns (parts, bottom y)."""
+    axis = d["axis"]
+    parts = []
+    pos_sorted = ordered(d)
+    # stagger dots that would touch, upward in rows
+    rows, last = [], {}
+    for p in pos_sorted:
+        px = x0 + 16 + p["at"] / 100 * (x1 - x0 - 32)
+        row = 0
+        while row in last and px - last[row] < 23:
+            row += 1
+        last[row] = px
+        rows.append((p, px, row))
+    lift = max((r for _, _, r in rows), default=0) * 23
+    bands = d.get("bands") or []
+    top = y + lift + (22 if bands else 0)
+    line_y = top + 12
+    for b in bands:
+        bx0, bx1 = x0 + b["from"] / 100 * (x1 - x0), x0 + b["to"] / 100 * (x1 - x0)
+        parts.append(f'<rect x="{bx0:.1f}" y="{line_y - 9:.1f}" width="{bx1 - bx0:.1f}" height="18" rx="4" fill="{SHADE}"/>')
+        lines, s = fit(b["label"], bx1 - bx0 - 4, 10.5, True, max_lines=1, floor=8.5)
+        parts.append(tx((bx0 + bx1) / 2, y + 10, lines[0], s, "#2C4A2E", "700", "middle"))
+    parts.append(f'<line x1="{x0:.1f}" x2="{x1:.1f}" y1="{line_y:.1f}" y2="{line_y:.1f}" stroke="{GREY}" '
+                 f'stroke-width="2"/>')
+    for xx, sgn in ((x0, 1), (x1, -1)):
+        parts.append(f'<path d="M{xx:.1f},{line_y:.1f} l{8 * sgn},-5 v10 Z" fill="{GREY}"/>')
+    for n, (p, px, row) in enumerate(rows, 1):
+        col = color(p.get("color"))
+        cy = line_y - row * 23
+        if row:
+            parts.append(f'<line x1="{px:.1f}" x2="{px:.1f}" y1="{cy:.1f}" y2="{line_y:.1f}" stroke="{col}" '
+                         f'stroke-width="1.5"/>')
+        parts.append(badge(n, px, cy, col, bool(p.get("outside"))))
+    ly = line_y + 26
+    size = 11.5 if narrow else 12.5
+    parts.append(tx(x0, ly, axis["left"], size, INK, "700"))
+    parts.append(tx(x1, ly, axis["right"], size, INK, "700", "end"))
+    if axis.get("label") and not narrow:
+        parts.append(tx((x0 + x1) / 2, ly, axis["label"], 11, GREY, None, "middle"))
+    return parts, ly + 10
+
+
+def plot_2d(d: dict, x: float, y: float, w: float, h: float) -> list[str]:
+    """Two-axis spectrum: a plot with labelled ends and numbered dots."""
+    axis, ay = d["axis"], d["axis_y"]
+    margin = 22
+    px0, px1, py0, py1 = x + margin, x + w, y, y + h - 30
+    parts = [f'<rect x="{px0:.1f}" y="{py0:.1f}" width="{px1 - px0:.1f}" height="{py1 - py0:.1f}" rx="6" '
+             f'fill="#faf9f7" stroke="{GRID}"/>',
+             f'<line x1="{(px0 + px1) / 2:.1f}" x2="{(px0 + px1) / 2:.1f}" y1="{py0:.1f}" y2="{py1:.1f}" '
+             f'stroke="{GRID}" stroke-dasharray="3 3"/>',
+             f'<line x1="{px0:.1f}" x2="{px1:.1f}" y1="{(py0 + py1) / 2:.1f}" y2="{(py0 + py1) / 2:.1f}" '
+             f'stroke="{GRID}" stroke-dasharray="3 3"/>']
+    cy = (py0 + py1) / 2
+    lx = x + 8
+    parts.append(f'<text x="{lx:.1f}" y="{cy:.1f}" font-size="11" fill="{GREY}" font-weight="700" '
+                 f'text-anchor="middle" transform="rotate(-90 {lx:.1f} {cy:.1f})">{esc(ay["label"])}</text>')
+    parts.append(tx(px0 + 6, py0 + 14, ay["top"], 11, INK, "700"))
+    parts.append(tx(px0 + 6, py1 - 7, ay["bottom"], 11, INK, "700"))
+    parts.append(tx(px0, py1 + 16, axis["left"], 11.5, INK, "700"))
+    parts.append(tx(px1, py1 + 16, axis["right"], 11.5, INK, "700", "end"))
+    if axis.get("label"):
+        parts.append(tx((px0 + px1) / 2, py1 + 28, axis["label"], 11, GREY, "700", "middle"))
+    inset = 22
+    dots = []
+    for n, p in enumerate(ordered(d), 1):
+        cx = px0 + inset + p["at"] / 100 * (px1 - px0 - 2 * inset)
+        cyy = py1 - 26 - p["y"] / 100 * (py1 - py0 - 52)
+        dots.append((n, p, cx, cyy))
+    taken = [(cx - 12, cyy - 12, cx + 12, cyy + 12) for _, _, cx, cyy in dots]
+    for n, p, cx, cyy in dots:
+        col = color(p.get("color"))
+        parts.append(badge(n, cx, cyy, col, bool(p.get("outside")), 11))
+        name = p.get("short") or p["name"]
+        tw = text_w(name, 11.5, True)
+        cands = [(cx + 15, cyy + 4, None), (cx - 15, cyy + 4, "end"),
+                 (cx, cyy - 17, "middle"), (cx, cyy + 26, "middle")]
+        best = None
+        for lx, ly, anchor in cands:
+            bx0 = lx if anchor is None else (lx - tw if anchor == "end" else lx - tw / 2)
+            box = (bx0, ly - 11, bx0 + tw, ly + 3)
+            inside = px0 + 2 <= box[0] and box[2] <= px1 - 2 and py0 <= box[1] and box[3] <= py1
+            clash = any(not (box[2] < t[0] or box[0] > t[2] or box[3] < t[1] or box[1] > t[3]) for t in taken)
+            if inside and not clash:
+                best = (lx, ly, anchor, box)
+                break
+        if best is None:
+            lx, ly, anchor = cands[0]
+            best = (lx, ly, anchor, (lx, ly - 11, lx + tw, ly + 3))
+        lx, ly, anchor, box = best
+        taken.append(box)
+        parts.append(tx(lx, ly, name, 11.5, col, "700", anchor))
+    return parts
+
+
+def render_spectrum(d: dict, narrow: bool) -> str:
+    w = W_NARROW if narrow else W_WIDE
+    sub = (d.get("image_subtitle_narrow") if narrow else None) or d.get("image_subtitle", "")
+    parts, y = header(d, w, sub)
+    pos = ordered(d)
+    if d.get("axis_y"):
+        if narrow:
+            ph = 250
+            parts += plot_2d(d, PAD, y, w - 2 * PAD, ph)
+            y += ph + 10
+            for n, p in enumerate(pos, 1):
+                svg, h = card(p, n, PAD, y, w - 2 * PAD, short=True)
+                parts.append(svg)
+                y += h + 8
+        else:
+            plot_w = 400
+            ph = 330
+            parts += plot_2d(d, PAD, y, plot_w, ph)
+            cx0 = PAD + plot_w + 16
+            cy = y
+            heights = [card(p, n, 0, 0, w - PAD - cx0, size=11)[1] for n, p in enumerate(pos, 1)]
+            gap = max(6.0, (ph - sum(heights)) / max(1, len(pos) - 1)) if sum(heights) < ph else 6.0
+            for n, p in enumerate(pos, 1):
+                svg, h = card(p, n, cx0, cy, w - PAD - cx0, size=11)
+                parts.append(svg)
+                cy += h + min(gap, 14)
+            y = max(y + ph, cy)
+    else:
+        strip, y = axis_strip(d, PAD + 4, w - PAD - 4, y, narrow)
+        parts += strip
+        y += 8
+        if narrow:
+            for n, p in enumerate(pos, 1):
+                svg, h = card(p, n, PAD, y, w - 2 * PAD, short=True)
+                parts.append(svg)
+                y += h + 8
+        else:
+            gap = 8
+            cw = (w - 2 * PAD - gap * (len(pos) - 1)) / len(pos)
+            size = 11.5 if cw >= 130 else 11
+            h = max(card(p, n, 0, 0, cw, size=size)[1] for n, p in enumerate(pos, 1))
+            for n, p in enumerate(pos, 1):
+                parts.append(card(p, n, PAD + (n - 1) * (cw + gap), y, cw, h, size=size)[0])
+            y += h
+    foot, y = footer(d, y + 12, w, 11)
+    return svg_open(d, w, y, narrow) + "".join(parts) + foot + "</svg>"
+
+
+def col_head(col: dict, x: float, y: float, w: float, h: float, size: float, short: bool) -> str:
+    c = color(col.get("color"))
+    lines, s = fit(col.get("short") if short and col.get("short") else col["name"], w - 8, size, True,
+                   max_lines=3, floor=9.5)
+    tag = outside_label(col)
+    parts = []
+    if col.get("outside"):
+        parts.append(f'<rect x="{x + 2:.1f}" y="{y:.1f}" width="{w - 4:.1f}" height="{h:.1f}" rx="5" fill="#fff" '
+                     f'stroke="{c}" stroke-dasharray="4 3"/>')
+    body_h = len(lines) * s * 1.18 + (12 if tag else 0)
+    cy = y + (h - 4) / 2 - (6 if tag else 0)
+    parts.append(block_text(lines, x + w / 2, cy, s, c, "700"))
+    if tag:
+        parts.append(tx(x + w / 2, cy + body_h / 2 + 6, tag, 9.5, GREY, "600", "middle"))
+    parts.append(f'<rect x="{x + 6:.1f}" y="{y + h - 4:.1f}" width="{w - 12:.1f}" height="3" rx="1.5" fill="{c}"/>')
+    return "".join(parts)
+
+
+def mark_legend(d: dict, x: float, y: float) -> tuple[str, float]:
+    used = [m for m in MARKS if any(c.get("mark") == m for r in d["rows"] for c in r["cells"])]
+    if not used:
+        return "", y
+    labels = {**MARK_LABELS, **(d.get("mark_labels") or {})}
+    parts, xx = [], x
+    for m in used:
+        parts.append(mark_svg(m, xx + 6, y - 4, 5.5, INK))
+        parts.append(tx(xx + 16, y, labels[m], 11, GREY))
+        xx += 26 + text_w(labels[m], 11)
+    return "".join(parts), y + 14
+
+
+def render_matrix(d: dict, narrow: bool) -> str:
+    w = W_NARROW if narrow else W_WIDE
+    sub = (d.get("image_subtitle_narrow") if narrow else None) or d.get("image_subtitle", "")
+    parts, y = header(d, w, sub)
+    cols, rows = d["columns"], d["rows"]
+    legend, y = mark_legend(d, PAD, y + 2)
+    parts.append(legend)
+    if narrow:
+        name_w = 96
+        for row in rows:
+            lines, s = fit(row.get("short") or row["label"], w - 2 * PAD - 12, 12.5, True, max_lines=2)
+            hh = len(lines) * s * 1.2 + 10
+            parts.append(f'<rect x="{PAD:.1f}" y="{y:.1f}" width="{w - 2 * PAD:.1f}" height="{hh:.1f}" rx="4" '
+                         f'fill="{SHADE}"/>')
+            for k, ln in enumerate(lines):
+                parts.append(tx(PAD + 6, y + 5 + s + k * s * 1.2, ln, s, "#2C4A2E", "700"))
+            y += hh + 4
+            for k, col in enumerate(cols):
+                c = color(col.get("color"))
+                cell = row["cells"][k]
+                nlines, ns = fit(col.get("short") or col["name"], name_w - 4, 11.5, True, max_lines=2, floor=9.5)
+                mark = cell.get("mark")
+                tx0 = PAD + name_w + (18 if mark else 4)
+                body = wrap(cell.get("short") or cell["text"], w - PAD - tx0, 11.5)
+                hh = max(len(nlines) * ns * 1.18, len(body) * 14.5) + 8
+                for j, ln in enumerate(nlines):
+                    parts.append(tx(PAD + 2, y + 4 + ns + j * ns * 1.18, ln, ns, c, "700"))
+                if mark:
+                    parts.append(mark_svg(mark, PAD + name_w + 8, y + 4 + 7, 5.5, c))
+                for j, ln in enumerate(body):
+                    parts.append(tx(tx0, y + 4 + 11.5 + j * 14.5, ln, 11.5, INK))
+                y += hh
+                if k < len(cols) - 1:
+                    parts.append(f'<line x1="{PAD + 2:.1f}" x2="{w - PAD:.1f}" y1="{y - 3:.1f}" y2="{y - 3:.1f}" '
+                                 f'stroke="{GRID}" stroke-opacity="0.6"/>')
+            y += 8
+    else:
+        label_w = 128
+        cw = (w - 2 * PAD - label_w) / len(cols)
+        head_h = max(40.0, max(len(fit(c["name"], cw - 8, 12.5, True, max_lines=3, floor=9.5)[0]) * 15
+                               + (14 if c.get("outside") else 0) + 12 for c in cols))
+        for k, col in enumerate(cols):
+            parts.append(col_head(col, PAD + label_w + k * cw, y, cw, head_h, 12.5, False))
+        y += head_h + 4
+        for i, row in enumerate(rows):
+            rl, rs = fit(row["label"], label_w - 10, 12, True, max_lines=4)
+            cells = []
+            hh = len(rl) * rs * 1.2 + 14
+            for k, col in enumerate(cols):
+                cell = row["cells"][k]
+                indent = 16 if cell.get("mark") else 0
+                body = wrap(cell["text"], cw - 12 - indent, 11)
+                cells.append((cell, body, indent))
+                hh = max(hh, len(body) * 13.8 + 14)
+            if i % 2 == 0:
+                parts.append(f'<rect x="{PAD:.1f}" y="{y:.1f}" width="{w - 2 * PAD:.1f}" height="{hh:.1f}" rx="4" '
+                             f'fill="#faf9f7"/>')
+            for j, ln in enumerate(rl):
+                parts.append(tx(PAD + 6, y + 7 + rs + j * rs * 1.2, ln, rs, INK, "700"))
+            for k, (cell, body, indent) in enumerate(cells):
+                c = color(cols[k].get("color"))
+                x0 = PAD + label_w + k * cw + 6
+                if cell.get("mark"):
+                    parts.append(mark_svg(cell["mark"], x0 + 6, y + 14, 5.5, c))
+                for j, ln in enumerate(body):
+                    parts.append(tx(x0 + indent, y + 18 + j * 13.8, ln, 11, INK))
+            y += hh
+            parts.append(f'<line x1="{PAD:.1f}" x2="{w - PAD:.1f}" y1="{y:.1f}" y2="{y:.1f}" stroke="{GRID}"/>')
+    foot, y = footer(d, y + 12, w, 11)
+    return svg_open(d, w, y, narrow) + "".join(parts) + foot + "</svg>"
+
+
 # ---------------------------------------------------------------- HTML
 
 STYLE = (
@@ -461,7 +935,37 @@ def voice_html(prop: dict, voices: VoiceIndex) -> str:
     return esc(prop["name"])
 
 
+def _table(d: dict, head: str, rows: list[str]) -> str:
+    return (f'<details class="cc-chart-data"><summary>Table version</summary><div class="cc-chart-scroll">'
+            f'<table class="cc-timeline-table cc-chart-stack"><caption>{esc(d["image_title"])}</caption>'
+            f'<thead><tr>{head}</tr></thead><tbody>{"".join(rows)}</tbody></table></div></details>')
+
+
 def table_html(d: dict) -> str:
+    if vtype(d) == "spectrum":
+        where = d["axis"].get("label") or "Where it sits"
+        if d.get("axis_y"):
+            where = "Where it sits"
+        head = (f'<th scope="col">{esc(d.get("table_view_label") or "View")}</th>'
+                f'<th scope="col">{esc(where)}</th><th scope="col">In short</th>')
+        rows = []
+        for n, p in enumerate(ordered(d), 1):
+            tag = f" ({esc(outside_label(p))})" if p.get("outside") else ""
+            rows.append(f'<tr><th scope="row">{n}. {esc(p["name"])}{tag}</th>'
+                        f'<td data-label="{esc(where)}">{esc(placement(d, p))}</td>'
+                        f'<td data-label="In short">{esc(p["text"])}</td></tr>')
+        return _table(d, head, rows)
+    if vtype(d) == "matrix":
+        cols = d["columns"]
+        head = (f'<th scope="col">{esc(d.get("table_view_label") or "Question")}</th>'
+                + "".join(f'<th scope="col">{esc(c["name"])}'
+                          + (f" ({esc(outside_label(c))})" if c.get("outside") else "") + "</th>" for c in cols))
+        rows = []
+        for row in d["rows"]:
+            cells = "".join(f'<td data-label="{esc(c["name"])}">{esc(row["cells"][k]["text"])}</td>'
+                            for k, c in enumerate(cols))
+            rows.append(f'<tr><th scope="row">{esc(row["label"])}</th>{cells}</tr>')
+        return _table(d, head, rows)
     stations = d["stations"]
     head = '<th scope="col">View</th>' + "".join(f'<th scope="col">{esc(st["label"])}</th>' for st in stations)
     common = set(d["common"])
@@ -503,14 +1007,15 @@ def render_block(d: dict, voices: VoiceIndex | None = None) -> str:
                   f'{esc(d["common_text"])}{cite}</p>')
     differ = "".join(f"<li>{esc(b)}</li>" for b in d["differ"])
     voices_li = []
-    for lane in d["lanes"]:
-        p = lane["proponent"]
+    for view in views(d):
+        p = view["proponent"]
         s = src[p["source"]]
         who = voice_html(p, voices)
         pub = "" if s["publisher"] == p["name"] else f'{esc(s["publisher"])}, '
+        tag = f" ({esc(outside_label(view))})" if view.get("outside") else ""
         voices_li.append(
-            f'<li><span class="cc-timeline-swatch" style="background:{color(lane.get("color"))}"></span>'
-            f'<strong>{esc(lane["name"])}:</strong> {who}, {pub}{link(s, p["work"])}{year(s)}</li>')
+            f'<li><span class="cc-timeline-swatch" style="background:{color(view.get("color"))}"></span>'
+            f'<strong>{esc(view["name"])}{tag}:</strong> {who}, {pub}{link(s, p["work"])}{year(s)}</li>')
     method = ""
     if d.get("method"):
         method = esc(d["method"]) + " "
@@ -527,9 +1032,10 @@ def render_block(d: dict, voices: VoiceIndex | None = None) -> str:
         f'<figcaption>{esc(d["caption"])}</figcaption>\n{common}\n'
         f'<div class="cc-timeline-key"><div class="cc-timeline-sub">Where they differ</div><ul>{differ}</ul></div>\n'
         f'{table_html(d)}\n'
-        f'<div class="cc-timeline-voices"><div class="cc-timeline-sub">One voice for each view</div>'
+        f'<div class="cc-timeline-voices"><div class="cc-timeline-sub">{esc(d.get("voices_label") or "One voice for each view")}</div>'
         f'<ul>{"".join(voices_li)}</ul></div>\n'
-        f'<p class="cc-chart-source">{method}No view is presented here as the answer. Chart by Christian Curator.</p>\n'
+        f'<p class="cc-chart-source">{method}{esc(d.get("note") or "No view is presented here as the answer.")} '
+        f'Chart by Christian Curator.</p>\n'
         f'</figure>\n</section>\n{end}'
     )
 
@@ -619,7 +1125,7 @@ def main(argv: list[str] | None = None) -> int:
             page.write_text(out, encoding="utf-8")
         print(f"{slug}: timeline {d['id']}{' (changed)' if out != html else ''}")
         if args.png and not args.dry_run:
-            png = write_png(d, PNG_DIR / f"{slug}-{d['id']}.png")
+            png = write_png(d, PNG_DIR / f"{slug}-{d.get('png_name') or d['id']}.png")
             print(f"  wrote {png.relative_to(REPO_ROOT)}")
     if errors:
         print(f"{errors} problem(s)")
