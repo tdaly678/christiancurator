@@ -1,8 +1,6 @@
 {
-  "_note": "Names that may not appear in a topic page's top block (data/topic_top/<slug>.json) until Tom reviews them. Source: topic-visuals-retention-report.md, Part 2a and 2b content notes (Nov 14 2026). Enforced by scripts/build_topic_top.py validate().",
+  "_note": "Names that may not appear in a topic page's top block (data/topic_top/<slug>.json) until Tom reviews them. Source: topic-visuals-retention-report.md, Part 2a and 2b content notes (Nov 14 2026). Enforced by scripts/build_topic_top.py validate(). Nov 14 2026 (Tom): Amber Cantorna and Mike McHargue cleared (kept on Position 2 with an outside-evangelicalism note). The other names were removed from the debate cards because they do not fit the labels (or, for Keller, could not be verified); they stay listed so they are not reintroduced without review.",
   "faith-deconstruction": [
-    "Amber Cantorna",
-    "Mike McHargue",
     "Rhett Smith",
     "Chrissy Stroop",
     "Christena Cleveland",

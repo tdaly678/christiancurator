@@ -13,10 +13,6 @@
             "slug": "r-albert-mohler"
           },
           {
-            "name": "Doug Wilson",
-            "slug": "doug-wilson"
-          },
-          {
             "name": "John MacArthur",
             "slug": "john-macarthur"
           }
@@ -93,5 +89,5 @@
   ],
   "latest": true,
   "signup": true,
-  "notes": "Positions 2 and 3 carry no voices: every name on those debate cards is in flagged_names.json pending Tom's review (see .christian-orchestrator/team/B-deconstruction-report.md). MacArthur and Baucham pages are noindex, so MacArthur prints as plain text; Baucham left off to keep the row short. Key number: Lifeway is an attendance measure, not a belief measure; the chart note says so."
+  "notes": "Doug Wilson dropped from Position 1 (Tom, Nov 14 2026: no writing of his own on deconstruction found). Positions 2 and 3 carry no voices in this block: no indexable voice pages. Position 2 names (Cantorna, McHargue) stay on the debate card with a note that the view is argued largely from outside evangelicalism; Position 3 names are Harber, Chatraw, Kim (Tom, Nov 14 2026). MacArthur and Baucham pages are noindex, so MacArthur prints as plain text; Baucham left off to keep the row short. Key number: Lifeway is an attendance measure, not a belief measure; the chart note says so."
 }
