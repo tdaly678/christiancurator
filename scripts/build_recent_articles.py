@@ -83,6 +83,17 @@ def _esc(t: str) -> str:
     return html_mod.escape(t or "", quote=True)
 
 
+def strip_tracking(url: str) -> str:
+    """Drop utm_* query parameters (9Marks feed links carry them); every other
+    part of the URL, including other parameters and their order, is kept."""
+    if "?" not in (url or ""):
+        return url
+    base, _, rest = url.partition("?")
+    query, hash_, frag = rest.partition("#")
+    kept = [p for p in query.split("&") if p and not p.split("=", 1)[0].lower().startswith("utm_")]
+    return base + ("?" + "&".join(kept) if kept else "") + hash_ + frag
+
+
 def _fmt_date(iso: str) -> str:
     from datetime import date
     try:
@@ -217,7 +228,7 @@ def render_section(heading_label: str, heading: str, items: list[dict],
         meta_bits = [b for b in (a["source"], _fmt_date(a["date"])) if b]
         rows.append(
             f'\n  <div class="cc-recent-item">'
-            f'\n    <a class="cc-recent-link" href="{_esc(a["url"])}" target="_blank" rel="noopener">{_esc(strip_dashes(a["title"]))}</a>'
+            f'\n    <a class="cc-recent-link" href="{_esc(strip_tracking(a["url"]))}" target="_blank" rel="noopener">{_esc(strip_dashes(a["title"]))}</a>'
             f'\n    <div class="cc-recent-meta">{_esc(" · ".join(meta_bits))}</div>'
             f'\n  </div>'
         )
@@ -331,10 +342,11 @@ def merge_items(keyword_items: list[dict], watch_items: list[dict]) -> list[dict
     """Keyword matches plus data-watch stories, newest first, one per URL."""
     seen, out = set(), []
     for a in sorted(keyword_items + watch_items, key=lambda a: a.get("date", ""), reverse=True):
-        if not a.get("url") or a["url"] in seen:
+        url = strip_tracking(a.get("url", ""))
+        if not url or url in seen:
             continue
-        seen.add(a["url"])
-        out.append(a)
+        seen.add(url)
+        out.append({**a, "url": url})
     return out[:MAX_ITEMS]
 
 
@@ -359,7 +371,7 @@ def render_latest_line(items: list[dict], limit: int = LATEST_MAX_ITEMS) -> str:
     for a in items[:limit]:
         meta = ", ".join(b for b in (a.get("source", ""), _short_date(a.get("date", ""))) if b)
         parts.append(
-            f'<a href="{_esc(a["url"])}" target="_blank" rel="noopener" data-pos="topic-latest"'
+            f'<a href="{_esc(strip_tracking(a["url"]))}" target="_blank" rel="noopener" data-pos="topic-latest"'
             f' data-src="{_esc(a.get("source", ""))}">{_esc(strip_dashes(a["title"]))}</a>'
             + (f' <span class="cc-tt-latest-meta">{_esc(meta)}</span>' if meta else "")
         )
