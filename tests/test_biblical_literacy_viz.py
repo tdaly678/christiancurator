@@ -141,8 +141,12 @@ def test_build_is_idempotent_and_committed_page_is_current():
 
 
 def test_dates_bump_only_when_data_changes():
+    # The data watch moves "Last updated" on real data changes, so compare with
+    # whatever date the committed page carries rather than a fixed one.
+    current = re.search(r"Last updated: ([A-Z][a-z]+ \d{1,2}, \d{4})", PAGE).group(1)
     unchanged = viz.build_page(PAGE, DATA, date(2030, 1, 1))
-    assert "Last updated: November 9, 2026" in unchanged
+    assert f"Last updated: {current}" in unchanged
+    assert "Last updated: January 1, 2030" not in unchanged
 
     data = copy.deepcopy(DATA)
     data["changelog"].append({"date": "2030-01-01", "note": "Test change."})
@@ -250,9 +254,9 @@ def test_blocks_in_reading_order_and_curated_list_untouched():
     order = [
         PAGE.index("has made it more acute.</p>"),
         PAGE.index("<!-- CC-BL-VIZ-GAP:START -->"),
-        PAGE.index('<section class="cc-key-questions">'),
+        PAGE.index('<section class="cc-key-questions"'),
         PAGE.index("<!-- CC-BL-VIZ-QUIZ:START -->"),
-        PAGE.index('<div class="cc-debate">'),
+        PAGE.index('<div class="cc-debate"'),
         PAGE.index("<!-- CC-FAQ:END -->"),
         PAGE.index("<!-- CC-BL-VIZ-TRACKER:START -->"),
         PAGE.index("<!-- CC-COMPANION-GUIDES:START -->"),

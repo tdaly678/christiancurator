@@ -227,13 +227,15 @@ def test_insert_once_refresh_in_place_and_bump_dates_only_on_change():
 
 def test_watch_rows_are_added_once_with_changelog_and_unverified_rejected():
     data = copy.deepcopy(viz.load_data())
+    before = copy.deepcopy(data)
+    existing = len(data.get("watch") or [])  # the daily data watch commits real rows
     new, added = dw.add_watch_rows(data, [verified(), verified(), verified(url="")], TODAY)
-    assert len(added) == 1 and len(new["watch"]) == 1
+    assert len(added) == 1 and len(new["watch"]) == existing + 1
     assert new["changelog"][-1]["date"] == "2026-11-10"
     assert "not charted" in new["changelog"][-1]["note"]
     again, added2 = dw.add_watch_rows(new, [verified()], TODAY)
     assert added2 == [] and again["changelog"] == new["changelog"]
-    assert "watch" not in data  # pure
+    assert data == before  # pure
 
 
 def test_builder_validates_and_renders_watch_rows_as_text_only():
@@ -241,19 +243,22 @@ def test_builder_validates_and_renders_watch_rows_as_text_only():
     assert viz.validate(data) == []
     page = viz.build_page(viz.PAGE_PATH.read_text(encoding="utf-8"), data, TODAY)
     tracker = viz.marker_re("TRACKER").search(page).group(2)
+    new_row = data["watch"][-1]
     assert 'id="data-watch"' in tracker and "42% of U.S. adults" in tracker
     for svg in re.findall(r"<svg.*?</svg>", page, re.S):
         assert "42% of U.S. adults" not in svg
     assert "Last updated: November 10, 2026" in page  # data changed, so the date moved
+    assert new_row["quote"].startswith("Barna found 42%")
     bad = copy.deepcopy(data)
-    bad["watch"][0]["figure"] = "43%"
+    bad["watch"][-1]["figure"] = "43%"
     assert any("not in its quote" in e for e in viz.validate(bad))
-    bad["watch"][0]["url"] = ""
+    bad["watch"][-1]["url"] = ""
     assert any("missing url" in e for e in viz.validate(bad))
 
 
-def test_committed_data_file_and_page_unchanged_without_watch_rows():
-    assert "watch" not in viz.load_data()
+def test_committed_data_file_and_page_are_valid():
+    # Real watch rows (added by the daily run) must validate like any other row.
+    assert viz.validate(viz.load_data()) == []
     assert viz.main(["--check"]) == 0
 
 

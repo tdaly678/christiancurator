@@ -16,6 +16,11 @@ in meta.json; older rows use the headline recovered by
 scripts/backfill_original_titles.py (data/original_titles.json). An item whose
 publisher headline is unknown is left off the page.
 
+Topic pages with a top-of-page block (scripts/build_topic_top.py) also carry a
+one-line "Latest" list between <!-- CC-TOPIC-LATEST:START/END --> markers. It
+reads the same items (topic_items()) and is refreshed here on every run, so the
+line near the top and the block near the bottom never disagree.
+
 Both sections are wrapped in marker comments and rewritten in place on each
 run, so the daily pipeline keeps them fresh — a recurring freshness signal on
 otherwise-static evergreen pages, plus genuinely useful recent reading for
@@ -49,6 +54,9 @@ EXCLUSIONS = REPO_ROOT / "data" / "voices" / "recent_exclusions.json"
 
 V_START = "<!-- CC-RECENT-ARTICLES:START -->"
 V_END = "<!-- CC-RECENT-ARTICLES:END -->"
+L_START = "<!-- CC-TOPIC-LATEST:START -->"
+L_END = "<!-- CC-TOPIC-LATEST:END -->"
+LATEST_MAX_ITEMS = 3
 
 MAX_ITEMS = 5
 # Voice pages list up to 10 recent pieces (Voices pilot, Nov 2026).
@@ -202,7 +210,8 @@ def before_death(items: list[dict], died: str | None) -> list[dict]:
 
 
 def render_section(heading_label: str, heading: str, items: list[dict],
-                   limit: int = MAX_ITEMS) -> str:
+                   limit: int = MAX_ITEMS, section_id: str = "") -> str:
+    id_attr = f' id="{section_id}"' if section_id else ""
     rows = []
     for a in items[:limit]:
         meta_bits = [b for b in (a["source"], _fmt_date(a["date"])) if b]
@@ -214,7 +223,7 @@ def render_section(heading_label: str, heading: str, items: list[dict],
         )
     return (
         f"\n{V_START}\n"
-        f'<section class="cc-recent">{STYLE}'
+        f'<section class="cc-recent"{id_attr}>{STYLE}'
         f'\n  <div class="cc-recent-label">{_esc(heading_label)}</div>'
         f'\n  <h2 class="cc-recent-title">{_esc(heading)}</h2>'
         + "".join(rows)
@@ -230,6 +239,7 @@ def inject(html: str, section: str) -> str | None:
         return block_re.sub(lambda _: section.strip("\n"), html, count=1)
     for anchor in (
         "<!-- AEO-TOPIC-BACKLINKS:START -->",
+        "<!-- CC-FAQ:START -->",
         '<section class="cc-faq"',
         '<a class="cc-back-link"',
         "</main>",
@@ -328,32 +338,90 @@ def merge_items(keyword_items: list[dict], watch_items: list[dict]) -> list[dict
     return out[:MAX_ITEMS]
 
 
-def update_topics() -> int:
+def _short_date(iso: str) -> str:
+    from datetime import date
+    try:
+        y, m, d = (int(x) for x in iso[:10].split("-"))
+        return date(y, m, d).strftime("%b %-d")
+    except Exception:
+        return ""
+
+
+def render_latest_line(items: list[dict], limit: int = LATEST_MAX_ITEMS) -> str:
+    """The top-of-page "Latest" line: Title, Outlet, Nov 9 (one to three items).
+
+    Returns the marker pair with nothing between when there are no items, so the
+    line disappears instead of going stale.
+    """
+    if not items:
+        return f"{L_START}{L_END}"
+    parts = []
+    for a in items[:limit]:
+        meta = ", ".join(b for b in (a.get("source", ""), _short_date(a.get("date", ""))) if b)
+        parts.append(
+            f'<a href="{_esc(a["url"])}" target="_blank" rel="noopener" data-pos="topic-latest"'
+            f' data-src="{_esc(a.get("source", ""))}">{_esc(strip_dashes(a["title"]))}</a>'
+            + (f' <span class="cc-tt-latest-meta">{_esc(meta)}</span>' if meta else "")
+        )
+    return (
+        f'{L_START}<p class="cc-tt-latest" id="latest"><span class="cc-tt-label">Latest</span>'
+        + '<span class="cc-tt-latest-sep">·</span>'.join(parts)
+        + f"</p>{L_END}"
+    )
+
+
+def refresh_latest_line(html: str, items: list[dict]) -> str:
+    """Replace an existing CC-TOPIC-LATEST block; pages without one are untouched."""
+    block_re = re.compile(re.escape(L_START) + r".*?" + re.escape(L_END), re.DOTALL)
+    if not block_re.search(html):
+        return html
+    return block_re.sub(lambda _: render_latest_line(items), html, count=1)
+
+
+def topic_list() -> list[dict]:
+    """Keyword topics from frontend.topic_matcher plus every slug the data watch fed."""
     from frontend.topics_data import TOPICS as ALL_TOPICS
 
-    history = json.loads(HISTORY.read_text(encoding="utf-8"))
     fresh = load_data_watch_fresh()
     names = {t["slug"]: t["name"] for t in ALL_TOPICS}
-    topics = list(TOPICS) + [
+    return list(TOPICS) + [
         {"slug": slug, "label": names.get(slug, slug), "keywords": []}
         for slug in sorted(fresh) if slug not in {t["slug"] for t in TOPICS}
     ]
+
+
+def topic_items(slug: str, history: list[dict] | None = None,
+                fresh: dict[str, list[dict]] | None = None) -> list[dict]:
+    """The items a topic page lists: keyword matches plus data-watch stories."""
+    if history is None:
+        history = json.loads(HISTORY.read_text(encoding="utf-8"))
+    if fresh is None:
+        fresh = load_data_watch_fresh()
+    topic = next((t for t in TOPICS if t["slug"] == slug), None)
+    keyword_items = match_articles_to_topic(topic, history) if topic and topic["keywords"] else []
+    return merge_items(keyword_items, fresh.get(slug, []))
+
+
+def update_topics() -> int:
+    history = json.loads(HISTORY.read_text(encoding="utf-8"))
+    fresh = load_data_watch_fresh()
     n = 0
-    for topic in topics:
+    for topic in topic_list():
         page = TOPICS_DIR / topic["slug"] / "index.html"
         if not page.exists():
             continue
         watch_items = fresh.get(topic["slug"], [])
-        items = merge_items(match_articles_to_topic(topic, history) if topic["keywords"] else [], watch_items)
-        # don't render a thin section, unless a data-watch story is in it
-        if len(items) < 2 and not watch_items:
-            continue
-        section = render_section(
-            "Fresh From the Digest", f"Recent Articles on {topic['label']}", items
-        )
+        items = topic_items(topic["slug"], history, fresh)
         html = page.read_text(encoding="utf-8")
-        out = inject(html, section)
-        if out and out != html:
+        out = refresh_latest_line(html, items)
+        # don't render a thin section, unless a data-watch story is in it
+        if len(items) >= 2 or watch_items:
+            section = render_section(
+                "Fresh From the Digest", f"Recent Articles on {topic['label']}", items,
+                section_id="recent",
+            )
+            out = inject(out, section) or out
+        if out != html:
             page.write_text(out, encoding="utf-8")
             n += 1
     return n

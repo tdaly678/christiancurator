@@ -539,11 +539,55 @@ fails closed: anything it cannot verify is linked, not written as a number, and 
 Cross-cutting scripts inject content-additive blocks using HTML-comment markers so re-runs replace the block in place instead of duplicating it. When extending any of these, update between the markers rather than editing around them:
 
 - `<!-- CC-LATEST-FIGURES:START --> ... END -->`: "Latest Figures" block on topic pages, written by the data watch (above)
+- `CC-TOPIC-ASSETS`, `CC-TOPIC-TOP` (with `CC-TOPIC-LATEST` inside), `CC-CHART:<id>`, `CC-CHART-SECTION:<id>`: see
+  "Topic pages: top block, shared assets, click tracking, charts" below
 - `<!-- AEO-RELATED-TOPICS:START --> ... END -->` — "Related Deep-Dive Topics" block on each topic page (inserted by `scripts/add_related_topics.py`, positioned between the synthesis `</section>` and the curated article list)
 - `<!-- AEO-TOPIC-BACKLINKS:START --> ... END -->` — "Featured in Deep-Dive Topics" block on voice pages (inserted by `scripts/update_voice_backlinks.py`, which is also invoked by `main.py` after `render_html` each day)
 - `/* AEO-FAQPAGE-SCHEMA */` — marker comment inside the FAQ JSON-LD script block; `verify_aeo.py` strips this before parsing
 
 All three scripts are safe to re-run standalone. The breadcrumb insert (`scripts/add_breadcrumbs.py`) uses a `.cc-breadcrumb` class presence check and a `"@type": "BreadcrumbList"` substring check for idempotency rather than markers.
+
+## Topic pages: top block, shared assets, click tracking, charts (Nov 14 2026)
+Plan: `.christian-orchestrator/topic-visuals-retention-report.md` (Parts 3 and 4). Foundation report with the exact
+schemas: `.christian-orchestrator/team/A-foundation-report.md`.
+
+- **Shared assets:** `docs/assets/topic.css` and `docs/assets/topic.js` (no framework), linked in every topic page's
+  `<head>` between `<!-- CC-TOPIC-ASSETS:START/END -->` with a `?v=<content hash>`. After editing either file, rerun
+  `scripts/build_topic_top.py` so the hash (and the browser cache) moves.
+- **Click tracking:** `topic.js` sends the homepage's GA4 `article_click` event (`link_url`, `position`, `topic`,
+  `article_source`) for every `a[data-pos]`. Existing blocks get `data-pos` at load: `.cc-article-entry` →
+  `topic-curated`, `.cc-topic-voices` and `.cc-debate-thinkers` → `topic-voices`, `.cc-recent` → `topic-latest`,
+  `.cc-debate-reads` → `topic-debate`, `.cc-related-topics` → `topic-related`, `.cc-latest-figures` → `topic-figures`.
+  Blocks written by the builders carry it in HTML (`topic-jump`, `topic-glance`, `topic-start`, `topic-latest`,
+  `topic-keynumber`, `topic-voices`, `topic-related`). Also `share` {`method`: native / copy_link / copy_summary /
+  copy_stat / print, `item`} and `signup` {`method`, `source`}. `scripts/fetch_click_counts.py` is unchanged and
+  already skips internal links. No tracking parameters are ever added to copied or shared links.
+- **Section ids** (added once to existing tags, no copy changed): `definition`, `tldr`, `key-questions`, `debate`,
+  `position-1`..`4`, `synthesis`, `reading` (curated list heading), `recent` (Recent Articles, written by
+  `build_recent_articles.py`), plus `faq` / `by-the-numbers` where they exist. `topic.js` puts a "Copy link" button
+  beside every heading whose section has an id.
+- **Top block:** `scripts/build_topic_top.py` writes `<!-- CC-TOPIC-TOP:START/END -->` right after the TL;DR on all
+  70 pages. Every page gets the "On this page" jump nav plus a Share button. A page with
+  `data/topic_top/<slug>.json` also gets What changed, "Where evangelicals disagree" (with Share), related debates,
+  Start here (picks must already be in the page's curated list), the Latest line, one key number (Copy with source)
+  and the inline Daily Digest signup (homepage Worker + reCAPTCHA, loaded on focus; hidden `source` = `topic:<slug>`;
+  the Worker ignores `source` today, GA4 `signup` records it). Schema and rules are in the script docstring;
+  `--check` validates, `--slug` limits, `--dry-run` writes nothing. Names in `data/topic_top/flagged_names.json`
+  are refused in the top block until Tom reviews them. Voices link only to existing, unretired, indexable pages.
+  The builder is not in the daily workflow: rerun it after a data file changes or when a page gains a new section.
+- **Latest line:** `<!-- CC-TOPIC-LATEST:START/END -->` inside the top block. `build_recent_articles.py` refreshes it
+  daily from the same items as the Recent Articles block (`topic_items()`: `frontend/topic_matcher.py` keywords plus
+  data-watch `fresh`). `faith-deconstruction` was added to the topic matcher.
+- **Charts:** `data/topic_charts/<slug>/<chart-id>.json` (types `hbar`, `column` with optional reference line,
+  `line`, `table`) plus an optional `section.json` that groups them; `scripts/build_topic_charts.py` renders
+  accessible inline SVG (title, population line, source with publisher and year and a small christiancurator.com mark
+  drawn on the image; `<title>`/`<desc>`; a data table) between `<!-- CC-CHART:<id>:START/END -->` and
+  `<!-- CC-CHART-SECTION:<id>:START/END -->`. Every row cites a source with URL, study, year, `fetched` date and
+  license `reuse` / `own-chart-cite` / `credit` (Barna and PRRI: drawn from published figures and credited clearly,
+  Tom Nov 14 2026); `as_published` must match each value. biblical-literacy keeps its own builder.
+- **Print:** `@media print` in `topic.css` turns a page with a top block into a one-page small-group handout
+  (definition, TL;DR, positions at a glance, key questions, Start here with URLs, page address).
+- Tests: `tests/test_build_topic_top.py`, `tests/test_build_topic_charts.py`.
 
 ## Navigation Structure — canonical 3-item nav
 

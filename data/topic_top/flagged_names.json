@@ -1,0 +1,24 @@
+{
+  "_note": "Names that may not appear in a topic page's top block (data/topic_top/<slug>.json) until Tom reviews them. Source: topic-visuals-retention-report.md, Part 2a and 2b content notes (Nov 14 2026). Enforced by scripts/build_topic_top.py validate().",
+  "faith-deconstruction": [
+    "Amber Cantorna",
+    "Mike McHargue",
+    "Rhett Smith",
+    "Chrissy Stroop",
+    "Christena Cleveland",
+    "Paul Young",
+    "Brad Jersak",
+    "Rachel Held Evans"
+  ],
+  "complementarianism-egalitarianism": [
+    "Tim Keller",
+    "Timothy Keller",
+    "Kevin DeYoung",
+    "D.A. Carson",
+    "D. A. Carson",
+    "Don Carson",
+    "Andreas Köstenberger",
+    "Andreas Kostenberger",
+    "Select TGC writers"
+  ]
+}

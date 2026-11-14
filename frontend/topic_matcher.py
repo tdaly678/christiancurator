@@ -159,6 +159,17 @@ TOPICS: list[dict] = [
         ],
     },
     {
+        "slug": "faith-deconstruction",
+        "label": "Faith Deconstruction",
+        "keywords": [
+            "deconstruct", "deconversion", "deconvert", "exvangelical", "ex-evangelical",
+            "leaving the faith", "left the faith", "leave the faith", "losing faith",
+            "lost my faith", "walk away from the faith", "walked away from the faith",
+            "dechurch", "crisis of faith", "faith crisis", "doubting christians",
+            "churchgoers face doubts",
+        ],
+    },
+    {
         "slug": "spiritual-disciplines",
         "label": "Spiritual Disciplines",
         "keywords": [

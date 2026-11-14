@@ -1,0 +1,144 @@
+/* Shared topic-page components (Christian Curator).
+   Loaded on every docs/topics/<slug>/ page by scripts/build_topic_top.py.
+   Blocks: jump nav, at-a-glance strip, Start here, latest line, key number,
+   inline Daily Digest signup, section copy links, share button, what changed,
+   related debates, topic charts (scripts/build_topic_charts.py), print handout.
+   Design tokens match the topic pages: green #2C4A2E, red #8B1A1A,
+   brown #8B4513, blue #4A4A8B, Lora headings, Source Sans 3 body. */
+
+.cc-tt { margin: 0 0 2rem; }
+.cc-tt-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 0.5rem; }
+
+/* On this page */
+.cc-tt-jump { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 0.9rem; font-size: 14px; padding: 0.6rem 0; border-top: 1px solid #e0ddd8; border-bottom: 1px solid #e0ddd8; margin-bottom: 1.5rem; }
+.cc-tt-jump-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #888; }
+.cc-tt-jump a { color: #2C4A2E; text-decoration: none; font-weight: 600; }
+.cc-tt-jump a:hover { text-decoration: underline; }
+.cc-tt-jump .cc-tt-share { margin-left: auto; }
+
+/* Small text buttons: share, copy, print */
+.cc-tt-btn { font-family: 'Source Sans 3', sans-serif; font-size: 12.5px; font-weight: 600; color: #2C4A2E; background: none; border: 1px solid #c9d2c9; border-radius: 3px; padding: 3px 10px; cursor: pointer; line-height: 1.4; }
+.cc-tt-btn:hover { border-color: #2C4A2E; background: #f0f4f0; }
+.cc-tt-btn[data-done] { border-color: #2C4A2E; background: #f0f4f0; }
+.cc-tt-btn[hidden] { display: none; }
+
+/* What changed */
+.cc-tt-changed { font-size: 12.5px; color: #666; margin: -0.75rem 0 1.25rem; }
+.cc-tt-changed strong { color: #444; font-weight: 600; }
+
+/* Where evangelicals disagree */
+.cc-tt-glance { background: #fff; border: 1px solid #e0ddd8; border-radius: 5px; padding: 1rem 1.15rem 0.9rem; margin-bottom: 1.5rem; }
+.cc-tt-glance-head { display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; }
+.cc-tt-glance-head .cc-tt-label { color: #8B1A1A; }
+.cc-tt-glance-q { font-family: 'Lora', Georgia, serif; font-size: 18px; font-weight: 600; color: #1a1a1a; line-height: 1.35; margin: 0.15rem 0 0.75rem; }
+.cc-tt-glance ol { list-style: none; margin: 0; padding: 0; }
+.cc-tt-glance li { padding: 0.55rem 0 0.55rem 0.8rem; border-top: 1px solid #ece9e4; border-left: 3px solid #2C4A2E; margin-bottom: 0.15rem; }
+.cc-tt-glance li.side-b { border-left-color: #8B4513; }
+.cc-tt-glance li.side-c { border-left-color: #4A4A8B; }
+.cc-tt-glance li.side-d { border-left-color: #8B1A1A; }
+.cc-tt-pos { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 15.5px; color: #1a1a1a; text-decoration: none; }
+a.cc-tt-pos:hover { color: #2C4A2E; text-decoration: underline; }
+.cc-tt-claim { font-size: 14.5px; color: #333; line-height: 1.5; }
+.cc-tt-voices { font-size: 13px; color: #666; margin-top: 2px; }
+.cc-tt-voices a { color: #2C4A2E; font-weight: 600; text-decoration: none; }
+.cc-tt-voices a:hover { text-decoration: underline; }
+
+/* Start here */
+.cc-tt-start { margin-bottom: 1.5rem; }
+.cc-tt-start ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+@media (max-width: 720px) { .cc-tt-start ol { grid-template-columns: 1fr; } }
+.cc-tt-start li { background: #fff; border: 1px solid #e0ddd8; border-radius: 5px; padding: 0.8rem 0.9rem; }
+.cc-tt-start-kind { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #8b6f1e; margin-bottom: 0.25rem; }
+.cc-tt-start a { font-family: 'Lora', Georgia, serif; font-size: 15.5px; font-weight: 600; line-height: 1.35; color: #1a1a1a; text-decoration: none; }
+.cc-tt-start a:hover { color: #2C4A2E; text-decoration: underline; }
+.cc-tt-byline { font-size: 12.5px; color: #888; margin-top: 3px; }
+.cc-tt-why { font-size: 13.5px; color: #444; line-height: 1.5; margin-top: 0.35rem; }
+
+/* Latest on this topic */
+.cc-tt-latest { font-size: 14px; color: #444; line-height: 1.6; margin-bottom: 1.25rem; }
+.cc-tt-latest .cc-tt-label { display: inline; margin-right: 0.5rem; }
+.cc-tt-latest a { color: #1a1a1a; font-weight: 600; text-decoration: none; }
+.cc-tt-latest a:hover { color: #2C4A2E; text-decoration: underline; }
+.cc-tt-latest-meta { color: #888; font-size: 12.5px; }
+.cc-tt-latest-sep { color: #c8c4be; margin: 0 0.35rem; }
+
+/* Key number */
+.cc-tt-num { display: flex; gap: 1rem; align-items: flex-start; background: #f3f1ed; border: 1px solid #e0ddd8; border-radius: 5px; padding: 0.9rem 1.1rem; margin-bottom: 1.5rem; }
+.cc-tt-num-fig { font-family: 'Lora', Georgia, serif; font-size: 34px; font-weight: 700; color: #8B1A1A; line-height: 1; min-width: 4.5rem; }
+.cc-tt-num-text { font-size: 15px; color: #1a1a1a; line-height: 1.5; }
+.cc-tt-num-src { font-size: 12.5px; color: #666; margin-top: 0.3rem; }
+.cc-tt-num-src a { color: #2C4A2E; }
+.cc-tt-num .cc-tt-btn { margin-top: 0.45rem; }
+
+/* Related debates */
+.cc-tt-related { font-size: 14px; margin-bottom: 1.5rem; }
+.cc-tt-related .cc-tt-label { color: #888; }
+.cc-tt-related ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
+.cc-tt-related a { color: #2C4A2E; font-weight: 600; text-decoration: none; }
+.cc-tt-related a:hover { text-decoration: underline; }
+
+/* Inline Daily Digest signup: one quiet line, no popup */
+.cc-tt-signup { border-top: 1px solid #e0ddd8; border-bottom: 1px solid #e0ddd8; padding: 0.8rem 0; margin-bottom: 1.75rem; font-size: 14px; color: #444; }
+.cc-tt-signup p { margin: 0 0 0.5rem; line-height: 1.5; }
+.cc-tt-signup strong { color: #1a1a1a; }
+.cc-tt-signup-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.cc-tt-signup input[type=email] { flex: 1 1 220px; max-width: 320px; padding: 7px 11px; font-size: 14px; font-family: 'Source Sans 3', sans-serif; border: 1px solid #c8c4be; border-radius: 4px; background: #fff; color: #1a1a1a; }
+.cc-tt-signup input[type=email]:focus { outline: none; border-color: #2C4A2E; box-shadow: 0 0 0 2px rgba(44,74,46,0.12); }
+.cc-tt-signup button { padding: 7px 18px; background: #2C4A2E; color: #fff; border: none; border-radius: 4px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'Source Sans 3', sans-serif; }
+.cc-tt-signup button:hover { background: #3a5f3c; }
+.cc-tt-signup button:disabled { opacity: 0.7; cursor: default; }
+.cc-tt-signup-hp { position: absolute; left: -5000px; }
+.cc-tt-signup-msg { font-size: 13px; margin-top: 0.4rem; }
+.cc-tt-signup-msg.is-ok { color: #2C4A2E; font-weight: 600; }
+.cc-tt-signup-msg.is-err { color: #b42318; }
+.cc-tt-signup-fine { font-size: 11px; color: #999; margin-top: 0.4rem; }
+.cc-tt-signup-fine a { color: inherit; }
+.grecaptcha-badge { visibility: hidden !important; }
+
+/* Copy link next to section headings (added by topic.js) */
+.cc-tt-anchor { font-family: 'Source Sans 3', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: none; color: #888; background: none; border: none; padding: 0 0 0 0.5rem; cursor: pointer; opacity: 0; transition: opacity 0.15s; vertical-align: middle; }
+:hover > .cc-tt-anchor, .cc-tt-anchor:focus, .cc-tt-anchor[data-done] { opacity: 1; }
+@media (hover: none) { .cc-tt-anchor { opacity: 0.7; } }
+.cc-tt-anchor:hover { color: #2C4A2E; }
+[id] { scroll-margin-top: 1rem; }
+
+/* Topic charts (scripts/build_topic_charts.py) */
+.cc-chart { margin: 1.75rem 0; padding: 1rem 1.1rem 1.1rem; background: #fff; border: 1px solid #e0ddd8; border-radius: 5px; }
+.cc-chart-kicker { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #8B1A1A; margin-bottom: 0.6rem; }
+.cc-chart-svg { display: block; width: 100%; max-width: 640px; height: auto; margin: 0 auto 0.6rem; }
+.cc-chart figcaption { font-family: 'Lora', Georgia, serif; font-size: 15px; line-height: 1.55; color: #1a1a1a; margin-bottom: 0.5rem; }
+.cc-chart-note, .cc-chart-source { font-size: 12.5px; color: #666; line-height: 1.5; margin: 0.45rem 0 0; }
+.cc-chart a { color: #2C4A2E; }
+.cc-chart-data { margin-top: 0.5rem; font-size: 13px; }
+.cc-chart-data summary { cursor: pointer; color: #2C4A2E; font-weight: 600; font-size: 12.5px; }
+.cc-chart table { border-collapse: collapse; width: 100%; margin-top: 0.5rem; font-size: 13px; }
+.cc-chart caption { text-align: left; font-size: 12px; color: #888; padding-bottom: 4px; }
+.cc-chart th, .cc-chart td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #ece9e4; vertical-align: top; }
+.cc-chart-scroll { overflow-x: auto; }
+
+/* Print: a clean one-page small-group handout.
+   Keeps the title, definition, TL;DR, positions at a glance, key questions,
+   Start here (with URLs) and the page address. Hides chrome and long copy. */
+.cc-tt-print-url { display: none; }
+@media print {
+  @page { margin: 1.4cm 1.6cm; }
+  body, .cc-root { background: #fff !important; }
+  .cc-header, .cc-nav, .cc-footer, .cc-breadcrumb, .cc-topic-index, .cc-related-topics, .cc-topic-voices,
+  .cc-companion, .cc-recent, .cc-tt-jump, .cc-tt-signup, .cc-tt-latest, .cc-tt-related, .cc-tt-changed,
+  .cc-tt-btn, .cc-tt-anchor, .cc-latest-figures, .cc-viz-data, .cc-chart-data, script, iframe { display: none !important; }
+  .cc-prose:has(.cc-tt-glance) .cc-editorial,
+  .cc-prose:has(.cc-tt-glance) .cc-debate,
+  .cc-prose:has(.cc-tt-glance) .cc-controversy,
+  .cc-prose:has(.cc-tt-start) .cc-article-entry,
+  .cc-prose:has(.cc-tt-start) .cc-article-list-label,
+  .cc-synthesis, .cc-faq, .cc-viz-section, .cc-viz, .cc-chart, .cc-tt-num { display: none !important; }
+  .cc-topic-title { font-size: 22pt !important; margin-bottom: 4pt !important; }
+  .cc-topic-deck { font-size: 11pt !important; }
+  .cc-definition, .cc-tldr, .cc-tt-glance, .cc-key-questions, .cc-tt-start li { break-inside: avoid; box-shadow: none !important; }
+  .cc-tt-start ol { display: block; }
+  .cc-tt-start li { border: none; padding: 0 0 6pt; }
+  .cc-tt-start a::after { content: " " attr(data-print-url); font-family: 'Source Sans 3', sans-serif; font-size: 9pt; font-weight: 400; color: #444; }
+  .cc-key-questions-label::after { content: " (for discussion)"; }
+  .cc-tt-print-url { display: block; font-size: 10pt; color: #444; margin-top: 10pt; border-top: 1px solid #999; padding-top: 6pt; }
+  a { color: #1a1a1a !important; text-decoration: none !important; }
+}
