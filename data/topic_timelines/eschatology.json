@@ -1,0 +1,158 @@
+{
+  "id": "timelines",
+  "slug": "eschatology",
+  "label": "Timelines Side by Side",
+  "title": "Four views of the end times on one line",
+  "intro": "Each lane follows one view of the millennium through the same events. Shaded bands mark what all four affirm; the gaps and spans show where they part ways.",
+  "image_title": "Four evangelical views of the end times, side by side",
+  "image_subtitle": "Shaded columns: what all four views affirm.",
+  "image_subtitle_narrow": "Shaded rows: what all four views affirm. Dispensational and historic are both premillennial views.",
+  "caption": "All four lanes begin at the cross and end in the new creation, with Christ's return and a final judgment in between. They differ on what the thousand years of Revelation 20 are, and so on how far apart the return and the final judgment sit.",
+  "stations": [
+    {"id": "cross", "label": "Cross, resurrection, ascension", "short": "Cross, rising, ascension", "weight": 0.95},
+    {"id": "church", "label": "Church age", "short": "Church age", "weight": 1.25},
+    {"id": "trib", "label": "Tribulation", "short": "Tribula­tion", "weight": 1.1},
+    {"id": "return", "label": "Second Coming", "short": "Second Coming", "weight": 0.95},
+    {"id": "millennium", "label": "Millennium", "short": "Millen­nium", "weight": 1.25},
+    {"id": "judgment", "label": "Final judgment", "short": "Final judgment", "weight": 0.95},
+    {"id": "newcreation", "label": "New heavens and new earth", "short": "New creation", "weight": 0.95}
+  ],
+  "common": ["cross", "return", "judgment", "newcreation"],
+  "common_text": "All four affirm Christ's death, resurrection and ascension, his personal return, a final judgment, and the new heavens and new earth. Sam Storms, an amillennialist, calls the millennium a secondary issue: \"What unites us is our common confession that Jesus is coming back!\"",
+  "common_source": "storms2022",
+  "lanes": [
+    {
+      "id": "dispensational",
+      "name": "Dispensational premillennialism",
+      "short": "Dispensa­tional",
+      "tag": "pretribulational",
+      "color": "green",
+      "segments": [
+        {"span": ["cross"], "kind": "shared"},
+        {"span": ["church"], "kind": "period", "text": "Church age, ends with the rapture", "short": "Church age; rapture"},
+        {"span": ["trib"], "kind": "period", "text": "Seven years; the church in heaven", "short": "7 years; church in heaven"},
+        {"span": ["return"], "kind": "event", "text": "Returns to earth", "short": "Returns to earth"},
+        {"span": ["millennium"], "kind": "period", "text": "1,000 years: Christ reigns, Israel restored", "short": "Reigns; Israel restored"},
+        {"span": ["judgment"], "kind": "event", "text": "Great white throne", "short": "Great white throne"},
+        {"span": ["newcreation"], "kind": "shared"}
+      ],
+      "proponent": {
+        "name": "Dallas Theological Seminary",
+        "image_name": "Dallas Seminary",
+        "work": "Doctrinal Statement, Articles XVIII to XXI",
+        "source": "dts"
+      }
+    },
+    {
+      "id": "historic",
+      "name": "Historic premillennialism",
+      "short": "Historic",
+      "color": "blue",
+      "segments": [
+        {"span": ["cross"], "kind": "shared"},
+        {"span": ["church"], "kind": "period", "text": "Church age", "short": "Church age"},
+        {"span": ["trib"], "kind": "period", "text": "The church goes through it", "short": "Church goes through it"},
+        {"span": ["return"], "kind": "event", "text": "Returns; saints raised", "short": "Returns; saints raised"},
+        {"span": ["millennium"], "kind": "period", "text": "1,000 years: Christ reigns on earth", "short": "Christ reigns on earth"},
+        {"span": ["judgment"], "kind": "event", "text": "The rest raised and judged", "short": "The rest raised, judged"},
+        {"span": ["newcreation"], "kind": "shared"}
+      ],
+      "proponent": {
+        "name": "John Piper",
+        "slug": "john-piper",
+        "image_name": "John Piper",
+        "work": "An Evening of Eschatology",
+        "source": "piper2009"
+      }
+    },
+    {
+      "id": "amillennial",
+      "name": "Amillennialism",
+      "short": "Amillen­nial",
+      "color": "brown",
+      "segments": [
+        {"span": ["cross"], "kind": "shared"},
+        {"span": ["church", "trib"], "kind": "period", "text": "The millennium is now: Christ reigns with his saints while the church suffers", "short": "Millennium now: Christ reigns with his saints"},
+        {"span": ["return", "judgment"], "kind": "event", "text": "Return, resurrection and judgment together", "short": "Return, resurrection, judgment together"},
+        {"span": ["newcreation"], "kind": "shared"}
+      ],
+      "proponent": {
+        "name": "Sam Storms",
+        "slug": "sam-storms",
+        "image_name": "Sam Storms",
+        "work": "Why I Am An Amillennialist",
+        "source": "storms2022"
+      }
+    },
+    {
+      "id": "postmillennial",
+      "name": "Postmillennialism",
+      "short": "Postmillen­nial",
+      "color": "gold",
+      "segments": [
+        {"span": ["cross"], "kind": "shared"},
+        {"span": ["church", "trib"], "kind": "period", "text": "The millennium comes first: the gospel wins multitudes, Israel included", "short": "Gospel advance before the return"},
+        {"span": ["return", "judgment"], "kind": "event", "text": "Return, resurrection and judgment together", "short": "Return, resurrection, judgment together"},
+        {"span": ["newcreation"], "kind": "shared"}
+      ],
+      "proponent": {
+        "name": "Keith Mathison",
+        "slug": "keith-mathison",
+        "image_name": "Keith Mathison",
+        "work": "The Millennial Maze",
+        "source": "mathison2013"
+      }
+    }
+  ],
+  "differ": [
+    "When Christ returns: before the thousand years (both premillennial views) or after them (amillennial and postmillennial).",
+    "What the thousand years are: a future reign on earth, Christ's present reign with his saints, or an age of gospel advance before the return.",
+    "The rapture: only dispensationalism places a coming for the church before the tribulation, separate from the return to earth.",
+    "Israel: dispensationalism expects national Israel restored in the millennium; postmillennialists expect many ethnic Israelites to come to Christ.",
+    "Return and judgment: one event for amillennialists and postmillennialists, a thousand years apart for premillennialists."
+  ],
+  "method": "Lane sequences follow Keith Mathison's survey of the four views and each view's own statement listed here.",
+  "method_source": "mathison2013",
+  "sources": [
+    {
+      "id": "dts",
+      "publisher": "Dallas Theological Seminary",
+      "title": "Doctrinal Statement",
+      "url": "https://www.dts.edu/why-dts/doctrinal-statement",
+      "fetched": "2026-11-14",
+      "quote": "the next great event in the fulfillment of prophecy will be the coming of the Lord in the air",
+      "notes": "Article XVIII (coming in the air before the tribulation), XIX (the church in heaven during Israel's seventieth week), XX (return to earth introduces the millennial age, Israel restored to her land), XXI (great white throne at the close of the millennium). Opened 2026-11-14; the /about/doctrinal-statement/ URL redirects here."
+    },
+    {
+      "id": "piper2009",
+      "publisher": "Desiring God",
+      "title": "An Evening of Eschatology",
+      "year": 2009,
+      "url": "https://www.desiringgod.org/interviews/an-evening-of-eschatology",
+      "fetched": "2026-11-14",
+      "quote": "My own view is the one represented by Jim Hamilton",
+      "notes": "Piper moderated (September 27, 2009, Bethlehem College and Seminary). The same paragraph names that view as historic premillennialism. desiringgod.org returns 403 to scripts, so the page was read from the Wayback Machine copy of 2026-01-29."
+    },
+    {
+      "id": "storms2022",
+      "publisher": "Sam Storms",
+      "title": "Why I Am An Amillennialist",
+      "year": 2022,
+      "url": "https://www.samstorms.org/enjoying-god-blog/post/why-i-am-an-amillennialist",
+      "fetched": "2026-11-14",
+      "quote": "What unites us is our common confession that Jesus is coming back!",
+      "notes": "August 29, 2022. Opens: the debate over the millennium is a secondary issue. My departure from premillennialism was gradual."
+    },
+    {
+      "id": "mathison2013",
+      "publisher": "Ligonier Ministries",
+      "title": "The Millennial Maze",
+      "year": 2013,
+      "url": "https://learn.ligonier.org/articles/millennial-maze",
+      "fetched": "2026-11-14",
+      "quote": "Books supporting this view have been published by men such as Loraine Boettner, J. Marcellus Kik, Kenneth Gentry, John Jefferson Davis, and myself.",
+      "notes": "November 25, 2013, first published in Tabletalk. Summarizes all four views; the lane sequences follow it (historic: tribulation, return, righteous raised, reign on earth, the unrighteous raised for judgment; dispensational: rapture, seven-year tribulation, return, rule from Jerusalem, great white throne; postmillennial: the Spirit draws unprecedented multitudes, ethnic Israelites included, then return, general resurrection, final judgment; amillennial: Christ reigns with the saints through the present age, marked by suffering, then return, general resurrection, last judgment, new heavens and new earth)."
+    }
+  ],
+  "place": {"before": "<section class=\"cc-synthesis\""}
+}

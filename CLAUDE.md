@@ -599,6 +599,14 @@ schemas: `.christian-orchestrator/team/A-foundation-report.md`.
   Each chart renders twice: a 640-unit SVG and a 360-unit phone SVG (`cc-chart-wide` / `cc-chart-narrow`, swapped
   below 560px in `topic.css`; column charts draw as horizontal bars on the phone image). A reference line is named in
   the legend, never on the plot. Table charts stack into one card per row below 560px (`data-label` on each cell).
+- **Parallel timelines (concept visuals, Nov 14 2026):** `data/topic_timelines/<slug>.json` +
+  `scripts/build_topic_timeline.py` render one lane per view across shared stations (wide SVG, phone SVG with
+  lanes as columns, table version, common ground, "Where they differ", one sourced voice per view) between
+  `<!-- CC-TIMELINE:<id>:START/END -->`, styles inline in the block (shared assets untouched). Every source needs a
+  URL, `fetched` date and a quote found on the page; voices link only when linkable. `--check` fails on a stale
+  page; `--png` writes the share image to `docs/og/charts/<slug>-<id>.png` (needs Chrome). First use: eschatology
+  (`#timelines`, added to the jump nav in `build_topic_top.py`). Run `build_topic_top.py --slug <slug>` after it.
+  Tests: `tests/test_build_topic_timeline.py`.
 - **Definition box and FAQ** (with matching FAQPage schema): `data/topic_reference/<slug>.json` +
   `scripts/build_topic_reference.py`; run before `build_topic_top.py`. It owns that page's `AEO-FAQPAGE-SCHEMA` block,
   so rerun it after `apply_aeo_upgrades.py` touches the slug. Rebuild order after editing any topic data file or
