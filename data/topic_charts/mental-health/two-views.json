@@ -1,0 +1,98 @@
+{
+  "id": "two-views",
+  "type": "column",
+  "kicker": "Two views of the same church",
+  "title": "Pastors see more mental health care in their churches than churchgoers do",
+  "subtitle": "U.S. Protestant senior pastors and monthly churchgoers, 2017",
+  "caption": "46% of pastors say their church regularly speaks about mental health issues; 12% of churchgoers say theirs does. On all five items, more pastors than churchgoers say their church has it in place.",
+  "note": "Both groups were asked the same question, \"Does your church have any of the following in place to help prevent suicide?\" (select all that apply). Churchgoers could also answer not sure, and 20% did. The two samples are different churches, so the gap shows a difference in perception, not a check on any one congregation.",
+  "unit": "%",
+  "max": 100,
+  "series": [
+    {
+      "id": "pastors",
+      "label": "Pastors",
+      "color": "green"
+    },
+    {
+      "id": "churchgoers",
+      "label": "Churchgoers",
+      "color": "brown"
+    }
+  ],
+  "rows": [
+    {
+      "label": "List of trained mental health professionals",
+      "values": {
+        "pastors": 51,
+        "churchgoers": 16
+      },
+      "as_published": {
+        "pastors": "51%",
+        "churchgoers": "16%"
+      },
+      "source": "lifeway2017"
+    },
+    {
+      "label": "Regularly speaks about mental health issues to remove stigma",
+      "values": {
+        "pastors": 46,
+        "churchgoers": 12
+      },
+      "as_published": {
+        "pastors": "46%",
+        "churchgoers": "12%"
+      },
+      "source": "lifeway2017"
+    },
+    {
+      "label": "Lay counseling ministry",
+      "values": {
+        "pastors": 36,
+        "churchgoers": 22
+      },
+      "as_published": {
+        "pastors": "36%",
+        "churchgoers": "22%"
+      },
+      "source": "lifeway2017"
+    },
+    {
+      "label": "Trained counselor on staff",
+      "values": {
+        "pastors": 29,
+        "churchgoers": 23
+      },
+      "as_published": {
+        "pastors": "29%",
+        "churchgoers": "23%"
+      },
+      "source": "lifeway2017"
+    },
+    {
+      "label": "Crisis response team",
+      "values": {
+        "pastors": 18,
+        "churchgoers": 12
+      },
+      "as_published": {
+        "pastors": "18%",
+        "churchgoers": "12%"
+      },
+      "source": "lifeway2017"
+    }
+  ],
+  "sources": [
+    {
+      "id": "lifeway2017",
+      "publisher": "Lifeway Research",
+      "study": "Suicide and the Church Research Study (Suicide Remains a Taboo Topic at Churches)",
+      "year": 2017,
+      "url": "https://research.lifeway.com/2017/09/29/suicide-remains-a-taboo-topic-at-churches/",
+      "fetched": "2026-11-14",
+      "license": "reuse",
+      "field_dates": "Pastors by phone, Aug. 30 to Sept. 18, 2017; churchgoers online, Sept. 15 to 19, 2017",
+      "sample": "1,000 Protestant senior pastors (plus or minus 3.2 points) and 1,000 Protestant and nondenominational churchgoers attending at least monthly (plus or minus 3.4 points)"
+    }
+  ]
+}

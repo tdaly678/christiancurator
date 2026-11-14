@@ -1,0 +1,112 @@
+{
+  "slug": "mental-health",
+  "glance": {
+    "question": "Is mental illness a spiritual problem, a medical one, or both, and who should treat it?",
+    "positions": [
+      {
+        "name": "Biblical Counseling",
+        "claim": "Scripture is sufficient for counseling; secular psychology adds nothing essential.",
+        "anchor": "position-1",
+        "voices": [
+          {
+            "name": "Heath Lambert",
+            "slug": "heath-lambert"
+          },
+          {
+            "name": "Jay Adams",
+            "slug": "jay-adams"
+          }
+        ]
+      },
+      {
+        "name": "Christian Integration",
+        "claim": "Scripture leads, with psychology and medicine serving as tools of care.",
+        "anchor": "position-2",
+        "voices": [
+          {
+            "name": "Diane Langberg",
+            "slug": "diane-langberg"
+          },
+          {
+            "name": "Curt Thompson",
+            "slug": "curt-thompson"
+          }
+        ]
+      },
+      {
+        "name": "Medical Realism",
+        "claim": "Mental illness is real illness; therapy and medication need no apology.",
+        "anchor": "position-3",
+        "voices": [
+          {
+            "name": "Kay Warren",
+            "slug": "kay-warren"
+          },
+          {
+            "name": "Amy Simpson"
+          }
+        ]
+      }
+    ]
+  },
+  "start_here": [
+    {
+      "kind": "A biblical counselor",
+      "url": "https://ligonier.org/learn/articles/heart-depression",
+      "title": "The Heart of Depression",
+      "author": "Edward Welch",
+      "outlet": "Ligonier Ministries",
+      "why": "Names five possible causes of depression and urges helpers to treat it first as suffering."
+    },
+    {
+      "kind": "On medication",
+      "url": "https://www.desiringgod.org/articles/scrambling-for-the-light",
+      "title": "Scrambling for the Light: Christian Depression and the Use of Medication",
+      "author": "Kathryn Butler",
+      "outlet": "Desiring God",
+      "why": "A physician argues that antidepressants can be received as one of God's gifts of common kindness."
+    },
+    {
+      "kind": "For churches",
+      "url": "https://www.christianitytoday.com/2024/05/anxious-church-mental-health-awareness-month-pastors/",
+      "title": "The Anxious Church",
+      "author": "J. D. Peabody",
+      "outlet": "Christianity Today",
+      "why": "A pastor who lives with anxiety and OCD asks why churches grow uneasy around unresolved pain."
+    }
+  ],
+  "key_number": {
+    "figure": "26%",
+    "text": "26% of churchgoers say their church encourages medication for mental illness; 54% say it encourages counseling.",
+    "publisher": "Lifeway Research",
+    "study": "Suicide and the Church Research Study",
+    "year": 2017,
+    "source_url": "https://research.lifeway.com/2017/09/29/suicide-remains-a-taboo-topic-at-churches/",
+    "fetched": "2026-11-14",
+    "license": "reuse",
+    "link": "#counseling-medication"
+  },
+  "related": [
+    {
+      "slug": "anxiety-and-fear",
+      "question": "Is anxiety a spiritual failure, a medical condition, or both?"
+    },
+    {
+      "slug": "suffering-and-providence",
+      "question": "Does God ordain suffering for our good, or merely permit it?"
+    },
+    {
+      "slug": "grief-and-lament",
+      "question": "Does Scripture call suffering Christians to honest, anguished prayer?"
+    }
+  ],
+  "changes": [
+    {
+      "date": "2026-11-14",
+      "text": "added survey charts from Lifeway Research, a definition and a FAQ."
+    }
+  ],
+  "latest": true,
+  "signup": true,
+  "notes": "Start here checked 2026-11-14: Welch (Ligonier page title and JSON-LD author), Butler (Desiring God byline, read via the web.archive.org copy of 2025-07-20 because the live site returned 403), Peabody (CT meta author, published 2024-05-02). Peabody's 'why' paraphrases the curated-list annotation and the article dek. Key number: Lifeway 2017 churchgoer survey, 'Twenty-six percent say their churches encourage the use of medications' and 'More than half (54 percent) say their church encourages counseling'. Voices verified 2026-11-14 in their own words: Lambert, SBTS Equip 'Can Jesus heal mental illness? Part 1' ('Mental illness is a label secular thinkers assign to spiritual problems discussed in the Scriptures') and ACBC covenant update; Adams, nouthetic.org/mental-illness ('The mind is not a physical organ'); Langberg, dianelangberg.com/counseling-practice/our-purpose ('incarnational and redemptive'); Thompson, Biola CCT video 2013 ('supports the use of medication, in those places where it's really necessary'); Warren, kaywarren.com interview ('not something you can just pray away'); Simpson, Christ and Pop Culture interview ('biological and environmental causes'). All voice pages are noindex today, so names print as plain text. Voice URLs, re-opened 2026-11-14 by the fact-check: Lambert https://equip.sbts.edu/article/can-jesus-heal-mental-illness-part-1/ ; Adams https://nouthetic.org/mental-illness/ ; Langberg https://www.dianelangberg.com/counseling-practice/our-purpose/ ('unless therapy is both incarnational and redemptive'); Thompson https://cct.biola.edu/mental-disorders-and-personal-healing/ ; Warren https://kaywarren.com/article/interview-with-kay-warren-removing-the-stigma-of-mental-illness ; Simpson https://christandpopculture.com/overcoming-mental-illness-stigma-in-the-church-an-interview-with-amy-simpson/ ('illness with biological and environmental causes just like a lot of other diseases')."
+}
