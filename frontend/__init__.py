@@ -1101,7 +1101,7 @@ def render_archive_index(env: Environment):
         '              <div class="cc-nav-submenu-panel">',
         '                <a href="/topics/abortion/">Abortion & the Pro-Life Movement</a>',
         '                <a href="/topics/addiction-and-recovery/">Addiction & Recovery</a>',
-        '                <a href="/topics/ai-and-the-church/">Artificial Intelligence & the Church</a>',
+        '                <a href="/topics/artificial-intelligence/">Artificial Intelligence</a>',
         '                <a href="/topics/biblical-justice/">Biblical Justice & the Social Gospel</a>',
         '                <a href="/topics/biblical-sexuality/">Biblical Sexuality</a>',
         '                <a href="/topics/christian-education/">Christian Education</a>',
@@ -1314,9 +1314,11 @@ def regenerate_sitemap():
     # --- Topics (deepest evergreen content) ---
     topic_entries = []
     if TOPICS_DIR.exists():
+        from frontend.topic_redirects import retired_topic_slugs
+        retired = retired_topic_slugs()  # redirect stubs stay out of the sitemap
         for topic_dir in sorted(TOPICS_DIR.iterdir()):
             idx = topic_dir / "index.html"
-            if topic_dir.is_dir() and idx.exists():
+            if topic_dir.is_dir() and idx.exists() and topic_dir.name not in retired:
                 topic_entries.append((
                     f"{base}/topics/{topic_dir.name}/",
                     "weekly", "0.9", _file_mtime_iso(idx),

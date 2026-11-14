@@ -1,0 +1,208 @@
+{
+  "id": "key-documents",
+  "type": "table",
+  "kicker": "Timeline",
+  "title": "What churches and Christian publishers have said about AI, 2019 to 2026",
+  "subtitle": "Statements, resolutions, policies and surveys, with Catholic documents marked",
+  "caption": "Evangelical bodies spoke first, in 2019. Most of the rest has come since 2025, as AI moved from the seminar to the church office.",
+  "columns": [
+    "When",
+    "What happened"
+  ],
+  "rows": [
+    {
+      "cells": [
+        "Apr. 11, 2019",
+        "The Ethics & Religious Liberty Commission of the Southern Baptist Convention releases \"Artificial Intelligence: An Evangelical Statement of Principles,\" a preamble and 12 articles signed by evangelical leaders."
+      ],
+      "source": "erlc2019"
+    },
+    {
+      "cells": [
+        "June 2023",
+        "Southern Baptist messengers adopt \"On Artificial Intelligence and Emerging Technologies,\" calling for \"eschatological hope rather than uncritical embrace or fearful rejection.\""
+      ],
+      "source": "sbc2023"
+    },
+    {
+      "cells": [
+        "Jan. 28, 2025",
+        "The Vatican issues Antiqua et Nova (Catholic): AI \"should not be seen as an artificial form of human intelligence but as a product of it.\""
+      ],
+      "source": "antiqua"
+    },
+    {
+      "cells": [
+        "Oct. 2025",
+        "NAE president Walter Kim and BioLogos president Kristine Torjesen sign a Christian and Jewish joint statement on AI ethics at a summit in Rome."
+      ],
+      "source": "rome2025"
+    },
+    {
+      "cells": [
+        "Dec. 15, 2025",
+        "Gloo, a church technology company, releases a benchmark testing how leading AI models answer questions of Christian faith and values."
+      ],
+      "source": "gloo"
+    },
+    {
+      "cells": [
+        "Apr. 9, 2026",
+        "Christianity Today publishes its AI policy for writers: \"We do not write with AI.\""
+      ],
+      "source": "ct-policy"
+    },
+    {
+      "cells": [
+        "Apr. 21, 2026",
+        "Lifeway Research releases its surveys of Protestant pastors and churchgoers on AI."
+      ],
+      "source": "lifeway2026"
+    },
+    {
+      "cells": [
+        "May 15, 2026",
+        "Pope Leo XIV signs Magnifica Humanitas, his first encyclical, on the human person in the time of AI; it is presented May 25 (Catholic)."
+      ],
+      "source": "magnifica"
+    },
+    {
+      "cells": [
+        "June 2026",
+        "Lifeway releases the Brentwood Statement on AI and Christian Ministry: \"Disciple making is a uniquely human practice that cannot be automated or outsourced in the name of efficiency and convenience.\""
+      ],
+      "source": "brentwood"
+    },
+    {
+      "cells": [
+        "Aug. 5, 2026",
+        "The Gospel Coalition tells writers not to use AI for ideating, research beyond a basic fact search, organizing, writing, or editing beyond a basic spelling check."
+      ],
+      "source": "tgc-policy"
+    },
+    {
+      "cells": [
+        "Aug. 5, 2026",
+        "The Presbyterian Church in America names the members of its ad interim study committee on artificial intelligence, due to report no later than the 2028 General Assembly."
+      ],
+      "source": "pca"
+    },
+    {
+      "cells": [
+        "Oct. 1, 2026",
+        "The NAE board adopts a resolution on AI: it \"does not bear the image of God; it possesses no conscience, no love, no soul.\""
+      ],
+      "source": "nae2026"
+    }
+  ],
+  "sources": [
+    {
+      "id": "erlc2019",
+      "publisher": "Ethics & Religious Liberty Commission",
+      "study": "Artificial Intelligence: An Evangelical Statement of Principles",
+      "year": 2019,
+      "url": "https://erlc.com/policy-content/artificial-intelligence-an-evangelical-statement-of-principles/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "sbc2023",
+      "publisher": "Southern Baptist Convention",
+      "study": "On Artificial Intelligence and Emerging Technologies",
+      "year": 2023,
+      "url": "https://www.sbc.net/resource-library/resolutions/on-artificial-intelligence-and-emerging-technologies/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "antiqua",
+      "publisher": "Holy See, Dicastery for the Doctrine of the Faith",
+      "study": "Antiqua et Nova",
+      "year": 2025,
+      "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "rome2025",
+      "publisher": "Christian Daily",
+      "study": "AI must remain under human control, say Christian and Jewish leaders in new statement on ethical boundaries for AI",
+      "year": 2025,
+      "url": "https://www.christiandaily.com/news/ai-must-remain-under-human-control-say-christian-and-jewish-leaders-in-new-statement-on-ethical-boundaries-for-ai",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "gloo",
+      "publisher": "Gloo",
+      "study": "Gloo unveils the first benchmark exposing how AI misses Christian worldview and values",
+      "year": 2025,
+      "url": "https://gloo.com/press/releases/gloo-unveils-the-first-benchmark-exposing-how-ai-misses-christian-worldview-and-values",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "ct-policy",
+      "publisher": "Christianity Today",
+      "study": "Christianity Today's AI Use Policy for Writers",
+      "year": 2026,
+      "url": "https://www.christianitytoday.com/2026/04/christianity-todays-ai-use-policy-for-writers/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "lifeway2026",
+      "publisher": "Lifeway Research",
+      "study": "Pastors, Churchgoers See AI as Concerning and Confusing",
+      "year": 2026,
+      "url": "https://research.lifeway.com/2026/04/21/pastors-churchgoers-see-ai-as-concerning-and-confusing/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "magnifica",
+      "publisher": "Holy See",
+      "study": "Magnifica Humanitas",
+      "year": 2026,
+      "url": "https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "brentwood",
+      "publisher": "Lifeway Christian Resources",
+      "study": "Brentwood Statement on AI and Christian Ministry",
+      "year": 2026,
+      "url": "https://brentwoodstatement.lifeway.com/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "tgc-policy",
+      "publisher": "The Gospel Coalition",
+      "study": "Our Line in the Sand on AI: TGC's Missional Opportunity",
+      "year": 2026,
+      "url": "https://www.thegospelcoalition.org/article/ai-tgc-missional-opportunity/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "pca",
+      "publisher": "byFaith",
+      "study": "Artificial Intelligence Study Committee Members Announced",
+      "year": 2026,
+      "url": "https://byfaithonline.com/artificial-intelligence-study-committee-members-announced/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "nae2026",
+      "publisher": "National Association of Evangelicals",
+      "study": "Artificial Intelligence (resolution)",
+      "year": 2026,
+      "url": "https://www.nae.org/artificial-intelligence/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    }
+  ]
+}

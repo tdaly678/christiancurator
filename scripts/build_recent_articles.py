@@ -41,7 +41,7 @@ sys.path.insert(0, str(REPO_ROOT))
 
 from curator.headline_voice import strip_dashes  # noqa: E402
 from curator.original_titles import lookup, publisher_title  # noqa: E402
-from frontend.topic_matcher import TOPICS, _normalise  # noqa: E402
+from frontend.topic_matcher import TOPICS, _normalise, keyword_in  # noqa: E402
 
 DOCS_DIR = REPO_ROOT / "docs"
 ARCHIVE_DIR = DOCS_DIR / "archive"
@@ -310,7 +310,7 @@ def match_articles_to_topic(topic: dict, history: list[dict]) -> list[dict]:
         if not original:
             continue
         text = _normalise(original + " " + " ".join(a.get("tags", [])))
-        if any(k in text for k in kws):
+        if any(keyword_in(k, text) for k in kws):
             out.append(
                 {
                     "date": a.get("date_shown", ""),
@@ -332,10 +332,19 @@ def match_articles_to_topic(topic: dict, history: list[dict]) -> list[dict]:
 
 
 def load_data_watch_fresh(path: Path = DATA_WATCH) -> dict[str, list[dict]]:
+    """Data-watch Fresh stories by topic slug. Stories filed under a retired
+    slug (frontend/topics_redirects.json) move to the page that replaced it."""
     try:
-        return json.loads(path.read_text(encoding="utf-8")).get("fresh") or {}
+        fresh = json.loads(path.read_text(encoding="utf-8")).get("fresh") or {}
     except (OSError, ValueError):
         return {}
+    from frontend.topic_redirects import load_topic_redirects
+    redirects = load_topic_redirects()
+    out: dict[str, list[dict]] = {}
+    for slug, items in fresh.items():
+        target = (redirects.get(slug) or {}).get("to") or slug
+        out.setdefault(target, []).extend(items or [])
+    return out
 
 
 def merge_items(keyword_items: list[dict], watch_items: list[dict]) -> list[dict]:

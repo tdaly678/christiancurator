@@ -10,10 +10,6 @@
       "question": "Is addiction a sin, a disease, or both?",
       "positions": ["Biblical Counseling", "Gospel-Centered Recovery Community", "Integrated Clinical and Theological"]
     },
-    "ai-and-the-church": {
-      "question": "How should Christians think about AI?",
-      "positions": ["Critical Caution", "Technological Optimism", "Theological Discernment"]
-    },
     "anxiety-and-fear": {
       "question": "Is anxiety a spiritual failure, a medical condition, or both?",
       "positions": ["Biblical Counseling Sufficiency", "Christian Integration", "Medical and Neurological Realism"]
@@ -21,6 +17,11 @@
     "apologetics": {
       "question": "Reason and evidence, or simply proclaim the gospel?",
       "positions": ["Classical Apologetics", "Presuppositional Apologetics", "Reformed Epistemology, Cumulative Case"]
+    },
+    "artificial-intelligence": {
+      "question": "How should Christians think about AI?",
+      "positions": ["Resist and Limit", "Use With Guardrails", "Shape It for the Mission", "Human Dignity First"],
+      "og_description": "Four evangelical positions on AI, what pastors and churchgoers think, the key statements since 2019, and the best reading on sermons, chatbots and the image of God."
     },
     "atonement": {
       "question": "What did Jesus' death accomplish?",

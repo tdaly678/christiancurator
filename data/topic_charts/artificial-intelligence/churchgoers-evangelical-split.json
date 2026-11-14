@@ -1,0 +1,71 @@
+{
+  "id": "churchgoers-evangelical-split",
+  "type": "column",
+  "kicker": "In the pews",
+  "title": "Evangelical churchgoers worry more and welcome AI sermon help less",
+  "subtitle": "U.S. Protestant churchgoers who attend at least monthly, September 2025",
+  "caption": "Three in five churchgoers are concerned about AI's influence on Christianity, rising to 67% of those with evangelical beliefs. Those without evangelical beliefs are more open to their pastor using AI in sermon preparation.",
+  "note": "Statements: \"I am concerned about AI's influence on Christianity.\" and \"I see nothing wrong with my pastor using Artificial Intelligence to help in sermon preparation.\" Bars show the share who agree strongly or somewhat. Evangelical beliefs follow the NAE Lifeway Research definition (strong agreement with four belief statements), not self-identification. Online panel, margin of error plus or minus 3.2 points overall, higher for subgroups.",
+  "unit": "%",
+  "max": 100,
+  "series": [
+    {
+      "id": "all",
+      "label": "All",
+      "color": "grey"
+    },
+    {
+      "id": "evb",
+      "label": "Evangelical by belief",
+      "color": "green"
+    },
+    {
+      "id": "nevb",
+      "label": "Not evangelical by belief",
+      "color": "blue"
+    }
+  ],
+  "rows": [
+    {
+      "label": "Concerned about AI's influence on Christianity",
+      "values": {
+        "all": 61,
+        "evb": 67,
+        "nevb": 55
+      },
+      "as_published": {
+        "all": "61%",
+        "evb": "67%",
+        "nevb": "55%"
+      },
+      "source": "lifeway-churchgoers"
+    },
+    {
+      "label": "See nothing wrong with pastor using AI in sermon prep",
+      "values": {
+        "all": 44,
+        "evb": 40,
+        "nevb": 49
+      },
+      "as_published": {
+        "all": "44%",
+        "evb": "40%",
+        "nevb": "49%"
+      },
+      "source": "lifeway-churchgoers"
+    }
+  ],
+  "sources": [
+    {
+      "id": "lifeway-churchgoers",
+      "publisher": "Lifeway Research",
+      "study": "Pastors, Churchgoers See AI as Concerning and Confusing",
+      "year": 2026,
+      "url": "https://research.lifeway.com/2026/04/21/pastors-churchgoers-see-ai-as-concerning-and-confusing/",
+      "fetched": "2026-11-14",
+      "license": "reuse",
+      "field_dates": "September 2 to 7, 2025 (online panel)",
+      "sample": "1,200 U.S. Protestant churchgoers who attend at least monthly"
+    }
+  ]
+}

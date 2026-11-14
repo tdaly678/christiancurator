@@ -83,6 +83,7 @@ sys.path.insert(0, str(REPO_ROOT))
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 from curator.headline_voice import strip_dashes  # noqa: E402
+from frontend.topic_redirects import live_topic_dirs  # noqa: E402
 
 DOCS = REPO_ROOT / "docs"
 TOPICS_DIR = DOCS / "topics"
@@ -366,7 +367,9 @@ def page_summary(page_html: str) -> str:
 JUMP_ITEMS = [
     ("Where evangelicals disagree", ("debate",)),
     ("By the numbers", ("by-the-numbers",)),
+    ("Key documents", ("key-documents",)),
     ("Questions answered", ("faq", "key-questions")),
+    ("Glossary", ("glossary",)),
     ("Start reading", ("reading",)),
     ("Latest", ("recent",)),
 ]
@@ -553,7 +556,7 @@ def build_page(slug: str, page_html: str, data: dict | None, *, voices: VoiceInd
 # ---------------------------------------------------------------- main
 
 def topic_slugs() -> list[str]:
-    return sorted(p.parent.name for p in TOPICS_DIR.glob("*/index.html"))
+    return [p.name for p in live_topic_dirs(TOPICS_DIR)]
 
 
 def main(argv: list[str] | None = None) -> int:

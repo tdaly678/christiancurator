@@ -1,0 +1,62 @@
+{
+  "id": "pastor-ai-concerns",
+  "type": "hbar",
+  "kicker": "What worries pastors",
+  "title": "Pastors' biggest AI worry is accuracy, not theology",
+  "subtitle": "U.S. Protestant senior pastors, September 2025",
+  "caption": "More than 8 in 10 pastors say AI output must be checked for errors and that its sources are hard to trust. A smaller majority, 55%, object that God has always shared his Word through people.",
+  "note": "Question: \"Which, if any, of the following concerns do you have about using AI tools for ministry. (Select all that apply)\" Self-identified evangelical pastors were more likely than mainline pastors to choose the God's Word item (58% v. 51%); mainline pastors were more likely to choose plagiarism (65% v. 56%). 4% chose none of these.",
+  "unit": "%",
+  "max": 100,
+  "rows": [
+    {
+      "label": "AI content must be edited assuming it contains errors",
+      "value": 84,
+      "as_published": "84%",
+      "source": "lifeway-pastors"
+    },
+    {
+      "label": "Hard to ensure AI only uses reliable sources",
+      "value": 81,
+      "as_published": "81%",
+      "source": "lifeway-pastors"
+    },
+    {
+      "label": "Biases may exist in the programming",
+      "value": 76,
+      "as_published": "76%",
+      "source": "lifeway-pastors"
+    },
+    {
+      "label": "Users are not disclosing AI as a collaborator",
+      "value": 62,
+      "as_published": "62%",
+      "source": "lifeway-pastors"
+    },
+    {
+      "label": "AI-created content from other sources is plagiarism",
+      "value": 59,
+      "as_published": "59%",
+      "source": "lifeway-pastors"
+    },
+    {
+      "label": "God has always shared his Word through people, and AI isn't a person",
+      "value": 55,
+      "as_published": "55%",
+      "source": "lifeway-pastors"
+    }
+  ],
+  "sources": [
+    {
+      "id": "lifeway-pastors",
+      "publisher": "Lifeway Research",
+      "study": "Pastors, Churchgoers See AI as Concerning and Confusing",
+      "year": 2026,
+      "url": "https://research.lifeway.com/2026/04/21/pastors-churchgoers-see-ai-as-concerning-and-confusing/",
+      "fetched": "2026-11-14",
+      "license": "reuse",
+      "field_dates": "September 2 to 24, 2025 (phone)",
+      "sample": "1,003 U.S. Protestant pastors"
+    }
+  ]
+}

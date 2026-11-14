@@ -607,7 +607,29 @@ schemas: `.christian-orchestrator/team/A-foundation-report.md`.
   Latest link (and `topic_items()`); `check_voices.py` matches links the same way.
 - **Print:** `@media print` in `topic.css` turns a page with a top block into a one-page small-group handout
   (definition, TL;DR, positions at a glance, key questions, Start here with URLs, page address).
+- **Glossary** (optional, same data file): a `glossary` key in `data/topic_reference/<slug>.json` renders
+  `<!-- CC-GLOSSARY:START/END -->` (`id="glossary"`, a `<dl>` with `term-*` ids, its own small style block) plus a
+  `DefinedTermSet` JSON-LD (`data-cc-marker="CC-GLOSSARY-SCHEMA"`). The jump nav links `#glossary` and
+  `#key-documents` when a page has them.
 - Tests: `tests/test_build_topic_top.py`, `tests/test_build_topic_charts.py`.
+
+## Flagship AI page and retired topic slugs (Nov 14 2026)
+- `/topics/artificial-intelligence/` replaced `/topics/ai-and-the-church/` (renamed in `topics_data.py`, so the
+  count stays 70). Built from agent R's research (`.christian-orchestrator/team2/ai-research-report.md`); build
+  report `.christian-orchestrator/team2/AI-build-report.md`. Four positions (`.cc-debate-grid.four-way`, side-d red),
+  charts in `data/topic_charts/artificial-intelligence/` (including the `key-documents` timeline table), definition,
+  FAQ and glossary in `data/topic_reference/`, top block in `data/topic_top/`, 40 curated pieces grouped by question.
+  Every named person on the cards was checked in their own words; the quotes are in the top-block data `notes`.
+- **Retired slugs:** `frontend/topics_redirects.json` (`{old: {"to": new, "name": ...}}`) and
+  `frontend/topic_redirects.py`. `scripts/retire_topic_slug.py` (dry run by default, `--apply`, idempotent) rewrites
+  every internal link and nav label site-wide and writes the old URL as a redirect stub (meta refresh + canonical to
+  the new page, robots noindex, follow; the voice-merge pattern). Scripts that walk `docs/topics/` skip retired
+  slugs via `live_topic_dirs()` / `retired_topic_slugs()` (sitemap, hub, quality gate, AEO checks, topic builders,
+  data watch); `build_recent_articles.load_data_watch_fresh()` files old-slug Fresh stories under the new slug.
+- **Matcher:** `frontend/topic_matcher.py` has an `artificial-intelligence` entry; Technology no longer carries
+  "ai" / "artificial intelligence". Keywords of 3 characters or fewer match whole words only (`keyword_in()`), so
+  "ai" no longer matches "said" or "faith" (this also tightened `crt`).
+- Tests: `tests/test_ai_topic_page.py`.
 
 ## Navigation Structure — canonical 3-item nav
 
@@ -775,7 +797,7 @@ Generated from `frontend/topics_data.py` on 2026-09-25. Page titles are the live
 |------|------------|
 | abortion | On Abortion & the Pro-Life Movement |
 | addiction-and-recovery | On Addiction & Recovery |
-| ai-and-the-church | On Artificial Intelligence & the Church |
+| artificial-intelligence | Christianity and AI: How Evangelicals Think About AI (replaced ai-and-the-church, Nov 14 2026) |
 | biblical-justice | On Biblical Justice & the Social Gospel |
 | biblical-sexuality | On Biblical Sexuality |
 | christian-education | On Christian Education |

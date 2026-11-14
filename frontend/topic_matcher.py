@@ -212,10 +212,22 @@ TOPICS: list[dict] = [
         ],
     },
     {
+        # AI stories land on the flagship AI page, not on Technology (Nov 14 2026).
+        # Keywords of 3 characters or fewer ("ai", "llm") match whole words only;
+        # see keyword_in().
+        "slug": "artificial-intelligence",
+        "label": "Artificial Intelligence",
+        "keywords": [
+            "artificial intelligence", "ai", "a.i.", "chatgpt", "chatbot", "openai",
+            "large language model", "llm", "machine learning", "generative ai",
+            "deepfake", "transhumanis", "superintelligence",
+        ],
+    },
+    {
         "slug": "technology",
         "label": "Technology",
         "keywords": [
-            "artificial intelligence", "ai", "technology", "smartphone",
+            "technology", "smartphone",
             "digital", "social media", "algorithm", "silicon valley",
             "tech", "screen time",
         ],
@@ -275,6 +287,21 @@ def _normalise(text: str) -> str:
     return re.sub(r"\s+", " ", text.lower().strip())
 
 
+SHORT_KEYWORD_LEN = 3  # "ai" must not match "said" or "faith"
+
+
+def keyword_in(keyword: str, text: str) -> bool:
+    """True when a lowercased keyword occurs in normalised text.
+
+    Keywords of SHORT_KEYWORD_LEN characters or fewer match whole words only;
+    longer keywords keep the substring match ("deconstruct" still matches
+    "deconstruction").
+    """
+    if len(keyword) <= SHORT_KEYWORD_LEN:
+        return re.search(r"(?<![a-z0-9])" + re.escape(keyword) + r"(?![a-z0-9])", text) is not None
+    return keyword in text
+
+
 def match_topics(articles: list[dict], daily_summary: dict | None) -> list[dict]:
     """
     Scan article titles and daily themes to find relevant topic pages.
@@ -307,7 +334,7 @@ def match_topics(articles: list[dict], daily_summary: dict | None) -> list[dict]
     # Score each topic by how many of its keywords appear in the corpus
     scored: list[tuple[int, dict]] = []
     for topic in TOPICS:
-        hits = sum(1 for kw in topic["keywords"] if kw in corpus)
+        hits = sum(1 for kw in topic["keywords"] if keyword_in(kw, corpus))
         if hits > 0:
             scored.append((hits, topic))
 

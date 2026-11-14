@@ -289,7 +289,9 @@ def trend_score(article: dict, outlets: int, on_digest: bool) -> float:
 def existing_topic_slugs(topics_dir: Path = TOPICS_DIR) -> set[str]:
     if not topics_dir.exists():
         return set()
-    return {p.parent.name for p in topics_dir.glob("*/index.html")}
+    from frontend.topic_redirects import retired_topic_slugs
+    retired = retired_topic_slugs()
+    return {p.parent.name for p in topics_dir.glob("*/index.html") if p.parent.name not in retired}
 
 
 def topic_labels() -> dict[str, str]:

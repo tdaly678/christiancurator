@@ -119,7 +119,11 @@ class CheckResult:
 
 def extract_links(slug_filter: set[str] | None) -> list[LinkOccurrence]:
     out: list[LinkOccurrence] = []
-    for page in sorted(TOPICS_DIR.glob("*/index.html")):
+    if str(REPO_ROOT) not in sys.path:
+        sys.path.insert(0, str(REPO_ROOT))
+    from frontend.topic_redirects import retired_topic_slugs
+    retired = retired_topic_slugs()
+    for page in sorted(p for p in TOPICS_DIR.glob("*/index.html") if p.parent.name not in retired):
         slug = page.parent.name
         if slug_filter and slug not in slug_filter:
             continue

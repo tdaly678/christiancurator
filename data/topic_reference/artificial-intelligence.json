@@ -1,0 +1,263 @@
+{
+  "slug": "artificial-intelligence",
+  "date_modified": "2026-11-14",
+  "definition": {
+    "question": "What is artificial intelligence, and why does it matter to Christians?",
+    "html": "<p><strong>Artificial intelligence (AI)</strong> is software that performs tasks associated with human thinking, such as writing, translating, summarizing and recognizing patterns, by learning from very large amounts of data. Chatbots such as ChatGPT run on large language models, which predict likely text.</p><p>For Christians the first question is less what AI can do than what it is. The <a href=\"https://erlc.com/policy-content/artificial-intelligence-an-evangelical-statement-of-principles/\" target=\"_blank\" rel=\"noopener\">Evangelical Statement of Principles</a> (2019) puts the common evangelical answer plainly: technology \"is not a moral agent. Humans alone bear the responsibility for moral decision making.\" See <a href=\"#debate\">where evangelicals disagree</a>, <a href=\"#by-the-numbers\">what the surveys show</a> and <a href=\"#faq\">short answers to common questions</a>.</p>",
+    "also_known_as": [
+      "AI",
+      "machine learning",
+      "generative AI",
+      "chatbots",
+      "large language models"
+    ]
+  },
+  "faq": {
+    "label": "Frequently Asked Questions",
+    "title": "Christianity and AI, Briefly Answered",
+    "place": {
+      "before": "<!-- CC-FAQ:START -->"
+    },
+    "items": [
+      {
+        "q": "What does the Bible say about artificial intelligence?",
+        "a": "The Bible does not mention AI, but it speaks to the questions AI raises. Genesis 1:26 to 28 says humans are made in the image of God and gives them work to do in the world, which is why evangelical statements locate human worth in who we are rather than in what we can do. Genesis 2:18 says it is not good for man to be alone, a text writers now apply to chatbot friendship. Scripture's warnings against trusting the work of our own hands (Psalm 115, Isaiah 44) speak to the temptation to look to a machine for what only God gives."
+      },
+      {
+        "q": "Is it a sin to use ChatGPT or other AI?",
+        "a": "No major evangelical body teaches that using AI is sinful in itself. The 2023 <a href=\"https://www.sbc.net/resource-library/resolutions/on-artificial-intelligence-and-emerging-technologies/\" target=\"_blank\" rel=\"noopener\">Southern Baptist resolution</a> calls for \"eschatological hope rather than uncritical embrace or fearful rejection,\" and the pastor Aaron Menikoff <a href=\"https://www.9marks.org/article/using-ai-wisely/\" target=\"_blank\" rel=\"noopener\">tells his church</a>, \"I’m not exhorting you to avoid this technology; I’m simply encouraging you to use it well.\" Sin can attach to the use: passing off AI work as your own, deceiving others, letting it replace study, prayer or real relationships, or trusting it in place of God."
+      },
+      {
+        "q": "Can AI be conscious, a person, or made in the image of God?",
+        "a": "Evangelical statements say no. The ERLC's <a href=\"https://erlc.com/policy-content/artificial-intelligence-an-evangelical-statement-of-principles/\" target=\"_blank\" rel=\"noopener\">2019 statement</a> denies that technology should \"be assigned a level of human identity, worth, dignity, or moral agency.\" The NAE's <a href=\"https://www.nae.org/artificial-intelligence/\" target=\"_blank\" rel=\"noopener\">2026 resolution</a> says AI \"does not bear the image of God; it possesses no conscience, no love, no soul.\" The Vatican's <a href=\"https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html\" target=\"_blank\" rel=\"noopener\">Antiqua et Nova</a> (2025, Catholic) says AI \"should not be seen as an artificial form of human intelligence but as a product of it.\" Crossway's Samuel James <a href=\"https://www.crossway.org/articles/podcast-answering-your-questions-about-ai-and-christianity-part-1/\" target=\"_blank\" rel=\"noopener\">puts it bluntly</a>: \"AI does not think. AI does not reason. AI does not contemplate. It is a machine.\""
+      },
+      {
+        "q": "Should pastors use AI to write sermons?",
+        "a": "Most evangelical voices say AI may help with research or administration but should not write the sermon. Lifeway's <a href=\"https://brentwoodstatement.lifeway.com/\" target=\"_blank\" rel=\"noopener\">Brentwood Statement</a> (2026) says what ministers say and write under their name \"must be of our own work.\" Mike Bullmore <a href=\"https://www.thegospelcoalition.org/article/sermon-prep-ai-problem/\" target=\"_blank\" rel=\"noopener\">asks every pastor</a>, \"What am I forfeiting by using AI to do this?\" Barna <a href=\"https://www.barna.com/research/pastors-using-ai-ministry/\" target=\"_blank\" rel=\"noopener\">reports</a> that 24% of pastors now use AI to write or edit sermons, and Lifeway <a href=\"https://research.lifeway.com/2026/04/21/pastors-churchgoers-see-ai-as-concerning-and-confusing/\" target=\"_blank\" rel=\"noopener\">found</a> that 44% of churchgoers see nothing wrong with their pastor using AI in sermon preparation."
+      },
+      {
+        "q": "Are AI companions and chatbot friends wrong for Christians?",
+        "a": "The evangelical writers on this page agree that an AI companion cannot be a friend. Russell Moore <a href=\"https://www.christianitytoday.com/2025/11/chatbot-companionship-loneliness-crisis-artificial-intelligence\" target=\"_blank\" rel=\"noopener\">writes</a> that \"in disconnecting from real community and cleaving to our own prompts and algorithmically discerned preferences, we are all alone.\" A <a href=\"https://mereorthodoxy.com/ai-companions-as-a-form-of-pornography/\" target=\"_blank\" rel=\"noopener\">Mere Orthodoxy essay</a> calls AI companions a form of pornography, and a Harvard human flourishing scholar and a tech founder argue in <a href=\"https://firstthings.com/time-to-ban-ai-companions/\" target=\"_blank\" rel=\"noopener\">First Things</a> that apps built to stand in for friendship and romance should be banned outright. The pastoral counsel is to take the loneliness seriously and meet it with embodied friendship and the church."
+      },
+      {
+        "q": "What have churches and denominations said about AI?",
+        "a": "Key texts: the ERLC's <a href=\"https://erlc.com/policy-content/artificial-intelligence-an-evangelical-statement-of-principles/\" target=\"_blank\" rel=\"noopener\">Evangelical Statement of Principles</a> (2019); the <a href=\"https://www.sbc.net/resource-library/resolutions/on-artificial-intelligence-and-emerging-technologies/\" target=\"_blank\" rel=\"noopener\">Southern Baptist resolution on AI</a> (2023); the Vatican's <a href=\"https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html\" target=\"_blank\" rel=\"noopener\">Antiqua et Nova</a> (2025) and Pope Leo XIV's encyclical <a href=\"https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html\" target=\"_blank\" rel=\"noopener\">Magnifica Humanitas</a> (2026), both Catholic; Lifeway's <a href=\"https://brentwoodstatement.lifeway.com/\" target=\"_blank\" rel=\"noopener\">Brentwood Statement on AI and Christian Ministry</a> (2026); and the NAE's <a href=\"https://www.nae.org/artificial-intelligence/\" target=\"_blank\" rel=\"noopener\">resolution</a> (October 2026). The PCA has a <a href=\"https://byfaithonline.com/artificial-intelligence-study-committee-members-announced/\" target=\"_blank\" rel=\"noopener\">study committee</a> due to report by 2028. <a href=\"https://www.christianitytoday.com/2026/04/christianity-todays-ai-use-policy-for-writers/\" target=\"_blank\" rel=\"noopener\">Christianity Today</a> and <a href=\"https://www.thegospelcoalition.org/article/ai-tgc-missional-opportunity/\" target=\"_blank\" rel=\"noopener\">The Gospel Coalition</a> have adopted policies keeping AI out of their writing. See the <a href=\"#key-documents\">timeline of key documents</a>."
+      },
+      {
+        "q": "Can AI help translate the Bible?",
+        "a": "Yes, and it already does. Bible translation agencies use AI to draft and check text, which <a href=\"https://www.thegospelcoalition.org/article/ai-bible-translation/\" target=\"_blank\" rel=\"noopener\">may shorten the work</a> in the languages that still lack Scripture. Translators and the agencies insist that human judgment stays responsible for fidelity; as an SIL developer told <a href=\"https://www.wycliffe.net/thats-what-good-tools-do/\" target=\"_blank\" rel=\"noopener\">Wycliffe</a>, \"AI is here to assist, not replace.\""
+      },
+      {
+        "q": "Is AI the mark of the beast or the Antichrist?",
+        "a": "None of the evangelical statements on this page identifies AI with the Antichrist or the mark of the beast; they treat it as a technology to be governed by love of God and neighbor. The older concern in Scripture is idolatry: trusting something human hands have made in place of God."
+      },
+      {
+        "q": "What do pastors and churchgoers think about AI?",
+        "a": "Lifeway <a href=\"https://research.lifeway.com/2026/04/21/pastors-churchgoers-see-ai-as-concerning-and-confusing/\" target=\"_blank\" rel=\"noopener\">found</a> that 10% of Protestant pastors are regular AI users and 32% are experimenting, and that 61% of churchgoers are concerned about AI's influence on Christianity. Barna <a href=\"https://www.barna.com/research/christians-trust-ai-flourishing-spiritual-authority/\" target=\"_blank\" rel=\"noopener\">found</a> that 94% of pastors and 83% of practicing Christians are concerned that AI will misinterpret Scripture. Pew Research Center <a href=\"https://www.pewresearch.org/wp-content/uploads/sites/20/2025/09/PS_2025.9.15_AI-and-its-impact_report.pdf\" target=\"_blank\" rel=\"noopener\">found</a> that 73% of U.S. adults say AI should play no role at all in advising people about their faith in God. See <a href=\"#by-the-numbers\">the charts</a>."
+      }
+    ]
+  },
+  "glossary": {
+    "label": "Glossary",
+    "title": "AI terms, in plain words",
+    "place": {
+      "before": "<!-- CC-GLOSSARY:START -->"
+    },
+    "items": [
+      {
+        "term": "Artificial intelligence (AI)",
+        "def": "Software that performs tasks associated with human thinking by learning patterns from data."
+      },
+      {
+        "term": "Generative AI",
+        "def": "AI that produces new text, images, audio or video in response to a prompt."
+      },
+      {
+        "term": "Large language model (LLM)",
+        "def": "The kind of model behind chatbots such as ChatGPT and Claude. It predicts likely next words from patterns in vast amounts of text."
+      },
+      {
+        "term": "Narrow AI and general AI (AGI)",
+        "def": "Narrow AI does one kind of task; general AI would match human ability across tasks. AGI does not yet exist, and whether it can is disputed."
+      },
+      {
+        "term": "Hallucination",
+        "def": "A confident but false answer produced by an AI model, such as an invented quotation or Bible reference."
+      },
+      {
+        "term": "AI companion",
+        "def": "A chatbot designed to act as a friend, partner or confidant over time."
+      },
+      {
+        "term": "Digital twin",
+        "def": "An AI trained on one person's words, such as a pastor's sermons, that answers in that person's voice."
+      },
+      {
+        "term": "Agentic AI",
+        "def": "AI that takes actions on a user's behalf, such as sending email or booking travel, rather than only answering."
+      },
+      {
+        "term": "Imago Dei",
+        "def": "Latin for the image of God: the teaching from Genesis 1:26 to 27 that human beings are made in God's image."
+      },
+      {
+        "term": "Transhumanism",
+        "def": "The movement that seeks to transcend human limits, including death, through technology."
+      },
+      {
+        "term": "Deepfake",
+        "def": "AI generated audio, image or video made to look like a real person saying or doing something they did not."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "erlc2019",
+      "publisher": "ERLC",
+      "title": "Artificial Intelligence: An Evangelical Statement of Principles",
+      "url": "https://erlc.com/policy-content/artificial-intelligence-an-evangelical-statement-of-principles/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "sbc2023",
+      "publisher": "Southern Baptist Convention",
+      "title": "On Artificial Intelligence and Emerging Technologies",
+      "url": "https://www.sbc.net/resource-library/resolutions/on-artificial-intelligence-and-emerging-technologies/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "nae2026",
+      "publisher": "National Association of Evangelicals",
+      "title": "Artificial Intelligence (resolution)",
+      "url": "https://www.nae.org/artificial-intelligence/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "antiqua",
+      "publisher": "Dicastery for the Doctrine of the Faith",
+      "title": "Antiqua et Nova",
+      "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "magnifica",
+      "publisher": "Holy See",
+      "title": "Magnifica Humanitas",
+      "url": "https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "brentwood",
+      "publisher": "Lifeway",
+      "title": "Brentwood Statement on AI and Christian Ministry",
+      "url": "https://brentwoodstatement.lifeway.com/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "lifeway2026",
+      "publisher": "Lifeway Research",
+      "title": "Pastors, Churchgoers See AI as Concerning and Confusing",
+      "url": "https://research.lifeway.com/2026/04/21/pastors-churchgoers-see-ai-as-concerning-and-confusing/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "barna-authority",
+      "publisher": "Barna Group",
+      "title": "AI is Becoming a Spiritual Authority, Even Among Practicing Christians",
+      "url": "https://www.barna.com/research/christians-trust-ai-flourishing-spiritual-authority/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "barna-pastors",
+      "publisher": "Barna Group",
+      "title": "New Research: Pastors Are Using AI More Than You Think",
+      "url": "https://www.barna.com/research/pastors-using-ai-ministry/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "pew2025",
+      "publisher": "Pew Research Center",
+      "title": "How Americans View AI and Its Impact on People and Society",
+      "url": "https://www.pewresearch.org/wp-content/uploads/sites/20/2025/09/PS_2025.9.15_AI-and-its-impact_report.pdf",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "menikoff",
+      "publisher": "9Marks",
+      "title": "Using AI Wisely: A Pastor's Encouragement to His Church",
+      "url": "https://www.9marks.org/article/using-ai-wisely/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "bullmore",
+      "publisher": "The Gospel Coalition",
+      "title": "AI Makes Sermon Prep Effortless. That's the Problem.",
+      "url": "https://www.thegospelcoalition.org/article/sermon-prep-ai-problem/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "moore",
+      "publisher": "Christianity Today",
+      "title": "Chatbot Companionship Will Make Our Loneliness Crisis Worse",
+      "url": "https://www.christianitytoday.com/2025/11/chatbot-companionship-loneliness-crisis-artificial-intelligence",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "deboer",
+      "publisher": "Mere Orthodoxy",
+      "title": "AI Companions as a Form of Pornography",
+      "url": "https://mereorthodoxy.com/ai-companions-as-a-form-of-pornography/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "firstthings",
+      "publisher": "First Things",
+      "title": "Time to Ban AI Companions",
+      "url": "https://firstthings.com/time-to-ban-ai-companions/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "wycliffe",
+      "publisher": "Wycliffe Global Alliance",
+      "title": "That's what good tools do",
+      "url": "https://www.wycliffe.net/thats-what-good-tools-do/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "barger",
+      "publisher": "The Gospel Coalition",
+      "title": "How AI Assists in Global Bible Translation",
+      "url": "https://www.thegospelcoalition.org/article/ai-bible-translation/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "james",
+      "publisher": "Crossway",
+      "title": "Podcast: Answering Your Questions about AI and Christianity (Part 1)",
+      "url": "https://www.crossway.org/articles/podcast-answering-your-questions-about-ai-and-christianity-part-1/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "pca",
+      "publisher": "byFaith",
+      "title": "PCA Ad Interim Study Committee on Artificial Intelligence",
+      "url": "https://byfaithonline.com/artificial-intelligence-study-committee-members-announced/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "ct",
+      "publisher": "Christianity Today",
+      "title": "Christianity Today's AI Use Policy for Writers",
+      "url": "https://www.christianitytoday.com/2026/04/christianity-todays-ai-use-policy-for-writers/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "tgc",
+      "publisher": "The Gospel Coalition",
+      "title": "Our Line in the Sand on AI: TGC's Missional Opportunity",
+      "url": "https://www.thegospelcoalition.org/article/ai-tgc-missional-opportunity/",
+      "fetched": "2026-11-14"
+    }
+  ],
+  "notes": "Built by agent AI on Nov 14 2026 from agent R's research (team2/ai-research.json), with every quote and figure rechecked this session by three verification passes (/tmp/aiwork/verify-*.md, summarized in team2/AI-build-report.md). Brentwood 'must be of our own work' and the Bullmore question are verbatim on their pages. The Genesis, Psalm and Isaiah references in the first answer are our framing, not a citation of any statement. The Wycliffe quote is reported speech (Jacob Bullock, NLP developer, SIL)."
+}

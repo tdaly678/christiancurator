@@ -259,7 +259,7 @@ def test_voice_index_respects_noindex_and_retired(tmp_path):
 # ---------------------------------------------------------------- site state
 
 def test_every_topic_page_has_one_block_and_assets():
-    for page in btt.TOPICS_DIR.glob("*/index.html"):
+    for page in (d / "index.html" for d in btt.live_topic_dirs(btt.TOPICS_DIR)):
         html = page.read_text(encoding="utf-8")
         assert html.count(btt.TOP_START) == 1, page
         assert html.count(btt.ASSET_START) == 1, page
@@ -270,7 +270,7 @@ def test_every_topic_page_has_one_block_and_assets():
 def test_committed_pages_are_up_to_date():
     """Rebuilding with no changes must be a no-op (the builder was run)."""
     voices = btt.VoiceIndex()
-    for page in sorted(btt.TOPICS_DIR.glob("*/index.html"))[:12]:
+    for page in [d / "index.html" for d in btt.live_topic_dirs(btt.TOPICS_DIR)][:12]:
         slug = page.parent.name
         if btt.load_data(slug):
             continue

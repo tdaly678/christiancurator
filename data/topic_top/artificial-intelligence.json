@@ -1,0 +1,135 @@
+{
+  "slug": "artificial-intelligence",
+  "glance": {
+    "question": "Is AI a tool to use, a force to resist, or a frontier to shape?",
+    "positions": [
+      {
+        "name": "Resist and Limit",
+        "claim": "AI forms us; keep it out of preaching, writing, friendship and worship.",
+        "anchor": "position-1",
+        "voices": [
+          {
+            "name": "Russell Moore",
+            "slug": "russell-moore"
+          },
+          {
+            "name": "Collin Hansen",
+            "slug": "collin-hansen"
+          },
+          {
+            "name": "Nadya Williams",
+            "slug": "nadya-williams"
+          }
+        ]
+      },
+      {
+        "name": "Use With Guardrails",
+        "claim": "A common grace tool: use it, but keep it servant, not master.",
+        "anchor": "position-2",
+        "voices": [
+          {
+            "name": "Tim Challies",
+            "slug": "tim-challies"
+          },
+          {
+            "name": "Aaron Menikoff"
+          },
+          {
+            "name": "Mitchell G. Bahnsen"
+          }
+        ]
+      },
+      {
+        "name": "Shape It for the Mission",
+        "claim": "Christians must build and use AI well, or others will shape it.",
+        "anchor": "position-3",
+        "voices": [
+          {
+            "name": "Pat Gelsinger"
+          },
+          {
+            "name": "Carey Nieuwhof"
+          }
+        ]
+      },
+      {
+        "name": "Human Dignity First",
+        "claim": "The real question is what a human is, not what machines can do.",
+        "anchor": "position-4",
+        "voices": [
+          {
+            "name": "Jason Thacker"
+          },
+          {
+            "name": "Samuel D. James",
+            "slug": "samuel-d-james"
+          },
+          {
+            "name": "Chris Watkin",
+            "slug": "chris-watkin"
+          }
+        ]
+      }
+    ]
+  },
+  "start_here": [
+    {
+      "kind": "Primer",
+      "url": "https://www.crossway.org/articles/how-should-christians-think-about-ai/",
+      "title": "How Should Christians Think About AI?",
+      "author": "Samuel D. James",
+      "outlet": "Crossway",
+      "why": "A short, measured way in: weigh AI by what Scripture says about work, creativity and relationship."
+    },
+    {
+      "kind": "For your church",
+      "url": "https://www.9marks.org/article/using-ai-wisely/",
+      "title": "Using AI Wisely: A Pastor’s Encouragement to His Church",
+      "author": "Aaron Menikoff",
+      "outlet": "9Marks",
+      "why": "Ten questions a pastor gave his own congregation to ask before they use AI."
+    },
+    {
+      "kind": "The deeper question",
+      "url": "https://www.thegospelcoalition.org/article/human-ai-age/",
+      "title": "What Is a Human in the AI Age?",
+      "author": "Chris Watkin",
+      "outlet": "The Gospel Coalition",
+      "why": "Why the AI debate keeps returning to what a human being is."
+    }
+  ],
+  "key_number": {
+    "figure": "10%",
+    "text": "One in 10 pastors (10%) say they are regular users of artificial intelligence, while a third (32%) are experimenting with it.",
+    "publisher": "Lifeway Research",
+    "study": "Pastors, Churchgoers See AI as Concerning and Confusing",
+    "year": 2026,
+    "source_url": "https://research.lifeway.com/2026/04/21/pastors-churchgoers-see-ai-as-concerning-and-confusing/",
+    "fetched": "2026-11-14",
+    "license": "reuse",
+    "link": "#pastors-ai-use"
+  },
+  "related": [
+    {
+      "slug": "technology",
+      "question": "How should Christians live in a world shaped by technology?"
+    },
+    {
+      "slug": "vocation-and-work",
+      "question": "Is all honest work sacred, or does ministry hold a higher calling?"
+    },
+    {
+      "slug": "christian-parenting",
+      "question": "How do Christian parents pass on the faith to the next generation?"
+    }
+  ],
+  "changes": [
+    {
+      "date": "2026-11-14",
+      "text": "launched this page, replacing Artificial Intelligence and the Church, with four positions, survey charts, key documents, a FAQ and a glossary."
+    }
+  ],
+  "latest": true,
+  "signup": true,
+  "notes": "Voices verified in their own words on Nov 14 2026: Moore (CT, 2025-11-12, body: 'Ultimately, we find that in disconnecting from real community and cleaving to our own prompts and algorithmically discerned preferences, we are all alone.'); Hansen (TGC, 2026-08-10: 'We’re not anti-tech. We’re pro-human. We refuse to surrender our minds to the machines.'); Williams (CT, 2026-04-09, body: 'Using AI to generate text is just such a disordered means.'); Kingsnorth (UnHerd interview, 2025-09-26: 'We’re trying to create God, make God live forever.'; Eastern Orthodox, labeled on the card only); Haidt and Rausch (After Babel, 2025-11-24: 'An AI companion can imitate friendship, but it can’t actually be a friend.'; secular, labeled on the card only); Challies (challies.com, 2026-03-18: 'For Christians, AI must remain a servant and never become a master.'); Menikoff (9Marks, 2026-07-24: 'I’m not exhorting you to avoid this technology; I’m simply encouraging you to use it well.'); Bahnsen (TGC, 2026-05-18: 'Our task isn’t to reject technology or baptize it uncritically but to approach it with hopeful realism.'; a Westmont College student per his bio); Gelsinger (Fox News op-ed, 2026-01-04: 'AI isn't just answering questions. It's shaping worldviews.'; executive chairman and head of technology at Gloo); Nieuwhof with Kenny Jahng (careynieuwhof.com, 2023: 'Embracing new methods always keeps the mission alive in ways that resisting them never will.'); Thacker (NAE, 2025-05-28: 'the value, dignity and exclusivity of humanity isn’t rooted in what we do but who we are as unique image bearers of our creator'); James (Crossway podcast, 2026-01-26: 'AI does not think. AI does not reason. AI does not contemplate. It is a machine.'); Watkin (TGC, 2026-08-24: 'AI can help us in many ways, and used wisely it could bring great benefits. But it cannot kneel.'); Pope Leo XIV (Vatican message, 2025-06-17: 'By definition, tools point to the human intelligence that crafted them...'; Catholic, labeled on the card only). Dropped after rechecking: Albert Mohler (quote was about longevity, not AI), Derek Schuurman and Jacob Bullock (reported speech only), Andy Crouch (holds both a shaping and a dignity view; cited via the Praxis piece only). Names from the retired ai-and-the-church card not carried over: James K.A. Smith, Carl Trueman (card), Noreen Herzfeld, Justin Brierley, Derek Rishmawy, John Lennox, David Johnson, Trillia Newbell, Albert Borgmann, Tim Keller."
+}
