@@ -1,0 +1,14 @@
+{
+  "id": "by-the-numbers",
+  "label": "By the Numbers",
+  "title": "What the surveys show",
+  "intro": "Two large surveys from 2025 and 2026 ask Americans about Christianity and government in different ways. Pew asks what people want the government to do and what they think of the label; PRRI scores agreement with a set of statements. Each chart stands on its own.",
+  "charts": [
+    "official-religion",
+    "label-view",
+    "prri-scale"
+  ],
+  "place": {
+    "before": "<div class=\"cc-debate\" id=\"debate\">"
+  }
+}

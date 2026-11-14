@@ -1,0 +1,93 @@
+{
+  "slug": "christian-nationalism",
+  "date_modified": "2026-11-14",
+  "definition": {
+    "question": "What is Christian nationalism?",
+    "html": "<p>In a widely read definition by an evangelical critic, <strong>Christian nationalism</strong> is \"the belief that the American nation is defined by Christianity, and that the government should take active steps to keep it that way\" (Paul D. Miller, <a href=\"https://www.christianitytoday.com/ct/2021/february-web-only/what-is-christian-nationalism.html\" target=\"_blank\" rel=\"noopener\">Christianity Today</a>, 2021). Stephen Wolfe, whose 2022 book <em>The Case for Christian Nationalism</em> argues for it, summarizes his own view as \"a nation that recognizes itself as a Christian people and then wants to act in light of that\" (<a href=\"https://christoverall.com/article/concise/transcript-interview-with-stephen-wolfe-on-christian-nationalism/\" target=\"_blank\" rel=\"noopener\">Christ Over All interview</a>, 2023).</p><p>The term is contested. Historian Thomas Kidd notes that it \"is usually a term of insult\" and that far more people apply it to others than embrace it (<a href=\"https://www.thegospelcoalition.org/article/christian-nationalism-patriotism/\" target=\"_blank\" rel=\"noopener\">The Gospel Coalition</a>). See <a href=\"#by-the-numbers\">what the surveys show</a> and <a href=\"#faq\">short answers to common questions</a>.</p>",
+    "also_known_as": [
+      "Christian nation",
+      "white Christian nationalism (a critics' term)"
+    ]
+  },
+  "faq": {
+    "label": "Frequently Asked Questions",
+    "title": "Christian Nationalism, Briefly Answered",
+    "place": {
+      "before": "<!-- CC-TOPIC-VOICES:START -->"
+    },
+    "items": [
+      {
+        "q": "What is the difference between Christian nationalism and patriotism?",
+        "a": "Paul D. Miller puts it this way: \"Patriotism is the love of country. It is different from nationalism, which is an argument about how to define our country\" (<a href=\"https://www.christianitytoday.com/ct/2021/february-web-only/what-is-christian-nationalism.html\" target=\"_blank\" rel=\"noopener\">Christianity Today</a>, 2021). Thomas Kidd likewise defends a measured Christian patriotism while warning against making America central to redemptive history (<a href=\"https://www.thegospelcoalition.org/article/christian-nationalism-patriotism/\" target=\"_blank\" rel=\"noopener\">The Gospel Coalition</a>)."
+      },
+      {
+        "q": "How do evangelicals view the label \"Christian nationalism\"?",
+        "a": "In Pew Research Center's April 2026 survey, 20% of white evangelicals had a favorable view of \"Christian nationalism,\" 18% an unfavorable view, and 38% said they had never heard of it (<a href=\"https://www.pewresearch.org/religion/2026/05/14/how-americans-feel-about-religions-influence-in-government-and-public-life/\" target=\"_blank\" rel=\"noopener\">Pew Research Center</a>). Some writers, including Stephen Wolfe and Doug Wilson, accept the label and argue for it."
+      },
+      {
+        "q": "How many evangelicals want Christianity to be the official religion?",
+        "a": "In the same Pew survey, 31% of white evangelicals said the federal government should declare Christianity the official religion of the U.S., 57% said it should promote Christian moral values without doing so, and 10% said it should do neither. Among all U.S. adults the figures were 17%, 43% and 38% (<a href=\"https://www.pewresearch.org/religion/2026/05/14/how-americans-feel-about-religions-influence-in-government-and-public-life/\" target=\"_blank\" rel=\"noopener\">Pew Research Center</a>, 2026). See <a href=\"#official-religion\">the chart</a>."
+      },
+      {
+        "q": "Why do some surveys say most white evangelicals are Christian nationalists?",
+        "a": "PRRI scores agreement with five statements, such as \"U.S. laws should be based on Christian values,\" and in its 2025 data classed 29% of white evangelical Protestants as Christian nationalism Adherents and 38% as Sympathizers (<a href=\"https://www.prri.org/research/mapping-christian-nationalism-across-the-50-states/\" target=\"_blank\" rel=\"noopener\">PRRI</a>, 2026). That measure counts agreement with statements, not views of the label, so it measures something different from Pew's question about the term. See <a href=\"#prri-scale\">the chart</a>."
+      },
+      {
+        "q": "Can Christians want biblical influence on the law without being Christian nationalists?",
+        "a": "Many evangelical critics say yes. Jonathan Leeman separates \"Influencers,\" who want a biblical view of justice to shape the law, from \"Identifiers,\" who want Christianity formally established, and counts himself among the first while urging both to drop the label (<a href=\"https://www.9marks.org/article/christian-nationalism/\" target=\"_blank\" rel=\"noopener\">9Marks</a>). Kevin DeYoung writes, \"I am not a Christian Nationalist, but I almost could be,\" while rejecting establishment and state coercion in religion (<a href=\"https://clearlyreformed.org/6-questions-for-christian-nationalists/\" target=\"_blank\" rel=\"noopener\">Clearly Reformed</a>)."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "miller2021",
+      "publisher": "Christianity Today",
+      "title": "What Is Christian Nationalism? (Paul D. Miller, Feb 3 2021)",
+      "url": "https://www.christianitytoday.com/ct/2021/february-web-only/what-is-christian-nationalism.html",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "wolfe2023",
+      "publisher": "Christ Over All",
+      "title": "Transcript: Interview with Stephen Wolfe on Christian Nationalism (Oct 20 2023)",
+      "url": "https://christoverall.com/article/concise/transcript-interview-with-stephen-wolfe-on-christian-nationalism/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "kidd",
+      "publisher": "The Gospel Coalition",
+      "title": "Christian Nationalism vs. Christian Patriotism (Thomas Kidd)",
+      "url": "https://www.thegospelcoalition.org/article/christian-nationalism-patriotism/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "leeman2022",
+      "publisher": "9Marks",
+      "title": "“Christian Nationalism” Misrepresents Jesus, So We Should Reject It (Jonathan Leeman, Oct 31 2022)",
+      "url": "https://www.9marks.org/article/christian-nationalism/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "deyoung",
+      "publisher": "Clearly Reformed",
+      "title": "6 Questions for Christian Nationalists (Kevin DeYoung)",
+      "url": "https://clearlyreformed.org/6-questions-for-christian-nationalists/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "pew2026",
+      "publisher": "Pew Research Center",
+      "title": "How Americans Feel About Religion's Influence in Government and Public Life (May 14 2026)",
+      "url": "https://www.pewresearch.org/religion/2026/05/14/how-americans-feel-about-religions-influence-in-government-and-public-life/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "prri2026",
+      "publisher": "PRRI",
+      "title": "Mapping Christian Nationalism Across the 50 States (Feb 17 2026)",
+      "url": "https://www.prri.org/research/mapping-christian-nationalism-across-the-50-states/",
+      "fetched": "2026-11-14"
+    }
+  ],
+  "notes": "Replaces the page's earlier FAQPage schema, which had five unsourced answers and no visible FAQ on the page. Every quote was checked against the linked page on Nov 14 2026."
+}

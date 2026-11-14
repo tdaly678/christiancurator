@@ -1,0 +1,109 @@
+{
+  "slug": "christian-nationalism",
+  "glance": {
+    "question": "Is Christian nationalism a defense of Christian civilization, an idol, or a label to drop?",
+    "positions": [
+      {
+        "name": "Christian Nationalism (Sympathetic)",
+        "claim": "A Christian people should shape its laws and customs as a Christian nation.",
+        "anchor": "position-1",
+        "voices": [
+          {
+            "name": "Stephen Wolfe",
+            "slug": "stephen-wolfe"
+          },
+          {
+            "name": "Doug Wilson",
+            "slug": "doug-wilson"
+          }
+        ]
+      },
+      {
+        "name": "Robust Christian Political Engagement (Anti-Nationalist)",
+        "claim": "Fusing faith with national identity is idolatry and compromises the gospel's witness.",
+        "anchor": "position-2",
+        "voices": [
+          {
+            "name": "Russell Moore",
+            "slug": "russell-moore"
+          },
+          {
+            "name": "Tim Keller",
+            "slug": "tim-keller"
+          }
+        ]
+      },
+      {
+        "name": "Theologically Chastened Engagement",
+        "claim": "Work for biblical convictions in law, but no nation is the kingdom of God.",
+        "anchor": "position-3",
+        "voices": [
+          {
+            "name": "Kevin DeYoung",
+            "slug": "kevin-deyoung"
+          }
+        ]
+      }
+    ]
+  },
+  "start_here": [
+    {
+      "kind": "Primer",
+      "url": "https://www.christianitytoday.com/ct/2021/february-web-only/what-is-christian-nationalism.html",
+      "title": "What Is Christian Nationalism?",
+      "author": "Paul D. Miller",
+      "outlet": "Christianity Today",
+      "why": "Defines the term and sets it apart from patriotism, which Miller calls the love of country."
+    },
+    {
+      "kind": "A case for the label",
+      "url": "https://dougwils.com/books-and-culture/s7-engaging-the-culture/christiany-nationalism.html",
+      "title": "Larry Arnn and the Hillsdale Half Step",
+      "author": "Douglas Wilson",
+      "outlet": "Blog & Mablog",
+      "why": "Wilson argues that if nations are moral agents answerable to God, believers are Christian nationalists in substance."
+    },
+    {
+      "kind": "A case against the label",
+      "url": "https://www.9marks.org/article/christian-nationalism/",
+      "title": "“Christian Nationalism” Misrepresents Jesus, So We Should Reject It",
+      "author": "Jonathan Leeman",
+      "outlet": "9Marks",
+      "why": "Leeman wants biblical conviction to shape the law but argues the label misrepresents Christ."
+    }
+  ],
+  "key_number": {
+    "figure": "31%",
+    "text": "Among white evangelicals, 31% say the federal government should declare Christianity the official religion; 57% say it should promote Christian moral values without one.",
+    "publisher": "Pew Research Center",
+    "study": "How Americans Feel About Religion's Influence in Government and Public Life",
+    "year": 2026,
+    "source_url": "https://www.pewresearch.org/religion/2026/05/14/how-americans-feel-about-religions-influence-in-government-and-public-life/",
+    "fetched": "2026-11-14",
+    "license": "reuse",
+    "link": "#official-religion"
+  },
+  "related": [
+    {
+      "slug": "politics-and-the-church",
+      "question": "Should Christians seek political power or hold it at arm's length?"
+    },
+    {
+      "slug": "religious-liberty",
+      "question": "How should Christians respond when conscience conflicts with the law?"
+    },
+    {
+      "slug": "evangelicalism",
+      "question": "Is the evangelical movement fracturing?"
+    }
+  ],
+  "changes": [
+    {
+      "date": "2026-11-14",
+      "text": "added survey charts from Pew and PRRI, a definition and short answers to common questions."
+    }
+  ],
+  "latest": true,
+  "signup": true,
+  "notes": "Voices checked in their own words, Nov 14 2026. Wolfe: Christ Over All transcript, Oct 20 2023 (https://christoverall.com/article/concise/transcript-interview-with-stephen-wolfe-on-christian-nationalism/): 'Christian Nationalism is a nation that recognizes itself as a Christian people and then wants to act in light of that.' Wolfe's voice page is noindex, so his name prints as plain text. Wilson: Blog & Mablog, Aug 25 2025 (https://dougwils.com/books-and-culture/s7-engaging-the-culture/christiany-nationalism.html): 'So my version of Christian nationalism is simply this. America needs to stop making God mad.' Moore: CT, Sept 2022 (https://www.christianitytoday.com/ct/2022/september-web-only/christian-nationalism-cannot-save-world-politics-elections.html): 'Christian nationalism is a liberation theology for white people. And that's not the gospel of Jesus Christ.' Keller: ChurchLeaders Podcast episode page, Mar 10 2021 (https://churchleaders.com/podcast/391233-timothy-keller-christian-nationalist.html), quoting the interview: 'Christian nationalism works on fear and resentment.' Also reported by Christian Post, Mar 12 2021 (https://www.christianpost.com/us/tim-keller-church-allowed-christian-nationalism-to-incubate.html). DeYoung: Clearly Reformed (https://clearlyreformed.org/6-questions-for-christian-nationalists/): 'I am not a Christian Nationalist, but I almost could be.' Left off: David French (listed under Position 1 as a critic), Jenna Ellis, Voddie Baucham, Trillia Newbell, Derek Rishmawy, Ligon Duncan; see T1 report. Key number: Pew asks about government action, not the label; the PRRI chart is a separate scale."
+}

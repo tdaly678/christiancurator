@@ -1,0 +1,122 @@
+{
+  "id": "prri-scale",
+  "type": "column",
+  "kicker": "How one survey measures it",
+  "title": "Two-thirds of white evangelicals score as Christian nationalists on PRRI's scale",
+  "subtitle": "Share PRRI classifies as Adherents or Sympathizers, by religious group, 2025",
+  "caption": "PRRI places 29% of white evangelical Protestants among Christian nationalism Adherents and 38% among Sympathizers, the largest combined share of any group it reports. Across all Americans the figures are 11% and 21%.",
+  "note": "PRRI scores agreement with five statements: the U.S. government should declare America a Christian nation; U.S. laws should be based on Christian values; if the U.S. moves away from our Christian foundations, we will not have a country anymore; being Christian is an important part of being truly American; and God has called Christians to exercise dominion over all areas of American society. The scale is PRRI's construction, and several evangelical writers dispute how the term is used; compare the Pew chart above, where one in five white evangelicals view the label favorably. PRRI figures, drawn by Christian Curator from the published report.",
+  "unit": "%",
+  "max": 100,
+  "series": [
+    {
+      "id": "adh",
+      "label": "Adherents",
+      "color": "brown"
+    },
+    {
+      "id": "sym",
+      "label": "Sympathizers",
+      "color": "gold"
+    }
+  ],
+  "rows": [
+    {
+      "label": "White evangelical Protestant",
+      "values": {
+        "adh": 29,
+        "sym": 38
+      },
+      "as_published": {
+        "adh": "29%",
+        "sym": "38%"
+      },
+      "source": "prri2026"
+    },
+    {
+      "label": "Hispanic Protestant",
+      "values": {
+        "adh": 24,
+        "sym": 30
+      },
+      "as_published": {
+        "adh": "24%",
+        "sym": "30%"
+      },
+      "source": "prri2026"
+    },
+    {
+      "label": "Black Protestant",
+      "values": {
+        "adh": 17,
+        "sym": 26
+      },
+      "as_published": {
+        "adh": "17%",
+        "sym": "26%"
+      },
+      "source": "prri2026"
+    },
+    {
+      "label": "White Catholic",
+      "values": {
+        "adh": 10,
+        "sym": 25
+      },
+      "as_published": {
+        "adh": "10%",
+        "sym": "25%"
+      },
+      "source": "prri2026"
+    },
+    {
+      "label": "White mainline Protestant",
+      "values": {
+        "adh": 8,
+        "sym": 27
+      },
+      "as_published": {
+        "adh": "8%",
+        "sym": "27%"
+      },
+      "source": "prri2026"
+    },
+    {
+      "label": "Religiously unaffiliated",
+      "values": {
+        "adh": 2,
+        "sym": 8
+      },
+      "as_published": {
+        "adh": "2%",
+        "sym": "8%"
+      },
+      "source": "prri2026"
+    },
+    {
+      "label": "All Americans",
+      "values": {
+        "adh": 11,
+        "sym": 21
+      },
+      "as_published": {
+        "adh": "11%",
+        "sym": "21%"
+      },
+      "source": "prri2026"
+    }
+  ],
+  "sources": [
+    {
+      "id": "prri2026",
+      "publisher": "PRRI",
+      "study": "Mapping Christian Nationalism Across the 50 States: Insights from PRRI's 2025 American Values Atlas",
+      "year": 2026,
+      "url": "https://www.prri.org/research/mapping-christian-nationalism-across-the-50-states/",
+      "fetched": "2026-11-14",
+      "license": "credit",
+      "field_dates": "February 28 to December 8, 2025, online",
+      "sample": "22,111 U.S. adults in all 50 states (20,771 Ipsos KnowledgePanel, 1,340 opt-in)"
+    }
+  ]
+}
