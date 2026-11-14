@@ -248,3 +248,90 @@ def test_new_types_refuse(make, mutate, expect):
     mutate(d)
     errs = btl.validate(d, "<!-- ANCHOR -->")
     assert any(expect in e for e in errs), errs
+
+
+# ---------------------------------------------------------------- orgchart and chronology types
+
+def orgchart():
+    tiers = [{"id": "top", "label": "Whole church"}, {"id": "mid", "label": "Region"},
+             {"id": "low", "label": "Congregation"}]
+
+    def chart(cid, color, loose=False):
+        return {"id": cid, "name": f"Chart {cid}", "color": color, "tag": "For example, a body",
+                "boxes": [{"tier": "top", "text": "Assembly", "sub": "Elders", "loose": loose},
+                          {"tier": "mid", "text": "Presbytery"}, {"tier": "low", "text": "Members"}],
+                "links": ([{"between": ["top", "mid"], "loose": "No authority"}] if loose else
+                          [{"between": ["top", "mid"], "down": "Reviews"}])
+                         + [{"between": ["mid", "low"], "down": "Governs", "up": "Elects elders"}],
+                "proponent": _prop(cid)}
+    return {
+        "id": "polity", "slug": "demo", "type": "orgchart", "label": "Polity", "title": "Who decides",
+        "image_title": "Two shapes of church government", "caption": "What it shows.",
+        "tiers": tiers, "charts": [chart("a", "green"), chart("b", "brown", loose=True)],
+        "differ": ["One", "Two", "Three"], "sources": _src(), "place": {"before": "<!-- ANCHOR -->"},
+    }
+
+
+def chronology():
+    def ev(i, year, outside=False):
+        return {"id": f"e{i}", "date": f"c. {year}", "year": year, "name": f"Model {i}", "who": "A writer",
+                "text": "What it says.", "color": "blue", "outside": outside, "proponent": _prop(f"W{i}")}
+    return {
+        "id": "models", "slug": "demo", "type": "chronology", "label": "History", "title": "Models in order",
+        "image_title": "Five models and when they took shape", "caption": "What it shows.",
+        "events": [ev(1, 180), ev(2, 1098), ev(3, 1134), ev(4, 1617), ev(5, 1931, outside=True)],
+        "differ": ["One", "Two", "Three"], "sources": _src(), "place": {"before": "<!-- ANCHOR -->"},
+    }
+
+
+@pytest.mark.parametrize("make", [orgchart, chronology])
+def test_orgchart_and_chronology_render(make):
+    d = make()
+    assert btl.validate(d, "<!-- ANCHOR -->") == []
+    block = btl.render_block(d, NoVoices())
+    assert block.count("<svg") == 2 and "<desc" in block and "Table version" in block
+    assert btl.BRAND in block and not re.search("[–—]", block)
+    page = "<html><head></head><body><!-- ANCHOR --></body></html>"
+    once = btl.build_page(page, d, NoVoices())
+    assert btl.build_page(once, d, NoVoices()) == once
+
+
+def test_orgchart_desc_and_table():
+    d = orgchart()
+    desc = btl.describe(d)
+    assert "Chart a. Whole church: Assembly (Elders)" in desc
+    assert "upward, elects or consents: Elects elders" in desc and "cooperation only: No authority" in desc
+    table = btl.table_html(d)
+    assert "Lines of authority" in table and "(cooperation, no authority)" in table
+    assert "Cooperation, no authority" in btl.render_wide(d)
+
+
+def test_chronology_cards_do_not_overlap():
+    for n in (4, 5, 6):
+        d = chronology()
+        d["events"] = d["events"][:n] if n <= 5 else d["events"] + [dict(d["events"][0], id="e6", year=2000)]
+        svg = btl.render_wide(d)
+        cards = [(float(x), float(w)) for x, w in
+                 re.findall(r'<rect x="([\d.]+)" y="[\d.]+" width="([\d.]+)" height="[\d.]+" rx="6"', svg)]
+        assert len(cards) == n
+        for row in (cards[0::2], cards[1::2]):
+            for (x1, w1), (x2, _) in zip(row, row[1:]):
+                assert x1 + w1 <= x2
+    assert "In date order. 1. c. 180: Model 1" in btl.describe(chronology())
+
+
+@pytest.mark.parametrize("make, mutate, expect", [
+    (orgchart, lambda d: d["charts"][0]["boxes"].pop(), "one box per tier"),
+    (orgchart, lambda d: d["charts"][0]["links"][0].update(between=["top", "low"]), "neighbouring tiers"),
+    (orgchart, lambda d: d["charts"][1]["links"][0].update(down="x"), "loose link stands alone"),
+    (orgchart, lambda d: d["charts"][0]["links"][1].pop("down") and d["charts"][0]["links"][1].pop("up"),
+     "needs down, up or loose"),
+    (chronology, lambda d: d["events"].reverse(), "date order"),
+    (chronology, lambda d: d["events"][0].update(year="180"), "whole number"),
+    (chronology, lambda d: d["events"][0].pop("date"), "missing date"),
+])
+def test_orgchart_and_chronology_refuse(make, mutate, expect):
+    d = make()
+    mutate(d)
+    errs = btl.validate(d, "<!-- ANCHOR -->")
+    assert any(expect in e for e in errs), errs

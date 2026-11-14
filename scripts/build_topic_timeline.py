@@ -51,6 +51,17 @@ stations / common / lanes:
   "matrix":   "columns": [{"id", "name", "short", "color", "outside", "outside_label", "proponent"}],
               "rows": [{"id", "label", "short", "cells": [{"text", "short", "mark": "yes|partly|no"}]}]
               Views across, questions down; on phones each question becomes a block.
+  "orgchart": "tiers": [{"id", "label"}]  (2 to 5 levels, top first),
+              "charts": [{"id", "name", "short", "tag", "color", "proponent",
+                          "boxes": [{"tier", "text", "sub", "loose": true}]   # one per tier, in order
+                          "links": [{"between": [upper tier, lower tier],
+                                     "down": "authority label", "up": "elects or consents label"}
+                                    | {"between": [...], "loose": "cooperation label"}]}]
+              2 to 4 side-by-side org diagrams; on phones they stack.
+  "chronology": "events": [{"id", "date": "c. 1098", "year": 1098 (whole number, for order), "name",
+                            "short", "who", "text", "short_text", "color", "outside", "proponent"}]
+              3 to 8 events in date order: cards alternate above and below one line
+              (one column with a rail on phones).
   "outside": a view beyond evangelical bounds, drawn dashed and labelled "Shown for contrast".
   Optional on any type: "voices_label", "note" (footer sentence), "image_source" (footer line on the
   image), "table_view_label", "png_name" (share image file name, default the id).
@@ -101,9 +112,9 @@ BRAND = "christiancurator.com"
 W_WIDE, W_NARROW, PAD = 740, 360, 14
 MIN_SHARE_H = 630
 KINDS = {"period", "event", "shared"}
-TYPES = ("timeline", "spectrum", "matrix")
+TYPES = ("timeline", "spectrum", "matrix", "orgchart", "chronology")
 TYPE_KEYS = {"timeline": ("stations", "common", "lanes"), "spectrum": ("axis", "positions"),
-             "matrix": ("columns", "rows")}
+             "matrix": ("columns", "rows"), "orgchart": ("tiers", "charts"), "chronology": ("events",)}
 MARKS = ("yes", "partly", "no")
 MARK_LABELS = {"yes": "Yes", "partly": "In part", "no": "No"}
 OUTSIDE_LABEL = "Shown for contrast"
@@ -133,7 +144,8 @@ def vtype(d: dict) -> str:
 
 def views(d: dict) -> list[dict]:
     """The views a visual compares: timeline lanes, spectrum positions or matrix columns."""
-    return d.get({"timeline": "lanes", "spectrum": "positions", "matrix": "columns"}.get(vtype(d), "lanes")) or []
+    return d.get({"timeline": "lanes", "spectrum": "positions", "matrix": "columns", "orgchart": "charts",
+                  "chronology": "events"}.get(vtype(d), "lanes")) or []
 
 
 def outside_label(view: dict) -> str:
@@ -238,6 +250,10 @@ def validate(d: dict, page_html: str | None = None) -> list[str]:
                     errs.append(f"lane {lid}: segments must cover every station")
     elif kind == "spectrum":
         errs += validate_spectrum(d)
+    elif kind == "orgchart":
+        errs += validate_orgchart(d)
+    elif kind == "chronology":
+        errs += validate_chronology(d)
     else:
         errs += validate_matrix(d)
     for view in views(d):
@@ -459,6 +475,10 @@ def render_wide(d: dict) -> str:
         return render_spectrum(d, False)
     if vtype(d) == "matrix":
         return render_matrix(d, False)
+    if vtype(d) == "orgchart":
+        return render_orgchart(d, False)
+    if vtype(d) == "chronology":
+        return render_chronology(d, False)
     w = W_WIDE
     parts, y = header(d, w, d.get("image_subtitle", ""))
     label_w = 136
@@ -508,6 +528,10 @@ def render_narrow(d: dict) -> str:
         return render_spectrum(d, True)
     if vtype(d) == "matrix":
         return render_matrix(d, True)
+    if vtype(d) == "orgchart":
+        return render_orgchart(d, True)
+    if vtype(d) == "chronology":
+        return render_chronology(d, True)
     w = W_NARROW
     parts, y = header(d, w, d.get("image_subtitle_narrow") or d.get("image_subtitle", ""))
     label_w = 70
@@ -567,6 +591,10 @@ def describe(d: dict) -> str:
     kind = vtype(d)
     if kind == "timeline":
         return lane_desc(d)
+    if kind == "orgchart":
+        return orgchart_desc(d)
+    if kind == "chronology":
+        return chronology_desc(d)
     if kind == "spectrum":
         axis, axis_y = d["axis"], d.get("axis_y")
         out = [f"{axis.get('label') or 'Axis'}: from {axis['left']} to {axis['right']}."]
@@ -918,6 +946,389 @@ def render_matrix(d: dict, narrow: bool) -> str:
     return svg_open(d, w, y, narrow) + "".join(parts) + foot + "</svg>"
 
 
+# ---------------------------------------------------------------- org charts and chronologies
+
+ARROW_KINDS = ("down", "up", "loose")
+ARROW_LABELS = {"down": "Authority or oversight", "up": "Elects or consents", "loose": "Cooperation, no authority"}
+
+
+def validate_orgchart(d: dict) -> list[str]:
+    errs: list[str] = []
+    tiers, charts = d["tiers"], d["charts"]
+    if not 2 <= len(tiers) <= 5:
+        errs.append("2 to 5 tiers")
+    if not 2 <= len(charts) <= 4:
+        errs.append("2 to 4 charts")
+    errs += _unique_ids(tiers, "tier") + _unique_ids(charts, "chart")
+    tier_ids = [t.get("id") for t in tiers]
+    for t in tiers:
+        if not t.get("label"):
+            errs.append(f"tier {t.get('id')}: missing label")
+    for ch in charts:
+        cid = ch.get("id", "?")
+        boxes = ch.get("boxes") or []
+        if [b.get("tier") for b in boxes] != tier_ids:
+            errs.append(f"chart {cid}: needs one box per tier, in tier order")
+        for b in boxes:
+            if not b.get("text"):
+                errs.append(f"chart {cid}: box {b.get('tier')} needs text")
+        for link in ch.get("links") or []:
+            pair = link.get("between") or []
+            if len(pair) != 2 or any(x not in tier_ids for x in pair) or \
+                    tier_ids.index(pair[1]) != tier_ids.index(pair[0]) + 1:
+                errs.append(f"chart {cid}: link {pair} must join two neighbouring tiers, top first")
+                continue
+            kinds = [k for k in ARROW_KINDS if link.get(k)]
+            if not kinds:
+                errs.append(f"chart {cid}: link {pair} needs down, up or loose")
+            if link.get("loose") and len(kinds) > 1:
+                errs.append(f"chart {cid}: a loose link stands alone")
+    return errs
+
+
+def validate_chronology(d: dict) -> list[str]:
+    errs: list[str] = []
+    events = d["events"]
+    if not 3 <= len(events) <= 8:
+        errs.append("3 to 8 events")
+    errs += _unique_ids(events, "event")
+    years = []
+    for ev in events:
+        eid = ev.get("id", "?")
+        for key in ("date", "text"):
+            if not ev.get(key):
+                errs.append(f"event {eid}: missing {key}")
+        if not isinstance(ev.get("year"), int) or isinstance(ev.get("year"), bool):
+            errs.append(f"event {eid}: year must be a whole number (for order)")
+        else:
+            years.append(ev["year"])
+    if years != sorted(years):
+        errs.append("events must run in date order")
+    return errs
+
+
+def arrow(kind: str, x: float, y0: float, y1: float, col: str) -> str:
+    """A vertical connector from y0 (upper box) to y1 (lower box)."""
+    if kind == "loose":
+        return (f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{y0:.1f}" y2="{y1:.1f}" stroke="{GREY}" '
+                f'stroke-width="1.6" stroke-dasharray="2 3"/>')
+    dash = ' stroke-dasharray="5 3"' if kind == "up" else ""
+    if kind == "down":
+        tip, back = y1, y1 - 7
+        line = (y0, back)
+    else:
+        tip, back = y0, y0 + 7
+        line = (back, y1)
+    return (f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{line[0]:.1f}" y2="{line[1]:.1f}" stroke="{col}" '
+            f'stroke-width="1.6"{dash}/>'
+            f'<path d="M{x - 4.5:.1f},{back:.1f} L{x + 4.5:.1f},{back:.1f} L{x:.1f},{tip:.1f} Z" fill="{col}"/>')
+
+
+def arrow_legend(kinds: list[str], x: float, y: float, w: float) -> tuple[str, float]:
+    parts, xx = [], x
+    for k in kinds:
+        label = ARROW_LABELS[k]
+        lw = 30 + text_w(label, 11)
+        if xx + lw > x + w:
+            xx, y = x, y + 16
+        col = GREY if k == "loose" else INK
+        dash = {"down": "", "up": ' stroke-dasharray="5 3"', "loose": ' stroke-dasharray="2 3"'}[k]
+        parts.append(f'<line x1="{xx:.1f}" x2="{xx + 18:.1f}" y1="{y - 4:.1f}" y2="{y - 4:.1f}" stroke="{col}" '
+                     f'stroke-width="1.6"{dash}/>')
+        if k == "down":
+            parts.append(f'<path d="M{xx + 18:.1f},{y - 8:.1f} L{xx + 18:.1f},{y:.1f} L{xx + 24:.1f},{y - 4:.1f} Z" fill="{INK}"/>')
+        elif k == "up":
+            parts.append(f'<path d="M{xx:.1f},{y - 8:.1f} L{xx:.1f},{y:.1f} L{xx - 6:.1f},{y - 4:.1f} Z" fill="{INK}"/>')
+        parts.append(tx(xx + 30, y, label, 11, GREY))
+        xx += lw + 14
+    return "".join(parts), y + 16
+
+
+def _links(ch: dict) -> dict:
+    return {tuple(l["between"]): l for l in ch.get("links") or []}
+
+
+def org_box(b: dict, x: float, y: float, w: float, col: str, h: float | None = None,
+            size: float = 11.5) -> tuple[str, float]:
+    lines = wrap(b["text"], w - 14, size, True)
+    sub = wrap(b["sub"], w - 14, 10.5) if b.get("sub") else []
+    need = 10 + len(lines) * size * 1.2 + len(sub) * 12.6 + 6
+    hh = h or need
+    if b.get("loose"):
+        shape = (f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{hh:.1f}" rx="6" fill="#fff" '
+                 f'stroke="{GREY}" stroke-width="1.2" stroke-dasharray="2 3"/>')
+    else:
+        shape = (f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{hh:.1f}" rx="6" fill="#fff"/>'
+                 f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{hh:.1f}" rx="6" fill="{col}" '
+                 f'fill-opacity="0.11" stroke="{col}" stroke-width="1.2"/>')
+    parts = [shape]
+    ty = y + (hh - need) / 2 + 6 + size
+    for ln in lines:
+        parts.append(tx(x + w / 2, ty, ln, size, INK if b.get("loose") else col, "700", "middle"))
+        ty += size * 1.2
+    for ln in sub:
+        parts.append(tx(x + w / 2, ty, ln, 10.5, GREY, None, "middle"))
+        ty += 12.6
+    return "".join(parts), need
+
+
+def gap_parts(link: dict | None, x: float, w: float, y0: float, col: str, label_w: float,
+              gh: float | None = None) -> tuple[list[str], float]:
+    """Arrows and their labels between two boxes of one chart; returns (parts, gap height).
+    Pass gh to draw at a set height, so the arrows in one row share a length."""
+    if not link:
+        return [], gh or 18.0
+    kinds = [k for k in ARROW_KINDS if link.get(k)]
+    slots = [x + w * ((0.2, 0.6)[i] if len(kinds) > 1 else 0.4) for i in range(len(kinds))]
+    labelled = [(k, sx, wrap(link[k], label_w, 10)) for k, sx in zip(kinds, slots)]
+    gh = gh or max(26.0, max(len(lines) * 11.5 for _, _, lines in labelled) + 12)
+    parts = []
+    for k, sx, lines in labelled:
+        parts.append(arrow(k, sx, y0 + 2, y0 + gh - 2, col))
+        ty = y0 + gh / 2 - (len(lines) - 1) * 5.75 + 3.5
+        for j, ln in enumerate(lines):
+            parts.append(tx(sx + 8, ty + j * 11.5, ln, 10, GREY))
+    return parts, gh
+
+
+def render_orgchart(d: dict, narrow: bool) -> str:
+    w = W_NARROW if narrow else W_WIDE
+    sub = (d.get("image_subtitle_narrow") if narrow else None) or d.get("image_subtitle", "")
+    parts, y = header(d, w, sub)
+    tiers, charts = d["tiers"], d["charts"]
+    used = [k for k in ARROW_KINDS if any(l.get(k) for ch in charts for l in ch.get("links") or [])]
+    legend, y = arrow_legend(used, PAD, y + 2, w - 2 * PAD)
+    parts.append(legend)
+    y += 4
+    if narrow:
+        bw = w - 2 * PAD
+        for ch in charts:
+            col = color(ch.get("color"))
+            parts.append(col_head(ch, PAD, y, bw, 30, 13, True))
+            y += 34
+            if ch.get("tag"):
+                for ln in wrap(ch["tag"], bw, 10.5):
+                    parts.append(tx(PAD + bw / 2, y + 8, ln, 10.5, GREY, None, "middle"))
+                    y += 13
+                y += 4
+            links = _links(ch)
+            for i, b in enumerate(ch["boxes"]):
+                svg, h = org_box(b, PAD + 20, y, bw - 40, col)
+                parts.append(svg)
+                y += h
+                if i < len(tiers) - 1:
+                    g, gh = gap_parts(links.get((tiers[i]["id"], tiers[i + 1]["id"])), PAD + 20, bw - 40, y, col,
+                                      (bw - 40) * 0.36)
+                    parts += g
+                    y += gh
+            y += 18
+    else:
+        label_w = 86
+        n = len(charts)
+        pw = (w - 2 * PAD - label_w) / n
+        bw = pw - 16
+        head_h = max(36.0, max(len(fit(c["name"], pw - 8, 12.5, True, max_lines=3, floor=9.5)[0]) * 15 + 12
+                               for c in charts))
+        for k, ch in enumerate(charts):
+            parts.append(col_head(ch, PAD + label_w + k * pw, y, pw, head_h, 12.5, False))
+        y += head_h + 4
+        if any(c.get("tag") for c in charts):
+            tag_lines = [wrap(c.get("tag", ""), pw - 12, 10.5) for c in charts]
+            for k, lines in enumerate(tag_lines):
+                for j, ln in enumerate(lines):
+                    parts.append(tx(PAD + label_w + k * pw + pw / 2, y + 10 + j * 12.5, ln, 10.5, GREY, None, "middle"))
+            y += max(len(l) for l in tag_lines) * 12.5 + 8
+        for i, t in enumerate(tiers):
+            h = max(org_box(ch["boxes"][i], 0, 0, bw, INK)[1] for ch in charts)
+            tl, ts = fit(t["label"], label_w - 8, 11, True, max_lines=3)
+            lh = ts * 1.18
+            ty = y + h / 2 - lh * (len(tl) - 1) / 2 + ts * 0.35
+            for j, ln in enumerate(tl):
+                parts.append(tx(PAD, ty + j * lh, ln, ts, GREY, "700"))
+            for k, ch in enumerate(charts):
+                parts.append(org_box(ch["boxes"][i], PAD + label_w + k * pw + 8, y, bw, color(ch.get("color")), h)[0])
+            y += h
+            if i < len(tiers) - 1:
+                args = [(_links(ch).get((t["id"], tiers[i + 1]["id"])), PAD + label_w + k * pw + 8, bw, y,
+                         color(ch.get("color")), bw * 0.4) for k, ch in enumerate(charts)]
+                gh = max(gap_parts(*a)[1] for a in args)
+                for a in args:
+                    parts += gap_parts(*a, gh=gh)[0]
+                y += gh
+    foot, y = footer(d, y + 12, w, 11)
+    return svg_open(d, w, y, narrow) + "".join(parts) + foot + "</svg>"
+
+
+def orgchart_desc(d: dict) -> str:
+    tiers = d["tiers"]
+    out = []
+    for ch in d["charts"]:
+        links = _links(ch)
+        bits = []
+        for i, b in enumerate(ch["boxes"]):
+            box = b["text"] + (f" ({b['sub']})" if b.get("sub") else "")
+            if b.get("loose"):
+                box += ", cooperative only"
+            bits.append(f"{tiers[i]['label']}: {box}")
+            if i < len(tiers) - 1:
+                link = links.get((tiers[i]["id"], tiers[i + 1]["id"])) or {}
+                for k in ARROW_KINDS:
+                    if link.get(k):
+                        arrow_word = {"down": "downward, authority", "up": "upward, elects or consents",
+                                      "loose": "cooperation only"}[k]
+                        bits.append(f"link {arrow_word}: {link[k]}")
+        out.append(f"{ch['name']}. " + "; ".join(bits) + ".")
+    return " ".join(out)
+
+
+def orgchart_table(d: dict) -> str:
+    charts, tiers = d["charts"], d["tiers"]
+    head = (f'<th scope="col">{esc(d.get("table_view_label") or "Level")}</th>'
+            + "".join(f'<th scope="col">{esc(c["name"])}</th>' for c in charts))
+    rows = []
+    for i, t in enumerate(tiers):
+        cells = []
+        for c in charts:
+            b = c["boxes"][i]
+            text = b["text"] + (f": {b['sub']}" if b.get("sub") else "")
+            if b.get("loose"):
+                text += " (cooperation, no authority)"
+            cells.append(f'<td data-label="{esc(c["name"])}">{esc(text)}</td>')
+        rows.append(f'<tr><th scope="row">{esc(t["label"])}</th>{"".join(cells)}</tr>')
+    links_cells = []
+    for c in charts:
+        bits = []
+        for l in c.get("links") or []:
+            for k in ARROW_KINDS:
+                if l.get(k):
+                    bits.append(l[k])
+        links_cells.append(f'<td data-label="{esc(c["name"])}">{esc("; ".join(bits))}</td>')
+    rows.append(f'<tr><th scope="row">Lines of authority</th>{"".join(links_cells)}</tr>')
+    return _table(d, head, rows)
+
+
+def event_card(ev: dict, x: float, y: float, w: float, h: float | None = None, short: bool = False,
+               size: float = 11) -> tuple[str, float]:
+    col = color(ev.get("color"))
+    name = ev.get("short") if short and ev.get("short") else ev["name"]
+    name_lines = wrap(name, w - 18, 12.5, True)
+    who = wrap(ev["who"], w - 18, 10.5) if ev.get("who") else []
+    body = wrap(ev.get("short_text") if short and ev.get("short_text") else ev["text"], w - 18, size)
+    tag = outside_label(ev)
+    need = 10 + 13 + len(name_lines) * 15 + (13 if tag else 0) + len(who) * 13 + 3 + len(body) * size * 1.25 + 6
+    hh = h or need
+    dash = ' stroke-dasharray="4 3"' if ev.get("outside") else ""
+    parts = [f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{hh:.1f}" rx="6" fill="#fff" '
+             f'stroke="{col if ev.get("outside") else GRID}" stroke-width="1.2"{dash}/>',
+             f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="4" rx="2" fill="{col}"/>']
+    ty = y + 19
+    parts.append(tx(x + 9, ty, ev["date"], 11, col, "700"))
+    ty += 15
+    for ln in name_lines:
+        parts.append(tx(x + 9, ty, ln, 12.5, INK, "700"))
+        ty += 15
+    if tag:
+        parts.append(tx(x + 9, ty - 1, tag, 10.5, GREY, "600"))
+        ty += 13
+    for ln in who:
+        parts.append(tx(x + 9, ty, ln, 10.5, GREY))
+        ty += 13
+    ty += 3
+    for ln in body:
+        parts.append(tx(x + 9, ty, ln, size, INK))
+        ty += size * 1.25
+    return "".join(parts), need
+
+
+def render_chronology(d: dict, narrow: bool) -> str:
+    w = W_NARROW if narrow else W_WIDE
+    sub = (d.get("image_subtitle_narrow") if narrow else None) or d.get("image_subtitle", "")
+    parts, y = header(d, w, sub)
+    events = d["events"]
+    if narrow:
+        lx = PAD + 8
+        cx0, cw = PAD + 24, w - 2 * PAD - 24
+        y0 = y
+        cards = []
+        for ev in events:
+            svg, h = event_card(ev, cx0, y, cw, short=True)
+            cards.append((ev, y, svg))
+            y += h + 10
+        parts.append(f'<line x1="{lx:.1f}" x2="{lx:.1f}" y1="{y0 + 10:.1f}" y2="{y - 20:.1f}" stroke="{GRID}" '
+                     f'stroke-width="3"/>')
+        for ev, cy, svg in cards:
+            col = color(ev.get("color"))
+            parts.append(f'<line x1="{lx:.1f}" x2="{cx0:.1f}" y1="{cy + 19:.1f}" y2="{cy + 19:.1f}" stroke="{col}"/>')
+            parts.append(_dot(lx, cy + 19, col, ev.get("outside")))
+            parts.append(svg)
+    else:
+        n = len(events)
+        s = (w - 2 * PAD) / n
+        gap = 12.0
+        above = [i for i in range(n) if i % 2 == 0]
+        below = [i for i in range(n) if i % 2 == 1]
+        # Cards alternate above and below the line; each row is spread evenly across the width
+        # (a shorter lower row is offset by half a card), so every dot sits under its own card.
+        cw = (w - 2 * PAD - (len(above) - 1) * gap) / len(above)
+        offset = {i: k * (cw + gap) for k, i in enumerate(above)}
+        shift = (cw + gap) / 2 if len(below) < len(above) else 0.0
+        offset.update({i: shift + k * (cw + gap) for k, i in enumerate(below)})
+        heights = [event_card(ev, 0, 0, cw)[1] for ev in events]
+        ha = max(heights[i] for i in above)
+        hb = max((heights[i] for i in below), default=0)
+        line_y = y + ha + 20
+        parts.append(f'<line x1="{PAD:.1f}" x2="{w - PAD:.1f}" y1="{line_y:.1f}" y2="{line_y:.1f}" stroke="{GRID}" '
+                     f'stroke-width="3"/>')
+        parts.append(f'<path d="M{w - PAD:.1f},{line_y - 6:.1f} L{w - PAD + 8:.1f},{line_y:.1f} '
+                     f'L{w - PAD:.1f},{line_y + 6:.1f} Z" fill="{GRID}"/>')
+        for i, ev in enumerate(events):
+            col = color(ev.get("color"))
+            cx = PAD + s * (i + 0.5)
+            x = PAD + offset[i]
+            if i in above:
+                cy = line_y - 20 - ha
+                parts.append(f'<line x1="{cx:.1f}" x2="{cx:.1f}" y1="{cy + ha:.1f}" y2="{line_y:.1f}" stroke="{col}"/>')
+                parts.append(event_card(ev, x, cy, cw, ha)[0])
+            else:
+                cy = line_y + 20
+                parts.append(f'<line x1="{cx:.1f}" x2="{cx:.1f}" y1="{line_y:.1f}" y2="{cy:.1f}" stroke="{col}"/>')
+                parts.append(event_card(ev, x, cy, cw, hb)[0])
+            parts.append(_dot(cx, line_y, col, ev.get("outside")))
+        y = line_y + 20 + hb
+    foot, y = footer(d, y + 12, w, 11)
+    return svg_open(d, w, y, narrow) + "".join(parts) + foot + "</svg>"
+
+
+def _dot(cx: float, cy: float, col: str, outside: bool | None) -> str:
+    if outside:
+        return (f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="6.5" fill="#fff" stroke="{col}" stroke-width="1.8" '
+                f'stroke-dasharray="3 2"/>')
+    return f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="6.5" fill="{col}" stroke="#fff" stroke-width="2"/>'
+
+
+def chronology_desc(d: dict) -> str:
+    out = ["In date order."]
+    for n, ev in enumerate(d["events"], 1):
+        tag = f" ({outside_label(ev)})" if ev.get("outside") else ""
+        who = f", {ev['who']}" if ev.get("who") else ""
+        out.append(f"{n}. {ev['date']}: {ev['name']}{tag}{who}. {ev['text']}")
+    return " ".join(out)
+
+
+def chronology_table(d: dict) -> str:
+    head = ('<th scope="col">When</th>'
+            f'<th scope="col">{esc(d.get("table_view_label") or "View")}</th>'
+            '<th scope="col">Who and where</th><th scope="col">In short</th>')
+    rows = []
+    for ev in d["events"]:
+        tag = f" ({esc(outside_label(ev))})" if ev.get("outside") else ""
+        rows.append(f'<tr><th scope="row">{esc(ev["date"])}</th>'
+                    f'<td data-label="{esc(d.get("table_view_label") or "View")}">{esc(ev["name"])}{tag}</td>'
+                    f'<td data-label="Who and where">{esc(ev.get("who", ""))}</td>'
+                    f'<td data-label="In short">{esc(ev["text"])}</td></tr>')
+    return _table(d, head, rows)
+
+
 # ---------------------------------------------------------------- HTML
 
 STYLE = (
@@ -954,6 +1365,10 @@ def _table(d: dict, head: str, rows: list[str]) -> str:
 
 
 def table_html(d: dict) -> str:
+    if vtype(d) == "orgchart":
+        return orgchart_table(d)
+    if vtype(d) == "chronology":
+        return chronology_table(d)
     if vtype(d) == "spectrum":
         where = d["axis"].get("label") or "Where it sits"
         if d.get("axis_y"):
