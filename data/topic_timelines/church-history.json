@@ -1,0 +1,416 @@
+{
+  "id": "family-tree",
+  "slug": "church-history",
+  "type": "tree",
+  "label": "The Protestant Family Tree",
+  "title": "Where today's evangelical churches came from",
+  "intro": "Four streams came out of the sixteenth-century Reformation. Baptists, Methodists, the Holiness movement and Pentecostals grew out of them later. Each line ends with one example body today; there are many others.",
+  "image_title": "The Reformation family tree",
+  "image_subtitle": "Four sixteenth-century streams and the movements that grew out of them, with one example body today.",
+  "image_subtitle_narrow": "Four Reformation streams and the movements that grew out of them.",
+  "caption": "Lutheran, Reformed, Anglican and Anabaptist churches all date to the 1500s. Baptists came out of English Separatism in 1609, Methodism out of the Church of England in the 1700s, the Holiness movement out of Methodism, and Pentecostalism out of the Holiness movement.",
+  "image_source": "Sources: each body's own history page; Christian History Institute; Christianity Today; Baptist News Global",
+  "span": [
+    1500,
+    2030
+  ],
+  "families": [
+    {
+      "id": "lutheran",
+      "name": "Lutheran",
+      "color": "green",
+      "nodes": [
+        {
+          "year": 1517,
+          "label": "Luther's 95 Theses",
+          "short": "Luther's 95 Theses",
+          "source": "theses"
+        },
+        {
+          "year": 1530,
+          "label": "Augsburg Confession",
+          "source": "augsburg",
+          "table_only": true
+        },
+        {
+          "year": 1847,
+          "label": "Lutheran Church Missouri Synod founded",
+          "short": "Missouri Synod",
+          "source": "lcms"
+        }
+      ],
+      "proponent": {
+        "name": "Lutheran Church Missouri Synod",
+        "image_name": "LCMS",
+        "work": "The Lutheran Witness on the synod's founding",
+        "source": "lcms"
+      }
+    },
+    {
+      "id": "reformed",
+      "name": "Reformed",
+      "color": "blue",
+      "nodes": [
+        {
+          "year": 1519,
+          "label": "Zwingli begins a New Testament sermon series in Zurich",
+          "short": "Zwingli in Zurich",
+          "source": "zwingli"
+        },
+        {
+          "year": 1647,
+          "label": "Westminster Confession approved in Scotland",
+          "short": "Westminster Confession",
+          "source": "westminster"
+        },
+        {
+          "year": 1973,
+          "label": "Presbyterian Church in America organized",
+          "short": "PCA",
+          "source": "pca"
+        }
+      ],
+      "proponent": {
+        "name": "Presbyterian Church in America",
+        "image_name": "PCA",
+        "work": "History",
+        "source": "pca"
+      }
+    },
+    {
+      "id": "anabaptist",
+      "name": "Anabaptist",
+      "color": "red",
+      "nodes": [
+        {
+          "year": 1525,
+          "label": "First adult baptisms near Zurich",
+          "short": "Adult baptisms, Zurich",
+          "source": "anabaptists"
+        },
+        {
+          "year": 1527,
+          "label": "Schleitheim Confession",
+          "source": "anabaptists",
+          "table_only": true
+        },
+        {
+          "year": 1860,
+          "label": "Mennonite Brethren Church founded",
+          "short": "Mennonite Brethren",
+          "source": "usmb"
+        }
+      ],
+      "proponent": {
+        "name": "U.S. Conference of Mennonite Brethren Churches",
+        "image_name": "USMB",
+        "work": "Our Story",
+        "source": "usmb"
+      }
+    },
+    {
+      "id": "baptist",
+      "name": "Baptist",
+      "color": "gold",
+      "parent": "anglican",
+      "influence": [
+        {
+          "from": "anabaptist",
+          "text": "Some Anabaptist influence; historians call its degree uncertain"
+        }
+      ],
+      "nodes": [
+        {
+          "year": 1609,
+          "label": "John Smyth's church of baptized believers, Amsterdam",
+          "short": "Smyth's church, Amsterdam",
+          "source": "baptists"
+        },
+        {
+          "year": 1845,
+          "label": "Southern Baptist Convention formed",
+          "short": "Southern Baptist Convention",
+          "source": "sbc"
+        }
+      ],
+      "proponent": {
+        "name": "Baptist News Global",
+        "image_name": "Baptist News Global",
+        "work": "Historians trace beginning of Baptist movement back 400 years",
+        "source": "baptists"
+      },
+      "parent_text": "Grew out of English Separatism: John Smyth was a former Anglican priest"
+    },
+    {
+      "id": "anglican",
+      "name": "Anglican",
+      "color": "brown",
+      "nodes": [
+        {
+          "year": 1534,
+          "label": "Act of Supremacy",
+          "short": "Act of Supremacy",
+          "source": "supremacy"
+        },
+        {
+          "year": 1571,
+          "label": "Thirty-nine Articles",
+          "short": "Thirty-nine Articles",
+          "source": "acna"
+        },
+        {
+          "year": 2009,
+          "label": "Anglican Church in North America founded",
+          "short": "ACNA",
+          "source": "acna"
+        }
+      ],
+      "proponent": {
+        "name": "Anglican Church in North America",
+        "image_name": "ACNA",
+        "work": "About",
+        "source": "acna"
+      }
+    },
+    {
+      "id": "methodist",
+      "name": "Methodist",
+      "color": "sage",
+      "parent": "anglican",
+      "parent_text": "Grew out of the Church of England: John Wesley was an Anglican priest",
+      "nodes": [
+        {
+          "year": 1738,
+          "label": "John Wesley's Aldersgate experience",
+          "short": "Wesley at Aldersgate",
+          "source": "fmc"
+        },
+        {
+          "year": 1784,
+          "label": "Methodist Episcopal Church formed",
+          "source": "fmc",
+          "table_only": true
+        },
+        {
+          "year": 1860,
+          "label": "Free Methodist Church founded",
+          "short": "Free Methodist",
+          "source": "fmc"
+        }
+      ],
+      "proponent": {
+        "name": "Free Methodist Church USA",
+        "image_name": "Free Methodist Church",
+        "work": "History of the Free Methodist Church",
+        "source": "fmc"
+      }
+    },
+    {
+      "id": "holiness",
+      "name": "Holiness",
+      "color": "rose",
+      "parent": "methodist",
+      "parent_text": "Grew out of Methodism's teaching on entire sanctification",
+      "nodes": [
+        {
+          "year": 1837,
+          "label": "Phoebe Palmer's experience of entire sanctification",
+          "short": "Phoebe Palmer",
+          "source": "holiness"
+        },
+        {
+          "year": 1908,
+          "label": "Church of the Nazarene united at Pilot Point, Texas",
+          "short": "Church of the Nazarene",
+          "source": "nazarene"
+        }
+      ],
+      "proponent": {
+        "name": "Church of the Nazarene",
+        "image_name": "Church of the Nazarene",
+        "work": "Our History",
+        "source": "nazarene"
+      }
+    },
+    {
+      "id": "pentecostal",
+      "name": "Pentecostal",
+      "color": "grey",
+      "parent": "holiness",
+      "parent_text": "Grew out of the Holiness movement: William Seymour was a Holiness preacher",
+      "nodes": [
+        {
+          "year": 1906,
+          "label": "Azusa Street revival, Los Angeles",
+          "short": "Azusa Street",
+          "source": "ag"
+        },
+        {
+          "year": 1914,
+          "label": "Assemblies of God organized",
+          "short": "Assemblies of God",
+          "source": "ag"
+        }
+      ],
+      "proponent": {
+        "name": "Assemblies of God",
+        "image_name": "Assemblies of God",
+        "work": "History",
+        "source": "ag"
+      }
+    }
+  ],
+  "differ": [
+    "Lutheran, Reformed, Anglican and Anabaptist churches all began in the Reformation of the 1500s.",
+    "Baptists came out of English Separatism; how much they owe the Anabaptists is still debated, so that link is dashed.",
+    "Methodism began as a renewal movement inside the Church of England before forming its own churches.",
+    "The Holiness movement grew out of Methodism, and Pentecostalism grew out of the Holiness movement."
+  ],
+  "voices_label": "Sources for each stream",
+  "note": "Dates are each body's own or a church history publisher's. The examples are one of many in each family.",
+  "sources": [
+    {
+      "id": "theses",
+      "publisher": "BookOfConcord.org",
+      "title": "Luther's 95 Theses (1517)",
+      "url": "https://bookofconcord.org/other-resources/sources-and-context/luthers-95-theses/",
+      "fetched": "2026-11-14",
+      "quote": "October 31, 1517, the day before All Saints Day"
+    },
+    {
+      "id": "augsburg",
+      "publisher": "Lutheran Church Missouri Synod",
+      "title": "Lectionary Summary: Augsburg Confession Presentation",
+      "url": "https://resources.lcms.org/worship-planning/lectionary-summary-for-augsburg-confession-commemoration/",
+      "fetched": "2026-11-14",
+      "quote": "On June 25, 1530, the confession of faith was presented"
+    },
+    {
+      "id": "lcms",
+      "publisher": "The Lutheran Witness",
+      "title": "Die Deutsche Evangelisch-Lutherische Synode von Missouri, Ohio und andern Staaten",
+      "year": 2022,
+      "url": "https://witness.lcms.org/2022/die-deutsche-evangelisch-lutherische-synode-von-missouri-ohio-und-andern-staaten/",
+      "fetched": "2026-11-14",
+      "quote": "On April 26, 1847, representatives from 14 Lutheran congregations gathered in Chicago"
+    },
+    {
+      "id": "zwingli",
+      "publisher": "Christianity Today",
+      "title": "Ulrich Zwingli",
+      "url": "https://www.christianitytoday.com/2008/08/ulrich-zwingli/",
+      "fetched": "2026-11-14",
+      "quote": "In 1519 he began preaching from the New Testament regularly.",
+      "notes": "Zurich: Christian History Institute, Zwingli timeline (https://christianhistoryinstitute.org/magazine/article/zwingli-timeline): \"1518 Appointed Leutpriester at Zurich Grossmünster 1519 Begins New Testament sermon series\"."
+    },
+    {
+      "id": "westminster",
+      "publisher": "Christian History Institute",
+      "title": "Daily quote, August 27",
+      "url": "https://christianhistoryinstitute.org/dailyquote/8/27",
+      "fetched": "2026-11-14",
+      "quote": "approved the Confession on this day, 27 August, 1647",
+      "notes": "The PCA history page speaks of standards significant \"since 1645\"; the 1647 Scottish approval is the date drawn."
+    },
+    {
+      "id": "pca",
+      "publisher": "Presbyterian Church in America",
+      "title": "History",
+      "url": "https://pcanet.org/history/",
+      "fetched": "2026-11-14",
+      "quote": "Organized at a constitutional assembly in December 1973"
+    },
+    {
+      "id": "anabaptists",
+      "publisher": "Christian History Institute",
+      "title": "People of Conscience",
+      "url": "https://christianhistoryinstitute.org/magazine/article/people-of-conscience",
+      "fetched": "2026-11-14",
+      "quote": "On January 21, 1525",
+      "notes": "Same page: the baptisms took place \"in a home near Zurich\"; \"In February 1527, several Anabaptists met at Schleitheim\"."
+    },
+    {
+      "id": "usmb",
+      "publisher": "U.S. Conference of Mennonite Brethren Churches",
+      "title": "Our Story",
+      "url": "https://usmb.org/history/",
+      "fetched": "2026-11-14",
+      "quote": "January 6, 1860",
+      "notes": "\"On Epiphany, January 6, 1860, a group of brethren met in a home\", the charter meeting of the Mennonite Brethren Church; the heritage \"can be traced back to the heart of the 16th century Reformation.\""
+    },
+    {
+      "id": "baptists",
+      "publisher": "Baptist News Global",
+      "title": "Historians trace beginning of Baptist movement back 400 years",
+      "year": 2009,
+      "url": "https://baptistnews.com/article/historians-trace-beginning-of-baptist-movement-back-400-years/",
+      "fetched": "2026-11-14",
+      "quote": "generally considered the first Baptist church",
+      "notes": "January 9, 2009 (ABP). Live site returns 403 to scripts; read from the Wayback copy of 2025-12-06. Smyth, \"a former Anglican priest\", pastored \"a Puritan Separatist congregation\"; the exact degree of Anabaptist influence \"remains uncertain\"."
+    },
+    {
+      "id": "sbc",
+      "publisher": "Southern Baptist Historical Library and Archives",
+      "title": "SBC Annuals",
+      "url": "https://sbhla.org/digital-resources/sbc-annuals/",
+      "fetched": "2026-11-14",
+      "quote": "In May of 1845, Southern Baptists meeting in Augusta, Georgia, formed the Southern Baptist Convention"
+    },
+    {
+      "id": "supremacy",
+      "publisher": "Christian History Institute",
+      "title": "Act of Supremacy",
+      "url": "https://christianhistoryinstitute.org/magazine/article/act-of-supremacy",
+      "fetched": "2026-11-14",
+      "quote": "In 1534 came the Act of Supremacy"
+    },
+    {
+      "id": "acna",
+      "publisher": "Anglican Church in North America",
+      "title": "About",
+      "url": "https://anglicanchurch.net/about/",
+      "fetched": "2026-11-14",
+      "quote": "We receive the Thirty-Nine Articles of Religion of 1571",
+      "notes": "Same page: the Constitution and Canons adopted by the \"Inaugural Assembly (2009)\"."
+    },
+    {
+      "id": "fmc",
+      "publisher": "Free Methodist Church USA",
+      "title": "History of the Free Methodist Church",
+      "url": "https://fmcusa.org/history",
+      "fetched": "2026-11-14",
+      "quote": "The Free Methodist Church was birthed in 1860",
+      "notes": "Also: \"John Wesley was ordained as an Anglican priest in the Church of England.\" \"1738 Aldersgate Experience\". \"1784 The Methodist Episcopal Church is formed\"."
+    },
+    {
+      "id": "holiness",
+      "publisher": "Christian History Institute",
+      "title": "Holiness movement timeline",
+      "url": "https://christianhistoryinstitute.org/magazine/article/holiness-movement-timeline",
+      "fetched": "2026-11-14",
+      "quote": "1837 Phoebe Worrall Palmer experiences entire sanctification",
+      "notes": "Also \"1843 Orange Scott organizes the Wesleyan Methodist Connection\". The movement also drew Presbyterian and Congregationalist teachers at Oberlin (CHI, Cleansing Wave); Methodism is its main parent."
+    },
+    {
+      "id": "nazarene",
+      "publisher": "Church of the Nazarene",
+      "title": "Our History",
+      "url": "https://nazarene.org/our-history/",
+      "fetched": "2026-11-14",
+      "quote": "The Church of the Nazarene traces its anniversary date to 1908.",
+      "notes": "Also: \"The spiritual vision of early Nazarenes was derived from the doctrinal core of John Wesley's preaching.\" The Second General Assembly met at Pilot Point, Texas, in October 1908."
+    },
+    {
+      "id": "ag",
+      "publisher": "Assemblies of God",
+      "title": "History",
+      "url": "https://ag.org/About/About-the-AG/History",
+      "fetched": "2026-11-14",
+      "quote": "In the summer of 1906, revival erupted",
+      "notes": "ag.org returns 403 to scripts; read from the Wayback copy of 2026-10-19 (rechecked 2026-11-14). Seymour was a \"Holiness preacher\"; the founders \"met in Hot Springs, Arkansas on April 2-12, 1914\"."
+    }
+  ],
+  "place": {
+    "before": "<section class=\"cc-synthesis\""
+  }
+}

@@ -36,7 +36,8 @@ File schema:
   "method": "...", "method_source": "<source id>",
   "sources": [{"id": "...", "publisher": "...", "title": "...", "year": 2013, "url": "https://...",
                "fetched": "YYYY-MM-DD", "quote": "words found verbatim on the page", "notes": "..."}],
-  "place": {"before": "literal string on the page"}   # first insert only
+  "place": {"before": "literal string on the page"},  # first insert only
+  "also": [{"slug": "<other slug>", "place": {...}}]   # optional: the same visual on more pages
 }
 Other types ("type", default "timeline"); both share every key above except
 stations / common / lanes:
@@ -62,6 +63,9 @@ stations / common / lanes:
                             "short", "who", "text", "short_text", "color", "outside", "proponent"}]
               3 to 8 events in date order: cards alternate above and below one line
               (one column with a rail on phones).
+  "tree":     "span": [1500, 2030], "families": [{"id", "name", "color", "parent", "parent_text",
+              "influence", "nodes": [{"year", "label", "short", "source", "table_only"}], "proponent"}]
+              A family tree of movements on a year axis; schema and rules in scripts/topic_tree.py.
   "outside": a view beyond evangelical bounds, drawn dashed and labelled "Shown for contrast".
   Optional on any type: "voices_label", "note" (footer sentence), "image_source" (footer line on the
   image), "table_view_label", "png_name" (share image file name, default the id).
@@ -99,6 +103,7 @@ sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 from build_topic_charts import COLORS, put  # noqa: E402
 from build_topic_top import VoiceIndex, ensure_assets  # noqa: E402
+from topic_tree import describe_tree, render_tree, table_tree, validate_tree  # noqa: E402
 
 DATA_DIR = REPO_ROOT / "data" / "topic_timelines"
 TOPICS_DIR = REPO_ROOT / "docs" / "topics"
@@ -112,9 +117,10 @@ BRAND = "christiancurator.com"
 W_WIDE, W_NARROW, PAD = 740, 360, 14
 MIN_SHARE_H = 630
 KINDS = {"period", "event", "shared"}
-TYPES = ("timeline", "spectrum", "matrix", "orgchart", "chronology")
+TYPES = ("timeline", "spectrum", "matrix", "orgchart", "chronology", "tree")
 TYPE_KEYS = {"timeline": ("stations", "common", "lanes"), "spectrum": ("axis", "positions"),
-             "matrix": ("columns", "rows"), "orgchart": ("tiers", "charts"), "chronology": ("events",)}
+             "matrix": ("columns", "rows"), "orgchart": ("tiers", "charts"), "chronology": ("events",),
+             "tree": ("span", "families")}
 MARKS = ("yes", "partly", "no")
 MARK_LABELS = {"yes": "Yes", "partly": "In part", "no": "No"}
 OUTSIDE_LABEL = "Shown for contrast"
@@ -145,7 +151,7 @@ def vtype(d: dict) -> str:
 def views(d: dict) -> list[dict]:
     """The views a visual compares: timeline lanes, spectrum positions or matrix columns."""
     return d.get({"timeline": "lanes", "spectrum": "positions", "matrix": "columns", "orgchart": "charts",
-                  "chronology": "events"}.get(vtype(d), "lanes")) or []
+                  "chronology": "events", "tree": "families"}.get(vtype(d), "lanes")) or []
 
 
 def outside_label(view: dict) -> str:
@@ -254,6 +260,8 @@ def validate(d: dict, page_html: str | None = None) -> list[str]:
         errs += validate_orgchart(d)
     elif kind == "chronology":
         errs += validate_chronology(d)
+    elif kind == "tree":
+        errs += validate_tree(d)
     else:
         errs += validate_matrix(d)
     for view in views(d):
@@ -479,6 +487,8 @@ def render_wide(d: dict) -> str:
         return render_orgchart(d, False)
     if vtype(d) == "chronology":
         return render_chronology(d, False)
+    if vtype(d) == "tree":
+        return render_tree(d, False)
     w = W_WIDE
     parts, y = header(d, w, d.get("image_subtitle", ""))
     label_w = 136
@@ -532,6 +542,8 @@ def render_narrow(d: dict) -> str:
         return render_orgchart(d, True)
     if vtype(d) == "chronology":
         return render_chronology(d, True)
+    if vtype(d) == "tree":
+        return render_tree(d, True)
     w = W_NARROW
     parts, y = header(d, w, d.get("image_subtitle_narrow") or d.get("image_subtitle", ""))
     label_w = 70
@@ -595,6 +607,8 @@ def describe(d: dict) -> str:
         return orgchart_desc(d)
     if kind == "chronology":
         return chronology_desc(d)
+    if kind == "tree":
+        return describe_tree(d)
     if kind == "spectrum":
         axis, axis_y = d["axis"], d.get("axis_y")
         out = [f"{axis.get('label') or 'Axis'}: from {axis['left']} to {axis['right']}."]
@@ -1382,6 +1396,8 @@ def table_html(d: dict) -> str:
                         f'<td data-label="{esc(where)}">{esc(placement(d, p))}</td>'
                         f'<td data-label="In short">{esc(p["text"])}</td></tr>')
         return _table(d, head, rows)
+    if vtype(d) == "tree":
+        return _table(d, *table_tree(d))
     if vtype(d) == "matrix":
         cols = d["columns"]
         head = (f'<th scope="col">{esc(d.get("table_view_label") or "Question")}</th>'
@@ -1519,6 +1535,20 @@ def write_png(d: dict, out: Path, width: int = 1200) -> Path:
 
 # ---------------------------------------------------------------- main
 
+def targets(paths: list[Path] | None = None):
+    """(path, slug, data, primary) for every page a data file renders on.
+
+    "also": [{"slug": "...", "place": {...}}] repeats one visual on more pages;
+    the share image is written once, from the primary slug.
+    """
+    for path in paths if paths is not None else data_files():
+        d = load(path)
+        slug = d.get("slug") or path.stem
+        yield path, slug, d, True
+        for extra in d.get("also") or []:
+            yield path, extra["slug"], {**d, "slug": extra["slug"], "place": extra.get("place") or d.get("place")}, False
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--slug", action="append")
@@ -1528,9 +1558,7 @@ def main(argv: list[str] | None = None) -> int:
     args = ap.parse_args(argv)
     errors = 0
     voices = VoiceIndex()
-    for path in data_files():
-        d = load(path)
-        slug = d.get("slug") or path.stem
+    for path, slug, d, primary in targets():
         if args.slug and slug not in args.slug:
             continue
         page = TOPICS_DIR / slug / "index.html"
@@ -1554,7 +1582,7 @@ def main(argv: list[str] | None = None) -> int:
         if out != html and not args.dry_run:
             page.write_text(out, encoding="utf-8")
         print(f"{slug}: timeline {d['id']}{' (changed)' if out != html else ''}")
-        if args.png and not args.dry_run:
+        if args.png and primary and not args.dry_run:
             png = write_png(d, PNG_DIR / f"{slug}-{d.get('png_name') or d['id']}.png")
             print(f"  wrote {png.relative_to(REPO_ROOT)}")
     if errors:

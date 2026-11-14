@@ -1,0 +1,149 @@
+{
+  "id": "worship-spectrum",
+  "slug": "worship-and-liturgy",
+  "type": "spectrum",
+  "label": "Regulative to Normative",
+  "title": "How much may a church add to its worship?",
+  "intro": "Protestant churches answer one question differently: does Scripture list everything that belongs in worship, or does it only rule things out? Four answers, three from confessions and one from John Frame, sit on one line below.",
+  "image_title": "Worship: from the regulative to the normative principle",
+  "image_subtitle": "Left: only what Scripture commands. Right: whatever Scripture does not forbid.",
+  "image_subtitle_narrow": "From only what Scripture commands to whatever it does not forbid.",
+  "caption": "Every view here says worship must be governed by Scripture. They differ on whether Scripture's silence forbids a practice or leaves it to the church, and so on psalms or hymns, instruments, and a set liturgy.",
+  "image_source": "Sources: RPCNA Testimony; Westminster Confession 21; John Frame; Thirty-nine Articles XX and XXXIV",
+  "axis": {
+    "left": "Only what Scripture commands",
+    "right": "Whatever Scripture does not forbid",
+    "label": "What may be added to worship"
+  },
+  "bands": [
+    {
+      "from": 0,
+      "to": 55,
+      "label": "Regulative principle"
+    },
+    {
+      "from": 62,
+      "to": 100,
+      "label": "Normative principle"
+    }
+  ],
+  "positions": [
+    {
+      "id": "psalmody",
+      "name": "Exclusive psalmody",
+      "short": "Psalms only",
+      "color": "green",
+      "at": 6,
+      "text": "Sing only the Psalms, without instruments, which are not part of the New Testament pattern of worship.",
+      "short_text": "Psalms only, no instruments",
+      "placement": "Reformed Presbyterian Church of North America",
+      "proponent": {
+        "name": "Reformed Presbyterian Church of North America",
+        "image_name": "RPCNA",
+        "work": "Testimony, chapter 21",
+        "source": "rpcna"
+      }
+    },
+    {
+      "id": "regulative",
+      "name": "Regulative principle",
+      "short": "Regulative",
+      "color": "blue",
+      "at": 26,
+      "text": "God may not be worshiped in any way not prescribed in Scripture: reading and preaching the Word, prayer, singing of psalms, and the sacraments.",
+      "short_text": "Only what Scripture prescribes",
+      "placement": "Westminster Confession 21; London Baptist Confession 22",
+      "proponent": {
+        "name": "Westminster Confession of Faith",
+        "image_name": "Westminster Confession",
+        "work": "Chapter 21, Of Religious Worship",
+        "source": "wcf"
+      }
+    },
+    {
+      "id": "broad",
+      "name": "A broader regulative principle",
+      "short": "Broader regulative",
+      "color": "brown",
+      "at": 46,
+      "text": "Scripture sets what worship contains; when, where, how many songs and what words are left to godly reasoning.",
+      "short_text": "Scripture sets content; forms are free",
+      "placement": "John Frame",
+      "proponent": {
+        "name": "John Frame",
+        "slug": "john-frame",
+        "work": "A Fresh Look at the Regulative Principle: A Broader View",
+        "source": "frame"
+      }
+    },
+    {
+      "id": "normative",
+      "name": "Normative principle",
+      "short": "Normative",
+      "color": "gold",
+      "at": 82,
+      "text": "The church may decree rites and ceremonies and change them, so long as nothing is ordained against God's Word.",
+      "short_text": "Rites allowed unless forbidden",
+      "placement": "Anglican Thirty-nine Articles; Lutheran Augsburg Confession XV",
+      "proponent": {
+        "name": "Thirty-nine Articles of Religion",
+        "image_name": "Thirty-nine Articles",
+        "work": "Articles XX and XXXIV",
+        "source": "articles"
+      }
+    }
+  ],
+  "common_text": "All four say Scripture governs worship. Even the broadest, the Thirty-nine Articles, grants the church power over rites only \"so that nothing be ordained against God's Word\".",
+  "common_source": "articles",
+  "differ": [
+    "Silence in Scripture: a prohibition for the regulative views, a freedom for the normative view.",
+    "Songs: the RPCNA sings only the Psalms; Frame and the normative churches also sing hymns; Westminster's text names psalms, and its churches differ on hymns.",
+    "Instruments: excluded by exclusive psalmody, used by the others.",
+    "Holy days and set rites: kept under the normative principle (Augsburg XV names holy days and festivals), and limited to prescribed elements by the stricter regulative views."
+  ],
+  "note": "Contemporary free-church worship is often described as normative, but we found no confessional statement of it to cite. No view is presented here as the answer.",
+  "sources": [
+    {
+      "id": "rpcna",
+      "publisher": "Reformed Presbyterian Church of North America",
+      "title": "Constitution of the RPCNA: Testimony",
+      "url": "https://reformedpresbyterian.org/pdf/constitution.pdf",
+      "fetched": "2026-11-14",
+      "quote": "The Book of Psalms, consisting of inspired psalms, hymns and songs, is the divinely authorized manual of praise.",
+      "notes": "Testimony 21.5 and 21.6 (p. A-63): \"The use of other songs in worship is not authorized in the Scriptures.\" \"The Psalms are to be sung without the accompaniment of instruments, which are not part of the New Testament pattern of worship.\" Also https://reformedpresbyterian.org/convictions: \"we sing without the aid of musical instruments.\""
+    },
+    {
+      "id": "wcf",
+      "publisher": "Orthodox Presbyterian Church",
+      "title": "The Westminster Confession of Faith",
+      "year": 1647,
+      "url": "https://www.opc.org/wcf.html",
+      "fetched": "2026-11-14",
+      "quote": "or any other way not prescribed in the Holy Scripture",
+      "notes": "21.1. 21.5 lists the parts of ordinary worship: reading of the Scriptures, preaching and hearing of the Word, singing of psalms, the sacraments (prayer in 21.3). The London Baptist Confession of 1689, 22.1, has the same sentence (https://www.the1689confession.com/1689/chapter-22). Neither confession names hymns."
+    },
+    {
+      "id": "frame",
+      "publisher": "Frame-Poythress.org",
+      "title": "A Fresh Look at the Regulative Principle: A Broader View",
+      "year": 2012,
+      "url": "https://frame-poythress.org/a-fresh-look-at-the-regulative-principle-a-broader-view/",
+      "fetched": "2026-11-14",
+      "quote": "These decisions require the use of godly reasoning, guided by the general teachings of the Word",
+      "notes": "John M. Frame, posted June 4, 2012. Preceding sentence: \"Scripture does not tell us specifically when or where to meet for worship, or how many hymns to sing, or precisely what words to use in offering prayer.\" Also: \"But God never rules His people by giving them exhaustive lists of things they must do, and forbidding them to do anything else.\""
+    },
+    {
+      "id": "articles",
+      "publisher": "Anglican Church of Canada",
+      "title": "Articles of Religion",
+      "year": 1571,
+      "url": "https://www.anglican.ca/resources/articles-of-religion/",
+      "fetched": "2026-11-14",
+      "quote": "The Church hath power to decree Rites or Ceremonies and authority in Controversies of Faith",
+      "notes": "Article XX. Article XXXIV: traditions and ceremonies \"may be changed according to the diversities of countries times and men's manners so that nothing be ordained against God's Word\" (this page drops the 1662 commas). Lutheran parallel, Augsburg Confession XV (https://bookofconcord.org/augsburg-confession/of-ecclesiastical-usages/): \"Of Usages in the Church they teach that those ought to be observed which may be observed without sin, and which are profitable unto tranquillity and good order in the Church\"."
+    }
+  ],
+  "place": {
+    "before": "<section class=\"cc-synthesis\""
+  }
+}

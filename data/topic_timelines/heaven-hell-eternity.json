@@ -1,0 +1,198 @@
+{
+  "id": "views-of-hell",
+  "slug": "heaven-hell-eternity",
+  "type": "matrix",
+  "label": "Three Views Compared",
+  "title": "What happens to the unrepentant?",
+  "intro": "Two views sit inside evangelical bounds and differ over what final punishment is. A third, universalism, is shown for contrast because evangelical statements reject it.",
+  "image_title": "Three views of final judgment, compared",
+  "image_subtitle": "Universalism is shown for contrast; evangelical statements reject it.",
+  "image_subtitle_narrow": "Universalism is shown for contrast; evangelical statements reject it.",
+  "caption": "Eternal conscious torment and conditional immortality both teach a real, final judgment from which there is no return. They part over whether the lost go on existing under punishment or are finally destroyed. Universalism holds that God will at last save everyone.",
+  "image_source": "Sources: Denny Burk (TGC); Edward Fudge (JETS); Robin Parry; Evangelical Alliance UK, The Nature of Hell (2000)",
+  "columns": [
+    {
+      "id": "ect",
+      "name": "Eternal conscious torment",
+      "short": "Eternal torment",
+      "color": "green",
+      "proponent": {
+        "name": "Denny Burk",
+        "slug": "denny-burk",
+        "work": "Hell as Endless Punishment",
+        "source": "burk2020"
+      }
+    },
+    {
+      "id": "conditional",
+      "name": "Conditional immortality",
+      "short": "Conditional",
+      "color": "blue",
+      "proponent": {
+        "name": "Edward Fudge",
+        "slug": "edward-fudge",
+        "work": "The Final End of the Wicked",
+        "source": "fudge1984"
+      }
+    },
+    {
+      "id": "universalism",
+      "name": "Universalism",
+      "short": "Universalism",
+      "color": "grey",
+      "outside": true,
+      "outside_label": "Outside evangelical bounds",
+      "proponent": {
+        "name": "Robin Parry",
+        "slug": "robin-parry",
+        "work": "7 Myths about Christian Universalism",
+        "source": "parry2016"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "fate",
+      "label": "What happens to the unrepentant?",
+      "short": "Final fate",
+      "cells": [
+        {
+          "text": "Eternal, conscious punishment that never ends",
+          "short": "Punished without end"
+        },
+        {
+          "text": "Judged, then destroyed: life is revoked forever",
+          "short": "Destroyed forever"
+        },
+        {
+          "text": "God at last saves all people",
+          "short": "All finally saved"
+        }
+      ]
+    },
+    {
+      "id": "texts",
+      "label": "Texts each view leans on",
+      "short": "Key texts",
+      "cells": [
+        {
+          "text": "Matthew 25:46; Mark 9:43 to 48; Revelation 20:10",
+          "short": "Matt 25:46; Mark 9; Rev 20:10"
+        },
+        {
+          "text": "2 Thessalonians 1:9; Matthew 10:28; Romans 2:7",
+          "short": "2 Thess 1:9; Matt 10:28"
+        },
+        {
+          "text": "Romans 5:18; 1 Corinthians 15:22; Colossians 1:20",
+          "short": "Rom 5:18; 1 Cor 15:22"
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "label": "Place in church history",
+      "short": "History",
+      "cells": [
+        {
+          "text": "The majority position of the church for 2,000 years",
+          "short": "Majority view"
+        },
+        {
+          "text": "A minority view; Fudge made the case in JETS in 1984",
+          "short": "Minority view"
+        },
+        {
+          "text": "Condemned by the Fifth General Council in 553",
+          "short": "Condemned in 553"
+        }
+      ]
+    },
+    {
+      "id": "statements",
+      "label": "Inside evangelical bounds?",
+      "short": "Evangelical?",
+      "cells": [
+        {
+          "text": "Yes: the classic, mainstream evangelical position",
+          "short": "Yes, mainstream",
+          "mark": "yes"
+        },
+        {
+          "text": "Yes: a significant minority evangelical view",
+          "short": "Yes, a minority",
+          "mark": "yes"
+        },
+        {
+          "text": "No: rejected by the Evangelical Alliance report",
+          "short": "No, rejected",
+          "mark": "no"
+        }
+      ]
+    }
+  ],
+  "common_text": "Both evangelical views affirm a real and final judgment, and the Evangelical Alliance's report counts the debate between them \"a secondary rather than a primary issue for evangelical theology.\"",
+  "common_source": "ea2000",
+  "differ": [
+    "Duration: punishment that goes on forever, or a punishment whose result, destruction, lasts forever.",
+    "Immortality: conditionalists hold that life without end is God's gift to the saved, not a property of every soul.",
+    "Matthew 25:46: \"eternal punishment\" read as unending experience by traditionalists and as a final, irreversible outcome by conditionalists.",
+    "Universalism: neither evangelical view accepts it, and the Evangelical Alliance report rejects it. Some holders still call themselves evangelical: Robin Parry, its voice here, wrote The Evangelical Universalist (as Gregory MacDonald)."
+  ],
+  "voices_label": "One voice for each view",
+  "sources": [
+    {
+      "id": "burk2020",
+      "publisher": "The Gospel Coalition",
+      "title": "Hell as Endless Punishment",
+      "year": 2020,
+      "url": "https://www.thegospelcoalition.org/essay/hell-as-endless-punishment/",
+      "fetched": "2026-11-14",
+      "quote": "Hell is a place of eternal, conscious torment for everyone who does not trust in Jesus Christ.",
+      "notes": "Denny Burk, Concise Theology essay, September 10, 2020. Also: \"Eternal conscious torment has been the majority position of the Christian church throughout its 2,000-year history.\" Texts include Matthew 25:46, Mark 9:43 to 48, Revelation 20:10. Confessional statements of the view: Westminster Confession 33.2 (\"cast into eternal torments\", https://www.opc.org/wcf.html) and Baptist Faith and Message 2000, Article X (\"the place of everlasting punishment\", https://bfm.sbc.net/bfm2000/)."
+    },
+    {
+      "id": "fudge1984",
+      "publisher": "Journal of the Evangelical Theological Society",
+      "title": "The Final End of the Wicked",
+      "year": 1984,
+      "url": "https://edwardfudge.com/wordpress/wp-content/uploads/2014/11/JETS_final_end_wicked.pdf",
+      "fetched": "2026-11-14",
+      "quote": "It is rather of what that punishment consists.",
+      "notes": "Edward Fudge, JETS 27/3 (September 1984), hosted on his own site. Preceding sentence: the question \"is not, therefore, whether the wicked will suffer eternal punishment\". Cites 2 Thessalonians 1:9 (\"everlasting destruction\"). Rethinking Hell's Statement on Evangelical Conditionalism (https://rethinkinghell.com/statement/, 2019): life \"will ultimately be granted forever to the saved and revoked forever from the unsaved\", citing Romans 2:7 and Matthew 10:28."
+    },
+    {
+      "id": "parry2016",
+      "publisher": "Plain Truth Ministries (CWR magazine)",
+      "title": "7 Myths about Christian Universalism",
+      "year": 2016,
+      "url": "https://ptm.org/16CWRm/Winter/7%20Myths%20about%20Christian%20Universalism%20Winter-2016-CWRm.pdf",
+      "fetched": "2026-11-14",
+      "quote": "So it is not hell that universalists deny so much as certain views about hell.",
+      "notes": "Robin Parry, author of The Evangelical Universalist (as Gregory MacDonald). Also: universalists believe God wants to save all people and \"God will achieve that goal.\" Texts: Romans 5:18; 1 Corinthians 15:22; Colossians 1:20; Philippians 2:11."
+    },
+    {
+      "id": "ea2000",
+      "publisher": "Evangelical Alliance (UK)",
+      "title": "The Nature of Hell",
+      "year": 2000,
+      "url": "https://www.eauk.org/church/resources/theological-articles/upload/The-Nature-of-Hell-2.pdf",
+      "fetched": "2026-11-14",
+      "quote": "is a significant minority evangelical view",
+      "notes": "ACUTE report, ed. David Hilborn. Para 18: eternal conscious punishment \"represents the classic, mainstream evangelical position\". Para 19 (quoted): conditional immortality \"is a significant minority evangelical view\" and the debate \"should be regarded as a secondary rather than a primary issue for evangelical theology.\" Also: \"We also reject the teaching of universalism\". Landing page: https://www.eauk.org/church/resources/theological-articles/the-nature-of-hell.cfm"
+    },
+    {
+      "id": "sep",
+      "publisher": "Stanford Encyclopedia of Philosophy",
+      "title": "Heaven and Hell in Christian Thought",
+      "year": 2025,
+      "url": "https://plato.stanford.edu/entries/heaven-hell/",
+      "fetched": "2026-11-14",
+      "quote": "condemned the doctrine of universal reconciliation in 553",
+      "notes": "Thomas Talbott, revised May 10, 2025: \"the Fifth General Council of the Christian church condemned the doctrine of universal reconciliation in 553 CE\". Supports the history row for universalism."
+    }
+  ],
+  "place": {
+    "before": "<section class=\"cc-synthesis\""
+  }
+}

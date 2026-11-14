@@ -615,6 +615,10 @@ schemas: `.christian-orchestrator/team/A-foundation-report.md`.
   arrows, dotted cooperation lines; church-governance `#governance-diagrams`) and `chronology` (3 to 8 dated
   cards alternating above and below one line; atonement `#atonement-models`). Baptism (`#baptism-matrix`) and
   predestination-free-will (`#five-points-matrix`) use `matrix`; all four ids are in the jump nav.
+  A `tree` type (`scripts/topic_tree.py`) draws a family tree of movements on a year axis (church-history).
+  `"also": [{"slug", "place"}]` repeats one visual on more pages (the covenant continuity matrix sits on
+  covenant-theology and israel-and-prophecy); the share PNG is written once, from the primary slug. The jump
+  nav also links `family-tree`, `continuity`, `views-of-hell` and `worship-spectrum`.
   Tests: `tests/test_build_topic_timeline.py`.
 - **Definition box and FAQ** (with matching FAQPage schema): `data/topic_reference/<slug>.json` +
   `scripts/build_topic_reference.py`; run before `build_topic_top.py`. It owns that page's `AEO-FAQPAGE-SCHEMA` block,
