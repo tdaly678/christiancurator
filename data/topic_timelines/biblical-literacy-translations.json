@@ -1,0 +1,190 @@
+{
+  "id": "translations",
+  "slug": "biblical-literacy",
+  "type": "spectrum",
+  "label": "Bible Translations Compared",
+  "title": "Six English Bibles, from word for word to thought for thought",
+  "intro": "Every translation balances the form of the original against plain English. Each is placed here by how its own publisher describes its method.",
+  "image_title": "Bible translations, from word for word to thought for thought",
+  "image_subtitle": "Each placed by its publisher's own description of its method.",
+  "image_subtitle_narrow": "Each placed by its publisher's own description of its method.",
+  "caption": "Six widely read English Bibles on one line. Placement is approximate; the publishers describe their methods in words, not numbers.",
+  "axis": {
+    "left": "Word for word",
+    "right": "Thought for thought",
+    "label": "Translation approach"
+  },
+  "bands": [
+    {
+      "from": 0,
+      "to": 30,
+      "label": "Formal equivalence"
+    },
+    {
+      "from": 68,
+      "to": 100,
+      "label": "Functional equivalence"
+    }
+  ],
+  "positions": [
+    {
+      "id": "nasb",
+      "name": "NASB",
+      "short": "NASB",
+      "color": "green",
+      "at": 4,
+      "text": "Formal equivalence: word for word as much as English allows.",
+      "short_text": "Word for word as much as English allows.",
+      "proponent": {
+        "name": "The Lockman Foundation",
+        "image_name": "The Lockman Foundation",
+        "work": "Family of Bible Translations",
+        "source": "lockman"
+      }
+    },
+    {
+      "id": "esv",
+      "name": "ESV",
+      "short": "ESV",
+      "color": "brown",
+      "at": 16,
+      "text": "Essentially literal: as literal as possible, kept clear.",
+      "short_text": "As literal as possible, kept clear.",
+      "proponent": {
+        "name": "Crossway",
+        "image_name": "Crossway",
+        "work": "ESV Translation Philosophy",
+        "source": "esv"
+      }
+    },
+    {
+      "id": "csb",
+      "name": "CSB",
+      "short": "CSB",
+      "color": "blue",
+      "at": 40,
+      "text": "Optimal equivalence: both highly literal and highly readable.",
+      "short_text": "Aims to be both literal and readable.",
+      "proponent": {
+        "name": "Lifeway",
+        "image_name": "Lifeway",
+        "work": "CSB Translation Philosophy",
+        "source": "csb"
+      }
+    },
+    {
+      "id": "niv",
+      "name": "NIV",
+      "short": "NIV",
+      "color": "red",
+      "at": 56,
+      "text": "Balances transparency to the original with clarity of meaning.",
+      "short_text": "Balances the original's form with clear meaning.",
+      "proponent": {
+        "name": "HarperCollins",
+        "image_name": "HarperCollins",
+        "work": "NIV Translation Philosophy",
+        "source": "niv"
+      }
+    },
+    {
+      "id": "nlt",
+      "name": "NLT",
+      "short": "NLT",
+      "color": "gold",
+      "at": 78,
+      "text": "Meaning based: finds the meaning, then says it in natural English.",
+      "short_text": "Finds the meaning, then says it naturally.",
+      "proponent": {
+        "name": "Tyndale House",
+        "image_name": "Tyndale House",
+        "work": "What is Meaning-Based Translation?",
+        "source": "nlt"
+      }
+    },
+    {
+      "id": "message",
+      "name": "The Message",
+      "short": "Message",
+      "color": "grey",
+      "at": 96,
+      "text": "A reading Bible in the cadence of conversational English.",
+      "short_text": "A reading Bible in conversational English.",
+      "proponent": {
+        "name": "NavPress",
+        "image_name": "NavPress",
+        "work": "About The Message",
+        "source": "message"
+      }
+    }
+  ],
+  "differ": [
+    "Word for word Bibles keep the original's wording and sentence shape, which helps close study and can read stiffly.",
+    "Thought for thought Bibles carry the meaning into natural English, which reads easily and leans more on the translators' judgment.",
+    "The CSB and NIV each describe themselves as a balance between the two.",
+    "Crossway, Lockman and Tyndale all say the trade-off is real; no translation avoids it."
+  ],
+  "voices_label": "Each translation in its publisher's words",
+  "table_view_label": "Translation",
+  "image_source": "Sources: publisher statements from Lockman, Crossway, Lifeway, HarperCollins, Tyndale and NavPress",
+  "note": "No translation is presented here as the only right choice.",
+  "sources": [
+    {
+      "id": "lockman",
+      "publisher": "The Lockman Foundation",
+      "title": "Lockman Foundation Family of Bible Translations",
+      "url": "https://www.lockman.org/lockman-family-of-bible-translations/",
+      "fetched": "2026-11-14",
+      "quote": "This method translates word-for-word from the original languages as much as possible.",
+      "notes": "On the NASB: 'it consistently uses the formal equivalence translation philosophy.' Also: 'it recognizes the need for the translation to be readable.'"
+    },
+    {
+      "id": "esv",
+      "publisher": "Crossway",
+      "title": "ESV Translation Philosophy",
+      "url": "https://www.esv.org/about/translation-philosophy/",
+      "fetched": "2026-11-14",
+      "quote": "seeks as far as possible to reproduce the precise wording of the original text and the personal style of each Bible writer",
+      "notes": "Opens: the ESV is an 'essentially literal' translation; 'we have sought to be \"as literal as possible\" while maintaining clarity of expression and literary excellence.' Names the trade-off between 'formal equivalence' and 'functional equivalence'. The /translation/philosophy/ URL redirects here."
+    },
+    {
+      "id": "csb",
+      "publisher": "Lifeway",
+      "title": "CSB Translation Philosophy",
+      "url": "https://csbible.com/about-the-csb/translation-philosophy/",
+      "fetched": "2026-11-14",
+      "quote": "Research shows the CSB is both highly literal to the original languages and highly readable, achieving an optimal blend of the two.",
+      "notes": "'The CSB follows a translation philosophy called \"optimal equivalence.\"' The site's publisher data names Lifeway."
+    },
+    {
+      "id": "niv",
+      "publisher": "HarperCollins",
+      "title": "NIV Translation Philosophy",
+      "url": "https://www.thenivbible.com/niv-translation-philosophy/",
+      "fetched": "2026-11-14",
+      "quote": "balancing transparency to the original with clarity of meaning",
+      "notes": "'In 1965, the original NIV translation committee pioneered a different approach'. The page is (c) HarperCollins Publishers."
+    },
+    {
+      "id": "nlt",
+      "publisher": "Tyndale House",
+      "title": "What is Meaning-Based Translation?",
+      "url": "https://sites.tyndale.com/nlt/meaning-based-translation",
+      "fetched": "2026-11-14",
+      "quote": "uses the meaning-based translation model",
+      "notes": "'In meaning-based translations, the translators start with a source-language text and dig beneath the surface to discover its meaning.' newlivingtranslation.com forwards to this site."
+    },
+    {
+      "id": "message",
+      "publisher": "NavPress",
+      "title": "About The Message",
+      "url": "https://www.navpress.com/the-message",
+      "fetched": "2026-11-14",
+      "quote": "The Message is a reading Bible translated from the original Greek and Hebrew Scriptures",
+      "notes": "Also: it 'combines the authority of God's Word with the cadence and energy of conversational English.' NavPress does not call it a paraphrase on this page, so this chart does not either."
+    }
+  ],
+  "place": {
+    "before": "<section class=\"cc-synthesis\""
+  }
+}
