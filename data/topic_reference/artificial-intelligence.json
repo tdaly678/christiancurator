@@ -45,7 +45,7 @@
       },
       {
         "q": "Can AI help translate the Bible?",
-        "a": "Yes, and it already does. Bible translation agencies use AI to draft and check text, which <a href=\"https://www.thegospelcoalition.org/article/ai-bible-translation/\" target=\"_blank\" rel=\"noopener\">may shorten the work</a> in the languages that still lack Scripture. Translators and the agencies insist that human judgment stays responsible for fidelity; as an SIL developer told <a href=\"https://www.wycliffe.net/thats-what-good-tools-do/\" target=\"_blank\" rel=\"noopener\">Wycliffe</a>, \"AI is here to assist, not replace.\""
+        "a": "Yes, and it already does. Translation teams use AI to produce first drafts from portions of Scripture already translated, which mother-tongue translators then check and refine, and this <a href=\"https://www.thegospelcoalition.org/article/ai-bible-translation/\" target=\"_blank\" rel=\"noopener\">may shorten the work</a> in the languages that still lack Scripture. The agencies insist that human translators stay responsible for the text; as a member of SIL Global told a 2025 summit panel, reported by <a href=\"https://www.wycliffe.net/thats-what-good-tools-do/\" target=\"_blank\" rel=\"noopener\">Wycliffe</a>, \"AI is here to assist, not replace.\""
       },
       {
         "q": "Is AI the mark of the beast or the Antichrist?",
@@ -259,5 +259,5 @@
       "fetched": "2026-11-14"
     }
   ],
-  "notes": "Built by agent AI on Nov 14 2026 from agent R's research (team2/ai-research.json), with every quote and figure rechecked this session by three verification passes (/tmp/aiwork/verify-*.md, summarized in team2/AI-build-report.md). Brentwood 'must be of our own work' and the Bullmore question are verbatim on their pages. The Genesis, Psalm and Isaiah references in the first answer are our framing, not a citation of any statement. The Wycliffe quote is reported speech (Jacob Bullock, NLP developer, SIL)."
+  "notes": "Built by agent AI on Nov 14 2026 from agent R's research (team2/ai-research.json), with every quote and figure rechecked this session by three verification passes (/tmp/aiwork/verify-*.md, summarized in team2/AI-build-report.md). Brentwood 'must be of our own work' and the Bullmore question are verbatim on their pages. The Genesis, Psalm and Isaiah references in the first answer are our framing, not a citation of any statement. The Wycliffe quote is reported speech: Jacob Bullock of SIL Global on a 2025 Missional AI Summit panel (Wycliffe does not give his role or say he spoke to Wycliffe)."
 }
