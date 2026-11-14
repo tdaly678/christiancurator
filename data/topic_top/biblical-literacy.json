@@ -1,0 +1,60 @@
+{
+  "slug": "biblical-literacy",
+  "glance": {
+    "question": "How do Christians come to know the Bible well?",
+    "positions": [
+      {"name": "Systematic Study & Interpretation",
+       "claim": "Literacy comes through careful, methodical study of grammar, context and the author's intent.",
+       "anchor": "position-1",
+       "voices": [{"name": "Jen Wilkin", "slug": "jen-wilkin"}, {"name": "R.C. Sproul", "slug": "rc-sproul"}]},
+      {"name": "Devotional Encounter & Transformation",
+       "claim": "Knowing Scripture means meeting God in it, through meditation the Spirit uses to change the heart.",
+       "anchor": "position-2",
+       "voices": [{"name": "John Piper", "slug": "john-piper"}, {"name": "Donald Whitney", "slug": "don-whitney"}]},
+      {"name": "Communal Interpretation & Church Formation",
+       "claim": "The church learns Scripture together, through worship, teaching, small groups and pastoral care.",
+       "anchor": "position-3",
+       "voices": [{"name": "Mark Dever", "slug": "mark-dever"}, {"name": "Jonathan Leeman", "slug": "jonathan-leeman"}]}
+    ]
+  },
+  "start_here": [
+    {"kind": "Primer",
+     "url": "https://www.crossway.org/articles/lets-talk-about-our-bible-literacy-problem/",
+     "title": "Let’s Talk about Our Bible Literacy Problem",
+     "author": "Jen Wilkin", "outlet": "Crossway",
+     "why": "Defines Bible literacy plainly and explains why it does not grow by accident."},
+    {"kind": "Practice",
+     "url": "https://www.desiringgod.org/interviews/how-do-i-make-the-most-of-daily-bible-reading",
+     "title": "How Do I Make the Most of Daily Bible Reading?",
+     "author": "John Piper", "outlet": "Desiring God",
+     "why": "Practical counsel on choosing a reading plan that fits your time, pace and habits."},
+    {"kind": "Going deeper",
+     "url": "https://www.christianitytoday.com/2026/07/how-to-read-bible-like-early-church-fourfold-schreiner/",
+     "title": "How to Read the Bible Like the Early Church Did",
+     "author": "Patrick Schreiner", "outlet": "Christianity Today",
+     "why": "What modern readers lose by dismissing the church's older ways of reading Scripture."}
+  ],
+  "key_number": {
+    "figure": "65%",
+    "text": "Asked dozens of general Bible knowledge questions, around 2 in 3 American Christian churchgoers (65%) earned an F, scoring below 60.",
+    "publisher": "Lifeway Research",
+    "study": "2 in 3 Churchgoers Fail Bible Literacy Quiz (online survey of 2,012 American Christian churchgoers)",
+    "year": 2026,
+    "source_url": "https://research.lifeway.com/2026/11/03/2-in-3-churchgoers-fail-bible-literacy-quiz/",
+    "fetched": "2026-11-14",
+    "license": "reuse",
+    "link": "#by-the-numbers"
+  },
+  "related": [
+    {"slug": "biblical-inerrancy", "question": "Is the Bible without error in everything it affirms?"},
+    {"slug": "discipleship", "question": "What does it mean to make disciples?"},
+    {"slug": "preaching", "question": "Is expository preaching the only faithful approach?"}
+  ],
+  "changes": [
+    {"date": "2026-11-09", "text": "added the reverence gap chart, the Lifeway quiz chart and the survey tracker"},
+    {"date": "2026-11-14", "text": "added two Lifeway figures to the data watch table"}
+  ],
+  "latest": true,
+  "signup": true,
+  "notes": "Drafted by agent D, 2026-11-14. Key number verified on the Lifeway release that day: 'Around 2 in 3 (65%) earn an F, below 60.' and 'The online survey of 2,012 Americans', described in the release as American Christian churchgoers. Position names match the debate card exactly; claims paraphrase each card's argument. Voices are taken from each card's thinkers line. Start here picks are from the page's curated list. Changes mirror data/biblical-literacy/surveys.json changelog."
+}

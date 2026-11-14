@@ -585,6 +585,17 @@ schemas: `.christian-orchestrator/team/A-foundation-report.md`.
   `<!-- CC-CHART-SECTION:<id>:START/END -->`. Every row cites a source with URL, study, year, `fetched` date and
   license `reuse` / `own-chart-cite` / `credit` (Barna and PRRI: drawn from published figures and credited clearly,
   Tom Nov 14 2026); `as_published` must match each value. biblical-literacy keeps its own builder.
+- **Link previews (Nov 14 2026):** `scripts/build_topic_og.py` renders a 1200 x 630 card per topic (category,
+  the question, the debate card's position names in green/brown/blue, `christiancurator.com`) to
+  `docs/og/topics/<slug>-<hash>.png` and writes `og:title` (the `<title>` minus the site suffix), `og:description`,
+  `og:image` (+ width, height, type, alt) and `twitter:card` `summary_large_image` (+ title, description, image,
+  alt) between `<!-- CC-OG:START/END -->` in `<head>`, removing those tags elsewhere in the head. Card text and
+  optional `og_description` overrides: `data/topic_og/cards.json` (no dashes; position count must match the page).
+  The hash in the file name moves when the card text changes, so social caches refetch. Needs Pillow (not in
+  `requirements.txt`; not in the daily workflow); fonts are in `data/fonts` (OFL). `--check` fails on stale tags or
+  a missing image; `--site-image` redraws `docs/og-image.png`. Rerun it after editing a page's title, description or
+  debate positions, and after any run of `scripts/apply_aeo_upgrades.py` (which resets og:title and descriptions).
+  Tests: `tests/test_build_topic_og.py`.
 - **Print:** `@media print` in `topic.css` turns a page with a top block into a one-page small-group handout
   (definition, TL;DR, positions at a glance, key questions, Start here with URLs, page address).
 - Tests: `tests/test_build_topic_top.py`, `tests/test_build_topic_charts.py`.

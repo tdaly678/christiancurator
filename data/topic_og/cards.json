@@ -1,0 +1,293 @@
+{
+  "_about": "Preview card text for every topic page, rendered by scripts/build_topic_og.py into docs/og/topics/<slug>-<hash>.png. question: the debate in plain words, no dashes, about 9 words or fewer. positions: short names of the page's debate card positions, in page order (count must match the page). deck: used instead of positions on pages with no debate card. og_description: optional override of the page's meta description for og:description and twitter:description. Edit, then run the script.",
+  "cards": {
+    "abortion": {
+      "question": "What does the pro-life movement owe women after Roe?",
+      "positions": ["Sanctity from Conception", "Holistic Care for Women", "Justice and Prophetic Witness"],
+      "og_description": "What the pro-life movement owes women after Roe, and whether evangelical churches are doing enough. Biblical perspectives and practical responses."
+    },
+    "addiction-and-recovery": {
+      "question": "Is addiction a sin, a disease, or both?",
+      "positions": ["Biblical Counseling", "Gospel-Centered Recovery Community", "Integrated Clinical and Theological"]
+    },
+    "ai-and-the-church": {
+      "question": "How should Christians think about AI?",
+      "positions": ["Critical Caution", "Technological Optimism", "Theological Discernment"]
+    },
+    "anxiety-and-fear": {
+      "question": "Is anxiety a spiritual failure, a medical condition, or both?",
+      "positions": ["Biblical Counseling Sufficiency", "Christian Integration", "Medical and Neurological Realism"]
+    },
+    "apologetics": {
+      "question": "Reason and evidence, or simply proclaim the gospel?",
+      "positions": ["Classical Apologetics", "Presuppositional Apologetics", "Reformed Epistemology, Cumulative Case"]
+    },
+    "atonement": {
+      "question": "What did Jesus' death accomplish?",
+      "positions": ["Penal Substitution as the Center", "Christus Victor and the Kaleidoscope", "The Post-Conservative Critique"]
+    },
+    "baptism": {
+      "question": "Should we baptize infants, or only those who profess faith?",
+      "positions": ["Believer's Baptism", "Covenant Baptism", "The Irenic Middle"]
+    },
+    "biblical-inerrancy": {
+      "question": "Is the Bible without error in everything it affirms?",
+      "positions": ["Full Inerrancy, Chicago Statement", "Infallibility Without Full Inerrancy", "Canonical, Functional Authority"]
+    },
+    "biblical-justice": {
+      "question": "What do evangelicals owe the poor and oppressed?",
+      "positions": ["Gospel-Centered Justice", "Prophetic Justice Emphasis", "Evangelical Care with Caution"]
+    },
+    "biblical-literacy": {
+      "question": "Why do so many Christians read the Bible so little?",
+      "positions": ["Systematic Study and Interpretation", "Devotional Encounter", "Communal Interpretation"]
+    },
+    "biblical-sexuality": {
+      "question": "What does Scripture teach about sexuality and marriage?",
+      "positions": ["Traditional Sexual Ethics", "Affirming, Progressive Evangelical", "Traditional with Pastoral Complexity"]
+    },
+    "christian-education": {
+      "question": "Public school, Christian school, or homeschool?",
+      "positions": ["Classical Christian Schools", "Homeschooling and Parental Discipleship", "Public School Engagement and Witness"]
+    },
+    "christian-ethics": {
+      "question": "How do Christians decide what the Bible does not directly address?",
+      "positions": ["Natural Law Ethics", "Scripture-First Ethics", "Narrative and Kingdom Ethics"]
+    },
+    "christian-friendship": {
+      "question": "Why are deep friendships so rare in evangelical churches?",
+      "positions": ["Theological Recovery", "Small Group Pragmatism", "Radical Proximity"]
+    },
+    "christian-masculinity": {
+      "question": "What does it mean to be a man in the church today?",
+      "positions": ["Complementarian Headship", "Servant Leadership", "Gospel-Centered Manhood"]
+    },
+    "christian-nationalism": {
+      "question": "What is Christian nationalism, and why does it draw evangelicals?",
+      "positions": ["Christian Nationalism, Sympathetic", "Political Engagement, Anti-Nationalist", "Theologically Chastened Engagement"]
+    },
+    "christian-parenting": {
+      "question": "How do Christian parents pass on the faith?",
+      "positions": ["Gospel-Centered Discipline", "Grace-Based Parenting", "Family Discipleship as Primary Mission"],
+      "og_description": "How Christian parents pass on the faith through discipleship, family worship, Scripture and a gospel-centered home. Biblical approaches compared."
+    },
+    "christology": {
+      "question": "How is Jesus fully God and fully human?",
+      "positions": ["Classical Christology", "Kenotic Christology", "Communicatio Idiomatum"]
+    },
+    "church-accountability": {
+      "question": "How should churches hold their leaders accountable?",
+      "positions": ["Congregational Oversight and Term Limits", "External Accountability Structures", "Reformed Leadership with Training and Care"]
+    },
+    "church-discipline": {
+      "question": "When and how should a church remove a member?",
+      "positions": ["Robust Church Authority", "Pastoral Discretion and Caution"]
+    },
+    "church-governance": {
+      "question": "Elders, congregations, or bishops?",
+      "positions": ["Elder Rule and Presbyterian Polity", "Elder-Led Congregational", "Episcopal Oversight"]
+    },
+    "church-history": {
+      "question": "What do evangelicals owe the church's past?",
+      "positions": ["The Reformation as Gospel Recovery", "Retrieval and Catholicity"]
+    },
+    "church-planting": {
+      "question": "Is planting new churches the best strategy?",
+      "positions": ["Plant Churches That Draw People In", "Send Churches Out into Neighborhoods", "Invest in Dying Churches First"]
+    },
+    "complementarianism-egalitarianism": {
+      "question": "Should women serve as pastors and elders?",
+      "positions": ["Complementarianism", "Egalitarianism", "Soft Complementarianism, Third Way"],
+      "og_description": "Complementarian, egalitarian, or a third way: where evangelicals and their churches stand on women as pastors, with the key texts and best reading."
+    },
+    "contemplative-prayer": {
+      "question": "Contemplative prayer: rich retrieval or risky import?",
+      "positions": ["Cautious or Critical", "Enthusiastic Adoption and Integration", "Evangelical Integration with Caution"]
+    },
+    "covenant-theology": {
+      "question": "One covenant story, or distinct dispensations?",
+      "positions": ["Covenant Theology", "Dispensationalism", "Progressive Covenantalism"]
+    },
+    "creation-care": {
+      "question": "Is caring for creation a Christian duty or a distraction?",
+      "positions": ["Creation Care as Christian Obligation", "Gospel Priority over Activism", "Gospel-Rooted Stewardship"]
+    },
+    "creation-evolution": {
+      "question": "Six literal days, or Genesis and modern science?",
+      "positions": ["Young Earth Creationism", "Old Earth Creationism", "Evolutionary Creationism"]
+    },
+    "death-and-dying": {
+      "question": "How should Christians prepare for death?",
+      "positions": ["Death as Enemy Defeated by Christ", "Honest Grief with Resurrection Hope", "Dying Well under God's Sovereignty"]
+    },
+    "discipleship": {
+      "question": "What does it mean to make disciples?",
+      "positions": ["Structured Discipleship in the Church", "Organic Spiritual Transformation", "Missional Discipleship in the World"]
+    },
+    "eschatology": {
+      "question": "Before, during, or after the thousand years?",
+      "positions": ["Dispensational Premillennialism", "Amillennialism", "Historic Premillennialism and Postmillennialism"]
+    },
+    "evangelicalism": {
+      "question": "Is the evangelical movement fracturing?",
+      "positions": ["Historical, Confessional", "Sociological, Moderate", "Post-Conservative, Progressive"]
+    },
+    "faith-deconstruction": {
+      "question": "What is faith deconstruction?",
+      "positions": ["Deconstruction as Apostasy", "Deconstruction as Necessary Reckoning", "Pastoring Through Deconstruction"],
+      "og_description": "Apostasy, honest reckoning, or a season to pastor through? Where evangelicals disagree on deconstruction, with the best reading from each side."
+    },
+    "fasting": {
+      "question": "Is fasting a neglected discipline the church must recover?",
+      "positions": ["Normative Christian Practice", "Voluntary and Spirit-Led", "Corporate and Liturgical Fasting"]
+    },
+    "forgiveness": {
+      "question": "Is Christian forgiveness unconditional?",
+      "positions": ["Conditional Forgiveness", "Unconditional Forgiveness", "Forgiveness vs. Reconciliation"]
+    },
+    "gender-and-biblical-anthropology": {
+      "question": "What does it mean to be male and female?",
+      "positions": ["Creational Binary", "Pastoral Compassion Without Compromise", "Rethinking the Framework"]
+    },
+    "grief-and-lament": {
+      "question": "Is lament a failure of faith?",
+      "positions": ["Lament as Spiritual Discipline", "Sufficiency of Christ in Sorrow", "Prophetic Lament for Justice"],
+      "og_description": "Biblical lament is faithful prayer, not spiritual failure. What Scripture teaches about honest grief, and why evangelical churches struggle with it."
+    },
+    "heaven-hell-eternity": {
+      "question": "Eternal conscious torment, or do the lost perish?",
+      "positions": ["Eternal Conscious Torment", "Annihilationism, Conditional Immortality", "Christian Universalism"]
+    },
+    "holy-spirit-spiritual-gifts": {
+      "question": "Do tongues and prophecy continue today?",
+      "positions": ["Cessationism", "Reformed Continuationism", "Pentecostal, Charismatic"]
+    },
+    "israel-and-prophecy": {
+      "question": "Does the modern state of Israel fulfill prophecy?",
+      "positions": ["Dispensational Israel", "Fulfillment in Christ", "Christian Zionism with Caution"]
+    },
+    "justification-by-faith": {
+      "question": "A declaration, a process, or something else?",
+      "positions": ["Traditional Reformation Justification", "New Perspective on Paul", "Progressive Covenantalism and Synthesis"]
+    },
+    "local-church": {
+      "question": "Is belonging to a local church optional?",
+      "positions": ["The Church Is Essential", "Decentralized and Spiritual", "Missional Ecclesiology"]
+    },
+    "lords-supper": {
+      "question": "Is Christ present in the bread and cup?",
+      "positions": ["Zwinglian Memorialism", "Reformed Spiritual Presence", "Lutheran Sacramental Union"]
+    },
+    "marriage-and-family": {
+      "question": "What does a Christian vision of marriage look like?",
+      "positions": ["Complementarian, Servant Headship", "Egalitarian, Mutual Submission", "Marriage as Gospel Witness"],
+      "og_description": "Christian marriage as covenant faithfulness, Christ-centered love and family discipleship. Evangelical views on marriage roles and singleness."
+    },
+    "membership": {
+      "question": "Is church membership biblical, or optional?",
+      "positions": ["The 9Marks Case", "The Non-Institutional View", "The Covenantal View"]
+    },
+    "mental-health": {
+      "question": "Is mental illness spiritual, medical, or both?",
+      "positions": ["Biblical Counseling", "Christian Integration", "Medical Realism"]
+    },
+    "missions-and-evangelism": {
+      "question": "Gospel proclamation or social transformation?",
+      "positions": ["Gospel Proclamation Is Primary", "Word and Deed Together", "God's Mission, Not Just the Church's"]
+    },
+    "pastoral-ministry": {
+      "question": "Preacher, shepherd, or CEO?",
+      "positions": ["Shepherd-Theologian", "Gospel-Centered Preaching and Teaching", "Missional Leadership with Vision"]
+    },
+    "politics-and-the-church": {
+      "question": "Should evangelicals seek political power?",
+      "positions": ["The Church's Prophetic Distance", "Faithful Presence in Every Sphere", "Reclaiming Christian Authority"]
+    },
+    "pornography": {
+      "question": "A spiritual problem, an addiction, or both?",
+      "positions": ["Spiritual Sin and Warfare", "Neurological Addiction", "Integrated Care, Spirit and Brain"]
+    },
+    "prayer": {
+      "question": "Does prayer change God, or change us?",
+      "positions": ["Reformed: Sovereignty and Means", "Genuine Intercession", "Contemplative Communion"]
+    },
+    "preaching": {
+      "question": "Is expository preaching the only faithful approach?",
+      "positions": ["Expository Preaching", "Topical, Needs-Centered", "Narrative, Story-Formed"]
+    },
+    "predestination-free-will": {
+      "question": "God's sovereign choice, or the human will?",
+      "positions": ["Classical Calvinism", "Classical Arminianism", "Molinism"]
+    },
+    "progressive-christianity": {
+      "question": "Is progressive Christianity a reform, or a different religion?",
+      "positions": ["Apologetic Refutation", "Generous Dialogue", "Prophetic Retrieval"]
+    },
+    "prosperity-gospel": {
+      "question": "Does God promise health and wealth?",
+      "positions": ["Rejection as Heresy", "Corrective Reform Within Charismaticism", "Understanding with Firm Rejection"]
+    },
+    "racial-reconciliation": {
+      "question": "Structural change, repentance, or proclamation?",
+      "positions": ["Gospel-Centered Individual Reconciliation", "Structural Justice and Gospel", "Lament and Long-Term Community"],
+      "og_description": "Evangelicals debate whether racial reconciliation requires gospel proclamation, individual repentance, structural change, or all three together."
+    },
+    "religious-liberty": {
+      "question": "Is religious liberty under genuine threat?",
+      "positions": ["Robust Exemptions", "Principled Pluralism", "Prophetic Witness Without Legal Refuge"],
+      "og_description": "Is religious liberty under threat, and how should Christians respond when conscience conflicts with law? Evangelical perspectives compared."
+    },
+    "sanctification": {
+      "question": "God's work in us, or rigorous human effort?",
+      "positions": ["Reformed Progressive Sanctification", "Wesleyan Entire Sanctification", "Union with Christ"]
+    },
+    "singleness": {
+      "question": "Is singleness a lesser life than marriage?",
+      "positions": ["Gift and Calling", "Season, with Marriage as Design", "Kingdom Priority"]
+    },
+    "small-groups": {
+      "question": "Are small groups the engine of discipleship?",
+      "positions": ["Discipleship Engine", "Cautious Complement to Worship", "Organic Community over Programs"]
+    },
+    "spiritual-abuse": {
+      "question": "How should churches respond to spiritual abuse?",
+      "positions": ["Institutional Reform", "Gospel-Centered Counseling", "Prophetic Critique"]
+    },
+    "spiritual-disciplines": {
+      "question": "A path to growth, or a path to legalism?",
+      "positions": ["Means, Not Merit", "Classical Disciplines as Transformation", "Ancient-Future and Contemplative"]
+    },
+    "spiritual-warfare": {
+      "question": "How active are demons in everyday Christian life?",
+      "positions": ["Cessationist Warfare", "Reformed Charismatic, Continuationist", "Third Wave, Strategic-Level Warfare"]
+    },
+    "stewardship-and-generosity": {
+      "question": "Is tithing a law, a floor, or a ceiling?",
+      "positions": ["Tithing as Normative", "Radical Gospel Generosity", "Freedom and Wisdom"]
+    },
+    "suffering-and-providence": {
+      "question": "Does God ordain suffering, or permit it?",
+      "positions": ["Meticulous Providence", "Open Theism", "Lament Theology"]
+    },
+    "technology": {
+      "question": "How should Christians navigate a world shaped by technology?",
+      "positions": ["Redemptive Technology Use", "Digital Minimalism, Formation-First", "AI Theology and Image-Bearing"]
+    },
+    "technology-and-discipleship": {
+      "question": "How do our phones form us spiritually?",
+      "positions": ["Digital Tools Can Serve Discipleship", "Formation-First, Analog Priority", "Sabbath Rhythms and Limits"]
+    },
+    "the-trinity": {
+      "question": "One God in three persons: what does it mean?",
+      "positions": ["Classical Trinitarianism", "Soft Subordinationism", "Social Trinitarianism"]
+    },
+    "vocation-and-work": {
+      "question": "Is all honest work sacred?",
+      "positions": ["Lutheran Two-Kingdoms Vocation", "Cultural Mandate", "Kingdom Now and New Creation"]
+    },
+    "worship-and-liturgy": {
+      "question": "Free-form and contemporary, or historic liturgy?",
+      "positions": ["Regulative Principle", "Contemporary Worship Freedom", "Liturgical Renewal"]
+    }
+  }
+}
