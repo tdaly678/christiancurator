@@ -1,37 +1,78 @@
 [
   {
+    "source_name": "The Roys Report",
+    "source_category": "church life",
+    "source_type": "christian",
+    "independent": false,
+    "creates_voices": true,
+    "role": "primary",
+    "author": "Aaron Earls",
+    "title": "Study: 2 in 3 churchgoers fail Bible literacy quiz",
+    "original_title": "Study: 2 in 3 churchgoers fail Bible literacy quiz",
+    "url": "https://roysreport.com/study-2-in-3-churchgoers-fail-bible-literacy-quiz/",
+    "summary": "<img alt=\"biblical truths Lifeway Research\" class=\"webfeedsFeaturedVisual wp-post-image\" height=\"150\" src=\"https://roysreport.com/wp-content/uploads/2026/09/Bible--150x150.jpg\" style=\"float: right; margin-left: 15px;\" width=\"150\" />If churches gave pop quizzes on the Bible this Sunday, most people in the pews would fail. Lifeway Research asked more than 2,000 American Christian churchgoers dozens of questions about general Bible knowledge. The average respondent scored 51. Around 2 in 3 (65 percent) earn an F, below 60. Almost 1 in 10 (9 percent) [&#8230;]<!-- 123386-1794556177 -->",
+    "full_content": "",
+    "published": "Fri, 13 Nov 2026 13:49:37 +0000",
+    "fetched_at": "2026-11-14T10:01:00.806221",
+    "score": 7,
+    "tags": [
+      "data",
+      "church life"
+    ],
+    "rewritten_title": "Most Churchgoers Fail Bible Literacy Quiz, Lifeway Research Finds",
+    "canonical_url": "https://roysreport.com/study-2-in-3-churchgoers-fail-bible-literacy-quiz",
+    "importance": 8.5,
+    "depth": 5.0,
+    "personas": [
+      "pastor",
+      "professional"
+    ],
+    "topic_cluster": "bible_literacy",
+    "perspective": "neutral",
+    "scored_by": "claude",
+    "base_score": 7.0,
+    "base_importance": 7.0,
+    "base_depth": 5.0,
+    "final_score": 8.5,
+    "boosts": {
+      "recency": 1.5
+    },
+    "boost_total": 1.5,
+    "recency_boost": 1.5
+  },
+  {
     "source_name": "Pew Research",
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
     "creates_voices": false,
     "role": "primary",
-    "author": "Regina Widjaya and Galen Stocking",
-    "title": "‘Download My Free Guide’: What Products and Services Do Health and Wellness Influencers Promote?",
-    "original_title": "‘Download My Free Guide’: What Products and Services Do Health and Wellness Influencers Promote?",
-    "url": "https://www.pewresearch.org/short-reads/2026/11/12/download-my-free-guide-what-products-and-services-do-health-and-wellness-influencers-promote/",
-    "summary": "Health and wellness influencers promote some kind of product or service in 38% of posts, most often guides and other information, and many followers act on it.",
+    "author": "Benjamin Toff",
+    "title": "Where Americans Get News Relates to How They Engage in Public Life",
+    "original_title": "Where Americans Get News Relates to How They Engage in Public Life",
+    "url": "https://www.pewresearch.org/short-reads/2026/11/13/where-americans-get-news-relates-to-how-they-engage-in-public-life/",
+    "summary": "News outlets that heavily cover politics are among the sources whose audiences contain a disproportionately high share of the most engaged Americans.",
     "full_content": "",
-    "published": "Thu, 12 Nov 2026 16:07:07 +0000",
-    "fetched_at": "2026-11-13T10:00:59.068019",
+    "published": "Fri, 13 Nov 2026 15:54:33 +0000",
+    "fetched_at": "2026-11-14T10:01:03.997920",
     "score": 4,
     "tags": [
-      "culture"
+      "culture",
+      "data"
     ],
-    "rewritten_title": "Health Wellness Influencers Promote Products in Over a Third of Posts",
-    "canonical_url": "https://pewresearch.org/short-reads/2026/11/12/download-my-free-guide-what-products-and-services-do-health-and-wellness-influencers-promote",
+    "rewritten_title": "Political News Coverage Attracts Most Engaged Americans",
+    "canonical_url": "https://pewresearch.org/short-reads/2026/11/13/where-americans-get-news-relates-to-how-they-engage-in-public-life",
     "importance": 5.5,
-    "depth": 3.0,
+    "depth": 2.0,
     "personas": [
-      "parent",
       "professional"
     ],
-    "topic_cluster": "influencer_wellness_products",
+    "topic_cluster": "media_engagement_politics",
     "perspective": "neutral",
     "scored_by": "claude",
     "base_score": 4.0,
     "base_importance": 4.0,
-    "base_depth": 3.0,
+    "base_depth": 2.0,
     "final_score": 5.5,
     "boosts": {
       "recency": 1.5
@@ -40,89 +81,50 @@
     "recency_boost": 1.5
   },
   {
-    "source_name": "Ryan Burge",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": true,
-    "creates_voices": true,
-    "role": "primary",
-    "author": "Ryan Burge",
-    "title": "The Presbyterian Church (USA) Is About to Cross a Historic Threshold",
-    "original_title": "The Presbyterian Church (USA) Is About to Cross a Historic Threshold",
-    "url": "https://www.graphsaboutreligion.com/p/the-presbyterian-church-usa-is-about",
-    "summary": "Membership is nearing one million&#8212;but the denomination's age profile and clergy pipeline tell the much bigger story.",
-    "full_content": "<p><span>Back in the very earliest days of my newsletter, I wrote a post with this pretty terrible title &#8211; &#8220;</span><a href=\"https://www.graphsaboutreligion.com/p/what-does-denominational-decline\"><span>What Does Denominational Decline Look Like?</span></a><span>&#8221; The reason that the title is not very good is because it didn&#8217;t directly specify the denomination that I was examining. It was the Presbyterian Church (USA). </span><strong><span>That post may have been the most important one in the development of my style and approach to writing because it garnered a ton of attention and led to my first spate of paid subscribers.</span></strong><span> I knew I was on to something.</span></p><p><span>From there, it&#8217;s really become one of the &#8220;tentpoles&#8221; of this newsletter. I really do love writing them. I can always find something interesting or unexplored while wading through a whole bunch of spreadsheets and glossy PDF files. And what I&#8217;ve found is that people just aren&#8217;t getting this information from anywhere else. </span><strong><span>I&#8217;ve covered all kinds of denominations and traditions &#8211; Episcopalians, Southern Baptists, even Unitarians.</span></strong><span> </span></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!ZBGC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd0d31bb7-2386-4efc-ae83-497614b5f5d4_1243x453.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"453\" src=\"https://substackcdn.com/image/fetch/$s_!ZBGC!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd0d31bb7-2386-4efc-ae83-497614b5f5d4_1243x453.png\" width=\"1243\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong><span>I&#8217;ve built a simple little website that provides a directory of lots of these reports that you can access by </span><a href=\"https://graphs-about-religion-reports.netlify.app/\"><span>clicking this link</span></a></strong><span>. Just know that almost all of them are behind the paywall because they are part of my ever growing archive of &#8220;back issues&#8221; that now is at least 300 total articles.</span></p><p><span>But I thought that this would be a fine time to revisit my friends in the Presbyterian Church (USA). My friend and PCUSA pastor, </span><a href=\"https://www.parkridgepresby.org/people/josh-erickson/\"><span>Josh Erickson</span></a><span>, emailed me </span><a href=\"https://pres-outlook.org/2026/07/pcusa-membership-decline-slows-but-congregations-continue-to-close/?utm_source=Presbyterian+Outlook+Email+Updates&amp;utm_campaign=93c0481435-EMAIL_CAMPAIGN_2026_07_23_12_34&amp;utm_medium=email&amp;utm_term=0_-93c0481435-522594795&amp;mc_cid=93c0481435\"><span>a link</span></a><span> to the newest set of numbers that we have from the denomination. And I already have a couple of spreadsheets on my hard drive, so there&#8217;s a lot to dig into when it comes to the future of the PCUSA</span></p><p><span>Here&#8217;s what I know: The age profile of this Protestant tradition, the shrinking pipeline of new clergy, the widening gap between churches and members, and the arithmetic of births, deaths, and new members all point to the same conclusion. </span><strong><span>The challenge facing the PCUSA isn&#8217;t simply that it has gotten smaller. It&#8217;s that the demographic forces shaping its future are becoming increasingly difficult to reverse.</span></strong></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!b_K4!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5f49a6af-bce4-4a93-a2f0-e9eb3cecaa21_2048x1365.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"970\" src=\"https://substackcdn.com/image/fetch/$s_!b_K4!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5f49a6af-bce4-4a93-a2f0-e9eb3cecaa21_2048x1365.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><span>Anyone who has hung around these parts for the last couple of years knows how this report is going to go &#8211; the mainline is in trouble and the PCUSA falls right in line with the other Six Sisters in the tradition. </span><strong><span>Back in 1984, the denomination boasted 3.1 million members.</span></strong><span> That&#8217;s really solid and would only put them about a million behind the current state of the United Methodist Church. But, alas, that was certainly the high-water mark for the PCUSA.</span></p><p><strong><span>The decline was relatively slow and steady for two decades.</span></strong><span> A typical year would see a decline that was often around 1%, sometimes even less than that. But a one-percentage-point dip is really deceptive. It doesn&#8217;t feel like much from one year to the next. Except those small declines really start to add up to big drops when compounded over two decades. By the time the denomination reached 2010, it was down to almost exactly two million members.</span></p><p><span>Then the decline really started accelerating from that point forward. In almost every year beyond 2010, the year-over-year drop has been in the five-percentage-point range. That&#8217;s impossible to deny. </span><strong><span>In numeric terms, that&#8217;s losing nearly 100,000 folks on an annual basis.</span></strong><span> You don&#8217;t feel a one-point drop, but you can&#8217;t ignore a five-point decline.</span></p><p><strong><span>And now the denomination is at 1,019,003 members</span></strong><span>. The drop last year was much less than usual &#8211; just 2.5 points. The smallest since 2007. But next year, it will certainly be below 1 million members. </span><strong><span>In percentage terms, the total decline is 67%.</span></strong><span> Said another way, for every three members on the rolls back in 1985, there is one member today.</span></p><p><span>In that early post, I built a really simple projection model based on a very naive assumption that I arrived at when looking at the trends for a while &#8211; if you just assumed a 4% decline in membership, that would get you really close to the actual numbers over a long period of time. Let&#8217;s see if that still holds up.</span></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!BFIF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff3924e43-3543-4e51-ad02-6816624f8149_2048x1434.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1019\" src=\"https://substackcdn.com/image/fetch/$s_!BFIF!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff3924e43-3543-4e51-ad02-6816624f8149_2048x1434.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-GK1x3M\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><span>I&#8217;m really surprised to see how well that super basic projection model performs against the membership data from the PCUSA. You can see from the graph that there was a period of time between 1995 and 2010 when my assumption was too pessimistic. I projected fewer members than were actually on the rolls of the denomination. But by 2013 or so, my projection line collided with the actual data again because losses really began to pick up during this time period.</span></p><p><strong><span>What&#8217;s interesting now is that my guess of 4% annual declines is actually too optimistic</span></strong><span>. It guessed that the denomination would have about 1.15M members in 2025. The actual number is 1.02M. My projection was about 10% too high. And I&#8217;m kind of convinced that it will actually continue to deviate more from the actual numbers each year because of some demographic obstacles I see in the data which I will discuss later.</span></p><p><span>How have the total number of congregations changed as membership has plummeted? That&#8217;s in the left panel below.</span></p>\n      <p>\n          <a href=\"https://www.graphsaboutreligion.com/p/the-presbyterian-church-usa-is-about\">\n              Read more\n          </a>\n      </p>",
-    "published": "Thu, 12 Nov 2026 12:31:07 +0000",
-    "fetched_at": "2026-11-13T10:00:58.891368",
-    "score": 3,
-    "tags": [
-      "news",
-      "data"
-    ],
-    "rewritten_title": "Presbyterian Church USA Faces Decline Despite Approaching One Million Members",
-    "canonical_url": "https://graphsaboutreligion.com/p/the-presbyterian-church-usa-is-about",
-    "importance": 5.0,
-    "depth": 3.0,
-    "personas": [
-      "pastor",
-      "professional"
-    ],
-    "topic_cluster": "mainline_decline",
-    "perspective": "news",
-    "scored_by": "claude",
-    "base_score": 3.0,
-    "base_importance": 3.0,
-    "base_depth": 3.0,
-    "final_score": 5.0,
-    "boosts": {
-      "recency": 1.5,
-      "frequency": 0.5
-    },
-    "boost_total": 2.0,
-    "frequency_boost": 0.75,
-    "source_posts_30d": 9,
-    "recency_boost": 1.5
-  },
-  {
     "source_name": "Pew Research",
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
     "creates_voices": false,
     "role": "primary",
-    "author": "Gabriel Piña and Ziyao Tian and Mark Hugo Lopez",
-    "title": "The Dating Attitudes of Single Black Adults",
-    "original_title": "The Dating Attitudes of Single Black Adults",
-    "url": "https://www.pewresearch.org/race-and-ethnicity/2026/11/12/the-dating-attitudes-of-single-black-adults/",
-    "summary": "While about half of Black singles are looking for a relationship or dates, men and women differ on goals and financial considerations.",
+    "author": "Alexandra Cahn and Carolyne Im and Joseph Copeland and Sahana Mukherjee",
+    "title": "Many Black Adults Say Close Relationships Influence Their Views About Being a Black Man or Woman",
+    "original_title": "Many Black Adults Say Close Relationships Influence Their Views About Being a Black Man or Woman",
+    "url": "https://www.pewresearch.org/short-reads/2026/11/12/many-black-adults-say-close-relationships-influence-their-views-about-being-a-black-man-or-woman/",
+    "summary": "Mothers top the list of influences on how Black adults see being a Black man or woman, while media like social platforms play a smaller role.",
     "full_content": "",
-    "published": "Thu, 12 Nov 2026 14:57:20 +0000",
-    "fetched_at": "2026-11-13T10:00:59.068019",
+    "published": "Thu, 12 Nov 2026 14:55:55 +0000",
+    "fetched_at": "2026-11-14T10:01:03.997920",
     "score": 4,
     "tags": [
-      "data",
-      "family"
+      "culture",
+      "data"
     ],
-    "rewritten_title": "Single Black Adults Diverge on Dating Goals and Financial Expectations",
-    "canonical_url": "https://pewresearch.org/race-and-ethnicity/2026/11/12/the-dating-attitudes-of-single-black-adults",
-    "importance": 4.75,
-    "depth": 4.0,
+    "rewritten_title": "Close Relationships Shape Black Adults' Views on Race and Gender More Than Media",
+    "canonical_url": "https://pewresearch.org/short-reads/2026/11/12/many-black-adults-say-close-relationships-influence-their-views-about-being-a-black-man-or-woman",
+    "importance": 3.0,
+    "depth": 3.0,
     "personas": [
-      "professional",
-      "parent"
+      "parent",
+      "professional"
     ],
-    "topic_cluster": "black_singles_dating",
-    "perspective": "neutral",
+    "topic_cluster": "black_identity_relationships",
+    "perspective": "news",
     "scored_by": "claude",
     "base_score": 4.0,
     "base_importance": 4.0,
-    "base_depth": 4.0,
-    "final_score": 4.75,
+    "base_depth": 3.0,
+    "final_score": 3.0,
     "boosts": {
-      "recency": 1.5,
+      "recency": 0.75,
+      "voice": -1.0,
       "diversity_penalty": -0.75
     },
-    "boost_total": 1.5,
-    "recency_boost": 1.5
+    "boost_total": 0.75,
+    "voice_score": -10,
+    "voice_rules": [
+      "DEMOTE_LENGTH"
+    ],
+    "recency_boost": 0.75
   }
 ]

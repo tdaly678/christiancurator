@@ -1,66 +1,5 @@
 {
  "entries": {
-  "https://harvestusa.org/selfies-are-not-the-self-forming-embodied-youth-in-a-disembodied-age": {
-   "url": "https://harvestusa.org/selfies-are-not-the-self-forming-embodied-youth-in-a-disembodied-age/",
-   "canonical_url": "https://harvestusa.org/selfies-are-not-the-self-forming-embodied-youth-in-a-disembodied-age",
-   "anchor": "Selfies Are Not the Self: Forming Embodied Youth in a Disembodied Age",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-6-2026/",
-   "found_on": "2026-11-06",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-06",
-   "title": "Selfies Are Not the Self: Forming Embodied Youth in a Disembodied Age",
-   "source_name": "Harvest USA"
-  },
-  "https://desiringgod.org/articles/cant-you-just-love-everyone": {
-   "url": "https://www.desiringgod.org/articles/cant-you-just-love-everyone",
-   "canonical_url": "https://desiringgod.org/articles/cant-you-just-love-everyone",
-   "anchor": "Can’t You Just Love Everyone?",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-6-2026/",
-   "found_on": "2026-11-06",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-06",
-   "title": "Can’t You Just Love Everyone?",
-   "source_name": "Desiring God"
-  },
-  "https://alexkocman.com/2026/11/03/4-applications-for-the-order-of-love-from-the-home-to-the-ends-of-the-earth": {
-   "url": "https://alexkocman.com/2026/11/03/4-applications-for-the-order-of-love-from-the-home-to-the-ends-of-the-earth/",
-   "canonical_url": "https://alexkocman.com/2026/11/03/4-applications-for-the-order-of-love-from-the-home-to-the-ends-of-the-earth",
-   "anchor": "4 Applications for the Order of Love—From the Home to the Ends of the Earth",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-6-2026/",
-   "found_on": "2026-11-06",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-06",
-   "title": "4 Applications for the Order of Love—From the Home to the Ends of the Earth",
-   "source_name": "Alex Kocman"
-  },
-  "https://zacharyconover.substack.com/p/your-thoughts-are-shaping-your-life": {
-   "url": "https://zacharyconover.substack.com/p/your-thoughts-are-shaping-your-life",
-   "canonical_url": "https://zacharyconover.substack.com/p/your-thoughts-are-shaping-your-life",
-   "anchor": "Your Thoughts Are Shaping Your Life",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-6-2026/",
-   "found_on": "2026-11-06",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
-  "https://katielaitkep.substack.com/p/dont-despise-the-red-flags-0ed": {
-   "url": "https://katielaitkep.substack.com/p/dont-despise-the-red-flags-0ed",
-   "canonical_url": "https://katielaitkep.substack.com/p/dont-despise-the-red-flags-0ed",
-   "anchor": "Don’t Despise the Red Flags",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-6-2026/",
-   "found_on": "2026-11-06",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
   "https://macleans.ca/longforms/the-hutterites-guide-to-technology": {
    "url": "https://macleans.ca/longforms/the-hutterites-guide-to-technology/",
    "canonical_url": "https://macleans.ca/longforms/the-hutterites-guide-to-technology",
@@ -481,8 +420,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-13-2026/",
    "found_on": "2026-11-13",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://desiringgod.org/interviews/scrolling-the-soul-shallow": {
@@ -497,7 +436,131 @@
    "graduated_on": "2026-11-13",
    "title": "Scrolling the Soul Shallow",
    "source_name": "Desiring God"
+  },
+  "https://gentlereformation.com/2026/11/13/teach-your-children-to-hate-you": {
+   "url": "https://gentlereformation.com/2026/11/13/teach-your-children-to-hate-you/",
+   "canonical_url": "https://gentlereformation.com/2026/11/13/teach-your-children-to-hate-you",
+   "anchor": "Teach Your Children to Hate You",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-14-2026/",
+   "found_on": "2026-11-14",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-14",
+   "title": "Teach Your Children to Hate You",
+   "source_name": "Gentle Reformation"
+  },
+  "https://theguardian.com/education/office-for-students": {
+   "url": "https://www.theguardian.com/education/office-for-students",
+   "canonical_url": "https://theguardian.com/education/office-for-students",
+   "anchor": "Office for Students",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-14-2026/",
+   "found_on": "2026-11-14",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-14",
+   "title": "Office for Students",
+   "source_name": "The Guardian"
+  },
+  "https://theguardian.com/education/2026/nov/11/ai-close-to-impossible-assess-university-coursework-regulator": {
+   "url": "https://www.theguardian.com/education/2026/nov/11/ai-close-to-impossible-assess-university-coursework-regulator",
+   "canonical_url": "https://theguardian.com/education/2026/nov/11/ai-close-to-impossible-assess-university-coursework-regulator",
+   "anchor": "AI has made it ‘close to impossible’ to assess university coursework, regulator says",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-14-2026/",
+   "found_on": "2026-11-14",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-14",
+   "title": "AI has made it ‘close to impossible’ to assess university coursework, regulator says",
+   "source_name": "The Guardian"
+  },
+  "https://cbc.ca/news/canada/manitoba/hidden-soldier-care-package-found-9.7415966": {
+   "url": "https://www.cbc.ca/news/canada/manitoba/hidden-soldier-care-package-found-9.7415966",
+   "canonical_url": "https://cbc.ca/news/canada/manitoba/hidden-soldier-care-package-found-9.7415966",
+   "anchor": "A Christmas care package for a Canadian WWII soldier was left behind. 80 years later, his family is getting it",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-14-2026/",
+   "found_on": "2026-11-14",
+   "status": "pending",
+   "attempts": 1,
+   "error": "ReadTimeout"
+  },
+  "https://reformedconformist.substack.com/p/christians-shouldnt-invoke-the-longhouse": {
+   "url": "https://reformedconformist.substack.com/p/christians-shouldnt-invoke-the-longhouse",
+   "canonical_url": "https://reformedconformist.substack.com/p/christians-shouldnt-invoke-the-longhouse",
+   "anchor": "Christians Shouldn’t Invoke “the Longhouse.”",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-14-2026/",
+   "found_on": "2026-11-14",
+   "status": "pending",
+   "attempts": 1,
+   "error": "HTTP 403"
+  },
+  "https://beautifulchristianlife.com/blog/7-ways-to-be-a-friend-according-to-the-bible": {
+   "url": "https://beautifulchristianlife.com/blog/7-ways-to-be-a-friend-according-to-the-bible",
+   "canonical_url": "https://beautifulchristianlife.com/blog/7-ways-to-be-a-friend-according-to-the-bible",
+   "anchor": "7 Ways to Be a Friend According to the Bible",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-14-2026/",
+   "found_on": "2026-11-14",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-14",
+   "title": "7 Ways to Be a Friend According to the Bible",
+   "source_name": "Beautiful Christian Life"
+  },
+  "https://zacharyconover.substack.com/p/your-thoughts-are-shaping-your-life": {
+   "url": "https://zacharyconover.substack.com/p/your-thoughts-are-shaping-your-life",
+   "canonical_url": "https://zacharyconover.substack.com/p/your-thoughts-are-shaping-your-life",
+   "anchor": "Your Thoughts Are Shaping Your Life",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-14-2026/",
+   "found_on": "2026-11-14",
+   "status": "pending",
+   "attempts": 1,
+   "error": "HTTP 403"
+  },
+  "https://en.wikipedia.org/wiki/The_Andy_Griffith_Show_season_3": {
+   "url": "https://en.wikipedia.org/wiki/The_Andy_Griffith_Show_season_3",
+   "canonical_url": "https://en.wikipedia.org/wiki/The_Andy_Griffith_Show_season_3",
+   "anchor": "season 3, episode 16",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-14-2026/",
+   "found_on": "2026-11-14",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-14",
+   "title": "List of The Andy Griffith Show episodes - Wikipedia",
+   "source_name": "wikipedia.org"
+  },
+  "https://monergism.com/christs-incarnation-foundation-christianity-ebook": {
+   "url": "https://www.monergism.com/christs-incarnation-foundation-christianity-ebook",
+   "canonical_url": "https://monergism.com/christs-incarnation-foundation-christianity-ebook",
+   "anchor": "Christ’s Incarnation: The Foundation of Christianity",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-14-2026/",
+   "found_on": "2026-11-14",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-14",
+   "title": "Spurgeon, C. H. — Christ's Incarnation: The Foundation of Christianity (Sermons eBook)",
+   "source_name": "monergism.com"
+  },
+  "https://truth78.org/collections/fighter-verses-songs": {
+   "url": "https://truth78.org/collections/fighter-verses-songs",
+   "canonical_url": "https://truth78.org/collections/fighter-verses-songs",
+   "anchor": "Fighter Verses Songs",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-14-2026/",
+   "found_on": "2026-11-14",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-14",
+   "title": "Fighter Verses Songs",
+   "source_name": "Truth78"
   }
  },
- "updated": "2026-11-13T10:01:12+00:00"
+ "updated": "2026-11-14T10:01:25+00:00"
 }

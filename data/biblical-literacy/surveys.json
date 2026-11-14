@@ -64,6 +64,10 @@
   {
    "date": "2026-11-09",
    "note": "Added the reverence gap chart (Pew Religious Landscape Study), the Lifeway quiz chart and five-question check, and this survey tracker. Pew, Lifeway and Gallup are plotted; Barna and American Bible Society are cited as text pending permission."
+  },
+  {
+   "date": "2026-11-14",
+   "note": "Data watch added 2 cited figures from Lifeway Research to the data watch table (quoted from the linked source, not charted)."
   }
  ],
  "studies": {
@@ -1861,6 +1865,30 @@
    "subgroup": "U.S. adults",
    "period": "2026",
    "value": 17
+  }
+ ],
+ "watch": [
+  {
+   "id": "watch-eb4324f5e1c9",
+   "quote": "In the people of the Bible section, respondents were most likely to correctly identify Moses as the person who received the Ten Commandments from God (94 percent correct v. 5 percent incorrect).",
+   "figure": "94 percent",
+   "publisher": "Lifeway Research",
+   "license_status": "reuse",
+   "url": "https://roysreport.com/study-2-in-3-churchgoers-fail-bible-literacy-quiz/",
+   "title": "Study: 2 in 3 churchgoers fail Bible literacy quiz",
+   "reported_by": "The Roys Report",
+   "verified_date": "2026-11-14"
+  },
+  {
+   "id": "watch-846a377a12d3",
+   "quote": "Three in 4 Christian churchgoers correctly place 1 Corinthians in the New Testament (74 percent) and Psalms (73 percent) in the Old Testament.",
+   "figure": "Three in 4",
+   "publisher": "Lifeway Research",
+   "license_status": "reuse",
+   "url": "https://roysreport.com/study-2-in-3-churchgoers-fail-bible-literacy-quiz/",
+   "title": "Study: 2 in 3 churchgoers fail Bible literacy quiz",
+   "reported_by": "The Roys Report",
+   "verified_date": "2026-11-14"
   }
  ]
 }

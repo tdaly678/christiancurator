@@ -18803,5 +18803,149 @@
     "website": "",
     "books": [],
     "initials": "SC"
+  },
+  {
+    "name": "Jayson Casper",
+    "slug": "jayson-casper",
+    "bio": "Jayson Casper is a journalist and correspondent specializing in coverage of the global church, particularly in the Middle East and North Africa. He reports on religious freedom, persecution, and the lived experiences of Christians in complex geopolitical contexts. His work combines rigorous reporting with pastoral sensitivity toward the communities he covers.",
+    "affiliation": "Christianity Today",
+    "role": "Correspondent & Journalist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JC"
+  },
+  {
+    "name": "Dominic Bouck",
+    "slug": "dominic-bouck",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DB"
+  },
+  {
+    "name": "Nathanael Devlin",
+    "slug": "nathanael-devlin",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ND"
+  },
+  {
+    "name": "Kyle R. Hughes",
+    "slug": "kyle-r-hughes",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KRH"
+  },
+  {
+    "name": "John Nettleton",
+    "slug": "john-nettleton",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JN"
+  },
+  {
+    "name": "Phill Howell",
+    "slug": "phill-howell",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PH"
+  },
+  {
+    "name": "Kyle Beshears",
+    "slug": "kyle-beshears",
+    "bio": "Kyle Beshears is a pastor and Christian writer who focuses on helping believers navigate faith and culture with biblical wisdom. His writing explores themes of discipleship, spiritual growth, and the practical application of Scripture to everyday life.",
+    "affiliation": "",
+    "role": "Pastor & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KB"
+  },
+  {
+    "name": "John Fea",
+    "slug": "john-fea",
+    "bio": "John Fea is a historian and professor who has written extensively on American religious history and the intersection of faith and politics. His work explores how Christians have engaged with American democracy and culture throughout the nation's history. Fea is known for his thoughtful, historically grounded perspective on contemporary faith and civic issues.",
+    "affiliation": "Messiah University",
+    "role": "Professor of History & Author",
+    "education": "Ph.D. in American History, State University of New York at Stony Brook",
+    "website": "https://www.johnfeahistory.com",
+    "books": [
+      {
+        "title": "The Bible Cause: A History of the American Bible Society",
+        "amazon_url": "https://www.amazon.com/s?k=The+Bible+Cause+John+Fea"
+      },
+      {
+        "title": "Was America Founded as a Christian Nation?: A Historical Introduction",
+        "amazon_url": "https://www.amazon.com/s?k=Was+America+Founded+as+a+Christian+Nation+John+Fea"
+      },
+      {
+        "title": "Believe Me: The Evangelical Road to Donald Trump",
+        "amazon_url": "https://www.amazon.com/s?k=Believe+Me+John+Fea"
+      },
+      {
+        "title": "The Way of Improvement Leads Home: Philip Vickers Fithian and the Rural North",
+        "amazon_url": "https://www.amazon.com/s?k=The+Way+of+Improvement+Leads+Home+John+Fea"
+      },
+      {
+        "title": "Spirituality in America: From the Land to the Mall",
+        "amazon_url": "https://www.amazon.com/s?k=Spirituality+in+America+John+Fea"
+      }
+    ],
+    "initials": "JF"
+  },
+  {
+    "name": "Matthew Schmitz",
+    "slug": "matthew-schmitz",
+    "bio": "Matthew Schmitz is a Catholic writer and editor known for his thoughtful commentary on faith, politics, and culture. He has contributed to various publications exploring the intersection of Christian belief and contemporary issues, bringing a nuanced perspective to debates affecting the modern Church.",
+    "affiliation": "First Things",
+    "role": "Writer & Editor",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MS"
+  },
+  {
+    "name": "Liel Leibovitz",
+    "slug": "liel-leibovitz",
+    "bio": "Liel Leibovitz is a senior writer at Tablet Magazine and author exploring the intersection of faith, culture, and politics. His work engages thoughtfully with biblical themes, Jewish and Christian traditions, and contemporary moral questions. Leibovitz brings scholarly insight and accessible prose to discussions of spirituality and its role in modern life.",
+    "affiliation": "Tablet Magazine",
+    "role": "Writer & Author",
+    "education": "M.A. in Comparative Literature, University of Michigan",
+    "website": "https://www.tabletmag.com/contributors/liel-leibovitz",
+    "books": [
+      {
+        "title": "The Un-American",
+        "amazon_url": "https://www.amazon.com/s?k=The+Un-American+Liel+Leibovitz"
+      },
+      {
+        "title": "Catch and Kill",
+        "amazon_url": "https://www.amazon.com/s?k=Catch+and+Kill+Liel+Leibovitz"
+      },
+      {
+        "title": "A Fire in the Flesh",
+        "amazon_url": "https://www.amazon.com/s?k=A+Fire+in+the+Flesh+Liel+Leibovitz"
+      }
+    ],
+    "initials": "LL"
   }
 ]

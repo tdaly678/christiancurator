@@ -95,6 +95,24 @@
       "status": "fetched",
       "attempts": 1,
       "note": "0 verified figure(s)"
+    },
+    "https://roysreport.com/study-2-in-3-churchgoers-fail-bible-literacy-quiz": {
+      "date": "2026-11-14",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "2 verified figure(s)"
+    },
+    "https://pewresearch.org/short-reads/2026/11/13/where-americans-get-news-relates-to-how-they-engage-in-public-life": {
+      "date": "2026-11-14",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
+    },
+    "https://pewresearch.org/short-reads/2026/11/12/many-black-adults-say-close-relationships-influence-their-views-about-being-a-black-man-or-woman": {
+      "date": "2026-11-14",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
     }
   },
   "fresh": {
@@ -116,6 +134,12 @@
         "title": "Pastoring after the midterm elections",
         "url": "https://erlc.com/resource/pastoring-after-the-midterm-elections/",
         "source": "ERLC"
+      },
+      {
+        "date": "2026-11-14",
+        "title": "Where Americans Get News Relates to How They Engage in Public Life",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/13/where-americans-get-news-relates-to-how-they-engage-in-public-life/",
+        "source": "Pew Research"
       }
     ],
     "technology": [
@@ -176,6 +200,12 @@
         "title": "2 in 3 Churchgoers Fail Bible Literacy Quiz",
         "url": "https://research.lifeway.com/2026/11/03/2-in-3-churchgoers-fail-bible-literacy-quiz/",
         "source": "Lifeway Research"
+      },
+      {
+        "date": "2026-11-14",
+        "title": "Study: 2 in 3 churchgoers fail Bible literacy quiz",
+        "url": "https://roysreport.com/study-2-in-3-churchgoers-fail-bible-literacy-quiz/",
+        "source": "The Roys Report"
       }
     ],
     "predestination-free-will": [
@@ -271,6 +301,22 @@
         "url": "https://www.pewresearch.org/2026/11/11/expert-brief-public-opinion-on-ai-in-healthcare/",
         "source": "Pew Research"
       }
+    ],
+    "gender-and-biblical-anthropology": [
+      {
+        "date": "2026-11-14",
+        "title": "Many Black Adults Say Close Relationships Influence Their Views About Being a Black Man or Woman",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/12/many-black-adults-say-close-relationships-influence-their-views-about-being-a-black-man-or-woman/",
+        "source": "Pew Research"
+      }
+    ],
+    "racial-reconciliation": [
+      {
+        "date": "2026-11-14",
+        "title": "Many Black Adults Say Close Relationships Influence Their Views About Being a Black Man or Woman",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/12/many-black-adults-say-close-relationships-influence-their-views-about-being-a-black-man-or-woman/",
+        "source": "Pew Research"
+      }
     ]
   },
   "figures": {
@@ -299,17 +345,71 @@
       }
     ]
   },
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "last_run": {
-    "date": "2026-11-13",
+    "date": "2026-11-14",
     "stories": [
       {
-        "title": "4 Warnings About Pride in Leadership",
-        "url": "https://research.lifeway.com/2026/11/12/4-warnings-about-pride-in-leadership/",
+        "title": "Study: 2 in 3 churchgoers fail Bible literacy quiz",
+        "url": "https://roysreport.com/study-2-in-3-churchgoers-fail-bible-literacy-quiz/",
+        "source": "The Roys Report",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [
+            "2 in 3",
+            "65 percent",
+            "1 in 10"
+          ],
+          "words": [
+            "quiz"
+          ],
+          "data_tag": true
+        },
+        "topics": [
+          "biblical-literacy"
+        ],
+        "trend": 9.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "verified 94 percent (Lifeway Research, reuse) for biblical-literacy",
+          "verified Three in 4 (Lifeway Research, reuse) for biblical-literacy"
+        ]
+      },
+      {
+        "title": "Leaving Well: 5 Ways to Prepare Your Church for Pastoral Transition",
+        "url": "https://research.lifeway.com/2026/11/11/leaving-well-5-ways-to-prepare-your-church-for-pastoral-transition/",
         "source": "Lifeway Research",
         "signals": {
           "publishers": [
             "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [
+          "pastoral-ministry",
+          "local-church"
+        ],
+        "trend": 7.75,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-11 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "‘Download My Free Guide’: What Products and Services Do Health and Wellness Influencers Promote?",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/12/download-my-free-guide-what-products-and-services-do-health-and-wellness-influencers-promote/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
           ],
           "figures": [],
           "words": [],
@@ -324,25 +424,26 @@
         ]
       },
       {
-        "title": "‘Download My Free Guide’: What Products and Services Do Health and Wellness Influencers Promote?",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/12/download-my-free-guide-what-products-and-services-do-health-and-wellness-influencers-promote/",
+        "title": "Where Americans Get News Relates to How They Engage in Public Life",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/13/where-americans-get-news-relates-to-how-they-engage-in-public-life/",
         "source": "Pew Research",
         "signals": {
           "publishers": [
             "Pew Research Center"
           ],
-          "figures": [
-            "38%"
-          ],
+          "figures": [],
           "words": [],
-          "data_tag": false
+          "data_tag": true
         },
-        "topics": [],
+        "topics": [
+          "politics-and-the-church"
+        ],
         "trend": 6.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
-          "no topic page matched"
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
         ]
       },
       {
@@ -369,46 +470,6 @@
         "actions": [
           "linked in Fresh From the Digest",
           "page already checked on 2026-11-12 (0 verified figure(s))"
-        ]
-      },
-      {
-        "title": "What We Know, and Don’t Know, About Flock’s License Plate Cameras",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/09/what-we-know-and-dont-know-about-flocks-license-plate-cameras/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [],
-        "trend": 6.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "The Presbyterian Church (USA) Is About to Cross a Historic Threshold",
-        "url": "https://www.graphsaboutreligion.com/p/the-presbyterian-church-usa-is-about",
-        "source": "Ryan Burge",
-        "signals": {
-          "publishers": [
-            "Ryan Burge"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 6.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
         ]
       },
       {
@@ -456,52 +517,50 @@
         ]
       },
       {
-        "title": "Most SBC Churches Confident About Future, but Issues Loom",
-        "url": "https://research.lifeway.com/2026/11/10/most-sbc-churches-confident-about-future-but-issues-loom/",
-        "source": "Lifeway Research",
+        "title": "Many Black Adults Say Close Relationships Influence Their Views About Being a Black Man or Woman",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/12/many-black-adults-say-close-relationships-influence-their-views-about-being-a-black-man-or-woman/",
+        "source": "Pew Research",
         "signals": {
           "publishers": [
-            "Lifeway Research"
+            "Pew Research Center"
           ],
           "figures": [],
-          "words": [
-            "report"
-          ],
+          "words": [],
           "data_tag": true
         },
         "topics": [
-          "evangelicalism"
+          "gender-and-biblical-anthropology",
+          "racial-reconciliation"
         ],
-        "trend": 4.25,
+        "trend": 4.0,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "page already checked on 2026-11-11 (2 verified figure(s))"
+          "no verifiable figure on the page: link only"
         ]
       },
       {
-        "title": "Pastoring after the midterm elections",
-        "url": "https://erlc.com/resource/pastoring-after-the-midterm-elections/",
-        "source": "ERLC",
+        "title": "Who Do Teenagers Turn To When They Doubt Their Religion?",
+        "url": "https://www.graphsaboutreligion.com/p/who-do-teenagers-turn-to-when-they",
+        "source": "Ryan Burge",
         "signals": {
-          "publishers": [],
-          "figures": [],
-          "words": [
-            "polls"
+          "publishers": [
+            "Ryan Burge"
           ],
-          "data_tag": false
+          "figures": [
+            "Four in Ten",
+            "Four in ten"
+          ],
+          "words": [],
+          "data_tag": true
         },
-        "topics": [
-          "politics-and-the-church",
-          "pastoral-ministry"
-        ],
-        "trend": 3.0,
+        "topics": [],
+        "trend": 2.75,
         "outlets": 1,
         "on_digest": true,
         "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-12 (0 verified figure(s))"
+          "no topic page matched"
         ]
       },
       {
@@ -525,53 +584,6 @@
         ]
       },
       {
-        "title": "Who Do Teenagers Turn To When They Doubt Their Religion?",
-        "url": "https://www.graphsaboutreligion.com/p/who-do-teenagers-turn-to-when-they",
-        "source": "Ryan Burge",
-        "signals": {
-          "publishers": [
-            "Ryan Burge"
-          ],
-          "figures": [
-            "Four in Ten",
-            "Four in ten"
-          ],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 2.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "Leaving Well: 5 Ways to Prepare Your Church for Pastoral Transition",
-        "url": "https://research.lifeway.com/2026/11/11/leaving-well-5-ways-to-prepare-your-church-for-pastoral-transition/",
-        "source": "Lifeway Research",
-        "signals": {
-          "publishers": [
-            "Lifeway Research"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "local-church",
-          "pastoral-ministry"
-        ],
-        "trend": 1.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-11 (0 verified figure(s))"
-        ]
-      },
-      {
         "title": "2026 Christmas Gift Guide: Save on Resources for Everyone",
         "url": "https://feeds.ligonier.org/~/972439013/0/ligonierministriesblog",
         "source": "Ligonier Ministries",
@@ -584,19 +596,112 @@
           "words": [],
           "data_tag": false
         },
-        "topics": [
-          "discipleship"
-        ],
-        "trend": 0.25,
+        "topics": [],
+        "trend": 2.0,
         "outlets": 1,
-        "on_digest": false,
+        "on_digest": true,
         "actions": [
-          "page already checked on 2026-11-10 (0 verified figure(s))"
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Most SBC Churches Confident About Future, but Issues Loom",
+        "url": "https://research.lifeway.com/2026/11/10/most-sbc-churches-confident-about-future-but-issues-loom/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [
+            "report"
+          ],
+          "data_tag": true
+        },
+        "topics": [
+          "evangelicalism"
+        ],
+        "trend": 2.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-11 (2 verified figure(s))"
+        ]
+      },
+      {
+        "title": "The Presbyterian Church (USA) Is About to Cross a Historic Threshold",
+        "url": "https://www.graphsaboutreligion.com/p/the-presbyterian-church-usa-is-about",
+        "source": "Ryan Burge",
+        "signals": {
+          "publishers": [
+            "Ryan Burge"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 1.75,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Pastoring after the midterm elections",
+        "url": "https://erlc.com/resource/pastoring-after-the-midterm-elections/",
+        "source": "ERLC",
+        "signals": {
+          "publishers": [],
+          "figures": [],
+          "words": [
+            "polls"
+          ],
+          "data_tag": false
+        },
+        "topics": [
+          "politics-and-the-church",
+          "pastoral-ministry"
+        ],
+        "trend": 1.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-12 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "4 Warnings About Pride in Leadership",
+        "url": "https://research.lifeway.com/2026/11/12/4-warnings-about-pride-in-leadership/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 0.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
         ]
       }
     ],
-    "pages": [],
-    "fetched": 0,
-    "hits": 13
+    "pages": [
+      {
+        "slug": "biblical-literacy",
+        "kind": "data-file",
+        "note": "added 2 watch row(s) (reuse, reuse); builder rerun"
+      }
+    ],
+    "fetched": 3,
+    "hits": 15
   }
 }
