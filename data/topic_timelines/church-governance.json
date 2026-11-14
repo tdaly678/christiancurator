@@ -26,7 +26,7 @@
       "tag": "For example, the PCA",
       "color": "green",
       "boxes": [
-        {"tier": "wide", "text": "General Assembly", "sub": "Teaching and ruling elders from every presbytery"},
+        {"tier": "wide", "text": "General Assembly", "sub": "All teaching elders, and ruling elders sent by sessions"},
         {"tier": "region", "text": "Presbytery", "sub": "Teaching elders and ruling elders sent by sessions"},
         {"tier": "leaders", "text": "Session", "sub": "Pastors and ruling elders"},
         {"tier": "congregation", "text": "Congregation", "sub": "Communing members"}
@@ -80,14 +80,14 @@
         {"tier": "congregation", "text": "Congregation", "sub": "Owns its property"}
       ],
       "links": [
-        {"between": ["wide", "region"], "down": "Consents", "up": "Elects bishop"},
+        {"between": ["wide", "region"], "down": "Consents", "up": "Elects its bishop"},
         {"between": ["region", "leaders"], "down": "Bishop consents to rector"},
         {"between": ["leaders", "congregation"], "down": "Spiritual leadership"}
       ],
       "proponent": {
         "name": "Anglican Church in North America",
         "image_name": "ACNA Constitution and Canons",
-        "work": "Constitution and Canons (ratified June 25, 2026)",
+        "work": "Constitution and Canons (as amended June 2026)",
         "source": "acna"
       }
     }
@@ -111,7 +111,7 @@
       "url": "https://www.pcaac.org/book-of-church-order/part-1-the-form-of-government/",
       "fetched": "2026-11-14",
       "quote": "Although each court exercises exclusive original jurisdiction over all matters especially belonging to it, the lower courts are subject to the review and control of the higher courts, in regular gradation.",
-      "notes": "Includes amendments through the 53rd General Assembly (June 2026). 10-2 \"These courts are church Sessions, Presbyteries, and the General Assembly.\" 12-1 \"The church Session consists of the pastor, associate pastor(s), if there be any, and the ruling elders of a church.\" 13-1 presbytery \"shall comprise all teaching elders and ruling elders as elected by their Session.\" 14-1 \"The General Assembly is the highest court of this Church\". 12-5b ruling elders and deacons \"on their election by the church\". 13-9, 14-6a appeals. 16-2 \"no man can be placed over a church in any office without the election, or at least the consent of that church.\""
+      "notes": "Includes amendments through the 53rd General Assembly (June 2026). 14-2 General Assembly \"shall consist of all teaching elders in good standing with their Presbyteries, and ruling elders as elected by their Session.\" 10-2 \"These courts are church Sessions, Presbyteries, and the General Assembly.\" 12-1 \"The church Session consists of the pastor, associate pastor(s), if there be any, and the ruling elders of a church.\" 13-1 presbytery \"shall comprise all teaching elders and ruling elders as elected by their Session.\" 14-1 \"The General Assembly is the highest court of this Church\". 12-5b ruling elders and deacons \"on their election by the church\". 13-9, 14-6a appeals. 16-2 \"no man can be placed over a church in any office without the election, or at least the consent of that church.\""
     },
     {
       "id": "bfm",
@@ -136,12 +136,12 @@
     {
       "id": "acna",
       "publisher": "Anglican Church in North America",
-      "title": "Constitution and Canons (ratified June 25, 2026)",
+      "title": "Constitution and Canons (as amended June 2026)",
       "year": 2026,
       "url": "https://anglicanchurch.net/wp-content/uploads/2026/08/ACNA-CC-RATIFIED-2026-06-25.pdf",
       "fetched": "2026-11-14",
       "quote": "No Rector may be called to or dismissed from a congregation without the consent of the Bishop.",
-      "notes": "Const. IV.2 \"Congregations and clergy are related together in a diocese or network (whether regional or affinity-based), united by a bishop.\" VII.1 Provincial Council \"is the governing body\". VIII.1 dioceses \"shall each retain all authority they do not yield to the Province by their own consent.\" IX.1 Archbishop \"elected by the College of Bishops\". X.5 College of Bishops may \"consent to an election from a diocese\". Canon I.6.5 vestry \"chosen and serves according to applicable laws, diocesan canons, and the congregational by-laws\"; \"supports the clergy in the spiritual leadership of the congregation\". I.6.6 congregational property \"solely and exclusively owned by the congregation\"."
+      "notes": "Title page: \"As ratified by the Inaugural Provincial Assembly, June 2009, amended by the seventh Provincial Assembly, June 2026\" (the June 25, 2026 date is only in the file name). Canon I.6.4 for the quote. Const. IV.2 \"Congregations and clergy are related together in a diocese or network (whether regional or affinity-based), united by a bishop.\" VII.1 Provincial Council \"is the governing body\". VIII.1 dioceses \"shall each retain all authority they do not yield to the Province by their own consent.\" IX.1 Archbishop \"elected by the College of Bishops\". X.5 College of Bishops may \"consent to an election from a diocese\". Canon I.6.5 vestry \"chosen and serves according to applicable laws, diocesan canons, and the congregational by-laws\"; \"supports the clergy in the spiritual leadership of the congregation\". I.6.6 congregational property \"solely and exclusively owned by the congregation\"."
     },
     {
       "id": "acna-structure",
