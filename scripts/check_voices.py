@@ -84,11 +84,13 @@ def run_checks() -> dict[str, list[tuple[str, str]]]:
     sitemap = SITEMAP.read_text(encoding="utf-8") if SITEMAP.exists() else ""
     in_sitemap = set(re.findall(r"/voices/([a-z0-9-]+)/</loc>", sitemap))
 
-    # Expected Recent Articles headlines, keyed (slug, url).
+    # Expected Recent Articles headlines, keyed (slug, url). Pages link the URL
+    # with utm_* parameters stripped (build_recent_articles.strip_tracking).
     by_voice = recent.collect_by_voice()
-    expected = {(s, i["url"]): recent.strip_dashes(i["title"]) for s, items in by_voice.items() for i in items}
+    clean = recent.strip_tracking
+    expected = {(s, clean(i["url"])): recent.strip_dashes(i["title"]) for s, items in by_voice.items() for i in items}
     deaths = recent.death_dates()
-    allowed = {(s, i["url"]) for s, items in by_voice.items()
+    allowed = {(s, clean(i["url"])) for s, items in by_voice.items()
                for i in recent.before_death(items, deaths.get(s))}
 
     for d in sorted(p for p in VOICES.iterdir() if p.is_dir()):
@@ -118,7 +120,7 @@ def run_checks() -> dict[str, list[tuple[str, str]]]:
                                      f"sourced bio: {vp.has_sourced_bio(entry)}"))
         for url, raw in RECENT_LINK_RE.findall(page):
             shown = " ".join(html_mod.unescape(re.sub(r"<[^>]+>", "", raw)).split())
-            url = html_mod.unescape(url)
+            url = clean(html_mod.unescape(url))
             want = expected.get((slug, url))
             if slug in deaths and (slug, url) not in allowed:
                 out["deceased"].append((slug, f"{url} was curated after the writer's death"))
