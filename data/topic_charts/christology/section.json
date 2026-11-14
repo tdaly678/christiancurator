@@ -1,0 +1,13 @@
+{
+  "id": "by-the-numbers",
+  "label": "By the Numbers",
+  "title": "What Americans and evangelicals say about Jesus",
+  "intro": "Ligonier Ministries and Lifeway Research ask Americans whether they agree with plain statements about Christ. Some of the answers sit badly with the Nicene Creed, including among evangelicals.",
+  "charts": [
+    "created-being",
+    "great-teacher"
+  ],
+  "place": {
+    "before": "<div class=\"cc-debate\" id=\"debate\">"
+  }
+}

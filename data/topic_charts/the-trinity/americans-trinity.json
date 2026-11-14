@@ -1,0 +1,110 @@
+{
+  "id": "americans-trinity",
+  "type": "line",
+  "kicker": "Belief and its logic",
+  "title": "Seven in ten Americans affirm the Trinity. Most also call the Spirit a force.",
+  "subtitle": "U.S. adults, 2014 to 2025",
+  "caption": "Agreement that there is one true God in three persons has held at about 70% in all six surveys. In every survey a majority also agreed that the Holy Spirit is a force and not a personal being, a claim the doctrine of the Trinity rules out.",
+  "note": "Statements: \"There is one true God in three persons: God the Father, God the Son, and God the Holy Spirit\" and \"The Holy Spirit is a force but is not a personal being\" (share who agree). All twelve figures are printed in the 2025 white paper, which compares each year with the earlier surveys.",
+  "unit": "%",
+  "max": 100,
+  "series": [
+    {
+      "id": "trinity",
+      "label": "Agree: one God in three persons",
+      "color": "green"
+    },
+    {
+      "id": "force",
+      "label": "Agree: the Spirit is a force, not a person",
+      "color": "brown"
+    }
+  ],
+  "rows": [
+    {
+      "label": "2014",
+      "values": {
+        "trinity": 71,
+        "force": 64
+      },
+      "as_published": {
+        "trinity": "71%",
+        "force": "64%"
+      },
+      "source": "sot2025"
+    },
+    {
+      "label": "2016",
+      "values": {
+        "trinity": 69,
+        "force": 56
+      },
+      "as_published": {
+        "trinity": "69%",
+        "force": "56%"
+      },
+      "source": "sot2025"
+    },
+    {
+      "label": "2018",
+      "values": {
+        "trinity": 70,
+        "force": 59
+      },
+      "as_published": {
+        "trinity": "70%",
+        "force": "59%"
+      },
+      "source": "sot2025"
+    },
+    {
+      "label": "2020",
+      "values": {
+        "trinity": 72,
+        "force": 59
+      },
+      "as_published": {
+        "trinity": "72%",
+        "force": "59%"
+      },
+      "source": "sot2025"
+    },
+    {
+      "label": "2022",
+      "values": {
+        "trinity": 71,
+        "force": 59
+      },
+      "as_published": {
+        "trinity": "71%",
+        "force": "59%"
+      },
+      "source": "sot2025"
+    },
+    {
+      "label": "2025",
+      "values": {
+        "trinity": 71,
+        "force": 57
+      },
+      "as_published": {
+        "trinity": "71%",
+        "force": "57%"
+      },
+      "source": "sot2025"
+    }
+  ],
+  "sources": [
+    {
+      "id": "sot2025",
+      "publisher": "Ligonier Ministries and Lifeway Research",
+      "study": "Ligonier State of Theology 2025 White Paper",
+      "year": 2025,
+      "url": "https://research.lifeway.com/wp-content/uploads/2025/09/Ligonier-State-of-Theology-2025-White-Paper.pdf",
+      "fetched": "2026-11-14",
+      "license": "credit",
+      "field_dates": "January 6 to 15, 2025",
+      "sample": "3,001 U.S. adults, demographically balanced online panel; margin of error plus or minus 1.9 points, higher in subgroups"
+    }
+  ]
+}

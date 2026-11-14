@@ -1,0 +1,75 @@
+{
+  "slug": "christology",
+  "glance": {
+    "question": "How do Christ's divine and human natures fit together in one person?",
+    "positions": [
+      {
+        "name": "Classical Christology",
+        "claim": "One person, two complete natures, united without confusion or separation.",
+        "anchor": "position-1"
+      },
+      {
+        "name": "Kenotic Christology",
+        "claim": "The Son limited the use of his divine powers to live a fully human life.",
+        "anchor": "position-2"
+      },
+      {
+        "name": "Communicatio Idiomatum",
+        "claim": "Because Christ is one person, we can truly say God suffered and died.",
+        "anchor": "position-3"
+      }
+    ]
+  },
+  "start_here": [
+    {
+      "kind": "Primer on kenosis",
+      "url": "https://journal.rts.edu/review/kenosis-the-self-emptying-of-christ-in-scripture-and-theology/",
+      "title": "Kenosis: The Self-Emptying of Christ in Scripture and Theology",
+      "author": "Thomas Haviland-Pabst",
+      "outlet": "Reformed Faith & Practice",
+      "why": "A Reformed review of a scholarly volume on what Christ's self-emptying in Philippians 2 does and does not mean."
+    },
+    {
+      "kind": "The longer view",
+      "url": "https://www.thegospelcoalition.org/themelios/article/recent-trends-in-christology/",
+      "title": "Recent trends in Christology",
+      "author": "Gerald Bray",
+      "outlet": "Themelios",
+      "why": "Bray surveys the scholarly answer to The Myth of God Incarnate and what it means for orthodox belief."
+    }
+  ],
+  "key_number": {
+    "figure": "73%",
+    "text": "In 2022, 73% of Americans with evangelical beliefs agreed that Jesus is the first and greatest being created by God, a claim the Nicene Creed rejects.",
+    "publisher": "Ligonier Ministries and Lifeway Research",
+    "study": "Ligonier State of Theology 2022 White Paper",
+    "year": 2022,
+    "source_url": "https://research.lifeway.com/wp-content/uploads/2022/09/Ligonier-State-of-Theology-2022-White-Paper.pdf",
+    "fetched": "2026-11-14",
+    "license": "credit",
+    "link": "#created-being"
+  },
+  "related": [
+    {
+      "slug": "the-trinity",
+      "question": "How is God one being in three persons?"
+    },
+    {
+      "slug": "atonement",
+      "question": "What did Christ accomplish on the cross?"
+    },
+    {
+      "slug": "apologetics",
+      "question": "Can the faith be defended with reason and evidence?"
+    }
+  ],
+  "changes": [
+    {
+      "date": "2026-11-14",
+      "text": "added a definition, short answers, and survey charts on what Americans believe about Jesus."
+    }
+  ],
+  "latest": true,
+  "signup": true,
+  "notes": "No voices in the strip: card names not verified in their own words this session; see report for mismatches (Spurgeon and Stott under kenotic; Calvin and Hodge under a Lutheran-sounding Position 3; Ferguson on two cards). Curated entries 1 and 5 carry wrong credits (report). Start here avoids them."
+}

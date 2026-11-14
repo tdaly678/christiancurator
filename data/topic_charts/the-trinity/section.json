@@ -1,0 +1,13 @@
+{
+  "id": "by-the-numbers",
+  "label": "By the Numbers",
+  "title": "What Americans and evangelicals say about the Trinity",
+  "intro": "Ligonier Ministries and Lifeway Research have asked Americans the same statements about God since 2014. These charts set the doctrine on this page beside what people say they believe.",
+  "charts": [
+    "spirit-gap",
+    "americans-trinity"
+  ],
+  "place": {
+    "before": "<div class=\"cc-debate\" id=\"debate\">"
+  }
+}
