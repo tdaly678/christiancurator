@@ -113,6 +113,37 @@ def test_reference_line_drawn_for_column():
     assert "stroke-dasharray" in html and "Two-thirds (66.67%)" in html
 
 
+@pytest.mark.parametrize("make", [hbar, column, line])
+def test_wide_and_narrow_images_with_unique_ids(make):
+    c = make()
+    svgs = [ET.fromstring(s) for s in re.findall(r"<svg.*?</svg>", btc.render_chart(c), re.DOTALL)]
+    assert [s.get("class") for s in svgs] == ["cc-chart-svg cc-chart-wide", "cc-chart-svg cc-chart-narrow"]
+    assert svgs[1].get("viewBox").split()[2] == str(btc.W_NARROW)
+    assert svgs[1].get("aria-labelledby") == f"{c['id']}-n-t {c['id']}-n-d"
+    # Phone image: no text below 12px (drawn at 360 units, about 0.9x on a 390px screen).
+    sizes = [float(t.get("font-size")) for t in svgs[1].iter("text")]
+    assert min(sizes) >= 12
+
+
+def test_narrow_column_is_horizontal_bars_and_text_fits():
+    svg = re.findall(r"<svg.*?</svg>", btc.render_chart(column()), re.DOTALL)[1]
+    root = ET.fromstring(svg)
+    bars = [r for r in root.iter("rect") if r.get("height") == "15"]
+    assert bars and all(float(r.get("x")) == btc.PAD for r in bars)
+    for t in root.iter("text"):
+        if t.get("text-anchor") != "end":
+            assert float(t.get("x")) + 7.4 * len(t.text) <= btc.W_NARROW
+
+
+def test_reference_label_sits_in_legend_above_the_bars():
+    svg = re.search(r"<svg.*?</svg>", btc.render_chart(column()), re.DOTALL).group(0)
+    root = ET.fromstring(svg)
+    label = [t for t in root.iter("text") if t.text == "Two-thirds (66.67%)"]
+    assert len(label) == 1
+    bar_tops = [float(r.get("y")) for r in root.iter("rect") if r.get("width") != str(btc.W) and r.get("rx") is None]
+    assert float(label[0].get("y")) < min(bar_tops)
+
+
 def test_table_type_renders_html_table_with_sources():
     html = btc.render_chart(table())
     assert "<svg" not in html and "<table class=\"cc-chart-table\">" in html

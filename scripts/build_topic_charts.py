@@ -95,6 +95,7 @@ INK, GREY, TRACK, GRID = "#1a1a1a", "#666", "#ece9e4", "#e0ddd8"
 FONT = "'Source Sans 3', sans-serif"
 SERIF = "'Lora', Georgia, serif"
 W, PAD = 640, 16
+W_NARROW = 360   # second image for phones; topic.css swaps them below 560px
 BRAND = "christiancurator.com"
 
 DASH_RE = re.compile("[–—]")
@@ -320,43 +321,74 @@ def axis_max(c: dict, values: list[float]) -> float:
     return top * 1.1
 
 
-def header(c: dict) -> tuple[list[str], float]:
+def narrow(w: float) -> bool:
+    return w < W
+
+
+def small(w: float) -> float:
+    """Size of axis, source and brand text: larger on the narrow image so it stays legible on a phone."""
+    return 12.5 if narrow(w) else 11.5
+
+
+def header(c: dict, w: float = W) -> tuple[list[str], float]:
     parts, y = [], 24
-    for line in wrap(c["title"], 56):
+    for line in wrap(c["title"], int((w - 2 * PAD) / 11)):
         parts.append(t(PAD, y, line, size=20, weight="700", family=SERIF))
         y += 25
-    for line in wrap(c["subtitle"], 84):
+    for line in wrap(c["subtitle"], int((w - 2 * PAD) / 7.2)):
         parts.append(t(PAD, y - 2, line, size=13, fill=GREY))
         y += 17
     return parts, y + 8
 
 
-def legend(items: list[tuple[str, str]], y: float) -> tuple[str, float]:
+def legend(items: list[tuple], y: float, w: float = W) -> tuple[str, float]:
+    """items: (label, color) or (label, color, "ref") for a dashed reference-line swatch."""
     parts, x = [], PAD
-    for label, col in items:
-        width = 18 + 7.2 * len(label) + 16
-        if x + width > W - PAD:
+    for item in items:
+        label, col = item[0], item[1]
+        dashed = len(item) > 2 and item[2] == "ref"
+        width = (26 if dashed else 18) + 7.2 * len(label) + 16
+        if x + width > w - PAD and x > PAD:
             x, y = PAD, y + 20
-        parts.append(f'<rect x="{x:.1f}" y="{y - 10:.1f}" width="11" height="11" rx="2" fill="{col}"/>')
-        parts.append(t(x + 16, y, label, size=13, fill="#444"))
+        if dashed:
+            parts.append(f'<line x1="{x:.1f}" x2="{x + 20:.1f}" y1="{y - 4.5:.1f}" y2="{y - 4.5:.1f}" '
+                         f'stroke="{col}" stroke-width="1.5" stroke-dasharray="5 4"/>')
+            parts.append(t(x + 25, y, label, size=13, fill=col, weight="600"))
+        else:
+            parts.append(f'<rect x="{x:.1f}" y="{y - 10:.1f}" width="11" height="11" rx="2" fill="{col}"/>')
+            parts.append(t(x + 16, y, label, size=13, fill="#444"))
         x += width
     return "".join(parts), y + 18
 
 
-def footer(c: dict, y: float) -> tuple[str, float]:
+def legend_items(c: dict, series: bool) -> list[tuple]:
+    items = [(s["label"], color(s.get("color"))) for s in c.get("series", [])] if series else []
+    ref = c.get("reference")
+    if ref:
+        # The reference line is named in the legend, never on the plot, so its
+        # label can never sit on a bar (the SBC 74.6% bar crossed it).
+        items.append((f'{ref.get("label", "")} ({fmt(ref["value"], c.get("unit", ""))})'.strip(),
+                      COLORS["red"], "ref"))
+    return items
+
+
+def footer(c: dict, y: float, w: float = W) -> tuple[str, float]:
     srcs = []
     for s in c["sources"]:
         bit = f'{s["publisher"]}, {s["year"]}'
         if bit not in srcs:
             srcs.append(bit)
-    lines = wrap("Source: " + "; ".join(srcs), 80)
-    parts = [f'<line x1="{PAD}" x2="{W - PAD}" y1="{y:.1f}" y2="{y:.1f}" stroke="{GRID}"/>']
+    size = small(w)
+    lines = wrap("Source: " + "; ".join(srcs), int((w - 2 * PAD) / (size * 0.62)))
+    parts = [f'<line x1="{PAD}" x2="{w - PAD}" y1="{y:.1f}" y2="{y:.1f}" stroke="{GRID}"/>']
     y += 17
     for i, line in enumerate(lines):
-        parts.append(t(PAD, y, line, size=11.5, fill=GREY))
+        parts.append(t(PAD, y, line, size=size, fill=GREY))
         if i < len(lines) - 1:
             y += 15
-    parts.append(t(W - PAD, y, BRAND, size=11, fill="#2C4A2E", weight="600", anchor="end"))
+    if narrow(w):
+        y += 17  # the mark gets its own line on the narrow image
+    parts.append(t(w - PAD, y, BRAND, size=size - 0.5, fill="#2C4A2E", weight="600", anchor="end"))
     return "".join(parts), y + 10
 
 
@@ -377,68 +409,85 @@ def desc_text(c: dict) -> str:
     return ""
 
 
-def svg_wrap(c: dict, body: str, height: float) -> str:
-    cid = c["id"]
+def svg_wrap(c: dict, body: str, height: float, w: float = W) -> str:
+    # The wide image shows above 560px, the narrow one below it (topic.css);
+    # the hidden one is display:none, so screen readers meet the chart once.
+    cid = c["id"] + ("-n" if narrow(w) else "")
+    cls = "cc-chart-svg " + ("cc-chart-narrow" if narrow(w) else "cc-chart-wide")
     return (
-        f'<svg class="cc-chart-svg" viewBox="0 0 {W} {height:.0f}" role="img" '
+        f'<svg class="{cls}" viewBox="0 0 {w} {height:.0f}" role="img" '
         f'aria-labelledby="{cid}-t {cid}-d" font-family="{FONT}">'
         f'<title id="{cid}-t">{esc(c["title"])}</title><desc id="{cid}-d">{esc(c.get("alt") or desc_text(c))}</desc>'
-        f'<rect width="{W}" height="{height:.0f}" fill="#fff"/>{body}</svg>'
+        f'<rect width="{w}" height="{height:.0f}" fill="#fff"/>{body}</svg>'
     )
 
 
-def render_hbar(c: dict) -> str:
-    parts, y = header(c)
+def _bar_row(parts: list[str], label_lines: list[str], y: float, bars: list[tuple[float, str]],
+             top: float, unit: str, w: float) -> float:
+    """One labeled row of horizontal bars (one bar per (value, color)); returns the next y."""
+    bar_w = w - 2 * PAD - 60
+    for k, line in enumerate(label_lines):
+        parts.append(t(PAD, y + 13 + 17 * k, line, size=14))
+    y += 17 * (len(label_lines) - 1)
+    if not bars:
+        parts.append(f'<rect x="{PAD}" y="{y + 19:.1f}" width="{bar_w}" height="15" rx="2" fill="{TRACK}"/>')
+        return y + 46
+    for v, col in bars:
+        bw = bar_w * v / top
+        parts.append(f'<rect x="{PAD}" y="{y + 19:.1f}" width="{bar_w}" height="15" rx="2" fill="{TRACK}"/>')
+        parts.append(f'<rect x="{PAD}" y="{y + 19:.1f}" width="{bw:.1f}" height="15" rx="2" fill="{col}"/>')
+        parts.append(t(PAD + bw + 6, y + 32, fmt(v, unit), size=14, weight="700"))
+        y += 21
+    return y + 25
+
+
+def render_hbar(c: dict, w: float = W) -> str:
+    parts, y = header(c, w)
     cats = {k["id"]: k for k in c.get("categories") or []}
     if cats:
-        leg, y = legend([(k["label"], color(k.get("color"))) for k in cats.values()], y + 4)
+        leg, y = legend([(k["label"], color(k.get("color"))) for k in cats.values()], y + 4, w)
         parts.append(leg)
     unit = c.get("unit", "")
     top = axis_max(c, [r["value"] for r in c["rows"]])
-    bar_w = W - 2 * PAD - 60
     for r in c["rows"]:
         col = color(cats[r["category"]].get("color")) if cats and r.get("category") in cats else color(r.get("color"))
-        w = bar_w * r["value"] / top
-        parts.append(t(PAD, y + 13, r["label"], size=14))
-        parts.append(f'<rect x="{PAD}" y="{y + 19:.1f}" width="{bar_w}" height="15" rx="2" fill="{TRACK}"/>')
-        parts.append(f'<rect x="{PAD}" y="{y + 19:.1f}" width="{w:.1f}" height="15" rx="2" fill="{col}"/>')
-        parts.append(t(PAD + w + 6, y + 32, fmt(r["value"], unit), size=14, weight="700"))
-        y += 46
-    foot, y = footer(c, y + 6)
-    return svg_wrap(c, "".join(parts) + foot, y)
+        y = _bar_row(parts, wrap(r["label"], int((w - 2 * PAD) / 7.4)), y, [(r["value"], col)], top, unit, w)
+    foot, y = footer(c, y + 6, w)
+    return svg_wrap(c, "".join(parts) + foot, y, w)
 
 
-def _plot_frame(c: dict, top: float, y0: float, plot_h: float, left: float) -> list[str]:
+def _plot_frame(c: dict, top: float, y0: float, plot_h: float, left: float, w: float = W) -> list[str]:
     unit = c.get("unit", "")
     parts = []
     for i in range(5):
         v = top * i / 4
         yy = y0 + plot_h - plot_h * i / 4
-        parts.append(f'<line x1="{left}" x2="{W - PAD}" y1="{yy:.1f}" y2="{yy:.1f}" stroke="{GRID}"/>')
-        parts.append(t(left - 6, yy + 4, fmt(round(v, 1), unit), size=11.5, fill=GREY, anchor="end"))
+        parts.append(f'<line x1="{left}" x2="{w - PAD}" y1="{yy:.1f}" y2="{yy:.1f}" stroke="{GRID}"/>')
+        parts.append(t(left - 6, yy + 4, fmt(round(v, 1), unit), size=small(w), fill=GREY, anchor="end"))
     ref = c.get("reference")
     if ref:
         yy = y0 + plot_h - plot_h * ref["value"] / top
-        parts.append(f'<line x1="{left}" x2="{W - PAD}" y1="{yy:.1f}" y2="{yy:.1f}" stroke="{COLORS["red"]}" '
+        parts.append(f'<line x1="{left}" x2="{w - PAD}" y1="{yy:.1f}" y2="{yy:.1f}" stroke="{COLORS["red"]}" '
                      f'stroke-width="1.5" stroke-dasharray="5 4"/>')
-        parts.append(t(W - PAD, yy - 5, f'{ref.get("label", "")} ({fmt(ref["value"], unit)})'.strip(),
-                       size=12, fill=COLORS["red"], weight="600", anchor="end"))
     return parts
 
 
-def render_column(c: dict) -> str:
-    parts, y = header(c)
+def render_column(c: dict, w: float = W) -> str:
+    if narrow(w):
+        return render_column_narrow(c, w)
+    parts, y = header(c, w)
     series = c["series"]
-    if len(series) > 1:
-        leg, y = legend([(s["label"], color(s.get("color"))) for s in series], y + 4)
+    items = legend_items(c, series=len(series) > 1)
+    if items:
+        leg, y = legend(items, y + 4, w)
         parts.append(leg)
     unit = c.get("unit", "")
     vals = [v for r in c["rows"] for v in r["values"].values()]
     top = axis_max(c, vals)
     left, plot_h, y0 = PAD + 40, 220, y + 14
-    parts += _plot_frame(c, top, y0, plot_h, left)
+    parts += _plot_frame(c, top, y0, plot_h, left, w)
     n = len(c["rows"])
-    group_w = (W - PAD - left) / n
+    group_w = (w - PAD - left) / n
     bar_w = min(56, (group_w - 16) / len(series))
     for i, r in enumerate(c["rows"]):
         gx = left + group_w * i + (group_w - bar_w * len(series)) / 2
@@ -460,22 +509,45 @@ def render_column(c: dict) -> str:
         for k, line in enumerate(wrap(r["label"], max(8, int(group_w / 7.5)))):
             parts.append(t(left + group_w * i + group_w / 2, y0 + plot_h + 18 + 15 * k, line, size=13, anchor="middle"))
     y = y0 + plot_h + 18 + 15 * max(len(wrap(r["label"], max(8, int(group_w / 7.5)))) for r in c["rows"]) + 8
-    foot, y = footer(c, y)
-    return svg_wrap(c, "".join(parts) + foot, y)
+    foot, y = footer(c, y, w)
+    return svg_wrap(c, "".join(parts) + foot, y, w)
 
 
-def render_line(c: dict) -> str:
-    parts, y = header(c)
+def render_column_narrow(c: dict, w: float) -> str:
+    """Column charts on a phone: the same data as grouped horizontal bars, so labels and values stay full size."""
+    parts, y = header(c, w)
     series = c["series"]
-    leg, y = legend([(s["label"], color(s.get("color"))) for s in series], y + 4)
+    items = legend_items(c, series=len(series) > 1)
+    if items:
+        leg, y = legend(items, y + 4, w)
+        parts.append(leg)
+    unit = c.get("unit", "")
+    top = axis_max(c, [v for r in c["rows"] for v in r["values"].values()])
+    y_start = y
+    for r in c["rows"]:
+        bars = [(r["values"][s["id"]], color(s.get("color"))) for s in series if s["id"] in r["values"]]
+        y = _bar_row(parts, wrap(r["label"], int((w - 2 * PAD) / 7.4)), y, bars, top, unit, w)
+    ref = c.get("reference")
+    if ref:
+        x = PAD + (w - 2 * PAD - 60) * ref["value"] / top
+        parts.append(f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{y_start + 16:.1f}" y2="{y - 8:.1f}" '
+                     f'stroke="{COLORS["red"]}" stroke-width="1.5" stroke-dasharray="5 4"/>')
+    foot, y = footer(c, y + 6, w)
+    return svg_wrap(c, "".join(parts) + foot, y, w)
+
+
+def render_line(c: dict, w: float = W) -> str:
+    parts, y = header(c, w)
+    series = c["series"]
+    leg, y = legend(legend_items(c, series=True), y + 4, w)
     parts.append(leg)
     unit = c.get("unit", "")
     vals = [v for r in c["rows"] for v in r["values"].values()]
     top = axis_max(c, vals)
     left, plot_h, y0 = PAD + 40, 200, y + 14
-    parts += _plot_frame(c, top, y0, plot_h, left)
+    parts += _plot_frame(c, top, y0, plot_h, left, w)
     n = len(c["rows"])
-    span = W - PAD - 30 - left
+    span = w - PAD - 30 - left
     xs = [left + 24 + (span * i / (n - 1) if n > 1 else span / 2) for i in range(n)]
     def ypos(v):
         return y0 + plot_h - plot_h * v / top
@@ -499,8 +571,8 @@ def render_line(c: dict) -> str:
     parts += labels
     for i, r in enumerate(c["rows"]):
         parts.append(t(xs[i], y0 + plot_h + 18, r["label"], size=13, anchor="middle"))
-    foot, y = footer(c, y0 + plot_h + 30)
-    return svg_wrap(c, "".join(parts) + foot, y)
+    foot, y = footer(c, y0 + plot_h + 30, w)
+    return svg_wrap(c, "".join(parts) + foot, y, w)
 
 
 def render_table_body(c: dict) -> str:
@@ -549,7 +621,10 @@ RENDERERS = {"hbar": render_hbar, "column": render_column, "line": render_line}
 
 def render_chart(c: dict) -> str:
     start, end = chart_marker(c["id"])
-    visual = render_table_body(c) if c["type"] == "table" else RENDERERS[c["type"]](c)
+    if c["type"] == "table":
+        visual = render_table_body(c)
+    else:
+        visual = RENDERERS[c["type"]](c) + "\n" + RENDERERS[c["type"]](c, W_NARROW)
     kicker = f'<div class="cc-chart-kicker">{esc(c["kicker"])}</div>' if c.get("kicker") else ""
     note = f'<p class="cc-chart-note">{esc(c["note"])}</p>' if c.get("note") else ""
     table = "" if c["type"] == "table" else data_table(c)
