@@ -1,0 +1,14 @@
+{
+  "id": "by-the-numbers",
+  "label": "By the Numbers",
+  "title": "Where churches stand",
+  "intro": "Southern Baptist votes, denominations and networks checked against their own documents, and the dates that shaped the debate.",
+  "charts": [
+    "sbc-votes",
+    "where-churches-stand",
+    "timeline"
+  ],
+  "place": {
+    "before": "<!-- CC-TOPIC-VOICES:START -->"
+  }
+}

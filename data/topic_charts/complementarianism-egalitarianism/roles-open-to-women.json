@@ -1,0 +1,113 @@
+{
+  "id": "roles-open-to-women",
+  "type": "column",
+  "kicker": "Which roles?",
+  "title": "Which roles could a woman hold at your church?",
+  "subtitle": "U.S. Protestant pastors, by church type, saying a woman could serve in each role at their church",
+  "caption": "Large majorities of evangelical pastors say a woman could teach a coed adult Bible study or lead a committee at their church; fewer than half say she could be the senior pastor. The gap between the two is the ground the third position on this page stands on.",
+  "note": "Pastors were asked about six roles and whether women are permitted to hold them in their congregations. Evangelical and mainline are Lifeway's groupings of the pastors' churches.",
+  "unit": "%",
+  "max": 100,
+  "series": [
+    {
+      "id": "evangelical",
+      "label": "Evangelical pastors",
+      "color": "green"
+    },
+    {
+      "id": "mainline",
+      "label": "Mainline pastors",
+      "color": "blue"
+    }
+  ],
+  "rows": [
+    {
+      "label": "Minister to children",
+      "values": {
+        "evangelical": 94,
+        "mainline": 97
+      },
+      "as_published": {
+        "evangelical": "94%",
+        "mainline": "97%"
+      },
+      "source": "lifeway2022"
+    },
+    {
+      "label": "Committee leader",
+      "values": {
+        "evangelical": 93,
+        "mainline": 95
+      },
+      "as_published": {
+        "evangelical": "93%",
+        "mainline": "95%"
+      },
+      "source": "lifeway2022"
+    },
+    {
+      "label": "Minister to teenagers",
+      "values": {
+        "evangelical": 89,
+        "mainline": 95
+      },
+      "as_published": {
+        "evangelical": "89%",
+        "mainline": "95%"
+      },
+      "source": "lifeway2022"
+    },
+    {
+      "label": "Coed adult Bible study teacher",
+      "values": {
+        "evangelical": 84,
+        "mainline": 95
+      },
+      "as_published": {
+        "evangelical": "84%",
+        "mainline": "95%"
+      },
+      "source": "lifeway2022"
+    },
+    {
+      "label": "Deacon",
+      "values": {
+        "evangelical": 56,
+        "mainline": 79
+      },
+      "as_published": {
+        "evangelical": "56%",
+        "mainline": "79%"
+      },
+      "source": "lifeway2022"
+    },
+    {
+      "label": "Senior pastor",
+      "values": {
+        "evangelical": 44,
+        "mainline": 76
+      },
+      "as_published": {
+        "evangelical": "44%",
+        "mainline": "76%"
+      },
+      "source": "lifeway2022"
+    }
+  ],
+  "sources": [
+    {
+      "id": "lifeway2022",
+      "publisher": "Lifeway Research",
+      "study": "Leadership Roles of Women Divide Protestant Denominations",
+      "year": 2022,
+      "url": "https://research.lifeway.com/2022/08/23/leadership-roles-of-women-divide-protestant-denominations/",
+      "fetched": "2026-11-14",
+      "license": "reuse",
+      "field_dates": "Phone survey, Sept. 1 to 29, 2021",
+      "sample": "1,000 Protestant pastors; margin of error plus or minus 3.2 points, higher in subgroups"
+    }
+  ],
+  "place": {
+    "before": "<section class=\"cc-synthesis\" id=\"synthesis\">"
+  }
+}

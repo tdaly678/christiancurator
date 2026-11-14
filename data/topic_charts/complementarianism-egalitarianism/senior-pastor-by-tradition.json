@@ -1,0 +1,34 @@
+{
+  "id": "senior-pastor-by-tradition",
+  "type": "hbar",
+  "kicker": "By tradition",
+  "title": "Could a woman be senior pastor at your church?",
+  "subtitle": "U.S. Protestant pastors saying yes, overall, by church type and by denominational family",
+  "caption": "A slight majority of Protestant pastors say yes, but the answer depends heavily on tradition: nearly all Methodist pastors say yes, against 14% of Baptist pastors.",
+  "unit": "%",
+  "max": 100,
+  "categories": [
+    {"id": "all", "label": "All pastors and church type", "color": "grey"},
+    {"id": "family", "label": "Denominational family", "color": "green"}
+  ],
+  "rows": [
+    {"label": "All Protestant pastors", "value": 55, "as_published": "55%", "source": "lifeway2022", "category": "all"},
+    {"label": "Mainline pastors", "value": 76, "as_published": "76%", "source": "lifeway2022", "category": "all"},
+    {"label": "Evangelical pastors", "value": 44, "as_published": "44%", "source": "lifeway2022", "category": "all"},
+    {"label": "Methodist", "value": 94, "as_published": "94%", "source": "lifeway2022", "category": "family"},
+    {"label": "Pentecostal", "value": 78, "as_published": "78%", "source": "lifeway2022", "category": "family"},
+    {"label": "Presbyterian/Reformed", "value": 77, "as_published": "77%", "source": "lifeway2022", "category": "family"},
+    {"label": "Lutheran", "value": 47, "as_published": "47%", "source": "lifeway2022", "category": "family"},
+    {"label": "Non-denominational", "value": 43, "as_published": "43%", "source": "lifeway2022", "category": "family"},
+    {"label": "Restorationist movement", "value": 25, "as_published": "25%", "source": "lifeway2022", "category": "family"},
+    {"label": "Baptist", "value": 14, "as_published": "14%", "source": "lifeway2022", "category": "family"}
+  ],
+  "sources": [
+    {"id": "lifeway2022", "publisher": "Lifeway Research", "study": "Leadership Roles of Women Divide Protestant Denominations", "year": 2022,
+     "url": "https://research.lifeway.com/2022/08/23/leadership-roles-of-women-divide-protestant-denominations/",
+     "fetched": "2026-11-14", "license": "reuse",
+     "field_dates": "Phone survey, Sept. 1 to 29, 2021",
+     "sample": "1,000 Protestant pastors; margin of error plus or minus 3.2 points, higher in subgroups"}
+  ],
+  "place": {"before": "<section class=\"cc-synthesis\" id=\"synthesis\">"}
+}

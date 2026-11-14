@@ -1,0 +1,206 @@
+{
+  "id": "timeline",
+  "type": "table",
+  "kicker": "How we got here",
+  "title": "Key moments in the debate, 1987 to 2027",
+  "subtitle": "Founding statements and recent denominational decisions",
+  "caption": "The two founding statements came within two years of each other; most of the recent movement has come in the Southern Baptist Convention.",
+  "columns": [
+    "When",
+    "What happened"
+  ],
+  "rows": [
+    {
+      "cells": [
+        "Aug. 28, 1987",
+        "Christians for Biblical Equality is incorporated, first as \"Men, Women and God: Christians for Biblical Equality.\""
+      ],
+      "source": "cbe-history"
+    },
+    {
+      "cells": [
+        "Dec. 1987",
+        "The Council on Biblical Manhood and Womanhood drafts the Danvers Statement in Danvers, Massachusetts; the final form is published in November 1988."
+      ],
+      "source": "danvers"
+    },
+    {
+      "cells": [
+        "July 1989",
+        "CBE presents its statement \"Men, Women, and Biblical Equality\" at its first international conference, in St. Paul."
+      ],
+      "source": "cbe-history"
+    },
+    {
+      "cells": [
+        "June 14, 2000",
+        "The Southern Baptist Convention adopts the Baptist Faith and Message 2000."
+      ],
+      "source": "bfm-pre"
+    },
+    {
+      "cells": [
+        "Sept. 2017",
+        "ACNA bishops leave the ordination of women as deacons and priests to each diocese and agree women will not be consecrated as bishops."
+      ],
+      "source": "acna"
+    },
+    {
+      "cells": [
+        "May 6, 2021",
+        "Saddleback Church ordains its first three women pastors."
+      ],
+      "source": "saddle"
+    },
+    {
+      "cells": [
+        "June 14, 2023",
+        "Southern Baptists amend Article VI of the Baptist Faith and Message to limit \"the office of pastor/elder/overseer\" to men."
+      ],
+      "source": "sbc"
+    },
+    {
+      "cells": [
+        "June 2023",
+        "Messengers uphold the removal of Saddleback Church and Fern Creek Baptist Church over women pastors."
+      ],
+      "source": "bm2023"
+    },
+    {
+      "cells": [
+        "June 12, 2024",
+        "The Law amendment falls short on its second vote, at 61.45 percent."
+      ],
+      "source": "bp2024"
+    },
+    {
+      "cells": [
+        "June 11, 2025",
+        "A new amendment on women pastors gets 60.74%, short of two-thirds."
+      ],
+      "source": "rns2025"
+    },
+    {
+      "cells": [
+        "June 10, 2026",
+        "The Truth and Unity Amendment passes its first vote with 74.6%."
+      ],
+      "source": "rns2026"
+    },
+    {
+      "cells": [
+        "Nov. 1, 2026",
+        "Calvary Chapel Costa Mesa says it ordains women as pastors."
+      ],
+      "source": "ccm"
+    },
+    {
+      "cells": [
+        "2027",
+        "The Truth and Unity Amendment needs a second two-thirds vote at the next annual meeting."
+      ],
+      "source": "rns2026"
+    }
+  ],
+  "sources": [
+    {
+      "id": "cbe-history",
+      "publisher": "CBE International",
+      "study": "A Brief History of CBE",
+      "year": 2026,
+      "url": "https://www.cbeinternational.org/resource/brief-history-cbe/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "danvers",
+      "publisher": "Council on Biblical Manhood and Womanhood",
+      "study": "The Danvers Statement",
+      "year": 1988,
+      "url": "https://cbmw.org/about/danvers-statement/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "bfm-pre",
+      "publisher": "Southern Baptist Convention",
+      "study": "The Baptist Faith and Message 2000: Preamble",
+      "year": 2000,
+      "url": "https://bfm.sbc.net/preamble/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "acna",
+      "publisher": "Anglican Church in North America",
+      "study": "College of Bishops Statement on the Ordination of Women",
+      "year": 2017,
+      "url": "https://anglicanchurch.net/?p=1578",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "saddle",
+      "publisher": "The Christian Post",
+      "study": "Saddleback Church ordains first female pastors",
+      "year": 2021,
+      "url": "https://www.christianpost.com/news/saddleback-church-ordains-first-female-pastors.html",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "sbc",
+      "publisher": "Southern Baptist Convention",
+      "study": "The Baptist Faith and Message 2000, Article VI",
+      "year": 2023,
+      "url": "https://bfm.sbc.net/bfm2000/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "bm2023",
+      "publisher": "Baptist Message",
+      "study": "Saddleback, two other churches disfellowshipped by SBC messengers",
+      "year": 2023,
+      "url": "https://baptistmessage.com/?p=58006",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "bp2024",
+      "publisher": "Baptist Press",
+      "study": "Law Amendment falls short at SBC meeting in Indianapolis",
+      "year": 2024,
+      "url": "https://mbcpathway.com/2024/06/12/law-amendment-falls-short-at-sbc-meeting-in-indianapolis/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "rns2025",
+      "publisher": "Religion News Service",
+      "study": "Vote to Bar Churches with Women Pastors Fails Again at SBC Meeting",
+      "year": 2025,
+      "url": "https://ministrywatch.com/vote-to-bar-churches-with-women-pastors-fails-again-at-sbc-meeting/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "rns2026",
+      "publisher": "Religion News Service",
+      "study": "Southern Baptists Move Closer to Constitutional Ban on Women Pastors",
+      "year": 2026,
+      "url": "https://www.christianitytoday.com/2026/06/southern-baptist-constitution-ban-women-pastors/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "ccm",
+      "publisher": "The Christian Post",
+      "study": "Pastors react after Calvary Chapel Costa Mesa says it ordains women pastors",
+      "year": 2026,
+      "url": "https://www.christianpost.com/news/pastors-react-to-calvary-chapel-costa-mesas-ordination-of-women.html",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    }
+  ]
+}
