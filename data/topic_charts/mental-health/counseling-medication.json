@@ -4,8 +4,8 @@
   "kicker": "Counseling and medication",
   "title": "What churchgoers say their church thinks of counseling and medication",
   "subtitle": "U.S. Protestant and nondenominational churchgoers attending at least monthly, 2017",
-  "caption": "Few churchgoers say their church discourages counseling (2%) or medication (6%). But counseling is encouraged far more often than medication, and on medication most churchgoers hear nothing or are not sure.",
-  "note": "Churchgoers were asked their church's stance on counseling and on the use of prescription medications in treating mental illness.",
+  "caption": "Few churchgoers say their church discourages counseling (2%) or medication (6%). But counseling is encouraged far more often than medication, and on medication most say their church takes neither side or are not sure.",
+  "note": "Churchgoers were asked, \"Where does your church stand on the use of psychological counseling or therapy in treating someone with mental illness?\" and \"Where does your church stand on the use of prescription drugs to treat mental illness?\" Encourages combines \"strongly\" and \"a little\"; so does Discourages. Neither means \"neither encourages nor discourages\", which Lifeway's release calls no opinion.",
   "unit": "%",
   "max": 100,
   "series": [
@@ -21,7 +21,7 @@
     },
     {
       "id": "none",
-      "label": "No opinion",
+      "label": "Neither",
       "color": "gold"
     },
     {
