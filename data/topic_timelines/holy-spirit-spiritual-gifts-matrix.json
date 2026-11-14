@@ -1,0 +1,219 @@
+{
+  "id": "matrix",
+  "type": "matrix",
+  "label": "Gift by Gift",
+  "title": "Which gifts each view expects today",
+  "intro": "The same four views, asked about three disputed gifts and about Scripture. Each answer comes from that view's own voice.",
+  "image_title": "Tongues, prophecy, healing: four views compared",
+  "image_subtitle": "Each answer comes from that view's own voice.",
+  "image_subtitle_narrow": "Each answer comes from that view's own voice.",
+  "caption": "Four evangelical views of the gifts, answered gift by gift. Open circles mark a gift a view holds has ended, not a gift it rejects in Scripture.",
+  "table_view_label": "Gift",
+  "columns": [
+    {
+      "id": "cessationist",
+      "name": "Cessationist",
+      "short": "Cessationist",
+      "color": "green",
+      "proponent": {
+        "name": "Thomas Schreiner",
+        "slug": "thomas-schreiner",
+        "image_name": "Thomas Schreiner",
+        "work": "Why I Am a Cessationist",
+        "source": "schreiner2014"
+      }
+    },
+    {
+      "id": "continuationist",
+      "name": "Reformed continuationist",
+      "short": "Continua­tionist",
+      "color": "brown",
+      "proponent": {
+        "name": "Sam Storms",
+        "slug": "sam-storms",
+        "image_name": "Sam Storms",
+        "work": "Why I Am a Continuationist",
+        "source": "storms2014"
+      }
+    },
+    {
+      "id": "charismatic",
+      "name": "Charismatic evangelical",
+      "short": "Charis­matic",
+      "color": "gold",
+      "proponent": {
+        "name": "Vineyard USA",
+        "image_name": "Vineyard USA",
+        "work": "Core Values and Beliefs",
+        "source": "vineyard"
+      }
+    },
+    {
+      "id": "pentecostal",
+      "name": "Pentecostal",
+      "short": "Pente­costal",
+      "color": "blue",
+      "proponent": {
+        "name": "Assemblies of God",
+        "image_name": "Assemblies of God",
+        "work": "Statement of Fundamental Truths",
+        "source": "ag-truths",
+        "also": [
+          "ag-prophecy"
+        ]
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "tongues",
+      "label": "Tongues",
+      "cells": [
+        {
+          "text": "Likely ended along with prophecy",
+          "mark": "no"
+        },
+        {
+          "text": "Continues, for building up the church",
+          "mark": "yes"
+        },
+        {
+          "text": "Yes, as prayer languages",
+          "mark": "yes"
+        },
+        {
+          "text": "Yes, the first sign of baptism in the Spirit",
+          "mark": "yes"
+        }
+      ]
+    },
+    {
+      "id": "prophecy",
+      "label": "Prophecy",
+      "cells": [
+        {
+          "text": "Ended. What is called prophecy today is an impression, tested by Scripture",
+          "short": "Ended. Today's impressions are tested by Scripture",
+          "mark": "no"
+        },
+        {
+          "text": "Continues, but never equal in authority to Scripture",
+          "mark": "yes"
+        },
+        {
+          "text": "Yes",
+          "mark": "yes"
+        },
+        {
+          "text": "Yes, weighed carefully and never equal to Scripture",
+          "mark": "yes"
+        }
+      ]
+    },
+    {
+      "id": "healing",
+      "label": "Healing",
+      "cells": [
+        {
+          "text": "God still heals in answer to prayer; the gift itself is doubtful today",
+          "short": "God heals in answer to prayer; the gift is doubtful",
+          "mark": "partly"
+        },
+        {
+          "text": "Continues with the other gifts",
+          "mark": "yes"
+        },
+        {
+          "text": "Yes: physical, emotional and social",
+          "mark": "yes"
+        },
+        {
+          "text": "Yes, provided for in the atonement",
+          "mark": "yes"
+        }
+      ]
+    },
+    {
+      "id": "scripture",
+      "label": "New words and Scripture",
+      "short": "New words and Scripture",
+      "cells": [
+        {
+          "text": "Scripture is the final authority; impressions are tested by it"
+        },
+        {
+          "text": "Prophecy today adds nothing equal to Scripture"
+        },
+        {
+          "text": "Scripture is the final, absolute authority"
+        },
+        {
+          "text": "Scripture is the infallible rule; no prophecy carries its weight"
+        }
+      ]
+    }
+  ],
+  "place": {
+    "after": "<!-- CC-TIMELINE:spectrum:END -->"
+  },
+  "slug": "holy-spirit-spiritual-gifts",
+  "differ": [
+    "Whether some gifts stopped when the apostles died, or every gift continues until Christ returns.",
+    "What prophecy is today: an impression to be tested (Schreiner), a real gift never equal to Scripture (Storms), or a gift to be weighed carefully and never equal to Scripture (Assemblies of God).",
+    "Tongues: likely ended, a gift some receive, a prayer language, or the first sign of baptism in the Spirit.",
+    "Healing: all four pray for the sick. They differ on whether healing is still a gift given to some, and whether it is promised in the atonement."
+  ],
+  "common_text": "All four hold Scripture as the final authority over any gift, and all four pray for the sick. Thomas Schreiner, a cessationist, says of the healing God still gives: \"we should pray for such.\"",
+  "common_source": "schreiner2014",
+  "sources": [
+    {
+      "id": "schreiner2014",
+      "publisher": "The Gospel Coalition",
+      "title": "Why I Am a Cessationist",
+      "year": 2014,
+      "url": "https://www.thegospelcoalition.org/article/cessationist/",
+      "fetched": "2026-11-14",
+      "quote": "I doubt the gift of miracles and healings exists today",
+      "notes": "Thomas Schreiner, January 22, 2014. Also on the page: the gifts of apostleship, prophecy, tongues, healing, and miracles are no longer given as a regular feature of church life; what people call prophecy today are impressions that must be tested by Scripture; 'If prophecy has passed away, then tongues have likely ended as well'; 'I believe God still heals and does miraculous things today, and we should pray for such.' The old /article/why-i-am-a-cessationist/ URL redirects here."
+    },
+    {
+      "id": "storms2014",
+      "publisher": "The Gospel Coalition",
+      "title": "Why I Am a Continuationist",
+      "year": 2014,
+      "url": "https://www.thegospelcoalition.org/article/continuationist/",
+      "fetched": "2026-11-14",
+      "quote": "the burden of proof rests with the cessationist",
+      "notes": "Sam Storms, January 22, 2014, the companion piece to Schreiner's. Gifts continue until the 'perfect' of 1 Corinthians 13 (Christ's return); 'All the gifts of the Spirit, whether tongues or teaching, prophecy or mercy, healing or helping' build up the church; revelatory gifts do not give 'infallible truths equal in authority to the biblical text itself'; 'I've seen all spiritual gifts in operation, tested and confirmed them'."
+    },
+    {
+      "id": "vineyard",
+      "publisher": "Vineyard USA",
+      "title": "Core Values and Beliefs",
+      "url": "https://vineyardusa.org/Vineyard-Core-Values-Beliefs.pdf",
+      "fetched": "2026-11-14",
+      "quote": "resulting in prophecy, prayer languages, healing, miracles, and many other gifts",
+      "notes": "PDF linked from vineyardusa.org/about/core-values-beliefs/. Also: 'We eschew hype and other efforts to manipulate either God's presence or the response of others'; healing 'physical, emotional, and social'; the Spirit poured out at Pentecost 'baptizing believers into the Body of Christ and releasing the gifts of the Spirit to them'; Scripture is 'our final, absolute authority'. Vineyard does not use the label Third Wave on these pages, so it is not used here. Its history page: 'We seek to blend the best of the evangelical traditions ... with the best of the Pentecostal and Charismatic traditions'."
+    },
+    {
+      "id": "ag-truths",
+      "publisher": "Assemblies of God",
+      "title": "Statement of Fundamental Truths",
+      "url": "https://ag.org/beliefs/statement-of-fundamental-truths",
+      "fetched": "2026-11-14",
+      "quote": "witnessed by the initial physical sign of speaking with other tongues as the Spirit of God gives them utterance",
+      "notes": "Truth 7: all believers 'should ardently expect and earnestly seek' the baptism in the Holy Spirit. Truth 8: tongues as the initial physical sign. Truth 12: 'Divine healing is an integral part of the gospel. Deliverance from sickness is provided for in the atonement'. Truth 1: Scripture is 'the infallible, authoritative rule of faith and conduct'. ag.org returns 403 to scripts; read from the Wayback Machine copy of 2026-11-10."
+    },
+    {
+      "id": "ag-prophecy",
+      "publisher": "Assemblies of God",
+      "title": "Modern-Day Prophecy (position paper)",
+      "year": 2025,
+      "url": "https://ag.org/Beliefs/Position-Papers/Modern-Day-Prophecy",
+      "fetched": "2026-11-14",
+      "quote": "No prophecies today carry the authority or weight of Scripture.",
+      "notes": "Adopted by the General Presbytery, August 4-5, 2025; it replaces the older Apostles and Prophets paper, whose URL now returns an error page. Also: 'Paul called churches to weigh or judge prophecy carefully (1 Corinthians 14:29).' ag.org returns 403 to scripts; read from the Wayback Machine copy of 2026-07-16."
+    }
+  ],
+  "voices_label": "One voice for each view"
+}
