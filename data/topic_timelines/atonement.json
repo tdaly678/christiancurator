@@ -99,6 +99,24 @@
       "notes": "Translated by Alexander Roberts and William Rambaut. III.18.7."
     },
     {
+      "id": "irenaeus-date",
+      "publisher": "Christian Classics Ethereal Library (Philip Schaff, Creeds of Christendom, Vol. II)",
+      "title": "The Creed of Irenaeus",
+      "url": "https://www.ccel.org/ccel/schaff/creeds2.iii.i.ii.html",
+      "fetched": "2026-11-14",
+      "quote": "wrote his great work against the Gnostic heresies about 180, while Eleutherus (d. 185) was bishop of Rome",
+      "notes": "Used only for the c. 180 date. Against Heresies III.3.3 (newadvent.org/fathers/0103303.htm) names Eleutherius as the bishop of Rome at the time of writing."
+    },
+    {
+      "id": "anselm-date",
+      "publisher": "New Advent (Catholic Encyclopedia, 1907)",
+      "title": "St. Anselm",
+      "url": "https://www.newadvent.org/cathen/01546a.htm",
+      "fetched": "2026-11-14",
+      "quote": "Here he finished his work, \"Cur Deus Homo\", which he had begun in England",
+      "notes": "Used only for the 1098 date: finished in the summer of 1098 in a mountain village belonging to the abbey of Telese, before Urban's council at Bari in October 1098."
+    },
+    {
       "id": "anselm",
       "publisher": "Fordham University, Internet Medieval Sourcebook",
       "title": "Anselm: Cur Deus Homo (Why God Became Man)",
@@ -138,12 +156,12 @@
     },
     {
       "id": "grotius-date",
-      "publisher": "Wikipedia",
-      "title": "Governmental theory of atonement",
-      "url": "https://en.wikipedia.org/wiki/Governmental_theory_of_atonement",
+      "publisher": "BMGN Low Countries Historical Review",
+      "title": "Review of H. Grotius, Opera theologica I, Defensio fidei catholicae de satisfactione Christi, ed. Edwin Rabbie (C. S. M. Rademaker)",
+      "url": "https://bmgn-lchr.nl/article/download/URN%3ANBN%3ANL%3AUI%3A10-1-104102/2000/2077",
       "fetched": "2026-11-14",
-      "quote": "wrote Defensio fidei catholicae de satisfactione Christi (1617)",
-      "notes": "Used only for the 1617 date. Charles Hodge (ccel.org/ccel/hodge/theology2.iv.ix.iv.html) agrees the work came out shortly before the Synod of Dort."
+      "quote": "oorspronkelijke uitgave Leiden 1617",
+      "notes": "Used only for the 1617 date. The review of the 1990 critical edition says its Latin text follows the second edition, \"Leiden 1617 (in feite 1618)\", collated with \"de eerste editie, Leiden, 1617\". Charles Hodge (ccel.org/ccel/hodge/theology2.iv.ix.iv.html) says the Synod of Dort met two years after the work was published. Replaces a Wikipedia citation (fact check, 2026-11-14)."
     },
     {
       "id": "kolb",
