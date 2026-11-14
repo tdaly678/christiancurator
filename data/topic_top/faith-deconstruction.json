@@ -1,0 +1,97 @@
+{
+  "slug": "faith-deconstruction",
+  "glance": {
+    "question": "Is deconstruction apostasy, a needed reckoning, or a season to pastor through?",
+    "positions": [
+      {
+        "name": "Deconstruction as Apostasy",
+        "claim": "It starts with secondary doubts and slides toward denying core Christian truths.",
+        "anchor": "position-1",
+        "voices": [
+          {
+            "name": "Al Mohler",
+            "slug": "r-albert-mohler"
+          },
+          {
+            "name": "Doug Wilson",
+            "slug": "doug-wilson"
+          },
+          {
+            "name": "John MacArthur",
+            "slug": "john-macarthur"
+          }
+        ]
+      },
+      {
+        "name": "Deconstruction as Necessary Reckoning",
+        "claim": "Testing an inherited, sometimes harmful faith can end in a more honest, owned faith.",
+        "anchor": "position-2"
+      },
+      {
+        "name": "Pastoring Through Deconstruction",
+        "claim": "Churches can hold to doctrine and still walk patiently with people who doubt.",
+        "anchor": "position-3"
+      }
+    ]
+  },
+  "start_here": [
+    {
+      "kind": "Primer",
+      "url": "https://www.thegospelcoalition.org/article/doubt-deconstruction-patient-faith/",
+      "title": "Doubt, Deconstruction, and Patient Faith",
+      "author": "Jay Y. Kim",
+      "outlet": "The Gospel Coalition",
+      "why": "Kim doubted, deconstructed and left the faith in college, then came back; he makes the case for patience."
+    },
+    {
+      "kind": "Holding the line",
+      "url": "https://www.9marks.org/article/editors-note-defending-sound-doctrine-against-the-deconstruction-of-american-evangelicalism/",
+      "title": "Editor’s Note: Defending Sound Doctrine Against the Deconstruction of American Evangelicalism",
+      "author": "Jonathan Leeman",
+      "outlet": "9Marks",
+      "why": "A pastor's argument that limited interpreters can still know and guard sound doctrine."
+    },
+    {
+      "kind": "Walking with someone",
+      "url": "https://www.thegospelcoalition.org/reviews/walking-through-deconstruction/",
+      "title": "Help Stop Deconstruction. Become a Non-Anxious Presence.",
+      "author": "Andrew Kelley",
+      "outlet": "The Gospel Coalition",
+      "why": "How friends and pastors can stay close to someone in a crisis of faith without rushing to win the argument."
+    }
+  ],
+  "key_number": {
+    "figure": "66%",
+    "text": "Of young adults who attended a Protestant church regularly as teens, 66% dropped out for at least a year between ages 18 and 22; 31% of those dropouts now attend twice a month or more.",
+    "publisher": "Lifeway Research",
+    "study": "Most Teenagers Drop Out of Church When They Become Young Adults",
+    "year": 2019,
+    "source_url": "https://research.lifeway.com/2019/01/15/most-teenagers-drop-out-of-church-as-young-adults/",
+    "fetched": "2026-11-14",
+    "license": "reuse",
+    "link": "#leaving-returning"
+  },
+  "related": [
+    {
+      "slug": "biblical-inerrancy",
+      "question": "Is the Bible without error?"
+    },
+    {
+      "slug": "apologetics",
+      "question": "Can the faith be defended with reason and evidence?"
+    },
+    {
+      "slug": "progressive-christianity",
+      "question": "Is progressive Christianity a reform or a different faith?"
+    }
+  ],
+  "changes": [
+    {
+      "date": "2026-11-14",
+      "text": "added survey charts on who deconstructs, why people leave, and doubt in the pews."
+    }
+  ],
+  "latest": true,
+  "signup": true,
+  "notes": "Positions 2 and 3 carry no voices: every name on those debate cards is in flagged_names.json pending Tom's review (see .christian-orchestrator/team/B-deconstruction-report.md). MacArthur and Baucham pages are noindex, so MacArthur prints as plain text; Baucham left off to keep the row short. Key number: Lifeway is an attendance measure, not a belief measure; the chart note says so."
+}

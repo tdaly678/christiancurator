@@ -1,0 +1,71 @@
+{
+  "id": "leaving-returning",
+  "type": "hbar",
+  "kicker": "Leaving and returning",
+  "title": "Where teen churchgoers are now, in their twenties",
+  "subtitle": "Adults 23 to 30 who attended a Protestant church regularly for at least a year as teens",
+  "caption": "Two thirds of this group dropped out for at least a year between ages 18 and 22, and 31 percent of those dropouts now attend twice a month or more. Today almost half attend at least twice a month; about one in five does not attend at all.",
+  "note": "\"Dropped out\" is a church attendance measure, not a belief measure: it is the closest survey data to deconstruction, not deconstruction itself. \"At least twice a month\" includes the 27 percent who attend weekly or more.",
+  "unit": "%",
+  "max": 100,
+  "categories": [
+    {
+      "id": "in",
+      "label": "Attending regularly",
+      "color": "green"
+    },
+    {
+      "id": "edge",
+      "label": "On the edge",
+      "color": "gold"
+    },
+    {
+      "id": "out",
+      "label": "Not attending",
+      "color": "grey"
+    }
+  ],
+  "rows": [
+    {
+      "label": "At least twice a month",
+      "value": 45,
+      "as_published": "45 percent",
+      "source": "lifeway2019",
+      "category": "in"
+    },
+    {
+      "label": "Once a month",
+      "value": 8,
+      "as_published": "8 percent",
+      "source": "lifeway2019",
+      "category": "edge"
+    },
+    {
+      "label": "A few times a year",
+      "value": 25,
+      "as_published": "25 percent",
+      "source": "lifeway2019",
+      "category": "edge"
+    },
+    {
+      "label": "Not at all",
+      "value": 22,
+      "as_published": "Twenty-two percent (22)",
+      "source": "lifeway2019",
+      "category": "out"
+    }
+  ],
+  "sources": [
+    {
+      "id": "lifeway2019",
+      "publisher": "Lifeway Research",
+      "study": "Most Teenagers Drop Out of Church When They Become Young Adults",
+      "year": 2019,
+      "url": "https://research.lifeway.com/2019/01/15/most-teenagers-drop-out-of-church-as-young-adults/",
+      "fetched": "2026-11-14",
+      "license": "reuse",
+      "field_dates": "September 15 to October 13, 2017",
+      "sample": "2,002 adults ages 23 to 30 who attended a Protestant church at least twice a month for at least a year in high school"
+    }
+  ]
+}

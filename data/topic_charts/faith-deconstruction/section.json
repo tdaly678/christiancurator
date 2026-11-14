@@ -1,0 +1,18 @@
+{
+  "id": "by-the-numbers",
+  "label": "By the Numbers",
+  "title": "What the surveys show",
+  "intro": "Each position in the debate below makes a claim about who is deconstructing and why. These charts set those claims beside the best survey data we could verify. Each survey asks a different group a different question, so each chart stands on its own.",
+  "charts": [
+    "deconstructed",
+    "why-they-left",
+    "why-dropped-out",
+    "left-2016-2023",
+    "leaving-returning",
+    "doubt-trend",
+    "deconstruction-pews"
+  ],
+  "place": {
+    "before": "<div class=\"cc-debate\" id=\"debate\">"
+  }
+}

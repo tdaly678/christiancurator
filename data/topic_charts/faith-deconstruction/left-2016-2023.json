@@ -1,0 +1,98 @@
+{
+  "id": "left-2016-2023",
+  "type": "column",
+  "kicker": "How the reasons are changing",
+  "title": "Reasons the unaffiliated give for leaving, 2016 and 2023",
+  "subtitle": "Religiously unaffiliated Americans who left their childhood religion",
+  "caption": "Each of these reasons was cited more often in 2023 than in 2016. The sharpest increases are in negative teaching about or treatment of gay and lesbian people and in clergy sexual abuse scandals; stopped believing is still the most common answer.",
+  "note": "Share calling each an important reason. PRRI figures, drawn by Christian Curator from the published report.",
+  "unit": "%",
+  "max": 100,
+  "series": [
+    {
+      "id": "y2016",
+      "label": "2016",
+      "color": "sage"
+    },
+    {
+      "id": "y2023",
+      "label": "2023",
+      "color": "green"
+    }
+  ],
+  "rows": [
+    {
+      "label": "Stopped believing",
+      "values": {
+        "y2016": 60,
+        "y2023": 67
+      },
+      "as_published": {
+        "y2016": "60%",
+        "y2023": "67%"
+      },
+      "source": "prri2024"
+    },
+    {
+      "label": "Negative teaching or treatment of gay and lesbian people",
+      "values": {
+        "y2016": 29,
+        "y2023": 47
+      },
+      "as_published": {
+        "y2016": "29%",
+        "y2023": "47%"
+      },
+      "source": "prri2024"
+    },
+    {
+      "label": "Family never that religious",
+      "values": {
+        "y2016": 32,
+        "y2023": 41
+      },
+      "as_published": {
+        "y2016": "32%",
+        "y2023": "41%"
+      },
+      "source": "prri2024"
+    },
+    {
+      "label": "Clergy sexual abuse scandals",
+      "values": {
+        "y2016": 19,
+        "y2023": 31
+      },
+      "as_published": {
+        "y2016": "19%",
+        "y2023": "31%"
+      },
+      "source": "prri2024"
+    },
+    {
+      "label": "Church too focused on politics",
+      "values": {
+        "y2016": 16,
+        "y2023": 20
+      },
+      "as_published": {
+        "y2016": "16%",
+        "y2023": "20%"
+      },
+      "source": "prri2024"
+    }
+  ],
+  "sources": [
+    {
+      "id": "prri2024",
+      "publisher": "PRRI",
+      "study": "Religious Change in America",
+      "year": 2024,
+      "url": "https://www.prri.org/research/religious-change-in-america/",
+      "fetched": "2026-11-14",
+      "license": "credit",
+      "sample": "5,627 U.S. adults (Ipsos KnowledgePanel plus opt-in panels); figures are among religiously unaffiliated Americans who left their childhood religion, compared with PRRI's 2016 survey",
+      "field_dates": "2023 survey: November 16 to December 7, 2023, online"
+    }
+  ]
+}

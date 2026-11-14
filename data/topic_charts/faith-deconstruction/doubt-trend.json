@@ -1,0 +1,85 @@
+{
+  "id": "doubt-trend",
+  "type": "column",
+  "kicker": "Doubt in the pews",
+  "title": "More churchgoers say they sometimes doubt",
+  "subtitle": "U.S. Protestant churchgoers, 2012, 2019 and 2025",
+  "caption": "On all three measures, the share of churchgoers who admit doubt has risen since 2012, with the steepest climb since 2019. About a quarter now say so on each.",
+  "note": "Item wording as summarized by Lifeway: during difficult circumstances they sometimes doubt God loves them and will provide; they typically doubt God is involved when things happen they can't explain; they sometimes doubt God can change the lives of non-Christians they know. Exact 2012 and 2019 wording is not printed on the release.",
+  "unit": "%",
+  "max": 40,
+  "series": [
+    {
+      "id": "y2012",
+      "label": "2012",
+      "color": "sage"
+    },
+    {
+      "id": "y2019",
+      "label": "2019",
+      "color": "gold"
+    },
+    {
+      "id": "y2025",
+      "label": "2025",
+      "color": "green"
+    }
+  ],
+  "rows": [
+    {
+      "label": "Doubt God's love and provision",
+      "values": {
+        "y2012": 15,
+        "y2019": 18,
+        "y2025": 25
+      },
+      "as_published": {
+        "y2012": "15%",
+        "y2019": "18%",
+        "y2025": "25%"
+      },
+      "source": "lifeway2026"
+    },
+    {
+      "label": "Doubt God is involved in what they can't explain",
+      "values": {
+        "y2012": 9,
+        "y2019": 14,
+        "y2025": 24
+      },
+      "as_published": {
+        "y2012": "9%",
+        "y2019": "14%",
+        "y2025": "24%"
+      },
+      "source": "lifeway2026"
+    },
+    {
+      "label": "Doubt God can change non-Christians they know",
+      "values": {
+        "y2012": 11,
+        "y2019": 17,
+        "y2025": 23
+      },
+      "as_published": {
+        "y2012": "11%",
+        "y2019": "17%",
+        "y2025": "23%"
+      },
+      "source": "lifeway2026"
+    }
+  ],
+  "sources": [
+    {
+      "id": "lifeway2026",
+      "publisher": "Lifeway Research",
+      "study": "Growing Number of Churchgoers Face Doubts",
+      "year": 2026,
+      "url": "https://research.lifeway.com/2026/04/07/growing-number-of-churchgoers-face-doubts/",
+      "fetched": "2026-11-14",
+      "license": "reuse",
+      "field_dates": "2025 survey: March 19 to 26, 2025",
+      "sample": "2025: 2,130 U.S. Protestant churchgoers who attend at least monthly; compared with Lifeway's 2012 and 2019 surveys"
+    }
+  ]
+}

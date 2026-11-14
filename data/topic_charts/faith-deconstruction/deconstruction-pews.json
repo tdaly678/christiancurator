@@ -1,0 +1,74 @@
+{
+  "id": "deconstruction-pews",
+  "type": "column",
+  "kicker": "Who sees it",
+  "title": "Pastors know the word; churchgoers see it in the pews",
+  "subtitle": "U.S. Protestant churchgoers (2022) and pastors (2021)",
+  "caption": "Pastors are more familiar with the idea of deconstruction, but among those who know the term, churchgoers are more likely than pastors to say they have seen people in their own church deconstruct their faith.",
+  "note": "The two surveys were a year apart and used different methods (churchgoers online, pastors by phone). \"Have seen it in their church\" is asked of those who have heard of deconstruction.",
+  "unit": "%",
+  "max": 100,
+  "series": [
+    {
+      "id": "churchgoers",
+      "label": "Churchgoers",
+      "color": "green"
+    },
+    {
+      "id": "pastors",
+      "label": "Pastors",
+      "color": "blue"
+    }
+  ],
+  "rows": [
+    {
+      "label": "Familiar with the concept",
+      "values": {
+        "churchgoers": 36,
+        "pastors": 46
+      },
+      "as_published": {
+        "churchgoers": "36%",
+        "pastors": "46%"
+      },
+      "source": "lifeway2023"
+    },
+    {
+      "label": "Have never heard the term",
+      "values": {
+        "churchgoers": 28,
+        "pastors": 14
+      },
+      "as_published": {
+        "churchgoers": "28%",
+        "pastors": "14%"
+      },
+      "source": "lifeway2023"
+    },
+    {
+      "label": "Have seen it in their church",
+      "values": {
+        "churchgoers": 37,
+        "pastors": 27
+      },
+      "as_published": {
+        "churchgoers": "37%",
+        "pastors": "27%"
+      },
+      "source": "lifeway2023"
+    }
+  ],
+  "sources": [
+    {
+      "id": "lifeway2023",
+      "publisher": "Lifeway Research",
+      "study": "Churchgoers Less Familiar Than Pastors With Deconstruction, More Likely to See It in Their Pews",
+      "year": 2023,
+      "url": "https://research.lifeway.com/2023/07/25/churchgoers-less-familiar-than-pastors-with-deconstruction-more-likely-to-see-it-in-their-pews/",
+      "fetched": "2026-11-14",
+      "license": "reuse",
+      "field_dates": "Churchgoers September 19 to 29, 2022 (online); pastors September 1 to 29, 2021 (phone)",
+      "sample": "1,002 U.S. Protestant churchgoers; U.S. Protestant pastors (sample size not given on the release)"
+    }
+  ]
+}
