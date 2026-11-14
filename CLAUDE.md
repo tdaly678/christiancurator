@@ -596,6 +596,15 @@ schemas: `.christian-orchestrator/team/A-foundation-report.md`.
   a missing image; `--site-image` redraws `docs/og-image.png`. Rerun it after editing a page's title, description or
   debate positions, and after any run of `scripts/apply_aeo_upgrades.py` (which resets og:title and descriptions).
   Tests: `tests/test_build_topic_og.py`.
+  Each chart renders twice: a 640-unit SVG and a 360-unit phone SVG (`cc-chart-wide` / `cc-chart-narrow`, swapped
+  below 560px in `topic.css`; column charts draw as horizontal bars on the phone image). A reference line is named in
+  the legend, never on the plot. Table charts stack into one card per row below 560px (`data-label` on each cell).
+- **Definition box and FAQ** (with matching FAQPage schema): `data/topic_reference/<slug>.json` +
+  `scripts/build_topic_reference.py`; run before `build_topic_top.py`. It owns that page's `AEO-FAQPAGE-SCHEMA` block,
+  so rerun it after `apply_aeo_upgrades.py` touches the slug. Rebuild order after editing any topic data file or
+  `topic.css` / `topic.js`: `build_topic_charts.py`, then `build_topic_reference.py`, then `build_topic_top.py`.
+- **Tracking parameters:** `build_recent_articles.strip_tracking()` drops `utm_*` from every Recent Articles and
+  Latest link (and `topic_items()`); `check_voices.py` matches links the same way.
 - **Print:** `@media print` in `topic.css` turns a page with a top block into a one-page small-group handout
   (definition, TL;DR, positions at a glance, key questions, Start here with URLs, page address).
 - Tests: `tests/test_build_topic_top.py`, `tests/test_build_topic_charts.py`.
