@@ -1,0 +1,229 @@
+{
+  "id": "continuity",
+  "slug": "covenant-theology",
+  "also": [
+    {
+      "slug": "israel-and-prophecy",
+      "place": {
+        "before": "<section class=\"cc-synthesis\""
+      }
+    }
+  ],
+  "type": "matrix",
+  "label": "Israel and the Church, Compared",
+  "title": "Four systems from more continuity to more distinction",
+  "intro": "The four main evangelical ways of reading the covenants line up on one question: how much the church continues Israel. Read left to right, each system draws a sharper line between them, in the order Michael Vlach and Stephen Wellum describe.",
+  "image_title": "Israel and the church: four evangelical systems",
+  "image_subtitle": "Left to right: from more continuity to more distinction between Israel and the church.",
+  "image_subtitle_narrow": "Ordered from more continuity to more distinction between Israel and the church.",
+  "caption": "Covenant theology sees one people of God in every age. Progressive covenantalism sees one people but a new covenant community. Both kinds of dispensationalism keep a distinct future for national Israel, and differ on how much of Israel's promise the church receives now.",
+  "image_source": "Sources: Westminster Confession; Wellum, Vlach and Bock (TGC); Dallas Seminary",
+  "mark_labels": {
+    "yes": "Yes",
+    "partly": "In part",
+    "no": "No"
+  },
+  "columns": [
+    {
+      "id": "covenant",
+      "name": "Covenant theology",
+      "short": "Covenant",
+      "color": "green",
+      "proponent": {
+        "name": "Westminster Confession of Faith",
+        "image_name": "Westminster Confession",
+        "work": "Chapters 7, 19 and 25",
+        "source": "wcf"
+      }
+    },
+    {
+      "id": "progcov",
+      "name": "Progressive covenantalism",
+      "short": "Prog. covenantal",
+      "color": "blue",
+      "proponent": {
+        "name": "Stephen Wellum",
+        "slug": "stephen-wellum",
+        "work": "Progressive Covenantalism and New Covenant Theology",
+        "source": "wellum"
+      }
+    },
+    {
+      "id": "progdisp",
+      "name": "Progressive dispensationalism",
+      "short": "Prog. dispensational",
+      "color": "brown",
+      "proponent": {
+        "name": "Darrell Bock",
+        "slug": "darrell-bock",
+        "work": "review of Kingdom through Covenant",
+        "source": "bock2012"
+      }
+    },
+    {
+      "id": "disp",
+      "name": "Traditional dispensationalism",
+      "short": "Traditional dispensational",
+      "color": "gold",
+      "proponent": {
+        "name": "Dallas Theological Seminary",
+        "image_name": "Dallas Seminary",
+        "work": "Doctrinal Statement, Articles V, XIII and XX",
+        "source": "dts"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "people",
+      "label": "Is the church the continuation of Israel?",
+      "short": "Church continues Israel?",
+      "cells": [
+        {
+          "text": "Yes: one people under one covenant of grace; Israel was the church under age",
+          "short": "Yes: one people of God",
+          "mark": "yes"
+        },
+        {
+          "text": "In part: one people, but the church is the new covenant community in Christ, the true Israel",
+          "short": "One people, new community",
+          "mark": "partly"
+        },
+        {
+          "text": "No: Israel has a future alongside the church, within one kingdom program",
+          "short": "Alongside, one program",
+          "mark": "no"
+        },
+        {
+          "text": "No: the church began at Pentecost and is distinct from Israel",
+          "short": "Distinct; began at Pentecost",
+          "mark": "no"
+        }
+      ]
+    },
+    {
+      "id": "promises",
+      "label": "Are Israel's promises fulfilled in the church now?",
+      "short": "Promises fulfilled now?",
+      "cells": [
+        {
+          "text": "Yes: Abraham's greater family is the church",
+          "short": "Yes, in the church",
+          "mark": "yes"
+        },
+        {
+          "text": "Yes: the church receives all of God's promises in Christ",
+          "short": "Yes, all in Christ",
+          "mark": "yes"
+        },
+        {
+          "text": "In part: fulfilled already, not yet in full until Israel is restored",
+          "short": "Already, not yet",
+          "mark": "partly"
+        },
+        {
+          "text": "No: the church shares the spiritual blessings; the promises are kept for Israel",
+          "short": "Kept for Israel",
+          "mark": "no"
+        }
+      ]
+    },
+    {
+      "id": "land",
+      "label": "Does national Israel still have a future in the land?",
+      "short": "Future in the land?",
+      "cells": [
+        {
+          "text": "No: the land points to the heavenly country",
+          "short": "No: a better country",
+          "mark": "no"
+        },
+        {
+          "text": "No: the land is a type, fulfilled in the new creation",
+          "short": "No: new creation",
+          "mark": "no"
+        },
+        {
+          "text": "Yes: the land promise still awaits Israel",
+          "short": "Yes, still ahead",
+          "mark": "yes"
+        },
+        {
+          "text": "Yes: Israel restored to her own land in the millennium",
+          "short": "Yes, in the millennium",
+          "mark": "yes"
+        }
+      ]
+    }
+  ],
+  "common_text": "All four teach one way of salvation in every age, by grace through faith in Christ. Wellum writes: \"All Christians agree that covenants are central to the Bible's story and that God's redemptive plan unfolds over time reaching its fulfillment in Christ.\"",
+  "common_source": "wellum",
+  "differ": [
+    "Israel and the church: one people in two administrations (covenant theology), one people with a new covenant community (progressive covenantalism), or two distinct entities (both dispensational views).",
+    "Promises: covenant theology and progressive covenantalism see them fulfilled in Christ and his church; progressive dispensationalists see real but partial fulfillment now; traditional dispensationalists see application only.",
+    "The land: a type of the new creation for the first two, a literal future hope for national Israel for the last two.",
+    "Baptism follows the line: covenant theology baptizes the children of believers, while progressive covenantalism and most dispensationalists baptize believers only."
+  ],
+  "sources": [
+    {
+      "id": "wcf",
+      "publisher": "Orthodox Presbyterian Church",
+      "title": "The Westminster Confession of Faith",
+      "year": 1647,
+      "url": "https://www.opc.org/wcf.html",
+      "fetched": "2026-11-14",
+      "quote": "There are not therefore two covenants of grace, differing in substance, but one and the same, under various dispensations.",
+      "notes": "7.6 (quoted). 19.3: ceremonial laws given \"to the people of Israel, as a church under age\", now abrogated. 25.2: the visible church is \"not confined to one nation, as before under the law\"."
+    },
+    {
+      "id": "watkins2026",
+      "publisher": "Tabletalk (Ligonier Ministries)",
+      "title": "Our Heavenly Homeland",
+      "year": 2026,
+      "url": "https://tabletalkmagazine.com/article/2026/03/our-heavenly-homeland/",
+      "fetched": "2026-11-14",
+      "quote": "What was true of these two promises was also true of the land. God had something far greater in store for Abraham and Sarah than real estate in the Holy Land.",
+      "notes": "Eric Watkins, March 2026, on Hebrews 11:13 to 16. Same article: \"God had an even greater family in store for Abraham\" followed by \"the church\". Supports the covenant theology cells on promises and land."
+    },
+    {
+      "id": "wellum",
+      "publisher": "The Gospel Coalition",
+      "title": "Progressive Covenantalism and New Covenant Theology",
+      "url": "https://www.thegospelcoalition.org/essay/progressive-covenantalism-and-new-covenant-theology/",
+      "fetched": "2026-11-14",
+      "quote": "the church receives all of God’s promises in Christ",
+      "notes": "Stephen Wellum, Concise Theology essay (the old /essay/progressive-covenantalism/ URL redirects here). Also: \"God has one people, yet there is an Israel-church distinction due to their respective covenants\"; \"The land, then, is viewed as a type/pattern\"; baptism \"is only applied to those who profess faith\". Common ground quote: \"All Christians agree that “covenants” are central to the Bible’s story and that God’s redemptive plan unfolds over time reaching its fulfillment in Christ.\" (the page's inner quotation marks are dropped in common_text)."
+    },
+    {
+      "id": "bock2012",
+      "publisher": "The Gospel Coalition",
+      "title": "Kingdom through Covenant: A Review by Darrell Bock",
+      "year": 2012,
+      "url": "https://www.thegospelcoalition.org/reviews/kingdom-covenant-darrell-bock/",
+      "fetched": "2026-11-14",
+      "quote": "With Progressive Dispensationalism , for example, Craig Blaising and I structured the entire book around a discussion of the covenants.",
+      "notes": "September 11, 2012. Bock identifies himself as co-author of Progressive Dispensationalism. On Israel: \"a future for Israel alongside the church is affirmed (not outside the church or the kingdom program as the book implies dispensationalists hold, but within the kingdom program)\". On the land he questions Gentry and Wellum's view that the land as type \"precludes a future for Israel and any hope she has of future promise in the land. Does this follow? I am not so sure.\" His covenants are \"already/not yet\"."
+    },
+    {
+      "id": "vlach",
+      "publisher": "The Gospel Coalition",
+      "title": "Dispensational Theology",
+      "url": "https://www.thegospelcoalition.org/essay/dispensational-theology/",
+      "fetched": "2026-11-14",
+      "quote": "Some dispensationalists believe no promises to Israel find fulfillment in the church today (Classical Dispensationalists), while others believe there is a partial fulfillment of some covenant promises with the church (Progressive Dispensationalists).",
+      "notes": "Michael Vlach, Concise Theology essay. Also says Revised and Progressive dispensationalism \"present more continuity between Israel and the church than that found with Classical/Traditional Dispensationalism\" and Progressive Dispensationalism affirms \"real covenant fulfillment (not just application)\" to the church. Complete fulfillment awaits Israel's restoration, including \"promises concerning Israel, the nations, and land\"."
+    },
+    {
+      "id": "dts",
+      "publisher": "Dallas Theological Seminary",
+      "title": "Doctrinal Statement",
+      "url": "https://www.dts.edu/why-dts/doctrinal-statement",
+      "fetched": "2026-11-14",
+      "quote": "began at Pentecost, and is distinct from Israel",
+      "notes": "Article XIII (the church). Article XX: Christ will \"restore Israel to her own land and give her the realization of God’s covenant promises\". Article V: salvation \"is always by grace through faith\" in every dispensation."
+    }
+  ],
+  "place": {
+    "before": "<section class=\"cc-synthesis\""
+  }
+}
