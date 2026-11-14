@@ -146,8 +146,19 @@ def test_reference_label_sits_in_legend_above_the_bars():
 
 def test_table_type_renders_html_table_with_sources():
     html = btc.render_chart(table())
-    assert "<svg" not in html and "<table class=\"cc-chart-table\">" in html
+    assert "<svg" not in html and "<table class=\"cc-chart-table cc-chart-stack\">" in html
     assert "Example Research, 2025</a>" in html
+
+
+def test_table_cells_carry_column_labels_and_a_visible_title():
+    html = btc.render_chart(table())
+    assert '<td data-label="Body">Example Church</td>' in html
+    assert '<td data-label="Position">Example position</td>' in html
+    assert '<td data-label="Source"><a href="https://example.org/study"' in html
+    assert '<span class="cc-chart-table-title">Where churches stand</span>' in html
+    assert '<span class="cc-chart-table-sub">Example bodies</span>' in html
+    css = (REPO_ROOT / "docs" / "assets" / "topic.css").read_text()
+    assert "content: attr(data-label)" in css and ".cc-chart-table-title" in css
 
 
 def test_build_page_places_and_is_idempotent():

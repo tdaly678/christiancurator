@@ -576,17 +576,22 @@ def render_line(c: dict, w: float = W) -> str:
 
 
 def render_table_body(c: dict) -> str:
+    # Each cell carries its column name in data-label: below 560px topic.css
+    # stacks every row into a card and prints the name before the value, so the
+    # Source column is never cut to one letter.
     sources = {s["id"]: s for s in c["sources"]}
-    head = "".join(f'<th scope="col">{esc(h)}</th>' for h in c["columns"]) + '<th scope="col">Source</th>'
+    cols = list(c["columns"]) + ["Source"]
+    head = "".join(f'<th scope="col">{esc(h)}</th>' for h in cols)
     rows = []
     for r in c["rows"]:
         s = sources[r["source"]]
-        cells = "".join(f"<td>{esc(x)}</td>" for x in r["cells"])
-        rows.append(f'<tr>{cells}<td><a href="{esc(s["url"])}" target="_blank" rel="noopener">'
+        cells = "".join(f'<td data-label="{esc(h)}">{esc(x)}</td>' for h, x in zip(cols, r["cells"]))
+        rows.append(f'<tr>{cells}<td data-label="Source"><a href="{esc(s["url"])}" target="_blank" rel="noopener">'
                     f'{esc(s["publisher"])}, {esc(s["year"])}</a></td></tr>')
-    return (f'<div class="cc-chart-scroll"><table class="cc-chart-table"><caption>{esc(c["title"])}. '
-            f'{esc(c["subtitle"])}</caption><thead><tr>{head}</tr></thead><tbody>{"".join(rows)}</tbody>'
-            f"</table></div>")
+    return (f'<div class="cc-chart-scroll"><table class="cc-chart-table cc-chart-stack"><caption>'
+            f'<span class="cc-chart-table-title">{esc(c["title"])}</span> '
+            f'<span class="cc-chart-table-sub">{esc(c["subtitle"])}</span></caption>'
+            f'<thead><tr>{head}</tr></thead><tbody>{"".join(rows)}</tbody></table></div>')
 
 
 def data_table(c: dict) -> str:
