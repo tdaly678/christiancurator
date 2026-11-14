@@ -97,6 +97,14 @@ try:
 except Exception:  # topics_data shape changed — fall back to the H1 only
     TOPIC_NAMES = {}
 
+
+
+def live_topic_pages() -> list[Path]:
+    """Topic pages, leaving out retired slugs' redirect stubs."""
+    from frontend.topic_redirects import live_topic_dirs
+    return [d / "index.html" for d in live_topic_dirs(TOPICS_DIR)]
+
+
 ENTRY_RE = re.compile(r'<article class="cc-article-entry">(.*?)</article>', re.S)
 TITLE_RE = re.compile(r'<(div|h[2-4]) class="cc-article-title">\s*(?:<a\b([^>]*)>(.*?)</a>|(.*?))\s*</\1>', re.S)
 HREF_RE = re.compile(r'\bhref="([^"]*)"')
@@ -342,7 +350,7 @@ def page_metadata(page: str) -> dict:
 
 def curated_urls() -> list[str]:
     urls = []
-    for path in sorted(TOPICS_DIR.glob("*/index.html")):
+    for path in live_topic_pages():
         for m in ENTRY_RE.finditer(path.read_text(encoding="utf-8")):
             t = TITLE_RE.search(m.group(1))
             h = HREF_RE.search((t.group(2) if t else "") or "")
@@ -394,7 +402,7 @@ def scan_all() -> dict[str, list[tuple[str, str]]]:
     results: dict[str, list[tuple[str, str]]] = {}
     ann_pages: dict[str, set[str]] = defaultdict(set)
     ann_by_slug: dict[str, list[str]] = {}
-    for path in sorted(TOPICS_DIR.glob("*/index.html")):
+    for path in live_topic_pages():
         slug = path.parent.name
         page = path.read_text(encoding="utf-8")
         v, anns = scan_page(slug, page, metadata)

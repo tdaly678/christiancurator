@@ -382,7 +382,8 @@ def main(argv: list[str]):
     if len(argv) > 1:
         slugs = argv[1:]
     else:
-        slugs = sorted(p.name for p in TOPICS_DIR.iterdir() if p.is_dir())
+        from frontend.topic_redirects import live_topic_dirs
+        slugs = [p.name for p in live_topic_dirs(TOPICS_DIR)]
 
     for slug in slugs:
         print(process_page(slug, enrichment))

@@ -1,0 +1,86 @@
+{
+  "id": "christians-pastors-ai-fears",
+  "type": "column",
+  "kicker": "Pews and pulpits",
+  "title": "Pastors fear AI misreading Scripture; their people trust it more",
+  "subtitle": "U.S. practicing Christians (November 2025) and U.S. Protestant pastors (December 2025)",
+  "caption": "Nearly all pastors (94%) worry about AI misinterpreting Scripture. Practicing Christians are more worried than pastors that AI will replace spiritual leaders, yet far more willing to trust it with their spiritual growth.",
+  "note": "The first three rows are the share expressing concern about each outcome. The last row is a different question: the share who would trust AI with growing spiritually (for practicing Christians, completely or somewhat). Barna surveyed U.S. adults, including practicing Christians, and U.S. Protestant pastors in separate online samples. Barna figures drawn by Christian Curator from published numbers.",
+  "unit": "%",
+  "max": 100,
+  "series": [
+    {
+      "id": "pc",
+      "label": "Practicing Christians",
+      "color": "green"
+    },
+    {
+      "id": "pastors",
+      "label": "Pastors",
+      "color": "brown"
+    }
+  ],
+  "rows": [
+    {
+      "label": "Concerned AI will misinterpret Scripture",
+      "values": {
+        "pc": 83,
+        "pastors": 94
+      },
+      "as_published": {
+        "pc": "83 percent",
+        "pastors": "94 percent"
+      },
+      "source": "barna2026"
+    },
+    {
+      "label": "Concerned AI will act as a replacement for God",
+      "values": {
+        "pc": 65,
+        "pastors": 79
+      },
+      "as_published": {
+        "pc": "65%",
+        "pastors": "79%"
+      },
+      "source": "barna2026"
+    },
+    {
+      "label": "Concerned AI will replace pastors or spiritual leaders",
+      "values": {
+        "pc": 72,
+        "pastors": 63
+      },
+      "as_published": {
+        "pc": "72 percent",
+        "pastors": "63 percent"
+      },
+      "source": "barna2026"
+    },
+    {
+      "label": "Would trust AI with growing spiritually",
+      "values": {
+        "pc": 48,
+        "pastors": 12
+      },
+      "as_published": {
+        "pc": "48%",
+        "pastors": "12 percent"
+      },
+      "source": "barna2026"
+    }
+  ],
+  "sources": [
+    {
+      "id": "barna2026",
+      "publisher": "Barna Group",
+      "study": "AI is Becoming a Spiritual Authority, Even Among Practicing Christians",
+      "year": 2026,
+      "url": "https://www.barna.com/research/christians-trust-ai-flourishing-spiritual-authority/",
+      "fetched": "2026-11-14",
+      "license": "credit",
+      "field_dates": "U.S. adults November 2025; pastors December 2025 (online)",
+      "sample": "1,514 U.S. adults; 442 U.S. Protestant pastors"
+    }
+  ]
+}

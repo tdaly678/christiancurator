@@ -1,0 +1,50 @@
+{
+  "id": "no-role-for-ai-in-faith",
+  "type": "hbar",
+  "kicker": "Where Americans draw the line",
+  "title": "Most Americans want AI kept out of advising people about God",
+  "subtitle": "U.S. adults, June 2025",
+  "caption": "Nearly three in four Americans (73%) say AI should play no role at all in advising people about their faith in God, more than say the same about matchmaking, governing or choosing juries.",
+  "note": "Share who say artificial intelligence should play \"no role at all\" in each area. The report gives no breakdown by religion. Pew Research Center bears no responsibility for the analyses or interpretations of the data presented here. The opinions expressed herein, including any implications for policy, are those of the author and not of Pew Research Center.",
+  "unit": "%",
+  "max": 100,
+  "rows": [
+    {
+      "label": "Advising people about their faith in God",
+      "value": 73,
+      "as_published": "73%",
+      "source": "pew2025"
+    },
+    {
+      "label": "Judging whether two people could fall in love",
+      "value": 66,
+      "as_published": "66%",
+      "source": "pew2025"
+    },
+    {
+      "label": "Making decisions about how to govern the country",
+      "value": 60,
+      "as_published": "60%",
+      "source": "pew2025"
+    },
+    {
+      "label": "Selecting who should serve on a jury",
+      "value": 47,
+      "as_published": "47%",
+      "source": "pew2025"
+    }
+  ],
+  "sources": [
+    {
+      "id": "pew2025",
+      "publisher": "Pew Research Center",
+      "study": "How Americans View AI and Its Impact on People and Society",
+      "year": 2025,
+      "url": "https://www.pewresearch.org/wp-content/uploads/sites/20/2025/09/PS_2025.9.15_AI-and-its-impact_report.pdf",
+      "fetched": "2026-11-14",
+      "license": "reuse",
+      "field_dates": "June 9 to 15, 2025",
+      "sample": "5,023 U.S. adults (American Trends Panel)"
+    }
+  ]
+}

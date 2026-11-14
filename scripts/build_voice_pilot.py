@@ -32,6 +32,7 @@ sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 import build_recent_articles as recent  # noqa: E402
 from curator import voice_pilot as vp  # noqa: E402
+from frontend.topic_redirects import live_topic_dirs  # noqa: E402
 from frontend.topics_data import TOPICS  # noqa: E402
 
 DOCS = REPO_ROOT / "docs"
@@ -95,7 +96,7 @@ def drop_from_sitemap(slug: str) -> bool:
 def update_topic_hubs(writers: list[dict], names: dict[str, str]) -> list[str]:
     mapping = {s: pairs for s, pairs in vp.topic_voice_map(writers).items() if s in names}
     changed = []
-    for page in sorted(TOPICS_DIR.glob("*/index.html")):
+    for page in sorted(p / "index.html" for p in live_topic_dirs(TOPICS_DIR)):
         slug = page.parent.name
         html = page.read_text(encoding="utf-8")
         if slug not in mapping and vp.TOPIC_START not in html:

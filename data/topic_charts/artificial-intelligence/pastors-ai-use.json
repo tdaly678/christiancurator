@@ -1,0 +1,85 @@
+{
+  "id": "pastors-ai-use",
+  "type": "hbar",
+  "kicker": "In the pulpit's study",
+  "title": "Four in 10 pastors use AI for ministry; a majority do not",
+  "subtitle": "U.S. Protestant senior pastors, September 2025",
+  "caption": "One in 10 pastors call themselves regular users and a third are experimenting, for 42% in all. Another 56% are waiting, avoiding it on purpose, or ignoring it.",
+  "note": "Question: \"Which of the following best describes your own current use of AI or Artificial Intelligence for ministry? (Select one)\" Phone survey, margin of error plus or minus 3.3 points.",
+  "unit": "%",
+  "max": 100,
+  "categories": [
+    {
+      "id": "use",
+      "label": "Using AI",
+      "color": "green"
+    },
+    {
+      "id": "non",
+      "label": "Not using AI",
+      "color": "brown"
+    },
+    {
+      "id": "ns",
+      "label": "Not sure",
+      "color": "grey"
+    }
+  ],
+  "rows": [
+    {
+      "label": "Experimenting with AI",
+      "value": 32,
+      "as_published": "32%",
+      "source": "lifeway-pastors",
+      "category": "use"
+    },
+    {
+      "label": "A regular user of AI",
+      "value": 10,
+      "as_published": "10%",
+      "source": "lifeway-pastors",
+      "category": "use"
+    },
+    {
+      "label": "Ignoring AI",
+      "value": 20,
+      "as_published": "20%",
+      "source": "lifeway-pastors",
+      "category": "non"
+    },
+    {
+      "label": "Waiting to see better examples",
+      "value": 18,
+      "as_published": "18%",
+      "source": "lifeway-pastors",
+      "category": "non"
+    },
+    {
+      "label": "Intentionally avoiding AI",
+      "value": 18,
+      "as_published": "18%",
+      "source": "lifeway-pastors",
+      "category": "non"
+    },
+    {
+      "label": "Not sure",
+      "value": 3,
+      "as_published": "3%",
+      "source": "lifeway-pastors",
+      "category": "ns"
+    }
+  ],
+  "sources": [
+    {
+      "id": "lifeway-pastors",
+      "publisher": "Lifeway Research",
+      "study": "Pastors, Churchgoers See AI as Concerning and Confusing",
+      "year": 2026,
+      "url": "https://research.lifeway.com/2026/04/21/pastors-churchgoers-see-ai-as-concerning-and-confusing/",
+      "fetched": "2026-11-14",
+      "license": "reuse",
+      "field_dates": "September 2 to 24, 2025 (phone)",
+      "sample": "1,003 U.S. Protestant pastors"
+    }
+  ]
+}

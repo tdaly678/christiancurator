@@ -136,7 +136,8 @@ def load_cards(path: Path = CARDS) -> dict:
 
 
 def topic_slugs() -> list[str]:
-    return sorted(p.parent.name for p in TOPICS_DIR.glob("*/index.html"))
+    from frontend.topic_redirects import live_topic_dirs
+    return [p.name for p in live_topic_dirs(TOPICS_DIR)]
 
 
 def topic_category(slug: str) -> str:

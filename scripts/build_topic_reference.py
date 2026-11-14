@@ -15,7 +15,12 @@ For a topic page that has data/topic_reference/<slug>.json, writes, idempotently
    rewritten from the same items, so the markup always matches the visible
    text (Google's rule for FAQ markup). Answers are stored as HTML; the schema
    gets the plain text.
-5. "dateModified" in the Article JSON-LD and the visible "Last updated" line are
+5. Optional glossary: <!-- CC-GLOSSARY:START/END --> with
+   <section class="cc-glossary" id="glossary"> (a <dl> of terms, its own small
+   style block so other pages' CSS does not move) and a DefinedTermSet JSON-LD
+   (<script ... data-cc-marker="CC-GLOSSARY-SCHEMA">) built from the same items.
+   First insert goes at "glossary.place".
+6. "dateModified" in the Article JSON-LD and the visible "Last updated" line are
    set to "date_modified".
 
 Schema of data/topic_reference/<slug>.json:
@@ -33,6 +38,11 @@ Schema of data/topic_reference/<slug>.json:
     "title": "Men, Women and the Church, Briefly Answered",
     "place": {"before": "<!-- CC-TOPIC-VOICES:START -->"},   # first insert only
     "items": [{"q": "Question?", "a": "Answer HTML (inline tags and links only)."}]
+  },
+  "glossary": {                                              # optional
+    "label": "Glossary", "title": "Terms used on this page",
+    "place": {"before": "<!-- CC-TOPIC-VOICES:START -->"},   # first insert only
+    "items": [{"term": "Imago Dei", "def": "Definition HTML (inline tags only)."}]
   },
   "sources": [{"id": "danvers", "publisher": "CBMW", "title": "The Danvers Statement",
                "url": "https://...", "fetched": "2026-11-14"}],   # what the copy rests on
@@ -72,6 +82,7 @@ TOPICS_DIR = REPO_ROOT / "docs" / "topics"
 CSS_START, CSS_END = "<!-- CC-REFERENCE-CSS:START -->", "<!-- CC-REFERENCE-CSS:END -->"
 DEF_START, DEF_END = "<!-- CC-DEFINITION:START -->", "<!-- CC-DEFINITION:END -->"
 FAQ_START, FAQ_END = "<!-- CC-FAQ:START -->", "<!-- CC-FAQ:END -->"
+GLOSS_START, GLOSS_END = "<!-- CC-GLOSSARY:START -->", "<!-- CC-GLOSSARY:END -->"
 ASSETS_START = "<!-- CC-TOPIC-ASSETS:START -->"
 TLDR_TAG = '<section class="cc-tldr"'
 
@@ -87,6 +98,18 @@ FAQ_SCHEMA_RE = re.compile(
     r'<script(?=[^>]*type="application/ld\+json")(?=[^>]*data-cc-marker="AEO-FAQPAGE-SCHEMA")[^>]*>.*?</script>',
     re.DOTALL,
 )
+GLOSS_SCHEMA_RE = re.compile(
+    r'<script(?=[^>]*type="application/ld\+json")(?=[^>]*data-cc-marker="CC-GLOSSARY-SCHEMA")[^>]*>.*?</script>',
+    re.DOTALL,
+)
+SITE = "https://www.christiancurator.com"
+GLOSS_CSS = ("<style>.cc-glossary{margin-top:2.5rem;padding-top:1.75rem;border-top:2px solid #e0ddd8;}"
+             ".cc-glossary-label{font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;"
+             "color:#2C4A2E;margin-bottom:0.5rem;}.cc-glossary-title{font-family:'Lora',Georgia,serif;"
+             "font-size:24px;font-weight:600;margin-bottom:1.1rem;color:#1a1a1a;}"
+             ".cc-glossary dt{font-family:'Lora',Georgia,serif;font-size:16px;font-weight:600;color:#1a1a1a;"
+             "margin-top:0.9rem;}.cc-glossary dd{font-size:15px;color:#333;line-height:1.65;margin:0.2rem 0 0;}"
+             ".cc-glossary dd a{color:#2C4A2E;}</style>")
 DATE_MODIFIED_RE = re.compile(r'("dateModified"\s*:\s*")\d{4}-\d{2}-\d{2}(")')
 LAST_UPDATED_RE = re.compile(r'(<p class="cc-last-updated">Last updated: )[^<]*(</p>)')
 
@@ -176,6 +199,18 @@ def validate(data: dict, slug: str, page_html: str, flagged: list[str] | None = 
             errs.append("faq has duplicate questions")
         if FAQ_START not in page_html:
             errs += _place_errors("faq", faq.get("place"), page_html)
+    gloss = data.get("glossary")
+    gitems = (gloss or {}).get("items") or []
+    if gloss is not None:
+        if len(gitems) < 3:
+            errs.append("glossary needs at least 3 terms")
+        terms = [str(it.get("term", "")).strip() for it in gitems]
+        if any(not t for t in terms) or any(not plain(str(it.get("def", ""))) for it in gitems):
+            errs.append("glossary: every item needs a term and a definition")
+        if len({t.lower() for t in terms}) != len(terms):
+            errs.append("glossary has duplicate terms")
+        if GLOSS_START not in page_html:
+            errs += _place_errors("glossary", gloss.get("place"), page_html)
     if d is not None and DEF_START not in page_html and TLDR_TAG not in page_html:
         errs.append("definition: no TL;DR on the page to insert before")
 
@@ -185,7 +220,10 @@ def validate(data: dict, slug: str, page_html: str, flagged: list[str] | None = 
         ids.add("definition")
     if faq is not None:
         ids.add("faq")
-    fragments = [str((d or {}).get("html", ""))] + [str(it.get("a", "")) for it in items]
+    if gloss is not None:
+        ids.add("glossary")
+    fragments = ([str((d or {}).get("html", ""))] + [str(it.get("a", "")) for it in items]
+                 + [str(it.get("def", "")) for it in gitems])
     for frag in fragments:
         for href in HREF_RE.findall(frag):
             if href.startswith("#"):
@@ -253,6 +291,38 @@ def render_schema(faq: dict) -> str:
     return f'<script type="application/ld+json" data-cc-marker="AEO-FAQPAGE-SCHEMA">\n{body}\n</script>'
 
 
+def term_id(term: str) -> str:
+    return "term-" + re.sub(r"[^a-z0-9]+", "-", plain(term).lower()).strip("-")
+
+
+def render_glossary(gloss: dict) -> str:
+    items = "\n".join(
+        f'<dt id="{term_id(it["term"])}">{esc(it["term"])}</dt>\n<dd>{it["def"].strip()}</dd>'
+        for it in gloss["items"]
+    )
+    return (f'{GLOSS_START}\n<section class="cc-glossary" id="glossary">{GLOSS_CSS}\n'
+            f'<h2 class="cc-glossary-label">{esc(gloss.get("label") or "Glossary")}</h2>\n'
+            f'<div class="cc-glossary-title">{esc(gloss.get("title") or "Terms used on this page")}</div>\n'
+            f"<dl>\n{items}\n</dl>\n</section>\n{GLOSS_END}")
+
+
+def render_glossary_schema(gloss: dict, slug: str) -> str:
+    url = f"{SITE}/topics/{slug}/"
+    doc = {
+        "@context": "https://schema.org",
+        "@type": "DefinedTermSet",
+        "name": plain(gloss.get("title") or "Glossary"),
+        "url": url + "#glossary",
+        "hasDefinedTerm": [
+            {"@type": "DefinedTerm", "name": plain(it["term"]), "description": plain(it["def"]),
+             "url": f"{url}#{term_id(it['term'])}"}
+            for it in gloss["items"]
+        ],
+    }
+    body = json.dumps(doc, indent=2, ensure_ascii=False)
+    return f'<script type="application/ld+json" data-cc-marker="CC-GLOSSARY-SCHEMA">\n{body}\n</script>'
+
+
 def put(page_html: str, start: str, end: str, block: str, place: dict | None) -> str:
     block_re = re.compile(re.escape(start) + r".*?" + re.escape(end), re.DOTALL)
     if block_re.search(page_html):
@@ -283,6 +353,15 @@ def build_page(page_html: str, data: dict) -> str:
         schema = render_schema(faq)
         if FAQ_SCHEMA_RE.search(out):
             out = FAQ_SCHEMA_RE.sub(lambda _: schema, out, count=1)
+        else:
+            i = out.index(CSS_START)
+            out = out[:i] + schema + "\n" + out[i:]
+    gloss = data.get("glossary")
+    if gloss:
+        out = put(out, GLOSS_START, GLOSS_END, render_glossary(gloss), gloss.get("place"))
+        schema = render_glossary_schema(gloss, data["slug"])
+        if GLOSS_SCHEMA_RE.search(out):
+            out = GLOSS_SCHEMA_RE.sub(lambda _: schema, out, count=1)
         else:
             i = out.index(CSS_START)
             out = out[:i] + schema + "\n" + out[i:]

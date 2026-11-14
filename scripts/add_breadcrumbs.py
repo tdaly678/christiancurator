@@ -240,7 +240,10 @@ def main():
         print(f"  {line}")
 
     print("\n== Topic pages ==")
-    slugs = sorted(p for p in TOPICS_DIR.iterdir() if p.is_dir())
+    if str(REPO_ROOT) not in sys.path:
+        sys.path.insert(0, str(REPO_ROOT))
+    from frontend.topic_redirects import retired_topic_slugs
+    slugs = sorted(p for p in TOPICS_DIR.iterdir() if p.is_dir() and p.name not in retired_topic_slugs())
     total = len(slugs)
     added = 0
     skipped = 0

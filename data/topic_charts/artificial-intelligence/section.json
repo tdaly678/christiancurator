@@ -1,0 +1,13 @@
+{
+  "id": "by-the-numbers",
+  "label": "By the Numbers",
+  "title": "What pastors and churchgoers think about AI",
+  "intro": "Surveys from Lifeway Research, Barna and Pew Research Center, drawn by Christian Curator from the published figures. Each chart names its source, sample and field dates.",
+  "charts": [
+    "pastors-ai-use",
+    "christians-pastors-ai-fears",
+    "churchgoers-evangelical-split",
+    "pastor-ai-concerns",
+    "no-role-for-ai-in-faith"
+  ]
+}

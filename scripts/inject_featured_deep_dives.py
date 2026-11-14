@@ -69,8 +69,10 @@ def collect_topics() -> list[dict]:
     out = []
     if not TOPICS_DIR.exists():
         return out
+    from frontend.topic_redirects import retired_topic_slugs
+    retired = retired_topic_slugs()  # redirect stubs are not topics
     for d in sorted(TOPICS_DIR.iterdir()):
-        if not d.is_dir():
+        if not d.is_dir() or d.name in retired:
             continue
         idx = d / "index.html"
         if not idx.exists():
