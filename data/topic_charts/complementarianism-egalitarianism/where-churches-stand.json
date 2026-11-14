@@ -1,0 +1,291 @@
+{
+  "id": "where-churches-stand",
+  "type": "table",
+  "kicker": "Where churches stand",
+  "title": "Can women be pastors? What each church body's own documents say",
+  "subtitle": "Evangelical denominations and networks, grouped no, local decision, yes; every row checked against the body's own document on November 14, 2026",
+  "caption": "Most bodies that say no restrict the office of pastor or elder, not every teaching role. The three that leave it to the diocese or congregation sit between the two main positions.",
+  "note": "Calvary Chapel Costa Mesa is a single church, shown because its November 2026 decision split the Calvary Chapel movement; the Calvary Chapel Association's regional team said it sees no sound biblical basis for ordaining women as elders and pastors. Not shown until checked on their own documents: Vineyard USA and the Calvary Chapel Association. Assemblies of God was read from an archived copy of its own page (July 2025) because ag.org refuses automated requests.",
+  "columns": [
+    "Church body",
+    "Women as pastors",
+    "What its own documents say"
+  ],
+  "rows": [
+    {
+      "cells": [
+        "Southern Baptist Convention",
+        "No",
+        "\"The office of pastor/elder/overseer is limited to men as qualified by Scripture.\" Article VI, as amended in 2023."
+      ],
+      "source": "sbc"
+    },
+    {
+      "cells": [
+        "Presbyterian Church in America",
+        "No",
+        "Elder and deacon: \"these offices are open to men only.\" Book of Church Order 7-2."
+      ],
+      "source": "pca"
+    },
+    {
+      "cells": [
+        "Orthodox Presbyterian Church",
+        "No",
+        "Elders and deacons \"must be male communicant members.\" Form of Government XXV.1."
+      ],
+      "source": "opc"
+    },
+    {
+      "cells": [
+        "Lutheran Church Missouri Synod",
+        "No",
+        "Women \"may not serve in the office of pastor\"; congregations may open other offices to them. 2004 convention."
+      ],
+      "source": "lcms"
+    },
+    {
+      "cells": [
+        "Acts 29",
+        "No",
+        "\"The office of elder/pastor is restricted to qualified men.\""
+      ],
+      "source": "acts29"
+    },
+    {
+      "cells": [
+        "Evangelical Free Church of America",
+        "No ordination; elders a local decision",
+        "\"The EFCA does not ordain women\" (1988 conference decision); on elders, \"the local church is free to make its own decision.\""
+      ],
+      "source": "efca"
+    },
+    {
+      "cells": [
+        "Anglican Church in North America",
+        "Each diocese decides",
+        "Each diocese decides on ordaining women deacons and priests; \"women will not be consecrated as bishops.\" 2017 bishops' statement."
+      ],
+      "source": "acna"
+    },
+    {
+      "cells": [
+        "Christian Reformed Church in North America",
+        "Each congregation decides",
+        "\"All congregations ... may allow women to serve in the office of minister, elder, deacon, or commissioned pastor.\" Synod 2007."
+      ],
+      "source": "crc"
+    },
+    {
+      "cells": [
+        "Assemblies of God",
+        "Yes",
+        "\"We cannot find convincing evidence that the ministry of women is restricted according to some sacred or immutable principle.\" 2010 position paper."
+      ],
+      "source": "ag"
+    },
+    {
+      "cells": [
+        "Church of the Nazarene",
+        "Yes",
+        "Affirms \"the historic right of women to be elected and appointed to places of leadership ... including the offices of both elder and deacon.\""
+      ],
+      "source": "naz"
+    },
+    {
+      "cells": [
+        "The Foursquare Church",
+        "Yes",
+        "\"[B]oth women and men are fully qualified for ministry leadership\" (a church article, first published 2011)."
+      ],
+      "source": "fsq"
+    },
+    {
+      "cells": [
+        "Evangelical Covenant Church",
+        "Yes",
+        "The church voted to ordain women in 1976."
+      ],
+      "source": "ecc"
+    },
+    {
+      "cells": [
+        "ECO: A Covenant Order of Evangelical Presbyterians",
+        "Yes",
+        "\"[M]en and women alike are called to all the ministries of the Church.\" Essential Tenets III.D."
+      ],
+      "source": "eco"
+    },
+    {
+      "cells": [
+        "The Wesleyan Church",
+        "Yes",
+        "\"Full opportunity for women to be ordained to the ministry and to serve in any and all ministerial and leadership capacities.\""
+      ],
+      "source": "wes"
+    },
+    {
+      "cells": [
+        "Free Methodist Church USA",
+        "Yes",
+        "The church \"has articulated an understanding of Scripture that affirms women in ministry and their ordination.\""
+      ],
+      "source": "fmc"
+    },
+    {
+      "cells": [
+        "Calvary Chapel Costa Mesa (one church)",
+        "Yes (announced Nov. 1, 2026)",
+        "The church \"believes and practices the ordination of both men and women to pastoral ministry,\" as reported by The Christian Post."
+      ],
+      "source": "ccm"
+    }
+  ],
+  "sources": [
+    {
+      "id": "sbc",
+      "publisher": "Southern Baptist Convention",
+      "study": "The Baptist Faith and Message 2000, Article VI (amended June 14, 2023)",
+      "year": 2023,
+      "url": "https://bfm.sbc.net/bfm2000/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "pca",
+      "publisher": "Presbyterian Church in America",
+      "study": "Book of Church Order, 2026 edition, 7-2",
+      "year": 2026,
+      "url": "https://www.pcaac.org/wp-content/uploads/2026/11/BCO_2026.pdf",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "opc",
+      "publisher": "Orthodox Presbyterian Church",
+      "study": "Form of Government, Chapter XXV.1",
+      "year": 2026,
+      "url": "https://opc.org/BCO/FG.html",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "lcms",
+      "publisher": "Lutheran Church Missouri Synod",
+      "study": "Convention says women may hold all offices that do not involve pastoral functions",
+      "year": 2004,
+      "url": "https://reporter.lcms.org/2004/convention-says-women-may-hold-all-offices-that-do-not-involve-pastoral-functions/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "acts29",
+      "publisher": "Acts 29",
+      "study": "Distinctives",
+      "year": 2026,
+      "url": "https://www.acts29.com/about-us/distinctives/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "efca",
+      "publisher": "Evangelical Free Church of America",
+      "study": "Theological FAQs: women in ministry and credentialing",
+      "year": 2026,
+      "url": "https://credentialing.ministries.efca.org/theological-faq-s",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "acna",
+      "publisher": "Anglican Church in North America",
+      "study": "College of Bishops Statement on the Ordination of Women",
+      "year": 2017,
+      "url": "https://anglicanchurch.net/?p=1578",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "crc",
+      "publisher": "Christian Reformed Church in North America",
+      "study": "Women in Ecclesiastical Office",
+      "year": 2026,
+      "url": "https://www.crcna.org/welcome/beliefs/position-statements/women-ecclesiastical-office",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "ag",
+      "publisher": "Assemblies of God",
+      "study": "The Role of Women in Ministry (position paper adopted August 2010)",
+      "year": 2010,
+      "url": "https://ag.org/Beliefs/Position-Papers/Women-in-Ministry",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite",
+      "archive": "http://web.archive.org/web/20250716213856/https://ag.org/Beliefs/Position-Papers/Women-in-Ministry"
+    },
+    {
+      "id": "naz",
+      "publisher": "Church of the Nazarene",
+      "study": "Women Clergy (citing the Manual, para. 501)",
+      "year": 2026,
+      "url": "https://nazarene.org/?p=6444",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "fsq",
+      "publisher": "The Foursquare Church",
+      "study": "Why women are qualified for ministry leadership",
+      "year": 2011,
+      "url": "https://resources.foursquare.org/why_women_are_qualified_for_ministry_leadership/",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "ecc",
+      "publisher": "Evangelical Covenant Church",
+      "study": "Occasional paper: women in ministry",
+      "year": 1986,
+      "url": "https://covchurch.org/resource/occasional-women-in-ministry",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "eco",
+      "publisher": "ECO: A Covenant Order of Evangelical Presbyterians",
+      "study": "Egalitarian (citing Essential Tenets III.D)",
+      "year": 2026,
+      "url": "https://eco-pres.org/egalitarian",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "wes",
+      "publisher": "The Wesleyan Church",
+      "study": "A Position Statement on Women in the Ministry",
+      "year": 2026,
+      "url": "https://resources.wesleyan.org/wp-content/uploads/Women-in-Ministry-Position-Statement.pdf",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "fmc",
+      "publisher": "Free Methodist Church USA",
+      "study": "A Biblical Understanding of Women in Church Leadership (revised Feb. 13, 2024)",
+      "year": 2024,
+      "url": "https://fmcusa.org/wp-content/uploads/FMCUSA_A-Biblical-Understanding-of-Women-in-Church-Leadership.pdf",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    },
+    {
+      "id": "ccm",
+      "publisher": "The Christian Post",
+      "study": "Pastors react after Calvary Chapel Costa Mesa says it ordains women pastors",
+      "year": 2026,
+      "url": "https://www.christianpost.com/news/pastors-react-to-calvary-chapel-costa-mesas-ordination-of-women.html",
+      "fetched": "2026-11-14",
+      "license": "own-chart-cite"
+    }
+  ]
+}

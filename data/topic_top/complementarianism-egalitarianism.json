@@ -1,0 +1,107 @@
+{
+  "slug": "complementarianism-egalitarianism",
+  "glance": {
+    "question": "Can women be pastors and elders, and which other roles are open to them?",
+    "positions": [
+      {
+        "name": "Complementarianism",
+        "claim": "Equal in dignity, distinct in role: pastors and elders are men.",
+        "anchor": "position-1",
+        "voices": [
+          {
+            "name": "John Piper",
+            "slug": "john-piper"
+          },
+          {
+            "name": "Wayne Grudem"
+          },
+          {
+            "name": "Thomas Schreiner"
+          }
+        ]
+      },
+      {
+        "name": "Egalitarianism",
+        "claim": "Every ministry and office is open to women and men alike.",
+        "anchor": "position-2",
+        "voices": [
+          {
+            "name": "N.T. Wright"
+          },
+          {
+            "name": "Scot McKnight"
+          },
+          {
+            "name": "Mimi Haddad"
+          }
+        ]
+      },
+      {
+        "name": "Soft Complementarianism / Third Way",
+        "claim": "Only the pastoral office is reserved for men; most teaching roles are open.",
+        "anchor": "position-3",
+        "voices": []
+      }
+    ]
+  },
+  "start_here": [
+    {
+      "kind": "The key text",
+      "url": "https://www.crossway.org/articles/what-does-it-mean-that-women-should-remain-quiet-in-church-1-timothy-2/",
+      "title": "What Does It Mean That Women Should “Remain Quiet” in Church? (1 Timothy 2)",
+      "author": "Denny Burk",
+      "outlet": "Crossway",
+      "why": "A careful complementarian reading of the passage the whole debate turns on."
+    },
+    {
+      "kind": "Another reading",
+      "url": "https://www.christianitytoday.com/2024/03/complementarian-home-egalitarian-church-paul-hugenberger/",
+      "title": "Complementarian at Home, Egalitarian at Church? Paul Would Approve.",
+      "author": "Gordon P. Hugenberger",
+      "outlet": "Christianity Today",
+      "why": "Argues 1 Timothy 2 may be more about marriage than ministry."
+    },
+    {
+      "kind": "The egalitarian side",
+      "url": "https://www.cbeinternational.org/resource/even-egalitarian-churches-limit-womens-leadership/",
+      "title": "Even Egalitarian Churches Limit Women's Leadership",
+      "author": "Rachel Heim Rausch",
+      "outlet": "CBE International",
+      "why": "An egalitarian look at the gap between what churches affirm and what they practice."
+    }
+  ],
+  "key_number": {
+    "figure": "44%",
+    "text": "44% of evangelical pastors say a woman could be senior pastor at their church; 84% say she could teach a coed adult Bible study.",
+    "publisher": "Lifeway Research",
+    "study": "Leadership Roles of Women Divide Protestant Denominations",
+    "year": 2022,
+    "source_url": "https://research.lifeway.com/2022/08/23/leadership-roles-of-women-divide-protestant-denominations/",
+    "fetched": "2026-11-14",
+    "license": "reuse",
+    "link": "#roles-open-to-women"
+  },
+  "related": [
+    {
+      "slug": "gender-and-biblical-anthropology",
+      "question": "What does Scripture teach about being male and female?"
+    },
+    {
+      "slug": "church-governance",
+      "question": "Elders, congregations or bishops: who should lead a church?"
+    },
+    {
+      "slug": "marriage-and-family",
+      "question": "What does a Christian marriage look like today?"
+    }
+  ],
+  "changes": [
+    {
+      "date": "2026-11-14",
+      "text": "added where churches stand, the SBC vote tracker, the Lifeway pastors survey and a FAQ."
+    }
+  ],
+  "latest": true,
+  "signup": true,
+  "notes": "Position 3 voices left empty on purpose: the card's names (Keller, DeYoung, Carson, Kostenberger, Select TGC writers) are flagged for Tom. Start here authors confirmed on the article pages 2026-11-14 (Burk: Crossway author bio; Hugenberger: meta author; Rausch: CBE author line)."
+}

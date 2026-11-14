@@ -1,0 +1,32 @@
+{
+  "id": "sbc-votes",
+  "type": "column",
+  "kicker": "The SBC votes",
+  "title": "Southern Baptists and the two-thirds line",
+  "subtitle": "Share of messengers voting for a constitutional amendment on women pastors, by annual meeting",
+  "caption": "A change to the SBC constitution needs a two-thirds vote at two consecutive annual meetings. Two attempts fell short in 2024 and 2025; the broader 2026 amendment cleared its first vote and needs a second at the 2027 meeting.",
+  "note": "Each bar is a different measure. 2023: the first vote on the Law amendment passed in New Orleans without a ballot count, so no share is charted. 2024: the Law amendment's required second vote, 5,099 of 8,298 ballots. 2025: an amendment to bar churches that affirm, appoint or employ a woman \"as a pastor of any kind.\" 2026: the Truth and Unity Amendment, which also bars churches that let women preach on Sunday mornings; a quarter voted against. Also in June 2023, messengers upheld the removal of Saddleback Church (88.46%) and Fern Creek Baptist Church (91.85%) over women pastors.",
+  "unit": "%",
+  "max": 100,
+  "series": [{"id": "yes", "label": "Voted for the amendment", "color": "green"}],
+  "reference": {"value": 66.67, "label": "Two-thirds needed"},
+  "rows": [
+    {"label": "2023 first vote, no count", "values": {}, "as_published": {}, "source": "burk2023"},
+    {"label": "2024 second vote", "values": {"yes": 61.45}, "as_published": {"yes": "61.45 percent"}, "source": "bp2024"},
+    {"label": "2025 amendment", "values": {"yes": 60.74}, "as_published": {"yes": "60.74%"}, "source": "rns2025"},
+    {"label": "2026 first vote", "values": {"yes": 74.6}, "as_published": {"yes": "74.6%"}, "source": "rns2026"},
+    {"label": "2027 second vote due", "values": {}, "as_published": {}, "source": "rns2026"}
+  ],
+  "sources": [
+    {"id": "burk2023", "publisher": "Denny Burk", "study": "The SBC in the Big Easy: What Happened?", "year": 2023,
+     "url": "https://www.dennyburk.com/the-sbc-in-the-big-easy-what-happened", "fetched": "2026-11-14", "license": "own-chart-cite"},
+    {"id": "bp2024", "publisher": "Baptist Press", "study": "Law Amendment falls short at SBC meeting in Indianapolis (June 12, 2024)", "year": 2024,
+     "url": "https://mbcpathway.com/2024/06/12/law-amendment-falls-short-at-sbc-meeting-in-indianapolis/", "fetched": "2026-11-14", "license": "own-chart-cite"},
+    {"id": "rns2025", "publisher": "Religion News Service", "study": "Vote to Bar Churches with Women Pastors Fails Again at SBC Meeting (June 12, 2025)", "year": 2025,
+     "url": "https://ministrywatch.com/vote-to-bar-churches-with-women-pastors-fails-again-at-sbc-meeting/", "fetched": "2026-11-14", "license": "own-chart-cite"},
+    {"id": "rns2026", "publisher": "Religion News Service", "study": "Southern Baptists Move Closer to Constitutional Ban on Women Pastors (June 11, 2026)", "year": 2026,
+     "url": "https://www.christianitytoday.com/2026/06/southern-baptist-constitution-ban-women-pastors/", "fetched": "2026-11-14", "license": "own-chart-cite"},
+    {"id": "bm2023", "publisher": "Baptist Message", "study": "Saddleback, two other churches disfellowshipped by SBC messengers (June 14, 2023)", "year": 2023,
+     "url": "https://baptistmessage.com/?p=58006", "fetched": "2026-11-14", "license": "own-chart-cite"}
+  ]
+}
