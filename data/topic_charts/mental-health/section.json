@@ -1,0 +1,14 @@
+{
+  "id": "by-the-numbers",
+  "label": "By the Numbers",
+  "title": "What pastors and churchgoers report",
+  "intro": "The debate below is about what mental illness is and who should treat it. These surveys show what churches actually say and do. Each asks a different group a different question, so each chart stands on its own.",
+  "charts": [
+    "counseling-medication",
+    "pulpit",
+    "two-views"
+  ],
+  "place": {
+    "before": "<section class=\"cc-controversy\" id=\"debate\">"
+  }
+}
