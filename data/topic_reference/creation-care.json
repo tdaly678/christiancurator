@@ -1,0 +1,106 @@
+{
+  "slug": "creation-care",
+  "date_modified": "2026-11-14",
+  "definition": {
+    "question": "What is creation care?",
+    "html": "<p><strong>Creation care</strong> is the Christian conviction that God made the world good, gave human beings, made in his image, a charge to rule and keep it (Genesis 1:28 and 2:15), and holds them accountable for how they treat it. Evangelicals across the spectrum affirm the principle: the Southern Baptist Convention's 2006 resolution commits to \"caring stewardship and wise dominion over the creation,\" and the Lausanne Movement's <a href=\"https://lausanne.org/statement/ctcommitment\" target=\"_blank\" rel=\"noopener\">Cape Town Commitment</a> (2010) says \"creation care is thus a gospel issue within the Lordship of Christ.\"</p><p>The disagreement is over weight and method: how high creation care ranks beside evangelism, how much to trust climate science, and whether the answer runs through government policy, the church or private enterprise. See <a href=\"#by-the-numbers\">what the surveys show</a> and <a href=\"#faq\">short answers to common questions</a>.</p>",
+    "also_known_as": [
+      "environmental stewardship",
+      "stewardship of creation",
+      "Christian environmentalism",
+      "dominion and stewardship"
+    ]
+  },
+  "faq": {
+    "label": "Frequently Asked Questions",
+    "title": "Creation Care, Briefly Answered",
+    "place": {
+      "before": "<!-- AEO-RELATED-TOPICS:START -->"
+    },
+    "items": [
+      {
+        "q": "Is creation care a gospel issue?",
+        "a": "Evangelicals answer differently. The Lausanne Movement's <a href=\"https://lausanne.org/statement/ctcommitment\" target=\"_blank\" rel=\"noopener\">Cape Town Commitment</a> (2010) says that \"to proclaim the gospel that says 'Jesus is Lord' is to proclaim the gospel that includes the earth\" and calls creation care \"a gospel issue within the Lordship of Christ.\" The Southern Baptist Convention's <a href=\"https://sbc.net/resource-library/resolutions/on-environmentalism-and-evangelicals\" target=\"_blank\" rel=\"noopener\">2006 resolution</a> affirms \"our God-given responsibility of caring for the creation\" but warns that environmentalism could \"distract its members from the priority of the Great Commission.\" Most evangelicals hold both convictions; the debate is over which comes first."
+      },
+      {
+        "q": "What do evangelicals believe about climate change?",
+        "a": "In Pew Research Center's <a href=\"https://www.pewresearch.org/religion/2025/02/26/religion-and-views-on-the-environment/\" target=\"_blank\" rel=\"noopener\">2023-24 Religious Landscape Study</a>, 91% of evangelical Protestants said God gave humans a duty to protect and care for the Earth, but 28% said the Earth is getting warmer mostly because of human activity, against 48% of all U.S. adults. In Pew's <a href=\"https://www.pewresearch.org/religion/2022/11/17/how-religion-intersects-with-americans-views-on-the-environment/\" target=\"_blank\" rel=\"noopener\">2022 survey</a>, 34% of evangelicals called climate change an extremely or very serious problem, the lowest of the major U.S. religious groups. See <a href=\"#duty-and-doubt\">the chart</a>."
+      },
+      {
+        "q": "Is the evangelical view of climate change about theology or politics?",
+        "a": "Mostly politics, by Pew's measure. In its <a href=\"https://www.pewresearch.org/religion/2022/11/17/how-religion-intersects-with-americans-views-on-the-environment/\" target=\"_blank\" rel=\"noopener\">2022 survey</a>, 17% of evangelical Republicans and 78% of evangelical Democrats called climate change an extremely or very serious problem. Holding party and demographics constant, evangelicals were 5 points less likely than the religiously unaffiliated to call it a serious problem. Theology still shows up in the answers: 29% of all evangelicals said climate change is not a serious problem because God is in control of the climate. See <a href=\"#party-not-pew\">the chart</a>."
+      },
+      {
+        "q": "Do evangelical churches talk about creation care?",
+        "a": "Not often. In Pew's <a href=\"https://www.pewresearch.org/religion/2022/11/17/environmentalism-in-u-s-religious-congregations/\" target=\"_blank\" rel=\"noopener\">2022 survey</a>, 60% of evangelical Protestants who attend services at least monthly said they had not heard climate change discussed in sermons at all. Among pastors, a <a href=\"https://research.lifeway.com/2020/04/21/most-protestant-pastors-see-human-activity-behind-global-warming/\" target=\"_blank\" rel=\"noopener\">2019 Lifeway Research survey</a> found 39% of evangelical pastors agreed that \"global warming is real and man-made,\" against 71% of mainline pastors, and 47% of evangelical pastors said their church had taken tangible steps to reduce its carbon footprint."
+      },
+      {
+        "q": "Does belief in the end times make evangelicals less concerned about the environment?",
+        "a": "Somewhat. In Pew's <a href=\"https://www.pewresearch.org/religion/2022/11/17/how-religion-intersects-with-americans-views-on-the-environment/\" target=\"_blank\" rel=\"noopener\">2022 survey</a>, 63% of evangelical Protestants said we are living in the end times. Americans who hold that belief were less likely than others to call climate change an extremely or very serious problem (51% against 62%), and those who also expect the world to decline until Jesus returns were the least concerned (40%). Pew calls the relationship modest."
+      },
+      {
+        "q": "What have evangelical bodies said about the environment?",
+        "a": "The statements point in different directions. The National Association of Evangelicals, with World Relief, published \"Loving the Least of These: Addressing a Changing Environment\" in 2022, an update of a 2011 report, which <a href=\"https://www.christianitytoday.com/2022/08/nae-climate-change-report-evangelicals-environment/\" target=\"_blank\" rel=\"noopener\">opens by insisting</a> that protecting the environment is a biblical mandate. The Southern Baptist Convention's 2006 resolution urges conservation but opposes \"solutions based on questionable science.\" The interfaith <a href=\"https://cornwallalliance.org/the-cornwall-declaration-on-environmental-stewardship/\" target=\"_blank\" rel=\"noopener\">Cornwall Declaration on Environmental Stewardship</a>, now published by the Cornwall Alliance and written from \"our common Judeo-Christian heritage,\" lists \"fears of destructive manmade global warming\" among \"unfounded or undue concerns.\""
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "lausanne",
+      "publisher": "Lausanne Movement",
+      "title": "The Cape Town Commitment",
+      "url": "https://lausanne.org/statement/ctcommitment",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "sbc2006",
+      "publisher": "Southern Baptist Convention",
+      "title": "On Environmentalism and Evangelicals (2006 resolution)",
+      "url": "https://sbc.net/resource-library/resolutions/on-environmentalism-and-evangelicals",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "cornwall",
+      "publisher": "Cornwall Alliance",
+      "title": "The Cornwall Declaration on Environmental Stewardship",
+      "url": "https://cornwallalliance.org/the-cornwall-declaration-on-environmental-stewardship/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "nae2022",
+      "publisher": "Christianity Today (Religion News Service, Jack Jenkins)",
+      "title": "NAE climate change report coverage, Aug. 31, 2022",
+      "url": "https://www.christianitytoday.com/2022/08/nae-climate-change-report-evangelicals-environment/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "pew2022",
+      "publisher": "Pew Research Center",
+      "title": "How Religion Intersects With Americans' Views on the Environment",
+      "url": "https://www.pewresearch.org/religion/2022/11/17/how-religion-intersects-with-americans-views-on-the-environment/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "pew2022c",
+      "publisher": "Pew Research Center",
+      "title": "Environmentalism in U.S. religious congregations",
+      "url": "https://www.pewresearch.org/religion/2022/11/17/environmentalism-in-u-s-religious-congregations/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "pew-rls",
+      "publisher": "Pew Research Center",
+      "title": "Religion and views on the environment (2023-24 Religious Landscape Study)",
+      "url": "https://www.pewresearch.org/religion/2025/02/26/religion-and-views-on-the-environment/",
+      "fetched": "2026-11-14"
+    },
+    {
+      "id": "lifeway2020",
+      "publisher": "Lifeway Research",
+      "title": "Most Protestant Pastors See Human Activity Behind Global Warming",
+      "url": "https://research.lifeway.com/2020/04/21/most-protestant-pastors-see-human-activity-behind-global-warming/",
+      "fetched": "2026-11-14"
+    }
+  ],
+  "notes": "Cornwall Alliance site returned 403 to direct requests; the declaration text was read from the Wayback Machine copy (web.archive.org/web/2024/...) on 2026-11-14. The NAE report itself was not opened (a guessed nae.org URL 404d); the title, 2022 date, World Relief partnership, 2011 predecessor and 'biblical mandate' framing come from the RNS story on christianitytoday.com. Lifeway 47% is the share of evangelical pastors saying their church has taken tangible steps to reduce its carbon footprint (2019 phone survey of 1,000 Protestant pastors, Aug. 30 to Sept. 24, 2019). Pew end-times figures: 63% of evangelicals; 51% vs 62%; premillennialist 40%, all from the 2022 overview. The Evangelical Climate Initiative (2006) is left out: its old site now serves unrelated content."
+}

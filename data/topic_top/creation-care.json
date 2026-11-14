@@ -1,0 +1,96 @@
+{
+  "slug": "creation-care",
+  "glance": {
+    "question": "Is caring for creation part of gospel obedience, or a rival to the Great Commission?",
+    "positions": [
+      {
+        "name": "Creation Care as Christian Obligation",
+        "claim": "Stewarding the earth is core obedience and love of neighbor, not an optional cause.",
+        "anchor": "position-1",
+        "voices": [
+          {
+            "name": "Andrew Spencer",
+            "slug": "andrew-spencer"
+          },
+          {
+            "name": "Russell Moore",
+            "slug": "russell-moore"
+          },
+          {
+            "name": "Sandra Richter"
+          }
+        ]
+      },
+      {
+        "name": "Gospel Priority over Environmental Activism",
+        "claim": "Steward wisely, but keep evangelism first and resist activism that becomes a substitute gospel.",
+        "anchor": "position-2"
+      },
+      {
+        "name": "Gospel-Rooted Stewardship",
+        "claim": "Creation care belongs to gospel obedience, grounded in Christ's lordship rather than secular environmentalism.",
+        "anchor": "position-3"
+      }
+    ]
+  },
+  "start_here": [
+    {
+      "kind": "Primer",
+      "url": "https://www.thegospelcoalition.org/article/creation-care/",
+      "title": "3 Foundational Truths for Creation Care",
+      "author": "Andrew Spencer",
+      "outlet": "The Gospel Coalition",
+      "why": "A short biblical case, starting from Genesis 1 and Francis Schaeffer, that creation is valuable in itself and should be stewarded for God's glory."
+    },
+    {
+      "kind": "Dominion as stewardship",
+      "url": "https://learn.ligonier.org/articles/what-biblical-stewardship",
+      "title": "What Is Biblical Stewardship?",
+      "author": "R.C. Sproul",
+      "outlet": "Ligonier Ministries",
+      "why": "Sproul reads the dominion mandate as productive stewardship, not a license to exploit the earth."
+    },
+    {
+      "kind": "A younger voice",
+      "url": "https://www.thegospelcoalition.org/article/creation-care-age-despair/",
+      "title": "Creation Care in an Age of Despair",
+      "author": "Rinah Fiol",
+      "outlet": "The Gospel Coalition",
+      "why": "A Gen Z writer argues that a hopeful creation ethic answers both eco-anxiety and escapism."
+    }
+  ],
+  "key_number": {
+    "figure": "91%",
+    "text": "91% of evangelical Protestants say God gave humans a duty to protect and care for the Earth; 28% say the Earth is warming mostly because of human activity.",
+    "publisher": "Pew Research Center",
+    "study": "2023-24 Religious Landscape Study: Religion and views on the environment",
+    "year": 2025,
+    "source_url": "https://www.pewresearch.org/religion/2025/02/26/religion-and-views-on-the-environment/",
+    "fetched": "2026-11-14",
+    "license": "reuse",
+    "link": "#duty-and-doubt"
+  },
+  "related": [
+    {
+      "slug": "stewardship-and-generosity",
+      "question": "What does faithful stewardship of money and possessions look like?"
+    },
+    {
+      "slug": "eschatology",
+      "question": "What does Scripture say about the end of the world?"
+    },
+    {
+      "slug": "politics-and-the-church",
+      "question": "How should the church engage political life?"
+    }
+  ],
+  "changes": [
+    {
+      "date": "2026-11-14",
+      "text": "added a definition, survey charts on stewardship and climate views, and short answers to common questions."
+    }
+  ],
+  "latest": true,
+  "signup": true,
+  "notes": "Position 1 voices checked against their own words on 2026-11-14: Spencer, TGC 'creation-care' ('imitating Christ by working toward the reconciliation of creation'); Moore, russellmoore.com/2015/04/21/should-christians-care-about-earth-day/ ('only the Christian account of the world and human history that makes a desire to preserve the physical order a rational one'); Richter, nae.org/richterpodcast/ ('we are killing our planet as well'). Positions 2 and 3 carry no voices: no card name there was verified as fitting (see T3 creation-care report). Start here: Spencer is author of the TGC piece (page credits only the outlet); Sproul and Fiol likewise. Key number from Pew RLS 2023-24 table 'religious-landscape-study_019-04' (91%) and 019-07 (28%)."
+}
