@@ -9,7 +9,7 @@
   "image_title": "Calvinist, Arminian and Molinist answers to the five points",
   "image_subtitle": "The Synod of Dort (1618 to 1619), the Remonstrance (1610) and William Lane Craig, each in its own terms.",
   "image_subtitle_narrow": "Dort (1618 to 1619), the Remonstrance (1610) and William Lane Craig, each in its own terms.",
-  "image_source": "Sources: Canons of Dort; Five Arminian Articles (1610); William Lane Craig, Reasonable Faith Q&A 79, 482",
+  "image_source": "Sources: Canons of Dort; Five Arminian Articles (1610); William Lane Craig, Reasonable Faith Q&A 79 and 482, and \"Lest Anyone Should Fall\" (1991)",
   "caption": "All three hold that no one comes to God without his grace. They part over whether election rests on foreseen faith, for whom Christ died, whether grace can be resisted, and whether a believer can fall away.",
   "table_view_label": "Point",
   "columns": [
@@ -156,7 +156,7 @@
     "Molinism is not a full five point system. Craig says middle knowledge could even be paired with a limited atonement."
   ],
   "voices_label": "Sources for each column",
-  "note": "Cells paraphrase each source; the perseverance cell for Molinism draws on Craig's Q&A 482 and Philip Congdon's 2019 paper. No view is presented here as the answer.",
+  "note": "Cells paraphrase each source; the Molinist cells also draw on Craig's Q&A 482 (atonement) and his 1991 paper \"Lest Anyone Should Fall\" (perseverance). No view is presented here as the answer.",
   "sources": [
     {
       "id": "dort",
@@ -185,7 +185,7 @@
       "url": "https://www.reasonablefaith.org/writings/question-answer/molinism-and-divine-election",
       "fetched": "2026-11-14",
       "quote": "God knows in exactly what circumstances people will freely respond to His grace and places people in circumstances in which each one receives sufficient grace for salvation if only that person will avail himself of it.",
-      "notes": "October 20, 2008. Also: \"John 6. 65 means that apart from God's grace no one can come to God on his own.\" \"Election, then, is first and foremost a corporate notion: God has chosen for Himself a people\". \"some persons freely resist God's grace\". Rows: depravity, election, grace."
+      "notes": "October 20, 2008. Also: \"John 6. 65 means that apart from God's grace no one can come to God on his own.\" \"Election, then, is first and foremost a corporate notion: God has chosen for Himself a people\". \"some persons freely resist God's grace\". Rows: depravity, election, grace; differ bullet 4 (what middle knowledge is)."
     },
     {
       "id": "craig482",
@@ -195,7 +195,7 @@
       "url": "https://www.reasonablefaith.org/writings/question-answer/limited-atonement",
       "fetched": "2026-11-14",
       "quote": "It is as if Christ has made a massive downpayment sufficient to pay for anyone's sins, which we must then appropriate in order to become a beneficiary.",
-      "notes": "July 11, 2016. Also: \"Via middle knowledge, we could, if we wanted, combine a doctrine of limited atonement with the universal availability of salvation.\" Rows: atonement, perseverance (Molinism as such leaves room), differ bullet 5."
+      "notes": "July 11, 2016. Also: \"Via middle knowledge, we could, if we wanted, combine a doctrine of limited atonement with the universal availability of salvation.\" Rows: atonement, differ bullet 5."
     },
     {
       "id": "craig-calvinism",
@@ -208,23 +208,14 @@
       "notes": "April 19, 2010. Said of Westminster Confession III.1, which he quotes in full."
     },
     {
-      "id": "congdon",
-      "publisher": "Grace Research Room",
-      "title": "A Free Grace Response to Keathley's Molinist Soteriology (Philip F. Congdon)",
-      "year": 2019,
-      "url": "https://www.gracelife.org/resources/grr/pdf/Congdon_A_Free_Grace_Response_to_Molinism.pdf",
+      "id": "craig-perseverance",
+      "publisher": "William Lane Craig (Leadership U, archived)",
+      "title": "\"Lest Anyone Should Fall\": A Middle Knowledge Perspective on Perseverance and Apostolic Warnings",
+      "year": 1991,
+      "url": "https://web.archive.org/web/20151225005008/http://www.leaderu.com/offices/billcraig/docs/lest.html",
       "fetched": "2026-11-14",
-      "quote": "not all Molinists would agree with his five points",
-      "notes": "Said of Kenneth Keathley's ROSES (a Molinist restatement of the five points). Supports the Molinist perseverance cell: Molinists differ on the five points. Congdon writes from a Free Grace view, not as a Molinist."
-    },
-    {
-      "id": "helm",
-      "publisher": "Ligonier Ministries",
-      "title": "Molinism 101 (Paul Helm)",
-      "url": "https://learn.ligonier.org/articles/molinism-101",
-      "fetched": "2026-11-14",
-      "quote": "God knows what they would freely choose in every possible circumstance.",
-      "notes": "A Reformed critic's definition of middle knowledge, used for differ bullet 4. Not used as a Molinist voice."
+      "quote": "Of course, Molinism does not imply the doctrine of the perseverance of the saints.",
+      "notes": "International Journal for Philosophy of Religion 29 (1991). The live leaderu.com URL now redirects, so the Wayback copy is cited. Also: \"The Molinist who holds to perseverance will simply add that God would not decree to actualize any of these worlds\"; abstract: \"a Molinist doctrine, according to which believers can fall away but in fact will not due to God's extrinsically efficacious grace.\" Row: perseverance. Replaces Philip Congdon (a Free Grace critic) and Paul Helm (a Reformed critic), dropped in the fact check (2026-11-14) so the Molinist column cites only a Molinist."
     }
   ],
   "place": {
