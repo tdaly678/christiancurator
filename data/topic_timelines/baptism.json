@@ -10,7 +10,7 @@
   "image_subtitle": "Each answer follows the tradition's own confession.",
   "image_subtitle_narrow": "Each answer follows the tradition's own confession.",
   "image_source": "Sources: Baptist Faith and Message 2000, Art. VII; Second London Baptist Confession 29; Westminster Confession 28; Heidelberg Catechism Q74",
-  "caption": "Baptist churches baptize those who profess faith, by immersion, so faith comes first. Presbyterian and Reformed churches baptize believers and believers' children, without requiring immersion; for a child, baptism comes first and its grace is given in God's appointed time.",
+  "caption": "Baptist churches baptize those who profess faith, by immersion, so faith comes first. Presbyterian and Reformed churches baptize believers and believers' children, without requiring immersion; for a child, baptism comes first, and Westminster says its efficacy is not tied to the moment it is given.",
   "table_view_label": "Question",
   "columns": [
     {
@@ -131,7 +131,7 @@
     "Mode: Baptists require immersion; Westminster calls pouring or sprinkling proper.",
     "The covenant: paedobaptists see one covenant of grace across both testaments, with baptism in the place of circumcision; credobaptists see a new covenant people made up of believers.",
     "Under the Baptist confession, a Presbyterian who joins a Baptist church is baptized on profession of faith; Westminster holds that baptism is given only once.",
-    "Neither confession says baptism saves: Westminster denies that grace is tied to the water or the moment."
+    "Neither confession makes baptism the cause of salvation: Westminster says grace and salvation are not so bound to it that no one can be saved without it."
   ],
   "voices_label": "Confessions behind each column",
   "note": "Cells paraphrase the confessions listed below the chart, with Stephen Wellum (credobaptist) on the covenant row and the Heidelberg Catechism on circumcision. No view is presented here as the answer.",
@@ -163,7 +163,7 @@
       "url": "https://opc.org/wcf.html",
       "fetched": "2026-11-14",
       "quote": "Not only those that do actually profess faith in and obedience unto Christ, but also the infants of one, or both, believing parents, are to be baptized.",
-      "notes": "28.1 sign and seal of the covenant of grace, admission into the visible church; 28.3 \"Dipping of the person into the water is not necessary; but baptism is rightly administered by pouring, or sprinkling water upon the person.\"; 28.5 not all baptized are regenerated; 28.6 grace conferred \"in his appointed time\"; 28.7 \"The sacrament of baptism is but once to be administered unto any person.\""
+      "notes": "28.1 sign and seal of the covenant of grace, admission into the visible church; 28.3 \"Dipping of the person into the water is not necessary; but baptism is rightly administered by pouring, or sprinkling water upon the person.\"; 28.5 not all baptized are regenerated; 28.6 \"The efficacy of baptism is not tied to that moment of time wherein it is administered\", grace conferred \"in his appointed time\" to such as that grace belongs to; 28.5 \"grace and salvation are not so inseparably annexed unto it, as that no person can be regenerated, or saved, without it\"; 28.7 \"The sacrament of baptism is but once to be administered unto any person.\""
     },
     {
       "id": "heidelberg",
