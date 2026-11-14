@@ -1,0 +1,202 @@
+{
+  "type": "matrix",
+  "id": "baptism-matrix",
+  "slug": "baptism",
+  "png_name": "matrix",
+  "label": "Side by Side",
+  "title": "Believer's baptism and covenant baptism, question by question",
+  "intro": "Both traditions baptize in the name of the Father, the Son and the Holy Spirit, and both deny that the water itself saves. They part over who should be baptized, how, and what the sign means. Each cell follows the tradition's own confession.",
+  "image_title": "Two evangelical views of baptism, side by side",
+  "image_subtitle": "Each answer follows the tradition's own confession.",
+  "image_subtitle_narrow": "Each answer follows the tradition's own confession.",
+  "image_source": "Sources: Baptist Faith and Message 2000, Art. VII; Second London Baptist Confession 29; Westminster Confession 28; Heidelberg Catechism Q74",
+  "caption": "Baptist churches baptize those who profess faith, by immersion, so faith comes first. Presbyterian and Reformed churches baptize believers and believers' children, without requiring immersion; for a child, baptism comes first and its grace is given in God's appointed time.",
+  "table_view_label": "Question",
+  "columns": [
+    {
+      "id": "believers",
+      "name": "Believer's baptism (credobaptist)",
+      "short": "Believer's baptism",
+      "color": "green",
+      "proponent": {
+        "name": "Southern Baptist Convention",
+        "image_name": "Baptist Faith and Message 2000",
+        "work": "Baptist Faith and Message 2000, Article VII",
+        "source": "bfm"
+      }
+    },
+    {
+      "id": "covenant",
+      "name": "Covenant baptism (paedobaptist)",
+      "short": "Covenant baptism",
+      "color": "brown",
+      "proponent": {
+        "name": "Westminster Confession of Faith",
+        "image_name": "Westminster Confession",
+        "work": "Westminster Confession of Faith, Chapter 28",
+        "source": "wcf"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "who",
+      "label": "Who is baptized?",
+      "cells": [
+        {
+          "text": "Only those who profess repentance and faith in Christ",
+          "short": "Only those who profess faith"
+        },
+        {
+          "text": "Those who profess faith, and the infants of one or both believing parents",
+          "short": "Believers and their infant children"
+        }
+      ]
+    },
+    {
+      "id": "how",
+      "label": "How?",
+      "cells": [
+        {
+          "text": "Immersion in water",
+          "short": "Immersion"
+        },
+        {
+          "text": "Pouring or sprinkling is proper; dipping is not necessary",
+          "short": "Pouring or sprinkling is proper"
+        }
+      ]
+    },
+    {
+      "id": "meaning",
+      "label": "What it signifies",
+      "cells": [
+        {
+          "text": "An act of obedience picturing the believer's faith in a crucified, buried and risen Savior",
+          "short": "The believer's faith in a crucified, buried and risen Savior"
+        },
+        {
+          "text": "A sign and seal of the covenant of grace: union with Christ, new birth, forgiveness",
+          "short": "A sign and seal of the covenant of grace"
+        }
+      ]
+    },
+    {
+      "id": "covenant-sign",
+      "label": "And circumcision?",
+      "cells": [
+        {
+          "text": "Not a straight replacement: the new covenant people are those joined to Christ by faith",
+          "short": "Not a straight replacement; the new covenant people are believers"
+        },
+        {
+          "text": "Baptism replaced circumcision as the sign of the covenant for believers' children",
+          "short": "Baptism replaced circumcision as the covenant sign"
+        }
+      ]
+    },
+    {
+      "id": "membership",
+      "label": "Church membership",
+      "cells": [
+        {
+          "text": "A prerequisite to membership and to the Lord's Supper",
+          "short": "Required for membership and the Lord's Supper"
+        },
+        {
+          "text": "Admits the one baptized into the visible church",
+          "short": "Admits into the visible church"
+        }
+      ]
+    },
+    {
+      "id": "again",
+      "label": "Baptized as an infant?",
+      "cells": [
+        {
+          "text": "Baptized now, on profession of faith",
+          "short": "Baptized now, on profession of faith"
+        },
+        {
+          "text": "Not baptized again: baptism is given only once",
+          "short": "Not baptized again"
+        }
+      ]
+    }
+  ],
+  "common_text": "Both sides baptize adults who come to faith, and both hold that Christ gave baptism to the church for good. In 2001 Mark Dever (SBC) and David Coffin (PCA) drew up 17 statements they could both affirm. The first: \"No one disagrees with professor baptism (except Quakers).\"",
+  "common_source": "dever-coffin",
+  "differ": [
+    "Who receives the sign: professing believers only, or believers and their children.",
+    "Mode: Baptists require immersion; Westminster calls pouring or sprinkling proper.",
+    "The covenant: paedobaptists see one covenant of grace across both testaments, with baptism in the place of circumcision; credobaptists see a new covenant people made up of believers.",
+    "Under the Baptist confession, a Presbyterian who joins a Baptist church is baptized on profession of faith; Westminster holds that baptism is given only once.",
+    "Neither confession says baptism saves: Westminster denies that grace is tied to the water or the moment."
+  ],
+  "voices_label": "Confessions behind each column",
+  "note": "Cells paraphrase the confessions listed below the chart, with Stephen Wellum (credobaptist) on the covenant row and the Heidelberg Catechism on circumcision. No view is presented here as the answer.",
+  "sources": [
+    {
+      "id": "bfm",
+      "publisher": "Southern Baptist Convention",
+      "title": "The Baptist Faith and Message 2000",
+      "year": 2000,
+      "url": "https://bfm.sbc.net/bfm2000/",
+      "fetched": "2026-11-14",
+      "quote": "Christian baptism is the immersion of a believer in water in the name of the Father, the Son, and the Holy Spirit. It is an act of obedience symbolizing the believer's faith in a crucified, buried, and risen Saviour",
+      "notes": "Art. VII also: \"Being a church ordinance, it is prerequisite to the privileges of church membership and to the Lord's Supper.\" Rows: who, how, meaning, order, membership, examples."
+    },
+    {
+      "id": "lbcf",
+      "publisher": "Redeemer Fellowship (the1689confession.com)",
+      "title": "Second London Baptist Confession of Faith (1689), Chapter 29: Of Baptism",
+      "year": 1689,
+      "url": "https://www.the1689confession.com/1689/chapter-29",
+      "fetched": "2026-11-14",
+      "quote": "Those who do actually profess repentance towards God, faith in, and obedience to, our Lord Jesus Christ, are the only proper subjects of this ordinance.",
+      "notes": "29.4: \"Immersion, or dipping of the person in water, is necessary to the due administration of this ordinance.\" Rows: who, how, again (infant sprinkling does not meet 29.2 and 29.4)."
+    },
+    {
+      "id": "wcf",
+      "publisher": "Orthodox Presbyterian Church",
+      "title": "The Westminster Confession of Faith, Chapter 28: Of Baptism",
+      "url": "https://opc.org/wcf.html",
+      "fetched": "2026-11-14",
+      "quote": "Not only those that do actually profess faith in and obedience unto Christ, but also the infants of one, or both, believing parents, are to be baptized.",
+      "notes": "28.1 sign and seal of the covenant of grace, admission into the visible church; 28.3 \"Dipping of the person into the water is not necessary; but baptism is rightly administered by pouring, or sprinkling water upon the person.\"; 28.5 not all baptized are regenerated; 28.6 grace conferred \"in his appointed time\"; 28.7 \"The sacrament of baptism is but once to be administered unto any person.\""
+    },
+    {
+      "id": "heidelberg",
+      "publisher": "Christian Reformed Church in North America",
+      "title": "Heidelberg Catechism, Q&A 74",
+      "year": 1563,
+      "url": "https://www.crcna.org/welcome/beliefs/confessions/heidelberg-catechism",
+      "fetched": "2026-11-14",
+      "quote": "This was done in the Old Testament by circumcision, which was replaced in the New Testament by baptism.",
+      "notes": "Row: covenant-sign (paedobaptist cell). Footnote numerals in the page text are omitted from the quote."
+    },
+    {
+      "id": "wellum",
+      "publisher": "The Gospel Coalition",
+      "title": "Why I Am a Credobaptist (Justin Taylor's interview with Stephen Wellum)",
+      "year": 2011,
+      "url": "https://www.thegospelcoalition.org/blogs/justin-taylor/why-i-am-a-credobaptist/",
+      "fetched": "2026-11-14",
+      "quote": "All those who are \"in Christ\" are a regenerate people, and as such it is only they who may receive the sign of the covenant, namely baptism.",
+      "notes": "Row: covenant-sign (credobaptist cell). Wellum also: \"Does circumcision signify the exact same spiritual realities as baptism? ... this is precisely what the NT does not teach.\" Posted November 11, 2011."
+    },
+    {
+      "id": "dever-coffin",
+      "publisher": "The Gospel Coalition",
+      "title": "17 Statements that a Paedobaptist and a Credobaptist Can Both Affirm",
+      "year": 2018,
+      "url": "https://www.thegospelcoalition.org/blogs/justin-taylor/17-statements-paedobaptist-credobaptist-can-affirm/",
+      "fetched": "2026-11-14",
+      "quote": "No one disagrees with professor baptism (except Quakers).",
+      "notes": "Justin Taylor, March 9, 2018: \"In the summer of 2001 pastors Mark Dever (SBC) and David Coffin (PCA) held a public conversation at Capitol Hill Baptist Church on baptism.\" Statement 7: \"Baptism was appointed by Christ to be of permanent value in the Christian church.\""
+    }
+  ],
+  "place": {
+    "before": "<section class=\"cc-synthesis\" id=\"synthesis\">"
+  }
+}
