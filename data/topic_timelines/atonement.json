@@ -1,0 +1,168 @@
+{
+  "type": "chronology",
+  "id": "atonement-models",
+  "slug": "atonement",
+  "png_name": "timeline",
+  "label": "A History of the Debate",
+  "title": "How Christians have explained the cross, century by century",
+  "intro": "Today's argument over the atonement draws on models that took shape across 1,800 years. Each card gives a model in the words, or close to the words, of the writer most tied to it.",
+  "image_title": "Six ways of explaining the cross, and when they took shape",
+  "image_subtitle": "From Irenaeus to Gustaf Aulén, each model in its own author's terms.",
+  "image_subtitle_narrow": "Each model in its own author's terms.",
+  "image_source": "Sources: Irenaeus, Against Heresies; Anselm, Cur Deus Homo; Calvin, Institutes II.16; Saint Anselm Journal; Sam Storms; The Gospel Coalition",
+  "caption": "The models are not always rivals. Many writers hold several together, and the debate is often over which one sits at the center.",
+  "table_view_label": "Model",
+  "events": [
+    {
+      "id": "recapitulation",
+      "date": "c. 180",
+      "year": 180,
+      "name": "Recapitulation",
+      "who": "Irenaeus, Against Heresies",
+      "text": "Christ sums up humanity in himself, to kill sin, break death's power and give life.",
+      "short_text": "Christ sums up humanity in himself, to undo sin and death.",
+      "color": "brown",
+      "proponent": {"name": "Irenaeus of Lyons", "work": "Against Heresies, Book III, Chapter 18", "source": "irenaeus"}
+    },
+    {
+      "id": "satisfaction",
+      "date": "c. 1098",
+      "year": 1098,
+      "name": "Satisfaction",
+      "who": "Anselm, Cur Deus Homo",
+      "text": "Sin robs God of honor. Only one who is both God and man can repay it.",
+      "color": "gold",
+      "proponent": {"name": "Anselm of Canterbury", "work": "Cur Deus Homo (Why God Became Man)", "source": "anselm"}
+    },
+    {
+      "id": "moral-influence",
+      "date": "c. 1134",
+      "year": 1134,
+      "name": "Moral influence",
+      "who": "Peter Abelard, on Romans",
+      "text": "Redemption is the love the Son's sacrifice awakens in us.",
+      "color": "blue",
+      "proponent": {"name": "Peter Abelard", "image_name": "Abelard", "work": "Commentary on Romans, as summarized in Kevin A. McMahon, Penance and Peter Abelard's Move Within", "source": "mcmahon"}
+    },
+    {
+      "id": "penal-substitution",
+      "date": "1500s",
+      "year": 1550,
+      "name": "Penal substitution",
+      "who": "John Calvin, Institutes II.16",
+      "text": "Christ took the punishment due to sinners; our guilt was transferred to him.",
+      "color": "green",
+      "proponent": {"name": "John Calvin", "work": "Institutes of the Christian Religion, Book II, Chapter 16", "source": "calvin"}
+    },
+    {
+      "id": "governmental",
+      "date": "1617",
+      "year": 1617,
+      "name": "Governmental",
+      "who": "Hugo Grotius, Defense of the Catholic Faith",
+      "short": "Governmental",
+      "text": "God as moral governor: Christ's death upholds his rule and shows his displeasure with sin.",
+      "short_text": "Christ's death upholds God's moral government.",
+      "color": "sage",
+      "proponent": {"name": "Hugo Grotius", "work": "Defensio fidei catholicae de satisfactione Christi, as explained by Sam Storms", "source": "storms"}
+    },
+    {
+      "id": "christus-victor",
+      "date": "1931",
+      "year": 1931,
+      "name": "Christus Victor",
+      "who": "Gustaf Aulén, Christus Victor",
+      "text": "Names the ancient \"classic\" theme of Christ's victory and argues the church fathers held it most.",
+      "short_text": "Revives the fathers' \"classic\" theme of Christ's victory.",
+      "color": "brown",
+      "proponent": {"name": "Gustaf Aulén", "work": "Christus Victor, as described by Robert Kolb", "source": "kolb"}
+    }
+  ],
+  "common_text": "Every model starts from the same events, Christ's death and resurrection for sinners. Evangelical statements such as The Gospel Coalition's confess penal substitution, and many evangelicals also teach Christ's victory and example.",
+  "common_source": "tgc",
+  "differ": [
+    "What the problem is: death and the devil, God's offended honor, our cold hearts, or the guilt and penalty of sin.",
+    "Whom the cross acts on: on the powers holding humanity, on God's justice, or on us, by moving us to love.",
+    "Penal substitution says Christ bore the penalty itself; the governmental view, as Storms puts it, makes him \"a penal example (but not a penal substitute).\"",
+    "Aulén took Irenaeus as his prime example and saw Luther reviving the theme; Robert Kolb, writing for The Gospel Coalition, calls that reading somewhat over simplified."
+  ],
+  "voices_label": "The writer behind each model",
+  "note": "Dates are approximate where marked. Cards on Abelard, Grotius and Aulén follow the scholarly and evangelical summaries cited. No view is presented here as the answer.",
+  "sources": [
+    {
+      "id": "irenaeus",
+      "publisher": "New Advent (Ante-Nicene Fathers, Vol. 1, 1885)",
+      "title": "Against Heresies, Book III, Chapter 18",
+      "url": "https://www.newadvent.org/fathers/0103318.htm",
+      "fetched": "2026-11-14",
+      "quote": "God recapitulated in Himself the ancient formation of man, that He might kill sin, deprive death of its power, and vivify man; and therefore His works are true.",
+      "notes": "Translated by Alexander Roberts and William Rambaut. III.18.7."
+    },
+    {
+      "id": "anselm",
+      "publisher": "Fordham University, Internet Medieval Sourcebook",
+      "title": "Anselm: Cur Deus Homo (Why God Became Man)",
+      "url": "https://sourcebooks.fordham.edu/basis/anselm-curdeus.asp",
+      "fetched": "2026-11-14",
+      "quote": "So then, every one who sins ought to pay back the honor of which he has robbed God; and this is the satisfaction which every sinner owes to God.",
+      "notes": "I.11. II.6: \"which none but God can make and none but man ought to make, it is necessary for the God-man to make it.\""
+    },
+    {
+      "id": "mcmahon",
+      "publisher": "The Saint Anselm Journal",
+      "title": "Penance and Peter Abelard's Move Within (Kevin A. McMahon)",
+      "year": 2009,
+      "url": "https://www.anselm.edu/sites/default/files/Documents/Institute%20of%20SA%20Studies/4.5.3.1_62McMahon.pdf",
+      "fetched": "2026-11-14",
+      "quote": "so our redemption consists in the love aroused in us by the sacrifice of his Son.",
+      "notes": "Saint Anselm Journal 6.2 (Spring 2009). Dates the commentary on Romans \"(c. 1134)\". On Romans 3:19 to 26, Abelard reads God's righteousness as \"God's love igniting love within believers\"."
+    },
+    {
+      "id": "calvin",
+      "publisher": "Christian Classics Ethereal Library",
+      "title": "John Calvin: Institutes of the Christian Religion, Book II, Chapter 16",
+      "url": "https://www.ccel.org/ccel/calvin/institutes.iv.xvii.html",
+      "fetched": "2026-11-14",
+      "quote": "Our acquittal is in this that the guilt which made us liable to punishment was transferred to the head of the Son of God.",
+      "notes": "II.16.5. II.16.2: \"Christ interposed, took the punishment upon himself and bore what by the just judgment of God was impending over sinners\". Dated \"1500s\" only; no edition year is used."
+    },
+    {
+      "id": "storms",
+      "publisher": "Sam Storms",
+      "title": "Grotius and the Governmental Theory of the Atonement",
+      "year": 2009,
+      "url": "https://www.samstorms.org/all-articles/post/grotius-and-the-governmental-theory-of-the-atonement",
+      "fetched": "2026-11-14",
+      "quote": "Thus Christ died as a penal example (but not a penal substitute), an exhibition of God's displeasure with sin designed to encourage us to forsake our evil ways.",
+      "notes": "March 17, 2009. Also: \"we are to view God as the Supreme Moral Governor of the created order\"; \"Christ's death is thus primarily a tribute to the sanctity of divine government.\" Storms writes as a critic of the view; the card states it in his description, not his verdict."
+    },
+    {
+      "id": "grotius-date",
+      "publisher": "Wikipedia",
+      "title": "Governmental theory of atonement",
+      "url": "https://en.wikipedia.org/wiki/Governmental_theory_of_atonement",
+      "fetched": "2026-11-14",
+      "quote": "wrote Defensio fidei catholicae de satisfactione Christi (1617)",
+      "notes": "Used only for the 1617 date. Charles Hodge (ccel.org/ccel/hodge/theology2.iv.ix.iv.html) agrees the work came out shortly before the Synod of Dort."
+    },
+    {
+      "id": "kolb",
+      "publisher": "The Gospel Coalition",
+      "title": "Christus Victor (Robert Kolb)",
+      "url": "https://www.thegospelcoalition.org/essay/christus-victor/",
+      "fetched": "2026-11-14",
+      "quote": "His work Christus Victor, published in 1931, advanced an analytic framework for presentations of Christ’s atoning work.",
+      "notes": "Also: \"He used Irenaeus as his prime example of this “classical” motif, dominant among the ancient church fathers and revived, in Aulén’s somewhat over-simplified reading, by Martin Luther.\""
+    },
+    {
+      "id": "tgc",
+      "publisher": "The Gospel Coalition",
+      "title": "Foundation Documents: Confessional Statement",
+      "url": "https://www.thegospelcoalition.org/about/foundation-documents/",
+      "fetched": "2026-11-14",
+      "quote": "on the cross he canceled sin, propitiated God, and, by bearing the full penalty of our sins, reconciled to God all those who believe.",
+      "notes": "Section 7, The Redemption of Christ. Also: \"Jesus Christ acted as our representative and substitute.\""
+    }
+  ],
+  "place": {"before": "<section class=\"cc-synthesis\" id=\"synthesis\">"}
+}
