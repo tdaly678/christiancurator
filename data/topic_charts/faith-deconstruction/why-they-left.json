@@ -1,0 +1,78 @@
+{
+  "id": "why-they-left",
+  "type": "hbar",
+  "kicker": "Why people leave",
+  "title": "Why people say they left their childhood religion",
+  "subtitle": "U.S. adults raised in a religion who have left it, 2025",
+  "caption": "Losing belief in the teachings tops the list, but plain drift comes close behind: \"wasn't important\" and \"gradually drifted away\" are each cited at least as often as church teaching or scandal. Share calling each an extremely or very important reason.",
+  "note": "Leavers include people now in another religion and people now unaffiliated. Former Protestants answer much the same: stopped believing 45%, gradually drifted away 40%, not important in their life 38%. The colors are our grouping, not Pew's.",
+  "unit": "%",
+  "max": 100,
+  "categories": [
+    {
+      "id": "belief",
+      "label": "Belief",
+      "color": "green"
+    },
+    {
+      "id": "conduct",
+      "label": "Church teaching or conduct",
+      "color": "brown"
+    },
+    {
+      "id": "drift",
+      "label": "Drift or life change",
+      "color": "gold"
+    }
+  ],
+  "rows": [
+    {
+      "label": "Stopped believing the teachings",
+      "value": 46,
+      "as_published": "46%",
+      "source": "pew2025",
+      "category": "belief"
+    },
+    {
+      "label": "It wasn't important in their life",
+      "value": 38,
+      "as_published": "38%",
+      "source": "pew2025",
+      "category": "drift"
+    },
+    {
+      "label": "Just gradually drifted away",
+      "value": 38,
+      "as_published": "38%",
+      "source": "pew2025",
+      "category": "drift"
+    },
+    {
+      "label": "Teachings on social and political issues",
+      "value": 34,
+      "as_published": "34%",
+      "source": "pew2025",
+      "category": "conduct"
+    },
+    {
+      "label": "Scandals involving clergy or leaders",
+      "value": 32,
+      "as_published": "32%",
+      "source": "pew2025",
+      "category": "conduct"
+    }
+  ],
+  "sources": [
+    {
+      "id": "pew2025",
+      "publisher": "Pew Research Center",
+      "study": "Why Do Some Americans Leave Their Religion While Others Stay?",
+      "year": 2025,
+      "url": "https://www.pewresearch.org/religion/2025/12/15/why-do-some-americans-leave-their-religion-while-others-stay/",
+      "fetched": "2026-11-14",
+      "license": "reuse",
+      "field_dates": "May 5 to 11, 2025",
+      "sample": "8,937 U.S. adults on Pew's American Trends Panel; reasons asked of those who were raised in a religion and have left it"
+    }
+  ]
+}

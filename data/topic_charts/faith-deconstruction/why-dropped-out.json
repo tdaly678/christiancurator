@@ -1,0 +1,78 @@
+{
+  "id": "why-dropped-out",
+  "type": "hbar",
+  "kicker": "Why young adults drop out",
+  "title": "Why young adults stopped going to church",
+  "subtitle": "Young adults who attended a Protestant church as teens and then dropped out for at least a year",
+  "caption": "The most common reason is a life change, moving away to college, followed closely by members who seemed judgmental or hypocritical. Seven in ten said leaving wasn't an intentional decision. These are the five specific reasons chosen most often.",
+  "note": "This measures church attendance, not belief. Survey taken in 2017 of adults then ages 23 to 30. The colors are our grouping, not Lifeway's.",
+  "unit": "%",
+  "max": 100,
+  "categories": [
+    {
+      "id": "belief",
+      "label": "Belief",
+      "color": "green"
+    },
+    {
+      "id": "conduct",
+      "label": "Church teaching or conduct",
+      "color": "brown"
+    },
+    {
+      "id": "drift",
+      "label": "Drift or life change",
+      "color": "gold"
+    }
+  ],
+  "rows": [
+    {
+      "label": "Moved to college and stopped attending",
+      "value": 34,
+      "as_published": "34 percent",
+      "source": "lifeway2019",
+      "category": "drift"
+    },
+    {
+      "label": "Members seemed judgmental or hypocritical",
+      "value": 32,
+      "as_published": "32 percent",
+      "source": "lifeway2019",
+      "category": "conduct"
+    },
+    {
+      "label": "No longer felt connected to people there",
+      "value": 29,
+      "as_published": "29 percent",
+      "source": "lifeway2019",
+      "category": "drift"
+    },
+    {
+      "label": "Disagreed with church on political or social issues",
+      "value": 25,
+      "as_published": "25 percent",
+      "source": "lifeway2019",
+      "category": "conduct"
+    },
+    {
+      "label": "Work responsibilities",
+      "value": 24,
+      "as_published": "24 percent",
+      "source": "lifeway2019",
+      "category": "drift"
+    }
+  ],
+  "sources": [
+    {
+      "id": "lifeway2019",
+      "publisher": "Lifeway Research",
+      "study": "Most Teenagers Drop Out of Church When They Become Young Adults",
+      "year": 2019,
+      "url": "https://research.lifeway.com/2019/01/15/most-teenagers-drop-out-of-church-as-young-adults/",
+      "fetched": "2026-11-14",
+      "license": "reuse",
+      "field_dates": "September 15 to October 13, 2017",
+      "sample": "2,002 adults ages 23 to 30 who attended a Protestant church at least twice a month for at least a year in high school"
+    }
+  ]
+}

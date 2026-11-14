@@ -1,0 +1,50 @@
+{
+  "id": "deconstructed",
+  "type": "hbar",
+  "kicker": "Deconstruction is not deconversion",
+  "title": "Who says they have deconstructed the faith of their youth?",
+  "subtitle": "U.S. adults, November 2023",
+  "caption": "About four in ten American adults say they have deconstructed the faith of their youth, and so do more than a third of people who call themselves Christians today, practicing or not. Many who say they have deconstructed still call themselves Christians.",
+  "note": "Barna's wording is \"deconstructed the faith of their youth\". Barna does not say on the release how it defines \"today's Christians\". Barna published this as partner content in its State of the Church work with Gloo.",
+  "unit": "%",
+  "max": 100,
+  "rows": [
+    {
+      "label": "All U.S. adults",
+      "value": 42,
+      "as_published": "42 percent",
+      "source": "barna2024"
+    },
+    {
+      "label": "Christians today",
+      "value": 37,
+      "as_published": "37 percent",
+      "source": "barna2024"
+    },
+    {
+      "label": "Practicing Christians",
+      "value": 36,
+      "as_published": "36%",
+      "source": "barna2024"
+    },
+    {
+      "label": "Nonpracticing Christians",
+      "value": 37,
+      "as_published": "37%",
+      "source": "barna2024"
+    }
+  ],
+  "sources": [
+    {
+      "id": "barna2024",
+      "publisher": "Barna Group",
+      "study": "Ex-Christians Aren't the Only Ones Deconstructing Faith",
+      "year": 2024,
+      "url": "https://www.barna.com/trends/ex-christians-deconstructing/",
+      "fetched": "2026-11-14",
+      "license": "credit",
+      "field_dates": "November 3 to 8, 2023",
+      "sample": "2,003 U.S. adults, online consumer panel; margin of error plus or minus 2 points"
+    }
+  ]
+}
