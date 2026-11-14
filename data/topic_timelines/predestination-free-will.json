@@ -1,0 +1,224 @@
+{
+  "type": "matrix",
+  "id": "five-points-matrix",
+  "slug": "predestination-free-will",
+  "png_name": "matrix",
+  "label": "Side by Side",
+  "title": "Dort, the Remonstrance and Molinism on the five disputed points",
+  "intro": "The five points of Calvinism began as the Synod of Dort's answer to the five articles of the Remonstrants in 1610. Molinism adds a different question: what God knows about the free choices people would make. Each column follows its own source.",
+  "image_title": "Calvinist, Arminian and Molinist answers to the five points",
+  "image_subtitle": "The Synod of Dort (1618 to 1619), the Remonstrance (1610) and William Lane Craig, each in its own terms.",
+  "image_subtitle_narrow": "Dort (1618 to 1619), the Remonstrance (1610) and William Lane Craig, each in its own terms.",
+  "image_source": "Sources: Canons of Dort; Five Arminian Articles (1610); William Lane Craig, Reasonable Faith Q&A 79 and 482, and \"Lest Anyone Should Fall\" (1991)",
+  "caption": "All three hold that no one comes to God without his grace. They part over whether election rests on foreseen faith, for whom Christ died, whether grace can be resisted, and whether a believer can fall away.",
+  "table_view_label": "Point",
+  "columns": [
+    {
+      "id": "dort",
+      "name": "Calvinist: Canons of Dort",
+      "short": "Calvinist (Dort)",
+      "color": "green",
+      "proponent": {
+        "name": "Synod of Dort",
+        "image_name": "Canons of Dort",
+        "work": "Canons of Dort (1618 to 1619)",
+        "source": "dort"
+      }
+    },
+    {
+      "id": "remonstrance",
+      "name": "Arminian: the Remonstrance",
+      "short": "Arminian (1610)",
+      "color": "brown",
+      "proponent": {
+        "name": "The Remonstrants",
+        "image_name": "The Remonstrance",
+        "work": "The Five Arminian Articles (1610)",
+        "source": "remonstrance"
+      }
+    },
+    {
+      "id": "molinist",
+      "name": "Molinist: William Lane Craig",
+      "short": "Molinist (Craig)",
+      "color": "blue",
+      "proponent": {
+        "name": "William Lane Craig",
+        "image_name": "William Lane Craig",
+        "work": "Molinism and Divine Election (Q&A 79)",
+        "source": "craig79"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "depravity",
+      "label": "Can a sinner turn to God unaided?",
+      "short": "Turn to God unaided?",
+      "cells": [
+        {
+          "text": "No. Without the Spirit's grace, people are neither willing nor able to return to God",
+          "short": "No: neither willing nor able without the Spirit"
+        },
+        {
+          "text": "No. Of themselves they cannot think, will or do anything truly good, saving faith included",
+          "short": "No: cannot of themselves believe"
+        },
+        {
+          "text": "No. Apart from God's grace no one can come to God",
+          "short": "No: not apart from God's grace"
+        }
+      ]
+    },
+    {
+      "id": "election",
+      "label": "Election",
+      "cells": [
+        {
+          "text": "Unconditional: a definite number chosen in Christ, not on the basis of foreseen faith",
+          "short": "Unconditional, not based on foreseen faith"
+        },
+        {
+          "text": "God decreed to save those who would believe in Christ and persevere in faith",
+          "short": "God chose to save those who believe and persevere"
+        },
+        {
+          "text": "Chiefly corporate: God chose a people, those who trust Christ; he knows who would freely respond",
+          "short": "Corporate: a people, those who trust Christ"
+        }
+      ]
+    },
+    {
+      "id": "atonement",
+      "label": "For whom did Christ die?",
+      "short": "For whom did Christ die?",
+      "cells": [
+        {
+          "text": "His death is sufficient for the whole world, but effectively redeems the elect only",
+          "short": "Sufficient for all; effective for the elect"
+        },
+        {
+          "text": "For all and for every one, though only believers enjoy the forgiveness he won",
+          "short": "For all; only believers receive it"
+        },
+        {
+          "text": "A payment sufficient for anyone's sins, which each must receive by faith",
+          "short": "Sufficient for anyone; received by faith"
+        }
+      ]
+    },
+    {
+      "id": "grace",
+      "label": "Can grace be resisted?",
+      "short": "Can grace be resisted?",
+      "cells": [
+        {
+          "text": "No. God regenerates without our help; it is not left in human power",
+          "short": "No: God regenerates without our help"
+        },
+        {
+          "text": "Yes. Grace begins all good, but it is not irresistible",
+          "short": "Yes: grace is not irresistible"
+        },
+        {
+          "text": "Yes. All receive sufficient grace; some freely resist it",
+          "short": "Yes: sufficient grace can be resisted"
+        }
+      ]
+    },
+    {
+      "id": "perseverance",
+      "label": "Can a believer fall away?",
+      "short": "Can a believer fall away?",
+      "cells": [
+        {
+          "text": "No. God preserves true believers to the end",
+          "short": "No: God preserves them"
+        },
+        {
+          "text": "Left open in 1610: to be settled from Scripture first",
+          "short": "Left open in 1610"
+        },
+        {
+          "text": "Middle knowledge does not settle it; Molinists differ",
+          "short": "Not settled by Molinism itself"
+        }
+      ]
+    }
+  ],
+  "common_text": "All three begin with grace: Dort, the Remonstrants and Craig agree that no fallen person comes to God without it. Craig also quotes the Westminster Confession's statement that God ordains whatever comes to pass without taking away the liberty of the creature, and says, \"Now this is precisely what the Molinist believes!\"",
+  "common_source": "craig-calvinism",
+  "differ": [
+    "Election: Dort says God chose for the purpose of faith, not because of foreseen faith; the Remonstrants tie election to those who would believe and persevere.",
+    "Atonement: all three call Christ's death enough for anyone. Dort says it effectively redeems the elect only; the Remonstrants and Craig say it is received by faith.",
+    "Grace: the Remonstrants and Craig say it can be resisted; Dort says regeneration is not left in human power.",
+    "Molinism's own claim is about God's knowledge: he knows what each person would freely do in any circumstance and orders the world with that knowledge.",
+    "Molinism is not a full five point system. Craig says middle knowledge could even be paired with a limited atonement."
+  ],
+  "voices_label": "Sources for each column",
+  "note": "Cells paraphrase each source; the Molinist cells also draw on Craig's Q&A 482 (atonement) and his 1991 paper \"Lest Anyone Should Fall\" (perseverance). No view is presented here as the answer.",
+  "sources": [
+    {
+      "id": "dort",
+      "publisher": "Christian Reformed Church in North America",
+      "title": "Canons of Dort",
+      "url": "https://www.crcna.org/welcome/beliefs/confessions/canons-dort",
+      "fetched": "2026-11-14",
+      "quote": "This same election took place, not on the basis of foreseen faith, of the obedience of faith, of holiness, or of any other good quality and disposition",
+      "notes": "Synod met \"in the city of Dordrecht in 1618-19\" (page intro). Rows: depravity (III/IV Art. 3: \"neither willing nor able to return to God\"), election (I.7, I.9), atonement (II.3 \"more than sufficient to atone for the sins of the whole world\"; II.8 \"all those and only those who were chosen\"), grace (III/IV Art. 12 \"which God works in us without our help\"), perseverance (V.3, V.8 \"with respect to God it cannot possibly happen\")."
+    },
+    {
+      "id": "remonstrance",
+      "publisher": "Christian Classics Ethereal Library",
+      "title": "The Five Arminian Articles, A.D. 1610 (Philip Schaff, Creeds of Christendom, Vol. III)",
+      "year": 1610,
+      "url": "https://www.ccel.org/ccel/schaff/creeds3.iv.xv.html",
+      "fetched": "2026-11-14",
+      "quote": "But as respects the mode of the operation of this grace, it is not irresistible, inasmuch as it is written concerning many, that they have resisted the Holy Ghost.",
+      "notes": "Art. I \"those who, through the grace of the Holy Ghost, shall believe on this his Son Jesus, and shall persevere in this faith\"; Art. II \"died for all men and for every man ... yet that no one actually enjoys this forgiveness of sins except the believer\"; Art. III \"That man has not saving grace of himself, nor of the energy of his free will\"; Art. V \"that must be more particularly determined out of the Holy Scripture, before we ourselves can teach it\"."
+    },
+    {
+      "id": "craig79",
+      "publisher": "Reasonable Faith",
+      "title": "Molinism and Divine Election (Q&A 79)",
+      "year": 2008,
+      "url": "https://www.reasonablefaith.org/writings/question-answer/molinism-and-divine-election",
+      "fetched": "2026-11-14",
+      "quote": "God knows in exactly what circumstances people will freely respond to His grace and places people in circumstances in which each one receives sufficient grace for salvation if only that person will avail himself of it.",
+      "notes": "October 20, 2008. Also: \"John 6. 65 means that apart from God's grace no one can come to God on his own.\" \"Election, then, is first and foremost a corporate notion: God has chosen for Himself a people\". \"some persons freely resist God's grace\". Rows: depravity, election, grace; differ bullet 4 (what middle knowledge is)."
+    },
+    {
+      "id": "craig482",
+      "publisher": "Reasonable Faith",
+      "title": "Limited Atonement (Q&A 482)",
+      "year": 2016,
+      "url": "https://www.reasonablefaith.org/writings/question-answer/limited-atonement",
+      "fetched": "2026-11-14",
+      "quote": "It is as if Christ has made a massive downpayment sufficient to pay for anyone's sins, which we must then appropriate in order to become a beneficiary.",
+      "notes": "July 11, 2016. Also: \"Via middle knowledge, we could, if we wanted, combine a doctrine of limited atonement with the universal availability of salvation.\" Rows: atonement, differ bullet 5."
+    },
+    {
+      "id": "craig-calvinism",
+      "publisher": "Reasonable Faith",
+      "title": "Molinism vs. Calvinism (Q&A 157)",
+      "year": 2010,
+      "url": "https://www.reasonablefaith.org/writings/question-answer/molinism-vs.-calvinism",
+      "fetched": "2026-11-14",
+      "quote": "Now this is precisely what the Molinist believes!",
+      "notes": "April 19, 2010. Said of Westminster Confession III.1, which he quotes in full."
+    },
+    {
+      "id": "craig-perseverance",
+      "publisher": "William Lane Craig (Leadership U, archived)",
+      "title": "\"Lest Anyone Should Fall\": A Middle Knowledge Perspective on Perseverance and Apostolic Warnings",
+      "year": 1991,
+      "url": "https://web.archive.org/web/20151225005008/http://www.leaderu.com/offices/billcraig/docs/lest.html",
+      "fetched": "2026-11-14",
+      "quote": "Of course, Molinism does not imply the doctrine of the perseverance of the saints.",
+      "notes": "International Journal for Philosophy of Religion 29 (1991). The live leaderu.com URL now redirects, so the Wayback copy is cited. Also: \"The Molinist who holds to perseverance will simply add that God would not decree to actualize any of these worlds\"; abstract: \"a Molinist doctrine, according to which believers can fall away but in fact will not due to God's extrinsically efficacious grace.\" Row: perseverance. Replaces Philip Congdon (a Free Grace critic) and Paul Helm (a Reformed critic), dropped in the fact check (2026-11-14) so the Molinist column cites only a Molinist."
+    }
+  ],
+  "place": {
+    "before": "<section class=\"cc-synthesis\" id=\"synthesis\">"
+  }
+}

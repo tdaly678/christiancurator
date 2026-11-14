@@ -1,0 +1,157 @@
+{
+  "type": "orgchart",
+  "id": "governance-diagrams",
+  "slug": "church-governance",
+  "png_name": "diagrams",
+  "label": "Three Shapes of Church Government",
+  "title": "Who decides, and who answers to whom",
+  "intro": "Each diagram runs from the widest body down to the local congregation. Solid arrows carry authority or oversight, dashed arrows show members electing or consenting, and dotted lines mark cooperation with no authority over the church.",
+  "image_title": "Three ways evangelical churches are governed",
+  "image_subtitle": "Presbyterian, congregational and episcopal polity, each drawn from its own governing documents.",
+  "image_subtitle_narrow": "Each drawn from its own governing documents.",
+  "image_source": "Sources: PCA Book of Church Order; Baptist Faith and Message 2000; 9Marks; ACNA Constitution and Canons",
+  "caption": "In the presbyterian chart, authority runs through graded courts of elders. In the congregational chart, the congregation has the final say and wider bodies only cooperate. In the episcopal chart, congregations are joined in a diocese under a bishop, and bishops meet as a college.",
+  "table_view_label": "Level",
+  "tiers": [
+    {"id": "wide", "label": "Whole church"},
+    {"id": "region", "label": "Region"},
+    {"id": "leaders", "label": "Local leaders"},
+    {"id": "congregation", "label": "Congregation"}
+  ],
+  "charts": [
+    {
+      "id": "presbyterian",
+      "name": "Presbyterian",
+      "short": "Presbyterian",
+      "tag": "For example, the PCA",
+      "color": "green",
+      "boxes": [
+        {"tier": "wide", "text": "General Assembly", "sub": "All teaching elders, and ruling elders sent by sessions"},
+        {"tier": "region", "text": "Presbytery", "sub": "Teaching elders and ruling elders sent by sessions"},
+        {"tier": "leaders", "text": "Session", "sub": "Pastors and ruling elders"},
+        {"tier": "congregation", "text": "Congregation", "sub": "Communing members"}
+      ],
+      "links": [
+        {"between": ["wide", "region"], "down": "Reviews, hears appeals"},
+        {"between": ["region", "leaders"], "down": "Reviews, hears appeals"},
+        {"between": ["leaders", "congregation"], "down": "Governs", "up": "Elects elders"}
+      ],
+      "proponent": {
+        "name": "Presbyterian Church in America",
+        "image_name": "PCA Book of Church Order",
+        "work": "Book of Church Order, Part 1: The Form of Government",
+        "source": "pca"
+      }
+    },
+    {
+      "id": "congregational",
+      "name": "Elder-led congregational",
+      "short": "Congregational",
+      "tag": "For example, SBC churches",
+      "color": "brown",
+      "boxes": [
+        {"tier": "wide", "text": "Convention", "sub": "Voluntary and advisory", "loose": true},
+        {"tier": "region", "text": "Association", "sub": "Voluntary and advisory", "loose": true},
+        {"tier": "leaders", "text": "Pastors or elders, and deacons"},
+        {"tier": "congregation", "text": "Congregation", "sub": "Final say on doctrine, leaders, members"}
+      ],
+      "links": [
+        {"between": ["wide", "region"], "loose": "No authority over each other"},
+        {"between": ["region", "leaders"], "loose": "No authority over churches"},
+        {"between": ["leaders", "congregation"], "down": "Lead", "up": "Chooses leaders"}
+      ],
+      "proponent": {
+        "name": "Jonathan Leeman",
+        "image_name": "Jonathan Leeman, 9Marks",
+        "work": "Clarifying \"Congregationalism\"",
+        "source": "leeman"
+      }
+    },
+    {
+      "id": "episcopal",
+      "name": "Episcopal",
+      "short": "Episcopal",
+      "tag": "For example, the ACNA",
+      "color": "blue",
+      "boxes": [
+        {"tier": "wide", "text": "Province", "sub": "Archbishop, College of Bishops, Provincial Council"},
+        {"tier": "region", "text": "Diocese", "sub": "Congregations under a bishop"},
+        {"tier": "leaders", "text": "Rector and vestry"},
+        {"tier": "congregation", "text": "Congregation", "sub": "Owns its property"}
+      ],
+      "links": [
+        {"between": ["wide", "region"], "down": "Consents", "up": "Elects its bishop"},
+        {"between": ["region", "leaders"], "down": "Bishop consents to rector"},
+        {"between": ["leaders", "congregation"], "down": "Spiritual leadership"}
+      ],
+      "proponent": {
+        "name": "Anglican Church in North America",
+        "image_name": "ACNA Constitution and Canons",
+        "work": "Constitution and Canons (as amended June 2026)",
+        "source": "acna"
+      }
+    }
+  ],
+  "common_text": "Members have a voice in all three. The PCA holds that no one is placed over a church in any office \"without the election, or at least the consent of that church,\" and the ACNA describes itself as a conciliar church where clergy and laity lead together.",
+  "common_source": "pca",
+  "differ": [
+    "Where final authority sits: in courts of elders, in the gathered congregation, or with bishops joined to their dioceses.",
+    "Wider bodies: presbyteries and the General Assembly review lower courts; Baptist associations and conventions have no authority over churches; ACNA dioceses keep every power they have not yielded to the province.",
+    "Calling a pastor: a Baptist congregation chooses its own; an Anglican rector is called only with the bishop's consent.",
+    "Appeals: a presbyterian member can appeal from the session to presbytery and General Assembly; a congregational church settles discipline as a whole body."
+  ],
+  "voices_label": "The documents behind each diagram",
+  "note": "Diagrams simplify each body's governing documents; details vary by denomination and by diocese or church. No view is presented here as the answer.",
+  "sources": [
+    {
+      "id": "pca",
+      "publisher": "PCA Administrative Committee",
+      "title": "Book of Church Order, Part 1: The Form of Government",
+      "year": 2026,
+      "url": "https://www.pcaac.org/book-of-church-order/part-1-the-form-of-government/",
+      "fetched": "2026-11-14",
+      "quote": "Although each court exercises exclusive original jurisdiction over all matters especially belonging to it, the lower courts are subject to the review and control of the higher courts, in regular gradation.",
+      "notes": "Includes amendments through the 53rd General Assembly (June 2026). 14-2 General Assembly \"shall consist of all teaching elders in good standing with their Presbyteries, and ruling elders as elected by their Session.\" 10-2 \"These courts are church Sessions, Presbyteries, and the General Assembly.\" 12-1 \"The church Session consists of the pastor, associate pastor(s), if there be any, and the ruling elders of a church.\" 13-1 presbytery \"shall comprise all teaching elders and ruling elders as elected by their Session.\" 14-1 \"The General Assembly is the highest court of this Church\". 12-5b ruling elders and deacons \"on their election by the church\". 13-9, 14-6a appeals. 16-2 \"no man can be placed over a church in any office without the election, or at least the consent of that church.\""
+    },
+    {
+      "id": "bfm",
+      "publisher": "Southern Baptist Convention",
+      "title": "The Baptist Faith and Message 2000",
+      "year": 2000,
+      "url": "https://bfm.sbc.net/bfm2000/",
+      "fetched": "2026-11-14",
+      "quote": "Each congregation operates under the Lordship of Christ through democratic processes.",
+      "notes": "Art. VI: \"an autonomous local congregation of baptized believers\"; \"Its two scriptural offices are that of pastor/elder/overseer and deacon.\" Art. XIV on associations and conventions: \"Such organizations have no authority over one another or over the churches. They are voluntary and advisory bodies\"."
+    },
+    {
+      "id": "leeman",
+      "publisher": "9Marks",
+      "title": "Clarifying \"Congregationalism\"",
+      "year": 2014,
+      "url": "https://www.9marks.org/article/clarifying-congregationalism/",
+      "fetched": "2026-11-14",
+      "quote": "The foundational claim of a congregationalist is that the entire church body has the final authority under God’s Word in matters of doctrine (and by implication, choosing leaders) and discipline (and by implication, choosing members).",
+      "notes": "Jonathan Leeman, June 10, 2014. Also: \"the mantel of day-to-day leadership and oversight falls to the elders\"."
+    },
+    {
+      "id": "acna",
+      "publisher": "Anglican Church in North America",
+      "title": "Constitution and Canons (as amended June 2026)",
+      "year": 2026,
+      "url": "https://anglicanchurch.net/wp-content/uploads/2026/08/ACNA-CC-RATIFIED-2026-06-25.pdf",
+      "fetched": "2026-11-14",
+      "quote": "No Rector may be called to or dismissed from a congregation without the consent of the Bishop.",
+      "notes": "Title page: \"As ratified by the Inaugural Provincial Assembly, June 2009, amended by the seventh Provincial Assembly, June 2026\" (the June 25, 2026 date is only in the file name). Canon I.6.4 for the quote. Const. IV.2 \"Congregations and clergy are related together in a diocese or network (whether regional or affinity-based), united by a bishop.\" VII.1 Provincial Council \"is the governing body\". VIII.1 dioceses \"shall each retain all authority they do not yield to the Province by their own consent.\" IX.1 Archbishop \"elected by the College of Bishops\". X.5 College of Bishops may \"consent to an election from a diocese\". Canon I.6.5 vestry \"chosen and serves according to applicable laws, diocesan canons, and the congregational by-laws\"; \"supports the clergy in the spiritual leadership of the congregation\". I.6.6 congregational property \"solely and exclusively owned by the congregation\"."
+    },
+    {
+      "id": "acna-structure",
+      "publisher": "Anglican Church in North America",
+      "title": "Structure",
+      "url": "https://anglicanchurch.net/structure/",
+      "fetched": "2026-11-14",
+      "quote": "The Anglican Church in North America is a conciliar church where clergy and laity serve together in leadership.",
+      "notes": "Also: \"Bishops meet together as the College of Bishops.\" Used for the common ground line."
+    }
+  ],
+  "place": {"before": "<section class=\"cc-synthesis\" id=\"synthesis\">"}
+}
