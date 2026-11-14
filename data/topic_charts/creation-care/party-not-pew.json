@@ -1,0 +1,80 @@
+{
+  "id": "party-not-pew",
+  "type": "hbar",
+  "kicker": "Party or pew?",
+  "title": "Among evangelicals, party predicts climate concern",
+  "subtitle": "Share saying global climate change is an extremely or very serious problem, 2022",
+  "caption": "Evangelical Republicans and evangelical Democrats sit 61 points apart, about as far apart as Republicans and Democrats overall. Pew found that with party and demographics held constant, evangelicals were 5 points less likely than the religiously unaffiliated to call climate change a serious problem.",
+  "note": "Republicans and Democrats include those who lean toward each party. Pew's marginal effects analysis controlled for age, gender, education, race and ethnicity, income and party.",
+  "unit": "%",
+  "max": 100,
+  "categories": [
+    {
+      "id": "evangelical",
+      "label": "Evangelical Protestants",
+      "color": "green"
+    },
+    {
+      "id": "all",
+      "label": "All U.S. adults",
+      "color": "grey"
+    }
+  ],
+  "rows": [
+    {
+      "label": "Evangelical Democrats",
+      "value": 78,
+      "as_published": "78%",
+      "source": "pew2022",
+      "category": "evangelical"
+    },
+    {
+      "label": "All Democrats",
+      "value": 83,
+      "as_published": "83%",
+      "source": "pew2022",
+      "category": "all"
+    },
+    {
+      "label": "All U.S. adults",
+      "value": 57,
+      "as_published": "57%",
+      "source": "pew2022",
+      "category": "all"
+    },
+    {
+      "label": "All evangelicals",
+      "value": 34,
+      "as_published": "34%",
+      "source": "pew2022",
+      "category": "evangelical"
+    },
+    {
+      "label": "All Republicans",
+      "value": 25,
+      "as_published": "25%",
+      "source": "pew2022",
+      "category": "all"
+    },
+    {
+      "label": "Evangelical Republicans",
+      "value": 17,
+      "as_published": "17%",
+      "source": "pew2022",
+      "category": "evangelical"
+    }
+  ],
+  "sources": [
+    {
+      "id": "pew2022",
+      "publisher": "Pew Research Center",
+      "study": "How Religion Intersects With Americans' Views on the Environment",
+      "year": 2022,
+      "url": "https://www.pewresearch.org/religion/2022/11/17/how-religion-intersects-with-americans-views-on-the-environment/",
+      "fetched": "2026-11-14",
+      "license": "reuse",
+      "field_dates": "April 11 to 17, 2022",
+      "sample": "10,156 U.S. adults on Pew's American Trends Panel"
+    }
+  ]
+}

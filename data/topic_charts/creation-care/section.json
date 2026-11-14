@@ -1,0 +1,14 @@
+{
+  "id": "by-the-numbers",
+  "label": "By the Numbers",
+  "title": "What the surveys show",
+  "intro": "The debate below is about priorities and theology, but surveys show how it plays out in the pews: evangelicals affirm stewardship almost unanimously and are the most skeptical of the major U.S. religious groups on climate change. Each chart stands on its own; the surveys asked different questions in different years.",
+  "charts": [
+    "duty-and-doubt",
+    "why-not-serious",
+    "party-not-pew"
+  ],
+  "place": {
+    "before": "<div class=\"cc-debate\" id=\"debate\">"
+  }
+}

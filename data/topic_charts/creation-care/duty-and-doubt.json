@@ -1,0 +1,86 @@
+{
+  "id": "duty-and-doubt",
+  "type": "column",
+  "kicker": "Belief and the climate",
+  "title": "Evangelicals affirm a duty to the Earth but doubt human-caused warming",
+  "subtitle": "Evangelical Protestants and all U.S. adults, 2023-24",
+  "caption": "Nine in ten evangelicals say God gave humans a duty to protect and care for the Earth, the highest share of any religious group in the study. Fewer than three in ten say the Earth is warming mostly because of human activity, and fewer than half say stricter environmental rules are worth the cost.",
+  "note": "The two God-given statements were separate questions, asked only of people who believe in God or a universal spirit; the figures are the share saying each statement completely or mostly describes their view, shown as a share of all respondents. The warming question offered three choices (human activity, natural patterns, no solid evidence); the regulation question offered two (worth the cost, or cost too many jobs and hurt the economy).",
+  "unit": "%",
+  "max": 100,
+  "series": [
+    {
+      "id": "evangelical",
+      "label": "Evangelical Protestants",
+      "color": "green"
+    },
+    {
+      "id": "all",
+      "label": "All U.S. adults",
+      "color": "grey"
+    }
+  ],
+  "rows": [
+    {
+      "label": "God gave humans a duty to protect and care for the Earth",
+      "values": {
+        "evangelical": 91,
+        "all": 66
+      },
+      "as_published": {
+        "evangelical": "91%",
+        "all": "66%"
+      },
+      "source": "pew-rls2025"
+    },
+    {
+      "label": "God gave humans the right to use the Earth for our benefit",
+      "values": {
+        "evangelical": 86,
+        "all": 57
+      },
+      "as_published": {
+        "evangelical": "86%",
+        "all": "57%"
+      },
+      "source": "pew-rls2025"
+    },
+    {
+      "label": "Stricter environmental rules are worth the cost",
+      "values": {
+        "evangelical": 44,
+        "all": 60
+      },
+      "as_published": {
+        "evangelical": "44%",
+        "all": "60%"
+      },
+      "source": "pew-rls2025"
+    },
+    {
+      "label": "The Earth is warming mostly because of human activity",
+      "values": {
+        "evangelical": 28,
+        "all": 48
+      },
+      "as_published": {
+        "evangelical": "28%",
+        "all": "48%"
+      },
+      "source": "pew-rls2025"
+    }
+  ],
+  "sources": [
+    {
+      "id": "pew-rls2025",
+      "publisher": "Pew Research Center",
+      "study": "Decline of Christianity in the U.S. Has Slowed, May Have Leveled Off (2023-24 Religious Landscape Study), chapter 19: Religion and views on the environment",
+      "year": 2025,
+      "url": "https://www.pewresearch.org/religion/2025/02/26/religion-and-views-on-the-environment/",
+      "fetched": "2026-11-14",
+      "license": "reuse",
+      "field_dates": "July 17, 2023 to March 4, 2024",
+      "sample": "36,908 U.S. adults, online, on paper and by phone, in English and Spanish"
+    }
+  ]
+}

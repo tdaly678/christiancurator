@@ -1,0 +1,90 @@
+{
+  "id": "why-not-serious",
+  "type": "hbar",
+  "kicker": "In their own words",
+  "title": "Why evangelicals who are unconcerned say climate change is not serious",
+  "subtitle": "All U.S. evangelical Protestants, 2022",
+  "caption": "Thirty-eight percent of evangelicals said climate change is not too serious or not a problem. Asked why, the most common answers were that the world has bigger problems and that God is in control of the climate; fewer said they doubt it is happening at all.",
+  "note": "Asked only of those who said climate change is not too serious a problem or not a problem; respondents could pick more than one reason. Pew reports each figure as a share of all evangelical Protestants surveyed, not only of the 38%. The colors are our grouping, not Pew's.",
+  "unit": "%",
+  "max": 100,
+  "categories": [
+    {
+      "id": "net",
+      "label": "Say it is not a serious problem",
+      "color": "grey"
+    },
+    {
+      "id": "priority",
+      "label": "Priorities",
+      "color": "brown"
+    },
+    {
+      "id": "theology",
+      "label": "Providence",
+      "color": "green"
+    },
+    {
+      "id": "doubt",
+      "label": "Doubt or confidence",
+      "color": "blue"
+    }
+  ],
+  "rows": [
+    {
+      "label": "Net: not too serious or not a problem",
+      "value": 38,
+      "as_published": "38%",
+      "source": "pew2022",
+      "category": "net"
+    },
+    {
+      "label": "There are much bigger problems in the world today",
+      "value": 34,
+      "as_published": "34%",
+      "source": "pew2022",
+      "category": "priority"
+    },
+    {
+      "label": "God is in control of the climate",
+      "value": 29,
+      "as_published": "29%",
+      "source": "pew2022",
+      "category": "theology"
+    },
+    {
+      "label": "It will not have a big impact on most people",
+      "value": 19,
+      "as_published": "19%",
+      "source": "pew2022",
+      "category": "doubt"
+    },
+    {
+      "label": "I don't believe it's happening",
+      "value": 15,
+      "as_published": "15%",
+      "source": "pew2022",
+      "category": "doubt"
+    },
+    {
+      "label": "New technologies will fix the problems",
+      "value": 5,
+      "as_published": "5%",
+      "source": "pew2022",
+      "category": "doubt"
+    }
+  ],
+  "sources": [
+    {
+      "id": "pew2022",
+      "publisher": "Pew Research Center",
+      "study": "How Religion Intersects With Americans' Views on the Environment",
+      "year": 2022,
+      "url": "https://www.pewresearch.org/religion/2022/11/17/how-religion-intersects-with-americans-views-on-the-environment/",
+      "fetched": "2026-11-14",
+      "license": "reuse",
+      "field_dates": "April 11 to 17, 2022",
+      "sample": "10,156 U.S. adults on Pew's American Trends Panel"
+    }
+  ]
+}
