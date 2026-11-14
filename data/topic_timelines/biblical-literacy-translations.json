@@ -33,8 +33,8 @@
       "short": "NASB",
       "color": "green",
       "at": 4,
-      "text": "Formal equivalence: word for word as much as English allows.",
-      "short_text": "Word for word as much as English allows.",
+      "text": "Formal equivalence: word for word as much as possible, kept readable.",
+      "short_text": "Word for word as much as possible.",
       "proponent": {
         "name": "The Lockman Foundation",
         "image_name": "The Lockman Foundation",
@@ -93,8 +93,8 @@
       "short": "NLT",
       "color": "gold",
       "at": 78,
-      "text": "Meaning based: finds the meaning, then says it in natural English.",
-      "short_text": "Finds the meaning, then says it naturally.",
+      "text": "Meaning based: finds the meaning, then re-expresses it in English.",
+      "short_text": "Finds the meaning, then re-expresses it.",
       "proponent": {
         "name": "Tyndale House",
         "image_name": "Tyndale House",
@@ -113,7 +113,7 @@
       "proponent": {
         "name": "NavPress",
         "image_name": "NavPress",
-        "work": "About The Message",
+        "work": "What Is The Message?",
         "source": "message"
       }
     }
@@ -122,7 +122,7 @@
     "Word for word Bibles keep the original's wording and sentence shape, which helps close study and can read stiffly.",
     "Thought for thought Bibles carry the meaning into natural English, which reads easily and leans more on the translators' judgment.",
     "The CSB and NIV each describe themselves as a balance between the two.",
-    "Crossway, Lockman and Tyndale all say the trade-off is real; no translation avoids it."
+    "Crossway says every translation is at many points a trade-off between literal precision and readability."
   ],
   "voices_label": "Each translation in its publisher's words",
   "table_view_label": "Translation",
@@ -177,7 +177,7 @@
     {
       "id": "message",
       "publisher": "NavPress",
-      "title": "About The Message",
+      "title": "What Is The Message?",
       "url": "https://www.navpress.com/the-message",
       "fetched": "2026-11-14",
       "quote": "The Message is a reading Bible translated from the original Greek and Hebrew Scriptures",
