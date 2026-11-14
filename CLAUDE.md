@@ -611,6 +611,10 @@ schemas: `.christian-orchestrator/team/A-foundation-report.md`.
   yes / in part / no marks; each question becomes a block on phones). A view with `"outside": true` is drawn
   dashed and labelled "Shown for contrast". Several data files may target one page, each with its own id;
   the jump nav knows the ids `spectrum`, `matrix` and `translations`. Schema in the script docstring.
+  Also `orgchart` (2 to 4 side-by-side org diagrams by level: solid authority arrows, dashed elect or consent
+  arrows, dotted cooperation lines; church-governance `#governance-diagrams`) and `chronology` (3 to 8 dated
+  cards alternating above and below one line; atonement `#atonement-models`). Baptism (`#baptism-matrix`) and
+  predestination-free-will (`#five-points-matrix`) use `matrix`; all four ids are in the jump nav.
   Tests: `tests/test_build_topic_timeline.py`.
 - **Definition box and FAQ** (with matching FAQPage schema): `data/topic_reference/<slug>.json` +
   `scripts/build_topic_reference.py`; run before `build_topic_top.py`. It owns that page's `AEO-FAQPAGE-SCHEMA` block,
