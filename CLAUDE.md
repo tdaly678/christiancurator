@@ -92,6 +92,14 @@ the list on that Eastern date and refuses if one exists or Brevo cannot answer. 
 --force`) skips the check; `no_email` builds nothing. Tests: `tests/test_email_dedupe.py`. Report:
 `.christian-orchestrator/fixes/email-dedupe-report.md`.
 
+Robustness (Nov 15 2026): after the email, `scripts/verify_live.py` waits for today's archive page and homepage date
+on the live site, requests one Pages rebuild after 10 minutes, and fails the run after 20 (IndexNow runs only once
+live). `commit_daily_run.sh` retries a rejected push or failed fetch after 5, 15, 30 and 60 seconds. Feeds answering
+429/5xx are retried after a pause (`RETRY_STATUSES` in `fetcher/rss_fetcher.py`). `check_feed_health.py` fails only
+on an outage (half the feeds empty, or every Substack feed empty). Every workflow job that runs repo Python installs
+`requirements.txt` (`tests/test_workflow_dependencies.py`); Pagefind is pinned (`pagefind@1.6.0`); the pipeline job
+has `timeout-minutes: 60`. Report: `.christian-orchestrator/audit/robustness-report.md`.
+
 What it commits: `docs/index.html`, `docs/topics/`, `docs/digest/`, `docs/yesterday.json`, `docs/email_draft.html`,
 `docs/article_history.json`, `docs/research_articles.json`, all five sitemaps (`sitemap.xml`, `sitemap-core.xml`,
 `sitemap-topics.xml`, `sitemap-voices.xml`, `sitemap-archive.xml`, `sitemap-daily.xml`), `docs/archive/`, `docs/daily/`,
@@ -104,7 +112,8 @@ and writes `docs/feed_health.json` every run: per-source `http_status`, `n_entri
 `error`, plus `zero_streaks` (consecutive run days with 0 items). `scripts/check_feed_health.py` runs after the commit
 and, since 2026-11-09, only warns: any source at 7+ days with 0 items becomes a `::warning` annotation and is listed in
 the job summary's Feed health section, split into "Blocked on runner" (HTTP 401/403/429) and "Empty". It exits 1 only
-when `docs/feed_health.json` is missing, or with `--strict`. Fix the URL in `fetcher/sources.py`; removing a source is
+on an outage (`docs/feed_health.json` missing, half or more feeds empty this run, or every Substack feed empty), or
+with `--strict`. Fix the URL in `fetcher/sources.py`; removing a source is
 Tom's call. Tests: `tests/test_feed_health_check.py`.
 
 Known runner block (2026-11-09): all 30 `*.substack.com` author feeds return HTTP 403 on GitHub Actions every day since

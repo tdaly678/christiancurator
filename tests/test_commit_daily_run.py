@@ -68,10 +68,28 @@ def repos(tmp_path):
     return origin, clone
 
 
-def _run_commit(cwd, *paths):
+def _run_commit(cwd, *paths, delays="0 0 0 0"):
     return subprocess.run(["bash", COMMIT_SCRIPT, "daily run", *paths], cwd=cwd,
                           capture_output=True, text=True,
-                          env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1"})
+                          env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1",
+                               "CC_PUSH_RETRY_DELAYS": delays})
+
+
+def _reject_pushes(origin, times):
+    """Make the bare origin refuse the next `times` pushes, like GitHub's
+    "fatal error in commit_refs" on Nov 4 2026."""
+    counter = origin / "rejects_left"
+    counter.write_text(str(times))
+    hook = origin / "hooks" / "pre-receive"
+    hook.write_text(
+        "#!/bin/sh\n"
+        f'n=$(cat "{counter}")\n'
+        'if [ "$n" -gt 0 ]; then\n'
+        f'  echo $((n - 1)) > "{counter}"\n'
+        '  echo "fatal error in commit_refs" >&2\n'
+        "  exit 1\n"
+        "fi\n")
+    hook.chmod(0o755)
 
 
 def _main_file(origin, path):
@@ -140,3 +158,34 @@ def test_nothing_to_commit(repos):
     result = _run_commit(runner, "docs/index.html")
     assert result.returncode == 0
     assert "Nothing to commit" in result.stdout
+
+
+def test_transient_push_rejection_is_retried(repos):
+    origin, clone = repos
+    runner = clone("runner")
+    _reject_pushes(origin, 2)
+    (runner / "docs" / "other.json").write_text('{"b": 2}\n')
+
+    result = _run_commit(runner, "docs/other.json")
+    assert result.returncode == 0, result.stdout + result.stderr
+    assert result.stdout.count("Push rejected") == 2
+    assert _main_file(origin, "docs/other.json") == '{"b": 2}\n'
+
+
+def test_push_gives_up_after_every_attempt_fails(repos):
+    origin, clone = repos
+    runner = clone("runner")
+    before = _git(origin, "rev-parse", "main").stdout
+    _reject_pushes(origin, 99)
+    (runner / "docs" / "other.json").write_text('{"c": 3}\n')
+
+    result = _run_commit(runner, "docs/other.json", delays="0 0")
+    assert result.returncode == 1
+    assert result.stdout.count("Push rejected") == 3
+    assert "push failed 3 times" in result.stdout
+    assert _git(origin, "rev-parse", "main").stdout == before
+
+
+def test_default_retry_pauses_back_off():
+    text = Path(COMMIT_SCRIPT).read_text()
+    assert 'CC_PUSH_RETRY_DELAYS:-5 15 30 60' in text

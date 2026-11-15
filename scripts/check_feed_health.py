@@ -7,8 +7,13 @@ become ::warning annotations and a "Feed health" section in the job summary, so
 they stay visible without marking the whole run failed. Pass --strict to exit 1
 on any such streak (the old behavior).
 
-Exit 1 only when docs/feed_health.json is missing (the fetcher did not run), or
-with --strict when a streak reaches ZERO_STREAK_FAIL_DAYS.
+Exit 1 only on a real outage, or with --strict when a streak reaches
+ZERO_STREAK_FAIL_DAYS. An outage is: docs/feed_health.json missing (the fetcher
+did not run); half or more of the feeds empty in this run (network, DNS or a
+fetcher bug, not one quiet blog); or every Substack feed empty in this run (the
+cc-feed-proxy Worker is down, its key rotated on one side only, or the
+CC_FEED_PROXY_* secrets are gone, which is how the 30 feeds went dark Oct 31
+to Nov 9 2026). One feed's long streak is a warning, never a failure.
 
 Substack feeds (*.substack.com) return HTTP 403 to GitHub's runner IPs while the
 same URL and headers return 200 from a home connection (first seen 2026-10-31),
@@ -25,7 +30,27 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from fetcher.rss_fetcher import FEED_HEALTH_PATH, ZERO_STREAK_FAIL_DAYS  # noqa: E402
+from fetcher.rss_fetcher import FEED_HEALTH_PATH, ZERO_STREAK_FAIL_DAYS, uses_proxy  # noqa: E402
+
+OUTAGE_SHARE = 0.5         # this share of feeds empty in one run is an outage
+OUTAGE_MIN_FEEDS = 10      # ...when at least this many feeds are configured
+PROXY_GROUP_MIN = 5        # every Substack feed empty is an outage when there are this many
+
+
+def outages(report: dict) -> list[str]:
+    """Plain reasons this run looks like an outage rather than a few quiet feeds."""
+    sources = report.get("sources", [])
+    reasons = []
+    empty = [s for s in sources if not s.get("n_entries")]
+    if len(sources) >= OUTAGE_MIN_FEEDS and len(empty) >= OUTAGE_SHARE * len(sources):
+        reasons.append(f"{len(empty)} of {len(sources)} feeds returned nothing this run")
+    proxied = [s for s in sources if uses_proxy(s.get("url", ""))]
+    if len(proxied) >= PROXY_GROUP_MIN and all(not s.get("n_entries") for s in proxied):
+        errors = sorted({s.get("proxy_error") or s.get("error") or "no items" for s in proxied})
+        reasons.append(f"all {len(proxied)} Substack feeds returned nothing this run "
+                       f"(check the cc-feed-proxy Worker and the CC_FEED_PROXY_* secrets; "
+                       f"errors: {', '.join(errors)[:200]})")
+    return reasons
 
 
 def is_blocked(source: dict) -> bool:
@@ -93,14 +118,22 @@ def main(argv: list[str] | None = None) -> int:
         with open(summary, "a", encoding="utf-8") as f:
             f.write("## Feed health\n\n" + "\n".join(lines) + "\n")
 
+    down = outages(report)
+    for reason in down:
+        print(f"::error title=Feed outage::{reason}.")
+    if down and summary:
+        with open(summary, "a", encoding="utf-8") as f:
+            f.write("\n**Outage:** " + "; ".join(down) + "\n")
+
     if not long_streaks:
-        print("Feed health OK.")
-        return 0
+        if not down:
+            print("Feed health OK.")
+        return 1 if down else 0
     names = ", ".join(f"{n} ({s['days']} days)" for n, s in long_streaks.items())
     level = "error" if args.strict else "warning"
     print(f"::{level} title=Feed health::{len(long_streaks)} feeds empty for "
           f"{ZERO_STREAK_FAIL_DAYS}+ days: {names}. See the Feed health section of the job summary.")
-    return 1 if args.strict else 0
+    return 1 if (args.strict or down) else 0
 
 
 if __name__ == "__main__":

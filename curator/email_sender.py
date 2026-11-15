@@ -26,6 +26,7 @@ import os
 import json
 import re
 import requests
+import time
 from datetime import date, datetime, timedelta
 from urllib.parse import urlsplit, urlunsplit
 from pathlib import Path
@@ -808,6 +809,9 @@ SENT_STATUSES = {"sent", "queued", "in_process", "inprocess", "archive"}
 PENDING_EMAIL_PATH = Path(__file__).parent.parent / "output" / "email_pending.json"
 
 
+BREVO_CHECK_RETRY_DELAYS = (5, 20)
+
+
 class BrevoCheckError(RuntimeError):
     """Brevo could not tell us whether today's email already went out."""
 
@@ -861,12 +865,21 @@ def brevo_sent_campaign(day: date | None = None) -> dict | None:
     headers = {"accept": "application/json", "api-key": BREVO_API_KEY}
     params = {"type": "classic", "limit": 50, "offset": 0, "sort": "desc",
               "excludeHtmlContent": "true"}
-    try:
-        response = requests.get(BREVO_API_URL, params=params, headers=headers, timeout=30)
-        response.raise_for_status()
-        campaigns = response.json().get("campaigns") or []
-    except (requests.exceptions.RequestException, ValueError) as e:
-        raise BrevoCheckError(f"could not list Brevo campaigns: {e}") from e
+    # The list call is read-only, so a timeout, 429 or 5xx is retried after a
+    # pause: a blip here would otherwise hold a published day's email.
+    for delay in (*BREVO_CHECK_RETRY_DELAYS, None):
+        try:
+            response = requests.get(BREVO_API_URL, params=params, headers=headers, timeout=30)
+            response.raise_for_status()
+            campaigns = response.json().get("campaigns") or []
+            break
+        except (requests.exceptions.RequestException, ValueError) as e:
+            status = getattr(getattr(e, "response", None), "status_code", None)
+            transient = status is None or status == 429 or status >= 500
+            if delay is None or not transient or isinstance(e, ValueError):
+                raise BrevoCheckError(f"could not list Brevo campaigns: {e}") from e
+            print(f"  Brevo campaign check failed ({e}); retrying in {delay}s.")
+            time.sleep(delay)
     return find_sent_campaign(campaigns, day)
 
 

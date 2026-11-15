@@ -97,8 +97,14 @@ jobs:
     needs: guard
     if: needs.guard.outputs.decision == 'run'
     runs-on: ubuntu-latest
+    # A normal run takes about 6 minutes plus up to 20 for the live check. A
+    # hung step would otherwise hold the concurrency group (and every catch-up
+    # slot queued behind it) for GitHub's 6-hour default.
+    timeout-minutes: 60
     permissions:
       contents: write
+      # verify_live.py may request one Pages rebuild when a deploy stalls.
+      pages: write
     # Archive paths, the email date, and the commit subject follow the Eastern
     # calendar. At 5:00 AM ET that is the same date as UTC. It matters when a
     # catch-up is delivered after midnight UTC (8:00 PM EST / 9:00 PM EDT).
@@ -178,7 +184,10 @@ jobs:
         run: python3 -c "import sys;sys.path.insert(0,'.');from frontend import regenerate_sitemap;regenerate_sitemap()"
 
       - name: Build Pagefind search index
-        run: npx pagefind@latest --site docs --output-path docs/_pagefind
+        # Pinned: @latest let a new Pagefind release change or break the index
+        # (and rewrite every fragment) on any morning. 1.6.0 built the
+        # committed index; bump it on purpose.
+        run: npx --yes pagefind@1.6.0 --site docs --output-path docs/_pagefind
 
       - name: Gate topic curated lists (no placeholder / filler entries)
         # Runs BEFORE the commit so a regression never reaches docs/ on main.
@@ -194,6 +203,7 @@ jobs:
         run: python3 scripts/check_voices.py
 
       - name: Commit output files
+        id: commit
         # Commits first, then rebases onto main with no autostash (a conflicted
         # autostash pop pushed conflict markers to the homepage on 2026-11-13).
         # Fails and pushes nothing if any tracked file has conflict markers.
@@ -219,12 +229,26 @@ jobs:
           BREVO_SENDER_EMAIL: ${{ secrets.BREVO_SENDER_EMAIL }}
         run: python3 scripts/send_daily_email.py
 
+      - name: Confirm the edition is live on christiancurator.com
+        # GitHub Pages deploys the push on its own. A deploy can stall and time
+        # out (Nov 10 2026) and nothing retries it. This waits for today's
+        # archive page and homepage date, requests one Pages rebuild after 10
+        # minutes, and fails the run (GitHub emails Tom) if still not live
+        # after 20. See scripts/verify_live.py. Runs even when the email step
+        # failed: the site was pushed either way.
+        id: verify
+        if: ${{ !cancelled() && steps.commit.outcome == 'success' }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/verify_live.py
+
       - name: Ping IndexNow with changed URLs
         # IndexNow notifies Bing / Yandex / Seznam / DuckDuckGo of changed pages.
         # Google does NOT use IndexNow, but submitting accelerates indexing on the others
         # and signals freshness, which is generally cheap and beneficial.
-        # Runs AFTER the commit step so HEAD~1 vs HEAD diffs exactly the run's changes.
-        if: success()
+        # Runs AFTER the commit step so HEAD~1 vs HEAD diffs exactly the run's changes,
+        # and only once the pages are live (no point asking engines to crawl a 404).
+        if: ${{ !cancelled() && steps.verify.outcome == 'success' }}
         run: python3 scripts/indexnow_ping.py
         continue-on-error: true
 
@@ -232,8 +256,11 @@ jobs:
         # docs/feed_health.json carries per-source zero-item streaks across
         # runs (it is committed above). Long streaks are ::warning annotations
         # plus a Feed health section in the job summary; they no longer fail
-        # the run (Substack 403s GitHub's runner IPs). Exits 1 only when the
-        # health file is missing. Add --strict to fail on streaks again.
+        # the run (Substack 403s GitHub's runner IPs; the cc-feed-proxy Worker
+        # carries those feeds). Exits 1 only on a real outage: the health file
+        # missing, half or more feeds empty this run, or every Substack feed
+        # empty (proxy down or its secrets gone). Add --strict to fail on
+        # streaks again.
         if: always()
         run: python3 scripts/check_feed_health.py
 

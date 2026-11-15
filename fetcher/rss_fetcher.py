@@ -27,6 +27,7 @@ import html
 import json
 import os
 import re
+import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timezone
 from email.utils import format_datetime
@@ -56,6 +57,14 @@ READER_USER_AGENT = "ChristianCurator/1.0 (+https://www.christiancurator.com/) f
 ACCEPT = "application/rss+xml, application/atom+xml, application/xml;q=0.9, */*;q=0.8"
 
 FEED_HEALTH_PATH = Path(__file__).parent.parent / "docs" / "feed_health.json"
+
+# A busy host answers 429 or 5xx for a moment and serves the feed seconds later.
+# Substack does this to the cc-feed-proxy Worker: since the Worker went live on
+# 2026-11-09, one to four of the 30 Substack feeds came back HTTP 429 each run.
+# Retry those statuses after a pause (Retry-After when given, capped).
+RETRY_STATUSES = (429, 502, 503, 504)
+RETRY_DELAYS = (4, 12)        # seconds before each retry
+RETRY_AFTER_MAX = 30
 
 # Substack's Cloudflare refuses GitHub runner IPs (HTTP 403). When both env vars
 # are set, *.substack.com feeds go through the cc-feed-proxy Worker
@@ -97,6 +106,26 @@ def _get_feed(feed_url: str, ua: str, health: dict) -> requests.Response:
             health["proxy_error"] = f"{type(e).__name__}: {e}"[:300]
     health.pop("via", None)
     return requests.get(feed_url, timeout=FETCH_TIMEOUT, headers=headers)
+
+def _retry_wait(resp: requests.Response, default: float) -> float:
+    try:
+        given = float(resp.headers.get("Retry-After", ""))
+    except (TypeError, ValueError):
+        return default
+    return max(0.0, min(given, RETRY_AFTER_MAX))
+
+
+def _get_feed_patiently(feed_url: str, ua: str, health: dict) -> requests.Response:
+    """_get_feed, retried after a pause while the host answers 429 or 5xx."""
+    resp = _get_feed(feed_url, ua, health)
+    for delay in RETRY_DELAYS:
+        if resp.status_code not in RETRY_STATUSES:
+            break
+        health["retries"] = health.get("retries", 0) + 1
+        time.sleep(_retry_wait(resp, delay))
+        resp = _get_feed(feed_url, ua, health)
+    return resp
+
 
 # Matches an email address (used to normalize RSS bylines like
 # "jakemeador@gmail.com (Jake Meador)" or bare "jpanyard@christianitytoday.com").
@@ -375,7 +404,7 @@ def fetch_feed(source: dict) -> tuple[list[dict], dict]:
     for ua in (USER_AGENT, READER_USER_AGENT):
         health.pop("error", None)
         try:
-            resp = _get_feed(source["url"], ua, health)
+            resp = _get_feed_patiently(source["url"], ua, health)
         except Exception as e:
             health["error"] = f"{type(e).__name__}: {e}"[:300]
             return [], health

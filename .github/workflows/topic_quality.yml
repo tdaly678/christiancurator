@@ -11,6 +11,7 @@ on:
       - 'docs/topics/**'
       - 'scripts/check_topic_quality.py'
       - 'scripts/topic_quality_baseline.json'
+      - 'requirements.txt'
       - '.github/workflows/topic_quality.yml'
   pull_request:
     paths:
@@ -25,12 +26,15 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-      - name: Install jinja2 (frontend package import)
-        run: pip install "jinja2>=3.1.2"
+      # The whole requirements file, not one package: on Nov 14 2026 this job
+      # installed nothing, and six runs crashed importing jinja2 via frontend.
+      - name: Install dependencies
+        run: pip install -r requirements.txt
       - name: Check topic curated lists
         run: python3 scripts/check_topic_quality.py --report

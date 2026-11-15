@@ -13,6 +13,11 @@
 # merge also fails, exit 1 and push nothing. Before every push,
 # scripts/check_conflict_markers.py must pass.
 #
+# A rejected push or a failed fetch is retried with a pause between attempts
+# (CC_PUSH_RETRY_DELAYS, seconds, default "5 15 30 60"): on Nov 4 2026 GitHub
+# answered one push with "fatal error in commit_refs", a server-side hiccup
+# that an immediate retry can hit again.
+#
 # Replaces `git pull --rebase --autostash` in daily_run.yml, which on
 # Nov 13 2026 committed a conflicted stash pop and pushed "<<<<<<< Updated
 # upstream" into the live homepage. Tests: tests/test_commit_daily_run.py.
@@ -23,6 +28,8 @@ shift
 here="$(cd "$(dirname "$0")" && pwd)"
 remote="${CC_REMOTE:-origin}"
 branch="${CC_BRANCH:-main}"
+read -r -a delays <<< "${CC_PUSH_RETRY_DELAYS:-5 15 30 60}"
+attempts=$(( ${#delays[@]} + 1 ))
 
 python3 "$here/check_conflict_markers.py"
 
@@ -40,8 +47,20 @@ if ! git diff --quiet; then
   echo "Set aside uncommitted edits outside the commit list in a stash."
 fi
 
-for attempt in 1 2 3; do
-  git fetch -q "$remote" "$branch"
+pause() {  # pause N: sleep before attempt N+1, when one follows
+  local d="${delays[$(( $1 - 1 ))]:-}"
+  if [ -n "$d" ]; then
+    echo "Waiting ${d}s before attempt $(( $1 + 1 )) of $attempts."
+    sleep "$d"
+  fi
+}
+
+for (( attempt = 1; attempt <= attempts; attempt++ )); do
+  if ! git fetch -q "$remote" "$branch"; then
+    echo "Fetch failed (attempt $attempt of $attempts)."
+    pause "$attempt"
+    continue
+  fi
   upstream="$(git rev-parse FETCH_HEAD)"
   if git rebase -q "$upstream"; then
     echo "Rebased the run commit onto $remote/$branch."
@@ -67,9 +86,10 @@ for attempt in 1 2 3; do
     echo "Pushed $(git rev-parse --short HEAD) to $remote/$branch."
     exit 0
   fi
-  echo "Push rejected (attempt $attempt); refetching."
+  echo "Push rejected (attempt $attempt of $attempts); refetching."
   git reset -q --hard "$run_commit"
+  pause "$attempt"
 done
 
-echo "::error title=Daily run commit::push rejected 3 times; nothing pushed."
+echo "::error title=Daily run commit::push failed $attempts times; nothing pushed."
 exit 1

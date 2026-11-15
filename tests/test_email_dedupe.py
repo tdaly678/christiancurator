@@ -27,6 +27,17 @@ from scripts import send_daily_email  # noqa: E402
 NOV15 = date(2026, 11, 15)
 
 
+_no_retry_pause = mock.patch.object(es, "BREVO_CHECK_RETRY_DELAYS", (0, 0))
+
+
+def setUpModule():
+    _no_retry_pause.start()
+
+
+def tearDownModule():
+    _no_retry_pause.stop()
+
+
 def campaign(status="sent", sent="2026-11-15T10:07:41.000Z", lists=(2,), **kw):
     c = {"id": kw.pop("id", 101), "name": "Christian Curator — November 15, 2026",
          "status": status, "sentDate": sent, "recipients": {"lists": list(lists)}}
@@ -110,18 +121,36 @@ class BrevoCheckTests(unittest.TestCase):
         self.assertEqual(params["type"], "classic")
         self.assertEqual(params["sort"], "desc")
 
-    def test_network_error_raises(self):
+    def test_network_error_raises_after_retries(self):
         get = mock.Mock(side_effect=requests.exceptions.ConnectionError("down"))
-        with Keys(), mock.patch.object(es.requests, "get", get):
+        with Keys(), mock.patch.object(es.requests, "get", get), \
+                mock.patch.object(es.time, "sleep") as sleep:
             with self.assertRaises(es.BrevoCheckError):
                 es.brevo_sent_campaign()
+        self.assertEqual(get.call_count, 1 + len(es.BREVO_CHECK_RETRY_DELAYS))
+        self.assertEqual(sleep.call_count, len(es.BREVO_CHECK_RETRY_DELAYS))
+
+    def test_a_blip_is_retried(self):
+        ok = brevo_get([campaign()])
+        answers = [requests.exceptions.ReadTimeout("slow"), ok.return_value]
+        get = mock.Mock(side_effect=answers)
+        with Keys(), mock.patch.object(es.requests, "get", get), \
+                mock.patch.object(es.time, "sleep"):
+            self.assertEqual(es.brevo_sent_campaign()["id"], 101)
+        self.assertEqual(get.call_count, 2)
 
     def test_http_error_raises(self):
         resp = mock.Mock()
-        resp.raise_for_status = mock.Mock(side_effect=requests.exceptions.HTTPError("401"))
-        with Keys(), mock.patch.object(es.requests, "get", mock.Mock(return_value=resp)):
+        resp.raise_for_status = mock.Mock(side_effect=requests.exceptions.HTTPError(
+            "401", response=mock.Mock(status_code=401)))
+        get = mock.Mock(return_value=resp)
+        with Keys(), mock.patch.object(es.requests, "get", get), \
+                mock.patch.object(es.time, "sleep") as sleep:
             with self.assertRaises(es.BrevoCheckError):
                 es.brevo_sent_campaign()
+        # A bad key is not retried.
+        self.assertEqual(get.call_count, 1)
+        sleep.assert_not_called()
 
 
 class SendCampaignTests(unittest.TestCase):

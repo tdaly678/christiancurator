@@ -117,3 +117,49 @@ def test_proxy_exception_falls_back_to_direct(proxy_env, calls):
     assert [c["url"] for c in log] == [PROXY, FEED]
     assert len(articles) == 1
     assert health["proxy_error"].startswith("ConnectionError")
+
+
+@pytest.fixture
+def sleeps(monkeypatch):
+    waited = []
+    monkeypatch.setattr(rss_fetcher.time, "sleep", waited.append)
+    return waited
+
+
+def test_proxy_429_is_retried_after_a_pause(monkeypatch, proxy_env, sleeps):
+    # Nov 10 to 14 2026: one to four Substack feeds a day came back 429 through
+    # the Worker and the run kept nothing from them.
+    log = []
+    answers = iter([FakeResp(429, b"", {"X-CC-Upstream-Status": "429"}),
+                    FakeResp(headers={"X-CC-Upstream-Status": "200"})])
+
+    def fake_get(url, timeout=None, headers=None, params=None):
+        log.append(url)
+        return next(answers)
+
+    monkeypatch.setattr(rss_fetcher.requests, "get", fake_get)
+    articles, health = rss_fetcher.fetch_feed(_source())
+    assert len(articles) == 1
+    assert health["http_status"] == 200 and health["retries"] == 1
+    assert sleeps == [rss_fetcher.RETRY_DELAYS[0]]
+    assert len(log) == 2
+
+
+def test_retry_after_header_is_honored_and_capped(proxy_env, calls, sleeps):
+    _, script = calls
+    script[PROXY] = FakeResp(429, b"", {"X-CC-Upstream-Status": "429", "Retry-After": "600"})
+    articles, health = rss_fetcher.fetch_feed(_source())
+    assert articles == []
+    assert health["http_status"] == 429
+    # Two retries for each user agent, every wait capped.
+    assert sleeps == [rss_fetcher.RETRY_AFTER_MAX] * 4
+
+
+def test_403_is_not_retried(monkeypatch, calls, sleeps):
+    monkeypatch.delenv("CC_FEED_PROXY_URL", raising=False)
+    monkeypatch.delenv("CC_FEED_PROXY_KEY", raising=False)
+    log, script = calls
+    script[FEED] = FakeResp(403, b"")
+    articles, health = rss_fetcher.fetch_feed(_source())
+    assert articles == [] and sleeps == [] and "retries" not in health
+    assert len(log) == 2  # browser UA, then the feed-reader UA

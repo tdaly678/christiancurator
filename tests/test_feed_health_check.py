@@ -74,3 +74,38 @@ def test_healthy_report_is_ok(tmp_path, monkeypatch, capsys):
     code, _ = _run(tmp_path, monkeypatch, report)
     assert code == 0
     assert "Feed health OK." in capsys.readouterr().out
+
+
+def _feeds(n_ok, n_empty, substack_ok=0, substack_empty=0):
+    rows = [{"source": f"ok{i}", "url": f"https://ok{i}/feed", "http_status": 200, "n_entries": 5}
+            for i in range(n_ok)]
+    rows += [{"source": f"e{i}", "url": f"https://e{i}/feed", "http_status": 200, "n_entries": 0}
+             for i in range(n_empty)]
+    rows += [{"source": f"s{i}", "url": f"https://s{i}.substack.com/feed", "http_status": 200,
+              "n_entries": 3, "via": "proxy"} for i in range(substack_ok)]
+    rows += [{"source": f"z{i}", "url": f"https://z{i}.substack.com/feed", "http_status": 403,
+              "n_entries": 0, "error": "HTTP 403", "proxy_error": "HTTP 401"}
+             for i in range(substack_empty)]
+    return {"run_at": "2026-11-15T10:00:00", "sources": rows, "zero_streaks": {}}
+
+
+def test_a_few_429s_through_the_proxy_are_not_an_outage(tmp_path, monkeypatch, capsys):
+    code, _ = _run(tmp_path, monkeypatch, _feeds(43, 4, substack_ok=26, substack_empty=4))
+    assert code == 0
+    assert "::error" not in capsys.readouterr().out
+
+
+def test_most_feeds_empty_is_an_outage(tmp_path, monkeypatch, capsys):
+    code, summary = _run(tmp_path, monkeypatch, _feeds(10, 30))
+    out = capsys.readouterr().out
+    assert code == 1
+    assert "::error title=Feed outage::30 of 40 feeds" in out
+    assert "**Outage:**" in summary.read_text()
+
+
+def test_every_substack_feed_empty_is_a_proxy_outage(tmp_path, monkeypatch, capsys):
+    # Oct 31 to Nov 9 2026: 30 Substack feeds 403 on the runner, a third of all feeds.
+    code, _ = _run(tmp_path, monkeypatch, _feeds(47, 0, substack_empty=30))
+    out = capsys.readouterr().out
+    assert code == 1
+    assert "all 30 Substack feeds returned nothing" in out and "HTTP 401" in out
