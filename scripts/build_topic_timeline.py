@@ -116,6 +116,7 @@ SERIF = "'Lora', Georgia, serif"
 BRAND = "christiancurator.com"
 W_WIDE, W_NARROW, PAD = 740, 360, 14
 MIN_SHARE_H = 630
+MAX_SHARE_H = 675    # X shows 1200 x 675 uncropped; a taller drawing is scaled down to fit
 KINDS = {"period", "event", "shared"}
 TYPES = ("timeline", "spectrum", "matrix", "orgchart", "chronology", "tree")
 TYPE_KEYS = {"timeline": ("stations", "common", "lanes"), "spectrum": ("axis", "positions"),
@@ -1505,14 +1506,20 @@ def share_html(d: dict, width: int = 1200) -> tuple[str, int]:
     vb = re.search(r'viewBox="0 0 (\d+) (\d+)"', svg)
     vw, vh = int(vb.group(1)), int(vb.group(2))
     pad = 36
-    inner = int(round((width - 2 * pad) * vh / vw))
+    svg_w = width - 2 * pad
+    inner = int(round(svg_w * vh / vw))
+    if inner + 2 * pad > MAX_SHARE_H:            # too tall for X: slimmer margin, smaller drawing, centred
+        pad = 24
+        inner = MAX_SHARE_H - 2 * pad
+        svg_w = int(vw * inner / vh)
     height = max(inner + 2 * pad, MIN_SHARE_H)   # X crops a short card; keep it near 1200 x 630 or taller
     top = (height - inner) // 2
+    left = (width - svg_w) // 2
     fonts = (f"@font-face{{font-family:'Source Sans 3';src:url('{(FONTS / 'SourceSans3-Variable.ttf').as_uri()}');"
              f"font-weight:200 900;}}@font-face{{font-family:'Lora';src:url('{(FONTS / 'Lora-Variable.ttf').as_uri()}');"
              f"font-weight:400 700;}}")
     page = (f"<!doctype html><html><head><meta charset='utf-8'><style>{fonts}html,body{{margin:0;background:#fff;}}"
-            f"svg{{display:block;width:{width - 2 * pad}px;height:auto;margin:{top}px {pad}px;}}</style></head>"
+            f"svg{{display:block;width:{svg_w}px;height:auto;margin:{top}px {left}px;}}</style></head>"
             f"<body>{svg}</body></html>")
     return page, height
 

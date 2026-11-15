@@ -604,7 +604,8 @@ schemas: `.christian-orchestrator/team/A-foundation-report.md`.
   lanes as columns, table version, common ground, "Where they differ", one sourced voice per view) between
   `<!-- CC-TIMELINE:<id>:START/END -->`, styles inline in the block (shared assets untouched). Every source needs a
   URL, `fetched` date and a quote found on the page; voices link only when linkable. `--check` fails on a stale
-  page; `--png` writes the share image to `docs/og/charts/<slug>-<id>.png` (needs Chrome). First use: eschatology
+  page; `--png` writes the share image to `docs/og/charts/<slug>-<id>.png` (needs Chrome; 1200 wide and 630 to 675
+  tall, a taller drawing is scaled down to fit so X does not crop it). First use: eschatology
   (`#timelines`, added to the jump nav in `build_topic_top.py`). Run `build_topic_top.py --slug <slug>` after it.
   Two more types in the same builder (`"type"` in the data file): `spectrum` (one axis with numbered dots
   and cards, or two axes with `axis_y` as a plot) and `matrix` (views across, questions down, optional
