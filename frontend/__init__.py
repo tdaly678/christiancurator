@@ -1325,15 +1325,17 @@ def regenerate_sitemap():
                 ))
 
     # --- Voices (deep author/contributor profiles) ---
-    # Pages listed in frontend/voices_noindex.json (written only by
-    # scripts/prepare_noindex.py --apply) carry a robots noindex tag, so they
-    # are left out here to keep the sitemap and the page in agreement.
+    # The page's own robots tag decides (frontend/robots.py): a page whose HTML
+    # says noindex is never listed. frontend/voices_noindex.json is honoured too,
+    # but it can lag the pages (the Nov 14 2026 run noindexed 10 new pages whose
+    # list update was never committed, and the Nov 15 gate failed on them).
+    from frontend.robots import page_has_noindex
     voice_entries = []
     noindex_voices = load_noindex_voices()
     if VOICES_DIR.exists():
         for voice_dir in sorted(VOICES_DIR.iterdir()):
             idx = voice_dir / "index.html"
-            if voice_dir.name in noindex_voices:
+            if voice_dir.name in noindex_voices or page_has_noindex(idx):
                 continue
             if voice_dir.is_dir() and idx.exists():
                 voice_entries.append((

@@ -40,6 +40,7 @@ sys.path.insert(0, str(REPO_ROOT / "scripts"))
 import build_recent_articles as recent  # noqa: E402
 from curator import voice_pilot as vp  # noqa: E402
 from curator.voice_filters import HUB_SLUGS  # noqa: E402
+from frontend.robots import html_has_noindex  # noqa: E402
 
 DOCS = REPO_ROOT / "docs"
 VOICES = DOCS / "voices"
@@ -50,8 +51,6 @@ SITEMAP = DOCS / "sitemap-voices.xml"
 BASELINE = Path(__file__).resolve().parent / "voices_check_baseline.json"
 
 DASH_RE = re.compile("[–—]")
-ROBOTS_NOINDEX_RE = re.compile(r'<meta\b[^>]*name="robots"[^>]*content="[^"]*noindex|'
-                               r'<meta\b[^>]*content="[^"]*noindex[^"]*"[^>]*name="robots"', re.I)
 RECENT_LINK_RE = re.compile(r'<a class="cc-recent-link" href="([^"]+)"[^>]*>(.*?)</a>', re.S)
 
 
@@ -107,7 +106,7 @@ def run_checks() -> dict[str, list[tuple[str, str]]]:
             continue
         if slug in retired:
             out["posting-account"].append((slug, "retired slug is a full page, not a stub"))
-        has_robots_noindex = bool(ROBOTS_NOINDEX_RE.search(page))
+        has_robots_noindex = html_has_noindex(page)
         if slug in noindex and not has_robots_noindex:
             out["noindex"].append((slug, "listed in voices_noindex.json but the page has no robots noindex"))
         if (slug in noindex or has_robots_noindex) and slug in in_sitemap:
