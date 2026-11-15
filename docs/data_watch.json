@@ -113,6 +113,12 @@
       "status": "fetched",
       "attempts": 1,
       "note": "0 verified figure(s)"
+    },
+    "https://pewresearch.org/short-reads/2026/11/12/a-first-look-at-polling-performance-in-2026": {
+      "date": "2026-11-15",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
     }
   },
   "fresh": {
@@ -139,6 +145,12 @@
         "date": "2026-11-14",
         "title": "Where Americans Get News Relates to How They Engage in Public Life",
         "url": "https://www.pewresearch.org/short-reads/2026/11/13/where-americans-get-news-relates-to-how-they-engage-in-public-life/",
+        "source": "Pew Research"
+      },
+      {
+        "date": "2026-11-15",
+        "title": "A First Look at Polling Performance in 2026",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/12/a-first-look-at-polling-performance-in-2026/",
         "source": "Pew Research"
       }
     ],
@@ -214,6 +226,12 @@
         "title": "What Does It Mean That God Is Omniscient?",
         "url": "https://feeds.ligonier.org/~/972452714/0/ligonierministriesblog",
         "source": "Ligonier Ministries"
+      },
+      {
+        "date": "2026-11-15",
+        "title": "A First Look at Polling Performance in 2026",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/12/a-first-look-at-polling-performance-in-2026/",
+        "source": "Pew Research"
       }
     ],
     "discipleship": [
@@ -317,6 +335,20 @@
         "url": "https://www.pewresearch.org/short-reads/2026/11/12/many-black-adults-say-close-relationships-influence-their-views-about-being-a-black-man-or-woman/",
         "source": "Pew Research"
       }
+    ],
+    "artificial-intelligence": [
+      {
+        "date": "2026-11-12",
+        "title": "Key Facts About U.S. Data Centers",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/11/key-facts-about-us-data-centers/",
+        "source": "Pew Research"
+      },
+      {
+        "date": "2026-11-12",
+        "title": "Expert Brief: Public Opinion on AI in Healthcare",
+        "url": "https://www.pewresearch.org/2026/11/11/expert-brief-public-opinion-on-ai-in-healthcare/",
+        "source": "Pew Research"
+      }
     ]
   },
   "figures": {
@@ -345,9 +377,9 @@
       }
     ]
   },
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "last_run": {
-    "date": "2026-11-14",
+    "date": "2026-11-15",
     "stories": [
       {
         "title": "Study: 2 in 3 churchgoers fail Bible literacy quiz",
@@ -357,11 +389,7 @@
           "publishers": [
             "Lifeway Research"
           ],
-          "figures": [
-            "2 in 3",
-            "65 percent",
-            "1 in 10"
-          ],
+          "figures": [],
           "words": [
             "quiz"
           ],
@@ -375,32 +403,7 @@
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "verified 94 percent (Lifeway Research, reuse) for biblical-literacy",
-          "verified Three in 4 (Lifeway Research, reuse) for biblical-literacy"
-        ]
-      },
-      {
-        "title": "Leaving Well: 5 Ways to Prepare Your Church for Pastoral Transition",
-        "url": "https://research.lifeway.com/2026/11/11/leaving-well-5-ways-to-prepare-your-church-for-pastoral-transition/",
-        "source": "Lifeway Research",
-        "signals": {
-          "publishers": [
-            "Lifeway Research"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "pastoral-ministry",
-          "local-church"
-        ],
-        "trend": 7.75,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-11 (0 verified figure(s))"
+          "page already checked on 2026-11-14 (2 verified figure(s))"
         ]
       },
       {
@@ -443,7 +446,7 @@
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
+          "page already checked on 2026-11-14 (0 verified figure(s))"
         ]
       },
       {
@@ -462,7 +465,7 @@
         },
         "topics": [
           "technology-and-discipleship",
-          "ai-and-the-church"
+          "artificial-intelligence"
         ],
         "trend": 6.0,
         "outlets": 1,
@@ -470,6 +473,26 @@
         "actions": [
           "linked in Fresh From the Digest",
           "page already checked on 2026-11-12 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "The Presbyterian Church (USA) Is About to Cross a Historic Threshold",
+        "url": "https://www.graphsaboutreligion.com/p/the-presbyterian-church-usa-is-about",
+        "source": "Ryan Burge",
+        "signals": {
+          "publishers": [
+            "Ryan Burge"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 6.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
         ]
       },
       {
@@ -506,7 +529,7 @@
         },
         "topics": [
           "technology-and-discipleship",
-          "ai-and-the-church"
+          "artificial-intelligence"
         ],
         "trend": 4.25,
         "outlets": 1,
@@ -533,6 +556,32 @@
           "racial-reconciliation"
         ],
         "trend": 4.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-14 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "A First Look at Polling Performance in 2026",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/12/a-first-look-at-polling-performance-in-2026/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [
+            "polls"
+          ],
+          "data_tag": true
+        },
+        "topics": [
+          "politics-and-the-church",
+          "predestination-free-will"
+        ],
+        "trend": 3.25,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -564,26 +613,6 @@
         ]
       },
       {
-        "title": "Why Don’t Religious Nones Want Kids?",
-        "url": "https://www.graphsaboutreligion.com/p/why-dont-religious-nones-want-kids",
-        "source": "Ryan Burge",
-        "signals": {
-          "publishers": [
-            "Ryan Burge"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 2.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
         "title": "2026 Christmas Gift Guide: Save on Resources for Everyone",
         "url": "https://feeds.ligonier.org/~/972439013/0/ligonierministriesblog",
         "source": "Ligonier Ministries",
@@ -594,6 +623,31 @@
             "50%"
           ],
           "words": [],
+          "data_tag": false
+        },
+        "topics": [
+          "discipleship"
+        ],
+        "trend": 2.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-10 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "Acknowledgements",
+        "url": "https://www.pewresearch.org/race-and-ethnicity/2026/11/12/single-black-adults-acknowledgements/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [
+            "survey"
+          ],
           "data_tag": false
         },
         "topics": [],
@@ -630,8 +684,8 @@
         ]
       },
       {
-        "title": "The Presbyterian Church (USA) Is About to Cross a Historic Threshold",
-        "url": "https://www.graphsaboutreligion.com/p/the-presbyterian-church-usa-is-about",
+        "title": "Why Don’t Religious Nones Want Kids?",
+        "url": "https://www.graphsaboutreligion.com/p/why-dont-religious-nones-want-kids",
         "source": "Ryan Burge",
         "signals": {
           "publishers": [
@@ -641,36 +695,15 @@
           "words": [],
           "data_tag": true
         },
-        "topics": [],
-        "trend": 1.75,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "Pastoring after the midterm elections",
-        "url": "https://erlc.com/resource/pastoring-after-the-midterm-elections/",
-        "source": "ERLC",
-        "signals": {
-          "publishers": [],
-          "figures": [],
-          "words": [
-            "polls"
-          ],
-          "data_tag": false
-        },
         "topics": [
-          "politics-and-the-church",
-          "pastoral-ministry"
+          "christian-parenting"
         ],
-        "trend": 1.5,
+        "trend": 0.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "page already checked on 2026-11-12 (0 verified figure(s))"
+          "page already checked on 2026-11-10 (0 verified figure(s))"
         ]
       },
       {
@@ -686,22 +719,40 @@
           "data_tag": false
         },
         "topics": [],
-        "trend": 0.5,
+        "trend": 0.25,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "no topic page matched"
         ]
-      }
-    ],
-    "pages": [
+      },
       {
-        "slug": "biblical-literacy",
-        "kind": "data-file",
-        "note": "added 2 watch row(s) (reuse, reuse); builder rerun"
+        "title": "ERLC, state leaders respond to Nov. 3 ballot measure successes, failures",
+        "url": "https://erlc.com/press/erlc-state-leaders-respond-to-nov-3-ballot-measure-successes-failures/",
+        "source": "ERLC",
+        "signals": {
+          "publishers": [],
+          "figures": [
+            "56 percent"
+          ],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [
+          "politics-and-the-church",
+          "predestination-free-will",
+          "evangelicalism"
+        ],
+        "trend": 0.0,
+        "outlets": 1,
+        "on_digest": false,
+        "actions": [
+          "page already checked on 2026-11-11 (0 verified figure(s))"
+        ]
       }
     ],
-    "fetched": 3,
-    "hits": 15
+    "pages": [],
+    "fetched": 1,
+    "hits": 16
   }
 }

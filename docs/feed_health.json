@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-14T10:01:15+00:00",
+  "run_at": "2026-11-15T14:31:50+00:00",
   "sources": [
     {
       "source": "The Gospel Coalition",
@@ -7,7 +7,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 60,
-      "newest_date": "2026-11-14",
+      "newest_date": "2026-11-15",
       "bozo": false,
       "stale": false
     },
@@ -31,8 +31,8 @@
       "url": "https://feed.desiringgod.org/articles-by-desiring-god.rss",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 642,
-      "newest_date": "2026-11-08",
+      "n_entries": 643,
+      "newest_date": "2026-11-15",
       "bozo": false,
       "stale": false
     },
@@ -67,7 +67,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-14",
       "bozo": false,
       "stale": false
     },
@@ -87,7 +87,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 30,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-15",
       "bozo": false,
       "stale": false
     },
@@ -106,7 +106,7 @@
       "url": "https://www.ligonier.org/feed/",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 42,
+      "n_entries": 41,
       "newest_date": "2026-11-13",
       "bozo": false,
       "user_agent": "reader",
@@ -133,7 +133,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-15",
       "bozo": false,
       "stale": false
     },
@@ -192,8 +192,8 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 25,
-      "newest_date": "2026-11-14",
+      "n_entries": 24,
+      "newest_date": "2026-11-15",
       "bozo": false,
       "stale": false
     },
@@ -202,8 +202,8 @@
       "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 55,
-      "newest_date": "2026-11-14",
+      "n_entries": 57,
+      "newest_date": "2026-11-15",
       "bozo": false,
       "stale": false
     },
@@ -213,7 +213,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 70,
-      "newest_date": "2026-11-14",
+      "newest_date": "2026-11-15",
       "bozo": false,
       "stale": false
     },
@@ -223,7 +223,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-15",
       "bozo": false,
       "stale": false
     },
@@ -253,12 +253,12 @@
       "source": "Laura Wifler",
       "url": "https://laurawifler.substack.com/feed",
       "role": "primary",
-      "http_status": 429,
-      "n_entries": 0,
-      "newest_date": null,
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-11-12",
       "bozo": false,
       "via": "proxy",
-      "error": "HTTP 429"
+      "stale": false
     },
     {
       "source": "Karen Swallow Prior",
@@ -311,21 +311,22 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-14",
+      "newest_date": "2026-11-15",
       "bozo": false,
       "via": "proxy",
+      "retries": 2,
       "stale": false
     },
     {
       "source": "Matthew Lee Anderson",
       "url": "https://matthewleeanderson.substack.com/feed",
       "role": "primary",
-      "http_status": 429,
-      "n_entries": 0,
-      "newest_date": null,
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-11-12",
       "bozo": false,
       "via": "proxy",
-      "error": "HTTP 429"
+      "stale": false
     },
     {
       "source": "O. Alan Noble",
@@ -353,9 +354,10 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 100,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-14",
       "bozo": false,
       "url_dropped": [
+        "📸🚗 What we know about Flock cameras",
         "Majorities say social media, news orgs have too much power in politics",
         "A Look at Catholics in Latin America as Pope Leo Visits",
         "📊 How did the midterm polls perform?",
@@ -363,7 +365,7 @@
         "Americans’ trust in local and national news organizations increases"
       ],
       "byline_from_page": {
-        "resolved": 15,
+        "resolved": 14,
         "no_byline": 0,
         "failed": 0
       },
@@ -420,6 +422,7 @@
       "newest_date": "2026-11-11",
       "bozo": false,
       "via": "proxy",
+      "retries": 1,
       "stale": false
     },
     {
@@ -448,12 +451,12 @@
       "source": "Daniel K. Williams",
       "url": "https://danielkwilliams.substack.com/feed",
       "role": "primary",
-      "http_status": 429,
-      "n_entries": 0,
-      "newest_date": null,
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-11-06",
       "bozo": false,
       "via": "proxy",
-      "error": "HTTP 429"
+      "stale": false
     },
     {
       "source": "Tsh Oxenreider",
@@ -495,7 +498,6 @@
       "newest_date": "2026-10-30",
       "bozo": false,
       "via": "proxy",
-      "user_agent": "reader",
       "stale": false
     },
     {
@@ -514,7 +516,7 @@
       "role": "discovery",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-14",
+      "newest_date": "2026-11-15",
       "bozo": false,
       "stale": false
     },
@@ -533,11 +535,11 @@
       "source": "Faithfully Magazine",
       "url": "https://faithfullymagazine.com/feed/",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 4,
-      "newest_date": "2026-11-14",
-      "bozo": false,
-      "stale": false
+      "http_status": 202,
+      "n_entries": 0,
+      "newest_date": null,
+      "bozo": true,
+      "error": "parse error: <unknown>:2:119: not well-formed (invalid token)"
     },
     {
       "source": "Sean McDowell",
@@ -574,12 +576,12 @@
       "source": "Stephen McAlpine",
       "url": "https://stephenmcalpine.substack.com/feed",
       "role": "primary",
-      "http_status": 429,
-      "n_entries": 0,
-      "newest_date": null,
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-11-11",
       "bozo": false,
       "via": "proxy",
-      "error": "HTTP 429"
+      "stale": false
     },
     {
       "source": "Chris Martin",
@@ -619,7 +621,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-14",
+      "newest_date": "2026-11-15",
       "bozo": false,
       "stale": false
     },
@@ -650,7 +652,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-14",
       "bozo": false,
       "stale": false
     },
@@ -660,7 +662,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-10",
+      "newest_date": "2026-11-15",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -671,7 +673,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-15",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -682,7 +684,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-14",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -693,7 +695,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-10-25",
+      "newest_date": "2026-11-15",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -726,7 +728,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-12",
+      "newest_date": "2026-11-14",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -850,24 +852,9 @@
     }
   ],
   "zero_streaks": {
-    "Laura Wifler": {
-      "since": "2026-11-14",
-      "last_date": "2026-11-14",
-      "days": 1
-    },
-    "Matthew Lee Anderson": {
-      "since": "2026-11-14",
-      "last_date": "2026-11-14",
-      "days": 1
-    },
-    "Daniel K. Williams": {
-      "since": "2026-11-14",
-      "last_date": "2026-11-14",
-      "days": 1
-    },
-    "Stephen McAlpine": {
-      "since": "2026-11-14",
-      "last_date": "2026-11-14",
+    "Faithfully Magazine": {
+      "since": "2026-11-15",
+      "last_date": "2026-11-15",
       "days": 1
     }
   }
