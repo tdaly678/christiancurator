@@ -9,3 +9,4 @@ output/articles.json
 .env.*
 output/ai_health.json
 .venv/
+output/email_pending.json

@@ -5,6 +5,10 @@ Usage:
     python main.py              # full run including email
     python main.py --no-email   # full run, skip email (use send_email.py to send later)
     python main.py --force-email  # send email even if pipeline already ran today
+    python main.py --defer-email  # build the email but hold it in
+                                  # output/email_pending.json; the daily workflow
+                                  # sends it with scripts/send_daily_email.py
+                                  # only after the site is committed and pushed
 
 Steps:
     1. Fetch articles from RSS sources (fetcher layer)
@@ -17,7 +21,8 @@ Steps:
     6. Update Research & Data section
        (role "media" video/podcast items skip steps 2-5 and only feed the
        Watch and Listen lane picked in frontend/layout.py)
-    7. Send email (skipped with --no-email, or if already sent today)
+    7. Send email (skipped with --no-email, or if already sent today: the
+       local archive exists, or Brevo already shows today's campaign)
 """
 
 import json
@@ -30,7 +35,8 @@ from curator.scorer import score_articles
 from curator.title_rewriter import rewrite_titles, REWRITE_TITLES_ENABLED
 from curator.point_counterpoint import build_point_counterpoint
 from curator.daily_summary import generate_daily_summary, save_theme_history
-from curator.email_sender import send_email
+from curator.email_sender import (send_email, prepare_email, save_pending_email,
+                                   PENDING_EMAIL_PATH)
 from curator.voice_generator import generate_new_voice_pages
 from curator.ai_health import write_report as write_ai_health_report
 from output import (OUTPUT_JSON_PATH, write_output, save_yesterday, load_yesterday, load_shown_urls,
@@ -51,7 +57,11 @@ def already_ran_today() -> bool:
 def main():
     send_email_flag = "--no-email" not in sys.argv
     force_email = "--force-email" in sys.argv
+    defer_email = "--defer-email" in sys.argv
     print("=== ChristianCurator Pipeline Starting ===\n")
+    if defer_email:
+        # Never let a held email from an earlier run go out with this one.
+        PENDING_EMAIL_PATH.unlink(missing_ok=True)
 
     # --- Duplicate-run guard: skip email if pipeline already ran today ---
     if send_email_flag and not force_email and already_ran_today():
@@ -160,10 +170,19 @@ def main():
         print(f"  (voice backlinks refresh skipped: {e})")
 
     # --- Send Email ---
-    if send_email_flag:
+    if send_email_flag and defer_email:
+        print("\n[8/8] Building daily email; it is sent after the commit step...")
+        subject, html_content = prepare_email(articles, yesterday_articles,
+                                              daily_summary=daily_summary,
+                                              research_articles=research_articles,
+                                              layout=layout)
+        pending = save_pending_email(subject, html_content, force=force_email)
+        print(f"  Email held for send: {pending}")
+    elif send_email_flag:
         print("\n[8/8] Sending daily email via Brevo...")
         send_email(articles, yesterday_articles, daily_summary=daily_summary,
-                   research_articles=research_articles, layout=layout)
+                   research_articles=research_articles, layout=layout,
+                   force=force_email)
     else:
         print("\n[8/8] Email skipped (--no-email). Run send_email.py when ready to send.")
 

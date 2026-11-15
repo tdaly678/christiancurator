@@ -802,14 +802,80 @@ def save_email_html(html_content: str) -> str:
 
 # ── Send ───────────────────────────────────────────────────────────────────────
 
-def send_email(articles: list[dict], yesterday_articles: list[dict] = None,
-               daily_summary: dict = None, research_articles: list[dict] = None,
-               layout: dict = None) -> bool:
+# Brevo campaign statuses that mean the list already got (or is getting) the
+# email. "draft" (creation worked, sendNow failed) and "suspended" do not count.
+SENT_STATUSES = {"sent", "queued", "in_process", "inprocess", "archive"}
+PENDING_EMAIL_PATH = Path(__file__).parent.parent / "output" / "email_pending.json"
 
+
+class BrevoCheckError(RuntimeError):
+    """Brevo could not tell us whether today's email already went out."""
+
+
+def _campaign_day(campaign: dict) -> date | None:
+    """Eastern calendar date a campaign was sent (or scheduled, or created)."""
+    for key in ("sentDate", "scheduledAt", "createdAt"):
+        value = campaign.get(key)
+        if not value:
+            continue
+        try:
+            stamp = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        if stamp.tzinfo is None:
+            stamp = stamp.replace(tzinfo=ZoneInfo("UTC"))
+        return stamp.astimezone(EDITION_TZ).date()
+    return None
+
+
+def _campaign_targets_list(campaign: dict, list_id: int) -> bool:
+    lists = (campaign.get("recipients") or {}).get("lists") or []
+    if lists:
+        return list_id in {int(x) for x in lists if str(x).isdigit()}
+    # No recipient detail: fall back to our own campaign name.
+    return str(campaign.get("name", "")).startswith(BREVO_SENDER_NAME)
+
+
+def find_sent_campaign(campaigns: list[dict], day: date,
+                       list_id: int = BREVO_LIST_ID) -> dict | None:
+    """The first campaign already sent to `list_id` on Eastern date `day`."""
+    for c in campaigns:
+        status = str(c.get("status", "")).replace("-", "_").lower()
+        if status not in SENT_STATUSES:
+            continue
+        if _campaign_day(c) != day:
+            continue
+        if _campaign_targets_list(c, list_id):
+            return c
+    return None
+
+
+def brevo_sent_campaign(day: date | None = None) -> dict | None:
+    """Ask Brevo whether today's email already went to the list.
+
+    Brevo is the record of what was sent, so this does not depend on git or on
+    any later workflow step having committed. Raises BrevoCheckError when the
+    answer is unknown.
+    """
+    day = day or edition_date()
+    headers = {"accept": "application/json", "api-key": BREVO_API_KEY}
+    params = {"type": "classic", "limit": 50, "offset": 0, "sort": "desc",
+              "excludeHtmlContent": "true"}
+    try:
+        response = requests.get(BREVO_API_URL, params=params, headers=headers, timeout=30)
+        response.raise_for_status()
+        campaigns = response.json().get("campaigns") or []
+    except (requests.exceptions.RequestException, ValueError) as e:
+        raise BrevoCheckError(f"could not list Brevo campaigns: {e}") from e
+    return find_sent_campaign(campaigns, day)
+
+
+def prepare_email(articles: list[dict], yesterday_articles: list[dict] = None,
+                  daily_summary: dict = None, research_articles: list[dict] = None,
+                  layout: dict = None) -> tuple[str, str]:
+    """Build the email, save docs/email_draft.html, return (subject, html)."""
     if isinstance(articles, dict):
         articles = articles.get("articles", [])
-
-    today        = date.today().strftime("%B %-d, %Y")
     subject      = build_subject(daily_summary)
     html_content = build_email_html(articles, yesterday_articles,
                                     daily_summary=daily_summary,
@@ -817,7 +883,29 @@ def send_email(articles: list[dict], yesterday_articles: list[dict] = None,
                                     layout=layout)
     path = save_email_html(html_content)
     print(f"  Email HTML saved to: {path}")
+    return subject, html_content
 
+
+def save_pending_email(subject: str, html_content: str, *, force: bool = False,
+                       path: Path = PENDING_EMAIL_PATH) -> Path:
+    """Hold the built email for scripts/send_daily_email.py (after the commit)."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps({
+        "edition": edition_date().isoformat(),
+        "subject": subject,
+        "html": html_content,
+        "force": bool(force),
+    }, ensure_ascii=False), encoding="utf-8")
+    return path
+
+
+def send_campaign(subject: str, html_content: str, *, force: bool = False) -> bool:
+    """Create and send the Brevo campaign. True only when Brevo accepted the send.
+
+    Unless `force`, refuses when Brevo already shows a campaign sent to the list
+    on today's Eastern date, and refuses when Brevo cannot be asked (fails
+    closed: a missed email can be sent by hand, a duplicate cannot be unsent).
+    """
     if not BREVO_API_KEY:
         print("  Warning: BREVO_API_KEY not set. Skipping email send.")
         return False
@@ -825,6 +913,21 @@ def send_email(articles: list[dict], yesterday_articles: list[dict] = None,
         print("  Warning: BREVO_SENDER_EMAIL not set. Skipping email send.")
         return False
 
+    if not force:
+        try:
+            already = brevo_sent_campaign()
+        except BrevoCheckError as e:
+            print(f"::error::Email not sent: {e}. Nothing was sent, so no duplicate is "
+                  "possible. Rerun the workflow with force_email once Brevo answers, "
+                  "after checking Brevo by hand.")
+            return False
+        if already:
+            print(f"  Email already sent today (Brevo campaign {already.get('id')}, "
+                  f"'{already.get('name', '')}', status {already.get('status')}). "
+                  "Not sending again. Use force_email to send anyway.")
+            return False
+
+    today = edition_date().strftime("%B %-d, %Y")
     headers = {
         "accept": "application/json",
         "api-key": BREVO_API_KEY,
@@ -860,3 +963,13 @@ def send_email(articles: list[dict], yesterday_articles: list[dict] = None,
         print(f"  Brevo response: {e.response.text}")
         print(f"  Campaign was created (ID {campaign_id}) — log into Brevo to send manually.")
         return False
+
+
+def send_email(articles: list[dict], yesterday_articles: list[dict] = None,
+               daily_summary: dict = None, research_articles: list[dict] = None,
+               layout: dict = None, force: bool = False) -> bool:
+    subject, html_content = prepare_email(articles, yesterday_articles,
+                                          daily_summary=daily_summary,
+                                          research_articles=research_articles,
+                                          layout=layout)
+    return send_campaign(subject, html_content, force=force)

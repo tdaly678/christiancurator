@@ -5,10 +5,12 @@ Use this when you ran main.py --no-email and are ready to send,
 or to re-send after making edits to the site.
 
 Usage:
-    python send_email.py
+    python send_email.py          # refuses if Brevo shows today's email already sent
+    python send_email.py --force  # send again anyway (a deliberate resend)
 """
 
 import json
+import sys
 from pathlib import Path
 from curator.email_sender import send_email
 from frontend import load_research_articles
@@ -54,9 +56,10 @@ def main():
     layout = build_homepage_layout(articles, pairings, research_articles,
                                    media_items=media_items, daily_summary=daily_summary)
 
-    send_email(articles, yesterday_articles, daily_summary=daily_summary,
-               research_articles=research_articles, layout=layout)
-    print("=== Email Sent ===")
+    sent = send_email(articles, yesterday_articles, daily_summary=daily_summary,
+                      research_articles=research_articles, layout=layout,
+                      force="--force" in sys.argv)
+    print("=== Email Sent ===" if sent else "=== Email Not Sent ===")
 
 
 if __name__ == "__main__":

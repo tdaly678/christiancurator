@@ -84,6 +84,14 @@ leftovers in a stash, runs `check_conflict_markers.py` before every push, and pu
 ## Daily Pipeline (GitHub Actions)
 Runs automatically around **5:00 AM America/New_York** all year (the workflow `timezone` field follows DST; catch-up slots and a same-morning no-op guard are in `.github/workflows/daily_run.yml`). A punctual 5:00 AM Cloudflare ping lives in `worker/morning/` and is not live until it is deployed. Operator notes: `.github/morning-trigger.md`.
 
+Email send and dedupe (Nov 15 2026): the workflow runs `main.py --defer-email`, which builds the email into
+`output/email_pending.json`; `scripts/send_daily_email.py` sends it only after "Commit output files", so a failed gate
+or commit holds the email and a catch-up slot publishes and sends the day. Every send (`send_campaign()` in
+`curator/email_sender.py`, also used by `main.py` and `send_email.py`) first asks Brevo for a campaign already sent to
+the list on that Eastern date and refuses if one exists or Brevo cannot answer. `force_email` (and `send_email.py
+--force`) skips the check; `no_email` builds nothing. Tests: `tests/test_email_dedupe.py`. Report:
+`.christian-orchestrator/fixes/email-dedupe-report.md`.
+
 What it commits: `docs/index.html`, `docs/topics/`, `docs/digest/`, `docs/yesterday.json`, `docs/email_draft.html`,
 `docs/article_history.json`, `docs/research_articles.json`, all five sitemaps (`sitemap.xml`, `sitemap-core.xml`,
 `sitemap-topics.xml`, `sitemap-voices.xml`, `sitemap-archive.xml`, `sitemap-daily.xml`), `docs/archive/`, `docs/daily/`,

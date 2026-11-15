@@ -24,6 +24,9 @@ name: Daily Curator Run
 # A late delivery still publishes when today's archive is not on origin/main,
 # so a delayed schedule does not drop the day. It does not publish again when
 # the archive is already there, so a late slot cannot send a second email.
+# The email is sent after the commit, and only when Brevo shows no campaign
+# already sent to the list that Eastern day (scripts/send_daily_email.py), so
+# a run that sent but failed later can never be followed by a second send.
 #
 # The punctual ~5:00 AM ping is the Cloudflare Worker in worker/morning/.
 # It is not live until Tom deploys it. See .github/morning-trigger.md.
@@ -132,7 +135,10 @@ jobs:
           CC_REWRITE_TITLES: '1'
         # pipeline_args is "" (send email), "--no-email", or "--force-email".
         # The guard script is the only writer. A morning ping always gets "".
-        run: python3 main.py ${{ needs.guard.outputs.pipeline_args }}
+        # --defer-email builds the email but holds it (output/email_pending.json)
+        # for the "Send daily email" step after the commit, so a failed gate or
+        # commit can never leave an emailed but unpublished day (Nov 15 2026).
+        run: python3 main.py --defer-email ${{ needs.guard.outputs.pipeline_args }}
 
       - name: Store outbound headline clicks from GA4
         # Writes docs/click_counts.json and article_history.json `clicks`.
@@ -197,6 +203,21 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           bash scripts/commit_daily_run.sh "chore: daily curator run $(date +%Y-%m-%d)" \
             docs/index.html docs/topics/ docs/digest/ docs/yesterday.json docs/email_draft.html docs/article_history.json docs/research_articles.json docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-topics.xml docs/sitemap-voices.xml docs/sitemap-daily.xml docs/sitemap-archive.xml docs/archive/ docs/daily/ docs/_pagefind/ docs/voices/ docs/voices_data.json frontend/voices_noindex.json docs/spotlight_topic_log.json docs/feed_health.json docs/click_counts.json docs/discovery_queue.json docs/data_watch.json data/
+
+      - name: Send daily email
+        # Runs only after the site is committed and pushed. On Nov 15 2026 the
+        # email went out inside "Run pipeline", "Gate voice pages" then failed,
+        # the commit was skipped, and the 6 AM slot (which looks for the
+        # archive) emailed again. Now a gate failure holds the email, and a
+        # catch-up slot publishes and sends it. Before sending, Brevo is asked
+        # for a campaign already sent to the list on this Eastern date; one
+        # found (or no answer from Brevo) means no send. force_email skips
+        # that check. See scripts/send_daily_email.py.
+        if: success()
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_SENDER_EMAIL: ${{ secrets.BREVO_SENDER_EMAIL }}
+        run: python3 scripts/send_daily_email.py
 
       - name: Ping IndexNow with changed URLs
         # IndexNow notifies Bing / Yandex / Seznam / DuckDuckGo of changed pages.

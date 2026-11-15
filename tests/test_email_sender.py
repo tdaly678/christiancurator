@@ -121,6 +121,7 @@ class Subject(unittest.TestCase):
              mock.patch.object(es, "BREVO_SENDER_EMAIL", "a@b.c"), \
              mock.patch.object(es, "build_email_html", return_value="<html></html>"), \
              mock.patch.object(es, "save_email_html", return_value="x"), \
+             mock.patch.object(es, "brevo_sent_campaign", return_value=None), \
              mock.patch.object(es.requests, "post", post):
             es.send_email([], daily_summary=pulse("The church is asking what prayer "
                                                   "is for, and writers disagree."),
@@ -305,6 +306,7 @@ class EditorNote(unittest.TestCase):
              mock.patch.object(es, "BREVO_SENDER_EMAIL", "a@b.c"), \
              mock.patch.object(es, "_get_spotlight_topic", return_value=None), \
              mock.patch.object(es, "save_email_html", return_value="x"), \
+             mock.patch.object(es, "brevo_sent_campaign", return_value=None), \
              mock.patch.object(es.requests, "post", post), \
              at_et(2026, 11, 11):
             es.send_email([], daily_summary=summary, layout=layout())
