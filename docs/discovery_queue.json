@@ -509,10 +509,88 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-14-2026/",
    "found_on": "2026-11-15",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
+  },
+  "https://achalmersblog.com/2026/11/13/can-you-keep-falling-into-the-same-sin-and-still-be-a-christian": {
+   "url": "https://achalmersblog.com/2026/11/13/can-you-keep-falling-into-the-same-sin-and-still-be-a-christian/",
+   "canonical_url": "https://achalmersblog.com/2026/11/13/can-you-keep-falling-into-the-same-sin-and-still-be-a-christian",
+   "anchor": "Can You Keep Falling into the Same Sin and Still Be a Christian?",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-16-2026/",
+   "found_on": "2026-11-16",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-16",
+   "title": "Can You Keep Falling into the Same Sin and Still Be a Christian?",
+   "source_name": "Chalmers' Blog"
+  },
+  "https://biblicalcounselingcoalition.org/2026/11/13/seven-thoughts-on-how-we-change": {
+   "url": "https://www.biblicalcounselingcoalition.org/2026/11/13/seven-thoughts-on-how-we-change",
+   "canonical_url": "https://biblicalcounselingcoalition.org/2026/11/13/seven-thoughts-on-how-we-change",
+   "anchor": "Seven Thoughts on How We Change",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-16-2026/",
+   "found_on": "2026-11-16",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-16",
+   "title": "Biblical Counseling Coalition",
+   "source_name": "Biblical Counseling Coalition"
+  },
+  "https://marcjsims.com/p/to-the-man-seconds-away-from-watching": {
+   "url": "https://www.marcjsims.com/p/to-the-man-seconds-away-from-watching",
+   "canonical_url": "https://marcjsims.com/p/to-the-man-seconds-away-from-watching",
+   "anchor": "To The Man Seconds Away From Watching Porn",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-16-2026/",
+   "found_on": "2026-11-16",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-16",
+   "title": "To The Man Seconds Away From Watching Porn",
+   "source_name": "marcjsims.com"
+  },
+  "https://reformeddogmatika.com/incarnation-images-of-christ-second-commandment": {
+   "url": "https://reformeddogmatika.com/incarnation-images-of-christ-second-commandment/",
+   "canonical_url": "https://reformeddogmatika.com/incarnation-images-of-christ-second-commandment",
+   "anchor": "Does the Incarnation Authorize Images of Christ?",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-16-2026/",
+   "found_on": "2026-11-16",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-16",
+   "title": "Does the Incarnation Authorize Images of Christ?",
+   "source_name": "Reformed Dogmatika"
+  },
+  "https://michaelkelley.co/2026/11/what-is-supernatural-is-not-necessarily-mystical": {
+   "url": "https://michaelkelley.co/2026/11/what-is-supernatural-is-not-necessarily-mystical/",
+   "canonical_url": "https://michaelkelley.co/2026/11/what-is-supernatural-is-not-necessarily-mystical",
+   "anchor": "What is Supernatural is Not Necessarily Mystical",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-16-2026/",
+   "found_on": "2026-11-16",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-16",
+   "title": "What is Supernatural is Not Necessarily Mystical",
+   "source_name": "Forward Progress"
+  },
+  "https://philcotnoir.com/2026/11/09/the-heritage-trees-of-the-church": {
+   "url": "https://philcotnoir.com/2026/11/09/the-heritage-trees-of-the-church/",
+   "canonical_url": "https://philcotnoir.com/2026/11/09/the-heritage-trees-of-the-church",
+   "anchor": "The Heritage Trees of the Church",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-16-2026/",
+   "found_on": "2026-11-16",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-16",
+   "title": "The Heritage Trees of the Church",
+   "source_name": "Phil's Scribblings"
   }
  },
- "updated": "2026-11-15T14:32:00+00:00"
+ "updated": "2026-11-16T10:01:40+00:00"
 }

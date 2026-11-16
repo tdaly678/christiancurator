@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-15T14:31:50+00:00",
+  "run_at": "2026-11-16T10:01:38+00:00",
   "sources": [
     {
       "source": "The Gospel Coalition",
@@ -7,7 +7,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 60,
-      "newest_date": "2026-11-15",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -42,12 +42,12 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-14",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "byline_from_page": {
         "resolved": 0,
         "no_byline": 0,
-        "failed": 10
+        "failed": 5
       },
       "stale": false
     },
@@ -67,7 +67,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-14",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -107,7 +107,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 41,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "user_agent": "reader",
       "stale": false
@@ -153,7 +153,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "byline_from_page": {
         "resolved": 15,
@@ -192,8 +192,8 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 24,
-      "newest_date": "2026-11-15",
+      "n_entries": 23,
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -202,8 +202,8 @@
       "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 57,
-      "newest_date": "2026-11-15",
+      "n_entries": 58,
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -213,7 +213,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 70,
-      "newest_date": "2026-11-15",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -236,6 +236,8 @@
       "newest_date": "2026-11-10",
       "bozo": false,
       "via": "proxy",
+      "retries": 4,
+      "user_agent": "reader",
       "stale": false
     },
     {
@@ -258,6 +260,8 @@
       "newest_date": "2026-11-12",
       "bozo": false,
       "via": "proxy",
+      "retries": 3,
+      "user_agent": "reader",
       "stale": false
     },
     {
@@ -311,10 +315,9 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-15",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "via": "proxy",
-      "retries": 2,
       "stale": false
     },
     {
@@ -377,7 +380,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-12",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -422,7 +425,6 @@
       "newest_date": "2026-11-11",
       "bozo": false,
       "via": "proxy",
-      "retries": 1,
       "stale": false
     },
     {
@@ -493,12 +495,13 @@
       "source": "Kate Shellnutt",
       "url": "https://kateshellnutt.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 13,
-      "newest_date": "2026-10-30",
+      "http_status": 429,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
       "via": "proxy",
-      "stale": false
+      "retries": 4,
+      "error": "HTTP 429"
     },
     {
       "source": "Albert Mohler",
@@ -506,7 +509,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 12,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -516,7 +519,7 @@
       "role": "discovery",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-15",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -535,11 +538,11 @@
       "source": "Faithfully Magazine",
       "url": "https://faithfullymagazine.com/feed/",
       "role": "primary",
-      "http_status": 202,
-      "n_entries": 0,
-      "newest_date": null,
-      "bozo": true,
-      "error": "parse error: <unknown>:2:119: not well-formed (invalid token)"
+      "http_status": 200,
+      "n_entries": 4,
+      "newest_date": "2026-11-14",
+      "bozo": false,
+      "stale": false
     },
     {
       "source": "Sean McDowell",
@@ -578,7 +581,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-11",
+      "newest_date": "2026-11-15",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -621,7 +624,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-15",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -639,12 +642,13 @@
       "source": "Tom Sugimura",
       "url": "https://tomsugi.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-11-06",
+      "http_status": 429,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
       "via": "proxy",
-      "stale": false
+      "retries": 4,
+      "error": "HTTP 429"
     },
     {
       "source": "J.A. Medders",
@@ -673,7 +677,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-15",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -728,7 +732,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-14",
+      "newest_date": "2026-11-15",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -748,12 +752,13 @@
       "source": "A.J. Swoboda",
       "url": "https://ajswoboda.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-11-12",
+      "http_status": 429,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
       "via": "proxy",
-      "stale": false
+      "retries": 4,
+      "error": "HTTP 429"
     },
     {
       "source": "Nicholas McDonald",
@@ -813,8 +818,8 @@
       "url": "https://feeds.simplecast.com/3NVmUWZO",
       "role": "media",
       "http_status": 200,
-      "n_entries": 549,
-      "newest_date": "2026-11-09",
+      "n_entries": 550,
+      "newest_date": "2026-11-16",
       "bozo": false,
       "apple_episode_urls": 50,
       "stale": false
@@ -852,9 +857,19 @@
     }
   ],
   "zero_streaks": {
-    "Faithfully Magazine": {
-      "since": "2026-11-15",
-      "last_date": "2026-11-15",
+    "Kate Shellnutt": {
+      "since": "2026-11-16",
+      "last_date": "2026-11-16",
+      "days": 1
+    },
+    "Tom Sugimura": {
+      "since": "2026-11-16",
+      "last_date": "2026-11-16",
+      "days": 1
+    },
+    "A.J. Swoboda": {
+      "since": "2026-11-16",
+      "last_date": "2026-11-16",
       "days": 1
     }
   }

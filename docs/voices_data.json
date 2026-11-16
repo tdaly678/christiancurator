@@ -18969,5 +18969,68 @@
     "website": "",
     "books": [],
     "initials": "PT"
+  },
+  {
+    "name": "Cornelis Venema",
+    "slug": "cornelis-venema",
+    "bio": "Cornelis Venema is a Reformed theologian and professor known for his scholarly work in systematic theology and biblical interpretation. He has contributed significantly to contemporary Christian thought through his teaching, writing, and engagement with theological education.",
+    "affiliation": "Mid-America Reformed Seminary",
+    "role": "Professor & Theologian",
+    "education": "Ph.D. in Theology",
+    "website": "",
+    "books": [
+      {
+        "title": "Accepted and Renewed in Christ: The Basics of the Reformed Faith",
+        "amazon_url": "https://www.amazon.com/s?k=Accepted+and+Renewed+in+Christ+Cornelis+Venema"
+      },
+      {
+        "title": "Getting the Gospel Right: The Story of the New Perspective on Paul",
+        "amazon_url": "https://www.amazon.com/s?k=Getting+the+Gospel+Right+Cornelis+Venema"
+      },
+      {
+        "title": "The Promise of the Future",
+        "amazon_url": "https://www.amazon.com/s?k=The+Promise+of+the+Future+Cornelis+Venema"
+      }
+    ],
+    "initials": "CV"
+  },
+  {
+    "name": "Mark Bauerlein",
+    "slug": "mark-bauerlein",
+    "bio": "Mark Bauerlein is a scholar and cultural critic who examines the intellectual and spiritual challenges facing contemporary society, particularly young people. His work explores how technology, education, and cultural trends impact Christian faith and thought. He brings a thoughtful, research-based perspective to conversations about faithfulness in a rapidly changing world.",
+    "affiliation": "Emory University",
+    "role": "Professor & Cultural Critic",
+    "education": "PhD in Comparative Literature, University of Virginia",
+    "website": "https://www.markbauerlein.com",
+    "books": [
+      {
+        "title": "The Dumbest Generation: How the Digital Age Stupefies Young Americans and Jeopardizes Our Future",
+        "amazon_url": "https://www.amazon.com/s?k=The+Dumbest+Generation+Mark+Bauerlein"
+      },
+      {
+        "title": "The Way to Happiness: Finding Life and Meaning in an Age of Distraction",
+        "amazon_url": "https://www.amazon.com/s?k=The+Way+to+Happiness+Mark+Bauerlein"
+      },
+      {
+        "title": "The Iron Triangle: Inside the Secret World of the Carlyle Group",
+        "amazon_url": "https://www.amazon.com/s?k=The+Iron+Triangle+Mark+Bauerlein"
+      },
+      {
+        "title": "Literary Knowledge: Humanistic Inquiry and the Philosophy of Science",
+        "amazon_url": "https://www.amazon.com/s?k=Literary+Knowledge+Mark+Bauerlein"
+      }
+    ],
+    "initials": "MB"
+  },
+  {
+    "name": "Joseph Whitenton",
+    "slug": "joseph-whitenton",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JW"
   }
 ]

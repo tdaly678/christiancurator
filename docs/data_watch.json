@@ -119,6 +119,12 @@
       "status": "fetched",
       "attempts": 1,
       "note": "0 verified figure(s)"
+    },
+    "https://research.lifeway.com/2026/11/16/more-than-events-7-principles-for-meaningful-womens-ministry-gatherings": {
+      "date": "2026-11-16",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
     }
   },
   "fresh": {
@@ -349,6 +355,14 @@
         "url": "https://www.pewresearch.org/2026/11/11/expert-brief-public-opinion-on-ai-in-healthcare/",
         "source": "Pew Research"
       }
+    ],
+    "sanctification": [
+      {
+        "date": "2026-11-16",
+        "title": "More Than Events: 7 Principles for Meaningful Women’s Ministry Gatherings",
+        "url": "https://research.lifeway.com/2026/11/16/more-than-events-7-principles-for-meaningful-womens-ministry-gatherings/",
+        "source": "Lifeway Research"
+      }
     ]
   },
   "figures": {
@@ -377,9 +391,9 @@
       }
     ]
   },
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "last_run": {
-    "date": "2026-11-15",
+    "date": "2026-11-16",
     "stories": [
       {
         "title": "Study: 2 in 3 churchgoers fail Bible literacy quiz",
@@ -404,6 +418,29 @@
         "actions": [
           "linked in Fresh From the Digest",
           "page already checked on 2026-11-14 (2 verified figure(s))"
+        ]
+      },
+      {
+        "title": "More Than Events: 7 Principles for Meaningful Women’s Ministry Gatherings",
+        "url": "https://research.lifeway.com/2026/11/16/more-than-events-7-principles-for-meaningful-womens-ministry-gatherings/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [
+          "sanctification"
+        ],
+        "trend": 7.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
         ]
       },
       {
@@ -450,32 +487,6 @@
         ]
       },
       {
-        "title": "Key Facts About U.S. Data Centers",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/11/key-facts-about-us-data-centers/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [
-            "data"
-          ],
-          "data_tag": true
-        },
-        "topics": [
-          "technology-and-discipleship",
-          "artificial-intelligence"
-        ],
-        "trend": 6.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-12 (0 verified figure(s))"
-        ]
-      },
-      {
         "title": "The Presbyterian Church (USA) Is About to Cross a Historic Threshold",
         "url": "https://www.graphsaboutreligion.com/p/the-presbyterian-church-usa-is-about",
         "source": "Ryan Burge",
@@ -513,30 +524,6 @@
         "on_digest": true,
         "actions": [
           "no topic page matched"
-        ]
-      },
-      {
-        "title": "Expert Brief: Public Opinion on AI in Healthcare",
-        "url": "https://www.pewresearch.org/2026/11/11/expert-brief-public-opinion-on-ai-in-healthcare/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [
-          "technology-and-discipleship",
-          "artificial-intelligence"
-        ],
-        "trend": 4.25,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-12 (0 verified figure(s))"
         ]
       },
       {
@@ -586,7 +573,7 @@
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
+          "page already checked on 2026-11-15 (0 verified figure(s))"
         ]
       },
       {
@@ -613,6 +600,50 @@
         ]
       },
       {
+        "title": "Key Facts About U.S. Data Centers",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/11/key-facts-about-us-data-centers/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [
+          "technology-and-discipleship",
+          "artificial-intelligence"
+        ],
+        "trend": 2.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-12 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "Acknowledgements",
+        "url": "https://www.pewresearch.org/race-and-ethnicity/2026/11/12/single-black-adults-acknowledgements/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 2.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
         "title": "2026 Christmas Gift Guide: Save on Resources for Everyone",
         "url": "https://feeds.ligonier.org/~/972439013/0/ligonierministriesblog",
         "source": "Ligonier Ministries",
@@ -628,7 +659,7 @@
         "topics": [
           "discipleship"
         ],
-        "trend": 2.5,
+        "trend": 1.75,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -637,8 +668,8 @@
         ]
       },
       {
-        "title": "Acknowledgements",
-        "url": "https://www.pewresearch.org/race-and-ethnicity/2026/11/12/single-black-adults-acknowledgements/",
+        "title": "What We Know – and Don’t Know – About Flock’s License Plate Cameras",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/09/what-we-know-and-dont-know-about-flocks-license-plate-cameras/",
         "source": "Pew Research",
         "signals": {
           "publishers": [
@@ -646,12 +677,12 @@
           ],
           "figures": [],
           "words": [
-            "survey"
+            "data shows"
           ],
           "data_tag": false
         },
         "topics": [],
-        "trend": 2.0,
+        "trend": 1.75,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -675,55 +706,12 @@
         "topics": [
           "evangelicalism"
         ],
-        "trend": 2.0,
+        "trend": 1.25,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
           "page already checked on 2026-11-11 (2 verified figure(s))"
-        ]
-      },
-      {
-        "title": "Why Don’t Religious Nones Want Kids?",
-        "url": "https://www.graphsaboutreligion.com/p/why-dont-religious-nones-want-kids",
-        "source": "Ryan Burge",
-        "signals": {
-          "publishers": [
-            "Ryan Burge"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [
-          "christian-parenting"
-        ],
-        "trend": 0.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-10 (0 verified figure(s))"
-        ]
-      },
-      {
-        "title": "4 Warnings About Pride in Leadership",
-        "url": "https://research.lifeway.com/2026/11/12/4-warnings-about-pride-in-leadership/",
-        "source": "Lifeway Research",
-        "signals": {
-          "publishers": [
-            "Lifeway Research"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [],
-        "trend": 0.25,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
         ]
       },
       {
@@ -739,15 +727,36 @@
           "data_tag": false
         },
         "topics": [
-          "politics-and-the-church",
-          "predestination-free-will",
-          "evangelicalism"
+          "religious-liberty",
+          "abortion"
         ],
         "trend": 0.0,
         "outlets": 1,
         "on_digest": false,
         "actions": [
           "page already checked on 2026-11-11 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "Why Don’t Religious Nones Want Kids?",
+        "url": "https://www.graphsaboutreligion.com/p/why-dont-religious-nones-want-kids",
+        "source": "Ryan Burge",
+        "signals": {
+          "publishers": [
+            "Ryan Burge"
+          ],
+          "figures": [],
+          "words": [
+            "study"
+          ],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": -0.5,
+        "outlets": 1,
+        "on_digest": false,
+        "actions": [
+          "no topic page matched"
         ]
       }
     ],
