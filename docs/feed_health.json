@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-16T10:01:38+00:00",
+  "run_at": "2026-11-17T10:01:31+00:00",
   "sources": [
     {
       "source": "The Gospel Coalition",
@@ -7,7 +7,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 60,
-      "newest_date": "2026-11-16",
+      "newest_date": "2026-11-17",
       "bozo": false,
       "stale": false
     },
@@ -17,7 +17,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "byline_from_page": {
         "resolved": 10,
@@ -42,12 +42,12 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-16",
+      "newest_date": "2026-11-17",
       "bozo": false,
       "byline_from_page": {
         "resolved": 0,
         "no_byline": 0,
-        "failed": 5
+        "failed": 2
       },
       "stale": false
     },
@@ -57,7 +57,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 50,
-      "newest_date": "2026-11-11",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -77,7 +77,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 100,
-      "newest_date": "2026-11-14",
+      "newest_date": "2026-11-17",
       "bozo": false,
       "stale": false
     },
@@ -87,7 +87,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 30,
-      "newest_date": "2026-11-15",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -107,7 +107,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 41,
-      "newest_date": "2026-11-16",
+      "newest_date": "2026-11-17",
       "bozo": false,
       "user_agent": "reader",
       "stale": false
@@ -118,7 +118,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 50,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "byline_from_page": {
         "resolved": 20,
@@ -133,7 +133,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-15",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -168,7 +168,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "byline_from_page": {
         "resolved": 15,
@@ -183,7 +183,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-10",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -192,8 +192,8 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 23,
-      "newest_date": "2026-11-16",
+      "n_entries": 20,
+      "newest_date": "2026-11-17",
       "bozo": false,
       "stale": false
     },
@@ -202,8 +202,8 @@
       "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 58,
-      "newest_date": "2026-11-16",
+      "n_entries": 59,
+      "newest_date": "2026-11-17",
       "bozo": false,
       "stale": false
     },
@@ -212,8 +212,8 @@
       "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 70,
-      "newest_date": "2026-11-16",
+      "n_entries": 71,
+      "newest_date": "2026-11-17",
       "bozo": false,
       "stale": false
     },
@@ -223,7 +223,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-15",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -236,8 +236,6 @@
       "newest_date": "2026-11-10",
       "bozo": false,
       "via": "proxy",
-      "retries": 4,
-      "user_agent": "reader",
       "stale": false
     },
     {
@@ -246,7 +244,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-01",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -260,8 +258,7 @@
       "newest_date": "2026-11-12",
       "bozo": false,
       "via": "proxy",
-      "retries": 3,
-      "user_agent": "reader",
+      "retries": 1,
       "stale": false
     },
     {
@@ -270,7 +267,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-10",
+      "newest_date": "2026-11-17",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -305,7 +302,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-11",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -315,7 +312,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-16",
+      "newest_date": "2026-11-17",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -337,7 +334,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -347,7 +344,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-12",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -442,12 +439,13 @@
       "source": "Nadya Williams",
       "url": "https://nadyawilliams.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-10-24",
+      "http_status": 429,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
       "via": "proxy",
-      "stale": false
+      "retries": 4,
+      "error": "HTTP 429"
     },
     {
       "source": "Daniel K. Williams",
@@ -476,7 +474,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -486,22 +484,22 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-09",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "via": "proxy",
+      "retries": 1,
       "stale": false
     },
     {
       "source": "Kate Shellnutt",
       "url": "https://kateshellnutt.substack.com/feed",
       "role": "primary",
-      "http_status": 429,
-      "n_entries": 0,
-      "newest_date": null,
+      "http_status": 200,
+      "n_entries": 13,
+      "newest_date": "2026-10-30",
       "bozo": false,
       "via": "proxy",
-      "retries": 4,
-      "error": "HTTP 429"
+      "stale": false
     },
     {
       "source": "Albert Mohler",
@@ -509,7 +507,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 12,
-      "newest_date": "2026-11-16",
+      "newest_date": "2026-11-17",
       "bozo": false,
       "stale": false
     },
@@ -519,7 +517,7 @@
       "role": "discovery",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-16",
+      "newest_date": "2026-11-17",
       "bozo": false,
       "stale": false
     },
@@ -558,12 +556,13 @@
       "source": "Hannah Anderson",
       "url": "https://hannahanderson.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 10,
-      "newest_date": "2026-09-03",
+      "http_status": 429,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
       "via": "proxy",
-      "stale": true
+      "retries": 4,
+      "error": "HTTP 429"
     },
     {
       "source": "Aaron Renn",
@@ -624,7 +623,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-16",
+      "newest_date": "2026-11-17",
       "bozo": false,
       "stale": false
     },
@@ -642,13 +641,12 @@
       "source": "Tom Sugimura",
       "url": "https://tomsugi.substack.com/feed",
       "role": "primary",
-      "http_status": 429,
-      "n_entries": 0,
-      "newest_date": null,
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-11-06",
       "bozo": false,
       "via": "proxy",
-      "retries": 4,
-      "error": "HTTP 429"
+      "stale": false
     },
     {
       "source": "J.A. Medders",
@@ -677,7 +675,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-16",
+      "newest_date": "2026-11-17",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -688,7 +686,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-14",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -752,13 +750,12 @@
       "source": "A.J. Swoboda",
       "url": "https://ajswoboda.substack.com/feed",
       "role": "primary",
-      "http_status": 429,
-      "n_entries": 0,
-      "newest_date": null,
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-11-16",
       "bozo": false,
       "via": "proxy",
-      "retries": 4,
-      "error": "HTTP 429"
+      "stale": false
     },
     {
       "source": "Nicholas McDonald",
@@ -777,7 +774,7 @@
       "role": "media",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -787,7 +784,7 @@
       "role": "media",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-13",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     },
@@ -807,8 +804,8 @@
       "url": "https://feeds.megaphone.fm/CHRTDY1120709803",
       "role": "media",
       "http_status": 200,
-      "n_entries": 507,
-      "newest_date": "2026-11-11",
+      "n_entries": 508,
+      "newest_date": "2026-11-16",
       "bozo": false,
       "apple_episode_urls": 50,
       "stale": false
@@ -829,8 +826,8 @@
       "url": "https://feeds.simplecast.com/FSKZVjpz",
       "role": "media",
       "http_status": 200,
-      "n_entries": 202,
-      "newest_date": "2026-11-03",
+      "n_entries": 203,
+      "newest_date": "2026-11-17",
       "bozo": false,
       "apple_episode_urls": 50,
       "stale": false
@@ -851,25 +848,20 @@
       "role": "media",
       "http_status": 200,
       "n_entries": 1000,
-      "newest_date": "2026-11-12",
+      "newest_date": "2026-11-16",
       "bozo": false,
       "stale": false
     }
   ],
   "zero_streaks": {
-    "Kate Shellnutt": {
-      "since": "2026-11-16",
-      "last_date": "2026-11-16",
+    "Nadya Williams": {
+      "since": "2026-11-17",
+      "last_date": "2026-11-17",
       "days": 1
     },
-    "Tom Sugimura": {
-      "since": "2026-11-16",
-      "last_date": "2026-11-16",
-      "days": 1
-    },
-    "A.J. Swoboda": {
-      "since": "2026-11-16",
-      "last_date": "2026-11-16",
+    "Hannah Anderson": {
+      "since": "2026-11-17",
+      "last_date": "2026-11-17",
       "days": 1
     }
   }

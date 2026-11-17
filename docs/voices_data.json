@@ -19032,5 +19032,170 @@
     "website": "",
     "books": [],
     "initials": "JW"
+  },
+  {
+    "name": "Miles Smith",
+    "slug": "miles-smith",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MS"
+  },
+  {
+    "name": "Lisa Anderson",
+    "slug": "lisa-anderson",
+    "bio": "Lisa Anderson is a Christian author and speaker known for her work on singleness, relationships, and faith. She has contributed to various Christian publications and speaks at conferences and events for young adults seeking biblical perspective on life and relationships.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "LA"
+  },
+  {
+    "name": "Gregg R. Allison",
+    "slug": "gregg-r-allison",
+    "bio": "Gregg R. Allison is a Reformed theologian and professor known for his clear, accessible writings on Christian doctrine and ecclesiology. His work helps believers understand foundational theological concepts through both academic rigor and pastoral warmth. Allison is committed to equipping the church with solid theological knowledge for faithful Christian living.",
+    "affiliation": "Southern Baptist Theological Seminary",
+    "role": "Professor of Christian Theology & Author",
+    "education": "Ph.D. in Theological Studies, Southern Baptist Theological Seminary",
+    "website": "",
+    "books": [
+      {
+        "title": "Sojourners and Strangers: The Doctrine of the Church",
+        "amazon_url": "https://www.amazon.com/s?k=Sojourners+and+Strangers+Doctrine+of+the+Church+Gregg+Allison"
+      },
+      {
+        "title": "Historical Theology: An Introduction to Christian Doctrine",
+        "amazon_url": "https://www.amazon.com/s?k=Historical+Theology+Introduction+to+Christian+Doctrine+Gregg+Allison"
+      },
+      {
+        "title": "The Church: God's New People",
+        "amazon_url": "https://www.amazon.com/s?k=The+Church+God's+New+People+Gregg+Allison"
+      },
+      {
+        "title": "Know the Creeds and Councils",
+        "amazon_url": "https://www.amazon.com/s?k=Know+the+Creeds+and+Councils+Gregg+Allison"
+      }
+    ],
+    "initials": "GRA"
+  },
+  {
+    "name": "Matthew Westerholm",
+    "slug": "matthew-westerholm",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MW"
+  },
+  {
+    "name": "David Schuman",
+    "slug": "david-schuman",
+    "bio": "David Schuman is a Christian writer and content creator dedicated to exploring faith, theology, and spiritual growth. His work encourages readers to deepen their understanding of Scripture and apply biblical principles to daily life.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DS"
+  },
+  {
+    "name": "John Byron Kuhner",
+    "slug": "john-byron-kuhner",
+    "bio": "John Byron Kuhner is a Christian author and thinker who explores themes of faith, theology, and spiritual growth. His work engages with contemporary issues through a biblical lens, offering thoughtful perspectives for believers seeking deeper understanding of their faith.",
+    "affiliation": "",
+    "role": "Author & Theologian",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JBK"
+  },
+  {
+    "name": "Rebecca VanDoodewaard",
+    "slug": "rebecca-vandoodewaard",
+    "bio": "Rebecca VanDoodewaard is a writer and speaker who explores themes of faith, culture, and Christian living. She contributes to various Christian publications and platforms, engaging readers with thoughtful reflections on Scripture and contemporary issues. Her work encourages believers to think deeply about how their faith shapes their engagement with the world.",
+    "affiliation": "Desiring God, The Gospel Coalition",
+    "role": "Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Simple Gifts: What Christmas Teaches Us About God's Grace",
+        "amazon_url": "https://www.amazon.com/s?k=Simple+Gifts+Rebecca+VanDoodewaard"
+      }
+    ],
+    "initials": "RVD"
+  },
+  {
+    "name": "Ben Reaoch",
+    "slug": "ben-reaoch",
+    "bio": "Ben Reaoch is a pastor and author who has written extensively on biblical themes and Christian living. He serves as senior pastor and brings a thoughtful, expository approach to Scripture and contemporary faith issues.",
+    "affiliation": "Third Avenue Church",
+    "role": "Pastor & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "Consider Jesus: Your King, Your Love, Your Joy",
+        "amazon_url": "https://www.amazon.com/s?k=Consider+Jesus+Ben+Reaoch"
+      },
+      {
+        "title": "The Purpose of the Law",
+        "amazon_url": "https://www.amazon.com/s?k=The+Purpose+of+the+Law+Ben+Reaoch"
+      }
+    ],
+    "initials": "BR"
+  },
+  {
+    "name": "Jonathan D. Teubner",
+    "slug": "jonathan-d-teubner",
+    "bio": "Jonathan D. Teubner is a Christian author and scholar devoted to helping believers deepen their understanding of Scripture and theology. His work focuses on practical Christian living and spiritual formation for modern disciples.",
+    "affiliation": "",
+    "role": "Author & Christian Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JDT"
+  },
+  {
+    "name": "Elizabeth Stice",
+    "slug": "elizabeth-stice",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ES"
+  },
+  {
+    "name": "R. R. Reno",
+    "slug": "r-r-reno",
+    "bio": "R. R. Reno is a prominent Christian intellectual and editor known for his thoughtful engagement with theology, culture, and faith in the modern world. As editor of First Things magazine, he has become an influential voice in contemporary Christian thought, addressing issues at the intersection of religion, politics, and culture. Reno's work emphasizes the importance of Christian tradition and orthodoxy in navigating contemporary challenges.",
+    "affiliation": "First Things magazine",
+    "role": "Editor & Writer",
+    "education": "Ph.D. in Religious Studies, University of Virginia",
+    "website": "https://www.firstthings.com",
+    "books": [
+      {
+        "title": "Fighting the Noonday Devil and Other Essays Personal and Intellectual",
+        "amazon_url": "https://www.amazon.com/s?k=Fighting+Noonday+Devil+Reno"
+      },
+      {
+        "title": "Return of the Strong Gods: Nationalism, Populism, and the Future of the West",
+        "amazon_url": "https://www.amazon.com/s?k=Return+Strong+Gods+Reno"
+      },
+      {
+        "title": "Resurrecting the Idea of a Christian Society",
+        "amazon_url": "https://www.amazon.com/s?k=Resurrecting+Idea+Christian+Society+Reno"
+      }
+    ],
+    "initials": "RRR"
   }
 ]

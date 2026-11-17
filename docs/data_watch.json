@@ -125,6 +125,18 @@
       "status": "fetched",
       "attempts": 1,
       "note": "0 verified figure(s)"
+    },
+    "https://graphsaboutreligion.com/p/the-religious-gender-gap-is-really": {
+      "date": "2026-11-17",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
+    },
+    "https://christianitytoday.com/2026/11/youversion-bible-app-ai-claude-chatgpt-bobby-gruenewald": {
+      "date": "2026-11-17",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
     }
   },
   "fresh": {
@@ -158,6 +170,12 @@
         "title": "A First Look at Polling Performance in 2026",
         "url": "https://www.pewresearch.org/short-reads/2026/11/12/a-first-look-at-polling-performance-in-2026/",
         "source": "Pew Research"
+      },
+      {
+        "date": "2026-11-17",
+        "title": "The Religious Gender Gap Is Really a Political Gap",
+        "url": "https://www.graphsaboutreligion.com/p/the-religious-gender-gap-is-really",
+        "source": "Ryan Burge"
       }
     ],
     "technology": [
@@ -224,6 +242,12 @@
         "title": "Study: 2 in 3 churchgoers fail Bible literacy quiz",
         "url": "https://roysreport.com/study-2-in-3-churchgoers-fail-bible-literacy-quiz/",
         "source": "The Roys Report"
+      },
+      {
+        "date": "2026-11-17",
+        "title": "YouVersion’s Biggest Problem Is Claude, ChatGPT Misquoting the Bible",
+        "url": "https://www.christianitytoday.com/2026/11/youversion-bible-app-ai-claude-chatgpt-bobby-gruenewald/",
+        "source": "Christianity Today"
       }
     ],
     "predestination-free-will": [
@@ -310,6 +334,12 @@
         "title": "Expert Brief: Public Opinion on AI in Healthcare",
         "url": "https://www.pewresearch.org/2026/11/11/expert-brief-public-opinion-on-ai-in-healthcare/",
         "source": "Pew Research"
+      },
+      {
+        "date": "2026-11-17",
+        "title": "YouVersion’s Biggest Problem Is Claude, ChatGPT Misquoting the Bible",
+        "url": "https://www.christianitytoday.com/2026/11/youversion-bible-app-ai-claude-chatgpt-bobby-gruenewald/",
+        "source": "Christianity Today"
       }
     ],
     "ai-and-the-church": [
@@ -332,6 +362,12 @@
         "title": "Many Black Adults Say Close Relationships Influence Their Views About Being a Black Man or Woman",
         "url": "https://www.pewresearch.org/short-reads/2026/11/12/many-black-adults-say-close-relationships-influence-their-views-about-being-a-black-man-or-woman/",
         "source": "Pew Research"
+      },
+      {
+        "date": "2026-11-17",
+        "title": "The Religious Gender Gap Is Really a Political Gap",
+        "url": "https://www.graphsaboutreligion.com/p/the-religious-gender-gap-is-really",
+        "source": "Ryan Burge"
       }
     ],
     "racial-reconciliation": [
@@ -363,6 +399,14 @@
         "url": "https://research.lifeway.com/2026/11/16/more-than-events-7-principles-for-meaningful-womens-ministry-gatherings/",
         "source": "Lifeway Research"
       }
+    ],
+    "biblical-inerrancy": [
+      {
+        "date": "2026-11-17",
+        "title": "YouVersion’s Biggest Problem Is Claude, ChatGPT Misquoting the Bible",
+        "url": "https://www.christianitytoday.com/2026/11/youversion-bible-app-ai-claude-chatgpt-bobby-gruenewald/",
+        "source": "Christianity Today"
+      }
     ]
   },
   "figures": {
@@ -391,10 +435,34 @@
       }
     ]
   },
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "last_run": {
-    "date": "2026-11-16",
+    "date": "2026-11-17",
     "stories": [
+      {
+        "title": "The Religious Gender Gap Is Really a Political Gap",
+        "url": "https://www.graphsaboutreligion.com/p/the-religious-gender-gap-is-really",
+        "source": "Ryan Burge",
+        "signals": {
+          "publishers": [
+            "Ryan Burge"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [
+          "gender-and-biblical-anthropology",
+          "politics-and-the-church"
+        ],
+        "trend": 10.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
+        ]
+      },
       {
         "title": "Study: 2 in 3 churchgoers fail Bible literacy quiz",
         "url": "https://roysreport.com/study-2-in-3-churchgoers-fail-bible-literacy-quiz/",
@@ -421,46 +489,28 @@
         ]
       },
       {
-        "title": "More Than Events: 7 Principles for Meaningful Women’s Ministry Gatherings",
-        "url": "https://research.lifeway.com/2026/11/16/more-than-events-7-principles-for-meaningful-womens-ministry-gatherings/",
-        "source": "Lifeway Research",
+        "title": "YouVersion’s Biggest Problem Is Claude, ChatGPT Misquoting the Bible",
+        "url": "https://www.christianitytoday.com/2026/11/youversion-bible-app-ai-claude-chatgpt-bobby-gruenewald/",
+        "source": "Christianity Today",
         "signals": {
           "publishers": [
-            "Lifeway Research"
+            "YouVersion"
           ],
           "figures": [],
           "words": [],
           "data_tag": false
         },
         "topics": [
-          "sanctification"
+          "biblical-literacy",
+          "biblical-inerrancy",
+          "technology-and-discipleship"
         ],
-        "trend": 7.5,
+        "trend": 9.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
           "no verifiable figure on the page: link only"
-        ]
-      },
-      {
-        "title": "‘Download My Free Guide’: What Products and Services Do Health and Wellness Influencers Promote?",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/12/download-my-free-guide-what-products-and-services-do-health-and-wellness-influencers-promote/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [],
-        "trend": 6.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
         ]
       },
       {
@@ -484,46 +534,6 @@
         "actions": [
           "linked in Fresh From the Digest",
           "page already checked on 2026-11-14 (0 verified figure(s))"
-        ]
-      },
-      {
-        "title": "The Presbyterian Church (USA) Is About to Cross a Historic Threshold",
-        "url": "https://www.graphsaboutreligion.com/p/the-presbyterian-church-usa-is-about",
-        "source": "Ryan Burge",
-        "signals": {
-          "publishers": [
-            "Ryan Burge"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 6.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "The Dating Attitudes of Single Black Adults",
-        "url": "https://www.pewresearch.org/race-and-ethnicity/2026/11/12/the-dating-attitudes-of-single-black-adults/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 5.75,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
         ]
       },
       {
@@ -585,8 +595,7 @@
             "Ryan Burge"
           ],
           "figures": [
-            "Four in Ten",
-            "Four in ten"
+            "Four in Ten"
           ],
           "words": [],
           "data_tag": true
@@ -597,6 +606,29 @@
         "on_digest": true,
         "actions": [
           "no topic page matched"
+        ]
+      },
+      {
+        "title": "More Than Events: 7 Principles for Meaningful Women’s Ministry Gatherings",
+        "url": "https://research.lifeway.com/2026/11/16/more-than-events-7-principles-for-meaningful-womens-ministry-gatherings/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [
+          "sanctification"
+        ],
+        "trend": 2.75,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-16 (0 verified figure(s))"
         ]
       },
       {
@@ -632,6 +664,28 @@
             "Pew Research Center"
           ],
           "figures": [],
+          "words": [
+            "survey"
+          ],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 2.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Give Tabletalk This Christmas",
+        "url": "https://feeds.ligonier.org/~/973078778/0/ligonierministriesblog",
+        "source": "Ligonier Ministries",
+        "signals": {
+          "publishers": [],
+          "figures": [
+            "50%"
+          ],
           "words": [],
           "data_tag": false
         },
@@ -644,30 +698,6 @@
         ]
       },
       {
-        "title": "2026 Christmas Gift Guide: Save on Resources for Everyone",
-        "url": "https://feeds.ligonier.org/~/972439013/0/ligonierministriesblog",
-        "source": "Ligonier Ministries",
-        "signals": {
-          "publishers": [],
-          "figures": [
-            "20%",
-            "50%"
-          ],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "discipleship"
-        ],
-        "trend": 1.75,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-10 (0 verified figure(s))"
-        ]
-      },
-      {
         "title": "What We Know – and Don’t Know – About Flock’s License Plate Cameras",
         "url": "https://www.pewresearch.org/short-reads/2026/11/09/what-we-know-and-dont-know-about-flocks-license-plate-cameras/",
         "source": "Pew Research",
@@ -676,13 +706,33 @@
             "Pew Research Center"
           ],
           "figures": [],
-          "words": [
-            "data shows"
-          ],
+          "words": [],
           "data_tag": false
         },
         "topics": [],
         "trend": 1.75,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Methodology",
+        "url": "https://www.pewresearch.org/race-and-ethnicity/2026/11/12/single-black-adults-methodology/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [
+            "survey"
+          ],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 1.25,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -715,44 +765,19 @@
         ]
       },
       {
-        "title": "ERLC, state leaders respond to Nov. 3 ballot measure successes, failures",
-        "url": "https://erlc.com/press/erlc-state-leaders-respond-to-nov-3-ballot-measure-successes-failures/",
-        "source": "ERLC",
-        "signals": {
-          "publishers": [],
-          "figures": [
-            "56 percent"
-          ],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "religious-liberty",
-          "abortion"
-        ],
-        "trend": 0.0,
-        "outlets": 1,
-        "on_digest": false,
-        "actions": [
-          "page already checked on 2026-11-11 (0 verified figure(s))"
-        ]
-      },
-      {
-        "title": "Why Don’t Religious Nones Want Kids?",
-        "url": "https://www.graphsaboutreligion.com/p/why-dont-religious-nones-want-kids",
+        "title": "The Presbyterian Church (USA) Is About to Cross a Historic Threshold",
+        "url": "https://www.graphsaboutreligion.com/p/the-presbyterian-church-usa-is-about",
         "source": "Ryan Burge",
         "signals": {
           "publishers": [
             "Ryan Burge"
           ],
           "figures": [],
-          "words": [
-            "study"
-          ],
-          "data_tag": true
+          "words": [],
+          "data_tag": false
         },
         "topics": [],
-        "trend": -0.5,
+        "trend": -0.75,
         "outlets": 1,
         "on_digest": false,
         "actions": [
@@ -761,7 +786,7 @@
       }
     ],
     "pages": [],
-    "fetched": 1,
-    "hits": 16
+    "fetched": 2,
+    "hits": 15
   }
 }
