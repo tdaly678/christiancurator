@@ -87269,5 +87269,1686 @@
     },
     "scored_by": "claude",
     "clicks": 0
+  },
+  {
+    "url": "https://scotmcknight.substack.com/p/the-return-of-the-apostle-paul",
+    "title": "Paul's Definition of Christian Life Remains Disputed",
+    "original_title": "The Return of the Apostle Paul",
+    "source_name": "Scot McKnight",
+    "date_shown": "2026-11-18",
+    "final_score": 8.0,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "pauline_theology",
+    "base_score": 6.0,
+    "importance": 8.0,
+    "depth": 7.0,
+    "base_importance": 6.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://scotmcknight.substack.com/p/the-return-of-the-apostle-paul",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.desiringgod.org/interviews/what-we-get-wrong-about-the-tears-of-jesus",
+    "title": "Jesus Wept Over Unbelief, Not Death Itself, Pastor Argues",
+    "original_title": "What We Get Wrong About the Tears of Jesus",
+    "source_name": "Desiring God",
+    "date_shown": "2026-11-18",
+    "final_score": 7.0,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 7.0,
+    "base_importance": 5.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://desiringgod.org/interviews/what-we-get-wrong-about-the-tears-of-jesus",
+    "boosts": {
+      "recency": 0.25,
+      "voice": 0.5,
+      "trending": 1.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.crossway.org/articles/how-is-believing-in-miracles-different-than-believing-in-a-flat-earth/",
+    "title": "Belief in Miracles Differs From Flat Earth Denial, Theologian Argues",
+    "original_title": "How Is Believing in Miracles Different Than Believing in a Flat Earth?",
+    "source_name": "Crossway",
+    "date_shown": "2026-11-18",
+    "final_score": 7.0,
+    "tags": [
+      "apologetics",
+      "theology"
+    ],
+    "topic_cluster": "miracles_faith_reason",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 6.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://crossway.org/articles/how-is-believing-in-miracles-different-than-believing-in-a-flat-earth",
+    "boosts": {
+      "recency": 1.5,
+      "voice": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.thegospelcoalition.org/article/small-church-sabbatical/",
+    "title": "Small Church Elders Enable Pastor Sabbatical With Lay Preachers",
+    "original_title": "Small-Church Elders, Here’s How to Give Your Pastor a Sabbatical",
+    "source_name": "The Gospel Coalition",
+    "date_shown": "2026-11-18",
+    "final_score": 7.0,
+    "tags": [
+      "church life"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 6.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://thegospelcoalition.org/article/small-church-sabbatical",
+    "boosts": {
+      "recency": 1.5,
+      "trending": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.furtherup.net/p/wesley-huff-and-the-curse-of-evangelical",
+    "title": "Evangelical Pastor Wesley Huff's Public Fall Examined",
+    "original_title": "Wesley Huff and the Curse of Evangelical Celebrity",
+    "source_name": "Bethel McGrew",
+    "date_shown": "2026-11-18",
+    "final_score": 9.0,
+    "tags": [
+      "theology",
+      "church life"
+    ],
+    "topic_cluster": "wesley_huff_celebrity_fall",
+    "base_score": 7.0,
+    "importance": 9.0,
+    "depth": 6.0,
+    "base_importance": 7.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://furtherup.net/p/wesley-huff-and-the-curse-of-evangelical",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://jemartisby.substack.com/p/what-happens-when-a-christian-college",
+    "title": "Evangelical Colleges Police Boundaries of Race and Theology",
+    "original_title": "What Happens When a Christian College Decides You're a Mistake?",
+    "source_name": "Jemar Tisby",
+    "date_shown": "2026-11-18",
+    "final_score": 7.0,
+    "tags": [
+      "culture",
+      "theology"
+    ],
+    "topic_cluster": "evangelical_institutional_identity",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 6.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://jemartisby.substack.com/p/what-happens-when-a-christian-college",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://seanmcdowell.org/blog/what-the-chosen-got-right-about-the-trial-of-jesus",
+    "title": "The Chosen\" Season 6 Depicts Jesus's Trial Accurately, Scholar Says",
+    "original_title": "What the Chosen Got Right about the Trial of Jesus",
+    "source_name": "Sean McDowell",
+    "date_shown": "2026-11-18",
+    "final_score": 7.0,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "the_chosen_entertainment",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 7.0,
+    "base_importance": 5.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://seanmcdowell.org/blog/what-the-chosen-got-right-about-the-trial-of-jesus",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/life5/the-quiet-struggle-of-believing-differently-than-your-parents/",
+    "title": "Faith Disagreements Between Adult Children and Parents Strain Family Bonds",
+    "original_title": "The Quiet Struggle of Believing Differently Than Your Parents",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-11-18",
+    "final_score": 6.5,
+    "tags": [
+      "family",
+      "theology"
+    ],
+    "topic_cluster": "faith_family_differences",
+    "base_score": 5.0,
+    "importance": 6.5,
+    "depth": 6.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://relevantmagazine.com/life5/the-quiet-struggle-of-believing-differently-than-your-parents",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/actually-existing-literary-martyrdom/",
+    "title": "French Author Michel Houellebecq Under Investigation for Incitement",
+    "original_title": "Actually Existing Literary Martyrdom",
+    "source_name": "First Things",
+    "date_shown": "2026-11-18",
+    "final_score": 6.5,
+    "tags": [
+      "culture",
+      "apologetics"
+    ],
+    "topic_cluster": "persecution_free_speech",
+    "base_score": 5.0,
+    "importance": 6.5,
+    "depth": 5.0,
+    "base_importance": 5.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://firstthings.com/actually-existing-literary-martyrdom",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://mereorthodoxy.com/remembering-john-allen-chau/",
+    "title": "Missionary's Death on Isolated Island Was Preventable, Writer Argues",
+    "original_title": "Remembering John Allen Chau",
+    "source_name": "Mere Orthodoxy",
+    "date_shown": "2026-11-18",
+    "final_score": 6.5,
+    "tags": [
+      "missions",
+      "suffering",
+      "theology"
+    ],
+    "topic_cluster": "john_chau_missions_ethics",
+    "base_score": 5.0,
+    "importance": 6.5,
+    "depth": 7.0,
+    "base_importance": 5.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://mereorthodoxy.com/remembering-john-allen-chau",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.challies.com/articles/what-takes-20-years-to-build-takes-5-minutes-to-destroy/",
+    "title": "Moral Failure Can Destroy a Reputation Built Over Decades",
+    "original_title": "What Takes 20 Years to Build Takes 5 Minutes to Destroy",
+    "source_name": "Tim Challies",
+    "date_shown": "2026-11-18",
+    "final_score": 6.0,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 6.0,
+    "depth": 7.0,
+    "base_importance": 4.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://challies.com/articles/what-takes-20-years-to-build-takes-5-minutes-to-destroy",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.thegospelcoalition.org/podcasts/your-corner-of-the-world/exercise-help-dark-lindsey-bomgren/",
+    "title": "Fitness Founder Lindsey Bomgren Helps Women Build Strength Through Hardship",
+    "original_title": "Using Exercise to Help Us Through the Dark Times (with Lindsey Bomgren)",
+    "source_name": "The Gospel Coalition",
+    "date_shown": "2026-11-18",
+    "final_score": 5.25,
+    "tags": [
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 5.25,
+    "depth": 5.0,
+    "base_importance": 4.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://thegospelcoalition.org/podcasts/your-corner-of-the-world/exercise-help-dark-lindsey-bomgren",
+    "boosts": {
+      "recency": 1.5,
+      "trending": 0.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/culture/sports/jesus-plus-nothing-is-everything-kayla-harrisons-message-after-the-biggest-win-of-her-career/",
+    "title": "‘Jesus Plus Nothing Is Everything’: Kayla Harrison’s Message After the Biggest Win of Her Career",
+    "original_title": "‘Jesus Plus Nothing Is Everything’: Kayla Harrison’s Message After the Biggest Win of Her Career",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-11-18",
+    "final_score": 4.75,
+    "tags": [
+      "culture",
+      "apologetics"
+    ],
+    "topic_cluster": "christian_witness_public",
+    "base_score": 5.0,
+    "importance": 4.75,
+    "depth": 4.0,
+    "base_importance": 5.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://relevantmagazine.com/culture/sports/jesus-plus-nothing-is-everything-kayla-harrisons-message-after-the-biggest-win-of-her-career",
+    "boosts": {
+      "recency": 1.5,
+      "voice": -1.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.crossway.org/articles/four-steps-to-jump-start-your-family-bible-time/",
+    "title": "Parents Should Teach Children About God Through Daily Conversation",
+    "original_title": "Four Steps to Jump-Start Your Family Bible Time",
+    "source_name": "Crossway",
+    "date_shown": "2026-11-18",
+    "final_score": 4.75,
+    "tags": [
+      "family",
+      "devotional"
+    ],
+    "topic_cluster": "family_discipleship",
+    "base_score": 4.0,
+    "importance": 4.75,
+    "depth": 6.0,
+    "base_importance": 4.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://crossway.org/articles/four-steps-to-jump-start-your-family-bible-time",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://mereorthodoxy.com/orthodoxy-never-hinged-on-a-diphthong/",
+    "title": "Orthodoxy Never Hinged on a Diphthong",
+    "original_title": "Orthodoxy  Never Hinged on a Diphthong",
+    "source_name": "Mere Orthodoxy",
+    "date_shown": "2026-11-18",
+    "final_score": 3.75,
+    "tags": [
+      "theology",
+      "apologetics"
+    ],
+    "topic_cluster": "church_history_doctrine",
+    "base_score": 3.0,
+    "importance": 3.75,
+    "depth": 5.0,
+    "base_importance": 3.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://mereorthodoxy.com/orthodoxy-never-hinged-on-a-diphthong",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/the-devils-and-the-liturgy-of-liberalism/",
+    "title": "Ken Russell's The Devils Remains Controversial Half Century Later",
+    "original_title": "The Devils and the Liturgy of Liberalism",
+    "source_name": "First Things",
+    "date_shown": "2026-11-18",
+    "final_score": 3.5,
+    "tags": [
+      "culture",
+      "apologetics"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 3.5,
+    "depth": 5.0,
+    "base_importance": 3.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://firstthings.com/the-devils-and-the-liturgy-of-liberalism",
+    "boosts": {
+      "recency": 1.5,
+      "trending": 0.5,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://newsletter.oalannoble.com/p/when-a-mental-health-crisis-becomes",
+    "title": "Doubt During Mental Health Crisis Doesn't Require Losing Faith",
+    "original_title": "When A Mental Health Crisis Becomes a Faith Crisis",
+    "source_name": "O. Alan Noble",
+    "date_shown": "2026-11-18",
+    "final_score": 3.5,
+    "tags": [
+      "theology",
+      "suffering"
+    ],
+    "topic_cluster": "mental_health_faith_crisis",
+    "base_score": 6.0,
+    "importance": 3.5,
+    "depth": 3.0,
+    "base_importance": 6.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://newsletter.oalannoble.com/p/when-a-mental-health-crisis-becomes",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.75,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://ajswoboda.substack.com/p/cultivating-hospitable-gospel-community",
+    "title": "Gospel Communities Require Hospitality, Pastor Argues",
+    "original_title": "Cultivating Hospitable Gospel Community",
+    "source_name": "A.J. Swoboda",
+    "date_shown": "2026-11-18",
+    "final_score": 3.0,
+    "tags": [
+      "theology",
+      "church life"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 5.0,
+    "importance": 3.0,
+    "depth": 2.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://ajswoboda.substack.com/p/cultivating-hospitable-gospel-community",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.5,
+      "previously_shown": -4.0,
+      "trending": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.9marks.org/article/you-cant-make-it-happen-the-spirit-and-the-doctrine-of-conversion/?utm_source=rss&utm_medium=rss&utm_campaign=you-cant-make-it-happen-the-spirit-and-the-doctrine-of-conversion",
+    "title": "The Holy Spirit Prompts Repentance, Not Human Will",
+    "original_title": "You Can’t Make It Happen: The Spirit and the Doctrine of Conversion",
+    "source_name": "9Marks",
+    "date_shown": "2026-11-18",
+    "final_score": 2.75,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 5.0,
+    "importance": 2.75,
+    "depth": 3.0,
+    "base_importance": 5.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://9marks.org/article/you-cant-make-it-happen-the-spirit-and-the-doctrine-of-conversion",
+    "boosts": {
+      "recency": 0.25,
+      "previously_shown": -4.0,
+      "trending": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.thegospelcoalition.org/article/save-no-more/",
+    "title": "God's Compassion, Not Human Repentance, Secures Salvation",
+    "original_title": "Would God Ever Say, ‘I Will Save You No More’?",
+    "source_name": "The Gospel Coalition",
+    "date_shown": "2026-11-18",
+    "final_score": 2.5,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 6.0,
+    "importance": 2.5,
+    "depth": 4.0,
+    "base_importance": 6.0,
+    "base_depth": 8.0,
+    "canonical_url": "https://thegospelcoalition.org/article/save-no-more",
+    "boosts": {
+      "recency": 0.75,
+      "voice": 0.5,
+      "previously_shown": -4.0,
+      "trending": 0.75,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.challies.com/articles/who-or-what-a-continuum-for-using-ai-wisely/",
+    "title": "Christians Should Distinguish Legitimate AI Uses From Illegitimate Ones",
+    "original_title": "Who or What? A Continuum for Using AI Wisely",
+    "source_name": "Tim Challies",
+    "date_shown": "2026-11-18",
+    "final_score": 2.25,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "ai_and_faith",
+    "base_score": 5.0,
+    "importance": 2.25,
+    "depth": 2.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://challies.com/articles/who-or-what-a-continuum-for-using-ai-wisely",
+    "boosts": {
+      "recency": 0.25,
+      "frequency": 0.75,
+      "previously_shown": -4.0,
+      "trending": 1.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.russellmoore.com/2026/11/16/you-cant-just-move-on/",
+    "title": "Russell Moore Says Grace Requires More Than Moving Forward",
+    "original_title": "You Can’t Just Move On",
+    "source_name": "Russell Moore",
+    "date_shown": "2026-11-18",
+    "final_score": 2.25,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "russell_moore_theology",
+    "base_score": 5.0,
+    "importance": 2.25,
+    "depth": 2.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://russellmoore.com/2026/11/16/you-cant-just-move-on",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.5,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://timothypauljones.substack.com/p/reconfiguring-cultural-engagement",
+    "title": "Evangelical Scholars Debate Ancient Apologetics for Modern Culture",
+    "original_title": "Reconfiguring Cultural Engagement: Ancient Apologetics and Positive, Neutral, and Negative Worlds",
+    "source_name": "Timothy Paul Jones",
+    "date_shown": "2026-11-18",
+    "final_score": 2.25,
+    "tags": [
+      "theology",
+      "apologetics"
+    ],
+    "topic_cluster": "evangelical_theological_society_2026",
+    "base_score": 5.0,
+    "importance": 2.25,
+    "depth": 3.0,
+    "base_importance": 5.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://timothypauljones.substack.com/p/reconfiguring-cultural-engagement",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.5,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://michaelfbird.substack.com/p/desiring-biblical-certainty-in-confusing",
+    "title": "Desiring Biblical Certainty in Confusing Age",
+    "original_title": "Desiring Biblical Certainty in Confusing Age",
+    "source_name": "Michael Bird",
+    "date_shown": "2026-11-18",
+    "final_score": 2.25,
+    "tags": [
+      "theology",
+      "apologetics"
+    ],
+    "topic_cluster": "faith_and_certainty",
+    "base_score": 5.0,
+    "importance": 2.25,
+    "depth": 2.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://michaelfbird.substack.com/p/desiring-biblical-certainty-in-confusing",
+    "boosts": {
+      "recency": 0.25,
+      "frequency": 1.0,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://scotmcknight.substack.com/p/a-muslim-and-a-kuyperian-walk-into",
+    "title": "A Muslim and a Kuyperian Walk into a Bar",
+    "original_title": "A Muslim and a Kuyperian Walk into a Bar",
+    "source_name": "Scot McKnight",
+    "date_shown": "2026-11-18",
+    "final_score": 2.0,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "faith_and_culture",
+    "base_score": 5.0,
+    "importance": 2.0,
+    "depth": 2.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://scotmcknight.substack.com/p/a-muslim-and-a-kuyperian-walk-into",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 1.0,
+      "previously_shown": -4.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://nijaykgupta.substack.com/p/what-is-pauls-most-pastoral-letter",
+    "title": "Paul's Most Pastoral Letter Is Not Among His Pastoral Epistles",
+    "original_title": "What is Paul’s Most Pastoral Letter?",
+    "source_name": "Nijay Gupta",
+    "date_shown": "2026-11-18",
+    "final_score": 2.0,
+    "tags": [
+      "theology"
+    ],
+    "topic_cluster": "pauline_epistles_study",
+    "base_score": 4.0,
+    "importance": 2.0,
+    "depth": 3.0,
+    "base_importance": 4.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://nijaykgupta.substack.com/p/what-is-pauls-most-pastoral-letter",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.75,
+      "voice": 0.5,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/11/tyler-perry-the-gospel-of-christmas-review/",
+    "title": "Tyler Perry's Christmas Movie Follows His Familiar Formula",
+    "original_title": "Tyler Perry’s Christmas Movie Is Everything You’d Think It Would Be",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-18",
+    "final_score": 3.25,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 3.25,
+    "depth": 2.0,
+    "base_importance": 2.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://christianitytoday.com/2026/11/tyler-perry-the-gospel-of-christmas-review",
+    "boosts": {
+      "recency": 1.5,
+      "trending": 0.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://thebardowl.substack.com/p/notes-for-the-weekend-an-all-time",
+    "title": "notes for the weekend: an all-time favorite novel",
+    "original_title": "notes for the weekend: an all-time favorite novel",
+    "source_name": "Nicholas McDonald",
+    "date_shown": "2026-11-18",
+    "final_score": 0.5,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 0.5,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://thebardowl.substack.com/p/notes-for-the-weekend-an-all-time",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.75,
+      "previously_shown": 0.25,
+      "trending": 1.25,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.digitalliturgies.net/p/dont-let-influencers-make-a-fool",
+    "title": "Don’t Let Influencers Make a Fool Out of You",
+    "original_title": "Don’t Let Influencers Make a Fool Out of You",
+    "source_name": "Samuel James",
+    "date_shown": "2026-11-18",
+    "final_score": 0.0,
+    "tags": [
+      "culture",
+      "work"
+    ],
+    "topic_cluster": "tech_habits_influence",
+    "base_score": 3.0,
+    "importance": 0.0,
+    "depth": 0.0,
+    "base_importance": 3.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://digitalliturgies.net/p/dont-let-influencers-make-a-fool",
+    "boosts": {
+      "recency": -4.0,
+      "frequency": 0.25,
+      "previously_shown": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://faithfullymagazine.com/amber-shana-williams-the-chosen-representation/",
+    "title": "Amber Shana Williams Says Actors Must Advocate for Character Authenticity",
+    "original_title": "Amber Shana Williams Talks ‘The Chosen,’ Representation, and Knowing Her Worth",
+    "source_name": "Faithfully Magazine",
+    "date_shown": "2026-11-18",
+    "final_score": 0.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "the_chosen_entertainment",
+    "base_score": 3.0,
+    "importance": 0.0,
+    "depth": 0.0,
+    "base_importance": 3.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://faithfullymagazine.com/amber-shana-williams-the-chosen-representation",
+    "boosts": {
+      "recency": -2.0,
+      "previously_shown": -1.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://mereorthodoxy.com/bear-hunt-and-the-politics-of-liberal-timidity/",
+    "title": "Liberal Politicians Depicted as Competent and Willing to Use Power",
+    "original_title": "'Bear Hunt' and the Politics of Liberal Timidity",
+    "source_name": "Mere Orthodoxy",
+    "date_shown": "2026-11-18",
+    "final_score": -0.75,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": -0.75,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://mereorthodoxy.com/bear-hunt-and-the-politics-of-liberal-timidity",
+    "boosts": {
+      "recency": -2.0,
+      "trending": 1.5,
+      "diversity_penalty": -2.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.digitalliturgies.net/p/life-is-too-good-to-be-a-scrolling",
+    "title": "Life Is Too Good to Waste on Endless Scrolling",
+    "original_title": "Life is Too Good to be a Scrolling Sluggard",
+    "source_name": "Samuel James",
+    "date_shown": "2026-11-18",
+    "final_score": -0.75,
+    "tags": [
+      "culture",
+      "work"
+    ],
+    "topic_cluster": "tech_habits_influence",
+    "base_score": 3.0,
+    "importance": -0.75,
+    "depth": 0.0,
+    "base_importance": 3.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://digitalliturgies.net/p/life-is-too-good-to-be-a-scrolling",
+    "boosts": {
+      "recency": -6.0,
+      "frequency": 0.25,
+      "previously_shown": 2.75,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://dandarling.substack.com/p/why-paper-books-endure",
+    "title": "Paper Books Retain Appeal Despite Digital Age",
+    "original_title": "Why Paper Books Endure",
+    "source_name": "Daniel Darling",
+    "date_shown": "2026-11-18",
+    "final_score": -0.75,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": -0.75,
+    "depth": 0.0,
+    "base_importance": 3.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://dandarling.substack.com/p/why-paper-books-endure",
+    "boosts": {
+      "recency": -6.0,
+      "frequency": 0.25,
+      "voice": 1.75,
+      "previously_shown": 1.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianpost.com/voices/should-christian-ministries-have-to-hire-non-christians.html",
+    "title": "Yakima Union Gospel Mission Defends Christian Hiring Requirements",
+    "original_title": "Should Christian ministries have to hire non-Christians?",
+    "source_name": "The Christian Post",
+    "date_shown": "2026-11-18",
+    "final_score": 8.3,
+    "tags": [
+      "news",
+      "church life"
+    ],
+    "topic_cluster": "religious_liberty_hiring",
+    "base_score": 7.0,
+    "importance": 8.3,
+    "depth": 5.0,
+    "base_importance": 7.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://christianpost.com/voices/should-christian-ministries-have-to-hire-non-christians.html",
+    "boosts": {
+      "tier": -0.7,
+      "recency": 1.5,
+      "voice": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/sift/onehope-ministry-founder-bob-hoskins-dead-at-90-1794951174",
+    "title": "OneHope ministry founder Bob Hoskins dead at 90",
+    "original_title": "OneHope ministry founder Bob Hoskins dead at 90",
+    "source_name": "World Magazine",
+    "date_shown": "2026-11-18",
+    "final_score": 7.62,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "bob_hoskins_tribute",
+    "base_score": 6.0,
+    "importance": 7.62,
+    "depth": 2.0,
+    "base_importance": 6.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://wng.org/sift/onehope-ministry-founder-bob-hoskins-dead-at-90-1794951174",
+    "boosts": {
+      "tier": 0.12,
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.theguardian.com/us-news/2026/nov/17/evangelical-church-exorcism-demons-charismatic-worship",
+    "title": "Evangelical Churches Embrace Deliverance Theology and Demon Exorcism",
+    "original_title": "‘I know I sound crazy’: the creep of demons into American evangelical churches",
+    "source_name": "The Guardian",
+    "date_shown": "2026-11-18",
+    "final_score": 7.1,
+    "tags": [
+      "theology",
+      "church life",
+      "culture"
+    ],
+    "topic_cluster": "charismatic_deliverance_practices",
+    "base_score": 7.0,
+    "importance": 7.1,
+    "depth": 5.0,
+    "base_importance": 7.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://theguardian.com/us-news/2026/nov/17/evangelical-church-exorcism-demons-charismatic-worship",
+    "boosts": {
+      "tier": -1.4,
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianpost.com/news/trump-admin-urges-nigeria-to-release-jailed-muslim-singer.html",
+    "title": "Trump Administration Calls for Release of Nigerian Singer Jailed for Blasphemy",
+    "original_title": "Trump admin. urges Nigeria to release Muslim singer jailed for blasphemy",
+    "source_name": "The Christian Post",
+    "date_shown": "2026-11-18",
+    "final_score": 7.05,
+    "tags": [
+      "news",
+      "missions"
+    ],
+    "topic_cluster": "persecution_religious_freedom",
+    "base_score": 7.0,
+    "importance": 7.05,
+    "depth": 4.0,
+    "base_importance": 7.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://christianpost.com/news/trump-admin-urges-nigeria-to-release-jailed-muslim-singer.html",
+    "boosts": {
+      "tier": -0.7,
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/sift/sen-hawley-says-overton-promises-robust-mifepristone-review-1794960323",
+    "title": "Sen. Hawley says Overton promises robust mifepristone review",
+    "original_title": "Sen. Hawley says Overton promises robust mifepristone review",
+    "source_name": "World Magazine",
+    "date_shown": "2026-11-18",
+    "final_score": 5.85,
+    "tags": [
+      "politics",
+      "news"
+    ],
+    "topic_cluster": "abortion_policy",
+    "base_score": 5.0,
+    "importance": 5.85,
+    "depth": 1.0,
+    "base_importance": 5.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://wng.org/sift/sen-hawley-says-overton-promises-robust-mifepristone-review-1794960323",
+    "boosts": {
+      "tier": 0.1,
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://religionnews.com/2026/11/17/in-dc-palestinian-christians-and-their-allies-push-lawmakers/",
+    "title": "Palestinian Christians Urge US Lawmakers to Address West Bank Violence",
+    "original_title": "Palestinian Christians press US lawmakers to address violence in the West Bank and Gaza",
+    "source_name": "Religion News Service",
+    "date_shown": "2026-11-18",
+    "final_score": 4.75,
+    "tags": [
+      "politics"
+    ],
+    "topic_cluster": "christian_political_advocacy",
+    "base_score": 4.0,
+    "importance": 4.75,
+    "depth": 2.0,
+    "base_importance": 4.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://religionnews.com/2026/11/17/in-dc-palestinian-christians-and-their-allies-push-lawmakers",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.americanreformer.org/p/after-the-republican-rout",
+    "title": "GOP Needs New Generation to Continue Party Realignment",
+    "original_title": "After the Republican Rout",
+    "source_name": "American Reformer",
+    "date_shown": "2026-11-18",
+    "final_score": 4.5,
+    "tags": [
+      "politics"
+    ],
+    "topic_cluster": "gop_leadership",
+    "base_score": 3.0,
+    "importance": 4.5,
+    "depth": 1.0,
+    "base_importance": 3.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://americanreformer.org/p/after-the-republican-rout",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.graphsaboutreligion.com/p/the-religious-gender-gap-is-really",
+    "title": "College Students Show Religious Gender Gap Reflects Political Divide",
+    "original_title": "The Religious Gender Gap Is Really a Political Gap",
+    "source_name": "Ryan Burge",
+    "date_shown": "2026-11-18",
+    "final_score": 4.5,
+    "tags": [
+      "data",
+      "culture"
+    ],
+    "topic_cluster": "gender_religion_politics",
+    "base_score": 7.0,
+    "importance": 4.5,
+    "depth": 1.0,
+    "base_importance": 7.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://graphsaboutreligion.com/p/the-religious-gender-gap-is-really",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.75,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://careynieuwhof.com/episode-843/",
+    "title": "Mark Batterson Says Pastors Silence Themselves From Fear",
+    "original_title": "Episode 843: Christian Nationalism: Mark Batterson on the Sin of Self-Silencing",
+    "source_name": "Carey Nieuwhof",
+    "date_shown": "2026-11-18",
+    "final_score": 4.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "christian_nationalism_debate",
+    "base_score": 2.0,
+    "importance": 4.0,
+    "depth": 1.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://careynieuwhof.com/episode-843",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.5,
+      "trending": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.theguardian.com/commentisfree/2026/nov/18/is-australia-ready-to-embrace-a-new-christian-left-religion-politics-ntwnfb",
+    "title": "Christian Democrat Gains Texas Seat With Faith-Based Message",
+    "original_title": "James Talarico’s ‘love thy neighbour’ message won over Texas. Is Australia ready to embrace a new Christian left? | Brigid Delaney",
+    "source_name": "The Guardian",
+    "date_shown": "2026-11-18",
+    "final_score": 3.75,
+    "tags": [
+      "politics",
+      "culture"
+    ],
+    "topic_cluster": "christian_political_witness",
+    "base_score": 5.0,
+    "importance": 3.75,
+    "depth": 4.0,
+    "base_importance": 5.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://theguardian.com/commentisfree/2026/nov/18/is-australia-ready-to-embrace-a-new-christian-left-religion-politics-ntwnfb",
+    "boosts": {
+      "tier": -1.0,
+      "recency": 1.5,
+      "voice": -1.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.aaronrenn.com/p/the-rise-of-the-rest-is-over",
+    "title": "America's Cities Face Decline in Post-Covid Era",
+    "original_title": "The Rise of the Rest Is Over",
+    "source_name": "Aaron Renn",
+    "date_shown": "2026-11-18",
+    "final_score": 3.0,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 3.0,
+    "depth": 1.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://aaronrenn.com/p/the-rise-of-the-rest-is-over",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://chrisgehrz.substack.com/p/gearing-up-for-lindbergh100",
+    "title": "Gearing Up for #Lindbergh100",
+    "original_title": "Gearing Up for #Lindbergh100",
+    "source_name": "Chris Gehrz",
+    "date_shown": "2026-11-18",
+    "final_score": 3.0,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "lindbergh_event",
+    "base_score": 1.0,
+    "importance": 3.0,
+    "depth": 1.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://chrisgehrz.substack.com/p/gearing-up-for-lindbergh100",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.pewresearch.org/short-reads/2026/11/17/at-least-10-states-require-in-person-businesses-to-accept-cash/",
+    "title": "Ten States Require In-Person Businesses to Accept Cash",
+    "original_title": "At Least 10 States Require In-Person Businesses to Accept Cash",
+    "source_name": "Pew Research",
+    "date_shown": "2026-11-18",
+    "final_score": 2.75,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "cash_payment_regulation",
+    "base_score": 2.0,
+    "importance": 2.75,
+    "depth": 1.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://pewresearch.org/short-reads/2026/11/17/at-least-10-states-require-in-person-businesses-to-accept-cash",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://mereorthodoxy.com/supporting-trump-killed-evangelical-political-influence/",
+    "title": "Evangelicals Become Voting Bloc Rather Than Policy Shapers",
+    "original_title": "Supporting Trump Killed Evangelical Political Influence",
+    "source_name": "Mere Orthodoxy",
+    "date_shown": "2026-11-18",
+    "final_score": 2.25,
+    "tags": [
+      "politics",
+      "church life"
+    ],
+    "topic_cluster": "evangelical_political_influence",
+    "base_score": 7.0,
+    "importance": 2.25,
+    "depth": 1.0,
+    "base_importance": 7.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://mereorthodoxy.com/supporting-trump-killed-evangelical-political-influence",
+    "boosts": {
+      "recency": 0.75,
+      "previously_shown": -4.0,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://thecommon.place/p/ep205",
+    "title": "A Boarding School & a Suit of Armor",
+    "original_title": "A Boarding School & a Suit of Armor",
+    "source_name": "Tsh Oxenreider",
+    "date_shown": "2026-11-18",
+    "final_score": 1.5,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 1.5,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://thecommon.place/p/ep205",
+    "boosts": {
+      "recency": -4.0,
+      "frequency": 0.25,
+      "previously_shown": 2.75,
+      "trending": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.spiritualtheology.net/p/october-book-briefs-29a",
+    "title": "October Book Briefs",
+    "original_title": "October Book Briefs",
+    "source_name": "J.A. Medders",
+    "date_shown": "2026-11-18",
+    "final_score": 1.5,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 1.5,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://spiritualtheology.net/p/october-book-briefs-29a",
+    "boosts": {
+      "recency": -6.0,
+      "frequency": 0.25,
+      "previously_shown": 3.75,
+      "trending": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/11/nigerian-christians-grapple-with-western-diaspora-driven-surrogacy-boom/",
+    "title": "Nigerian Christians Turn to Surrogacy to Escape Poverty",
+    "original_title": "Nigerian Christians Grapple with Diaspora-Driven Surrogacy Boom",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-18",
+    "final_score": 1.25,
+    "tags": [
+      "news",
+      "culture"
+    ],
+    "topic_cluster": "nigerian_christianity_diaspora",
+    "base_score": 6.0,
+    "importance": 1.25,
+    "depth": 1.0,
+    "base_importance": 6.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://christianitytoday.com/2026/11/nigerian-christians-grapple-with-western-diaspora-driven-surrogacy-boom",
+    "boosts": {
+      "recency": 0.75,
+      "previously_shown": -4.0,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://reformation21.org/everyones-in-a-huff/",
+    "title": "Everyone’s in a Huff",
+    "original_title": "Everyone’s in a Huff",
+    "source_name": "Reformation21",
+    "date_shown": "2026-11-18",
+    "final_score": 1.21,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 1.21,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://reformation21.org/everyones-in-a-huff",
+    "boosts": {
+      "tier": 0.04,
+      "recency": 0.75,
+      "previously_shown": -2.79,
+      "trending": 1.21
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://feeds.ligonier.org/~/973078778/0/ligonierministriesblog",
+    "title": "Give Tabletalk This Christmas",
+    "original_title": "Give Tabletalk This Christmas",
+    "source_name": "Ligonier Ministries",
+    "date_shown": "2026-11-18",
+    "final_score": 0.75,
+    "tags": [
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 0.75,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://feeds.ligonier.org/~/973078778/0/ligonierministriesblog",
+    "boosts": {
+      "recency": 0.25,
+      "previously_shown": -1.25,
+      "trending": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://careynieuwhof.com/episode-842/",
+    "title": "Ron Friedman: Top Teams Use AI to Outpace Average Competitors",
+    "original_title": "Episode 842: 3 Characteristics of High Performing Teams: Ron Friedman On What Makes Average Teams Average and How Top Teams Use AI",
+    "source_name": "Carey Nieuwhof",
+    "date_shown": "2026-11-18",
+    "final_score": 0.75,
+    "tags": [
+      "work"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 0.75,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://careynieuwhof.com/episode-842",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.5,
+      "voice": -0.5,
+      "trending": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://thecommon.place/p/ep204",
+    "title": "An Empty Museum & an Urban Neighborhood",
+    "original_title": "An Empty Museum & an Urban Neighborhood",
+    "source_name": "Tsh Oxenreider",
+    "date_shown": "2026-11-18",
+    "final_score": 0.75,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 0.75,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://thecommon.place/p/ep204",
+    "boosts": {
+      "recency": -6.0,
+      "frequency": 0.25,
+      "previously_shown": 4.75,
+      "trending": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://emilypfreeman.substack.com/p/faith-politics-and-november-vibes",
+    "title": "Faith, Politics, and November Vibes",
+    "original_title": "Faith, Politics, and November Vibes",
+    "source_name": "Emily P. Freeman",
+    "date_shown": "2026-11-18",
+    "final_score": 0.75,
+    "tags": [
+      "culture",
+      "politics"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 0.75,
+    "depth": 0.0,
+    "base_importance": 4.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://emilypfreeman.substack.com/p/faith-politics-and-november-vibes",
+    "boosts": {
+      "recency": -4.0,
+      "frequency": 0.5,
+      "previously_shown": -0.5,
+      "trending": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/11/good-burdens-lords-table-between-hurry-heaven/",
+    "title": "Philippians 4:8 Commands Believers to Focus on Excellence",
+    "original_title": "How ‘Good Burdens’ Bring You to the Lord’s Table",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-18",
+    "final_score": 5.0,
+    "tags": [
+      "devotional",
+      "theology"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 5.0,
+    "depth": 7.0,
+    "base_importance": 3.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://christianitytoday.com/2026/11/good-burdens-lords-table-between-hurry-heaven",
+    "boosts": {
+      "recency": 1.5,
+      "voice": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://feeds.ligonier.org/~/973246799/0/ligonierministriesblog",
+    "title": "What Abba Means in the Bible",
+    "original_title": "What Abba Means in the Bible",
+    "source_name": "Ligonier Ministries",
+    "date_shown": "2026-11-18",
+    "final_score": 5.0,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "biblical_word_studies",
+    "base_score": 3.0,
+    "importance": 5.0,
+    "depth": 7.0,
+    "base_importance": 3.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://feeds.ligonier.org/~/973246799/0/ligonierministriesblog",
+    "boosts": {
+      "recency": 1.5,
+      "voice": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://thebardowl.substack.com/p/how-to-experience-gospel-transformation",
+    "title": "How To Experience Gospel Transformation",
+    "original_title": "How To Experience Gospel Transformation",
+    "source_name": "Nicholas McDonald",
+    "date_shown": "2026-11-18",
+    "final_score": 5.0,
+    "tags": [
+      "devotional",
+      "theology"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 5.0,
+    "depth": 7.0,
+    "base_importance": 3.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://thebardowl.substack.com/p/how-to-experience-gospel-transformation",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/peace-in-a-humbler-form/",
+    "title": "Christ's Peace Takes Humbler Forms Than Expected",
+    "original_title": "Peace in a Humbler Form",
+    "source_name": "First Things",
+    "date_shown": "2026-11-18",
+    "final_score": 4.75,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "advent_peace",
+    "base_score": 4.0,
+    "importance": 4.75,
+    "depth": 7.0,
+    "base_importance": 4.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://firstthings.com/peace-in-a-humbler-form",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/faith/john-mark-comer-the-great-lie-is-that-we-heal-by-moving-away-from-our-pain/",
+    "title": "John Mark Comer Says We Heal by Facing Our Pain, Not Fleeing It",
+    "original_title": "John Mark Comer: The Great Lie Is That We Heal by Moving Away From Our Pain",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-11-18",
+    "final_score": 3.5,
+    "tags": [
+      "devotional",
+      "suffering"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 3.5,
+    "depth": 7.0,
+    "base_importance": 4.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://relevantmagazine.com/faith/john-mark-comer-the-great-lie-is-that-we-heal-by-moving-away-from-our-pain",
+    "boosts": {
+      "recency": 1.5,
+      "voice": -1.0,
+      "trending": 0.5,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=mwCtBTLSAis",
+    "title": "Using Exercise to Help Us Through the Dark Times (w/Lindsey Bomgren) [Your Corner of the World Ep.4]",
+    "original_title": "Using Exercise to Help Us Through the Dark Times (w/Lindsey Bomgren) [Your Corner of the World Ep.4]",
+    "source_name": "The Gospel Coalition (Video)",
+    "date_shown": "2026-11-18",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "https://youtube.com/watch?v=mwCtBTLSAis",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
+  },
+  {
+    "url": "https://podcasts.apple.com/us/podcast/where-our-criminal-justice-system-breaks-down-with/id1499898207?i=1000802403616",
+    "title": "Where Our Criminal Justice System Breaks Down (with Matthew Martens)",
+    "original_title": "Where Our Criminal Justice System Breaks Down (with Matthew Martens)",
+    "source_name": "Gospelbound",
+    "date_shown": "2026-11-18",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "https://podcasts.apple.com/us/podcast/where-our-criminal-justice-system-breaks-down-with/id1499898207?i=1000802403616",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/podcasts/the-world-and-everything-in-it-november-18-2026-1794935676",
+    "title": "The World and Everything in It: November 18, 2026",
+    "original_title": "The World and Everything in It: November 18, 2026",
+    "source_name": "World Magazine",
+    "date_shown": "2026-11-18",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "https://wng.org/podcasts/the-world-and-everything-in-it-november-18-2026-1794935676",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
+  },
+  {
+    "url": "https://podcasts.apple.com/us/podcast/you-cant-just-move-on/id1074011166?i=1000802244119",
+    "title": "You Can’t Just Move On",
+    "original_title": "You Can’t Just Move On",
+    "source_name": "The Russell Moore Show",
+    "date_shown": "2026-11-18",
+    "final_score": 0,
+    "tags": [],
+    "topic_cluster": "",
+    "base_score": null,
+    "importance": null,
+    "depth": null,
+    "base_importance": null,
+    "base_depth": null,
+    "canonical_url": "https://podcasts.apple.com/us/podcast/you-cant-just-move-on/id1074011166?i=1000802244119",
+    "boosts": {},
+    "scored_by": "media",
+    "clicks": 0
+  },
+  {
+    "url": "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith/",
+    "title": "Study Finds Church, Family, and Smartphones Shape Evangelical Youth Faith",
+    "original_title": "Young Adults Say Church, Home, and Smartphones Have Shaped Their Faith",
+    "source_name": "Lifeway Research",
+    "date_shown": "2026-11-18",
+    "final_score": 7.5,
+    "tags": [
+      "data",
+      "church life"
+    ],
+    "topic_cluster": "young_adult_faith_formation",
+    "base_score": 6.0,
+    "importance": 7.5,
+    "depth": 5.0,
+    "base_importance": 6.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.pewresearch.org/short-reads/2026/11/17/younger-and-lgbtq-adults-in-the-us-stand-out-for-finding-friendship-online/",
+    "title": "Younger Adults Find More Friendships Online Than Older Peers",
+    "original_title": "Younger and LGBTQ Adults in the U.S. Stand Out for Finding Friendship Online",
+    "source_name": "Pew Research",
+    "date_shown": "2026-11-18",
+    "final_score": 6.5,
+    "tags": [
+      "data",
+      "culture"
+    ],
+    "topic_cluster": "online_friendship_trends",
+    "base_score": 5.0,
+    "importance": 6.5,
+    "depth": 3.0,
+    "base_importance": 5.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://pewresearch.org/short-reads/2026/11/17/younger-and-lgbtq-adults-in-the-us-stand-out-for-finding-friendship-online",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://research.lifeway.com/2026/11/18/4-ways-to-reach-unchurched-men/",
+    "title": "Churches Must Meet Unchurched Men Where They Are",
+    "original_title": "4 Ways to Reach Unchurched Men",
+    "source_name": "Lifeway Research",
+    "date_shown": "2026-11-18",
+    "final_score": 5.75,
+    "tags": [
+      "church life",
+      "missions"
+    ],
+    "topic_cluster": "reaching_unchurched_men",
+    "base_score": 5.0,
+    "importance": 5.75,
+    "depth": 4.0,
+    "base_importance": 5.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://research.lifeway.com/2026/11/18/4-ways-to-reach-unchurched-men",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
   }
 ]

@@ -137,6 +137,18 @@
       "status": "fetched",
       "attempts": 1,
       "note": "0 verified figure(s)"
+    },
+    "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith": {
+      "date": "2026-11-18",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "3 verified figure(s)"
+    },
+    "https://research.lifeway.com/2026/11/18/4-ways-to-reach-unchurched-men": {
+      "date": "2026-11-18",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
     }
   },
   "fresh": {
@@ -184,6 +196,12 @@
         "title": "Majority of Americans Say Social Media Companies, News Outlets Have Too Much Power in Politics",
         "url": "https://www.pewresearch.org/short-reads/2026/11/06/majority-of-americans-say-social-media-companies-news-outlets-have-too-much-power-in-politics/",
         "source": "Pew Research"
+      },
+      {
+        "date": "2026-11-18",
+        "title": "Young Adults Say Church, Home, and Smartphones Have Shaped Their Faith",
+        "url": "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith/",
+        "source": "Lifeway Research"
       }
     ],
     "christian-nationalism": [
@@ -205,6 +223,12 @@
         "date": "2026-11-11",
         "title": "Most SBC Churches Confident About Future, but Issues Loom",
         "url": "https://research.lifeway.com/2026/11/10/most-sbc-churches-confident-about-future-but-issues-loom/",
+        "source": "Lifeway Research"
+      },
+      {
+        "date": "2026-11-18",
+        "title": "Young Adults Say Church, Home, and Smartphones Have Shaped Their Faith",
+        "url": "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith/",
         "source": "Lifeway Research"
       }
     ],
@@ -304,6 +328,12 @@
         "title": "Leaving Well: 5 Ways to Prepare Your Church for Pastoral Transition",
         "url": "https://research.lifeway.com/2026/11/11/leaving-well-5-ways-to-prepare-your-church-for-pastoral-transition/",
         "source": "Lifeway Research"
+      },
+      {
+        "date": "2026-11-18",
+        "title": "4 Ways to Reach Unchurched Men",
+        "url": "https://research.lifeway.com/2026/11/18/4-ways-to-reach-unchurched-men/",
+        "source": "Lifeway Research"
       }
     ],
     "religious-liberty": [
@@ -390,6 +420,12 @@
         "title": "Expert Brief: Public Opinion on AI in Healthcare",
         "url": "https://www.pewresearch.org/2026/11/11/expert-brief-public-opinion-on-ai-in-healthcare/",
         "source": "Pew Research"
+      },
+      {
+        "date": "2026-11-17",
+        "title": "YouVersion’s Biggest Problem Is Claude, ChatGPT Misquoting the Bible",
+        "url": "https://www.christianitytoday.com/2026/11/youversion-bible-app-ai-claude-chatgpt-bobby-gruenewald/",
+        "source": "Christianity Today"
       }
     ],
     "sanctification": [
@@ -407,10 +443,40 @@
         "url": "https://www.christianitytoday.com/2026/11/youversion-bible-app-ai-claude-chatgpt-bobby-gruenewald/",
         "source": "Christianity Today"
       }
+    ],
+    "marriage-and-family": [
+      {
+        "date": "2026-11-18",
+        "title": "Young Adults Say Church, Home, and Smartphones Have Shaped Their Faith",
+        "url": "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith/",
+        "source": "Lifeway Research"
+      }
     ]
   },
   "figures": {
     "evangelicalism": [
+      {
+        "quote": "Just as many point to people and programs at church (21%), personal spiritual disciplines (21%) and people and practices at home (20%).",
+        "figure": "21%",
+        "publisher": "Lifeway Research",
+        "license_status": "reuse",
+        "url": "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith/",
+        "title": "Young Adults Say Church, Home, and Smartphones Have Shaped Their Faith",
+        "reported_by": "Lifeway Research",
+        "found_on": "2026-11-18",
+        "id": "watch-c2d9ec215e75"
+      },
+      {
+        "quote": "Two in 3 evangelical young adults (64%) say they know the age at which they gave their life to Christ.",
+        "figure": "Two in 3",
+        "publisher": "Lifeway Research",
+        "license_status": "reuse",
+        "url": "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith/",
+        "title": "Young Adults Say Church, Home, and Smartphones Have Shaped Their Faith",
+        "reported_by": "Lifeway Research",
+        "found_on": "2026-11-18",
+        "id": "watch-cc3f7e97de6a"
+      },
       {
         "quote": "Almost 9 in 10 churches (86%) say their congregation’s future is at least OK, including 27% that say they are thriving and should continue that way.",
         "figure": "9 in 10",
@@ -433,12 +499,97 @@
         "found_on": "2026-11-11",
         "id": "watch-d28e1e4c0d32"
       }
+    ],
+    "marriage-and-family": [
+      {
+        "quote": "A quarter select addiction (26%) and bullying (23%), while 17% say their parents’ divorce.",
+        "figure": "26%",
+        "publisher": "Lifeway Research",
+        "license_status": "reuse",
+        "url": "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith/",
+        "title": "Young Adults Say Church, Home, and Smartphones Have Shaped Their Faith",
+        "reported_by": "Lifeway Research",
+        "found_on": "2026-11-18",
+        "id": "watch-4d82fa6f8f92"
+      }
     ]
   },
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "last_run": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "stories": [
+      {
+        "title": "Young Adults Say Church, Home, and Smartphones Have Shaped Their Faith",
+        "url": "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [
+            "study finds"
+          ],
+          "data_tag": true
+        },
+        "topics": [
+          "evangelicalism",
+          "marriage-and-family",
+          "technology"
+        ],
+        "trend": 8.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "verified 21% (Lifeway Research, reuse) for evangelicalism",
+          "verified Two in 3 (Lifeway Research, reuse) for evangelicalism",
+          "verified 26% (Lifeway Research, reuse) for marriage-and-family"
+        ]
+      },
+      {
+        "title": "Younger and LGBTQ Adults in the U.S. Stand Out for Finding Friendship Online",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/17/younger-and-lgbtq-adults-in-the-us-stand-out-for-finding-friendship-online/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 7.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "4 Ways to Reach Unchurched Men",
+        "url": "https://research.lifeway.com/2026/11/18/4-ways-to-reach-unchurched-men/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [
+          "local-church"
+        ],
+        "trend": 6.75,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
+        ]
+      },
       {
         "title": "The Religious Gender Gap Is Really a Political Gap",
         "url": "https://www.graphsaboutreligion.com/p/the-religious-gender-gap-is-really",
@@ -455,109 +606,32 @@
           "gender-and-biblical-anthropology",
           "politics-and-the-church"
         ],
-        "trend": 10.0,
+        "trend": 5.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
+          "page already checked on 2026-11-17 (0 verified figure(s))"
         ]
       },
       {
-        "title": "Study: 2 in 3 churchgoers fail Bible literacy quiz",
-        "url": "https://roysreport.com/study-2-in-3-churchgoers-fail-bible-literacy-quiz/",
-        "source": "The Roys Report",
+        "title": "At Least 10 States Require In-Person Businesses to Accept Cash",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/17/at-least-10-states-require-in-person-businesses-to-accept-cash/",
+        "source": "Pew Research",
         "signals": {
           "publishers": [
-            "Lifeway Research"
-          ],
-          "figures": [],
-          "words": [
-            "quiz"
-          ],
-          "data_tag": true
-        },
-        "topics": [
-          "biblical-literacy"
-        ],
-        "trend": 9.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-14 (2 verified figure(s))"
-        ]
-      },
-      {
-        "title": "YouVersion’s Biggest Problem Is Claude, ChatGPT Misquoting the Bible",
-        "url": "https://www.christianitytoday.com/2026/11/youversion-bible-app-ai-claude-chatgpt-bobby-gruenewald/",
-        "source": "Christianity Today",
-        "signals": {
-          "publishers": [
-            "YouVersion"
+            "Pew Research Center"
           ],
           "figures": [],
           "words": [],
           "data_tag": false
         },
-        "topics": [
-          "biblical-literacy",
-          "biblical-inerrancy",
-          "technology-and-discipleship"
-        ],
-        "trend": 9.5,
+        "topics": [],
+        "trend": 3.75,
         "outlets": 1,
         "on_digest": true,
         "actions": [
-          "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
-        ]
-      },
-      {
-        "title": "Where Americans Get News Relates to How They Engage in Public Life",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/13/where-americans-get-news-relates-to-how-they-engage-in-public-life/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [
-          "politics-and-the-church"
-        ],
-        "trend": 6.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-14 (0 verified figure(s))"
-        ]
-      },
-      {
-        "title": "Many Black Adults Say Close Relationships Influence Their Views About Being a Black Man or Woman",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/12/many-black-adults-say-close-relationships-influence-their-views-about-being-a-black-man-or-woman/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [
-          "gender-and-biblical-anthropology",
-          "racial-reconciliation"
-        ],
-        "trend": 4.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-14 (0 verified figure(s))"
+          "no topic page matched"
         ]
       },
       {
@@ -664,28 +738,6 @@
             "Pew Research Center"
           ],
           "figures": [],
-          "words": [
-            "survey"
-          ],
-          "data_tag": false
-        },
-        "topics": [],
-        "trend": 2.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "Give Tabletalk This Christmas",
-        "url": "https://feeds.ligonier.org/~/973078778/0/ligonierministriesblog",
-        "source": "Ligonier Ministries",
-        "signals": {
-          "publishers": [],
-          "figures": [
-            "50%"
-          ],
           "words": [],
           "data_tag": false
         },
@@ -718,6 +770,26 @@
         ]
       },
       {
+        "title": "Give Tabletalk This Christmas",
+        "url": "https://feeds.ligonier.org/~/973078778/0/ligonierministriesblog",
+        "source": "Ligonier Ministries",
+        "signals": {
+          "publishers": [],
+          "figures": [
+            "50%"
+          ],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 1.75,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
         "title": "Methodology",
         "url": "https://www.pewresearch.org/race-and-ethnicity/2026/11/12/single-black-adults-methodology/",
         "source": "Pew Research",
@@ -726,9 +798,7 @@
             "Pew Research Center"
           ],
           "figures": [],
-          "words": [
-            "survey"
-          ],
+          "words": [],
           "data_tag": true
         },
         "topics": [],
@@ -765,19 +835,46 @@
         ]
       },
       {
-        "title": "The Presbyterian Church (USA) Is About to Cross a Historic Threshold",
-        "url": "https://www.graphsaboutreligion.com/p/the-presbyterian-church-usa-is-about",
+        "title": "YouVersion’s Biggest Problem Is Claude, ChatGPT Misquoting the Bible",
+        "url": "https://www.christianitytoday.com/2026/11/youversion-bible-app-ai-claude-chatgpt-bobby-gruenewald/",
+        "source": "Christianity Today",
+        "signals": {
+          "publishers": [
+            "YouVersion"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [
+          "biblical-literacy",
+          "technology-and-discipleship",
+          "artificial-intelligence"
+        ],
+        "trend": 0.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-17 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "Why Don’t Religious Nones Want Kids?",
+        "url": "https://www.graphsaboutreligion.com/p/why-dont-religious-nones-want-kids",
         "source": "Ryan Burge",
         "signals": {
           "publishers": [
             "Ryan Burge"
           ],
           "figures": [],
-          "words": [],
-          "data_tag": false
+          "words": [
+            "study finds"
+          ],
+          "data_tag": true
         },
         "topics": [],
-        "trend": -0.75,
+        "trend": -0.5,
         "outlets": 1,
         "on_digest": false,
         "actions": [
@@ -785,8 +882,19 @@
         ]
       }
     ],
-    "pages": [],
+    "pages": [
+      {
+        "slug": "evangelicalism",
+        "kind": "latest-figures",
+        "note": "Latest Figures block refreshed (4 figures); dates bumped"
+      },
+      {
+        "slug": "marriage-and-family",
+        "kind": "latest-figures",
+        "note": "Latest Figures block refreshed (1 figures); dates bumped"
+      }
+    ],
     "fetched": 2,
-    "hits": 15
+    "hits": 16
   }
 }

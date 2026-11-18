@@ -19197,5 +19197,85 @@
       }
     ],
     "initials": "RRR"
+  },
+  {
+    "name": "Hans Madueme",
+    "slug": "hans-madueme",
+    "bio": "Hans Madueme is a theologian and scholar known for his work in systematic theology, biblical studies, and Christian worldview. He has contributed to various Christian publications and academic contexts, bringing rigorous theological reflection to contemporary faith issues.",
+    "affiliation": "",
+    "role": "Theologian & Scholar",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "HM"
+  },
+  {
+    "name": "Megan Buss",
+    "slug": "megan-buss",
+    "bio": "Megan Buss is a Christian writer and content creator dedicated to helping women navigate faith and life with biblical wisdom. Through her writing and speaking, she encourages believers to deepen their relationship with God and live out their faith authentically in everyday circumstances.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MB"
+  },
+  {
+    "name": "P. R. Swain",
+    "slug": "p-r-swain",
+    "bio": "P. R. Swain is a Christian writer and content creator dedicated to exploring faith, scripture, and spiritual growth. Through thoughtful writing and biblical reflection, Swain seeks to help readers deepen their understanding of Christian doctrine and practice.",
+    "affiliation": "",
+    "role": "Author & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "PRS"
+  },
+  {
+    "name": "A. Trevor Sutton",
+    "slug": "a-trevor-sutton",
+    "bio": "A. Trevor Sutton is a writer and content creator known for his work in Christian apologetics and biblical commentary. He contributes to various Christian publications and speaks on topics related to faith, Scripture, and contemporary culture.",
+    "affiliation": "",
+    "role": "Writer & Christian Apologist",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ATS"
+  },
+  {
+    "name": "George Weigel",
+    "slug": "george-weigel",
+    "bio": "George Weigel is a prominent Catholic author and biographer best known for his comprehensive works on Pope John Paul II and Catholic social thought. His writing explores the intersection of faith, politics, and culture from a distinctly Christian worldview, offering intellectual depth to contemporary religious discourse.",
+    "affiliation": "Ethics and Public Policy Center",
+    "role": "Author, Biographer & Catholic Intellectual",
+    "education": "Holy Cross College",
+    "website": "https://www.georgeweigel.com",
+    "books": [
+      {
+        "title": "Witness to Hope: The Biography of Pope John Paul II",
+        "amazon_url": "https://www.amazon.com/s?k=Witness+to+Hope+George+Weigel"
+      },
+      {
+        "title": "The End and the Beginning: Pope John Paul II, the Victory of Freedom, the Last Years, the Legacy",
+        "amazon_url": "https://www.amazon.com/s?k=The+End+and+the+Beginning+George+Weigel"
+      },
+      {
+        "title": "The Courage to Be Catholic: Crisis, Reform, and the Future of the Church",
+        "amazon_url": "https://www.amazon.com/s?k=The+Courage+to+Be+Catholic+George+Weigel"
+      },
+      {
+        "title": "God's Choice: Pope Benedict XVI and the Future of the Catholic Church",
+        "amazon_url": "https://www.amazon.com/s?k=Gods+Choice+George+Weigel"
+      },
+      {
+        "title": "The World in 2050: How to Build a Better Future",
+        "amazon_url": "https://www.amazon.com/s?k=The+World+in+2050+George+Weigel"
+      },
+      {
+        "title": "Letters to a Young Catholic",
+        "amazon_url": "https://www.amazon.com/s?k=Letters+to+a+Young+Catholic+George+Weigel"
+      }
+    ],
+    "initials": "GW"
   }
 ]
