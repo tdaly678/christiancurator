@@ -119,8 +119,9 @@ def test_masthead_claim_names_no_source_count():
 def test_descriptions_name_no_feed_count():
     # Overnight Nov 12 2026: meta and Open Graph descriptions match the masthead.
     root = Path(__file__).resolve().parent.parent
-    want = ("A daily ranked front page of news, commentary and theology from across the "
-            "evangelical web, updated every morning.")
+    # Nov 19 2026: new tagline and supporting line (T1).
+    want = ("The Christian conversation, in one place: news, commentary and theology from "
+            "across the Christian web. The range of views, fairly told. Curated every day.")
     for path in (root / "frontend" / "template.html", root / "docs" / "index.html"):
         html = path.read_text(encoding="utf-8")
         assert f'<meta name="description" content="{want}" />' in html

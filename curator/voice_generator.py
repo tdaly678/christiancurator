@@ -99,7 +99,7 @@ HEADER_HTML = """  <header class="cc-header">
     </div>
     <div class="cc-masthead">
       <a href="/" class="cc-site-name">Christian Curator</a>
-      <p class="cc-tagline">Curated perspectives &middot; updated daily</p>
+      <p class="cc-tagline">The Christian conversation, in one place</p>
     </div>
 {nav}
   </header>"""
@@ -112,7 +112,7 @@ FOOTER_HTML = """  <footer class="cc-footer">
       <a href="/voices/">Voices</a>
       <a href="/archive/">Archive</a>
     </div>
-    <div>Curated from across the evangelical web.</div>
+    <div>The range of views, fairly told. Curated every day.</div>
   </footer>"""
 
 SITE_URL = "https://www.christiancurator.com"

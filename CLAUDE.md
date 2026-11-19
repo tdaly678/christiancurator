@@ -152,7 +152,7 @@ category hubs, run the topic data watch, refresh recent-articles sections, injec
 build the Pagefind index, commit, then ping IndexNow.
 
 ### Editorial scoring: two axes (P1 Wave 1, 2026-10-30)
-Product thesis: RealClearPolitics for evangelicals. The front page ranks by importance; formative depth goes
+Product thesis (tagline since Nov 19 2026: "The Christian conversation, in one place." / "The range of views, fairly told. Curated every day."): one place for the whole Christian conversation and its range of views, like RealClear. The front page ranks by importance; formative depth goes
 to a separate Worth Your Time lane.
 
 - `curator/scorer.py` asks Claude for `importance` (news value, evangelical significance, debate heat) and
@@ -719,7 +719,7 @@ The digest page shows "Yesterday's top reads" below today's headlines. `save_yes
 Daily email via Brevo API, built in `curator/email_sender.py` after `render_html()` (which assigns `debate_topics`).
 Structure mirrors homepage v2 (same `layout` dict):
 1. Date line + "Forwarded to you? Subscribe Free" banner
-2. Masthead + byline: *"For curious Christians seeking clarity on the questions that matter most"*
+2. Masthead + tagline: *"The Christian conversation, in one place"* and the supporting line *"The range of views, fairly told. Curated every day."*
 3. **The Lead**: lead + 3 subleads
 4. **The Daily Pulse**: `daily_summary["paragraphs_html"]` plus a link to `/daily/YYYY-MM-DD/`; omitted when the summary is missing or empty
 5. **Board**: Church & Theology, Commentary & Debate, News, 3 headlines each

@@ -289,7 +289,7 @@ def render_hub(cat: dict, members: list[dict], groups: dict[str, list[dict]]) ->
     </div>
     <div class="cc-masthead">
       <a class="cc-site-name" href="/">Christian Curator</a>
-      <p class="cc-tagline">The best of evangelical writing, curated daily</p>
+      <p class="cc-tagline">The Christian conversation, in one place</p>
     </div>
     {nav_html}
   </header>

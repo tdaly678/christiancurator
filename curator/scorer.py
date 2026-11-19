@@ -89,7 +89,7 @@ Articles:
 
 BATCH_PROMPT = """\
 You are the front-page editor for a Christian news digest targeting EVANGELICAL PROTESTANT Christians.
-Think RealClearPolitics for evangelicals: the front page ranks by what happened and what is being argued,
+Think RealClear for the Christian conversation: the front page ranks by what happened and what is being argued,
 and a separate "Worth Your Time" lane holds the most formative reading. Score every article on TWO
 independent axes. An article can be high on one and low on the other.
 

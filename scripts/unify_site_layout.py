@@ -65,7 +65,7 @@ SHARED_HEADER = f"""{HDR_START}
 </div>
 <div class="cc-masthead">
 <div class="cc-masthead-h1"><a href="/" class="cc-site-name">Christian Curator</a></div>
-<p class="cc-tagline">Curated perspectives &middot; updated daily</p>
+<p class="cc-tagline">The Christian conversation, in one place</p>
 </div>
 <nav class="cc-nav">
 <a href="/">Home</a>
@@ -90,7 +90,7 @@ SHARED_FOOTER = f"""{FTR_START}
 <a href="/voices/">Voices</a>
 <a href="/archive/">Archive</a>
 </div>
-<div class="cc-footer-tagline">Curated from across the evangelical web.</div>
+<div class="cc-footer-tagline">The range of views, fairly told. Curated every day.</div>
 </footer>
 {FTR_END}"""
 

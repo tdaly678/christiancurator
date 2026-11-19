@@ -1025,7 +1025,7 @@ def render_archive_index(env: Environment):
         '      </div>',
         '      <div class="cc-masthead">',
         "        <a href='/' class='cc-site-name'>Christian Curator</a>",
-        "        <p class='cc-tagline'>Evangelical News &amp; Theology — Curated Daily</p>",
+        "        <p class='cc-tagline'>The Christian conversation, in one place</p>",
         '      </div>',
         '      <nav class="cc-nav">',
         '        <a href="/">Home</a>',

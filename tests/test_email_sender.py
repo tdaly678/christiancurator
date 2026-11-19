@@ -282,7 +282,7 @@ class EditorNote(unittest.TestCase):
 
     def test_note_sits_between_masthead_and_lead(self):
         out = self.render((2026, 11, 11))
-        self.assertLess(out.index("For curious Christians"), out.index(">A note</div>"))
+        self.assertLess(out.index("The Christian conversation, in one place"), out.index(">A note</div>"))
         self.assertLess(out.index(">A note</div>"), out.index("The Lead"))
         self.assertLess(out.index("The Lead"), out.index("The Daily Pulse"))
 

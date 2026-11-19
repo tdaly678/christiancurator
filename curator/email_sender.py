@@ -743,7 +743,11 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
       </a>
       <div style="font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;
                   color:#aaa;margin-top:9px;font-weight:400;">
-        For curious Christians seeking clarity on the questions that matter most
+        The Christian conversation, in one place
+      </div>
+      <div style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-style:italic;
+                  color:#888;margin-top:6px;">
+        The range of views, fairly told. Curated every day.
       </div>
     </div>
 
@@ -784,7 +788,7 @@ def build_email_html(articles: list[dict], yesterday_articles: list[dict] = None
         </tr>
       </table>
       <div style="font-size:11px;color:#ccc;margin-top:8px;line-height:1.6;">
-        Curated from across the evangelical web.
+        The Christian conversation, in one place.
       </div>
     </div>
 
