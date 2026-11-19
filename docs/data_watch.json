@@ -149,6 +149,12 @@
       "status": "fetched",
       "attempts": 1,
       "note": "0 verified figure(s)"
+    },
+    "https://research.lifeway.com/2026/11/19/defining-success-in-evangelism": {
+      "date": "2026-11-19",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
     }
   },
   "fresh": {
@@ -451,6 +457,14 @@
         "url": "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith/",
         "source": "Lifeway Research"
       }
+    ],
+    "missions-and-evangelism": [
+      {
+        "date": "2026-11-19",
+        "title": "Defining Success in Evangelism",
+        "url": "https://research.lifeway.com/2026/11/19/defining-success-in-evangelism/",
+        "source": "Lifeway Research"
+      }
     ]
   },
   "figures": {
@@ -514,37 +528,96 @@
       }
     ]
   },
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "last_run": {
-    "date": "2026-11-18",
+    "date": "2026-11-19",
     "stories": [
       {
-        "title": "Young Adults Say Church, Home, and Smartphones Have Shaped Their Faith",
-        "url": "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith/",
-        "source": "Lifeway Research",
+        "title": "Pew: Christians Will Be Minority in North America by 2070, Will Double in Africa",
+        "url": "https://www.christianitytoday.com/2026/11/pew-research-christians-minority-2070-africa-growth/",
+        "source": "Christianity Today",
         "signals": {
           "publishers": [
-            "Lifeway Research"
+            "Pew Research Center"
           ],
           "figures": [],
           "words": [
-            "study finds"
+            "report",
+            "research"
           ],
           "data_tag": true
         },
+        "topics": [],
+        "trend": 10.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "The Future of Religion in North America",
+        "url": "https://www.pewresearch.org/religion/2026/11/18/the-future-of-religion-in-north-america/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 10.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Islam slated to overtake Christianity by 2035, researchers say",
+        "url": "https://wng.org/sift/islam-slated-to-overtake-christianity-by-2035-researchers-say-1795035758",
+        "source": "World Magazine",
+        "signals": {
+          "publishers": [],
+          "figures": [],
+          "words": [
+            "researchers"
+          ],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 9.64,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "YouVersion’s Biggest Problem Is Claude, ChatGPT Misquoting the Bible",
+        "url": "https://www.christianitytoday.com/2026/11/youversion-bible-app-ai-claude-chatgpt-bobby-gruenewald/",
+        "source": "Christianity Today",
+        "signals": {
+          "publishers": [
+            "YouVersion"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
         "topics": [
-          "evangelicalism",
-          "marriage-and-family",
-          "technology"
+          "biblical-literacy",
+          "technology-and-discipleship",
+          "biblical-inerrancy"
         ],
-        "trend": 8.5,
+        "trend": 9.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "verified 21% (Lifeway Research, reuse) for evangelicalism",
-          "verified Two in 3 (Lifeway Research, reuse) for evangelicalism",
-          "verified 26% (Lifeway Research, reuse) for marriage-and-family"
+          "page already checked on 2026-11-17 (0 verified figure(s))"
         ]
       },
       {
@@ -568,6 +641,30 @@
         ]
       },
       {
+        "title": "The Religious Gender Gap Is Really a Political Gap",
+        "url": "https://www.graphsaboutreligion.com/p/the-religious-gender-gap-is-really",
+        "source": "Ryan Burge",
+        "signals": {
+          "publishers": [
+            "Ryan Burge"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [
+          "gender-and-biblical-anthropology",
+          "politics-and-the-church"
+        ],
+        "trend": 7.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-17 (0 verified figure(s))"
+        ]
+      },
+      {
         "title": "4 Ways to Reach Unchurched Men",
         "url": "https://research.lifeway.com/2026/11/18/4-ways-to-reach-unchurched-men/",
         "source": "Lifeway Research",
@@ -587,31 +684,70 @@
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
+          "page already checked on 2026-11-18 (0 verified figure(s))"
         ]
       },
       {
-        "title": "The Religious Gender Gap Is Really a Political Gap",
-        "url": "https://www.graphsaboutreligion.com/p/the-religious-gender-gap-is-really",
-        "source": "Ryan Burge",
+        "title": "The Future of Religion in Sub-Saharan Africa",
+        "url": "https://www.pewresearch.org/religion/2026/11/18/the-future-of-religion-in-sub-saharan-africa/",
+        "source": "Pew Research",
         "signals": {
           "publishers": [
-            "Ryan Burge"
+            "Pew Research Center"
           ],
           "figures": [],
           "words": [],
           "data_tag": true
         },
+        "topics": [],
+        "trend": 6.75,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Defining Success in Evangelism",
+        "url": "https://research.lifeway.com/2026/11/19/defining-success-in-evangelism/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
         "topics": [
-          "gender-and-biblical-anthropology",
-          "politics-and-the-church"
+          "missions-and-evangelism"
         ],
-        "trend": 5.5,
+        "trend": 6.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "page already checked on 2026-11-17 (0 verified figure(s))"
+          "no verifiable figure on the page: link only"
+        ]
+      },
+      {
+        "title": "Muslims are projected to outnumber Christians by 2035 as the world’s largest religion",
+        "url": "https://religionnews.com/2026/11/18/muslims-are-projected-to-outnumber-christians-by-2035-as-the-worlds-largest-religion/",
+        "source": "Religion News Service",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 5.75,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
         ]
       },
       {
@@ -635,29 +771,30 @@
         ]
       },
       {
-        "title": "A First Look at Polling Performance in 2026",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/12/a-first-look-at-polling-performance-in-2026/",
-        "source": "Pew Research",
+        "title": "Young Adults Say Church, Home, and Smartphones Have Shaped Their Faith",
+        "url": "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith/",
+        "source": "Lifeway Research",
         "signals": {
           "publishers": [
-            "Pew Research Center"
+            "Lifeway Research"
           ],
           "figures": [],
           "words": [
-            "polls"
+            "study finds"
           ],
           "data_tag": true
         },
         "topics": [
-          "politics-and-the-church",
-          "predestination-free-will"
+          "evangelicalism",
+          "marriage-and-family",
+          "technology"
         ],
-        "trend": 3.25,
+        "trend": 3.0,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "page already checked on 2026-11-15 (0 verified figure(s))"
+          "page already checked on 2026-11-18 (3 verified figure(s))"
         ]
       },
       {
@@ -835,31 +972,6 @@
         ]
       },
       {
-        "title": "YouVersion’s Biggest Problem Is Claude, ChatGPT Misquoting the Bible",
-        "url": "https://www.christianitytoday.com/2026/11/youversion-bible-app-ai-claude-chatgpt-bobby-gruenewald/",
-        "source": "Christianity Today",
-        "signals": {
-          "publishers": [
-            "YouVersion"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "biblical-literacy",
-          "technology-and-discipleship",
-          "artificial-intelligence"
-        ],
-        "trend": 0.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-17 (0 verified figure(s))"
-        ]
-      },
-      {
         "title": "Why Don’t Religious Nones Want Kids?",
         "url": "https://www.graphsaboutreligion.com/p/why-dont-religious-nones-want-kids",
         "source": "Ryan Burge",
@@ -868,9 +980,7 @@
             "Ryan Burge"
           ],
           "figures": [],
-          "words": [
-            "study finds"
-          ],
+          "words": [],
           "data_tag": true
         },
         "topics": [],
@@ -882,19 +992,8 @@
         ]
       }
     ],
-    "pages": [
-      {
-        "slug": "evangelicalism",
-        "kind": "latest-figures",
-        "note": "Latest Figures block refreshed (4 figures); dates bumped"
-      },
-      {
-        "slug": "marriage-and-family",
-        "kind": "latest-figures",
-        "note": "Latest Figures block refreshed (1 figures); dates bumped"
-      }
-    ],
-    "fetched": 2,
-    "hits": 16
+    "pages": [],
+    "fetched": 1,
+    "hits": 21
   }
 }

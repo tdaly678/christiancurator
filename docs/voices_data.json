@@ -19277,5 +19277,78 @@
       }
     ],
     "initials": "GW"
+  },
+  {
+    "name": "Germán S. Díaz del Castillo",
+    "slug": "germn-s-daz-del-castillo",
+    "bio": "Germán S. Díaz del Castillo is a Christian writer and theologian who contributes to Spanish-language Christian media and publications. His work focuses on biblical teaching and spiritual formation for Spanish-speaking audiences seeking deeper engagement with Scripture and faith.",
+    "affiliation": "",
+    "role": "Christian Writer & Theologian",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "GSD"
+  },
+  {
+    "name": "Megan Fowler",
+    "slug": "megan-fowler",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MF"
+  },
+  {
+    "name": "Calvin Anthony",
+    "slug": "calvin-anthony",
+    "bio": "Calvin Anthony is a Christian writer and content creator focused on biblical teaching and spiritual growth. His work emphasizes practical application of Scripture to contemporary Christian life.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CA"
+  },
+  {
+    "name": "Christina Bieber Lake",
+    "slug": "christina-bieber-lake",
+    "bio": "Christina Bieber Lake is a scholar and writer focused on literature, theology, and Christian intellectual life. She explores how faith intersects with culture, literature, and the life of the mind. Her work encourages Christians to engage thoughtfully with art, ideas, and the broader intellectual tradition.",
+    "affiliation": "Christianity Today, various academic and Christian publications",
+    "role": "Writer & Scholar",
+    "education": "Ph.D. in English Literature",
+    "website": "",
+    "books": [
+      {
+        "title": "Rereading Genesis: The Creation Mandate and the Meaning of Work",
+        "amazon_url": "https://www.amazon.com/s?k=Rereading+Genesis+Creation+Mandate+Christina+Bieber+Lake"
+      }
+    ],
+    "initials": "CBL"
+  },
+  {
+    "name": "Michael Root",
+    "slug": "michael-root",
+    "bio": "Michael Root is a distinguished Lutheran theologian and ecumenical scholar known for his work in Christian unity and doctrinal theology. His scholarly contributions have bridged conversations between Lutheran, Catholic, and Reformed traditions, making complex theological concepts accessible to academic and pastoral audiences.",
+    "affiliation": "Institute for Ecumenical Research",
+    "role": "Theologian & Ecumenical Scholar",
+    "education": "Ph.D. in Theology, University of Strasbourg",
+    "website": "",
+    "books": [
+      {
+        "title": "The Narrated God: Story and Concept in Religious Speech",
+        "amazon_url": "https://www.amazon.com/s?k=The+Narrated+God+Michael+Root"
+      },
+      {
+        "title": "Communion of Communions: One Eucharistic Fellowship",
+        "amazon_url": "https://www.amazon.com/s?k=Communion+of+Communions+Michael+Root"
+      },
+      {
+        "title": "The Church and Christian Unity",
+        "amazon_url": "https://www.amazon.com/s?k=The+Church+and+Christian+Unity+Michael+Root"
+      }
+    ],
+    "initials": "MR"
   }
 ]

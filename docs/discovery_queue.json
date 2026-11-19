@@ -1,79 +1,5 @@
 {
  "entries": {
-  "https://desiringgod.org/articles/a-new-serpent-in-the-garden-of-africa": {
-   "url": "https://www.desiringgod.org/articles/a-new-serpent-in-the-garden-of-africa",
-   "canonical_url": "https://desiringgod.org/articles/a-new-serpent-in-the-garden-of-africa",
-   "anchor": "A New Serpent in the Garden of Africa",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-11-2026/",
-   "found_on": "2026-11-11",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-11",
-   "title": "A New Serpent in the Garden of Africa",
-   "source_name": "Desiring God"
-  },
-  "https://andrewroycroft.substack.com/p/on-naming-the-dead": {
-   "url": "https://andrewroycroft.substack.com/p/on-naming-the-dead",
-   "canonical_url": "https://andrewroycroft.substack.com/p/on-naming-the-dead",
-   "anchor": "On Naming the Dead",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-11-2026/",
-   "found_on": "2026-11-11",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
-  "https://christianitytoday.com/2026/11/why-your-favorite-worship-songs-grammar-matters": {
-   "url": "https://www.christianitytoday.com/2026/11/why-your-favorite-worship-songs-grammar-matters/?utm_medium=widgetsocial",
-   "canonical_url": "https://christianitytoday.com/2026/11/why-your-favorite-worship-songs-grammar-matters",
-   "anchor": "Why Your Favorite Worship Song’s Grammar Matters",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-11-2026/",
-   "found_on": "2026-11-11",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-11",
-   "title": "Why Your Favorite Worship Song’s Grammar Matters",
-   "source_name": "Christianity Today"
-  },
-  "https://ca.thegospelcoalition.org/article/3-reasons-you-should-not-date-while-watching-porn": {
-   "url": "https://ca.thegospelcoalition.org/article/3-reasons-you-should-not-date-while-watching-porn/",
-   "canonical_url": "https://ca.thegospelcoalition.org/article/3-reasons-you-should-not-date-while-watching-porn",
-   "anchor": "3 Reasons You Should Not Date While Watching Porn",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-11-2026/",
-   "found_on": "2026-11-11",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-11",
-   "title": "3 Reasons You Should Not Date While Watching Porn",
-   "source_name": "The Gospel Coalition"
-  },
-  "https://thebeehive.live/blog/forgivenarcissism": {
-   "url": "https://www.thebeehive.live/blog/forgivenarcissism",
-   "canonical_url": "https://thebeehive.live/blog/forgivenarcissism",
-   "anchor": "Would You Forgive Me of My Narcissism?",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-11-2026/",
-   "found_on": "2026-11-11",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-11",
-   "title": "Would You Forgive Me of My Narcissism?",
-   "source_name": "The Bee Hive"
-  },
-  "https://thebardowl.substack.com/p/christianity-today-and-the-sin-of": {
-   "url": "https://thebardowl.substack.com/p/christianity-today-and-the-sin-of",
-   "canonical_url": "https://thebardowl.substack.com/p/christianity-today-and-the-sin-of",
-   "anchor": "Christianity Today and the Sin of Centrism",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-11-2026/",
-   "found_on": "2026-11-11",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
   "https://murraycampbell.substack.com/p/the-church-is-gods-family-and-its": {
    "url": "https://murraycampbell.substack.com/p/the-church-is-gods-family-and-its",
    "canonical_url": "https://murraycampbell.substack.com/p/the-church-is-gods-family-and-its",
@@ -561,8 +487,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-18-2026/",
    "found_on": "2026-11-18",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://livingarchivenewsletter.substack.com/p/the-quiet-voice": {
@@ -572,8 +498,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-18-2026/",
    "found_on": "2026-11-18",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://desiringgod.org/interviews/what-we-get-wrong-about-the-tears-of-jesus": {
@@ -596,8 +522,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-18-2026/",
    "found_on": "2026-11-18",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://justinpoythress.com/the-singularity-will-never-happen": {
@@ -607,10 +533,95 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-18-2026/",
    "found_on": "2026-11-18",
+   "status": "failed",
+   "attempts": 2,
+   "error": "HTTP 403"
+  },
+  "https://logos.sjv.io/PzEPWz": {
+   "url": "https://logos.sjv.io/PzEPWz",
+   "canonical_url": "https://logos.sjv.io/PzEPWz",
+   "anchor": "Bible Study Week",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
+   "found_on": "2026-11-19",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-19",
+   "title": "Top Deals from Logos: Books, Bibles & More",
+   "source_name": "logos.com"
+  },
+  "https://kimberlywagner7.substack.com/p/the-hardest-day-you-may-ever-face": {
+   "url": "https://kimberlywagner7.substack.com/p/the-hardest-day-you-may-ever-face",
+   "canonical_url": "https://kimberlywagner7.substack.com/p/the-hardest-day-you-may-ever-face",
+   "anchor": "The Hardest Day You May Ever Face",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
+   "found_on": "2026-11-19",
    "status": "pending",
    "attempts": 1,
    "error": "HTTP 403"
+  },
+  "https://zacharyconover.substack.com/p/for-the-ones-like-me": {
+   "url": "https://zacharyconover.substack.com/p/for-the-ones-like-me",
+   "canonical_url": "https://zacharyconover.substack.com/p/for-the-ones-like-me",
+   "anchor": "For the Ones Like Me",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
+   "found_on": "2026-11-19",
+   "status": "pending",
+   "attempts": 1,
+   "error": "HTTP 403"
+  },
+  "https://elephantinroom.substack.com/p/praying-to-the-god-who-rules-history": {
+   "url": "https://elephantinroom.substack.com/p/praying-to-the-god-who-rules-history",
+   "canonical_url": "https://elephantinroom.substack.com/p/praying-to-the-god-who-rules-history",
+   "anchor": "Praying to the God Who Rules History",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
+   "found_on": "2026-11-19",
+   "status": "pending",
+   "attempts": 1,
+   "error": "HTTP 403"
+  },
+  "https://mereorthodoxy.com/dear-gen-alpha-claude-wants-to-turn-you-into-a-toad-please-for-the-love-of-all-things-human-dont-let-it": {
+   "url": "https://mereorthodoxy.com/dear-gen-alpha-claude-wants-to-turn-you-into-a-toad-please-for-the-love-of-all-things-human-dont-let-it/",
+   "canonical_url": "https://mereorthodoxy.com/dear-gen-alpha-claude-wants-to-turn-you-into-a-toad-please-for-the-love-of-all-things-human-dont-let-it",
+   "anchor": "Dear Gen Alpha, Claude Wants to Turn You Into a Toad. Please, for the Love of All Things Human, Don’t Let It",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
+   "found_on": "2026-11-19",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-19",
+   "title": "Dear Gen Alpha,  Claude wants to turn you into a toad. Please, for the love of all things human, don’t let it.",
+   "source_name": "Mere Orthodoxy"
+  },
+  "https://jvfesko.com/blog/2026/11/16/old-dogs-and-new-tricks": {
+   "url": "https://www.jvfesko.com/blog/2026/11/16/old-dogs-and-new-tricks",
+   "canonical_url": "https://jvfesko.com/blog/2026/11/16/old-dogs-and-new-tricks",
+   "anchor": "Old Dogs and New Tricks",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
+   "found_on": "2026-11-19",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-19",
+   "title": "Old Dogs and New Tricks",
+   "source_name": "Reformed Theology"
+  },
+  "https://biblicalcounselingcoalition.org/2026/11/16/getting-a-handle-on-our-emotions": {
+   "url": "https://www.biblicalcounselingcoalition.org/2026/11/16/getting-a-handle-on-our-emotions/",
+   "canonical_url": "https://biblicalcounselingcoalition.org/2026/11/16/getting-a-handle-on-our-emotions",
+   "anchor": "Getting a Handle on Our Emotions",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
+   "found_on": "2026-11-19",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-19",
+   "title": "Biblical Counseling Coalition",
+   "source_name": "Biblical Counseling Coalition"
   }
  },
- "updated": "2026-11-18T10:01:42+00:00"
+ "updated": "2026-11-19T10:01:40+00:00"
 }
