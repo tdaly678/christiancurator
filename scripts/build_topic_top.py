@@ -375,6 +375,7 @@ JUMP_ITEMS = [
     ("Bible translations compared", ("translations",)),
     ("By the numbers", ("by-the-numbers",)),
     ("Key documents", ("key-documents",)),
+    ("Key texts", ("texts-divide",)),
     ("Questions answered", ("faq", "key-questions")),
     ("Glossary", ("glossary",)),
     ("Start reading", ("reading",)),

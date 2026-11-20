@@ -110,6 +110,11 @@ def check_page(slug: str) -> list[str]:
 def check_digest_template() -> list[str]:
     problems = []
     env = Environment(loader=FileSystemLoader(str(FRONTEND_DIR)))
+    # Same filter the live renderer registers (frontend/__init__.py), so the template loads.
+    if str(REPO_ROOT) not in sys.path:
+        sys.path.insert(0, str(REPO_ROOT))
+    from curator.original_titles import byline_title
+    env.filters["pub_title"] = byline_title
     try:
         tpl = env.get_template("digest_template.html")
     except Exception as e:

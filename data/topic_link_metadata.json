@@ -72,7 +72,7 @@
   },
   "https://biologos.org/common-questions/what-is-evolutionary-creationism": {
    "status": 404,
-   "fetched_on": "2026-11-12"
+   "fetched_on": "2026-11-20"
   },
   "https://cbmw.org/2023/06/22/does-complementarianism-depend-on-eras-a-response-to-kevin-giles-the-trinity-argument-for-womens-subordination/": {
    "status": 200,
@@ -84,7 +84,7 @@
   "https://christandpopculture.com/living-for-truth-in-the-age-of-ai/": {
    "status": null,
    "error": "ConnectionError",
-   "fetched_on": "2026-11-12"
+   "fetched_on": "2026-11-20"
   },
   "https://christianitytoday.com/ct/2016/october-web-only/n-t-wright-jesus-death-does-more-than-just-get-us-into-heav.html": {
    "status": 200,
@@ -316,6 +316,15 @@
    "title": "The Pastor as Wider Theologian, or What’s Wrong With Theology Today - First Things",
    "authors": [
     "Gerald Hiestand"
+   ]
+  },
+  "https://firstthings.com/time-to-ban-ai-companions/": {
+   "status": 200,
+   "final_url": "https://firstthings.com/time-to-ban-ai-companions/",
+   "fetched_on": "2026-11-20",
+   "title": "Time to Ban AI Companions - First Things",
+   "authors": [
+    "Jonathan D. Teubner"
    ]
   },
   "https://firstthings.com/triune-atonement-1/": {
@@ -713,6 +722,24 @@
     "Edward Welch"
    ]
   },
+  "https://mereorthodoxy.com/ai-companions-as-a-form-of-pornography/": {
+   "status": 200,
+   "final_url": "https://mereorthodoxy.com/ai-companions-as-a-form-of-pornography/",
+   "fetched_on": "2026-11-20",
+   "title": "AI Companions as a Form of Pornography",
+   "authors": [
+    "Josiah DeBoer"
+   ]
+  },
+  "https://mereorthodoxy.com/american-evangelicals-long-for-the-embrace-of-the-machine-god/": {
+   "status": 200,
+   "final_url": "https://mereorthodoxy.com/american-evangelicals-long-for-the-embrace-of-the-machine-god/",
+   "fetched_on": "2026-11-20",
+   "title": "American Evangelicals Long for the Embrace of the Machine God",
+   "authors": [
+    "Christopher Jones"
+   ]
+  },
   "https://mereorthodoxy.com/an-evangelical-response-to-the-statement-on-social-justice-and-the-gospel/": {
    "status": 200,
    "final_url": "https://mereorthodoxy.com/an-evangelical-response-to-the-statement-on-social-justice-and-the-gospel/",
@@ -783,6 +810,15 @@
    "title": "Friendship Through a Pandemic: Seeing More Clearly With Stanley Hauerwas",
    "authors": [
     "Mere Orthodoxy"
+   ]
+  },
+  "https://mereorthodoxy.com/how-should-christians-approach-ai-translation/": {
+   "status": 200,
+   "final_url": "https://mereorthodoxy.com/how-should-christians-approach-ai-translation/",
+   "fetched_on": "2026-11-20",
+   "title": "How Should Christians Approach AI Translation?",
+   "authors": [
+    "Phil Thompson"
    ]
   },
   "https://mereorthodoxy.com/in-defense-of-the-gender-binary": {
@@ -979,6 +1015,15 @@
     "Aaron Earls"
    ]
   },
+  "https://research.lifeway.com/2026/04/21/pastors-churchgoers-see-ai-as-concerning-and-confusing/": {
+   "status": 200,
+   "final_url": "https://research.lifeway.com/2026/04/21/pastors-churchgoers-see-ai-as-concerning-and-confusing/",
+   "fetched_on": "2026-11-20",
+   "title": "Pastors, Churchgoers See AI as Concerning and Confusing - Lifeway Research",
+   "authors": [
+    "Aaron Earls"
+   ]
+  },
   "https://t4g.org/resources/albert-mohler/covenant-theology/": {
    "status": 200,
    "final_url": "https://t4g.org/resources/albert-mohler/covenant-theology/",
@@ -1016,7 +1061,7 @@
   },
   "https://voices.lifeway.com/bible-theology/evangelicals-must-not-ignore-the-church-fathers/": {
    "status": 500,
-   "fetched_on": "2026-11-12"
+   "fetched_on": "2026-11-20"
   },
   "https://www.9marks.org/answer/what-church-discipline/": {
    "status": 200,
@@ -1374,6 +1419,15 @@
     "Bobby Jamieson"
    ]
   },
+  "https://www.9marks.org/article/the-pastors-public-ministry-and-generative-ai-perils-and-possibilities/": {
+   "status": 200,
+   "final_url": "https://www.9marks.org/article/the-pastors-public-ministry-and-generative-ai-perils-and-possibilities/",
+   "fetched_on": "2026-11-20",
+   "title": "The Pastor’s Public Ministry and Generative AI: Perils and Possibilities - 9Marks",
+   "authors": [
+    "Eric Beach"
+   ]
+  },
   "https://www.9marks.org/article/the-role-of-women-in-healthy-church-formation/": {
    "status": 200,
    "final_url": "https://www.9marks.org/article/the-role-of-women-in-healthy-church-formation/",
@@ -1602,11 +1656,11 @@
   },
   "https://www.acts29.com/church-planters-need-pastoring-too/": {
    "status": 404,
-   "fetched_on": "2026-11-12"
+   "fetched_on": "2026-11-20"
   },
   "https://www.acts29.com/great-commission/": {
    "status": 404,
-   "fetched_on": "2026-11-12"
+   "fetched_on": "2026-11-20"
   },
   "https://www.amazon.com/Dark-Clouds-Deep-Mercy-Discovering/dp/0801075254": {
    "status": 200,
@@ -1631,7 +1685,7 @@
   },
   "https://www.cbeinternational.org/resource/even-egalitarian-churches-limit-womens-leadership/": {
    "status": 502,
-   "fetched_on": "2026-11-12"
+   "fetched_on": "2026-11-20"
   },
   "https://www.ccef.org/fearful-and-anxious/": {
    "status": 200,
@@ -1687,6 +1741,13 @@
    "final_url": "https://www.challies.com/articles/its-not-too-late-to-make-this-a-great-year-of-bible-reading/",
    "fetched_on": "2026-11-12",
    "title": "It’s Not Too Late to Make This a Great Year of Bible Reading",
+   "authors": []
+  },
+  "https://www.challies.com/articles/tgc-ai-and-the-democratization-of-competence/": {
+   "status": 200,
+   "final_url": "https://www.challies.com/articles/tgc-ai-and-the-democratization-of-competence/",
+   "fetched_on": "2026-11-20",
+   "title": "TGC, AI, and the Democratization of Competence",
    "authors": []
   },
   "https://www.christianitytoday.com/2001/01/learning-ancient-rhythms-of-prayer/": {
@@ -2058,6 +2119,24 @@
     "Matthew Burdette"
    ]
   },
+  "https://www.christianitytoday.com/2025/06/wrong-tech-question-artificial-intelligence-ai-church/": {
+   "status": 200,
+   "final_url": "https://www.christianitytoday.com/2025/06/wrong-tech-question-artificial-intelligence-ai-church/",
+   "fetched_on": "2026-11-20",
+   "title": "We’re Asking the Wrong Tech Question - Christianity Today",
+   "authors": [
+    "Mitchell East"
+   ]
+  },
+  "https://www.christianitytoday.com/2025/07/ai-is-making-humans-dumber/": {
+   "status": 200,
+   "final_url": "https://www.christianitytoday.com/2025/07/ai-is-making-humans-dumber/",
+   "fetched_on": "2026-11-20",
+   "title": "AI Is Making Humans Dumber - Christianity Today",
+   "authors": [
+    "O. Alan Noble"
+   ]
+  },
   "https://www.christianitytoday.com/2025/07/ai-offers-information-god-offers-wisdom/": {
    "status": 200,
    "final_url": "https://www.christianitytoday.com/2025/07/ai-offers-information-god-offers-wisdom/",
@@ -2065,6 +2144,15 @@
    "title": "AI Offers Information. God Offers Wisdom. - Christianity Today",
    "authors": [
     "Vineet Rajan"
+   ]
+  },
+  "https://www.christianitytoday.com/2025/07/image-god-ai-era-artificial-intelligence-russell-moore/": {
+   "status": 200,
+   "final_url": "https://www.christianitytoday.com/2025/07/image-god-ai-era-artificial-intelligence-russell-moore/",
+   "fetched_on": "2026-11-20",
+   "title": "An Image of God for an Era of AI - Christianity Today",
+   "authors": [
+    "Russell Moore"
    ]
   },
   "https://www.christianitytoday.com/2025/09/anxiety-isnt-unnaturalor-unfaithful-made-to-tremble/": {
@@ -2139,6 +2227,15 @@
     "Daniel Silliman"
    ]
   },
+  "https://www.christianitytoday.com/2026/03/whats-the-point-of-education-in-an-age-of-ai/": {
+   "status": 200,
+   "final_url": "https://www.christianitytoday.com/2026/03/whats-the-point-of-education-in-an-age-of-ai/",
+   "fetched_on": "2026-11-20",
+   "title": "What’s the Point of Education in an Age of AI?  - Christianity Today",
+   "authors": [
+    "Carrie McKean"
+   ]
+  },
   "https://www.christianitytoday.com/2026/03/why-i-changed-my-mind-bible-prophecy-politics/": {
    "status": 200,
    "final_url": "https://www.christianitytoday.com/2026/03/why-i-changed-my-mind-bible-prophecy-politics/",
@@ -2148,6 +2245,33 @@
     "Russell Moore"
    ]
   },
+  "https://www.christianitytoday.com/2026/04/christianity-todays-ai-use-policy-for-writers/": {
+   "status": 200,
+   "final_url": "https://www.christianitytoday.com/2026/04/christianity-todays-ai-use-policy-for-writers/",
+   "fetched_on": "2026-11-20",
+   "title": "Christianity Today’s AI Use Policy for Writers - Christianity Today",
+   "authors": [
+    "Bonnie Kristian"
+   ]
+  },
+  "https://www.christianitytoday.com/2026/04/church-offers-world-in-love-with-ai-companions/": {
+   "status": 200,
+   "final_url": "https://www.christianitytoday.com/2026/04/church-offers-world-in-love-with-ai-companions/",
+   "fetched_on": "2026-11-20",
+   "title": "Our Desires Need Discipline, Not the Ease of AI - Christianity Today",
+   "authors": [
+    "Jay Stringer"
+   ]
+  },
+  "https://www.christianitytoday.com/2026/05/people-of-the-chatbot-ai-bible-study/": {
+   "status": 200,
+   "final_url": "https://www.christianitytoday.com/2026/05/people-of-the-chatbot-ai-bible-study/",
+   "fetched_on": "2026-11-20",
+   "title": "People of the Chatbot - Christianity Today",
+   "authors": [
+    "Jeffrey Bilbro"
+   ]
+  },
   "https://www.christianitytoday.com/2026/07/how-to-read-bible-like-early-church-fourfold-schreiner/": {
    "status": 200,
    "final_url": "https://www.christianitytoday.com/2026/07/how-to-read-bible-like-early-church-fourfold-schreiner/",
@@ -2155,6 +2279,15 @@
    "title": "How to Read the Bible Like the Early Church Did - Christianity Today",
    "authors": [
     "Patrick Schreiner"
+   ]
+  },
+  "https://www.christianitytoday.com/2026/08/the-malnourished-ministry-of-relational-ai-chatbot-pastor/": {
+   "status": 200,
+   "final_url": "https://www.christianitytoday.com/2026/08/the-malnourished-ministry-of-relational-ai-chatbot-pastor/",
+   "fetched_on": "2026-11-20",
+   "title": "The Malnourished Ministry of Relational AI - Christianity Today",
+   "authors": [
+    "Joshua Torrey"
    ]
   },
   "https://www.christianitytoday.com/2026/09/its-not-good-to-be-alone-with-chatbots/": {
@@ -2634,6 +2767,13 @@
    "title": "How Elders Shepherd by Example",
    "authors": []
   },
+  "https://www.crossway.org/articles/how-should-christians-think-about-ai/": {
+   "status": 200,
+   "final_url": "https://www.crossway.org/articles/how-should-christians-think-about-ai/",
+   "fetched_on": "2026-11-20",
+   "title": "How Should Christians Think About AI?",
+   "authors": []
+  },
   "https://www.crossway.org/articles/how-to-pray-in-spiritual-warfare/": {
    "status": 200,
    "final_url": "https://www.crossway.org/articles/how-to-pray-in-spiritual-warfare/",
@@ -2915,8 +3055,11 @@
    "authors": []
   },
   "https://www.desiringgod.org/articles/a-summary-theology-of-prayer": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/a-summary-theology-of-prayer",
+   "fetched_on": "2026-11-20",
+   "title": "A Summary Theology of Prayer",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/all-of-us-sinners-none-of-us-freaks": {
    "status": 200,
@@ -2934,11 +3077,11 @@
   },
   "https://www.desiringgod.org/articles/back-to-the-heart-of-worship": {
    "status": 429,
-   "fetched_on": "2026-11-12"
+   "fetched_on": "2026-11-20"
   },
   "https://www.desiringgod.org/articles/be-ready-to-speak-of-jesus": {
    "status": 429,
-   "fetched_on": "2026-11-12"
+   "fetched_on": "2026-11-20"
   },
   "https://www.desiringgod.org/articles/christian-your-job-is-a-ministry-job": {
    "status": 200,
@@ -2963,7 +3106,7 @@
   },
   "https://www.desiringgod.org/articles/cosmic-level-spiritual-warfare": {
    "status": 429,
-   "fetched_on": "2026-11-12"
+   "fetched_on": "2026-11-20"
   },
   "https://www.desiringgod.org/articles/dare-to-hope-in-god": {
    "status": 200,
@@ -2974,7 +3117,7 @@
   },
   "https://www.desiringgod.org/articles/discipleship-in-the-age-of-the-spectacle": {
    "status": 429,
-   "fetched_on": "2026-11-12"
+   "fetched_on": "2026-11-20"
   },
   "https://www.desiringgod.org/articles/discipline-that-connects-with-our-childrens-hearts": {
    "status": 200,
@@ -3012,16 +3155,19 @@
    "authors": []
   },
   "https://www.desiringgod.org/articles/friends-are-for-the-darkness": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/friends-are-for-the-darkness",
+   "fetched_on": "2026-11-20",
+   "title": "Friends Are for the Darkness: How to Care for the Depressed",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/generosity-begins-at-home": {
    "status": 429,
-   "fetched_on": "2026-11-12"
+   "fetched_on": "2026-11-20"
   },
   "https://www.desiringgod.org/articles/give-thanks-and-give-more": {
    "status": 429,
-   "fetched_on": "2026-11-12"
+   "fetched_on": "2026-11-20"
   },
   "https://www.desiringgod.org/articles/god-made-black-and-god-made-white": {
    "status": 200,
@@ -3073,8 +3219,11 @@
    "authors": []
   },
   "https://www.desiringgod.org/articles/how-the-prosperity-gospel-hurts-racial-reconciliation": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/how-the-prosperity-gospel-hurts-racial-reconciliation",
+   "fetched_on": "2026-11-20",
+   "title": "How the Prosperity Gospel Hurts Racial Reconciliation",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/inspired-by-the-incredible-early-church": {
    "status": 200,
@@ -3099,7 +3248,7 @@
   },
   "https://www.desiringgod.org/articles/let-your-dream-small-group-die": {
    "status": 429,
-   "fetched_on": "2026-11-12"
+   "fetched_on": "2026-11-20"
   },
   "https://www.desiringgod.org/articles/lord-where-is-your-faithfulness": {
    "status": 200,
@@ -3109,8 +3258,11 @@
    "authors": []
   },
   "https://www.desiringgod.org/articles/marriage-as-submission": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/marriage-as-submission",
+   "fetched_on": "2026-11-20",
+   "title": "Marriage as Submission?",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/mental-illness-and-church-discipline": {
    "status": 200,
@@ -3134,8 +3286,11 @@
    "authors": []
   },
   "https://www.desiringgod.org/articles/pray-because-god-is-sovereign": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/pray-because-god-is-sovereign",
+   "fetched_on": "2026-11-20",
+   "title": "Pray Because God Is Sovereign",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/pro-life-from-womb-to-tomb/": {
    "status": 200,
@@ -3159,8 +3314,11 @@
    "authors": []
   },
   "https://www.desiringgod.org/articles/scrambling-for-the-light": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/scrambling-for-the-light",
+   "fetched_on": "2026-11-20",
+   "title": "Scrambling for the Light: Christian Depression and the Use of Medication",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/signs-and-wonders-then-and-now": {
    "status": 200,
@@ -3170,8 +3328,11 @@
    "authors": []
   },
   "https://www.desiringgod.org/articles/single-satisfied-and-sent": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/single-satisfied-and-sent",
+   "fetched_on": "2026-11-20",
+   "title": "Single, Satisfied, and Sent: Mission for the Not-Yet-Married",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/start-the-day-happy-in-god": {
    "status": 200,
@@ -3195,8 +3356,11 @@
    "authors": []
   },
   "https://www.desiringgod.org/articles/the-means-of-grace-we-might-despise": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/the-means-of-grace-we-might-despise",
+   "fetched_on": "2026-11-20",
+   "title": "The Means of Grace We Might Despise: Why We Practice Church Discipline",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/the-pastor-we-all-want": {
    "status": 200,
@@ -3206,12 +3370,18 @@
    "authors": []
   },
   "https://www.desiringgod.org/articles/the-poverty-of-the-prosperity-gospel": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/the-poverty-of-the-prosperity-gospel",
+   "fetched_on": "2026-11-20",
+   "title": "The Poverty of the Prosperity Gospel",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/the-sovereignty-of-god-and-prayer": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/the-sovereignty-of-god-and-prayer",
+   "fetched_on": "2026-11-20",
+   "title": "The Sovereignty of God and Prayer",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/three-benefits-of-discipleship": {
    "status": 200,
@@ -3222,7 +3392,7 @@
   },
   "https://www.desiringgod.org/articles/two-keys-to-flourishing-in-the-digital-age": {
    "status": 429,
-   "fetched_on": "2026-11-12"
+   "fetched_on": "2026-11-20"
   },
   "https://www.desiringgod.org/articles/two-underused-strategies-for-addiction": {
    "status": 200,
@@ -3260,8 +3430,11 @@
    "authors": []
   },
   "https://www.desiringgod.org/articles/why-join-a-church": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/articles/why-join-a-church",
+   "fetched_on": "2026-11-20",
+   "title": "Why Join a Church",
+   "authors": []
   },
   "https://www.desiringgod.org/articles/will-membership-make-a-difference": {
    "status": 200,
@@ -3285,8 +3458,11 @@
    "authors": []
   },
   "https://www.desiringgod.org/interviews/anxiety-sin-disorder-or-both": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/interviews/anxiety-sin-disorder-or-both",
+   "fetched_on": "2026-11-20",
+   "title": "Anxiety: Sin, Disorder, or Both?",
+   "authors": []
   },
   "https://www.desiringgod.org/interviews/articulating-the-glorious-cross-to-an-atonement-rejecting-culture": {
    "status": 200,
@@ -3331,8 +3507,11 @@
    "authors": []
   },
   "https://www.desiringgod.org/interviews/if-im-dead-to-sin-why-must-i-kill-it-every-day": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/interviews/if-im-dead-to-sin-why-must-i-kill-it-every-day",
+   "fetched_on": "2026-11-20",
+   "title": "If I’m Dead to Sin, Why Must I Kill It Every Day?",
+   "authors": []
   },
   "https://www.desiringgod.org/interviews/is-there-room-in-reformed-theology-for-environmental-concern": {
    "status": 200,
@@ -3398,8 +3577,11 @@
    "authors": []
   },
   "https://www.desiringgod.org/interviews/when-love-wanes-the-marriage-covenant-remains": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/interviews/when-love-wanes-the-marriage-covenant-remains",
+   "fetched_on": "2026-11-20",
+   "title": "When Love Wanes, the Marriage Covenant Remains",
+   "authors": []
   },
   "https://www.desiringgod.org/interviews/why-do-we-see-so-few-miracles-today": {
    "status": 200,
@@ -3423,12 +3605,18 @@
    "authors": []
   },
   "https://www.desiringgod.org/messages/god-has-chosen-us-in-him-before-the-foundation-of-the-earth": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/messages/god-has-chosen-us-in-him-before-the-foundation-of-the-earth",
+   "fetched_on": "2026-11-20",
+   "title": "God Has Chosen Us in Him Before the Foundation of the Earth",
+   "authors": []
   },
   "https://www.desiringgod.org/messages/husbands-who-love-like-christ-and-the-wives-who-submit-to-them": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/messages/husbands-who-love-like-christ-and-the-wives-who-submit-to-them",
+   "fetched_on": "2026-11-20",
+   "title": "Husbands Who Love Like Christ and the Wives Who Submit to Them",
+   "authors": []
   },
   "https://www.desiringgod.org/messages/israel-palestine-and-the-middle-east": {
    "status": 200,
@@ -3438,8 +3626,11 @@
    "authors": []
   },
   "https://www.desiringgod.org/messages/marriage-gods-showcase-of-covenant-keeping-grace": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/messages/marriage-gods-showcase-of-covenant-keeping-grace",
+   "fetched_on": "2026-11-20",
+   "title": "Marriage: God’s Showcase of Covenant-Keeping Grace",
+   "authors": []
   },
   "https://www.desiringgod.org/messages/spiritual-warfare-and-prayer": {
    "status": 200,
@@ -3450,7 +3641,7 @@
   },
   "https://www.desiringgod.org/messages/ten-aspects-of-gods-sovereignty-over-suffering-and-satans-hand-in-it": {
    "status": 429,
-   "fetched_on": "2026-11-12"
+   "fetched_on": "2026-11-20"
   },
   "https://www.desiringgod.org/messages/the-doctrine-of-justification-by-faith": {
    "status": 200,
@@ -3467,8 +3658,11 @@
    "authors": []
   },
   "https://www.desiringgod.org/messages/the-primacy-of-expository-preaching-part-1": {
-   "status": 429,
-   "fetched_on": "2026-11-12"
+   "status": 200,
+   "final_url": "https://www.desiringgod.org/messages/the-primacy-of-expository-preaching-part-1",
+   "fetched_on": "2026-11-20",
+   "title": "The Primacy of Expository Preaching, Part 1",
+   "authors": []
   },
   "https://www.desiringgod.org/messages/those-whom-he-foreknew-he-predestined": {
    "status": 200,
@@ -3668,7 +3862,23 @@
   },
   "https://www.modernreformation.org/resources/articles/revisiting-the-1978-chicago-statement-on-biblical-inerrancy": {
    "status": 403,
-   "fetched_on": "2026-11-12"
+   "fetched_on": "2026-11-20"
+  },
+  "https://www.nae.org/redemptive-artificial-intelligence-ai-faith-andy-crouch/": {
+   "status": 200,
+   "final_url": "https://www.nae.org/redemptive-artificial-intelligence-ai-faith-andy-crouch/",
+   "fetched_on": "2026-11-20",
+   "title": "Redemptive Artificial Intelligence",
+   "authors": [],
+   "authors_note": "NAE episode page names its web posting account (Emma Patel), not the guest; cleared by hand 2026-11-20"
+  },
+  "https://www.nae.org/you-are-not-a-machine-jason-thacker-ai-ethics/": {
+   "status": 200,
+   "final_url": "https://www.nae.org/you-are-not-a-machine-jason-thacker-ai-ethics/",
+   "fetched_on": "2026-11-20",
+   "title": "You Are Not a Machine",
+   "authors": [],
+   "authors_note": "NAE episode page names its web posting account (Emma Patel), not the guest; cleared by hand 2026-11-20"
   },
   "https://www.namb.net/apologetics/resource/the-moral-argument-for-gods-existence/": {
    "status": 200,
@@ -3814,6 +4024,69 @@
     "Justin Lakemacher"
    ]
   },
+  "https://www.thegospelcoalition.org/article/agentic-ai-pastor-church/": {
+   "status": 200,
+   "final_url": "https://www.thegospelcoalition.org/article/agentic-ai-pastor-church/",
+   "fetched_on": "2026-11-20",
+   "title": "Can Agentic AI Pastor Your Church?",
+   "authors": [
+    "Sebastian Y. Kim"
+   ]
+  },
+  "https://www.thegospelcoalition.org/article/ai-bible-translation/": {
+   "status": 200,
+   "final_url": "https://www.thegospelcoalition.org/article/ai-bible-translation/",
+   "fetched_on": "2026-11-20",
+   "title": "How AI Assists in Global Bible Translation",
+   "authors": [
+    "Don Barger"
+   ]
+  },
+  "https://www.thegospelcoalition.org/article/ai-companions-doctrine-friendship/": {
+   "status": 200,
+   "final_url": "https://www.thegospelcoalition.org/article/ai-companions-doctrine-friendship/",
+   "fetched_on": "2026-11-20",
+   "title": "‘AI Companions’ and the Christian Doctrine of Friendship",
+   "authors": [
+    "Noah Senthil"
+   ]
+  },
+  "https://www.thegospelcoalition.org/article/ai-tgc-missional-opportunity/": {
+   "status": 200,
+   "final_url": "https://www.thegospelcoalition.org/article/ai-tgc-missional-opportunity/",
+   "fetched_on": "2026-11-20",
+   "title": "Our Line in the Sand on AI: TGC’s Missional Opportunity",
+   "authors": [
+    "Brett McCracken"
+   ]
+  },
+  "https://www.thegospelcoalition.org/article/ai-tools-work-demands/": {
+   "status": 200,
+   "final_url": "https://www.thegospelcoalition.org/article/ai-tools-work-demands/",
+   "fetched_on": "2026-11-20",
+   "title": "AI Can Assist Your Work. But Should It?",
+   "authors": [
+    "Rachel Gilson"
+   ]
+  },
+  "https://www.thegospelcoalition.org/article/ai-usefulness-dangers-preachers/": {
+   "status": 200,
+   "final_url": "https://www.thegospelcoalition.org/article/ai-usefulness-dangers-preachers/",
+   "fetched_on": "2026-11-20",
+   "title": "AI’s Usefulness and Its Dangers for Preachers",
+   "authors": [
+    "Clayton Chancey"
+   ]
+  },
+  "https://www.thegospelcoalition.org/article/ai-writing-the-day-of-reckoning/": {
+   "status": 200,
+   "final_url": "https://www.thegospelcoalition.org/article/ai-writing-the-day-of-reckoning/",
+   "fetched_on": "2026-11-20",
+   "title": "AI Writing: The Day of Reckoning",
+   "authors": [
+    "Collin Hansen"
+   ]
+  },
   "https://www.thegospelcoalition.org/article/ai-youth-group-girls/": {
    "status": 200,
    "final_url": "https://www.thegospelcoalition.org/article/ai-youth-group-girls/",
@@ -3949,6 +4222,15 @@
     "Andrew Spencer"
    ]
   },
+  "https://www.thegospelcoalition.org/article/danger-ai-misformation/": {
+   "status": 200,
+   "final_url": "https://www.thegospelcoalition.org/article/danger-ai-misformation/",
+   "fetched_on": "2026-11-20",
+   "title": "The Danger of AI Isn’t Misinformation. It’s Mis-Formation.",
+   "authors": [
+    "Jonathan Sams"
+   ]
+  },
   "https://www.thegospelcoalition.org/article/david-platt-ligon-duncan-racial-blindness/": {
    "status": 200,
    "final_url": "https://www.thegospelcoalition.org/article/david-platt-ligon-duncan-racial-blindness/",
@@ -4019,6 +4301,15 @@
    "title": "Evangelism and Apologetics: Preaching the Gospel, Answering Objections",
    "authors": [
     "John Starke"
+   ]
+  },
+  "https://www.thegospelcoalition.org/article/expect-ai-wisdom/": {
+   "status": 200,
+   "final_url": "https://www.thegospelcoalition.org/article/expect-ai-wisdom/",
+   "fetched_on": "2026-11-20",
+   "title": "Christians Can Give Two Cheers for AI",
+   "authors": [
+    "Mitchell G. Bahnsen"
    ]
   },
   "https://www.thegospelcoalition.org/article/fasting-not-spiritually-elite-hurting/": {
@@ -4119,6 +4410,15 @@
    "title": "How to Wed Scripture and Song in Corporate Worship",
    "authors": [
     "Walt Harrah"
+   ]
+  },
+  "https://www.thegospelcoalition.org/article/human-ai-age/": {
+   "status": 200,
+   "final_url": "https://www.thegospelcoalition.org/article/human-ai-age/",
+   "fetched_on": "2026-11-20",
+   "title": "What Is a Human in the AI Age?",
+   "authors": [
+    "Chris Watkin"
    ]
   },
   "https://www.thegospelcoalition.org/article/is-your-job-useless/": {
@@ -4227,6 +4527,15 @@
    "title": "Why We Need Silence",
    "authors": [
     "Sarah J. Hauser"
+   ]
+  },
+  "https://www.thegospelcoalition.org/article/parenting-age-ai/": {
+   "status": 200,
+   "final_url": "https://www.thegospelcoalition.org/article/parenting-age-ai/",
+   "fetched_on": "2026-11-20",
+   "title": "‘Not a Child-Safe Technology’: Proactive Parenting in the Age of AI",
+   "authors": [
+    "Sarah Eekhoff Zylstra"
    ]
   },
   "https://www.thegospelcoalition.org/article/penal-substitution-early-church/": {
@@ -4746,6 +5055,15 @@
    "final_url": "https://www.thegospelcoalition.org/blogs/kevin-deyoung/five-questions-about-sanctification-and-good-works-how-does-sanctification-differ-from-justification/",
    "fetched_on": "2026-11-12",
    "title": "Five Questions about Sanctification and Good Works: How Does Sanctification Differ from Justification?",
+   "authors": [
+    "Kevin DeYoung"
+   ]
+  },
+  "https://www.thegospelcoalition.org/blogs/kevin-deyoung/making-sense-of-millennium-part-1/": {
+   "status": 200,
+   "final_url": "https://www.thegospelcoalition.org/blogs/kevin-deyoung/making-sense-of-millennium-part-1/",
+   "fetched_on": "2026-11-20",
+   "title": "Making Sense of the Millennium, Part 1",
    "authors": [
     "Kevin DeYoung"
    ]
