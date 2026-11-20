@@ -464,6 +464,113 @@ main.cc-prose { max-width: 740px; margin: 0 auto; padding-top: 1.5rem; }
 <nav class="cc-tt-jump" aria-label="On this page"><span class="cc-tt-jump-label">On this page</span><a href="#debate" data-pos="topic-jump">Where evangelicals disagree</a><a href="#timelines" data-pos="topic-jump">Timelines side by side</a><a href="#key-questions" data-pos="topic-jump">Questions answered</a><a href="#reading" data-pos="topic-jump">Start reading</a><span class="cc-tt-share"><button type="button" class="cc-tt-btn" data-cc-action="share" data-share-item="page" data-share-text="On Eschatology &amp; the End Times&#10;Evangelicals differ on whether Christ returns before (premillennialism), after (postmillennialism), or if the millennium is now (amillennialism).">Share</button></span></nav>
 </div>
 <!-- CC-TOPIC-TOP:END -->
+<!-- CC-TOPIC-VIDEO:START -->
+<style>
+.cc-video { margin: 0 0 2rem; }
+.cc-video-strip { display: flex; align-items: center; gap: 14px; width: 100%; margin: 0; padding: 10px 14px 10px 10px;
+  background: #f4f1ea; border: 1px solid #e0ddd8; border-radius: 4px; cursor: pointer; text-align: left;
+  font: inherit; color: #1a1a1a; transition: border-color .15s ease, background-color .15s ease; }
+.cc-video-strip:hover { border-color: #b9c4b3; background: #f0ede4; }
+.cc-video-strip:focus-visible { outline: 2px solid #2C4A2E; outline-offset: 2px; }
+.cc-video-thumb { position: relative; flex: 0 0 144px; width: 144px; aspect-ratio: 16 / 9; border-radius: 3px; overflow: hidden; background: #2C4A2E; }
+.cc-video-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.cc-video-play { position: absolute; left: 50%; top: 50%; width: 34px; height: 34px; margin: -17px 0 0 -17px; border-radius: 50%;
+  background: rgba(26, 26, 26, .62); box-shadow: 0 0 0 1px rgba(255, 255, 255, .35); }
+.cc-video-play::after { content: ""; position: absolute; left: 13px; top: 10px; border-style: solid; border-width: 7px 0 7px 11px;
+  border-color: transparent transparent transparent #fff; }
+.cc-video-text { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.cc-video-kicker { font-family: 'Source Sans 3', sans-serif; font-size: 10.5px; font-weight: 600; letter-spacing: .14em;
+  text-transform: uppercase; color: #2C4A2E; }
+.cc-video-title { font-family: 'Lora', Georgia, serif; font-size: 16.5px; font-weight: 600; line-height: 1.3; color: #1a1a1a; }
+.cc-video-credit { font-family: 'Source Sans 3', sans-serif; font-size: 12.5px; color: #6b6b6b; }
+.cc-video-cta { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; padding: 6px 13px; border: 1px solid #2C4A2E;
+  border-radius: 999px; font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 600; color: #2C4A2E; background: transparent; }
+.cc-video-strip:hover .cc-video-cta { background: #2C4A2E; color: #faf9f7; }
+.cc-video-cta svg { width: 9px; height: 10px; fill: currentColor; }
+.cc-video-strip[hidden], .cc-video-player[hidden] { display: none; }
+.cc-video-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #1a1a1a; border-radius: 4px 4px 0 0; overflow: hidden; }
+.cc-video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.cc-video-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 12px;
+  background: #f4f1ea; border: 1px solid #e0ddd8; border-top: 0; border-radius: 0 0 4px 4px;
+  font-family: 'Source Sans 3', sans-serif; font-size: 12.5px; color: #6b6b6b; }
+.cc-video-links { display: inline-flex; align-items: center; gap: 14px; white-space: nowrap; }
+.cc-video-links a { color: #2C4A2E; text-decoration: underline; text-underline-offset: 2px; }
+.cc-video-hide { padding: 0; border: 0; background: none; font: inherit; color: #6b6b6b; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+.cc-video-hide:hover { color: #1a1a1a; }
+@media (max-width: 560px) {
+  .cc-video-strip { gap: 11px; padding: 8px 10px 8px 8px; }
+  .cc-video-thumb { flex-basis: 104px; width: 104px; }
+  .cc-video-play { width: 28px; height: 28px; margin: -14px 0 0 -14px; }
+  .cc-video-play::after { left: 11px; top: 8px; border-width: 6px 0 6px 9px; }
+  .cc-video-title { font-size: 14.5px; }
+  .cc-video-credit { font-size: 11.5px; }
+  .cc-video-cta { display: none; }
+  .cc-video-bar { flex-wrap: wrap; row-gap: 4px; }
+}
+@media print { .cc-video { display: none; } }
+</style>
+<section class="cc-video" id="video" aria-label="Video overview" data-video="L3IzTHCC_mo" data-embed="https://www.youtube-nocookie.com/embed/L3IzTHCC_mo?autoplay=1&amp;rel=0&amp;cc_load_policy=0" data-title="4 Christian End Times Views Explained: Premillennial, Amillennial, Postmillennial">
+<button type="button" class="cc-video-strip" aria-expanded="false" aria-controls="cc-video-player" aria-label="Play video: Four Christian Views of the End Times, Side by Side (3 minutes 22 seconds)">
+<span class="cc-video-thumb"><img src="/assets/video-eschatology-thumb.webp" alt="" width="960" height="540" decoding="async"><span class="cc-video-play" aria-hidden="true"></span></span>
+<span class="cc-video-text"><span class="cc-video-kicker">Video overview · 3 MIN</span><span class="cc-video-title">Four Christian Views of the End Times, Side by Side</span><span class="cc-video-credit">Narrated by Tom Daly, editor of Christian Curator</span></span>
+<span class="cc-video-cta" aria-hidden="true"><svg viewBox="0 0 9 10" aria-hidden="true" focusable="false"><path d="M0 0L9 5L0 10Z"/></svg>Watch</span>
+</button>
+<div class="cc-video-player" id="cc-video-player" hidden>
+<div class="cc-video-frame"></div>
+<div class="cc-video-bar"><span class="cc-video-credit-bar">Narrated by Tom Daly, editor of Christian Curator</span><span class="cc-video-links"><a href="https://youtu.be/L3IzTHCC_mo" target="_blank" rel="noopener" data-pos="topic-video" data-src="YouTube">Watch on YouTube</a><button type="button" class="cc-video-hide" aria-controls="cc-video-player">Hide video</button></span></div>
+</div>
+</section>
+<script>
+(function () {
+  var box = document.currentScript && document.currentScript.previousElementSibling;
+  if (!box || !box.classList.contains('cc-video')) return;
+  var strip = box.querySelector('.cc-video-strip');
+  var player = box.querySelector('.cc-video-player');
+  var frame = box.querySelector('.cc-video-frame');
+  var hide = box.querySelector('.cc-video-hide');
+  strip.addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = box.getAttribute('data-embed');
+    f.title = box.getAttribute('data-title');
+    f.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+    f.setAttribute('allowfullscreen', '');
+    frame.appendChild(f);
+    strip.setAttribute('aria-expanded', 'true');
+    strip.hidden = true;
+    player.hidden = false;
+    f.focus();
+    if (typeof window.gtag === 'function') {
+      var m = location.pathname.match(/\/topics\/([^\/]+)\//);
+      window.gtag('event', 'video_play', { topic: m ? m[1] : '', video_id: box.getAttribute('data-video') });
+    }
+  });
+  hide.addEventListener('click', function () {
+    frame.innerHTML = '';
+    player.hidden = true;
+    strip.hidden = false;
+    strip.setAttribute('aria-expanded', 'false');
+    strip.focus();
+  });
+})();
+</script>
+<script type="application/ld+json" data-cc-marker="CC-VIDEO-SCHEMA">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "4 Christian End Times Views Explained: Premillennial, Amillennial, Postmillennial",
+  "description": "Christians agree Jesus is coming back but disagree about the thousand years of Revelation 20. This overview sets the four main evangelical views side by side: dispensational premillennialism, historic premillennialism, amillennialism and postmillennialism.",
+  "thumbnailUrl": "https://www.christiancurator.com/assets/video-eschatology-thumb.webp",
+  "uploadDate": "2026-11-19",
+  "duration": "PT3M22S",
+  "embedUrl": "https://www.youtube-nocookie.com/embed/L3IzTHCC_mo",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Christian Curator",
+    "url": "https://www.christiancurator.com"
+  }
+}
+</script>
+<!-- CC-TOPIC-VIDEO:END -->
 <section class="cc-editorial">
 <p>For much of the 20th century, evangelical eschatology was dominated by dispensationalism, a framework that predicted a secret rapture, a seven-year tribulation, and a literal thousand-year reign of Christ on earth. John Darby, Cyrus Scofield, and later Tim LaHaye and the <em>Left Behind</em> series made these beliefs central to popular evangelical identity. Entire theologies of history, politics, and mission flowed from this eschatological map. But in recent decades, many evangelical scholars and pastors have begun to question whether dispensationalism accurately reflects Scripture, whether it encourages responsible engagement with culture and suffering, and whether it can sustain genuine hope in a world of real pain.</p>
 <p>Today's eschatological debate is not primarily academic. It shapes how pastors counsel their congregation about suffering, how believers approach their calling in the world, and whether the future is something to flee or something to steward. The tension between premillennialism (Christ returns before the millennium), amillennialism (the millennium is Christ's current reign), and postmillennialism (Christ returns after gospel progress ushers in his reign) matters pastorally because each view implies a different theology of hope. If Christ is returning imminently, how do we think about our children's future, about justice, about building institutions? If Christ is reigning now, how do we understand the defeat of evil and the continuity of history? These are not speculative puzzles. They are questions that determine whether we live as those who expect Christ to evacuate us from history or to transform it.</p>
