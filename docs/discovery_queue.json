@@ -1,79 +1,5 @@
 {
  "entries": {
-  "https://murraycampbell.substack.com/p/the-church-is-gods-family-and-its": {
-   "url": "https://murraycampbell.substack.com/p/the-church-is-gods-family-and-its",
-   "canonical_url": "https://murraycampbell.substack.com/p/the-church-is-gods-family-and-its",
-   "anchor": "On Spouses Sitting Together in Church",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-12-2026/",
-   "found_on": "2026-11-12",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
-  "https://desiringgod.org/articles/cant-you-just-be-like-me": {
-   "url": "https://www.desiringgod.org/articles/cant-you-just-be-like-me",
-   "canonical_url": "https://desiringgod.org/articles/cant-you-just-be-like-me",
-   "anchor": "Can’t You Just Be Like Me?",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-12-2026/",
-   "found_on": "2026-11-12",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-12",
-   "title": "Can’t You Just Be Like Me?",
-   "source_name": "Desiring God"
-  },
-  "https://forthegospel.org/read/husbands-pray-for-your-wives": {
-   "url": "https://www.forthegospel.org/read/husbands-pray-for-your-wives",
-   "canonical_url": "https://forthegospel.org/read/husbands-pray-for-your-wives",
-   "anchor": "Husbands, Pray for Your Wives",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-12-2026/",
-   "found_on": "2026-11-12",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-12",
-   "title": "Husbands, Pray for Your Wives",
-   "source_name": "For the Gospel"
-  },
-  "https://dashhouse.com/six-comforts-for-pastors": {
-   "url": "https://www.dashhouse.com/six-comforts-for-pastors/",
-   "canonical_url": "https://dashhouse.com/six-comforts-for-pastors",
-   "anchor": "Six Comforts for Pastors",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-12-2026/",
-   "found_on": "2026-11-12",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-12",
-   "title": "Six Comforts for Pastors",
-   "source_name": "DashHouse.com"
-  },
-  "https://brittanyleeallen.substack.com/p/the-most-fun-i-ever-had": {
-   "url": "https://brittanyleeallen.substack.com/p/the-most-fun-i-ever-had",
-   "canonical_url": "https://brittanyleeallen.substack.com/p/the-most-fun-i-ever-had",
-   "anchor": "The Most Fun I Ever Had",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-12-2026/",
-   "found_on": "2026-11-12",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
-  "https://epm.org/resources/2026/Nov/11/be-perfect-heaven": {
-   "url": "https://www.epm.org/resources/2026/Nov/11/be-perfect-heaven/",
-   "canonical_url": "https://epm.org/resources/2026/Nov/11/be-perfect-heaven",
-   "anchor": "Will We Really Be Perfect in Heaven?",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-12-2026/",
-   "found_on": "2026-11-12",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-12",
-   "title": "Will We Really Be Perfect in Heaven?",
-   "source_name": "Eternal Perspective Ministries"
-  },
   "https://christianitytoday.com/2026/11/hillsong-bethel-elevation-worship-bans": {
    "url": "https://www.christianitytoday.com/2026/11/hillsong-bethel-elevation-worship-bans/?utm_medium=widgetsocial",
    "canonical_url": "https://christianitytoday.com/2026/11/hillsong-bethel-elevation-worship-bans",
@@ -557,8 +483,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
    "found_on": "2026-11-19",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://zacharyconover.substack.com/p/for-the-ones-like-me": {
@@ -568,8 +494,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
    "found_on": "2026-11-19",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://elephantinroom.substack.com/p/praying-to-the-god-who-rules-history": {
@@ -579,8 +505,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
    "found_on": "2026-11-19",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://mereorthodoxy.com/dear-gen-alpha-claude-wants-to-turn-you-into-a-toad-please-for-the-love-of-all-things-human-dont-let-it": {
@@ -621,7 +547,98 @@
    "graduated_on": "2026-11-19",
    "title": "Biblical Counseling Coalition",
    "source_name": "Biblical Counseling Coalition"
+  },
+  "https://thegospelcoalition.org/blogs/trevin-wax/hot-water-holy-wonder": {
+   "url": "https://www.thegospelcoalition.org/blogs/trevin-wax/hot-water-holy-wonder/",
+   "canonical_url": "https://thegospelcoalition.org/blogs/trevin-wax/hot-water-holy-wonder",
+   "anchor": "Hot Water and Holy Wonder: Giving Thanks for Ordinary Luxuries",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-20-2026/",
+   "found_on": "2026-11-20",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-20",
+   "title": "Hot Water and Holy Wonder: Giving Thanks for Ordinary Luxuries",
+   "source_name": "The Gospel Coalition"
+  },
+  "https://desiringgod.org/interviews/are-my-prayers-selfish": {
+   "url": "https://www.desiringgod.org/interviews/are-my-prayers-selfish",
+   "canonical_url": "https://desiringgod.org/interviews/are-my-prayers-selfish",
+   "anchor": "Are My Prayers Selfish?",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-20-2026/",
+   "found_on": "2026-11-20",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-20",
+   "title": "Are My Prayers Selfish?",
+   "source_name": "Desiring God"
+  },
+  "https://betweentwocultures.com/2026/11/19/when-the-heavens-declare-what-a-solar-halo-says-to-a-secular-city": {
+   "url": "https://betweentwocultures.com/2026/11/19/when-the-heavens-declare-what-a-solar-halo-says-to-a-secular-city/",
+   "canonical_url": "https://betweentwocultures.com/2026/11/19/when-the-heavens-declare-what-a-solar-halo-says-to-a-secular-city",
+   "anchor": "When the Heavens Declare: What a Solar Halo Says to a Secular City",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-20-2026/",
+   "found_on": "2026-11-20",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-20",
+   "title": "When The Heavens Declare: What a Solar Halo Says to a Secular City",
+   "source_name": "Between Two Cultures"
+  },
+  "https://thenational.co.za/news/2026-11-16-joburg-s-sky-puts-on-a-show-what-causes-the-mysterious-ring-around-the-sun": {
+   "url": "https://thenational.co.za/news/2026-11-16-joburg-s-sky-puts-on-a-show-what-causes-the-mysterious-ring-around-the-sun/",
+   "canonical_url": "https://thenational.co.za/news/2026-11-16-joburg-s-sky-puts-on-a-show-what-causes-the-mysterious-ring-around-the-sun",
+   "anchor": "see here for images",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-20-2026/",
+   "found_on": "2026-11-20",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-20",
+   "title": "Joburg's sky puts on a show: What causes the mysterious ring around the sun?",
+   "source_name": "The National"
+  },
+  "https://harvestusa.org/gospel-pilling-the-looksmaxxers-hope-for-despairing-men": {
+   "url": "https://harvestusa.org/gospel-pilling-the-looksmaxxers-hope-for-despairing-men/",
+   "canonical_url": "https://harvestusa.org/gospel-pilling-the-looksmaxxers-hope-for-despairing-men",
+   "anchor": "Gospel-Pilling the Looksmaxxers: Hope for Despairing Men",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-20-2026/",
+   "found_on": "2026-11-20",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-20",
+   "title": "Gospel-Pilling the Looksmaxxers: Hope for Despairing Men",
+   "source_name": "Harvest USA"
+  },
+  "https://alifeoverseas.com/here-are-the-lessons-ive-learned-about-single-missionaries-from-a-lifetime-of-being-one": {
+   "url": "https://www.alifeoverseas.com/here-are-the-lessons-ive-learned-about-single-missionaries-from-a-lifetime-of-being-one/",
+   "canonical_url": "https://alifeoverseas.com/here-are-the-lessons-ive-learned-about-single-missionaries-from-a-lifetime-of-being-one",
+   "anchor": "Here Are the Lessons I’ve Learned About Single Missionaries (From a Lifetime of Being One)",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-20-2026/",
+   "found_on": "2026-11-20",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-20",
+   "title": "Here Are the Lessons I’ve Learned About Single Missionaries (From a Lifetime of Being One)",
+   "source_name": "alifeoverseas.com"
+  },
+  "https://michaelkelley.co/2026/11/dont-be-afraid-to-provoke-your-brothers": {
+   "url": "https://michaelkelley.co/2026/11/dont-be-afraid-to-provoke-your-brothers/",
+   "canonical_url": "https://michaelkelley.co/2026/11/dont-be-afraid-to-provoke-your-brothers",
+   "anchor": "Don’t Be Afraid to Provoke Your Brothers",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-20-2026/",
+   "found_on": "2026-11-20",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-20",
+   "title": "Don’t Be Afraid to Provoke Your Brothers",
+   "source_name": "Forward Progress"
   }
  },
- "updated": "2026-11-19T10:01:40+00:00"
+ "updated": "2026-11-20T10:01:46+00:00"
 }
