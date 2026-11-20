@@ -17,7 +17,7 @@ PAGE = """<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>On Baptism — Christian Curator</title>
+<title>On Baptism | Christian Curator</title>
 <meta content="Evangelicals debate infant and believer's baptism." name="description"/>
 <link href="https://www.christiancurator.com/topics/baptism/" rel="canonical"/>
 <!-- CC-TOPIC-ASSETS:START -->
@@ -49,6 +49,8 @@ def head(html: str) -> str:
 def test_page_title_drops_site_suffix():
     assert og.page_title(PAGE) == "On Baptism"
     assert og.page_title("<title>On Abortion &amp; Life | Christian Curator</title>") == "On Abortion & Life"
+    # Older pages used an em dash before the site name.
+    assert og.page_title("<title>On Abortion &amp; Life — Christian Curator</title>") == "On Abortion & Life"
 
 
 def test_valid_card_has_no_problems():

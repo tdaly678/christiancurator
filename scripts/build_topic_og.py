@@ -11,7 +11,7 @@ For each docs/topics/<slug>/index.html this script
    so when the text changes the URL changes and Meta, X and iMessage fetch the
    new image (they cache by URL). Older cards for the slug are deleted.
 2. writes the preview tags in <head> between <!-- CC-OG:START/END -->:
-   og:title (the <title> without the " — Christian Curator" suffix; og:site_name
+   og:title (the <title> without the " | Christian Curator" suffix; og:site_name
    already names the site), og:description, og:image with width, height, type
    and alt, twitter:card summary_large_image, twitter:title, twitter:description,
    twitter:image and twitter:image:alt. The same tags found anywhere else in

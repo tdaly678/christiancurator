@@ -45,7 +45,7 @@ TOPICS = [
         "category": "Core Theology",
         "hook": "Is the Bible without error in everything it affirms, or only in matters of faith and practice?",
         "summary": "How evangelicals understand Scripture's authority, reliability, and relationship to science, history, and theology.",
-        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " — Christian Curator".
+        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " | Christian Curator".
         "seo_title": "What Is Biblical Inerrancy?",
         "seo_description": "What is biblical inerrancy? How evangelicals understand the Bible's truthfulness and authority, the Chicago Statement, and answers to common objections.",
         "keywords": [
@@ -136,7 +136,7 @@ TOPICS = [
         "category": "Core Theology",
         "hook": "Should Christians defend the faith through reason and evidence, or simply proclaim the gospel?",
         "summary": "How Christians make the case for the faith — through reason, evidence, presupposition, and engagement with doubt.",
-        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " — Christian Curator".
+        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " | Christian Curator".
         "seo_title": "What Is Christian Apologetics?",
         "seo_description": "What is Christian apologetics? A guide to defending the faith with evidence, reason and grace, plus the best evangelical articles on doubt and hard questions.",
         "keywords": [
@@ -281,7 +281,7 @@ TOPICS = [
         "category": "Spiritual Formation",
         "hook": "What does it actually mean to make disciples — and are most churches doing it?",
         "summary": "How Christians grow in maturity — one-on-one mentoring, church programs, and the meaning of making disciples.",
-        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " — Christian Curator".
+        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " | Christian Curator".
         "seo_title": "Discipleship: How to Make Disciples",
         "seo_description": "What is discipleship, and how do you make disciples? Evangelical wisdom on following Jesus, growing to maturity, and helping others obey all Christ commanded.",
         "keywords": [
@@ -308,7 +308,7 @@ TOPICS = [
         "category": "Spiritual Formation",
         "hook": "Are the spiritual disciplines a path to growth — or a path to legalism?",
         "summary": "How practices like solitude, silence, Scripture reading, and fasting shape the Christian life.",
-        # SEO title/description (2026-10-30 spoke pass) — the live <title> is seo_title + " — Christian Curator".
+        # SEO title/description (2026-10-30 spoke pass) — the live <title> is seo_title + " | Christian Curator".
         "seo_title": "What Are the Spiritual Disciplines?",
         "seo_description": "What are the spiritual disciplines? A biblical definition, a list of the classic disciplines, why they are means of grace, and how to start practicing them.",
         "keywords": [
@@ -536,7 +536,7 @@ TOPICS = [
         "category": "Spiritual Formation",
         "hook": "When Christians begin questioning their beliefs, what does faithful deconstruction look like — and how should churches and pastors respond?",
         "summary": "Why Christians are deconstructing, what churches can do, and what healthy faith rebuilding looks like.",
-        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " — Christian Curator".
+        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " | Christian Curator".
         "seo_title": "What Is Faith Deconstruction?",
         "seo_description": "What is faith deconstruction? Why Christians are deconstructing faith, how doubt differs from unbelief, and how to rebuild on Christ with biblical wisdom.",
         "keywords": [
@@ -709,7 +709,7 @@ TOPICS = [
         "category": "Culture & Society",
         "hook": "Is progressive Christianity a reform of the faith — or has it progressed so far it has become a different religion altogether?",
         "summary": "Evangelical responses to progressive Christianity — its departure from biblical authority, sexual ethics, and exclusivity — and what distinguishes it from historic orthodoxy.",
-        # SEO title/description (2026-10-30 spoke pass) — the live <title> is seo_title + " — Christian Curator".
+        # SEO title/description (2026-10-30 spoke pass) — the live <title> is seo_title + " | Christian Curator".
         "seo_title": "What Is Progressive Christianity?",
         "seo_description": "What is progressive Christianity? What progressive Christians believe, how it differs from historic Christianity, and why it draws people deconstructing faith.",
         "keywords": [
@@ -825,7 +825,7 @@ TOPICS = [
         "category": "Spiritual Formation",
         "hook": "Why do so many Christians read the Bible so little — and what would change if the church actually knew Scripture?",
         "summary": "Evangelical concern about declining biblical knowledge, how Christians should read and engage Scripture, and what it looks like to recover genuine biblical literacy.",
-        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " — Christian Curator".
+        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " | Christian Curator".
         "seo_title": "What Is Biblical Literacy?",
         "seo_description": "What is biblical literacy? A clear definition, what it means to be biblically literate, why Bible literacy matters, and how to grow in knowing Scripture.",
         "keywords": [

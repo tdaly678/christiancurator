@@ -300,7 +300,7 @@ def ensure_head_metadata(soup: BeautifulSoup, slug: str, topic_name: str, url: s
     if head is None:
         return False
     title_tag = soup.find("title")
-    page_title = title_tag.get_text(strip=True) if title_tag else f"On {topic_name} — Christian Curator"
+    page_title = title_tag.get_text(strip=True) if title_tag else f"On {topic_name} | Christian Curator"
 
     changed = False
 
@@ -361,7 +361,7 @@ def process_page(slug: str, enrichment: dict) -> str:
     insert_last_updated(soup, TODAY_ISO)
     update_meta_descriptions(soup, meta)
     if topic.get("seo_title"):
-        set_page_title(soup, f"{topic['seo_title']} — {PUBLISHER_NAME}")
+        set_page_title(soup, f"{topic['seo_title']} | {PUBLISHER_NAME}")
     ensure_head_metadata(soup, slug, topic.get("name", slug), url)
     upgrade_article_schema(soup, meta, url)
     upgrade_faq_schema(soup, questions, answers)
