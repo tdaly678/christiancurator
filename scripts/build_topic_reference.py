@@ -36,12 +36,12 @@ Schema of data/topic_reference/<slug>.json:
   "faq": {
     "label": "Frequently Asked Questions",
     "title": "Men, Women and the Church, Briefly Answered",
-    "place": {"before": "<!-- CC-TOPIC-VOICES:START -->"},   # first insert only
+    "place": {"before": "<!-- AEO-RELATED-TOPICS:START -->"},   # first insert only
     "items": [{"q": "Question?", "a": "Answer HTML (inline tags and links only)."}]
   },
   "glossary": {                                              # optional
     "label": "Glossary", "title": "Terms used on this page",
-    "place": {"before": "<!-- CC-TOPIC-VOICES:START -->"},   # first insert only
+    "place": {"before": "<!-- AEO-RELATED-TOPICS:START -->"},   # first insert only
     "items": [{"term": "Imago Dei", "def": "Definition HTML (inline tags only)."}]
   },
   "sources": [{"id": "danvers", "publisher": "CBMW", "title": "The Danvers Statement",

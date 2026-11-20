@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""build_voice_pilot.py: render the Voices pilot pages and their topic back-links.
+"""build_voice_pilot.py: render the Voices pilot pages.
 
 Reads data/voices/pilot.json (drafts carry "reviewed": false until Tom signs
 off) and, for each writer:
@@ -10,8 +10,8 @@ off) and, for each writer:
   - keeps frontend/voices_noindex.json and docs/sitemap-voices.xml in step
     with the page's robots tag (an unreviewed page that is only an auto list
     is noindexed and left out of the sitemap).
-Then it writes a "Writers on this topic" CC-TOPIC-VOICES block on each topic
-hub a pilot writer returns to, and removes the block from hubs no longer listed.
+It writes nothing to topic pages: the "Writers on this topic" CC-TOPIC-VOICES
+box was removed from every topic hub on Nov 20 2026 (Tom).
 
 Run by hand after editing the data file. Idempotent.
 
@@ -32,7 +32,6 @@ sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 import build_recent_articles as recent  # noqa: E402
 from curator import voice_pilot as vp  # noqa: E402
-from frontend.topic_redirects import live_topic_dirs  # noqa: E402
 from frontend.topics_data import TOPICS  # noqa: E402
 
 DOCS = REPO_ROOT / "docs"
@@ -93,25 +92,6 @@ def drop_from_sitemap(slug: str) -> bool:
     return True
 
 
-def update_topic_hubs(writers: list[dict], names: dict[str, str]) -> list[str]:
-    mapping = {s: pairs for s, pairs in vp.topic_voice_map(writers).items() if s in names}
-    changed = []
-    for page in sorted(p / "index.html" for p in live_topic_dirs(TOPICS_DIR)):
-        slug = page.parent.name
-        html = page.read_text(encoding="utf-8")
-        if slug not in mapping and vp.TOPIC_START not in html:
-            continue
-        block = vp.render_topic_voices_block(mapping[slug]) if slug in mapping else ""
-        out = vp.inject_topic_voices(html, block)
-        if out is None:
-            print(f"  ! {slug}: no AEO-RELATED-TOPICS anchor, back-link not added")
-            continue
-        if out != html:
-            page.write_text(out, encoding="utf-8")
-            changed.append(slug)
-    return changed
-
-
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--preview-dir", type=Path, help="also write each page to DIR/<slug>.html")
@@ -141,9 +121,6 @@ def main(argv: list[str] | None = None) -> int:
             (args.preview_dir / f"{slug}.html").write_text(html, encoding="utf-8")
         status = "noindex" if noindex else "index"
         print(f"  /voices/{slug}/  {status}  reviewed={bool(entry.get('reviewed'))}")
-
-    changed = update_topic_hubs(writers, tnames)
-    print(f"topic hubs with voice back-links updated: {len(changed)} {changed}")
     return 0
 
 

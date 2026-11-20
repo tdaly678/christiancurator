@@ -12,8 +12,9 @@ site-wide indexing rule for every voice page (voices cleanup, Nov 12 2026): a
 page is indexable only when reviewed is true, or when it has 2 or more of the
 writer's own verified pieces plus a sourced bio (bio text and bio_sources).
 
-Topic hubs link back through a marker block (render_topic_voices_block /
-inject_topic_voices) placed before AEO-RELATED-TOPICS.
+Topic hubs carry no voices box: the "Writers on this topic" CC-TOPIC-VOICES
+block was removed from every topic page on Nov 20 2026 (Tom). The writer's
+own page still lists the topics they return to.
 
 No em dashes anywhere in rendered copy (assert_no_em_dash).
 """
@@ -41,10 +42,6 @@ PILOT_PATH = REPO_ROOT / "data" / "voices" / "pilot.json"
 
 ROBOTS_NOINDEX = '<meta name="robots" content="noindex, follow" />'
 CORRECTIONS_URL = "/about/#contact"
-
-TOPIC_START = "<!-- CC-TOPIC-VOICES:START -->"
-TOPIC_END = "<!-- CC-TOPIC-VOICES:END -->"
-TOPIC_ANCHOR = "<!-- AEO-RELATED-TOPICS:START -->"
 
 RECENT_START = "<!-- CC-RECENT-ARTICLES:START -->"
 RECENT_END = "<!-- CC-RECENT-ARTICLES:END -->"
@@ -349,59 +346,3 @@ def assert_no_em_dash(text: str) -> None:
     if "—" in text:
         i = text.index("—")
         raise ValueError(f"em dash in rendered voice pilot copy: ...{text[max(0, i - 60):i + 20]}...")
-
-
-# ── Topic hub back-links ─────────────────────────────────────────────────────
-
-def topic_voice_map(writers: list[dict]) -> dict[str, list[tuple[dict, str]]]:
-    """topic slug -> [(writer, angle)] for indexable pilot writers."""
-    out: dict[str, list[tuple[dict, str]]] = {}
-    for w in writers:
-        if needs_noindex(w):
-            continue
-        for t in w.get("topics") or []:
-            out.setdefault(t["slug"], []).append((w, t["angle"]))
-    return out
-
-
-TOPIC_BLOCK_CSS = (
-    "<style>.cc-topic-voices{margin:2rem 0;padding:1.1rem 1.4rem;background:#fff;border:1px solid #e0ddd8;"
-    "border-radius:5px;}.cc-topic-voices-label{font-size:10px;font-weight:700;letter-spacing:0.16em;"
-    "text-transform:uppercase;color:#2C4A2E;margin-bottom:0.6rem;}.cc-topic-voices ul{list-style:none;}"
-    ".cc-topic-voices li{padding:0.35rem 0;font-size:14px;color:#555;line-height:1.5;}"
-    ".cc-topic-voices a{color:#2C4A2E;font-weight:600;text-decoration:none;}"
-    ".cc-topic-voices a:hover{text-decoration:underline;}</style>"
-)
-
-
-def render_topic_voices_block(pairs: list[tuple[dict, str]]) -> str:
-    items = "".join(
-        f'\n    <li><a href="/voices/{_esc(w["slug"])}/">{_esc(w["name"])}</a>: {_esc(angle)}</li>'
-        for w, angle in sorted(pairs, key=lambda p: p[0]["name"].split()[-1].lower())
-    )
-    block = (
-        f"{TOPIC_START}\n"
-        f'<aside class="cc-topic-voices">{TOPIC_BLOCK_CSS}'
-        f'\n  <div class="cc-topic-voices-label">Writers on this topic</div>'
-        f"\n  <ul>{items}\n  </ul>"
-        f"\n</aside>\n{TOPIC_END}"
-    )
-    assert_no_em_dash(block)
-    return block
-
-
-def inject_topic_voices(html: str, block: str) -> str | None:
-    """Replace the block in place, or insert it before AEO-RELATED-TOPICS.
-
-    An empty block removes an existing one. Returns None when there is no
-    anchor to insert at.
-    """
-    block_re = re.compile(re.escape(TOPIC_START) + r".*?" + re.escape(TOPIC_END) + r"\n?", re.DOTALL)
-    if block_re.search(html):
-        return block_re.sub(lambda _: (block + "\n") if block else "", html, count=1)
-    if not block:
-        return html
-    pos = html.find(TOPIC_ANCHOR)
-    if pos == -1:
-        return None
-    return html[:pos] + block + "\n" + html[pos:]

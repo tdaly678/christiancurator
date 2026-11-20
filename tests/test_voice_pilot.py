@@ -144,13 +144,6 @@ def test_reviewed_auto_list_is_indexable():
     assert not vp.needs_noindex(_entry(bio="", start_here=[], reviewed=True))
 
 
-def test_noindexed_writers_get_no_topic_backlinks():
-    writers = [_entry(reviewed=True), _entry(slug="auto-only", name="Auto Only", bio="", start_here=[])]
-    mapping = vp.topic_voice_map(writers)
-    slugs = {w["slug"] for pairs in mapping.values() for w, _ in pairs}
-    assert slugs == {"test-writer"}
-
-
 # ── Page template ────────────────────────────────────────────────────────────
 
 def test_page_sections_in_brief_order():
@@ -222,22 +215,6 @@ def test_recent_inject_replaces_in_place_without_growing():
     for _ in range(5):
         again = recent.inject(again, section)
     assert again == once
-
-
-# ── Topic hub back-links ─────────────────────────────────────────────────────
-
-def test_topic_block_inserts_before_related_topics_and_is_idempotent():
-    page = "<section>synthesis</section>\n<!-- AEO-RELATED-TOPICS:START -->\n<nav></nav>\n<!-- AEO-RELATED-TOPICS:END -->"
-    block = vp.render_topic_voices_block([(_entry(), "Reading habits.")])
-    once = vp.inject_topic_voices(page, block)
-    assert once.index(vp.TOPIC_START) < once.index("AEO-RELATED-TOPICS:START")
-    assert '<a href="/voices/test-writer/">Test Writer</a>: Reading habits.' in once
-    assert vp.inject_topic_voices(once, block) == once
-    assert vp.inject_topic_voices(once, "") == page
-
-
-def test_topic_block_needs_anchor():
-    assert vp.inject_topic_voices("<p>no anchor</p>", "<!-- x -->") is None
 
 
 # ── Pilot data file ──────────────────────────────────────────────────────────
