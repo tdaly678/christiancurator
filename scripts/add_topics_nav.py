@@ -2,29 +2,34 @@
 """
 add_topics_nav.py
 
-Inject a multi-level "Topics" dropdown into every nav bar site-wide.
+Write the "Topics" dropdown into every nav bar site-wide.
 
 Layout after patch:
-  Home | [ existing inter-items ] | Topics ▾ | Resources ▾
+  Home | Topics ▾ | Resources ▾
 
-Topics▾ hovers open a list of the 4 category names; hovering a category
-fans its topic pages out to the side.
+Desktop: Topics ▾ opens five hand-picked featured topics
+(frontend/topics_hub.py FEATURED) and a bold last line "All N topics"
+linking /topics/, where N is the live topic count computed at build time.
+Phones (700px and below): the dropdown is replaced by a plain "Topics" link
+to /topics/. The link carries `hidden` so a page without the CSS below never
+shows two Topics items.
 
 Sources:
-  • The nav HTML is built from frontend/topics_data.py (TOPICS_BY_CATEGORY
-    ordered by CATEGORIES), so re-running this script after topics change
-    regenerates every nav to match.
+  • frontend/topics_hub.py (featured picks, labels) and docs/topics/ (count).
   • Idempotent via HTML/CSS comment markers. Safe to re-run.
 
 Targets:
   1. frontend/template.html, digest_template.html, archive_template.html,
-     daily_template.html     (Jinja templates)
+     daily_template.html     (Jinja templates; voice pages copy template.html)
   2. frontend/__init__.py    (Python-list nav block in render_archive_index)
   3. docs/**/*.html          (already-rendered static pages)
+
+Tests: tests/test_topics_hub.py (the templates must match build_topics_html()).
 """
 
 from __future__ import annotations
 
+import html as html_mod
 import re
 import sys
 from pathlib import Path
@@ -33,7 +38,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from frontend.topics_data import CATEGORIES, TOPICS_BY_CATEGORY  # noqa: E402
+from frontend.topics_hub import FEATURED, nav_label, topic_count  # noqa: E402
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Markers
@@ -47,97 +52,54 @@ CSS_END = "/* CC-NAV-TOPICS-SUBMENU:END */"
 # Build the nav block
 # ─────────────────────────────────────────────────────────────────────────────
 
-def _slug_to_title(topic: dict) -> str:
-    # Use the display name from topics_data (already Title Case)
-    return topic["name"]
 
-
-def build_topics_html(indent: str = "      ") -> str:
+def build_topics_html(indent: str = "      ", count: int | None = None) -> str:
     """Return the full idempotent HTML block for the Topics dropdown.
 
     `indent` is the leading whitespace for the outer <div>, matching the
-    formatting of sibling nav items in the target file.
+    formatting of sibling nav items in the target file. `count` defaults to
+    the number of live topic pages in docs/topics/.
     """
+    n = topic_count() if count is None else count
     lines: list[str] = []
     lines.append(f'{indent}{HTML_START}')
     lines.append(f'{indent}<div class="cc-nav-dropdown cc-nav-dropdown-topics">')
+    lines.append(f'{indent}  <a class="cc-nav-topics-link" href="/topics/" hidden>Topics</a>')
     lines.append(f'{indent}  <button class="cc-nav-dropdown-toggle" aria-haspopup="true">Topics</button>')
     lines.append(f'{indent}  <div class="cc-nav-dropdown-menu cc-nav-dropdown-menu-topics">')
-    for cat in CATEGORIES:
-        topics = sorted(TOPICS_BY_CATEGORY.get(cat, []), key=lambda t: t["name"].lower())
-        lines.append(f'{indent}    <div class="cc-nav-submenu">')
-        lines.append(f'{indent}      <button class="cc-nav-submenu-toggle" aria-haspopup="true">{cat}</button>')
-        lines.append(f'{indent}      <div class="cc-nav-submenu-panel">')
-        for t in topics:
-            slug = t["slug"]
-            name = _slug_to_title(t)
-            lines.append(f'{indent}        <a href="/topics/{slug}/">{name}</a>')
-        lines.append(f'{indent}      </div>')
-        lines.append(f'{indent}    </div>')
+    for slug in FEATURED:
+        label = html_mod.escape(nav_label(slug), quote=False)
+        lines.append(f'{indent}    <a href="/topics/{slug}/">{label}</a>')
+    lines.append(f'{indent}    <a class="cc-nav-topics-all" href="/topics/">All {n} topics</a>')
     lines.append(f'{indent}  </div>')
     lines.append(f'{indent}</div>')
     lines.append(f'{indent}{HTML_END}')
     return "\n".join(lines) + "\n"
 
 
-# CSS for the Topics dropdown + its nested category submenus.
-# Matches existing .cc-nav-dropdown look (minus the center-positioned panel:
-# Topics panel is left-aligned so its side-out submenus have room).
-TOPICS_CSS = f"""    {CSS_START}
-    .cc-nav-dropdown-menu-topics {{
-      left: 0; transform: none; min-width: 220px; padding: 6px 0;
-    }}
-    .cc-nav-submenu {{ position: relative; }}
-    .cc-nav-submenu-toggle {{
-      display: block; width: 100%; text-align: left;
-      padding: 7px 18px; background: none; border: none; cursor: pointer;
-      font-family: inherit;
-      font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-      color: #888; white-space: nowrap;
-    }}
-    .cc-nav-submenu-toggle::after {{
-      content: '›'; float: right; margin-left: 18px; color: #bbb; font-weight: 400;
-    }}
-    .cc-nav-submenu-toggle:hover {{ color: #2C4A2E; background: #f7f5f2; }}
-    .cc-nav-submenu-panel {{
-      display: none; position: absolute; left: 100%; top: -7px;
-      background: #fff; border: 1px solid #e0ddd8; border-radius: 4px;
-      padding: 8px 0; min-width: 260px;
-      max-height: 70vh; overflow-y: auto;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08); z-index: 101;
-    }}
-    .cc-nav-submenu:hover > .cc-nav-submenu-panel,
-    .cc-nav-submenu:focus-within > .cc-nav-submenu-panel {{ display: block; }}
-    .cc-nav-submenu-panel a {{
-      display: block; padding: 6px 18px;
-      font-size: 13px; font-weight: 500; letter-spacing: 0; text-transform: none;
-      color: #333; text-decoration: none; white-space: nowrap;
-    }}
-    .cc-nav-submenu-panel a:hover {{ color: #2C4A2E; background: #f7f5f2; }}
-    @media (max-width: 700px) {{
-      .cc-nav-submenu-panel {{ position: static; left: auto; top: auto;
-        max-height: none; box-shadow: none; border: none; padding: 0 0 0 18px; }}
-      .cc-nav-dropdown-menu-topics {{ min-width: 180px; }}
-    }}
-    {CSS_END}
-"""
-
-# Compact single-line CSS for __init__.py (which uses a Python list of strings).
-# Matches the 8-space Python indent of the surrounding style list. Uses the
-# literal '›' glyph (U+203A) to avoid Python octal-escape ambiguity.
-TOPICS_CSS_LINES_INIT = [
-    f"        '    {CSS_START}',",
-    "        '    .cc-nav-dropdown-menu-topics{left:0;transform:none;min-width:220px;padding:6px 0;}',",
-    "        '    .cc-nav-submenu{position:relative;}',",
-    "        '    .cc-nav-submenu-toggle{display:block;width:100%;text-align:left;padding:7px 18px;background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#888;white-space:nowrap;}',",
-    "        '    .cc-nav-submenu-toggle::after{content:\"›\";float:right;margin-left:18px;color:#bbb;font-weight:400;}',",
-    "        '    .cc-nav-submenu-toggle:hover{color:#2C4A2E;background:#f7f5f2;}',",
-    "        '    .cc-nav-submenu-panel{display:none;position:absolute;left:100%;top:-7px;background:#fff;border:1px solid #e0ddd8;border-radius:4px;padding:8px 0;min-width:260px;max-height:70vh;overflow-y:auto;box-shadow:0 4px 12px rgba(0,0,0,0.08);z-index:101;}',",
-    "        '    .cc-nav-submenu:hover > .cc-nav-submenu-panel,.cc-nav-submenu:focus-within > .cc-nav-submenu-panel{display:block;}',",
-    "        '    .cc-nav-submenu-panel a{display:block;padding:6px 18px;font-size:13px;font-weight:500;letter-spacing:0;text-transform:none;color:#333;text-decoration:none;white-space:nowrap;}',",
-    "        '    .cc-nav-submenu-panel a:hover{color:#2C4A2E;background:#f7f5f2;}',",
-    f"        '    {CSS_END}',",
+# CSS for the Topics dropdown. The generic .cc-nav-dropdown rules on each page
+# open the panel on hover / focus; these rules restyle its links and swap the
+# dropdown for the plain link on phones.
+TOPICS_CSS_RULES = [
+    ".cc-nav-dropdown-menu-topics{left:0;transform:none;min-width:230px;padding:8px 0;}",
+    ".cc-nav-dropdown-menu-topics a{font-size:13.5px;font-weight:500;letter-spacing:0;text-transform:none;color:#333;padding:7px 18px;}",
+    ".cc-nav-dropdown-menu-topics a:hover{color:#2C4A2E;background:#f7f5f2;}",
+    ".cc-nav-dropdown-menu-topics a.cc-nav-topics-all{font-weight:700;color:#1a1a1a;border-top:1px solid #e0ddd8;margin-top:6px;padding-top:10px;}",
+    "@media (max-width:700px){.cc-nav-topics-link[hidden]{display:block;line-height:normal;}.cc-nav-dropdown-topics>.cc-nav-dropdown-toggle,.cc-nav-dropdown-topics>.cc-nav-dropdown-menu-topics{display:none !important;}}",
 ]
+
+TOPICS_CSS = (
+    f"    {CSS_START}\n"
+    + "".join(f"    {r}\n" for r in TOPICS_CSS_RULES)
+    + f"    {CSS_END}\n"
+)
+
+# Same CSS for __init__.py (a Python list of strings at an 8-space indent).
+TOPICS_CSS_LINES_INIT = (
+    [f"        '    {CSS_START}',"]
+    + [f"        '    {r}'," for r in TOPICS_CSS_RULES]
+    + [f"        '    {CSS_END}',"]
+)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Patch helpers

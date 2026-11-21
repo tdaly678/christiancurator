@@ -1,12 +1,18 @@
 """
-add_breadcrumbs.py — Insert Home > Topics > [Name] breadcrumbs into the 70
-topic pages at docs/topics/<slug>/index.html.
+add_breadcrumbs.py — Write Home > Topics > [Category] > [Name] breadcrumbs on
+every live topic page at docs/topics/<slug>/index.html.
+
+"Topics" links the /topics/ hub and the category links its anchor there
+(/topics/#doctrine); the category comes from frontend/topics_hub.py.
 
 Three edits per page:
   1. Inject `.cc-breadcrumb` CSS block into the <style> section (once).
   2. Insert <nav class="cc-breadcrumb"> between </header> and <main>
-     (or after <main> if the layout nests it that way).
-  3. Add BreadcrumbList JSON-LD alongside the Article JSON-LD.
+     (or after <main> if the layout nests it that way), or replace it in place.
+  3. Add (or replace in place) the BreadcrumbList JSON-LD after the Article JSON-LD.
+
+scripts/build_topics_index.py calls process_topic_page() on every run (daily
+workflow), so a topic that changes hub category gets the new trail next day.
 
 Also adds id="topics" to <nav class="cc-topic-index"> on the homepage so
 the "Topics" link in the breadcrumb has somewhere to land.
@@ -20,6 +26,7 @@ Run:
 
 from __future__ import annotations
 
+import html as html_mod
 import json
 import re
 import sys
@@ -28,6 +35,10 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DOCS_DIR = REPO_ROOT / "docs"
 TOPICS_DIR = DOCS_DIR / "topics"
+
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+from frontend.topics_hub import hub_category  # noqa: E402
 
 BREADCRUMB_CSS = """
     /* Breadcrumb */
@@ -75,30 +86,44 @@ def inject_breadcrumb_css(html: str) -> tuple[str, bool]:
     return new_html, True
 
 
-def build_breadcrumb_html(topic_name: str) -> str:
-    """Return the breadcrumb <nav> markup."""
-    # Keep topic name without the leading "On " prefix for cleaner breadcrumb text
-    display = topic_name
-    if display.lower().startswith("on "):
-        display = display[3:]
+def display_name(topic_name: str) -> str:
+    """Topic name without the leading "On " prefix, for cleaner breadcrumb text."""
+    if topic_name.lower().startswith("on "):
+        return topic_name[3:]
+    return topic_name
 
+
+def build_breadcrumb_html(topic_name: str, category: tuple[str, str]) -> str:
+    """Return the breadcrumb <nav> markup. `category` is (anchor id, name)."""
+    cat_id, cat_name = category
     return (
         '<nav aria-label="Breadcrumb" class="cc-breadcrumb">'
         '<a href="/">Home</a>'
         '<span class="cc-breadcrumb-sep">\u203A</span>'
-        '<a href="/#topics">Topics</a>'
+        '<a href="/topics/">Topics</a>'
         '<span class="cc-breadcrumb-sep">\u203A</span>'
-        f"<span aria-current=\"page\">{display}</span>"
+        f'<a href="/topics/#{cat_id}">{html_mod.escape(cat_name)}</a>'
+        '<span class="cc-breadcrumb-sep">\u203A</span>'
+        f"<span aria-current=\"page\">{display_name(topic_name)}</span>"
         "</nav>"
     )
 
 
-def insert_breadcrumb_element(html: str, topic_name: str) -> tuple[str, bool]:
-    """Insert <nav class="cc-breadcrumb"> between </header> and the topic hero."""
+BREADCRUMB_NAV_RE = re.compile(r'<nav aria-label="Breadcrumb" class="cc-breadcrumb">.*?</nav>', re.S)
+BREADCRUMB_JSONLD_RE = re.compile(
+    r'<script type="application/ld\+json">[^<]*"@type":\s*"BreadcrumbList"[^<]*</script>'
+)
+
+
+def insert_breadcrumb_element(html: str, topic_name: str, category: tuple[str, str]) -> tuple[str, bool]:
+    """Insert <nav class="cc-breadcrumb"> between </header> and the topic hero,
+    or replace an existing one in place."""
+    bc = build_breadcrumb_html(topic_name, category)
+    if BREADCRUMB_NAV_RE.search(html):
+        new_html = BREADCRUMB_NAV_RE.sub(lambda _m: bc, html, count=1)
+        return new_html, new_html != html
     if 'class="cc-breadcrumb"' in html:
         return html, False
-
-    bc = build_breadcrumb_html(topic_name)
 
     # Pattern 1: </header><main>  (compact semantic output from apply_semantic_to_file)
     m = re.search(r"(</header>\s*<main>)", html, re.IGNORECASE)
@@ -115,46 +140,37 @@ def insert_breadcrumb_element(html: str, topic_name: str) -> tuple[str, bool]:
     return html, False
 
 
-def insert_breadcrumb_jsonld(html: str, topic_name: str, canonical: str) -> tuple[str, bool]:
-    """Append a BreadcrumbList JSON-LD script right after the Article JSON-LD."""
-    if '"@type": "BreadcrumbList"' in html or "'@type': 'BreadcrumbList'" in html:
-        return html, False
-
-    # Clean display name (strip "On " prefix)
-    display = topic_name
-    if display.lower().startswith("on "):
-        display = display[3:]
-
+def build_breadcrumb_jsonld(topic_name: str, canonical: str, category: tuple[str, str]) -> str:
     site_root = "https://www.christiancurator.com"
+    cat_id, cat_name = category
     data = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": f"{site_root}/",
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Topics",
-                "item": f"{site_root}/#topics",
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": display,
-                "item": canonical,
-            },
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site_root}/"},
+            {"@type": "ListItem", "position": 2, "name": "Topics", "item": f"{site_root}/topics/"},
+            {"@type": "ListItem", "position": 3, "name": cat_name,
+             "item": f"{site_root}/topics/#{cat_id}"},
+            {"@type": "ListItem", "position": 4, "name": display_name(topic_name), "item": canonical},
         ],
     }
-    jsonld = (
+    return (
         '<script type="application/ld+json">\n'
         + json.dumps(data, indent=2, ensure_ascii=False)
         + "\n</script>"
     )
+
+
+def insert_breadcrumb_jsonld(html: str, topic_name: str, canonical: str,
+                             category: tuple[str, str]) -> tuple[str, bool]:
+    """Replace the BreadcrumbList JSON-LD in place, or append it right after
+    the Article JSON-LD."""
+    jsonld = build_breadcrumb_jsonld(topic_name, canonical, category)
+    if BREADCRUMB_JSONLD_RE.search(html):
+        new_html = BREADCRUMB_JSONLD_RE.sub(lambda _m: jsonld, html, count=1)
+        return new_html, new_html != html
+    if '"@type": "BreadcrumbList"' in html or "'@type': 'BreadcrumbList'" in html:
+        return html, False
 
     # Insert right after the first closing </script> that follows an Article schema.
     article_m = re.search(
@@ -178,19 +194,23 @@ def process_topic_page(path: Path) -> str:
     if not meta:
         return f"{path.parent.name}: skipped (couldn't extract topic meta)"
     topic_name, canonical = meta
+    try:
+        category = hub_category(path.parent.name)
+    except KeyError:
+        return f"{path.parent.name}: skipped (no hub category in frontend/topics_hub.py)"
 
     changed = False
     html, css_added = inject_breadcrumb_css(html)
     changed |= css_added
 
-    html, el_added = insert_breadcrumb_element(html, topic_name)
+    html, el_added = insert_breadcrumb_element(html, topic_name, category)
     changed |= el_added
 
-    html, jsonld_added = insert_breadcrumb_jsonld(html, topic_name, canonical)
+    html, jsonld_added = insert_breadcrumb_jsonld(html, topic_name, canonical, category)
     changed |= jsonld_added
 
     if not changed:
-        return f"{path.parent.name}: no change (already has breadcrumb)"
+        return f"{path.parent.name}: no change (breadcrumb current)"
 
     path.write_text(html, encoding="utf-8")
     parts = []
@@ -200,7 +220,7 @@ def process_topic_page(path: Path) -> str:
         parts.append("nav")
     if jsonld_added:
         parts.append("json-ld")
-    return f"{path.parent.name}: added {', '.join(parts)}"
+    return f"{path.parent.name}: updated {', '.join(parts)}"
 
 
 def ensure_topics_anchor_on_homepage(template_path: Path, rendered_path: Path) -> list[str]:
@@ -254,7 +274,7 @@ def main():
             continue
         status = process_topic_page(html_path)
         print(f"  {status}")
-        if "added" in status:
+        if "updated" in status:
             added += 1
         elif "no change" in status or "skipped" in status:
             skipped += 1

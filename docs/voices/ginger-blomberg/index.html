@@ -46,41 +46,11 @@
     .cc-nav-dropdown-menu a:hover{color:#2C4A2E;background:#f7f5f2;}
 
     /* CC-NAV-TOPICS-SUBMENU:START */
-    .cc-nav-dropdown-menu-topics {
-      left: 0; transform: none; min-width: 220px; padding: 6px 0;
-    }
-    .cc-nav-submenu { position: relative; }
-    .cc-nav-submenu-toggle {
-      display: block; width: 100%; text-align: left;
-      padding: 7px 18px; background: none; border: none; cursor: pointer;
-      font-family: inherit;
-      font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-      color: #888; white-space: nowrap;
-    }
-    .cc-nav-submenu-toggle::after {
-      content: '›'; float: right; margin-left: 18px; color: #bbb; font-weight: 400;
-    }
-    .cc-nav-submenu-toggle:hover { color: #2C4A2E; background: #f7f5f2; }
-    .cc-nav-submenu-panel {
-      display: none; position: absolute; left: 100%; top: -7px;
-      background: #fff; border: 1px solid #e0ddd8; border-radius: 4px;
-      padding: 8px 0; min-width: 260px;
-      max-height: 70vh; overflow-y: auto;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08); z-index: 101;
-    }
-    .cc-nav-submenu:hover > .cc-nav-submenu-panel,
-    .cc-nav-submenu:focus-within > .cc-nav-submenu-panel { display: block; }
-    .cc-nav-submenu-panel a {
-      display: block; padding: 6px 18px;
-      font-size: 13px; font-weight: 500; letter-spacing: 0; text-transform: none;
-      color: #333; text-decoration: none; white-space: nowrap;
-    }
-    .cc-nav-submenu-panel a:hover { color: #2C4A2E; background: #f7f5f2; }
-    @media (max-width: 700px) {
-      .cc-nav-submenu-panel { position: static; left: auto; top: auto;
-        max-height: none; box-shadow: none; border: none; padding: 0 0 0 18px; }
-      .cc-nav-dropdown-menu-topics { min-width: 180px; }
-    }
+    .cc-nav-dropdown-menu-topics{left:0;transform:none;min-width:230px;padding:8px 0;}
+    .cc-nav-dropdown-menu-topics a{font-size:13.5px;font-weight:500;letter-spacing:0;text-transform:none;color:#333;padding:7px 18px;}
+    .cc-nav-dropdown-menu-topics a:hover{color:#2C4A2E;background:#f7f5f2;}
+    .cc-nav-dropdown-menu-topics a.cc-nav-topics-all{font-weight:700;color:#1a1a1a;border-top:1px solid #e0ddd8;margin-top:6px;padding-top:10px;}
+    @media (max-width:700px){.cc-nav-topics-link[hidden]{display:block;line-height:normal;}.cc-nav-dropdown-topics>.cc-nav-dropdown-toggle,.cc-nav-dropdown-topics>.cc-nav-dropdown-menu-topics{display:none !important;}}
     /* CC-NAV-TOPICS-SUBMENU:END */
     .cc-nav-dropdown-menu a.active{color:#1a1a1a;}
     .cc-breadcrumb{font-size:11px;color:#aaa;margin-bottom:1.5rem;}
@@ -167,99 +137,16 @@
 <a href="/">Home</a>
 <!-- CC-TOPICS-DROPDOWN:START -->
 <div class="cc-nav-dropdown cc-nav-dropdown-topics">
-<button aria-haspopup="true" class="cc-nav-dropdown-toggle">Topics</button>
-<div class="cc-nav-dropdown-menu cc-nav-dropdown-menu-topics">
-<div class="cc-nav-submenu">
-<button aria-haspopup="true" class="cc-nav-submenu-toggle">Core Theology</button>
-<div class="cc-nav-submenu-panel">
-<a href="/topics/apologetics/">Apologetics</a>
-<a href="/topics/baptism/">Baptism</a>
-<a href="/topics/biblical-inerrancy/">Biblical Inerrancy</a>
-<a href="/topics/christology/">Christology</a>
-<a href="/topics/covenant-theology/">Covenant Theology</a>
-<a href="/topics/creation-evolution/">Creation &amp; Evolution</a>
-<a href="/topics/eschatology/">Eschatology &amp; End Times</a>
-<a href="/topics/gender-and-biblical-anthropology/">Gender &amp; Biblical Anthropology</a>
-<a href="/topics/heaven-hell-eternity/">Heaven, Hell &amp; Eternity</a>
-<a href="/topics/israel-and-prophecy/">Israel &amp; Prophecy</a>
-<a href="/topics/justification-by-faith/">Justification by Faith</a>
-<a href="/topics/predestination-free-will/">Predestination &amp; Free Will</a>
-<a href="/topics/suffering-and-providence/">Suffering &amp; Providence</a>
-<a href="/topics/atonement/">The Atonement</a>
-<a href="/topics/holy-spirit-spiritual-gifts/">The Holy Spirit &amp; Spiritual Gifts</a>
-<a href="/topics/lords-supper/">The Lord's Supper</a>
-<a href="/topics/the-trinity/">The Trinity</a>
-</div>
-</div>
-<div class="cc-nav-submenu">
-<button aria-haspopup="true" class="cc-nav-submenu-toggle">Church Life</button>
-<div class="cc-nav-submenu-panel">
-<a href="/topics/church-discipline/">Church Discipline</a>
-<a href="/topics/church-governance/">Church Governance</a>
-<a href="/topics/church-history/">Church History</a>
-<a href="/topics/membership/">Church Membership</a>
-<a href="/topics/church-planting/">Church Planting</a>
-<a href="/topics/complementarianism-egalitarianism/">Complementarianism &amp; Egalitarianism</a>
-<a href="/topics/missions-and-evangelism/">Missions &amp; Evangelism</a>
-<a href="/topics/church-accountability/">Pastoral Accountability</a>
-<a href="/topics/preaching/">Preaching</a>
-<a href="/topics/small-groups/">Small Groups</a>
-<a href="/topics/spiritual-abuse/">Spiritual Abuse &amp; Toxic Churches</a>
-<a href="/topics/local-church/">The Local Church</a>
-<a href="/topics/pastoral-ministry/">The Pastor's Role</a>
-<a href="/topics/worship-and-liturgy/">Worship &amp; Liturgy</a>
-</div>
-</div>
-<div class="cc-nav-submenu">
-<button aria-haspopup="true" class="cc-nav-submenu-toggle">Spiritual Formation</button>
-<div class="cc-nav-submenu-panel">
-<a href="/topics/anxiety-and-fear/">Anxiety &amp; Fear</a>
-<a href="/topics/biblical-literacy/">Biblical Literacy</a>
-<a href="/topics/christian-friendship/">Christian Friendship &amp; Community</a>
-<a href="/topics/contemplative-prayer/">Contemplative Prayer</a>
-<a href="/topics/death-and-dying/">Death &amp; Dying</a>
-<a href="/topics/faith-deconstruction/">Deconstruction &amp; Faith</a>
-<a href="/topics/discipleship/">Discipleship</a>
-<a href="/topics/fasting/">Fasting</a>
-<a href="/topics/forgiveness/">Forgiveness</a>
-<a href="/topics/grief-and-lament/">Grief &amp; Lament</a>
-<a href="/topics/mental-health/">Mental Health &amp; Faith</a>
-<a href="/topics/pornography/">Pornography &amp; Sexual Purity</a>
-<a href="/topics/prayer/">Prayer</a>
-<a href="/topics/sanctification/">Sanctification</a>
-<a href="/topics/singleness/">Singleness</a>
-<a href="/topics/spiritual-disciplines/">Spiritual Disciplines</a>
-<a href="/topics/spiritual-warfare/">Spiritual Warfare</a>
-</div>
-</div>
-<div class="cc-nav-submenu">
-<button aria-haspopup="true" class="cc-nav-submenu-toggle">Culture &amp; Society</button>
-<div class="cc-nav-submenu-panel">
-<a href="/topics/abortion/">Abortion &amp; the Pro-Life Movement</a>
-<a href="/topics/addiction-and-recovery/">Addiction &amp; Recovery</a>
-<a href="/topics/artificial-intelligence/">Artificial Intelligence</a>
-<a href="/topics/biblical-justice/">Biblical Justice &amp; the Social Gospel</a>
-<a href="/topics/biblical-sexuality/">Biblical Sexuality</a>
-<a href="/topics/christian-education/">Christian Education</a>
-<a href="/topics/christian-ethics/">Christian Ethics</a>
-<a href="/topics/christian-masculinity/">Christian Masculinity</a>
-<a href="/topics/christian-nationalism/">Christian Nationalism</a>
-<a href="/topics/christian-parenting/">Christian Parenting</a>
-<a href="/topics/creation-care/">Creation Care</a>
-<a href="/topics/marriage-and-family/">Marriage &amp; Family</a>
-<a href="/topics/politics-and-the-church/">Politics &amp; the Church</a>
-<a href="/topics/progressive-christianity/">Progressive Christianity</a>
-<a href="/topics/racial-reconciliation/">Racial Reconciliation</a>
-<a href="/topics/religious-liberty/">Religious Liberty</a>
-<a href="/topics/stewardship-and-generosity/">Stewardship &amp; Generosity</a>
-<a href="/topics/technology-and-discipleship/">Technology &amp; Discipleship</a>
-<a href="/topics/technology/">Technology &amp; the Christian Life</a>
-<a href="/topics/evangelicalism/">The Future of Evangelicalism</a>
-<a href="/topics/prosperity-gospel/">The Prosperity Gospel</a>
-<a href="/topics/vocation-and-work/">Vocation &amp; Work</a>
-</div>
-</div>
-</div>
+  <a class="cc-nav-topics-link" href="/topics/" hidden>Topics</a>
+  <button class="cc-nav-dropdown-toggle" aria-haspopup="true">Topics</button>
+  <div class="cc-nav-dropdown-menu cc-nav-dropdown-menu-topics">
+    <a href="/topics/eschatology/">Eschatology &amp; End Times</a>
+    <a href="/topics/baptism/">Baptism</a>
+    <a href="/topics/faith-deconstruction/">Faith Deconstruction</a>
+    <a href="/topics/artificial-intelligence/">Artificial Intelligence</a>
+    <a href="/topics/complementarianism-egalitarianism/">Men, Women &amp; the Church</a>
+    <a class="cc-nav-topics-all" href="/topics/">All 70 topics</a>
+  </div>
 </div>
 <!-- CC-TOPICS-DROPDOWN:END -->
 <div class="cc-nav-dropdown">

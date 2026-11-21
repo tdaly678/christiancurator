@@ -1,13 +1,27 @@
 #!/usr/bin/env python3
-"""Generate /docs/topics/index.html as a real SEO-friendly hub page.
+"""Generate /docs/topics/index.html, the Topics hub, and refresh the topic
+page breadcrumbs.
 
-Replaces the legacy redirect stub with a hub that links to every /topics/{slug}/
-page. Without this, topics/ is invisible to search engines except through scattered
-links from the homepage; with it, topics/ is a 1-click path from the canonical
-"Topics" hub URL. Page parses each topic's <title> and <meta description>.
+The hub lists every live topic in one of six categories (frontend/topics_hub.py),
+each with a one-line description, a "Four views" tag where the page's debate
+grid has four positions, a row of category jump links (/topics/#doctrine) and a
+type-to-filter box with synonym matching. Every link is plain HTML; the filter
+box is shown only when JavaScript runs, so the page works without it.
+Schema: CollectionPage with an ItemList of every topic, plus BreadcrumbList.
+
+The daily workflow runs this script ("Rebuild /topics/ hub index"), so the hub,
+its topic count and the Home > Topics > Category breadcrumbs on every topic page
+(scripts/add_breadcrumbs.py) stay current. The Topics nav dropdown is written by
+scripts/add_topics_nav.py.
+
+Run:  python scripts/build_topics_index.py [--no-breadcrumbs]
+Tests: tests/test_topics_hub.py
 """
 from __future__ import annotations
+
+import argparse
 import html as html_mod
+import json
 import re
 import sys
 from datetime import date
@@ -17,77 +31,113 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DOCS_DIR = REPO_ROOT / "docs"
 TOPICS_DIR = DOCS_DIR / "topics"
 OUTPUT = TOPICS_DIR / "index.html"
-BLURB_LIMIT = 200  # every current topic meta description fits whole
+SITE = "https://www.christiancurator.com"
+PAGE_URL = f"{SITE}/topics/"
 
 sys.path.insert(0, str(REPO_ROOT))
-from frontend.text import complete_blurb  # noqa: E402
+from frontend.topics_hub import hub_sections  # noqa: E402
+
+TITLE = "Topics | Christian Curator"
+DESCRIPTION = ("Every Christian Curator topic guide in one place: Scripture, doctrine, "
+               "church practice, Christian living, culture and ethics, faith and doubt.")
+INTRO = ("Each guide gathers the best evangelical writing on one question, sets out where "
+         "believers agree and where they part ways, and points to the strongest reading on "
+         "every side. Browse by category, or type a word to narrow the list.")
 
 
-def parse_meta(html: str, attr: str, name_value: str) -> str:
-    # The content value may contain the other quote character ("God's").
-    m = re.search(
-        rf'<meta[^>]*\s{attr}=["\']{re.escape(name_value)}["\'][^>]*\scontent=(["\'])(.*?)\1',
-        html, re.IGNORECASE,
-    )
-    if m:
-        return m.group(2)
-    m = re.search(
-        rf'<meta[^>]*\scontent=(["\'])(.*?)\1[^>]*\s{attr}=["\']{re.escape(name_value)}["\']',
-        html, re.IGNORECASE,
-    )
-    return m.group(2) if m else ""
-
-
-def parse_title(html: str) -> str:
-    m = re.search(r"<title>([^<]+)</title>", html)
-    if not m:
-        return ""
-    title = html_mod.unescape(m.group(1))
-    return title.split(" — ")[0].strip()
-
-
-def collect_topics() -> list[dict]:
-    out = []
-    from frontend.topic_redirects import retired_topic_slugs
-    retired = retired_topic_slugs()  # redirect stubs are not topics
-    for d in sorted(TOPICS_DIR.iterdir()):
-        if not d.is_dir() or d.name in retired:
-            continue
-        idx = d / "index.html"
-        if not idx.exists():
-            continue
-        h = idx.read_text(encoding="utf-8", errors="replace")
-        title = parse_title(h) or d.name.replace("-", " ").title()
-        desc = parse_meta(h, "name", "description")
-        out.append({"slug": d.name, "title": title, "description": desc})
-    return out
-
-
+def esc(s: str) -> str:
+    return html_mod.escape(s, quote=True)
 
 
 def canonical_nav() -> str:
-    """Pull the canonical <nav class="cc-nav">…</nav> block from archive_template.html
-    and adjust the 'active' class so /topics/ is highlighted."""
-    tpl = REPO_ROOT / "frontend" / "archive_template.html"
-    if not tpl.exists():
-        # Fallback flat nav (won't pass nav-consistency check)
-        return (
-            '      <nav class="cc-nav" aria-label="Primary">\n'
-            '        <a href="/">Home</a>\n'
-            '        <a class="active" href="/topics/">Topics</a>\n'
-            '        <a href="/voices/">Voices</a>\n'
-            '        <a href="/archive/">Archive</a>\n'
-            '      </nav>'
-        )
-    src = tpl.read_text(encoding="utf-8")
-    m = re.search(r'<nav\s+class="cc-nav".*?</nav>', src, re.DOTALL)
-    if not m:
-        return ""
-    nav = m.group(0)
-    # Strip any existing active classes, then we keep no specific link active
-    # (the page header below already says "Topics" prominently).
-    nav = re.sub(r'\s+class="active"', '', nav)
+    """The canonical <nav class="cc-nav"> block from archive_template.html,
+    with no item marked active."""
+    src = (REPO_ROOT / "frontend" / "archive_template.html").read_text(encoding="utf-8")
+    m = re.search(r'[ \t]*<nav\s+class="cc-nav".*?</nav>', src, re.DOTALL)
+    nav = m.group(0) if m else ""
+    nav = re.sub(r'\s+class="active"', "", nav)
+    # This page is the Topics section: mark Topics, not Resources, as current.
+    nav = nav.replace(' style="color:#1a1a1a;"', "")
+    nav = nav.replace('<button class="cc-nav-dropdown-toggle" aria-haspopup="true">Topics</button>',
+                      '<button class="cc-nav-dropdown-toggle" aria-haspopup="true" style="color:#1a1a1a;">Topics</button>', 1)
+    nav = nav.replace('<a class="cc-nav-topics-link" href="/topics/" hidden>',
+                      '<a class="cc-nav-topics-link" href="/topics/" hidden aria-current="page" style="color:#1a1a1a;">', 1)
     return nav
+
+
+def nav_css() -> str:
+    """Nav and dropdown CSS from archive_template.html (through the Topics block)."""
+    src = (REPO_ROOT / "frontend" / "archive_template.html").read_text(encoding="utf-8")
+    m = re.search(r"[ \t]*\.cc-nav \{.*?/\* CC-NAV-TOPICS-SUBMENU:END \*/", src, re.DOTALL)
+    return m.group(0) if m else ""
+
+
+def build_jsonld(sections: list[dict]) -> str:
+    items = []
+    pos = 0
+    for sec in sections:
+        for t in sec["topics"]:
+            pos += 1
+            items.append({
+                "@type": "ListItem",
+                "position": pos,
+                "name": t["name"],
+                "url": f"{SITE}/topics/{t['slug']}/",
+            })
+    data = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CollectionPage",
+                "@id": f"{PAGE_URL}#page",
+                "url": PAGE_URL,
+                "name": "Topics",
+                "description": DESCRIPTION,
+                "isPartOf": {"@type": "WebSite", "name": "Christian Curator", "url": f"{SITE}/"},
+                "breadcrumb": {"@id": f"{PAGE_URL}#breadcrumb"},
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "name": "Christian Curator topic guides",
+                    "numberOfItems": len(items),
+                    "itemListElement": items,
+                },
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": f"{PAGE_URL}#breadcrumb",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
+                    {"@type": "ListItem", "position": 2, "name": "Topics", "item": PAGE_URL},
+                ],
+            },
+        ],
+    }
+    return json.dumps(data, indent=2, ensure_ascii=False)
+
+
+def build_sections_html(sections: list[dict]) -> str:
+    out = []
+    for sec in sections:
+        out.append(f'    <section class="cc-hub-cat" id="{sec["id"]}" aria-labelledby="{sec["id"]}-h">')
+        out.append(f'      <h2 class="cc-hub-cat-name" id="{sec["id"]}-h">{esc(sec["name"])}</h2>')
+        out.append('      <ul class="cc-hub-list">')
+        for t in sec["topics"]:
+            tag = ' <span class="cc-hub-tag">Four views</span>' if t["four_views"] else ""
+            out.append(
+                f'        <li class="cc-hub-topic" data-terms="{esc(t["terms"])}">'
+                f'<a href="/topics/{t["slug"]}/">{esc(t["name"])}</a>{tag}'
+                f'<span class="cc-hub-line">{esc(t["line"])}</span></li>'
+            )
+        out.append("      </ul>")
+        out.append("    </section>")
+    return "\n".join(out)
+
+
+def build_jump_html(sections: list[dict]) -> str:
+    links = "".join(
+        f'<a href="#{sec["id"]}">{esc(sec["name"])}</a>' for sec in sections
+    )
+    return f'    <nav class="cc-hub-jump" aria-label="Topic categories">{links}</nav>'
 
 
 PAGE = """<!DOCTYPE html>
@@ -95,103 +145,200 @@ PAGE = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Topic Guides | Christian Curator</title>
-  <meta name="description" content="Browse {n} curated topic guides on apologetics, theology, the church, culture and family, drawn from across evangelical Christianity." />
-  <link rel="canonical" href="https://www.christiancurator.com/topics/" />
+  <title>{title}</title>
+  <meta name="description" content="{description}" />
+  <link rel="canonical" href="{page_url}" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Christian Curator" />
-  <meta property="og:title" content="Topic Guides | Christian Curator" />
-  <meta property="og:description" content="Browse {n} curated deep-dive topic hubs across evangelical Christianity." />
-  <meta property="og:url" content="https://www.christiancurator.com/topics/" />
-  <meta property="og:image" content="https://www.christiancurator.com/og-image.png" />
+  <meta property="og:title" content="{title}" />
+  <meta property="og:description" content="{description}" />
+  <meta property="og:url" content="{page_url}" />
+  <meta property="og:image" content="{site}/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{title}" />
+  <meta name="twitter:description" content="{description}" />
+  <meta name="twitter:image" content="{site}/og-image.png" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NJ5DSPFXL"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-3NJ5DSPFXL");</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+{jsonld}
+  </script>
   <style>
-    *,*::before,*::after{{box-sizing:border-box;margin:0;padding:0;}}
-    body{{font-family:"Source Sans 3",sans-serif;background:#faf9f7;color:#1a1a1a;font-size:16px;line-height:1.5;}}
-    .cc-root{{max-width:880px;margin:0 auto;padding:0 20px 4rem;}}
-    .cc-header{{border-bottom:1px solid #e0ddd8;padding:0.75rem 0 0;margin-bottom:2.5rem;}}
-    .cc-top-bar{{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;font-size:12px;color:#888;}}
-    .cc-subscribe-btn{{background:#2C4A2E;color:#fff;padding:5px 14px;font-size:12px;border-radius:3px;text-decoration:none;font-family:inherit;}}
-    .cc-subscribe-btn:hover{{background:#3a5f3c;}}
-    .cc-masthead{{text-align:center;padding:0.5rem 0 1rem;border-bottom:2.5px solid #1a1a1a;}}
-    .cc-site-name{{font-family:"Lora",Georgia,serif;font-size:46px;font-weight:600;letter-spacing:-0.02em;color:#1a1a1a;text-decoration:none;display:block;}}
-    .cc-site-name:hover{{color:#2C4A2E;}}
-    .cc-tagline{{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:8px 0 0;font-weight:300;}}
-    @media(max-width:600px){{.cc-site-name{{font-size:32px;}}}}
-    .cc-nav{{display:flex;justify-content:center;align-items:center;gap:2rem;padding:0.6rem 0 0;border-top:1px solid #e0ddd8;margin-top:0.75rem;}}
-    .cc-nav a{{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#888;text-decoration:none;}}
-    .cc-nav a:hover{{color:#2C4A2E;}}
-    .cc-nav a.active{{color:#1a1a1a;border-bottom:2px solid #1a1a1a;padding-bottom:2px;}}
-    .cc-page-header{{border-bottom:2px solid #1a1a1a;padding-bottom:0.75rem;margin-bottom:0.5rem;}}
-    .cc-page-label{{font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#2C4A2E;margin-bottom:0.4rem;}}
-    .cc-page-title{{font-family:"Lora",Georgia,serif;font-size:30px;font-weight:600;color:#1a1a1a;}}
-    .cc-page-desc{{font-size:14px;color:#666;line-height:1.65;margin:0.75rem 0 2rem;}}
-    .cc-topics-grid{{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}}
-    @media(max-width:680px){{.cc-topics-grid{{grid-template-columns:1fr;}}}}
-    .cc-topic-card{{display:block;padding:1.1rem 1.2rem;background:#fff;border:1px solid #e0ddd8;border-radius:5px;text-decoration:none;color:#1a1a1a;transition:border-color 0.15s,box-shadow 0.15s;}}
-    .cc-topic-card:hover{{border-color:#2C4A2E;box-shadow:0 2px 8px rgba(44,74,46,0.08);}}
-    .cc-topic-card-title{{font-family:"Lora",Georgia,serif;font-size:17px;font-weight:600;line-height:1.3;margin-bottom:6px;color:#1a1a1a;}}
-    .cc-topic-card-desc{{font-size:13.5px;color:#555;line-height:1.55;}}
-    .cc-footer{{margin-top:3rem;padding:1.5rem 0 0;border-top:1px solid #e0ddd8;font-size:12px;color:#888;text-align:center;}}
+    *,*::before,*::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
+    body {{ font-family: "Source Sans 3", sans-serif; background: #faf9f7; color: #1a1a1a; font-size: 16px; line-height: 1.5; }}
+    .cc-root {{ max-width: 920px; margin: 0 auto; padding: 0 20px 3rem; }}
+    .cc-header {{ padding: 0.75rem 0 0; margin-bottom: 1.5rem; }}
+    .cc-top-bar {{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; font-size: 12px; }}
+    .cc-back-link {{ color: #888; text-decoration: none; }}
+    .cc-back-link:hover {{ color: #2C4A2E; }}
+    .cc-subscribe-btn {{ background: #2C4A2E; color: #fff; padding: 5px 14px; font-size: 12px; border-radius: 3px; text-decoration: none; }}
+    .cc-subscribe-btn:hover {{ background: #3a5f3c; }}
+    .cc-masthead {{ text-align: center; padding: 0.5rem 0 1rem; border-bottom: 2.5px solid #1a1a1a; }}
+    .cc-masthead h1, .cc-masthead p.cc-site {{ margin: 0; }}
+    .cc-site-name {{ font-family: "Lora", Georgia, serif; font-size: 46px; font-weight: 600; letter-spacing: -0.02em; line-height: 1; color: #1a1a1a; text-decoration: none; }}
+    .cc-site-name:hover {{ color: #2C4A2E; }}
+    .cc-tagline {{ font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #888; margin: 8px 0 0; font-weight: 300; }}
+    @media (max-width: 600px) {{ .cc-site-name {{ font-size: 32px; }} }}
+{nav_css}
+    .cc-breadcrumb {{ font-size: 11px; color: #aaa; margin: 0 0 1rem; letter-spacing: 0.02em; }}
+    .cc-breadcrumb a {{ color: #2C4A2E; text-decoration: none; }}
+    .cc-breadcrumb a:hover {{ text-decoration: underline; }}
+    .cc-breadcrumb-sep {{ margin: 0 6px; color: #ccc; }}
+    .cc-hub-head {{ border-bottom: 2px solid #1a1a1a; padding-bottom: 1rem; margin-bottom: 1.25rem; }}
+    .cc-hub-title {{ font-family: "Lora", Georgia, serif; font-size: 34px; font-weight: 600; line-height: 1.15; margin-bottom: 0.5rem; }}
+    .cc-hub-intro {{ font-size: 16px; color: #444; line-height: 1.6; max-width: 680px; }}
+    .cc-hub-filter {{ margin: 0 0 1rem; }}
+    .cc-hub-filter label {{ display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 6px; }}
+    .cc-hub-filter input {{ width: 100%; max-width: 460px; font: inherit; font-size: 16px; padding: 9px 12px; border: 1px solid #c9c4bc; border-radius: 4px; background: #fff; color: #1a1a1a; }}
+    .cc-hub-filter input:focus {{ outline: 2px solid #2C4A2E; outline-offset: 1px; border-color: #2C4A2E; }}
+    .cc-hub-status {{ font-size: 13px; color: #777; margin-top: 6px; min-height: 1.2em; }}
+    .cc-hub-jump {{ display: flex; flex-wrap: wrap; gap: 6px 18px; padding: 0.75rem 0; border-top: 1px solid #e0ddd8; border-bottom: 1px solid #e0ddd8; margin-bottom: 1.75rem; }}
+    .cc-hub-jump a {{ font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #2C4A2E; text-decoration: none; }}
+    .cc-hub-jump a:hover {{ text-decoration: underline; }}
+    .cc-hub-cat {{ margin-bottom: 2.25rem; scroll-margin-top: 1rem; }}
+    .cc-hub-cat-name {{ font-family: "Lora", Georgia, serif; font-size: 21px; font-weight: 600; padding-bottom: 0.4rem; border-bottom: 1px solid #e0ddd8; margin-bottom: 0.9rem; }}
+    .cc-hub-list {{ list-style: none; columns: 3 220px; column-gap: 2rem; }}
+    .cc-hub-topic {{ break-inside: avoid; padding: 0 0 0.85rem; }}
+    .cc-hub-topic a {{ font-family: "Lora", Georgia, serif; font-size: 16px; font-weight: 600; color: #1a1a1a; text-decoration: none; line-height: 1.3; }}
+    .cc-hub-topic a:hover {{ color: #2C4A2E; text-decoration: underline; }}
+    .cc-hub-line {{ display: block; font-size: 13.5px; color: #666; line-height: 1.45; margin-top: 2px; }}
+    .cc-hub-tag {{ display: inline-block; vertical-align: 2px; margin-left: 6px; font-size: 9.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8B1A1A; border: 1px solid #d9b8b8; border-radius: 3px; padding: 0 5px; line-height: 1.6; }}
+    .cc-hub-empty {{ font-size: 15px; color: #555; margin: 0 0 2rem; }}
+    .cc-footer {{ margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid #e0ddd8; text-align: center; font-size: 12px; color: #aaa; }}
+    .cc-footer a {{ color: #2C4A2E; text-decoration: none; font-weight: 600; }}
+    .cc-footer a:hover {{ text-decoration: underline; }}
+    @media (max-width: 600px) {{
+      .cc-hub-title {{ font-size: 28px; }}
+      .cc-hub-jump {{ gap: 8px 14px; }}
+    }}
   </style>
 </head>
 <body>
+<div class="cc-root">
   <header class="cc-header">
-    <div class="cc-root">
-      <div class="cc-top-bar"><span>Updated daily</span><a class="cc-subscribe-btn" href="/#cc-email-box">Subscribe</a></div>
-      <div class="cc-masthead">
-        <a class="cc-site-name" href="/">Christian Curator</a>
-        <p class="cc-tagline">The Christian conversation, in one place</p>
-      </div>
-{nav_block}
+    <div class="cc-top-bar">
+      <a href="/" class="cc-back-link">&larr; Christian Curator</a>
+      <a href="/#cc-email-box" class="cc-subscribe-btn">Get the Daily Digest</a>
     </div>
+    <div class="cc-masthead">
+      <p class="cc-site"><a href="/" class="cc-site-name">Christian Curator</a></p>
+      <p class="cc-tagline">The Christian conversation, in one place</p>
+    </div>
+{nav_block}
   </header>
 
-  <main class="cc-root">
-    <div class="cc-page-header">
-      <div class="cc-page-label">Deep Dives</div>
-      <h1 class="cc-page-title">Topics</h1>
+  <main data-pagefind-body>
+    <nav aria-label="Breadcrumb" class="cc-breadcrumb"><a href="/">Home</a><span class="cc-breadcrumb-sep">&rsaquo;</span><span aria-current="page">Topics</span></nav>
+    <div class="cc-hub-head">
+      <h1 class="cc-hub-title">Topics</h1>
+      <p class="cc-hub-intro">{intro}</p>
     </div>
-    <p class="cc-page-desc">{n} curated deep-dive hubs collecting the best evangelical thinking on the questions, controversies, and convictions that shape Christian life today.</p>
-    <div class="cc-topics-grid">
-{cards}
+    <div class="cc-hub-filter" id="cc-hub-filter" hidden>
+      <label for="cc-hub-q">Find a topic</label>
+      <input id="cc-hub-q" type="search" autocomplete="off" spellcheck="false" placeholder="Try rapture, communion, or doubt" aria-describedby="cc-hub-status" />
+      <p class="cc-hub-status" id="cc-hub-status" aria-live="polite"></p>
     </div>
+{jump}
+    <p class="cc-hub-empty" id="cc-hub-empty" hidden>No topic matches that word. Try a broader one, or browse the categories.</p>
+{sections}
   </main>
 
   <footer class="cc-footer">
-    <div class="cc-root">© {year} Christian Curator</div>
+    <p><a href="/">Christian Curator</a> &middot; <a href="/about/">About</a> &middot; <a href="/voices/">Voices</a> &middot; <a href="/archive/">Archive</a> &middot; <a href="/#cc-email-box">Subscribe to the daily email</a></p>
+    <p style="margin-top:6px;">&copy; {year} Christian Curator</p>
   </footer>
+</div>
+<script>
+(function () {{
+  var wrap = document.getElementById("cc-hub-filter");
+  var box = document.getElementById("cc-hub-q");
+  var status = document.getElementById("cc-hub-status");
+  var empty = document.getElementById("cc-hub-empty");
+  if (!wrap || !box) return;
+  wrap.hidden = false;
+  var items = [].slice.call(document.querySelectorAll(".cc-hub-topic"));
+  var cats = [].slice.call(document.querySelectorAll(".cc-hub-cat"));
+  var words = items.map(function (li) {{ return (li.getAttribute("data-terms") || "").split(" "); }});
+  function tokens(s) {{ return s.toLowerCase().replace(/[’']/g, "").match(/[a-z0-9]+/g) || []; }}
+  function matches(ws, q) {{
+    return q.every(function (t) {{
+      return ws.some(function (w) {{ return w.lastIndexOf(t, 0) === 0; }});
+    }});
+  }}
+  function run() {{
+    var q = tokens(box.value);
+    var shown = 0;
+    items.forEach(function (li, i) {{
+      var ok = !q.length || matches(words[i], q);
+      li.hidden = !ok;
+      if (ok) shown++;
+    }});
+    cats.forEach(function (c) {{
+      c.hidden = !c.querySelector(".cc-hub-topic:not([hidden])");
+    }});
+    empty.hidden = shown > 0;
+    status.textContent = q.length ? (shown === 1 ? "1 topic matches" : shown + " topics match") : "";
+  }}
+  box.addEventListener("input", run);
+  box.addEventListener("keydown", function (e) {{
+    if (e.key === "Escape") {{ box.value = ""; run(); }}
+  }});
+  if (box.value) run();
+}})();
+</script>
 </body>
 </html>
 """
 
 
-def main() -> int:
-    topics = collect_topics()
-    if not topics:
+def render_page(sections: list[dict]) -> str:
+    return PAGE.format(
+        title=esc(TITLE),
+        description=esc(DESCRIPTION),
+        page_url=PAGE_URL,
+        site=SITE,
+        jsonld=build_jsonld(sections),
+        nav_css=nav_css(),
+        nav_block=canonical_nav(),
+        intro=esc(INTRO),
+        jump=build_jump_html(sections),
+        sections=build_sections_html(sections),
+        year=date.today().year,
+    )
+
+
+def refresh_breadcrumbs() -> int:
+    """Home > Topics > Category breadcrumbs on every live topic page."""
+    sys.path.insert(0, str(REPO_ROOT / "scripts"))
+    import add_breadcrumbs  # noqa: E402
+    from frontend.topic_redirects import live_topic_dirs
+    changed = 0
+    for d in live_topic_dirs(TOPICS_DIR):
+        status = add_breadcrumbs.process_topic_page(d / "index.html")
+        if "updated" in status:
+            changed += 1
+        elif "skipped" in status:
+            print(f"  ! {status}", file=sys.stderr)
+    return changed
+
+
+def main(argv: list[str] | None = None) -> int:
+    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap.add_argument("--no-breadcrumbs", action="store_true",
+                    help="write the hub page only")
+    args = ap.parse_args(argv)
+    sections = hub_sections(TOPICS_DIR)
+    total = sum(len(s["topics"]) for s in sections)
+    if not total:
         print("no topics found", file=sys.stderr)
         return 1
-    cards = []
-    for t in topics:
-        title = html_mod.escape(t["title"])
-        desc = html_mod.escape(complete_blurb(t["description"], BLURB_LIMIT))
-        cards.append(
-            f'      <a href="/topics/{t["slug"]}/" class="cc-topic-card">\n'
-            f'        <div class="cc-topic-card-title">{title}</div>\n'
-            f'        <div class="cc-topic-card-desc">{desc}</div>\n'
-            f'      </a>'
-        )
-    page = PAGE.format(
-        n=len(topics),
-        cards="\n".join(cards),
-        year=date.today().year,
-        nav_block=canonical_nav(),
-    )
-    OUTPUT.write_text(page, encoding="utf-8")
-    print(f"wrote {OUTPUT} with {len(topics)} topics")
+    OUTPUT.write_text(render_page(sections), encoding="utf-8")
+    print(f"wrote {OUTPUT} with {total} topics in {len(sections)} categories")
+    if not args.no_breadcrumbs:
+        n = refresh_breadcrumbs()
+        print(f"breadcrumbs refreshed on {n} topic page(s)")
     return 0
 
 
