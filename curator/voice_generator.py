@@ -36,7 +36,7 @@ AVATAR_COLORS = [
 ]
 
 # Fallback nav (pre-Topics). Used only if the canonical nav can't be read from
-# frontend/template.html. The canonical nav (Home + Topics mega-menu + Resources)
+# frontend/template.html. The canonical nav (Home + Topics link + Resources)
 # is the single source of truth and is loaded at import time below.
 _SIMPLE_NAV_HTML = """    <nav class="cc-nav">
       <a href="/">Home</a>
@@ -54,9 +54,9 @@ TEMPLATE_PATH = DOCS_DIR.parent / "frontend" / "template.html"
 
 
 def load_canonical_nav(active: str = "/voices/") -> tuple[str, str]:
-    """Extract the canonical <nav class="cc-nav"> block and its Topics-submenu CSS
+    """Extract the canonical <nav class="cc-nav"> block and its Topics-link CSS
     from frontend/template.html so generated voice pages match the rest of the site
-    (Home + Topics mega-menu + Resources). `active` marks which top-level link/section
+    (Home + Topics link + Resources). `active` marks which top-level link/section
     is current. Falls back to the simple nav if the template can't be read."""
     try:
         src = TEMPLATE_PATH.read_text(encoding="utf-8")

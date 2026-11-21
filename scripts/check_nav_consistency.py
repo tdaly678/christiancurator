@@ -8,7 +8,7 @@ The nav bar lives in multiple places: four Jinja templates under
 `frontend/` and the hand-written standalone About page at
 `docs/about/index.html`. When a new standalone page is added (or a
 template is edited), it's easy for the top-level nav items to drift
-— e.g. the About page was first published missing the Topics dropdown
+— e.g. the About page was first published missing the Topics item
 entirely. This script catches that before deploy.
 
 What it checks
@@ -17,7 +17,8 @@ For every HTML file under `docs/`, it verifies the first `<nav class="cc-nav">`
 block contains all of these top-level items:
 
   1. A "Home" link (`<a href="/">Home</a>` — also accepts `class="active"`)
-  2. A Topics dropdown button (`>Topics<`)
+  2. A plain Topics link to the hub (`<a href="/topics/">Topics</a>`; the
+     dropdown was removed on Nov 20 2026)
   3. A Resources dropdown button (`>Resources<`)
 
 "Daily Digest" is permitted but not required — homepage and digest
@@ -50,7 +51,7 @@ DOCS = REPO_ROOT / "docs"
 # Each entry: (label, regex that must match inside the cc-nav block)
 REQUIRED = [
     ("Home link",         re.compile(r'<a\s+href="/"[^>]*>\s*Home\s*</a>', re.I)),
-    ("Topics dropdown",   re.compile(r'<button[^>]*>\s*Topics\s*</button>', re.I)),
+    ("Topics link",       re.compile(r'<a\s[^>]*href="/topics/"[^>]*>\s*Topics\s*</a>', re.I)),
     ("Resources dropdown", re.compile(r'<button[^>]*>\s*Resources\s*</button>', re.I)),
 ]
 

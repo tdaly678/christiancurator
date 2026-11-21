@@ -1,4 +1,5 @@
-"""The /topics/ hub page, the Topics nav dropdown and topic page breadcrumbs (S9)."""
+"""The /topics/ hub page and its click tracking, the plain Topics nav link and
+topic page breadcrumbs (S9, S9b)."""
 from __future__ import annotations
 
 import json
@@ -17,7 +18,6 @@ import add_breadcrumbs  # noqa: E402
 import add_topics_nav  # noqa: E402
 import build_topics_index  # noqa: E402
 from frontend.topics_hub import (  # noqa: E402
-    FEATURED,
     HUB_CATEGORIES,
     HUB_TOPICS,
     has_four_views,
@@ -143,7 +143,10 @@ def test_hub_page_plain_links_jump_row_and_no_js_fallback():
     page = _page()
     main = page.split("<main", 1)[1].split("</main>", 1)[0]
     for slug in live_slugs():
-        assert f'<a href="/topics/{slug}/">' in main, slug
+        cat_id, _ = hub_category(slug)
+        # A plain, crawlable href: no redirect wrapper, no query string.
+        assert (f'<a href="/topics/{slug}/" data-pos="topics-hub" data-topic="{slug}" '
+                f'data-category="{cat_id}">') in main, slug
     for cat_id, _name in HUB_CATEGORIES:
         assert f'<a href="#{cat_id}">' in main
         assert f'id="{cat_id}"' in main
@@ -170,21 +173,46 @@ def test_committed_hub_page_is_current():
         "docs/topics/index.html is stale: run python scripts/build_topics_index.py")
 
 
-# ── Nav dropdown ────────────────────────────────────────────────────────────
+def test_hub_click_tracking():
+    page = _page()
+    main = page.split("<main", 1)[1].split("</main>", 1)[0]
+    assert main.count('data-pos="topics-hub"') == topic_count()
+    # Every tracked link goes straight to its topic page.
+    for href in re.findall(r'<a href="([^"]*)" data-pos="topics-hub"', main):
+        assert re.fullmatch(r"/topics/[a-z0-9-]+/", href), href
+    script = page.rsplit("<script>", 1)[1]
+    assert 'gtag("event", "article_click"' in script
+    for param in ("position:", "topic:", "topic_category:", "hub_filter:", "link_url: a.href",
+                  'transport_type: "beacon"'):
+        assert param in script, param
+    assert "preventDefault" not in script and "location.href" not in script
+    # Tracking does not depend on the filter box.
+    assert script.count("(function ()") == 2
 
-def test_nav_block_featured_and_count():
+
+# ── Nav: plain Topics link ──────────────────────────────────────────────────
+
+def test_nav_block_is_a_plain_topics_link():
     block = add_topics_nav.build_topics_html()
-    links = re.findall(r'<a href="/topics/([a-z-]+)/">', block)
-    assert links == FEATURED and len(FEATURED) == 5
-    assert FEATURED[:3] == ["eschatology", "baptism", "faith-deconstruction"]
-    for slug in FEATURED:
-        assert slug in live_slugs()
-    assert f'<a class="cc-nav-topics-all" href="/topics/">All {topic_count()} topics</a>' in block
-    # Mobile link to the hub; the Topics button stays for the nav check.
-    assert '<a class="cc-nav-topics-link" href="/topics/" hidden>Topics</a>' in block
-    assert '<button class="cc-nav-dropdown-toggle" aria-haspopup="true">Topics</button>' in block
-    assert "font-weight:700" in add_topics_nav.TOPICS_CSS
-    assert "max-width:700px" in add_topics_nav.TOPICS_CSS
+    inner = [ln.strip() for ln in block.strip().splitlines()[1:-1]]
+    assert inner == ['<a class="cc-nav-topics" href="/topics/">Topics</a>']
+    assert "<button" not in block and "dropdown-menu" not in block and "hidden" not in block
+    assert "@media" not in add_topics_nav.TOPICS_CSS
+
+
+def test_no_page_keeps_the_topics_dropdown():
+    stale = []
+    for path in sorted((REPO / "docs").rglob("*.html")):
+        html = path.read_text(encoding="utf-8", errors="ignore")
+        if re.search(r"<button[^>]*>\s*Topics\s*</button>", html) or "cc-nav-dropdown-topics" in html:
+            stale.append(str(path.relative_to(REPO)))
+    assert not stale, f"run python scripts/add_topics_nav.py: {stale[:5]}"
+
+
+def test_hub_marks_topics_current():
+    nav = re.search(r'<nav class="cc-nav">.*?</nav>', _page(), re.S).group(0)
+    assert '<a class="cc-nav-topics" href="/topics/" aria-current="page">Topics</a>' in nav
+    assert 'class="active"' not in nav
 
 
 def _norm(s: str) -> str:
@@ -196,7 +224,7 @@ def _norm(s: str) -> str:
 def test_templates_carry_the_current_nav(name):
     src = (REPO / "frontend" / name).read_text(encoding="utf-8")
     m = add_topics_nav.HTML_BLOCK_RE.search(src)
-    assert m, f"{name} has no Topics dropdown markers"
+    assert m, f"{name} has no Topics nav markers"
     assert _norm(m.group(0)) == _norm(add_topics_nav.build_topics_html()), (
         f"{name} nav is stale: run python scripts/add_topics_nav.py")
     assert _norm(add_topics_nav.TOPICS_CSS) in _norm(src)
@@ -204,8 +232,8 @@ def test_templates_carry_the_current_nav(name):
 
 def test_archive_index_python_nav_is_current():
     src = (REPO / "frontend" / "__init__.py").read_text(encoding="utf-8")
-    assert f"All {topic_count()} topics" in src
-    assert "cc-nav-submenu" not in src
+    assert '<a class="cc-nav-topics" href="/topics/">Topics</a>' in src
+    assert "cc-nav-dropdown-topics" not in src and "cc-nav-submenu" not in src
 
 
 def test_nav_rewrite_is_idempotent(tmp_path):

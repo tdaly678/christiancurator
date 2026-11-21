@@ -2,20 +2,18 @@
 """
 add_topics_nav.py
 
-Write the "Topics" dropdown into every nav bar site-wide.
+Write the "Topics" item into every nav bar site-wide.
 
 Layout after patch:
-  Home | Topics ▾ | Resources ▾
+  Home | Topics | Resources ▾
 
-Desktop: Topics ▾ opens five hand-picked featured topics
-(frontend/topics_hub.py FEATURED) and a bold last line "All N topics"
-linking /topics/, where N is the live topic count computed at build time.
-Phones (700px and below): the dropdown is replaced by a plain "Topics" link
-to /topics/. The link carries `hidden` so a page without the CSS below never
-shows two Topics items.
+Topics is a plain link to the /topics/ hub on desktop and phones alike
+(Tom, Nov 20 2026: no dropdown, no featured topics). It is written between
+the CC-TOPICS-DROPDOWN markers (the marker names predate the change and are
+kept so every page and template is found and replaced in place), and its small
+CSS block between the CC-NAV-TOPICS-SUBMENU markers. Re-running replaces the
+old dropdown and its CSS wherever they remain.
 
-Sources:
-  • frontend/topics_hub.py (featured picks, labels) and docs/topics/ (count).
   • Idempotent via HTML/CSS comment markers. Safe to re-run.
 
 Targets:
@@ -29,16 +27,11 @@ Tests: tests/test_topics_hub.py (the templates must match build_topics_html()).
 
 from __future__ import annotations
 
-import html as html_mod
 import re
 import sys
 from pathlib import Path
 
-# Make frontend importable when run from project root
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT))
-
-from frontend.topics_hub import FEATURED, nav_label, topic_count  # noqa: E402
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Markers
@@ -53,39 +46,21 @@ CSS_END = "/* CC-NAV-TOPICS-SUBMENU:END */"
 # ─────────────────────────────────────────────────────────────────────────────
 
 
-def build_topics_html(indent: str = "      ", count: int | None = None) -> str:
-    """Return the full idempotent HTML block for the Topics dropdown.
+TOPICS_LINK = '<a class="cc-nav-topics" href="/topics/">Topics</a>'
 
-    `indent` is the leading whitespace for the outer <div>, matching the
-    formatting of sibling nav items in the target file. `count` defaults to
-    the number of live topic pages in docs/topics/.
-    """
-    n = topic_count() if count is None else count
-    lines: list[str] = []
-    lines.append(f'{indent}{HTML_START}')
-    lines.append(f'{indent}<div class="cc-nav-dropdown cc-nav-dropdown-topics">')
-    lines.append(f'{indent}  <a class="cc-nav-topics-link" href="/topics/" hidden>Topics</a>')
-    lines.append(f'{indent}  <button class="cc-nav-dropdown-toggle" aria-haspopup="true">Topics</button>')
-    lines.append(f'{indent}  <div class="cc-nav-dropdown-menu cc-nav-dropdown-menu-topics">')
-    for slug in FEATURED:
-        label = html_mod.escape(nav_label(slug), quote=False)
-        lines.append(f'{indent}    <a href="/topics/{slug}/">{label}</a>')
-    lines.append(f'{indent}    <a class="cc-nav-topics-all" href="/topics/">All {n} topics</a>')
-    lines.append(f'{indent}  </div>')
-    lines.append(f'{indent}</div>')
-    lines.append(f'{indent}{HTML_END}')
+
+def build_topics_html(indent: str = "      ") -> str:
+    """Return the idempotent HTML block for the Topics nav item: one plain
+    link to /topics/. `indent` matches the sibling nav items in the target file."""
+    lines = [f"{indent}{HTML_START}", f"{indent}{TOPICS_LINK}", f"{indent}{HTML_END}"]
     return "\n".join(lines) + "\n"
 
 
-# CSS for the Topics dropdown. The generic .cc-nav-dropdown rules on each page
-# open the panel on hover / focus; these rules restyle its links and swap the
-# dropdown for the plain link on phones.
+# CSS for the Topics link. The page's generic `.cc-nav a` rules style it; these
+# keep it on one line and mark it current on the hub (aria-current="page").
 TOPICS_CSS_RULES = [
-    ".cc-nav-dropdown-menu-topics{left:0;transform:none;min-width:230px;padding:8px 0;}",
-    ".cc-nav-dropdown-menu-topics a{font-size:13.5px;font-weight:500;letter-spacing:0;text-transform:none;color:#333;padding:7px 18px;}",
-    ".cc-nav-dropdown-menu-topics a:hover{color:#2C4A2E;background:#f7f5f2;}",
-    ".cc-nav-dropdown-menu-topics a.cc-nav-topics-all{font-weight:700;color:#1a1a1a;border-top:1px solid #e0ddd8;margin-top:6px;padding-top:10px;}",
-    "@media (max-width:700px){.cc-nav-topics-link[hidden]{display:block;line-height:normal;}.cc-nav-dropdown-topics>.cc-nav-dropdown-toggle,.cc-nav-dropdown-topics>.cc-nav-dropdown-menu-topics{display:none !important;}}",
+    ".cc-nav a.cc-nav-topics{white-space:nowrap;}",
+    '.cc-nav a.cc-nav-topics[aria-current="page"]{color:#1a1a1a;border-bottom:2px solid #1a1a1a;padding-bottom:2px;}',
 ]
 
 TOPICS_CSS = (

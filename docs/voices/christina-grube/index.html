@@ -47,11 +47,8 @@
     .cc-nav-dropdown-menu a:hover{color:#2C4A2E;background:#f7f5f2;}
 
     /* CC-NAV-TOPICS-SUBMENU:START */
-    .cc-nav-dropdown-menu-topics{left:0;transform:none;min-width:230px;padding:8px 0;}
-    .cc-nav-dropdown-menu-topics a{font-size:13.5px;font-weight:500;letter-spacing:0;text-transform:none;color:#333;padding:7px 18px;}
-    .cc-nav-dropdown-menu-topics a:hover{color:#2C4A2E;background:#f7f5f2;}
-    .cc-nav-dropdown-menu-topics a.cc-nav-topics-all{font-weight:700;color:#1a1a1a;border-top:1px solid #e0ddd8;margin-top:6px;padding-top:10px;}
-    @media (max-width:700px){.cc-nav-topics-link[hidden]{display:block;line-height:normal;}.cc-nav-dropdown-topics>.cc-nav-dropdown-toggle,.cc-nav-dropdown-topics>.cc-nav-dropdown-menu-topics{display:none !important;}}
+    .cc-nav a.cc-nav-topics{white-space:nowrap;}
+    .cc-nav a.cc-nav-topics[aria-current="page"]{color:#1a1a1a;border-bottom:2px solid #1a1a1a;padding-bottom:2px;}
     /* CC-NAV-TOPICS-SUBMENU:END */
     .cc-nav-dropdown-menu a.active{color:#1a1a1a;}
     .cc-breadcrumb{font-size:11px;color:#aaa;margin-bottom:1.5rem;}
@@ -137,18 +134,7 @@
 <nav class="cc-nav">
 <a href="/">Home</a>
 <!-- CC-TOPICS-DROPDOWN:START -->
-<div class="cc-nav-dropdown cc-nav-dropdown-topics">
-  <a class="cc-nav-topics-link" href="/topics/" hidden>Topics</a>
-  <button class="cc-nav-dropdown-toggle" aria-haspopup="true">Topics</button>
-  <div class="cc-nav-dropdown-menu cc-nav-dropdown-menu-topics">
-    <a href="/topics/eschatology/">Eschatology &amp; End Times</a>
-    <a href="/topics/baptism/">Baptism</a>
-    <a href="/topics/faith-deconstruction/">Faith Deconstruction</a>
-    <a href="/topics/artificial-intelligence/">Artificial Intelligence</a>
-    <a href="/topics/complementarianism-egalitarianism/">Men, Women &amp; the Church</a>
-    <a class="cc-nav-topics-all" href="/topics/">All 70 topics</a>
-  </div>
-</div>
+<a class="cc-nav-topics" href="/topics/">Topics</a>
 <!-- CC-TOPICS-DROPDOWN:END -->
 <div class="cc-nav-dropdown">
 <button class="cc-nav-dropdown-toggle" style="color:#1a1a1a;">Resources</button>

@@ -1,10 +1,9 @@
 """The /topics/ hub: six reader-facing categories, one line per topic, search
-synonyms and the featured picks for the Topics nav dropdown.
+synonyms and short names.
 
 This is the single source for:
   * scripts/build_topics_index.py  -> docs/topics/index.html (daily workflow)
   * scripts/add_breadcrumbs.py     -> Home > Topics > Category on every topic page
-  * scripts/add_topics_nav.py      -> the Topics dropdown in templates and pages
 
 The six hub categories are a reading aid for the hub page only. The older
 four-way `category` field in topics_data.py is left alone (the series label
@@ -203,20 +202,8 @@ SYNONYMS: dict[str, list[str]] = {
     "christian-ethics": ["bioethics", "morality", "ethics", "ivf", "euthanasia"],
 }
 
-# Five hand-picked topics for the desktop Topics dropdown, in order.
-# Eschatology, Baptism and Faith Deconstruction were named in the S9 spec;
-# Artificial Intelligence and Men, Women & the Church are the two most
-# built-out hubs (definition, FAQ, charts and a top block).
-FEATURED: list[str] = [
-    "eschatology",
-    "baptism",
-    "faith-deconstruction",
-    "artificial-intelligence",
-    "complementarianism-egalitarianism",
-]
-
-# Short nav labels (the topics_data name is used when a slug is not here).
-NAV_LABELS: dict[str, str] = {
+# Short names people also use for these topics; the hub filter matches them.
+SHORT_NAMES: dict[str, str] = {
     "eschatology": "Eschatology & End Times",
     "baptism": "Baptism",
     "faith-deconstruction": "Faith Deconstruction",
@@ -248,8 +235,8 @@ def topic_name(slug: str) -> str:
     return t["name"] if t else slug.replace("-", " ").title()
 
 
-def nav_label(slug: str) -> str:
-    return NAV_LABELS.get(slug) or topic_name(slug)
+def short_name(slug: str) -> str:
+    return SHORT_NAMES.get(slug) or topic_name(slug)
 
 
 def has_four_views(slug: str, topics_dir: Path = TOPICS_DIR) -> bool:
@@ -263,7 +250,7 @@ def has_four_views(slug: str, topics_dir: Path = TOPICS_DIR) -> bool:
 
 def search_terms(slug: str) -> str:
     """Lower-case words the filter box matches against (name, line, keywords, synonyms)."""
-    parts = [topic_name(slug), nav_label(slug), HUB_TOPICS[slug][1]]
+    parts = [topic_name(slug), short_name(slug), HUB_TOPICS[slug][1]]
     t = TOPICS_BY_SLUG.get(slug) or {}
     parts += t.get("keywords", [])
     parts += SYNONYMS.get(slug, [])

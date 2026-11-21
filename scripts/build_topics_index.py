@@ -11,8 +11,14 @@ Schema: CollectionPage with an ItemList of every topic, plus BreadcrumbList.
 
 The daily workflow runs this script ("Rebuild /topics/ hub index"), so the hub,
 its topic count and the Home > Topics > Category breadcrumbs on every topic page
-(scripts/add_breadcrumbs.py) stay current. The Topics nav dropdown is written by
-scripts/add_topics_nav.py.
+(scripts/add_breadcrumbs.py) stay current. The nav's plain Topics link to this
+page is written by scripts/add_topics_nav.py.
+
+Click tracking (P2.1 pattern): every topic link carries data-pos="topics-hub",
+data-topic=<slug> and data-category=<hub category id>. One delegated listener
+sends the GA4 `article_click` event the homepage sends, with position, topic,
+topic_category, hub_filter (browse / filtered) and link_url, by beacon. The
+links stay plain hrefs: no redirect, no URL parameters, nothing needs JS.
 
 Run:  python scripts/build_topics_index.py [--no-breadcrumbs]
 Tests: tests/test_topics_hub.py
@@ -56,12 +62,10 @@ def canonical_nav() -> str:
     m = re.search(r'[ \t]*<nav\s+class="cc-nav".*?</nav>', src, re.DOTALL)
     nav = m.group(0) if m else ""
     nav = re.sub(r'\s+class="active"', "", nav)
-    # This page is the Topics section: mark Topics, not Resources, as current.
+    # This page is the Topics section: mark the Topics link as current.
     nav = nav.replace(' style="color:#1a1a1a;"', "")
-    nav = nav.replace('<button class="cc-nav-dropdown-toggle" aria-haspopup="true">Topics</button>',
-                      '<button class="cc-nav-dropdown-toggle" aria-haspopup="true" style="color:#1a1a1a;">Topics</button>', 1)
-    nav = nav.replace('<a class="cc-nav-topics-link" href="/topics/" hidden>',
-                      '<a class="cc-nav-topics-link" href="/topics/" hidden aria-current="page" style="color:#1a1a1a;">', 1)
+    nav = nav.replace('<a class="cc-nav-topics" href="/topics/">',
+                      '<a class="cc-nav-topics" href="/topics/" aria-current="page">', 1)
     return nav
 
 
@@ -125,7 +129,8 @@ def build_sections_html(sections: list[dict]) -> str:
             tag = ' <span class="cc-hub-tag">Four views</span>' if t["four_views"] else ""
             out.append(
                 f'        <li class="cc-hub-topic" data-terms="{esc(t["terms"])}">'
-                f'<a href="/topics/{t["slug"]}/">{esc(t["name"])}</a>{tag}'
+                f'<a href="/topics/{t["slug"]}/" data-pos="topics-hub" data-topic="{t["slug"]}" '
+                f'data-category="{sec["id"]}">{esc(t["name"])}</a>{tag}'
                 f'<span class="cc-hub-line">{esc(t["line"])}</span></li>'
             )
         out.append("      </ul>")
@@ -286,6 +291,27 @@ PAGE = """<!DOCTYPE html>
     if (e.key === "Escape") {{ box.value = ""; run(); }}
   }});
   if (box.value) run();
+}})();
+(function () {{
+  // Topic clicks, as GA4 article_click (the homepage's event). Read per topic
+  // and per category in GA4 with position = topics-hub.
+  function send(e) {{
+    if (e.type === "auxclick" && e.button !== 1) return;
+    var a = e.target.closest && e.target.closest("a[data-pos]");
+    if (!a || typeof gtag !== "function") return;
+    var box = document.getElementById("cc-hub-q");
+    gtag("event", "article_click", {{
+      article_title: a.textContent.trim().slice(0, 100),
+      position: a.getAttribute("data-pos"),
+      topic: a.getAttribute("data-topic") || "",
+      topic_category: a.getAttribute("data-category") || "",
+      hub_filter: box && box.value.trim() ? "filtered" : "browse",
+      link_url: a.href,
+      transport_type: "beacon"
+    }});
+  }}
+  document.addEventListener("click", send);
+  document.addEventListener("auxclick", send);
 }})();
 </script>
 </body>

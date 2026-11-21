@@ -675,12 +675,12 @@ schemas: `.christian-orchestrator/team/A-foundation-report.md`.
 Every site page has **exactly three** top-level items in its `<nav class="cc-nav">`, in this order:
 
 1. **Home** — `<a href="/">Home</a>`
-2. **Topics** — dropdown button with 4 submenus (Core Theology, Church Life, Spiritual Formation, Culture & Society)
+2. **Topics** — a plain link to the `/topics/` hub, desktop and mobile (Tom, Nov 20 2026: no dropdown, no featured topics)
 3. **Resources** — dropdown containing About, Voices, Archive
 
 No "Daily Digest" link in the top nav — users reach the digest via the Home link (home = today's digest) or the "Get the Daily Digest" subscribe button. The footer nav does still include a Daily Digest link; that's intentional.
 
-CSS class: `.cc-nav`. The canonical HTML pattern lives in `frontend/archive_template.html` — use this when creating new standalone pages. The Topics dropdown block is bracketed by `<!-- CC-TOPICS-DROPDOWN:START -->` / `<!-- CC-TOPICS-DROPDOWN:END -->` markers in every template; keep the marker pair so sync scripts can re-inject the list.
+CSS class: `.cc-nav`. The canonical HTML pattern lives in `frontend/archive_template.html` — use this when creating new standalone pages. The Topics link (`<a class="cc-nav-topics" href="/topics/">Topics</a>`) is bracketed by `<!-- CC-TOPICS-DROPDOWN:START -->` / `<!-- CC-TOPICS-DROPDOWN:END -->` markers (old name, kept) in every template and page; `scripts/add_topics_nav.py` rewrites it in place. Topic links on the `/topics/` hub send the GA4 `article_click` event with `position` = `topics-hub`, `topic`, `topic_category` and `hub_filter` (`scripts/build_topics_index.py`).
 
 ### Guardrail — `scripts/check_nav_consistency.py`
 
@@ -691,7 +691,7 @@ python scripts/check_nav_consistency.py                   # full site
 python scripts/check_nav_consistency.py --only-standalone # just hand-written pages
 ```
 
-Exits non-zero if any page's `cc-nav` block is missing Home, Topics, or Resources. This catches drift like the April 2026 About-page launch (published without the Topics dropdown because it was hand-written rather than rendered from a Jinja template).
+Exits non-zero if any page's `cc-nav` block is missing Home, the Topics link, or Resources. This catches drift like the April 2026 About-page launch (published without the Topics dropdown because it was hand-written rather than rendered from a Jinja template).
 
 > **Known pre-existing drift:** 16 archive day pages dated 2026-03-22 through 2026-04-06 plus `docs/archive/index.html` pre-date the Topics dropdown and will fail the full-site check. Backfilling them is a separate task.
 
