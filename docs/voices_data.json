@@ -19416,5 +19416,104 @@
     "website": "",
     "books": [],
     "initials": "RM"
+  },
+  {
+    "name": "Tonny Onyulo",
+    "slug": "tonny-onyulo",
+    "bio": "Tonny Onyulo is a Christian writer and communicator who shares insights on faith, culture, and spiritual growth with audiences across East Africa and beyond. Through his writing and content creation, he seeks to help believers deepen their understanding of Scripture and apply biblical principles to contemporary life.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "TO"
+  },
+  {
+    "name": "Margaret Philbrick",
+    "slug": "margaret-philbrick",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MP"
+  },
+  {
+    "name": "Sacha Mugisha",
+    "slug": "sacha-mugisha",
+    "bio": "Sacha Mugisha is a writer and communicator known for exploring faith, culture, and contemporary issues from a Christian perspective. His work engages thoughtful audiences seeking to understand how Christian values intersect with modern life.",
+    "affiliation": "",
+    "role": "Writer & Communicator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "SM"
+  },
+  {
+    "name": "Elizabeth Black",
+    "slug": "elizabeth-black",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "EB"
+  },
+  {
+    "name": "Sho Baraka",
+    "slug": "sho-baraka",
+    "bio": "Sho Baraka is a Christian hip-hop artist, speaker, and author known for integrating faith with cultural commentary and social justice themes. His music and writing explore the intersection of Christianity, identity, and discipleship for contemporary audiences. Through his ministry, he challenges believers to live out authentic faith in practical and prophetic ways.",
+    "affiliation": "Humble Beast Records",
+    "role": "Artist, Author & Speaker",
+    "education": "",
+    "website": "https://shobaraka.com",
+    "books": [
+      {
+        "title": "He Spoke Life: How God's Words Transform Us",
+        "amazon_url": "https://www.amazon.com/s?k=He+Spoke+Life+Sho+Baraka"
+      },
+      {
+        "title": "The Finished Work: What Jesus Did for You",
+        "amazon_url": "https://www.amazon.com/s?k=The+Finished+Work+Sho+Baraka"
+      }
+    ],
+    "initials": "SB"
+  },
+  {
+    "name": "Robert P. Imbelli",
+    "slug": "robert-p-imbelli",
+    "bio": "Robert P. Imbelli is a scholar and theologian known for his work in systematic theology and Catholic intellectual life. His writings explore the intersection of faith, reason, and contemporary culture, offering resources for Christian readers seeking to deepen their theological understanding.",
+    "affiliation": "Fordham University",
+    "role": "Professor & Theologian",
+    "education": "PhD in Theology",
+    "website": "",
+    "books": [
+      {
+        "title": "Rekindling the Christic Imagination: Theological Meditations for the New Evangelization",
+        "amazon_url": "https://www.amazon.com/s?k=Rekindling+Christic+Imagination+Robert+Imbelli"
+      },
+      {
+        "title": "The Apprenticeship of Jesus: Learning to Live as His Disciple",
+        "amazon_url": "https://www.amazon.com/s?k=Apprenticeship+Jesus+Robert+Imbelli"
+      },
+      {
+        "title": "Chesterton and the Modernist Crisis",
+        "amazon_url": "https://www.amazon.com/s?k=Chesterton+Modernist+Crisis+Robert+Imbelli"
+      }
+    ],
+    "initials": "RPI"
+  },
+  {
+    "name": "Dakota Fiebranz",
+    "slug": "dakota-fiebranz",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DF"
   }
 ]

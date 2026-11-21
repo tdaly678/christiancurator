@@ -581,9 +581,9 @@
       }
     ]
   },
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "last_run": {
-    "date": "2026-11-20",
+    "date": "2026-11-21",
     "stories": [
       {
         "title": "How Pew’s projections for Christianity and Islam worldwide changed — and why",
@@ -595,7 +595,6 @@
           ],
           "figures": [],
           "words": [
-            "report",
             "research"
           ],
           "data_tag": true
@@ -629,26 +628,6 @@
         ]
       },
       {
-        "title": "How Much Less Religious Is Australia Than the U.S.?",
-        "url": "https://www.graphsaboutreligion.com/p/how-much-less-religious-is-australia",
-        "source": "Ryan Burge",
-        "signals": {
-          "publishers": [
-            "Ryan Burge"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 10.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
         "title": "Islam slated to overtake Christianity by 2035, researchers say",
         "url": "https://wng.org/sift/islam-slated-to-overtake-christianity-by-2035-researchers-say-1795035758",
         "source": "World Magazine",
@@ -669,31 +648,6 @@
         ]
       },
       {
-        "title": "YouVersion’s Biggest Problem Is Claude, ChatGPT Misquoting the Bible",
-        "url": "https://www.christianitytoday.com/2026/11/youversion-bible-app-ai-claude-chatgpt-bobby-gruenewald/",
-        "source": "Christianity Today",
-        "signals": {
-          "publishers": [
-            "YouVersion"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "biblical-literacy",
-          "technology-and-discipleship",
-          "biblical-inerrancy"
-        ],
-        "trend": 9.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-17 (0 verified figure(s))"
-        ]
-      },
-      {
         "title": "Data Explorer: The Future of World Religions",
         "url": "https://www.pewresearch.org/religion/feature/the-future-of-world-religions-data-explorer/",
         "source": "Pew Research",
@@ -702,13 +656,31 @@
             "Pew Research Center"
           ],
           "figures": [],
-          "words": [
-            "data"
-          ],
+          "words": [],
           "data_tag": true
         },
         "topics": [],
         "trend": 8.75,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "The Future of World Religions: Population Growth Projections, 2020-2070",
+        "url": "https://www.pewresearch.org/religion/2026/11/18/the-future-of-world-religions-population-growth-projections-2020-2070/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 8.25,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -733,59 +705,6 @@
         "on_digest": true,
         "actions": [
           "no topic page matched"
-        ]
-      },
-      {
-        "title": "91% of Christian Young Adults Say God Used a Hard Season to Draw Them to Him",
-        "url": "https://relevantmagazine.com/faith/91-of-christian-young-adults-say-god-used-a-hard-season-to-draw-them-to-him/",
-        "source": "Relevant Magazine",
-        "signals": {
-          "publishers": [
-            "Lifeway Research"
-          ],
-          "figures": [
-            "91%"
-          ],
-          "words": [
-            "researchers",
-            "survey"
-          ],
-          "data_tag": true
-        },
-        "topics": [
-          "suffering-and-providence"
-        ],
-        "trend": 7.75,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
-        ]
-      },
-      {
-        "title": "New Insights Report Helps Churches Connect Evangelism and Discipleship",
-        "url": "https://research.lifeway.com/2026/11/19/new-insights-report-helps-churches-connect-evangelism-and-discipleship/",
-        "source": "Lifeway Research",
-        "signals": {
-          "publishers": [
-            "Lifeway Research"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "missions-and-evangelism",
-          "discipleship",
-          "small-groups"
-        ],
-        "trend": 7.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "verified 45% (Lifeway Research, reuse) for missions-and-evangelism"
         ]
       },
       {
@@ -852,26 +771,43 @@
         ]
       },
       {
-        "title": "Defining Success in Evangelism",
-        "url": "https://research.lifeway.com/2026/11/19/defining-success-in-evangelism/",
-        "source": "Lifeway Research",
+        "title": "How Much Less Religious Is Australia Than the U.S.?",
+        "url": "https://www.graphsaboutreligion.com/p/how-much-less-religious-is-australia",
+        "source": "Ryan Burge",
         "signals": {
           "publishers": [
-            "Lifeway Research"
+            "Ryan Burge"
           ],
           "figures": [],
           "words": [],
-          "data_tag": false
+          "data_tag": true
         },
-        "topics": [
-          "missions-and-evangelism"
-        ],
-        "trend": 6.5,
+        "topics": [],
+        "trend": 6.0,
         "outlets": 1,
         "on_digest": true,
         "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-19 (0 verified figure(s))"
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Key Factors Shaping the Global Future of Religions",
+        "url": "https://www.pewresearch.org/religion/2026/11/18/key-factors-shaping-the-global-future-of-religions/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 4.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
         ]
       },
       {
@@ -890,7 +826,7 @@
           "data_tag": true
         },
         "topics": [],
-        "trend": 5.75,
+        "trend": 4.0,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -965,49 +901,6 @@
         ]
       },
       {
-        "title": "More Than Events: 7 Principles for Meaningful Women’s Ministry Gatherings",
-        "url": "https://research.lifeway.com/2026/11/16/more-than-events-7-principles-for-meaningful-womens-ministry-gatherings/",
-        "source": "Lifeway Research",
-        "signals": {
-          "publishers": [
-            "Lifeway Research"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "sanctification"
-        ],
-        "trend": 2.75,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-16 (0 verified figure(s))"
-        ]
-      },
-      {
-        "title": "Acknowledgements",
-        "url": "https://www.pewresearch.org/race-and-ethnicity/2026/11/12/single-black-adults-acknowledgements/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [],
-        "trend": 2.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
         "title": "The Religious Gender Gap Is Really a Political Gap",
         "url": "https://www.graphsaboutreligion.com/p/the-religious-gender-gap-is-really",
         "source": "Ryan Burge",
@@ -1023,7 +916,7 @@
           "gender-and-biblical-anthropology",
           "politics-and-the-church"
         ],
-        "trend": 2.0,
+        "trend": 3.0,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -1032,48 +925,51 @@
         ]
       },
       {
-        "title": "Methodology",
-        "url": "https://www.pewresearch.org/race-and-ethnicity/2026/11/12/single-black-adults-methodology/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 1.25,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "Most SBC Churches Confident About Future, but Issues Loom",
-        "url": "https://research.lifeway.com/2026/11/10/most-sbc-churches-confident-about-future-but-issues-loom/",
+        "title": "New Insights Report Helps Churches Connect Evangelism and Discipleship",
+        "url": "https://research.lifeway.com/2026/11/19/new-insights-report-helps-churches-connect-evangelism-and-discipleship/",
         "source": "Lifeway Research",
         "signals": {
           "publishers": [
             "Lifeway Research"
           ],
           "figures": [],
-          "words": [
-            "report"
-          ],
-          "data_tag": true
+          "words": [],
+          "data_tag": false
         },
         "topics": [
-          "evangelicalism"
+          "missions-and-evangelism",
+          "discipleship",
+          "small-groups"
         ],
-        "trend": 1.25,
+        "trend": 2.75,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "page already checked on 2026-11-11 (2 verified figure(s))"
+          "page already checked on 2026-11-20 (1 verified figure(s))"
+        ]
+      },
+      {
+        "title": "Defining Success in Evangelism",
+        "url": "https://research.lifeway.com/2026/11/19/defining-success-in-evangelism/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [
+          "missions-and-evangelism"
+        ],
+        "trend": 1.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-19 (0 verified figure(s))"
         ]
       },
       {
@@ -1089,25 +985,17 @@
           "words": [],
           "data_tag": false
         },
-        "topics": [
-          "discipleship"
-        ],
-        "trend": -0.75,
+        "topics": [],
+        "trend": 0.75,
         "outlets": 1,
         "on_digest": false,
         "actions": [
-          "page already checked on 2026-11-10 (0 verified figure(s))"
+          "no topic page matched"
         ]
       }
     ],
-    "pages": [
-      {
-        "slug": "missions-and-evangelism",
-        "kind": "latest-figures",
-        "note": "Latest Figures block refreshed (1 figures); dates bumped"
-      }
-    ],
-    "fetched": 2,
-    "hits": 23
+    "pages": [],
+    "fetched": 0,
+    "hits": 19
   }
 }

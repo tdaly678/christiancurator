@@ -1,81 +1,5 @@
 {
  "entries": {
-  "https://christianitytoday.com/2026/11/hillsong-bethel-elevation-worship-bans": {
-   "url": "https://www.christianitytoday.com/2026/11/hillsong-bethel-elevation-worship-bans/?utm_medium=widgetsocial",
-   "canonical_url": "https://christianitytoday.com/2026/11/hillsong-bethel-elevation-worship-bans",
-   "anchor": "Churches Shouldn’t Just Ban Hillsong, Bethel, and Elevation",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-13-2026/",
-   "found_on": "2026-11-13",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-13",
-   "title": "Churches Shouldn’t Just Ban Hillsong, Bethel, and Elevation",
-   "source_name": "Christianity Today"
-  },
-  "https://firstthings.com/the-new-benefit-of-clergy": {
-   "url": "https://firstthings.com/the-new-benefit-of-clergy/",
-   "canonical_url": "https://firstthings.com/the-new-benefit-of-clergy",
-   "anchor": "The New Benefit of Clergy",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-13-2026/",
-   "found_on": "2026-11-13",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-13",
-   "title": "The New Benefit of Clergy",
-   "source_name": "First Things"
-  },
-  "https://jacobrcrouch.wordpress.com/2026/11/11/everything-sad-coming-untrue": {
-   "url": "https://jacobrcrouch.wordpress.com/2026/11/11/everything-sad-coming-untrue/",
-   "canonical_url": "https://jacobrcrouch.wordpress.com/2026/11/11/everything-sad-coming-untrue",
-   "anchor": "Everything Sad Coming Untrue",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-13-2026/",
-   "found_on": "2026-11-13",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-13",
-   "title": "Everything Sad Coming Untrue",
-   "source_name": "Aliens and Pilgrims"
-  },
-  "https://wordfirst.org/articles/what-do-we-do-with-new-testament-books-not-written-by-apostles": {
-   "url": "https://wordfirst.org/articles/what-do-we-do-with-new-testament-books-not-written-by-apostles/",
-   "canonical_url": "https://wordfirst.org/articles/what-do-we-do-with-new-testament-books-not-written-by-apostles",
-   "anchor": "What Do We Do With New Testament Books Not Written by Apostles?",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-13-2026/",
-   "found_on": "2026-11-13",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-13",
-   "title": "What Do We Do With New Testament Books Not Written by Apostles?",
-   "source_name": "Word First"
-  },
-  "https://rethinkingfertility.substack.com/p/the-million-dollar-gene-editing-question": {
-   "url": "https://rethinkingfertility.substack.com/p/the-million-dollar-gene-editing-question",
-   "canonical_url": "https://rethinkingfertility.substack.com/p/the-million-dollar-gene-editing-question",
-   "anchor": "The Million Dollar Gene Editing Question",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-13-2026/",
-   "found_on": "2026-11-13",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
-  "https://desiringgod.org/interviews/scrolling-the-soul-shallow": {
-   "url": "https://www.desiringgod.org/interviews/scrolling-the-soul-shallow",
-   "canonical_url": "https://desiringgod.org/interviews/scrolling-the-soul-shallow",
-   "anchor": "Scrolling the Soul Shallow",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-13-2026/",
-   "found_on": "2026-11-13",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-13",
-   "title": "Scrolling the Soul Shallow",
-   "source_name": "Desiring God"
-  },
   "https://gentlereformation.com/2026/11/13/teach-your-children-to-hate-you": {
    "url": "https://gentlereformation.com/2026/11/13/teach-your-children-to-hate-you/",
    "canonical_url": "https://gentlereformation.com/2026/11/13/teach-your-children-to-hate-you",
@@ -638,7 +562,70 @@
    "graduated_on": "2026-11-20",
    "title": "Don’t Be Afraid to Provoke Your Brothers",
    "source_name": "Forward Progress"
+  },
+  "https://thedispatch.com/article/trauma-mental-health-therapy?gift_key=d7f372d50c6aa314&gift_ref=d2777208-495f-4246-87b2-13ab5f80eedc&gift_t=1795120535": {
+   "url": "https://thedispatch.com/article/trauma-mental-health-therapy/?gift_key=d7f372d50c6aa314&gift_ref=d2777208-495f-4246-87b2-13ab5f80eedc&gift_t=1795120535",
+   "canonical_url": "https://thedispatch.com/article/trauma-mental-health-therapy?gift_key=d7f372d50c6aa314&gift_ref=d2777208-495f-4246-87b2-13ab5f80eedc&gift_t=1795120535",
+   "anchor": "Does the Body Really Keep the Score?",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-21-2026/",
+   "found_on": "2026-11-21",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-21",
+   "title": "Trauma Is More Complicated Than Influencers Say",
+   "source_name": "The Dispatch"
+  },
+  "https://zakmellgren.substack.com/p/theres-no-such-thing-as-your-weekend": {
+   "url": "https://zakmellgren.substack.com/p/theres-no-such-thing-as-your-weekend",
+   "canonical_url": "https://zakmellgren.substack.com/p/theres-no-such-thing-as-your-weekend",
+   "anchor": "There’s No Such Thing as “Your” Weekend",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-21-2026/",
+   "found_on": "2026-11-21",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-21",
+   "title": "There’s No Such Thing as “Your” Weekend",
+   "source_name": "substack.com"
+  },
+  "https://wsj.com/opinion/school-cell-phone-bans-harvard-study-5b703c69?reflink=desktopwebshare_permalink&st=apboQS": {
+   "url": "https://www.wsj.com/opinion/school-cell-phone-bans-harvard-study-5b703c69?st=apboQS&reflink=desktopwebshare_permalink",
+   "canonical_url": "https://wsj.com/opinion/school-cell-phone-bans-harvard-study-5b703c69?reflink=desktopwebshare_permalink&st=apboQS",
+   "anchor": "What Happens When Schools Ban Phones",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-21-2026/",
+   "found_on": "2026-11-21",
+   "status": "pending",
+   "attempts": 1,
+   "error": "HTTP 401"
+  },
+  "https://reformedperspective.ca/gta-6-is-pornographic-and-gory": {
+   "url": "https://reformedperspective.ca/gta-6-is-pornographic-and-gory",
+   "canonical_url": "https://reformedperspective.ca/gta-6-is-pornographic-and-gory",
+   "anchor": "GTA 6 Is Pornographic and Gory",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-21-2026/",
+   "found_on": "2026-11-21",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-21",
+   "title": "GTA 6 is pornographic and gory",
+   "source_name": "Reformed Perspective"
+  },
+  "https://apps.apple.com/us/app/daily-spurgeon-devotionals/id1476230796": {
+   "url": "https://apps.apple.com/us/app/daily-spurgeon-devotionals/id1476230796",
+   "canonical_url": "https://apps.apple.com/us/app/daily-spurgeon-devotionals/id1476230796",
+   "anchor": "Daily Spurgeon Devotionals",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-21-2026/",
+   "found_on": "2026-11-21",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-21",
+   "title": "Daily Spurgeon Devotionals App",
+   "source_name": "App Store"
   }
  },
- "updated": "2026-11-20T10:01:46+00:00"
+ "updated": "2026-11-21T10:01:36+00:00"
 }
