@@ -42,9 +42,10 @@ from urllib.parse import urlsplit
 
 from curator.clusters import build_story_clusters
 from curator.dedup import canonical_url
-from curator.editorial import board_sort_key, rank_lead_pool
+from curator.editorial import board_sort_key, is_news_report, rank_lead_pool
 from curator.headline_voice import headline_has_claim, is_claimless_short, is_dated_briefing
 from curator.lanes import select_watch_and_listen, select_worth_your_time
+from curator.media_kind import looks_like_audio_video
 from curator.mission import is_off_mission
 from frontend.text import clean_copy, first_sentence
 
@@ -65,9 +66,11 @@ BOARD_COLUMNS = [
     ("commentary", "Commentary & Debate"),
     ("news", "News"),
 ]
-NEWS_TAGS = {"news", "data", "politics"}
 CHURCH_TAGS = {"theology", "church life", "missions", "devotional", "prayer", "apologetics"}
 CHURCH_SOURCE_CATEGORIES = {"theology", "devotional"}
+# Opinion sections of news outlets (WORLD /opinions/, Christian Post /voices/).
+_OPINION_PATH_RE = re.compile(r"/(?:opinions?|voices|columns?|commentary|analysis|podcasts?)/",
+                              re.IGNORECASE)
 
 
 def _score(a: dict) -> float:
@@ -77,29 +80,34 @@ def _score(a: dict) -> float:
 def board_column(a: dict) -> str:
     """Route an article to a board column from fields the scorer already sets.
 
-    News: world-news sources, perspective "news", or a news/data/politics tag.
-    Church & Theology: a theology/church/missions/devotional tag, or a
-    theology/devotional source. Everything else is commentary.
+    News (since Nov 22 2026, S1 3.6): a news report (curator.editorial
+    is_news_report(): world-news source, perspective "news" or a "news" tag),
+    or a neutral piece from a news outlet outside its opinion section. A
+    politics or data tag alone no longer makes an essay news, and podcasts
+    and videos never go to News. Church & Theology: a theology/church/
+    missions/devotional tag, or a theology/devotional source. Everything else
+    is commentary.
     """
     tags = set(a.get("tags") or [])
-    if (a.get("source_type") == "world_news" or a.get("perspective") == "news"
-            or tags & NEWS_TAGS or a.get("source_category") == "news"):
-        return "news"
+    audio_video = is_audio_video(a)
+    if not audio_video:
+        if is_news_report(a):
+            return "news"
+        if (a.get("source_category") == "news"
+                and a.get("perspective") not in ("supportive", "critical")
+                and not _OPINION_PATH_RE.search(urlsplit(a.get("url") or "").path or "")):
+            return "news"
     if tags & CHURCH_TAGS or a.get("source_category") in CHURCH_SOURCE_CATEGORIES:
         return "church"
     return "commentary"
 
 
 def is_audio_video(a: dict) -> bool:
-    """True for podcast episodes and videos, whatever feed they came from."""
-    if a.get("media_format"):
-        return True
-    parts = urlsplit(a.get("url") or "")
-    host = (parts.hostname or "").lower()
-    if any(host == h or host.endswith("." + h) for h in VIDEO_HOSTS):
-        return True
-    title = (a.get("title") or "").lower()
-    return "/podcast" in parts.path.lower() or title.startswith(("podcast:", "video:"))
+    """True for podcast episodes and videos, whatever feed they came from
+    (curator.media_kind: media feeds, video hosts, podcast and episode URL
+    paths such as /erlc-podcast/ or /p/ep205, and "Ep." or "Join me as I
+    talk with" openers)."""
+    return looks_like_audio_video(a)
 
 
 def _cap_audio_video(ranked: list[dict], limit: int = MAIN_LANE_MAX_AUDIO_VIDEO) -> list[dict]:

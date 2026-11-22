@@ -41,6 +41,26 @@ class MainlinePolity(unittest.TestCase):
         ]:
             self.assertFalse(is_mainline_polity(t), t)
 
+    def test_church_courts_are_polity_not_exempt(self):
+        # Live 2026-11-21 (WORLD), News column item 10.
+        for t in [
+            "Methodist court approves forced closure of Los Angeles church",
+            "UMC Judicial Council rules on bishop's appointment",
+            "Judicial Council upholds Methodist annual conference vote",
+            "Episcopal church court removes bishop",
+        ]:
+            self.assertTrue(is_mainline_polity(t), t)
+
+    def test_civil_courts_still_exempt(self):
+        for t in [
+            "Supreme Court hears Methodist conference property case",
+            "Federal court blocks UMC conference from seizing church property",
+            "State court sides with Episcopal diocese in property fight",
+            "Court of Appeals rules for disaffiliating Methodist churches against bishop",
+            "Methodist conference sued by departing churches",
+        ]:
+            self.assertFalse(is_mainline_polity(t), t)
+
     def test_debate_rejects_mainline(self):
         a = {"title": "UMC bishop appoints pastor to Highland Park", "source_name": "The Christian Post",
              "perspective": "critical", "url": "https://a.example/1"}

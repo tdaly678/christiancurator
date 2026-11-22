@@ -23,7 +23,7 @@ VIDEO_HOSTS = ("youtube.com", "youtu.be", "vimeo.com")
 _PATH_RE = re.compile(
     r"/podcasts?(?:[/-]|$)"                   # /podcast, /podcasts/, /podcast-x
     r"|/[\w-]+-podcasts?(?:/|$)"              # /erlc-podcast/ (not /why-podcasts-matter)
-    r"|/episodes?(?:[/-]|$)"                  # /episode-844, /episodes/x
+    r"|/episodes?(?:/|-\d|$)"                # /episode-844, /episodes/x (not /episodes-of-grace)
     r"|/(?:p/)?ep-?\d+(?:[/-]|$)"             # /p/ep205, /ep-12
     r"|/p/[\w-]*-ep-?\d+(?:[/-]|$)"           # /p/show-ep-205
     r"|/[\w-]+-episode-\d+(?:[/-]|$)",        # /great-talk-episode-12

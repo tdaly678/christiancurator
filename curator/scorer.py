@@ -29,7 +29,7 @@ from curator.dedup import canonical_url, dedupe_articles
 from curator.headline_voice import (
     apply_display_title, hard_reject, hard_reject_description, voice_adjustments,
 )
-from curator.mission import has_faith_hook
+from curator.mission import has_faith_hook, is_news_brief, is_off_mission
 from curator.vocab import ALLOWED_TAGS, ALLOWED_PERSONAS, clean_tags, clean_personas, report_drops
 from curator.vocab import dropped as vocab_dropped
 
@@ -137,6 +137,15 @@ SPECIAL CASES:
   Christianity Today) framing a mainline story around an evangelical angle can rank on that angle.
   BAPTIST (SBC and others) and PRESBYTERIAN (PCA, EPC, ECO, OPC) news is core evangelical coverage: score it
   normally, including denominational votes and leadership news.
+- OFF-MISSION ITEMS FROM CHRISTIAN OUTLETS: importance 3 or below and depth 3 or below for
+  (a) partisan horse-race politics (party fortunes, election post-mortems, polling, campaign strategy)
+  with no faith, church, religious liberty or life-issue stake in the piece itself;
+  (b) celebrity, sports and entertainment items (athletes, comedians, video games, film and TV trailers)
+  where faith is only an incidental mention (a quote thanking God, a church joke);
+  (c) lifestyle newsletters and personal shopping, beauty, fashion, recipe or home posts;
+  (d) Catholic-internal items (traditionalist Catholics, Latin Mass, papal travel, Vatican personnel),
+  as under CATHOLIC-SPECIFIC CONTENT above.
+  Score normally when the faith angle is the point of the piece.
 - DATA, RESEARCH, and STATISTICS pieces (Pew, Barna, Burge, Lifeway, Gallup, PRRI, church demographics,
   generational trends): tag "data". Score importance on its merits; new findings can be 7+.
 
@@ -504,6 +513,8 @@ CATHOLIC_CLUSTER_KEYWORDS = {
     "pope", "papal", "vatican", "synod", "synodality", "cardinal", "jesuit",
     "catholic_church", "roman_catholic", "pope_francis", "holy_see",
     "encyclical", "bishop_of_rome", "purgatory", "catholic",
+    # Nov 22 2026 (S1 2.2): traditionalist Catholic pieces ("TK: Trads").
+    "trads", "latin mass", "latin_mass", "conclave", "curia",
 }
 CATHOLIC_SCORE_CAP = 3.0  # max final_score for Catholic-specific content
 
@@ -514,7 +525,8 @@ CATHOLIC_SCORE_CAP = 3.0  # max final_score for Catholic-specific content
 # Needs BOTH a mainline body and a polity/personnel term in the title, so the
 # bare word "Methodist" is never banned. Exempt titles carry an evangelical
 # angle (Asbury, Global/Free Methodist, seminaries, religious liberty, courts,
-# counts of departing churches) and fall back to Claude's score.
+# counts of departing churches) and fall back to Claude's score. Only civil
+# courts are exempt: "Methodist court" and the UMC Judicial Council are polity.
 MAINLINE_BODY_RE = re.compile(
     r"\bUMC\b|\bMethodists?\b|\bEpiscopal(ian)?s?\b|\bELCA\b|Evangelical Lutheran Church in America"
     r"|\bPC\s?\(?USA\)?|Presbyterian Church \(?U\.?S\.?A\.?\)?|United Church of Christ|\bUCC\b"
@@ -524,15 +536,60 @@ MAINLINE_BODY_RE = re.compile(
 MAINLINE_POLITY_RE = re.compile(
     r"\bbishops?\b|\bconferences?\b|judicial council|\bappoint|\bdiocese|\bdiocesan\b|\bsynod"
     r"|\bconsecrat|\bpresiding\b|\bsuperintendent|\bdelegates?\b|\bapportionment|\bclergy\b"
-    r"|\bresign|\bretire|\binstall|\belect(s|ed|ion)?\b|\bchurch trial\b|\bpolity\b",
+    r"|\bresign|\bretire|\binstall|\belect(s|ed|ion)?\b|\bchurch trial\b|\bpolity\b"
+    r"|\bcourts?\b|\bclosures?\b",
     re.IGNORECASE,
 )
 MAINLINE_EXEMPT_RE = re.compile(
-    r"asbury|global methodist|free methodist|seminary|religious (liberty|freedom)|supreme court|\bcourt\b"
+    r"asbury|global methodist|free methodist|seminary|religious (liberty|freedom)|supreme court"
+    # Civil courts only (Nov 22 2026, S1 2.1): "Methodist court" and the
+    # Judicial Council are church polity, not a lawsuit.
+    r"|\b(federal|state|civil|district|appeals?|appellate|circuit|superior|county|bankruptcy)\s+court"
+    r"|\bcourt of appeals?\b|\b(lawsuit|sues|sued|judge)\b"
     r"|\b\d[\d,]*\s+(churches|congregations)\b",
     re.IGNORECASE,
 )
 MAINLINE_SCORE_CAP = 3.0
+
+# Off-mission items from Christian outlets (Nov 22 2026, S1 2.2). The scorer
+# prompt caps them at 3; this is the deterministic backstop for titles that
+# say so plainly. Lifestyle posts are capped on the title alone. Horse-race
+# politics is capped when neither title nor summary has a faith hook, and
+# entertainment when the title has none (a faith mention deep in the summary
+# is incidental).
+OFF_MISSION_SCORE_CAP = 3.0
+LIFESTYLE_RE = re.compile(
+    r"\bperfumes?\b|\bdupes?\b|\bskin ?care\b|\bmakeup\b|\boutfits?\b|\bwardrobe\b|\bhaul\b"
+    r"|\brecipes?\b|\bgift guide\b|\bhome tour\b|\bhome decor\b|\bamazon finds\b"
+    r"|\bfavou?rite things\b|\bwhat i wore\b|\bbeauty (products|routine)\b",
+    re.IGNORECASE,
+)
+HORSE_RACE_RE = re.compile(
+    r"\bdemocrats?\b|\brepublicans?\b|\bGOP\b|\bmidterms?\b|\bprimar(y|ies)\b|\bpolling\b"
+    r"|\belection (results|night|post-?mortem)\b|\bcampaign strategy\b|\bswing (voters|states)\b"
+    r"|\b(senate|house|governor'?s?) race\b|\brout\b|\blandslide\b|\bballot box\b",
+    re.IGNORECASE,
+)
+ENTERTAINMENT_RE = re.compile(
+    r"\bGTA\b|\bgrand theft auto\b|\bvideo games?\b|\bnetflix\b|\bhulu\b|\bHBO\b|\btrailer\b"
+    r"|\bbox office\b|\bcomedy special\b|\bcomedian\b|\bquarterback\b|\bNFL\b|\bNBA\b"
+    r"|\bMLB\b|\btouchdown\b|\bsuper bowl\b|\bgrammys?\b|\boscars?\b|\bemmys?\b"
+    r"|\bcelebrit(y|ies)\b|\bhollywood\b|\brapper\b",
+    re.IGNORECASE,
+)
+
+
+def off_mission_kind(article: dict) -> str | None:
+    """"lifestyle", "horse_race" or "entertainment" for an off-mission title, else None."""
+    title = article.get("original_title") or article.get("title") or ""
+    summary = re.sub(r"<[^>]+>", " ", article.get("summary") or "")[:500]
+    if LIFESTYLE_RE.search(title):
+        return "lifestyle"
+    if HORSE_RACE_RE.search(title) and not has_faith_hook(title, summary):
+        return "horse_race"
+    if ENTERTAINMENT_RE.search(title) and not has_faith_hook(title):
+        return "entertainment"
+    return None
 
 
 def is_mainline_polity(title: str) -> bool:
@@ -787,6 +844,15 @@ def score_articles(articles: list[dict], shown_urls: set = None,
         print(f"  Kept {len(kept)} of {len(world_news)} world news articles after relevance filter")
         articles = christian + kept
 
+    # Step 0a: WORLD Sift and Christian Post news briefs face the same faith-hook
+    # gate as world news (curator.mission.is_news_brief, Nov 22 2026).
+    off_briefs = [a for a in articles if is_news_brief(a) and is_off_mission(a)]
+    if off_briefs:
+        for a in off_briefs:
+            print(f"    Off-mission brief: {a.get('title', '')!r} ({a.get('source_name', '?')})")
+        articles = [a for a in articles if not (is_news_brief(a) and is_off_mission(a))]
+        print(f"  Dropped {len(off_briefs)} news briefs with no faith hook.")
+
     # Step 0b: Hard cutoff — drop articles older than HARD_CUTOFF_DAYS
     cutoff_hours = HARD_CUTOFF_DAYS * 24
     fresh = []
@@ -843,6 +909,7 @@ def score_articles(articles: list[dict], shown_urls: set = None,
     previously_shown_count = 0
     shown_yesterday_count = 0
     catholic_capped_count = 0
+    off_mission_capped_count = 0
     mainline_capped_count = 0
     frequency_boosted_count = 0
     voice_demoted_count = 0
@@ -926,6 +993,16 @@ def score_articles(articles: list[dict], shown_urls: set = None,
             catholic_capped_count += 1
         if is_catholic:
             depth = min(depth, CATHOLIC_SCORE_CAP)
+            # Board top 10 stays evangelical (editorial.board_sort_key).
+            article["catholic_internal"] = True
+
+        off_kind = off_mission_kind(article)
+        if off_kind:
+            if article["final_score"] > OFF_MISSION_SCORE_CAP:
+                _adjust(article, "off_mission_cap", OFF_MISSION_SCORE_CAP)
+                off_mission_capped_count += 1
+            article["off_mission_capped"] = off_kind
+            depth = min(depth, OFF_MISSION_SCORE_CAP)
 
         if is_mainline_polity(article.get("title")):
             if article["final_score"] > MAINLINE_SCORE_CAP:
@@ -946,6 +1023,9 @@ def score_articles(articles: list[dict], shown_urls: set = None,
         print(f"  Applied Catholic content cap to {catholic_capped_count} articles.")
     if mainline_capped_count:
         print(f"  Applied mainline polity cap to {mainline_capped_count} articles.")
+    if off_mission_capped_count:
+        print(f"  Applied off-mission cap (lifestyle, horse race, entertainment) to "
+              f"{off_mission_capped_count} articles.")
     if voice_demoted_count:
         print(f"  Headline voice: demoted {voice_demoted_count} articles (caps, exclamation, meta voice, length).")
     if frequency_boosted_count:
