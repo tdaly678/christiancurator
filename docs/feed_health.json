@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-21T10:01:35+00:00",
+  "run_at": "2026-11-22T10:01:50+00:00",
   "sources": [
     {
       "source": "The Gospel Coalition",
@@ -7,7 +7,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 60,
-      "newest_date": "2026-11-21",
+      "newest_date": "2026-11-22",
       "bozo": false,
       "stale": false
     },
@@ -67,7 +67,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-20",
+      "newest_date": "2026-11-21",
       "bozo": false,
       "stale": false
     },
@@ -87,7 +87,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 30,
-      "newest_date": "2026-11-20",
+      "newest_date": "2026-11-22",
       "bozo": false,
       "stale": false
     },
@@ -133,7 +133,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-20",
+      "newest_date": "2026-11-21",
       "bozo": false,
       "stale": false
     },
@@ -192,8 +192,8 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 24,
-      "newest_date": "2026-11-21",
+      "n_entries": 28,
+      "newest_date": "2026-11-22",
       "bozo": false,
       "stale": false
     },
@@ -203,7 +203,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 53,
-      "newest_date": "2026-11-21",
+      "newest_date": "2026-11-22",
       "bozo": false,
       "stale": false
     },
@@ -212,8 +212,8 @@
       "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 73,
-      "newest_date": "2026-11-21",
+      "n_entries": 72,
+      "newest_date": "2026-11-22",
       "bozo": false,
       "stale": false
     },
@@ -223,7 +223,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-21",
+      "newest_date": "2026-11-22",
       "bozo": false,
       "stale": false
     },
@@ -231,13 +231,12 @@
       "source": "Kyle Worley",
       "url": "https://sacredslang.substack.com/feed",
       "role": "primary",
-      "http_status": 429,
-      "n_entries": 0,
-      "newest_date": null,
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-11-10",
       "bozo": false,
       "via": "proxy",
-      "retries": 4,
-      "error": "HTTP 429"
+      "stale": false
     },
     {
       "source": "Phylicia Masonheimer",
@@ -312,7 +311,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-21",
+      "newest_date": "2026-11-22",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -354,9 +353,10 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 100,
-      "newest_date": "2026-11-20",
+      "newest_date": "2026-11-21",
       "bozo": false,
       "url_dropped": [
+        "🌍 Projecting the future of world religions",
         "Dating Attitudes of Single Black Americans",
         "McClatchy turns to AI after local newspaper layoffs",
         "Can AI Stand In for Human Survey-Takers?",
@@ -364,7 +364,7 @@
         "The Future of World Religions, 2020-2070"
       ],
       "byline_from_page": {
-        "resolved": 15,
+        "resolved": 14,
         "no_byline": 0,
         "failed": 0
       },
@@ -427,13 +427,12 @@
       "source": "Aimee Byrd",
       "url": "https://aimeebyrd.substack.com/feed",
       "role": "primary",
-      "http_status": 429,
-      "n_entries": 0,
-      "newest_date": null,
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-09-03",
       "bozo": false,
       "via": "proxy",
-      "retries": 4,
-      "error": "HTTP 429"
+      "stale": true
     },
     {
       "source": "Nadya Williams",
@@ -450,12 +449,13 @@
       "source": "Daniel K. Williams",
       "url": "https://danielkwilliams.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-11-06",
+      "http_status": 429,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
       "via": "proxy",
-      "stale": false
+      "retries": 4,
+      "error": "HTTP 429"
     },
     {
       "source": "Tsh Oxenreider",
@@ -483,7 +483,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-16",
+      "newest_date": "2026-11-21",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -516,7 +516,7 @@
       "role": "discovery",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-21",
+      "newest_date": "2026-11-22",
       "bozo": false,
       "stale": false
     },
@@ -535,11 +535,12 @@
       "source": "Faithfully Magazine",
       "url": "https://faithfullymagazine.com/feed/",
       "role": "primary",
-      "http_status": 202,
+      "http_status": 429,
       "n_entries": 0,
       "newest_date": null,
-      "bozo": true,
-      "error": "parse error: <unknown>:2:119: not well-formed (invalid token)"
+      "bozo": false,
+      "retries": 4,
+      "error": "HTTP 429"
     },
     {
       "source": "Sean McDowell",
@@ -613,6 +614,8 @@
       "newest_date": "2026-10-23",
       "bozo": false,
       "via": "proxy",
+      "retries": 4,
+      "user_agent": "reader",
       "stale": false
     },
     {
@@ -621,7 +624,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-21",
+      "newest_date": "2026-11-22",
       "bozo": false,
       "stale": false
     },
@@ -662,7 +665,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-19",
+      "newest_date": "2026-11-21",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -728,7 +731,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-19",
+      "newest_date": "2026-11-21",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -764,6 +767,7 @@
       "newest_date": "2026-11-20",
       "bozo": false,
       "via": "proxy",
+      "retries": 1,
       "stale": false
     },
     {
@@ -852,25 +856,20 @@
     }
   ],
   "zero_streaks": {
-    "Kyle Worley": {
-      "since": "2026-11-21",
-      "last_date": "2026-11-21",
-      "days": 1
-    },
-    "Aimee Byrd": {
-      "since": "2026-11-21",
-      "last_date": "2026-11-21",
+    "Daniel K. Williams": {
+      "since": "2026-11-22",
+      "last_date": "2026-11-22",
       "days": 1
     },
     "Kate Shellnutt": {
       "since": "2026-11-21",
-      "last_date": "2026-11-21",
-      "days": 1
+      "last_date": "2026-11-22",
+      "days": 2
     },
     "Faithfully Magazine": {
       "since": "2026-11-20",
-      "last_date": "2026-11-21",
-      "days": 2
+      "last_date": "2026-11-22",
+      "days": 3
     }
   }
 }

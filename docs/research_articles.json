@@ -1,45 +1,5 @@
 [
   {
-    "source_name": "Pew Research",
-    "source_category": "culture",
-    "source_type": "christian",
-    "independent": false,
-    "creates_voices": false,
-    "role": "primary",
-    "author": "Conrad Hackett",
-    "title": "The Future of World Religions: Population Growth Projections, 2020-2070",
-    "original_title": "The Future of World Religions: Population Growth Projections, 2020-2070",
-    "url": "https://www.pewresearch.org/religion/2026/11/18/the-future-of-world-religions-population-growth-projections-2020-2070/",
-    "summary": "Our projections detail why Muslims will soon become the world’s largest religious group and Christians will be the second largest.",
-    "full_content": "",
-    "published": "Wed, 18 Nov 2026 14:19:32 +0000",
-    "fetched_at": "2026-11-21T10:01:02.201056",
-    "score": 7,
-    "tags": [
-      "data"
-    ],
-    "rewritten_title": "Muslims Projected to Become World's Largest Religious Group by 2070",
-    "canonical_url": "https://pewresearch.org/religion/2026/11/18/the-future-of-world-religions-population-growth-projections-2020-2070",
-    "importance": 7.25,
-    "depth": 4.0,
-    "personas": [
-      "pastor",
-      "professional"
-    ],
-    "topic_cluster": "pew_global_religion_projections",
-    "perspective": "neutral",
-    "scored_by": "claude",
-    "base_score": 7.0,
-    "base_importance": 7.0,
-    "base_depth": 4.0,
-    "final_score": 7.25,
-    "boosts": {
-      "recency": 0.25
-    },
-    "boost_total": 0.25,
-    "recency_boost": 0.25
-  },
-  {
     "source_name": "Ryan Burge",
     "source_category": "culture",
     "source_type": "christian",
@@ -53,85 +13,125 @@
     "summary": "Church attendance, religious affiliation, and the collapse of Australian Protestantism, compared to the GSS",
     "full_content": "<div class=\"captioned-image-container\"><figure><div class=\"image-link image2\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"220\" src=\"https://substackcdn.com/image/fetch/$s_!p_IS!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F664df8c7-a437-4552-9cf3-a94f731f73bd_1100x220.webp\" width=\"1100\" /><div></div></div></div></figure></div><p><em><span>This post has been unlocked through a generous grant from the </span><a href=\"https://lillyendowment.org/\">Lilly Endowment</a><span> for the </span><a href=\"https://thearda.com/\">Association of Religion Data Archives</a><span> (ARDA). The graphs you see here use data that is publicly available for download and analysis through link(s) provided in the text below.</span></em></p><div><hr /></div><p><span>I&#8217;m always on the look out for ways that I can do some data analysis on countries outside the United States. That&#8217;s often not too easy. The data infrastructure in the U.S. is incredibly robust and that&#8217;s in large part because we have organizations like the National Science Foundation which provide funding to administer key instruments like the </span><a href=\"https://gss.norc.org/\"><span>General Social Survey</span></a><span> and the </span><a href=\"https://electionstudies.org/\"><span>American National Election Study</span></a><span>. If you attend graduate school in the United States in social sciences you are quickly introduced to datasets like that in research methods.</span></p><p><strong><span>One problem that plagues researchers is that we &#8220;go with what we know&#8221; too often.</span></strong><span> Since we become comfortable with a handful of datasets when we are in the apprentice phase of our careers, it makes perfect sense for us to stick to the tried and true as we move into the professoriate. </span><strong><span>In my day to day work, I rarely ever just stumble on a high quality survey from another country. It almost has to smack me in the face.</span></strong></p><p><span>However, I found a way to intentionally expose myself to data that is not on my radar: scroll the Association of Religion Data Archive&#8217;s </span><a href=\"https://thearda.com/data-archive/browse-newest-additions\"><span>&#8220;Newest Addition&#8221; page</span></a><span>. It is exactly what you think, a simple webpage that just displays the last ten things that have been uploaded to the ARDA repository.</span></p><p><span>It&#8217;s always a fun little potpourri of stuff, too. For instance, when I scrolled the page today there was a dataset of &#8220;</span><a href=\"https://thearda.com/data-archive?fid=CNS1916R\"><span>Religious Inequality in America, 1916</span></a><span>&#8221; and the &#8220;</span><a href=\"https://thearda.com/data-archive?fid=NNSP_ILLIN\"><span>Illinois 1989 Policy Survey</span></a><span>.&#8221; </span><strong><span>It&#8217;s just like grabbing random index cards out of the card catalog in the library. I love it.</span></strong><span> But there was one that really jumped off the page for me, &#8220;</span><a href=\"https://thearda.com/data-archive?fid=AUSSA2022\"><span>The Australian Survey of Social Attitudes, 2022</span></a><span>.&#8221; I&#8217;ve never really done a deep dive on what&#8217;s up with religion in that country and I knew that I could also access the </span><a href=\"https://www.thearda.com/data-archive?fid=GSS2022\"><span>2022 GSS </span></a><span>data from ARDA, as well. So let&#8217;s figure out how much these two countries diverge on religion variables.</span></p><p><span>Let&#8217;s start with the usual suspect &#8211; frequency of </span><a href=\"https://thearda.com/data-archive?fid=AUSSA2022&amp;tab=4&amp;vName=J35\"><span>religious attendance</span></a><span>. Lucky for me, both the Australia Survey of Social Attitudes and the General Social Survey pose this question in a pretty similar way so I don&#8217;t have to spend too much time harmonizing the two variables.</span></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!FZLd!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff01f284b-d5a0-4c76-972f-6406c391158a_2048x1365.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"970\" src=\"https://substackcdn.com/image/fetch/$s_!FZLd!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff01f284b-d5a0-4c76-972f-6406c391158a_2048x1365.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg class=\"icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><span>And the results of this comparison pretty much jump off the screen, right? </span><strong><span>The average Australian is much less likely to show up at a house of worship this weekend compared to the average American.</span></strong><span> Down under, 57% of Aussies indicate that their attendance level is never. That&#8217;s 24 percentage points higher than the American sample in the GSS. </span><strong><span>In total, 71% of Australians are going to a church, synagogue, or mosque less than once a year. For Americans, that share is 44%.</span></strong></p><p><span>It logically follows then that Americans are much more prone to regular church attendance. In the 2022 GSS, almost a third of Americans report that they are attending church at least once a month, with 22% indicating that they attend on a weekly basis.  </span><strong><span>Those figures for Australians are: 15% monthly or more attendance and just 9% who attend every single week.</span></strong></p><p><span>Australians aren&#8217;t as religious as Americans if we are measuring by attendance. But maybe if I do the same calculation by age group, there&#8217;s a chance that the attendance gap will narrow in the future as older, more religiously active Americans die off?</span></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!ofGo!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd8752598-edad-4446-a1da-c2a86e936d00_2048x1593.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1133\" src=\"https://substackcdn.com/image/fetch/$s_!ofGo!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd8752598-edad-4446-a1da-c2a86e936d00_2048x1593.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg class=\"icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><span>Yeah, I don&#8217;t see that happening, either. Not even close. Look at the bottom of the graph. Those are folks who are at least 72 years old. (I know the age categories are odd, but this is the only way to harmonize the age variable across both datasets). </span><strong><span>For the very oldest Australians, over 70% of them are going to church less than once a year. For the oldest Americans, just 32% are in the bottom two attendance brackets.</span></strong><span> A retired American is about three times more likely to be a weekly attender compared to an Aussie from the same age bracket.</span></p><p><span>Those gaps are really persistent when you compare younger respondents, too. Just looking at the &#8220;never&#8221; attending share of both samples is probably the best way to sort this out. Among those 52-71 years old, an Aussie is twice as likely to never go to church compared to an American (59% vs 30%). The gap is 31 percentage points for the 32-51 age bracket, as well. It does narrow just ever so slightly for the youngest adults. </span><strong><span>But among young adult Australians, 77% are going less than once a year and just 10% are weekly attenders. Those figures for young Americans are 50% and 25% respectively.</span></strong></p><p><span>In other words, I don&#8217;t see any reason to believe that the attendance gap is going to narrow because of generational replacement.</span></p><p><span>Now, we turn our attention to a question about religious affiliation. The Australian survey asks, &#8220;Do you belong to a religion and, if yes, which religion do you belong to?&#8221; Then it&#8217;s got 14 different options that are a bit different than what you would typically see on an American survey of religion. For instance, it lists: Anglican/Church of England and Uniting Church/Methodist as top level choices. The GSS doesn&#8217;t do that.</span></p><p><span>So, again, I had to do some harmonizing to get everything lined up as well as possible. I ended up with four categories: the non-religious, Catholics, Protestants, and then everyone else.</span></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!qqiu!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7ccf3309-e1e1-4b30-97fa-439d134603bc_2048x1365.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"970\" src=\"https://substackcdn.com/image/fetch/$s_!qqiu!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7ccf3309-e1e1-4b30-97fa-439d134603bc_2048x1365.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg class=\"icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><span>Based on the prior analysis of attendance, it should come as little shock that Australians are much more likely to identify as non-religious compared to their American counterparts. </span><strong><span>In fact, about half of Aussies indicated no religious affiliation.</span></strong><span> That&#8217;s almost twice the rate of the nones in the U.S at 27%. So, where does the American sample &#8220;find&#8221; those 22 points? It&#8217;s the Protestant category. Americans are twice as likely to identify as Protestant compared to Australians, 40% vs 19%.</span></p><p><span>The other two groups are remarkably similar, though. </span><strong><span>Americans are only five percentage points more likely to be Catholic compared to Aussies &#8211; 23% vs 18%.</span></strong><span> And then we have the &#8220;something else&#8221; category which covers everyone from Latter-day Saints to Buddhists. Here, the Aussies are slightly higher than the Americans at 14% compared to 10%.</span></p><p><span>Now, for keen eyed observers of the kind of work that I do &#8211; I never put the nones first in a graph. There&#8217;s a reason for that: in American surveys it&#8217;s never listed first. </span><strong><span>I&#8217;ve not once seen a mainstream dataset that put &#8220;non-religious&#8221; in the first position.</span></strong><span> It almost always goes Protestant, then Catholic. So why is it listed first above? Well, my friends, this is where things get very interesting.</span></p><p><span>There is a controversy brewing in Australia right now about some of the methodological choices made by the team of social scientists who put this survey together. The video embedded in this tweet does a good job of explaining a lot of it: <br /><br /></span></p><div class=\"twitter-embed\"></div><p><span>For those who don&#8217;t (or can&#8217;t) watch it, here&#8217;s the gist: The Australian survey put &#8220;non-religion&#8221; as the first option. </span><strong><span>Some folks believe that this artificially inflated the share of Aussies who are secular because of this</span></strong><span>. There is a robust literature in American political science about &#8220;</span><a href=\"https://electionlab.mit.edu/research/ballot-order-effects\"><span>ballot ordering</span></a><span>&#8221; effects, which is the idea that whoever shows up on the ballot first is going to get a few more votes just because it&#8217;s easier to pick the top one from the list.</span></p><p><span>So, theoretically speaking, the critics do have a point here. I would definitely be inclined to believe that this design choice did bump up the nones rate in Australia. By how much? I have no idea. </span><strong><span>But in the video, they ran their own experiment and concluded that it was at least a ten point difference.</span></strong></p><p><span>With that aside, let&#8217;s do the same calculation but do it by those age cohorts from earlier.</span></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!yDuG!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdf374495-605c-45d0-afa4-4d3816ea2255_2048x1593.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1133\" src=\"https://substackcdn.com/image/fetch/$s_!yDuG!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdf374495-605c-45d0-afa4-4d3816ea2255_2048x1593.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg class=\"icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><span>The gaps on the nones here are large and it grows when moving from older age groups to younger ones. For the oldest respondents in Australia, 27% were non-religious. It was 12% of Americans who were 72 or older. The gap is 27-28 points for those in the middle two age buckets, but it does narrow at least a little bit among the youngest adults. </span><strong><span>Among those who were 18-31, 64% of Australians claimed no religious affiliation, compared to 40% of Americans in that same category. </span></strong><span>Secularization continues apace in both countries. This is unmistakable.</span></p><p><span>Now the other thing that really blew my mind in this graph is how much Protestantism is just collapsing in Australia. Nearly 40% of the oldest Australians identify as some type of Protestant. </span><strong><span>Then it drops by 14 points in the next age cohort and then 13 points more in the 32-51 year old category until it bottoms out at just 6% among the youngest Australians.</span></strong><span> That&#8217;s hard to fathom, really. The share of atheists in America (not nones, just atheists) is around 5%. Only 6% of young Australians are Protestant.</span></p><p><span>I don&#8217;t think I need to make any more graphs to prove this point &#8211; the average Australian is a whole lot less religious than the average American, no matter how you measure it.</span></p><p><strong><span>But I wanted to end this post with what I thought was a fun little battery of questions that basically asked about religious freedom</span></strong><span>. Each question started with this preamble, &#8220;Some religious people hold &#8216;conservative&#8217; or &#8216;traditional&#8217; beliefs and feel strongly that LGBTQ+ practices are against the teachings of their religion. Do you agree or disagree with them being allowed to do the following things?&#8221;</span></p><p><span>And then you had scenarios like:</span></p><p><a href=\"https://thearda.com/data-archive?fid=AUSSA2022&amp;tab=4&amp;vName=C3_A\"><span>A conservative religious person working in a cake shop should be allowed to refuse to sell a wedding cake to a same-sex couple</span></a></p><p><a href=\"https://thearda.com/data-archive?fid=AUSSA2022&amp;tab=4&amp;vName=C3_B\"><span>Conservative Catholic, Anglican, Jewish, and Muslim schools should be allowed to refused to employ a teacher because they are LGBTQ+</span></a></p><p><a href=\"https://thearda.com/data-archive?fid=AUSSA2022&amp;tab=4&amp;vName=C3_C\"><span>A conservative religiously affiliated social welfare organisation providing accommodation for homeless people should be allowed to direct LGBTQ+ homeless people to seek welfare assistance from another organisation.</span></a></p><p><span>I am going to only show you the share who &#8220;strongly disagreed&#8221; with each statement because as you can quickly guess, that&#8217;s where huge shares of Australians ended up.</span></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!xkwO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F16109ea3-bd15-49df-bc4d-550778f097ec_1946x2048.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1532\" src=\"https://substackcdn.com/image/fetch/$s_!xkwO!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F16109ea3-bd15-49df-bc4d-550778f097ec_1946x2048.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg class=\"icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image buttonBase-tqxFUX\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2 icon-noB79L\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong><span>In every single one of these scenarios a majority of Australians said that they completely disagreed with the statement</span></strong><span>. The one that scored the lowest (at 51%), was the one about conservative religious schools refusing to employ an LGBTQ+ teacher. But every other scenario landed between 55% and 59% in the strongly disagree column. The one that registered the most disagreement was a conservative religious school that refused to hire that teacher when </span><a href=\"https://thearda.com/data-archive?fid=AUSSA2022&amp;tab=4&amp;vName=C3_F\"><span>most of the school&#8217;s funding</span></a><span> comes from the government.</span></p><p><span>I don&#8217;t think it&#8217;s that surprising that the non-religious always register a higher level of strong disagreement on these topics. But there are also lots of cases in which the religious sample was close to 50% on this metric. What really jumped out to me, though, is that there wasn&#8217;t a clear ranking ordering among the remaining religious groups. Sometimes Catholics scored the highest and other times it was the &#8220;something else&#8221; category.</span></p><p><strong><span>In the debate between minority rights and religious freedom, it&#8217;s pretty clear where the average Australian falls.</span></strong></p><p><span>So, there you have it &#8211; a pretty broad look at the religious composition of our neighbors from down under. It wouldn&#8217;t surprise me at all if Australia is two-thirds unaffiliated in 30 years, with only 20% of the population worshipping at least once a year. </span><strong><span>I think it&#8217;s fair to say the overall religiosity of Australia is much closer to many of their European cousins than the United States.</span></strong></p><p><em><span>Code for this post can be </span><a href=\"https://gist.github.com/ryanburge/abfa8e966a4d64ad16304ea3d9e79590\"><span>found here</span></a><span>.</span></em></p><div><hr /></div><p><em><span>Ryan P. Burge is a professor of practice at the </span><a href=\"https://rap.wustl.edu/\">Danforth Center on Religion and Politics</a><span> at Washington University.</span></em></p><div class=\"captioned-image-container\"><figure><div class=\"image-link image2\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"312\" src=\"https://substackcdn.com/image/fetch/$s_!3azb!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe0d9cc0c-b696-4035-abf2-f5cd277bd3bb_1456x312.webp\" width=\"1456\" /><div></div></div></div></figure></div>",
     "published": "Thu, 19 Nov 2026 12:30:45 +0000",
-    "fetched_at": "2026-11-21T10:01:02.160166",
+    "fetched_at": "2026-11-22T10:01:14.684044",
     "score": 7,
     "tags": [
-      "data"
+      "data",
+      "culture"
     ],
-    "rewritten_title": "Australian Protestantism Has Collapsed Compared to U.S. Churches",
+    "rewritten_title": "Australian Protestantism Has Collapsed, Unlike America's Churches",
     "canonical_url": "https://graphsaboutreligion.com/p/how-much-less-religious-is-australia",
-    "importance": 5.0,
+    "importance": 4.5,
     "depth": 0.0,
     "personas": [
       "pastor",
       "professional"
     ],
-    "topic_cluster": "religious_decline_international",
+    "topic_cluster": "global_secularization",
     "perspective": "news",
     "scored_by": "claude",
     "base_score": 7.0,
     "base_importance": 7.0,
     "base_depth": 4.0,
-    "final_score": 5.0,
+    "final_score": 4.5,
     "boosts": {
-      "recency": 0.75,
+      "recency": 0.25,
       "frequency": 0.75,
       "voice": 0.5,
       "previously_shown": -4.0
     },
-    "boost_total": 2.0,
+    "boost_total": 1.5,
     "frequency_boost": 0.75,
-    "source_posts_30d": 9,
+    "source_posts_30d": 8,
     "voice_score": 5,
     "voice_rules": [
       "BOOST_ISSUE_QUESTION"
     ],
     "shown_yesterday": true,
     "previously_shown": true,
-    "recency_boost": 0.75
+    "recency_boost": 0.25
   },
   {
-    "source_name": "The Dispatch",
+    "source_name": "Pew Research",
     "source_category": "culture",
     "source_type": "christian",
     "independent": false,
     "creates_voices": false,
     "role": "primary",
-    "author": "Matthew Loftus",
-    "title": "Trauma Is More Complicated Than Influencers Say",
-    "original_title": "Trauma Is More Complicated Than Influencers Say",
-    "url": "https://thedispatch.com/article/trauma-mental-health-therapy/?gift_key=d7f372d50c6aa314&gift_ref=d2777208-495f-4246-87b2-13ab5f80eedc&gift_t=1795120535",
-    "summary": "Trauma can, in fact, affect your physical health. But it’s more complicated than influencers say.",
+    "author": "Jenn Hatfield",
+    "title": "Q&A: How Pew Research Center Projects Religious Groups’ Future Growth or Decline",
+    "original_title": "Q&A: How Pew Research Center Projects Religious Groups’ Future Growth or Decline",
+    "url": "https://www.pewresearch.org/short-reads/2026/11/18/qa-how-pew-research-center-projects-religious-groups-future-growth-or-decline/",
+    "summary": "Senior Demographer and Associate Director of Research Conrad Hackett explains how the Center makes its projections for seven major religious groups.",
     "full_content": "",
-    "published": "Mon, 16 Nov 2026 06:00:00 +0000",
-    "fetched_at": "2026-11-21T10:01:36.631877",
-    "discovered_via": "Tim Challies",
-    "discovered_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-21-2026/",
+    "published": "Wed, 18 Nov 2026 14:48:49 +0000",
+    "fetched_at": "2026-11-22T10:01:15.281372",
     "score": 5,
     "tags": [
-      "culture",
       "data"
     ],
-    "rewritten_title": "Trauma Affects Physical Health, But Influencers Oversimplify It",
-    "canonical_url": "https://thedispatch.com/article/trauma-mental-health-therapy?gift_key=d7f372d50c6aa314&gift_ref=d2777208-495f-4246-87b2-13ab5f80eedc&gift_t=1795120535",
-    "importance": 3.75,
-    "depth": 4.0,
+    "rewritten_title": "Pew Research Center Projects Growth and Decline Among Seven Major Religious Groups",
+    "canonical_url": "https://pewresearch.org/short-reads/2026/11/18/qa-how-pew-research-center-projects-religious-groups-future-growth-or-decline",
+    "importance": 3.0,
+    "depth": 2.0,
     "personas": [
-      "professional",
-      "parent"
+      "pastor",
+      "professional"
     ],
-    "topic_cluster": "mental_health_trauma",
+    "topic_cluster": "pew_global_religion_projections",
     "perspective": "neutral",
     "scored_by": "claude",
     "base_score": 5.0,
     "base_importance": 5.0,
-    "base_depth": 5.0,
-    "final_score": 3.75,
+    "base_depth": 3.0,
+    "final_score": 3.0,
     "boosts": {
-      "recency": -2.0,
-      "stale_source": 0.75
+      "recency": -2.0
     },
-    "boost_total": 0.75,
-    "stale_source_boosted": true
+    "boost_total": 0.0
+  },
+  {
+    "source_name": "Lifeway Research",
+    "source_category": "culture",
+    "source_type": "christian",
+    "independent": false,
+    "creates_voices": false,
+    "role": "primary",
+    "author": "Lifeway Research",
+    "title": "New Insights Report Helps Churches Connect Evangelism and Discipleship",
+    "original_title": "New Insights Report Helps Churches Connect Evangelism and Discipleship",
+    "url": "https://research.lifeway.com/2026/11/19/new-insights-report-helps-churches-connect-evangelism-and-discipleship/",
+    "summary": "<p>This Insights Report highlights a ripe mission field, common evangelistic shortcomings, and the role of small groups in evangelism. <br /><a class=\"more-link is-small m-t-md\" href=\"https://research.lifeway.com/2026/11/19/new-insights-report-helps-churches-connect-evangelism-and-discipleship/\" rel=\"bookmark\">Read More</a></p>\n<p>The post <a href=\"https://research.lifeway.com/2026/11/19/new-insights-report-helps-churches-connect-evangelism-and-discipleship/\">New Insights Report Helps Churches Connect Evangelism and Discipleship</a> appeared first on <a href=\"https://research.lifeway.com\">Lifeway Research</a>.</p>",
+    "full_content": "",
+    "published": "Thu, 19 Nov 2026 16:00:00 +0000",
+    "fetched_at": "2026-11-22T10:01:14.845956",
+    "score": 6,
+    "tags": [
+      "data",
+      "missions"
+    ],
+    "rewritten_title": "Churches Should Use Small Groups for Evangelism and Discipleship",
+    "canonical_url": "https://research.lifeway.com/2026/11/19/new-insights-report-helps-churches-connect-evangelism-and-discipleship",
+    "importance": 2.25,
+    "depth": 1.0,
+    "personas": [
+      "pastor",
+      "professional"
+    ],
+    "topic_cluster": "evangelism_discipleship_research",
+    "perspective": "news",
+    "scored_by": "claude",
+    "base_score": 6.0,
+    "base_importance": 6.0,
+    "base_depth": 5.0,
+    "final_score": 2.25,
+    "boosts": {
+      "recency": 0.25,
+      "previously_shown": -4.0
+    },
+    "boost_total": 0.25,
+    "shown_yesterday": true,
+    "previously_shown": true,
+    "recency_boost": 0.25
   }
 ]

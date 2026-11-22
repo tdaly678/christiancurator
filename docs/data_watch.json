@@ -167,6 +167,12 @@
       "status": "fetched",
       "attempts": 1,
       "note": "1 verified figure(s)"
+    },
+    "https://pewresearch.org/politics/2026/11/19/how-americans-view-trump-key-administration-officials-and-democratic-congressional-leaders": {
+      "date": "2026-11-22",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
     }
   },
   "fresh": {
@@ -206,6 +212,12 @@
         "title": "The Religious Gender Gap Is Really a Political Gap",
         "url": "https://www.graphsaboutreligion.com/p/the-religious-gender-gap-is-really",
         "source": "Ryan Burge"
+      },
+      {
+        "date": "2026-11-22",
+        "title": "How Americans View Trump, Key Administration Officials and Democratic Congressional Leaders",
+        "url": "https://www.pewresearch.org/politics/2026/11/19/how-americans-view-trump-key-administration-officials-and-democratic-congressional-leaders/",
+        "source": "Pew Research"
       }
     ],
     "technology": [
@@ -581,9 +593,9 @@
       }
     ]
   },
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "last_run": {
-    "date": "2026-11-21",
+    "date": "2026-11-22",
     "stories": [
       {
         "title": "How Pew’s projections for Christianity and Islam worldwide changed — and why",
@@ -688,6 +700,27 @@
         ]
       },
       {
+        "title": "Attacks on Christians in Europe rose 44% last year: observatory",
+        "url": "https://www.christianpost.com/news/attacks-on-christians-in-europe-rose-44-last-year-observatory.html",
+        "source": "The Christian Post",
+        "signals": {
+          "publishers": [],
+          "figures": [
+            "44 Percent",
+            "44%"
+          ],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 8.05,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
         "title": "Islam Will Soon Be the World’s Largest Religion, but Christianity Will Keep Growing Too",
         "url": "https://www.pewresearch.org/short-reads/2026/11/18/islam-will-soon-be-the-worlds-largest-religion-but-christianity-will-keep-growing-too/",
         "source": "Pew Research",
@@ -701,26 +734,6 @@
         },
         "topics": [],
         "trend": 8.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "Younger and LGBTQ Adults in the U.S. Stand Out for Finding Friendship Online",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/17/younger-and-lgbtq-adults-in-the-us-stand-out-for-finding-friendship-online/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 7.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -748,8 +761,8 @@
         ]
       },
       {
-        "title": "4 Ways to Reach Unchurched Men",
-        "url": "https://research.lifeway.com/2026/11/18/4-ways-to-reach-unchurched-men/",
+        "title": "Defining Success in Evangelism",
+        "url": "https://research.lifeway.com/2026/11/19/defining-success-in-evangelism/",
         "source": "Lifeway Research",
         "signals": {
           "publishers": [
@@ -760,14 +773,14 @@
           "data_tag": false
         },
         "topics": [
-          "local-church"
+          "missions-and-evangelism"
         ],
-        "trend": 6.75,
+        "trend": 6.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "page already checked on 2026-11-18 (0 verified figure(s))"
+          "page already checked on 2026-11-19 (0 verified figure(s))"
         ]
       },
       {
@@ -783,7 +796,7 @@
           "data_tag": true
         },
         "topics": [],
-        "trend": 6.0,
+        "trend": 5.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -811,16 +824,15 @@
         ]
       },
       {
-        "title": "Pew: Christians Will Be Minority in North America by 2070, Will Double in Africa",
-        "url": "https://www.christianitytoday.com/2026/11/pew-research-christians-minority-2070-africa-growth/",
-        "source": "Christianity Today",
+        "title": "Q&A: How Pew Research Center Projects Religious Groups’ Future Growth or Decline",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/18/qa-how-pew-research-center-projects-religious-groups-future-growth-or-decline/",
+        "source": "Pew Research",
         "signals": {
           "publishers": [
             "Pew Research Center"
           ],
           "figures": [],
           "words": [
-            "report",
             "research"
           ],
           "data_tag": true
@@ -854,28 +866,8 @@
         ]
       },
       {
-        "title": "At Least 10 States Require In-Person Businesses to Accept Cash",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/17/at-least-10-states-require-in-person-businesses-to-accept-cash/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [],
-        "trend": 3.75,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "Young Adults Say Church, Home, and Smartphones Have Shaped Their Faith",
-        "url": "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith/",
+        "title": "New Insights Report Helps Churches Connect Evangelism and Discipleship",
+        "url": "https://research.lifeway.com/2026/11/19/new-insights-report-helps-churches-connect-evangelism-and-discipleship/",
         "source": "Lifeway Research",
         "signals": {
           "publishers": [
@@ -883,21 +875,46 @@
           ],
           "figures": [],
           "words": [
-            "study finds"
+            "report"
           ],
           "data_tag": true
         },
         "topics": [
-          "evangelicalism",
-          "marriage-and-family",
-          "technology"
+          "missions-and-evangelism",
+          "discipleship",
+          "small-groups"
+        ],
+        "trend": 3.25,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-20 (1 verified figure(s))"
+        ]
+      },
+      {
+        "title": "How Americans View Trump, Key Administration Officials and Democratic Congressional Leaders",
+        "url": "https://www.pewresearch.org/politics/2026/11/19/how-americans-view-trump-key-administration-officials-and-democratic-congressional-leaders/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [
+            "survey"
+          ],
+          "data_tag": true
+        },
+        "topics": [
+          "politics-and-the-church"
         ],
         "trend": 3.0,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "page already checked on 2026-11-18 (3 verified figure(s))"
+          "no verifiable figure on the page: link only"
         ]
       },
       {
@@ -925,54 +942,6 @@
         ]
       },
       {
-        "title": "New Insights Report Helps Churches Connect Evangelism and Discipleship",
-        "url": "https://research.lifeway.com/2026/11/19/new-insights-report-helps-churches-connect-evangelism-and-discipleship/",
-        "source": "Lifeway Research",
-        "signals": {
-          "publishers": [
-            "Lifeway Research"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "missions-and-evangelism",
-          "discipleship",
-          "small-groups"
-        ],
-        "trend": 2.75,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-20 (1 verified figure(s))"
-        ]
-      },
-      {
-        "title": "Defining Success in Evangelism",
-        "url": "https://research.lifeway.com/2026/11/19/defining-success-in-evangelism/",
-        "source": "Lifeway Research",
-        "signals": {
-          "publishers": [
-            "Lifeway Research"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "missions-and-evangelism"
-        ],
-        "trend": 1.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-19 (0 verified figure(s))"
-        ]
-      },
-      {
         "title": "2026 Christmas Gift Guide: Save on Resources for Everyone",
         "url": "https://feeds.ligonier.org/~/972439013/0/ligonierministriesblog",
         "source": "Ligonier Ministries",
@@ -985,17 +954,93 @@
           "words": [],
           "data_tag": false
         },
+        "topics": [
+          "discipleship"
+        ],
+        "trend": 2.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-10 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "Pew: Christians Will Be Minority in North America by 2070, Will Double in Africa",
+        "url": "https://www.christianitytoday.com/2026/11/pew-research-christians-minority-2070-africa-growth/",
+        "source": "Christianity Today",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [
+            "report",
+            "research"
+          ],
+          "data_tag": true
+        },
         "topics": [],
-        "trend": 0.75,
+        "trend": 2.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Young Adults Say Church, Home, and Smartphones Have Shaped Their Faith",
+        "url": "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [
+            "study finds"
+          ],
+          "data_tag": true
+        },
+        "topics": [
+          "evangelicalism",
+          "technology"
+        ],
+        "trend": 1.25,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-18 (3 verified figure(s))"
+        ]
+      },
+      {
+        "title": "ERLC, state leaders respond to Nov. 3 ballot measure successes, failures",
+        "url": "https://erlc.com/press/erlc-state-leaders-respond-to-nov-3-ballot-measure-successes-failures/",
+        "source": "ERLC",
+        "signals": {
+          "publishers": [],
+          "figures": [
+            "56 percent"
+          ],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [
+          "religious-liberty",
+          "suffering-and-providence",
+          "grief-and-lament"
+        ],
+        "trend": 0.0,
         "outlets": 1,
         "on_digest": false,
         "actions": [
-          "no topic page matched"
+          "page already checked on 2026-11-11 (0 verified figure(s))"
         ]
       }
     ],
     "pages": [],
-    "fetched": 0,
-    "hits": 19
+    "fetched": 1,
+    "hits": 20
   }
 }
