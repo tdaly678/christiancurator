@@ -163,7 +163,8 @@ to a separate Worth Your Time lane.
 - Boost cap: the combined upward movement from mechanical boosts (`BOOST_KEYS`: tier, recency, frequency, response,
   trending, stale_source, opposing_views, independent_floor) is capped at `MAX_TOTAL_BOOST = 2.0` per article.
   Penalties are uncapped. `INDEPENDENT_FLOOR_BOOST` dropped from 2.0 to 1.0. The used budget is `boost_total`.
-- `curator/lanes.py` `select_worth_your_time()` returns the top 5 by depth (min depth 6, one per source), excluding
+- `curator/lanes.py` `select_worth_your_time()` returns the top 5 by depth (min depth 6, one per source; when fewer
+  than 3 qualify it drops to depth 5, deeper picks first, since Nov 22 2026), excluding
   URLs already placed in the importance lane. Rendered on the homepage and email since Wave 2, and the picks are
   written to `article_history.json` so the depth lane does not repeat.
 
@@ -251,7 +252,13 @@ it, and `main.py` passes it to `send_email()` so page and email agree. Each URL 
    (`curator/point_counterpoint.py`, tightened 2026-10-30). Claude sees title, source, perspective, cluster/tags and a
    snippet, must state thesis A and thesis B, and every pair (Claude, cached or fallback) must pass `validate_pair()`:
    different sources, not both news/neutral, not the same stance, not the same story (shared distinctive proper nouns
-   unless one is supportive and the other critical). Empty is the expected result on most days. Tests: `tests/test_point_counterpoint.py`
+   unless one is supportive and the other critical). Tests: `tests/test_point_counterpoint.py`
+   Revived Nov 22 2026 (nothing had rendered since Oct 31): candidates are `max(importance, base importance, depth)
+   >= 6`, argued pieces first (`debate_candidates()`); shared names are allowed when Claude stated two different
+   theses and neither side is a news report; the layout pairs after the lead block is chosen, so a pair may take a
+   sublead (the next pick fills the slot) and only a pair touching the Lead is dropped. Every rejection (Claude stage
+   and layout, `layout["debate_notes"]`) is logged and written to the job summary by `write_debate_summary()` in
+   `main.py`. History rows carry `perspective` and `opposing_pair`. Tests: `tests/test_debate_revival.py`
 5. Worth Your Time (depth lane), 6. Watch and Listen (media lane, below), 7. Research & Data
    (`docs/research_articles.json`), then signup, then the 70-topic grid
 Headline clicks are tracked by one delegated gtag listener reading `data-pos` / `data-src`. Sample render: ~78 outbound
@@ -314,7 +321,9 @@ A compact homepage and email section of 3 to 5 videos and podcast episodes from 
 - Selection: `curator/lanes.py` `select_watch_and_listen()`: published in the last 7 days, not previously shown, not
   placed elsewhere on the page (canonical URL), newest item per source, one per source. Items from the last 2 days
   first, then source priority, then recency. Keeps at least one video and one podcast when both qualify. Returns []
-  (section omitted on page and in email) when fewer than 3 qualify. No Claude call.
+  (section omitted on page and in email) when fewer than 2 qualify (3 until Nov 22 2026). No Claude call.
+  All eight media feeds answer 200 with an episode in the last week (feed_health, Nov 1 to 21); the gaps come from
+  rotation: about 8 to 10 new episodes a week against 3 to 5 picks on each day the lane shows.
 - `build_homepage_layout()` picks the lane after Worth Your Time and before the board, adds it to the placed set and
   `outbound_urls()`. The page shows format, duration when known, original title and source; links open in a new tab.
 - Picks shown are written to `article_history.json` with `scored_by: "media"`, so the lane rotates. Exclude those rows
@@ -438,10 +447,14 @@ arla-eicher, anna-jackson, beshay-sakla, reem-nadeem, sara-atske. Tests: `tests/
 - Email clicks are not included; Brevo's own click stats cover the email.
 
 ### P2.2 Story clustering
-- `curator/clusters.py` `build_story_clusters()` groups the ranked fresh pool by `topic_cluster` (never `unique` or
-  empty) and folds in dedup copies (`also_from`, plus `also_links` = [{source_name, url, title}], which
-  `curator/dedup.py` now records for each collapsed copy). A story with 3+ distinct outlets (`MIN_OUTLETS`) shows
-  once, at its best-ranked article, with an `also: World · RNS` line (max 4 links, one per source). The other copies
+- `curator/clusters.py` `build_story_clusters()` groups the ranked fresh pool by story identity (since Nov 22 2026;
+  `topic_cluster` names themes and only adds weight): `same_story()` needs weight 2 from shared distinctive names
+  (capitalised words the day's pool never writes in lower case, minus `STOP`; 1 in both headlines, 0.5 snippet only),
+  shared 3+ digit numbers or percentages other than the current year (1.5), a publisher named by the other article
+  or by both (1 each), or a shared `story_id`. Stories are connected groups. It folds in dedup copies (`also_from`,
+  plus `also_links` = [{source_name, url, title}], which `curator/dedup.py` now records for each collapsed copy). A
+  story with 3+ distinct outlets (`MIN_OUTLETS`), or 3+ copies from two outlets, shows once, at its best-ranked
+  article, with an `also: World · RNS` line (max 4 links, one per source). The other copies
   are removed from the lead pool, board and Worth Your Time. Under threshold nothing changes.
 - `build_homepage_layout()` returns `siblings` (representative URL -> links); `also_line()` in `frontend/template.html`
   renders it under the lead, subleads and board items with `data-pos="also"` so the clicks are tracked. The email
