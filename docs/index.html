@@ -901,8 +901,7 @@
       </p>
     </div>
 
-    <!-- reCAPTCHA v3 (invisible). Badge hidden via CSS; required disclaimer text is shown near the form above. -->
-    <script src="https://www.google.com/recaptcha/api.js?render=6LfNEL4sAAAAAMOuBd1AqaSaL6GLd9WnkOXSjkMV"></script>
+    <!-- reCAPTCHA v3 (invisible), loaded on first focus of the form (or on submit), not at startup. Badge hidden via CSS; required disclaimer text is shown near the form above. -->
     <style>.grecaptcha-badge { visibility: hidden !important; }</style>
 
     <script>
@@ -917,6 +916,16 @@
         var emailInput = form.querySelector('input[name="email"]');
         var honeypotInput = form.querySelector('input[name="honeypot"]');
         var originalBtnText = submitBtn.textContent;
+        var captchaLoaded = false;
+        function loadCaptcha() {
+          if (captchaLoaded) return;
+          captchaLoaded = true;
+          var s = document.createElement('script');
+          s.src = 'https://www.google.com/recaptcha/api.js?render=' + RECAPTCHA_SITE_KEY;
+          s.async = true;
+          document.head.appendChild(s);
+        }
+        form.addEventListener('focusin', loadCaptcha);
 
         function showError(msg) {
           errorEl.textContent = msg;
@@ -942,10 +951,16 @@
           submitBtn.disabled = true;
           submitBtn.textContent = 'Subscribing…';
 
+          loadCaptcha();
+          var tries = 0;
+          (function waitForCaptcha() {
           if (typeof grecaptcha === 'undefined' || !grecaptcha.ready) {
-            showError('Verification is still loading. Please try again in a moment.');
-            resetButton();
-            return;
+            if (++tries > 50) {
+              showError('Verification is still loading. Please try again in a moment.');
+              resetButton();
+              return;
+            }
+            return setTimeout(waitForCaptcha, 200);
           }
 
           grecaptcha.ready(function () {
@@ -981,6 +996,7 @@
                 resetButton();
               });
           });
+          })();
         });
       })();
     </script>
