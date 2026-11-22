@@ -64,7 +64,6 @@ def sample_data(html: str = DECON) -> dict:
                  "voices": [{"name": "Indexed Writer", "slug": "indexed-writer"},
                             {"name": "Hidden Writer", "slug": "hidden-writer"}]},
                 {"name": "Position two", "claim": "A short claim for the second position."},
-                {"name": "Position three", "claim": "A short claim for the third position."},
             ],
         },
         "start_here": [
@@ -93,11 +92,13 @@ ITEMS = [{"date": "2026-11-12", "title": "A fresh piece", "url": "https://exampl
 # ---------------------------------------------------------------- ids and assets
 
 def test_ensure_ids_both_debate_variants_and_idempotent():
-    for html in (DECON, MENWOMEN):
+    # The deconstruction page has two position cards (Nov 22 2026); men-and-women has three.
+    for html, cards in ((DECON, 2), (MENWOMEN, 3)):
         once = btt.ensure_ids(strip_top(html))
         assert btt.ensure_ids(once) == once
         ids = btt.page_ids(once)
-        for ident in ("tldr", "key-questions", "debate", "position-1", "position-2", "position-3",
+        positions = tuple(f"position-{n}" for n in range(1, cards + 1))
+        for ident in ("tldr", "key-questions", "debate") + positions + (
                       "synthesis", "reading"):
             assert ident in ids, ident
         assert len(re.findall(r'id="debate"', once)) == 1
