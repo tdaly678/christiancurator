@@ -41,6 +41,7 @@ sys.path.insert(0, str(REPO_ROOT))
 
 from curator.headline_voice import strip_dashes  # noqa: E402
 from curator.original_titles import lookup, publisher_title  # noqa: E402
+from fetcher.discovery import blocked_reason  # noqa: E402
 from frontend.topic_matcher import TOPICS, _normalise, keyword_in  # noqa: E402
 
 DOCS_DIR = REPO_ROOT / "docs"
@@ -84,13 +85,14 @@ def _esc(t: str) -> str:
 
 
 def strip_tracking(url: str) -> str:
-    """Drop utm_* query parameters (9Marks feed links carry them); every other
-    part of the URL, including other parameters and their order, is kept."""
+    """Drop utm_* and gift_* query parameters (9Marks feed links carry utm_*,
+    Dispatch gift links carry gift_key and gift_ref); every other part of the
+    URL, including other parameters and their order, is kept."""
     if "?" not in (url or ""):
         return url
     base, _, rest = url.partition("?")
     query, hash_, frag = rest.partition("#")
-    kept = [p for p in query.split("&") if p and not p.split("=", 1)[0].lower().startswith("utm_")]
+    kept = [p for p in query.split("&") if p and not p.split("=", 1)[0].lower().startswith(("utm_", "gift_"))]
     return base + ("?" + "&".join(kept) if kept else "") + hash_ + frag
 
 
@@ -308,6 +310,10 @@ def match_articles_to_topic(topic: dict, history: list[dict]) -> list[dict]:
     for a in reversed(history):  # newest last in file -> iterate newest first
         original = a.get("original_title") or lookup(a.get("url", ""))
         if not original:
+            continue
+        # Not an article: app store, Amazon, ebook or store page, topic hub
+        # (fetcher/discovery.py rules, Nov 22 2026).
+        if blocked_reason(a.get("url", "")):
             continue
         text = _normalise(original + " " + " ".join(a.get("tags", [])))
         if any(keyword_in(k, text) for k in kws):

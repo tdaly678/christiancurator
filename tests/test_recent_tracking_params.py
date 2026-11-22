@@ -37,3 +37,21 @@ def test_topic_items_and_rendered_links_are_clean():
     raw = [{"url": NINE, "title": "Church Membership Matters", "source": "9Marks", "date": "2026-11-13"}]
     html = bra.render_section("Fresh From the Digest", "Recent Articles on Membership", raw)
     assert 'href="https://www.9marks.org/article/church-membership/"' in html and "utm_" not in html
+
+
+def test_strip_tracking_drops_gift_params():
+    gift = ("https://thedispatch.com/article/trauma-mental-health-therapy/?gift_key=d7f"
+            "&gift_ref=d27&gift_t=1795")
+    assert bra.strip_tracking(gift) == "https://thedispatch.com/article/trauma-mental-health-therapy/"
+
+
+def test_topic_items_skip_non_articles():
+    history = [
+        {"url": "https://www.monergism.com/christs-incarnation-foundation-christianity-ebook",
+         "original_title": "Christ's Incarnation: Sermons on preaching", "source_name": "monergism.com",
+         "date_shown": "2026-11-14", "tags": []},
+        {"url": "https://example.org/2026/11/preaching-christ", "original_title": "Preaching Christ Today",
+         "source_name": "Example", "date_shown": "2026-11-14", "tags": []},
+    ]
+    items = bra.topic_items("preaching", history, {})
+    assert [a["url"] for a in items] == ["https://example.org/2026/11/preaching-christ"]

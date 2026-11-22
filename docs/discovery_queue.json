@@ -20,11 +20,12 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-14-2026/",
    "found_on": "2026-11-14",
-   "status": "graduated",
+   "status": "blocked",
    "attempts": 1,
    "graduated_on": "2026-11-14",
    "title": "Office for Students",
-   "source_name": "The Guardian"
+   "source_name": "The Guardian",
+   "error": "topic hub"
   },
   "https://theguardian.com/education/2026/nov/11/ai-close-to-impossible-assess-university-coursework-regulator": {
    "url": "https://www.theguardian.com/education/2026/nov/11/ai-close-to-impossible-assess-university-coursework-regulator",
@@ -92,11 +93,12 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-14-2026/",
    "found_on": "2026-11-14",
-   "status": "graduated",
+   "status": "blocked",
    "attempts": 1,
    "graduated_on": "2026-11-14",
    "title": "List of The Andy Griffith Show episodes - Wikipedia",
-   "source_name": "wikipedia.org"
+   "source_name": "wikipedia.org",
+   "error": "blocked host en.wikipedia.org"
   },
   "https://monergism.com/christs-incarnation-foundation-christianity-ebook": {
    "url": "https://www.monergism.com/christs-incarnation-foundation-christianity-ebook",
@@ -105,11 +107,12 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-14-2026/",
    "found_on": "2026-11-14",
-   "status": "graduated",
+   "status": "blocked",
    "attempts": 1,
    "graduated_on": "2026-11-14",
    "title": "Spurgeon, C. H. — Christ's Incarnation: The Foundation of Christianity (Sermons eBook)",
-   "source_name": "monergism.com"
+   "source_name": "monergism.com",
+   "error": "store or hub path"
   },
   "https://truth78.org/collections/fighter-verses-songs": {
    "url": "https://truth78.org/collections/fighter-verses-songs",
@@ -118,11 +121,12 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-14-2026/",
    "found_on": "2026-11-14",
-   "status": "graduated",
+   "status": "blocked",
    "attempts": 1,
    "graduated_on": "2026-11-14",
    "title": "Fighter Verses Songs",
-   "source_name": "Truth78"
+   "source_name": "Truth78",
+   "error": "store or hub path"
   },
   "https://macleans.ca/longforms/the-hutterites-guide-to-technology": {
    "url": "https://macleans.ca/longforms/the-hutterites-guide-to-technology/",
@@ -285,11 +289,12 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-17-2026/",
    "found_on": "2026-11-17",
-   "status": "graduated",
+   "status": "blocked",
    "attempts": 1,
    "graduated_on": "2026-11-17",
    "title": "All God’s Creatures: What the Bible Says About Animals, Heaven, and the New Earth: Alcorn, Randy: 9781496433411: Amazon.com: Books",
-   "source_name": "amazon.com"
+   "source_name": "amazon.com",
+   "error": "blocked host link.amazon"
   },
   "https://link.amazon/B0gduHlIl": {
    "url": "https://link.amazon/B0gduHlIl",
@@ -298,11 +303,12 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-17-2026/",
    "found_on": "2026-11-17",
-   "status": "graduated",
+   "status": "blocked",
    "attempts": 1,
    "graduated_on": "2026-11-17",
    "title": "Amazon.com",
-   "source_name": "amazon.com"
+   "source_name": "amazon.com",
+   "error": "blocked host link.amazon"
   },
   "https://link.amazon/B09yjeL1g": {
    "url": "https://link.amazon/B09yjeL1g",
@@ -311,11 +317,12 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-17-2026/",
    "found_on": "2026-11-17",
-   "status": "graduated",
+   "status": "blocked",
    "attempts": 1,
    "graduated_on": "2026-11-17",
    "title": "Biblical Worship: A Christ-Centered Practical Theology: Westerholm, Matthew: 9798874905675: Amazon.com: Books",
-   "source_name": "amazon.com"
+   "source_name": "amazon.com",
+   "error": "blocked host link.amazon"
   },
   "https://mereorthodoxy.com/remembering-john-allen-chau": {
    "url": "https://mereorthodoxy.com/remembering-john-allen-chau/",
@@ -394,11 +401,12 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
    "found_on": "2026-11-19",
-   "status": "graduated",
+   "status": "blocked",
    "attempts": 1,
    "graduated_on": "2026-11-19",
    "title": "Top Deals from Logos: Books, Bibles & More",
-   "source_name": "logos.com"
+   "source_name": "logos.com",
+   "error": "blocked host logos.sjv.io"
   },
   "https://kimberlywagner7.substack.com/p/the-hardest-day-you-may-ever-face": {
    "url": "https://kimberlywagner7.substack.com/p/the-hardest-day-you-may-ever-face",
@@ -518,11 +526,12 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-20-2026/",
    "found_on": "2026-11-20",
-   "status": "graduated",
+   "status": "blocked",
    "attempts": 1,
    "graduated_on": "2026-11-20",
    "title": "Joburg's sky puts on a show: What causes the mysterious ring around the sun?",
-   "source_name": "The National"
+   "source_name": "The National",
+   "error": "weak anchor"
   },
   "https://harvestusa.org/gospel-pilling-the-looksmaxxers-hope-for-despairing-men": {
    "url": "https://harvestusa.org/gospel-pilling-the-looksmaxxers-hope-for-despairing-men/",
@@ -563,9 +572,9 @@
    "title": "Don’t Be Afraid to Provoke Your Brothers",
    "source_name": "Forward Progress"
   },
-  "https://thedispatch.com/article/trauma-mental-health-therapy?gift_key=d7f372d50c6aa314&gift_ref=d2777208-495f-4246-87b2-13ab5f80eedc&gift_t=1795120535": {
-   "url": "https://thedispatch.com/article/trauma-mental-health-therapy/?gift_key=d7f372d50c6aa314&gift_ref=d2777208-495f-4246-87b2-13ab5f80eedc&gift_t=1795120535",
-   "canonical_url": "https://thedispatch.com/article/trauma-mental-health-therapy?gift_key=d7f372d50c6aa314&gift_ref=d2777208-495f-4246-87b2-13ab5f80eedc&gift_t=1795120535",
+  "https://thedispatch.com/article/trauma-mental-health-therapy": {
+   "url": "https://thedispatch.com/article/trauma-mental-health-therapy/",
+   "canonical_url": "https://thedispatch.com/article/trauma-mental-health-therapy",
    "anchor": "Does the Body Really Keep the Score?",
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-21-2026/",
@@ -587,7 +596,7 @@
    "attempts": 1,
    "graduated_on": "2026-11-21",
    "title": "There’s No Such Thing as “Your” Weekend",
-   "source_name": "substack.com"
+   "source_name": "Zak Mellgren"
   },
   "https://wsj.com/opinion/school-cell-phone-bans-harvard-study-5b703c69?reflink=desktopwebshare_permalink&st=apboQS": {
    "url": "https://www.wsj.com/opinion/school-cell-phone-bans-harvard-study-5b703c69?st=apboQS&reflink=desktopwebshare_permalink",
@@ -620,11 +629,12 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-21-2026/",
    "found_on": "2026-11-21",
-   "status": "graduated",
+   "status": "blocked",
    "attempts": 1,
    "graduated_on": "2026-11-21",
    "title": "Daily Spurgeon Devotionals App",
-   "source_name": "App Store"
+   "source_name": "App Store",
+   "error": "blocked host apps.apple.com"
   }
  },
  "updated": "2026-11-21T10:01:36+00:00"

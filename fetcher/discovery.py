@@ -23,6 +23,14 @@ Flow, once per run (main.py, right after fetch_all):
      Graduated entries are marked status "graduated"; pages that fail twice
      are "failed". Entries older than QUEUE_TTL_DAYS are pruned.
 
+Non-articles (Nov 22 2026, S1 2.4): `blocked_reason()` refuses app stores,
+Amazon and affiliate redirectors (`*.sjv.io`), Wikipedia, store and hub paths
+(/collections/, /books/, /tag/) and section pages on dated-path news sites; it
+runs at harvest, on queued entries (marked "blocked") and on the final URL
+after redirects. `anchor_ok()` refuses calls to action ("see here for
+images", "Download", "Kindle deals"). `clean_url()` strips gift_* and utm_*
+params. A piece on a shared platform (substack.com) is credited to its writer.
+
 The Aquila Report is a discovery source too, but its feed carries no link to
 the original and its item pages sit behind a Cloudflare challenge, so it does
 not opt in to harvesting yet.
@@ -37,7 +45,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from email.utils import format_datetime
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 import requests
 
@@ -65,7 +73,69 @@ SKIP_DOMAINS = {
     "bit.ly", "feedburner.com", "squarequotes.church",
 }
 SKIP_SUBDOMAIN_PREFIXES = ("store.", "shop.", "grow.", "gift.")
-SKIP_EXTENSIONS = (".jpg", ".jpeg", ".png", ".gif", ".webp", ".pdf", ".mp3", ".mp4", ".zip")
+SKIP_EXTENSIONS = (".jpg", ".jpeg", ".png", ".gif", ".webp", ".pdf", ".mp3", ".mp4", ".zip",
+                   ".epub", ".mobi")
+
+# Non-articles (S1 2.4, Nov 22 2026): app stores, Amazon and affiliate
+# redirectors, encyclopedias, store catalogues. Checked on the harvested link,
+# on queued entries before fetching, and on the final URL after redirects
+# (link.amazon and logos.sjv.io both redirect to a store).
+BLOCK_HOSTS = {
+    "apps.apple.com", "itunes.apple.com", "play.google.com", "chromewebstore.google.com",
+    "link.amazon", "amzn.to", "amzn.com", "a.co",
+    "bookshop.org", "barnesandnoble.com", "goodreads.com", "audible.com", "etsy.com",
+    "ebay.com", "walmart.com", "target.com", "kobo.com", "books.google.com",
+    "go.skimresources.com", "click.linksynergy.com", "shareasale.com", "awin1.com",
+    "tkqlhce.com", "anrdoezrs.net", "dpbolvw.net", "jdoqocy.com", "kqzyfj.com",
+    "linktr.ee", "geni.us", "lnk.to", "rstyle.me", "shopstyle.it", "howl.me",
+}
+# Any subdomain of these is an affiliate redirector or a reference site.
+BLOCK_HOST_SUFFIXES = (
+    ".sjv.io", ".pxf.io", ".pntra.com", ".pntrs.com", ".pntrac.com", ".avantlink.com",
+    ".prf.hn", ".evyy.net", ".ojrq.net", ".7eer.net", ".wikipedia.org", ".wikimedia.org",
+    ".wiktionary.org", ".fandom.com",
+)
+BLOCK_HOST_BASES = {"wikipedia.org", "wikimedia.org", "wiktionary.org", "fandom.com", "sjv.io"}
+# amazon.com, amazon.co.uk, amazon.ca ... and their subdomains.
+_AMAZON_RE = re.compile(r"(^|\.)amazon\.[a-z]{2,3}(\.[a-z]{2})?$")
+# Store and catalogue paths, and hub pages that only list other pages.
+# A store root like /books/ counts only at the start of the path, so
+# relevantmagazine.com/culture/books/<essay> stays an article.
+BLOCK_PATH_RE = re.compile(
+    r"^/(products?|shop|store|cart|checkout|books|bookstore|app|apps)(/|$)"
+    r"|/(collections|tag|tags|topic|topics|category|categories|series|search)(/|$)"
+    r"|(^|[-/_])e-?books?($|[-/_.])",
+    re.I,
+)
+# Hosts whose articles always carry a date (or an article marker) in the path;
+# any other page there is a section or topic hub
+# (theguardian.com/education/office-for-students).
+DATED_PATH_HOSTS = {
+    "theguardian.com": re.compile(r"/\d{4}/[a-z]{3}/\d{2}/"),
+    "nytimes.com": re.compile(r"/\d{4}/\d{2}/\d{2}/"),
+    "washingtonpost.com": re.compile(r"/\d{4}/\d{2}/\d{2}/"),
+    "cnn.com": re.compile(r"/\d{4}/\d{2}/\d{2}/"),
+    "bbc.co.uk": re.compile(r"/(articles|news)/"),
+    "bbc.com": re.compile(r"/(articles|news)/"),
+}
+# Gift, share and tracking tokens a reader should not inherit from a roundup link.
+STRIP_PARAM_PREFIXES = ("utm_", "gift_", "mc_", "pk_", "hsa_")
+STRIP_PARAMS = {"giftcopy", "unlocked_article_code", "smid", "sgrp", "fbclid", "gclid",
+                "access_token", "share_token", "sharetoken", "accesstoken"}
+# Shared publishing platforms: the bare domain names nobody, so credit the writer.
+PLATFORM_DOMAINS = {"substack.com", "medium.com", "wordpress.com", "blogspot.com",
+                    "ghost.io", "beehiiv.com", "squarespace.com", "wixsite.com"}
+PLATFORM_SITE_NAMES = PLATFORM_DOMAINS | {"substack", "medium", "wordpress", "blogger",
+                                          "app store", "google play", "amazon.com", "amazon"}
+# Anchor texts that describe a link's function, not a piece.
+GENERIC_ANCHOR_RE = re.compile(
+    r"\b(click|see|go|look|read|tap)\s+here\b|\bhere\s+(for|to)\b|\b(read|learn|find\s+out)\s+more\b"
+    r"|\bsign\s+up\b|\bsubscribe\b|\bdownload\b|\bpre-?order\b|\border\s+(now|here|today)\b"
+    r"|\bbuy\b|\bon\s+sale\b|\d+\s*%\s*off\b|\bdeals?\b|\bkindle\b|\be-?book\b"
+    r"|\bfree\s+(copy|book)\b|\bfor\s+images\b|\bseason\s+\d+|\bepisode\s+\d+"
+    r"|\bapp\b|\bgift\b",
+    re.I,
+)
 
 _SOURCES_BY_NAME = {s["name"]: s for s in SOURCES}
 
@@ -81,6 +151,57 @@ for _s in SOURCES:
     # Shared hosts (substack.com, medium.com) can't identify a source.
     if _d and _d not in ("substack.com", "medium.com", "wordpress.com", "blogspot.com"):
         _SOURCE_BY_DOMAIN.setdefault(_d, _s)
+
+
+# ------------------------------------------------------------------ link rules
+
+def clean_url(url: str) -> str:
+    """Drop gift, share and tracking params (gift_key, utm_*) from a link we publish."""
+    try:
+        parts = urlsplit(url)
+    except ValueError:
+        return url
+    if not parts.query:
+        return url
+    kept = [(k, v) for k, v in parse_qsl(parts.query, keep_blank_values=True)
+            if k.lower() not in STRIP_PARAMS and not k.lower().startswith(STRIP_PARAM_PREFIXES)]
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(kept), parts.fragment))
+
+
+def blocked_reason(url: str) -> str:
+    """Why a URL is not an article we can graduate ('' when it may be one)."""
+    try:
+        parts = urlsplit(url or "")
+    except ValueError:
+        return "bad url"
+    host = (parts.hostname or "").lower()
+    if host.startswith("www."):
+        host = host[4:]
+    if not host:
+        return ""
+    base = _base_domain(host)
+    if (host in BLOCK_HOSTS or base in BLOCK_HOSTS or base in BLOCK_HOST_BASES
+            or host.endswith(BLOCK_HOST_SUFFIXES) or _AMAZON_RE.search(host)):
+        return f"blocked host {host}"
+    if BLOCK_PATH_RE.search(parts.path or ""):
+        return "store or hub path"
+    dated = DATED_PATH_HOSTS.get(base)
+    if dated and not dated.search(parts.path or ""):
+        return "topic hub"
+    return ""
+
+
+def anchor_ok(anchor: str) -> bool:
+    """Minimum anchor quality: 3+ words, one real word, not a URL or a call to action."""
+    anchor = (anchor or "").strip()
+    words = anchor.split()
+    if len(words) < MIN_ANCHOR_WORDS:
+        return False
+    if re.match(r"(https?://|www\.)", anchor, re.I) or re.search(r"\.[a-z]{2,4}/", anchor, re.I):
+        return False
+    if not any(len(re.sub(r"\W", "", w)) >= 4 for w in words):
+        return False
+    return not GENERIC_ANCHOR_RE.search(anchor)
 
 
 # ------------------------------------------------------------------ harvesting
@@ -115,7 +236,9 @@ def keep_link(url: str, anchor: str, roundup_domain: str) -> bool:
         return False
     if "utm_source=challies" in parts.query.lower():  # sponsor links
         return False
-    return len(anchor.split()) >= MIN_ANCHOR_WORDS
+    if blocked_reason(url):
+        return False
+    return anchor_ok(anchor)
 
 
 def extract_links(item: dict) -> list[dict]:
@@ -124,7 +247,7 @@ def extract_links(item: dict) -> list[dict]:
     roundup_domain = _base_domain(urlsplit(item.get("url") or "").hostname or "")
     out, seen = [], set()
     for href, inner in re.findall(r'<a\s[^>]*?href=["\']([^"\']+)["\'][^>]*>(.*?)</a>', body, re.S | re.I):
-        url = htmllib.unescape(href).strip()
+        url = clean_url(htmllib.unescape(href).strip())
         anchor = _clean_text(inner).rstrip(".").strip()
         canon = canonical_url(url)
         if canon in seen or not keep_link(url, anchor, roundup_domain):
@@ -244,8 +367,19 @@ def _author(page: str) -> str:
     return "" if author.lower().startswith(("http://", "https://")) else author
 
 
+def _looks_like_hub(page: str) -> bool:
+    """A page that calls itself a website (not an article) and names no date or writer."""
+    if _meta(page, "og:type").lower() != "website":
+        return False
+    return not (_meta(page, "article:published_time", "datePublished", "parsely-pub-date")
+                or _author(page))
+
+
 def article_from_page(entry: dict, page: str, final_url: str) -> dict | None:
     """Build a scorer-ready article dict from a fetched page, or None."""
+    final_url = clean_url(final_url)
+    if blocked_reason(final_url) or _looks_like_hub(page):
+        return None
     title = _meta(page, "og:title", "twitter:title")
     if not title:
         m = re.search(r"<title[^>]*>(.*?)</title>", page, re.S | re.I)
@@ -255,9 +389,24 @@ def article_from_page(entry: dict, page: str, final_url: str) -> dict | None:
     if known and known.get("role") in ("discovery", "media"):
         return None
     og_site = _meta(page, "og:site_name")
-    site_name = (known or {}).get("name") or og_site or _base_domain(host)
+    if og_site.lower() in PLATFORM_SITE_NAMES:
+        og_site = ""
+    author = _author(page)
+    domain = _base_domain(host)
+    if known:
+        site_name = known.get("name")
+    elif og_site:
+        site_name = og_site
+    elif domain in PLATFORM_DOMAINS:
+        # zakmellgren.substack.com: credit the writer, never "substack.com".
+        site_name = author or host.lower().removeprefix("www.")
+    else:
+        site_name = domain
     title = _strip_site_suffix(title, {site_name, og_site})
-    title = title or entry.get("anchor", "")
+    # A title that is only the site name ("Biblical Counseling Coalition",
+    # "Amazon.com") names no piece; the roundup's anchor text does.
+    if not title or title.strip().lower() in {site_name.lower(), og_site.lower(), domain}:
+        title = entry.get("anchor", "")
     if not title:
         return None
     description = _meta(page, "og:description", "description", "twitter:description")
@@ -269,7 +418,7 @@ def article_from_page(entry: dict, page: str, final_url: str) -> dict | None:
         # Unknown sites must not spawn /voices/ pages from one linked piece.
         "creates_voices": bool(known) and known.get("creates_voices", True),
         "role": "primary",
-        "author": _author(page),
+        "author": author,
         "title": title,
         "original_title": title,
         "url": final_url,
@@ -301,7 +450,19 @@ def _fetch(entry: dict) -> tuple[dict, dict | None, str]:
 
 def graduate(queue: dict, limit: int = MAX_FETCH_PER_RUN, fetch=_fetch) -> list[dict]:
     """Fetch up to `limit` pending entries; return article dicts for scoring."""
-    pending = [e for e in queue.get("entries", {}).values() if e.get("status") == "pending"]
+    pending = []
+    for e in queue.get("entries", {}).values():
+        if e.get("status") != "pending":
+            continue
+        # Entries queued before the Nov 22 2026 rules are checked again here.
+        reason = blocked_reason(e.get("url", ""))
+        if not reason and e.get("anchor") and not anchor_ok(e["anchor"]):
+            reason = "weak anchor"
+        if reason:
+            e.update(status="blocked", error=reason)
+            continue
+        e["url"] = clean_url(e.get("url", ""))
+        pending.append(e)
     pending.sort(key=lambda e: e.get("found_on", ""), reverse=True)
     batch = pending[:limit]
     if not batch:
