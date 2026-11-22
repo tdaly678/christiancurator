@@ -951,7 +951,7 @@ def send_campaign(subject: str, html_content: str, *, force: bool = False) -> bo
         "content-type": "application/json",
     }
     payload = {
-        "name": f"Christian Curator — {today}",
+        "name": f"Christian Curator | {today}",
         "subject": subject,
         "sender": {"name": BREVO_SENDER_NAME, "email": BREVO_SENDER_EMAIL},
         "type": "classic",

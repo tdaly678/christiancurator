@@ -940,8 +940,8 @@ def render_archive_index(env: Environment):
         '<head>',
         '  <meta charset="UTF-8" />',
         '  <meta name="viewport" content="width=device-width, initial-scale=1.0" />',
-        '  <title>Christian Curator — Archive</title>',
-        '  <meta name="description" content="Browse all past issues of Christian Curator — a daily digest of evangelical Christian news, theology, and culture." />',
+        '  <title>Archive | Christian Curator</title>',
+        '  <meta name="description" content="Browse all past issues of Christian Curator, a daily digest of evangelical Christian news, theology, and culture." />',
         '  <link rel="canonical" href="https://www.christiancurator.com/archive/" />',
         '  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NJ5DSPFXL"></script>',
         '  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-3NJ5DSPFXL");</script>',
@@ -1072,7 +1072,7 @@ def render_archive_index(env: Environment):
     lines += [
         '    </div>',  # /cc-day-list
         '    <footer class="cc-footer">',
-        '      <p><a href="/">Christian Curator</a> — A daily digest of the best evangelical Christian writing.</p>',
+        '      <p><a href="/">Christian Curator</a> · A daily digest of the best evangelical Christian writing.</p>',
         '      <p style="margin-top:6px;"><a href="/#subscribe">Subscribe to the daily email</a></p>',
         '    </footer>',
         '  </div>',

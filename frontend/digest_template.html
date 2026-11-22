@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christian Curator — Daily Digest, {{ date }}</title>
-  <meta name="description" content="Today's best evangelical writing on theology, church life, culture, and more — curated and rewritten for clarity." />
+  <title>Daily Digest, {{ date }} | Christian Curator</title>
+  <meta name="description" content="Today's best evangelical writing on theology, church life, culture, and more, curated and rewritten for clarity." />
   <link rel="canonical" href="https://www.christiancurator.com/digest/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Christian Curator" />
-  <meta property="og:title" content="Christian Curator — Daily Digest, {{ date }}" />
-  <meta property="og:description" content="Today's best evangelical writing on theology, church life, culture, and more — curated and rewritten for clarity." />
+  <meta property="og:title" content="Daily Digest, {{ date }} | Christian Curator" />
+  <meta property="og:description" content="Today's best evangelical writing on theology, church life, culture, and more, curated and rewritten for clarity." />
   <meta property="og:url" content="https://www.christiancurator.com/digest/" />
   <meta property="og:image" content="https://www.christiancurator.com/og-image.png" />
   <meta property="og:image:width" content="1200" />
@@ -19,7 +19,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Christian Curator — Daily Digest, {{ date }}" />
+  <meta name="twitter:title" content="Daily Digest, {{ date }} | Christian Curator" />
   <meta name="twitter:description" content="Today's best evangelical writing, curated daily." />
 
   <!-- Structured Data -->
@@ -27,8 +27,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Christian Curator — Daily Digest, {{ date }}",
-    "description": "Today's best evangelical writing on theology, church life, culture, and more — curated and rewritten for clarity.",
+    "headline": "Daily Digest, {{ date }} | Christian Curator",
+    "description": "Today's best evangelical writing on theology, church life, culture, and more, curated and rewritten for clarity.",
     "url": "https://www.christiancurator.com/digest/",
     "mainEntityOfPage": "https://www.christiancurator.com/digest/",
     "datePublished": "{{ iso_date }}",
@@ -467,7 +467,7 @@
       </div>
     </article>
 
-    {# Articles 2–10 #}
+    {# Articles 2-10 #}
     <div class="cc-headline-list">
       {% for article in articles[1:] %}
       <article class="cc-headline-item">
@@ -503,7 +503,7 @@
       <div class="cc-world-news-sub">Stories worth watching</div>
     </div>
     <div class="cc-world-news-card">
-      <div class="cc-world-news-intro">From the broader world — filtered for what matters to Christians</div>
+      <div class="cc-world-news-intro">From the broader world, filtered for what matters to Christians</div>
       {% for article in world_news_articles %}
       <article class="cc-world-news-item">
         <div class="cc-world-news-num">{{ loop.index }}</div>
@@ -558,7 +558,7 @@
       </div>
     </article>
 
-    {# Articles 2–10 #}
+    {# Articles 2-10 #}
     <div class="cc-headline-list">
       {% for article in yesterday_articles[1:] %}
       <article class="cc-headline-item">
