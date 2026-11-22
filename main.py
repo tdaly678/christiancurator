@@ -33,7 +33,7 @@ from fetcher.rss_fetcher import fetch_all
 from curator.headline_voice import apply_display_title
 from curator.scorer import score_articles
 from curator.title_rewriter import rewrite_titles, REWRITE_TITLES_ENABLED
-from curator.point_counterpoint import build_point_counterpoint
+from curator.point_counterpoint import build_point_counterpoint, write_debate_summary
 from curator.daily_summary import generate_daily_summary, save_theme_history
 from curator.email_sender import (send_email, prepare_email, save_pending_email,
                                    PENDING_EMAIL_PATH)
@@ -155,6 +155,12 @@ def main():
         save_article_history(outbound_articles(layout))
     else:
         print("  (no layout returned; article history not updated)")
+    # The Debate: candidates, proposals and every rejection with its reason,
+    # in the log and the job summary. Never blocks the run.
+    try:
+        write_debate_summary(layout)
+    except Exception as e:
+        print(f"  (debate summary skipped: {type(e).__name__}: {e})")
 
     # --- Voice ↔ Topic cross-links: refresh "Featured in Deep-Dive Topics" block
     #     on each voice page from the latest featured_topic_log + current digest.

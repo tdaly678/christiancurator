@@ -117,6 +117,9 @@ def history_row(a: dict, day: str) -> dict:
         "base_importance": a.get("base_importance", a.get("base_score")),
         "base_depth": a.get("base_depth"),
         "canonical_url": a.get("canonical_url") or canonical_url(a.get("url", "")),
+        # Stance fields (Nov 22 2026) so The Debate can be tuned from history.
+        "perspective": a.get("perspective"),
+        **({"opposing_pair": True} if a.get("opposing_pair") else {}),
         "boosts": a.get("boosts", {}),
         "scored_by": a.get("scored_by", "unknown"),
         "clicks": 0,  # filled from GA4 by scripts/fetch_click_counts.py
