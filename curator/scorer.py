@@ -26,7 +26,9 @@ from dotenv import load_dotenv
 
 from curator.ai_health import record_failure
 from curator.dedup import canonical_url, dedupe_articles
-from curator.headline_voice import apply_display_title, hard_reject, voice_adjustments
+from curator.headline_voice import (
+    apply_display_title, hard_reject, hard_reject_description, voice_adjustments,
+)
 from curator.mission import has_faith_hook
 from curator.vocab import ALLOWED_TAGS, ALLOWED_PERSONAS, clean_tags, clean_personas, report_drops
 from curator.vocab import dropped as vocab_dropped
@@ -811,7 +813,8 @@ def score_articles(articles: list[dict], shown_urls: set = None,
     kept_titles = []
     reject_counts = defaultdict(int)
     for a in articles:
-        reason = hard_reject(a.get("title", ""), a.get("source_name"))
+        reason = (hard_reject(a.get("title", ""), a.get("source_name"))
+                  or hard_reject_description(a.get("summary") or a.get("full_content") or ""))
         if reason:
             reject_counts[reason] += 1
             print(f"    {reason}: {a.get('title', '')!r} ({a.get('source_name', '?')})")

@@ -310,6 +310,97 @@ def test_display_byline(author, source, expected):
 
 # ── strip_dashes (shared with the Pulse) ─────────────────────────────────────
 
+def test_strip_dashes_basic():
+    assert strip_dashes("a — b") == "a, b"
+
+
+# ── Nov 22 2026 (S1 3.3, 3.5): more roundups, promos and dated columns ──────
+
+from curator.headline_voice import (  # noqa: E402
+    HARD_REJECT_DATED_COLUMN,
+    hard_reject_description,
+    is_claimless_short,
+)
+
+
+@pytest.mark.parametrize("title,reason", [
+    ("Meanderings, 21 November 2026", HARD_REJECT_DATED_COLUMN),
+    ("Field Notes: 3rd March", HARD_REJECT_DATED_COLUMN),
+    ("Join me for weekly columns at The Dispatch", HARD_REJECT_PROMO),
+    ("New Podcast: IVP's “Hear Women” with Nijay Gupta", HARD_REJECT_PROMO),
+    ("New Episode: Why We Gather", HARD_REJECT_PROMO),
+    ("notes for the weekend: mere Christianity revisited", HARD_REJECT_ROUNDUP),
+    ("The Best Books I Read in 2026", HARD_REJECT_ROUNDUP),
+    ("Books I Read in October", HARD_REJECT_ROUNDUP),
+    ("My Nine Books", HARD_REJECT_ROUNDUP),
+    ("My Top Ten Books of the Year", HARD_REJECT_ROUNDUP),
+    ("Monthly(ish) Newsletter: Favorite Perfumes, Aritzia Dupes", HARD_REJECT_ROUNDUP),
+    ("The Weekly Newsletter", HARD_REJECT_ROUNDUP),
+])
+def test_s1_roundups_promos_and_dates_rejected(title, reason):
+    assert hard_reject(title) == reason
+
+
+@pytest.mark.parametrize("title", [
+    "SBC Votes on 21 November",          # a date inside a claim, not closing a label
+    "Why I Read Old Books",
+    "Join Me in Prayer for Burundi",
+    "Pastor Joins Me on a Long Walk",
+    "The New Podcast Economy and the Church",
+    "A Newsletter Editor Reflects on Faith",
+    "Books That Shaped My Faith",
+    "My Mother Read Books to Me",
+])
+def test_s1_lookalikes_pass(title):
+    assert hard_reject(title) is None
+
+
+@pytest.mark.parametrize("text,reason", [
+    ("Join me for weekly columns at The Dispatch, starting this Friday.", HARD_REJECT_PROMO),
+    ("<p>Pre-order my new book today and get a bonus.</p>", HARD_REJECT_PROMO),
+    ("Welcome to the monthly(ish) newsletter, friends!", HARD_REJECT_ROUNDUP),
+    ("Here's my weekly roundup of good reads.", HARD_REJECT_ROUNDUP),
+    ("In this week's newsletter: perfume, books and a recipe.", HARD_REJECT_ROUNDUP),
+])
+def test_description_openers_rejected(text, reason):
+    assert hard_reject_description(text) == reason
+
+
+@pytest.mark.parametrize("text", [
+    "",
+    "Join me as I talk with Karen Swallow Prior about reading.",   # a podcast: capped, not dropped
+    "Ep. 205: rest and rhythm.",
+    "The SBC voted Tuesday to expel a church. A giveaway was not mentioned.",
+    "Pastors face burnout. The book is now available in paperback, he notes.",
+    "Many churches welcome newcomers, but few follow up.",
+])
+def test_description_real_articles_kept(text):
+    assert hard_reject_description(text) is None
+
+
+@pytest.mark.parametrize("title", [
+    "Church Age Mindset",
+    "Hot Water and Holy Wonder",
+    "Faithful Presence",
+    "Kevin Flatt",
+])
+def test_short_titles_with_no_verb_are_claimless(title):
+    assert is_claimless_short(title)
+
+
+@pytest.mark.parametrize("title", [
+    "Old Dogs and New Tricks",     # "Dogs" may be a verb: stay conservative
+    "Remember Your Baptism",
+    "Pastors Need Rest",
+    "God Loves Sinners",
+    "Why Paper Books Endure",
+    "Psalm 23",
+    "Church Age Mindset Matters",
+])
+def test_short_titles_that_may_have_a_verb_are_not_claimless(title):
+    assert not is_claimless_short(title)
+
+
 def test_strip_dashes():
     out = strip_dashes("TGC says the threat is doctrinal — bad theology. Pages 3–5.")
     assert out == "TGC says the threat is doctrinal, bad theology. Pages 3-5."

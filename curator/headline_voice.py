@@ -19,6 +19,8 @@ hard_reject(title) returns one of these reason codes, or None:
                             (display_title() strips it). "Ep. 112: On Calvin"
                             and "Episode 9 with Russell Moore" still reject.
   HARD_REJECT_PROMO         promo collocates only, never bare "launch" or "sale"
+                            (Nov 22 2026: also a leading "Join me for/at/on"
+                            and "New Podcast:" / "New Episode:")
                             (so "SpaceX Launch" and "Church Sale" stay news):
                             '"X" is HERE' / 'book is here' / 'is here!', out now,
                             now available, pre-order, giveaway, book/course/album
@@ -28,10 +30,15 @@ hard_reject(title) returns one of these reason codes, or None:
   HARD_REJECT_ROUNDUP       Quick Things, Weekly Roundup, Things I'm Reading,
                             Friday Five, Open Thread, Link Roundup, and "Links"
                             only as the whole title or its lead word ("Links:",
-                            "Weekend Links"), so "Missing Links in Theology" passes
+                            "Weekend Links"), so "Missing Links in Theology" passes.
+                            Nov 22 2026: "notes for the weekend", "books I read"
+                            ("The Best Books I Read in 2026"), "My Nine Books",
+                            "Monthly(ish) Newsletter"
 
   HARD_REJECT_DATED_COLUMN  a dated column: the title ends in a calendar date
-                            set off by "(", ":", a dash or a comma, or is only
+                            set off by "(", ":", a dash or a comma (month-day or,
+                            since Nov 22 2026, day-month-year: "Meanderings, 21
+                            November 2026"), or is only
                             a weekday date ("Works & Wonders (November 1)",
                             "Works & Wonders: October 25", "Weekend A La Carte
                             (October 24)"). Allow-listed by source
@@ -44,6 +51,10 @@ hard_reject(title) returns one of these reason codes, or None:
                             unless rewritten_title carries a real claim
   HARD_REJECT_REVIEW_META   review meta copy: "lives up to its title / the hype
                             / its billing / its name / its promise"
+
+hard_reject_description(description) checks only the body opener, for promo
+and newsletter patterns ("Join me for weekly columns at", "Welcome to the
+monthly(ish) newsletter"); score_articles() drops matches like a title reject.
 
 Checks run in the order above; the first match wins. Curly quotes and
 apostrophes are normalized to straight ones before matching.
@@ -66,8 +77,10 @@ MAX_TOTAL_BOOST budget like other boosts; demotions are uncapped penalties.
                                   "a review of", "New and Notable"
   DEMOTE_CLAIMLESS_SHORT     -15  2 to 5 words, no ":" or "?", no verb, no claim
                                   noun (CLAIM_NOUNS: myth, danger, case, crisis,
-                                  ...), and either starts with "The" or reads
-                                  "Noun of Noun" ("Tyranny of Preferences"). A
+                                  ...), and either starts with "The", reads
+                                  "Noun of Noun" ("Tyranny of Preferences"), or
+                                  has no word that could be a verb ("Church Age
+                                  Mindset", since Nov 22 2026). A
                                   label, not a headline: build_homepage_layout()
                                   keeps it out of the lead, subleads and email
   BOOST_NEWS_VERB            +10  a subject followed by a strong news verb
@@ -192,7 +205,20 @@ _ROUNDUP_RE = re.compile(
     r"|\bthings\s+i'?m\s+reading\b"
     r"|\bfriday\s+five\b"
     r"|\bopen\s+thread\b"
-    r"|^\s*(?:(?:weekly|weekend|friday|saturday|sunday)\s+)?links?\b\s*(?:[:\-–—|]|$)",
+    r"|^\s*(?:(?:weekly|weekend|friday|saturday|sunday)\s+)?links?\b\s*(?:[:\-–—|]|$)"
+    # Nov 22 2026 (S1 3.5): weekend notes, reading lists, newsletters.
+    r"|\bnotes\s+for\s+the\s+weekend\b"
+    r"|\bbooks\s+i\s+(?:read|loved|enjoyed|finished)\b"
+    r"|^\s*my\s+(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve"
+    r"|fifteen|twenty|favou?rite|top|best)\s+(?:\w+\s+)?(?:books|reads|albums|podcasts)\b"
+    r"|\b(?:weekly|monthly|quarterly)\s*(?:\(ish\)|-?ish)?\s+newsletter\b",
+    re.IGNORECASE,
+)
+
+# Calls to subscribe or follow elsewhere, and podcast promos (Nov 22 2026).
+_PROMO_OPENER_RE = re.compile(
+    r"^\s*join\s+me\s+(?:for|at|on|every|this|over|here)\b"
+    r"|^\s*new\s+(?:podcast|episode|video)(?:\s+episode)?\s*:",
     re.IGNORECASE,
 )
 
@@ -200,7 +226,9 @@ _ROUNDUP_RE = re.compile(
 _MONTH = (r"(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?"
           r"|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\.?")
 _WEEKDAY = r"(?:Mon|Tues|Wednes|Thurs|Fri|Satur|Sun)day"
-_DATE = rf"{_MONTH}\s+\d{{1,2}}(?:st|nd|rd|th)?(?:,?\s+\d{{4}})?"
+_DATE = (rf"(?:{_MONTH}\s+\d{{1,2}}(?:st|nd|rd|th)?(?:,?\s+\d{{4}})?"
+         # Day-month-year: "Meanderings, 21 November 2026" (Nov 22 2026).
+         rf"|\d{{1,2}}(?:st|nd|rd|th)?\s+{_MONTH}(?:,?\s+\d{{4}})?)")
 
 # A date that closes the title, set off by "(", ":", a dash or a comma, or a
 # title that is only a (weekday) date.
@@ -270,7 +298,7 @@ def hard_reject(title: str, source: str | None = None) -> str | None:
         return HARD_REJECT_EMOJI
     if ISSUE_NUMBER_RE.search(_episode_claim(t) or t):
         return HARD_REJECT_ISSUE_NUMBER
-    if _PROMO_CS_RE.search(t) or _PROMO_RE.search(t):
+    if _PROMO_CS_RE.search(t) or _PROMO_RE.search(t) or _PROMO_OPENER_RE.search(t):
         return HARD_REJECT_PROMO
     if _ROUNDUP_RE.search(t):
         return HARD_REJECT_ROUNDUP
@@ -278,6 +306,44 @@ def hard_reject(title: str, source: str | None = None) -> str | None:
         return HARD_REJECT_DATED_COLUMN
     if _REVIEW_META_RE.search(t):
         return HARD_REJECT_REVIEW_META
+    return None
+
+
+# Body openers that mark a promo, podcast plug or newsletter issue. Only the
+# start of the description is checked, and only patterns that cannot open a
+# real article: a piece that mentions a giveaway in paragraph three stays.
+_DESC_PROMO_RE = re.compile(
+    r"^\s*join\s+me\s+(?:for|at|on|every|this|over|here)\b"
+    r"|^\s*(?:pre-?order|giveaway|out\s+now|now\s+available)\b"
+    r"|^\s*(?:enter|subscribe|register)\s+(?:now|today|here)\b",
+    re.IGNORECASE,
+)
+_DESC_ROUNDUP_RE = re.compile(
+    r"^\s*(?:welcome\s+(?:back\s+)?to|here\s+is|here'?s)\s+(?:the\s+|my\s+|this\s+(?:week's|month's)\s+)?"
+    r"(?:\w+\s+)?(?:(?:weekly|monthly|quarterly)\s*(?:\(ish\)|-?ish)?\s+)?(?:newsletter|round-?up|links)\b"
+    r"|^\s*(?:in\s+)?this\s+(?:week's|month's)\s+(?:newsletter|issue|round-?up|links)\b"
+    r"|^\s*(?:a\s+few\s+)?(?:links|things)\s+(?:i'?m\s+reading|worth\s+reading|for\s+the\s+weekend)\b",
+    re.IGNORECASE,
+)
+
+
+def hard_reject_description(description: str) -> str | None:
+    """HARD_REJECT_PROMO or HARD_REJECT_ROUNDUP when the body opens as a promo or
+    newsletter issue ("Join me for weekly columns at ...", "Welcome to the
+    monthly(ish) newsletter"), else None.
+
+    Only the opener is checked (tags stripped, first 240 characters), so an
+    article that mentions a book launch later in its text is kept. Podcast
+    openers ("Join me as I talk with", "Ep. 205") are not rejected here; they
+    are audio, which the homepage caps (frontend.layout.is_audio_video).
+    """
+    text = normalize_title(re.sub(r"<[^>]+>", " ", description or ""))[:240]
+    if not text:
+        return None
+    if _DESC_PROMO_RE.search(text):
+        return HARD_REJECT_PROMO
+    if _DESC_ROUNDUP_RE.search(text):
+        return HARD_REJECT_ROUNDUP
     return None
 
 
@@ -362,11 +428,42 @@ def _is_verbish(word: str) -> bool:
             or (len(w) > 4 and w.endswith(("ing", "ed"))))
 
 
+# Common base-form verbs: imperatives ("Remember Your Baptism") and verbs after
+# a plural subject ("Pastors Need Rest"). Used only by the no-verb label rule.
+_COMMON_VERBS = frozenset("""
+    love loves pray prays go goes come comes need needs make makes let lets know
+    knows remember stop keep keeps give gives take takes seek seeks follow trust
+    fear rest wait read watch listen see sees look think believe believes matter
+    matters work works live lives die serve serves lead leads teach teaches preach
+    build builds grow grows change changes choose hold holds run runs stand stands
+    speak speaks tell tells ask asks find finds feel feels hope hopes endure endures
+    get gets put puts say says become becomes mean means show shows bring brings
+    turn turns help helps fail fails win lose rise rises fall falls begin begins
+    sing sings walk walks forgive forgives repent bless blesses heal heals save saves
+""".split())
+_QUESTION_WORDS = frozenset("why how what when where who whom whose which".split())
+
+
+def _could_be_verb(word: str) -> bool:
+    """A loose finite-verb test for the no-verb label rule: verbish words, common
+    base verbs, and -s forms that are not plural nouns we can recognize
+    ("Endures"). Errs toward "maybe a verb", so the rule stays conservative."""
+    w = word.lower().strip("'")
+    if _is_verbish(word) or w in _COMMON_VERBS:
+        return True
+    return (len(w) > 3 and w.endswith("s") and not w.endswith(("ss", "us", "is", "'s", "ics")))
+
+
 def is_claimless_short(title: str) -> bool:
     """True for a 2 to 5 word label with no verb and no claim noun.
 
-    Must start with "The" or read "Noun of Noun". Colons and question marks
-    signal a claim or question, so those titles are never claimless.
+    A title starting with "The" or reading "Noun of Noun" needs only to lack a
+    verbish word ("The Tyranny of Preferences"). Since Nov 22 2026 (S1 3.3) any
+    other 2 to 5 word title with no possible verb counts too ("Church Age
+    Mindset", "Hot Water and Holy Wonder"); a word that may be a verb ("Old
+    Dogs and New Tricks", "Remember Your Baptism") or a question word keeps it
+    out. Colons and question marks signal a claim or question, so those titles
+    are never claimless.
     """
     t = normalize_title(title)
     if not t or ":" in t or "?" in t:
@@ -380,7 +477,11 @@ def is_claimless_short(title: str) -> bool:
     starts_the = lower[0] == "the"
     noun_of_noun = (len(words) >= 3 and lower[1] == "of" and words[0][:1].isupper()
                     and lower[0] not in _NOT_SUBJECT)
-    return starts_the or noun_of_noun
+    if starts_the or noun_of_noun:
+        return True
+    if lower[0] in _QUESTION_WORDS or any(c.isdigit() for c in t):
+        return False
+    return not any(_could_be_verb(w) for w in words)
 
 
 def _base_form(verb: str) -> str:
