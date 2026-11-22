@@ -3,29 +3,36 @@
   "slug": "lords-supper",
   "type": "matrix",
   "label": "Views Compared",
-  "title": "Four views of the Lord's Supper, question by question",
-  "intro": "Three Protestant confessions, with Roman Catholic teaching shown for contrast. Every answer is drawn from the confession named below it.",
-  "image_title": "The Lord's Supper: four views, five questions",
-  "image_subtitle": "Each answer from that tradition's own confession. Roman Catholic teaching shown for contrast.",
+  "title": "Three Protestant views of the Lord's Supper, question by question",
+  "intro": "Three Protestant confessions, with Roman Catholic teaching shown last for reference. Every answer is drawn from the confession named below it.",
+  "image_title": "The Lord's Supper: three Protestant views, five questions",
+  "image_subtitle": "Each answer from that tradition's own confession. Roman Catholic teaching shown for reference.",
   "image_subtitle_narrow": "Each answer from that tradition's own confession.",
-  "caption": "Rome, Augsburg, Westminster and the Baptist Faith and Message on the same five questions. The dashed column is outside evangelical bounds and is shown so the Protestant answers can be read against it.",
+  "caption": "The Baptist Faith and Message, Westminster and Augsburg on the same five questions, with Rome last. The dashed column is outside evangelical bounds and is shown for reference, so the Protestant answers can be read against it.",
   "table_view_label": "Question",
   "columns": [
     {
-      "id": "catholic",
-      "name": "Transubstantiation",
-      "short": "Roman Catholic",
-      "color": "grey",
-      "outside": true,
-      "outside_label": "Roman Catholic, for contrast",
+      "id": "memorial",
+      "name": "Memorial",
+      "short": "Memorial",
+      "color": "green",
       "proponent": {
-        "name": "Catechism of the Catholic Church",
-        "image_name": "Catechism of the Catholic Church",
-        "work": "The Sacrament of the Eucharist",
-        "source": "ccc",
-        "also": [
-          "ccc-communion"
-        ]
+        "name": "The Baptist Faith and Message",
+        "image_name": "Baptist Faith and Message",
+        "work": "Article VII",
+        "source": "bfm"
+      }
+    },
+    {
+      "id": "reformed",
+      "name": "Reformed spiritual presence",
+      "short": "Reformed",
+      "color": "brown",
+      "proponent": {
+        "name": "The Westminster Confession",
+        "image_name": "Westminster Confession",
+        "work": "Chapter 29",
+        "source": "wcf"
       }
     },
     {
@@ -45,27 +52,20 @@
       }
     },
     {
-      "id": "reformed",
-      "name": "Reformed spiritual presence",
-      "short": "Reformed",
-      "color": "brown",
+      "id": "catholic",
+      "name": "Transubstantiation",
+      "short": "Roman Catholic",
+      "color": "grey",
+      "outside": true,
+      "outside_label": "Roman Catholic, for reference",
       "proponent": {
-        "name": "The Westminster Confession",
-        "image_name": "Westminster Confession",
-        "work": "Chapter 29",
-        "source": "wcf"
-      }
-    },
-    {
-      "id": "memorial",
-      "name": "Memorial",
-      "short": "Memorial",
-      "color": "green",
-      "proponent": {
-        "name": "The Baptist Faith and Message",
-        "image_name": "Baptist Faith and Message",
-        "work": "Article VII",
-        "source": "bfm"
+        "name": "Catechism of the Catholic Church",
+        "image_name": "Catechism of the Catholic Church",
+        "work": "The Sacrament of the Eucharist",
+        "source": "ccc",
+        "also": [
+          "ccc-communion"
+        ]
       }
     }
   ],
@@ -75,16 +75,16 @@
       "label": "Is Christ present?",
       "cells": [
         {
-          "text": "Yes: body, blood, soul and divinity, truly, really and substantially"
-        },
-        {
-          "text": "Yes: his body and blood are truly present and given out"
+          "text": "The Supper remembers his death and looks for his return"
         },
         {
           "text": "Yes, really but spiritually, to the faith of believers"
         },
         {
-          "text": "The Supper remembers his death and looks for his return"
+          "text": "Yes: his body and blood are truly present and given out"
+        },
+        {
+          "text": "Yes: body, blood, soul and divinity, truly, really and substantially"
         }
       ]
     },
@@ -93,16 +93,16 @@
       "label": "What are the bread and wine?",
       "cells": [
         {
-          "text": "Their whole substance becomes his body and blood"
-        },
-        {
-          "text": "Still bread and wine; his body and blood are received with them"
+          "text": "Bread and the fruit of the vine, in a symbolic act"
         },
         {
           "text": "Truly and only bread and wine, set apart for holy use"
         },
         {
-          "text": "Bread and the fruit of the vine, in a symbolic act"
+          "text": "Still bread and wine; his body and blood are received with them"
+        },
+        {
+          "text": "Their whole substance becomes his body and blood"
         }
       ]
     },
@@ -111,18 +111,18 @@
       "label": "What does an unbeliever receive?",
       "cells": [
         {
-          "text": "The Catechism warns that eating unworthily brings judgment",
-          "short": "Warns that eating unworthily brings judgment"
-        },
-        {
-          "text": "The true body and blood, to judgment"
+          "text": "The Faith and Message does not say; the Supper is for church members",
+          "short": "Not addressed; the Supper is for members"
         },
         {
           "text": "Only the outward elements, to judgment"
         },
         {
-          "text": "The Faith and Message does not say; the Supper is for church members",
-          "short": "Not addressed; the Supper is for members"
+          "text": "The true body and blood, to judgment"
+        },
+        {
+          "text": "The Catechism warns that eating unworthily brings judgment",
+          "short": "Warns that eating unworthily brings judgment"
         }
       ]
     },
@@ -131,16 +131,16 @@
       "label": "Who comes to the table?",
       "cells": [
         {
-          "text": "Anyone conscious of grave sin goes to confession first"
-        },
-        {
-          "text": "None are admitted unless first examined"
+          "text": "Baptized members of the church"
         },
         {
           "text": "Not the ignorant and ungodly"
         },
         {
-          "text": "Baptized members of the church"
+          "text": "None are admitted unless first examined"
+        },
+        {
+          "text": "Anyone conscious of grave sin goes to confession first"
         }
       ]
     },
@@ -149,25 +149,25 @@
       "label": "How often?",
       "cells": [
         {
-          "text": "At least once a year; Sundays, even daily, encouraged"
-        },
-        {
-          "text": "Every holy day, and other days for any who ask"
+          "text": "The Faith and Message sets no schedule"
         },
         {
           "text": "The Confession sets no schedule"
         },
         {
-          "text": "The Faith and Message sets no schedule"
+          "text": "Every holy day, and other days for any who ask"
+        },
+        {
+          "text": "At least once a year; Sundays, even daily, encouraged"
         }
       ]
     }
   ],
   "differ": [
-    "Presence: bodily for Rome and the Lutherans, real but spiritual for the Reformed, and for the memorial view a remembrance of his death.",
-    "The elements: only Rome teaches that the bread ceases to be bread. All three Protestant confessions say it remains bread.",
-    "The unbeliever: Lutherans confess he receives Christ's body and blood to judgment; Westminster says he receives only the outward elements.",
-    "Frequency: Rome and Augsburg set a pattern; Westminster and the Baptist Faith and Message set none."
+    "Presence: for the memorial view a remembrance of his death, real but spiritual for the Reformed, and bodily for the Lutherans (and for Rome).",
+    "The elements: all three Protestant confessions say the bread remains bread. Only Rome teaches that it ceases to be bread.",
+    "The unbeliever: Westminster says he receives only the outward elements; Lutherans confess he receives Christ's body and blood to judgment.",
+    "Frequency: the Baptist Faith and Message and Westminster set no pattern; Augsburg (and Rome) set one."
   ],
   "voices_label": "Each view in its own confession",
   "sources": [
@@ -245,5 +245,5 @@
   "place": {
     "before": "<section class=\"cc-synthesis\""
   },
-  "image_source": "Sources: Catechism of the Catholic Church; Augsburg Confession and Formula of Concord; Westminster Confession; Baptist Faith and Message 2000"
+  "image_source": "Sources: Baptist Faith and Message 2000; Westminster Confession; Augsburg Confession and Formula of Concord; Catechism of the Catholic Church (for reference)"
 }
