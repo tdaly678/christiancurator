@@ -8,6 +8,7 @@ from jinja2 import Environment, FileSystemLoader
 
 from curator.original_titles import article_original_title, byline_title
 from frontend.a11y_css import A11Y_BLOCK
+from frontend.favicon import FAVICON_LINKS
 import hashlib
 import json
 import re
@@ -941,6 +942,7 @@ def render_archive_index(env: Environment):
         '<head>',
         '  <meta charset="UTF-8" />',
         '  <meta name="viewport" content="width=device-width, initial-scale=1.0" />',
+        '  ' + FAVICON_LINKS,
         '  <title>Archive | Christian Curator</title>',
         '  <meta name="description" content="Browse all past issues of Christian Curator, a daily digest of evangelical Christian news, theology, and culture." />',
         '  <link rel="canonical" href="https://www.christiancurator.com/archive/" />',

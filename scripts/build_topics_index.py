@@ -151,6 +151,7 @@ PAGE = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CC-FAVICON:START --><link rel="icon" href="/favicon.ico" sizes="any" /><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" /><!-- CC-FAVICON:END -->
   <title>{title}</title>
   <meta name="description" content="{description}" />
   <link rel="canonical" href="{page_url}" />

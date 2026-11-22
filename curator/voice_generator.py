@@ -523,6 +523,7 @@ def render_bio_page(author: dict, index: int) -> str:
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CC-FAVICON:START --><link rel="icon" href="/favicon.ico" sizes="any" /><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" /><!-- CC-FAVICON:END -->
   <title>{voice_page_title(name)}</title>
   <meta name="description" content="{bio[:160]}" />
   <link rel="canonical" href="https://www.christiancurator.com/voices/{slug}/" />
@@ -679,6 +680,7 @@ def _build_index_from_scratch(authors_sorted: list, cards: str) -> str:
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CC-FAVICON:START --><link rel="icon" href="/favicon.ico" sizes="any" /><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" /><!-- CC-FAVICON:END -->
   <title>Voices | Christian Curator</title>
   <meta name="description" content="Meet the writers, pastors, and thinkers whose work we curate most often: the voices shaping evangelical Christianity." />
   <link rel="canonical" href="https://www.christiancurator.com/voices/" />
