@@ -16,9 +16,13 @@ from fetcher.sources import SOURCES
 
 WORTH_YOUR_TIME_COUNT = 5
 WORTH_YOUR_TIME_MIN_DEPTH = 6.0
+# When fewer than WORTH_YOUR_TIME_FLOOR_COUNT picks reach depth 6, the lane
+# takes depth 5 too (S2, Nov 22 2026: it had 0 or 1 picks on six November days).
+WORTH_YOUR_TIME_FLOOR_DEPTH = 5.0
+WORTH_YOUR_TIME_FLOOR_COUNT = 3
 
 WATCH_LISTEN_MAX = 5
-WATCH_LISTEN_MIN = 3          # fewer qualifying items: omit the section
+WATCH_LISTEN_MIN = 2          # fewer qualifying items: omit the section (was 3 until Nov 22 2026)
 WATCH_LISTEN_MAX_AGE_DAYS = 7
 WATCH_LISTEN_FRESH_DAYS = 2   # items this new outrank older ones regardless of priority
 
@@ -32,6 +36,7 @@ def select_worth_your_time(
     n: int = WORTH_YOUR_TIME_COUNT,
     exclude_top_n: int = 10,
     min_depth: float = WORTH_YOUR_TIME_MIN_DEPTH,
+    floor_depth: float | None = WORTH_YOUR_TIME_FLOOR_DEPTH,
 ) -> list[dict]:
     """Top `n` non-world-news articles by depth, one per source.
 
@@ -39,7 +44,17 @@ def select_worth_your_time(
     URLs) or, when no set is given, the top `exclude_top_n` by importance, so
     the two lanes don't repeat each other. Previously shown, Catholic-capped and
     mainline-polity-capped items are skipped, as is anything below `min_depth`.
+    When fewer than WORTH_YOUR_TIME_FLOOR_COUNT qualify, the bar drops to
+    `floor_depth` (None keeps the strict bar); deeper picks still come first.
     """
+    picks = _worth_your_time(articles, exclude_urls, n, exclude_top_n, min_depth)
+    if (floor_depth is not None and floor_depth < min_depth
+            and len(picks) < min(n, WORTH_YOUR_TIME_FLOOR_COUNT)):
+        picks = _worth_your_time(articles, exclude_urls, n, exclude_top_n, floor_depth)
+    return picks
+
+
+def _worth_your_time(articles, exclude_urls, n, exclude_top_n, min_depth) -> list[dict]:
     pool = [a for a in articles if a.get("source_type") != "world_news"]
     if exclude_urls is None:
         ranked = sorted(pool, key=lambda a: a.get("final_score", 0), reverse=True)
