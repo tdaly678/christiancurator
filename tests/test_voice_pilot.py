@@ -57,21 +57,23 @@ def _recent_items(n):
 
 def test_voice_title_is_pronoun_free_and_dash_free():
     t = voice_page_title("Abby Silva")
-    assert t == "Abby Silva: Articles, Bio, and Where They Write | Christian Curator"
+    assert t == "Abby Silva: Articles and Bio | Christian Curator"
     assert "—" not in t and "–" not in t
 
 
 def test_generated_voice_page_uses_new_title():
     page = render_bio_page({"name": "New Writer", "slug": "new-writer", "bio": "x"}, 0)
-    assert "<title>New Writer: Articles, Bio, and Where They Write | Christian Curator</title>" in page
+    assert "<title>New Writer: Articles and Bio | Christian Curator</title>" in page
     assert "— Voices —" not in page
 
 
 @pytest.mark.parametrize("old,new", [
     ("<title>Jane Roe — Voices — Christian Curator</title>",
-     "<title>Jane Roe: Articles, Bio, and Where They Write | Christian Curator</title>"),
+     "<title>Jane Roe: Articles and Bio | Christian Curator</title>"),
     ("<title>Jane Roe: Articles, Bio, and Where They Write | Christian Curator</title>",
-     "<title>Jane Roe: Articles, Bio, and Where They Write | Christian Curator</title>"),
+     "<title>Jane Roe: Articles and Bio | Christian Curator</title>"),
+    ("<title>Jane Roe: Articles and Bio | Christian Curator</title>",
+     "<title>Jane Roe: Articles and Bio | Christian Curator</title>"),
 ])
 def test_fix_voice_titles_rewrites_and_is_idempotent(old, new):
     html = f'<head>{old}<meta property="og:title" content="x" /></head>\n\n\n\n<p>a</p>'
@@ -90,7 +92,7 @@ def test_fix_voice_titles_stub_gets_short_title():
 def test_fix_voice_titles_leaves_pilot_titles_alone():
     """Rewrapping a pilot title doubled it on /voices/david-powlison/ (Nov 12)."""
     page = _render(_entry(name="David Powlison"))
-    title = "David Powlison: Articles, Bio, and Where They Write | Christian Curator"
+    title = "David Powlison: Articles and Bio | Christian Curator"
     assert f"<title>{title}</title>" in page
     out = fix_voice_titles.fix_page(page)
     assert f"<title>{title}</title>" in out

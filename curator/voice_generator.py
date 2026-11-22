@@ -148,8 +148,12 @@ _QF_ROWS = [
 
 
 def voice_page_title(name: str) -> str:
-    """<title> for a voice page. Pronoun-free and dash-free (Voices pilot, Nov 2026)."""
-    return f"{name}: Articles, Bio, and Where They Write | Christian Curator"
+    """<title> for a voice page. Pronoun-free and dash-free (Voices pilot, Nov 2026).
+
+    Shortened Nov 22 2026 (S1 report, SEO 4): the old "Articles, Bio, and Where
+    They Write" form put most voice titles over 65 characters.
+    """
+    return f"{name}: Articles and Bio | Christian Curator"
 
 
 def _esc(text: str) -> str:
