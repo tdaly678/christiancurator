@@ -13,6 +13,17 @@ there are no pairs, and that beats showing two reports of the same story.
 Rejected examples (2026-10-30 live page), covered by tests/test_point_counterpoint.py:
   * Pew's "Religion Remains Stable..." vs. Christian Post's write-up of the same Pew study
   * two news reports of the UMC / Highland Park disaffiliation fight
+
+Revived Nov 22 2026 (S2; the module had rendered nothing since Oct 31):
+  * candidates are chosen on max(importance, base importance, depth) >= 6,
+    so argued essays (high depth, modest news value) reach Claude; argued
+    pieces are listed first.
+  * validate_pair() lets two pieces that name the same people or bodies pair
+    when Claude stated two different theses and neither side is a news
+    report. Same source, same stance, both reporting, and news plus reaction
+    are still rejected.
+  * every rejection (here and in frontend/layout.py) is logged and written
+    to the job summary (GITHUB_STEP_SUMMARY) by write_debate_summary().
 """
 
 from __future__ import annotations
@@ -30,6 +41,7 @@ load_dotenv()
 
 MAX_PAIRS = 2          # layout.DEBATE_MAX_PAIRS also caps; keep them in step
 MAX_CANDIDATES = 24
+MIN_AXIS = 6.0         # max(importance, depth) a candidate needs
 SNIPPET_CHARS = 220
 
 # Perspectives that describe reporting rather than an argued position.
@@ -48,6 +60,9 @@ _COMMON_CAPS = {
 }
 
 _client = None
+
+# What the last build_point_counterpoint() call saw, for the job summary.
+LAST_RUN: dict = {}
 
 
 def _get_client():
@@ -88,8 +103,10 @@ Accept a pair only if ALL of these hold:
 
 Do NOT pair: two outlets summarising one Pew/Barna/Lifeway report; two reports of
 one denominational dispute; a news story and a reaction that agrees with it;
-"related coverage" of one topic. When in doubt, leave it out. Most days have
-zero or one real pair, and an empty array is a good answer.
+"related coverage" of one topic. Two opinion or theology essays that name the
+same people, bodies or events DO qualify when they argue opposite answers:
+that is what a debate looks like. Look hardest among the articles marked
+supportive or critical and the essays. If no pair meets the bar, return [].
 
 Return at most {max_pairs} pairs as a JSON array, strongest first:
   {{"point_index": <int>, "counterpoint_index": <int>,
@@ -185,26 +202,58 @@ def validate_pair(a: dict, b: dict, pairing: dict | None = None) -> str | None:
     if SequenceMatcher(None, _norm_title(a), _norm_title(b)).ratio() >= 0.6:
         return "near-identical headlines"
 
-    na, nb = _proper_nouns(a), _proper_nouns(b)
-    shared = na & nb
-    if shared and not opposed:
-        overlap = len(shared) / max(1, min(len(na), len(nb)))
-        if len(shared) >= 2 or overlap >= 0.5:
-            return f"same story ({', '.join(sorted(shared)[:3])})"
-
     ta, tb = (pairing.get("thesis_a") or "").strip(), (pairing.get("thesis_b") or "").strip()
     if pairing and (not ta or not tb):
         return "no stated theses"
     if ta and tb and SequenceMatcher(None, ta.lower(), tb.lower()).ratio() >= 0.7:
         return "theses agree"
+
+    na, nb = _proper_nouns(a), _proper_nouns(b)
+    shared = na & nb
+    # Real debates name the same people and bodies. Two stated, different
+    # theses from two pieces that take a position and are not news reports
+    # are a debate even when they share names; a news story plus a reaction
+    # to it is not.
+    argued = bool(ta and tb) and "news" not in (pa, pb) and bool({pa, pb} & _STANCES)
+    if shared and not opposed and not argued:
+        overlap = len(shared) / max(1, min(len(na), len(nb)))
+        if len(shared) >= 2 or overlap >= 0.5:
+            return f"same story ({', '.join(sorted(shared)[:3])})"
     return None
+
+
+def axis_score(a: dict) -> float:
+    """The stronger of the two editorial axes: importance (final, or Claude's
+    base value) and depth. Essays rarely score high on importance."""
+    vals = [a.get("importance"), a.get("final_score"), a.get("score"),
+            a.get("base_importance"), a.get("depth")]
+    return max((float(v) for v in vals if isinstance(v, (int, float))), default=0.0)
+
+
+_STANCE_ORDER = {"supportive": 0, "critical": 0, "neutral": 1, "news": 2}
+
+
+def debate_candidates(articles: list[dict], limit: int = MAX_CANDIDATES) -> list[dict]:
+    """Articles Claude may pair: max(importance, depth) >= MIN_AXIS, not
+    media, off focus or shown yesterday. Argued pieces first, then by axis."""
+    pool = [a for a in articles
+            if axis_score(a) >= MIN_AXIS and a.get("role") != "media"
+            and a.get("url") and not a.get("shown_yesterday") and not _off_focus(a)]
+    pool.sort(key=lambda a: (_STANCE_ORDER.get(a.get("perspective"), 1), -axis_score(a)))
+    return pool[:limit]
+
+
+def rejection_note(a: dict, b: dict, reason: str) -> dict:
+    return {"reason": reason, "a": _title(a)[:80], "a_source": a.get("source_name", ""),
+            "b": _title(b)[:80], "b_source": b.get("source_name", "")}
 
 
 def build_point_counterpoint(articles: list[dict]) -> list[dict]:
     """Ask Claude for genuine thesis-vs-thesis pairs among the top articles."""
-    candidates = [a for a in articles
-                  if (a.get("score") or 0) >= 6 and a.get("role") != "media"
-                  and not _off_focus(a)][:MAX_CANDIDATES]
+    candidates = debate_candidates(articles)
+    LAST_RUN.clear()
+    LAST_RUN.update({"candidates": len(candidates), "proposed": 0, "accepted": 0,
+                     "rejected": [], "error": ""})
     if len(candidates) < 2:
         return []
 
@@ -221,10 +270,14 @@ def build_point_counterpoint(articles: list[dict]) -> list[dict]:
     except Exception as e:
         print(f"  Point/counterpoint error: {e}")
         record_failure("point_counterpoint", e)
+        LAST_RUN["error"] = f"{type(e).__name__}: {e}"[:200]
         return []
 
     pairings, used = [], set()
-    for p in pairings_raw if isinstance(pairings_raw, list) else []:
+    proposals = ([p for p in pairings_raw if isinstance(p, dict)]
+                 if isinstance(pairings_raw, list) else [])
+    LAST_RUN["proposed"] = len(proposals)
+    for p in proposals:
         pi, ci = p.get("point_index"), p.get("counterpoint_index")
         if not isinstance(pi, int) or not isinstance(ci, int):
             continue
@@ -236,6 +289,7 @@ def build_point_counterpoint(articles: list[dict]) -> list[dict]:
             reason = "article already paired"
         if reason:
             print(f"  Debate pair rejected ({reason}): {_title(a)[:50]} | {_title(b)[:50]}")
+            LAST_RUN["rejected"].append(rejection_note(a, b, reason))
             continue
         pairings.append({
             "point": a,
@@ -247,4 +301,44 @@ def build_point_counterpoint(articles: list[dict]) -> list[dict]:
         used |= {a.get("url"), b.get("url")}
         if len(pairings) >= MAX_PAIRS:
             break
+    LAST_RUN["accepted"] = len(pairings)
     return pairings
+
+
+def debate_summary_lines(layout: dict | None = None) -> list[str]:
+    """Markdown lines for the job summary: what Claude saw and proposed, and
+    every pair rejected here or by the homepage layout, with the reason."""
+    run = LAST_RUN or {}
+    shown = len((layout or {}).get("debate") or [])
+    lines = ["## The Debate", ""]
+    if run:
+        lines.append(f"Candidates sent to Claude: {run.get('candidates', 0)}. "
+                     f"Pairs proposed: {run.get('proposed', 0)}. "
+                     f"Passed validation: {run.get('accepted', 0)}.")
+        if run.get("error"):
+            lines.append(f"Claude call failed: {run['error']}")
+    lines.append(f"Pairs on the page: {shown}.")
+    notes = list(run.get("rejected") or []) + list((layout or {}).get("debate_notes") or [])
+    if notes:
+        lines += ["", "| Rejected | Side A | Side B |", "|---|---|---|"]
+        for n in notes:
+            a = f"{n['a']} ({n['a_source']})".replace("|", "/")
+            b = f"{n['b']} ({n['b_source']})".replace("|", "/")
+            lines.append(f"| {n['reason']} | {a} | {b} |")
+    return lines + [""]
+
+
+def write_debate_summary(layout: dict | None = None, path: str | None = None) -> None:
+    """Print the Debate report and append it to the GitHub job summary
+    (GITHUB_STEP_SUMMARY) when that is set."""
+    lines = debate_summary_lines(layout)
+    for line in lines:
+        if line:
+            print(f"  {line}")
+    path = path or os.environ.get("GITHUB_STEP_SUMMARY")
+    if path:
+        try:
+            with open(path, "a", encoding="utf-8") as f:
+                f.write("\n".join(lines) + "\n")
+        except OSError as e:
+            print(f"  (debate summary not written: {e})")

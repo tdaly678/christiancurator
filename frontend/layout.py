@@ -9,7 +9,10 @@ see the same picks:
                     content kind (curator/editorial.py, 2026-11-12): what the
                     Pulse drew on first, then ideas, commentary, news filler;
                     scandal never, unless it is the dominant story
-  debate            point/counterpoint pairs, else scorer opposing pairs
+  debate            point/counterpoint pairs, else scorer opposing pairs;
+                    paired after the lead block is chosen, so a pair may
+                    take a sublead (the next pick fills the slot) but never
+                    the Lead
   worth_your_time   depth lane, via curator.lanes.select_worth_your_time
   watch_listen      video/podcast lane from the media feeds, via
                     curator.lanes.select_watch_and_listen (Wave 3)
@@ -163,20 +166,32 @@ def _pick_lead(pool: list[dict], n: int) -> list[dict]:
     return picks
 
 
-def _build_debate(articles: list[dict], pairings: list[dict]) -> list[dict]:
+def _pick_top(ordered: list[dict], dominant: dict | None) -> list[dict]:
+    """Lead + subleads from the ranked lead pool. The dominant story's one
+    reserved slot is the first sublead; it takes the Lead only when nothing
+    else qualifies."""
+    top = _pick_lead(ordered, 1 + SUBLEAD_COUNT - (1 if dominant else 0))
+    if dominant:
+        top = [a for a in top if a.get("source_name") != dominant.get("source_name")]
+        top.insert(1 if top else 0, dominant)
+    return top
+
+
+def _build_debate(articles: list[dict], pairings: list[dict],
+                  exclude_urls: set | frozenset = frozenset(),
+                  notes: list | None = None) -> list[dict]:
     """Side-by-side pairs. Claude's point/counterpoint pairings first; if there
     are none, fall back to the scorer's supportive vs. critical opposing pairs
     (same topic_cluster). Every pair, including cached ones, must pass
-    point_counterpoint.validate_pair(). Returns [] when nothing pairs, so the
-    module is omitted.
+    point_counterpoint.validate_pair(). A pair touching `exclude_urls` (the
+    Lead) is skipped. Rejections are appended to `notes` for the job
+    summary. Returns [] when nothing pairs, so the module is omitted.
     """
-    from curator.point_counterpoint import validate_pair
+    from curator.point_counterpoint import rejection_note, validate_pair
+    notes = notes if notes is not None else []
     by_url = {a.get("url"): a for a in articles}
     debates, used = [], set()
     for p in pairings or []:
-        if any((by_url.get((p.get(k) or {}).get("url")) or p.get(k) or {}).get("shown_yesterday")
-               for k in ("point", "counterpoint")):
-            continue
         # Cached pairings (regenerate_daily.py) carry only title + url, so use
         # the full article dict when we have it.
         point, counter = p.get("point"), p.get("counterpoint")
@@ -184,9 +199,22 @@ def _build_debate(articles: list[dict], pairings: list[dict]) -> list[dict]:
         counter = by_url.get((counter or {}).get("url"), counter)
         if not point or not counter:
             continue
-        if point.get("url") in used or counter.get("url") in used:
-            continue
-        if validate_pair(point, counter):
+        reason = None
+        if point.get("shown_yesterday") or counter.get("shown_yesterday"):
+            reason = "shown yesterday"
+        elif point.get("url") in exclude_urls or counter.get("url") in exclude_urls:
+            reason = "a side is the Lead"
+        elif point.get("url") in used or counter.get("url") in used:
+            reason = "article already paired"
+        else:
+            # Theses ride along on fresh and newer cached pairings; the
+            # shared-name rule relaxes only when both are stated.
+            stated = p if ("thesis_a" in p or "thesis_b" in p) else None
+            reason = validate_pair(point, counter, stated)
+        if reason:
+            print(f"  Debate pair dropped by layout ({reason}): "
+                  f"{(point.get('title') or '')[:50]} | {(counter.get('title') or '')[:50]}")
+            notes.append(rejection_note(point, counter, reason))
             continue
         d = {"topic": p.get("topic", ""), "label_a": "Point", "label_b": "Counterpoint",
              "a": point, "b": counter, "kind": "claude"}
@@ -202,12 +230,17 @@ def _build_debate(articles: list[dict], pairings: list[dict]) -> list[dict]:
 
     clusters: dict = {}
     for a in articles:
-        if a.get("opposing_pair") and a.get("url") not in used and not a.get("shown_yesterday"):
+        if (a.get("opposing_pair") and a.get("url") not in used and not a.get("shown_yesterday")
+                and a.get("url") not in exclude_urls):
             clusters.setdefault(a.get("topic_cluster") or "", []).append(a)
     for cluster, group in clusters.items():
         pro = next((a for a in group if a.get("perspective") == "supportive"), None)
         con = next((a for a in group if a.get("perspective") == "critical"), None)
-        if not cluster or not pro or not con or validate_pair(pro, con):
+        if not cluster or not pro or not con:
+            continue
+        reason = validate_pair(pro, con)
+        if reason:
+            notes.append(rejection_note(pro, con, f"scorer pair: {reason}"))
             continue
         debates.append({"topic": cluster.replace("_", " ").capitalize(),
                         "label_a": "Pro", "label_b": "Con", "a": pro, "b": con,
@@ -272,22 +305,21 @@ def build_homepage_layout(articles: list[dict], pairings: list[dict] | None = No
 
     lead_pool = [a for a in fresh if a.get("source_type") != "world_news" and lead_block_eligible(a)]
     ordered, dominant = rank_lead_pool(lead_pool, daily_summary, unclustered)
-    top = _pick_lead(ordered, 1 + SUBLEAD_COUNT - (1 if dominant else 0))
-    if dominant:
-        # The dominant story's one reserved slot is the first sublead; it
-        # takes the Lead only when nothing else qualifies.
-        top = [a for a in top if a.get("source_name") != dominant.get("source_name")]
-        top.insert(1 if top else 0, dominant)
-    lead, subleads = (top[0] if top else None), top[1:]
-    placed = {a["url"] for a in top}
+    top = _pick_top(ordered, dominant)
 
-    debate = _build_debate(articles, [
-        p for p in (pairings or [])
-        if p.get("point", {}).get("url") not in placed
-        and p.get("counterpoint", {}).get("url") not in placed
-    ])
-    for d in debate:
-        placed |= {d["a"]["url"], d["b"]["url"]}
+    # The Debate is paired after the lead block is chosen. A pair may take a
+    # sublead (that article moves to The Debate and the next pick fills its
+    # slot); only a pair touching the Lead itself is dropped (S2, Nov 22 2026).
+    debate_notes: list = []
+    debate = _build_debate(articles, pairings,
+                           exclude_urls={top[0]["url"]} if top else set(),
+                           notes=debate_notes)
+    debate_urls = {u for d in debate for u in (d["a"]["url"], d["b"]["url"])}
+    if any(a["url"] in debate_urls for a in top):
+        top = _pick_top([a for a in ordered if a["url"] not in debate_urls],
+                        dominant if dominant and dominant["url"] not in debate_urls else None)
+    lead, subleads = (top[0] if top else None), top[1:]
+    placed = {a["url"] for a in top} | debate_urls
 
     research = []
     for r in research_articles or []:
@@ -339,6 +371,8 @@ def build_homepage_layout(articles: list[dict], pairings: list[dict] | None = No
         "board": board,
         "research": research,
         "siblings": siblings,
+        # Pairs the layout dropped, with the reason (job summary only).
+        "debate_notes": debate_notes,
     }
 
 
