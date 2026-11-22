@@ -13,15 +13,37 @@ publisher headline. Every display path reads `rewritten_title or title`.
 Every rewrite is gated by headline_voice.rewrite_rejection() (hard rejects,
 dated column check, listicle and claimless-label rules, voice demotions). A
 rewrite that fails falls back to the cleaned original, display_title().
+
+Fact guards (Nov 22 2026, S1 3.4): a rewrite may not say more than the piece.
+  - keep_publisher_title(): roundups, podcast episodes and newsletters are
+    never sent to Claude; they keep the cleaned publisher title.
+  - fact_rejection() discards a rewrite that
+      REWRITE_CHANGES_MODALITY    turns a question ("What will we remember in
+                                  the afterlife?", "Why paper books endure")
+                                  into a statement
+      REWRITE_UNCREDITED_OPINION  adds should / must / ought to a piece without
+                                  crediting it ("..., Writer Argues", "X Says")
+      REWRITE_INVENTED_NOUN       adds a noun such as "white paper", "report",
+                                  "study" or "groups" that the original title
+                                  and summary never use
+      REWRITE_UNKNOWN_ENTITY      names a person, body or work (acronym,
+                                  initials, or a capitalized word outside
+                                  common vocabulary) absent from the original
+                                  title, summary, byline and outlet
 """
 
 import os
+import re
 import time
 import anthropic
 from dotenv import load_dotenv
 
 from curator.ai_health import record_failure
-from curator.headline_voice import display_title, rewrite_rejection, strip_dashes
+from curator.headline_voice import (
+    NEWS_VERBS, display_title, hard_reject, hard_reject_description, rewrite_rejection,
+    strip_dashes,
+)
+from curator.media_kind import looks_like_audio_video
 
 load_dotenv()
 
@@ -50,6 +72,15 @@ the writer argues. A question is fine only when it names a real dispute.
 - No newsletter or first person voice (my week, what I'm reading, a note to readers)
 - No listicles ("5 Ways", "7 Reasons", "10 Things")
 - No review labels ("Review:", "A Review of")
+- Keep the original's form: if the original is a question or a "Why" / "How" \
+title, the headline stays a question or a "Why" / "How" headline
+- When the piece argues an opinion, credit it to the writer ("..., Writer Argues", \
+"Pastor Says ..."); never state the writer's opinion as fact
+- Never add a document or group the summary does not name: no "white paper", \
+"report", "study", "survey", "statement", "groups", "leaders" or "coalition" \
+unless the original title or summary uses that word
+- Never add a person, church, outlet or organization the original title or summary \
+does not name
 - Never return a dated show or column title such as \
 "The World and Everything in It: November 3, 2026" or "Works & Wonders (November 1)". \
 For a dated show or briefing, drop the show name and the date and headline the \
@@ -68,7 +99,10 @@ Examples of the voice to aim for:
   RealClear: "Supreme Court Weighs Faith-Based Charter School Case"
 
   Original: "5 Things Every Pastor Should Know About AI"
-  RealClear: "Pastors Should Treat AI Sermon Tools With Caution"
+  RealClear: "Pastors Should Treat AI Sermon Tools With Caution, Writer Argues"
+
+  Original: "What will we remember in the afterlife?"
+  RealClear: "What Will Believers Remember in the Afterlife?"
 
 Original title: {title}
 Article summary: {summary}
@@ -98,19 +132,174 @@ def _fallback_title(article: dict) -> str:
     return display_title(article["title"], article.get("source_name")) or article["title"]
 
 
-def accept_rewrite(article: dict, candidate: str) -> str:
+# ── Fact guards ──────────────────────────────────────────────────────────────
+
+# Nouns a rewrite may not introduce: they assert a document, a study or a
+# collective actor the piece may not have ("ERLC ... in New White Paper" for a
+# podcast, "Christian Groups Denounce" for one editorial).
+INVENTED_NOUNS = (
+    "white paper", "report", "reports", "study", "studies", "survey", "surveys",
+    "poll", "polls", "research", "researchers", "data", "statement", "statements",
+    "resolution", "letter", "petition", "lawsuit", "ruling", "guidelines",
+    "group", "groups", "leaders", "coalition", "lawmakers", "experts", "scholars",
+    "publisher", "publishers", "organizations", "activists", "critics", "advocates",
+    "readers", "theologians",
+)
+_INVENTED_RE = re.compile(
+    r"\b(" + "|".join(re.escape(n) for n in sorted(INVENTED_NOUNS, key=len, reverse=True)) + r")\b",
+    re.IGNORECASE)
+
+_QUESTION_OPEN_RE = re.compile(
+    r"^\s*(?:why|how|what|when|where|who|which|is|are|can|could|do|does|did|will|would"
+    r"|should|was|were|has|have)\b", re.IGNORECASE)
+_NORMATIVE_RE = re.compile(
+    r"\b(?:should|must|ought|need\s+to|needs\s+to|have\s+to|has\s+to)\b", re.IGNORECASE)
+_CREDIT_RE = re.compile(
+    r"\b(?:argues?|says?|writes?|contends?|urges?|warns?|asks?|insists?|claims?|"
+    r"believes?|thinks?|suggests?|calls?|maintains?|according\s+to)\b",
+    re.IGNORECASE)
+
+# Words a headline may use without the source naming them: function words,
+# attribution verbs and the site's everyday nouns. Any other capitalized word
+# in a rewrite that the source lacks must appear in lowercase in today's
+# summaries (common vocabulary, build_vocab()), or it is taken for a name.
+_BASE_VOCAB = frozenset("""
+    a an the and but or nor for of in on at to by as vs via up per from with without
+    over under into onto after before about against among amid between through during
+    is are was were be been being am has have had do does did can could will would
+    should shall may might must not no new old more most less least many much few
+    why how what when where who whom whose which this that these those it its they
+    their them he his she her we our you your i my one two three four five first
+    also just even only ever never all every some any own other others both each
+    still yet not so than then there here out off down back
+    argues argue says say writes write warns warn urges urge asks ask contends
+    insists claims calls call weighs weigh faces face sees see finds find makes make
+    takes take shows show offers offer explains explain remains remain still now
+    again case cases way ways writer writers author pastor pastors church churches
+    christian christians christianity faith faithful believers believer evangelical
+    evangelicals god jesus christ gospel bible biblical scripture theology
+    theologian theological prayer worship ministry life lives people world culture
+""".split())
+_TOKEN_RE = re.compile(r"[A-Za-z][A-Za-z.'\-]*[A-Za-z]|[A-Z]")
+_WORDS_RE = re.compile(r"[A-Za-z][A-Za-z'\-]*")
+
+
+def _stem(word: str) -> str:
+    w = word.lower().strip(".'")
+    w = re.sub(r"'s$", "", w)
+    for suf in ("ies", "es", "s", "ed", "ing", "ly"):
+        if w.endswith(suf) and len(w) - len(suf) >= 3:
+            return w[: -len(suf)]
+    return w
+
+
+def _source_text(article: dict) -> str:
+    # The byline and outlet count as named in the piece ("..., Mathis Argues").
+    parts = [article.get("original_title") or "", article.get("title") or "",
+             article.get("summary") or "", article.get("description") or "",
+             article.get("author") or "", article.get("source_name") or ""]
+    return " ".join(re.sub(r"<[^>]+>", " ", p) for p in parts)
+
+
+def build_vocab(articles: list[dict]) -> set[str]:
+    """Stems of words that appear in lowercase in today's summaries and feed
+    text: common vocabulary, so a capitalized rewrite word in it is not taken
+    for a name. Names are capitalized in running text, so they never enter."""
+    vocab = set()
+    for a in articles:
+        raw = (a.get("summary") or "") + " " + (a.get("full_content") or "")[:20000]
+        text = re.sub(r"<[^>]+>", " ", raw)
+        for w in re.findall(r"\b[a-z][a-z'\-]+\b", text):
+            vocab.add(_stem(w))
+    return vocab
+
+
+def _is_question(title: str) -> bool:
+    t = (title or "").strip()
+    return t.endswith("?") or bool(_QUESTION_OPEN_RE.match(t))
+
+
+def keep_publisher_title(article: dict) -> str | None:
+    """Why the publisher's title is kept without a rewrite, or None.
+
+    Roundups, podcast episodes and newsletters are presented under their own
+    titles: a rewrite of one of them states a claim the piece never makes.
+    """
+    title = article.get("original_title") or article.get("title") or ""
+    if looks_like_audio_video(article):
+        return "KEEP_PODCAST"
+    reason = hard_reject(title) or hard_reject_description(article.get("summary") or "")
+    if reason in ("HARD_REJECT_ROUNDUP", "HARD_REJECT_PROMO"):
+        return "KEEP_ROUNDUP"
+    if re.search(r"\bnewsletter\b|\bround-?up\b|\ba la carte\b", title, re.IGNORECASE):
+        return "KEEP_NEWSLETTER"
+    return None
+
+
+def _entity_tokens(candidate: str, vocab: set[str]) -> list[str]:
+    """Words in the rewrite that look like names: acronyms, initials, internal
+    capitals, or capitalized words outside common vocabulary."""
+    out = []
+    for tok in _TOKEN_RE.findall(candidate):
+        for part in tok.split("-"):
+            part = part.strip(".'")
+            if not part or not part[0].isupper():
+                continue
+            letters = re.sub(r"[^A-Za-z]", "", part)
+            if len(letters) >= 2 and letters.isupper():          # ERLC, SBC
+                out.append(part)
+            elif "." in part or re.search(r"[a-z][A-Z]", part):  # C.S, McDonald
+                out.append(part)
+            else:
+                low = re.sub(r"'s$", "", part.lower())
+                stem = _stem(part)
+                if (low not in _BASE_VOCAB and stem not in _BASE_VOCAB and stem not in vocab
+                        and low not in NEWS_VERBS):
+                    out.append(part)
+    return out
+
+
+def fact_rejection(candidate: str, article: dict, vocab: set[str] | None = None) -> str | None:
+    """Why a rewrite says more than the piece does, or None (see module doc)."""
+    source = _source_text(article)
+    source_low = source.lower()
+    words = _WORDS_RE.findall(source)
+    source_stems = {_stem(w) for w in words} | {_stem(p) for w in words for p in w.split("-") if p}
+    original = article.get("original_title") or article.get("title") or ""
+
+    if _is_question(display_title(original)) and not _is_question(candidate):
+        return "REWRITE_CHANGES_MODALITY"
+
+    if (_NORMATIVE_RE.search(candidate) and not _NORMATIVE_RE.search(original)
+            and not _CREDIT_RE.search(candidate)):
+        return "REWRITE_UNCREDITED_OPINION"
+
+    for m in _INVENTED_RE.finditer(candidate):
+        noun = m.group(1).lower()
+        if (not re.search(r"\b" + re.escape(noun) + r"\b", source_low)
+                and not all(_stem(w) in source_stems for w in noun.split())):
+            return "REWRITE_INVENTED_NOUN"
+
+    vocab = (vocab or set()) | build_vocab([article])
+    for tok in _entity_tokens(candidate, vocab):
+        if tok.lower() not in source_low and _stem(tok) not in source_stems:
+            return "REWRITE_UNKNOWN_ENTITY"
+    return None
+
+
+def accept_rewrite(article: dict, candidate: str, vocab: set[str] | None = None) -> str:
     """Return the headline to show: the rewrite if it passes the voice gate, else the fallback.
 
     The candidate is cleaned first (quotes, dashes, emoji, service tails), then
-    checked with headline_voice.rewrite_rejection(). A rejection is logged and
-    recorded on the article as rewrite_rejected.
+    checked with headline_voice.rewrite_rejection() and fact_rejection(). A
+    rejection is logged and recorded on the article as rewrite_rejected.
     """
     cleaned = strip_dashes(display_title((candidate or "").strip().strip('"'),
                                          article.get("source_name")))
     if not _looks_like_headline(cleaned):
         article["rewrite_rejected"] = "META_REPLY"
         return _fallback_title(article)
-    reason = rewrite_rejection(cleaned, article["title"])
+    reason = rewrite_rejection(cleaned, article["title"]) or fact_rejection(cleaned, article, vocab)
     if reason:
         print(f"  Rewrite rejected ({reason}): '{cleaned}' for '{article['title']}'")
         article["rewrite_rejected"] = reason
@@ -118,9 +307,13 @@ def accept_rewrite(article: dict, candidate: str) -> str:
     return cleaned
 
 
-def rewrite_title(article: dict) -> dict:
+def rewrite_title(article: dict, vocab: set[str] | None = None) -> dict:
     """Rewrite a single article title using Claude, with retry on 529 overload."""
-    import re
+    keep = keep_publisher_title(article)
+    if keep:
+        article["rewritten_title"] = _fallback_title(article)
+        article["rewrite_skipped"] = keep
+        return article
     summary = article.get("summary") or ""
     # Strip HTML tags from summary for cleaner context
     summary_text = re.sub(r"<[^>]+>", "", summary).strip()[:300]
@@ -137,7 +330,7 @@ def rewrite_title(article: dict) -> dict:
                 max_tokens=60,
                 messages=[{"role": "user", "content": REWRITE_PROMPT.format(title=article["title"], summary=summary_text)}],
             )
-            article["rewritten_title"] = accept_rewrite(article, message.content[0].text)
+            article["rewritten_title"] = accept_rewrite(article, message.content[0].text, vocab)
             return article
         except anthropic.APIStatusError as e:
             if e.status_code == 529 and attempt <= MAX_RETRIES:
@@ -167,4 +360,5 @@ def rewrite_titles(articles: list[dict], enabled: bool | None = None) -> list[di
         enabled = REWRITE_TITLES_ENABLED
     if not enabled:
         return articles
-    return [rewrite_title(a) for a in articles]
+    vocab = build_vocab(articles)
+    return [rewrite_title(a, vocab) for a in articles]

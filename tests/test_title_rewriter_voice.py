@@ -149,7 +149,8 @@ def test_realclear_rewrites_pass(candidate):
     assert rewrite_rejection(candidate, WNG) is None
 
 
-def _article(title, source="World Magazine", summary="The Supreme Court heard a charter case."):
+def _article(title, source="World Magazine",
+             summary="The Supreme Court heard a case over a faith-based charter school."):
     return {"title": title, "source_name": source, "summary": summary}
 
 

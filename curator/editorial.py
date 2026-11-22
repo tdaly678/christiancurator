@@ -259,9 +259,17 @@ def on_pulse_theme(a: dict, stems: set[str]) -> bool:
 
 # ── Lead-block ranking ───────────────────────────────────────────────────────
 
+def is_off_mission_pick(a: dict) -> bool:
+    """Catholic-internal or off-mission (lifestyle, horse race, entertainment)
+    items, flagged by the scorer (Nov 22 2026, S1 2.2): never in the lead
+    block, and below every other item in their board column, so they stay
+    out of the board's top 10."""
+    return bool(a.get("catholic_internal") or a.get("off_mission_capped"))
+
+
 def lead_tier(a: dict, cited: dict[str, int], stems: set[str]) -> int:
     kind = content_kind(a)
-    if kind == "scandal":
+    if kind == "scandal" or is_off_mission_pick(a):
         return TIER_EXCLUDED
     score = _score(a)
     if canonical_url(a.get("url") or "") in cited and score >= PULSE_CITED_MIN_SCORE:
@@ -305,6 +313,7 @@ def rank_lead_pool(pool: list[dict], daily_summary: dict | None = None,
 
 def board_sort_key(a: dict, pool: list[dict]) -> tuple:
     """Board columns keep importance order, but a scandal story that is not
-    the dominant story sits below every other item in its column."""
+    the dominant story sits below every other item in its column, and a
+    Catholic-internal or off-mission item sits below those."""
     demoted = content_kind(a) == "scandal" and not is_dominant_story(a, pool)
-    return (demoted, -_score(a))
+    return (is_off_mission_pick(a), demoted, -_score(a))
