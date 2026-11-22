@@ -3,21 +3,16 @@
   "type": "spectrum",
   "slug": "creation-evolution",
   "label": "Where the Views Sit",
-  "title": "Two questions, not one line",
-  "intro": "The creation debate is often drawn as one line from young earth to evolution. It is really two questions: how old the earth is, and whether all life shares common ancestors. Each view is placed by its own statement.",
-  "image_title": "Creation and science: two questions, not one line",
-  "image_subtitle": "How old is the earth, and does all life share common ancestors?",
-  "image_subtitle_narrow": "How old is the earth, and does all life share common ancestors?",
-  "caption": "Views held by evangelicals, on two separate questions. Old earth creation and evolutionary creation agree on the age of the earth and part ways on common descent. No major view pairs a young earth with common descent, so that corner is empty.",
+  "title": "How old is the earth?",
+  "intro": "Evangelicals who hold that God made humanity directly still differ on the age of the earth and the length of the creation days. Each view is placed by its own statement.",
+  "image_title": "Creation and science: how old is the earth?",
+  "image_subtitle": "Six 24-hour days and a recent creation, or long creation days and billions of years",
+  "image_subtitle_narrow": "How old is the earth?",
+  "caption": "Two evangelical views on the age of the earth. Both reject the common descent of humanity from earlier life and hold that God created Adam and Eve directly.",
   "axis": {
     "left": "Thousands of years",
     "right": "Billions of years",
     "label": "Age of the earth"
-  },
-  "axis_y": {
-    "label": "Common descent of life",
-    "bottom": "Rejected",
-    "top": "Accepted"
   },
   "positions": [
     {
@@ -32,8 +27,7 @@
         "source": "aig"
       },
       "at": 5,
-      "y": 6,
-      "placement": "Thousands of years; common descent rejected",
+      "placement": "Thousands of years",
       "text": "Six consecutive 24-hour days and a recent creation. God made the original kinds, and Adam and Eve, directly.",
       "short_text": "Six 24-hour days, a recent creation, the kinds made directly."
     },
@@ -47,46 +41,28 @@
         "image_name": "Reasons to Believe",
         "work": "Frequently Asked Questions",
         "source": "rtb-faq",
-        "also": ["rtb-faith"]
+        "also": [
+          "rtb-faith"
+        ]
       },
       "at": 93,
-      "y": 8,
-      "placement": "Billions of years; common descent rejected",
+      "placement": "Billions of years",
       "text": "The creation days are long periods and the earth is billions of years old. God created new forms of life directly, humanity as a special creation.",
       "short_text": "Long creation days, billions of years, new life forms made directly."
-    },
-    {
-      "id": "evolutionary",
-      "name": "Evolutionary creation",
-      "short": "Evolutionary creation",
-      "color": "blue",
-      "proponent": {
-        "name": "BioLogos",
-        "image_name": "BioLogos",
-        "work": "What is Evolutionary Creation?",
-        "source": "biologos-ec",
-        "also": ["biologos-fossils"]
-      },
-      "at": 93,
-      "y": 94,
-      "placement": "Billions of years; common descent accepted",
-      "text": "God created through evolution over billions of years. All life on earth is related, humans included, which does not negate the image of God.",
-      "short_text": "God created through evolution; all life, humans included, is related."
     }
   ],
   "place": {
     "before": "<section class=\"cc-synthesis\""
   },
   "differ": [
-    "Age: six 24-hour days and a recent creation (Answers in Genesis), or billions of years (Reasons to Believe and BioLogos).",
-    "Common descent: Answers in Genesis and Reasons to Believe hold that God created kinds or new forms of life directly; BioLogos accepts that all life, humans included, is related.",
-    "Adam and Eve: Answers in Genesis and Reasons to Believe hold they were the first two humans, made directly. BioLogos says evolutionary creationists differ; some hold they were a historical couple.",
-    "Scripture and science: Answers in Genesis calls old earth and evolutionary readings incompatible with Scripture. Reasons to Believe holds that Scripture and nature, properly understood, never contradict each other; BioLogos takes the Bible seriously as God's inspired word and science seriously as a way of understanding the world God has made."
+    "Age: six 24-hour days and a recent creation (Answers in Genesis), or billions of years (Reasons to Believe).",
+    "The days of Genesis: Answers in Genesis reads them as six consecutive, ordinary days; Reasons to Believe reads them as long periods of time.",
+    "Scripture and science: Answers in Genesis calls old earth readings such as day-age and progressive creation incompatible with Scripture. Reasons to Believe holds that Scripture and nature, properly understood, never contradict each other."
   ],
-  "common_text": "All three confess God as the Creator of all things and the Bible as his inspired word. BioLogos puts the common ground this way: \"While Christians differ on their views of the age of the earth and evolution, we all agree on the essentials of the faith.\"",
-  "common_source": "biologos-views",
+  "common_text": "Both confess God as the Creator of all things and the Bible as his inspired word, and both hold that God made the first humans directly. Reasons to Believe puts it this way: \"Adam and Eve, the first human beings, chose to rebel against God and go their own autonomous way.\"",
+  "common_source": "rtb-faith",
   "note": "No view is presented here as the answer.",
-  "image_source": "Sources: Answers in Genesis, Statement of Faith; Reasons to Believe, FAQ; BioLogos, What is Evolutionary Creation?",
+  "image_source": "Sources: Answers in Genesis, Statement of Faith; Reasons to Believe, FAQ",
   "sources": [
     {
       "id": "aig",
@@ -114,33 +90,6 @@
       "fetched": "2026-11-14",
       "quote": "Adam and Eve, the first human beings, chose to rebel against God and go their own autonomous way.",
       "notes": "Also: 'Properly understood, God’s Word (Scripture) and God’s world (nature), as two revelations (one verbal, one physical) from the same God, will never contradict each other.'"
-    },
-    {
-      "id": "biologos-ec",
-      "publisher": "BioLogos",
-      "title": "What is Evolutionary Creation?",
-      "url": "https://biologos.org/common-questions/what-is-evolutionary-creation",
-      "fetched": "2026-11-14",
-      "quote": "We therefore accept the scientific evidence that all life on Earth is related, including humans",
-      "notes": "Also: EC 'takes the Bible seriously as the inspired and authoritative word of God'; 'ECs generally agree that people were made by God and that humans are biologically related to other creatures'; 'Some ECs believe Adam and Eve were a historical couple.' biologos.org answers scripts with a bot challenge (HTTP 429); read in headless Chrome."
-    },
-    {
-      "id": "biologos-fossils",
-      "publisher": "BioLogos",
-      "title": "What does the fossil record show?",
-      "url": "https://biologos.org/common-questions/what-does-the-fossil-record-show",
-      "fetched": "2026-11-14",
-      "quote": "are 3.7 billion years old",
-      "notes": "Full sentence: 'The oldest fossils, microbial mats in Greenland, are 3.7 billion years old!' Read in headless Chrome."
-    },
-    {
-      "id": "biologos-views",
-      "publisher": "BioLogos",
-      "title": "How is Evolutionary Creation different from Evolutionism, Intelligent Design, and Creationism?",
-      "url": "https://biologos.org/common-questions/how-is-biologos-different-from-evolutionism-intelligent-design-and-creationism",
-      "fetched": "2026-11-14",
-      "quote": "While Christians differ on their views of the age of the earth and evolution, we all agree on the essentials of the faith",
-      "notes": "Also describes OEC: 'OEC does not accept the common ancestry of all life forms, often opting instead for a theory of progressive creation.' Last updated November 20, 2023. Read in headless Chrome."
     }
   ],
   "voices_label": "One voice for each view"
