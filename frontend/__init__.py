@@ -1176,6 +1176,7 @@ def _write_urlset(path, entries):
 
 
 VOICES_NOINDEX_PATH = Path(__file__).parent / "voices_noindex.json"
+SITEMAP_LASTMOD_PATH = Path(__file__).parent.parent / "data" / "sitemap_lastmod.json"
 
 
 def load_noindex_voices() -> set:
@@ -1192,27 +1193,39 @@ def regenerate_sitemap():
     """Regenerate sitemap.xml as a sitemap-index pointing to per-section sitemaps.
 
     Sections: core (home/digest/about/hub indexes), topics, voices, daily, archive.
-    Each per-section sitemap uses accurate per-page lastmod (file mtime).
+    lastmod is the page's dateModified, else the date its visible content last
+    changed (frontend/sitemap_lastmod.py, state in data/sitemap_lastmod.json);
+    the homepage, digest and archive index change every day. Daily and archive
+    snapshots use their own date. The index lastmod is the newest in each child.
 
     Priority/changefreq tuned to favor deep evergreen content (topics, voices)
     over high-volume frozen content (daily/archive individual snapshots).
     """
+    from frontend.sitemap_lastmod import LastmodState
     today_iso = date.today().isoformat()
     base = "https://www.christiancurator.com"
+    state = LastmodState(SITEMAP_LASTMOD_PATH)
+
+    def page_lastmod(url, path):
+        try:
+            html = Path(path).read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            return _file_mtime_iso(path)
+        return state.lastmod(url, html, today_iso)
 
     # --- Core hub URLs (always-on, high priority) ---
     core_entries = [
         (f"{base}/",        "daily",   "1.0", today_iso),
         (f"{base}/digest/", "daily",   "0.9", today_iso),
-        (f"{base}/about/",  "monthly", "0.6", today_iso),
+        (f"{base}/about/",  "monthly", "0.6", page_lastmod(f"{base}/about/", DOCS_DIR / "about" / "index.html")),
         (f"{base}/archive/","daily",   "0.7", today_iso),
     ]
     if (TOPICS_DIR / "index.html").exists():
         core_entries.append((f"{base}/topics/", "weekly", "0.8",
-                             _file_mtime_iso(TOPICS_DIR / "index.html")))
+                             page_lastmod(f"{base}/topics/", TOPICS_DIR / "index.html")))
     if (VOICES_DIR / "index.html").exists():
         core_entries.append((f"{base}/voices/", "weekly", "0.8",
-                             _file_mtime_iso(VOICES_DIR / "index.html")))
+                             page_lastmod(f"{base}/voices/", VOICES_DIR / "index.html")))
 
     # --- Topics (deepest evergreen content) ---
     topic_entries = []
@@ -1222,10 +1235,8 @@ def regenerate_sitemap():
         for topic_dir in sorted(TOPICS_DIR.iterdir()):
             idx = topic_dir / "index.html"
             if topic_dir.is_dir() and idx.exists() and topic_dir.name not in retired:
-                topic_entries.append((
-                    f"{base}/topics/{topic_dir.name}/",
-                    "weekly", "0.9", _file_mtime_iso(idx),
-                ))
+                url = f"{base}/topics/{topic_dir.name}/"
+                topic_entries.append((url, "weekly", "0.9", page_lastmod(url, idx)))
 
     # --- Voices (deep author/contributor profiles) ---
     # The page's own robots tag decides (frontend/robots.py): a page whose HTML
@@ -1241,10 +1252,8 @@ def regenerate_sitemap():
             if voice_dir.name in noindex_voices or page_has_noindex(idx):
                 continue
             if voice_dir.is_dir() and idx.exists():
-                voice_entries.append((
-                    f"{base}/voices/{voice_dir.name}/",
-                    "monthly", "0.9", _file_mtime_iso(idx),
-                ))
+                url = f"{base}/voices/{voice_dir.name}/"
+                voice_entries.append((url, "monthly", "0.9", page_lastmod(url, idx)))
 
     # --- Daily pulse pages (frozen snapshots, lower priority to preserve crawl budget) ---
     daily_entries = []
@@ -1281,7 +1290,8 @@ def regenerate_sitemap():
         if not entries:
             continue
         _write_urlset(SITEMAP_DIR / filename, entries)
-        written.append((filename, len(entries)))
+        written.append((filename, len(entries), max(e[3] for e in entries)))
+    state.save()
 
     # Write sitemap index at /sitemap.xml. The daily and archive sitemaps are
     # still written (and their pages stay crawlable via links), but they are
@@ -1290,20 +1300,20 @@ def regenerate_sitemap():
     unlisted = {"sitemap-daily.xml", "sitemap-archive.xml"}
     idx_lines = ['<?xml version="1.0" encoding="UTF-8"?>',
                  '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for filename, _count in written:
+    for filename, _count, newest in written:
         if filename in unlisted:
             continue
         idx_lines += [
             "  <sitemap>",
             f"    <loc>{base}/{filename}</loc>",
-            f"    <lastmod>{today_iso}</lastmod>",
+            f"    <lastmod>{newest}</lastmod>",
             "  </sitemap>",
         ]
     idx_lines.append("</sitemapindex>")
     with open(SITEMAP_PATH, "w", encoding="utf-8") as f:
         f.write("\n".join(idx_lines) + "\n")
 
-    listed = [(n, c) for n, c in written if n not in unlisted]
+    listed = [(n, c) for n, c, _newest in written if n not in unlisted]
     total = sum(c for _, c in listed)
     detail = ", ".join(f"{n}={c}" for n, c in listed)
     print(f"  Regenerated sitemap index with {total} URL(s) across {len(listed)} sitemaps ({detail}); "
