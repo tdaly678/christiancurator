@@ -506,9 +506,9 @@ LF_STYLE = (
     ".cc-lf-list{list-style:none;padding:0;margin:0;}"
     ".cc-lf-item{margin-bottom:1.1rem;padding-left:0.9rem;border-left:3px solid #2C4A2E;}"
     ".cc-lf-quote{font-family:'Lora',Georgia,serif;font-size:16px;line-height:1.5;color:#1a1a1a;margin:0;}"
-    ".cc-lf-meta{font-size:12px;color:#777;margin-top:4px;}"
+    ".cc-lf-meta{font-size:12px;color:#6b6b6b;margin-top:4px;}"
     ".cc-lf-meta a{color:#2C4A2E;}"
-    ".cc-lf-note{font-size:12px;color:#888;margin-top:0.75rem;line-height:1.5;}"
+    ".cc-lf-note{font-size:12px;color:#6b6b6b;margin-top:0.75rem;line-height:1.5;}"
     "</style>"
 )
 

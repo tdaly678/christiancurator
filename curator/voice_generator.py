@@ -17,6 +17,7 @@ import anthropic
 from pathlib import Path
 from curator.ai_health import record_failure
 from curator.headline_voice import strip_dashes
+from frontend.a11y_css import A11Y_BLOCK
 from curator.voice_filters import is_voice_worthy, source_creates_voices
 
 DOCS_DIR = Path(__file__).parent.parent / "docs"
@@ -79,7 +80,7 @@ NAV_HTML, TOPICS_SUBMENU_CSS = load_canonical_nav()
 
 NAV_CSS = """
     .cc-nav{display:flex;justify-content:center;align-items:center;gap:2rem;padding:0.6rem 0 0;border-top:1px solid #e0ddd8;margin-top:0.75rem;}
-    .cc-nav a{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#888;text-decoration:none;}
+    .cc-nav a{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6b6b6b;text-decoration:none;}
     .cc-nav a:hover{color:#2C4A2E;}
     .cc-nav a.active{color:#1a1a1a;border-bottom:2px solid #1a1a1a;padding-bottom:2px;}
     .cc-nav-dropdown{position:relative;display:inline-block;}
@@ -88,7 +89,7 @@ NAV_CSS = """
     .cc-nav-dropdown-toggle::after{content:"▾";font-size:10px;letter-spacing:0;}
     .cc-nav-dropdown-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid #e0ddd8;border-radius:4px;padding:14px 0 6px;min-width:140px;z-index:100;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
     .cc-nav-dropdown:hover .cc-nav-dropdown-menu,.cc-nav-dropdown:focus-within .cc-nav-dropdown-menu{display:block;}
-    .cc-nav-dropdown-menu a{display:block;padding:7px 18px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#888;text-decoration:none;white-space:nowrap;}
+    .cc-nav-dropdown-menu a{display:block;padding:7px 18px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6b6b6b;text-decoration:none;white-space:nowrap;}
     .cc-nav-dropdown-menu a:hover{color:#2C4A2E;background:#f7f5f2;}
     .cc-nav-dropdown-menu a.active{color:#1a1a1a;}"""
 
@@ -127,7 +128,7 @@ ENRICH_CSS = """
     .cc-qf-item{display:flex;gap:1rem;padding:0.5rem 0;border-bottom:1px solid #f0ede8;align-items:baseline;}
     .cc-qf-item:last-child{border-bottom:none;padding-bottom:0;}
     .cc-qf-item:first-of-type{padding-top:0;}
-    .cc-qf-key{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#aaa;min-width:96px;flex-shrink:0;}
+    .cc-qf-key{font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6b6b6b;min-width:96px;flex-shrink:0;}
     .cc-qf-val{font-size:14px;color:#333;line-height:1.55;}
     .cc-faq{margin-top:2.5rem;padding-top:1.75rem;border-top:2px solid #e0ddd8;}
     .cc-faq-label{font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#2C4A2E;margin-bottom:0.5rem;}
@@ -542,18 +543,18 @@ def render_bio_page(author: dict, index: int) -> str:
     .cc-root{{max-width:980px;margin:0 auto;padding:0 20px 3rem;}}
     main.cc-prose{{max-width:740px;margin:0 auto;padding-top:1.5rem;}}
     .cc-header{{border-bottom:1px solid #e0ddd8;padding:0.75rem 0 0;margin-bottom:2.5rem;}}
-    .cc-top-bar{{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;font-size:12px;color:#888;}}
+    .cc-top-bar{{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;font-size:12px;color:#6b6b6b;}}
     .cc-subscribe-btn{{background:#2C4A2E;color:#fff;padding:5px 14px;font-size:12px;border-radius:3px;text-decoration:none;font-family:inherit;}}
     .cc-subscribe-btn:hover{{background:#3a5f3c;}}
     .cc-masthead{{text-align:center;padding:0.5rem 0 1rem;border-bottom:2.5px solid #1a1a1a;}}
     .cc-site-name{{font-family:"Lora",Georgia,serif;font-size:46px;font-weight:600;letter-spacing:-0.02em;color:#1a1a1a;text-decoration:none;display:block;}}
     .cc-site-name:hover{{color:#2C4A2E;}}
-    .cc-tagline{{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:8px 0 0;font-weight:300;}}
+    .cc-tagline{{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#6b6b6b;margin:8px 0 0;font-weight:300;}}
     @media(max-width:600px){{.cc-site-name{{font-size:32px;}}}}
     {NAV_CSS}
     {TOPICS_SUBMENU_CSS}
     {ENRICH_CSS}
-    .cc-breadcrumb{{font-size:11px;color:#aaa;margin-bottom:1.5rem;}}
+    .cc-breadcrumb{{font-size:12px;color:#6b6b6b;margin-bottom:1.5rem;}}
     .cc-breadcrumb a{{color:#2C4A2E;text-decoration:none;}}
     .cc-breadcrumb a:hover{{text-decoration:underline;}}
     .cc-breadcrumb span{{margin:0 6px;}}
@@ -566,7 +567,7 @@ def render_bio_page(author: dict, index: int) -> str:
     .cc-meta-item{{display:flex;gap:1rem;padding:0.6rem 0;border-bottom:1px solid #f0ede8;align-items:baseline;}}
     .cc-meta-item:last-child{{border-bottom:none;padding-bottom:0;}}
     .cc-meta-item:first-child{{padding-top:0;}}
-    .cc-meta-label{{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#aaa;min-width:80px;flex-shrink:0;}}
+    .cc-meta-label{{font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6b6b6b;min-width:80px;flex-shrink:0;}}
     .cc-meta-value{{font-size:14px;color:#444;line-height:1.5;}}
     .cc-meta-link{{font-size:14px;color:#2C4A2E;text-decoration:none;}}
     .cc-meta-link:hover{{text-decoration:underline;}}
@@ -579,11 +580,12 @@ def render_bio_page(author: dict, index: int) -> str:
     .cc-book-link{{font-size:12px;font-weight:600;color:#2C4A2E;white-space:nowrap;margin-left:1rem;flex-shrink:0;}}
     .cc-back-link{{display:inline-block;margin-top:2rem;font-size:13px;color:#2C4A2E;text-decoration:none;font-weight:600;border-bottom:1px solid #2C4A2E;}}
     .cc-back-link:hover{{color:#1a1a1a;border-color:#1a1a1a;}}
-    .cc-footer{{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e0ddd8;font-size:12px;color:#aaa;text-align:center;line-height:1.8;}}
-    .cc-footer-name{{font-family:"Lora",serif;font-size:14px;color:#888;margin-bottom:4px;}}
+    .cc-footer{{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e0ddd8;font-size:12px;color:#6b6b6b;text-align:center;line-height:1.8;}}
+    .cc-footer-name{{font-family:"Lora",serif;font-size:14px;color:#6b6b6b;margin-bottom:4px;}}
     .cc-footer-nav{{display:flex;justify-content:center;gap:1.5rem;margin-bottom:6px;}}
-    .cc-footer-nav a{{color:#aaa;text-decoration:none;font-size:12px;}}
+    .cc-footer-nav a{{color:#6b6b6b;text-decoration:none;font-size:12px;}}
     .cc-footer-nav a:hover{{color:#2C4A2E;}}
+    {A11Y_BLOCK}
   </style>
 </head>
 <body>
@@ -689,12 +691,12 @@ def _build_index_from_scratch(authors_sorted: list, cards: str) -> str:
     body{{font-family:"Source Sans 3",sans-serif;background:#faf9f7;color:#1a1a1a;font-size:16px;line-height:1.5;}}
     .cc-root{{max-width:760px;margin:0 auto;padding:0 20px 4rem;}}
     .cc-header{{border-bottom:1px solid #e0ddd8;padding:0.75rem 0 0;margin-bottom:2.5rem;}}
-    .cc-top-bar{{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;font-size:12px;color:#888;}}
+    .cc-top-bar{{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;font-size:12px;color:#6b6b6b;}}
     .cc-subscribe-btn{{background:#2C4A2E;color:#fff;padding:5px 14px;font-size:12px;border-radius:3px;text-decoration:none;font-family:inherit;}}
     .cc-masthead{{text-align:center;padding:0.5rem 0 1rem;border-bottom:2.5px solid #1a1a1a;}}
     .cc-site-name{{font-family:"Lora",Georgia,serif;font-size:46px;font-weight:600;letter-spacing:-0.02em;color:#1a1a1a;text-decoration:none;display:block;}}
     .cc-site-name:hover{{color:#2C4A2E;}}
-    .cc-tagline{{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:8px 0 0;font-weight:300;}}
+    .cc-tagline{{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#6b6b6b;margin:8px 0 0;font-weight:300;}}
     {NAV_CSS}
     .cc-page-header{{border-bottom:2px solid #1a1a1a;padding-bottom:0.75rem;margin-bottom:0.5rem;}}
     .cc-page-label{{font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#2C4A2E;margin-bottom:0.4rem;}}
@@ -708,10 +710,11 @@ def _build_index_from_scratch(authors_sorted: list, cards: str) -> str:
     .cc-voice-card-name{{font-family:"Lora",Georgia,serif;font-size:15px;font-weight:600;line-height:1.25;margin-bottom:2px;color:#1a1a1a;}}
     .cc-voice-card-role{{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2C4A2E;margin-bottom:5px;}}
     .cc-voice-card-teaser{{font-size:12.5px;color:#666;line-height:1.5;}}
-    .cc-footer{{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e0ddd8;font-size:12px;color:#aaa;text-align:center;line-height:1.8;}}
-    .cc-footer-name{{font-family:"Lora",serif;font-size:14px;color:#888;margin-bottom:4px;}}
+    .cc-footer{{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e0ddd8;font-size:12px;color:#6b6b6b;text-align:center;line-height:1.8;}}
+    .cc-footer-name{{font-family:"Lora",serif;font-size:14px;color:#6b6b6b;margin-bottom:4px;}}
     .cc-footer-nav{{display:flex;justify-content:center;gap:1.5rem;margin-bottom:6px;}}
-    .cc-footer-nav a{{color:#aaa;text-decoration:none;font-size:12px;}}
+    .cc-footer-nav a{{color:#6b6b6b;text-decoration:none;font-size:12px;}}
+    {A11Y_BLOCK}
   </style>
 </head>
 <body>

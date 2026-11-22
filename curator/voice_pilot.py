@@ -26,6 +26,7 @@ import re
 from datetime import date
 from pathlib import Path
 
+from frontend.a11y_css import A11Y_BLOCK
 from curator.voice_generator import (
     FOOTER_HTML,
     HEADER_HTML,
@@ -226,7 +227,7 @@ def render_related(entry: dict, voice_names: dict[str, str]) -> str:
 
 
 PILOT_CSS = """
-    .cc-breadcrumb{font-size:11px;color:#aaa;margin-bottom:1.5rem;}
+    .cc-breadcrumb{font-size:12px;color:#6b6b6b;margin-bottom:1.5rem;}
     .cc-breadcrumb a{color:#2C4A2E;text-decoration:none;}
     .cc-breadcrumb span{margin:0 6px;}
     .cc-vp-hero{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:2px solid #1a1a1a;}
@@ -235,7 +236,7 @@ PILOT_CSS = """
     .cc-vp-section{margin:0 0 2.25rem;}
     .cc-vp-label{font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#2C4A2E;margin-bottom:0.8rem;}
     .cc-vp-bio{font-family:"Lora",Georgia,serif;font-size:17px;line-height:1.75;color:#1a1a1a;margin-bottom:0.6rem;}
-    .cc-vp-source{font-size:12px;color:#888;}
+    .cc-vp-source{font-size:12px;color:#6b6b6b;}
     .cc-vp-source a{color:#2C4A2E;}
     .cc-vp-outlets,.cc-vp-topics,.cc-vp-related{list-style:none;}
     .cc-vp-outlets li,.cc-vp-related li{padding:0.35rem 0;}
@@ -247,16 +248,16 @@ PILOT_CSS = """
     .cc-vp-pick{margin-bottom:1.2rem;}
     .cc-vp-pick-title{font-family:"Lora",Georgia,serif;font-size:17px;font-weight:600;line-height:1.35;color:#1a1a1a;text-decoration:none;}
     .cc-vp-pick-title:hover{color:#2C4A2E;text-decoration:underline;}
-    .cc-vp-meta{font-size:12px;color:#888;margin-top:2px;}
+    .cc-vp-meta{font-size:12px;color:#6b6b6b;margin-top:2px;}
     .cc-vp-note{font-size:15px;color:#333;line-height:1.6;margin-top:4px;}
-    .cc-vp-compiled{margin-top:2.5rem;padding-top:1rem;border-top:1px solid #e0ddd8;font-size:12px;color:#888;}
+    .cc-vp-compiled{margin-top:2.5rem;padding-top:1rem;border-top:1px solid #e0ddd8;font-size:12px;color:#6b6b6b;}
     .cc-vp-compiled a{color:#2C4A2E;}
     .cc-recent{margin:0 0 2.25rem;}
     .cc-back-link{display:inline-block;margin-top:1.5rem;font-size:13px;color:#2C4A2E;text-decoration:none;font-weight:600;border-bottom:1px solid #2C4A2E;}
-    .cc-footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e0ddd8;font-size:12px;color:#aaa;text-align:center;line-height:1.8;}
-    .cc-footer-name{font-family:"Lora",serif;font-size:14px;color:#888;margin-bottom:4px;}
+    .cc-footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e0ddd8;font-size:12px;color:#6b6b6b;text-align:center;line-height:1.8;}
+    .cc-footer-name{font-family:"Lora",serif;font-size:14px;color:#6b6b6b;margin-bottom:4px;}
     .cc-footer-nav{display:flex;justify-content:center;gap:1.5rem;margin-bottom:6px;}
-    .cc-footer-nav a{color:#aaa;text-decoration:none;font-size:12px;}"""
+    .cc-footer-nav a{color:#6b6b6b;text-decoration:none;font-size:12px;}"""
 
 BASE_CSS = """
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -264,11 +265,11 @@ BASE_CSS = """
     .cc-root{max-width:980px;margin:0 auto;padding:0 20px 3rem;}
     main.cc-prose{max-width:740px;margin:0 auto;padding-top:1.5rem;}
     .cc-header{border-bottom:1px solid #e0ddd8;padding:0.75rem 0 0;margin-bottom:2.5rem;}
-    .cc-top-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;font-size:12px;color:#888;}
+    .cc-top-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;font-size:12px;color:#6b6b6b;}
     .cc-subscribe-btn{background:#2C4A2E;color:#fff;padding:5px 14px;font-size:12px;border-radius:3px;text-decoration:none;font-family:inherit;}
     .cc-masthead{text-align:center;padding:0.5rem 0 1rem;border-bottom:2.5px solid #1a1a1a;}
     .cc-site-name{font-family:"Lora",Georgia,serif;font-size:46px;font-weight:600;letter-spacing:-0.02em;color:#1a1a1a;text-decoration:none;display:block;}
-    .cc-tagline{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:8px 0 0;font-weight:300;}
+    .cc-tagline{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#6b6b6b;margin:8px 0 0;font-weight:300;}
     @media(max-width:600px){.cc-site-name{font-size:32px;}}"""
 
 
@@ -312,6 +313,7 @@ def render_pilot_page(entry: dict, *, recent_html: str, voice_names: dict[str, s
   <style>{BASE_CSS}
     {NAV_CSS}
     {TOPICS_SUBMENU_CSS}{PILOT_CSS}
+    {A11Y_BLOCK}
   </style>
 </head>
 <body>

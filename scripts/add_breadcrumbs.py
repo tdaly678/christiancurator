@@ -42,10 +42,10 @@ from frontend.topics_hub import hub_category  # noqa: E402
 
 BREADCRUMB_CSS = """
     /* Breadcrumb */
-    .cc-breadcrumb { font-size: 11px; color: #aaa; margin-bottom: 1.5rem; letter-spacing: 0.02em; }
+    .cc-breadcrumb { font-size: 12px; color: #6b6b6b; margin-bottom: 1.5rem; letter-spacing: 0.02em; }
     .cc-breadcrumb a { color: #2C4A2E; text-decoration: none; }
     .cc-breadcrumb a:hover { text-decoration: underline; }
-    .cc-breadcrumb-sep { margin: 0 6px; color: #ccc; }
+    .cc-breadcrumb-sep { margin: 0 6px; color: #6b6b6b; }
 """
 
 # Marker comment so the idempotency check is unambiguous.

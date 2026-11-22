@@ -77,7 +77,7 @@
     .cc-header { border-bottom: 1px solid #e0ddd8; padding: 0.75rem 0 0; }
     .cc-top-bar {
       display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 0.75rem; font-size: 12px; color: #888; letter-spacing: 0.02em;
+      margin-bottom: 0.75rem; font-size: 12px; color: #6b6b6b; letter-spacing: 0.02em;
     }
     .cc-subscribe-btn {
       background: #2C4A2E; color: #fff; border: none; padding: 5px 14px;
@@ -93,7 +93,7 @@
     }
     .cc-tagline {
       font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
-      color: #888; margin: 8px 0 0; font-weight: 300;
+      color: #6b6b6b; margin: 8px 0 0; font-weight: 300;
     }
     .cc-nav {
       display: flex; justify-content: center; gap: 2rem;
@@ -101,7 +101,7 @@
     }
     .cc-nav a {
       font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-      color: #888; text-decoration: none;
+      color: #6b6b6b; text-decoration: none;
     }
     .cc-nav a:hover { color: #2C4A2E; }
     .cc-nav a.active { color: #1a1a1a; border-bottom: 2px solid #1a1a1a; padding-bottom: 2px; }
@@ -109,7 +109,7 @@
     .cc-nav-dropdown { position: relative; display: inline-block; }
     .cc-nav-dropdown-toggle {
       font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-      color: #888; text-decoration: none; cursor: pointer;
+      color: #6b6b6b; text-decoration: none; cursor: pointer;
       display: flex; align-items: center; gap: 4px; background: none; border: none;
       font-family: inherit; padding: 0;
     }
@@ -127,7 +127,7 @@
     .cc-nav-dropdown-menu a {
       display: block; padding: 7px 18px;
       font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-      color: #888; text-decoration: none; white-space: nowrap;
+      color: #6b6b6b; text-decoration: none; white-space: nowrap;
     }
     .cc-nav-dropdown-menu a:hover { color: #2C4A2E; background: #f7f5f2; }
     .cc-nav-dropdown-menu a.active { color: #1a1a1a; }
@@ -167,8 +167,8 @@
       border-top: 1px solid #e0ddd8;
     }
     .cc-about-eyebrow {
-      font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-      color: #888; font-weight: 600; margin-bottom: 0.6rem;
+      font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: #6b6b6b; font-weight: 600; margin-bottom: 0.6rem;
     }
     .cc-about-h2 {
       font-family: 'Lora', Georgia, serif; font-weight: 600;
@@ -231,7 +231,7 @@
       border-radius: 4px;
       background: #e0ddd8;
       display: flex; align-items: center; justify-content: center;
-      color: #888; font-size: 12px; letter-spacing: 0.1em;
+      color: #6b6b6b; font-size: 12px; letter-spacing: 0.1em;
       text-transform: uppercase; text-align: center;
       overflow: hidden;
     }
@@ -260,7 +260,7 @@
     .cc-founder-socials a {
       display: inline-flex; align-items: center; justify-content: center;
       width: 28px; height: 28px;
-      color: #888; text-decoration: none;
+      color: #6b6b6b; text-decoration: none;
       transition: color 0.15s ease;
     }
     .cc-founder-socials a:hover { color: #2C4A2E; }
@@ -310,17 +310,17 @@
     .cc-signup-success {
       font-size: 14px; color: #2C4A2E; font-weight: 600; padding: 0.5rem 0;
     }
-    .cc-signup-privacy { font-size: 11px; color: #aaa; margin-top: 0.75rem; }
+    .cc-signup-privacy { font-size: 12px; color: #6b6b6b; margin-top: 0.75rem; }
 
     /* ── Footer ──────────────────────────────────────────────────── */
     .cc-footer {
       border-top: 2.5px solid #1a1a1a; margin-top: 2.5rem; padding-top: 1rem;
       display: flex; justify-content: space-between; align-items: center;
-      font-size: 11px; color: #aaa; flex-wrap: wrap; gap: 8px;
+      font-size: 12px; color: #6b6b6b; flex-wrap: wrap; gap: 8px;
     }
     .cc-footer-name { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 15px; color: #1a1a1a; }
     .cc-footer-nav { display: flex; gap: 12px; flex-wrap: wrap; }
-    .cc-footer-nav a { font-size: 11px; color: #888; text-decoration: none; font-weight: 600; }
+    .cc-footer-nav a { font-size: 12px; color: #6b6b6b; text-decoration: none; font-weight: 600; }
     .cc-footer-nav a:hover { color: #2C4A2E; }
 
     @media (max-width: 660px) {
@@ -332,7 +332,8 @@
     .cc-about-subscribe { font-size: 14px; color: #666; margin-top: 1rem; }
     .cc-about-subscribe a { color: #2C4A2E; font-weight: 600; text-decoration: none; }
     .cc-about-subscribe a:hover { text-decoration: underline; }
-  </style>
+  /* CC-A11Y:START */.cc-nav{padding-top:0;padding-bottom:0;}.cc-nav a,.cc-nav-dropdown-toggle{display:inline-flex;align-items:center;min-height:44px;}.cc-nav a.active,.cc-nav a[aria-current="page"],.cc-nav a.cc-nav-topics[aria-current="page"]{border-bottom:0;padding-bottom:0;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;}.cc-nav-dropdown-menu a{display:block;min-height:0;padding-top:10px;padding-bottom:10px;}.cc-breadcrumb a,.cc-footer a,.cc-footer-nav a,.cc-section-meta a,.cc-back,.cc-back-link,.cc-hub-jump a{display:inline-block;padding-top:3px;padding-bottom:3px;}.cc-hub-topic a{display:inline-block;padding:2px 0;}/* CC-A11Y:END */
+</style>
 </head>
 <body>
 <div class="cc-root">
@@ -706,7 +707,7 @@
            style="display:none; color:#b42318; margin-top:8px; font-size:0.95rem;"></div>
       <p class="cc-signup-privacy">
         No spam. Unsubscribe anytime.<br>
-        <span style="font-size:0.8rem; color:#888;">
+        <span style="font-size:0.8rem; color:#6b6b6b;">
           Protected by reCAPTCHA. Google
           <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a> &amp;
           <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms</a>.

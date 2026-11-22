@@ -29,6 +29,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
 from curator.voice_generator import load_canonical_nav, avatar_color  # noqa: E402
+from frontend.a11y_css import A11Y_BLOCK  # noqa: E402
 
 DOCS_DIR = REPO_ROOT / "docs"
 VOICES_DIR = DOCS_DIR / "voices"
@@ -248,21 +249,21 @@ def render_hub(cat: dict, members: list[dict], groups: dict[str, list[dict]]) ->
     body{{font-family:"Source Sans 3",sans-serif;background:#faf9f7;color:#1a1a1a;font-size:16px;line-height:1.5;}}
     .cc-root{{max-width:760px;margin:0 auto;padding:0 20px 4rem;}}
     .cc-header{{border-bottom:1px solid #e0ddd8;padding:0.75rem 0 0;margin-bottom:2.5rem;}}
-    .cc-top-bar{{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;font-size:12px;color:#888;}}
+    .cc-top-bar{{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;font-size:12px;color:#6b6b6b;}}
     .cc-subscribe-btn{{background:#2C4A2E;color:#fff;padding:5px 14px;font-size:12px;border-radius:3px;text-decoration:none;font-family:inherit;}}
     .cc-subscribe-btn:hover{{background:#3a5f3c;}}
     .cc-masthead{{text-align:center;padding:0.5rem 0 1rem;border-bottom:2.5px solid #1a1a1a;}}
     .cc-site-name{{font-family:"Lora",Georgia,serif;font-size:46px;font-weight:600;letter-spacing:-0.02em;color:#1a1a1a;text-decoration:none;display:block;}}
     .cc-site-name:hover{{color:#2C4A2E;}}
-    .cc-tagline{{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:8px 0 0;font-weight:300;}}
+    .cc-tagline{{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#6b6b6b;margin:8px 0 0;font-weight:300;}}
     @media(max-width:600px){{.cc-site-name{{font-size:32px;}}}}
     {nav_css}
-    .cc-breadcrumb{{font-size:12px;color:#888;margin-bottom:1.5rem;}}
+    .cc-breadcrumb{{font-size:12px;color:#6b6b6b;margin-bottom:1.5rem;}}
     .cc-breadcrumb a{{color:#2C4A2E;text-decoration:none;}}
     .cc-breadcrumb span{{margin:0 6px;}}
     .cc-hub-h1{{font-family:"Lora",Georgia,serif;font-size:30px;font-weight:600;letter-spacing:-0.01em;margin-bottom:0.5rem;}}
     .cc-hub-intro{{font-size:15px;color:#555;line-height:1.65;margin-bottom:0.5rem;max-width:640px;}}
-    .cc-hub-count{{font-size:12px;color:#888;letter-spacing:0.04em;margin-bottom:2rem;}}
+    .cc-hub-count{{font-size:12px;color:#6b6b6b;letter-spacing:0.04em;margin-bottom:2rem;}}
     .cc-voices-grid{{display:grid;grid-template-columns:1fr;gap:0.85rem;}}
     .cc-voice-card{{display:flex;gap:14px;align-items:flex-start;padding:0.9rem 1rem;background:#fff;border:1px solid #e0ddd8;border-radius:4px;text-decoration:none;color:#1a1a1a;transition:border-color 0.15s,box-shadow 0.15s;}}
     .cc-voice-card:hover{{border-color:#2C4A2E;box-shadow:0 1px 6px rgba(44,74,46,0.08);}}
@@ -271,13 +272,14 @@ def render_hub(cat: dict, members: list[dict], groups: dict[str, list[dict]]) ->
     .cc-voice-card-role{{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#2C4A2E;margin-bottom:4px;}}
     .cc-voice-card-teaser{{font-size:13px;color:#666;line-height:1.5;}}
     .cc-hub-siblings{{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e0ddd8;}}
-    .cc-hub-siblings-label{{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#888;margin-bottom:0.75rem;}}
+    .cc-hub-siblings-label{{font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6b6b6b;margin-bottom:0.75rem;}}
     .cc-hub-chips{{display:flex;flex-wrap:wrap;gap:0.5rem;}}
     .cc-hub-chip{{font-size:12.5px;font-weight:600;color:#2C4A2E;background:#fff;border:1px solid #e0ddd8;border-radius:999px;padding:5px 12px;text-decoration:none;}}
     .cc-hub-chip:hover{{border-color:#2C4A2E;}}
-    .cc-hub-chip-n{{color:#999;font-weight:400;margin-left:2px;}}
-    .cc-footer{{margin-top:4rem;padding-top:1.5rem;border-top:2.5px solid #1a1a1a;font-size:12px;color:#888;display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;}}
+    .cc-hub-chip-n{{color:#6b6b6b;font-weight:400;margin-left:2px;}}
+    .cc-footer{{margin-top:4rem;padding-top:1.5rem;border-top:2.5px solid #1a1a1a;font-size:12px;color:#6b6b6b;display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;}}
     .cc-footer a{{color:#2C4A2E;text-decoration:none;}}
+    {A11Y_BLOCK}
   </style>
 </head>
 <body>
@@ -335,13 +337,13 @@ def build_strip(groups: dict[str, list[dict]]) -> str:
     style = (
         "<style>"
         ".cc-hub-strip{margin:0 0 2rem;}"
-        ".cc-hub-strip-label{font-size:11px;font-weight:700;letter-spacing:0.12em;"
-        "text-transform:uppercase;color:#888;margin-bottom:0.75rem;}"
+        ".cc-hub-strip-label{font-size:12px;font-weight:700;letter-spacing:0.12em;"
+        "text-transform:uppercase;color:#6b6b6b;margin-bottom:0.75rem;}"
         ".cc-hub-chips{display:flex;flex-wrap:wrap;gap:0.5rem;}"
         ".cc-hub-chip{font-size:12.5px;font-weight:600;color:#2C4A2E;background:#fff;"
         "border:1px solid #e0ddd8;border-radius:999px;padding:5px 12px;text-decoration:none;}"
         ".cc-hub-chip:hover{border-color:#2C4A2E;}"
-        ".cc-hub-chip-n{color:#999;font-weight:400;margin-left:2px;}"
+        ".cc-hub-chip-n{color:#6b6b6b;font-weight:400;margin-left:2px;}"
         "</style>"
     )
     return (
