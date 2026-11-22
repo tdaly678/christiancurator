@@ -60,7 +60,7 @@ TOPICS = [
         "name": "Baptism",
         "category": "Core Theology",
         "hook": "Should we baptize infants or only those who profess faith, and does it matter?",
-        "summary": "The evangelical debate over infant vs. believer's baptism, mode, and what Scripture teaches about the ordinance.",
+        "summary": "Three Christian views of baptism, Baptist, Presbyterian and Reformed, and Lutheran, on who should be baptized and what God does in it.",
         "keywords": [
             "baptism", "infant baptism", "paedobaptism", "credobaptism",
             "believer's baptism", "baptismal regeneration", "mode of baptism",

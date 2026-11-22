@@ -4,18 +4,18 @@
   "slug": "baptism",
   "png_name": "matrix",
   "label": "Side by Side",
-  "title": "Believer's baptism and covenant baptism, question by question",
-  "intro": "Both traditions baptize in the name of the Father, the Son and the Holy Spirit, and both deny that the water itself saves. They part over who should be baptized, how, and what the sign means. Each cell follows the tradition's own confession.",
-  "image_title": "Two evangelical views of baptism, side by side",
+  "title": "Three Christian views of baptism, question by question",
+  "intro": "All three baptize with water in the name of the Father, the Son and the Holy Spirit, because Christ commanded it. They part over who should be baptized and what God does in it. Each cell follows the tradition's own confession.",
+  "image_title": "Three Christian views of baptism, side by side",
   "image_subtitle": "Each answer follows the tradition's own confession.",
   "image_subtitle_narrow": "Each answer follows the tradition's own confession.",
-  "image_source": "Sources: Baptist Faith and Message 2000, Art. VII; Second London Baptist Confession 29; Westminster Confession 28; Heidelberg Catechism Q74",
-  "caption": "Baptist churches baptize those who profess faith, by immersion, so faith comes first. Presbyterian and Reformed churches baptize believers and believers' children, without requiring immersion; for a child, baptism comes first, and Westminster says its efficacy is not tied to the moment it is given.",
+  "image_source": "Sources: Baptist Faith and Message 2000, Art. VII; Second London Baptist Confession 29; Westminster Confession 28; Heidelberg Catechism Q74; Augsburg Confession IX; Luther's Small and Large Catechisms",
+  "caption": "Baptist churches baptize those who profess faith, by immersion, as a sign of forgiveness already received. Presbyterian and Reformed churches baptize believers and their children, and Westminster says its grace is not tied to the moment it is given. Lutheran churches baptize infants and adults, and teach that through baptism God gives forgiveness to all who believe.",
   "table_view_label": "Question",
   "columns": [
     {
       "id": "believers",
-      "name": "Believer's baptism (credobaptist)",
+      "name": "Believer's baptism (Baptist)",
       "short": "Believer's baptism",
       "color": "green",
       "proponent": {
@@ -27,7 +27,7 @@
     },
     {
       "id": "covenant",
-      "name": "Covenant baptism (paedobaptist)",
+      "name": "Covenant baptism (Presbyterian and Reformed)",
       "short": "Covenant baptism",
       "color": "brown",
       "proponent": {
@@ -35,6 +35,18 @@
         "image_name": "Westminster Confession",
         "work": "Westminster Confession of Faith, Chapter 28",
         "source": "wcf"
+      }
+    },
+    {
+      "id": "lutheran",
+      "name": "Lutheran",
+      "short": "Lutheran",
+      "color": "blue",
+      "proponent": {
+        "name": "Augsburg Confession",
+        "image_name": "Augsburg Confession",
+        "work": "Augsburg Confession, Article IX",
+        "source": "augsburg"
       }
     }
   ],
@@ -50,6 +62,10 @@
         {
           "text": "Those who profess faith, and the infants of one or both believing parents",
           "short": "Believers and their infant children"
+        },
+        {
+          "text": "Infants as well as adults; through baptism children are received into God's grace",
+          "short": "Infants and adults"
         }
       ]
     },
@@ -64,6 +80,10 @@
         {
           "text": "Pouring or sprinkling is proper; dipping is not necessary",
           "short": "Pouring or sprinkling is proper"
+        },
+        {
+          "text": "Water comprehended in God's command and connected with God's Word",
+          "short": "Water joined to God's Word"
         }
       ]
     },
@@ -78,34 +98,46 @@
         {
           "text": "A sign and seal of the covenant of grace: union with Christ, new birth, forgiveness",
           "short": "A sign and seal of the covenant of grace"
+        },
+        {
+          "text": "The old Adam drowned by daily repentance, and a new man daily rising to live before God",
+          "short": "Daily dying to sin and rising to new life"
+        }
+      ]
+    },
+    {
+      "id": "god",
+      "label": "What God does in it",
+      "cells": [
+        {
+          "text": "A sign of forgiveness already received: remission of sins and union with Christ in his death and resurrection",
+          "short": "A sign of forgiveness already received"
+        },
+        {
+          "text": "Grace is really conferred by the Spirit to those it belongs to, in God's appointed time; not tied to the moment of baptism",
+          "short": "Grace given in God's appointed time"
+        },
+        {
+          "text": "God's own work: it works forgiveness of sins and gives eternal salvation to all who believe",
+          "short": "Forgiveness and salvation to all who believe"
         }
       ]
     },
     {
       "id": "covenant-sign",
-      "label": "And circumcision?",
+      "label": "Why baptize, or not baptize, children?",
       "cells": [
         {
-          "text": "Not a straight replacement: the new covenant people are those joined to Christ by faith",
-          "short": "Not a straight replacement; the new covenant people are believers"
+          "text": "Not until they profess faith: the new covenant people are those joined to Christ by faith",
+          "short": "Not until they profess faith"
         },
         {
-          "text": "Baptism replaced circumcision as the sign of the covenant for believers' children",
-          "short": "Baptism replaced circumcision as the covenant sign"
-        }
-      ]
-    },
-    {
-      "id": "membership",
-      "label": "Church membership",
-      "cells": [
-        {
-          "text": "A prerequisite to membership and to the Lord's Supper",
-          "short": "Required for membership and the Lord's Supper"
+          "text": "Children of believers are in the covenant; baptism replaced circumcision as its sign",
+          "short": "In the covenant; baptism replaced circumcision"
         },
         {
-          "text": "Admits the one baptized into the visible church",
-          "short": "Admits into the visible church"
+          "text": "Solely upon the command of God, who does not lie, and his promise to receive children into his grace",
+          "short": "God's command and promise"
         }
       ]
     },
@@ -120,21 +152,24 @@
         {
           "text": "Not baptized again: baptism is given only once",
           "short": "Not baptized again"
+        },
+        {
+          "text": "Not baptized again: no one should rebaptize them",
+          "short": "Not baptized again"
         }
       ]
     }
   ],
-  "common_text": "Both sides baptize adults who come to faith, and both hold that Christ gave baptism to the church for good. In 2001 Mark Dever (SBC) and David Coffin (PCA) drew up 17 statements they could both affirm. The first: \"No one disagrees with professor baptism (except Quakers).\"",
-  "common_source": "dever-coffin",
+  "common_text": "All three baptize adults who come to faith, with water, in the name of the Father, the Son and the Holy Spirit, because Christ commanded it: \"Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit\" (Matthew 28:19, ESV).",
   "differ": [
-    "Who receives the sign: professing believers only, or believers and their children.",
-    "Mode: Baptists require immersion; Westminster calls pouring or sprinkling proper.",
-    "The covenant: paedobaptists see one covenant of grace across both testaments, with baptism in the place of circumcision; credobaptists see a new covenant people made up of believers.",
-    "Under the Baptist confession, a Presbyterian who joins a Baptist church is baptized on profession of faith; Westminster holds that baptism is given only once.",
-    "Neither confession makes baptism the cause of salvation: Westminster says grace and salvation are not so bound to it that no one can be saved without it."
+    "Who receives it: Baptists baptize professing believers only; Presbyterian, Reformed and Lutheran churches also baptize believers' children.",
+    "Mode: Baptists require immersion; Westminster calls pouring or sprinkling proper; Luther's Small Catechism defines baptism as water joined to God's command and Word.",
+    "What God does: Baptists see a sign of forgiveness already received; Westminster says the Spirit confers grace to those it belongs to, in God's appointed time; Lutherans teach that baptism works forgiveness of sins and gives salvation to all who believe.",
+    "Necessity: the Augsburg Confession calls baptism necessary to salvation; Westminster says grace and salvation are not so bound to it that no one can be saved without it.",
+    "A Presbyterian or Lutheran who joins a Baptist church is baptized on profession of faith; Westminster and the Large Catechism hold that baptism is not repeated."
   ],
   "voices_label": "Confessions behind each column",
-  "note": "Cells paraphrase the confessions listed below the chart, with Stephen Wellum (credobaptist) on the covenant row and the Heidelberg Catechism on circumcision. No view is presented here as the answer.",
+  "note": "Cells paraphrase the confessions listed below the chart, with Stephen Wellum (Baptist) and the Heidelberg Catechism on the children row and Luther's Small and Large Catechisms in the Lutheran column. No view is presented here as the answer.",
   "sources": [
     {
       "id": "bfm",
@@ -154,7 +189,7 @@
       "url": "https://www.the1689confession.com/1689/chapter-29",
       "fetched": "2026-11-14",
       "quote": "Those who do actually profess repentance towards God, faith in, and obedience to, our Lord Jesus Christ, are the only proper subjects of this ordinance.",
-      "notes": "29.4: \"Immersion, or dipping of the person in water, is necessary to the due administration of this ordinance.\" Rows: who, how, again (infant sprinkling does not meet 29.2 and 29.4)."
+      "notes": "29.4: \"Immersion, or dipping of the person in water, is necessary to the due administration of this ordinance.\" Rows: who, how, again (infant sprinkling does not meet 29.2 and 29.4). 29.1: baptism is \"a sign of his fellowship with him, in his death and resurrection; of his being engrafted into him; of remission of sins\" (row: god)."
     },
     {
       "id": "wcf",
@@ -163,7 +198,7 @@
       "url": "https://opc.org/wcf.html",
       "fetched": "2026-11-14",
       "quote": "Not only those that do actually profess faith in and obedience unto Christ, but also the infants of one, or both, believing parents, are to be baptized.",
-      "notes": "28.1 sign and seal of the covenant of grace, admission into the visible church; 28.3 \"Dipping of the person into the water is not necessary; but baptism is rightly administered by pouring, or sprinkling water upon the person.\"; 28.5 not all baptized are regenerated; 28.6 \"The efficacy of baptism is not tied to that moment of time wherein it is administered\", grace conferred \"in his appointed time\" to such as that grace belongs to; 28.5 \"grace and salvation are not so inseparably annexed unto it, as that no person can be regenerated, or saved, without it\"; 28.7 \"The sacrament of baptism is but once to be administered unto any person.\""
+      "notes": "28.1 sign and seal of the covenant of grace, admission into the visible church; 28.3 \"Dipping of the person into the water is not necessary; but baptism is rightly administered by pouring, or sprinkling water upon the person.\"; 28.5 not all baptized are regenerated; 28.6 \"The efficacy of baptism is not tied to that moment of time wherein it is administered\", grace conferred \"in his appointed time\" to such as that grace belongs to; 28.5 \"grace and salvation are not so inseparably annexed unto it, as that no person can be regenerated, or saved, without it\"; 28.7 \"The sacrament of baptism is but once to be administered unto any person.\" Row god: 28.6, \"by the right use of this ordinance, the grace promised is not only offered, but really exhibited, and conferred, by the Holy Ghost, to such (whether of age or infants) as that grace belongeth unto\"."
     },
     {
       "id": "heidelberg",
@@ -186,14 +221,34 @@
       "notes": "Row: covenant-sign (credobaptist cell). Wellum also: \"Does circumcision signify the exact same spiritual realities as baptism? ... this is precisely what the NT does not teach.\" Posted November 11, 2011."
     },
     {
-      "id": "dever-coffin",
-      "publisher": "The Gospel Coalition",
-      "title": "17 Statements that a Paedobaptist and a Credobaptist Can Both Affirm",
-      "year": 2018,
-      "url": "https://www.thegospelcoalition.org/blogs/justin-taylor/17-statements-paedobaptist-credobaptist-can-affirm/",
-      "fetched": "2026-11-14",
-      "quote": "No one disagrees with professor baptism (except Quakers).",
-      "notes": "Justin Taylor, March 9, 2018: \"In the summer of 2001 pastors Mark Dever (SBC) and David Coffin (PCA) held a public conversation at Capitol Hill Baptist Church on baptism.\" Statement 7: \"Baptism was appointed by Christ to be of permanent value in the Christian church.\""
+      "id": "augsburg",
+      "publisher": "Book of Concord (bookofconcord.org)",
+      "title": "Augsburg Confession, Article IX: Of Baptism",
+      "year": 1530,
+      "url": "https://bookofconcord.org/augsburg-confession/of-baptism/",
+      "fetched": "2026-11-22",
+      "quote": "children are to be baptized who, being offered to God through Baptism are received into God's grace",
+      "notes": "Art. IX opens: \"Of Baptism they teach that it is necessary to salvation, and that through Baptism is offered the grace of God\". Rows: who, children; differ: necessity."
+    },
+    {
+      "id": "small-catechism",
+      "publisher": "Book of Concord (bookofconcord.org)",
+      "title": "Luther's Small Catechism, The Sacrament of Holy Baptism",
+      "year": 1529,
+      "url": "https://bookofconcord.org/small-catechism/the-sacrament-of-holy-baptism/",
+      "fetched": "2026-11-22",
+      "quote": "It works forgiveness of sins, delivers from death and the devil, and gives eternal salvation to all who believe this",
+      "notes": "Also: \"Baptism is not simple water only, but it is the water comprehended in God's command and connected with God's Word\" (row how); \"It signifies that the old Adam in us should, by daily contrition and repentance, be drowned and die with all sins and evil lusts, and, again, a new man daily come forth and arise\" (row meaning). Row god."
+    },
+    {
+      "id": "large-catechism",
+      "publisher": "Book of Concord (bookofconcord.org)",
+      "title": "Luther's Large Catechism, Part IV: Of Baptism",
+      "year": 1529,
+      "url": "https://bookofconcord.org/large-catechism/holy-baptism/",
+      "fetched": "2026-11-22",
+      "quote": "Baptism, however, is not our work, but God's",
+      "notes": "Para 10: \"although it is performed by human hands, it is nevertheless truly God's own work\" (row god). Para 57: \"we do not baptize it upon that, but solely upon the command of God. Why so? Because we know that God does not lie.\" (row children). \"no one should rebaptize them\" (row again)."
     }
   ],
   "place": {
