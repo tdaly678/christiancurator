@@ -173,9 +173,20 @@ Baptist and Presbyterian news is core coverage; mainline internal polity (UMC bi
 conference process, routine TEC / ELCA / PC(USA) / UCC business) is not. The scorer prompt scores it 3 or below unless
 it clearly matters to evangelicals (disaffiliation waves, Asbury/seminary doctrine fights, religious liberty).
 `is_mainline_polity()` in `curator/scorer.py` is the title backstop: mainline body AND polity term, minus exemptions
-(Asbury, Global/Free Methodist, seminary, religious liberty, court, "N churches"). Matches are capped at 3.0, flagged
+(Asbury, Global/Free Methodist, seminary, religious liberty, the Supreme Court or a civil court, "N churches"; a
+Methodist court or the Judicial Council is polity and capped since Nov 22 2026). Matches are capped at 3.0, flagged
 `mainline_capped`, and kept out of the lead, board, Worth Your Time and The Debate. Never drop RNS, Christian Post or
 WORLD to fix this. Tests: `tests/test_mainline_focus.py`. Notes: `.christian-orchestrator/evangelical-focus-and-schedule-2026-10-31.md`.
+
+### Off-mission caps, briefs, audio cap, News routing (S2, Nov 22 2026)
+`off_mission_kind()` in `curator/scorer.py` (with a matching scorer prompt rule) caps partisan horse-race politics,
+celebrity and entertainment with an incidental faith mention, lifestyle newsletters and Catholic-internal items
+(trads, Latin Mass) at 3.0 (`off_mission_capped`); `curator/editorial.py` keeps them out of the lead and at the bottom
+of their board column. WORLD Sift and Christian Post `/news/` briefs (`is_news_brief()` in `curator/mission.py`) must
+pass `has_faith_hook()` or the brief-only beat terms (`BRIEF_HOOK_RE`). `is_audio_video()` uses
+`curator/media_kind.py` (`/erlc-podcast/`, `/episode-N`, `/p/epN`, "Ep." and "Join me as I talk with" openers).
+`board_column()` sends only news reports to News; politics/data tags no longer route essays there. Tests:
+`tests/test_mission_fit.py`.
 
 ### Evangelical focus: world-news mission gate (Tom, 2026-10-31)
 BBC, NYT and WSJ world feeds (`source_type: "world_news"`) carried wars, disasters, foreign politics and markets onto
@@ -224,6 +235,14 @@ Slice 3 (Nov 1, Jarvis-greenlit), same module:
   `DEMOTE_CLAIMLESS_SHORT` -15 (`is_claimless_short()`: 2 to 5 words, no `:`/`?`, no verb, no `CLAIM_NOUNS`, starts
   with "The" or "Noun of Noun"; "tyranny" is deliberately not a claim noun). Claimless titles are board/lane fill only:
   never lead, sublead or any email slot.
+
+Slice 4 (S2, Nov 22 2026): `hard_reject()` also catches day-month-year dated columns ("Meanderings, 21 November
+2026"), "Join me for/at/on", "New Podcast:", "notes for the weekend", "books I read", "My Nine Books", "Monthly(ish)
+Newsletter"; `hard_reject_description()` checks the description's opening. `is_claimless_short()` covers any 2 to 5
+word title with no verb. `curator/title_rewriter.py` keeps the publisher title for podcasts, roundups and newsletters
+(`keep_publisher_title()`), and `fact_rejection()` refuses a rewrite that turns a question into a statement, adds an
+uncredited should/must, adds an `INVENTED_NOUNS` word (white paper, report, study, groups) or names anything absent
+from the title, summary, byline or outlet. Tests: `tests/test_headline_voice.py`, `tests/test_title_rewriter_facts.py`.
 
 ### Cross-day repeats (Nov 1)
 - `output.load_yesterday_shown()` returns the latest `date_shown` before today and its URLs (url + canonical_url).
@@ -472,6 +491,11 @@ arla-eicher, anna-jackson, beshay-sakla, reem-nadeem, sara-atske. Tests: `tests/
   time become a normal article (`role: "primary"`, `discovered_via`, `creates_voices: False` unless the domain belongs
   to a configured source, whose name and category it then takes). They go through `score_articles()` like any feed
   item, and dedup collapses them against feed copies. Status becomes `graduated`; two failed fetches mark `failed`.
+- Non-articles never graduate (S2, Nov 22 2026): `blocked_reason()` refuses app stores, Amazon and `amzn.to`,
+  affiliate redirectors (`*.sjv.io`), Wikipedia, store and hub paths (`/collections/`, leading `/books/`, ebooks) and
+  topic index pages, at harvest, before fetch and on the final URL; `anchor_ok()` refuses junk anchors ("see here",
+  "Download"); `clean_url()` strips `gift_*` and `utm_*`. Substack pieces are credited to the writer, not
+  "substack.com". Blocked queue entries get `status: "blocked"`.
 - The Aquila Report does not harvest: its feed has no original link and its pages are behind a Cloudflare challenge.
 
 ### P2.4 Quarterly prune of quiet independents
