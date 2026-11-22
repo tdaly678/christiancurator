@@ -366,7 +366,7 @@ recorded in `frontend/voices_redirects.json` (loser → survivor); the loser's p
 `scripts/merge_duplicate_voices.py` holds the pair list.
 
 ### Voices pilot (live Nov 12 2026; Tom approved all five drafts)
-- Voice page titles are `Name: Articles, Bio, and Where They Write | Christian Curator` (`voice_page_title()` in
+- Voice page titles are `Name: Articles and Bio | Christian Curator` (shortened Nov 22 2026) (`voice_page_title()` in
   `curator/voice_generator.py`; `scripts/fix_voice_titles.py` applied it to existing pages). No em dashes in Voices templates.
 - Five pilot pages (dawn-sherillporter, alex-harris, brandon-corley, chandler-vannoy, david-powlison) are
   rendered from `data/voices/pilot.json` by `scripts/build_voice_pilot.py` (renderer `curator/voice_pilot.py`): dek, sourced

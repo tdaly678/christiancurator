@@ -1,16 +1,16 @@
 """
-topics_data.py — canonical data for all 36 debate topics.
+topics_data.py: canonical data for all 36 debate topics.
 
 Slugs match the actual folder names under docs/topics/.
 Each entry:
-  slug       — matches /topics/{slug}/ URL path exactly
-  name       — display name
-  category   — one of: "Core Theology", "Church Life", "Spiritual Formation", "Culture & Society"
-  hook       — one punchy sentence capturing the central debate question
+  slug       : matches /topics/{slug}/ URL path exactly
+  name       : display name
+  category   : one of: "Core Theology", "Church Life", "Spiritual Formation", "Culture & Society"
+  hook       : one punchy sentence capturing the central debate question
                (used on individual topic pages for SEO/AEO)
-  summary    — short plain-language description of what the topic covers
-               (used on homepage cards, digest cards, and emails — not tied to today's articles)
-  keywords   — list of strings used by the topic classifier to match articles
+  summary    : short plain-language description of what the topic covers
+               (used on homepage cards, digest cards, and emails; not tied to today's articles)
+  keywords   : list of strings used by the topic classifier to match articles
 """
 
 TOPICS = [
@@ -19,7 +19,7 @@ TOPICS = [
         "slug": "atonement",
         "name": "The Atonement",
         "category": "Core Theology",
-        "hook": "What exactly did Jesus' death accomplish — and how does it actually save us?",
+        "hook": "What exactly did Jesus' death accomplish, and how does it actually save us?",
         "summary": "Evangelical perspectives on the cross, penal substitution, and what Christ's death accomplished for sinners.",
         "keywords": [
             "atonement", "penal substitution", "substitutionary atonement", "cross of christ",
@@ -45,7 +45,7 @@ TOPICS = [
         "category": "Core Theology",
         "hook": "Is the Bible without error in everything it affirms, or only in matters of faith and practice?",
         "summary": "How evangelicals understand Scripture's authority, reliability, and relationship to science, history, and theology.",
-        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " | Christian Curator".
+        # SEO title/description (2026-10-26 CTR pass): the live <title> is seo_title + " | Christian Curator".
         "seo_title": "What Is Biblical Inerrancy?",
         "seo_description": "What is biblical inerrancy? How evangelicals understand the Bible's truthfulness and authority, the Chicago Statement, and answers to common objections.",
         "keywords": [
@@ -59,7 +59,7 @@ TOPICS = [
         "slug": "baptism",
         "name": "Baptism",
         "category": "Core Theology",
-        "hook": "Should we baptize infants or only those who profess faith — and does it matter?",
+        "hook": "Should we baptize infants or only those who profess faith, and does it matter?",
         "summary": "The evangelical debate over infant vs. believer's baptism, mode, and what Scripture teaches about the ordinance.",
         "keywords": [
             "baptism", "infant baptism", "paedobaptism", "credobaptism",
@@ -72,7 +72,7 @@ TOPICS = [
         "name": "The Lord's Supper",
         "category": "Core Theology",
         "hook": "Is Christ truly present in the bread and cup, and if so, how?",
-        "summary": "Evangelical perspectives on what happens at communion — Christ's presence, meaning, and how churches practice it.",
+        "summary": "Evangelical perspectives on what happens at communion: Christ's presence, meaning, and how churches practice it.",
         "keywords": [
             "lord's supper", "communion", "eucharist", "real presence",
             "transubstantiation", "consubstantiation", "memorial",
@@ -135,8 +135,8 @@ TOPICS = [
         "name": "Apologetics",
         "category": "Core Theology",
         "hook": "Should Christians defend the faith through reason and evidence, or simply proclaim the gospel?",
-        "summary": "How Christians make the case for the faith — through reason, evidence, presupposition, and engagement with doubt.",
-        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " | Christian Curator".
+        "summary": "How Christians make the case for the faith through reason, evidence, presupposition, and engagement with doubt.",
+        # SEO title/description (2026-10-26 CTR pass): the live <title> is seo_title + " | Christian Curator".
         "seo_title": "What Is Christian Apologetics?",
         "seo_description": "What is Christian apologetics? A guide to defending the faith with evidence, reason and grace, plus the best evangelical articles on doubt and hard questions.",
         "keywords": [
@@ -165,7 +165,7 @@ TOPICS = [
         "slug": "church-discipline",
         "name": "Church Discipline",
         "category": "Church Life",
-        "hook": "When and how should a church remove a member — and what does restoration look like?",
+        "hook": "When and how should a church remove a member, and what does restoration look like?",
         "summary": "How churches handle member sin, accountability, corrective removal, and the path to restoration.",
         "keywords": [
             "church discipline", "excommunication", "disfellowship", "Matthew 18",
@@ -178,7 +178,7 @@ TOPICS = [
         "name": "Worship & Liturgy",
         "category": "Church Life",
         "hook": "Should evangelical worship be free-form and contemporary, or anchored in historic liturgical forms?",
-        "summary": "Evangelical conversation about how churches should gather, sing, and meet with God — contemporary or liturgical.",
+        "summary": "Evangelical conversation about how churches should gather, sing, and meet with God, contemporary or liturgical.",
         "keywords": [
             "worship", "liturgy", "liturgical", "contemporary worship", "hymns",
             "regulative principle", "normative principle", "corporate worship",
@@ -191,7 +191,7 @@ TOPICS = [
         "name": "The Local Church",
         "category": "Church Life",
         "hook": "Is belonging to a local church optional for Christians, or essential to spiritual health?",
-        "summary": "Why the local church matters — and evangelical conversations about attendance, belonging, and dechurching.",
+        "summary": "Why the local church matters, and evangelical conversations about attendance, belonging, and dechurching.",
         "keywords": [
             "local church", "church attendance", "ecclesiology",
             "church planting", "multisite", "megachurch", "dechurching",
@@ -203,7 +203,7 @@ TOPICS = [
         "slug": "missions-and-evangelism",
         "name": "Missions & Evangelism",
         "category": "Church Life",
-        "hook": "What is the church's primary mission — gospel proclamation, or social transformation?",
+        "hook": "What is the church's primary mission: gospel proclamation, or social transformation?",
         "summary": "How evangelicals understand the Great Commission, gospel proclamation, and the church's mission in the world.",
         "keywords": [
             "missions", "evangelism", "missionaries", "great commission",
@@ -216,8 +216,8 @@ TOPICS = [
         "slug": "church-history",
         "name": "Church History",
         "category": "Church Life",
-        "hook": "How should evangelical churches relate to the wisdom — and failures — of their historical ancestors?",
-        "summary": "What the church's past — its reformers, councils, creeds, and failures — means for Christians today.",
+        "hook": "How should evangelical churches relate to the wisdom (and failures) of their historical ancestors?",
+        "summary": "What the church's past (its reformers, councils, creeds, and failures) means for Christians today.",
         "keywords": [
             "church history", "reformation", "reformers", "puritans",
             "luther", "calvin", "augustine", "early church", "church fathers",
@@ -253,8 +253,8 @@ TOPICS = [
         "slug": "preaching",
         "name": "Preaching",
         "category": "Church Life",
-        "hook": "What makes preaching faithful — and is expository preaching the only legitimate approach?",
-        "summary": "What makes a sermon faithful — evangelical debate over expository preaching, topical approaches, and pulpit method.",
+        "hook": "What makes preaching faithful, and is expository preaching the only legitimate approach?",
+        "summary": "What makes a sermon faithful: evangelical debate over expository preaching, topical approaches, and pulpit method.",
         "keywords": [
             "preaching", "expository preaching", "sermon", "homiletics",
             "topical preaching", "expository", "preach", "pulpit",
@@ -279,9 +279,9 @@ TOPICS = [
         "slug": "discipleship",
         "name": "Discipleship",
         "category": "Spiritual Formation",
-        "hook": "What does it actually mean to make disciples — and are most churches doing it?",
-        "summary": "How Christians grow in maturity — one-on-one mentoring, church programs, and the meaning of making disciples.",
-        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " | Christian Curator".
+        "hook": "What does it actually mean to make disciples, and are most churches doing it?",
+        "summary": "How Christians grow in maturity: one-on-one mentoring, church programs, and the meaning of making disciples.",
+        # SEO title/description (2026-10-26 CTR pass): the live <title> is seo_title + " | Christian Curator".
         "seo_title": "Discipleship: How to Make Disciples",
         "seo_description": "What is discipleship, and how do you make disciples? Evangelical wisdom on following Jesus, growing to maturity, and helping others obey all Christ commanded.",
         "keywords": [
@@ -295,7 +295,7 @@ TOPICS = [
         "name": "Sanctification",
         "category": "Spiritual Formation",
         "hook": "Is growing in holiness primarily God's work in us, or does it require rigorous human effort?",
-        "summary": "The evangelical debate over how Christians grow in holiness — God's work, human effort, and means of grace.",
+        "summary": "The evangelical debate over how Christians grow in holiness: God's work, human effort, and means of grace.",
         "keywords": [
             "sanctification", "holiness", "mortification", "means of grace",
             "growing in holiness", "put to death", "spiritual maturity",
@@ -306,9 +306,9 @@ TOPICS = [
         "slug": "spiritual-disciplines",
         "name": "Spiritual Disciplines",
         "category": "Spiritual Formation",
-        "hook": "Are the spiritual disciplines a path to growth — or a path to legalism?",
+        "hook": "Are the spiritual disciplines a path to growth, or a path to legalism?",
         "summary": "How practices like solitude, silence, Scripture reading, and fasting shape the Christian life.",
-        # SEO title/description (2026-10-30 spoke pass) — the live <title> is seo_title + " | Christian Curator".
+        # SEO title/description (2026-10-30 spoke pass): the live <title> is seo_title + " | Christian Curator".
         "seo_title": "What Are the Spiritual Disciplines?",
         "seo_description": "What are the spiritual disciplines? A biblical definition, a list of the classic disciplines, why they are means of grace, and how to start practicing them.",
         "keywords": [
@@ -334,7 +334,7 @@ TOPICS = [
         "name": "Fasting",
         "category": "Spiritual Formation",
         "hook": "Is fasting a neglected discipline the church must recover, or a practice easily misunderstood?",
-        "summary": "What the Bible teaches about fasting — and why many evangelicals consider it a neglected spiritual discipline.",
+        "summary": "What the Bible teaches about fasting, and why many evangelicals consider it a neglected spiritual discipline.",
         "keywords": [
             "fasting", "fast", "biblical fasting", "spiritual fast",
             "abstinence", "lent", "abstain from food",
@@ -345,7 +345,7 @@ TOPICS = [
         "name": "Anxiety & Fear",
         "category": "Spiritual Formation",
         "hook": "Is anxiety primarily a spiritual failure, a medical condition, or both?",
-        "summary": "How Christians understand worry, fear, and anxiety — spiritually, psychologically, and practically.",
+        "summary": "How Christians understand worry, fear, and anxiety: spiritually, psychologically, and practically.",
         "keywords": [
             "anxiety", "worry", "anxious", "panic",
             "cast your anxiety", "do not be afraid", "mental health",
@@ -356,7 +356,7 @@ TOPICS = [
         "slug": "mental-health",
         "name": "Mental Health & Faith",
         "category": "Spiritual Formation",
-        "hook": "How should Christians think about depression and mental illness — as primarily spiritual, medical, or both?",
+        "hook": "How should Christians think about depression and mental illness: as primarily spiritual, medical, or both?",
         "summary": "Evangelical perspectives on depression, mental illness, counseling, and integrating faith with psychological care.",
         "keywords": [
             "mental health", "depression", "mental illness", "christian mental health",
@@ -408,7 +408,7 @@ TOPICS = [
         "slug": "technology-and-discipleship",
         "name": "Technology & Discipleship",
         "category": "Culture & Society",
-        "hook": "How do smartphones and social media form us spiritually — and what should Christians do about it?",
+        "hook": "How do smartphones and social media form us spiritually, and what should Christians do about it?",
         "summary": "How AI and digital tools are reshaping discipleship, ministry, and evangelical thinking about what it means to be human.",
         "keywords": [
             "artificial intelligence", "AI", "machine learning", "chatbot",
@@ -434,7 +434,7 @@ TOPICS = [
         "name": "Christian Parenting",
         "category": "Culture & Society",
         "hook": "How do Christian parents faithfully pass on faith to the next generation?",
-        "summary": "How Christian parents pass faith to the next generation — from family worship and catechism to raising teenagers.",
+        "summary": "How Christian parents pass faith to the next generation, from family worship and catechism to raising teenagers.",
         "keywords": [
             "parenting", "christian parenting", "raising children",
             "children and faith", "family worship", "catechism",
@@ -469,8 +469,8 @@ TOPICS = [
         "slug": "evangelicalism",
         "name": "The Future of Evangelicalism",
         "category": "Culture & Society",
-        "hook": "Is the evangelical movement fracturing — and if so, what should come next?",
-        "summary": "The state of the evangelical movement — its divisions, decline, identity, and what comes next.",
+        "hook": "Is the evangelical movement fracturing, and if so, what should come next?",
+        "summary": "The state of the evangelical movement: its divisions, decline, identity, and what comes next.",
         "keywords": [
             "evangelicalism", "evangelical", "post-evangelical",
             "evangelical identity", "evangelical decline", "evangelical movement",
@@ -486,7 +486,7 @@ TOPICS = [
         "slug": "predestination-free-will",
         "name": "Predestination & Free Will",
         "category": "Core Theology",
-        "hook": "Is salvation ultimately determined by God's sovereign choice or the human will's free response — and what are the stakes of getting this question right?",
+        "hook": "Is salvation ultimately determined by God's sovereign choice or the human will's free response, and what are the stakes of getting this question right?",
         "summary": "The Calvinist-Arminian debate over divine election, human freedom, and the nature of saving grace.",
         "keywords": [
             "predestination", "election", "calvinism", "arminianism", "free will",
@@ -498,7 +498,7 @@ TOPICS = [
         "slug": "holy-spirit-spiritual-gifts",
         "name": "The Holy Spirit & Spiritual Gifts",
         "category": "Core Theology",
-        "hook": "Do miraculous spiritual gifts like tongues and prophecy continue today, or did they cease with the apostolic age — and how does the answer shape Christian life and worship?",
+        "hook": "Do miraculous spiritual gifts like tongues and prophecy continue today, or did they cease with the apostolic age, and how does the answer shape Christian life and worship?",
         "summary": "The debate between cessationists and continuationists over spiritual gifts, tongues, and the Spirit's work today.",
         "keywords": [
             "holy spirit", "spiritual gifts", "tongues", "prophecy", "gifts of the spirit",
@@ -510,8 +510,8 @@ TOPICS = [
         "slug": "the-trinity",
         "name": "The Trinity",
         "category": "Core Theology",
-        "hook": "What does it mean that God is one being in three persons — and why does Trinitarian theology matter for prayer, salvation, and everyday Christian life?",
-        "summary": "Evangelical theology of the triune God — Father, Son, and Spirit — and why Trinitarian doctrine matters in practice.",
+        "hook": "What does it mean that God is one being in three persons, and why does Trinitarian theology matter for prayer, salvation, and everyday Christian life?",
+        "summary": "Evangelical theology of the triune God (Father, Son, and Spirit) and why Trinitarian doctrine matters in practice.",
         "keywords": [
             "trinity", "trinitarian", "three in one", "father son holy spirit",
             "subordinationism", "social trinitarianism", "substance", "persons",
@@ -523,7 +523,7 @@ TOPICS = [
         "name": "Christian Nationalism",
         "category": "Culture & Society",
         "hook": "What is Christian nationalism, why is it attracting evangelical support, and how does it differ from faithful Christian political engagement?",
-        "summary": "Evangelical debate over Christian nationalism — its appeal, its dangers, and what faithful political engagement looks like.",
+        "summary": "Evangelical debate over Christian nationalism: its appeal, its dangers, and what faithful political engagement looks like.",
         "keywords": [
             "christian nationalism", "nationalism", "christendom", "christian civilization",
             "christian right", "political power", "kingdom of god", "two kingdoms",
@@ -534,9 +534,9 @@ TOPICS = [
         "slug": "faith-deconstruction",
         "name": "Deconstruction & Faith",
         "category": "Spiritual Formation",
-        "hook": "When Christians begin questioning their beliefs, what does faithful deconstruction look like — and how should churches and pastors respond?",
+        "hook": "When Christians begin questioning their beliefs, what does faithful deconstruction look like, and how should churches and pastors respond?",
         "summary": "Why Christians are deconstructing, what churches can do, and what healthy faith rebuilding looks like.",
-        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " | Christian Curator".
+        # SEO title/description (2026-10-26 CTR pass): the live <title> is seo_title + " | Christian Curator".
         "seo_title": "What Is Faith Deconstruction?",
         "seo_description": "What is faith deconstruction? Why Christians are deconstructing faith, how doubt differs from unbelief, and how to rebuild on Christ with biblical wisdom.",
         "keywords": [
@@ -549,7 +549,7 @@ TOPICS = [
         "slug": "biblical-sexuality",
         "name": "Biblical Sexuality",
         "category": "Culture & Society",
-        "hook": "What does Scripture teach about same-sex attraction, marriage, and sexual identity — and how should evangelical churches care for LGBTQ+ neighbors and members?",
+        "hook": "What does Scripture teach about same-sex attraction, marriage, and sexual identity, and how should evangelical churches care for LGBTQ+ neighbors and members?",
         "summary": "Evangelical perspectives on same-sex attraction, LGBTQ+ identity, sexual ethics, and what Scripture teaches about sexuality.",
         "keywords": [
             "sexuality", "same-sex", "LGBTQ", "homosexuality", "gender identity",
@@ -573,7 +573,7 @@ TOPICS = [
         "slug": "contemplative-prayer",
         "name": "Contemplative Prayer",
         "category": "Spiritual Formation",
-        "hook": "Are contemplative practices like centering prayer and lectio divina a rich retrieval of Christian tradition — or a dangerous import of mystical techniques incompatible with evangelical theology?",
+        "hook": "Are contemplative practices like centering prayer and lectio divina a rich retrieval of Christian tradition, or a dangerous import of mystical techniques incompatible with evangelical theology?",
         "summary": "Evangelical debate over centering prayer, lectio divina, and the place of contemplative practices in Christian spirituality.",
         "keywords": [
             "contemplative prayer", "centering prayer", "lectio divina", "mysticism",
@@ -599,7 +599,7 @@ TOPICS = [
         "slug": "biblical-justice",
         "name": "Biblical Justice & the Social Gospel",
         "category": "Culture & Society",
-        "hook": "What is the evangelical responsibility toward the poor and oppressed — and how do we distinguish biblical justice from a social gospel that eclipses the gospel itself?",
+        "hook": "What is the evangelical responsibility toward the poor and oppressed, and how do we distinguish biblical justice from a social gospel that eclipses the gospel itself?",
         "summary": "Evangelical debate over poverty, oppression, and the distinction between biblical justice and the social gospel.",
         "keywords": [
             "social justice", "poverty", "poor", "oppressed",
@@ -613,7 +613,7 @@ TOPICS = [
         "slug": "eschatology",
         "name": "Eschatology & End Times",
         "category": "Core Theology",
-        "hook": "Will Christ return before, during, or after a thousand-year reign — and does your eschatology change how you live now?",
+        "hook": "Will Christ return before, during, or after a thousand-year reign, and does your eschatology change how you live now?",
         "summary": "Evangelical debate over premillennialism, amillennialism, the rapture, and what Scripture teaches about Christ's return and the end of history.",
         "keywords": [
             "eschatology", "end times", "second coming", "rapture",
@@ -626,7 +626,7 @@ TOPICS = [
         "slug": "prosperity-gospel",
         "name": "The Prosperity Gospel",
         "category": "Culture & Society",
-        "hook": "Does God promise health and wealth to the faithful — or is the prosperity gospel a dangerous distortion of Christ?",
+        "hook": "Does God promise health and wealth to the faithful, or is the prosperity gospel a dangerous distortion of Christ?",
         "summary": "Why evangelical Christians oppose the Word of Faith movement, and what a biblically faithful theology of blessing, suffering, and money looks like.",
         "keywords": [
             "prosperity gospel", "word of faith", "health and wealth gospel",
@@ -639,7 +639,7 @@ TOPICS = [
         "slug": "spiritual-abuse",
         "name": "Spiritual Abuse & Toxic Churches",
         "category": "Church Life",
-        "hook": "How do churches recognize and respond to spiritual abuse — and why does it so often go unaddressed?",
+        "hook": "How do churches recognize and respond to spiritual abuse, and why does it so often go unaddressed?",
         "summary": "What spiritual abuse looks like in evangelical churches, how abusive leaders operate, and what faithful churches owe to survivors.",
         "keywords": [
             "spiritual abuse", "toxic church", "abusive pastor", "spiritual manipulation",
@@ -652,7 +652,7 @@ TOPICS = [
         "slug": "religious-liberty",
         "name": "Religious Liberty",
         "category": "Culture & Society",
-        "hook": "Is religious liberty under genuine threat — and how should Christians respond when conscience conflicts with the law?",
+        "hook": "Is religious liberty under genuine threat, and how should Christians respond when conscience conflicts with the law?",
         "summary": "Evangelical debate over conscience rights, religious exemptions, government overreach, and how Christians engage a pluralistic legal culture.",
         "keywords": [
             "religious liberty", "religious freedom", "conscience rights",
@@ -666,7 +666,7 @@ TOPICS = [
         "slug": "israel-and-prophecy",
         "name": "Israel & Prophecy",
         "category": "Core Theology",
-        "hook": "Does the modern state of Israel fulfill biblical prophecy — and what do the Old Testament land promises mean for Christians today?",
+        "hook": "Does the modern state of Israel fulfill biblical prophecy, and what do the Old Testament land promises mean for Christians today?",
         "summary": "Evangelical debate between dispensationalism and covenant theology over Israel's role in prophecy, the land promises, and Christian Zionism.",
         "keywords": [
             "israel prophecy", "dispensationalism", "covenant theology",
@@ -680,8 +680,8 @@ TOPICS = [
         "slug": "grief-and-lament",
         "name": "Grief & Lament",
         "category": "Spiritual Formation",
-        "hook": "Is lament a failure of faith — or does Scripture call suffering Christians to honest, anguished prayer?",
-        "summary": "What the Bible teaches about grief, lament, and honest prayer in suffering — and why so many evangelical churches struggle to make space for it.",
+        "hook": "Is lament a failure of faith, or does Scripture call suffering Christians to honest, anguished prayer?",
+        "summary": "What the Bible teaches about grief, lament, and honest prayer in suffering, and why so many evangelical churches struggle to make space for it.",
         "keywords": [
             "lament", "grief", "psalms of lament", "theology of lament",
             "biblical grief", "mark vroegop", "dark clouds deep mercy",
@@ -693,7 +693,7 @@ TOPICS = [
         "slug": "forgiveness",
         "name": "Forgiveness",
         "category": "Spiritual Formation",
-        "hook": "Is Christian forgiveness unconditional — or must it require repentance from the offender?",
+        "hook": "Is Christian forgiveness unconditional, or must it require repentance from the offender?",
         "summary": "Evangelical debate over whether forgiveness is unconditional, what reconciliation requires, and how churches handle forgiveness in the context of abuse and justice.",
         "keywords": [
             "forgiveness", "christian forgiveness", "unconditional forgiveness",
@@ -707,9 +707,9 @@ TOPICS = [
         "slug": "progressive-christianity",
         "name": "Progressive Christianity",
         "category": "Culture & Society",
-        "hook": "Is progressive Christianity a reform of the faith — or has it progressed so far it has become a different religion altogether?",
-        "summary": "Evangelical responses to progressive Christianity — its departure from biblical authority, sexual ethics, and exclusivity — and what distinguishes it from historic orthodoxy.",
-        # SEO title/description (2026-10-30 spoke pass) — the live <title> is seo_title + " | Christian Curator".
+        "hook": "Is progressive Christianity a reform of the faith, or has it progressed so far it has become a different religion altogether?",
+        "summary": "Evangelical responses to progressive Christianity (its departure from biblical authority, sexual ethics, and exclusivity) and what distinguishes it from historic orthodoxy.",
+        # SEO title/description (2026-10-30 spoke pass): the live <title> is seo_title + " | Christian Curator".
         "seo_title": "What Is Progressive Christianity?",
         "seo_description": "What is progressive Christianity? What progressive Christians believe, how it differs from historic Christianity, and why it draws people deconstructing faith.",
         "keywords": [
@@ -724,7 +724,7 @@ TOPICS = [
         "slug": "christian-friendship",
         "name": "Christian Friendship & Community",
         "category": "Spiritual Formation",
-        "hook": "Why are deep friendships so rare in evangelical churches — and what does Scripture teach about the community we were made for?",
+        "hook": "Why are deep friendships so rare in evangelical churches, and what does Scripture teach about the community we were made for?",
         "summary": "Evangelical perspectives on biblical friendship, loneliness, and why the church must become a place of genuine, deep relational belonging.",
         "keywords": [
             "christian friendship", "biblical friendship", "loneliness church",
@@ -741,8 +741,8 @@ TOPICS = [
         "slug": "christology",
         "name": "Christology",
         "category": "Core Theology",
-        "hook": "Is Jesus fully God and fully human at the same time — and why does the answer matter for salvation, prayer, and everything else?",
-        "summary": "Evangelical theology of Jesus Christ — his divine and human natures, the hypostatic union, and what faithful Christology means for worship and salvation.",
+        "hook": "Is Jesus fully God and fully human at the same time, and why does the answer matter for salvation, prayer, and everything else?",
+        "summary": "Evangelical theology of Jesus Christ: his divine and human natures, the hypostatic union, and what faithful Christology means for worship and salvation.",
         "keywords": [
             "christology", "jesus christ", "hypostatic union", "two natures",
             "fully god fully human", "incarnation", "divine nature", "human nature",
@@ -754,7 +754,7 @@ TOPICS = [
         "slug": "covenant-theology",
         "name": "Covenant Theology",
         "category": "Core Theology",
-        "hook": "Is the Bible best read as one unified covenant story, or as a sequence of distinct dispensations — and what's at stake in getting this right?",
+        "hook": "Is the Bible best read as one unified covenant story, or as a sequence of distinct dispensations, and what's at stake in getting this right?",
         "summary": "Evangelical debate between covenant theology and dispensationalism over how the Old and New Testaments relate, and what the biblical covenants mean for the church today.",
         "keywords": [
             "covenant theology", "dispensationalism", "new covenant", "old covenant",
@@ -769,8 +769,8 @@ TOPICS = [
         "slug": "small-groups",
         "name": "Small Groups",
         "category": "Church Life",
-        "hook": "Are small groups the engine of discipleship in the local church — or a poor substitute for the deep community Christians actually need?",
-        "summary": "How evangelical churches use small groups, life groups, and home groups for discipleship, community, and pastoral care — and whether they actually work.",
+        "hook": "Are small groups the engine of discipleship in the local church, or a poor substitute for the deep community Christians actually need?",
+        "summary": "How evangelical churches use small groups, life groups, and home groups for discipleship, community, and pastoral care, and whether they actually work.",
         "keywords": [
             "small groups", "life groups", "home groups", "community groups",
             "cell groups", "small group ministry", "house church",
@@ -782,8 +782,8 @@ TOPICS = [
         "slug": "pastoral-ministry",
         "name": "The Pastor's Role",
         "category": "Church Life",
-        "hook": "Is the pastor primarily a preacher, a shepherd, a CEO — and how does the answer shape the health of a church?",
-        "summary": "What the Bible teaches about pastoral ministry — shepherding, preaching, leadership, bivocational ministry, and the marks of a faithful pastor.",
+        "hook": "Is the pastor primarily a preacher, a shepherd, a CEO, and how does the answer shape the health of a church?",
+        "summary": "What the Bible teaches about pastoral ministry: shepherding, preaching, leadership, bivocational ministry, and the marks of a faithful pastor.",
         "keywords": [
             "pastor", "pastoral ministry", "shepherd", "bivocational",
             "pastor burnout", "pastoral leadership", "elder pastor",
@@ -795,8 +795,8 @@ TOPICS = [
         "slug": "church-governance",
         "name": "Church Governance",
         "category": "Church Life",
-        "hook": "Should churches be governed by elders, congregations, or bishops — and does polity really matter for church health?",
-        "summary": "Evangelical debate over elder rule, congregationalism, and episcopal governance — and what the New Testament teaches about how churches should be structured and led.",
+        "hook": "Should churches be governed by elders, congregations, or bishops, and does polity really matter for church health?",
+        "summary": "Evangelical debate over elder rule, congregationalism, and episcopal governance, and what the New Testament teaches about how churches should be structured and led.",
         "keywords": [
             "church governance", "church polity", "elder rule", "congregationalism",
             "episcopal", "elders", "deacons", "church structure", "plurality of elders",
@@ -810,7 +810,7 @@ TOPICS = [
         "slug": "singleness",
         "name": "Singleness",
         "category": "Spiritual Formation",
-        "hook": "Is singleness a lesser life than marriage — or does the New Testament present it as an equally valid, even uniquely powerful, calling?",
+        "hook": "Is singleness a lesser life than marriage, or does the New Testament present it as an equally valid, even uniquely powerful, calling?",
         "summary": "Evangelical perspectives on singleness as a calling, celibacy as a gift, and how the church should honor and support single Christians.",
         "keywords": [
             "singleness", "single christian", "celibacy", "gift of singleness",
@@ -823,9 +823,9 @@ TOPICS = [
         "slug": "biblical-literacy",
         "name": "Biblical Literacy",
         "category": "Spiritual Formation",
-        "hook": "Why do so many Christians read the Bible so little — and what would change if the church actually knew Scripture?",
+        "hook": "Why do so many Christians read the Bible so little, and what would change if the church actually knew Scripture?",
         "summary": "Evangelical concern about declining biblical knowledge, how Christians should read and engage Scripture, and what it looks like to recover genuine biblical literacy.",
-        # SEO title/description (2026-10-26 CTR pass) — the live <title> is seo_title + " | Christian Curator".
+        # SEO title/description (2026-10-26 CTR pass): the live <title> is seo_title + " | Christian Curator".
         "seo_title": "What Is Biblical Literacy?",
         "seo_description": "What is biblical literacy? A clear definition, what it means to be biblically literate, why Bible literacy matters, and how to grow in knowing Scripture.",
         "keywords": [
@@ -839,7 +839,7 @@ TOPICS = [
         "slug": "pornography",
         "name": "Pornography & Sexual Purity",
         "category": "Spiritual Formation",
-        "hook": "Is pornography primarily a spiritual problem, a neurological addiction, or both — and what does genuine freedom actually look like?",
+        "hook": "Is pornography primarily a spiritual problem, a neurological addiction, or both, and what does genuine freedom actually look like?",
         "summary": "Evangelical approaches to pornography addiction, purity culture critique, accountability, and the path to sexual wholeness for men and women.",
         "keywords": [
             "pornography", "porn addiction", "sexual purity", "purity culture",
@@ -852,7 +852,7 @@ TOPICS = [
         "slug": "death-and-dying",
         "name": "Death & Dying",
         "category": "Spiritual Formation",
-        "hook": "How should Christians prepare for death — and does the church have anything distinctive to offer a culture that avoids it?",
+        "hook": "How should Christians prepare for death, and does the church have anything distinctive to offer a culture that avoids it?",
         "summary": "Evangelical perspectives on dying well, end-of-life care, euthanasia, hospice, and how the hope of resurrection shapes the way Christians face death.",
         "keywords": [
             "death", "dying", "end of life", "dying well", "euthanasia",
@@ -867,7 +867,7 @@ TOPICS = [
         "slug": "christian-education",
         "name": "Christian Education",
         "category": "Culture & Society",
-        "hook": "Should Christian parents put their children in public schools, Christian schools, or homeschool them — and is there a biblical answer?",
+        "hook": "Should Christian parents put their children in public schools, Christian schools, or homeschool them, and is there a biblical answer?",
         "summary": "Evangelical debate over Christian schooling, classical education, homeschooling, and how families pass on faith through education.",
         "keywords": [
             "christian education", "homeschooling", "classical christian education",
@@ -881,7 +881,7 @@ TOPICS = [
         "slug": "abortion",
         "name": "Abortion & the Pro-Life Movement",
         "category": "Culture & Society",
-        "hook": "What does the pro-life movement owe to women after Roe — and is the church doing enough?",
+        "hook": "What does the pro-life movement owe to women after Roe, and is the church doing enough?",
         "summary": "Evangelical theology of life, the pro-life movement post-Dobbs, and what faithful Christian witness looks like on abortion in a post-Roe America.",
         "keywords": [
             "abortion", "pro-life", "roe v wade", "dobbs", "sanctity of life",
@@ -894,7 +894,7 @@ TOPICS = [
         "slug": "addiction-and-recovery",
         "name": "Addiction & Recovery",
         "category": "Culture & Society",
-        "hook": "Is addiction a sin, a disease, or both — and what does the church offer that secular recovery programs cannot?",
+        "hook": "Is addiction a sin, a disease, or both, and what does the church offer that secular recovery programs cannot?",
         "summary": "How evangelical Christians understand addiction, the role of faith in recovery, and what the church can offer those struggling with substances and compulsive behaviors.",
         "keywords": [
             "addiction", "recovery", "celebrate recovery", "substance abuse",
@@ -907,7 +907,7 @@ TOPICS = [
         "slug": "creation-care",
         "name": "Creation Care",
         "category": "Culture & Society",
-        "hook": "Is caring for the environment a Christian responsibility — or a distraction from the gospel?",
+        "hook": "Is caring for the environment a Christian responsibility, or a distraction from the gospel?",
         "summary": "Evangelical debate over environmental stewardship, climate change, and what it means to care for creation as image-bearers of God.",
         "keywords": [
             "creation care", "environment", "stewardship", "climate change",
@@ -920,7 +920,7 @@ TOPICS = [
         "slug": "christian-masculinity",
         "name": "Christian Masculinity",
         "category": "Culture & Society",
-        "hook": "What does it actually mean to be a man in the church today — and is evangelical culture making men better or worse?",
+        "hook": "What does it actually mean to be a man in the church today, and is evangelical culture making men better or worse?",
         "summary": "Evangelical conversation about biblical manhood, the crisis of male disengagement from church, fatherhood, and what healthy Christian masculinity looks like.",
         "keywords": [
             "christian masculinity", "biblical manhood", "men in church",
@@ -935,8 +935,8 @@ TOPICS = [
         "slug": "stewardship-and-generosity",
         "name": "Stewardship & Generosity",
         "category": "Culture & Society",
-        "hook": "Is tithing a law, a floor, or a ceiling — and what does radical gospel generosity actually demand of Christians?",
-        "summary": "How Christians think about money, giving, and generosity — from tithing debates to radical generosity and the prosperity gospel critique.",
+        "hook": "Is tithing a law, a floor, or a ceiling, and what does radical gospel generosity actually demand of Christians?",
+        "summary": "How Christians think about money, giving, and generosity, from tithing debates to radical generosity and the prosperity gospel critique.",
         "keywords": [
             "stewardship", "generosity", "tithing", "christian giving",
             "biblical stewardship", "randy alcorn", "treasure principle",

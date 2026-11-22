@@ -7,6 +7,8 @@ from datetime import date
 from jinja2 import Environment, FileSystemLoader
 
 from curator.original_titles import article_original_title, byline_title
+from frontend.a11y_css import A11Y_BLOCK
+from frontend.favicon import FAVICON_LINKS
 import hashlib
 import json
 import re
@@ -940,8 +942,9 @@ def render_archive_index(env: Environment):
         '<head>',
         '  <meta charset="UTF-8" />',
         '  <meta name="viewport" content="width=device-width, initial-scale=1.0" />',
-        '  <title>Christian Curator — Archive</title>',
-        '  <meta name="description" content="Browse all past issues of Christian Curator — a daily digest of evangelical Christian news, theology, and culture." />',
+        '  ' + FAVICON_LINKS,
+        '  <title>Archive | Christian Curator</title>',
+        '  <meta name="description" content="Browse all past issues of Christian Curator, a daily digest of evangelical Christian news, theology, and culture." />',
         '  <link rel="canonical" href="https://www.christiancurator.com/archive/" />',
         '  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NJ5DSPFXL"></script>',
         '  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-3NJ5DSPFXL");</script>',
@@ -952,7 +955,7 @@ def render_archive_index(env: Environment):
         '    body{font-family:"Source Sans 3",sans-serif;background:#faf9f7;color:#1a1a1a;font-size:16px;line-height:1.5;}',
         '    .cc-root{max-width:640px;margin:0 auto;padding:0 20px 4rem;}',
         '    .cc-header{border-bottom:1px solid #e0ddd8;padding:0.75rem 0 0;margin-bottom:2rem;}',
-        '    .cc-top-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;font-size:12px;color:#888;}',
+        '    .cc-top-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;font-size:12px;color:#6b6b6b;}',
         '    .cc-back-link{font-size:12px;color:#2C4A2E;text-decoration:none;font-weight:600;}',
         '    .cc-back-link:hover{text-decoration:underline;}',
         '    .cc-subscribe-btn{background:#2C4A2E;color:#fff;border:none;padding:5px 14px;font-size:12px;border-radius:3px;cursor:pointer;font-family:"Source Sans 3",sans-serif;text-decoration:none;display:inline-block;}',
@@ -960,21 +963,21 @@ def render_archive_index(env: Environment):
         '    .cc-masthead{text-align:center;padding:0.5rem 0 1rem;border-bottom:2.5px solid #1a1a1a;}',
         '    .cc-site-name{font-family:"Lora",Georgia,serif;font-size:46px;font-weight:600;letter-spacing:-0.02em;line-height:1;color:#1a1a1a;text-decoration:none;}',
         '    .cc-site-name:hover{color:#2C4A2E;}',
-        '    .cc-tagline{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:8px 0 0;font-weight:300;}',
+        '    .cc-tagline{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#6b6b6b;margin:8px 0 0;font-weight:300;}',
         '    h1{font-family:"Lora",Georgia,serif;font-size:24px;font-weight:600;margin:1.75rem 0 0.5rem;}',
         '    .cc-archive-intro{font-size:14px;color:#666;margin-bottom:1.25rem;}',
         '    .cc-filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:0.5rem;}',
         '    .cc-filter-bar select{font-family:"Source Sans 3",sans-serif;font-size:12px;color:#1a1a1a;background:#fff;border:1px solid #d0cdc8;border-radius:3px;padding:5px 8px;cursor:pointer;flex:1;min-width:140px;}',
         '    .cc-filter-bar select:focus{outline:none;border-color:#2C4A2E;}',
-        '    .cc-filter-clear{font-family:"Source Sans 3",sans-serif;font-size:12px;background:none;border:1px solid #d0cdc8;border-radius:3px;padding:5px 12px;cursor:pointer;color:#888;white-space:nowrap;}',
+        '    .cc-filter-clear{font-family:"Source Sans 3",sans-serif;font-size:12px;background:none;border:1px solid #d0cdc8;border-radius:3px;padding:5px 12px;cursor:pointer;color:#6b6b6b;white-space:nowrap;}',
         '    .cc-filter-clear:hover{border-color:#2C4A2E;color:#2C4A2E;}',
-        '    .cc-filter-count{font-size:12px;color:#888;margin-bottom:1.25rem;min-height:1.2em;}',
+        '    .cc-filter-count{font-size:12px;color:#6b6b6b;margin-bottom:1.25rem;min-height:1.2em;}',
         '    .cc-month{margin-bottom:2rem;}',
         '    .cc-month-label{font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#2C4A2E;padding-bottom:0.5rem;border-bottom:1px solid #e0ddd8;margin-bottom:0.75rem;}',
         '    .cc-day-link{display:flex;align-items:baseline;gap:10px;padding:0.6rem 0;border-bottom:1px solid #f0ede8;text-decoration:none;color:#1a1a1a;}',
         '    .cc-day-link:last-child{border-bottom:none;}',
         '    .cc-day-link:hover .cc-day-display{text-decoration:underline;text-decoration-color:#2C4A2E;}',
-        '    .cc-day-weekday{font-size:11px;color:#aaa;min-width:60px;}',
+        '    .cc-day-weekday{font-size:12px;color:#6b6b6b;min-width:60px;}',
         '    .cc-day-display{font-family:"Lora",Georgia,serif;font-size:15px;font-weight:500;}',
         '    .cc-result-group{margin-bottom:2rem;}',
         '    .cc-result-date{font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#2C4A2E;padding-bottom:0.5rem;border-bottom:1px solid #e0ddd8;margin-bottom:0.75rem;}',
@@ -984,13 +987,13 @@ def render_archive_index(env: Environment):
         '    .cc-result-item:last-child{border-bottom:none;}',
         '    .cc-result-title{font-family:"Lora",Georgia,serif;font-size:15px;font-weight:500;line-height:1.35;color:#1a1a1a;text-decoration:none;display:block;margin-bottom:4px;}',
         '    .cc-result-title:hover{text-decoration:underline;text-decoration-color:#2C4A2E;}',
-        '    .cc-result-meta{font-size:11.5px;color:#aaa;}',
+        '    .cc-result-meta{font-size:12px;color:#6b6b6b;}',
         '    .cc-result-meta .cc-meta-dot{margin:0 4px;}',
-        '    .cc-footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e0ddd8;text-align:center;font-size:12px;color:#aaa;}',
+        '    .cc-footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e0ddd8;text-align:center;font-size:12px;color:#6b6b6b;}',
         '    .cc-footer a{color:#2C4A2E;text-decoration:none;}',
         '    .cc-footer a:hover{text-decoration:underline;}',
         '    .cc-nav{display:flex;justify-content:center;align-items:center;gap:2rem;padding:0.6rem 0 0;border-top:1px solid #e0ddd8;margin-top:0.75rem;}',
-        '    .cc-nav a{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#888;text-decoration:none;}',
+        '    .cc-nav a{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6b6b6b;text-decoration:none;}',
         '    .cc-nav a:hover{color:#2C4A2E;}',
         '    .cc-nav a.active{color:#1a1a1a;border-bottom:2px solid #1a1a1a;padding-bottom:2px;}',
         '    .cc-nav-dropdown{position:relative;display:inline-block;}',
@@ -999,7 +1002,7 @@ def render_archive_index(env: Environment):
         '    .cc-nav-dropdown-toggle::after{content:"▾";font-size:10px;letter-spacing:0;}',
         '    .cc-nav-dropdown-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid #e0ddd8;border-radius:4px;padding:14px 0 6px;min-width:140px;z-index:100;box-shadow:0 4px 12px rgba(0,0,0,0.08);}',
         '    .cc-nav-dropdown:hover .cc-nav-dropdown-menu,.cc-nav-dropdown:focus-within .cc-nav-dropdown-menu{display:block;}',
-        '    .cc-nav-dropdown-menu a{display:block;padding:7px 18px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#888;text-decoration:none;white-space:nowrap;}',
+        '    .cc-nav-dropdown-menu a{display:block;padding:7px 18px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6b6b6b;text-decoration:none;white-space:nowrap;}',
         '    .cc-nav-dropdown-menu a:hover{color:#2C4A2E;background:#f7f5f2;}',
         '    .cc-nav-dropdown-menu a.active{color:#1a1a1a;}',
         '    /* CC-NAV-TOPICS-SUBMENU:START */',
@@ -1007,6 +1010,7 @@ def render_archive_index(env: Environment):
         '    .cc-nav a.cc-nav-topics[aria-current="page"]{color:#1a1a1a;border-bottom:2px solid #1a1a1a;padding-bottom:2px;}',
         '    /* CC-NAV-TOPICS-SUBMENU:END */',
         '    @media(max-width:600px){.cc-site-name{font-size:32px;}.cc-filter-bar select{min-width:100%;}}',
+        '    ' + A11Y_BLOCK,
         '  </style>',
         '</head>',
         '<body>',
@@ -1072,7 +1076,7 @@ def render_archive_index(env: Environment):
     lines += [
         '    </div>',  # /cc-day-list
         '    <footer class="cc-footer">',
-        '      <p><a href="/">Christian Curator</a> — A daily digest of the best evangelical Christian writing.</p>',
+        '      <p><a href="/">Christian Curator</a> · A daily digest of the best evangelical Christian writing.</p>',
         '      <p style="margin-top:6px;"><a href="/#subscribe">Subscribe to the daily email</a></p>',
         '    </footer>',
         '  </div>',
@@ -1118,7 +1122,7 @@ def render_archive_index(env: Environment):
         '        });',
         '        html += \'</div>\';',
         '      });',
-        '      if (!html) html = \'<p style="font-size:14px;color:#888;padding:1rem 0;">No articles found.</p>\';',
+        '      if (!html) html = \'<p style="font-size:14px;color:#6b6b6b;padding:1rem 0;">No articles found.</p>\';',
         '      resultsEl.innerHTML = html;',
         '      resultsEl.style.display = "";',
         '      var issueWord = groups.length === 1 ? "issue" : "issues";',
@@ -1172,6 +1176,7 @@ def _write_urlset(path, entries):
 
 
 VOICES_NOINDEX_PATH = Path(__file__).parent / "voices_noindex.json"
+SITEMAP_LASTMOD_PATH = Path(__file__).parent.parent / "data" / "sitemap_lastmod.json"
 
 
 def load_noindex_voices() -> set:
@@ -1188,27 +1193,39 @@ def regenerate_sitemap():
     """Regenerate sitemap.xml as a sitemap-index pointing to per-section sitemaps.
 
     Sections: core (home/digest/about/hub indexes), topics, voices, daily, archive.
-    Each per-section sitemap uses accurate per-page lastmod (file mtime).
+    lastmod is the page's dateModified, else the date its visible content last
+    changed (frontend/sitemap_lastmod.py, state in data/sitemap_lastmod.json);
+    the homepage, digest and archive index change every day. Daily and archive
+    snapshots use their own date. The index lastmod is the newest in each child.
 
     Priority/changefreq tuned to favor deep evergreen content (topics, voices)
     over high-volume frozen content (daily/archive individual snapshots).
     """
+    from frontend.sitemap_lastmod import LastmodState
     today_iso = date.today().isoformat()
     base = "https://www.christiancurator.com"
+    state = LastmodState(SITEMAP_LASTMOD_PATH)
+
+    def page_lastmod(url, path):
+        try:
+            html = Path(path).read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            return _file_mtime_iso(path)
+        return state.lastmod(url, html, today_iso)
 
     # --- Core hub URLs (always-on, high priority) ---
     core_entries = [
         (f"{base}/",        "daily",   "1.0", today_iso),
         (f"{base}/digest/", "daily",   "0.9", today_iso),
-        (f"{base}/about/",  "monthly", "0.6", today_iso),
+        (f"{base}/about/",  "monthly", "0.6", page_lastmod(f"{base}/about/", DOCS_DIR / "about" / "index.html")),
         (f"{base}/archive/","daily",   "0.7", today_iso),
     ]
     if (TOPICS_DIR / "index.html").exists():
         core_entries.append((f"{base}/topics/", "weekly", "0.8",
-                             _file_mtime_iso(TOPICS_DIR / "index.html")))
+                             page_lastmod(f"{base}/topics/", TOPICS_DIR / "index.html")))
     if (VOICES_DIR / "index.html").exists():
         core_entries.append((f"{base}/voices/", "weekly", "0.8",
-                             _file_mtime_iso(VOICES_DIR / "index.html")))
+                             page_lastmod(f"{base}/voices/", VOICES_DIR / "index.html")))
 
     # --- Topics (deepest evergreen content) ---
     topic_entries = []
@@ -1218,10 +1235,8 @@ def regenerate_sitemap():
         for topic_dir in sorted(TOPICS_DIR.iterdir()):
             idx = topic_dir / "index.html"
             if topic_dir.is_dir() and idx.exists() and topic_dir.name not in retired:
-                topic_entries.append((
-                    f"{base}/topics/{topic_dir.name}/",
-                    "weekly", "0.9", _file_mtime_iso(idx),
-                ))
+                url = f"{base}/topics/{topic_dir.name}/"
+                topic_entries.append((url, "weekly", "0.9", page_lastmod(url, idx)))
 
     # --- Voices (deep author/contributor profiles) ---
     # The page's own robots tag decides (frontend/robots.py): a page whose HTML
@@ -1237,10 +1252,8 @@ def regenerate_sitemap():
             if voice_dir.name in noindex_voices or page_has_noindex(idx):
                 continue
             if voice_dir.is_dir() and idx.exists():
-                voice_entries.append((
-                    f"{base}/voices/{voice_dir.name}/",
-                    "monthly", "0.9", _file_mtime_iso(idx),
-                ))
+                url = f"{base}/voices/{voice_dir.name}/"
+                voice_entries.append((url, "monthly", "0.9", page_lastmod(url, idx)))
 
     # --- Daily pulse pages (frozen snapshots, lower priority to preserve crawl budget) ---
     daily_entries = []
@@ -1277,7 +1290,8 @@ def regenerate_sitemap():
         if not entries:
             continue
         _write_urlset(SITEMAP_DIR / filename, entries)
-        written.append((filename, len(entries)))
+        written.append((filename, len(entries), max(e[3] for e in entries)))
+    state.save()
 
     # Write sitemap index at /sitemap.xml. The daily and archive sitemaps are
     # still written (and their pages stay crawlable via links), but they are
@@ -1286,20 +1300,20 @@ def regenerate_sitemap():
     unlisted = {"sitemap-daily.xml", "sitemap-archive.xml"}
     idx_lines = ['<?xml version="1.0" encoding="UTF-8"?>',
                  '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for filename, _count in written:
+    for filename, _count, newest in written:
         if filename in unlisted:
             continue
         idx_lines += [
             "  <sitemap>",
             f"    <loc>{base}/{filename}</loc>",
-            f"    <lastmod>{today_iso}</lastmod>",
+            f"    <lastmod>{newest}</lastmod>",
             "  </sitemap>",
         ]
     idx_lines.append("</sitemapindex>")
     with open(SITEMAP_PATH, "w", encoding="utf-8") as f:
         f.write("\n".join(idx_lines) + "\n")
 
-    listed = [(n, c) for n, c in written if n not in unlisted]
+    listed = [(n, c) for n, c, _newest in written if n not in unlisted]
     total = sum(c for _, c in listed)
     detail = ", ".join(f"{n}={c}" for n, c in listed)
     print(f"  Regenerated sitemap index with {total} URL(s) across {len(listed)} sitemaps ({detail}); "

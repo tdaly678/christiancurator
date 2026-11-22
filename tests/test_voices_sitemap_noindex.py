@@ -44,6 +44,7 @@ def site(tmp_path, monkeypatch):
         monkeypatch.setattr(frontend, name, docs / name.lower())
     monkeypatch.setattr(frontend, "SITEMAP_DIR", docs)
     monkeypatch.setattr(frontend, "SITEMAP_PATH", docs / "sitemap.xml")
+    monkeypatch.setattr(frontend, "SITEMAP_LASTMOD_PATH", tmp_path / "sitemap_lastmod.json")
     return docs
 
 

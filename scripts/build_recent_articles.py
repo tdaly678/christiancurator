@@ -75,7 +75,7 @@ STYLE = (
     ".cc-recent-link{font-family:'Lora',Georgia,serif;font-size:16px;font-weight:600;"
     "line-height:1.35;color:#1a1a1a;text-decoration:none;}"
     ".cc-recent-link:hover{color:#2C4A2E;text-decoration:underline;}"
-    ".cc-recent-meta{font-size:12px;color:#888;margin-top:2px;}"
+    ".cc-recent-meta{font-size:12px;color:#6b6b6b;margin-top:2px;}"
     "</style>"
 )
 

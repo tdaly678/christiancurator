@@ -265,7 +265,8 @@ def find_related_days(today_themes: list[str], history: list[dict], today_slug: 
             scored.append({
                 "slug": entry["slug"],
                 "date": entry["date"],
-                "excerpt": entry.get("excerpt", ""),
+                # Old Pulses predate the sanitizer; never quote their dashes.
+                "excerpt": strip_dashes(entry.get("excerpt", "")),
                 "shared_themes": sorted(shared),
                 "_score": len(shared),
             })

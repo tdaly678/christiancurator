@@ -5,7 +5,9 @@ Voice profile pages were titled "Name — Voices — Christian Curator". The Voi
 pilot (Nov 2026) changes that to the pronoun-free, dash-free form from
 curator.voice_generator.voice_page_title():
 
-    Name: Articles, Bio, and Where They Write | Christian Curator
+    Name: Articles and Bio | Christian Curator
+
+(Shortened from "Name: Articles, Bio, and Where They Write" on Nov 22 2026.)
 
 Per page it rewrites <title> and og:title. Merged-duplicate stubs (meta refresh
 to the survivor) become "Name | Christian Curator". It also collapses runs of
@@ -41,7 +43,7 @@ OG_TITLE_RE = re.compile(
     r'<meta property="og:title" content="[^"]*" />|<meta content="[^"]*" property="og:title"\s*/>'
 )
 SUFFIX_RE = re.compile(
-    r"\s*(?:—\s*Voices\s*—|:\s*Articles, Bio, and Where They Write\s*\||—|\|)\s*Christian Curator\s*$"
+    r"\s*(?:—\s*Voices\s*—|:\s*Articles, Bio, and Where They Write\s*\||:\s*Articles and Bio\s*\||—|\|)\s*Christian Curator\s*$"
 )
 PILOT_MARK = "data-cc-voice-pilot="
 BLANK_RUN_RE = re.compile(r"\n(?:[ \t]*\n){2,}")

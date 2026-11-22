@@ -62,5 +62,6 @@ def live_topic_dirs(topics_dir: Path, path: Path = REDIRECTS_PATH) -> list[Path]
 
 def render_stub(old: str, to: str, name: str, to_name: str) -> str:
     import html as html_mod
-    return STUB.format(name=html_mod.escape(name), to=to, site=SITE,
-                       to_name=html_mod.escape(to_name))
+    from frontend.favicon import add_favicon
+    return add_favicon(STUB.format(name=html_mod.escape(name), to=to, site=SITE,
+                                   to_name=html_mod.escape(to_name)))

@@ -42,6 +42,7 @@ PAGE_URL = f"{SITE}/topics/"
 
 sys.path.insert(0, str(REPO_ROOT))
 from frontend.topics_hub import hub_sections  # noqa: E402
+from frontend.a11y_css import A11Y_BLOCK  # noqa: E402
 
 TITLE = "Topics | Christian Curator"
 DESCRIPTION = ("Every Christian Curator topic guide in one place: Scripture, doctrine, "
@@ -150,6 +151,7 @@ PAGE = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CC-FAVICON:START --><link rel="icon" href="/favicon.ico" sizes="any" /><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" /><!-- CC-FAVICON:END -->
   <title>{title}</title>
   <meta name="description" content="{description}" />
   <link rel="canonical" href="{page_url}" />
@@ -176,7 +178,7 @@ PAGE = """<!DOCTYPE html>
     .cc-root {{ max-width: 920px; margin: 0 auto; padding: 0 20px 3rem; }}
     .cc-header {{ padding: 0.75rem 0 0; margin-bottom: 1.5rem; }}
     .cc-top-bar {{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; font-size: 12px; }}
-    .cc-back-link {{ color: #888; text-decoration: none; }}
+    .cc-back-link {{ color: #6b6b6b; text-decoration: none; }}
     .cc-back-link:hover {{ color: #2C4A2E; }}
     .cc-subscribe-btn {{ background: #2C4A2E; color: #fff; padding: 5px 14px; font-size: 12px; border-radius: 3px; text-decoration: none; }}
     .cc-subscribe-btn:hover {{ background: #3a5f3c; }}
@@ -184,13 +186,13 @@ PAGE = """<!DOCTYPE html>
     .cc-masthead h1, .cc-masthead p.cc-site {{ margin: 0; }}
     .cc-site-name {{ font-family: "Lora", Georgia, serif; font-size: 46px; font-weight: 600; letter-spacing: -0.02em; line-height: 1; color: #1a1a1a; text-decoration: none; }}
     .cc-site-name:hover {{ color: #2C4A2E; }}
-    .cc-tagline {{ font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #888; margin: 8px 0 0; font-weight: 300; }}
+    .cc-tagline {{ font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #6b6b6b; margin: 8px 0 0; font-weight: 300; }}
     @media (max-width: 600px) {{ .cc-site-name {{ font-size: 32px; }} }}
 {nav_css}
-    .cc-breadcrumb {{ font-size: 11px; color: #aaa; margin: 0 0 1rem; letter-spacing: 0.02em; }}
+    .cc-breadcrumb {{ font-size: 12px; color: #6b6b6b; margin: 0 0 1rem; letter-spacing: 0.02em; }}
     .cc-breadcrumb a {{ color: #2C4A2E; text-decoration: none; }}
     .cc-breadcrumb a:hover {{ text-decoration: underline; }}
-    .cc-breadcrumb-sep {{ margin: 0 6px; color: #ccc; }}
+    .cc-breadcrumb-sep {{ margin: 0 6px; color: #6b6b6b; }}
     .cc-hub-head {{ border-bottom: 2px solid #1a1a1a; padding-bottom: 1rem; margin-bottom: 1.25rem; }}
     .cc-hub-title {{ font-family: "Lora", Georgia, serif; font-size: 34px; font-weight: 600; line-height: 1.15; margin-bottom: 0.5rem; }}
     .cc-hub-intro {{ font-size: 16px; color: #444; line-height: 1.6; max-width: 680px; }}
@@ -198,7 +200,7 @@ PAGE = """<!DOCTYPE html>
     .cc-hub-filter label {{ display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #2C4A2E; margin-bottom: 6px; }}
     .cc-hub-filter input {{ width: 100%; max-width: 460px; font: inherit; font-size: 16px; padding: 9px 12px; border: 1px solid #c9c4bc; border-radius: 4px; background: #fff; color: #1a1a1a; }}
     .cc-hub-filter input:focus {{ outline: 2px solid #2C4A2E; outline-offset: 1px; border-color: #2C4A2E; }}
-    .cc-hub-status {{ font-size: 13px; color: #777; margin-top: 6px; min-height: 1.2em; }}
+    .cc-hub-status {{ font-size: 13px; color: #6b6b6b; margin-top: 6px; min-height: 1.2em; }}
     .cc-hub-jump {{ display: flex; flex-wrap: wrap; gap: 6px 18px; padding: 0.75rem 0; border-top: 1px solid #e0ddd8; border-bottom: 1px solid #e0ddd8; margin-bottom: 1.75rem; }}
     .cc-hub-jump a {{ font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #2C4A2E; text-decoration: none; }}
     .cc-hub-jump a:hover {{ text-decoration: underline; }}
@@ -211,13 +213,14 @@ PAGE = """<!DOCTYPE html>
     .cc-hub-line {{ display: block; font-size: 13.5px; color: #666; line-height: 1.45; margin-top: 2px; }}
     .cc-hub-tag {{ display: inline-block; vertical-align: 2px; margin-left: 6px; font-size: 9.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8B1A1A; border: 1px solid #d9b8b8; border-radius: 3px; padding: 0 5px; line-height: 1.6; }}
     .cc-hub-empty {{ font-size: 15px; color: #555; margin: 0 0 2rem; }}
-    .cc-footer {{ margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid #e0ddd8; text-align: center; font-size: 12px; color: #aaa; }}
+    .cc-footer {{ margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid #e0ddd8; text-align: center; font-size: 12px; color: #6b6b6b; }}
     .cc-footer a {{ color: #2C4A2E; text-decoration: none; font-weight: 600; }}
     .cc-footer a:hover {{ text-decoration: underline; }}
     @media (max-width: 600px) {{
       .cc-hub-title {{ font-size: 28px; }}
       .cc-hub-jump {{ gap: 8px 14px; }}
     }}
+    {A11Y_BLOCK}
   </style>
 </head>
 <body>
@@ -327,6 +330,7 @@ def render_page(sections: list[dict]) -> str:
         site=SITE,
         jsonld=build_jsonld(sections),
         nav_css=nav_css(),
+        A11Y_BLOCK=A11Y_BLOCK,
         nav_block=canonical_nav(),
         intro=esc(INTRO),
         jump=build_jump_html(sections),
