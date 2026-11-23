@@ -15,12 +15,14 @@ dated column check, listicle and claimless-label rules, voice demotions). A
 rewrite that fails falls back to the cleaned original, display_title().
 
 Fact guards (Nov 22 2026, S1 3.4): a rewrite may not say more than the piece.
-  - keep_publisher_title(): roundups, podcast episodes and newsletters are
-    never sent to Claude; they keep the cleaned publisher title.
+  - keep_publisher_title(): roundups, podcast episodes, newsletters and
+    titles ending in "?" (KEEP_QUESTION, S10) are never sent to Claude; they
+    keep the cleaned publisher title.
   - fact_rejection() discards a rewrite that
       REWRITE_CHANGES_MODALITY    turns a question ("What will we remember in
                                   the afterlife?", "Why paper books endure")
-                                  into a statement
+                                  into a statement (a question ends in "?"
+                                  or opens with Why, How or What)
       REWRITE_UNCREDITED_OPINION  adds should / must / ought to a piece without
                                   crediting it ("..., Writer Argues", "X Says")
       REWRITE_INVENTED_NOUN       adds a noun such as "white paper", "report",
@@ -168,9 +170,10 @@ _INVENTED_RE = re.compile(
     r"\b(" + "|".join(re.escape(n) for n in sorted(INVENTED_NOUNS, key=len, reverse=True)) + r")\b",
     re.IGNORECASE)
 
-_QUESTION_OPEN_RE = re.compile(
-    r"^\s*(?:why|how|what|when|where|who|which|is|are|can|could|do|does|did|will|would"
-    r"|should|was|were|has|have)\b", re.IGNORECASE)
+# A title is a question when it ends in "?" or opens with Why, How or What
+# (S10, Nov 23 2026). "When Democrats Show Up for Men" or "Is Coming" style
+# openers without a "?" are statements.
+_QUESTION_OPEN_RE = re.compile(r"^\s*(?:why|how|what)\b", re.IGNORECASE)
 _NORMATIVE_RE = re.compile(
     r"\b(?:should|must|ought|need\s+to|needs\s+to|have\s+to|has\s+to)\b", re.IGNORECASE)
 _CREDIT_RE = re.compile(
@@ -243,6 +246,8 @@ def keep_publisher_title(article: dict) -> str | None:
 
     Roundups, podcast episodes and newsletters are presented under their own
     titles: a rewrite of one of them states a claim the piece never makes.
+    Titles ending in "?" are kept too (KEEP_QUESTION): a rewrite could only
+    restate the question or answer it.
     """
     title = article.get("original_title") or article.get("title") or ""
     # Highlighted research sources (Burge) keep their own headlines: past
@@ -256,6 +261,9 @@ def keep_publisher_title(article: dict) -> str | None:
         return "KEEP_ROUNDUP"
     if re.search(r"\bnewsletter\b|\bround-?up\b|\ba la carte\b", title, re.IGNORECASE):
         return "KEEP_NEWSLETTER"
+    # A question the publisher asked stays the publisher's question (S10).
+    if title.strip().endswith("?"):
+        return "KEEP_QUESTION"
     return None
 
 
@@ -282,6 +290,16 @@ def _entity_tokens(candidate: str, vocab: set[str]) -> list[str]:
     return out
 
 
+def unknown_entities(candidate: str, article: dict, vocab: set[str] | None = None) -> list[str]:
+    """Name-like words in the rewrite that the source never uses."""
+    source_low = _source_text(article).lower()
+    words = _WORDS_RE.findall(_source_text(article))
+    source_stems = {_stem(w) for w in words} | {_stem(p) for w in words for p in w.split("-") if p}
+    vocab = (vocab or set()) | build_vocab([article])
+    return [tok for tok in _entity_tokens(candidate, vocab)
+            if tok.lower() not in source_low and _stem(tok) not in source_stems]
+
+
 def fact_rejection(candidate: str, article: dict, vocab: set[str] | None = None) -> str | None:
     """Why a rewrite says more than the piece does, or None (see module doc)."""
     source = _source_text(article)
@@ -303,10 +321,8 @@ def fact_rejection(candidate: str, article: dict, vocab: set[str] | None = None)
                 and not all(_stem(w) in source_stems for w in noun.split())):
             return "REWRITE_INVENTED_NOUN"
 
-    vocab = (vocab or set()) | build_vocab([article])
-    for tok in _entity_tokens(candidate, vocab):
-        if tok.lower() not in source_low and _stem(tok) not in source_stems:
-            return "REWRITE_UNKNOWN_ENTITY"
+    if unknown_entities(candidate, article, vocab):
+        return "REWRITE_UNKNOWN_ENTITY"
     return None
 
 
@@ -324,18 +340,32 @@ def accept_rewrite(article: dict, candidate: str, vocab: set[str] | None = None)
         return _fallback_title(article)
     reason = rewrite_rejection(cleaned, article["title"]) or fact_rejection(cleaned, article, vocab)
     if reason:
-        print(f"  Rewrite rejected ({reason}): '{cleaned}' for '{article['title']}'")
+        detail = reason
+        if reason == "REWRITE_UNKNOWN_ENTITY":
+            detail += ": " + ", ".join(unknown_entities(cleaned, article, vocab))
+        print(f"  Rewrite rejected ({detail}): '{cleaned}' for '{article['title']}'")
         article["rewrite_rejected"] = reason
         return _fallback_title(article)
     return cleaned
 
 
-def rewrite_title(article: dict, vocab: set[str] | None = None) -> dict:
-    """Rewrite a single article title using Claude, with retry on 529 overload."""
+def _count(stats: dict | None, key: str) -> None:
+    if stats is not None:
+        stats[key] = stats.get(key, 0) + 1
+
+
+def rewrite_title(article: dict, vocab: set[str] | None = None,
+                  stats: dict | None = None) -> dict:
+    """Rewrite a single article title using Claude, with retry on 529 overload.
+
+    `stats`, when given, counts the outcome: skipped (kept or nothing to
+    ground on), sent (a Claude call made), then accepted, rejected or errors.
+    """
     keep = keep_publisher_title(article)
     if keep:
         article["rewritten_title"] = _fallback_title(article)
         article["rewrite_skipped"] = keep
+        _count(stats, "skipped")
         return article
     summary = article.get("summary") or ""
     # Strip HTML tags from summary for cleaner context
@@ -344,7 +374,10 @@ def rewrite_title(article: dict, vocab: set[str] | None = None) -> dict:
     # Skip rewrite entirely if there's nothing to ground it on
     if not summary_text:
         article["rewritten_title"] = _fallback_title(article)
+        _count(stats, "skipped")
         return article
+
+    _count(stats, "sent")
 
     for attempt, delay in enumerate(RETRY_DELAYS, start=1):
         try:
@@ -354,6 +387,7 @@ def rewrite_title(article: dict, vocab: set[str] | None = None) -> dict:
                 messages=[{"role": "user", "content": REWRITE_PROMPT.format(title=article["title"], summary=summary_text)}],
             )
             article["rewritten_title"] = accept_rewrite(article, message.content[0].text, vocab)
+            _count(stats, "rejected" if article.get("rewrite_rejected") else "accepted")
             return article
         except anthropic.APIStatusError as e:
             if e.status_code == 529 and attempt <= MAX_RETRIES:
@@ -363,13 +397,16 @@ def rewrite_title(article: dict, vocab: set[str] | None = None) -> dict:
                 print(f"  Title rewrite error for '{article['title']}': {e}")
                 record_failure("title_rewriter", e)
                 article["rewritten_title"] = _fallback_title(article)
+                _count(stats, "errors")
                 return article
         except Exception as e:
             print(f"  Title rewrite error for '{article['title']}': {e}")
             record_failure("title_rewriter", e)
             article["rewritten_title"] = _fallback_title(article)
+            _count(stats, "errors")
             return article
     article["rewritten_title"] = _fallback_title(article)
+    _count(stats, "errors")
     return article
 
 
@@ -384,4 +421,14 @@ def rewrite_titles(articles: list[dict], enabled: bool | None = None) -> list[di
     if not enabled:
         return articles
     vocab = build_vocab(articles)
-    return [rewrite_title(a, vocab) for a in articles]
+    stats = {"sent": 0, "skipped": 0, "accepted": 0, "rejected": 0, "errors": 0}
+    out = [rewrite_title(a, vocab, stats) for a in articles]
+    print(summary_line(stats))
+    return out
+
+
+def summary_line(stats: dict) -> str:
+    """One line per run, so the rejection log is read against the totals."""
+    return ("  Title rewrites: {sent} sent, {skipped} skipped, {accepted} accepted, "
+            "{rejected} rejected, {errors} errors".format(**{
+                k: stats.get(k, 0) for k in ("sent", "skipped", "accepted", "rejected", "errors")}))
