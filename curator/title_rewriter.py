@@ -128,6 +128,24 @@ def _looks_like_headline(text: str) -> bool:
     return not any(p in lower for p in refusal_phrases)
 
 
+_QUOTES = "\"“”"
+
+
+def _unwrap_quotes(text: str) -> str:
+    """Remove one pair of double quotes that wraps the whole reply.
+
+    Only a wrapping pair is removed. A headline that opens or closes with a
+    quoted phrase ('"The Elect Lady" in 2 John ...') keeps both of its quote
+    marks; a plain str.strip('"') used to cut the opening one and leave the
+    closing one dangling.
+    """
+    t = (text or "").strip()
+    if (len(t) >= 2 and t[0] in _QUOTES and t[-1] in _QUOTES
+            and not any(c in _QUOTES for c in t[1:-1])):
+        return t[1:-1].strip()
+    return t
+
+
 def _fallback_title(article: dict) -> str:
     """The cleaned publisher title shown when a rewrite is skipped or rejected."""
     return display_title(article["title"], article.get("source_name")) or article["title"]
@@ -299,7 +317,7 @@ def accept_rewrite(article: dict, candidate: str, vocab: set[str] | None = None)
     checked with headline_voice.rewrite_rejection() and fact_rejection(). A
     rejection is logged and recorded on the article as rewrite_rejected.
     """
-    cleaned = strip_dashes(display_title((candidate or "").strip().strip('"'),
+    cleaned = strip_dashes(display_title(_unwrap_quotes(candidate),
                                          article.get("source_name")))
     if not _looks_like_headline(cleaned):
         article["rewrite_rejected"] = "META_REPLY"

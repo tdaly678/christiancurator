@@ -146,3 +146,31 @@ def test_prompt_states_the_fact_rules():
     assert "Never add a person, church, outlet or organization" in prompt
     for dash in ("—", "–"):
         assert dash not in tr.REWRITE_PROMPT
+
+
+# ── Quote handling (S8, Nov 23 2026) ────────────────────────────────────────
+# Shown on Nov 17 and Nov 18 2026: 'The Elect Lady" in 2 John ...' and
+# 'The Chosen" Season 6 Depicts ...'. str.strip('"') cut the opening quote of
+# a headline that starts with a quoted phrase and left the closing one.
+
+@pytest.mark.parametrize("reply,expected", [
+    ('"The Chosen" Season 6 Depicts the Trial of Jesus',
+     '"The Chosen" Season 6 Depicts the Trial of Jesus'),
+    ('Critics Answer "Born This Way"', 'Critics Answer "Born This Way"'),
+    ('"Pastors Weigh AI Sermon Tools"', 'Pastors Weigh AI Sermon Tools'),
+    ('“Pastors Weigh AI Sermon Tools”', 'Pastors Weigh AI Sermon Tools'),
+    ('  Pastors Weigh AI Sermon Tools  ', 'Pastors Weigh AI Sermon Tools'),
+    ('"The Chosen" and "The Office" Share a Writer',
+     '"The Chosen" and "The Office" Share a Writer'),
+])
+def test_unwrap_quotes_removes_only_a_wrapping_pair(reply, expected):
+    assert tr._unwrap_quotes(reply) == expected
+
+
+def test_accepted_rewrite_keeps_a_leading_quoted_phrase():
+    article = _art("Tangled Up In Blue",
+                   "The editors of First Things discuss the Erasmus Lecture.",
+                   source="First Things")
+    shown = tr.accept_rewrite(article, '"First Things" Editors Discuss the Erasmus Lecture')
+    assert shown == '"First Things" Editors Discuss the Erasmus Lecture'
+    assert "rewrite_rejected" not in article
