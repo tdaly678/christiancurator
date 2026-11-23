@@ -51,6 +51,8 @@ LICENSE_STATUSES = {"reuse", "cite-only", "ask-first", "permission-granted"}
 CHARTABLE = {"reuse", "permission-granted"}
 # Rows the daily data watch (curator/data_watch.py) adds under "watch": a quoted
 # sentence checked against its source page. Shown as cited text, never charted.
+# Covers Christian Curator's compilation; the survey figures stay credited to their publishers.
+DATASET_LICENSE = "https://creativecommons.org/licenses/by/4.0/"
 WATCH_FIELDS = ("id", "quote", "figure", "publisher", "license_status", "url", "verified_date")
 REQUIRED_ROW_FIELDS = (
     "source", "study_title", "url", "field_dates", "publication_date", "sample", "population",
@@ -707,6 +709,7 @@ def render_dataset_jsonld(data: dict, page_date: date) -> str:
         "url": PAGE_URL + "#survey-tracker",
         "sameAs": DATA_URL,
         "creator": {"@type": "Organization", "name": "Christian Curator", "url": "https://www.christiancurator.com"},
+        "license": DATASET_LICENSE,
         "dateModified": page_date.isoformat(),
         "temporalCoverage": f"{min(years)}/{max(years)}",
         "spatialCoverage": {"@type": "Place", "name": "United States"},

@@ -205,6 +205,8 @@ def test_dataset_jsonld_is_based_on_every_source():
                   block(PAGE, "TRACKER"), re.S)
     doc = json.loads(m.group(1))
     assert doc["@type"] == "Dataset"
+    assert doc["license"] == "https://creativecommons.org/licenses/by/4.0/"
+    assert doc["creator"]["name"] == "Christian Curator" and doc["description"]
     urls = {w["url"] for w in doc["isBasedOn"]}
     assert urls == {s["url"] for s in DATA["studies"].values()}
 
