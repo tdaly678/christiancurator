@@ -493,6 +493,7 @@ def fetch_feed(source: dict) -> tuple[list[dict], dict]:
             "source_type": source.get("source_type", "christian"),
             "independent": source.get("independent", False),
             "creates_voices": source.get("creates_voices", True),
+            **({"highlight": source["highlight"]} if source.get("highlight") else {}),
             "role": "media" if item_media else _article_role(source, title),
             "author": author,
             "title": title,

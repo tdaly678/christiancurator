@@ -188,6 +188,15 @@ pass `has_faith_hook()` or the brief-only beat terms (`BRIEF_HOOK_RE`). `is_audi
 `board_column()` sends only news reports to News; politics/data tags no longer route essays there. Tests:
 `tests/test_mission_fit.py`.
 
+### Highlighted sources: Ryan Burge (Tom, Nov 23 2026)
+A source with `"highlight": "research"` in `fetcher/sources.py` (only Ryan Burge / Graphs About Religion today) gets,
+via `curator/highlight.py`: a reserved sublead for each new post (published in the last 4 days, never shown before;
+`reserve_highlight()` in `frontend/layout.py`, right after the Lead or the dominant story, never the Lead itself), no
+Catholic, mainline polity or off-mission cap in the scorer (data on any American religious group is on mission), and
+the publisher's headline instead of a Claude rewrite (`KEEP_HIGHLIGHT`). Burge posts at 7:30 AM ET Mon/Thu, so each
+post first shows on the next morning's run. Tests: `tests/test_highlight_sources.py`. Report:
+`.christian-orchestrator/site/S5-report.md`.
+
 ### Evangelical focus: world-news mission gate (Tom, 2026-10-31)
 BBC, NYT and WSJ world feeds (`source_type: "world_news"`) carried wars, disasters, foreign politics and markets onto
 the News board (Iran bases, Spain rail, Tigray, a Russian newspaper). Cause: the Haiku world-news filter had to keep one

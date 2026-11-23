@@ -43,6 +43,7 @@ from curator.headline_voice import (
     NEWS_VERBS, display_title, hard_reject, hard_reject_description, rewrite_rejection,
     strip_dashes,
 )
+from curator.highlight import is_highlighted
 from curator.media_kind import looks_like_audio_video
 
 load_dotenv()
@@ -226,6 +227,10 @@ def keep_publisher_title(article: dict) -> str | None:
     titles: a rewrite of one of them states a claim the piece never makes.
     """
     title = article.get("original_title") or article.get("title") or ""
+    # Highlighted research sources (Burge) keep their own headlines: past
+    # rewrites added claims ("Study Finds") and drifted from day to day.
+    if is_highlighted(article):
+        return "KEEP_HIGHLIGHT"
     if looks_like_audio_video(article):
         return "KEEP_PODCAST"
     reason = hard_reject(title) or hard_reject_description(article.get("summary") or "")

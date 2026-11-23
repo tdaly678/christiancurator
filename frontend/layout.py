@@ -8,7 +8,9 @@ see the same picks:
   lead + subleads   4 picks, one per source, ordered by the Pulse and by
                     content kind (curator/editorial.py, 2026-11-12): what the
                     Pulse drew on first, then ideas, commentary, news filler;
-                    scandal never, unless it is the dominant story
+                    scandal never, unless it is the dominant story; a
+                    highlighted source's new post (Burge) takes a reserved
+                    sublead (curator/highlight.py, S5 Nov 23 2026)
   debate            point/counterpoint pairs, else scorer opposing pairs;
                     paired after the lead block is chosen, so a pair may
                     take a sublead (the next pick fills the slot) but never
@@ -45,8 +47,9 @@ from urllib.parse import urlsplit
 
 from curator.clusters import build_story_clusters
 from curator.dedup import canonical_url
-from curator.editorial import board_sort_key, is_news_report, rank_lead_pool
+from curator.editorial import board_sort_key, content_kind, is_news_report, rank_lead_pool
 from curator.headline_voice import headline_has_claim, is_claimless_short, is_dated_briefing
+from curator.highlight import age_days, needs_featured_slot
 from curator.lanes import select_watch_and_listen, select_worth_your_time
 from curator.media_kind import looks_like_audio_video
 from curator.mission import is_off_mission
@@ -185,6 +188,30 @@ def _pick_top(ordered: list[dict], dominant: dict | None) -> list[dict]:
     return top
 
 
+def highlight_pick(pool: list[dict], now: datetime | None = None) -> dict | None:
+    """The newest post from a highlighted source (curator/highlight.py) on its
+    first showing, or None. Scandal never takes the reserved slot."""
+    picks = [a for a in pool if needs_featured_slot(a, now) and content_kind(a) != "scandal"]
+    return min(picks, key=lambda a: age_days(a, now), default=None)
+
+
+def reserve_highlight(top: list[dict], pick: dict | None, dominant: dict | None) -> list[dict]:
+    """Give a highlighted source's new post a sublead (S5, Nov 23 2026).
+
+    It goes right after the Lead (after the dominant story's reserved slot,
+    when there is one), the last sublead drops off, and any other pick from
+    the same source gives way. It never displaces the Lead; with no Lead it
+    takes the Lead itself."""
+    if pick is None or any(a["url"] == pick["url"] for a in top):
+        return top
+    top = [a for a in top if a.get("source_name") != pick.get("source_name")]
+    if not top:
+        return [pick]
+    at = 2 if dominant is not None and len(top) > 1 and top[1] is dominant else 1
+    top.insert(at, pick)
+    return top[:1 + SUBLEAD_COUNT]
+
+
 def _build_debate(articles: list[dict], pairings: list[dict],
                   exclude_urls: set | frozenset = frozenset(),
                   notes: list | None = None) -> list[dict]:
@@ -313,7 +340,8 @@ def build_homepage_layout(articles: list[dict], pairings: list[dict] | None = No
 
     lead_pool = [a for a in fresh if a.get("source_type") != "world_news" and lead_block_eligible(a)]
     ordered, dominant = rank_lead_pool(lead_pool, daily_summary, unclustered)
-    top = _pick_top(ordered, dominant)
+    highlighted = highlight_pick(lead_pool)
+    top = reserve_highlight(_pick_top(ordered, dominant), highlighted, dominant)
 
     # The Debate is paired after the lead block is chosen. A pair may take a
     # sublead (that article moves to The Debate and the next pick fills its
@@ -324,8 +352,11 @@ def build_homepage_layout(articles: list[dict], pairings: list[dict] | None = No
                            notes=debate_notes)
     debate_urls = {u for d in debate for u in (d["a"]["url"], d["b"]["url"])}
     if any(a["url"] in debate_urls for a in top):
-        top = _pick_top([a for a in ordered if a["url"] not in debate_urls],
-                        dominant if dominant and dominant["url"] not in debate_urls else None)
+        dominant = dominant if dominant and dominant["url"] not in debate_urls else None
+        top = reserve_highlight(
+            _pick_top([a for a in ordered if a["url"] not in debate_urls], dominant),
+            highlighted if highlighted and highlighted["url"] not in debate_urls else None,
+            dominant)
     lead, subleads = (top[0] if top else None), top[1:]
     placed = {a["url"] for a in top} | debate_urls
 

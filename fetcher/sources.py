@@ -248,6 +248,10 @@ SOURCES = [
         "url": "https://www.graphsaboutreligion.com/feed",
         "category": "culture",
         "independent": True,
+        # Highlighted (Tom, Nov 23 2026): each new post gets a reserved
+        # sublead, keeps its own headline and skips the Catholic, mainline
+        # and off-mission caps (curator/highlight.py).
+        "highlight": "research",
     },
     {
         "name": "Pew Research",

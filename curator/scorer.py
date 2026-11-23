@@ -26,6 +26,7 @@ from dotenv import load_dotenv
 
 from curator.ai_health import record_failure
 from curator.dedup import canonical_url, dedupe_articles
+from curator.highlight import is_highlighted
 from curator.headline_voice import (
     apply_display_title, hard_reject, hard_reject_description, voice_adjustments,
 )
@@ -986,7 +987,11 @@ def score_articles(articles: list[dict], shown_urls: set = None,
         # Apply Catholic content cap: check topic_cluster and title for Catholic keywords
         cluster = (article.get("topic_cluster") or "").lower()
         title = (article.get("title") or "").lower()
-        is_catholic = any(kw in cluster or kw in title for kw in CATHOLIC_CLUSTER_KEYWORDS)
+        # Highlighted research sources (Burge, curator/highlight.py) report
+        # data on every American religious group: on mission, never capped.
+        highlighted = is_highlighted(article)
+        is_catholic = not highlighted and any(
+            kw in cluster or kw in title for kw in CATHOLIC_CLUSTER_KEYWORDS)
         if is_catholic and article["final_score"] > CATHOLIC_SCORE_CAP:
             _adjust(article, "catholic_cap", CATHOLIC_SCORE_CAP)
             article["catholic_capped"] = True
@@ -996,7 +1001,7 @@ def score_articles(articles: list[dict], shown_urls: set = None,
             # Board top 10 stays evangelical (editorial.board_sort_key).
             article["catholic_internal"] = True
 
-        off_kind = off_mission_kind(article)
+        off_kind = None if highlighted else off_mission_kind(article)
         if off_kind:
             if article["final_score"] > OFF_MISSION_SCORE_CAP:
                 _adjust(article, "off_mission_cap", OFF_MISSION_SCORE_CAP)
@@ -1004,7 +1009,7 @@ def score_articles(articles: list[dict], shown_urls: set = None,
             article["off_mission_capped"] = off_kind
             depth = min(depth, OFF_MISSION_SCORE_CAP)
 
-        if is_mainline_polity(article.get("title")):
+        if not highlighted and is_mainline_polity(article.get("title")):
             if article["final_score"] > MAINLINE_SCORE_CAP:
                 _adjust(article, "mainline_cap", MAINLINE_SCORE_CAP)
                 mainline_capped_count += 1
