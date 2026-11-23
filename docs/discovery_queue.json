@@ -1,16 +1,5 @@
 {
  "entries": {
-  "https://macleans.ca/longforms/the-hutterites-guide-to-technology": {
-   "url": "https://macleans.ca/longforms/the-hutterites-guide-to-technology/",
-   "canonical_url": "https://macleans.ca/longforms/the-hutterites-guide-to-technology",
-   "anchor": "The Hutterites’ Guide to Technology",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/weekend-a-la-carte-november-14-2026/",
-   "found_on": "2026-11-15",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
   "https://achalmersblog.com/2026/11/13/can-you-keep-falling-into-the-same-sin-and-still-be-a-christian": {
    "url": "https://achalmersblog.com/2026/11/13/can-you-keep-falling-into-the-same-sin-and-still-be-a-christian/",
    "canonical_url": "https://achalmersblog.com/2026/11/13/can-you-keep-falling-into-the-same-sin-and-still-be-a-christian",
@@ -514,7 +503,59 @@
    "graduated_on": "2026-11-22",
    "title": "Christians Shouldn’t Invoke “the Longhouse”",
    "source_name": "substack.com"
+  },
+  "https://buildingjerusalem.blog/2026/11/20/learn-from-autistic-people-about-evangelism": {
+   "url": "https://buildingjerusalem.blog/2026/11/20/learn-from-autistic-people-about-evangelism/",
+   "canonical_url": "https://buildingjerusalem.blog/2026/11/20/learn-from-autistic-people-about-evangelism",
+   "anchor": "Learn From Autistic People About Evangelism",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-23-2026/",
+   "found_on": "2026-11-23",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-23",
+   "title": "Learn from autistic people about evangelism",
+   "source_name": "Building Jerusalem"
+  },
+  "https://mag.commonplace.org/p/america-needs-a-new-temperance-agenda": {
+   "url": "https://mag.commonplace.org/p/america-needs-a-new-temperance-agenda",
+   "canonical_url": "https://mag.commonplace.org/p/america-needs-a-new-temperance-agenda",
+   "anchor": "America Needs a New Temperance Agenda",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-23-2026/",
+   "found_on": "2026-11-23",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-23",
+   "title": "America Needs a New Temperance Agenda",
+   "source_name": "commonplace.org"
+  },
+  "https://ornitheology.com/post/praise-god-from-whom-all-sparrows-flow": {
+   "url": "https://www.ornitheology.com/post/praise-god-from-whom-all-sparrows-flow",
+   "canonical_url": "https://ornitheology.com/post/praise-god-from-whom-all-sparrows-flow",
+   "anchor": "Praise God From Whom All Sparrows Flow",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-23-2026/",
+   "found_on": "2026-11-23",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-23",
+   "title": "Praise God From Whom All Sparrows Flow",
+   "source_name": "ornitheology.com"
+  },
+  "https://institutefc.org/the-housing-crisis-and-the-biblical-duty-of-stewardship": {
+   "url": "https://institutefc.org/the-housing-crisis-and-the-biblical-duty-of-stewardship/",
+   "canonical_url": "https://institutefc.org/the-housing-crisis-and-the-biblical-duty-of-stewardship",
+   "anchor": "The Housing Crisis and the Biblical Duty of Stewardship",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-23-2026/",
+   "found_on": "2026-11-23",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-23",
+   "title": "The Housing Crisis and the Biblical Duty of Stewardship - Institute for Faith and Culture",
+   "source_name": "Institute for Faith and Culture - Equipping Christians for this cultural moment"
   }
  },
- "updated": "2026-11-22T10:01:50+00:00"
+ "updated": "2026-11-23T10:01:40+00:00"
 }

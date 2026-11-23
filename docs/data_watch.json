@@ -593,9 +593,9 @@
       }
     ]
   },
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "last_run": {
-    "date": "2026-11-22",
+    "date": "2026-11-23",
     "stories": [
       {
         "title": "How Pew’s projections for Christianity and Islam worldwide changed — and why",
@@ -613,46 +613,6 @@
         },
         "topics": [],
         "trend": 11.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "The Future of Religion in North America",
-        "url": "https://www.pewresearch.org/religion/2026/11/18/the-future-of-religion-in-north-america/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 10.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "Islam slated to overtake Christianity by 2035, researchers say",
-        "url": "https://wng.org/sift/islam-slated-to-overtake-christianity-by-2035-researchers-say-1795035758",
-        "source": "World Magazine",
-        "signals": {
-          "publishers": [],
-          "figures": [],
-          "words": [
-            "researchers"
-          ],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 9.64,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -706,8 +666,7 @@
         "signals": {
           "publishers": [],
           "figures": [
-            "44 Percent",
-            "44%"
+            "44 Percent"
           ],
           "words": [],
           "data_tag": false
@@ -721,48 +680,8 @@
         ]
       },
       {
-        "title": "Islam Will Soon Be the World’s Largest Religion, but Christianity Will Keep Growing Too",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/18/islam-will-soon-be-the-worlds-largest-religion-but-christianity-will-keep-growing-too/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 8.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "The Future of Religion in Sub-Saharan Africa",
-        "url": "https://www.pewresearch.org/religion/2026/11/18/the-future-of-religion-in-sub-saharan-africa/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 6.75,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "Defining Success in Evangelism",
-        "url": "https://research.lifeway.com/2026/11/19/defining-success-in-evangelism/",
+        "title": "10 Ways to Form Bold Disciples of Jesus",
+        "url": "https://research.lifeway.com/2026/11/23/10-ways-to-form-bold-disciples-of-jesus/",
         "source": "Lifeway Research",
         "signals": {
           "publishers": [
@@ -772,20 +691,17 @@
           "words": [],
           "data_tag": false
         },
-        "topics": [
-          "missions-and-evangelism"
-        ],
-        "trend": 6.5,
+        "topics": [],
+        "trend": 5.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-19 (0 verified figure(s))"
+          "no topic page matched"
         ]
       },
       {
-        "title": "How Much Less Religious Is Australia Than the U.S.?",
-        "url": "https://www.graphsaboutreligion.com/p/how-much-less-religious-is-australia",
+        "title": "The Religious Gender Gap Is Really a Political Gap",
+        "url": "https://www.graphsaboutreligion.com/p/the-religious-gender-gap-is-really",
         "source": "Ryan Burge",
         "signals": {
           "publishers": [
@@ -795,12 +711,16 @@
           "words": [],
           "data_tag": true
         },
-        "topics": [],
-        "trend": 5.5,
+        "topics": [
+          "gender-and-biblical-anthropology",
+          "politics-and-the-church"
+        ],
+        "trend": 4.75,
         "outlets": 1,
         "on_digest": true,
         "actions": [
-          "no topic page matched"
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-17 (0 verified figure(s))"
         ]
       },
       {
@@ -846,26 +766,6 @@
         ]
       },
       {
-        "title": "9 Most Popular Thanksgiving Bible Verses",
-        "url": "https://research.lifeway.com/2026/11/20/9-most-popular-thanksgiving-bible-verses/",
-        "source": "Lifeway Research",
-        "signals": {
-          "publishers": [
-            "Lifeway Research"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [],
-        "trend": 3.75,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
         "title": "New Insights Report Helps Churches Connect Evangelism and Discipleship",
         "url": "https://research.lifeway.com/2026/11/19/new-insights-report-helps-churches-connect-evangelism-and-discipleship/",
         "source": "Lifeway Research",
@@ -874,9 +774,7 @@
             "Lifeway Research"
           ],
           "figures": [],
-          "words": [
-            "report"
-          ],
+          "words": [],
           "data_tag": true
         },
         "topics": [
@@ -890,79 +788,6 @@
         "actions": [
           "linked in Fresh From the Digest",
           "page already checked on 2026-11-20 (1 verified figure(s))"
-        ]
-      },
-      {
-        "title": "How Americans View Trump, Key Administration Officials and Democratic Congressional Leaders",
-        "url": "https://www.pewresearch.org/politics/2026/11/19/how-americans-view-trump-key-administration-officials-and-democratic-congressional-leaders/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [
-            "survey"
-          ],
-          "data_tag": true
-        },
-        "topics": [
-          "politics-and-the-church"
-        ],
-        "trend": 3.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
-        ]
-      },
-      {
-        "title": "The Religious Gender Gap Is Really a Political Gap",
-        "url": "https://www.graphsaboutreligion.com/p/the-religious-gender-gap-is-really",
-        "source": "Ryan Burge",
-        "signals": {
-          "publishers": [
-            "Ryan Burge"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [
-          "gender-and-biblical-anthropology",
-          "politics-and-the-church"
-        ],
-        "trend": 3.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-17 (0 verified figure(s))"
-        ]
-      },
-      {
-        "title": "2026 Christmas Gift Guide: Save on Resources for Everyone",
-        "url": "https://feeds.ligonier.org/~/972439013/0/ligonierministriesblog",
-        "source": "Ligonier Ministries",
-        "signals": {
-          "publishers": [],
-          "figures": [
-            "20%",
-            "50%"
-          ],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "discipleship"
-        ],
-        "trend": 2.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-10 (0 verified figure(s))"
         ]
       },
       {
@@ -981,7 +806,7 @@
           "data_tag": true
         },
         "topics": [],
-        "trend": 2.5,
+        "trend": 3.25,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -989,29 +814,66 @@
         ]
       },
       {
-        "title": "Young Adults Say Church, Home, and Smartphones Have Shaped Their Faith",
-        "url": "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith/",
-        "source": "Lifeway Research",
+        "title": "How Americans View Trump, Key Administration Officials and Democratic Congressional Leaders",
+        "url": "https://www.pewresearch.org/politics/2026/11/19/how-americans-view-trump-key-administration-officials-and-democratic-congressional-leaders/",
+        "source": "Pew Research",
         "signals": {
           "publishers": [
-            "Lifeway Research"
+            "Pew Research Center"
           ],
           "figures": [],
-          "words": [
-            "study finds"
-          ],
+          "words": [],
           "data_tag": true
         },
         "topics": [
-          "evangelicalism",
-          "technology"
+          "politics-and-the-church"
         ],
-        "trend": 1.25,
+        "trend": 3.0,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "page already checked on 2026-11-18 (3 verified figure(s))"
+          "page already checked on 2026-11-22 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "Islam Will Soon Be the World’s Largest Religion, but Christianity Will Keep Growing Too",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/18/islam-will-soon-be-the-worlds-largest-religion-but-christianity-will-keep-growing-too/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 3.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "How Much Less Religious Is Australia Than the U.S.?",
+        "url": "https://www.graphsaboutreligion.com/p/how-much-less-religious-is-australia",
+        "source": "Ryan Burge",
+        "signals": {
+          "publishers": [
+            "Ryan Burge"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 2.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
         ]
       },
       {
@@ -1027,20 +889,95 @@
           "data_tag": false
         },
         "topics": [
-          "religious-liberty",
-          "suffering-and-providence",
-          "grief-and-lament"
+          "religious-liberty"
         ],
-        "trend": 0.0,
+        "trend": 1.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-11 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "Give Tabletalk This Christmas",
+        "url": "https://feeds.ligonier.org/~/973078778/0/ligonierministriesblog",
+        "source": "Ligonier Ministries",
+        "signals": {
+          "publishers": [],
+          "figures": [
+            "50%"
+          ],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 1.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "9 Most Popular Thanksgiving Bible Verses",
+        "url": "https://research.lifeway.com/2026/11/20/9-most-popular-thanksgiving-bible-verses/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 0.25,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "How the 2026 Midterms Played Out on Kalshi and Polymarket",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/20/how-the-2026-midterms-played-out-on-kalshi-and-polymarket/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 1.0,
         "outlets": 1,
         "on_digest": false,
         "actions": [
-          "page already checked on 2026-11-11 (0 verified figure(s))"
+          "no topic page matched"
         ]
       }
     ],
-    "pages": [],
-    "fetched": 1,
-    "hits": 20
+    "pages": [
+      {
+        "slug": "evangelicalism",
+        "kind": "latest-figures",
+        "note": "Latest Figures block refreshed (4 figures); dates bumped"
+      },
+      {
+        "slug": "marriage-and-family",
+        "kind": "latest-figures",
+        "note": "Latest Figures block refreshed (1 figures); dates bumped"
+      },
+      {
+        "slug": "missions-and-evangelism",
+        "kind": "latest-figures",
+        "note": "Latest Figures block refreshed (1 figures); dates bumped"
+      }
+    ],
+    "fetched": 0,
+    "hits": 17
   }
 }

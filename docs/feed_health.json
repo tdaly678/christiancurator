@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-22T10:01:50+00:00",
+  "run_at": "2026-11-23T10:01:39+00:00",
   "sources": [
     {
       "source": "The Gospel Coalition",
@@ -7,7 +7,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 60,
-      "newest_date": "2026-11-22",
+      "newest_date": "2026-11-23",
       "bozo": false,
       "stale": false
     },
@@ -31,8 +31,8 @@
       "url": "https://feed.desiringgod.org/articles-by-desiring-god.rss",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 643,
-      "newest_date": "2026-11-15",
+      "n_entries": 644,
+      "newest_date": "2026-11-22",
       "bozo": false,
       "stale": false
     },
@@ -42,12 +42,12 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-21",
+      "newest_date": "2026-11-23",
       "bozo": false,
       "byline_from_page": {
-        "resolved": 9,
+        "resolved": 1,
         "no_byline": 0,
-        "failed": 0
+        "failed": 3
       },
       "stale": false
     },
@@ -77,7 +77,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 100,
-      "newest_date": "2026-11-20",
+      "newest_date": "2026-11-22",
       "bozo": false,
       "stale": false
     },
@@ -87,7 +87,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 30,
-      "newest_date": "2026-11-22",
+      "newest_date": "2026-11-23",
       "bozo": false,
       "stale": false
     },
@@ -107,7 +107,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 41,
-      "newest_date": "2026-11-20",
+      "newest_date": "2026-11-23",
       "bozo": false,
       "user_agent": "reader",
       "stale": false
@@ -133,7 +133,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-21",
+      "newest_date": "2026-11-23",
       "bozo": false,
       "stale": false
     },
@@ -153,7 +153,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-20",
+      "newest_date": "2026-11-23",
       "bozo": false,
       "byline_from_page": {
         "resolved": 15,
@@ -192,8 +192,8 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 28,
-      "newest_date": "2026-11-22",
+      "n_entries": 35,
+      "newest_date": "2026-11-23",
       "bozo": false,
       "stale": false
     },
@@ -203,7 +203,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 53,
-      "newest_date": "2026-11-22",
+      "newest_date": "2026-11-23",
       "bozo": false,
       "stale": false
     },
@@ -212,8 +212,8 @@
       "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 72,
-      "newest_date": "2026-11-22",
+      "n_entries": 70,
+      "newest_date": "2026-11-23",
       "bozo": false,
       "stale": false
     },
@@ -231,23 +231,25 @@
       "source": "Kyle Worley",
       "url": "https://sacredslang.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-11-10",
+      "http_status": 429,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
       "via": "proxy",
-      "stale": false
+      "retries": 4,
+      "error": "HTTP 429"
     },
     {
       "source": "Phylicia Masonheimer",
       "url": "https://phyliciamasonheimer.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-11-16",
+      "http_status": 429,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
       "via": "proxy",
-      "stale": false
+      "retries": 4,
+      "error": "HTTP 429"
     },
     {
       "source": "Laura Wifler",
@@ -311,7 +313,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-22",
+      "newest_date": "2026-11-23",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -376,7 +378,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-20",
+      "newest_date": "2026-11-23",
       "bozo": false,
       "stale": false
     },
@@ -492,13 +494,13 @@
       "source": "Kate Shellnutt",
       "url": "https://kateshellnutt.substack.com/feed",
       "role": "primary",
-      "http_status": 429,
-      "n_entries": 0,
-      "newest_date": null,
+      "http_status": 200,
+      "n_entries": 13,
+      "newest_date": "2026-10-30",
       "bozo": false,
       "via": "proxy",
-      "retries": 4,
-      "error": "HTTP 429"
+      "retries": 2,
+      "stale": false
     },
     {
       "source": "Albert Mohler",
@@ -506,7 +508,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 12,
-      "newest_date": "2026-11-20",
+      "newest_date": "2026-11-23",
       "bozo": false,
       "stale": false
     },
@@ -516,7 +518,7 @@
       "role": "discovery",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-22",
+      "newest_date": "2026-11-23",
       "bozo": false,
       "stale": false
     },
@@ -579,7 +581,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-21",
+      "newest_date": "2026-11-22",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -614,8 +616,6 @@
       "newest_date": "2026-10-23",
       "bozo": false,
       "via": "proxy",
-      "retries": 4,
-      "user_agent": "reader",
       "stale": false
     },
     {
@@ -624,7 +624,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-22",
+      "newest_date": "2026-11-23",
       "bozo": false,
       "stale": false
     },
@@ -644,7 +644,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-06",
+      "newest_date": "2026-11-22",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -676,7 +676,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-20",
+      "newest_date": "2026-11-22",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -687,7 +687,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-16",
+      "newest_date": "2026-11-22",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -731,7 +731,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-21",
+      "newest_date": "2026-11-22",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -767,7 +767,6 @@
       "newest_date": "2026-11-20",
       "bozo": false,
       "via": "proxy",
-      "retries": 1,
       "stale": false
     },
     {
@@ -817,8 +816,8 @@
       "url": "https://feeds.simplecast.com/3NVmUWZO",
       "role": "media",
       "http_status": 200,
-      "n_entries": 550,
-      "newest_date": "2026-11-16",
+      "n_entries": 551,
+      "newest_date": "2026-11-23",
       "bozo": false,
       "apple_episode_urls": 50,
       "stale": false
@@ -856,20 +855,25 @@
     }
   ],
   "zero_streaks": {
-    "Daniel K. Williams": {
-      "since": "2026-11-22",
-      "last_date": "2026-11-22",
+    "Kyle Worley": {
+      "since": "2026-11-23",
+      "last_date": "2026-11-23",
       "days": 1
     },
-    "Kate Shellnutt": {
-      "since": "2026-11-21",
-      "last_date": "2026-11-22",
+    "Phylicia Masonheimer": {
+      "since": "2026-11-23",
+      "last_date": "2026-11-23",
+      "days": 1
+    },
+    "Daniel K. Williams": {
+      "since": "2026-11-22",
+      "last_date": "2026-11-23",
       "days": 2
     },
     "Faithfully Magazine": {
       "since": "2026-11-20",
-      "last_date": "2026-11-22",
-      "days": 3
+      "last_date": "2026-11-23",
+      "days": 4
     }
   }
 }
