@@ -12,5 +12,27 @@
     "upload_date": "2026-11-19",
     "thumbnail_path": "/assets/video-eschatology-thumb.webp"
   },
-  "notes": "Duration from ffprobe on .christian-orchestrator/video/V28A-full.mp4 (201.6 s; V27 and V28B are the same length). Thumbnail is V9 thumbnail F, confirmed as the live YouTube thumbnail by comparing it with i.ytimg.com maxresdefault.jpg on 2026-11-19."
+  "shorts": {
+    "position-1": {
+      "youtube_id": "0-sH-7oJMSU",
+      "name": "Will Jesus Reign Over Restored Israel for 1,000 Years? Dispensationalism Explained",
+      "view": "Dispensational Premillennialism",
+      "description": "Dispensational premillennialism holds that Jesus comes for his church first, then returns to reign for a thousand years over Israel restored to its land, as God promised. It is one of four Christian views of the end times.",
+      "duration_seconds": 37,
+      "duration_iso": "PT37S",
+      "upload_date": "2026-11-19",
+      "thumbnail_path": "/assets/short-eschatology-position-1-thumb.webp"
+    },
+    "position-2": {
+      "youtube_id": "jrkytvZbMYY",
+      "name": "Will Jesus Raise His People to Reign on Earth for 1,000 Years? Historic Premillennialism Explained",
+      "view": "Historic Premillennialism",
+      "description": "Historic premillennialism holds that the church endures the tribulation, then Christ returns, raises his people, and reigns on earth for a thousand years. It is one of four Christian views of the end times.",
+      "duration_seconds": 26,
+      "duration_iso": "PT26S",
+      "upload_date": "2026-11-23",
+      "thumbnail_path": "/assets/short-eschatology-position-2-thumb.webp"
+    }
+  },
+  "notes": "Duration from ffprobe on .christian-orchestrator/video/V28A-full.mp4 (201.6 s; V27 and V28B are the same length). Thumbnail is V9 thumbnail F, confirmed as the live YouTube thumbnail by comparing it with i.ytimg.com maxresdefault.jpg on 2026-11-19. Shorts (S6, 2026-11-23): ids found in the public channel RSS (channel UC8cyC2xYDJLYD9wQnQloJwA) and confirmed by oEmbed title; durations and upload dates from the public watch page (itemprop duration PT0M37S and PT0M26S, uploadDate); thumbnails are the YouTube oardefault 1080x1920 images resized to 180x320 WebP. Keys are debate card ids (position-1 to position-4); a card with no entry shows nothing."
 }

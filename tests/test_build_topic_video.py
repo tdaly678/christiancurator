@@ -64,3 +64,89 @@ def test_duration_must_match():
     bad = copy.deepcopy(DATA)
     bad["video"]["duration_iso"] = "PT3M10S"
     assert any("does not match" in e for e in btv.validate(bad))
+
+
+# Shorts per view (S6)
+
+def _cards(n=4):
+    return "".join(
+        f'<div class="cc-debate-side side-x" id="position-{i}">\n<div class="cc-debate-name">View {i}</div>\n'
+        f'<div class="cc-debate-reads">\n<a href="https://example.com/{i}">Read {i}</a>\n</div>\n</div>\n'
+        for i in range(1, n + 1)
+    )
+
+
+CARD_PAGE = f'<div class="cc-debate-grid four-way">\n{_cards()}</div>'
+
+
+def _card(page, key):
+    start = page.index(f'id="{key}"')
+    nxt = page.find('<div class="cc-debate-side', start)
+    return page[start:nxt if nxt >= 0 else len(page)]
+
+
+def test_both_current_shorts_land_in_their_cards_only():
+    out = btv.apply_shorts(CARD_PAGE, DATA["shorts"])
+    assert DATA["shorts"]["position-1"]["youtube_id"] == "0-sH-7oJMSU"
+    assert DATA["shorts"]["position-2"]["youtube_id"] == "jrkytvZbMYY"
+    assert 'data-video="0-sH-7oJMSU"' in _card(out, "position-1")
+    assert 'data-video="jrkytvZbMYY"' in _card(out, "position-2")
+    for key in ("position-3", "position-4"):
+        assert "cc-short" not in _card(out, key)
+    # Placed after Key Reads, not inside it.
+    c1 = _card(out, "position-1")
+    assert c1.index("</a>\n</div>") < c1.index("CC-TOPIC-SHORT:position-1:START")
+    assert btv.apply_shorts(out, DATA["shorts"]) == out
+
+
+def test_missing_short_renders_nothing_and_removed_short_is_dropped():
+    only_one = {"position-2": DATA["shorts"]["position-2"]}
+    out = btv.apply_shorts(CARD_PAGE, only_one)
+    assert "cc-short" not in _card(out, "position-1")
+    both = btv.apply_shorts(CARD_PAGE, DATA["shorts"])
+    assert btv.apply_shorts(both, only_one) == out
+    assert btv.apply_shorts(both, {}) == CARD_PAGE
+
+
+def test_short_has_no_iframe_until_click():
+    block = btv.render_short("position-1", DATA["shorts"]["position-1"])
+    assert "<iframe" not in block
+    assert not re.search(r'src="[^"]*(youtube|ytimg)', block)
+    assert 'aria-expanded="false"' in block and " hidden>" in block
+    assert "Watch the 37-second version" in block
+    assert 'href="https://www.youtube.com/shorts/0-sH-7oJMSU" target="_blank" rel="noopener"' in block
+    assert "Hide video" in block
+    raw = block.split('data-cc-marker="CC-SHORT-SCHEMA">', 1)[1].split("</script>", 1)[0]
+    obj = json.loads(raw)
+    assert obj["duration"] == "PT37S" and "contentUrl" not in obj
+    assert obj["thumbnailUrl"].startswith("https://www.christiancurator.com/assets/")
+
+
+def test_shorts_copy_rules():
+    main_block = btv.render_block(DATA)
+    blocks = [btv.render_short(k, v) for k, v in DATA["shorts"].items()]
+    for b in [main_block, *blocks]:
+        assert "—" not in b and "–" not in b
+        assert not re.search(r"(^|\s)#[A-Za-z]", re.sub(r"<style>.*?</style>", "", b, flags=re.S))
+        assert not re.search(r"\bpastor\b", b, re.IGNORECASE)
+    bad = copy.deepcopy(DATA)
+    bad["shorts"]["position-3"] = dict(bad["shorts"]["position-1"], description="Amill — explained #endtimes")
+    bad["shorts"]["position-9x"] = dict(bad["shorts"]["position-2"], youtube_id="short")
+    errs = " ".join(btv.validate(bad))
+    assert "dash" in errs and "hashtag" in errs and "used twice" in errs
+    assert "debate card id" in errs and "11 character" in errs
+
+
+def test_check_catches_stale_page(tmp_path, monkeypatch, capsys):
+    page_dir = tmp_path / "eschatology"
+    page_dir.mkdir()
+    page = page_dir / "index.html"
+    live = (btv.TOPICS_DIR / "eschatology" / "index.html").read_text(encoding="utf-8")
+    page.write_text(live, encoding="utf-8")
+    monkeypatch.setattr(btv, "TOPICS_DIR", tmp_path)
+    assert btv.main(["--slug", "eschatology", "--check"]) == 0
+    page.write_text(btv.apply_shorts(live, {}), encoding="utf-8")
+    assert btv.main(["--slug", "eschatology", "--check"]) == 1
+    assert "stale" in capsys.readouterr().out
+    assert btv.main(["--slug", "eschatology"]) == 0
+    assert page.read_text(encoding="utf-8") == live

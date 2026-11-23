@@ -393,6 +393,25 @@ main.cc-prose { max-width: 740px; margin: 0 auto; padding-top: 1.5rem; }
   .cc-video-bar { flex-wrap: wrap; row-gap: 4px; }
 }
 @media print { .cc-video { display: none; } }
+.cc-short { margin-top: .9rem; padding-top: .75rem; border-top: 1px solid #eeebe5; }
+.cc-short-open { display: flex; align-items: center; gap: 10px; width: 100%; margin: 0; padding: 6px 10px 6px 6px;
+  background: #f4f1ea; border: 1px solid #e0ddd8; border-radius: 4px; cursor: pointer; text-align: left; font: inherit; color: #1a1a1a;
+  transition: border-color .15s ease, background-color .15s ease; }
+.cc-short-open:hover { border-color: #b9c4b3; background: #f0ede4; }
+.cc-short-open:focus-visible { outline: 2px solid #2C4A2E; outline-offset: 2px; }
+.cc-short-thumb { position: relative; flex: 0 0 34px; width: 34px; aspect-ratio: 9 / 16; border-radius: 2px; overflow: hidden; background: #2C4A2E; }
+.cc-short-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.cc-short-thumb .cc-video-play { width: 20px; height: 20px; margin: -10px 0 0 -10px; }
+.cc-short-thumb .cc-video-play::after { left: 8px; top: 6px; border-width: 4px 0 4px 6px; }
+.cc-short-text { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.cc-short-label { font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 600; color: #2C4A2E; }
+.cc-short-meta { font-family: 'Source Sans 3', sans-serif; font-size: 11.5px; color: #6b6b6b; }
+.cc-short-open[hidden], .cc-short-player[hidden] { display: none; }
+.cc-short-player { max-width: 320px; }
+.cc-short-frame { position: relative; width: 100%; aspect-ratio: 9 / 16; background: #1a1a1a; border-radius: 4px 4px 0 0; overflow: hidden; }
+.cc-short-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.cc-short-player .cc-video-bar { padding: 6px 10px; font-size: 12px; }
+@media print { .cc-short { display: none; } }
 </style>
 <section class="cc-video" id="video" aria-label="Video overview" data-video="L3IzTHCC_mo" data-embed="https://www.youtube-nocookie.com/embed/L3IzTHCC_mo?autoplay=1&amp;rel=0&amp;cc_load_policy=0" data-title="4 Christian End Times Views Explained: Premillennial, Amillennial, Postmillennial">
 <button type="button" class="cc-video-strip" aria-expanded="false" aria-controls="cc-video-player" aria-label="Play video: Four Christian Views of the End Times, Side by Side (3 minutes 22 seconds)">
@@ -435,6 +454,41 @@ main.cc-prose { max-width: 740px; margin: 0 auto; padding-top: 1.5rem; }
     strip.hidden = false;
     strip.setAttribute('aria-expanded', 'false');
     strip.focus();
+  });
+})();
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var open = e.target.closest && e.target.closest('.cc-short-open');
+    var hide = e.target.closest && e.target.closest('.cc-short-hide');
+    var box = (open || hide) && (open || hide).closest('.cc-short');
+    if (!box) return;
+    var btn = box.querySelector('.cc-short-open');
+    var player = box.querySelector('.cc-short-player');
+    var frame = box.querySelector('.cc-short-frame');
+    if (open) {
+      var f = document.createElement('iframe');
+      f.src = box.getAttribute('data-embed');
+      f.title = box.getAttribute('data-title');
+      f.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      f.setAttribute('allowfullscreen', '');
+      frame.appendChild(f);
+      btn.setAttribute('aria-expanded', 'true');
+      btn.hidden = true;
+      player.hidden = false;
+      f.focus();
+      if (typeof window.gtag === 'function') {
+        var m = location.pathname.match(/\/topics\/([^\/]+)\//);
+        window.gtag('event', 'video_play', { topic: m ? m[1] : '', video_id: box.getAttribute('data-video'), video_kind: 'short' });
+      }
+    } else {
+      frame.innerHTML = '';
+      player.hidden = true;
+      btn.hidden = false;
+      btn.setAttribute('aria-expanded', 'false');
+      btn.focus();
+    }
   });
 })();
 </script>
@@ -488,6 +542,32 @@ main.cc-prose { max-width: 740px; margin: 0 auto; padding-top: 1.5rem; }
 <a href="https://www.dts.edu/why-dts/doctrinal-statement" rel="noopener" target="_blank">Doctrinal Statement, Articles XVIII to XXI (Dallas Theological Seminary)</a>
 <a href="https://www.gty.org/sermons/90-334/why-every-selfrespecting-calvinist-is-a-premillennialist" rel="noopener" target="_blank">Why Every Calvinist Should Be a Premillennialist, Part 1 (John MacArthur, Grace to You)</a>
 </div>
+<!-- CC-TOPIC-SHORT:position-1:START -->
+<div class="cc-short" data-video="0-sH-7oJMSU" data-embed="https://www.youtube-nocookie.com/embed/0-sH-7oJMSU?autoplay=1&amp;rel=0&amp;cc_load_policy=0" data-title="Will Jesus Reign Over Restored Israel for 1,000 Years? Dispensationalism Explained">
+<button type="button" class="cc-short-open" aria-expanded="false" aria-controls="cc-short-player-position-1" aria-label="Play video: Dispensational Premillennialism, the 37 seconds version"><span class="cc-short-thumb"><img src="/assets/short-eschatology-position-1-thumb.webp" alt="" width="180" height="320" loading="lazy" decoding="async"><span class="cc-video-play" aria-hidden="true"></span></span><span class="cc-short-text"><span class="cc-short-label">Watch the 37-second version</span><span class="cc-short-meta">Short video · 0:37</span></span></button>
+<div class="cc-short-player" id="cc-short-player-position-1" hidden>
+<div class="cc-short-frame"></div>
+<div class="cc-video-bar"><span class="cc-video-links"><a href="https://www.youtube.com/shorts/0-sH-7oJMSU" target="_blank" rel="noopener" data-pos="topic-short" data-src="YouTube">Watch on YouTube</a><button type="button" class="cc-video-hide cc-short-hide" aria-controls="cc-short-player-position-1">Hide video</button></span></div>
+</div>
+</div>
+<script type="application/ld+json" data-cc-marker="CC-SHORT-SCHEMA">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Will Jesus Reign Over Restored Israel for 1,000 Years? Dispensationalism Explained",
+  "description": "Dispensational premillennialism holds that Jesus comes for his church first, then returns to reign for a thousand years over Israel restored to its land, as God promised. It is one of four Christian views of the end times.",
+  "thumbnailUrl": "https://www.christiancurator.com/assets/short-eschatology-position-1-thumb.webp",
+  "uploadDate": "2026-11-19",
+  "duration": "PT37S",
+  "embedUrl": "https://www.youtube-nocookie.com/embed/0-sH-7oJMSU",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Christian Curator",
+    "url": "https://www.christiancurator.com"
+  }
+}
+</script>
+<!-- CC-TOPIC-SHORT:position-1:END -->
 </div>
 <div class="cc-debate-side side-b" id="position-2">
 <div class="cc-debate-position">Position 2</div>
@@ -502,6 +582,32 @@ main.cc-prose { max-width: 740px; margin: 0 auto; padding-top: 1.5rem; }
 <a href="https://www.desiringgod.org/interviews/an-evening-of-eschatology" rel="noopener" target="_blank">An Evening of Eschatology (Desiring God)</a>
 <a href="https://christianstandard.com/2007/11/cs_article-729/" rel="noopener" target="_blank">Classic Premillennial View: Why I Take a Premillennial Position (Alex V. Wilson, Christian Standard)</a>
 </div>
+<!-- CC-TOPIC-SHORT:position-2:START -->
+<div class="cc-short" data-video="jrkytvZbMYY" data-embed="https://www.youtube-nocookie.com/embed/jrkytvZbMYY?autoplay=1&amp;rel=0&amp;cc_load_policy=0" data-title="Will Jesus Raise His People to Reign on Earth for 1,000 Years? Historic Premillennialism Explained">
+<button type="button" class="cc-short-open" aria-expanded="false" aria-controls="cc-short-player-position-2" aria-label="Play video: Historic Premillennialism, the 26 seconds version"><span class="cc-short-thumb"><img src="/assets/short-eschatology-position-2-thumb.webp" alt="" width="180" height="320" loading="lazy" decoding="async"><span class="cc-video-play" aria-hidden="true"></span></span><span class="cc-short-text"><span class="cc-short-label">Watch the 26-second version</span><span class="cc-short-meta">Short video · 0:26</span></span></button>
+<div class="cc-short-player" id="cc-short-player-position-2" hidden>
+<div class="cc-short-frame"></div>
+<div class="cc-video-bar"><span class="cc-video-links"><a href="https://www.youtube.com/shorts/jrkytvZbMYY" target="_blank" rel="noopener" data-pos="topic-short" data-src="YouTube">Watch on YouTube</a><button type="button" class="cc-video-hide cc-short-hide" aria-controls="cc-short-player-position-2">Hide video</button></span></div>
+</div>
+</div>
+<script type="application/ld+json" data-cc-marker="CC-SHORT-SCHEMA">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Will Jesus Raise His People to Reign on Earth for 1,000 Years? Historic Premillennialism Explained",
+  "description": "Historic premillennialism holds that the church endures the tribulation, then Christ returns, raises his people, and reigns on earth for a thousand years. It is one of four Christian views of the end times.",
+  "thumbnailUrl": "https://www.christiancurator.com/assets/short-eschatology-position-2-thumb.webp",
+  "uploadDate": "2026-11-23",
+  "duration": "PT26S",
+  "embedUrl": "https://www.youtube-nocookie.com/embed/jrkytvZbMYY",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Christian Curator",
+    "url": "https://www.christiancurator.com"
+  }
+}
+</script>
+<!-- CC-TOPIC-SHORT:position-2:END -->
 </div>
 <div class="cc-debate-side side-c" id="position-3">
 <div class="cc-debate-position">Position 3</div>
