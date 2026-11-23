@@ -19559,5 +19559,92 @@
     "website": "",
     "books": [],
     "initials": "PM"
+  },
+  {
+    "name": "Bob Smietana",
+    "slug": "bob-smietana",
+    "bio": "Bob Smietana is a respected religion journalist and author who has covered faith, culture, and social issues for major Christian and secular publications. With a keen eye for understanding evangelical Christianity and its intersection with contemporary culture, he brings both journalistic rigor and pastoral sensitivity to his reporting. His work has helped Christians think more deeply about their faith's public witness and moral responsibilities.",
+    "affiliation": "Religion News Service, Christianity Today",
+    "role": "Religion Journalist & Author",
+    "education": "University of Tennessee",
+    "website": "",
+    "books": [
+      {
+        "title": "Reorganized Religion: The Reshaping of the American Church and Why It Matters",
+        "amazon_url": "https://www.amazon.com/s?k=Reorganized+Religion+Bob+Smietana"
+      }
+    ],
+    "initials": "BS"
+  },
+  {
+    "name": "Daniel Lipinski",
+    "slug": "daniel-lipinski",
+    "bio": "Daniel Lipinski is a U.S. Congressman from Illinois who has been a vocal advocate for Christian values and pro-life positions throughout his political career. Serving in the House of Representatives, he has consistently championed faith-based principles in public policy and legislative matters.",
+    "affiliation": "United States House of Representatives",
+    "role": "U.S. Congressman",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DL"
+  },
+  {
+    "name": "Amanda Held Opelt",
+    "slug": "amanda-held-opelt",
+    "bio": "Amanda Held Opelt is a writer and speaker who explores themes of faith, identity, and Christian living. She contributes to various Christian publications and platforms, helping readers navigate their spiritual journeys with authenticity and biblical insight.",
+    "affiliation": "",
+    "role": "Writer & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "AHO"
+  },
+  {
+    "name": "Emily Stivason",
+    "slug": "emily-stivason",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ES"
+  },
+  {
+    "name": "Jonathan Gibson",
+    "slug": "jonathan-gibson",
+    "bio": "Jonathan Gibson is a Reformed minister and theologian known for his work in biblical interpretation and Christian education. He has contributed to various Christian publications and resources aimed at helping believers deepen their understanding of Scripture and theology.",
+    "affiliation": "",
+    "role": "Minister & Theologian",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JG"
+  },
+  {
+    "name": "Keith Page",
+    "slug": "keith-page",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "KP"
+  },
+  {
+    "name": "Zachary Young",
+    "slug": "zachary-young",
+    "bio": "Zachary Young is a journalist and author known for his investigative work on religious topics and Christian issues. His reporting brings critical examination to contemporary faith-related stories with rigorous journalistic standards.",
+    "affiliation": "",
+    "role": "Journalist & Author",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Last Language of God",
+        "amazon_url": "https://www.amazon.com/s?k=The+Last+Language+of+God+Zachary+Young"
+      }
+    ],
+    "initials": "ZY"
   }
 ]

@@ -173,6 +173,12 @@
       "status": "fetched",
       "attempts": 1,
       "note": "0 verified figure(s)"
+    },
+    "https://graphsaboutreligion.com/p/catholics-are-going-to-church-lessand": {
+      "date": "2026-11-23",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
     }
   },
   "fresh": {
@@ -218,6 +224,12 @@
         "title": "How Americans View Trump, Key Administration Officials and Democratic Congressional Leaders",
         "url": "https://www.pewresearch.org/politics/2026/11/19/how-americans-view-trump-key-administration-officials-and-democratic-congressional-leaders/",
         "source": "Pew Research"
+      },
+      {
+        "date": "2026-11-23",
+        "title": "Catholics Are Going to Church Less—and Voting Republican More",
+        "url": "https://www.graphsaboutreligion.com/p/catholics-are-going-to-church-lessand",
+        "source": "Ryan Burge"
       }
     ],
     "technology": [
@@ -692,11 +704,34 @@
           "data_tag": false
         },
         "topics": [],
-        "trend": 5.5,
+        "trend": 7.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "no topic page matched"
+        ]
+      },
+      {
+        "title": "Catholics Are Going to Church Less—and Voting Republican More",
+        "url": "https://www.graphsaboutreligion.com/p/catholics-are-going-to-church-lessand",
+        "source": "Ryan Burge",
+        "signals": {
+          "publishers": [
+            "Ryan Burge"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [
+          "politics-and-the-church"
+        ],
+        "trend": 5.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
         ]
       },
       {
@@ -766,6 +801,26 @@
         ]
       },
       {
+        "title": "Democratic Wave Sweeps In More Split Senate Delegations",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/23/democratic-wave-sweeps-in-more-split-senate-delegations/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 3.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
         "title": "New Insights Report Helps Churches Connect Evangelism and Discipleship",
         "url": "https://research.lifeway.com/2026/11/19/new-insights-report-helps-churches-connect-evangelism-and-discipleship/",
         "source": "Lifeway Research",
@@ -788,29 +843,6 @@
         "actions": [
           "linked in Fresh From the Digest",
           "page already checked on 2026-11-20 (1 verified figure(s))"
-        ]
-      },
-      {
-        "title": "Pew: Christians Will Be Minority in North America by 2070, Will Double in Africa",
-        "url": "https://www.christianitytoday.com/2026/11/pew-research-christians-minority-2070-africa-growth/",
-        "source": "Christianity Today",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [
-            "report",
-            "research"
-          ],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 3.25,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
         ]
       },
       {
@@ -837,26 +869,6 @@
         ]
       },
       {
-        "title": "Islam Will Soon Be the World’s Largest Religion, but Christianity Will Keep Growing Too",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/18/islam-will-soon-be-the-worlds-largest-religion-but-christianity-will-keep-growing-too/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 3.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
         "title": "How Much Less Religious Is Australia Than the U.S.?",
         "url": "https://www.graphsaboutreligion.com/p/how-much-less-religious-is-australia",
         "source": "Ryan Burge",
@@ -877,26 +889,46 @@
         ]
       },
       {
-        "title": "ERLC, state leaders respond to Nov. 3 ballot measure successes, failures",
-        "url": "https://erlc.com/press/erlc-state-leaders-respond-to-nov-3-ballot-measure-successes-failures/",
-        "source": "ERLC",
+        "title": "Pew: Christians Will Be Minority in North America by 2070, Will Double in Africa",
+        "url": "https://www.christianitytoday.com/2026/11/pew-research-christians-minority-2070-africa-growth/",
+        "source": "Christianity Today",
         "signals": {
-          "publishers": [],
-          "figures": [
-            "56 percent"
+          "publishers": [
+            "Pew Research Center"
           ],
-          "words": [],
-          "data_tag": false
+          "figures": [],
+          "words": [
+            "report",
+            "research"
+          ],
+          "data_tag": true
         },
-        "topics": [
-          "religious-liberty"
-        ],
-        "trend": 1.0,
+        "topics": [],
+        "trend": 2.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-11 (0 verified figure(s))"
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Islam Will Soon Be the World’s Largest Religion, but Christianity Will Keep Growing Too",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/18/islam-will-soon-be-the-worlds-largest-religion-but-christianity-will-keep-growing-too/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 2.25,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
         ]
       },
       {
@@ -912,7 +944,7 @@
           "data_tag": false
         },
         "topics": [],
-        "trend": 1.0,
+        "trend": 1.75,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -938,46 +970,10 @@
         "actions": [
           "no topic page matched"
         ]
-      },
-      {
-        "title": "How the 2026 Midterms Played Out on Kalshi and Polymarket",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/20/how-the-2026-midterms-played-out-on-kalshi-and-polymarket/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [],
-        "trend": 1.0,
-        "outlets": 1,
-        "on_digest": false,
-        "actions": [
-          "no topic page matched"
-        ]
       }
     ],
-    "pages": [
-      {
-        "slug": "evangelicalism",
-        "kind": "latest-figures",
-        "note": "Latest Figures block refreshed (4 figures); dates bumped"
-      },
-      {
-        "slug": "marriage-and-family",
-        "kind": "latest-figures",
-        "note": "Latest Figures block refreshed (1 figures); dates bumped"
-      },
-      {
-        "slug": "missions-and-evangelism",
-        "kind": "latest-figures",
-        "note": "Latest Figures block refreshed (1 figures); dates bumped"
-      }
-    ],
-    "fetched": 0,
+    "pages": [],
+    "fetched": 1,
     "hits": 17
   }
 }
