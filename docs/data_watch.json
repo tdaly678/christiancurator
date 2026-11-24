@@ -605,52 +605,10 @@
       }
     ]
   },
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "last_run": {
-    "date": "2026-11-23",
+    "date": "2026-11-24",
     "stories": [
-      {
-        "title": "How Pew’s projections for Christianity and Islam worldwide changed — and why",
-        "url": "https://religionnews.com/2026/11/20/why-did-pew-research-project-that-islam-would-become-the-worlds-largest-faith/",
-        "source": "Religion News Service",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [
-            "research"
-          ],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 11.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "Data Explorer: The Future of World Religions",
-        "url": "https://www.pewresearch.org/religion/feature/the-future-of-world-religions-data-explorer/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 8.75,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
       {
         "title": "The Future of World Religions: Population Growth Projections, 2020-2070",
         "url": "https://www.pewresearch.org/religion/2026/11/18/the-future-of-world-religions-population-growth-projections-2020-2070/",
@@ -692,46 +650,23 @@
         ]
       },
       {
-        "title": "10 Ways to Form Bold Disciples of Jesus",
-        "url": "https://research.lifeway.com/2026/11/23/10-ways-to-form-bold-disciples-of-jesus/",
-        "source": "Lifeway Research",
+        "title": "The Church Needs to Know Its History",
+        "url": "https://www.thegospelcoalition.org/reviews/church-know-its-history/",
+        "source": "The Gospel Coalition",
         "signals": {
-          "publishers": [
-            "Lifeway Research"
-          ],
+          "publishers": [],
           "figures": [],
-          "words": [],
+          "words": [
+            "surveys"
+          ],
           "data_tag": false
         },
         "topics": [],
-        "trend": 7.5,
+        "trend": 5.75,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "no topic page matched"
-        ]
-      },
-      {
-        "title": "Catholics Are Going to Church Less—and Voting Republican More",
-        "url": "https://www.graphsaboutreligion.com/p/catholics-are-going-to-church-lessand",
-        "source": "Ryan Burge",
-        "signals": {
-          "publishers": [
-            "Ryan Burge"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [
-          "politics-and-the-church"
-        ],
-        "trend": 5.0,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
         ]
       },
       {
@@ -846,6 +781,29 @@
         ]
       },
       {
+        "title": "Pew: Christians Will Be Minority in North America by 2070, Will Double in Africa",
+        "url": "https://www.christianitytoday.com/2026/11/pew-research-christians-minority-2070-africa-growth/",
+        "source": "Christianity Today",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [
+            "report",
+            "research"
+          ],
+          "data_tag": true
+        },
+        "topics": [],
+        "trend": 3.25,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
         "title": "How Americans View Trump, Key Administration Officials and Democratic Congressional Leaders",
         "url": "https://www.pewresearch.org/politics/2026/11/19/how-americans-view-trump-key-administration-officials-and-democratic-congressional-leaders/",
         "source": "Pew Research",
@@ -869,49 +827,6 @@
         ]
       },
       {
-        "title": "How Much Less Religious Is Australia Than the U.S.?",
-        "url": "https://www.graphsaboutreligion.com/p/how-much-less-religious-is-australia",
-        "source": "Ryan Burge",
-        "signals": {
-          "publishers": [
-            "Ryan Burge"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 2.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "Pew: Christians Will Be Minority in North America by 2070, Will Double in Africa",
-        "url": "https://www.christianitytoday.com/2026/11/pew-research-christians-minority-2070-africa-growth/",
-        "source": "Christianity Today",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [
-            "report",
-            "research"
-          ],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 2.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
         "title": "Islam Will Soon Be the World’s Largest Religion, but Christianity Will Keep Growing Too",
         "url": "https://www.pewresearch.org/short-reads/2026/11/18/islam-will-soon-be-the-worlds-largest-religion-but-christianity-will-keep-growing-too/",
         "source": "Pew Research",
@@ -924,7 +839,7 @@
           "data_tag": true
         },
         "topics": [],
-        "trend": 2.25,
+        "trend": 3.0,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -932,19 +847,45 @@
         ]
       },
       {
-        "title": "Give Tabletalk This Christmas",
-        "url": "https://feeds.ligonier.org/~/973078778/0/ligonierministriesblog",
-        "source": "Ligonier Ministries",
+        "title": "Young Adults Say Church, Home, and Smartphones Have Shaped Their Faith",
+        "url": "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith/",
+        "source": "Lifeway Research",
         "signals": {
-          "publishers": [],
-          "figures": [
-            "50%"
+          "publishers": [
+            "Lifeway Research"
           ],
+          "figures": [],
+          "words": [
+            "study"
+          ],
+          "data_tag": true
+        },
+        "topics": [
+          "evangelicalism",
+          "technology"
+        ],
+        "trend": 2.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-18 (3 verified figure(s))"
+        ]
+      },
+      {
+        "title": "How Much Less Religious Is Australia Than the U.S.?",
+        "url": "https://www.graphsaboutreligion.com/p/how-much-less-religious-is-australia",
+        "source": "Ryan Burge",
+        "signals": {
+          "publishers": [
+            "Ryan Burge"
+          ],
+          "figures": [],
           "words": [],
-          "data_tag": false
+          "data_tag": true
         },
         "topics": [],
-        "trend": 1.75,
+        "trend": 1.25,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -952,8 +893,8 @@
         ]
       },
       {
-        "title": "9 Most Popular Thanksgiving Bible Verses",
-        "url": "https://research.lifeway.com/2026/11/20/9-most-popular-thanksgiving-bible-verses/",
+        "title": "10 Ways to Form Bold Disciples of Jesus",
+        "url": "https://research.lifeway.com/2026/11/23/10-ways-to-form-bold-disciples-of-jesus/",
         "source": "Lifeway Research",
         "signals": {
           "publishers": [
@@ -970,10 +911,33 @@
         "actions": [
           "no topic page matched"
         ]
+      },
+      {
+        "title": "Catholics Are Going to Church Less—and Voting Republican More",
+        "url": "https://www.graphsaboutreligion.com/p/catholics-are-going-to-church-lessand",
+        "source": "Ryan Burge",
+        "signals": {
+          "publishers": [
+            "Ryan Burge"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [
+          "politics-and-the-church"
+        ],
+        "trend": 0.25,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-23 (0 verified figure(s))"
+        ]
       }
     ],
     "pages": [],
-    "fetched": 1,
-    "hits": 17
+    "fetched": 0,
+    "hits": 15
   }
 }
