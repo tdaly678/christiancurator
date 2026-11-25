@@ -99866,5 +99866,1816 @@
     },
     "scored_by": "claude",
     "clicks": 0
+  },
+  {
+    "url": "https://www.caseymccall.com/p/american-culture-and-hostility-to",
+    "title": "American Culture Grows Hostile to Christian Faith, Writer Argues",
+    "original_title": "American Culture and Hostility to Christ",
+    "source_name": "caseymccall.com",
+    "date_shown": "2026-11-25",
+    "final_score": 7.0,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 7.0,
+    "base_importance": 5.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://caseymccall.com/p/american-culture-and-hostility-to",
+    "perspective": "critical",
+    "boosts": {
+      "trending": 1.5,
+      "stale_source": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianpost.com/voices/joel-webbons-christian-nationalism-is-idolatry.html",
+    "title": "Joel Webbon's Christian Nationalism Contradicts Scripture, Writer Argues",
+    "original_title": "Joel Webbon's Christian nationalism is idolatry",
+    "source_name": "The Christian Post",
+    "date_shown": "2026-11-25",
+    "final_score": 7.55,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "christian_nationalism_debate",
+    "base_score": 7.0,
+    "importance": 7.55,
+    "depth": 6.0,
+    "base_importance": 7.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://christianpost.com/voices/joel-webbons-christian-nationalism-is-idolatry.html",
+    "perspective": "critical",
+    "boosts": {
+      "tier": -0.7,
+      "recency": 1.5,
+      "trending": 0.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.preachleadlove.com/single-post/how-to-spot-a-false-teacher",
+    "title": "How To Spot A False Teacher",
+    "original_title": "How To Spot A False Teacher",
+    "source_name": "preach-lead-love",
+    "date_shown": "2026-11-25",
+    "final_score": 7.0,
+    "tags": [
+      "theology",
+      "church life"
+    ],
+    "topic_cluster": "false_teachers",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 6.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://preachleadlove.com/single-post/how-to-spot-a-false-teacher",
+    "perspective": "critical",
+    "boosts": {
+      "recency": 0.75,
+      "voice": 0.5,
+      "stale_source": 0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://roysreport.com/andrew-wommacks-faith-healing-message-kept-woman-from-cancer-treatment-until-it-was-too-late/",
+    "title": "Andrew Wommack's Faith-Healing Teaching Delayed Woman's Cancer Treatment",
+    "original_title": "Andrew Wommack’s faith-healing message kept woman from cancer treatment until it was too late",
+    "source_name": "The Roys Report",
+    "date_shown": "2026-11-25",
+    "final_score": 9.5,
+    "tags": [
+      "news",
+      "church life"
+    ],
+    "topic_cluster": "andrew_wommack_faith_healing",
+    "base_score": 8.0,
+    "importance": 9.5,
+    "depth": 5.0,
+    "base_importance": 8.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://roysreport.com/andrew-wommacks-faith-healing-message-kept-woman-from-cancer-treatment-until-it-was-too-late",
+    "perspective": "critical",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://religionnews.com/2026/11/24/for-university-of-michigan-faculty-intimidation-of-jews-gets-a-pass/",
+    "title": "University of Michigan Faculty Tolerates Intimidation of Jews, Writer Argues",
+    "original_title": "For University of Michigan faculty, intimidation of Jews gets a pass",
+    "source_name": "Religion News Service",
+    "date_shown": "2026-11-25",
+    "final_score": 7.5,
+    "tags": [
+      "culture",
+      "apologetics"
+    ],
+    "topic_cluster": "antisemitism_universities",
+    "base_score": 6.0,
+    "importance": 7.5,
+    "depth": 5.0,
+    "base_importance": 6.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://religionnews.com/2026/11/24/for-university-of-michigan-faculty-intimidation-of-jews-gets-a-pass",
+    "perspective": "critical",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://jemartisby.substack.com/p/the-oil-millionaire-behind-the-christian",
+    "title": "Grove City College Rejected Student's Racial Justice Advocacy, Oil Donor Shaped",
+    "original_title": "The Oil Millionaire Behind the Christian College That Rejected Me",
+    "source_name": "Jemar Tisby",
+    "date_shown": "2026-11-25",
+    "final_score": 7.0,
+    "tags": [
+      "culture",
+      "theology"
+    ],
+    "topic_cluster": "evangelical_institution_race",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 6.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://jemartisby.substack.com/p/the-oil-millionaire-behind-the-christian",
+    "perspective": "critical",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://nijaykgupta.substack.com/p/its-okay-to-not-be-okay-pricelis",
+    "title": "It’s Okay to Not Be Okay (Pricelis Perreaux-Dominguez)",
+    "original_title": "It’s Okay to Not Be Okay (Pricelis Perreaux-Dominguez)",
+    "source_name": "Nijay Gupta",
+    "date_shown": "2026-11-25",
+    "final_score": 7.0,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "mental_health_faith",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 7.0,
+    "base_importance": 5.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://nijaykgupta.substack.com/p/its-okay-to-not-be-okay-pricelis",
+    "perspective": "supportive",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://thebardowl.substack.com/p/lets-talk-about-the-bible-project",
+    "title": "Let’s Talk About the Bible Project",
+    "original_title": "Let’s Talk About the Bible Project",
+    "source_name": "Nicholas McDonald",
+    "date_shown": "2026-11-25",
+    "final_score": 7.0,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "bible_project_reception",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 5.0,
+    "base_importance": 5.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://thebardowl.substack.com/p/lets-talk-about-the-bible-project",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.9marks.org/article/does-your-preaching-have-the-tincture-of-christ-in-it/?utm_source=rss&utm_medium=rss&utm_campaign=does-your-preaching-have-the-tincture-of-christ-in-it",
+    "title": "Does Your Preaching Have the Tincture of Christ in It?",
+    "original_title": "Does Your Preaching Have the Tincture of Christ in It?",
+    "source_name": "9Marks",
+    "date_shown": "2026-11-25",
+    "final_score": 6.0,
+    "tags": [
+      "theology",
+      "church life"
+    ],
+    "topic_cluster": "christological_preaching",
+    "base_score": 4.0,
+    "importance": 6.0,
+    "depth": 7.0,
+    "base_importance": 4.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://9marks.org/article/does-your-preaching-have-the-tincture-of-christ-in-it",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": 1.5,
+      "voice": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://nathanfinn.substack.com/p/cultivating-thankfulness-in-a-difficult",
+    "title": "Cultivating Thankfulness in a Difficult Season",
+    "original_title": "Cultivating Thankfulness in a Difficult Season",
+    "source_name": "Nathan A. Finn",
+    "date_shown": "2026-11-25",
+    "final_score": 6.0,
+    "tags": [
+      "devotional",
+      "theology"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 6.0,
+    "depth": 7.0,
+    "base_importance": 4.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://nathanfinn.substack.com/p/cultivating-thankfulness-in-a-difficult",
+    "perspective": "neutral",
+    "boosts": {
+      "trending": 1.5,
+      "stale_source": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://feeds.ligonier.org/~/973951025/0/ligonierministriesblog",
+    "title": "The Importance of Prayers of Thanksgiving",
+    "original_title": "The Importance of Prayers of Thanksgiving",
+    "source_name": "Ligonier Ministries",
+    "date_shown": "2026-11-25",
+    "final_score": 5.5,
+    "tags": [
+      "devotional",
+      "prayer"
+    ],
+    "topic_cluster": "thanksgiving_prayers",
+    "base_score": 4.0,
+    "importance": 5.5,
+    "depth": 7.0,
+    "base_importance": 4.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://feeds.ligonier.org/~/973951025/0/ligonierministriesblog",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://michaelkelley.co/2026/11/pain-reminds-us-we-have-a-foot-in-two-worlds/",
+    "title": "Physical Weakness Points Christians to Eternal Life, Writer Argues",
+    "original_title": "Pain Reminds Us We Have a Foot in Two Worlds",
+    "source_name": "Forward Progress",
+    "date_shown": "2026-11-25",
+    "final_score": 5.5,
+    "tags": [
+      "theology",
+      "suffering",
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 5.5,
+    "depth": 8.0,
+    "base_importance": 4.0,
+    "base_depth": 8.0,
+    "canonical_url": "https://michaelkelley.co/2026/11/pain-reminds-us-we-have-a-foot-in-two-worlds",
+    "perspective": "neutral",
+    "boosts": {
+      "trending": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://karadedert.substack.com/p/bourbon-maple-syrup-and-the-singularity",
+    "title": "Christians Must Reckon With AI's Limits, Writer Argues",
+    "original_title": "With Christ In the Singularity",
+    "source_name": "Kara Dedert",
+    "date_shown": "2026-11-25",
+    "final_score": 5.5,
+    "tags": [
+      "theology",
+      "culture",
+      "apologetics"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 5.0,
+    "importance": 5.5,
+    "depth": 6.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://karadedert.substack.com/p/bourbon-maple-syrup-and-the-singularity",
+    "perspective": "neutral",
+    "boosts": {
+      "voice": -1.5,
+      "trending": 1.5,
+      "stale_source": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.thegospelcoalition.org/article/thankful-evangelical-publishing/",
+    "title": "Why I’m Thankful for Evangelical Publishing",
+    "original_title": "Why I’m Thankful for Evangelical Publishing",
+    "source_name": "The Gospel Coalition",
+    "date_shown": "2026-11-25",
+    "final_score": 5.0,
+    "tags": [
+      "church life",
+      "theology"
+    ],
+    "topic_cluster": "evangelical_publishing",
+    "base_score": 3.0,
+    "importance": 5.0,
+    "depth": 6.0,
+    "base_importance": 3.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://thegospelcoalition.org/article/thankful-evangelical-publishing",
+    "perspective": "supportive",
+    "boosts": {
+      "recency": 1.5,
+      "voice": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/11/introduction-name-above-all-names/",
+    "title": "Parents Choose Names That Reflect Their Faith, Writer Reflects",
+    "original_title": "Introduction: Name Above All Names",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-25",
+    "final_score": 5.0,
+    "tags": [
+      "devotional"
+    ],
+    "topic_cluster": "names_of_god_series",
+    "base_score": 3.0,
+    "importance": 5.0,
+    "depth": 3.0,
+    "base_importance": 3.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://christianitytoday.com/2026/11/introduction-name-above-all-names",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": 1.5,
+      "voice": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://laurawifler.substack.com/p/will-jesus-return-in-our-lifetime",
+    "title": "Will Jesus return in our lifetime?",
+    "original_title": "Will Jesus return in our lifetime?",
+    "source_name": "Laura Wifler",
+    "date_shown": "2026-11-25",
+    "final_score": 5.0,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "eschatology",
+    "base_score": 3.0,
+    "importance": 5.0,
+    "depth": 4.0,
+    "base_importance": 3.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://laurawifler.substack.com/p/will-jesus-return-in-our-lifetime",
+    "perspective": "neutral",
+    "boosts": {
+      "tier": 0.06,
+      "recency": 1.5,
+      "frequency": 0.25,
+      "voice": 0.19
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://ap.org.au/2026/11/23/how-to-listen-to-a-sermon/",
+    "title": "AP Article: How to Listen to a Sermon",
+    "original_title": "AP Article: How to Listen to a Sermon",
+    "source_name": "AP",
+    "date_shown": "2026-11-25",
+    "final_score": 5.0,
+    "tags": [
+      "church life"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 5.0,
+    "depth": 5.0,
+    "base_importance": 3.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://ap.org.au/2026/11/23/how-to-listen-to-a-sermon",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": 0.25,
+      "trending": 1.5,
+      "stale_source": 0.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/life5/why-going-home-for-the-holidays-can-make-you-feel-15-again/",
+    "title": "Why Going Home for the Holidays Can Make You Feel 15 Again",
+    "original_title": "Why Going Home for the Holidays Can Make You Feel 15 Again",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-11-25",
+    "final_score": 4.25,
+    "tags": [
+      "devotional",
+      "family"
+    ],
+    "topic_cluster": "family_identity",
+    "base_score": 3.0,
+    "importance": 4.25,
+    "depth": 5.0,
+    "base_importance": 3.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://relevantmagazine.com/life5/why-going-home-for-the-holidays-can-make-you-feel-15-again",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": 1.5,
+      "voice": 0.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://mereorthodoxy.com/the-language-of-the-church-the-poetry-of-psalms/",
+    "title": "Psalms Reveal the Soul Through Poetry, Writer Argues",
+    "original_title": "The Language of the Church: The Poetry of Psalms",
+    "source_name": "Mere Orthodoxy",
+    "date_shown": "2026-11-25",
+    "final_score": 4.25,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 4.25,
+    "depth": 7.0,
+    "base_importance": 3.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://mereorthodoxy.com/the-language-of-the-church-the-poetry-of-psalms",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": 1.5,
+      "trending": 0.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://nadyawilliams.substack.com/p/thanksgiving-with-harold-and-his",
+    "title": "Thanksgiving with Harold and his Purple Crayon",
+    "original_title": "Thanksgiving with Harold and his Purple Crayon",
+    "source_name": "Nadya Williams",
+    "date_shown": "2026-11-25",
+    "final_score": 4.0,
+    "tags": [
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 4.0,
+    "depth": 2.0,
+    "base_importance": 2.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://nadyawilliams.substack.com/p/thanksgiving-with-harold-and-his",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": 0.75,
+      "trending": 1.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.crossway.org/articles/the-story-behind-psalm-51/",
+    "title": "Psalm 51 Has a Story That Deepens Its Meaning",
+    "original_title": "The Story Behind Psalm 51",
+    "source_name": "Crossway",
+    "date_shown": "2026-11-25",
+    "final_score": 3.0,
+    "tags": [
+      "devotional"
+    ],
+    "topic_cluster": "psalms_study",
+    "base_score": 3.0,
+    "importance": 3.0,
+    "depth": 5.0,
+    "base_importance": 3.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://crossway.org/articles/the-story-behind-psalm-51",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": 1.5,
+      "voice": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://michaelfbird.substack.com/p/can-we-hasten-the-second-coming",
+    "title": "Can We Hasten the Second Coming?",
+    "original_title": "Can We Hasten the Second Coming?",
+    "source_name": "Michael Bird",
+    "date_shown": "2026-11-25",
+    "final_score": 2.25,
+    "tags": [
+      "theology",
+      "apologetics"
+    ],
+    "topic_cluster": "eschatology_second_coming",
+    "base_score": 5.0,
+    "importance": 2.25,
+    "depth": 2.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://michaelfbird.substack.com/p/can-we-hasten-the-second-coming",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 1.0,
+      "voice": 0.25,
+      "previously_shown": -4.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://scotmcknight.substack.com/p/whos-to-blame",
+    "title": "Who’s to Blame?",
+    "original_title": "Who’s to Blame?",
+    "source_name": "Scot McKnight",
+    "date_shown": "2026-11-25",
+    "final_score": 2.25,
+    "tags": [
+      "theology",
+      "culture"
+    ],
+    "topic_cluster": "poverty_and_justice",
+    "base_score": 5.0,
+    "importance": 2.25,
+    "depth": 2.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://scotmcknight.substack.com/p/whos-to-blame",
+    "perspective": "critical",
+    "boosts": {
+      "recency": 0.25,
+      "frequency": 1.0,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.thegospelcoalition.org/article/confession-ebenezer-moral-clarity/",
+    "title": "Christian Films Celebrate Grace Against Secular Values",
+    "original_title": "‘Confession’ and ‘Ebenezer’: Moral Clarity in Murky Times",
+    "source_name": "The Gospel Coalition",
+    "date_shown": "2026-11-25",
+    "final_score": 2.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "christian_film_commentary",
+    "base_score": 2.0,
+    "importance": 2.0,
+    "depth": 4.0,
+    "base_importance": 2.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://thegospelcoalition.org/article/confession-ebenezer-moral-clarity",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.spiritualtheology.net/p/treasuring-gods-word",
+    "title": "Treasuring God’s Word",
+    "original_title": "Treasuring God’s Word",
+    "source_name": "J.A. Medders",
+    "date_shown": "2026-11-25",
+    "final_score": 1.5,
+    "tags": [
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 1.5,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://spiritualtheology.net/p/treasuring-gods-word",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.5,
+      "previously_shown": -0.5,
+      "trending": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://carmenjoyimes.substack.com/p/days-with-dad",
+    "title": "Days with Dad",
+    "original_title": "Days with Dad",
+    "source_name": "Carmen Joy Imes",
+    "date_shown": "2026-11-25",
+    "final_score": 1.5,
+    "tags": [
+      "family"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 1.5,
+    "depth": 0.0,
+    "base_importance": 4.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://carmenjoyimes.substack.com/p/days-with-dad",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": -4.0,
+      "frequency": 0.25,
+      "previously_shown": -0.25,
+      "trending": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.americanreformer.org/p/lessons-from-the-huang-affair",
+    "title": "Christians Must Learn to See Through Designed Narratives, Writer Argues",
+    "original_title": "Lessons from the Huang Affair",
+    "source_name": "American Reformer",
+    "date_shown": "2026-11-25",
+    "final_score": 7.5,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "huang_affair",
+    "base_score": 6.0,
+    "importance": 7.5,
+    "depth": 5.0,
+    "base_importance": 6.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://americanreformer.org/p/lessons-from-the-huang-affair",
+    "perspective": "critical",
+    "boosts": {
+      "recency": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://albertmohler.com/2026/11/25/in-the-library-james-wood/",
+    "title": "In the Library: James Wood",
+    "original_title": "In the Library: James Wood",
+    "source_name": "Albert Mohler",
+    "date_shown": "2026-11-25",
+    "final_score": 4.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 4.0,
+    "depth": 2.0,
+    "base_importance": 2.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://albertmohler.com/2026/11/25/in-the-library-james-wood",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": 1.5,
+      "trending": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://careynieuwhof.com/episode-845/",
+    "title": "Will AI Wipe Out Humanity? Your Hardest Questions on AI and the Church",
+    "original_title": "Episode 845: Will AI Wipe Out Humanity? Your Hardest Questions on AI and the Church",
+    "source_name": "Carey Nieuwhof",
+    "date_shown": "2026-11-25",
+    "final_score": 3.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 3.0,
+    "depth": 1.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://careynieuwhof.com/episode-845",
+    "perspective": "news",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.75,
+      "voice": -1.0,
+      "trending": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.furtherup.net/p/oh-to-hell-with-all-this",
+    "title": "Oh to Hell With All This",
+    "original_title": "Oh to Hell With All This",
+    "source_name": "Bethel McGrew",
+    "date_shown": "2026-11-25",
+    "final_score": 1.5,
+    "tags": [
+      "politics"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 1.5,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://furtherup.net/p/oh-to-hell-with-all-this",
+    "perspective": "critical",
+    "boosts": {
+      "recency": -6.0,
+      "frequency": 0.5,
+      "previously_shown": 3.5,
+      "trending": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://thecommon.place/p/ep205",
+    "title": "A Boarding School & a Suit of Armor",
+    "original_title": "A Boarding School & a Suit of Armor",
+    "source_name": "Tsh Oxenreider",
+    "date_shown": "2026-11-25",
+    "final_score": 1.5,
+    "tags": [],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 1.5,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://thecommon.place/p/ep205",
+    "perspective": "news",
+    "boosts": {
+      "recency": -6.0,
+      "previously_shown": 5.0,
+      "trending": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://stephenmcalpine.substack.com/p/substacking-with-gertrude-and-alice",
+    "title": "Substacking with Gertrude and Alice",
+    "original_title": "Substacking with Gertrude and Alice",
+    "source_name": "Stephen McAlpine",
+    "date_shown": "2026-11-25",
+    "final_score": 1.5,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 1.5,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://stephenmcalpine.substack.com/p/substacking-with-gertrude-and-alice",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": -4.0,
+      "frequency": 0.5,
+      "previously_shown": 1.5,
+      "trending": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.aaronrenn.com/p/the-rise-of-the-rest-is-over",
+    "title": "America's Cities Face Decline as Post-Covid Era Ends",
+    "original_title": "The Rise of the Rest Is Over",
+    "source_name": "Aaron Renn",
+    "date_shown": "2026-11-25",
+    "final_score": 0.5,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 0.5,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://aaronrenn.com/p/the-rise-of-the-rest-is-over",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": -4.0,
+      "frequency": 0.75,
+      "previously_shown": 2.25,
+      "trending": 1.25,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.digitalliturgies.net/p/dont-let-influencers-make-a-fool",
+    "title": "Don’t Let Influencers Make a Fool Out of You",
+    "original_title": "Don’t Let Influencers Make a Fool Out of You",
+    "source_name": "Samuel James",
+    "date_shown": "2026-11-25",
+    "final_score": 0.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "tech_habits",
+    "base_score": 2.0,
+    "importance": 0.0,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://digitalliturgies.net/p/dont-let-influencers-make-a-fool",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": -6.0,
+      "frequency": 0.25,
+      "previously_shown": 3.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.graphsaboutreligion.com/p/how-much-less-religious-is-australia",
+    "title": "How Much Less Religious Is Australia Than the U.S.?",
+    "original_title": "How Much Less Religious Is Australia Than the U.S.?",
+    "source_name": "Ryan Burge",
+    "date_shown": "2026-11-25",
+    "final_score": -0.5,
+    "tags": [
+      "data",
+      "culture"
+    ],
+    "topic_cluster": "global_religious_decline",
+    "base_score": 5.0,
+    "importance": -0.5,
+    "depth": 0.0,
+    "base_importance": 5.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://graphsaboutreligion.com/p/how-much-less-religious-is-australia",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.75,
+      "voice": 0.5,
+      "previously_shown": -4.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/an-undefined-apocalypse/",
+    "title": "Science Fiction Translates Better to Film Than Literature, Writer Argues",
+    "original_title": "An Undefined Apocalypse",
+    "source_name": "First Things",
+    "date_shown": "2026-11-25",
+    "final_score": -0.75,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": -0.75,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://firstthings.com/an-undefined-apocalypse",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": -2.0,
+      "trending": 1.5,
+      "diversity_penalty": -2.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.digitalliturgies.net/p/life-is-too-good-to-be-a-scrolling",
+    "title": "Life is Too Good to be a Scrolling Sluggard",
+    "original_title": "Life is Too Good to be a Scrolling Sluggard",
+    "source_name": "Samuel James",
+    "date_shown": "2026-11-25",
+    "final_score": -0.75,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "tech_habits",
+    "base_score": 2.0,
+    "importance": -0.75,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://digitalliturgies.net/p/life-is-too-good-to-be-a-scrolling",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": -6.0,
+      "frequency": 0.25,
+      "previously_shown": 3.75,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/the-godless-new-christian-right/",
+    "title": "Christian Right Abandons Religious Foundation for Politics, Writer Argues",
+    "original_title": "The Godless New Christian Right",
+    "source_name": "First Things",
+    "date_shown": "2026-11-25",
+    "final_score": -1.5,
+    "tags": [
+      "politics",
+      "culture"
+    ],
+    "topic_cluster": "christian_nationalism_debate",
+    "base_score": 7.0,
+    "importance": -1.5,
+    "depth": 1.0,
+    "base_importance": 7.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://firstthings.com/the-godless-new-christian-right",
+    "perspective": "critical",
+    "boosts": {
+      "recency": -2.0,
+      "voice": -1.5,
+      "previously_shown": -3.5,
+      "trending": 1.5,
+      "duplicate_topic": -1.5,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://firstthings.com/an-actual-conservative/",
+    "title": "Conservative Institutions Face Attacks From the Right, Writer Argues",
+    "original_title": "An Actual Conservative",
+    "source_name": "First Things",
+    "date_shown": "2026-11-25",
+    "final_score": -1.5,
+    "tags": [
+      "politics",
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 5.0,
+    "importance": -1.5,
+    "depth": 1.0,
+    "base_importance": 5.0,
+    "base_depth": 6.0,
+    "canonical_url": "https://firstthings.com/an-actual-conservative",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": -2.0,
+      "voice": -1.5,
+      "previously_shown": -1.5,
+      "trending": 1.5,
+      "diversity_penalty": -3.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.americanreformer.org/p/an-unforgiving-surface-a-review-of",
+    "title": "An Unforgiving Surface: A Review of John Wilson’s History of Concrete",
+    "original_title": "An Unforgiving Surface: A Review of John Wilson’s History of Concrete",
+    "source_name": "American Reformer",
+    "date_shown": "2026-11-25",
+    "final_score": -2.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": -2.0,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://americanreformer.org/p/an-unforgiving-surface-a-review-of",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": -2.0,
+      "voice": 1.0,
+      "trending": 1.0,
+      "diversity_penalty": -3.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianpost.com/news/crosspoint-church-petitions-supreme-court-over-maines-lgbt-rules.html",
+    "title": "Crosspoint Church School Challenges Maine's LGBT Policy Requirement for Tuition Aid",
+    "original_title": "Crosspoint Church petitions Supreme Court over Maine's LGBT rules for school tuition program",
+    "source_name": "The Christian Post",
+    "date_shown": "2026-11-25",
+    "final_score": 9.2,
+    "tags": [
+      "news",
+      "politics"
+    ],
+    "topic_cluster": "religious_liberty_maine_lgbtq",
+    "base_score": 8.0,
+    "importance": 9.2,
+    "depth": 3.0,
+    "base_importance": 8.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://christianpost.com/news/crosspoint-church-petitions-supreme-court-over-maines-lgbt-rules.html",
+    "perspective": "news",
+    "boosts": {
+      "tier": -0.8,
+      "recency": 1.5,
+      "voice": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.bbc.co.uk/news/articles/cqgkv8kp7145o?at_medium=RSS&at_campaign=rss",
+    "title": "North Korean Defectors Report Persecution for Christian Faith",
+    "original_title": "These North Koreans say they were spied on, beaten and jailed for being Christian",
+    "source_name": "BBC News",
+    "date_shown": "2026-11-25",
+    "final_score": 9.2,
+    "tags": [
+      "news",
+      "missions",
+      "suffering"
+    ],
+    "topic_cluster": "north_korea_persecution",
+    "base_score": 8.0,
+    "importance": 9.2,
+    "depth": 4.0,
+    "base_importance": 8.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://bbc.co.uk/news/articles/cqgkv8kp7145o?at_campaign=rss&at_medium=RSS",
+    "perspective": "news",
+    "boosts": {
+      "tier": -0.8,
+      "recency": 1.5,
+      "stale_source": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/justice/a-farmer-walked-three-days-to-reach-a-hospital-ship-a-nurse-volunteer-tells-what-happened-next/",
+    "title": "Farmer Walks Three Days to Hospital Ship for Tumor Surgery",
+    "original_title": "A Farmer Walked Three Days to Reach a Hospital Ship. A Nurse Volunteer Tells What Happened Next.",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-11-25",
+    "final_score": 6.5,
+    "tags": [
+      "missions",
+      "news"
+    ],
+    "topic_cluster": "medical_missions",
+    "base_score": 6.0,
+    "importance": 6.5,
+    "depth": 5.0,
+    "base_importance": 6.0,
+    "base_depth": 5.0,
+    "canonical_url": "https://relevantmagazine.com/justice/a-farmer-walked-three-days-to-reach-a-hospital-ship-a-nurse-volunteer-tells-what-happened-next",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": 1.5,
+      "voice": -1.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://religionnews.com/2026/11/25/washington-faith-leaders-split-over-transgender-sports-ban/",
+    "title": "Washington Religious Leaders Divided Over Transgender Sports Ban",
+    "original_title": "Washington faith leaders split over transgender sports ban",
+    "source_name": "Religion News Service",
+    "date_shown": "2026-11-25",
+    "final_score": 5.75,
+    "tags": [
+      "politics",
+      "news"
+    ],
+    "topic_cluster": "transgender_sports_policy",
+    "base_score": 5.0,
+    "importance": 5.75,
+    "depth": 3.0,
+    "base_importance": 5.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://religionnews.com/2026/11/25/washington-faith-leaders-split-over-transgender-sports-ban",
+    "perspective": "news",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://wng.org/roundups/congress-mulls-major-environmental-permitting-reforms-1795558510",
+    "title": "Congress Considers Bipartisan Environmental Permitting Reform Package",
+    "original_title": "Congress mulls major environmental permitting reforms",
+    "source_name": "World Magazine",
+    "date_shown": "2026-11-25",
+    "final_score": 3.0,
+    "tags": [
+      "politics"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 3.0,
+    "depth": 1.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://wng.org/roundups/congress-mulls-major-environmental-permitting-reforms-1795558510",
+    "perspective": "news",
+    "boosts": {
+      "tier": 0.02,
+      "recency": 1.5,
+      "trending": 0.48
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://michaelfbird.substack.com/p/2026-biblical-studies-conferences",
+    "title": "Biblical Studies Conferences Conclude in Denver",
+    "original_title": "2026 Biblical Studies Conferences Review",
+    "source_name": "Michael Bird",
+    "date_shown": "2026-11-25",
+    "final_score": 3.0,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "conference_announcements",
+    "base_score": 1.0,
+    "importance": 3.0,
+    "depth": 1.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://michaelfbird.substack.com/p/2026-biblical-studies-conferences",
+    "perspective": "news",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://bonniekristian.substack.com/p/trump-hates-enemies-dog-bites-man",
+    "title": "Trump hates enemies; dog bites man",
+    "original_title": "Trump hates enemies; dog bites man",
+    "source_name": "Bonnie Kristian",
+    "date_shown": "2026-11-25",
+    "final_score": 1.5,
+    "tags": [
+      "politics"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 1.5,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://bonniekristian.substack.com/p/trump-hates-enemies-dog-bites-man",
+    "perspective": "news",
+    "boosts": {
+      "recency": -4.0,
+      "frequency": 0.5,
+      "previously_shown": 1.5,
+      "trending": 1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://chrisgehrz.substack.com/p/that-was-the-week-that-was-6dc",
+    "title": "That Was The Week That Was",
+    "original_title": "That Was The Week That Was",
+    "source_name": "Chris Gehrz",
+    "date_shown": "2026-11-25",
+    "final_score": 1.25,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 1.25,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://chrisgehrz.substack.com/p/that-was-the-week-that-was-6dc",
+    "perspective": "news",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.75,
+      "previously_shown": -0.75,
+      "trending": 1.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://relevantmagazine.com/life5/a-record-25-2-million-young-adults-wont-be-traveling-home-for-thanksgiving-because-they-already-live-there/",
+    "title": "A Record 25.2 Million Young Adults Won’t Be Traveling Home for Thanksgiving Because They Already Live There",
+    "original_title": "A Record 25.2 Million Young Adults Won’t Be Traveling Home for Thanksgiving Because They Already Live There",
+    "source_name": "Relevant Magazine",
+    "date_shown": "2026-11-25",
+    "final_score": 1.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "young_adult_living",
+    "base_score": 2.0,
+    "importance": 1.0,
+    "depth": 1.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://relevantmagazine.com/life5/a-record-25-2-million-young-adults-wont-be-traveling-home-for-thanksgiving-because-they-already-live-there",
+    "perspective": "news",
+    "boosts": {
+      "recency": 1.5,
+      "voice": -1.0,
+      "diversity_penalty": -1.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.americanreformer.org/p/an-evening-with-american-reformer",
+    "title": "An Evening with American Reformer",
+    "original_title": "An Evening with American Reformer",
+    "source_name": "American Reformer",
+    "date_shown": "2026-11-25",
+    "final_score": 0.75,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 0.75,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://americanreformer.org/p/an-evening-with-american-reformer",
+    "perspective": "news",
+    "boosts": {
+      "recency": -6.0,
+      "previously_shown": 5.0,
+      "trending": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.furtherup.net/p/the-ordinary-greatness-of-kaylub",
+    "title": "The Ordinary Greatness of Kaylub Giamanco",
+    "original_title": "The Ordinary Greatness of Kaylub Giamanco",
+    "source_name": "Bethel McGrew",
+    "date_shown": "2026-11-25",
+    "final_score": 0.75,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 4.0,
+    "importance": 0.75,
+    "depth": 0.0,
+    "base_importance": 4.0,
+    "base_depth": 3.0,
+    "canonical_url": "https://furtherup.net/p/the-ordinary-greatness-of-kaylub",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": -6.0,
+      "frequency": 0.5,
+      "previously_shown": 1.5,
+      "trending": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.theguardian.com/australia-news/ng-interactive/2026/nov/21/padre-dave-the-minister-flies-to-outback-stations",
+    "title": "‘We don’t talk about the God stuff’: a day with Padre Dave, the outback’s flying minister",
+    "original_title": "‘We don’t talk about the God stuff’: a day with Padre Dave, the outback’s flying minister",
+    "source_name": "The Guardian",
+    "date_shown": "2026-11-25",
+    "final_score": 0.75,
+    "tags": [
+      "culture",
+      "news"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 0.75,
+    "depth": 0.0,
+    "base_importance": 3.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://theguardian.com/australia-news/ng-interactive/2026/nov/21/padre-dave-the-minister-flies-to-outback-stations",
+    "perspective": "neutral",
+    "boosts": {
+      "tier": -0.6,
+      "recency": -2.0,
+      "voice": -0.4,
+      "trending": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://carmenjoyimes.substack.com/p/the-annual-nerdfest-report",
+    "title": "The Annual NerdFest Report",
+    "original_title": "The Annual NerdFest Report",
+    "source_name": "Carmen Joy Imes",
+    "date_shown": "2026-11-25",
+    "final_score": 0.25,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 0.25,
+    "depth": 0.0,
+    "base_importance": 3.0,
+    "base_depth": 2.0,
+    "canonical_url": "https://carmenjoyimes.substack.com/p/the-annual-nerdfest-report",
+    "perspective": "news",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.25,
+      "voice": -1.5,
+      "previously_shown": -2.5,
+      "trending": 1.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://karenswallowprior.substack.com/p/frances-burneys-evelina-week-3",
+    "title": "Frances Burney’s Evelina: Week 3",
+    "original_title": "Frances Burney’s Evelina: Week 3",
+    "source_name": "Karen Swallow Prior",
+    "date_shown": "2026-11-25",
+    "final_score": 0.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "book_club_announcement",
+    "base_score": 1.0,
+    "importance": 0.0,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://karenswallowprior.substack.com/p/frances-burneys-evelina-week-3",
+    "perspective": "news",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.5,
+      "previously_shown": -2.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://laurawifler.substack.com/p/sword-drill-is-live",
+    "title": "Sword Drill is LIVE!!",
+    "original_title": "Sword Drill is LIVE!!",
+    "source_name": "Laura Wifler",
+    "date_shown": "2026-11-25",
+    "final_score": -0.75,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "product_announcement",
+    "base_score": 1.0,
+    "importance": -0.75,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://laurawifler.substack.com/p/sword-drill-is-live",
+    "perspective": "news",
+    "boosts": {
+      "tier": 0.02,
+      "recency": -4.0,
+      "frequency": 0.25,
+      "voice": 1.73,
+      "previously_shown": 1.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://danielkwilliams.substack.com/p/what-this-weeks-midterm-elections",
+    "title": "What This Week’s Midterm Elections Revealed about American Christianity and Politics",
+    "original_title": "What This Week’s Midterm Elections Revealed about American Christianity and Politics",
+    "source_name": "Daniel K. Williams",
+    "date_shown": "2026-11-25",
+    "final_score": -0.75,
+    "tags": [
+      "politics",
+      "data"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": -0.75,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://danielkwilliams.substack.com/p/what-this-weeks-midterm-elections",
+    "perspective": "news",
+    "boosts": {
+      "recency": -6.0,
+      "frequency": 0.25,
+      "voice": 1.75,
+      "previously_shown": 2.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://nijaykgupta.substack.com/p/fierce-and-faithful-wins-readers",
+    "title": "Fierce & Faithful Wins Readers' Choice Award",
+    "original_title": "Fierce & Faithful Wins Readers’ Choice Award!",
+    "source_name": "Nijay Gupta",
+    "date_shown": "2026-11-25",
+    "final_score": -0.75,
+    "tags": [
+      "news"
+    ],
+    "topic_cluster": "fierce_faithful_award",
+    "base_score": 1.0,
+    "importance": -0.75,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://nijaykgupta.substack.com/p/fierce-and-faithful-wins-readers",
+    "perspective": "news",
+    "boosts": {
+      "recency": 0.25,
+      "frequency": 0.75,
+      "voice": -1.5,
+      "previously_shown": -0.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://feeds.ligonier.org/~/973886414/0/ligonierministriesblog",
+    "title": "Ligonier Launches Free App With Thousands of Christian Resources",
+    "original_title": "Thousands of Free Resources in the App to Help You Grow",
+    "source_name": "Ligonier Ministries",
+    "date_shown": "2026-11-25",
+    "final_score": -2.25,
+    "tags": [
+      "devotional"
+    ],
+    "topic_cluster": "ligonier_app_promo",
+    "base_score": 1.0,
+    "importance": -2.25,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://feeds.ligonier.org/~/973886414/0/ligonierministriesblog",
+    "perspective": "news",
+    "boosts": {
+      "recency": 0.75,
+      "previously_shown": -1.75,
+      "diversity_penalty": -2.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://feeds.ligonier.org/~/973865495/0/ligonierministriesblog",
+    "title": "Ligonier Launches AI Assistant for Biblical Questions in Grow App",
+    "original_title": "Bring Your Questions, Get Biblical Answers: Ask Ligonier",
+    "source_name": "Ligonier Ministries",
+    "date_shown": "2026-11-25",
+    "final_score": -3.0,
+    "tags": [
+      "devotional"
+    ],
+    "topic_cluster": "ligonier_ask_promo",
+    "base_score": 1.0,
+    "importance": -3.0,
+    "depth": 0.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://feeds.ligonier.org/~/973865495/0/ligonierministriesblog",
+    "perspective": "news",
+    "boosts": {
+      "recency": 0.25,
+      "previously_shown": -1.25,
+      "diversity_penalty": -3.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://roysreport.com/michael-tait-reaches-out-to-accusers-18-months-after-abuse-reports/",
+    "title": "Michael Tait Seeks Private Meetings With Sexual Assault Accusers",
+    "original_title": "Michael Tait reaches out to accusers 18 months after abuse reports",
+    "source_name": "The Roys Report",
+    "date_shown": "2026-11-25",
+    "final_score": 7.75,
+    "tags": [
+      "news",
+      "church life"
+    ],
+    "topic_cluster": "michael_tait_abuse",
+    "base_score": 7.0,
+    "importance": 7.75,
+    "depth": 4.0,
+    "base_importance": 7.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://roysreport.com/michael-tait-reaches-out-to-accusers-18-months-after-abuse-reports",
+    "perspective": "news",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.challies.com/resources/christmas-gift-guide-2026-christian-books-bibles/",
+    "title": "Christian Books and Bibles Released in 2026",
+    "original_title": "A Gift Guide for the Christian Reader on Your List",
+    "source_name": "Tim Challies",
+    "date_shown": "2026-11-25",
+    "final_score": 3.0,
+    "tags": [
+      "culture"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 1.0,
+    "importance": 3.0,
+    "depth": 1.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://challies.com/resources/christmas-gift-guide-2026-christian-books-bibles",
+    "perspective": "news",
+    "boosts": {
+      "recency": 1.5,
+      "frequency": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.aaronrenn.com/p/when-democrats-show-up-for-men",
+    "title": "Democrats Engage on Men's Issues and Public Health",
+    "original_title": "When Democrats Show Up for Men",
+    "source_name": "Aaron Renn",
+    "date_shown": "2026-11-25",
+    "final_score": 1.25,
+    "tags": [
+      "politics"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 2.0,
+    "importance": 1.25,
+    "depth": 0.0,
+    "base_importance": 2.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://aaronrenn.com/p/when-democrats-show-up-for-men",
+    "perspective": "news",
+    "boosts": {
+      "recency": -2.0,
+      "frequency": 0.75,
+      "previously_shown": -0.75,
+      "trending": 1.25
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://mereorthodoxy.com/the-world-that-will-not-stay/",
+    "title": "God's Earthly Gifts Are Temporary But Real, Writer Argues",
+    "original_title": "The World That Will Not Stay",
+    "source_name": "Mere Orthodoxy",
+    "date_shown": "2026-11-25",
+    "final_score": 5.0,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "unique",
+    "base_score": 3.0,
+    "importance": 5.0,
+    "depth": 7.0,
+    "base_importance": 3.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://mereorthodoxy.com/the-world-that-will-not-stay",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": 1.5,
+      "trending": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.thegospelcoalition.org/article/christmas-good-news-weary/",
+    "title": "Christmas Offers Gospel Hope to Weary Believers",
+    "original_title": "Christmas Is Good News for the Headline Weary",
+    "source_name": "The Gospel Coalition",
+    "date_shown": "2026-11-25",
+    "final_score": 3.75,
+    "tags": [
+      "devotional",
+      "theology"
+    ],
+    "topic_cluster": "christmas_gospel",
+    "base_score": 3.0,
+    "importance": 3.75,
+    "depth": 7.0,
+    "base_importance": 3.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://thegospelcoalition.org/article/christmas-good-news-weary",
+    "perspective": "supportive",
+    "boosts": {
+      "recency": 1.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.christianitytoday.com/2026/11/yahweh-i-am-who-i-am/",
+    "title": "Yahweh / I Am Who I Am",
+    "original_title": "Yahweh / I Am Who I Am",
+    "source_name": "Christianity Today",
+    "date_shown": "2026-11-25",
+    "final_score": 0.75,
+    "tags": [
+      "theology",
+      "devotional"
+    ],
+    "topic_cluster": "names_of_god_series",
+    "base_score": 3.0,
+    "importance": 0.75,
+    "depth": 7.0,
+    "base_importance": 3.0,
+    "base_depth": 7.0,
+    "canonical_url": "https://christianitytoday.com/2026/11/yahweh-i-am-who-i-am",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": 1.5,
+      "duplicate_topic": -3.0,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.pewresearch.org/decoded/2026/11/24/can-ai-research-tools-help-code-data-about-restrictions-on-religion/",
+    "title": "Can AI Research Tools Help Code Data About Restrictions on Religion?",
+    "original_title": "Can AI Research Tools Help Code Data About Restrictions on Religion?",
+    "source_name": "Pew Research",
+    "date_shown": "2026-11-25",
+    "final_score": 7.0,
+    "tags": [
+      "apologetics",
+      "work"
+    ],
+    "topic_cluster": "ai_research_methodology",
+    "base_score": 5.0,
+    "importance": 7.0,
+    "depth": 4.0,
+    "base_importance": 5.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://pewresearch.org/decoded/2026/11/24/can-ai-research-tools-help-code-data-about-restrictions-on-religion",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": 1.5,
+      "voice": 0.5
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.graphsaboutreligion.com/p/catholics-are-going-to-church-lessand",
+    "title": "Catholics Are Going to Church Less, and Voting Republican More",
+    "original_title": "Catholics Are Going to Church Less—and Voting Republican More",
+    "source_name": "Ryan Burge",
+    "date_shown": "2026-11-25",
+    "final_score": 2.5,
+    "tags": [
+      "data",
+      "politics"
+    ],
+    "topic_cluster": "catholic_political_shift",
+    "base_score": 5.0,
+    "importance": 2.5,
+    "depth": 0.0,
+    "base_importance": 5.0,
+    "base_depth": 4.0,
+    "canonical_url": "https://graphsaboutreligion.com/p/catholics-are-going-to-church-lessand",
+    "perspective": "neutral",
+    "boosts": {
+      "recency": 0.75,
+      "frequency": 0.75,
+      "previously_shown": -4.0
+    },
+    "scored_by": "claude",
+    "clicks": 0
+  },
+  {
+    "url": "https://www.pewresearch.org/short-reads/2026/11/24/how-household-wealth-varies-by-race-and-ethnicity-in-the-us/",
+    "title": "How Household Wealth Varies by Race and Ethnicity in the U.S.",
+    "original_title": "How Household Wealth Varies by Race and Ethnicity in the U.S.",
+    "source_name": "Pew Research",
+    "date_shown": "2026-11-25",
+    "final_score": 2.25,
+    "tags": [
+      "data"
+    ],
+    "topic_cluster": "withdrawn_research",
+    "base_score": 1.0,
+    "importance": 2.25,
+    "depth": 1.0,
+    "base_importance": 1.0,
+    "base_depth": 1.0,
+    "canonical_url": "https://pewresearch.org/short-reads/2026/11/24/how-household-wealth-varies-by-race-and-ethnicity-in-the-us",
+    "perspective": "news",
+    "boosts": {
+      "recency": 1.5,
+      "voice": 0.5,
+      "diversity_penalty": -0.75
+    },
+    "scored_by": "claude",
+    "clicks": 0
   }
 ]

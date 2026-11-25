@@ -19679,5 +19679,146 @@
     "website": "",
     "books": [],
     "initials": "KD"
+  },
+  {
+    "name": "Jessica Morris",
+    "slug": "jessica-morris",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JM"
+  },
+  {
+    "name": "H.P. McCracken",
+    "slug": "hp-mccracken",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "HPM"
+  },
+  {
+    "name": "Monty Waldron",
+    "slug": "monty-waldron",
+    "bio": "Monty Waldron is a Christian communicator and content creator dedicated to helping believers deepen their faith and understanding of Scripture. Through various platforms, he shares insights on Christian living, biblical teaching, and spiritual growth with a heart to encourage and equip the body of Christ.",
+    "affiliation": "",
+    "role": "Christian Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "MW"
+  },
+  {
+    "name": "Benjamin Shear",
+    "slug": "benjamin-shear",
+    "bio": "Benjamin Shear is a scholar and writer focused on biblical studies and Christian theology. His work engages thoughtfully with Scripture and contemporary faith questions for modern Christian audiences.",
+    "affiliation": "",
+    "role": "Scholar & Writer",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BS"
+  },
+  {
+    "name": "Rodney Nielsen",
+    "slug": "rodney-nielsen",
+    "bio": "Rodney Nielsen is a Christian writer and content creator focused on faith-based topics and spiritual development. His work encourages believers to deepen their relationship with God through practical wisdom and biblical teaching.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "RN"
+  },
+  {
+    "name": "Ethan C. Jones",
+    "slug": "ethan-c-jones",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "ECJ"
+  },
+  {
+    "name": "Joanna Insco",
+    "slug": "joanna-insco",
+    "bio": "Joanna Insco is a writer and content creator focused on Christian living and spiritual growth. She contributes to various Christian platforms and publications, offering thoughtful perspectives on faith, discipleship, and practical theology for modern believers.",
+    "affiliation": "",
+    "role": "Writer & Content Creator",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JI"
+  },
+  {
+    "name": "Darel E. Paul",
+    "slug": "darel-e-paul",
+    "bio": "Darel E. Paul is a scholar and writer who explores the intersection of politics, culture, and Christian faith. His work examines how contemporary ideologies shape society and offers thoughtful analysis from a Christian worldview perspective.",
+    "affiliation": "",
+    "role": "Author & Scholar",
+    "education": "",
+    "website": "",
+    "books": [
+      {
+        "title": "The Cult of Trump",
+        "amazon_url": "https://www.amazon.com/s?k=The+Cult+of+Trump+Darel+Paul"
+      },
+      {
+        "title": "The Identity Trap",
+        "amazon_url": "https://www.amazon.com/s?k=The+Identity+Trap+Darel+Paul"
+      }
+    ],
+    "initials": "DEP"
+  },
+  {
+    "name": "Delaney Baker",
+    "slug": "delaney-baker",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "DB"
+  },
+  {
+    "name": "Judy Nelson Lewis",
+    "slug": "judy-nelson-lewis",
+    "bio": "Judy Nelson Lewis is a Christian author and speaker who has contributed to faith-based publications and women's ministry resources. Her writing focuses on encouraging believers to deepen their spiritual walk and biblical understanding.",
+    "affiliation": "",
+    "role": "Author & Speaker",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "JNL"
+  },
+  {
+    "name": "Carrie Henry",
+    "slug": "carrie-henry",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "CH"
+  },
+  {
+    "name": "Brian Boecker",
+    "slug": "brian-boecker",
+    "bio": "",
+    "affiliation": "",
+    "role": "",
+    "education": "",
+    "website": "",
+    "books": [],
+    "initials": "BB"
   }
 ]

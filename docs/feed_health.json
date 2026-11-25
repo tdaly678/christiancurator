@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-24T10:01:48+00:00",
+  "run_at": "2026-11-25T10:01:48+00:00",
   "sources": [
     {
       "source": "The Gospel Coalition",
@@ -7,7 +7,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 60,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -17,7 +17,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-23",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "byline_from_page": {
         "resolved": 10,
@@ -42,12 +42,12 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "byline_from_page": {
-        "resolved": 0,
+        "resolved": 3,
         "no_byline": 0,
-        "failed": 2
+        "failed": 0
       },
       "stale": false
     },
@@ -57,7 +57,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 50,
-      "newest_date": "2026-11-21",
+      "newest_date": "2026-11-24",
       "bozo": false,
       "stale": false
     },
@@ -67,7 +67,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -87,7 +87,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 30,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -107,7 +107,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 41,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "user_agent": "reader",
       "stale": false
@@ -118,7 +118,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 50,
-      "newest_date": "2026-11-18",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "byline_from_page": {
         "resolved": 20,
@@ -133,7 +133,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-23",
+      "newest_date": "2026-11-24",
       "bozo": false,
       "stale": false
     },
@@ -143,7 +143,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-23",
+      "newest_date": "2026-11-24",
       "bozo": false,
       "stale": false
     },
@@ -153,7 +153,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-23",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "byline_from_page": {
         "resolved": 15,
@@ -168,7 +168,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-23",
+      "newest_date": "2026-11-24",
       "bozo": false,
       "byline_from_page": {
         "resolved": 15,
@@ -192,8 +192,8 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 24,
-      "newest_date": "2026-11-24",
+      "n_entries": 35,
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -202,8 +202,8 @@
       "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 51,
-      "newest_date": "2026-11-24",
+      "n_entries": 58,
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -213,7 +213,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 72,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -237,6 +237,8 @@
       "newest_date": "2026-11-10",
       "bozo": false,
       "via": "proxy",
+      "retries": 3,
+      "user_agent": "reader",
       "stale": false
     },
     {
@@ -256,7 +258,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-12",
+      "newest_date": "2026-11-24",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -288,7 +290,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 12,
-      "newest_date": "2026-11-19",
+      "newest_date": "2026-11-24",
       "bozo": false,
       "sponsored_dropped": [
         "The Metric That’s Killing Your Church’s Momentum",
@@ -312,7 +314,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -326,7 +328,6 @@
       "newest_date": "2026-11-23",
       "bozo": false,
       "via": "proxy",
-      "retries": 1,
       "stale": false
     },
     {
@@ -353,11 +354,22 @@
       "source": "Pew Research",
       "url": "https://www.pewresearch.org/religion/feed/",
       "role": "primary",
-      "http_status": 403,
-      "n_entries": 0,
-      "newest_date": null,
+      "http_status": 200,
+      "n_entries": 100,
+      "newest_date": "2026-11-24",
       "bozo": false,
-      "error": "HTTP 403"
+      "url_dropped": [
+        "How Americans feel about the midterms",
+        "🌍 Projecting the future of world religions",
+        "Dating Attitudes of Single Black Americans",
+        "McClatchy turns to AI after local newspaper layoffs"
+      ],
+      "byline_from_page": {
+        "resolved": 16,
+        "no_byline": 0,
+        "failed": 0
+      },
+      "stale": false
     },
     {
       "source": "Lifeway Research",
@@ -373,25 +385,23 @@
       "source": "Joy Clarkson",
       "url": "https://joyclarkson.substack.com/feed",
       "role": "primary",
-      "http_status": 429,
-      "n_entries": 0,
-      "newest_date": null,
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-11-01",
       "bozo": false,
       "via": "proxy",
-      "retries": 4,
-      "error": "HTTP 429"
+      "stale": false
     },
     {
       "source": "Mike Cosper",
       "url": "https://mikecosper.substack.com/feed",
       "role": "primary",
-      "http_status": 429,
-      "n_entries": 0,
-      "newest_date": null,
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-09-18",
       "bozo": false,
       "via": "proxy",
-      "retries": 4,
-      "error": "HTTP 429"
+      "stale": true
     },
     {
       "source": "Bethel McGrew",
@@ -429,25 +439,24 @@
       "source": "Nadya Williams",
       "url": "https://nadyawilliams.substack.com/feed",
       "role": "primary",
-      "http_status": 429,
-      "n_entries": 0,
-      "newest_date": null,
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-11-24",
       "bozo": false,
       "via": "proxy",
-      "retries": 4,
-      "error": "HTTP 429"
+      "stale": false
     },
     {
       "source": "Daniel K. Williams",
       "url": "https://danielkwilliams.substack.com/feed",
       "role": "primary",
-      "http_status": 429,
-      "n_entries": 0,
-      "newest_date": null,
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-11-06",
       "bozo": false,
       "via": "proxy",
-      "retries": 4,
-      "error": "HTTP 429"
+      "retries": 1,
+      "stale": false
     },
     {
       "source": "Tsh Oxenreider",
@@ -455,7 +464,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-20",
+      "newest_date": "2026-11-24",
       "bozo": false,
       "stale": false
     },
@@ -498,7 +507,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 12,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -508,7 +517,7 @@
       "role": "discovery",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -518,10 +527,9 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-17",
+      "newest_date": "2026-11-24",
       "bozo": false,
       "via": "proxy",
-      "retries": 1,
       "stale": false
     },
     {
@@ -541,7 +549,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 6,
-      "newest_date": "2026-11-21",
+      "newest_date": "2026-11-24",
       "bozo": false,
       "stale": false
     },
@@ -615,7 +623,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -667,7 +675,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -678,7 +686,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-22",
+      "newest_date": "2026-11-24",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -709,13 +717,12 @@
       "source": "Thomas Kidd",
       "url": "https://thomaskidd.substack.com/feed",
       "role": "primary",
-      "http_status": 429,
-      "n_entries": 0,
-      "newest_date": null,
+      "http_status": 200,
+      "n_entries": 20,
+      "newest_date": "2026-10-23",
       "bozo": false,
       "via": "proxy",
-      "retries": 4,
-      "error": "HTTP 429"
+      "stale": false
     },
     {
       "source": "Chris Gehrz",
@@ -756,7 +763,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-20",
+      "newest_date": "2026-11-24",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -797,8 +804,8 @@
       "url": "https://feeds.megaphone.fm/CHRTDY1120709803",
       "role": "media",
       "http_status": 200,
-      "n_entries": 510,
-      "newest_date": "2026-11-23",
+      "n_entries": 511,
+      "newest_date": "2026-11-25",
       "bozo": false,
       "apple_episode_urls": 50,
       "stale": false
@@ -847,45 +854,15 @@
     }
   ],
   "zero_streaks": {
-    "Pew Research": {
-      "since": "2026-11-24",
-      "last_date": "2026-11-24",
-      "days": 1
-    },
-    "Joy Clarkson": {
-      "since": "2026-11-24",
-      "last_date": "2026-11-24",
-      "days": 1
-    },
-    "Mike Cosper": {
-      "since": "2026-11-24",
-      "last_date": "2026-11-24",
-      "days": 1
-    },
-    "Nadya Williams": {
-      "since": "2026-11-24",
-      "last_date": "2026-11-24",
-      "days": 1
-    },
-    "Daniel K. Williams": {
-      "since": "2026-11-24",
-      "last_date": "2026-11-24",
-      "days": 1
-    },
     "Kate Shellnutt": {
       "since": "2026-11-24",
-      "last_date": "2026-11-24",
-      "days": 1
+      "last_date": "2026-11-25",
+      "days": 2
     },
     "Faithfully Magazine": {
       "since": "2026-11-20",
-      "last_date": "2026-11-24",
-      "days": 5
-    },
-    "Thomas Kidd": {
-      "since": "2026-11-24",
-      "last_date": "2026-11-24",
-      "days": 1
+      "last_date": "2026-11-25",
+      "days": 6
     }
   }
 }

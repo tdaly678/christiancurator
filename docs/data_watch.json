@@ -179,6 +179,18 @@
       "status": "fetched",
       "attempts": 1,
       "note": "0 verified figure(s)"
+    },
+    "https://pewresearch.org/decoded/2026/11/24/can-ai-research-tools-help-code-data-about-restrictions-on-religion": {
+      "date": "2026-11-25",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
+    },
+    "https://pewresearch.org/short-reads/2026/11/24/how-household-wealth-varies-by-race-and-ethnicity-in-the-us": {
+      "date": "2026-11-25",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
     }
   },
   "fresh": {
@@ -418,6 +430,12 @@
         "title": "YouVersion’s Biggest Problem Is Claude, ChatGPT Misquoting the Bible",
         "url": "https://www.christianitytoday.com/2026/11/youversion-bible-app-ai-claude-chatgpt-bobby-gruenewald/",
         "source": "Christianity Today"
+      },
+      {
+        "date": "2026-11-25",
+        "title": "Can AI Research Tools Help Code Data About Restrictions on Religion?",
+        "url": "https://www.pewresearch.org/decoded/2026/11/24/can-ai-research-tools-help-code-data-about-restrictions-on-religion/",
+        "source": "Pew Research"
       }
     ],
     "ai-and-the-church": [
@@ -454,6 +472,12 @@
         "title": "Many Black Adults Say Close Relationships Influence Their Views About Being a Black Man or Woman",
         "url": "https://www.pewresearch.org/short-reads/2026/11/12/many-black-adults-say-close-relationships-influence-their-views-about-being-a-black-man-or-woman/",
         "source": "Pew Research"
+      },
+      {
+        "date": "2026-11-25",
+        "title": "How Household Wealth Varies by Race and Ethnicity in the U.S.",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/24/how-household-wealth-varies-by-race-and-ethnicity-in-the-us/",
+        "source": "Pew Research"
       }
     ],
     "artificial-intelligence": [
@@ -474,6 +498,12 @@
         "title": "YouVersion’s Biggest Problem Is Claude, ChatGPT Misquoting the Bible",
         "url": "https://www.christianitytoday.com/2026/11/youversion-bible-app-ai-claude-chatgpt-bobby-gruenewald/",
         "source": "Christianity Today"
+      },
+      {
+        "date": "2026-11-25",
+        "title": "Can AI Research Tools Help Code Data About Restrictions on Religion?",
+        "url": "https://www.pewresearch.org/decoded/2026/11/24/can-ai-research-tools-help-code-data-about-restrictions-on-religion/",
+        "source": "Pew Research"
       }
     ],
     "sanctification": [
@@ -605,30 +635,10 @@
       }
     ]
   },
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "last_run": {
-    "date": "2026-11-24",
+    "date": "2026-11-25",
     "stories": [
-      {
-        "title": "The Future of World Religions: Population Growth Projections, 2020-2070",
-        "url": "https://www.pewresearch.org/religion/2026/11/18/the-future-of-world-religions-population-growth-projections-2020-2070/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 8.25,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
       {
         "title": "Attacks on Christians in Europe rose 44% last year: observatory",
         "url": "https://www.christianpost.com/news/attacks-on-christians-in-europe-rose-44-last-year-observatory.html",
@@ -650,23 +660,27 @@
         ]
       },
       {
-        "title": "The Church Needs to Know Its History",
-        "url": "https://www.thegospelcoalition.org/reviews/church-know-its-history/",
-        "source": "The Gospel Coalition",
+        "title": "Can AI Research Tools Help Code Data About Restrictions on Religion?",
+        "url": "https://www.pewresearch.org/decoded/2026/11/24/can-ai-research-tools-help-code-data-about-restrictions-on-religion/",
+        "source": "Pew Research",
         "signals": {
-          "publishers": [],
-          "figures": [],
-          "words": [
-            "surveys"
+          "publishers": [
+            "Pew Research Center"
           ],
+          "figures": [],
+          "words": [],
           "data_tag": false
         },
-        "topics": [],
-        "trend": 5.75,
+        "topics": [
+          "technology-and-discipleship",
+          "artificial-intelligence"
+        ],
+        "trend": 8.0,
         "outlets": 1,
         "on_digest": true,
         "actions": [
-          "no topic page matched"
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
         ]
       },
       {
@@ -694,26 +708,6 @@
         ]
       },
       {
-        "title": "Key Factors Shaping the Global Future of Religions",
-        "url": "https://www.pewresearch.org/religion/2026/11/18/key-factors-shaping-the-global-future-of-religions/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 4.5,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
         "title": "Q&A: How Pew Research Center Projects Religious Groups’ Future Growth or Decline",
         "url": "https://www.pewresearch.org/short-reads/2026/11/18/qa-how-pew-research-center-projects-religious-groups-future-growth-or-decline/",
         "source": "Pew Research",
@@ -733,6 +727,29 @@
         "on_digest": true,
         "actions": [
           "no topic page matched"
+        ]
+      },
+      {
+        "title": "Catholics Are Going to Church Less—and Voting Republican More",
+        "url": "https://www.graphsaboutreligion.com/p/catholics-are-going-to-church-lessand",
+        "source": "Ryan Burge",
+        "signals": {
+          "publishers": [
+            "Ryan Burge"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [
+          "politics-and-the-church"
+        ],
+        "trend": 3.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-23 (0 verified figure(s))"
         ]
       },
       {
@@ -781,6 +798,29 @@
         ]
       },
       {
+        "title": "How Household Wealth Varies by Race and Ethnicity in the U.S.",
+        "url": "https://www.pewresearch.org/short-reads/2026/11/24/how-household-wealth-varies-by-race-and-ethnicity-in-the-us/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": true
+        },
+        "topics": [
+          "racial-reconciliation"
+        ],
+        "trend": 3.25,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
+        ]
+      },
+      {
         "title": "Pew: Christians Will Be Minority in North America by 2070, Will Double in Africa",
         "url": "https://www.christianitytoday.com/2026/11/pew-research-christians-minority-2070-africa-growth/",
         "source": "Christianity Today",
@@ -789,10 +829,7 @@
             "Pew Research Center"
           ],
           "figures": [],
-          "words": [
-            "report",
-            "research"
-          ],
+          "words": [],
           "data_tag": true
         },
         "topics": [],
@@ -855,9 +892,7 @@
             "Lifeway Research"
           ],
           "figures": [],
-          "words": [
-            "study"
-          ],
+          "words": [],
           "data_tag": true
         },
         "topics": [
@@ -873,26 +908,6 @@
         ]
       },
       {
-        "title": "How Much Less Religious Is Australia Than the U.S.?",
-        "url": "https://www.graphsaboutreligion.com/p/how-much-less-religious-is-australia",
-        "source": "Ryan Burge",
-        "signals": {
-          "publishers": [
-            "Ryan Burge"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": true
-        },
-        "topics": [],
-        "trend": 1.25,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
         "title": "10 Ways to Form Bold Disciples of Jesus",
         "url": "https://research.lifeway.com/2026/11/23/10-ways-to-form-bold-disciples-of-jesus/",
         "source": "Lifeway Research",
@@ -905,7 +920,7 @@
           "data_tag": false
         },
         "topics": [],
-        "trend": 0.25,
+        "trend": 1.25,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -913,8 +928,8 @@
         ]
       },
       {
-        "title": "Catholics Are Going to Church Less—and Voting Republican More",
-        "url": "https://www.graphsaboutreligion.com/p/catholics-are-going-to-church-lessand",
+        "title": "How Much Less Religious Is Australia Than the U.S.?",
+        "url": "https://www.graphsaboutreligion.com/p/how-much-less-religious-is-australia",
         "source": "Ryan Burge",
         "signals": {
           "publishers": [
@@ -924,20 +939,37 @@
           "words": [],
           "data_tag": true
         },
-        "topics": [
-          "politics-and-the-church"
-        ],
-        "trend": 0.25,
+        "topics": [],
+        "trend": 0.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-23 (0 verified figure(s))"
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "9 Most Popular Thanksgiving Bible Verses",
+        "url": "https://research.lifeway.com/2026/11/20/9-most-popular-thanksgiving-bible-verses/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": -0.75,
+        "outlets": 1,
+        "on_digest": false,
+        "actions": [
+          "no topic page matched"
         ]
       }
     ],
     "pages": [],
-    "fetched": 0,
+    "fetched": 2,
     "hits": 15
   }
 }
