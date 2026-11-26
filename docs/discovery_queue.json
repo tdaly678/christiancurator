@@ -1,75 +1,5 @@
 {
  "entries": {
-  "https://mereorthodoxy.com/remembering-john-allen-chau": {
-   "url": "https://mereorthodoxy.com/remembering-john-allen-chau/",
-   "canonical_url": "https://mereorthodoxy.com/remembering-john-allen-chau",
-   "anchor": "Remembering John Allen Chau",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-18-2026/",
-   "found_on": "2026-11-18",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-18",
-   "title": "Remembering John Allen Chau",
-   "source_name": "Mere Orthodoxy"
-  },
-  "https://thebardowl.substack.com/p/how-to-experience-gospel-transformation": {
-   "url": "https://thebardowl.substack.com/p/how-to-experience-gospel-transformation",
-   "canonical_url": "https://thebardowl.substack.com/p/how-to-experience-gospel-transformation",
-   "anchor": "How to Experience Gospel Transformation",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-18-2026/",
-   "found_on": "2026-11-18",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
-  "https://livingarchivenewsletter.substack.com/p/the-quiet-voice": {
-   "url": "https://livingarchivenewsletter.substack.com/p/the-quiet-voice",
-   "canonical_url": "https://livingarchivenewsletter.substack.com/p/the-quiet-voice",
-   "anchor": "The Quiet Voice",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-18-2026/",
-   "found_on": "2026-11-18",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
-  "https://desiringgod.org/interviews/what-we-get-wrong-about-the-tears-of-jesus": {
-   "url": "https://www.desiringgod.org/interviews/what-we-get-wrong-about-the-tears-of-jesus",
-   "canonical_url": "https://desiringgod.org/interviews/what-we-get-wrong-about-the-tears-of-jesus",
-   "anchor": "What We Get Wrong About the Tears of Jesus",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-18-2026/",
-   "found_on": "2026-11-18",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-18",
-   "title": "What We Get Wrong About the Tears of Jesus",
-   "source_name": "Desiring God"
-  },
-  "https://reformedpolitics.substack.com/p/i-thought-adultery-had-been-approved": {
-   "url": "https://reformedpolitics.substack.com/p/i-thought-adultery-had-been-approved",
-   "canonical_url": "https://reformedpolitics.substack.com/p/i-thought-adultery-had-been-approved",
-   "anchor": "I Thought Adultery Had Been Approved",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-18-2026/",
-   "found_on": "2026-11-18",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
-  "https://justinpoythress.com/the-singularity-will-never-happen": {
-   "url": "https://justinpoythress.com/the-singularity-will-never-happen/",
-   "canonical_url": "https://justinpoythress.com/the-singularity-will-never-happen",
-   "anchor": "The Singularity Will Never Happen",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-18-2026/",
-   "found_on": "2026-11-18",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
   "https://logos.sjv.io/PzEPWz": {
    "url": "https://logos.sjv.io/PzEPWz",
    "canonical_url": "https://logos.sjv.io/PzEPWz",
@@ -468,9 +398,9 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-25-2026/",
    "found_on": "2026-11-25",
-   "status": "pending",
-   "attempts": 1,
-   "error": "no title"
+   "status": "failed",
+   "attempts": 2,
+   "error": "HTTP 405"
   },
   "https://preachleadlove.com/single-post/how-to-spot-a-false-teacher": {
    "url": "https://www.preachleadlove.com/single-post/how-to-spot-a-false-teacher",
@@ -523,7 +453,77 @@
    "graduated_on": "2026-11-25",
    "title": "AP Article: How to Listen to a Sermon",
    "source_name": "AP"
+  },
+  "https://michaeljensen603.substack.com/p/evangelicalism-and-high-culture": {
+   "url": "https://michaeljensen603.substack.com/p/evangelicalism-and-high-culture",
+   "canonical_url": "https://michaeljensen603.substack.com/p/evangelicalism-and-high-culture",
+   "anchor": "Evangelicalism and ‘High’ Culture",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-26-2026/",
+   "found_on": "2026-11-26",
+   "status": "pending",
+   "attempts": 1,
+   "error": "HTTP 403"
+  },
+  "https://kraigkeck.com/reflection-on-a-public-memorial-service": {
+   "url": "https://kraigkeck.com/reflection-on-a-public-memorial-service/",
+   "canonical_url": "https://kraigkeck.com/reflection-on-a-public-memorial-service",
+   "anchor": "Reflection on a Public Memorial Service",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-26-2026/",
+   "found_on": "2026-11-26",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-26",
+   "title": "Reflection on a Public Memorial Service",
+   "source_name": "kraigkeck.com"
+  },
+  "https://goldenthread.substack.com/p/the-pilgrims-did-not-invent-thanksgiving": {
+   "url": "https://goldenthread.substack.com/p/the-pilgrims-did-not-invent-thanksgiving",
+   "canonical_url": "https://goldenthread.substack.com/p/the-pilgrims-did-not-invent-thanksgiving",
+   "anchor": "The Pilgrims Did Not Invent Thanksgiving",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-26-2026/",
+   "found_on": "2026-11-26",
+   "status": "pending",
+   "attempts": 1,
+   "error": "HTTP 403"
+  },
+  "https://befriendfaithfulness.substack.com/p/quarters-and-contentment": {
+   "url": "https://befriendfaithfulness.substack.com/p/quarters-and-contentment",
+   "canonical_url": "https://befriendfaithfulness.substack.com/p/quarters-and-contentment",
+   "anchor": "Quarters and Contentment",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-26-2026/",
+   "found_on": "2026-11-26",
+   "status": "pending",
+   "attempts": 1,
+   "error": "HTTP 403"
+  },
+  "https://alifeoverseas.com/are-we-asking-too-much-of-our-kids": {
+   "url": "https://www.alifeoverseas.com/are-we-asking-too-much-of-our-kids/",
+   "canonical_url": "https://alifeoverseas.com/are-we-asking-too-much-of-our-kids",
+   "anchor": "Are We Asking Too Much of Our Kids?",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-26-2026/",
+   "found_on": "2026-11-26",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-26",
+   "title": "Are We Asking Too Much of Our Kids?",
+   "source_name": "A Life Overseas  |"
+  },
+  "https://epm.org/resources/2026/Nov/25/spirit-gratitude": {
+   "url": "https://www.epm.org/resources/2026/Nov/25/spirit-gratitude/",
+   "canonical_url": "https://epm.org/resources/2026/Nov/25/spirit-gratitude",
+   "anchor": "Do We Have a Spirit of Entitlement or a Spirit of Gratitude?",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-26-2026/",
+   "found_on": "2026-11-26",
+   "status": "pending",
+   "attempts": 1,
+   "error": "no title"
   }
  },
- "updated": "2026-11-25T10:01:50+00:00"
+ "updated": "2026-11-26T10:01:44+00:00"
 }

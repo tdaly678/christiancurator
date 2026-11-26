@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-25T10:01:48+00:00",
+  "run_at": "2026-11-26T10:01:43+00:00",
   "sources": [
     {
       "source": "The Gospel Coalition",
@@ -7,7 +7,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 60,
-      "newest_date": "2026-11-25",
+      "newest_date": "2026-11-28",
       "bozo": false,
       "stale": false
     },
@@ -42,12 +42,12 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-25",
+      "newest_date": "2026-11-26",
       "bozo": false,
       "byline_from_page": {
-        "resolved": 3,
+        "resolved": 0,
         "no_byline": 0,
-        "failed": 0
+        "failed": 2
       },
       "stale": false
     },
@@ -57,7 +57,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 50,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -77,7 +77,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 100,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -106,8 +106,8 @@
       "url": "https://www.ligonier.org/feed/",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 41,
-      "newest_date": "2026-11-25",
+      "n_entries": 42,
+      "newest_date": "2026-11-26",
       "bozo": false,
       "user_agent": "reader",
       "stale": false
@@ -133,7 +133,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -143,7 +143,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -153,7 +153,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-25",
+      "newest_date": "2026-11-26",
       "bozo": false,
       "byline_from_page": {
         "resolved": 15,
@@ -168,7 +168,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "byline_from_page": {
         "resolved": 15,
@@ -192,8 +192,8 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 35,
-      "newest_date": "2026-11-25",
+      "n_entries": 27,
+      "newest_date": "2026-11-26",
       "bozo": false,
       "stale": false
     },
@@ -202,8 +202,8 @@
       "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
       "role": "primary",
       "http_status": 200,
-      "n_entries": 58,
-      "newest_date": "2026-11-25",
+      "n_entries": 57,
+      "newest_date": "2026-11-26",
       "bozo": false,
       "stale": false
     },
@@ -213,7 +213,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 72,
-      "newest_date": "2026-11-25",
+      "newest_date": "2026-11-26",
       "bozo": false,
       "stale": false
     },
@@ -223,7 +223,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-26",
       "bozo": false,
       "user_agent": "reader",
       "stale": false
@@ -232,14 +232,13 @@
       "source": "Kyle Worley",
       "url": "https://sacredslang.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-11-10",
+      "http_status": 429,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
       "via": "proxy",
-      "retries": 3,
-      "user_agent": "reader",
-      "stale": false
+      "retries": 4,
+      "error": "HTTP 429"
     },
     {
       "source": "Phylicia Masonheimer",
@@ -256,12 +255,13 @@
       "source": "Laura Wifler",
       "url": "https://laurawifler.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-11-24",
+      "http_status": 429,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
       "via": "proxy",
-      "stale": false
+      "retries": 4,
+      "error": "HTTP 429"
     },
     {
       "source": "Karen Swallow Prior",
@@ -314,7 +314,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-25",
+      "newest_date": "2026-11-26",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -325,7 +325,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-23",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -336,7 +336,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-23",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -356,16 +356,17 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 100,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "url_dropped": [
+        "Gratitude and prayer at the Thanksgiving dinner table",
         "How Americans feel about the midterms",
         "🌍 Projecting the future of world religions",
         "Dating Attitudes of Single Black Americans",
         "McClatchy turns to AI after local newspaper layoffs"
       ],
       "byline_from_page": {
-        "resolved": 16,
+        "resolved": 15,
         "no_byline": 0,
         "failed": 0
       },
@@ -409,7 +410,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-17",
+      "newest_date": "2026-11-26",
       "bozo": false,
       "stale": false
     },
@@ -419,7 +420,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-20",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -444,6 +445,7 @@
       "newest_date": "2026-11-24",
       "bozo": false,
       "via": "proxy",
+      "retries": 1,
       "stale": false
     },
     {
@@ -455,7 +457,6 @@
       "newest_date": "2026-11-06",
       "bozo": false,
       "via": "proxy",
-      "retries": 1,
       "stale": false
     },
     {
@@ -474,7 +475,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-20",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -517,7 +518,7 @@
       "role": "discovery",
       "http_status": 200,
       "n_entries": 10,
-      "newest_date": "2026-11-25",
+      "newest_date": "2026-11-26",
       "bozo": false,
       "stale": false
     },
@@ -562,6 +563,7 @@
       "newest_date": "2026-09-03",
       "bozo": false,
       "via": "proxy",
+      "retries": 1,
       "stale": true
     },
     {
@@ -570,7 +572,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-20",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -623,7 +625,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-25",
+      "newest_date": "2026-11-26",
       "bozo": false,
       "stale": false
     },
@@ -646,6 +648,7 @@
       "newest_date": "2026-11-22",
       "bozo": false,
       "via": "proxy",
+      "retries": 2,
       "stale": false
     },
     {
@@ -664,7 +667,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-21",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -675,7 +678,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-25",
+      "newest_date": "2026-11-26",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -686,7 +689,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-24",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -695,12 +698,13 @@
       "source": "Carmen Joy Imes",
       "url": "https://carmenjoyimes.substack.com/feed",
       "role": "primary",
-      "http_status": 200,
-      "n_entries": 20,
-      "newest_date": "2026-11-23",
+      "http_status": 429,
+      "n_entries": 0,
+      "newest_date": null,
       "bozo": false,
       "via": "proxy",
-      "stale": false
+      "retries": 4,
+      "error": "HTTP 429"
     },
     {
       "source": "Beth Felker Jones",
@@ -752,7 +756,7 @@
       "role": "primary",
       "http_status": 200,
       "n_entries": 20,
-      "newest_date": "2026-11-16",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "via": "proxy",
       "stale": false
@@ -774,7 +778,7 @@
       "role": "media",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-23",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -784,7 +788,7 @@
       "role": "media",
       "http_status": 200,
       "n_entries": 15,
-      "newest_date": "2026-11-23",
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -793,8 +797,8 @@
       "url": "https://rss.buzzsprout.com/2612792.rss",
       "role": "media",
       "http_status": 200,
-      "n_entries": 327,
-      "newest_date": "2026-11-18",
+      "n_entries": 328,
+      "newest_date": "2026-11-25",
       "bozo": false,
       "apple_episode_urls": 50,
       "stale": false
@@ -837,8 +841,8 @@
       "url": "https://rss.libsyn.com/shows/40819/destinations/121777.xml",
       "role": "media",
       "http_status": 200,
-      "n_entries": 814,
-      "newest_date": "2026-11-18",
+      "n_entries": 815,
+      "newest_date": "2026-11-25",
       "bozo": false,
       "stale": false
     },
@@ -854,15 +858,30 @@
     }
   ],
   "zero_streaks": {
+    "Kyle Worley": {
+      "since": "2026-11-26",
+      "last_date": "2026-11-26",
+      "days": 1
+    },
+    "Laura Wifler": {
+      "since": "2026-11-26",
+      "last_date": "2026-11-26",
+      "days": 1
+    },
     "Kate Shellnutt": {
       "since": "2026-11-24",
-      "last_date": "2026-11-25",
-      "days": 2
+      "last_date": "2026-11-26",
+      "days": 3
     },
     "Faithfully Magazine": {
       "since": "2026-11-20",
-      "last_date": "2026-11-25",
-      "days": 6
+      "last_date": "2026-11-26",
+      "days": 7
+    },
+    "Carmen Joy Imes": {
+      "since": "2026-11-26",
+      "last_date": "2026-11-26",
+      "days": 1
     }
   }
 }
