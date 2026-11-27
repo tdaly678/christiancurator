@@ -42,7 +42,17 @@
       "duration_iso": "PT28S",
       "upload_date": "2026-11-25",
       "thumbnail_path": "/assets/short-eschatology-position-3-thumb.webp"
+    },
+    "position-4": {
+      "youtube_id": "sPr6EzLU6Bo",
+      "name": "Will the Gospel Fill the Earth Before Jesus Returns? Postmillennialism Explained",
+      "view": "Postmillennialism",
+      "description": "Postmillennialism holds that the thousand years is the gospel age still unfolding: the kingdom grows like a mustard seed until it fills the earth, and then Christ returns. It is one of four Christian views of the end times.",
+      "duration_seconds": 28,
+      "duration_iso": "PT28S",
+      "upload_date": "2026-11-27",
+      "thumbnail_path": "/assets/short-eschatology-position-4-thumb.webp"
     }
   },
-  "notes": "Duration from ffprobe on .christian-orchestrator/video/V28A-full.mp4 (201.6 s; V27 and V28B are the same length). Thumbnail is V9 thumbnail F, confirmed as the live YouTube thumbnail by comparing it with i.ytimg.com maxresdefault.jpg on 2026-11-19. Shorts (S6, 2026-11-23): ids found in the public channel RSS (channel UC8cyC2xYDJLYD9wQnQloJwA) and confirmed by oEmbed title; durations and upload dates from the public watch page (itemprop duration PT0M37S and PT0M26S, uploadDate); thumbnails are the YouTube oardefault 1080x1920 images resized to 180x320 WebP. Short 3 (S7, 2026-11-25): id BGnBWK-58ik found in the public channel RSS and confirmed by oEmbed title; duration from the public watch page (itemprop duration PT0M28S; the final file was 27.30 s), uploadDate 2026-11-25; thumbnail made the same way. Keys are debate card ids (position-1 to position-4); a card with no entry shows nothing."
+  "notes": "Duration from ffprobe on .christian-orchestrator/video/V28A-full.mp4 (201.6 s; V27 and V28B are the same length). Thumbnail is V9 thumbnail F, confirmed as the live YouTube thumbnail by comparing it with i.ytimg.com maxresdefault.jpg on 2026-11-19. Shorts (S6, 2026-11-23): ids found in the public channel RSS (channel UC8cyC2xYDJLYD9wQnQloJwA) and confirmed by oEmbed title; durations and upload dates from the public watch page (itemprop duration PT0M37S and PT0M26S, uploadDate); thumbnails are the YouTube oardefault 1080x1920 images resized to 180x320 WebP. Short 3 (S7, 2026-11-25): id BGnBWK-58ik found in the public channel RSS and confirmed by oEmbed title; duration from the public watch page (itemprop duration PT0M28S; the final file was 27.30 s), uploadDate 2026-11-25; thumbnail made the same way. Short 4 (S8, 2026-11-27): id sPr6EzLU6Bo found in the public channel RSS and confirmed by oEmbed title; duration from the public watch page (itemprop duration PT0M28S; the final file was 27.57 s), uploadDate 2026-11-27; thumbnail made the same way from YouTube's 1080x1920 oar2.jpg (oardefault.jpg was not available for this Short). Keys are debate card ids (position-1 to position-4); a card with no entry shows nothing."
 }

@@ -94,11 +94,13 @@ def test_current_shorts_land_in_their_cards_only():
     assert 'data-video="jrkytvZbMYY"' in _card(out, "position-2")
     assert 'data-video="BGnBWK-58ik"' in _card(out, "position-3")
     assert "Watch the 28-second version" in _card(out, "position-3")
+    assert DATA["shorts"]["position-4"]["youtube_id"] == "sPr6EzLU6Bo"
+    assert 'data-video="sPr6EzLU6Bo"' in _card(out, "position-4")
+    assert "Watch the 28-second version" in _card(out, "position-4")
     for key in ("position-1", "position-2"):
         assert "BGnBWK-58ik" not in _card(out, key)
-    # Short 4 (postmillennialism) is not live yet: its card stays empty.
-    assert "position-4" not in DATA["shorts"]
-    assert "cc-short" not in _card(out, "position-4")
+    for key in ("position-1", "position-2", "position-3"):
+        assert "sPr6EzLU6Bo" not in _card(out, key)
     # Placed after Key Reads, not inside it.
     c1 = _card(out, "position-1")
     assert c1.index("</a>\n</div>") < c1.index("CC-TOPIC-SHORT:position-1:START")
