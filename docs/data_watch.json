@@ -203,6 +203,12 @@
       "status": "fetched",
       "attempts": 1,
       "note": "0 verified figure(s)"
+    },
+    "https://thegospelcoalition.org/reviews/church-know-its-history": {
+      "date": "2026-11-27",
+      "status": "fetched",
+      "attempts": 1,
+      "note": "0 verified figure(s)"
     }
   },
   "fresh": {
@@ -583,6 +589,22 @@
         "url": "https://research.lifeway.com/2026/11/19/new-insights-report-helps-churches-connect-evangelism-and-discipleship/",
         "source": "Lifeway Research"
       }
+    ],
+    "church-history": [
+      {
+        "date": "2026-11-24",
+        "title": "The Church Needs to Know Its History",
+        "url": "https://www.thegospelcoalition.org/reviews/church-know-its-history/",
+        "source": "The Gospel Coalition"
+      }
+    ],
+    "abortion": [
+      {
+        "date": "2026-11-27",
+        "title": "ERLC, state leaders respond to Nov. 3 ballot measure successes, failures",
+        "url": "https://erlc.com/press/erlc-state-leaders-respond-to-nov-3-ballot-measure-successes-failures/",
+        "source": "ERLC"
+      }
     ]
   },
   "figures": {
@@ -659,9 +681,9 @@
       }
     ]
   },
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "last_run": {
-    "date": "2026-11-26",
+    "date": "2026-11-27",
     "stories": [
       {
         "title": "Can AI Research Tools Help Code Data About Restrictions on Religion?",
@@ -710,8 +732,8 @@
         ]
       },
       {
-        "title": "The Religious Gender Gap Is Really a Political Gap",
-        "url": "https://www.graphsaboutreligion.com/p/the-religious-gender-gap-is-really",
+        "title": "How the Graphs Get Made",
+        "url": "https://www.graphsaboutreligion.com/p/how-the-graphs-get-made",
         "source": "Ryan Burge",
         "signals": {
           "publishers": [
@@ -719,34 +741,10 @@
           ],
           "figures": [],
           "words": [],
-          "data_tag": true
-        },
-        "topics": [
-          "gender-and-biblical-anthropology",
-          "politics-and-the-church"
-        ],
-        "trend": 4.75,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-17 (0 verified figure(s))"
-        ]
-      },
-      {
-        "title": "Democratic Wave Sweeps In More Split Senate Delegations",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/23/democratic-wave-sweeps-in-more-split-senate-delegations/",
-        "source": "Pew Research",
-        "signals": {
-          "publishers": [
-            "Pew Research Center"
-          ],
-          "figures": [],
-          "words": [],
           "data_tag": false
         },
         "topics": [],
-        "trend": 3.5,
+        "trend": 5.0,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -762,9 +760,7 @@
             "Pew Research Center"
           ],
           "figures": [],
-          "words": [
-            "survey"
-          ],
+          "words": [],
           "data_tag": false
         },
         "topics": [
@@ -775,7 +771,7 @@
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
+          "page already checked on 2026-11-26 (0 verified figure(s))"
         ]
       },
       {
@@ -822,8 +818,28 @@
         ]
       },
       {
-        "title": "Islam Will Soon Be the World’s Largest Religion, but Christianity Will Keep Growing Too",
-        "url": "https://www.pewresearch.org/short-reads/2026/11/18/islam-will-soon-be-the-worlds-largest-religion-but-christianity-will-keep-growing-too/",
+        "title": "9 Most Popular Thanksgiving Bible Verses",
+        "url": "https://research.lifeway.com/2026/11/20/9-most-popular-thanksgiving-bible-verses/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 2.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "Acknowledgments",
+        "url": "https://www.pewresearch.org/global/2026/11/23/americans-increasingly-see-strains-in-us-germany-ties-acknowledgments/",
         "source": "Pew Research",
         "signals": {
           "publishers": [
@@ -831,10 +847,10 @@
           ],
           "figures": [],
           "words": [],
-          "data_tag": true
+          "data_tag": false
         },
         "topics": [],
-        "trend": 3.0,
+        "trend": 2.0,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -866,6 +882,51 @@
         ]
       },
       {
+        "title": "The Church Needs to Know Its History",
+        "url": "https://www.thegospelcoalition.org/reviews/church-know-its-history/",
+        "source": "The Gospel Coalition",
+        "signals": {
+          "publishers": [],
+          "figures": [],
+          "words": [
+            "surveys"
+          ],
+          "data_tag": false
+        },
+        "topics": [
+          "church-history"
+        ],
+        "trend": 1.75,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "no verifiable figure on the page: link only"
+        ]
+      },
+      {
+        "title": "How Americans Followed the 2026 Midterm Results",
+        "url": "https://www.pewresearch.org/journalism/2026/11/23/how-americans-followed-the-2026-midterm-results/",
+        "source": "Pew Research",
+        "signals": {
+          "publishers": [
+            "Pew Research Center"
+          ],
+          "figures": [
+            "90%"
+          ],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 1.25,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
         "title": "How Much Less Religious Is Australia Than the U.S.?",
         "url": "https://www.graphsaboutreligion.com/p/how-much-less-religious-is-australia",
         "source": "Ryan Burge",
@@ -886,29 +947,6 @@
         ]
       },
       {
-        "title": "10 Ways to Form Bold Disciples of Jesus",
-        "url": "https://research.lifeway.com/2026/11/23/10-ways-to-form-bold-disciples-of-jesus/",
-        "source": "Lifeway Research",
-        "signals": {
-          "publishers": [
-            "Lifeway Research"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [
-          "pastoral-ministry"
-        ],
-        "trend": 0.25,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
-        ]
-      },
-      {
         "title": "Catholics Are Going to Church Less—and Voting Republican More",
         "url": "https://www.graphsaboutreligion.com/p/catholics-are-going-to-church-lessand",
         "source": "Ryan Burge",
@@ -923,7 +961,7 @@
         "topics": [
           "politics-and-the-church"
         ],
-        "trend": 0.25,
+        "trend": 1.0,
         "outlets": 1,
         "on_digest": true,
         "actions": [
@@ -932,8 +970,32 @@
         ]
       },
       {
-        "title": "9 Most Popular Thanksgiving Bible Verses",
-        "url": "https://research.lifeway.com/2026/11/20/9-most-popular-thanksgiving-bible-verses/",
+        "title": "ERLC, state leaders respond to Nov. 3 ballot measure successes, failures",
+        "url": "https://erlc.com/press/erlc-state-leaders-respond-to-nov-3-ballot-measure-successes-failures/",
+        "source": "ERLC",
+        "signals": {
+          "publishers": [],
+          "figures": [
+            "56 percent"
+          ],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [
+          "religious-liberty",
+          "abortion"
+        ],
+        "trend": 1.0,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-11 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "4 Ways to Reach Unchurched Men",
+        "url": "https://research.lifeway.com/2026/11/18/4-ways-to-reach-unchurched-men/",
         "source": "Lifeway Research",
         "signals": {
           "publishers": [
@@ -943,17 +1005,19 @@
           "words": [],
           "data_tag": false
         },
-        "topics": [],
-        "trend": 1.5,
-        "outlets": 2,
+        "topics": [
+          "local-church"
+        ],
+        "trend": 0.75,
+        "outlets": 1,
         "on_digest": false,
         "actions": [
-          "no topic page matched"
+          "page already checked on 2026-11-18 (0 verified figure(s))"
         ]
       }
     ],
     "pages": [],
-    "fetched": 2,
-    "hits": 13
+    "fetched": 1,
+    "hits": 15
   }
 }

@@ -1,90 +1,5 @@
 {
  "entries": {
-  "https://logos.sjv.io/PzEPWz": {
-   "url": "https://logos.sjv.io/PzEPWz",
-   "canonical_url": "https://logos.sjv.io/PzEPWz",
-   "anchor": "Bible Study Week",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
-   "found_on": "2026-11-19",
-   "status": "blocked",
-   "attempts": 1,
-   "graduated_on": "2026-11-19",
-   "title": "Top Deals from Logos: Books, Bibles & More",
-   "source_name": "logos.com"
-  },
-  "https://kimberlywagner7.substack.com/p/the-hardest-day-you-may-ever-face": {
-   "url": "https://kimberlywagner7.substack.com/p/the-hardest-day-you-may-ever-face",
-   "canonical_url": "https://kimberlywagner7.substack.com/p/the-hardest-day-you-may-ever-face",
-   "anchor": "The Hardest Day You May Ever Face",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
-   "found_on": "2026-11-19",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
-  "https://zacharyconover.substack.com/p/for-the-ones-like-me": {
-   "url": "https://zacharyconover.substack.com/p/for-the-ones-like-me",
-   "canonical_url": "https://zacharyconover.substack.com/p/for-the-ones-like-me",
-   "anchor": "For the Ones Like Me",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
-   "found_on": "2026-11-19",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
-  "https://elephantinroom.substack.com/p/praying-to-the-god-who-rules-history": {
-   "url": "https://elephantinroom.substack.com/p/praying-to-the-god-who-rules-history",
-   "canonical_url": "https://elephantinroom.substack.com/p/praying-to-the-god-who-rules-history",
-   "anchor": "Praying to the God Who Rules History",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
-   "found_on": "2026-11-19",
-   "status": "failed",
-   "attempts": 2,
-   "error": "HTTP 403"
-  },
-  "https://mereorthodoxy.com/dear-gen-alpha-claude-wants-to-turn-you-into-a-toad-please-for-the-love-of-all-things-human-dont-let-it": {
-   "url": "https://mereorthodoxy.com/dear-gen-alpha-claude-wants-to-turn-you-into-a-toad-please-for-the-love-of-all-things-human-dont-let-it/",
-   "canonical_url": "https://mereorthodoxy.com/dear-gen-alpha-claude-wants-to-turn-you-into-a-toad-please-for-the-love-of-all-things-human-dont-let-it",
-   "anchor": "Dear Gen Alpha, Claude Wants to Turn You Into a Toad. Please, for the Love of All Things Human, Don’t Let It",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
-   "found_on": "2026-11-19",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-19",
-   "title": "Dear Gen Alpha,  Claude wants to turn you into a toad. Please, for the love of all things human, don’t let it.",
-   "source_name": "Mere Orthodoxy"
-  },
-  "https://jvfesko.com/blog/2026/11/16/old-dogs-and-new-tricks": {
-   "url": "https://www.jvfesko.com/blog/2026/11/16/old-dogs-and-new-tricks",
-   "canonical_url": "https://jvfesko.com/blog/2026/11/16/old-dogs-and-new-tricks",
-   "anchor": "Old Dogs and New Tricks",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
-   "found_on": "2026-11-19",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-19",
-   "title": "Old Dogs and New Tricks",
-   "source_name": "Reformed Theology"
-  },
-  "https://biblicalcounselingcoalition.org/2026/11/16/getting-a-handle-on-our-emotions": {
-   "url": "https://www.biblicalcounselingcoalition.org/2026/11/16/getting-a-handle-on-our-emotions/",
-   "canonical_url": "https://biblicalcounselingcoalition.org/2026/11/16/getting-a-handle-on-our-emotions",
-   "anchor": "Getting a Handle on Our Emotions",
-   "found_via": "Tim Challies",
-   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-19-2026/",
-   "found_on": "2026-11-19",
-   "status": "graduated",
-   "attempts": 1,
-   "graduated_on": "2026-11-19",
-   "title": "Biblical Counseling Coalition",
-   "source_name": "Biblical Counseling Coalition"
-  },
   "https://thegospelcoalition.org/blogs/trevin-wax/hot-water-holy-wonder": {
    "url": "https://www.thegospelcoalition.org/blogs/trevin-wax/hot-water-holy-wonder/",
    "canonical_url": "https://thegospelcoalition.org/blogs/trevin-wax/hot-water-holy-wonder",
@@ -461,8 +376,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-26-2026/",
    "found_on": "2026-11-26",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://kraigkeck.com/reflection-on-a-public-memorial-service": {
@@ -485,8 +400,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-26-2026/",
    "found_on": "2026-11-26",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://befriendfaithfulness.substack.com/p/quarters-and-contentment": {
@@ -496,8 +411,8 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-26-2026/",
    "found_on": "2026-11-26",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "HTTP 403"
   },
   "https://alifeoverseas.com/are-we-asking-too-much-of-our-kids": {
@@ -520,10 +435,62 @@
    "found_via": "Tim Challies",
    "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-26-2026/",
    "found_on": "2026-11-26",
-   "status": "pending",
-   "attempts": 1,
+   "status": "failed",
+   "attempts": 2,
    "error": "no title"
+  },
+  "https://betweentwocultures.com/2026/11/26/is-it-ever-right-to-pay-a-bribe": {
+   "url": "https://betweentwocultures.com/2026/11/26/is-it-ever-right-to-pay-a-bribe/",
+   "canonical_url": "https://betweentwocultures.com/2026/11/26/is-it-ever-right-to-pay-a-bribe",
+   "anchor": "Is It Ever Right to Pay a Bribe?",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-27-2026/",
+   "found_on": "2026-11-27",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-27",
+   "title": "Is it Ever Right to Pay a Bribe?",
+   "source_name": "Between Two Cultures"
+  },
+  "https://algooderham.wordpress.com/2026/11/22/pastoral-care-the-problem-of-the-person-who-shouts-loudest": {
+   "url": "https://algooderham.wordpress.com/2026/11/22/pastoral-care-the-problem-of-the-person-who-shouts-loudest/",
+   "canonical_url": "https://algooderham.wordpress.com/2026/11/22/pastoral-care-the-problem-of-the-person-who-shouts-loudest",
+   "anchor": "Pastoral Care: The Problem of the Person Who Shouts Loudest",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-27-2026/",
+   "found_on": "2026-11-27",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-27",
+   "title": "Pastoral care: the problem of the person who shouts loudest",
+   "source_name": "Al Gooderham"
+  },
+  "https://thecripplegate.com/six-reasons-christians-can-give-thanks-in-every-circumstance": {
+   "url": "https://thecripplegate.com/six-reasons-christians-can-give-thanks-in-every-circumstance/",
+   "canonical_url": "https://thecripplegate.com/six-reasons-christians-can-give-thanks-in-every-circumstance",
+   "anchor": "Six Reasons Christians Can Give Thanks in Every Circumstance",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-27-2026/",
+   "found_on": "2026-11-27",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-27",
+   "title": "Six Reasons Christians Can Give Thanks in Every Circumstance",
+   "source_name": "The Cripplegate"
+  },
+  "https://buildingjerusalem.blog/2026/11/25/christmas-is-not-in-the-bible-so-your-celebration-doesnt-measure-your-spirituality": {
+   "url": "https://buildingjerusalem.blog/2026/11/25/christmas-is-not-in-the-bible-so-your-celebration-doesnt-measure-your-spirituality/",
+   "canonical_url": "https://buildingjerusalem.blog/2026/11/25/christmas-is-not-in-the-bible-so-your-celebration-doesnt-measure-your-spirituality",
+   "anchor": "Christmas Is Not in the Bible So Your Celebration Doesn’t Measure Your Spirituality",
+   "found_via": "Tim Challies",
+   "found_in": "https://www.challies.com/a-la-carte/a-la-carte-november-27-2026/",
+   "found_on": "2026-11-27",
+   "status": "graduated",
+   "attempts": 1,
+   "graduated_on": "2026-11-27",
+   "title": "Christmas is not in the Bible so your celebration doesn’t measure your spirituality",
+   "source_name": "Building Jerusalem"
   }
  },
- "updated": "2026-11-26T10:01:44+00:00"
+ "updated": "2026-11-27T10:01:42+00:00"
 }
