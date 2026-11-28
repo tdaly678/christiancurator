@@ -681,32 +681,30 @@
       }
     ]
   },
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "last_run": {
-    "date": "2026-11-27",
+    "date": "2026-11-28",
     "stories": [
       {
-        "title": "Can AI Research Tools Help Code Data About Restrictions on Religion?",
-        "url": "https://www.pewresearch.org/decoded/2026/11/24/can-ai-research-tools-help-code-data-about-restrictions-on-religion/",
-        "source": "Pew Research",
+        "title": "Nearly 40% of Americans consider ministry as concerns over pastor shortage grow",
+        "url": "https://www.christianpost.com/news/2-in-5-americans-have-considered-ministry-seminary-or-chaplaincy.html",
+        "source": "The Christian Post",
         "signals": {
-          "publishers": [
-            "Pew Research Center"
+          "publishers": [],
+          "figures": [
+            "40%"
           ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
+          "words": [
+            "survey"
+          ],
+          "data_tag": true
         },
-        "topics": [
-          "technology-and-discipleship",
-          "artificial-intelligence"
-        ],
-        "trend": 8.0,
+        "topics": [],
+        "trend": 8.05,
         "outlets": 1,
         "on_digest": true,
         "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-25 (0 verified figure(s))"
+          "no topic page matched"
         ]
       },
       {
@@ -752,26 +750,23 @@
         ]
       },
       {
-        "title": "Carousel: Americans’ views of economic policy in 2026",
-        "url": "https://www.pewresearch.org/social-trends/2026/11/24/carousel-americans-views-of-economic-policy-in-2026/",
-        "source": "Pew Research",
+        "title": "You Know What You Need for Christmas? Graphs about Religion",
+        "url": "https://www.graphsaboutreligion.com/p/you-know-what-you-need-for-christmas",
+        "source": "Ryan Burge",
         "signals": {
           "publishers": [
-            "Pew Research Center"
+            "Ryan Burge"
           ],
           "figures": [],
           "words": [],
           "data_tag": false
         },
-        "topics": [
-          "politics-and-the-church"
-        ],
-        "trend": 3.25,
+        "topics": [],
+        "trend": 4.0,
         "outlets": 1,
         "on_digest": true,
         "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-26 (0 verified figure(s))"
+          "no topic page matched"
         ]
       },
       {
@@ -798,43 +793,28 @@
         ]
       },
       {
-        "title": "Pew: Christians Will Be Minority in North America by 2070, Will Double in Africa",
-        "url": "https://www.christianitytoday.com/2026/11/pew-research-christians-minority-2070-africa-growth/",
-        "source": "Christianity Today",
+        "title": "Carousel: Americans’ views of economic policy in 2026",
+        "url": "https://www.pewresearch.org/social-trends/2026/11/24/carousel-americans-views-of-economic-policy-in-2026/",
+        "source": "Pew Research",
         "signals": {
           "publishers": [
             "Pew Research Center"
           ],
           "figures": [],
-          "words": [],
+          "words": [
+            "survey"
+          ],
           "data_tag": true
         },
-        "topics": [],
-        "trend": 3.25,
-        "outlets": 1,
-        "on_digest": true,
-        "actions": [
-          "no topic page matched"
-        ]
-      },
-      {
-        "title": "9 Most Popular Thanksgiving Bible Verses",
-        "url": "https://research.lifeway.com/2026/11/20/9-most-popular-thanksgiving-bible-verses/",
-        "source": "Lifeway Research",
-        "signals": {
-          "publishers": [
-            "Lifeway Research"
-          ],
-          "figures": [],
-          "words": [],
-          "data_tag": false
-        },
-        "topics": [],
+        "topics": [
+          "politics-and-the-church"
+        ],
         "trend": 2.5,
         "outlets": 1,
         "on_digest": true,
         "actions": [
-          "no topic page matched"
+          "linked in Fresh From the Digest",
+          "page already checked on 2026-11-26 (0 verified figure(s))"
         ]
       },
       {
@@ -858,50 +838,71 @@
         ]
       },
       {
-        "title": "Young Adults Say Church, Home, and Smartphones Have Shaped Their Faith",
-        "url": "https://research.lifeway.com/2026/11/17/young-adults-say-church-home-and-smartphones-have-shaped-their-faith/",
-        "source": "Lifeway Research",
+        "title": "2026 Christmas Gift Guide: Save on Resources for Everyone",
+        "url": "https://feeds.ligonier.org/~/972439013/0/ligonierministriesblog",
+        "source": "Ligonier Ministries",
         "signals": {
-          "publishers": [
-            "Lifeway Research"
+          "publishers": [],
+          "figures": [
+            "20%",
+            "50%"
           ],
-          "figures": [],
           "words": [],
-          "data_tag": true
+          "data_tag": false
         },
-        "topics": [
-          "evangelicalism",
-          "technology"
-        ],
-        "trend": 2.0,
+        "topics": [],
+        "trend": 1.75,
         "outlets": 1,
         "on_digest": true,
         "actions": [
-          "linked in Fresh From the Digest",
-          "page already checked on 2026-11-18 (3 verified figure(s))"
+          "no topic page matched"
         ]
       },
       {
-        "title": "The Church Needs to Know Its History",
-        "url": "https://www.thegospelcoalition.org/reviews/church-know-its-history/",
-        "source": "The Gospel Coalition",
+        "title": "Can AI Research Tools Help Code Data About Restrictions on Religion?",
+        "url": "https://www.pewresearch.org/decoded/2026/11/24/can-ai-research-tools-help-code-data-about-restrictions-on-religion/",
+        "source": "Pew Research",
         "signals": {
-          "publishers": [],
+          "publishers": [
+            "Pew Research Center"
+          ],
           "figures": [],
           "words": [
-            "surveys"
+            "data",
+            "research"
           ],
-          "data_tag": false
+          "data_tag": true
         },
         "topics": [
-          "church-history"
+          "technology-and-discipleship",
+          "artificial-intelligence"
         ],
         "trend": 1.75,
         "outlets": 1,
         "on_digest": true,
         "actions": [
           "linked in Fresh From the Digest",
-          "no verifiable figure on the page: link only"
+          "page already checked on 2026-11-25 (0 verified figure(s))"
+        ]
+      },
+      {
+        "title": "The Most Religious Congressional Districts, and What They Mean for Tuesday",
+        "url": "https://www.graphsaboutreligion.com/p/the-most-religious-congressional",
+        "source": "Ryan Burge",
+        "signals": {
+          "publishers": [
+            "Ryan Burge"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 1.5,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
         ]
       },
       {
@@ -912,9 +913,7 @@
           "publishers": [
             "Pew Research Center"
           ],
-          "figures": [
-            "90%"
-          ],
+          "figures": [],
           "words": [],
           "data_tag": false
         },
@@ -994,8 +993,28 @@
         ]
       },
       {
-        "title": "4 Ways to Reach Unchurched Men",
-        "url": "https://research.lifeway.com/2026/11/18/4-ways-to-reach-unchurched-men/",
+        "title": "9 Most Popular Thanksgiving Bible Verses",
+        "url": "https://research.lifeway.com/2026/11/20/9-most-popular-thanksgiving-bible-verses/",
+        "source": "Lifeway Research",
+        "signals": {
+          "publishers": [
+            "Lifeway Research"
+          ],
+          "figures": [],
+          "words": [],
+          "data_tag": false
+        },
+        "topics": [],
+        "trend": 0.25,
+        "outlets": 1,
+        "on_digest": true,
+        "actions": [
+          "no topic page matched"
+        ]
+      },
+      {
+        "title": "10 Ways to Form Bold Disciples of Jesus",
+        "url": "https://research.lifeway.com/2026/11/23/10-ways-to-form-bold-disciples-of-jesus/",
         "source": "Lifeway Research",
         "signals": {
           "publishers": [
@@ -1006,18 +1025,18 @@
           "data_tag": false
         },
         "topics": [
-          "local-church"
+          "pastoral-ministry"
         ],
-        "trend": 0.75,
+        "trend": 0.0,
         "outlets": 1,
         "on_digest": false,
         "actions": [
-          "page already checked on 2026-11-18 (0 verified figure(s))"
+          "page already checked on 2026-11-26 (0 verified figure(s))"
         ]
       }
     ],
     "pages": [],
-    "fetched": 1,
-    "hits": 15
+    "fetched": 0,
+    "hits": 16
   }
 }
